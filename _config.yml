@@ -9,7 +9,7 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Carl Boettiger 
+title : Carl Boettiger
 tagline: theoretical ecology and evolution
 author :
   name : Carl Boettiger
@@ -81,7 +81,7 @@ JB :
   comments :
     provider : disqus
     disqus : cboettig
-      short_name : cboettig 
+      short_name : cboettig
     livefyre :
       site_id : 123
     intensedebate :
