@@ -81,7 +81,7 @@ JB :
   comments :
     provider : disqus
     disqus : cboettig
-      short_name : cboettig
+      short_name : 
     livefyre :
       site_id : 123
     intensedebate :
