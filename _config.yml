@@ -81,7 +81,7 @@ JB :
   comments :
     provider : disqus
     disqus : cboettig
-      short_name : jekyllbootstrap
+      short_name : cboettig 
     livefyre :
       site_id : 123
     intensedebate :
@@ -99,7 +99,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-29776516-1'
     getclicky :
       site_id : 
     mixpanel :
