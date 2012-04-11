@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}: {{ page.subtitle }} </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{{ site.url }}/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="{{ site.url }}/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{ site.url }}/assets/css/docs.css" rel="stylesheet">
+    <link href="{{ site.url }}/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+  </head>
+
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+
+  <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="./index.html">Home</a>
+              </li>
+                 <li class="active">
+                <a href="./research.html">Research</a>
+              </li>
+             <li class="active">
+                <a href="./teaching.html">Teaching</a>
+              </li>
+             <li class="active">
+                <a href="./lab-notebook.html">Lab Notebook</a>
+              </li>
+           </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+<!-- Masthead
+================================================== -->
+
+
+<header class="jumbotron subhead">
+  <div class="inner">
+  <h1 class="entry-title">{{ page.title }}</h1>
+  <p>{{ page.subtitle }}</p>
+  </div>
+</header>
+<hr class="soften">
+
+
+
+
+
+      <div class="row">
+        <div class="span8">
+        {{ content }}
+      </div>
+      </div>
+
+
+
+
+
+<!-- Footer
+      ================================================== -->
+      <footer class="footer">
+      <div class="bs-links">
+        <ul class="quick-links">
+          <li>
+            <iframe class="github-btn" src="http://markdotto.github.com/github-buttons/github-btn.html?user=cboettig&repo=cboettig.github.com&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="98px" height="20px"></iframe>
+          </li>
+          <li class="follow-btn">
+            <a href="https://twitter.com/cboettig" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @cboettig</a>
+          </li>
+        </ul>
+      </div>
+
+
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      <p>All content by <a href="http://carboettiger.info">Carl Boettiger</a>, 
+      released under <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero<a/></p>
+      </footer>
+    </div><!-- /container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/google-code-prettify/prettify.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script src="js/application.js"></script>
+
+    <!-- Analytics
+    ================================================== -->
+  <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-29776516-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+  </body>
+</html>
