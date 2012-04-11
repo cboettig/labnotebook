@@ -1,6 +1,8 @@
-I am a researcher interested in regime shifts in ecology and evolution. 
-See  [http://carlboettiger.info](http://carlboettiger.info).
+---
+layout: default
+title: Carl Boettiger 
+subtitle: Theoretical Ecology and Evolution 
+---
+>>>>>>> 3d1e4bc
 
-
-
-
+[homepage](http://carlboettiger.info)
