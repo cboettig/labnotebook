@@ -1,11 +1,4 @@
-*-tikzDictionary
-*.aux
-*.log
-*.out
-knitr-*.pdf
-inst/examples/cache
-inst/examples/figure
-inst/examples/ex-out*
-knitr-minimal.html
-knitr-latex.tex
+_site
+_knit_*
+knit-all.R
 
