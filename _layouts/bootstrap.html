@@ -37,7 +37,7 @@
                 <a href="{{ site.url }}/vita.html">Vita</a>
               </li>
               <li class="active">
-                <a href="{{ site.url }}/Research.html">Research</a>
+                <a href="{{ site.url }}/research.html">Research</a>
               </li>
              <li class="active">
                 <a href="{{ site.url }}/teaching.html">Teaching</a>
@@ -55,15 +55,14 @@
 
 <!-- Masthead
 ================================================== -->
-
-
+ 
 <header class="jumbotron subhead">
   <div class="inner">
-      <form class="well form-search pull-right" role=search method=get id=searchform action="http://www.carlboettiger.info/">
-        <div><label class=screen-reader-text for=s></label>
-          <input type="text" class="input-medium search-query" value="" name="s" id="s" >
-          <button type="submit" id="searchsubmit" class="btn">Search</button>
-        </div>
+    <form class="well form-search pull-right" method="get" action="http://google.com/search">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:carlboettiger.info" />
+          <input class="search-query" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
       </form>
     <h1 class="entry-title">{{ page.title }}</h1>
     <p>{{ page.subtitle }}</p>
