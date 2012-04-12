@@ -10,9 +10,9 @@
     <!-- Le styles -->
     <link href="{{ site.url }}/assets/css/bootstrap.css" rel="stylesheet">
     <link href="{{ site.url }}/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{ site.url }}/assets/css/code_highlights.css" rel="stylesheet">
     <link href="{{ site.url }}/assets/css/docs.css" rel="stylesheet">
     <link href="{{ site.url }}/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
@@ -32,16 +32,16 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active">
-                <a href="./index.html">Home</a>
+                <a href="{{ site.url }}/index.html">Home</a>
               </li>
                  <li class="active">
-                <a href="./vita.html">Vita</a>
+                <a href="{{ site.url }}/vita.html">Vita</a>
               </li>
              <li class="active">
-                <a href="./teaching.html">Teaching</a>
+                <a href="{{ site.url }}/teaching.html">Teaching</a>
               </li>
              <li class="active">
-                <a href="./lab-notebook.html">Lab Notebook</a>
+                <a href="{{ site.url }}/lab-notebook.html">Lab Notebook</a>
               </li>
            </ul>
           </div>
@@ -57,12 +57,18 @@
 
 <header class="jumbotron subhead">
   <div class="inner">
-  <h1 class="entry-title">{{ page.title }}</h1>
-  <p>{{ page.subtitle }}</p>
+      <form class="well form-search pull-right" role=search method=get id=searchform action="http://www.carlboettiger.info/">
+        <div><label class=screen-reader-text for=s></label>
+          <input type="text" class="input-medium search-query" value="" name="s" id="s" >
+          <button type="submit" id="searchsubmit" class="btn">Search</button>
+        </div>
+      </form>
+    <h1 class="entry-title">{{ page.title }}</h1>
+    <p>{{ page.subtitle }}</p>
   </div>
+
 </header>
 <hr class="soften">
-
 
 
 
@@ -70,27 +76,29 @@
       <div class="row">
         <div class="span8">
         {{ content }}
+        </div>
       </div>
-      </div>
 
 
-
-
-
-<!-- Footer
+      <!-- Footer
       ================================================== -->
-      <footer class="footer">
-        <ul class="quick-links">
-          <li>
-            <iframe class="github-btn" src="http://markdotto.github.com/github-buttons/github-btn.html?user=cboettig&repo=cboettig.github.com&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="98px" height="20px"></iframe>
-          </li>
-          <li class="follow-btn">
-            <a href="https://twitter.com/cboettig" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @cboettig</a>
-          </li>
-        </ul>
-      <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" style="float:left;margin:0 5 0 0;" alt="CC0" /></a></br></br>
-      by <a href="/" rel="dct:publisher"><span property="dct:title">Carl Boettiger</span></a>
 
+      <footer class="footer">
+
+          <div class="row">
+            <div class="span2">
+               <a href="https://twitter.com/cboettig" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">@cboettig</a> 
+             <iframe class="github-btn" src="http://markdotto.github.com/github-buttons/github-btn.html?user=cboettig&repo=cboettig.github.com&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="98px" height="20px"></iframe>
+            </div>
+            <div class="span1 offset8">
+              <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" style="float:left;margin:0 5 0 0;" alt="CC0" /></a>
+            </div>
+            <div class="span1">
+              <a rel=license href="http://onsclaims.wikispaces.com/"><img align="right" alt="ONS" style="border-width: 0pt;" src="http://onsclaims.wikispaces.com/file/view/ons-sci2-icon.png"> </a><br/>
+              </br> 
+              </br> 
+            </div>
+        </div>
       </footer>
     </div><!-- /container -->
 
@@ -99,9 +107,10 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="{{ site.url }}/assets/js/google-code-prettify/prettify.js"></script>
     <!--
+    <script src="{{ site.url }}/assets/js/google-code-prettify/prettify.js"></script>
     <script src="{{ site.url }}/assets/js/jquery.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-transition.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-alert.js"></script>
@@ -117,6 +126,8 @@
     <script src="{{ site.url }}/assets/js/bootstrap-typeahead.js"></script>
     <script src="{{ site.url }}/assets/js/application.js"></script>
     -->
+
+
     <!-- Analytics
     ================================================== -->
   <script type="text/javascript">

@@ -23,4 +23,15 @@ describe in this
 
 This is an experimental site built on Jekyll with twitter-bootstrap css.  
 For now, please see my [homepage](http://carlboettiger.info)
-for more information.  
+for more information. 
+
+
+## Mathjax Tests
+
+\\[ x+1\over\sqrt{1-x^2} \\]
+
+and with equation environment:
+
+\begin{equation}
+x+1\over\sqrt{1-x^2}
+\end{equation}
