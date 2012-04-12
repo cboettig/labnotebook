@@ -21,7 +21,8 @@ describe in this
 [introduction](http://www.carlboettiger.info/archives/211).
 
 
-This is an experimental site built on Jekyll with twitter-bootstrap css.  
+This is an experimental site built on [Jekyll](https://github.com/mojombo/jekyll) 
+using CSS from [twitter-bootstrap](http://twitter.github.com/bootstrap/).  
 For now, please see my [homepage](http://carlboettiger.info)
 for more information. 
 
