@@ -3,11 +3,8 @@ layout: bootstrap
 title: Carl Boettiger 
 subtitle: Theoretical Ecology and Evolution 
 ---
-<div style="float: right">
-![image](http://www.carlboettiger.info/wp-content/uploads/2010/09/carlboettiger1.jpg)
-</div>
-I am a graduate student with [Alan
-Hastings](http://two.ucdavis.edu/%7Eme "Alan Hastings") in the
+![floatright](http://www.carlboettiger.info/wp-content/uploads/2010/09/carlboettiger1.jpg)
+I am a graduate student with [Alan Hastings](http://two.ucdavis.edu/%7Eme "Alan Hastings") in the
 [Population Biology](http://www-eve.ucdavis.edu/eve/pbg/) Ph.D program
 at UC Davis, working on regime shifts in ecology and evolution. Such
 shifts mark the most dramatic events in complex systems; understanding
