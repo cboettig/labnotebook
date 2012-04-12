@@ -45,29 +45,29 @@ title: Vita
 -   Carl Boettiger. (2011) A general model of continuous character
     evolution. **Evolution Conference;** Norman, OK. In *Nature
     Precedings*,
-    [doi:10.1038/npre.2011.6080.1](http://dx.doi.org/10.1038/npre.2011.6080.1 "A general model of continuous character evolution (talk)")
+    [doi:10.1038/npre.2011.6080.1](http://dx.doi.org/10.1038/npre.2011.6080.1)
     ([slides](http://www.slideshare.net/cboettig/a-general-model-of-continuous-character-evolution))
 -   Carl Boettiger. (2011) Using Treebase from R. **iEvoBio
     Conference**; Norman, OK. *In Nature Precedings*,
-    [doi:10.1038/npre.2012.6851.1](http://dx.doi.org/10.1038/npre.2012.6851.1 "Using Treebase from R")
+    [doi:10.1038/npre.2012.6851.1](http://dx.doi.org/10.1038/npre.2012.6851.1 )
     ([slides](http://www.slideshare.net/cboettig/r-interface-to-treebase))
 -   Carl Boettiger. (2011) Integrating Open Lab Notebooks with Online
     Databases **Science Online**; Durham, NC. In *Nature Precedings*,
-    [doi:10.1038/npre.2012.6853.1](http://dx.doi.org/10.1038/npre.2012.6853.1 "Integrating open lab notebooks with online databases (talk)")
+    [doi:10.1038/npre.2012.6853.1](http://dx.doi.org/10.1038/npre.2012.6853.1)
     ([slides](http://www.slideshare.net/cboettig/scioslides))
 -   Carl Boettiger, Graham Coop & Peter Ralph. (2011) Is your phylogeny
     informative? Presented at the**Society for Integrative and
     Comparative Biology.**Salt Lake City, Utah. In *Nature Precedings*,
-    [doi:10.1038/npre.2011.6453.1](http://dx.doi.org/10.1038/npre.2011.6453.1 "Is your phylogney informative? (talk)")
+    [doi:10.1038/npre.2011.6453.1](http://dx.doi.org/10.1038/npre.2011.6453.1)
     ([slides](http://www.slideshare.net/cboettig/is-your-phylogeny-informative))
 -   Carl Boettiger. (2010) My experiment with open science. At
     **iEvoBio** Conference; Portland, OR. In *Nature
-    Precedings*[doi:10.1038/npre.2010.4602.1](http://dx.doi.org/10.1038/npre.2010.4602.1 "My Experiment with Open Science (talk)")
+    Precedings*[doi:10.1038/npre.2010.4602.1](http://dx.doi.org/10.1038/npre.2010.4602.1)
     ([slides](http://www.slideshare.net/cboettig/ievobio))
 -   Carl Boettiger. (2010) **Evolution Conference**; Portland OR. A new
     phylogenetic comparative method: detecting niches and transitions
     with continuous characters. In *Nature Precedings*
-    [doi:10.1038/npre.2010.4615.1](10.1038/npre.2010.4615.1 "A new phylogenetic comparative method: detecting niches and transitions with continuous characters")
+    [doi:10.1038/npre.2010.4615.1](10.1038/npre.2010.4615.1)
     ([slides](http://www.slideshare.net/cboettig/a-new-phylogenetic-comparative-method-detecting-niches-and-transitions-with-continuous-characters))
 -   Carl Boettiger. (2009) Inferring Adaptive Landscapes from
     Phylogenetic Trees. **University of Tennessee**, Knoxville, TN.
@@ -77,12 +77,12 @@ title: Vita
 -   Carl Boettiger. (2009) The Evolutionary Seesaw: Origins of
     Biodiversity? **International Institute of Applied Systems
     Analysis**, Vienna; Austria. In *Nature Precedings,*
-    [doi:10.1038/npre.2012.6852.1](http://dx.doi.org/10.1038/npre.2012.6852.1 "The Evolutionary Seesaw: Origins of Biodiversity? (talk)")
+    [doi:10.1038/npre.2012.6852.1](http://dx.doi.org/10.1038/npre.2012.6852.1)
     ([slides](http://www.slideshare.net/cboettig/iiasa-final))
 -   Carl Boettiger. (2008): Reading the Secrets of Biological
     Fluctuations. **Cornell Probability Summer School**, Ithaca, NY. In
     *Nature Precedings,*
-    [doi:10.1038/npre.2010.4949.1](http://dx.doi.org/10.1038/npre.2010.4949.1 "Reading the Secrets of Biological Fluctuations")
+    [doi:10.1038/npre.2010.4949.1](http://dx.doi.org/10.1038/npre.2010.4949.1)
     ([slides](http://www.slideshare.net/cboettig/presentation-5348861))
 
 ## Theses
