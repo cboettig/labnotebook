@@ -17,4 +17,4 @@ and with equation environment:
 x+1\over\sqrt{1-x^2} \label{ex}
 \end{equation}
 
-Note that we've enabled equation numbering to reference Eq \eqref{2}.  
+Note that we've enabled equation numbering to reference Eq \eqref{ex}.  
