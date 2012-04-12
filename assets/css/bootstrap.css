@@ -4645,3 +4645,8 @@ a.thumbnail:hover {
     margin-left: 30px;
   }
 }
+
+
+img[alt=floatright] { float: right; }
+
+
