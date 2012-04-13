@@ -23,7 +23,7 @@ describe in this
 
 This is an experimental site built on [Jekyll](https://github.com/mojombo/jekyll) 
 using CSS from [twitter-bootstrap](http://twitter.github.com/bootstrap/).  
-For now, please see my [homepage](http://carlboettiger.info)
-for more information. 
+For now, please see my [homepage](http://carlboettiger.info/index.php)
+(built on Wordpress) for more information. 
 
 
