@@ -20,8 +20,10 @@ title: Lab Notebook
     {% endfor %}
   </ul>
 
-Earlier posts are still available in my [Wordpress-based lab notebook](http://www.carlboettiger.info/research/lab-notebook).
-Even earlier posts are available in my [OpenWetWare notebook](http://openwetware.org/wiki/User:Carl_Boettiger/Notebook)
+* Earlier posts are still available in my
+[Wordpress-based lab notebook](http://www.carlboettiger.info/research/lab-notebook).
+* Even earlier posts are available in my 
+[OpenWetWare notebook](http://openwetware.org/wiki/User:Carl_Boettiger/Notebook).
 </div>
 
 
