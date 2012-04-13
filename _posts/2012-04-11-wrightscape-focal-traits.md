@@ -2,6 +2,7 @@
 layout: bootstrap
 title: wrightscape
 category: phylogenetics
+tags: knitr
 ---
 
 
