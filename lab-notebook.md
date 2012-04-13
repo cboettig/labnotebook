@@ -15,7 +15,7 @@ title: Lab Notebook
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-      <span>:{{ post.subtitle }}</span></li>
+      <span>{{ post.subtitle }}</span></li>
     {% endfor %}
   </ul>
 
