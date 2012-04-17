@@ -1,5 +1,5 @@
 ---
-layout: bootstrap
+layout: posts
 title: Mathjax testing 
 category: computing
 ---

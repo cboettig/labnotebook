@@ -1,5 +1,5 @@
 ---
-layout: bootstrap
+layout: posts 
 title: wrightscape
 category: phylogenetics
 tags: knitr

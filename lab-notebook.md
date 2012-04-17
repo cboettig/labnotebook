@@ -1,5 +1,5 @@
 ---
-layout: bootstrap
+layout: default
 title: Lab Notebook
 ---
 
