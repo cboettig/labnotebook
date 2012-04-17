@@ -60,27 +60,14 @@
  
 <header class="jumbotron subhead">
   <div class="inner">
-    <form class="well form-search pull-right" method="get" action="http://google.com/search">
-        <fieldset role="search">
-          <input type="hidden" name="q" value="site:carlboettiger.info" />
-          <input class="search-query" type="text" name="q" results="0" placeholder="Search"/>
-        </fieldset>
-      </form>
+    <form class="well form-search pull-right" method="get" action="{{ site.url }}/search.html">
+          <input class="search-query" type="text" name="q" id="tipue_search_input" placeholder="Search">
+    </form>
     <h1 class="entry-title">{{ page.title }}</h1>
     <p>{{ page.subtitle }}</p>
   </div>
-
-
-    <form class="well form-search pull-right" action="search.html">
-      <div style="float: left;"><input type="text" name="q" id="tipue_search_input"></div>
-      <div style="float: left; margin-left: 13px;"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div>
-    </form>
-    <div style="clear: both"></div>
-
 </header>
 <hr class="soften">
-
-
 
 
       <div class="row">
