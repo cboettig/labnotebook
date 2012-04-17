@@ -12,6 +12,8 @@
     <link href="{{ site.url }}/assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="{{ site.url }}/assets/css/code_highlights.css" rel="stylesheet">
     <link href="{{ site.url }}/assets/css/docs.css" rel="stylesheet">
+    <!-- Tipue search stylesheet -->
+    <link href="{{ site.url }}/assets/css/tipuesearch.css" rel="stylesheet" type="text/css">
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
@@ -68,6 +70,15 @@
     <p>{{ page.subtitle }}</p>
   </div>
 
+    <form class="well form-search pull-right">
+      <fieldset role="search">
+      <input class="search-query" type="text" id="tipue_search_input">
+      <input type="button" id="tipue_search_button">
+      <div id="tipue_search_content"></div>
+      </fieldset>
+    </form>
+
+
 </header>
 <hr class="soften">
 
@@ -108,6 +119,11 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <!-- search using tipuesearch -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/js/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/js/tipuesearch_data.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/js/tipuesearch.js"></script>
     <!-- Equations using MathJax -->
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
