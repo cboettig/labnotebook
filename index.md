@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: search
 title: Carl Boettiger 
 subtitle: Theoretical Ecology and Evolution 
 ---
