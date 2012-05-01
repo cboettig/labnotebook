@@ -19,10 +19,9 @@ title: Lab Notebook
     {% endfor %}
   </ul>
 
+    Entries <a href="{{ site.url }}/categories.html">by category</a> | <a href="{{ site.url }}/tags.html">by tag</a> 
 
   <ul>
-    <li> Entries <a href="{{ site.url }}/categories.html">by category</a> </li> 
-    <li> Entries <a href="{{ site.url }}/tags.html">by tag</a> </li> 
     <li> Earlier entries are still available in my <a href="http://www.carlboettiger.info/research/lab-notebook">Wordpress-based lab notebook</a>. </li> 
     <li> Even earlier entries are available in my <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook">OpenWetWare notebook</a>. </li> 
   </ul>
