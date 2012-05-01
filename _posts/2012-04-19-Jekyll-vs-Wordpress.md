@@ -92,7 +92,15 @@ I'm glad that Wordpress.org and Jekyll both meet these requirements.
 
 Probably the only annoying step in setting up a Jekyll blog is getting the right versions of Ruby running.  Strictly speaking, this is unnecessary for sites hosted on Github, which will run Jekyll automatically.  I host on my Dreamhost VPS, for which it is easiest just to compile locally using Jekyll and push on the output HTML files, created in `_site`, to the server.  
 
-HTML layouts can import chunks from separate files with a bit of liquid code:
+
+
+* Getting [out of 1.8.7 and into 1.9.2](http://askubuntu.com/questions/91693/how-do-you-uninstall-ruby-1-8-7-and-install-ruby-1-9-2)
+* Redcarpet isn't the default interpreter, but works better. However, [it's latest version has issues](http://stackoverflow.com/questions/8395347/gollum-wiki-undefined-method-new-for-redcarpetmodule).
+* Actually I find it better to use the latest Redcarpet, [and a plugin](https://github.com/nono/Jekyll-plugins) that lets one use Github-flavored markdown code blocks instead of the silly liquid highlight tags (markdown should be markdown after all). 
+* [image alignment in markdown](http://stackoverflow.com/questions/255170/markdown-and-image-alignment)
+* [markdown in diqus](http://code.lancepollard.com/jquery-disqus-plugin)
+
+* HTML layouts can import chunks from separate files with a bit of liquid code:
 
 ```
 {% include file.html %}
