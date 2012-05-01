@@ -58,8 +58,8 @@ My greatest reservation in this shift comes from the vibrant user and developer
 community on Wordpress (Wordpress powers an estimated 14% of the top 1 million websites)
 including a 
 [Wordpress-for-Scientists group](https://groups.google.com/forum/#!forum/wordpress-for-scientists). 
-This means that almost anything you want has already been done.  
-A downside is the need to know PHP and Wordpress-specific 
+This means that almost anything you want has already been done.  A downside is 
+the need to know PHP and Wordpress-specific 
 implementation to do anything the community hasn't already provided.  Thanks to
 Github and it's appeal as a "hacker's blog," Jekyll has a powerful and growing 
 community of it's own. It's not a content management system (CMS), and unlike 
