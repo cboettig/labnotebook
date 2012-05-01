@@ -1,0 +1,5 @@
+<div class="highlight"><pre><code class="r">dat <span class="o">&lt;-</span> melt<span class="p">(</span>sims<span class="p">,</span> id<span class="o">=</span>names<span class="p">(</span>sims<span class="p">[[</span><span class="m">1</span><span class="p">]]))</span>  
+dt <span class="o">&lt;-</span> data.table<span class="p">(</span>dat<span class="p">)</span>
+setnames<span class="p">(</span>dt<span class="p">,</span> <span class="s">&quot;L1&quot;</span><span class="p">,</span> <span class="s">&quot;reps&quot;</span><span class="p">)</span> <span class="c1"># names are nice</span>
+</code></pre>
+</div>
