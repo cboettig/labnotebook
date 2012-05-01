@@ -47,7 +47,10 @@ and surround it with meaningful comments, math, etc, which can be easily
 shared on Github and later adapted into a manuscript without worrying about formats.
 (I've written about this [workflow here](http://www.carlboettiger.info/archives/4325)
 and adapting it to [manuscripts here](http://www.carlboettiger.info/archives/4419)).
-
+Now this works seemlessly on my website as well, instead of needing custom shortcode
+for Wordpress syntax highlighting, etc.  For instance, here's a 
+[recent code script](http://carlboettiger.info/economics/2012/04/30/Sethi.html)
+I just dropped into my `_posts` directory and added the yaml header.
 
 ## Reservations
 
