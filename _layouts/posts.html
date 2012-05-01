@@ -8,14 +8,10 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="{{ site.url }}/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="{{ site.url }}/assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <!--  knitr website's syntax highlighting -->
-    <link href="{{ site.url }}/assets/css/code_highlights.css" rel="stylesheet"> 
-    <link href="{{ site.url }}/assets/css/docs.css" rel="stylesheet">
-    <!-- Github's syntax highlighting -->
-    <!--    <link href="https://a248.e.akamai.net/assets.github.com/stylesheets/bundles/github2-5ab64ac97650d8573ae90dab55d0169f7850d0f9.css" media="screen" rel="stylesheet" type="text/css" /> -->
-
+    <link href="{{ site.url }}/assets/css/bootstrap.css" rel="stylesheet"> 
+    <link href="{{ site.url }}/assets/css/bootstrap-responsive.css" rel="stylesheet"> 
+    <link href="{{ site.url }}/assets/css/docs.css" rel="stylesheet"> 
+    <link href="{{ site.url }}/assets/css/solarized.css" rel="stylesheet"> 
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
@@ -34,19 +30,19 @@
           <a class="brand" href="./index.html">Carl Boettiger</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active">
+              <li class="">
                 <a href="{{ site.url }}/index.html">Home</a>
               </li>
-              <li class="active">
+              <li class="">
                 <a href="{{ site.url }}/vita.html">Vita</a>
               </li>
-              <li class="active">
+              <li class="">
                 <a href="{{ site.url }}/research.html">Research</a>
               </li>
-             <li class="active">
+             <li class="">
                 <a href="{{ site.url }}/teaching.html">Teaching</a>
               </li>
-             <li class="active">
+             <li class="">
                 <a href="{{ site.url }}/lab-notebook.html">Lab Notebook</a>
               </li>
            </ul>
@@ -83,10 +79,33 @@
         <div class="span8">
           {{ content }}
         </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span4">
+          <div class="sidebar">
+            Posted on
+            <time pubdate datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>. </br>
+            <span itemprop="keywords">
+            {% for tag in page.tags %}
+              <a rel="tag" class="tag" href="{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}-tag">#{{ tag }}</a>
+              {% unless page.tags.last == tag %}, {% endunless %}
+            {% endfor %}
+            </span>
+          </div>
+        </div>
       </div>
 
-
-
+<!--
+      <div id="related">
+        <h2>Related Posts</h2>
+        <ul class="posts">
+          {% for post in site.related_posts limit:3 %}
+            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+-->
 
       <!-- Disqus Comments -->
       <div class="row">
@@ -119,7 +138,7 @@
                <a href="https://twitter.com/cboettig" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">@cboettig</a> 
              <iframe class="github-btn" src="http://markdotto.github.com/github-buttons/github-btn.html?user=cboettig&repo=cboettig.github.com&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="98px" height="20px"></iframe>
             </div>
-            <div class="span1 offset8">
+           <div class="span1 offset8">
               <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" style="float:left;margin:0 5 0 0;" alt="CC0" /></a>
             </div>
             <div class="span1">
@@ -139,6 +158,7 @@
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="{{ site.url }}/assets/js/bootstrap-collapse.js"></script>
     <!--
     <script src="{{ site.url }}/assets/js/google-code-prettify/prettify.js"></script>
     <script src="{{ site.url }}/assets/js/jquery.js"></script>
@@ -151,7 +171,6 @@
     <script src="{{ site.url }}/assets/js/bootstrap-tooltip.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-popover.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-button.js"></script>
-    <script src="{{ site.url }}/assets/js/bootstrap-collapse.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-carousel.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-typeahead.js"></script>
     <script src="{{ site.url }}/assets/js/application.js"></script>
