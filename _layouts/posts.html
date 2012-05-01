@@ -10,8 +10,11 @@
     <!-- Le styles -->
     <link href="{{ site.url }}/assets/css/bootstrap.css" rel="stylesheet">
     <link href="{{ site.url }}/assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="{{ site.url }}/assets/css/code_highlights.css" rel="stylesheet">
+    <!--  knitr website's syntax highlighting -->
+    <link href="{{ site.url }}/assets/css/code_highlights.css" rel="stylesheet"> 
     <link href="{{ site.url }}/assets/css/docs.css" rel="stylesheet">
+    <!-- Github's syntax highlighting -->
+    <!--    <link href="https://a248.e.akamai.net/assets.github.com/stylesheets/bundles/github2-5ab64ac97650d8573ae90dab55d0169f7850d0f9.css" media="screen" rel="stylesheet" type="text/css" /> -->
 
   </head>
 
@@ -54,17 +57,18 @@
 
     <div class="container">
 
-<!-- Masthead
-================================================== -->
+<!-- Masthead ================================================= -->
  
 <header class="jumbotron subhead">
-  <div class="inner">
+<div class="inner">
+    <!-- Search bar -->
     <form class="well form-search pull-right" method="get" action="http://google.com/search">
-        <fieldset role="search">
-          <input type="hidden" name="q" value="site:carlboettiger.info" />
-          <input class="search-query" type="text" name="q" results="0" placeholder="Search"/>
-        </fieldset>
-      </form>
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:carlboettiger.info" />
+        <input class="search-query" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+    <!-- Heading -->
     <h1 class="entry-title">{{ page.title }}</h1>
     <p>{{ page.subtitle }}</p>
   </div>
@@ -73,15 +77,20 @@
 <hr class="soften">
 
 
-
+      <!-- Body, where Jekyll will insert the formatted content from the Markdown files -->
 
       <div class="row">
         <div class="span8">
           {{ content }}
         </div>
       </div>
+
+
+
+
+      <!-- Disqus Comments -->
       <div class="row">
-        <div class="span8">
+        <div class="span8">          
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
@@ -95,6 +104,9 @@
             <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
+
+
+
 
 
       <!-- Footer
@@ -124,10 +136,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <!-- Equations using MathJax -->
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
-    <!-- A little twitter link -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <!--
     <script src="{{ site.url }}/assets/js/google-code-prettify/prettify.js"></script>
@@ -148,7 +158,7 @@
     -->
 
 
-    <!-- Analytics
+    <!-- Google Analytics
     ================================================== -->
   <script type="text/javascript">
           var _gaq = _gaq || [];
