@@ -1,0 +1,10 @@
+<div class="highlight"><pre><code class="r">policy <span class="o">&lt;-</span> melt<span class="p">(</span>opt<span class="p">$</span>D<span class="p">)</span>
+policy_zoom <span class="o">&lt;-</span> subset<span class="p">(</span>policy<span class="p">,</span> x_grid<span class="p">[</span>Var1<span class="p">]</span> <span class="o">&lt;</span> max<span class="p">(</span>dt<span class="p">$</span>fishstock<span class="p">)</span> <span class="p">)</span>
+p5 <span class="o">&lt;-</span> ggplot<span class="p">(</span>policy_zoom<span class="p">)</span> <span class="o">+</span> 
+  geom_point<span class="p">(</span>aes<span class="p">(</span>Var2<span class="p">,</span> <span class="p">(</span>x_grid<span class="p">[</span>Var1<span class="p">]),</span> col<span class="o">=</span>h_grid<span class="p">[</span>value<span class="p">]))</span> <span class="o">+</span> 
+  labs<span class="p">(</span>x <span class="o">=</span> <span class="s">&quot;time&quot;</span><span class="p">,</span> y <span class="o">=</span> <span class="s">&quot;fishstock&quot;</span><span class="p">)</span> <span class="o">+</span>
+  scale_colour_gradientn<span class="p">(</span>colours <span class="o">=</span> rainbow<span class="p">(</span><span class="m">4</span><span class="p">))</span> <span class="o">+</span>
+  geom_abline<span class="p">(</span>intercept<span class="o">=</span>opt<span class="p">$</span>S<span class="p">,</span> slope <span class="o">=</span> <span class="m">0</span><span class="p">)</span> 
+p5
+</code></pre>
+</div>
