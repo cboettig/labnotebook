@@ -6,8 +6,6 @@ author :
   github : cboettig
   twitter : cboettig
 
-production_url : http://username.github.com/jekyll-source
-
 pygments: true 
 markdown: kramdown
 markdown: redcarpet2
