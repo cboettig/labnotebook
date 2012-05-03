@@ -7,7 +7,6 @@ author :
   twitter : cboettig
 
 pygments: true 
-markdown: kramdown
-markdown: redcarpet2
+markdown: redcarpet2 
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink"]

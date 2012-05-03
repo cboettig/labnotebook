@@ -20,10 +20,5 @@ as I describe in this
 [introduction](http://www.carlboettiger.info/archives/211).
 
 
-This is an experimental site built on [Jekyll](https://github.com/mojombo/jekyll) 
-using CSS from [twitter-bootstrap](http://twitter.github.com/bootstrap/).  My 
-[original wordpress site](http://carlboettiger.info/research/lab-notebook) also
-remains on this domain.  
-
 
 
