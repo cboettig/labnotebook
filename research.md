@@ -3,5 +3,3 @@ layout: default
 title: Research
 ---
 
-
-

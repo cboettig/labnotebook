@@ -15,7 +15,7 @@ Updated runs for various norms, added profit plots.
 
 
 We need to determine a the magnitude of penalty coefficient to compare between the different functional forms. For instance, for what value of `c` is an `L2` penalty,
-\\( c ( h_t - h_{t-1} )^2 \\) comparable to the `L1` penalty, \\( c  \abs(h_t - h_{t-1} ) \\)?
+\\( c ( h_t - h_p )^2 \\) comparable to the `L1` penalty, \\( c  \operatorname{abs}(h_t - h_p ) \\) ?
 
 I think we decided that we should select this parameter such that the penalty induces the same equilibrium expected profit from fishing (before costs of policy-changes are subtracted) in each functional form.  Is this correct?  
 
