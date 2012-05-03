@@ -669,3 +669,10 @@ form.well {
   }
 
 }
+
+/* Make markdown with floatright in the alt-text into a nice text-wrapped image */
+
+img[alt=floatright] { float:right;margin: 10px 10px }
+
+
+

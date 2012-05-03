@@ -6,13 +6,19 @@ title: Vita
 
 ## Publications
 
-1. Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, Carl Boettiger and Brian
+1. Carl Boettiger and Alan Hastings (2012). Quantifying Limits to Detection 
+  of Early Warning for Critical Transitions. In *Journal of the Royal Society:
+  Interface* (in press). 
+  ([arXiv](http://arxiv.org/abs/1204.6231))
+  ([code](https://github.com/cboettig/earlywarning))
+  ([data](#))
+2. Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, Carl Boettiger and Brian
   O’Meara, (2012). Modeling Stabilizing Selection: Expanding the
   Ornstein-Uhlenbeck Model of Adaptive Evolution. In *Evolution*,
   [doi:10.1111/j.1558-5646.2012.01619.x](http://dx.doi.org/doi:10.1111/j.1558-5646.2012.01619.x).
   ([pdf](http://www.mendeley.com/download/public/98752/4605481493/93f096d8b8740485fc7a7dfe72baa56be6ef50b4/dl.pdf))
   ([code](http://cran.r-project.org/web/packages/OUwie/index.html))
-2. Carl Boettiger, Graham Coop, Peter Ralph (2012) Is your phylogeny
+3. Carl Boettiger, Graham Coop, Peter Ralph (2012) Is your phylogeny
   informative? Measuring the power of comparative methods. In
   *Evolution*.
   [doi:10.1111/j.1558-5646.2012.01574.x](http://dx.doi.org/10.1111/j.1558-5646.2012.01574.x)
@@ -20,7 +26,7 @@ title: Vita
   ([arXiv](http://arxiv.org/abs/1110.4944))
   ([code](https://github.com/cboettig/pmc))
   ([data](http://datadryad.org/handle/10255/dryad.37645))
-3. Carl Boettiger, Jonathan Dushoff, Joshua S Weitz (2010) Fluctuation
+4. Carl Boettiger, Jonathan Dushoff, Joshua S Weitz (2010) Fluctuation
   domains in adaptive evolution., 6-13. In *Theoretical Population
   Biology* 77 (1).
   [doi:10.1016/j.tpb.2009.10.003](http://dx.doi.org/10.1016/j.tpb.2009.10.003)
@@ -28,7 +34,7 @@ title: Vita
   ([arXiv](http://arxiv.org/abs/1004.4233))
   ([code](https://github.com/cboettig/fluctuationDomains))
   ([data](http://datadryad.org/handle/10255/dryad.37625))
-4. James J. Wray, Neta A. Bahcall, Paul Bode, Carl Boettiger, Phillip
+5. James J. Wray, Neta A. Bahcall, Paul Bode, Carl Boettiger, Phillip
   Hopkins. (2006) The Shape, Multiplicity, and Evolution of
   Superclusters in ΛCDM Cosmology, 907-916. In *The Astrophysical
   Journal* 652 (2).
@@ -56,8 +62,8 @@ title: Vita
     [doi:10.1038/npre.2012.6853.1](http://dx.doi.org/10.1038/npre.2012.6853.1)
     ([slides](http://www.slideshare.net/cboettig/scioslides))
 -   Carl Boettiger, Graham Coop & Peter Ralph. (2011) Is your phylogeny
-    informative? Presented at the**Society for Integrative and
-    Comparative Biology.**Salt Lake City, Utah. In *Nature Precedings*,
+    informative? Presented at the **Society for Integrative and
+    Comparative Biology.** Salt Lake City, Utah. In *Nature Precedings*,
     [doi:10.1038/npre.2011.6453.1](http://dx.doi.org/10.1038/npre.2011.6453.1)
     ([slides](http://www.slideshare.net/cboettig/is-your-phylogeny-informative))
 -   Carl Boettiger. (2010) My experiment with open science. At
