@@ -1,4 +1,5 @@
 /* Adapted from https://gist.github.com/2005058 by scotu */
+/* bootstrap already prvides a box, so comment this box out
 .highlight { 
   background-color: #efefef;
   padding: 7px 7px 7px 10px; 
@@ -9,6 +10,7 @@
   margin: 20px 0 20px 0; 
   overflow: hidden;
 }
+*/
 
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
