@@ -13,7 +13,7 @@ Each repository is organized as an R package, with the basic directories `R/`, `
 `data/`, `inst/examples/` and `inst/docs/`, and the metadata file `DESCRIPTION` providing
 the R package metadata such as author and dependencies.  `README.md` files provide 
 descriptions of the directories.  The package is installable directly from R through
-github.  The R package structure nicely handles software dependencies, documentation, and 
+Github.  The R package structure nicely handles software dependencies, documentation, and 
 metadata in a consistent and portable structure: 
 
 - `R/` provides R functions representing commonly used analyses. 
