@@ -12,13 +12,23 @@
         <div class="span4">
           <div class="sidebar">
             Posted on
-            <time pubdate datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>. </br>
+            <time pubdate datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>. <br />
             <span itemprop="keywords">
             {% for tag in page.tags %}
               <a rel="tag" class="tag" href="{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}-tag">#{{ tag }}</a>
               {% unless page.tags.last == tag %}, {% endunless %}
             {% endfor %}
-            </span>
+          </span>
+          <br />
+          <br />
+          {% if page.previous %}
+          <p>Previous: <a href='{{ page.previous.url }}'>{{ page.previous.title }}</a></p>
+          <br />
+          {% endif %}
+          {% if page.next %}
+          <p>Next: <a href='{{ page.next.url }}'>{{ page.next.title }}</a></p>
+          {% endif %}
+
           </div>
         </div>
       </div>
