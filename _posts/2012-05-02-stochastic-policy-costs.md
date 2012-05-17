@@ -2,7 +2,7 @@
 layout: post
 title: Stochastic policy costs
 category: ecology
-tags: control 
+tags: decision-theory 
 ---
 
 

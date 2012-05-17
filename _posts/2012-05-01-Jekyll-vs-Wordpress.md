@@ -89,16 +89,16 @@ convoluted dependencies on Ruby surely make Jekyll a bit intimidating to new use
 Leaving Wordpress, I have a few basic requirments for a notebook system.  Fortunately it is pretty easy to enjoy all these features in Jekyll.  
 
 - **Dynamic posts**:  Works out of the box 
-- **RSS feed**: just create an appropriate [atom.xml file](https://github.com/cboettig/jekyll-source/blob/master/atom.xml) with a bit of Jekyll Liquid code.
-- **Comments**: paste Disqus code into [html template](https://github.com/cboettig/jekyll-source/blob/master/_layouts/default.html)
+- **RSS feed**: just create an appropriate [atom.xml file](https://github.com/cboettig/labnotebook/blob/master/atom.xml) with a bit of Jekyll Liquid code.
+- **Comments**: paste Disqus code into [html template](https://github.com/cboettig/labnotebook/blob/master/_layouts/default.html)
 - **Categories & tags**: built-in through Jekyll's YAML frontmatter
 - **Search**: Google search or Tipue
-- **MathJax equations (and numbering)**: [Just add the javascript call to the html template](https://github.com/cboettig/jekyll-source/blob/master/_layouts/default.html)
+- **MathJax equations (and numbering)**: [Just add the javascript call to the html template](https://github.com/cboettig/labnotebook/blob/master/_layouts/default.html)
 - **Dynamic citations**: Pandoc or my knitcitations tool, for now.
 - **Syntax highlighting**: use Github notation with Redcarpet2
 - **Writing posts in markdown**: native
-- **Version control**: [on Github](https://github.com/cboettig/jekyll-source/)
-- **Visitor statistics**: [Google analytics in layout](https://github.com/cboettig/jekyll-source/blob/master/_layouts/default.html)
+- **Version control**: [on Github](https://github.com/cboettig/labnotebook/)
+- **Visitor statistics**: [Google analytics in layout](https://github.com/cboettig/labnotebook/blob/master/_layouts/default.html)
 - **embeddable content (twitter streams, feeds, etc.)** : add scripts to html templates
 - **customization of appearance**  [twitter bootstrap](http://twitter.github.com/bootstrap) for the css and javascript + html templates
 - **ease of use**:  Such as the ability to move around markdown documents and html layouts, and to customize things appearance without PHP. 
