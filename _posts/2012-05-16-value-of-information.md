@@ -7,12 +7,29 @@ tags: decision-theory
 
 ## Value of information
 
-I've considered four scenarios so far, (links to results)
+The motivation for this "value of information" excercise comes from Costello _et al._ (2010),
+which essentially compares two scenarios: the value of a marine protected area when you the 
+dispersal kernel is unknown (one of a discrete set of possible kernels you sum over), to the
+value of the protected area when the kernel is known perfectly.  No intrinsic stochasticity,
+single time step, no learning. 
+
+The model I'm looking at comes from Reed (1979), and a modification by Sethi _et al._ (2005).
+Fish dynamics are driven by Beverton Holt process, we harvest some of the population each year.
+In the Reed formulation, only the future growth rate is stochastic -- the current stock value
+is known without error when we must choose the harvest level for that year. The Sethi paper 
+expands this result to consider the case in which the stock assessment may have measurement
+error, and the harvest process may have implementation error. In either event, the optimal
+harvest level for all possible values of stock for each interval in time (on a finite time-horizon)
+is computed by stochastic dynamic programming, given some price function for the harvest.
+This is implemented in [my R package, pdgControl](https://github.com/cboettig/pdg_control).
+
+I consider several cases in which we vary the management uncertainty and the stock uncertainty.
+I've considered four scenarios so far, (links to the runs of each scenario with R code and results)
 
 - ["Value of information" (VI)](https://github.com/cboettig/pdg_control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/value_of_information.md)
 - ["Value of stochasticity" (VS)](https://github.com/cboettig/pdg_control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/value_of_stochasticity.md)
 - ["Cost of underestimating" (CU)](https://github.com/cboettig/pdg_control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/cost_of_underestimating.md)
-- ["Reckless driver" (RD)](https://github.com/cboettig/pdg_control/blob/cfe87046bb29122b4e624459b63e4df5db34118d/inst/examples/reckless_driver.Rmd)
+- ["Reckless driver" (RD)](https://github.com/cboettig/pdg_control/blob/cfe87046bb29122b4e624459b63e4df5db34118d/inst/examples/reckless_driver.md)
 
 Easiest to compare by putting these on a grid of manager uncertainty (across) vs true stochasticity (down):
 
@@ -24,179 +41,27 @@ Easiest to compare by putting these on a grid of manager uncertainty (across) vs
 **g+m+implement** |  CU, RD    |   CU     |    CU       | CU, VS
 
 
+So far I've been surprised that the expected profits in each scenario are remarkably similar, despite the apparent mismatch between optimization strategy and reality, or the presence of extra noise. Perhaps this is driven by the essentially single-step prediction nature of the problem formulation, perhaps simply because things are relatively linear? 
 
-## Cost of bias notes:
 
-Notes pasted in from the knitr output file on github, [Cost of Bias](https://github.com/cboettig/pdg_control/blob/993b05ed46639e6fbd24adf2a5ef18d45397f7fc/inst/examples/cost_of_bias.md), in order that equations display. Code printing supressed to focus on figures, see the knitr source file for the code. Seeing if this makes for more readable notes. This example doesn't match perfectly to the grid.
+References
+----------
 
-- Should also  compare deterministic case, growth only noise
-
-
-- Thought that the deterministic case was giving trouble, but seems to work just fine in the example below.  Examples above had introduced some negligible noise.  
-
-
-# Calculating the cost of bias  
- * author Carl Boettiger, <cboettig@gmail.com>
- * license: CC0
-
-
- * knitr-formatted [source code](https://github.com/cboettig/pdg_control/blob/master/inst/examples/cost_of_bias.Rmd)
- * [Cached data](http://two.ucdavis.edu/cboettig/data/cost_of_bias/)
-
-Implements a numerical version of the SDP described in (Sethi _et. al._ 2005).  Then compute the optimal solution under different forms of uncertainty and compare the results. 
-
-
-
-
-
-## Model setup 
-
-We will assume a Beverton-Holt state equation / population dynamics function, <div> \\[ f(x,h) = \frac{A x}{1 + B x} \\]</div>
-
-
-
-with parameters A = `1.5` and B = `0.05`.  The positive stationary root of the (unharvested) model is given by 
-<div>\\[K = \frac{A-1}{B} \\]</div>, 
-in this case, K = `10`. 
-
-
-
-
-We also assume a profit function of the form 
-
-<div>\\[ \Pi = p h - \left( c_0  + c_1 \frac{h}{x} \right) \frac{h}{x} \\]</div>,
-
-conditioned on \\( h > x \\) and \\(x > 0 \\), with price p = `1`, c0 = `0.01`, and c1 = `0`.  
-
-We solve the problem on a discrete grid of `100` for stock size and range `0`, `20`.  We use the same set of gridpoints for the possible harvest levels. 
-
-
-## Scenarios 
-
-We calculate the stochastic transition matrix for the probability of going from any state \\(x_t \\) to any other state <span>\\(x_{t+1}\\)</span> the following year, for each possible choice of harvest \\( h_t \\).  This provides a look-up table for the dynamic programming calculations. In the Sethi case, computing the distribution over multiple sources of noise is actually quite difficult.  Simulation turns out to be more efficient than numerically integrating over each distribution.  We use this matrix to compute the optimum strategy for all possible states of the world by dynamic programming, and then simulate replicates while applying this rule.   
-
-
-### No Uncertainty 
-
-The first scenario considers the completely deterministic case.  
-
-
-
-
-
-
-
-
-
-
-We simulate 100 replicates of this system.  We will used a fixed seed so that we can compare these replicates to simulations under different conditions.  (Of course the seed is irrelevant at this stage since this is actually deterministic).  
-
-
-
-### Growth uncertainty 
-
-
-
-
-The next scenario introduces growth uncertainty into the model, <div> \\[ x_{t+1} = z_g f(x_t) \\] </div>, where `z_g` is lognormal with logmean 0 and logsd of `0.15`.  
-
-
-
-
-
-
-
-
-As before, we simulate 100 replicates using the same random number sequence, now under this case where the noise in growth is intrinsic and is being accounted for by the management.  
-
-
-
-
-### Growth uncertainty & bias  
-
-
-
-
-
-This time we consider the same optimization under uncertainty as before, but the simulations introduce bias through a random estimate of the growth rate parameter A, drawn from a normal with mean equal to the true value `1.5` and variance `0.1`.   Since A is a constant multiplier in the growth dynamics, this is equivalent to a random estimate of mean of the noise process `z_g`.  Our estimate of the parameter is drawn from the distribution and then held fixed for that replicate.  Each replicate draws its own value, so average parameter estimate across the replicates should be close to the true value.  _Isn't this equivalent to the standard parameter uncertainty?_
-
-
-
-
-
-### Unbiased error in growth estimate
-
-
-
-
-We will compare this result to the situation of underestimating the uncertainty in the growth rate, but knowning the parameter exactly.  We use the deterministic optimum solution under a reality that has log-normal growth noise equal to the sum of the variances in the previous example, \\( \sigma_g = \\)  `0.1803`.  
-
-
-
-
-
-
-
-## Summarize and plot the results                                                   
-
-
-
-
-
-### Plots 
-
-Let's begin by looking at the dynamics of a single replicate. The line shows Reed's S, the level above which the stock should be harvested (where catch should be the difference between stock and S). 
-
-![plot of chunk onerep](http://farm8.staticflickr.com/7225/7212202628_7bb3dd53f8_o.png) 
-
-
-
-This plot summarizes the stock dynamics by visualizing the replicates. Reed's S shown again.
-
-![the induced dynamics in the stock size over time, for all replicates, by scenario](http://farm8.staticflickr.com/7212/7212203002_18118a7ae0_o.png) 
-
-
-
-![The profits made in each time interval of a single replicate, by scenario](http://farm8.staticflickr.com/7211/7212203360_0aa32ff0ea_o.png) 
-
-
-
-![the distribution of profits by scenario](http://farm8.staticflickr.com/7237/7212203732_d1d414beaf_o.png) 
-
-
-Summary statistics tell the final story:
-
-
-
-```
-       uncertainty    V1
-[1,]         known 33.06
-[2,]        Growth 34.34
-[3,]          Bias 35.38
-[4,] Underestimate 34.92
-```
-
-
-
-```
-       uncertainty    V1
-[1,]         known 0.000
-[2,]        Growth 3.963
-[3,]          Bias 8.680
-[4,] Underestimate 4.912
-```
-
-
-
-
-
-
-# References
+Costello C, Rassweiler A, Siegel D, De Leo G, Micheli F and
+Rosenberg A (2010). "Marine Reserves Special Feature: The
+value of spatial information in MPA network design." _Proceedings
+of the National Academy of Sciences_, *107*. ISSN 0027-8424, 
+http://dx.doi.org/10.1073/pnas.0908057107
 
 Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005).
 "Fishery management under multiple uncertainty." _Journal of
 Environmental Economics and Management_, *50*. ISSN 00950696,
-<URL: http://dx.doi.org/10.1016/j.jeem.2004.11.005>.
+http://dx.doi.org/10.1016/j.jeem.2004.11.005
+
+Reed W (1979). "Optimal escapement levels in stochastic and
+deterministic harvesting models." _Journal of Environmental
+Economics and Management_, *6*. ISSN 00950696, 
+http://dx.doi.org/10.1016/0095-0696(79)90014-7
 
 
 
