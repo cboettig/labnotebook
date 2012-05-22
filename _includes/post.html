@@ -12,7 +12,7 @@
         <div class="span4">
           <div class="sidebar">
             Posted on
-            <time pubdate datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>. </br>
+            <time pubdate datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>. <br>
             <span itemprop="keywords">
             {% for tag in page.tags %}
               <a rel="tag" class="tag" href="{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}-tag">#{{ tag }}</a>
