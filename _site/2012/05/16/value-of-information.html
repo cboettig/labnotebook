@@ -1,0 +1,266 @@
+
+
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Value of information, cost of bias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/assets/css/solarized.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+  </head>
+  <body> 
+
+    <!-- Navbar
+    ================================================== -->
+
+   
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Carl Boettiger</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class=""><a href="/index.html">Home</a></li>
+              <li><a href="/vita.html">Vita</a></li>
+              <li><a href="/research.html">Research</a></li>
+              <li><a href="/teaching.html">Teaching</a></li>
+              <li><a href="/lab-notebook.html">Lab Notebook</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+           <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+             <input type="hidden" name="q" value="site:carlboettiger.info">
+             <input class="search-query" type="text" name="q">
+           </form>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container">
+
+<!-- Masthead
+================================================== -->
+ 
+<header>
+    <h1 class="entry-title">Value of information, cost of bias</h1>
+    <h3></h3>
+</header>
+<hr class="soften">
+
+
+
+
+
+      <div class="row-fluid">
+        <div class="span8">
+          <h2 id="toc_62">Value of information</h2>
+
+<p>The motivation for this &quot;value of information&quot; excercise comes from Costello <em>et al.</em> (2010),
+which essentially compares two scenarios: the value of a marine protected area when you the 
+dispersal kernel is unknown (one of a discrete set of possible kernels you sum over), to the
+value of the protected area when the kernel is known perfectly.  No intrinsic stochasticity,
+single time step, no learning. </p>
+
+<p>The model I&#39;m looking at comes from Reed (1979), and a modification by Sethi <em>et al.</em> (2005).
+Fish dynamics are driven by Beverton Holt process, we harvest some of the population each year.
+In the Reed formulation, only the future growth rate is stochastic -- the current stock value
+is known without error when we must choose the harvest level for that year. The Sethi paper 
+expands this result to consider the case in which the stock assessment may have measurement
+error, and the harvest process may have implementation error. In either event, the optimal
+harvest level for all possible values of stock for each interval in time (on a finite time-horizon)
+is computed by stochastic dynamic programming, given some price function for the harvest.
+This is implemented in <a href="https://github.com/cboettig/pdg_control">my R package, pdgControl</a>.</p>
+
+<p>I consider several cases in which we vary the management uncertainty and the stock uncertainty.
+I&#39;ve considered four scenarios so far, (links to the runs of each scenario with R code and results)</p>
+
+<ul>
+<li><a href="https://github.com/cboettig/pdg_control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/value_of_information.md">&quot;Value of information&quot; (VI)</a></li>
+<li><a href="https://github.com/cboettig/pdg_control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/value_of_stochasticity.md">&quot;Value of stochasticity&quot; (VS)</a></li>
+<li><a href="https://github.com/cboettig/pdg_control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/cost_of_underestimating.md">&quot;Cost of underestimating&quot; (CU)</a></li>
+<li><a href="https://github.com/cboettig/pdg_control/blob/cfe87046bb29122b4e624459b63e4df5db34118d/inst/examples/reckless_driver.md">&quot;Reckless driver&quot; (RD)</a></li>
+</ul>
+
+<p>Easiest to compare by putting these on a grid of manager uncertainty (across) vs true stochasticity (down):</p>
+
+<table><thead>
+<tr>
+<th></th>
+<th>none</th>
+<th>growth</th>
+<th>g+measure</th>
+<th>g+m+implement</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>none</strong></td>
+<td>VS,VI,RD</td>
+<td>VI</td>
+<td>VI</td>
+<td>VI</td>
+</tr>
+<tr>
+<td><strong>growth</strong></td>
+<td>RD</td>
+<td>VS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>g+measure</strong></td>
+<td>RD</td>
+<td></td>
+<td>VS</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>g+m+implement</strong></td>
+<td>CU, RD</td>
+<td>CU</td>
+<td>CU</td>
+<td>CU, VS</td>
+</tr>
+</tbody></table>
+
+<p>So far I&#39;ve been surprised that the expected profits in each scenario are remarkably similar, despite the apparent mismatch between optimization strategy and reality, or the presence of extra noise. Perhaps this is driven by the essentially single-step prediction nature of the problem formulation, perhaps simply because things are relatively linear? </p>
+
+<h2 id="toc_63">References</h2>
+
+<p>Costello C, Rassweiler A, Siegel D, De Leo G, Micheli F and
+Rosenberg A (2010). &quot;Marine Reserves Special Feature: The
+value of spatial information in MPA network design.&quot; <em>Proceedings
+of the National Academy of Sciences</em>, <em>107</em>. ISSN 0027-8424, 
+<a href="http://dx.doi.org/10.1073/pnas.0908057107">http://dx.doi.org/10.1073/pnas.0908057107</a></p>
+
+<p>Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005).
+&quot;Fishery management under multiple uncertainty.&quot; <em>Journal of
+Environmental Economics and Management</em>, <em>50</em>. ISSN 00950696,
+<a href="http://dx.doi.org/10.1016/j.jeem.2004.11.005">http://dx.doi.org/10.1016/j.jeem.2004.11.005</a></p>
+
+<p>Reed W (1979). &quot;Optimal escapement levels in stochastic and
+deterministic harvesting models.&quot; <em>Journal of Environmental
+Economics and Management</em>, <em>6</em>. ISSN 00950696, 
+<a href="http://dx.doi.org/10.1016/0095-0696(79)90014-7">http://dx.doi.org/10.1016/0095-0696(79)90014-7</a></p>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span4">
+          <div class="sidebar">
+            Posted on
+            <time pubdate datetime="2012-05-16T00:00:00-07:00" itemprop="datePublished">16 May 2012</time>. <br />
+            <span itemprop="keywords">
+            
+              <a rel="tag" class="tag" href="/tags.html#decision-theory-tag">#decision-theory</a>
+              
+            
+          </span>
+          <br />
+          <br />
+          
+          <p>Previous: <a href='/2012/05/15/fallacy.html'>Notes</a></p>
+          <br />
+          
+          
+          <p>Next: <a href='/2012/05/18/notes.html'>notes</a></p>
+          
+
+          </div>
+        </div>
+      </div>
+
+        <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+        <footer class="footer">
+         <div class="row">
+            <div class="span4">
+              <a href="mailto:cboettig@gmail.com"><i class="icon-envelope"></i></a>
+              <a href="https://twitter.com/cboettig"><img src="/assets/img/icon-twitter.png" alt="twitter"> </a> 
+              <a href="https://github.com/cboettig"><img src="/assets/img/icon-github.png" alt="github"></a> 
+              <a href="/atom.xml"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+            </div>
+            <div class="span2" style="text-align:center">
+              <a rel="license" href="http://onsclaims.wikispaces.com/"><img src="http://onsclaims.wikispaces.com/file/view/ons-aci2-icon.png" alt="ONS"></a> <br><br>
+              <p> <a class="btn btn-mini" href="https://github.com/cboettig/labnotebook">view logs</a></p>
+            </div>
+            <div class="span4">
+              <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0" style="float:right"></a> 
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+    
+        <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap-collapse.js"></script>
+    <!--
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+
+      <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+<!--  UA-29776516-1 -->
+
+  </body>
+</html>
+

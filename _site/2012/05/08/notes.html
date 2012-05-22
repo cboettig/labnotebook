@@ -1,0 +1,272 @@
+
+
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Data to Knowledge Day II & other notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/assets/css/solarized.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+  </head>
+  <body> 
+
+    <!-- Navbar
+    ================================================== -->
+
+   
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Carl Boettiger</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class=""><a href="/index.html">Home</a></li>
+              <li><a href="/vita.html">Vita</a></li>
+              <li><a href="/research.html">Research</a></li>
+              <li><a href="/teaching.html">Teaching</a></li>
+              <li><a href="/lab-notebook.html">Lab Notebook</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+           <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+             <input type="hidden" name="q" value="site:carlboettiger.info">
+             <input class="search-query" type="text" name="q">
+           </form>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container">
+
+<!-- Masthead
+================================================== -->
+ 
+<header>
+    <h1 class="entry-title">Data to Knowledge Day II & other notes</h1>
+    <h3></h3>
+</header>
+<hr class="soften">
+
+
+
+
+
+      <div class="row-fluid">
+        <div class="span8">
+          <p>Great second day at the Data to Knowledge conference (a few notes below).<br>
+Also I have been trying to move a few projects forward during the commute
+and break. I&#39;ve sent Alan my revisions on the prosecutor&#39;s fallacy manuscript,
+getting pretty close. Following up on a query from John, ran a simulation 
+showing the impact of having a delay in the timeseries before the slow 
+change towards the bifurcation begins.  Certainly weakens power but 
+does not preclude the linear-change model detecting the change, 
+<a href="https://github.com/cboettig/earlywarning/blob/59e6da5cee663447509db0441c81fe4a6b960c34/inst/examples/delayed.md">see example</a>
+Also moving towards scheduling a call for the PDG Control manuscript on
+stochastic policy costs; some notes below.  </p>
+
+<h1 id="toc_40">Data to Knowledge Conference, Day 2</h1>
+
+<p>David A. Bader, algorithm design / HPC perspective</p>
+
+<p>Opportunities:</p>
+
+<ol>
+<li>HPC on big data (massive graphs) </li>
+<li>Streaming analytics:  Today&#39;s challenges aren&#39;t dense linear algebra. </li>
+<li>Informational visualization - more data on graph than we have pixels</li>
+<li>Hetergeneous systems - a system that can reconfigure memory hierarchy on the fly</li>
+<li>energy efficiency (moving data takes high energy as well as time)</li>
+</ol>
+
+<p>This is not the time to get stuck in a single paradigm!
+Scientific computing != MPI
+Big data != Hadoop/Map-reduce</p>
+<div class="highlight"><pre><code class="text">External disk -------------------------------------------- Internal memory
+Hadoop -- traditional database -- cloud/cluster -- large shared memory
+Easy programming -------------- harder
+low performance --------------- higher performance
+high energy use --------------- low energy use
+</code></pre>
+</div>
+
+<p>Latency on memory (random access some address in a big global index) dominates over floating point calculations
+Cray XMT 512 processor, 128 threads/processor, 64TB global memory, no cache.  </p>
+
+<h2 id="toc_41">Jeff Hawkins: Brain as a streaming processor</h2>
+
+<p>learning isn&#39;t about strengthening weights on synapses -- they form and vanish all the time.  connections are binary, with scalar permanence.  </p>
+
+<hr>
+
+<p>The two-Layer learning system (classification problem)</p>
+
+<ul>
+<li>Layer 0 is the original problem:</li>
+<li>receive labeled and unlabeled data</li>
+<li>train a classifier on labeled example, predict for others.</li>
+<li>Layer 1 meta-classifier which tries to learn over which data layer 0 does well (using binary classification on layer 0 as true or false)</li>
+</ul>
+
+<h1 id="toc_42">Policy Costs</h1>
+
+<p>Framing the question: Need to discuss these issues, then get a someone to be point-person on each?</p>
+
+<ul>
+<li> Policy costs -- Why this is important, what&#39;s already known. </li>
+<li> Typical ways these concerns are addressed (i.e. quadratic costs on control), similarity &amp; differences.</li>
+<li> Discussion of policy costs as &quot;Regularization&quot; </li>
+<li> Why stochastic?</li>
+<li> Background: Reed model. </li>
+</ul>
+
+<p>Results so far: (discuss these, decide what needs more study)</p>
+
+<ul>
+<li> Introduce &amp; characterize the impact of different norms: L1, L2, asymmetric, fixed costs</li>
+<li> Comparison to Reed</li>
+<li> The double-pay of policy costs: Paying for the transactions, difference from optimal policy</li>
+<li> Comparisons between these norms apples-to-apples. </li>
+</ul>
+
+<p>Discussion/Conclusion -- what do we highlight?</p>
+
+<ul>
+<li> Must first answer - which journal/audience?</li>
+</ul>
+
+<h1 id="toc_43">Misc</h1>
+
+<p>Modified css to use twitter-bootstrap striped tables as table default, since
+markdown won&#39;t add a class on tables automatically.  Hopefully doesn&#39;t cause 
+trouble with other table layouts.  </p>
+
+<p>Note that <code>xtable</code> can handle this by toggling options&quot;</p>
+<div class="highlight"><pre><code class="r">html.table.attributes<span class="o">=</span>getOption<span class="p">(</span><span class="s">&quot;xtable.html.table.attributes&quot;</span><span class="p">,</span> <span class="s">&quot;class=table-striped&quot;</span><span class="p">),</span>
+</code></pre>
+</div>
+
+<p>so setting html class of tables should work fine in <code>knitr</code>.  On the flip side,
+sounds like pandoc would do better with ascii tables as input than with html tables?</p>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span4">
+          <div class="sidebar">
+            Posted on
+            <time pubdate datetime="2012-05-08T00:00:00-07:00" itemprop="datePublished">08 May 2012</time>. <br />
+            <span itemprop="keywords">
+            
+              <a rel="tag" class="tag" href="/tags.html#conferences-tag">#conferences</a>
+              
+            
+          </span>
+          <br />
+          <br />
+          
+          <p>Previous: <a href='/2012/05/07/notes.html'>Data to Knowledge Day 1</a></p>
+          <br />
+          
+          
+          <p>Next: <a href='/2012/05/09/notes.html'>Infering Partially Observable Markov Processes with Iterative Particle Filtering</a></p>
+          
+
+          </div>
+        </div>
+      </div>
+
+        <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+        <footer class="footer">
+         <div class="row">
+            <div class="span4">
+              <a href="mailto:cboettig@gmail.com"><i class="icon-envelope"></i></a>
+              <a href="https://twitter.com/cboettig"><img src="/assets/img/icon-twitter.png" alt="twitter"> </a> 
+              <a href="https://github.com/cboettig"><img src="/assets/img/icon-github.png" alt="github"></a> 
+              <a href="/atom.xml"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+            </div>
+            <div class="span2" style="text-align:center">
+              <a rel="license" href="http://onsclaims.wikispaces.com/"><img src="http://onsclaims.wikispaces.com/file/view/ons-aci2-icon.png" alt="ONS"></a> <br><br>
+              <p> <a class="btn btn-mini" href="https://github.com/cboettig/labnotebook">view logs</a></p>
+            </div>
+            <div class="span4">
+              <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0" style="float:right"></a> 
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+    
+        <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap-collapse.js"></script>
+    <!--
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+
+      <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+<!--  UA-29776516-1 -->
+
+  </body>
+</html>
+

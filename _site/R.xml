@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Carl Boettiger - R</title>
+ <link href="/blog/R.xml" rel="self"/>
+ <link href=""/>
+ <updated>2012-05-22T14:55:10-07:00</updated>
+ <id></id>
+ <author>
+   <name>Carl Boettiger</name>
+   <email>cboettig@gmail.com</email>
+ </author>
+
+ 
+ 
+</feed>

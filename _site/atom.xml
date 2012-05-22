@@ -1,0 +1,1628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Carl Boettiger</title>
+ <link href="/atom.xml" rel="self"/>
+ <link href=""/>
+ <updated>2012-05-22T14:55:10-07:00</updated>
+ <id></id>
+ <author>
+   <name>Carl Boettiger</name>
+   <email>cboettig@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Limits to the detection of early warning signals</title>
+   <link href="/2012/05/21/limits-to-detection-of-early-warning-signals.html"/>
+   <updated>2012-05-21T00:00:00-07:00</updated>
+   <id>h/2012/05/21/limits-to-detection-of-early-warning-signals</id>
+   <content type="html">&lt;p&gt;Our paper, &lt;em&gt;limits to the detection of early warning signals for
+critical transitions&lt;/em&gt;, has now &lt;a href=&quot;http://dx.doi.org/10.1098/rsif.2012.0125&quot;&gt;appeared in the Proceedings of the Royal
+Interface&lt;/a&gt;. An open-access copy
+is &lt;a href=&quot;http://arxiv.org/abs/1204.6231&quot;&gt;available under CC-by license on the ArXiv&lt;/a&gt;.
+The essence of the
+paper is to bring a more model-based approach to early warning signals,
+while seeking to remain as general as possible.  Without a model-based
+approach, it is difficult to leverage statistically meaningful comparisons
+to identify what is a real warning signal and what is just noise. We use
+two simple models, (a stationary OU process and temporally heterogeneous
+OU process) combined with a likelihood ratio bootstrap to do this,
+though other models and comparisons could be equally promising.&lt;/p&gt;
+
+&lt;p&gt;The motivation for this paper comes somewhat from the appendices in
+the groundbreaking work by Dakos &lt;em&gt;et al&lt;/em&gt; 2008, which compares several
+potential null distributions and shows that Kendall&amp;#39;s tau, the correlation
+statistic used to identify an increase, takes on almost any value
+in its range, which doesn&amp;#39;t leave us with much information to go by.
+I both wanted to confirm this distribution and see if I could improve
+upon it with the model-based approach.  I was glad to see that not only
+could we quantify uncertainty more precisely with the model based-approach,
+but also improve upon the sensitivity relative to traditional indicators,
+as seen in our ROC curves. &lt;/p&gt;
+
+&lt;p&gt;My talk at ESA last year gave an introduction to these results.&lt;/p&gt;
+
+&lt;div style=&quot;width:425px&quot; id=&quot;__ss_11357956&quot;&gt;
+&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a
+href=&quot;http://www.slideshare.net/cboettig/limits-to-detection-for-early-warning-signals-of-population-collapse&quot;
+title=&quot;Limits to Detection for Early Warning Signals of
+Population Collapse&quot; target=&quot;_blank&quot;&gt;Limits to Detection for
+Early Warning Signals of Population Collapse&lt;/a&gt;&lt;/strong&gt; &lt;iframe
+src=&quot;http://www.slideshare.net/slideshow/embed_code/11357956&quot;
+width=&quot;425&quot; height=&quot;355&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;
+scrolling=&quot;no&quot;&gt;&lt;/iframe&gt; &lt;div style=&quot;padding:5px 0 12px&quot;&gt; View more
+&lt;a href=&quot;http://www.slideshare.net/&quot; target=&quot;_blank&quot;&gt;presentations&lt;/a&gt;
+from &lt;a href=&quot;http://www.slideshare.net/cboettig&quot; target=&quot;_blank&quot;&gt;Carl
+Boettiger&lt;/a&gt; &lt;/div&gt; &lt;/div&gt;
+
+&lt;h1 id=&quot;toc_64&quot;&gt;An Open Notebook Story&lt;/h1&gt;
+
+&lt;p&gt;This project has gone through many iterations, dead ends, and
+transformations as it evolved over the past year and a half alongside
+my other research projects. In the process, there&amp;#39;s also been ample
+cross-pollination of ideas from different projects.  The interplay of
+these ideas unfolds in the interleaved pages of my online lab
+notebook. &lt;/p&gt;
+
+&lt;p&gt;Here are a few examples of this cross-pollination: Using the likelihood
+ratio bootstrap as the most powerful comparison of two composite
+(parameter-estimated) hypotheses first emerged in my evolutionary work
+which became the paper, &lt;em&gt;Is your phylogeny informative&lt;/em&gt;, while solving
+the likelihood equation for the temporally heterogeneous OU process
+has it&amp;#39;s roots in my work on the evolutionary release of constraint
+that became the paper &lt;em&gt;Modeling Stabilizing Selection: Expanding the
+Ornstein-Uhlenbeck Model of Adaptive Evolution&lt;/em&gt; and plays a role in my
+current &lt;code&gt;wrightscape&lt;/code&gt; project.  These projects share a central challenge
+of detecting faint signals of regime shifts from large data sets whilst
+quantifying uncertainty, despite substantial differences in the details
+of both model formulation and solution.&lt;/p&gt;
+
+&lt;p&gt;The project had several dead ends of things that sounded promising but
+turn out not to work.  A few that I&amp;#39;ve been asked about since include
+&lt;a href=&quot;http://www.carlboettiger.info/wordpress/archives/144&quot;&gt;solving the model inference problem in the frequency (Fourier)
+space&lt;/a&gt;
+(doesn&amp;#39;t work because the power transform destroys the
+Gaussian property of the noise), and &lt;a href=&quot;http://www.carlboettiger.info/wordpress/archives/452&quot;&gt;estimating quadratic
+models (such as the canonical form for the saddle node
+bifurcation)&lt;/a&gt;
+(page forward on each if your curious). &lt;/p&gt;
+
+&lt;h2 id=&quot;toc_65&quot;&gt;The project by numbers&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8144/7249633810_a1cb6395bf_m.jpg&quot; alt=&quot;floatright&quot;&gt;
+My notebook contains &lt;a href=&quot;http://www.carlboettiger.info/wordpress/archives/tag/warning-signals&quot;&gt;123
+posts&lt;/a&gt;
+relevant to this project, tagged under &lt;code&gt;warning-signals&lt;/code&gt;, dating back to
+October 2010, out of a total of 388 posts. The flickr archive has &lt;a href=&quot;http://www.flickr.com/photos/cboettig/tags/warningsignals/&quot;&gt;903
+images&lt;/a&gt;
+tagged for this project, the &lt;a href=&quot;https://github.com/cboettig/populationdynamics&quot;&gt;github
+repository&lt;/a&gt;
+have seen over 40,000 lines of code, mostly in different
+explorations, consisting of 64 files with commits on 74 days.
+(This repository has since been split into separate repositories
+for the [population dynamics simulations] and the &lt;a href=&quot;https://github.com/cboettig/earlywarning&quot;&gt;early warning
+signals computations&lt;/a&gt;.)
+Simulations were run on at least four different machines, including
+the 512 node cluster on campus and &lt;a href=&quot;http://www.nersc.gov/users/computational-systems/carver&quot;&gt;NERSC&amp;#39;s Carver supercomputing
+facility&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;toc_66&quot;&gt;Accessing the data and code&lt;/h1&gt;
+
+&lt;p&gt;My organizational structure has evolved over the course of this project, 
+but mostly conforms to my &lt;a href=&quot;http://carlboettiger.info/2012/05/06/research-workflow.html&quot;&gt;Github-based R-package structure&lt;/a&gt;
+within the &lt;a href=&quot;https://github.com/cboettig/earlywarning&quot;&gt;&lt;code&gt;earlywarning&lt;/code&gt; repository&lt;/a&gt;.
+The &lt;code&gt;inst/examples&lt;/code&gt; directory includes code to reproduce the analysis for
+the chemostat, simulation, and glaciation data.&lt;/p&gt;
+
+&lt;h1 id=&quot;toc_67&quot;&gt;References&lt;/h1&gt;
+
+&lt;p&gt;Boettiger, C., and Hastings, A. (2012). Quantifying limits to detection of early warning for critical transitions. Journal of The Royal Society Interface, 1-29. doi:10.1098/rsif.2012.0125&lt;/p&gt;
+
+&lt;p&gt;Dakos, V., Scheffer, M., van Nes, E. H., Brovkin, V., Petoukhov, V., and Held, H. (2008). Slowing down as an early warning signal for abrupt climate change. Proceedings of the National Academy of Sciences, 105(38), 14308-12. doi:10.1073/pnas.0802430105&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>notes</title>
+   <link href="/2012/05/18/notes.html"/>
+   <updated>2012-05-18T00:00:00-07:00</updated>
+   <id>h/2012/05/18/notes</id>
+   <content type="html">&lt;ul&gt;
+&lt;li&gt;Wrote short talk for Adaptive Management class&lt;/li&gt;
+&lt;li&gt;Adaptive management class short talks.&lt;/li&gt;
+&lt;li&gt;teary&lt;/li&gt;
+&lt;li&gt;Confirmed model-based estimation avoids fallacy on newly zoomed data.&lt;/li&gt;
+&lt;li&gt;Updated cost-of-bias comparison&lt;/li&gt;
+&lt;li&gt;Policy-costs: added adjustment free distribution to highlight double-cost effect&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Value of information, cost of bias</title>
+   <link href="/2012/05/16/value-of-information.html"/>
+   <updated>2012-05-16T00:00:00-07:00</updated>
+   <id>h/2012/05/16/value-of-information</id>
+   <content type="html">&lt;h2 id=&quot;toc_62&quot;&gt;Value of information&lt;/h2&gt;
+
+&lt;p&gt;The motivation for this &amp;quot;value of information&amp;quot; excercise comes from Costello &lt;em&gt;et al.&lt;/em&gt; (2010),
+which essentially compares two scenarios: the value of a marine protected area when you the 
+dispersal kernel is unknown (one of a discrete set of possible kernels you sum over), to the
+value of the protected area when the kernel is known perfectly.  No intrinsic stochasticity,
+single time step, no learning. &lt;/p&gt;
+
+&lt;p&gt;The model I&amp;#39;m looking at comes from Reed (1979), and a modification by Sethi &lt;em&gt;et al.&lt;/em&gt; (2005).
+Fish dynamics are driven by Beverton Holt process, we harvest some of the population each year.
+In the Reed formulation, only the future growth rate is stochastic -- the current stock value
+is known without error when we must choose the harvest level for that year. The Sethi paper 
+expands this result to consider the case in which the stock assessment may have measurement
+error, and the harvest process may have implementation error. In either event, the optimal
+harvest level for all possible values of stock for each interval in time (on a finite time-horizon)
+is computed by stochastic dynamic programming, given some price function for the harvest.
+This is implemented in &lt;a href=&quot;https://github.com/cboettig/pdg_control&quot;&gt;my R package, pdgControl&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I consider several cases in which we vary the management uncertainty and the stock uncertainty.
+I&amp;#39;ve considered four scenarios so far, (links to the runs of each scenario with R code and results)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/value_of_information.md&quot;&gt;&amp;quot;Value of information&amp;quot; (VI)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/value_of_stochasticity.md&quot;&gt;&amp;quot;Value of stochasticity&amp;quot; (VS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/cost_of_underestimating.md&quot;&gt;&amp;quot;Cost of underestimating&amp;quot; (CU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/cfe87046bb29122b4e624459b63e4df5db34118d/inst/examples/reckless_driver.md&quot;&gt;&amp;quot;Reckless driver&amp;quot; (RD)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Easiest to compare by putting these on a grid of manager uncertainty (across) vs true stochasticity (down):&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;none&lt;/th&gt;
+&lt;th&gt;growth&lt;/th&gt;
+&lt;th&gt;g+measure&lt;/th&gt;
+&lt;th&gt;g+m+implement&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;none&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;VS,VI,RD&lt;/td&gt;
+&lt;td&gt;VI&lt;/td&gt;
+&lt;td&gt;VI&lt;/td&gt;
+&lt;td&gt;VI&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;growth&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;RD&lt;/td&gt;
+&lt;td&gt;VS&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;g+measure&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;RD&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;VS&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;g+m+implement&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;CU, RD&lt;/td&gt;
+&lt;td&gt;CU&lt;/td&gt;
+&lt;td&gt;CU&lt;/td&gt;
+&lt;td&gt;CU, VS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;So far I&amp;#39;ve been surprised that the expected profits in each scenario are remarkably similar, despite the apparent mismatch between optimization strategy and reality, or the presence of extra noise. Perhaps this is driven by the essentially single-step prediction nature of the problem formulation, perhaps simply because things are relatively linear? &lt;/p&gt;
+
+&lt;h2 id=&quot;toc_63&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;Costello C, Rassweiler A, Siegel D, De Leo G, Micheli F and
+Rosenberg A (2010). &amp;quot;Marine Reserves Special Feature: The
+value of spatial information in MPA network design.&amp;quot; &lt;em&gt;Proceedings
+of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;107&lt;/em&gt;. ISSN 0027-8424, 
+&lt;a href=&quot;http://dx.doi.org/10.1073/pnas.0908057107&quot;&gt;http://dx.doi.org/10.1073/pnas.0908057107&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005).
+&amp;quot;Fishery management under multiple uncertainty.&amp;quot; &lt;em&gt;Journal of
+Environmental Economics and Management&lt;/em&gt;, &lt;em&gt;50&lt;/em&gt;. ISSN 00950696,
+&lt;a href=&quot;http://dx.doi.org/10.1016/j.jeem.2004.11.005&quot;&gt;http://dx.doi.org/10.1016/j.jeem.2004.11.005&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Reed W (1979). &amp;quot;Optimal escapement levels in stochastic and
+deterministic harvesting models.&amp;quot; &lt;em&gt;Journal of Environmental
+Economics and Management&lt;/em&gt;, &lt;em&gt;6&lt;/em&gt;. ISSN 00950696, 
+&lt;a href=&quot;http://dx.doi.org/10.1016/0095-0696(79)90014-7&quot;&gt;http://dx.doi.org/10.1016/0095-0696(79)90014-7&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Notes</title>
+   <link href="/2012/05/15/fallacy.html"/>
+   <updated>2012-05-15T00:00:00-07:00</updated>
+   <id>h/2012/05/15/fallacy</id>
+   <content type="html">&lt;h2 id=&quot;toc_61&quot;&gt;Prosecutors Fallacy&lt;/h2&gt;
+
+&lt;p&gt;Running the null distribution and add to plots&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;generate &lt;a href=&quot;https://github.com/cboettig/earlywarning/blob/35ea8b6d9aee76ed2814c32bb4d5b4ec861af0eb/inst/examples/nullfallacy.md&quot;&gt;nulls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;add to &lt;a href=&quot;https://github.com/cboettig/earlywarning/blob/90696473b0d98a506e337cbd80a85cec5be51736/inst/examples/fallacy.md&quot;&gt;fallacy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Questions on plots -- show the full replicates plot?&lt;/li&gt;
+&lt;li&gt;Emphasize the two different distributions that result.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/earlywarning/blob/35ea8b6d9aee76ed2814c32bb4d5b4ec861af0eb/inst/examples/nullfallacy.md&quot;&gt;Additional replicates&lt;/a&gt; narrow the null distribution further. hmm...&lt;/li&gt;
+&lt;li&gt;run model fit part again &lt;a href=&quot;https://github.com/cboettig/earlywarning/blob/prosecutor/inst/examples/modelfallacy.md&quot;&gt;modelfallacy.Rmd&lt;/a&gt;. Need to add the model fit data analysis section into this script.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;knitr&amp;#39;s caching really is the way to go with debugging things that need HPC.  Nice to pick up from where we hit the bug rather than rerunning everything. Must remember to set unique cache paths though. &lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>notes</title>
+   <link href="/2012/05/14/notes.html"/>
+   <updated>2012-05-14T00:00:00-07:00</updated>
+   <id>h/2012/05/14/notes</id>
+   <content type="html">&lt;ul&gt;
+&lt;li&gt;Added results into prosecutors fallacy and sent to Alex, Noam, Marissa.&lt;/li&gt;
+&lt;li&gt;Ran pdf copy and sent Treebase to Duncan&lt;/li&gt;
+&lt;li&gt;README added to &lt;a href=&quot;https://github.com/cboettig/knitcitations&quot;&gt;knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;staticdoc documentation for knitcitations (and filed a few issues on staticdocs)&lt;/li&gt;
+&lt;li&gt;Updated documentaiton on treebase, rfishbase. updated their staticdocs documentation as well.&lt;/li&gt;
+&lt;li&gt;rfishbase 0.0-9 update pushed to CRAN&lt;/li&gt;
+&lt;li&gt;Working on prosecutor&amp;#39;s fallacy edits from Alex&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_59&quot;&gt;Alan meeting&lt;/h2&gt;
+
+&lt;p&gt;Discuss management example with ROC curve instead of hypothesis test &lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Crash&lt;/th&gt;
+&lt;th&gt;No Crash&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Action&lt;/td&gt;
+&lt;td&gt;a&lt;/td&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;No Action&lt;/td&gt;
+&lt;td&gt;c&lt;/td&gt;
+&lt;td&gt;d&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;Where 
+&lt;span&gt;( d &amp;gt; a &amp;gt; b &amp;gt; c )&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;From the ROC curve: TP = f(FP), that is, y = f(x), so:&lt;/p&gt;
+
+&lt;div&gt;\[ \min_x a f(x) +b x + c f(x) + d x \]&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;simulate and detect.  Dynamic updating?&lt;/li&gt;
+&lt;li&gt;estimate stochastic model&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;toc_60&quot;&gt;Misc tricks&lt;/h1&gt;
+
+&lt;p&gt;Start a new branch on gh-pages for the documentation &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;true | git mktree | xargs git commit-tree | xargs git branch gh-pages
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then update in future using:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;git checkout gh-pages
+git read-tree master:inst/doc/html
+git commit -a -m &amp;#39;gh-pages documentation&amp;#39;
+git push origin gh-pages
+git checkout master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;From updating staticdocs on gh-pages: &lt;a href=&quot;http://stackoverflow.com/questions/10590156/git-update-the-root-directory-of-a-branch-from-the-subdirectory-of-another&quot;&gt;Q on SO&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Prosecutor's fallacy notes</title>
+   <link href="/2012/05/12/notes.html"/>
+   <updated>2012-05-12T00:00:00-07:00</updated>
+   <id>h/2012/05/12/notes</id>
+   <content type="html">&lt;p&gt;Mostly getting Prosecutor&amp;#39;s Fallacy example to run with large enough sample sizes.  Finer sampling or more replicates than current settings seems to crash MPI connections over farm cluster, probably a memory issue.  Oh well, looks like I&amp;#39;ve got a good enough sample size here. &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/earlywarning/blob/08952efd2e181726a3a44aeb6cba14fa83aa57a4/inst/examples/fallacy.md&quot;&gt;Prosecutor&amp;#39;s Fallacy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_58&quot;&gt;Citations on Jekyll&lt;/h2&gt;
+
+&lt;p&gt;No ideal solution here at the moment, a couple options:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pandoc: My intended solution,  Disadvantages: converts everything to it&amp;#39;s own markdown format, which messes up my PHP Markdown tables and YAML frontmatter. Also chokes on large bibtex files, so I need to run bibtool / my bibgen script to generate the bib file first. Perhaps a scripted solution can get around this.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Use knit+R to generate citations with my &lt;a href=&quot;https://github.com/cboettig/knitcitations&quot;&gt;knitcitations&lt;/a&gt; package.  Advantages: customizable, can run on DOIs without needing to bother with bibtex. Easiest to extend with metadata in citations, such as CiTO.  Disadvantages: not very polished, citation formating needs help.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/inukshuk/jekyll-scholar&quot;&gt;jekyll-scholar&lt;/a&gt;: Perhaps the most promising of the citation plugins.&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Computing the value of information in management of a stochastic resource</title>
+   <link href="/2012/05/11/Notes.html"/>
+   <updated>2012-05-11T00:00:00-07:00</updated>
+   <id>h/2012/05/11/Notes</id>
+   <content type="html">&lt;h1 id=&quot;toc_54&quot;&gt;PDG Control&lt;/h1&gt;
+
+&lt;p&gt;After reading Costello &lt;em&gt;et. al.&lt;/em&gt; (2010), taking a look at value of information in a dynamic context. 
+Consider the model of Sethi &lt;em&gt;et. al.&lt;/em&gt; (2005) (Costello is part of et al); a dynamic fisheries model with stochastic growth (a la Reed, (1979)), stochastic measurement assessing the stock size, and stochastic implementation of the harvest. 
+I first imagine the case where the real system is quite deterministic, say, with a tiny amount of growth stochasticity only.  I solve this optimal harvest problem using SDP and compare it to three other scenarios (simulating 100 realizations of each). &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;where our estimate of the growth stochasticity is much higher, reflecting our lack of knowledge about growth, (in our the computation of the optimal solution)&lt;/li&gt;
+&lt;li&gt; where our estimate of both growth and stock measurement is higher&lt;/li&gt;
+&lt;li&gt;where our estimate of all three is higher. &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/70e899ea4ecc52317cb6ff91c21406cf665cbaa9/inst/examples/value_of_information.md&quot;&gt;Value of information&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Compare this to solving the optimal solution under increasing uncertainty (that is, increasing the sources of stochasticity in the real system, and having the manager solve for the optimal solution given that uncertainty).  Still feels like uncertainty should impact profits, but not much:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/0bda7ca2f32b80a7905d6cbc302223f8811bc033/inst/examples/value_of_information.md&quot;&gt;Value of stochasticity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Even &lt;em&gt;underestimating&lt;/em&gt; rather than overestimating the noise isn&amp;#39;t so costly, only impacts cases where the population crashes (i.e. the manager assumes a nearly deterministic system, and scenarios add additional stochasticity into the reality).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/da6e0b933450755319a16d92efa4745883baa792/inst/examples/cost_of_underestimating.md&quot;&gt;Cost of underestimating&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Similarly for an Allee effect model, overestimating uncertainty doesn&amp;#39;t result in very suboptimal (conservative) behavior...&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/4b89252c276a3cf9881f598ffe2070cc1cafde4a/inst/examples/value_under_allee.md&quot;&gt;Allee&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Costello C, Rassweiler A, Siegel D, De Leo G, Micheli F and
+Rosenberg A (2010 2010). &amp;quot;Marine Reserves Special Feature: The
+value of spatial information in MPA network design.&amp;quot; &lt;em&gt;Proceedings
+of the National Academy of Sciences&lt;/em&gt;, &lt;em&gt;107&lt;/em&gt;. ISSN 0027-8424, 
+&lt;a href=&quot;http://dx.doi.org/10.1073/pnas.0908057107&quot;&gt;http://dx.doi.org/10.1073/pnas.0908057107&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005).
+&amp;quot;Fishery management under multiple uncertainty.&amp;quot; &lt;em&gt;Journal of
+Environmental Economics and Management&lt;/em&gt;, &lt;em&gt;50&lt;/em&gt;. ISSN 00950696,
+&lt;a href=&quot;http://dx.doi.org/10.1016/j.jeem.2004.11.005&quot;&gt;http://dx.doi.org/10.1016/j.jeem.2004.11.005&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Reed W (1979). &amp;quot;Optimal escapement levels in stochastic and
+deterministic harvesting models.&amp;quot; &lt;em&gt;Journal of Environmental
+Economics and Management&lt;/em&gt;, &lt;em&gt;6&lt;/em&gt;. ISSN 00950696, 
+&lt;a href=&quot;http://dx.doi.org/10.1016/0095-0696(79)90014-7&quot;&gt;http://dx.doi.org/10.1016/0095-0696(79)90014-7&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;toc_55&quot;&gt;Evolution stuff&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;More writing on Wrightscape manuscript.  Reply to Peter.&lt;/li&gt;
+&lt;li&gt;rfishbase new version to CRAN? &lt;/li&gt;
+&lt;li&gt;Create table 1 for treebase&lt;/li&gt;
+&lt;li&gt;Touch up pacakge documentation in treebase&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;toc_56&quot;&gt;Early warning&lt;/h1&gt;
+
+&lt;p&gt;Large replicate sims with fine sampling -- creating memory issues on nodes on farm.  Too hot for SOCK, switching to MPI...&lt;/p&gt;
+
+&lt;h1 id=&quot;toc_57&quot;&gt;Package Documentation&lt;/h1&gt;
+
+&lt;p&gt;Just as a test, I ran staticdocs &lt;code&gt;build_package&lt;/code&gt; function on rfishbase, sticking the output into &lt;code&gt;inst/doc/html&lt;/code&gt; (from the package root directory).  &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;staticdocs&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+build_package&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rfishbase&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;inst/doc/html&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I then created the gh-pages branch with just the html docs and pushed to github.  &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;git branch gh-pages
+git checkout gh-pages
+rm -rf data/ man/ R/ README.md NEWS NAMESPACE DESCRIPTION demo/
+mv inst/doc/html/* .
+rm -rf inst/
+git add *
+git commit -a -m &amp;quot;gh-pages documentation&amp;quot;
+git push origin gh-pages
+git checkout master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Which means that the documentation now appears at: &lt;a href=&quot;http://ropensci.github.com/rfishbase/&quot;&gt;http://ropensci.github.com/rfishbase/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We can think about customizing the css to some ropensci standard if we like.  Should motivate me to get some more pretty examples in the documentation too.  I think there&amp;#39;s a way to get vignettes to show up as well, will dig around a bit.  &lt;/p&gt;
+
+&lt;p&gt;Also created an index for all packages at &lt;a href=&quot;http://ropensci.github.com&quot;&gt;http://ropensci.github.com&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Notes</title>
+   <link href="/2012/05/10/notes.html"/>
+   <updated>2012-05-10T00:00:00-07:00</updated>
+   <id>h/2012/05/10/notes</id>
+   <content type="html">&lt;h1 id=&quot;toc_50&quot;&gt;Partially Observable Stochastic Processes (cont.)&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Reading a bit more about &lt;code&gt;pomp&lt;/code&gt;.  Looks like SCM and PMCMC offer nicely Bayesian inference tools using the same framework (&lt;code&gt;rprocess&lt;/code&gt; and &lt;code&gt;dmeasure&lt;/code&gt;), making a nice platform for implementing multiple methods. Almost feels like having the likelihood equation in hand again. &lt;/li&gt;
+&lt;li&gt;A bit more skeptical about nonlinear forecasting and  probe matching, as they feel even more heuristic or arbitrary.  I suppose that&amp;#39;s just the price of having only &lt;code&gt;rmeasure&lt;/code&gt; instead of &lt;code&gt;dmeasure&lt;/code&gt; available though.  Perhaps worth a closer look. &lt;/li&gt;
+&lt;li&gt;Time to implement some saddle-node models and see what we can get...&lt;/li&gt;
+&lt;li&gt;Also need to spend a bit more time working through examples on Vasilis&amp;#39;s &lt;code&gt;earlywarings&lt;/code&gt; package.&lt;/li&gt;
+&lt;li&gt;About ready to submit Prosecutor&amp;#39;s Fallacy paper.  Repeating runs, some touch up on presentation still needed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;toc_51&quot;&gt;Evolution stuff&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;treebase manuscript re-organization. -- done&lt;/li&gt;
+&lt;li&gt;treebase mansuscript simplify / clarify language -- done&lt;/li&gt;
+&lt;li&gt;treebase select examples, move technical examples to appendix -- done&lt;/li&gt;
+&lt;li&gt;treebase finalize new function list. -- done&lt;/li&gt;
+&lt;li&gt;More writing on Wrightscape manuscript.  Reply to Peter.&lt;/li&gt;
+&lt;li&gt;rfishbase new version to CRAN? &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Treebase miscellaneous exploration examples?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(histogram of species in treebase?)&lt;/li&gt;
+&lt;li&gt;gene tree diversification rates vs species tree?&lt;/li&gt;
+&lt;li&gt;gene tree of taxon of interest&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;toc_52&quot;&gt;Logistics&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ESA 2012 flight booked. Registration paid.  need housing...&lt;/li&gt;
+&lt;li&gt;Sent query for CSGF 2012 flights&lt;/li&gt;
+&lt;li&gt;Need to book Evolution flight.  Registration paid, housing paid. &lt;/li&gt;
+&lt;li&gt;file reimbursements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;toc_53&quot;&gt;Computing&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;oooh: &lt;a href=&quot;https://github.com/hadley/staticdocs&quot;&gt;staticdocs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Infering Partially Observable Markov Processes with Iterative Particle Filtering</title>
+   <link href="/2012/05/09/notes.html"/>
+   <updated>2012-05-09T00:00:00-07:00</updated>
+   <id>h/2012/05/09/notes</id>
+   <content type="html">&lt;p&gt;Excellent talk by Ed Ionides at UC Davis today (led me to miss Weds session of Data to Knowledge).  &lt;/p&gt;
+
+&lt;h1 id=&quot;toc_44&quot;&gt;Ed Ionides&lt;/h1&gt;
+
+&lt;p&gt;six problems of Bjonstead &amp;amp; Grenfell: an appeal for arbitrary nonlinear partially observed vector valued stochastic models.&lt;br&gt;
+POMP doesn&amp;#39;t mix well in the winbugs.&lt;/p&gt;
+
+&lt;p&gt;simulation-based algorithm --&amp;gt; plug-and-play
+(more &lt;/p&gt;
+
+&lt;p&gt;Think of a process being defined by:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rprocess()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dprocess()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rmeasure()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dmeasure()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In general we need some subset of these processes: &lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;rprocess&lt;/th&gt;
+&lt;th&gt;dprocess&lt;/th&gt;
+&lt;th&gt;rmeasure&lt;/th&gt;
+&lt;th&gt;dmeasure&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;iterative filtering&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lui-West SCM&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EM by SCM&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MCMC&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nonlin forecasting&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Particle MCMC&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Probe matching&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h2 id=&quot;toc_45&quot;&gt;Bayesian plug-and-play&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Artificial parameter evolution (Liu &amp;amp; West 2001)&lt;/li&gt;
+&lt;li&gt;Approximate Bayesian Computing (Toni et al Interface 2009)&lt;/li&gt;
+&lt;li&gt;Particle MCMC [@Andrieu2010] &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_46&quot;&gt;Non-Bayesian &lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Simulation-based prediction rules [@Kendall1999] &amp;quot;Probe-matching&amp;quot;&lt;/li&gt;
+&lt;li&gt;Simulated likelihood of summary statistics [@Wood2010]&lt;/li&gt;
+&lt;li&gt;Iterated filtering [@Ionides2006]&lt;/li&gt;
+&lt;li&gt;Nonlinear forecasting &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;quot;Likelihood-free&amp;quot; inference -- i.e. don&amp;#39;t have the likelihood equation 
+unlike MCMC, EM need &lt;code&gt;dprocess()&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Compare to optimization &amp;quot;gradient-free&amp;quot; methods.&lt;/li&gt;
+&lt;li&gt;or to Keverkidis &amp;quot;equation-free&amp;quot; (2003,2004). &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Approximate Bayesian methods and simulated moment methods lead to loss of &lt;em&gt;statistical&lt;/em&gt; efficiency
+Iterated filtering enables almost exact likelihood-based inference.  &lt;/p&gt;
+
+&lt;p&gt;ODEs have been plug-and-play (numerical) for a long time.  We want this to be true for SDEs as well.  &lt;/p&gt;
+
+&lt;h2 id=&quot;toc_47&quot;&gt;Filtering&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Think &amp;quot;Kalman filter&amp;quot;.  Particle filter is a simulated approximation approach for the likelihood function.&lt;/li&gt;
+&lt;li&gt;Iterative filtering is a much more clever way to search for the best fit model than some traditional optimization routine that wants a smooth likelihood function. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Theorem: derivative of the log-likelihood is the small-noise limit of a weighted average of local filtering. In:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;pseudo-code&quot;&gt;@Ionides2006&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;proofs&quot;&gt;@Ionides2011&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Scientists like life on the edge of identifiability,
+&amp;gt; Minimal complexity acceptable to scientsits approx maximimal complexity acceptable to available data&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ah, &lt;a href=&quot;http://www.stat.lsa.umich.edu/%7Eionides/pubs/davis12.pdf&quot;&gt;Ed&amp;#39;s slides are available online&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;Some good information on the &lt;a href=&quot;http://pomp.r-forge.r-project.org/&quot;&gt;pomp website&lt;/a&gt; as well.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;toc_48&quot;&gt;Exploring Iterative Filtering in POMP&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/cboettig/populationdynamics/blob/497d4ce4c401833464ccaff6edd518133f4e9b0c/inst/examples/pomp_explore.md&quot;&gt;my example exploration&lt;/a&gt;, following the &lt;a href=&quot;http://cran.at.r-project.org/web/packages/pomp/vignettes/intro_to_pomp.pdf&quot;&gt;introductory vignette.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;Note that the iterative filtering algorithm took a little over 16 minutes on ten processors on the farm cluster.  pomp does not provide any parallelization.  Particles must communicate at each iteration.  With tight communication loops, could probably get substantial acceleration on MPI or GPU.  &lt;/p&gt;
+
+&lt;p&gt;(Would be interesting to drive the simulation with Gillespie algorithm, something richer than a crude discritization.  Depending on timescale, may result in very computationally intensive requirements).  &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pomp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+gompertz.proc.sim &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; t&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; params&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; delta.t&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    r &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; params&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    K &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; params&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;K&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    sigma &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; params&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sigma&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    X &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# the state at time t:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;## generate a log-normal random variable:&lt;/span&gt;
+    eps &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; exp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;rnorm&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; mean &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sd &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sigma&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;## compute the state at time t+delta.t:&lt;/span&gt;
+    S &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; exp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;r &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; delta.t&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;X &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; unname&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;K&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; S&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; X&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;S &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; eps&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;gompertz.meas.sim &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; t&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; params&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    tau &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; params&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tau&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    X &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# state at time t:&lt;/span&gt;
+    y &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; unname&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;rlnorm&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; meanlog &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;X&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; sd &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tau&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;create a container of class &lt;code&gt;pomp&lt;/code&gt; to hold the model and data.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;gompertz &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; pomp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;time &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; times &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;time&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+    rprocess &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; discrete.time.sim&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;step.fun &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; gompertz.proc.sim&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; delta.t &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
+    rmeasure &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; gompertz.meas.sim&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; t0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Parameters and  inital condition:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;theta &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;r &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; K &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sigma &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; tau &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; X.0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;gompertz &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; simulate&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gompertz&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; theta&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gompertz&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; variables &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Y&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8012/7168130004_62bc33148d_o.png&quot; alt=&quot;plot of chunk simulate&quot;&gt; &lt;/p&gt;
+
+&lt;p&gt;Likelihood using a particle filter (sequential Monte Carlo) requires the measurement density (but not the process density).  &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;gompertz.meas.dens &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; t&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; params&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; log&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    tau &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; params&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tau&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;## state at time t:&lt;/span&gt;
+    X &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;## observation at time t:&lt;/span&gt;
+    Y &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; y&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Y&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;## compute the likelihood of Y|X,tau&lt;/span&gt;
+    dlnorm&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Y&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; meanlog &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;X&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; sdlog &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tau&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; log &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Stick the new function into our container:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;gompertz &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; pomp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gompertz&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; dmeasure &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; gompertz.meas.dens&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then we get a point estimate of the likelihood,&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;pf &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; pfilter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gompertz&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; theta&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Np &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+logLik&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pf&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;[1] 49.29
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;toc_49&quot;&gt;Iterated filtering&lt;/h3&gt;
+
+&lt;p&gt;We will do this in the transformed variable space, so we add
+our transformation method to the container:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;gompertz &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; pomp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gompertz&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; parameter.transform &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;params&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+    &lt;span class=&quot;m&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    exp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;params&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; parameter.inv.transform &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;params&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    log&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;params&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we&amp;#39;re ready for an iterated-filtering run.  This is gonna be slow,
+so let&amp;#39;s set up a parallel architecture first:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;snowfall&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+sfInit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;parallel &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cpu &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;rep &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;dummy_index&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    estpars &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;sigma&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;tau&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    theta.guess &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; coef&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gompertz&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    theta.guess&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;estpars&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rlnorm&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;estpars&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; meanlog &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theta.guess&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;estpars&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; 
+        sdlog &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    mif&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gompertz&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Nmif &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; start &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; theta.guess&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; transform &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pars &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; estpars&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+        rw.sd &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;r &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.02&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sigma &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.02&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; tau &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.05&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; Np &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; var.factor &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+        ic.lag &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cooling.factor &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.999&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; max.fail &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+sfExportAll&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+system.time&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mf &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sfSapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; rep&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;   user  system elapsed 
+   0.02    0.00 1037.39 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Average parameter estimates (compare to theta)&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;theta.mif &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; apply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mf&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; coef&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; mean&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+theta.mif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;      r       K   sigma     tau     X.0 
+0.04385 1.00000 0.09647 0.10495 1.00000 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Evaluating the log-likelihoods at the convergent parameters requires the particle filter.  This line applies the particle filter to each of the parameter estimates&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;loglik.mif &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; replicate&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; logLik&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pfilter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mf&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt; params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; theta.mif&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+    Np &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+bl &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; mean&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;loglik.mif&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+loglik.mif.est &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; bl &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; log&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mean&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;exp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;loglik.mif &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; bl&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+loglik.mif.se &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sd&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;exp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;loglik.mif &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; bl&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;exp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;loglik.mif.est &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; bl&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;est &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; loglik.mif.est&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; se &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; loglik.mif.se&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;     est       se 
+51.45397  0.09316 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&amp;quot;True&amp;quot; uses the original model and coefficients rather than the estimated one, but still approximates the log.likelihood using particle filtering &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;loglik.true &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; replicate&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; logLik&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pfilter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gompertz&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; coef&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gompertz&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
+    Np &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+loglik.true.est &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; bl &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; log&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mean&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;exp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;loglik.true &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; bl&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+loglik.true.se &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sd&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;exp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;loglik.true &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; bl&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;exp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;loglik.true.est &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; 
+    bl&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;est &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; loglik.true.est&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; se &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; loglik.true.se&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;    est      se 
+50.0128  0.1062 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Data to Knowledge Day II & other notes</title>
+   <link href="/2012/05/08/notes.html"/>
+   <updated>2012-05-08T00:00:00-07:00</updated>
+   <id>h/2012/05/08/notes</id>
+   <content type="html">&lt;p&gt;Great second day at the Data to Knowledge conference (a few notes below).&lt;br&gt;
+Also I have been trying to move a few projects forward during the commute
+and break. I&amp;#39;ve sent Alan my revisions on the prosecutor&amp;#39;s fallacy manuscript,
+getting pretty close. Following up on a query from John, ran a simulation 
+showing the impact of having a delay in the timeseries before the slow 
+change towards the bifurcation begins.  Certainly weakens power but 
+does not preclude the linear-change model detecting the change, 
+&lt;a href=&quot;https://github.com/cboettig/earlywarning/blob/59e6da5cee663447509db0441c81fe4a6b960c34/inst/examples/delayed.md&quot;&gt;see example&lt;/a&gt;
+Also moving towards scheduling a call for the PDG Control manuscript on
+stochastic policy costs; some notes below.  &lt;/p&gt;
+
+&lt;h1 id=&quot;toc_40&quot;&gt;Data to Knowledge Conference, Day 2&lt;/h1&gt;
+
+&lt;p&gt;David A. Bader, algorithm design / HPC perspective&lt;/p&gt;
+
+&lt;p&gt;Opportunities:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;HPC on big data (massive graphs) &lt;/li&gt;
+&lt;li&gt;Streaming analytics:  Today&amp;#39;s challenges aren&amp;#39;t dense linear algebra. &lt;/li&gt;
+&lt;li&gt;Informational visualization - more data on graph than we have pixels&lt;/li&gt;
+&lt;li&gt;Hetergeneous systems - a system that can reconfigure memory hierarchy on the fly&lt;/li&gt;
+&lt;li&gt;energy efficiency (moving data takes high energy as well as time)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This is not the time to get stuck in a single paradigm!
+Scientific computing != MPI
+Big data != Hadoop/Map-reduce&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;External disk -------------------------------------------- Internal memory
+Hadoop -- traditional database -- cloud/cluster -- large shared memory
+Easy programming -------------- harder
+low performance --------------- higher performance
+high energy use --------------- low energy use
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Latency on memory (random access some address in a big global index) dominates over floating point calculations
+Cray XMT 512 processor, 128 threads/processor, 64TB global memory, no cache.  &lt;/p&gt;
+
+&lt;h2 id=&quot;toc_41&quot;&gt;Jeff Hawkins: Brain as a streaming processor&lt;/h2&gt;
+
+&lt;p&gt;learning isn&amp;#39;t about strengthening weights on synapses -- they form and vanish all the time.  connections are binary, with scalar permanence.  &lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;The two-Layer learning system (classification problem)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Layer 0 is the original problem:&lt;/li&gt;
+&lt;li&gt;receive labeled and unlabeled data&lt;/li&gt;
+&lt;li&gt;train a classifier on labeled example, predict for others.&lt;/li&gt;
+&lt;li&gt;Layer 1 meta-classifier which tries to learn over which data layer 0 does well (using binary classification on layer 0 as true or false)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;toc_42&quot;&gt;Policy Costs&lt;/h1&gt;
+
+&lt;p&gt;Framing the question: Need to discuss these issues, then get a someone to be point-person on each?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt; Policy costs -- Why this is important, what&amp;#39;s already known. &lt;/li&gt;
+&lt;li&gt; Typical ways these concerns are addressed (i.e. quadratic costs on control), similarity &amp;amp; differences.&lt;/li&gt;
+&lt;li&gt; Discussion of policy costs as &amp;quot;Regularization&amp;quot; &lt;/li&gt;
+&lt;li&gt; Why stochastic?&lt;/li&gt;
+&lt;li&gt; Background: Reed model. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Results so far: (discuss these, decide what needs more study)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt; Introduce &amp;amp; characterize the impact of different norms: L1, L2, asymmetric, fixed costs&lt;/li&gt;
+&lt;li&gt; Comparison to Reed&lt;/li&gt;
+&lt;li&gt; The double-pay of policy costs: Paying for the transactions, difference from optimal policy&lt;/li&gt;
+&lt;li&gt; Comparisons between these norms apples-to-apples. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Discussion/Conclusion -- what do we highlight?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt; Must first answer - which journal/audience?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;toc_43&quot;&gt;Misc&lt;/h1&gt;
+
+&lt;p&gt;Modified css to use twitter-bootstrap striped tables as table default, since
+markdown won&amp;#39;t add a class on tables automatically.  Hopefully doesn&amp;#39;t cause 
+trouble with other table layouts.  &lt;/p&gt;
+
+&lt;p&gt;Note that &lt;code&gt;xtable&lt;/code&gt; can handle this by toggling options&amp;quot;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;html.table.attributes&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;getOption&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;xtable.html.table.attributes&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;class=table-striped&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;so setting html class of tables should work fine in &lt;code&gt;knitr&lt;/code&gt;.  On the flip side,
+sounds like pandoc would do better with ascii tables as input than with html tables?&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Data to Knowledge Day 1</title>
+   <link href="/2012/05/07/notes.html"/>
+   <updated>2012-05-07T00:00:00-07:00</updated>
+   <id>h/2012/05/07/notes</id>
+   <content type="html">&lt;h2 id=&quot;toc_32&quot;&gt;Scaling Time Series Data Mining to trillions of series&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cs.ucr.edu/%7Eeamonn/&quot;&gt;Eamonn Keogh&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Similarity search is the fundamental problem for any task&lt;/li&gt;
+&lt;li&gt;This problem is now solved.&lt;/li&gt;
+&lt;li&gt;As effective as possible, as efficient as possible.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;What is similarity search?  All about required invariances:
+Looking at ancient manuscripts of fish -- identify multiple drawings of the same species.  Invariant to color, scale, and orientation.&lt;br&gt;
+(Note that rotation becomes phase, easy to handle).
+Of course database to compare to might be very large, so this must be fast.  &lt;/p&gt;
+
+&lt;p&gt;Time-series space: Larson transform.  Key is often changing between data formats.
+DNA to time-series: G = step up 1, A = step up two, C = step down 1, etc.&lt;br&gt;
+Produces accurate phylogenies Locke et al., Nature.  &lt;/p&gt;
+
+&lt;p&gt;Identify mosquito species based on activity time series pattern.&lt;br&gt;
+Now doing in real time identification of sex and species by flight path from 100m away.&lt;/p&gt;
+
+&lt;p&gt;Beet leafhopper, $10 billion damage by spreading disease between plants.&lt;br&gt;
+measure voltage on leafhoppers.  Time-series motifs identify common behaviors.&lt;br&gt;
+See &lt;a href=&quot;http://www.cs.ucr.edu/%7Eeamonn/SDM_insects.pdf&quot;&gt;paper&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finding rules in time series for predicting patterns.&lt;br&gt;
+Rules work across Zebra finch songs.  Knockout genes, see how this changes.  &lt;/p&gt;
+
+&lt;p&gt;What are the distance measures?
+Invariant to: noise, uniform scaling, offset, amplitude scaling, dropouts, phase, warping.  &lt;/p&gt;
+
+&lt;p&gt;Euclidean distance between &lt;code&gt;i&lt;/code&gt;th pt in the time-series.&lt;br&gt;
+Much better: distance to &lt;code&gt;i+1&lt;/code&gt; etc.  &amp;quot;Dynamic Time Warping&amp;quot;.  &lt;/p&gt;
+
+&lt;p&gt;Claim to have tested every publicly available dataset in the world.&lt;br&gt;
+Got code/advice from every author and asked them how to make it better.&lt;br&gt;
+All other methods are slower, more parameter-rich than anything else.  Not on average, but on every dataset we&amp;#39;ve tested.
+(While not &amp;quot;every dataset in the world&amp;quot;, Eamonn probably has assembled one of the largest collections of datasets used in clustering,
+which he makes conditionally &lt;a href=&quot;http://www.cs.ucr.edu/%7Eeamonn/time_series_data/&quot;&gt;available on his website&lt;/a&gt;).  &lt;/p&gt;
+
+&lt;p&gt;But isn&amp;#39;t DTW is O(N^2) to minimize the path in distance space between any pt in set 1 and any set in pt 2.&lt;br&gt;
+LB Keogh method makes it O(N).  But, can now do in O(1).  &lt;/p&gt;
+
+&lt;p&gt;How about high dimensions.  answers: argues that low-dimensions is all that you need, which needs domain expertise.  &lt;/p&gt;
+
+&lt;h2 id=&quot;toc_33&quot;&gt;Random forests&lt;/h2&gt;
+
+&lt;p&gt;more memory efficient, scalable solution for random forests.&lt;br&gt;
+&lt;a href=&quot;github.com/deads/bigrf&quot;&gt;code on github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_34&quot;&gt;coffee break&lt;/h2&gt;
+
+&lt;p&gt;Nice chatting with &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Josh Bloom, Astrophysics.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Michael Last, applied math, US Gov&amp;#39;t.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Excellent discussion with Keogh about applications of time series analysis to early warning &lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_35&quot;&gt;Sparse GEV Yan Liu.  &lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;EM algorithm approach.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_36&quot;&gt;Classifying signals with missing data&lt;/h2&gt;
+
+&lt;p&gt;i.e. before we&amp;#39;ve seen the future of the data.&lt;br&gt;
+Estimate reliability of the data, decide when to act.&lt;br&gt;
+(Reliable != accurate.  Just means same prediction as full data)
+Model random features parameterized from data so far.  &lt;/p&gt;
+
+&lt;h2 id=&quot;toc_37&quot;&gt;Astro-statistical challenges (&lt;a href=&quot;http://www.sdss.jhu.edu/%7Eszalay/&quot;&gt;Alex Szalay&lt;/a&gt;)&lt;/h2&gt;
+
+&lt;p&gt;limitations of poor sampling give way to systematic errors
+unknown unknowns when no models available&lt;/p&gt;
+
+&lt;p&gt;Sparse signal, large dimensions, much noise, rare events, 
+Large SVD perfect for randomized algorithms&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_38&quot;&gt;Jeff Scargle, Bayesian Blocks: Segmented Models for Detecting and Characterizing Transients in Streaming Time Series&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Construct a good representation of the variability of the underlying process from time series data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A Bayesian dynamic programming solution for selecting change-points.&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_39&quot;&gt;Multiple Object Detections in Time-Domain Surveys (Tamas Budavari)&lt;/h2&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>My research workflow, based on Github</title>
+   <link href="/2012/05/06/research-workflow.html"/>
+   <updated>2012-05-06T00:00:00-07:00</updated>
+   <id>h/2012/05/06/research-workflow</id>
+   <content type="html">&lt;p&gt;This post outlines my current research workflow.  This has evolved over time, so only
+my most recent projects hold completely to it, though almost all my projects follow the
+general R package structure.  Two main differences are visible in my earlier projects:
+I used to keep scripts in &lt;code&gt;demo&lt;/code&gt; before they became the more complete knitr markdown 
+in &lt;code&gt;inst/examples&lt;/code&gt;.  I previously relied on a custom package called socialR to post
+results from those scripts to flickr, and would then embed the results in my wordpress
+notebook, linking back to the demo file in github.  knitr has allowed me to keep
+those figures, code and text in the package repository.  This keeps everything more 
+centralized (to github), and lets each of the examples be updated in a more natural way
+than the linear record in the lab notebook.  (Images are still hosted on flickr to
+avoid commiting the binary files, knitr handles this upload rather well.).  &lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve recently gotten better at always including &lt;code&gt;Roxygen&lt;/code&gt; documentation for packages.
+Since &lt;code&gt;knitr&lt;/code&gt; and markdown are recent developments for me, many older and even working
+manuscripts are still local in LaTeX.  Being sensitive to the desires of collaborators
+means, that some projects are kept locally or hosted as private, secure repositories.  &lt;/p&gt;
+
+&lt;h1 id=&quot;toc_31&quot;&gt;My Worflow&lt;/h1&gt;
+
+&lt;p&gt;When I begin a new research project, I create a repository for that project in &lt;a href=&quot;https://github.com/cboettig&quot;&gt;Github&lt;/a&gt;. 
+Projects that build substantially on earlier work of mine may start as a &lt;code&gt;clone&lt;/code&gt; 
+of one of my existing projects. New directions in an existing project will instead
+begin as a branch within that repository, that may merge or be split out.  &lt;/p&gt;
+
+&lt;p&gt;Each repository is organized as an R package, with the basic directories &lt;code&gt;R/&lt;/code&gt;, &lt;code&gt;src/&lt;/code&gt;, &lt;code&gt;man/&lt;/code&gt;
+&lt;code&gt;data/&lt;/code&gt;, &lt;code&gt;inst/examples/&lt;/code&gt; and &lt;code&gt;inst/docs/&lt;/code&gt;, and the metadata file &lt;code&gt;DESCRIPTION&lt;/code&gt; providing
+the R package metadata such as author and dependencies.  &lt;code&gt;README.md&lt;/code&gt; files provide 
+descriptions of the directories.  The package is installable directly from R through
+Github.  The R package structure nicely handles software dependencies, documentation, and 
+metadata in a consistent and portable structure: &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;R/&lt;/code&gt; provides R functions representing commonly used analyses. &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src/&lt;/code&gt; provides C source-code for any R functions that are too slow by themselves.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;man/&lt;/code&gt; contains automatically generated documentation of these functions from the 
+Roxygen documentation included in the function files. &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data/&lt;/code&gt; contains small data files.  Version management is not ideal for large data files.
+Instead, a README file contains metadata and links to data stored on a seperate webserver.&lt;br&gt;
+The README file can be version managed within git and nicely displayed on Github.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;inst/examples/&lt;/code&gt; contains each of my investigations.  These are saved as 
+&lt;a href=&quot;http://yihui.name/knitr&quot;&gt;knitr&lt;/a&gt; files, which allow me to mix markdown text describing
+what I am doing with each code block.  Knitr runs this code and assembles
+the results in a markdown format that displays the code, images, and supporting text nicely
+together. Long blocks of code become abstracted as functions and move into the &lt;code&gt;R&lt;/code&gt; directory,
+where they recieve formal documentation and can be more easily used in later examples. &lt;/li&gt;
+&lt;li&gt;Sections from mature examples can be moved into &lt;code&gt;inst/doc/&lt;/code&gt; as another markdown file that
+will eventually become a publication associated with this work.  The paper acts a Sweave-style
+dynamic document that still contains the code relevant to re-create the examples, though options
+can now hide that code from the final display. In addition to the markdown format for online
+viewing, &lt;code&gt;inst/doc/&lt;/code&gt; includes utilities from knitr and &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;pandoc&lt;/a&gt;
+which handle citations and can convert this markdown file into a LaTeX or Word document for 
+journal submission.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Github maintains and displays the version history of the workflow, making it easy to compare 
+earlier versions of the manuscript, and track the history of the results to even before they
+reach the manuscript in &lt;code&gt;inst/examples/&lt;/code&gt;.  Contributions of collaborators using Github are easily
+tracked and displayed as well.  Github can provide version-stable links that will point to 
+any element at a fixed point in the process, and dynamic links that always point to the most
+recent version (or even particular line of code in a version). &lt;/p&gt;
+
+&lt;p&gt;Github&amp;#39;s issues tracker provides a convenient platform to record, sort, and prioritize issues
+that need to be addressed and directions for future exploration. Issues can be submitted by anyone.  &lt;/p&gt;
+
+&lt;p&gt;The R package structure provides a standardized and 
+portable container for the project suitable for combining functions, scripts, documentation, 
+and examples, and also handling software dependencies and versions.  &lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Notes</title>
+   <link href="/2012/05/04/notes.html"/>
+   <updated>2012-05-04T00:00:00-07:00</updated>
+   <id>h/2012/05/04/notes</id>
+   <content type="html">&lt;h2 id=&quot;toc_27&quot;&gt;Chris Costello Talk&lt;/h2&gt;
+
+&lt;p&gt;Presents unpublished work on value of (behavioral) adaptation, using forestry practices changing under climate change as the example.  &lt;strong&gt;If we ignore adaptive responses, we overestimate costs and underestimate benefits.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Effect w/ adaptation:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+\[ \frac{d V}{d \theta} = \frac{\partial f}{\partial r} \frac{\partial r }{\partial \theta} + \frac{\partial f}{\partial \theta} \]
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Envelope theorem: optimal point is at &lt;span&gt;( df/dr = 0 )&lt;/span&gt;, so no value of adaptation after optimizing with respect to r. &lt;/li&gt;
+&lt;li&gt;Present Faustman harvest model adding with heterogeneity on site, species, time, age, environment to dynamic programming solution. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_28&quot;&gt;meeting&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Discuss @Sethi2005 and @Brozovic2011&lt;/li&gt;
+&lt;li&gt;Option value pricing on acting on an early warning signal?&lt;/li&gt;
+&lt;li&gt;Discussion of adding &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_29&quot;&gt;lunch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fascinating discussion of his experience in the marine reserve design process, in which they use a model to score proposals offered by stakeholders but are forbidden using the model to predict the optimal policy (since they are then more directly accountable for the recommendation). &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_30&quot;&gt;Wrightscape&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Should we present the additional traits that do not show a signal, for contrast?&lt;/li&gt;
+&lt;li&gt;Launched additional runs on &lt;code&gt;farm&lt;/code&gt; cluster, each on 16 cores, running over all traits:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;pid&lt;/th&gt;
+&lt;th&gt;priority&lt;/th&gt;
+&lt;th&gt;name&lt;/th&gt;
+&lt;th&gt;time of launch&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;61830&lt;/td&gt;
+&lt;td&gt;0.61000&lt;/td&gt;
+&lt;td&gt;intra&lt;/td&gt;
+&lt;td&gt;05/04/2012 15:26:21&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;61831&lt;/td&gt;
+&lt;td&gt;0.61000&lt;/td&gt;
+&lt;td&gt;twoshifts&lt;/td&gt;
+&lt;td&gt;5/04/2012 15:27:06&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;61832&lt;/td&gt;
+&lt;td&gt;0.00000&lt;/td&gt;
+&lt;td&gt;pharyngeal&lt;/td&gt;
+&lt;td&gt;05/04/2012 15:34:07&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Notes</title>
+   <link href="/2012/05/03/notes.html"/>
+   <updated>2012-05-03T00:00:00-07:00</updated>
+   <id>h/2012/05/03/notes</id>
+   <content type="html">&lt;ul&gt;
+&lt;li&gt;Returned proofs for warning signals paper.&lt;/li&gt;
+&lt;li&gt;Wrighscape figures sent to Peter.&lt;/li&gt;
+&lt;li&gt;move &lt;code&gt;fallacy&lt;/code&gt; to a branch off of main in &lt;code&gt;earlywaring&lt;/code&gt; package?&lt;/li&gt;
+&lt;li&gt;Running knit on the large clusters means images cannot be uploaded as they are created, since compute nodes don&amp;#39;t have internet access.  Saving files locally, I&amp;#39;ve created &lt;a href=&quot;https://github.com/cboettig/sandbox/blob/master/uploadflickr&quot;&gt;a little script&lt;/a&gt; to parse the output &lt;code&gt;file.md&lt;/code&gt; to find the and upload the local images, and swap the local paths for the url paths.&lt;/li&gt;
+&lt;li&gt;Also wrote quick R &lt;a href=&quot;https://github.com/cboettig/sandbox/blob/master/bibgen&quot;&gt;script to build the corresponding bib files&lt;/a&gt; from a markdown file with pandoc style citations. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_26&quot;&gt;Misc&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Minor tweaks on new site.&lt;/li&gt;
+&lt;li&gt;Annoyed by &lt;a href=&quot;http://stackoverflow.com/questions/10438937/is-there-a-markdown-parser-supported-on-jekyll-that-plays-nicely-with-mathjax&quot;&gt;Mathjax/markdown issues&lt;/a&gt;. &lt;a href=&quot;https://github.com/tanoku/redcarpet/issues/130&quot;&gt;Redcarpet&lt;/a&gt;. Maruku does better, protecting anything in &lt;code&gt;$$&lt;/code&gt;, but lacks support for fenced code blocks.  They are supposed to work on &lt;a href=&quot;https://github.com/nex3/maruku/issues/28#issuecomment-5499698&quot;&gt;this fork&lt;/a&gt;, but no luck.  UPDATE -- problem solved, I can just wrap any mathjax expressions in a &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;/div&amp;gt;&lt;/code&gt; and they&amp;#39;ll work with any markdown interpreter.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;UC considers an &lt;a href=&quot;http://phylogenomics.blogspot.com/2012/05/draft-of-proposal-for-uc-openaccess.html&quot;&gt;open-access policy&lt;/a&gt;, now open for comments.  (Email Brian Kolner, we may get a statement from the GSA giving a student perspective on this one).&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Stochastic policy costs</title>
+   <link href="/2012/05/02/stochastic-policy-costs.html"/>
+   <updated>2012-05-02T00:00:00-07:00</updated>
+   <id>h/2012/05/02/stochastic-policy-costs</id>
+   <content type="html">&lt;p&gt;Updated runs for various norms, added profit plots.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/ecc1b23594234cbc99def6114d5ccf6f48908e3a/inst/examples/policycosts/L1.md&quot;&gt;L1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/ecc1b23594234cbc99def6114d5ccf6f48908e3a/inst/examples/policycosts/L2.md&quot;&gt;L2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;asymmetric: differs on the sign of the asymmetry? Penalty only for &lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/ecc1b23594234cbc99def6114d5ccf6f48908e3a/inst/examples/policycosts/free_increase.md&quot;&gt;decreasing quotas&lt;/a&gt;.  Penalty only for &lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/ecc1b23594234cbc99def6114d5ccf6f48908e3a/inst/examples/policycosts/free_decrease.md&quot;&gt;increasing quotas&lt;/a&gt;. check implementation.&lt;/li&gt;
+&lt;li&gt;fixed transaction fee -- whoops, fixed cost should still be free when &lt;code&gt;h == h_prev&lt;/code&gt;. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We need to determine a the magnitude of penalty coefficient to compare between the different functional forms. For instance, for what value of &lt;code&gt;c&lt;/code&gt; is an &lt;code&gt;L2&lt;/code&gt; penalty,
+\( c ( h_t - h_p )^2 \) comparable to the &lt;code&gt;L1&lt;/code&gt; penalty, \( c  \operatorname{abs}(h_t - h_p ) \) ?&lt;/p&gt;
+
+&lt;p&gt;I think we decided that we should select this parameter such that the penalty induces the same equilibrium expected profit from fishing (before costs of policy-changes are subtracted) in each functional form.  Is this correct?  &lt;/p&gt;
+
+&lt;p&gt;Consequently we simply calculate this expected-profit-from-fishing under each penalty over a range of &lt;code&gt;c&lt;/code&gt; values, and plot a curve for each profit value as a function of &lt;code&gt;c&lt;/code&gt;.  A horizontal line across this graph at, say, 50% of the adjustment-costs-free (i.e. Reed) profits would intersect each curve at the value of &lt;code&gt;c&lt;/code&gt; that corresponded to this common baseline.  Was that the agreed upon apples-to-apples strategy?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Computing this from the numerics: average over replicates. Provides variance estimates too, but rather noisy. &lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/master/inst/examples/policycosts/simulate_npv_curves.md&quot;&gt;results&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Computing exactly from the SDP solution -- record the equilbrium value-to-go would be before profits have been added. &lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/master/inst/examples/policycosts/exact_npv.md&quot;&gt;results&lt;/a&gt;.  Also needs rerunning with corrected fixed-fee model. &lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Jekyll vs Wordpress</title>
+   <link href="/2012/05/01/Jekyll-vs-Wordpress.html"/>
+   <updated>2012-05-01T00:00:00-07:00</updated>
+   <id>h/2012/05/01/Jekyll-vs-Wordpress</id>
+   <content type="html">&lt;p&gt;I am now trying out a &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll-based platform&lt;/a&gt;
+rather than a Wordpress based for 
+my website and lab notebook.  Don&amp;#39;t worry, the Wordpress site still remains where
+it was with links intact, I&amp;#39;ve simply remapped the homepage.  For now this 
+is an experiment, we&amp;#39;ll see how it goes.  &lt;/p&gt;
+
+&lt;h1 id=&quot;toc_19&quot;&gt;Why switch?&lt;/h1&gt;
+
+&lt;h2 id=&quot;toc_20&quot;&gt;Speed&lt;/h2&gt;
+
+&lt;p&gt;Wordpress was great, meeting most of my needs for a customizable site that I 
+couldn&amp;#39;t really accomplish in my first online notebook on 
+&lt;a href=&quot;http://openwetware.org&quot;&gt;OpenWetWare&lt;/a&gt;. Unfortunately, despite caching and 
+a variety of other optimization steps, Wordpress remains very demanding
+of computational power, and consequently both expensive and unstable to traffic
+bursts. Relying on Wordpress.com would avoid this, but loses some of the 
+customization and flexibility -- particularly plugins for 
+&lt;a href=&quot;http://mathjax.org&quot;&gt;MathJax&lt;/a&gt; and 
+&lt;a href=&quot;http://wordpress.org/extend/plugins/kcite/&quot;&gt;kcite&lt;/a&gt;, as well as anything 
+needing a script.  The 
+&lt;a href=&quot;http://en.support.wordpress.com/com-vs-org/&quot;&gt;Wordpress.com vs Wordpress.org&lt;/a&gt;
+page sums up the trade-offs between these options very well. Jekyll, on the other
+hand, is light as a feather.  All the content is static, like in the early days
+of the web, rather than served on the fly through dynamic databases.  This means
+that the site can load instantly even from a low-power server. A lot has been 
+written about the advantages of static sites, which seem to be on the rise these
+days, so I won&amp;#39;t add much more here.  &lt;/p&gt;
+
+&lt;h2 id=&quot;toc_21&quot;&gt;Markdown&lt;/h2&gt;
+
+&lt;p&gt;Markdown syntax has become my Lingua Franca of day-to-day work, thanks to tools
+such as knitr and pandoc.  It allows me to have files in a single format that 
+are maximimally mobile, displaying well on Github, converting into LaTeX or 
+MS Word manuscripts, and even running as R code.  It doesn&amp;#39;t force me to work
+in a source format that is surrounded by markup code which makes things hard
+to read without rendering them, such as LaTeX or HTML, which frees me to focus
+on content.  The common format means that I can take some R script I write
+and surround it with meaningful comments, math, etc, which can be easily 
+shared on Github and later adapted into a manuscript without worrying about formats.
+(I&amp;#39;ve written about this &lt;a href=&quot;http://www.carlboettiger.info/archives/4325&quot;&gt;workflow here&lt;/a&gt;
+and adapting it to &lt;a href=&quot;http://www.carlboettiger.info/archives/4419&quot;&gt;manuscripts here&lt;/a&gt;).
+Now this works seemlessly on my website as well, instead of needing custom shortcode
+for Wordpress syntax highlighting, etc.  For instance, here&amp;#39;s a 
+&lt;a href=&quot;http://carlboettiger.info/ecology/2012/04/30/Sethi.html&quot;&gt;recent code script&lt;/a&gt;
+I just dropped into my &lt;code&gt;_posts&lt;/code&gt; directory and added the yaml header.&lt;/p&gt;
+
+&lt;h2 id=&quot;toc_22&quot;&gt;Reservations&lt;/h2&gt;
+
+&lt;p&gt;My greatest reservation in this shift comes from the vibrant user and developer
+community on Wordpress (Wordpress powers an estimated 14% of the top 1 million websites)
+including a 
+&lt;a href=&quot;https://groups.google.com/forum/#!forum/wordpress-for-scientists&quot;&gt;Wordpress-for-Scientists group&lt;/a&gt;. 
+This means that almost anything you want has already been done.  A downside is 
+the need to know PHP and Wordpress-specific 
+implementation to do anything the community hasn&amp;#39;t already provided.  Thanks to
+Github and it&amp;#39;s appeal as a &amp;quot;hacker&amp;#39;s blog,&amp;quot; Jekyll has a powerful and growing 
+community of it&amp;#39;s own. It&amp;#39;s not a content management system (CMS), and unlike 
+Wordpress will doubtfully ever become one -- but several 
+tools are now coming online to make Jekyll more accessible, such as 
+&lt;a href=&quot;http://octopress.org/&quot;&gt;octopress&lt;/a&gt;, &lt;a href=&quot;http://jekyllbootstrap.com/&quot;&gt;jekyllbootstrap&lt;/a&gt; 
+and &lt;a href=&quot;http://ruhoh.com/&quot;&gt;ruhoh&lt;/a&gt;. These provide some good examples of how to do the 
+more tricky dynamic things like generating an atom feed or a list of posts by tag.
+These also get away from having to generate custom CSS and HTML. However, with rich
+CSS options such as twitter-bootstrap available, I&amp;#39;ve found I actually prefer writing
+my own HTML templates for pages and posts. &lt;/p&gt;
+
+&lt;p&gt;The other downside of a Jekyll based blog is that it may be a less effective platform
+to convince others to try out a lab notebook.  The emphasis on Github and the somewhat
+convoluted dependencies on Ruby surely make Jekyll a bit intimidating to new users.&lt;/p&gt;
+
+&lt;h1 id=&quot;toc_23&quot;&gt;Some remaining concerns in switching&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Wordpress can generate rss feeds for any category or tag on the fly&lt;/em&gt;.  Looks like this is now &lt;a href=&quot;https://github.com/pattex/jekyll-tagging&quot;&gt;possible in Jekyll&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Wordpress can toggle password and privacy control for each post&lt;/em&gt;. On a independently hosted site, this could be done with an &lt;code&gt;.htaccess&lt;/code&gt; file and independent hosting (pointless if the source is hosted on github). I known several partially open lab notebooks would have a problem with this.  I use privacy controls occasionally when a collaborator may have reservations, and always for requested editorial reviews.  Such things can remain on my Wordpress site or off-line entirely. &lt;/li&gt;
+&lt;li&gt;Due in part to heavy use of plugins with short-code, migrating my existing posts out of Wordpress and into a static site seems pretty much impossible.  Presumably this should be doable at the front end HTML, if not from the database, but my attempts have been unsuccessful.  For now, old content will continue to live on my Wordpress site.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;toc_24&quot;&gt;My basic requirements for an electronic notebook&lt;/h1&gt;
+
+&lt;p&gt;Leaving Wordpress, I have a few basic requirments for a notebook system.  Fortunately it is pretty easy to enjoy all these features in Jekyll.  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic posts&lt;/strong&gt;:  Works out of the box &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RSS feed&lt;/strong&gt;: just create an appropriate &lt;a href=&quot;https://github.com/cboettig/labnotebook/blob/master/atom.xml&quot;&gt;atom.xml file&lt;/a&gt; with a bit of Jekyll Liquid code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Comments&lt;/strong&gt;: paste Disqus code into &lt;a href=&quot;https://github.com/cboettig/labnotebook/blob/master/_layouts/default.html&quot;&gt;html template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Categories &amp;amp; tags&lt;/strong&gt;: built-in through Jekyll&amp;#39;s YAML frontmatter&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Search&lt;/strong&gt;: Google search or Tipue&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MathJax equations (and numbering)&lt;/strong&gt;: &lt;a href=&quot;https://github.com/cboettig/labnotebook/blob/master/_layouts/default.html&quot;&gt;Just add the javascript call to the html template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic citations&lt;/strong&gt;: Pandoc or my knitcitations tool, for now.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Syntax highlighting&lt;/strong&gt;: use Github notation with Redcarpet2&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Writing posts in markdown&lt;/strong&gt;: native&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Version control&lt;/strong&gt;: &lt;a href=&quot;https://github.com/cboettig/labnotebook/&quot;&gt;on Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visitor statistics&lt;/strong&gt;: &lt;a href=&quot;https://github.com/cboettig/labnotebook/blob/master/_layouts/default.html&quot;&gt;Google analytics in layout&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;embeddable content (twitter streams, feeds, etc.)&lt;/strong&gt; : add scripts to html templates&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;customization of appearance&lt;/strong&gt;  &lt;a href=&quot;http://twitter.github.com/bootstrap&quot;&gt;twitter bootstrap&lt;/a&gt; for the css and javascript + html templates&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ease of use&lt;/strong&gt;:  Such as the ability to move around markdown documents and html layouts, and to customize things appearance without PHP. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;toc_25&quot;&gt;Jekyll Configuration Notes&lt;/h1&gt;
+
+&lt;p&gt;Probably the only annoying step in setting up a Jekyll blog is getting the right versions of Ruby running.  Strictly speaking, this is unnecessary for sites hosted on Github, which will run Jekyll automatically.  I host on my Dreamhost VPS, for which it is easiest just to compile locally using Jekyll and push on the output HTML files, created in &lt;code&gt;_site&lt;/code&gt;, to the server.  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Getting &lt;a href=&quot;http://askubuntu.com/questions/91693/how-do-you-uninstall-ruby-1-8-7-and-install-ruby-1-9-2&quot;&gt;out of 1.8.7 and into 1.9.2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Redcarpet isn&amp;#39;t the default interpreter, but works better. However, &lt;a href=&quot;http://stackoverflow.com/questions/8395347/gollum-wiki-undefined-method-new-for-redcarpetmodule&quot;&gt;it&amp;#39;s latest version has issues&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I find it better to use the Redcarpet2, &lt;a href=&quot;https://github.com/nono/Jekyll-plugins&quot;&gt;and a plugin&lt;/a&gt; that lets one use Github-flavored markdown code blocks instead of the silly liquid highlight tags (markdown should be markdown after all). Unfortunately this prevents Github&amp;#39;s Jekyll from building the site at the moment, which doesn&amp;#39;t yet support Redcarpet2.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/255170/markdown-and-image-alignment&quot;&gt;image alignment in markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://code.lancepollard.com/jquery-disqus-plugin&quot;&gt;markdown in diqus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;HTML layouts can import chunks from separate files given in &lt;code&gt;_include&lt;/code&gt; directory using a bit of liquid code. See &lt;a href=&quot;https://github.com/spo11/kismetik-jekyll&quot;&gt;an example&lt;/a&gt;.  Perfect for creating layouts out of different combinations of elements.&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Additional sources of noise (Sethi 2005)</title>
+   <link href="/2012/04/30/Sethi.html"/>
+   <updated>2012-04-30T00:00:00-07:00</updated>
+   <id>h/2012/04/30/Sethi</id>
+   <content type="html">&lt;h1 id=&quot;toc_11&quot;&gt;Sethi Model&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;author Carl Boettiger, &lt;a href=&quot;mailto:cboettig@gmail.com&quot;&gt;cboettig@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;license: CC0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Implements a numerical version of the SDP described in (Sethi &lt;em&gt;et. al.&lt;/em&gt; 2005).&lt;/p&gt;
+
+&lt;p&gt;Clear the workspace and load package dependencies: &lt;/p&gt;
+
+&lt;p&gt;Define noise parameters &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;sigma_g &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# Noise in population growth&lt;/span&gt;
+sigma_m &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# noise in stock assessment measurement&lt;/span&gt;
+sigma_i &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# noise in implementation of the quota&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;we&amp;#39;ll use log normal noise functions. 
+For Reed, only &lt;code&gt;z_g&lt;/code&gt; will be random.
+Sethi et al will add the other forms of noise: &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;z_g &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; rlnorm&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sigma_g&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# mean 1&lt;/span&gt;
+z_m &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; rlnorm&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sigma_m&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# mean 1&lt;/span&gt;
+z_i &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; rlnorm&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sigma_i&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# mean 1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Chose the state equation / population dynamics function&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;f &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; BevHolt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note that the &lt;code&gt;pdg_control&lt;/code&gt; pacakge already has a definition for the &lt;code&gt;BevHolt&lt;/code&gt; function, (typing the function name prints the function)&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;BevHolt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;function (x, h, p) 
+{
+    x &amp;lt;- max(0, x - h)
+    A &amp;lt;- p[1]
+    B &amp;lt;- p[2]
+    sapply(x, function(x) {
+        x &amp;lt;- max(0, x)
+        max(0, A * x/(1 + B * x))
+    })
+}
+&amp;lt;environment: namespace:pdgControl&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;That is, \( f(x,h) = \frac{A x}{1 + B x} \)&lt;/p&gt;
+
+&lt;p&gt;Of course we could pass in any custom function of stocksize &lt;code&gt;x&lt;/code&gt;, harvest &lt;code&gt;h&lt;/code&gt; and parameter vector &lt;code&gt;p&lt;/code&gt; in place of &lt;code&gt;BevHolt&lt;/code&gt;.  Note that we would need to write this function explicitly so that it can take vector values of &lt;code&gt;x&lt;/code&gt; (i.e. uses &lt;code&gt;sapply&lt;/code&gt;), an annoying feature of &lt;code&gt;R&lt;/code&gt; for users comming from Matlab.  &lt;/p&gt;
+
+&lt;p&gt;We must now define parameters for the function.  Note that the positive stationary root of the model is given by \( \frac{A-1}{B} \), which we&amp;#39;ll store for future reference as &lt;code&gt;K&lt;/code&gt;.  &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;pars &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.05&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+K &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pars&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;pars&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and we use a harvest-based profit function with default parameters&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;profit &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; profit_harvest&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;price&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; c0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The &lt;code&gt;profit_harvest&lt;/code&gt; function has the form &lt;/p&gt;
+
+&lt;p&gt;\[ \Pi = h - \left( c_0  + c_1 \frac{h}{x} \right) \frac{h}{x} \]&lt;/p&gt;
+
+&lt;p&gt;conditioned on \( h &amp;gt; x \) and \(x &amp;gt; 0 \).  Note that the R code defines a function from another function using a trick known as a &lt;em&gt;closure&lt;/em&gt;.  Again we could write a custom profit function as long as it can take a vector stock size &lt;code&gt;x&lt;/code&gt; and a scalar harvest level &lt;code&gt;h&lt;/code&gt;.  Details for provided functions can be found in the manual, i.e. &lt;code&gt;?profit_harvest&lt;/code&gt;. &lt;/p&gt;
+
+&lt;p&gt;Now we must set up the discrete grids for stock size and havest levels (which will use same resolution as for stock), in order to calculate the SDP solution.   Here we set the gridsize to 100.  &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;x_grid &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; seq&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; K&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; length &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+h_grid &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x_grid  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;toc_12&quot;&gt;Calculate the transition matrix (with noise in growth only)&lt;/h3&gt;
+
+&lt;p&gt;We calculate the stochastic transition matrix for the probability of going from any state \( x_t \) 
+to any other state \( x_t+1 \) the following year, 
+for each possible choice of harvest \( h_t \). This provides a look-up table for the dynamic programming calculations.  &lt;/p&gt;
+
+&lt;p&gt;In the Sethi case, computing the distribution over multiple sources of noise is actually quite difficult.  Simulation turns out to be more efficient than numerically integrating over each distribution.  This code parallelizes the operation over four cores, but can be scaled to an arbitrary cluster. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;snowfall&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+sfInit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;parallel&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cpu&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+SDP_Mat &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; SDP_by_simulation&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;f&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pars&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x_grid&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; h_grid&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; z_g&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; z_m&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; z_i&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; reps&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;999&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;Library ggplot2 loaded.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note that &lt;code&gt;SDP_Mat&lt;/code&gt; is specified from the calculation above, as are our grids and our profit function. &lt;code&gt;OptTime&lt;/code&gt; is the stopping time.  &lt;code&gt;xT&lt;/code&gt; specifies a boundary condition at the stopping time. A reward for meeting this boundary must be specified for it to make any difference.  &lt;code&gt;delta&lt;/code&gt; indicates the economic discount rate. Again, details are in the function documentation.   &lt;/p&gt;
+
+&lt;h3 id=&quot;toc_13&quot;&gt;Find the optimum by dynamic programming&lt;/h3&gt;
+
+&lt;p&gt;Bellman&amp;#39;s algorithm to compute the optimal solution for all possible trajectories. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;opt &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; find_dp_optim&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;SDP_Mat&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x_grid&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; h_grid&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; OptTime&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; xT&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                     profit&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; delta&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.05&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; reward&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;toc_14&quot;&gt;Simulate&lt;/h3&gt;
+
+&lt;p&gt;Now we&amp;#39;ll simulate 100 replicates of this stochastic process under the optimal harvest policy determined above.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;sims &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; lapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  ForwardSimulate&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;f&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pars&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x_grid&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; h_grid&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x0&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;K&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; opt&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;D&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; z_g&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; z_m&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; z_i&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The forward simulation algorithm needs an initial condition &lt;code&gt;x0&lt;/code&gt; which we set equal to the carrying capacity, as well as our population dynamics &lt;code&gt;f&lt;/code&gt;, parameters &lt;code&gt;pars&lt;/code&gt;, grids, and noise coefficients.  Recall in the Reed case only &lt;code&gt;z_g&lt;/code&gt;, growth, is stochastic, while in the Sethi example we now have three forms of stochasticity -- growth, measurement, and implementation.   &lt;/p&gt;
+
+&lt;h2 id=&quot;toc_15&quot;&gt;Summarize and plot the results&lt;/h2&gt;
+
+&lt;p&gt;R makes it easy to work with this big replicate data set.  We make data tidy (melt), fast (data.tables), and nicely labeled.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;dat &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; melt&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sims&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sims&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]))&lt;/span&gt;  
+dt &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; data.table&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;dat&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+setnames&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;dt&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;L1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;reps&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# names are nice&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;toc_16&quot;&gt;Plots&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;#39;s begin by looking at the dynamics of a single replicate. The line shows Reed&amp;#39;s S, the level above which the stock should be harvested (where catch should be the difference between stock and S).  To confirm that this policy is being followed, note that harvesting only occurs when the stock is above this line, and harvest is proportional to the amount by which it is above.  Change the replicate &lt;code&gt;reps==&lt;/code&gt; to see the results from a different replicate.  &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;subset&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;dt&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;reps&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  geom_line&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;time&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fishstock&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  geom_abline&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;intercept&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;opt&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;S&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; slope &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  geom_line&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;time&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; harvest&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;darkgreen&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8007/7130135757_09c23e3e5a_o.png&quot; alt=&quot;plot of chunk onerep&quot;&gt; &lt;/p&gt;
+
+&lt;p&gt;This plot summarizes the stock dynamics by visualizing the replicates. Reed&amp;#39;s S shown again.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;p1 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;dt&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; geom_abline&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;intercept&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;opt&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;S&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; slope &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+p1 &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; geom_line&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;time&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fishstock&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; group &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; reps&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; alpha &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8148/6984061776_d15e7d073f_o.png&quot; alt=&quot;plot of chunk all&quot;&gt; &lt;/p&gt;
+
+&lt;p&gt;We can also look at the harvest dynamics:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;p1 &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; geom_line&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;time&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; harvest&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; group &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; reps&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; alpha &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;darkgreen&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://farm8.staticflickr.com/7188/6984052718_6e932cedf8_o.png&quot; alt=&quot;plot of chunk harvestplot&quot;&gt; &lt;/p&gt;
+
+&lt;p&gt;This strategy is supposed to be a constant-escapement strategy. We can visualize the escapement: &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;p1 &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; geom_line&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;time&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; escapement&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; group &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; reps&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; alpha &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;darkgrey&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://farm8.staticflickr.com/7096/6984052922_b4ab50f14b_o.png&quot; alt=&quot;plot of chunk escapement&quot;&gt; &lt;/p&gt;
+
+&lt;h3 id=&quot;toc_17&quot;&gt;Visualizing the optimal policy&lt;/h3&gt;
+
+&lt;p&gt;Note that when the boundary is sufficiently far away, i.e. for the first couple timesteps, the optimal policy is stationary.  The optimal policy is shown here over time, where the color indicates the harvest recommended for each possible stock value at that time (shown on the vertical axis). Observe that the solution does not correspond to a simple Reed-style rule.  &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;policy &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; melt&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;opt&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;D&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+policy_zoom &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; subset&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;policy&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x_grid&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;Var1&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; max&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;dt&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;fishstock&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+p5 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;policy_zoom&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+  geom_point&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Var2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x_grid&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;Var1&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;h_grid&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;value&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+  labs&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;time&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;fishstock&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  scale_colour_gradientn&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;colours &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; rainbow&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  geom_abline&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;intercept&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;opt&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;S&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; slope &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+p5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://farm8.staticflickr.com/7198/7130146133_bf7083f9d2_o.png&quot; alt=&quot;plot of chunk policy&quot;&gt; &lt;/p&gt;
+
+&lt;p&gt;The harvest intensity is limited by the stock size.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;p6 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;policy_zoom&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+  geom_point&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Var2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x_grid&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;Var1&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;x_grid&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;Var1&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; h_grid&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;value&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+  labs&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;time&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;fishstock&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  scale_colour_gradientn&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;colours &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; rainbow&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  geom_abline&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;intercept&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;opt&lt;span class=&quot;p&quot;&gt;$&lt;/span&gt;S&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; slope &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+p6 &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; geom_line&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;time&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fishstock&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; group &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; reps&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; alpha &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;dt&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8007/6984063036_ea9d9ac47d_o.png&quot; alt=&quot;plot of chunk policy2&quot;&gt; &lt;/p&gt;
+
+&lt;h1 id=&quot;toc_18&quot;&gt;References&lt;/h1&gt;
+
+&lt;p&gt;Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005).
+&amp;quot;Fishery management under multiple uncertainty.&amp;quot; &lt;em&gt;Journal of
+Environmental Economics and Management&lt;/em&gt;, &lt;em&gt;50&lt;/em&gt;. ISSN 00950696,
+&lt;a href=&quot;http://dx.doi.org/10.1016/j.jeem.2004.11.005&quot;&gt;http://dx.doi.org/10.1016/j.jeem.2004.11.005&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Project tracking (Evolution)</title>
+   <link href="/2012/04/27/evolution-notes.html"/>
+   <updated>2012-04-27T00:00:00-07:00</updated>
+   <id>h/2012/04/27/evolution-notes</id>
+   <content type="html">&lt;h1 id=&quot;toc_6&quot;&gt;Evolution&lt;/h1&gt;
+
+&lt;p&gt;I&amp;#39;m also still wrapping up a variety of projects on the Evolution front. &lt;/p&gt;
+
+&lt;h2 id=&quot;toc_7&quot;&gt;&lt;a href=&quot;https://github.com/ropensci/treebase&quot;&gt;treebase&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ropensci/treeBASE/tree/master/inst/doc/treebase&quot;&gt;Dynamic manuscript&lt;/a&gt;.  Reorganize, simplify?&lt;/li&gt;
+&lt;li&gt;add, document, employ the additional functions to avoid &lt;code&gt;sapply&lt;/code&gt; commands.&lt;/li&gt;
+&lt;li&gt;Prune examples?&lt;/li&gt;
+&lt;li&gt;iEvoBio challenge entry?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_8&quot;&gt;&lt;a href=&quot;https://github.com/cboettig/wrightscape&quot;&gt;Wrightscape&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Start synthesizing documents&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/wrightscape/blob/master/inst/examples/manuscript.md&quot;&gt;Evidence for release in open lever ratio and kt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/wrightscape/blob/master/inst/examples/simulate_release.md&quot;&gt;Illustrating the different models&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Consider updated data format outputs and graphical processing functions for the model choice steps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_9&quot;&gt;&lt;a href=&quot;https://github.com/ropensci/rfishbase&quot;&gt;fishbase&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;submitted! &lt;a href=&quot;https://github.com/ropensci/rfishbase/tree/master/inst/doc/rfishbase&quot;&gt;Dynamic document&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;handling of reference ids example for Patrick&lt;/li&gt;
+&lt;li&gt;Working word templatese for Pandoc odt/docx?&lt;/li&gt;
+&lt;li&gt;Push updated copy to CRAN&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_10&quot;&gt;&lt;a href=&quot;https://github.com/cboettig/AdaptiveDynamics&quot;&gt;Adaptive dynamics&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What to do with time-to-branching results from Vienna with Ulf?&lt;/li&gt;
+&lt;li&gt;What to do with nice fast branching process simulation code? &lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Project tracking (Ecology)</title>
+   <link href="/2012/04/27/ecology-notes.html"/>
+   <updated>2012-04-27T00:00:00-07:00</updated>
+   <id>h/2012/04/27/ecology-notes</id>
+   <content type="html">&lt;h2 id=&quot;toc_0&quot;&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control&quot;&gt;PDG Control&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Has become a variety of different directions: &lt;/p&gt;
+
+&lt;h3 id=&quot;toc_1&quot;&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control/tree/master/inst/examples/policycosts&quot;&gt;Policy Costs&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Considering different norms. &lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/master/inst/examples/policycosts/policycost_L1.md&quot;&gt;L1&lt;/a&gt; &lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/master/inst/examples/policycosts/policycost_L2.md&quot;&gt;L2&lt;/a&gt; &lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/master/inst/examples/policycosts/policycost_asym.md&quot;&gt;Assymetric&lt;/a&gt; &lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/master/inst/examples/policycosts/policycost_fixed.md&quot;&gt;fixed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;When can policy costs pay for themselves? &lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/master/inst/examples/policycosts/exact_npv.md&quot;&gt;notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;toc_2&quot;&gt;Additional Noise&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Starts with &lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/master/inst/examples/Sethi.md&quot;&gt;replicating Sethi et al. (2005)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Consider the performance of various non-optimal solutions, particularly regarding imperfect implementation&lt;/li&gt;
+&lt;li&gt;These are losely collected in &lt;a href=&quot;https://github.com/cboettig/pdg_control/tree/master/inst/examples/robustness&quot;&gt;Robustness examples&lt;/a&gt;, needs some evaluation of the most interesting. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;toc_3&quot;&gt;Approaches to parameter, structural, and state uncertainty&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(Morph of) Training problem II from the working group. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cboettig/pdg_control/blob/master/inst/examples/model_uncertainty.md&quot;&gt;Active adaptive management using grid, model choice example.&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;Add: Myopic Bayes passive adaptive management for model choice&lt;/li&gt;
+&lt;li&gt;Compare to: stationary (no learning) solution averaging over models&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_4&quot;&gt;&lt;a href=&quot;https://github.com/cboettig/earlywarning&quot;&gt;Warning signals&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Accepted!&lt;/li&gt;
+&lt;li&gt;Copy up on &lt;a href=&quot;http://arxiv.org/abs/1204.6231&quot;&gt;arxiv&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;Streamline code and examples. Began updating functions to work in a more generic manner that is better for connecting in pipelines and swapping between indicators.  Move examples over from wiki to &lt;code&gt;inst/examples&lt;/code&gt;. &lt;/li&gt;
+&lt;li&gt;What to do with older repo &lt;code&gt;warningsignals&lt;/code&gt; vs newer codebase &lt;code&gt;earlywarning&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;Provide a generic early warning signals package? Perhaps Vasilis would be interested in helping?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;toc_5&quot;&gt;Fallacy&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Write introduction with more basic background on warning signals&lt;/li&gt;
+&lt;li&gt;Touch up discussion, edits.&lt;/li&gt;
+&lt;li&gt;Updated runs from codebase. Heavy computation makes quick replication difficult&lt;/li&gt;
+&lt;li&gt;draft sent to Alan&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Notes</title>
+   <link href="/2012/04/25/notes.html"/>
+   <updated>2012-04-25T00:00:00-07:00</updated>
+   <id>h/2012/04/25/notes</id>
+   <content type="html">&lt;p&gt;Working on IGPS Presentation.&lt;/p&gt;
+
+&lt;p&gt;Experimenting with recent tools for Amazon cloud computing via R.  &lt;a href=&quot;https://github.com/armstrtw/AWS.tools&quot;&gt;Whit Armstrong&amp;#39;s packages&lt;/a&gt; seem like a good place to start, but some trouble with credentials on both this and on Segue at the moment.  &lt;/p&gt;
+
+&lt;p&gt;Submitted nominations for EVE Seminar.  Splitting nominations among the theory group, this year I&amp;#39;ve filed nominations for &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://resource.wur.nl/en/wetenschap/detail/ecologist_marten_scheffer_the_spirit_must_be_free&quot;&gt;Marten Scheffer (profile)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.science.org.au/scientists/interviews/p/hp.html&quot;&gt;Hugh Possingham (profile)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://dragonfly.ecology.uga.edu/drakelab&quot;&gt;John Drake&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>
