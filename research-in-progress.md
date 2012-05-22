@@ -6,7 +6,7 @@ title: Research
 
 ![floatright](assets/img/wadirum.jpg) I'm interested in problems 
 
-I began my PhD as a pencil & paper theorist.  A fortuitous training grant in Computational Science  
+I began my PhD as a pencil+paper theorist.  A fortuitous training grant in Computational Science 
 
 
 
@@ -43,11 +43,9 @@ Compartive Phylogenetics
 
 
 
-
-
 - [An index of my projects on Github](software.html)
 - [Outline of project workflow & data management](http://www.carlboettiger.info/2012/05/06/research-workflow.html)
 
 
-I enjoy exposure to fieldwork whenever I can convince colleagues to take me along.  (I can carry a shovel and have eight+ years of experience as an alpine guide).  Though my own research has no field component, I'm thankful for recent opporunities from surveying pitfall traps for tiger salamanders to helping escavate icthysaur fossils in the Nevada desert.  
+I enjoy exposure to fieldwork whenever I can convince colleagues to take me along.  (I can carry a shovel and have eight+ years of experience as an alpine guide).  Though my own research has no field component, I'm thankful for recent opporunities from surveying pitfall traps for tiger salamanders to helping escavate icthysaur fossils in the Nevada desert. 
 
