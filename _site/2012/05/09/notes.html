@@ -1,0 +1,459 @@
+
+
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Infering Partially Observable Markov Processes with Iterative Particle Filtering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/assets/css/solarized.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+  </head>
+  <body> 
+
+    <!-- Navbar
+    ================================================== -->
+
+   
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Carl Boettiger</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class=""><a href="/index.html">Home</a></li>
+              <li><a href="/vita.html">Vita</a></li>
+              <li><a href="/research.html">Research</a></li>
+              <li><a href="/teaching.html">Teaching</a></li>
+              <li><a href="/lab-notebook.html">Lab Notebook</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+           <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+             <input type="hidden" name="q" value="site:carlboettiger.info">
+             <input class="search-query" type="text" name="q">
+           </form>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container">
+
+<!-- Masthead
+================================================== -->
+ 
+<header>
+    <h1 class="entry-title">Infering Partially Observable Markov Processes with Iterative Particle Filtering</h1>
+    <h3></h3>
+</header>
+<hr class="soften">
+
+
+
+
+
+      <div class="row-fluid">
+        <div class="span8">
+          <p>Excellent talk by Ed Ionides at UC Davis today (led me to miss Weds session of Data to Knowledge).  </p>
+
+<h1 id="toc_44">Ed Ionides</h1>
+
+<p>six problems of Bjonstead &amp; Grenfell: an appeal for arbitrary nonlinear partially observed vector valued stochastic models.<br>
+POMP doesn&#39;t mix well in the winbugs.</p>
+
+<p>simulation-based algorithm --&gt; plug-and-play
+(more </p>
+
+<p>Think of a process being defined by:</p>
+
+<ul>
+<li><code>rprocess()</code></li>
+<li><code>dprocess()</code></li>
+<li><code>rmeasure()</code></li>
+<li><code>dmeasure()</code></li>
+</ul>
+
+<p>In general we need some subset of these processes: </p>
+
+<table><thead>
+<tr>
+<th></th>
+<th>rprocess</th>
+<th>dprocess</th>
+<th>rmeasure</th>
+<th>dmeasure</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>iterative filtering</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>Lui-West SCM</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>EM by SCM</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>MCMC</td>
+<td></td>
+<td>X</td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>Nonlin forecasting</td>
+<td>X</td>
+<td></td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Particle MCMC</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>Probe matching</td>
+<td>X</td>
+<td></td>
+<td>X</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="toc_45">Bayesian plug-and-play</h2>
+
+<ul>
+<li>Artificial parameter evolution (Liu &amp; West 2001)</li>
+<li>Approximate Bayesian Computing (Toni et al Interface 2009)</li>
+<li>Particle MCMC [@Andrieu2010] </li>
+</ul>
+
+<h2 id="toc_46">Non-Bayesian </h2>
+
+<ul>
+<li>Simulation-based prediction rules [@Kendall1999] &quot;Probe-matching&quot;</li>
+<li>Simulated likelihood of summary statistics [@Wood2010]</li>
+<li>Iterated filtering [@Ionides2006]</li>
+<li>Nonlinear forecasting </li>
+</ul>
+
+<p>&quot;Likelihood-free&quot; inference -- i.e. don&#39;t have the likelihood equation 
+unlike MCMC, EM need <code>dprocess()</code></p>
+
+<ul>
+<li>Compare to optimization &quot;gradient-free&quot; methods.</li>
+<li>or to Keverkidis &quot;equation-free&quot; (2003,2004). </li>
+</ul>
+
+<p>Approximate Bayesian methods and simulated moment methods lead to loss of <em>statistical</em> efficiency
+Iterated filtering enables almost exact likelihood-based inference.  </p>
+
+<p>ODEs have been plug-and-play (numerical) for a long time.  We want this to be true for SDEs as well.  </p>
+
+<h2 id="toc_47">Filtering</h2>
+
+<ul>
+<li>Think &quot;Kalman filter&quot;.  Particle filter is a simulated approximation approach for the likelihood function.</li>
+<li>Iterative filtering is a much more clever way to search for the best fit model than some traditional optimization routine that wants a smooth likelihood function. </li>
+</ul>
+
+<p>Theorem: derivative of the log-likelihood is the small-noise limit of a weighted average of local filtering. In:</p>
+
+<ul>
+<li><a href="pseudo-code">@Ionides2006</a></li>
+<li><a href="proofs">@Ionides2011</a></li>
+</ul>
+
+<p>Scientists like life on the edge of identifiability,
+&gt; Minimal complexity acceptable to scientsits approx maximimal complexity acceptable to available data</p>
+
+<ul>
+<li>Ah, <a href="http://www.stat.lsa.umich.edu/%7Eionides/pubs/davis12.pdf">Ed&#39;s slides are available online</a>. </li>
+<li>Some good information on the <a href="http://pomp.r-forge.r-project.org/">pomp website</a> as well.</li>
+</ul>
+
+<h1 id="toc_48">Exploring Iterative Filtering in POMP</h1>
+
+<p><a href="https://github.com/cboettig/populationdynamics/blob/497d4ce4c401833464ccaff6edd518133f4e9b0c/inst/examples/pomp_explore.md">my example exploration</a>, following the <a href="http://cran.at.r-project.org/web/packages/pomp/vignettes/intro_to_pomp.pdf">introductory vignette.</a> </p>
+
+<p>Note that the iterative filtering algorithm took a little over 16 minutes on ten processors on the farm cluster.  pomp does not provide any parallelization.  Particles must communicate at each iteration.  With tight communication loops, could probably get substantial acceleration on MPI or GPU.  </p>
+
+<p>(Would be interesting to drive the simulation with Gillespie algorithm, something richer than a crude discritization.  Depending on timescale, may result in very computationally intensive requirements).  </p>
+<div class="highlight"><pre><code class="r">require<span class="p">(</span>pomp<span class="p">)</span>
+gompertz.proc.sim <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span> t<span class="p">,</span> params<span class="p">,</span> delta.t<span class="p">,</span> <span class="m">...</span><span class="p">)</span> <span class="p">{</span>
+    r <span class="o">&lt;-</span> params<span class="p">[</span><span class="s">&quot;r&quot;</span><span class="p">]</span>
+    K <span class="o">&lt;-</span> params<span class="p">[</span><span class="s">&quot;K&quot;</span><span class="p">]</span>
+    sigma <span class="o">&lt;-</span> params<span class="p">[</span><span class="s">&quot;sigma&quot;</span><span class="p">]</span>
+    X <span class="o">&lt;-</span> x<span class="p">[</span><span class="s">&quot;X&quot;</span><span class="p">]</span>  <span class="c1"># the state at time t:</span>
+    <span class="c1">## generate a log-normal random variable:</span>
+    eps <span class="o">&lt;-</span> exp<span class="p">(</span>rnorm<span class="p">(</span>n <span class="o">=</span> <span class="m">1</span><span class="p">,</span> mean <span class="o">=</span> <span class="m">0</span><span class="p">,</span> sd <span class="o">=</span> sigma<span class="p">))</span>
+    <span class="c1">## compute the state at time t+delta.t:</span>
+    S <span class="o">&lt;-</span> exp<span class="p">(</span><span class="o">-</span>r <span class="o">*</span> delta.t<span class="p">)</span>
+    c<span class="p">(</span>X <span class="o">=</span> unname<span class="p">(</span>K<span class="o">^</span><span class="p">(</span><span class="m">1</span> <span class="o">-</span> S<span class="p">)</span> <span class="o">*</span> X<span class="o">^</span>S <span class="o">*</span> eps<span class="p">))</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+<div class="highlight"><pre><code class="r">gompertz.meas.sim <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span> t<span class="p">,</span> params<span class="p">,</span> <span class="m">...</span><span class="p">)</span> <span class="p">{</span>
+    tau <span class="o">&lt;-</span> params<span class="p">[</span><span class="s">&quot;tau&quot;</span><span class="p">]</span>
+    X <span class="o">&lt;-</span> x<span class="p">[</span><span class="s">&quot;X&quot;</span><span class="p">]</span>  <span class="c1"># state at time t:</span>
+    y <span class="o">&lt;-</span> c<span class="p">(</span>Y <span class="o">=</span> unname<span class="p">(</span>rlnorm<span class="p">(</span>n <span class="o">=</span> <span class="m">1</span><span class="p">,</span> meanlog <span class="o">=</span> log<span class="p">(</span>X<span class="p">),</span> sd <span class="o">=</span> tau<span class="p">)))</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>create a container of class <code>pomp</code> to hold the model and data.</p>
+<div class="highlight"><pre><code class="r">gompertz <span class="o">&lt;-</span> pomp<span class="p">(</span>data <span class="o">=</span> data.frame<span class="p">(</span>time <span class="o">=</span> <span class="m">1</span>:<span class="m">100</span><span class="p">,</span> Y <span class="o">=</span> <span class="kc">NA</span><span class="p">),</span> times <span class="o">=</span> <span class="s">&quot;time&quot;</span><span class="p">,</span> 
+    rprocess <span class="o">=</span> discrete.time.sim<span class="p">(</span>step.fun <span class="o">=</span> gompertz.proc.sim<span class="p">,</span> delta.t <span class="o">=</span> <span class="m">1</span><span class="p">),</span> 
+    rmeasure <span class="o">=</span> gompertz.meas.sim<span class="p">,</span> t0 <span class="o">=</span> <span class="m">0</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Parameters and  inital condition:</p>
+<div class="highlight"><pre><code class="r">theta <span class="o">&lt;-</span> c<span class="p">(</span>r <span class="o">=</span> <span class="m">0.1</span><span class="p">,</span> K <span class="o">=</span> <span class="m">1</span><span class="p">,</span> sigma <span class="o">=</span> <span class="m">0.1</span><span class="p">,</span> tau <span class="o">=</span> <span class="m">0.1</span><span class="p">,</span> X.0 <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="highlight"><pre><code class="r">gompertz <span class="o">&lt;-</span> simulate<span class="p">(</span>gompertz<span class="p">,</span> params <span class="o">=</span> theta<span class="p">)</span>
+plot<span class="p">(</span>gompertz<span class="p">,</span> variables <span class="o">=</span> <span class="s">&quot;Y&quot;</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p><img src="http://farm9.staticflickr.com/8012/7168130004_62bc33148d_o.png" alt="plot of chunk simulate"> </p>
+
+<p>Likelihood using a particle filter (sequential Monte Carlo) requires the measurement density (but not the process density).  </p>
+<div class="highlight"><pre><code class="r">gompertz.meas.dens <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>y<span class="p">,</span> x<span class="p">,</span> t<span class="p">,</span> params<span class="p">,</span> log<span class="p">,</span> <span class="m">...</span><span class="p">)</span> <span class="p">{</span>
+    tau <span class="o">&lt;-</span> params<span class="p">[</span><span class="s">&quot;tau&quot;</span><span class="p">]</span>
+    <span class="c1">## state at time t:</span>
+    X <span class="o">&lt;-</span> x<span class="p">[</span><span class="s">&quot;X&quot;</span><span class="p">]</span>
+    <span class="c1">## observation at time t:</span>
+    Y <span class="o">&lt;-</span> y<span class="p">[</span><span class="s">&quot;Y&quot;</span><span class="p">]</span>
+    <span class="c1">## compute the likelihood of Y|X,tau</span>
+    dlnorm<span class="p">(</span>x <span class="o">=</span> Y<span class="p">,</span> meanlog <span class="o">=</span> log<span class="p">(</span>X<span class="p">),</span> sdlog <span class="o">=</span> tau<span class="p">,</span> log <span class="o">=</span> log<span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Stick the new function into our container:</p>
+<div class="highlight"><pre><code class="r">gompertz <span class="o">&lt;-</span> pomp<span class="p">(</span>gompertz<span class="p">,</span> dmeasure <span class="o">=</span> gompertz.meas.dens<span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Then we get a point estimate of the likelihood,</p>
+<div class="highlight"><pre><code class="r">pf <span class="o">&lt;-</span> pfilter<span class="p">(</span>gompertz<span class="p">,</span> params <span class="o">=</span> theta<span class="p">,</span> Np <span class="o">=</span> <span class="m">1000</span><span class="p">)</span>
+logLik<span class="p">(</span>pf<span class="p">)</span>
+</code></pre>
+</div>
+<div class="highlight"><pre><code class="text">[1] 49.29
+</code></pre>
+</div>
+
+<h3 id="toc_49">Iterated filtering</h3>
+
+<p>We will do this in the transformed variable space, so we add
+our transformation method to the container:</p>
+<div class="highlight"><pre><code class="r">gompertz <span class="o">&lt;-</span> pomp<span class="p">(</span>gompertz<span class="p">,</span> parameter.transform <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>params<span class="p">,</span> 
+    <span class="m">...</span><span class="p">)</span> <span class="p">{</span>
+    exp<span class="p">(</span>params<span class="p">)</span>
+<span class="p">},</span> parameter.inv.transform <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>params<span class="p">,</span> <span class="m">...</span><span class="p">)</span> <span class="p">{</span>
+    log<span class="p">(</span>params<span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<p>Now we&#39;re ready for an iterated-filtering run.  This is gonna be slow,
+so let&#39;s set up a parallel architecture first:</p>
+<div class="highlight"><pre><code class="r">require<span class="p">(</span>snowfall<span class="p">)</span>
+sfInit<span class="p">(</span>parallel <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> cpu <span class="o">=</span> <span class="m">10</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="highlight"><pre><code class="r">rep <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>dummy_index<span class="p">)</span> <span class="p">{</span>
+    estpars <span class="o">&lt;-</span> c<span class="p">(</span><span class="s">&quot;r&quot;</span><span class="p">,</span> <span class="s">&quot;sigma&quot;</span><span class="p">,</span> <span class="s">&quot;tau&quot;</span><span class="p">)</span>
+    theta.guess <span class="o">&lt;-</span> coef<span class="p">(</span>gompertz<span class="p">)</span>
+    theta.guess<span class="p">[</span>estpars<span class="p">]</span> <span class="o">&lt;-</span> rlnorm<span class="p">(</span>n <span class="o">=</span> length<span class="p">(</span>estpars<span class="p">),</span> meanlog <span class="o">=</span> log<span class="p">(</span>theta.guess<span class="p">[</span>estpars<span class="p">]),</span> 
+        sdlog <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+    mif<span class="p">(</span>gompertz<span class="p">,</span> Nmif <span class="o">=</span> <span class="m">100</span><span class="p">,</span> start <span class="o">=</span> theta.guess<span class="p">,</span> transform <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> pars <span class="o">=</span> estpars<span class="p">,</span> 
+        rw.sd <span class="o">=</span> c<span class="p">(</span>r <span class="o">=</span> <span class="m">0.02</span><span class="p">,</span> sigma <span class="o">=</span> <span class="m">0.02</span><span class="p">,</span> tau <span class="o">=</span> <span class="m">0.05</span><span class="p">),</span> Np <span class="o">=</span> <span class="m">2000</span><span class="p">,</span> var.factor <span class="o">=</span> <span class="m">4</span><span class="p">,</span> 
+        ic.lag <span class="o">=</span> <span class="m">10</span><span class="p">,</span> cooling.factor <span class="o">=</span> <span class="m">0.999</span><span class="p">,</span> max.fail <span class="o">=</span> <span class="m">10</span><span class="p">)</span>
+<span class="p">}</span>
+sfExportAll<span class="p">()</span>
+system.time<span class="p">(</span>mf <span class="o">&lt;-</span> sfSapply<span class="p">(</span><span class="m">1</span>:<span class="m">10</span><span class="p">,</span> rep<span class="p">))</span>
+</code></pre>
+</div>
+<div class="highlight"><pre><code class="text">   user  system elapsed 
+   0.02    0.00 1037.39 
+</code></pre>
+</div>
+
+<p>Average parameter estimates (compare to theta)</p>
+<div class="highlight"><pre><code class="r">theta.mif <span class="o">&lt;-</span> apply<span class="p">(</span>sapply<span class="p">(</span>mf<span class="p">,</span> coef<span class="p">),</span> <span class="m">1</span><span class="p">,</span> mean<span class="p">)</span>
+theta.mif
+</code></pre>
+</div>
+<div class="highlight"><pre><code class="text">      r       K   sigma     tau     X.0 
+0.04385 1.00000 0.09647 0.10495 1.00000 
+</code></pre>
+</div>
+
+<p>Evaluating the log-likelihoods at the convergent parameters requires the particle filter.  This line applies the particle filter to each of the parameter estimates</p>
+<div class="highlight"><pre><code class="r">loglik.mif <span class="o">&lt;-</span> replicate<span class="p">(</span>n <span class="o">=</span> <span class="m">10</span><span class="p">,</span> logLik<span class="p">(</span>pfilter<span class="p">(</span>mf<span class="p">[[</span><span class="m">1</span><span class="p">]],</span> params <span class="o">=</span> theta.mif<span class="p">,</span> 
+    Np <span class="o">=</span> <span class="m">10000</span><span class="p">)))</span>
+bl <span class="o">&lt;-</span> mean<span class="p">(</span>loglik.mif<span class="p">)</span>
+loglik.mif.est <span class="o">&lt;-</span> bl <span class="o">+</span> log<span class="p">(</span>mean<span class="p">(</span>exp<span class="p">(</span>loglik.mif <span class="o">-</span> bl<span class="p">)))</span>
+loglik.mif.se <span class="o">&lt;-</span> sd<span class="p">(</span>exp<span class="p">(</span>loglik.mif <span class="o">-</span> bl<span class="p">))</span><span class="o">/</span>exp<span class="p">(</span>loglik.mif.est <span class="o">-</span> bl<span class="p">)</span>
+c<span class="p">(</span>est <span class="o">=</span> loglik.mif.est<span class="p">,</span> se <span class="o">=</span> loglik.mif.se<span class="p">)</span>
+</code></pre>
+</div>
+<div class="highlight"><pre><code class="text">     est       se 
+51.45397  0.09316 
+</code></pre>
+</div>
+
+<p>&quot;True&quot; uses the original model and coefficients rather than the estimated one, but still approximates the log.likelihood using particle filtering </p>
+<div class="highlight"><pre><code class="r">loglik.true <span class="o">&lt;-</span> replicate<span class="p">(</span>n <span class="o">=</span> <span class="m">10</span><span class="p">,</span> logLik<span class="p">(</span>pfilter<span class="p">(</span>gompertz<span class="p">,</span> params <span class="o">=</span> coef<span class="p">(</span>gompertz<span class="p">),</span> 
+    Np <span class="o">=</span> <span class="m">10000</span><span class="p">)))</span>
+loglik.true.est <span class="o">&lt;-</span> bl <span class="o">+</span> log<span class="p">(</span>mean<span class="p">(</span>exp<span class="p">(</span>loglik.true <span class="o">-</span> bl<span class="p">)))</span>
+loglik.true.se <span class="o">&lt;-</span> sd<span class="p">(</span>exp<span class="p">(</span>loglik.true <span class="o">-</span> bl<span class="p">))</span><span class="o">/</span>exp<span class="p">(</span>loglik.true.est <span class="o">-</span> 
+    bl<span class="p">)</span>
+c<span class="p">(</span>est <span class="o">=</span> loglik.true.est<span class="p">,</span> se <span class="o">=</span> loglik.true.se<span class="p">)</span>
+</code></pre>
+</div>
+<div class="highlight"><pre><code class="text">    est      se 
+50.0128  0.1062 
+</code></pre>
+</div>
+
+        </div>
+
+
+        <!-- Custom sidebar -->      
+        <div class="span4">
+          <div class="sidebar">
+            Posted on
+            <time pubdate datetime="2012-05-09T00:00:00-07:00" itemprop="datePublished">09 May 2012</time>. <br />
+            <span itemprop="keywords">
+            
+              <a rel="tag" class="tag" href="/tags.html#seminar-tag">#seminar</a>
+              
+            
+          </span>
+          <br />
+          <br />
+          
+          <p>Previous: <a href='/2012/05/08/notes.html'>Data to Knowledge Day II & other notes</a></p>
+          <br />
+          
+          
+          <p>Next: <a href='/2012/05/10/notes.html'>Notes</a></p>
+          
+
+          </div>
+        </div>
+      </div>
+
+        <!-- Disqus Comments -->
+      <div class="row">
+        <div class="span8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+        <footer class="footer">
+         <div class="row">
+            <div class="span4">
+              <a href="mailto:cboettig@gmail.com"><i class="icon-envelope"></i></a>
+              <a href="https://twitter.com/cboettig"><img src="/assets/img/icon-twitter.png" alt="twitter"> </a> 
+              <a href="https://github.com/cboettig"><img src="/assets/img/icon-github.png" alt="github"></a> 
+              <a href="/atom.xml"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+            </div>
+            <div class="span2" style="text-align:center">
+              <a rel="license" href="http://onsclaims.wikispaces.com/"><img src="http://onsclaims.wikispaces.com/file/view/ons-aci2-icon.png" alt="ONS"></a> <br><br>
+              <p> <a class="btn btn-mini" href="https://github.com/cboettig/labnotebook">view logs</a></p>
+            </div>
+            <div class="span4">
+              <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0" style="float:right"></a> 
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+    
+        <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap-collapse.js"></script>
+    <!--
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+
+      <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+<!--  UA-29776516-1 -->
+
+  </body>
+</html>
+

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html>
+  <head>    <meta charset="utf-8">
+    <title>Carl Boettiger </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/assets/css/solarized.css" rel="stylesheet">
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <script type="text/javascript" src="/assets/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/strftime.js"></script>
+    <script type="text/javascript">
+
+    (function ($, undefined) {
+
+      // Put custom repo URL's in this object, keyed by repo name.
+      var repoUrls = {
+      };
+      // Put custom repo descriptions in this object, keyed by repo name.
+      var repoDescriptions = {
+      };
+
+      function repoUrl(repo) {
+        return repoUrls[repo.name] || repo.html_url;
+      }
+      function repoDescription(repo) {
+        return repoDescriptions[repo.name] || repo.description;
+      }
+
+      function addRecentlyUpdatedRepo(repo) {
+        var $item = $("<li>");
+
+        var $name = $("<a>").attr("href", repo.html_url).text(repo.name);
+        $item.append($("<span>").addClass("name").append($name));
+
+        var $time = $("<a>").attr("href", repo.html_url + "/commits").text(strftime("%h %e, %Y", repo.pushed_at));
+        $item.append($("<span>").addClass("time").append($time));
+
+        $item.append('<span class="bullet">&sdot;</span>');
+
+        var $watchers = $("<a>").attr("href", repo.html_url + "/watchers").text(repo.watchers + " watchers");
+        $item.append($("<span>").addClass("watchers").append($watchers));
+
+        $item.append('<span class="bullet">&sdot;</span>');
+
+        var $forks = $("<a>").attr("href", repo.html_url + "/network").text(repo.forks + " forks");
+        $item.append($("<span>").addClass("forks").append($forks));
+
+        $item.appendTo("#recently-updated-repos");
+      }
+
+      function addRepo(repo) {
+        var $item = $("<li>").addClass("repo grid-1 " + (repo.language || '').toLowerCase());
+        var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($item);
+        $link.append($("<h2>").text(repo.name));
+        $link.append($("<h3>").text(repo.watchers + " watchers" + " / " + repo.forks + " forks"));
+        $link.append($("<p>").text(repoDescription(repo)));
+        $link.append($("<p>").text("Updated " + 
+          strftime("%h %e, %Y", repo.pushed_at)));
+        $link.append($("<h3>").addClass("language").text(repo.language));
+        
+        $item.appendTo("#repos");
+      }
+
+      $.getJSON("https://api.github.com/users/cboettig/repos?per_page=100&callback=?", function (result) {
+        var repos = result.data;
+
+        $(function () {
+          $("#num-repos").text(repos.length);
+
+          // Convert pushed_at to Date.
+          $.each(repos, function (i, repo) {
+            repo.pushed_at = new Date(repo.pushed_at);
+
+            var weekHalfLife  = 1.146 * Math.pow(10, -9);
+
+            var pushDelta    = (new Date) - Date.parse(repo.pushed_at);
+            var createdDelta = (new Date) - Date.parse(repo.created_at);
+
+            var weightForPush = 1;
+            var weightForWatchers = 1.314 * Math.pow(10, 7);
+
+            repo.hotness = weightForPush * Math.pow(Math.E, -1 * weekHalfLife * pushDelta);
+            repo.hotness += weightForWatchers * repo.watchers / createdDelta;
+          });
+
+          // Sort by highest # of watchers.
+          repos.sort(function (a, b) {
+            if (a.hotness < b.hotness) return 1;
+            if (b.hotness < a.hotness) return -1;
+            return 0;
+          });
+
+          $.each(repos, function (i, repo) {
+            addRepo(repo);
+          });
+
+          // Sort by most-recently pushed to.
+          repos.sort(function (a, b) {
+            if (a.pushed_at < b.pushed_at) return 1;
+            if (b.pushed_at < a.pushed_at) return -1;
+            return 0;
+          });
+
+          $.each(repos.slice(0, 3), function (i, repo) {
+            addRecentlyUpdatedRepo(repo);
+          });
+        });
+      });
+
+    })(jQuery);
+    </script>
+  </head>
+
+
+<!-- Navbar
+    ================================================== -->
+
+   
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Carl Boettiger</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class=""><a href="/index.html">Home</a></li>
+              <li><a href="/vita.html">Vita</a></li>
+              <li><a href="/research.html">Research</a></li>
+              <li><a href="/teaching.html">Teaching</a></li>
+              <li><a href="/lab-notebook.html">Lab Notebook</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+           <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+             <input type="hidden" name="q" value="site:carlboettiger.info" />
+             <input class="search-query" type="text" name="q" results="0" placeholder="Search"/>
+           </form>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  <body>
+    <div id="wrapper" class="grid clearfix">
+      <div id="main" class="grid-1">
+        <div><h1>Carl Boettiger's github repos</h1></div>
+        <p>This is an index to my open source repos on github</p>
+        <p>Page based on <a href="http://twitter.github.com/">http://twitter.github.com/</a> and <a href="http://hadely.github.com/">http://hadley.github.com/</a></p>
+
+      </div>
+
+      <div class="grid grid-3">
+        <div id="statistics" class="grid-1 alpha header">
+          <h1>Statistics</h1>
+          <p>
+            <a href="https://github.com/cboettig/repositories"><span id="num-repos">&nbsp;</span> public repos</a>
+            <br>
+          </p>
+          <p class="email"><a href="mailto:cboettig@ucdavis.edu">cboettig@ucdavis.edu</a></p>
+        </div>
+
+        <div id="recently-updated" class="grid-2 omega header">
+          <h1>Recently updated <a href="https://github.com/cboettig/repositories">View All on GitHub</a></h1>
+          <ol id="recently-updated-repos"></ol>
+        </div>
+      </div>
+
+      <ol id="repos"></ol>
+    </div>
+<!--  </body>
+</html> -->
+
+      <footer class="footer">
+         <div class="row">
+            <div class="span4">
+              <a href="mailto:cboettig@gmail.com"><i class="icon-envelope"></i></a>
+              <a href="https://twitter.com/cboettig"><img src="/assets/img/icon-twitter.png" alt="twitter"> </a> 
+              <a href="https://github.com/cboettig"><img src="/assets/img/icon-github.png" alt="github"></a> 
+              <a href="/atom.xml"><img src="/assets/img/icon-rss.png" alt="feed"></a>
+            </div>
+            <div class="span2" style="text-align:center">
+              <a rel="license" href="http://onsclaims.wikispaces.com/"><img src="http://onsclaims.wikispaces.com/file/view/ons-aci2-icon.png" alt="ONS"></a> <br><br>
+              <p> <a class="btn btn-mini" href="https://github.com/cboettig/labnotebook">view logs</a></p>
+            </div>
+            <div class="span4">
+              <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0" style="float:right"></a> 
+            </div>
+        </div>
+      </footer>
+    </div><!-- /container -->
+    
+        <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap-collapse.js"></script>
+    <!--
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/application.js"></script>
+    -->
+
+
+      <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+<!--  UA-29776516-1 -->
+
+  </body>
+</html>
+
