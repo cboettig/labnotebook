@@ -9,7 +9,7 @@ Publications
 
 1. Carl Boettiger and Alan Hastings (2012). Quantifying Limits to Detection 
   of Early Warning for Critical Transitions. In *Journal of the Royal Society:
-  Interface* (in press). 
+  Interface* ([doi](http://dx.doi.org/10.1098/rsif.2012.0125)) 
   ([arXiv](http://arxiv.org/abs/1204.6231))
   ([code](https://github.com/cboettig/earlywarning))
   ([data](#))
