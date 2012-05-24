@@ -1,0 +1,70 @@
+---
+title: Lab Notebook
+---
+
+
+{% include header.html %}
+
+  <div class="row">
+      <div class="span12">
+        <h2>Archive ({{ site.posts | size }} entries) <a href="{{ site.url }}/atom.xml"><img src="/assets/img/icon-rss.png" alt="feed"></a></h2>
+
+        <div class="postpreview">
+        <div class="span3">
+          {% for post in site.posts limit:4 %}
+            <h3><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+            <p><span>{{ post.subtitle }}</span></p>
+            <span> &raquo; {{ post.date | date_to_string }}</span>
+            <blockquote>
+              {{ post | only_first_p }}
+            </blockquote>
+            <br>
+            <br>
+          {% endfor %}
+        </div>
+        <div class="span3">
+          {% for post in site.posts limit:4 offset:4 %}
+            <h3><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+            <p><span>{{ post.subtitle }}</span></p>
+            <span> &raquo; {{ post.date | date_to_string }}</span>
+            <blockquote>
+              {{ post | only_first_p }}
+            </blockquote>
+            <br>
+            <br>
+          {% endfor %}
+       </div>
+        <div class="span3">
+          {% for post in site.posts limit:4 offset:8 %}
+            <h3><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+            <p><span>{{ post.subtitle }}</span></p>
+            <span> &raquo; {{ post.date | date_to_string }}</span>
+            <blockquote>
+              {{ post | only_first_p }}
+            </blockquote>
+            <br>
+            <br>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!--Remaining posts without column formatting -->
+    <h3> Older posts </h3>
+        <ul class="posts">
+          {% for post in site.posts offset:12 %}
+            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+            <span>{{ post.subtitle }}</span></li>
+          {% endfor %}
+        </ul>
+
+      Entries <a href="{{ site.url }}/categories.html">by category</a> | <a href="{{ site.url }}/tags.html">by tag</a> 
+      <ul>
+        <li> Earlier entries are still available in my <a href="http://www.carlboettiger.info/research/lab-notebook">Wordpress-based lab notebook</a>. </li> 
+        <li> Even earlier entries are available in my <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook">OpenWetWare notebook</a>. </li> 
+      </ul>
+    </div>
+
+
+{% include footer.html %}
+

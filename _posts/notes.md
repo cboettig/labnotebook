@@ -35,7 +35,15 @@
 * Research page update! 
 * pomp on the bifurcation model.  run both pmcmc and iterative filtering mif
 
+## Evolution stuff
 
+* pmc bug 
+
+## Logistics
+
+* purchased Evolution airplane tickets
+* filed reimbursement request on my Krell account 
+* Still need CSGF tickets
 
 ## misc 
 * Jekyll notebook previews?
