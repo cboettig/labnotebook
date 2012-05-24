@@ -4,7 +4,7 @@
  <title>Carl Boettiger</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2012-05-22T15:49:55-07:00</updated>
+ <updated>2012-05-24T10:51:16-07:00</updated>
  <id></id>
  <author>
    <name>Carl Boettiger</name>
@@ -508,11 +508,10 @@ git checkout master
 
 &lt;h1 id=&quot;toc_44&quot;&gt;Ed Ionides&lt;/h1&gt;
 
-&lt;p&gt;six problems of Bjonstead &amp;amp; Grenfell: an appeal for arbitrary nonlinear partially observed vector valued stochastic models.&lt;br&gt;
+&lt;p&gt;six problems of Bjonstead and Grenfell: an appeal for arbitrary nonlinear partially observed vector valued stochastic models.&lt;br&gt;
 POMP doesn&amp;#39;t mix well in the winbugs.&lt;/p&gt;
 
-&lt;p&gt;simulation-based algorithm --&amp;gt; plug-and-play
-(more &lt;/p&gt;
+&lt;p&gt;simulation-based algorithm (plug-and-play)&lt;/p&gt;
 
 &lt;p&gt;Think of a process being defined by:&lt;/p&gt;
 
@@ -789,7 +788,7 @@ c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;est &lt;span class=&quot;o&quot;&
  </entry>
  
  <entry>
-   <title>Data to Knowledge Day II & other notes</title>
+   <title>Data to Knowledge Day II and other notes</title>
    <link href="/2012/05/08/notes.html"/>
    <updated>2012-05-08T00:00:00-07:00</updated>
    <id>h/2012/05/08/notes</id>
