@@ -1,5 +1,7 @@
 require 'feedzirra'
 
+# Need to store feed in cache and just call update?
+
 module Jekyll
 
   class FeedzirraBlockTag < Liquid::Tag

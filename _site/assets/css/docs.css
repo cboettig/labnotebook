@@ -116,6 +116,32 @@ hr.soften {
   font-size: 13px;
 }
 
+/* postpreview
+-------------------------------------------------- */
+.postpreview {
+  margin-left: 45px;
+  padding: 35px 35px 36px;
+  border-left: 1px solid #e5e5e5;
+  font-size: 13px;
+  line-height: 18px;
+}
+.postpreview h3 {
+  line-height: 22px;
+}
+.postpreview p {
+  margin-bottom: 0;
+  color: #555;
+  font-size: 13px;
+  line-height: 18px;
+}
+.postpreview blockquote {
+  margin-bottom: 0;
+  color: #555;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+
 
 /* Misc
 -------------------------------------------------- */
