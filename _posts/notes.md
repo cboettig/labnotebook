@@ -4,16 +4,14 @@
 
 * Blog post for PRSI paper, +social
 * Email Thilo Gross re PRSI paper -- DONE
-* Email Tony Ives
+* Email Tony Ives -- Done
+* Email Steve Carpenter? Vasilis? Scheffer?
 * Email Joshua, Jonathan, Lucas? Jeremy Fox
-* Code clean up: example
+* Reply to David Seekell
+* Code clean up: example. mostly done.
 * Data Dryad deposit
 * Code on CRAN? 
 
-### Class
-
-* Presentation for Friday. DONE
-* Send announcement email for Carl Walters visit. DONE
 
 ### PDG Control Working group
 
@@ -21,7 +19,9 @@
 
 ### Value of information
 
-- To better get at Jim's question, should compare (profit from growth only noise) - (profit from deterministic) + ((profit from measurement only) - (profit from deterministic)) to (profit from growth+measurement) - (determinsitic), i.e. is (growth+measurement) greater/less than (growth) + (measurement) - deterministic?  
+- To better get at Jim's question, should compare (profit from growth only noise) - (profit from deterministic) + ((profit from measurement only) - (profit from deterministic)) to (profit from growth+measurement) - (determinsitic), i.e. is (growth+measurement) greater/less than (growth) + (measurement) - deterministic?   
+- Clarify this!  is (profit from growth only) the case in which (a) the manager includes growth noise in the solution when in reality it is absent (hence the deterministic solution is optimal), (b) the case where the manager includes growth noise and it is present (i.e. both are optimal given reality, but reality differs, not the information) (c) the 
+
 
 ### Fallacy paper
 
@@ -34,21 +34,6 @@
 * write more wrightscape, email peter
 * Research page update! 
 * pomp on the bifurcation model.  run both pmcmc and iterative filtering mif
-
-
-# logistics
-
-## Carl Walters visit
-
-- Notice about talk, meeting, dinner.  4-5 (including speaker + host).  (Unless funding is forthcoming...)
-- Email Walters -- share the paper (electronic? print copy?)  Prefered abstract for talk?
-- Breakfast Friday: Possible meeting -- maybe Jim Wilen?  Saturday -- not unless necessary.  
-- Breakfast Saturday: no schedule.  Unless needed. 
-- Lunch logistics - order pizza ask Hannah. 
-- Thursday dinner: Jim Sanchirico 
-- Friday: Mike Springborn.  Loo Botsford?  if not.  7pm 
-- Meetings: Mike anytime Friday.
-
 
 
 
