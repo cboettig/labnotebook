@@ -1,5 +1,5 @@
 ---
-title: Lab Notebook
+title: Lab Notebook <a href="{{ site.url }}/atom.xml"><img src="/assets/img/icon-rss.png" alt="feed"></a>
 ---
 
 
@@ -7,37 +7,37 @@ title: Lab Notebook
 
     <div class="row">
       <div class="span12">
-        <h2>Archive ({{ site.posts | size }} entries) <a href="{{ site.url }}/atom.xml"><img src="/assets/img/icon-rss.png" alt="feed"></a></h2>
+          <div class="postpreview">
+            <div class="row">
+              {% for post in site.posts limit:3 %}
+                <div class="span3">
+                  {% include postexcerpt.html %}
+                </div>
+              {% endfor %}
+            </div>
+            <div class="row">
+              {% for post in site.posts limit:3 offset:3 %}
+                <div class="span3">
+                  {% include postexcerpt.html %}
+                </div>
+              {% endfor %}
+            </div>
+            <div class="row">
+              {% for post in site.posts limit:3 offset:6 %}
+                <div class="span3">
+                  {% include postexcerpt.html %}
+                </div>
+              {% endfor %}
+            </div>
+         </div> <!-- end postpreview -->
+       </div> <!-- end span12-->
+    </div> <!--end row -->
 
-
-        <!-- A bit of liquid code to calculate column sizes -->
-        {% capture n  %}{{ site.posts | size | divided_by:3}}{% endcapture %}
-        {% capture m %} {{ n | times:2 }}{% endcapture %}
-             
-        <div class="postpreview">
-          <div class="span3">
-            {% for post in site.posts limit:n %}
-              {% include postexcerpt.html %}
-            {% endfor %}
-          </div>
-          <div class="span3">
-            {% for post in site.posts limit:n offset:n %}
-            {% include postexcerpt.html %}
-            {% endfor %}
-          </div>
-          <div class="span3">
-            {% for post in site.posts limit:n offset:m %}
-            {% include postexcerpt.html %}
-            {% endfor %}
-          </div>
-        </div> <!-- end postpreview -->
-      </div> <!-- end span12 -->
-
+    <div class="row">
       <div class="span10">
         <h3><i class="icon-chevron-left"></i> <a href="{{ site.url }}/older-posts.html">Older posts</a></h3>
-
         Entries <a href="{{ site.url }}/categories.html">by category</a> | <a href="{{ site.url }}/tags.html">by tag</a> 
-      </div> <!-- end span10-->
+       </div> <!-- end span10-->
     </div> <!--end row -->
 
 
