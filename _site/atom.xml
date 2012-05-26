@@ -4,7 +4,7 @@
  <title>Carl Boettiger</title>
  <link href="/atom.xml" rel="self"/>
  <link href=""/>
- <updated>2012-05-24T14:47:18-07:00</updated>
+ <updated>2012-05-26T13:02:27-07:00</updated>
  <id></id>
  <author>
    <name>Carl Boettiger</name>
@@ -18,17 +18,19 @@
    <updated>2012-05-21T00:00:00-07:00</updated>
    <id>h/2012/05/21/limits-to-detection-of-early-warning-signals</id>
    <content type="html">&lt;p&gt;Our paper, &lt;em&gt;limits to the detection of early warning signals for
-critical transitions&lt;/em&gt;, has now &lt;a href=&quot;http://dx.doi.org/10.1098/rsif.2012.0125&quot;&gt;appeared in the Proceedings of the Royal
-Interface&lt;/a&gt;. An open-access copy
-is &lt;a href=&quot;http://arxiv.org/abs/1204.6231&quot;&gt;available under CC-by license on the ArXiv&lt;/a&gt;.
-The essence of the
-paper is to bring a more model-based approach to early warning signals,
-while seeking to remain as general as possible.  Without a model-based
-approach, it is difficult to leverage statistically meaningful comparisons
-to identify what is a real warning signal and what is just noise. We use
-two simple models, (a stationary OU process and temporally heterogeneous
-OU process) combined with a likelihood ratio bootstrap to do this,
-though other models and comparisons could be equally promising.&lt;/p&gt;
+critical transitions&lt;/em&gt;, has now &lt;a href=&quot;http://dx.doi.org/10.1098/rsif.2012.0125&quot;&gt;appeared in the Proceedings of the
+Royal Interface&lt;/a&gt;. An
+open-access copy is &lt;a href=&quot;http://arxiv.org/abs/1204.6231&quot;&gt;available under CC-by license on the
+ArXiv&lt;/a&gt;.  The essence of the paper is
+to bring a more model-based approach to early warning signals, while
+seeking to remain as general as possible.&lt;/p&gt;
+
+&lt;p&gt;Without a model-based approach, it is difficult to leverage statistically
+meaningful comparisons to identify what is a real warning signal and
+what is just noise. We use two simple models, (a stationary OU process
+and temporally heterogeneous OU process) combined with a likelihood
+ratio bootstrap to do this, though other models and comparisons could
+be equally promising.&lt;/p&gt;
 
 &lt;p&gt;The motivation for this paper comes somewhat from the appendices in
 the groundbreaking work by Dakos &lt;em&gt;et al&lt;/em&gt; 2008, which compares several
