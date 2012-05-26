@@ -124,6 +124,7 @@ hr.soften {
   border-left: 1px solid #e5e5e5;
   font-size: 13px;
   line-height: 18px;
+  text-align: justify;
 }
 .postpreview h3 {
   line-height: 22px;
@@ -133,15 +134,26 @@ hr.soften {
   color: #555;
   font-size: 13px;
   line-height: 18px;
+  text-align: justify;
 }
 .postpreview blockquote {
   margin-bottom: 0;
   color: #555;
   font-size: 13px;
   line-height: 18px;
+  text-align: justify;
 }
 
-
+.postpreview h1 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.postpreview h2 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
 
 /* Misc
 -------------------------------------------------- */

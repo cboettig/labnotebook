@@ -6,17 +6,19 @@ tags: warning-signals
 ---
 
 Our paper, _limits to the detection of early warning signals for
-critical transitions_, has now [appeared in the Proceedings of the Royal
-Interface](http://dx.doi.org/10.1098/rsif.2012.0125). An open-access copy
-is [available under CC-by license on the ArXiv](http://arxiv.org/abs/1204.6231).
-The essence of the
-paper is to bring a more model-based approach to early warning signals,
-while seeking to remain as general as possible.  Without a model-based
-approach, it is difficult to leverage statistically meaningful comparisons
-to identify what is a real warning signal and what is just noise. We use
-two simple models, (a stationary OU process and temporally heterogeneous
-OU process) combined with a likelihood ratio bootstrap to do this,
-though other models and comparisons could be equally promising.
+critical transitions_, has now [appeared in the Proceedings of the
+Royal Interface](http://dx.doi.org/10.1098/rsif.2012.0125). An
+open-access copy is [available under CC-by license on the
+ArXiv](http://arxiv.org/abs/1204.6231).  The essence of the paper is
+to bring a more model-based approach to early warning signals, while
+seeking to remain as general as possible.
+
+Without a model-based approach, it is difficult to leverage statistically
+meaningful comparisons to identify what is a real warning signal and
+what is just noise. We use two simple models, (a stationary OU process
+and temporally heterogeneous OU process) combined with a likelihood
+ratio bootstrap to do this, though other models and comparisons could
+be equally promising.
 
 The motivation for this paper comes somewhat from the appendices in
 the groundbreaking work by Dakos _et al_ 2008, which compares several
