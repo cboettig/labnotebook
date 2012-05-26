@@ -4,7 +4,6 @@ http://www.carlboettiger.info//categories.html
 http://www.carlboettiger.info//assets/template.html
 http://www.carlboettiger.info//teaching.html
 http://www.carlboettiger.info//vita.html
-http://www.carlboettiger.info//lab-notebook.html
 http://www.carlboettiger.info//index.html
 http://www.carlboettiger.info//software.html
 http://www.carlboettiger.info//tags.html
@@ -12,7 +11,7 @@ http://www.carlboettiger.info//community.html
 http://www.carlboettiger.info//atom.xml
 http://www.carlboettiger.info//R.xml
 http://www.carlboettiger.info//search.html
-http://www.carlboettiger.info//lab-notebook-extended.html
+http://www.carlboettiger.info//lab-notebook.html
 http://www.carlboettiger.info//research-in-progress.html
 http://www.carlboettiger.info//research.html
 http://www.carlboettiger.info//older-posts.html
