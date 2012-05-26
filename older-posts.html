@@ -1,0 +1,34 @@
+---
+title: Older posts 
+---
+
+
+{% include header.html %}
+
+    <div class="row">
+      <div class="span12">
+        <h2>Archive ({{ site.posts | size }} entries) <a href="{{ site.url }}/atom.xml"><img src="/assets/img/icon-rss.png" alt="feed"></a></h2>
+
+        <div class="postpreview">
+          {% for post in site.posts offset:9 %}
+          <!--  <div class="span3"> -->
+              {% include postexcerpt.html %}
+              <!-- </div> --> 
+          {% endfor %}
+        </div>
+        <ul>
+      </div> <!-- end span-->
+    </div> <!--end row -->
+
+    <div class="row">
+      <div class="span12">
+          <li> Earlier entries are still available in my <a href="http://www.carlboettiger.info/research/lab-notebook">Wordpress-based lab notebook</a>. </li> 
+          <li> Even earlier entries are available in my <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook">OpenWetWare notebook</a>. </li> 
+        </ul>
+      </div> <!-- end span-->
+    </div> <!--end row -->
+
+
+
+{% include footer.html %}
+
