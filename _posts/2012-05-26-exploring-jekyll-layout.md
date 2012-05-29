@@ -35,26 +35,33 @@ Arrange site-posts into three columns, entries columnwise.
 
 
 ```html
+{% raw %}
 {% capture n  %}{{ site.posts | size | divided_by:3}}{% endcapture %}
 {% capture m %} {{ n | times:2 }}{% endcapture %}
-
+{% endraw %}
 
 <div class="span3">
+{% raw %}
 {% for post in site.posts limit:n %}
 {{ post | content }}
 {% endfor %}
+{% endraw %}
 </div>
 
 <div class="span3">
+{% raw %}
 {% for post in site.posts limit:n offset:n%}
 {{ post | content }}
 {% endfor %}
+{% endraw %}
 </div>
 
 <div class="span3">
+{% raw %}
 {% for post in site.posts limit:n offset:m %}
 {{ post | content }}
 {% endfor %}
+{% endraw %}
 </div>
 ```
 

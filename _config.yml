@@ -3,11 +3,8 @@ tagline: Theoretical ecology and evolution
 author :
   name : Carl Boettiger
   email : cboettig@gmail.com
-  github : cboettig
-  twitter : cboettig
-
 permalink: /:year/:month/:day/:title.html
-pygments: true 
+
 markdown: redcarpet2
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
