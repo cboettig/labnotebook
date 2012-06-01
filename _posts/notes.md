@@ -2,15 +2,17 @@
 
 ### PRSI paper
 
-* Blog post for PRSI paper -- DONE
-* Email Thilo Gross re PRSI paper -- DONE
-* Email Tony Ives -- DONE
 * Email Steve Carpenter? Vasilis? Scheffer?
 * Email Joshua, Jonathan, Lucas?
 * Reply to David Seekell
 * Code clean up: example. mostly done.
 * Data Dryad deposit?
 * Code on CRAN? 
+* Blog post for PRSI paper -- DONE
+* Email Thilo Gross re PRSI paper -- DONE
+* Email Tony Ives -- DONE
+* code edits for earlywarning: Run each dataset in inst/examples DONE
+* add readme DONE
 
 
 ### PDG Control Working group
@@ -40,30 +42,24 @@
 
 ## Evolution stuff
 
-* pmc bug 
+* pmc bugfix
 
 ## Logistics
 
-* purchased Evolution airplane tickets
-* filed reimbursement request on my Krell account 
-* Still need CSGF tickets
+* purchased Evolution airplane tickets DONE
+* filed reimbursement request on my Krell account DONE
+* Need CSGF tickets
 
 ## misc 
 
-* Jekyll notebook previews?
+* Jekyll notebook previews? DONE
 * Write to [Amber Mace](http://www.linkedin.com/pub/amber-mace/7/a94/b43)?
 
 
 ### treebase edits.  
 
-- added `metadata_table()` to combine metadata sources and improve data discovery
-
-
-### Early Warning
-
-- code edits for earlywarning: Run each dataset in inst/examples
-- add readme
-- notebook post on PSRI paper, social media share.  
+- added `metadata()` to combine metadata sources and improve data discovery
+- adding Duncan's corrections
 
 
 ## PDG Control
@@ -71,11 +67,16 @@
 * Bohm 1974 
 * Sigh _et al._ 2006 essentially treats this problem but with two control variables -- fishing fleet and harvest level.  
 Highlights the tradeoff: want a variable harvest rate since Jensen's inequality guarantees that a fixed harvest rate will under-perform in stochastic stock, but need a smoother change to avoid adjustment costs to the fleet.  
+* (Show the underperformance of the fixed harvest rate?)
 
-(Show the underperformance of the fixed harvest rate?)
-
-# References 
 
 Bohm, P. (1974). On the Effects of Policy Costs. The Swedish Journal of Economics, 76(1), 104. doi:10.2307/3439361
 
 Singh, R., Weninger, Q., and Doyle, M. (2006). Fisheries management with stock growth uncertainty and costly capital adjustment. Journal of Environmental Economics and Management, 52(2), 582-599. doi:10.1016/j.jeem.2006.02.006
+
+
+# misc / code-tricks
+
+- [solarized for vim](https://github.com/altercation/vim-colors-solarized)
+- [solarized for gnome-terminal](https://github.com/sigurdga/gnome-terminal-colors-solarized)
+- 

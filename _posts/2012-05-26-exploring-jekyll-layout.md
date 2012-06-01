@@ -24,10 +24,11 @@ I wanted a nice way to embed feeds on my Jekyll site -- preferably at Jekyll-com
 
 I first considered using a plugin [plugin](https://github.com/sebcioz/jekyll-only_first_p) to get the frist paragraph (based on nokogiri parsing the html/xml).  While nokogiri is quite powerful, I often don't have just the right length content in the first paragraph -- some entries just launch into a list enviornment with no paragraphs to begin with. 
 
-Instead, it's much easier to use [built in liquid filters](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) which can already grab first n characters or n words.  Unfortunately pulls in _formatted_ post content, not pure markdown, leaving open tags.  Should probably look into some santize html filters, but don't seem to be default. To avoid this, I ended up using the `strip_html` filter, rendering unformatted but more uniformly looking previews on pages. 
+Instead, it's much easier to use [built in liquid filters](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) which can already grab first n characters or n words.  Unfortunately pulls in _formatted_ post content, not pure markdown, leaving open tags.  Should probably look into some santize html filters, but don't seem to be default. To avoid this, I ended up using the `strip_html` filter, rendering unformatted but more uniformly looking previews on pages.   
 
 Lastly, format the previews in justified columns in a smaller font-size using a little css. 
 
+Oh, it appears there is a [nokogiri-based plugin](https://github.com/MattHall/truncatehtml) which will truncate and close html tags appropriately.
 
 #### Some liquid example code
 
