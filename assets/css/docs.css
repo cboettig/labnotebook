@@ -122,7 +122,7 @@ hr.soften {
   margin-left: 45px;
   padding: 35px 35px 36px;
   border-left: 1px solid #e5e5e5;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 18px;
   text-align: justify;
 }
@@ -422,4 +422,5 @@ table tbody tr:nth-child(odd) td,
 table tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
+
 

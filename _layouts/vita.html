@@ -1,0 +1,35 @@
+
+  {% include header.html %}
+
+      <div class="row">
+        <div class="span6 offset2">
+        <style>
+          .cv {
+                font-size: 13px;
+                line-height: 18px;
+                text-align: justify;         
+          }
+           .cv ul, ol { 
+                margin-left: 0;
+                margin-bottom: 30px;
+                list-style: none;
+          }
+           .cv li {
+                margin-bottom: 10px;
+          }
+          .cv strong {
+            font-weight: bolder;
+          }
+
+        </style>
+          <div class="cv">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+
+
+
+  {% include footer.html %}
+
+    
