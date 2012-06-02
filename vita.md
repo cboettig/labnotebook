@@ -114,11 +114,12 @@ Theses
 Software
 --------
 
-1.   Carl Boettiger (2012). **pmc: Phylogenetic Monte Carlo.** [Stable version on CRAN](http://cran.r-project.org/web/packages/pmc/).
-2.   Carl Boettiger & Duncan Temple Lang (2011). **treebase: An R interface**
+1. Carl Boettiger (2012). **pmc: Phylogenetic Monte Carlo.** [Stable version on CRAN](http://cran.r-project.org/web/packages/pmc/).
+2. Carl Boettiger & Duncan Temple Lang (2011). **treebase: An R interface**
     to TreeBASE. [Stable version on CRAN](http://cran.r-project.org/web/packages/treebase/).
-3.   Carl Boettiger (2011). **rfishbase: Programmatic access to FishBase.**
+3. Carl Boettiger (2011). **rfishbase: Programmatic access to FishBase.**
     [Stable version on CRAN](http://cran.r-project.org/web/packages/rfishbase/).
+4. I am also a founding member of the [rOpenSci project](http://ropensci.org), which has currently produced 28 R packages for interacting with web data and recieved $5000 from Google to support a full-time summer student intern.  
 
 
 See my [Software page](http://carlboettiger.info/software.html) for more. 
