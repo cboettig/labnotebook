@@ -16,7 +16,7 @@ Publications
 2. Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, Carl Boettiger and Brian
   O’Meara, (2012). **Modeling Stabilizing Selection: Expanding the
   Ornstein-Uhlenbeck Model of Adaptive Evolution.** In *Evolution*,
-  ([doi](http://dx.doi.org/doi:10.1111/j.1558-5646.2012.01619.x)) 
+  ([doi](http://dx.doi.org/10.1111/j.1558-5646.2012.01619.x)) 
   ([pdf](http://www.mendeley.com/download/public/98752/4605481493/93f096d8b8740485fc7a7dfe72baa56be6ef50b4/dl.pdf))
   ([code](http://cran.r-project.org/web/packages/OUwie/index.html))
 3. Carl Boettiger, Graham Coop, Peter Ralph (2012) **Is your phylogeny
@@ -53,7 +53,8 @@ Presentations
 
 -   Carl Boettiger & Alan Hastings. (2011) **Limits to Detection for Early
     Warning Signals of Population Collapse.** Ecological Society of
-    America Conference; Austin, TX. In *Nature Precedings*
+    America Conference; Austin, TX. In *Nature Precedings* 
+    ([doi](dx.doi.org/10.1038/npre.2012.6857.1))
     ([slides](http://www.slideshare.net/cboettig/limits-to-detection-for-early-warning-signals-of-population-collapse))
 -   Carl Boettiger. (2011) A general model of continuous character
     evolution. Evolution Conference; Norman, OK. In *Nature
@@ -62,7 +63,7 @@ Presentations
     ([slides](http://www.slideshare.net/cboettig/a-general-model-of-continuous-character-evolution))
 -   Carl Boettiger. (2011) **Using Treebase from R.** iEvoBio
     Conference; Norman, OK. *In Nature Precedings*,
-    ([doi](http://dx.doi.org/10.1038/npre.2012.6851.1 ))
+    ([doi](http://dx.doi.org/10.1038/npre.2012.6851.1))
     ([slides](http://www.slideshare.net/cboettig/r-interface-to-treebase))
 -   Carl Boettiger. (2011) **Integrating Open Lab Notebooks with Online
     Databases.** Science Online; Durham, NC. In *Nature Precedings*,
