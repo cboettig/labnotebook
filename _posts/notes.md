@@ -1,48 +1,40 @@
 
 
-### PRSI paper
 
-* Email Steve Carpenter? Vasilis? Scheffer?
-* Email Joshua, Jonathan, Lucas?
-* Reply to David Seekell
-* Code clean up: example. mostly done.
-* Data Dryad deposit?
-* Code on CRAN? 
-* Blog post for PRSI paper -- DONE
-* Email Thilo Gross re PRSI paper -- DONE
-* Email Tony Ives -- DONE
-* code edits for earlywarning: Run each dataset in inst/examples DONE
-* add readme DONE
-
-
-### PDG Control Working group
+## PDG Control Working group
 
 * send summary briefing for stochastic policy costs paper -- DONE
 * send latex/pdf to group
 
-### Value of information
+## Value of information
 
 - To better get at Jim's question, should compare (profit from growth only noise) - (profit from deterministic) + ((profit from measurement only) - (profit from deterministic)) to (profit from growth+measurement) - (determinsitic), i.e. is (growth+measurement) greater/less than (growth) + (measurement) - deterministic?   
 - Clarify this!  is (profit from growth only) the case in which (a) the manager includes growth noise in the solution when in reality it is absent (hence the deterministic solution is optimal), (b) the case where the manager includes growth noise and it is present (i.e. both are optimal given reality, but reality differs, not the information) 
 - when/are the policies equivalent regardless of the noise? 
 
 
+## Fallacy paper
 
-### Fallacy paper
-
-* Integrate Noam comments to Fallacy paper 
+* Integrate Noam comments DONE
 * Data analysis on updated model runs. DONE 
+* Replace Figure 1 with conceptual diagram of fallacy. DONE
+* Marissa's edits. DONE
+* Alex's edits. DONE
+* Rewrite introduction.  DONE
+* Remove 500 words. DONE
 
-
-### Other 
-
-* write more wrightscape, email peter
-* Research page update! 
-* pomp on the bifurcation model.  run both pmcmc and iterative filtering mif
 
 ## Evolution stuff
 
-* pmc bugfix
+* pmc bugfix (see issues log)
+* write more wrightscape, email peter
+
+### treebase edits.  
+
+- added `metadata()` to combine metadata sources and improve data discovery
+- adding Duncan's corrections
+- Duncan's corrections round 2: 
+- Revised figures.  Return more example code to body
 
 ## Logistics
 
@@ -50,19 +42,33 @@
 * filed reimbursement request on my Krell account DONE
 * Need CSGF tickets
 
-## misc 
 
-* Jekyll notebook previews? DONE
-* Write to [Amber Mace](http://www.linkedin.com/pub/amber-mace/7/a94/b43)?
+### Jekyll 
 
-
-### treebase edits.  
-
-- added `metadata()` to combine metadata sources and improve data discovery
-- adding Duncan's corrections
-
+* notebook previews? DONE
+* next/previous post DONE
+* Toggle code blocks on/off DONE, add to posts template
+* See labnotebook issues.  
 
 ## PDG Control
+
+### Meeting with Jim
+
+- NCEAS TNC
+- Quantify the penalty influence on stock dynamics, not just on the control dynamics!
+
+
+#### Potential extensions to Policy Costs:
+
+-  Measurment uncertainty?
+-  Allee effect? 
+-  interaction with nonlinear?
+
+- memory introduced in policy
+- comparison to autocorrelated noise results 
+- what would you have concluded from stock 
+
+#### PDG Control Reading
 
 * Bohm 1974 
 * Sigh _et al._ 2006 essentially treats this problem but with two control variables -- fishing fleet and harvest level.  
@@ -75,7 +81,10 @@ Bohm, P. (1974). On the Effects of Policy Costs. The Swedish Journal of Economic
 Singh, R., Weninger, Q., and Doyle, M. (2006). Fisheries management with stock growth uncertainty and costly capital adjustment. Journal of Environmental Economics and Management, 52(2), 582-599. doi:10.1016/j.jeem.2006.02.006
 
 
-# misc / code-tricks
+## Reading
+
+
+## misc / code-tricks
 
 - [solarized for vim](https://github.com/altercation/vim-colors-solarized)
 - [solarized for gnome-terminal](https://github.com/sigurdga/gnome-terminal-colors-solarized)

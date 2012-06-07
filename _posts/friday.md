@@ -1,39 +1,29 @@
+---
 
+---
 
 - Write Walters presentation
 - Walters email -- re value of information?
-- Correspondence w. Rafael over PMC+OUwie, wrightscape draft.
+- Correspondence w. Rafael over PMC+OUwie, wrightscape draft. 
 - Filing issues collections on labnotebook, ropensci.github.com
-- CV update 
+- CV updates
 
+### PRSI paper
 
-#### Meeting with Jim
+* Email Steve Carpenter? Vasilis? Scheffer?
+* Email Joshua, Jonathan, Lucas?
+* Reply to David Seekell
+* Code clean up: example. mostly done.
+* Data Dryad deposit?
+* Code on CRAN? 
+* Blog post for PRSI paper -- DONE
+* Email Thilo Gross re PRSI paper -- DONE
+* Email Tony Ives -- DONE
+* code edits for earlywarning: Run each dataset in inst/examples DONE
+* add readme DONE
 
-NCEAS TNC
+# Misc
 
-penalty influence on stock dynamics.  
-
-
-Impacts:
-
-  replicates pattern
-
-  Measurment uncertainty?
-
-  Allee effect? 
-
-  interaction with nonlinear?
-
-  memory introduced in policy
-  comparison to autocorrelated noise results 
-  what would you have concluded from stock 
-  
-
-Policy costs 
-
-email Simon
-
-Notebook update
-
-ropensci readme
+* Write to [Amber Mace](http://www.linkedin.com/pub/amber-mace/7/a94/b43)?
+* pomp on the bifurcation model.  run both pmcmc and iterative filtering mif
 
