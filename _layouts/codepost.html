@@ -12,13 +12,16 @@
         <div class="span4">
           <div class="sidebar">
             Posted on
-            <time pubdate datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>.
+            <time pubdate datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>. 
             <br />
             {% include pagetags.html %}
+            <br />
             <br />
             {% include nextprevious.html %}
             <br />
             <p> <a class="btn btn-mini" href="https://github.com/cboettig/labnotebook/commits/master/_posts">history</a></p>
+            <br />
+            <p> {% include collapse.html %} </p>
           </div>
         </div>
       </div>
