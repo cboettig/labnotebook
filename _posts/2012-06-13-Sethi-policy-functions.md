@@ -7,9 +7,6 @@ tags: decision-theory
 
 
 
- * author Carl Boettiger, <cboettig@gmail.com>
- * license: CC0
- * A dynamic document generated with knitr
 
 Implements a numerical version of the SDP described in (Sethi _et. al._ 2005).
 
@@ -158,9 +155,6 @@ Library ggplot2 loaded.
 
 
 
-### Find the optimum by dynamic programming
-
-
 
 ```r
 measure <- find_dp_optim(SDP_Mat, x_grid, h_grid, OptTime=25, xT=0, 
@@ -269,4 +263,18 @@ ggplot(value) + geom_smooth(aes(stock, value, color=variable)) + ylab("Net Prese
 ![plot of chunk plots](http://farm9.staticflickr.com/8014/7187327805_62635271fa_o.png) 
 
 
-Note that growth noise gives the constant escapement solution, as expected, but large measurement noise results in raising the maximum escapement, particularly at large stock sizes.  If the measured population was unusually high you might assume it was a measurement error and not increase your target harvest immediately, so this makes some intuitive sense.   
+Note that growth noise gives the constant escapement solution, as expected, but large measurement noise results in raising the maximum escapement, particularly at large stock sizes.  If the measured population was unusually high you might assume it was a measurement error and not increase your target harvest immediately, so this makes some intuitive sense.  
+
+
+ * author Carl Boettiger, <cboettig@gmail.com>
+ * license: CC0
+ * A dynamic document generated with knitr
+
+# References 
+
+Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005).
+"Fishery Management Under Multiple Uncertainty." _Journal of
+Environmental Economics And Management_, *50*. ISSN 00950696,
+[doi:10.1016/j.jeem.2004.11.005](http://dx.doi.org/10.1016/j.jeem.2004.11.005)
+
+
