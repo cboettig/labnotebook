@@ -41,6 +41,16 @@ Easiest to compare by putting these on a grid of manager uncertainty (across) vs
 **g+m+implement** |  CU, RD    |   CU     |    CU       | CU, VS
 
 
+
+### Numerical values
+
+                  | none        | growth     | g+measure   | g+m+implement
+-----------       | ----------- | ---------- | ----------- | -------------
+**none**          |  33+/-0.3   |   33+/-1.4 |    33+/-1.5 | 33 +/1.4
+**growth**        |   35+/-4    |   35 +/ -3 |             | 
+**g+measure**     |   33+/-3    |            |  33+/- 3.5  | 
+**g+m+implement** |   33+/-4    |   33+/- 4  |    33+/-4   | 33 +/- 5
+
 So far I've been surprised that the expected profits in each scenario are remarkably similar, despite the apparent mismatch between optimization strategy and reality, or the presence of extra noise. Perhaps this is driven by the essentially single-step prediction nature of the problem formulation, perhaps simply because things are relatively linear? 
 
 

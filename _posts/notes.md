@@ -35,12 +35,14 @@
 - adding Duncan's corrections
 - Duncan's corrections round 2: 
 - Revised figures.  Return more example code to body
+- Text comparing the process of doing tasks manually!
+
 
 ## Logistics
 
 * purchased Evolution airplane tickets DONE
 * filed reimbursement request on my Krell account DONE
-* Need CSGF tickets
+* CSGF tickets DONE
 
 
 ### Jekyll 
