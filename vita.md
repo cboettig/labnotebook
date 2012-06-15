@@ -132,4 +132,4 @@ Media coverage
 
 -   Featured in [Science Careers](http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2010_04_09/caredit.a1000036)
 
-## ([CV as PDF](http://www.carlboettiger.info/wp-content/uploads/2011/07/cv.pdf))
+## ([CV as PDF](http://www.carlboettiger.info/assets/files/cv.pdf))
