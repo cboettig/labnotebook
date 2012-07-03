@@ -45,7 +45,10 @@ Publications
 
 ### Submitted
 
-- Carl Boettiger, Duncan Temple Lang, Peter Wainwright. **rfishbase: exploring, manipulating and visualizing FishBase data from R.**  ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md)) ([code](https://github.com/ropensci/rfishbase))
+- Carl Boettiger, Duncan Temple Lang, Peter Wainwright. **rfishbase: exploring, manipulating and visualizing FishBase data from R.** *Journal of Fish Biology*. ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md)) ([code](https://github.com/ropensci/rfishbase)) ([software package](http://cran.at.r-project.org/web/packages/rfishbase/))
+- Carl Boettiger, Duncan Temple Lang.  **Treebase: An R package for discovery, access and manipulation of online phylogenies** ([preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md)) ([code](https://github.com/ropensci/treebase)) ([software package](http://cran.at.r-project.org/web/packages/treebase/))
+- Carl Boettiger, Alan Hastings. **Early Warning Signals and the Prosecutor’s Fallacy** 
+
 
 
 Presentations
