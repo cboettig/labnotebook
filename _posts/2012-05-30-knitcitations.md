@@ -264,7 +264,7 @@ As we go along adding inline citations, R stores the list of citation info.  The
 
 
 ```r
-print(bibliography(), "html")
+bibliography("html") 
 ```
 
 <p>Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006).
