@@ -1,0 +1,32 @@
+---
+layout: post
+
+---
+
+## Value of information
+
+* bias table with measurement noise
+* Fix deterministic. 
+* Run scenarios with very low noise rather than deterministic 
+* Reed S vs. D theorem
+* Reed theorem extended to Sethi cases
+* simulation values should import scenario list. (done for bias table).  
+
+### Reed theorem
+
+* Not showing S = D for cost free.  hmm... 
+* Not showing S constant for different profit functions?!
+
+
+## impact of management on warning signals
+
+Compare the probability of detection in managed and unmanaged models.  
+
+## Evolution
+
+* Evolution talk
+* fishbase reply
+*  iEvoBio talk (rOpenSci)
+
+
+[fishR](http://www.ncfaculty.net/dogle/fishR/gnrlex/gnrlex.html)
