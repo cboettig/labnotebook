@@ -138,4 +138,6 @@ Media coverage
 
 -   Featured in [Science Careers](http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2010_04_09/caredit.a1000036)
 
-## ([CV as PDF](http://www.carlboettiger.info/assets/files/cv.pdf))
+<h2> (<a href="http://www.carlboettiger.info/assets/files/cv.pdf"  onclick="var that=this;_gaq.push(['_trackEvent','Download','PDF',this.href]);setTimeout(function(){location.href=that.href;},200);return false;">CV as PDF</a>) </h2>
+
+
