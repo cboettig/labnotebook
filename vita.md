@@ -45,8 +45,8 @@ Publications
 
 ### Submitted
 
-- Carl Boettiger, Duncan Temple Lang, Peter Wainwright. **rfishbase: exploring, manipulating and visualizing FishBase data from R.** *Journal of Fish Biology*. ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md)) ([code](https://github.com/ropensci/rfishbase)) ([software package](http://cran.at.r-project.org/web/packages/rfishbase/))
-- Carl Boettiger, Duncan Temple Lang.  **Treebase: An R package for discovery, access and manipulation of online phylogenies** ([preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md)) ([code](https://github.com/ropensci/treebase)) ([software package](http://cran.at.r-project.org/web/packages/treebase/))
+- Carl Boettiger, Duncan Temple Lang, Peter Wainwright. **rfishbase: exploring, manipulating and visualizing FishBase data from R.** *Journal of Fish Biology*. ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md)) ([code](https://github.com/ropensci/rfishbase)) ([software package](http://cran.at.r-project.org/web/packages/rfishbase/)). 
+- Carl Boettiger, Duncan Temple Lang.  **Treebase: An R package for discovery, access and manipulation of online phylogenies** ([preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md)) ([code](https://github.com/ropensci/treebase)) ([software package](http://cran.at.r-project.org/web/packages/treebase/)). *Methods in Ecology and Evolution* pending minor revisions.
 - Carl Boettiger, Alan Hastings. **Early Warning Signals and the Prosecutor’s Fallacy** 
 
 
@@ -54,6 +54,9 @@ Publications
 Presentations
 -------------
 
+-   Invited speaker in SSB Symposium: Carl Boettiger (2012) **Detecting evolutionary regime shifts with comparative phylogenetics.**
+    Evolution Conference, Ottawa, CAN. 
+    ([slides](http://www.slideshare.net/cboettig/evolution-13576088)) 
 -   Carl Boettiger & Alan Hastings. (2011) **Limits to Detection for Early
     Warning Signals of Population Collapse.** Ecological Society of
     America Conference; Austin, TX. In *Nature Precedings* 
