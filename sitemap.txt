@@ -3,12 +3,8 @@
 title : Sitemap
 ---
 
-## Pages
-
 {% for page in site.pages %}
 http://www.carlboettiger.info{{ page.url }}{% endfor %}
-
-## Posts
 
 {% for post in site.posts %}
 http://www.carlboettiger.info{{ post.url }}{% endfor %}
