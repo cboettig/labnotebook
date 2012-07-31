@@ -7,3 +7,9 @@ project directory.
 
 Released under the MIT license.
 
+
+Insert a feed using a Jekyll liquid tag:
+
+{% feedzirra %}
+
+
