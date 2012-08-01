@@ -7,6 +7,11 @@ layout: default
 
 {% octokit_issues pdg_control%}
 
+### Recent commits
+
+{% octokit_commits pdg_control%}
+
+
 
 ## Warning Signals tasks  
 
