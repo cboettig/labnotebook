@@ -53,7 +53,8 @@ Also: ievobio Day 1.
 Wednesday
 ---------
 
-ievobio all day.  
+* #ievobio all day. 
+* Slides for my #ievobio [lightning talk on rOpenSci](http://cboettig.github.com/talks/ievobio2012/)
 
 Sunday - Tuesday twitter notes
 ------------------------------
