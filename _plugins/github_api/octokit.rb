@@ -37,3 +37,36 @@ end
 Liquid::Template.register_tag('octokit_issues', Jekyll::OctokitIssues)
 
 
+
+
+
+module Jekyll
+  class OctokitCommits < Liquid::Tag
+    def initialize(tag_name, text, tokens)
+      super
+      @text = text
+      @address = "cboettig/"+"#{@text}"
+    end
+
+    def render(context) # learn how to write this to take an argument!
+      repo = Octokit.commits(@address) 
+      out = "<ul>"
+      for i in 0 ... [repo.size, 5].min
+        out = out + "<li>" +
+          "<a href=\"" + repo[i].commit.url + "\">" +
+          repo[i].commit.message +
+          "</a>" +
+          " " + repo[i].commit.author.date + "</li>"
+      end
+      out = out + "</ul>"
+      out
+
+    end
+  end
+end
+
+Liquid::Template.register_tag('octokit_commits', Jekyll::OctokitCommits)
+
+
+
+
