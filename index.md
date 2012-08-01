@@ -25,7 +25,7 @@ as I describe in this
 <ul class="unstyled">
 <li> Office: 3156 <a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=wickson+Hall+UC+Davis,+Davis+CA&sll=37.0625,-95.677068&sspn=29.025693,65.390625&ie=UTF8&hq=wickson+Hall&hnear=University+of+California+Davis,+Davis,+Yolo,+California+95616&ll=38.542082,-121.751679&spn=0.003281,0.007982&t=h&z=17">Wickson Hall</a> 
 <li> Mail: EVE Dept, UC Davis 1 Shields Ave, Davis CA 95616 </li>
-<li> Electronic/Network profiles: The icons below link to corresponding networks </li>
+<li> Electronic contact &amp; network profiles: Linked from the icons below. </li>
 <!-- <li> Researcher ID: <a href="http://www.researcherid.com/rid/F-9784-2010">F-9784–2010</a> </li> -->
 </ul>
 
