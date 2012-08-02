@@ -1,6 +1,7 @@
 require 'feedzirra'
 require 'octokit'
 require 'twitter'
+require 'redcarpet'
 
 # Need to store feed in cache and just call update?
 
@@ -11,10 +12,13 @@ module Jekyll
       @user = text
     end
     def render(context)
+      # Initialize a redcarpet markdown renderer to autolink urls
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+                                                 :autolink => true, :space_after_headers => true)
       out = "<ul class=\"unstyled\">"
       tweets = Twitter.user_timeline(@user)
       for i in 0 ... 3
-      out = out + "<li>" + tweets[i].text +
+      out = out + "<li>" + markdown.render(tweets[i].text) +
         " <a href=\"http://twitter.com/" + @user + "/statuses/" + 
         tweets[i].id.to_s + "\">"  + tweets[i].created_at.to_s + "</a> " + 
         "</li>"
@@ -44,7 +48,7 @@ module Jekyll
       @address = "cboettig/"+"#{@text}"
     end
 
-    def render(context) # learn how to write this to take an argument!
+    def render(context) 
       repo = Octokit.commits(@address) 
       out = "<ul>"
       for i in 0 ... [repo.size, 2].min
@@ -60,6 +64,8 @@ module Jekyll
     end
   end
 
+## Use context-specific github flavored markdown to convert sha into link.  e.g.
+## Octokit.markdown("Hello world github/linguist#1 **cool**, and #1!", :mode => "gfm", :context => "github/gollum")
 
 
 end
