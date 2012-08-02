@@ -48,7 +48,7 @@ module Jekyll
       @address = "cboettig/"+"#{@text}"
     end
 
-    def render(context) # learn how to write this to take an argument!
+    def render(context)
       repo = Octokit.commits(@address) 
       out = "<ul>"
       for i in 0 ... [repo.size, 5].min
@@ -64,6 +64,10 @@ module Jekyll
     end
   end
 end
+
+## Use context-specific github flavored markdown to convert sha into link.  e.g.
+## Octokit.markdown("Hello world github/linguist#1 **cool**, and #1!", :mode => "gfm", :context => "github/gollum")
+#
 
 Liquid::Template.register_tag('octokit_commits', Jekyll::OctokitCommits)
 
