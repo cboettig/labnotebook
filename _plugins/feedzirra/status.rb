@@ -15,12 +15,12 @@ module Jekyll
       # Initialize a redcarpet markdown renderer to autolink urls
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
                                                  :autolink => true, :space_after_headers => true)
-      out = "<ul class=\"unstyled\">"
+      out = "<ul>"
       tweets = Twitter.user_timeline(@user)
       for i in 0 ... 3
       out = out + "<li>" + markdown.render(tweets[i].text) +
         " <a href=\"http://twitter.com/" + @user + "/statuses/" + 
-        tweets[i].id.to_s + "\">"  + tweets[i].created_at.to_s + "</a> " + 
+        tweets[i].id.to_s + "\">"  + tweets[i].created_at.strftime("%I:%M %Y/%m/%d") + "</a> " + 
         "</li>"
       end
       out + "</ul>"
@@ -30,12 +30,12 @@ module Jekyll
 
   class GithubFeed < Liquid::Tag
     def render(context)
-      out = "<ul class=\"unstyled\">"
+      out = "<ul>"
       feed = Feedzirra::Feed.fetch_and_parse("https://github.com/cboettig.atom")
       # consider formatting properly
       for i in 0 ... 3
         out = out + "<li>" + feed.entries[i].title + " <a href=\"" + feed.entries[i].url + "\">" +
-          feed.entries[i].published.to_s + "</a>" + "</li>" 
+          feed.entries[i].published.strftime("%I:%M %Y/%m/%d") + "</a>" + "</li>" 
       end
       out + "</ul>"
     end
