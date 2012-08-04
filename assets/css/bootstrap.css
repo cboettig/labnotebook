@@ -416,7 +416,7 @@ h6 {
   text-transform: uppercase;
 }
 .page-header {
-  padding-bottom: 23px;
+  padding-bottom: -23px;
   margin: 24px 0;
   border-bottom: 1px solid #eeeeee;
 }
