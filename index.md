@@ -22,10 +22,9 @@ as I describe in this
 [introduction](http://www.carlboettiger.info/archives/211).
 
 
-<ul class="unstyled" style="font-size:.8em">
-<li> Office: 3156 <a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=wickson+Hall+UC+Davis,+Davis+CA&sll=37.0625,-95.677068&sspn=29.025693,65.390625&ie=UTF8&hq=wickson+Hall&hnear=University+of+California+Davis,+Davis,+Yolo,+California+95616&ll=38.542082,-121.751679&spn=0.003281,0.007982&t=h&z=17">Wickson Hall</a> 
-<li> Mail: EVE Dept, UC Davis 1 Shields Ave, Davis CA 95616 </li>
-<li> Email &amp; online networks: linked from icons below. </li>
-<!-- <li> Researcher ID: <a href="http://www.researcherid.com/rid/F-9784-2010">F-9784–2010</a> </li> -->
+<ul class="unstyled" style="font-size:.8em;line-height=.8em">
+<li style="margin:-6px"> Office: 3156 <a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=wickson+Hall+UC+Davis,+Davis+CA&sll=37.0625,-95.677068&sspn=29.025693,65.390625&ie=UTF8&hq=wickson+Hall&hnear=University+of+California+Davis,+Davis,+Yolo,+California+95616&ll=38.542082,-121.751679&spn=0.003281,0.007982&t=h&z=17">Wickson Hall</a> 
+<li style="margin:-6px"> Mail: EVE Dept, UC Davis 1 Shields Ave, Davis CA 95616 </li>
+<li style="margin:-6px"> Email &amp; online networks: linked from icons below. </li>
 </ul>
 

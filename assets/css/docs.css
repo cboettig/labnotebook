@@ -122,8 +122,8 @@ hr.soften {
   margin-left: 45px;
   padding: 35px 35px 36px;
   border-left: 1px solid #e5e5e5;
-  font-size: .9em;
-  line-height: .9em;
+  font-size: .85em;
+  line-height: 1.5em;
   text-align: justify;
 }
 .postpreview h3 {
