@@ -18,9 +18,6 @@ layout: default
 {% octokit_issues earlywarning%}
 
 
-## Lab Notebook tasks
-
-{% octokit_issues labnotebook%}
 
 
 (Task labels in parentheses.  Generated automatically with the Github API using [Octokit](https://github.com/pengwynn/octokit/)).

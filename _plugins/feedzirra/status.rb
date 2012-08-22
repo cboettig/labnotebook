@@ -1,7 +1,8 @@
-require 'feedzirra'
-require 'octokit'
-require 'twitter'
-require 'redcarpet'
+require 'feedzirra' # atom/rss API
+require 'octokit'   # Github API
+require 'twitter'   # Twitter API
+require 'redcarpet' # Formatting links
+require 'nokogiri'  # Parse HTML
 
 # Need to store feed in cache and just call update?
 
@@ -34,8 +35,14 @@ module Jekyll
       feed = Feedzirra::Feed.fetch_and_parse("https://github.com/cboettig.atom")
       # consider formatting properly
       for i in 0 ... 3
-        out = out + "<li>" + feed.entries[i].title + " <a href=\"" + feed.entries[i].url + "\">" +
-          feed.entries[i].published.strftime("%I:%M %Y/%m/%d") + "</a>" + "</li>" 
+        doc = Nokogiri::HTML.parse(feed.entries[i].content) # parse the content
+        # Print title, content
+        out = out + "<li>" + 
+          feed.entries[i].title + ": " +
+          "<em>" + doc.css('blockquote').text + "</em>" + 
+          " <a href=\"" + feed.entries[i].url + "\">" +
+          feed.entries[i].published.strftime("%I:%M %Y/%m/%d") + "</a>" +
+          "</li>" 
       end
       out + "</ul>"
     end
