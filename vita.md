@@ -6,6 +6,7 @@ title: Vita
 
 Publications
 ------------
+1. Carl Boettiger, Duncan Temple Lang.  **Treebase: An R package for discovery, access and manipulation of online phylogenies** In *Methods in Ecology and Evolution* (in press). [preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md)) ([code](https://github.com/ropensci/treebase)) ([software package](http://cran.at.r-project.org/web/packages/treebase/)).
 
 1. Carl Boettiger and Alan Hastings (2012). **Quantifying Limits to Detection 
   of Early Warning for Critical Transitions.** In *Journal of the Royal Society:
@@ -13,13 +14,13 @@ Publications
   ([pdf](http://www.mendeley.com/download/public/98752/4711221423/df767d6b5f0fbf44cc236470307992b019e6c149/dl.pdf))
   ([arXiv](http://arxiv.org/abs/1204.6231))
   ([code](https://github.com/cboettig/earlywarning))
-2. Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, Carl Boettiger and Brian
+1. Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, Carl Boettiger and Brian
   O’Meara, (2012). **Modeling Stabilizing Selection: Expanding the
   Ornstein-Uhlenbeck Model of Adaptive Evolution.** In *Evolution*,
   ([doi](http://dx.doi.org/10.1111/j.1558-5646.2012.01619.x)) 
   ([pdf](http://www.mendeley.com/download/public/98752/4605481493/93f096d8b8740485fc7a7dfe72baa56be6ef50b4/dl.pdf))
   ([code](http://cran.r-project.org/web/packages/OUwie/index.html))
-3. Carl Boettiger, Graham Coop, Peter Ralph (2012) **Is your phylogeny
+1. Carl Boettiger, Graham Coop, Peter Ralph (2012) **Is your phylogeny
   informative? Measuring the power of comparative methods.** In
   *Evolution*.
   ([doi](http://dx.doi.org/10.1111/j.1558-5646.2012.01574.x)) 
@@ -27,7 +28,7 @@ Publications
   ([arXiv](http://arxiv.org/abs/1110.4944))
   ([code](https://github.com/cboettig/pmc))
   ([data](http://datadryad.org/handle/10255/dryad.37645))
-4. Carl Boettiger, Jonathan Dushoff, Joshua S Weitz (2010) **Fluctuation
+1. Carl Boettiger, Jonathan Dushoff, Joshua S Weitz (2010) **Fluctuation
   domains in adaptive evolution.**, 6-13. In *Theoretical Population
   Biology* 77 (1).
   ([doi](http://dx.doi.org/10.1016/j.tpb.2009.10.003)) 
@@ -35,7 +36,7 @@ Publications
   ([arXiv](http://arxiv.org/abs/1004.4233))
   ([code](https://github.com/cboettig/fluctuationDomains))
   ([data](http://datadryad.org/handle/10255/dryad.37625))
-5. James J. Wray, Neta A. Bahcall, Paul Bode, Carl Boettiger, Phillip
+1. James J. Wray, Neta A. Bahcall, Paul Bode, Carl Boettiger, Phillip
   Hopkins. (2006) **The Shape, Multiplicity, and Evolution of
   Superclusters in ΛCDM Cosmology**, 907-916. In *The Astrophysical
   Journal* 652 (2).
@@ -46,7 +47,6 @@ Publications
 ### Submitted
 
 - Carl Boettiger, Duncan Temple Lang, Peter Wainwright. **rfishbase: exploring, manipulating and visualizing FishBase data from R.** *Journal of Fish Biology*. ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md)) ([code](https://github.com/ropensci/rfishbase)) ([software package](http://cran.at.r-project.org/web/packages/rfishbase/)). 
-- Carl Boettiger, Duncan Temple Lang.  **Treebase: An R package for discovery, access and manipulation of online phylogenies** ([preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md)) ([code](https://github.com/ropensci/treebase)) ([software package](http://cran.at.r-project.org/web/packages/treebase/)). *Methods in Ecology and Evolution* pending minor revisions.
 - Carl Boettiger, Alan Hastings. **Early Warning Signals and the Prosecutor’s Fallacy** 
 
 
@@ -54,6 +54,7 @@ Publications
 Presentations
 -------------
 
+-   Carl Boettiger (2012) Ecological Society of America Conference, Portland, OR.  ([slides](http://www.slideshare.net/cboettig/esa-2012-talk))
 -   Invited speaker in SSB Symposium: Carl Boettiger (2012) **Detecting evolutionary regime shifts with comparative phylogenetics.**
     Evolution Conference, Ottawa, CAN. 
     ([slides](http://www.slideshare.net/cboettig/evolution-13576088)) 
