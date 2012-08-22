@@ -45,8 +45,6 @@ Liquid::Template.register_tag('octokit_issues', Jekyll::OctokitIssues)
 
 
 
-## TODO Format date using Chronic.parse(date).strftime("%I:%M %Y/%m/%d") 
-
 module Jekyll
   class OctokitCommits < Liquid::Tag
     def initialize(tag_name, text, tokens)
@@ -63,7 +61,7 @@ module Jekyll
           "<a href=\"" + repo[i].commit.url + "\">" +
           repo[i].commit.message +
           "</a>" +
-          " " + repo[i].commit.author.date + "</li>"
+          " " + DateTime.parse(repo[i].commit.author.date).to_time.strftime("%I:%M %Y/%m/%d")  + "</li>"
       end
       out = out + "</ul>"
       out

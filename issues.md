@@ -3,6 +3,8 @@ layout: default
 
 ---
 
+<div class="sidebar">
+
 ## PDG Control Tasks 
 
 {% octokit_issues pdg_control%}
@@ -22,3 +24,5 @@ layout: default
 
 (Task labels in parentheses.  Generated automatically with the Github API using [Octokit](https://github.com/pengwynn/octokit/)).
 
+
+</div>
