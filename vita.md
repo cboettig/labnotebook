@@ -6,8 +6,8 @@ title: Vita
 
 Publications
 ------------
-1. Carl Boettiger, Duncan Temple Lang.  **Treebase: An R package for discovery, access and manipulation of online phylogenies** In *Methods in Ecology and Evolution* (in press). [preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md)) ([code](https://github.com/ropensci/treebase)) ([software package](http://cran.at.r-project.org/web/packages/treebase/)).
 
+1. Carl Boettiger, Duncan Temple Lang.  **Treebase: An R package for discovery, access and manipulation of online phylogenies** In *Methods in Ecology and Evolution* (in press). [preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md)) ([code](https://github.com/ropensci/treebase)) ([software package](http://cran.at.r-project.org/web/packages/treebase/)).
 1. Carl Boettiger and Alan Hastings (2012). **Quantifying Limits to Detection 
   of Early Warning for Critical Transitions.** In *Journal of the Royal Society:
   Interface* ([doi](http://dx.doi.org/10.1098/rsif.2012.0125)) 
@@ -53,56 +53,39 @@ Publications
 
 Presentations
 -------------
-
--   Carl Boettiger (2012) Ecological Society of America Conference, Portland, OR.  ([slides](http://www.slideshare.net/cboettig/esa-2012-talk))
--   Invited speaker in SSB Symposium: Carl Boettiger (2012) **Detecting evolutionary regime shifts with comparative phylogenetics.**
-    Evolution Conference, Ottawa, CAN. 
+-   Carl Boettiger (2012) Ecological Society of America Conference, Portland, OR.
+    ([slides](http://www.slideshare.net/cboettig/esa-2012-talk))
+-   Invited speaker in SSB Symposium: Carl Boettiger (2012) Evolution Conference, Ottawa, CAN. 
     ([slides](http://www.slideshare.net/cboettig/evolution-13576088)) 
--   Carl Boettiger & Alan Hastings. (2011) **Limits to Detection for Early
-    Warning Signals of Population Collapse.** Ecological Society of
+-   Carl Boettiger & Alan Hastings. (2011) Ecological Society of
     America Conference; Austin, TX. In *Nature Precedings* 
     ([doi](dx.doi.org/10.1038/npre.2012.6857.1))
     ([slides](http://www.slideshare.net/cboettig/limits-to-detection-for-early-warning-signals-of-population-collapse))
--   Carl Boettiger. (2011) A general model of continuous character
-    evolution. Evolution Conference; Norman, OK. In *Nature
-    Precedings*,
-    ([doi](http://dx.doi.org/10.1038/npre.2011.6080.1))
+-   Carl Boettiger. (2011) Evolution Conference; Norman, OK. In *Nature
+    Precedings*, ([doi](http://dx.doi.org/10.1038/npre.2011.6080.1))
     ([slides](http://www.slideshare.net/cboettig/a-general-model-of-continuous-character-evolution))
--   Carl Boettiger. (2011) **Using Treebase from R.** iEvoBio
+-   Carl Boettiger. (2011) iEvoBio
     Conference; Norman, OK. *In Nature Precedings*,
     ([doi](http://dx.doi.org/10.1038/npre.2012.6851.1))
     ([slides](http://www.slideshare.net/cboettig/r-interface-to-treebase))
--   Carl Boettiger. (2011) **Integrating Open Lab Notebooks with Online
-    Databases.** Science Online; Durham, NC. In *Nature Precedings*,
-    ([doi](http://dx.doi.org/10.1038/npre.2012.6853.1))
+-   Carl Boettiger. (2011) Science Online; Durham, NC. In *Nature Precedings*, ([doi](http://dx.doi.org/10.1038/npre.2012.6853.1))
     ([slides](http://www.slideshare.net/cboettig/scioslides))
--   Carl Boettiger, Graham Coop & Peter Ralph. (2011) **Is your phylogeny
-    informative?** Presented at the Society for Integrative and
+-   Carl Boettiger, Graham Coop & Peter Ralph. (2011) Society for Integrative and
     Comparative Biology. Salt Lake City, Utah. In *Nature Precedings*,
     ([doi](http://dx.doi.org/10.1038/npre.2011.6453.1))
     ([slides](http://www.slideshare.net/cboettig/is-your-phylogeny-informative))
--   Carl Boettiger. (2010) **My experiment with open science.** At
-    iEvoBio Conference; Portland, OR. In *Nature
+-   Carl Boettiger. (2010) iEvoBio Conference; Portland, OR. In *Nature
     Precedings* ([doi](http://dx.doi.org/10.1038/npre.2010.4602.1))
     ([slides](http://www.slideshare.net/cboettig/ievobio))
--   Carl Boettiger. (2010) Evolution Conference; Portland OR. **A new
-    phylogenetic comparative method: detecting niches and transitions
-    with continuous characters.** In *Nature Precedings*
+-   Carl Boettiger. (2010) Evolution Conference; Portland OR. In *Nature Precedings*
     ([doi](10.1038/npre.2010.4615.1))
     ([slides](http://www.slideshare.net/cboettig/a-new-phylogenetic-comparative-method-detecting-niches-and-transitions-with-continuous-characters))
--   Carl Boettiger. (2009) **Inferring Adaptive Landscapes from
-    Phylogenetic Trees.** University of Tennessee, Knoxville, TN.
--   Carl Boettiger. (2009) Inferring Adaptive Landscapes from
-    Phylogenetic Trees. Center for Population Biology, Davis, CA.
-    ([slides](http://www.slideshare.net/cboettig/cpb-pres))
--   Carl Boettiger. (2009) **The Evolutionary Seesaw: Origins of
-    Biodiversity?** International Institute of Applied Systems
-    Analysis, Vienna; Austria. In *Nature Precedings,*
+-   Carl Boettiger. (2009) University of Tennessee, Knoxville, TN.
+-   Carl Boettiger. (2009) Center for Population Biology, Davis, CA. ([slides](http://www.slideshare.net/cboettig/cpb-pres))
+-   Carl Boettiger. (2009) International Institute of Applied Systems Analysis, Vienna; Austria. In *Nature Precedings,*
     ([doi](http://dx.doi.org/10.1038/npre.2012.6852.1))
     ([slides](http://www.slideshare.net/cboettig/iiasa-final))
--   Carl Boettiger. (2008): **Reading the Secrets of Biological
-    Fluctuations.** Cornell Probability Summer School, Ithaca, NY. In
-    *Nature Precedings,*
+-   Carl Boettiger. (2008) Cornell Probability Summer School, Ithaca, NY. In *Nature Precedings,*
     ([doi](http://dx.doi.org/10.1038/npre.2010.4949.1))
     ([slides](http://www.slideshare.net/cboettig/presentation-5348861))
 
