@@ -1,6 +1,7 @@
 require 'octokit'
 
 # should this cache?
+# TODO: show only top 3 issues? sort by date?  Show closed issues?
 
 module Jekyll
   class OctokitIssues < Liquid::Tag
@@ -15,16 +16,22 @@ module Jekyll
 
       repo = Octokit.issues(@address) # grab the data. Can this go in "initialize?"
 
+      #  repo = Octokit.issues(@address, :status => "closed") # (Gets closed issues??)
+
       # Generate a list of all open issues, linking to github issue page.  
       out = "<ul>"
-      for i in 0 ... repo.size
+      for i in 0 ... [repo.size, 3].min ## displays up to 3.  sorted by date?
         lab = ""
         if repo[i].labels[0].class == Hashie::Mash  # Get labels for issues, with color, where applicable 
           lab = " (<font color=\"#" + repo[i].labels[0].color + 
                 "\">" + repo[i].labels[0].name  + "</font>)"
         end
-        if repo[i].state == "open" # Print only open issues (not necessary? Done by default?)
+        ## Actually only pulls open issues
+        if repo[i].state == "open" # Print only open issues 
           out = out + "<li> <a href=\"" + repo[i].html_url + "\">" +  repo[i].title + "</a> " + lab + "</li>"
+        end
+        if repo[i].state == "closed" # strike out closed issues 
+          out = out + "<li> <strike> <a href=\"" + repo[i].html_url + "\">" +  repo[i].title + "</a> " + lab + "</strike> </li>"
         end
       end
       out = out + "</ul>"
@@ -38,7 +45,7 @@ Liquid::Template.register_tag('octokit_issues', Jekyll::OctokitIssues)
 
 
 
-
+## TODO Format date using Chronic.parse(date).strftime("%I:%M %Y/%m/%d") 
 
 module Jekyll
   class OctokitCommits < Liquid::Tag
@@ -51,7 +58,7 @@ module Jekyll
     def render(context)
       repo = Octokit.commits(@address) 
       out = "<ul>"
-      for i in 0 ... [repo.size, 5].min
+      for i in 0 ... [repo.size, 3].min
         out = out + "<li>" +
           "<a href=\"" + repo[i].commit.url + "\">" +
           repo[i].commit.message +
