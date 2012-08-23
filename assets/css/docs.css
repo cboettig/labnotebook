@@ -101,6 +101,12 @@ hr.soften {
   color: #555;
 }
 
+/* highlight (shrink fontsize for code)
+-------------------------------------------------- */
+.highlight code {
+  font-size: 13px;
+}
+
 
 /* Sidebar
 -------------------------------------------------- */
