@@ -107,6 +107,10 @@ hr.soften {
   font-size: 13px;
 }
 
+.highlight code {
+  font-size: 13px;
+}
+
 
 /* Sidebar
 -------------------------------------------------- */
