@@ -4,13 +4,13 @@ layout: post
 ---
 
 
+## Resolving S < D 
+
+
+
 ## Code updates
 
-* 
-
-* 
-
-
+[octokit](https://github.com/pengwynn/octokit/issues/127)
 
 ## Reading
 

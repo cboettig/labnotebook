@@ -2,7 +2,7 @@
 layout: post
 title: Limits to the detection of early warning signals
 category: ecology
-tags: warning-signals
+tags: early-warning
 ---
 
 Our paper, _limits to the detection of early warning signals for
