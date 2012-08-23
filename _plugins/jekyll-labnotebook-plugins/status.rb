@@ -14,11 +14,12 @@ module Jekyll
     end
     def render(context)
       # Initialize a redcarpet markdown renderer to autolink urls
+      # Could use octokit instead to get GFM
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
                                                  :autolink => true, :space_after_headers => true)
       out = "<ul>"
       tweets = Twitter.user_timeline(@user)
-      for i in 0 ... 3
+      for i in 0 ... 4
       out = out + "<li>" + markdown.render(tweets[i].text) +
         " <a href=\"http://twitter.com/" + @user + "/statuses/" + 
         tweets[i].id.to_s + "\">"  + tweets[i].created_at.strftime("%I:%M %Y/%m/%d") + "</a> " + 
@@ -30,11 +31,15 @@ module Jekyll
 
 
   class GithubFeed < Liquid::Tag
+    def initialize(tag_name, text, tokens)
+      super
+      @user = text
+    end
     def render(context)
       out = "<ul>"
-      feed = Feedzirra::Feed.fetch_and_parse("https://github.com/cboettig.atom")
+      feed = Feedzirra::Feed.fetch_and_parse("https://github.com/" + @user + ".atom")
       # consider formatting properly
-      for i in 0 ... 3
+      for i in 0 ... 4
         doc = Nokogiri::HTML.parse(feed.entries[i].content) # parse the content
         # Print title, content
         out = out + "<li>" + 
@@ -75,9 +80,47 @@ module Jekyll
 ## Octokit.markdown("Hello world github/linguist#1 **cool**, and #1!", :mode => "gfm", :context => "github/gollum")
 
 
-end
+
+
+  class MendeleyFeed < Liquid::Tag
+    def initialize(tag_name, text, tokens)
+      super
+      @text = text
+    end
+    def render(context)
+      out = "<ul>"
+      feed = Feedzirra::Feed.fetch_and_parse("http://www.mendeley.com/groups/" + @text + "/feed/rss/")
+      # consider formatting properly
+      for i in 0 ... 3
+        doc = Nokogiri::HTML.parse(feed.entries[i].summary) # parse the content
+        # Print title, content
+        out = out + "<li>" + 
+          feed.entries[i].title + ": " +
+          doc.xpath("//p[1]").text +  
+          doc.xpath("//p[2]").text + 
+#          "<em>" + doc.css('blockquote').text + "</em>" + 
+          " <a href=\"" + feed.entries[i].url + "\">" +
+          feed.entries[i].published.strftime("%I:%M %Y/%m/%d") + "</a>" +
+          "</li>" 
+      end
+      out + "</ul>"
+    end
+  end
+
+
+
+
+
+end ## end module Jekyll
+
+
 
 Liquid::Template.register_tag('twitter_feed', Jekyll::TwitterFeed)
 Liquid::Template.register_tag('github_feed', Jekyll::GithubFeed)
 Liquid::Template.register_tag('github_commits', Jekyll::GitCommits)
+Liquid::Template.register_tag('mendeley_feed', Jekyll::MendeleyFeed)
+
+
+
+
 
