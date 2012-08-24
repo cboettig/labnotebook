@@ -4,27 +4,37 @@ title: Vita
 ---
 
 
-Publications
-------------
 
-1. Carl Boettiger, Duncan Temple Lang.  **Treebase: An R package for discovery, access and manipulation of online phylogenies** In *Methods in Ecology and Evolution* (in press). [preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md)) ([code](https://github.com/ropensci/treebase)) ([software package](http://cran.at.r-project.org/web/packages/treebase/)).
+publications
+------------
+1. Carl Boettiger, Duncan Temple Lang, Peter
+  Wainwright. **rfishbase: exploring, manipulating and visualizing
+  FishBase data from R.** *Journal of Fish Biology* (in press).
+  ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md))
+  ([code](https://github.com/ropensci/rfishbase)) ([software
+  package](http://cran.at.r-project.org/web/packages/rfishbase/)).
+1. Carl Boettiger, Duncan Temple Lang.  **Treebase: An R
+  package for discovery, access and manipulation of online
+  phylogenies** In *Methods in Ecology and Evolution* (in press).
+  ([preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md))
+  ([code](https://github.com/ropensci/treebase)) ([software
+  package](http://cran.at.r-project.org/web/packages/treebase/)).
 1. Carl Boettiger and Alan Hastings (2012). **Quantifying Limits to Detection 
-  of Early Warning for Critical Transitions.** In *Journal of the Royal Society:
-  Interface* ([doi](http://dx.doi.org/10.1098/rsif.2012.0125)) 
+  of Early Warning for Critical Transitions.** 2527-2539. In *Journal of the Royal Society:
+  Interface* 9 (75) ([doi](http://dx.doi.org/10.1098/rsif.2012.0125)) 
   ([pdf](http://www.mendeley.com/download/public/98752/4711221423/df767d6b5f0fbf44cc236470307992b019e6c149/dl.pdf))
   ([arXiv](http://arxiv.org/abs/1204.6231))
   ([code](https://github.com/cboettig/earlywarning))
 1. Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, Carl Boettiger and Brian
   O’Meara, (2012). **Modeling Stabilizing Selection: Expanding the
-  Ornstein-Uhlenbeck Model of Adaptive Evolution.** In *Evolution*,
+  Ornstein-Uhlenbeck Model of Adaptive Evolution.** 2369-2383. In *Evolution* 66 (8). 
   ([doi](http://dx.doi.org/10.1111/j.1558-5646.2012.01619.x)) 
-  ([pdf](http://www.mendeley.com/download/public/98752/4605481493/93f096d8b8740485fc7a7dfe72baa56be6ef50b4/dl.pdf))
+  ([pdf](http://www.mendeley.com/download/public/98752/4605481493/dfca8df9311b372425a204c1a6587ecee2b275dc/dl.pdf))
   ([code](http://cran.r-project.org/web/packages/OUwie/index.html))
 1. Carl Boettiger, Graham Coop, Peter Ralph (2012) **Is your phylogeny
-  informative? Measuring the power of comparative methods.** In
-  *Evolution*.
-  ([doi](http://dx.doi.org/10.1111/j.1558-5646.2012.01574.x)) 
-  ([pdf](http://www.mendeley.com/download/public/98752/4485545653/9a209c7dd29980fd2e47c06eb8b2d1d7dd6f70d4/dl.pdf))
+  informative? Measuring the power of comparative methods.**  2240-51. In *Evolution* 66 (7).
+  ([doi](http://dx.doi.org/10.1111/j.1558-5646.2011.01574.x)) 
+  ([pdf](http://www.mendeley.com/download/public/98752/4485545653/566ffaffaf0fa6fb8f847096b742bc465aca3a8e/dl.pdf))
   ([arXiv](http://arxiv.org/abs/1110.4944))
   ([code](https://github.com/cboettig/pmc))
   ([data](http://datadryad.org/handle/10255/dryad.37645))
@@ -46,10 +56,10 @@ Publications
 
 ### Submitted
 
-- Carl Boettiger, Duncan Temple Lang, Peter Wainwright. **rfishbase: exploring, manipulating and visualizing FishBase data from R.** *Journal of Fish Biology*. ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md)) ([code](https://github.com/ropensci/rfishbase)) ([software package](http://cran.at.r-project.org/web/packages/rfishbase/)). 
 - Carl Boettiger, Alan Hastings. **Early Warning Signals and the Prosecutor’s Fallacy** 
-
-
+- Samantha A. Price, Lars Schmitz, Philip S. L. Anderson, Carl Boettiger, Peter C. Wainwright. **Comparing
+disparity between traits using the Ornstein-Uhlenbeck model: a test of
+functional constraint on the eyes of labrid fishes.**
 
 Presentations
 -------------
