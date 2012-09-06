@@ -6,7 +6,7 @@ tags: conferences
 
 
 * **[My Schedule](/assets/files/ESA2012_cboettig_schedule.pdf)**
-* Meetings/discussion with Don Strong, Tony Ives, Marten Scheffer, Justin Yeates, Karen Abbott, Jarrett Byrnes, Christopher Lortie.   
+* Meetings/discussion with Don Strong, Tony Ives, Marten Scheffer, Justin Yeakel, Karen Abbott, Jarrett Byrnes, Christopher Lortie.   
 * Check in with Paul Armsworth on working group
 * rOpenSci tutorial session (below)
 * tweetup
