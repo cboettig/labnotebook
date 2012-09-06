@@ -10,7 +10,12 @@ module Jekyll
   class TwitterFeed < Liquid::Tag
     def initialize(tag_name, text, tokens)
       super
-      @user = text
+      input = text.split(/, */ )
+      @user = input[0]
+      @count = input[1]
+      if input[1] == nil
+        @count = 3
+      end
     end
     def render(context)
       # Initialize a redcarpet markdown renderer to autolink urls
@@ -19,7 +24,7 @@ module Jekyll
                                                  :autolink => true, :space_after_headers => true)
       out = "<ul>"
       tweets = Twitter.user_timeline(@user)
-      for i in 0 ... 4
+      for i in 0 ... @count.to_i
       out = out + "<li>" + markdown.render(tweets[i].text) +
         " <a href=\"http://twitter.com/" + @user + "/statuses/" + 
         tweets[i].id.to_s + "\">"  + tweets[i].created_at.strftime("%I:%M %Y/%m/%d") + "</a> " + 
@@ -33,18 +38,25 @@ module Jekyll
   class GithubFeed < Liquid::Tag
     def initialize(tag_name, text, tokens)
       super
-      @user = text
+      input = text.split(/, */ )
+      @user = input[0]
+      @count = input[1]
+      if input[1] == nil
+        @count = 3
+      end
     end
     def render(context)
       out = "<ul>"
       feed = Feedzirra::Feed.fetch_and_parse("https://github.com/" + @user + ".atom")
       # consider formatting properly
-      for i in 0 ... 4
+      for i in 0 ... @count.to_i
         doc = Nokogiri::HTML.parse(feed.entries[i].content) # parse the content
         # Print title, content
         out = out + "<li>" + 
           feed.entries[i].title + ": " +
-          "<em>" + doc.css('blockquote').text + "</em>" + 
+          "<em>" + 
+          doc.css('blockquote').text.gsub(/\n/, ' ').squeeze(' ').strip[0 .. 150] +
+          "</em>" + 
           " <a href=\"" + feed.entries[i].url + "\">" +
           feed.entries[i].published.strftime("%I:%M %Y/%m/%d") + "</a>" +
           "</li>" 
@@ -56,7 +68,12 @@ module Jekyll
   class GitCommits < Liquid::Tag
     def initialize(tag_name, text, tokens)
       super
-      @text = text
+      input = text.split(/, */ )
+      @text = input[0]
+      @count = input[1]
+      if input[1] == nil
+        @count = 3
+      end
       @address = "cboettig/"+"#{@text}"
     end
 
@@ -85,13 +102,18 @@ module Jekyll
   class MendeleyFeed < Liquid::Tag
     def initialize(tag_name, text, tokens)
       super
-      @text = text
+      input = text.split(/, */ )
+      @text = input[0]
+      @count = input[1]
+      if input[1] == nil
+        @count = 3
+      end
     end
     def render(context)
       out = "<ul>"
       feed = Feedzirra::Feed.fetch_and_parse("http://www.mendeley.com/groups/" + @text + "/feed/rss/")
       # consider formatting properly
-      for i in 0 ... 3
+      for i in 0 ... @count.to_i
         doc = Nokogiri::HTML.parse(feed.entries[i].summary) # parse the content
         # Print title, content
         out = out + "<li>" + 
