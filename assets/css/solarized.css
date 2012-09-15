@@ -12,8 +12,11 @@
 }
 */
 
+/* redcarpet2 does syntax highlighting using HTML markup from these classes */
+
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+  font-size: .8em;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
@@ -84,3 +87,23 @@ code {
 .highlight .vg { color: #268BD2 } /* Name.Variable.Global */
 .highlight .vi { color: #268BD2 } /* Name.Variable.Instance */
 .highlight .il { color: #2AA198 } /* Literal.Number.Integer.Long */
+
+
+
+/* Pandoc does syntax highlighting using HTML markup from these classes */
+/* Based on kate's own default colors for Haskell */
+pre.sourceCode, table.sourceCode, table.sourceCode * { font-family: monospace; }
+code.sourceCode span.kw { color: #b58900; font-weight: bold; }
+code.sourceCode span.dt { color: #2aa198; }
+code.sourceCode span.dv { color: #586e75; }
+code.sourceCode span.bn { color: #cb4b16; }
+code.sourceCode span.fl { color: #2aa198; }
+code.sourceCode span.ch { color: #dc322f; }
+code.sourceCode span.st { color: #d33682; }
+code.sourceCode span.co { color: #586e75; font-style: italic; }
+code.sourceCode span.ot { }
+code.sourceCode span.al { color: #859900; font-weight: bold; }
+code.sourceCode span.fu { color: #268bd2; }
+code.sourceCode span.re { }
+code.sourceCode span.er { color: #dc322f; font-weight: bold; }
+
