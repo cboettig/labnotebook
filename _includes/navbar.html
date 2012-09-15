@@ -1,31 +1,40 @@
-  <!-- Navbar
-    ================================================== -->
 
-   
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class=""><a href="{{ site.url }}/index.html">Home</a></li>
-              <li><a href="{{ site.url }}/vita.html">Vita</a></li>
-              <li><a href="{{ site.url }}/research.html">Research</a></li>
-              <li><a href="{{ site.url }}/teaching.html">Teaching</a></li>
-              <li><a href="{{ site.url }}/lab-notebook.html">Lab Notebook</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-           <form class="navbar-search pull-right" method="get" action="http://google.com/search">
-             <input type="hidden" name="q" value="site:carlboettiger.info">
-             <input type="text" class="search-query" name="q">
-             <button type="submit" class="btn btn-inverse">Search</button>
-           </form>
-         </div> <!-- /container -->
-       </div> <!-- /navbar-inner -->
-     </div> <!-- /navbar -->
+<!-- Navbar  ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="{{ site.url }}/README.html">  <img style="float:right;" src="{{ site.url }}/assets/img/icon-info-circle-inverted.png" alt="info"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          {% if page.url == "/index.html" %}<li class="active">{% else %}<li>{% endif %}
+          <a href="{{ site.url }}/index.html">Home</a></li>
+
+          {% if page.url == "/vita.html" %}<li class="active">{% else %}<li>{% endif %}
+          <a href="{{ site.url }}/vita.html">Vita</a></li>
+
+          {% if page.url == "/Reseach.html" %}<li class="active">{% else %}<li>{% endif %}
+          <a href="{{ site.url }}/research.html">Research</a></li>
+
+          {% if page.url == "/teaching.html" %}<li class="active">{% else %}<li>{% endif %}
+          <a href="{{ site.url }}/teaching.html">Teaching</a></li>
+
+          {% if page.url == "/lab-notebook.html" %}<li class="active">{% else %}<li>{% endif %}
+          <a href="{{ site.url }}/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+         <input type="hidden" name="q" value="site:carlboettiger.info">
+         <input type="text" class="search-query" name="q">
+         <button type="submit" class="btn btn-inverse">Search</button>
+       </form>
+     </div> <!-- /container -->
+   </div> <!-- /navbar-inner -->
+ </div> <!-- /navbar -->
 
 

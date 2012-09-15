@@ -1,7 +1,7 @@
 html {
   background: url("bg.png") repeat;
 }
-
+/*
 body {
   font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4;
@@ -29,7 +29,7 @@ a:link, a:visited {
 a:hover {
   text-decoration: underline;
 }
-
+*/
 #wrapper {
   position: relative;
   width: 960px;
