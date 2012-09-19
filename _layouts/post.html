@@ -13,7 +13,7 @@
           <div class="sidebar">
             Posted on
             <time pubdate datetime="{{ page.date | date_to_xmlschema }}" 
-                  itemprop="datePublished">{{ page.date | date_to_long_string }}</time>.
+                  itemprop="datePublished">{{ page.date | date_to_string }}</time>.
             <br />
             {% include nextprevious.html %}
             <br />
