@@ -10,10 +10,10 @@ title: About this site
 * Source files can be found in its Github repository: [labnotebook](http://github.com/cboettig/labnotebook)
 * Please report any errors or other feedback in the [Issues Tracker](https://github.com/cboettig/labnotebook/issues)
 
-Site Feature Credits
-====================
+Site Features & Credits
+=======================
 
-* Syntax highlighting with [Solarized](http://ethanschoonover.com/solarized) color scheme
+* Colors and syntax highlighting with [Solarized](http://ethanschoonover.com/solarized) color schemes
 * Static site generation by [Jekyll](https://github.com/mojombo/jekyll)
 * Equations rendered in [Mathjax](http://www.mathjax.org/)
 * Reproducible, formated code from [knitr](http://yihui.name/knitr/)
@@ -24,10 +24,10 @@ Site Feature Credits
 
 
 
-Install 
-=======
+Installing Jekyll
+=================
 
-This site is built by Jekyll, a static site generator which creates html pages from markdown files.  These instructions are based on my Ubuntu 12.04 platform.  
+This site is built by Jekyll, a static site generator which creates html pages from markdown files.  These instructions for building the site from source, based on my Ubuntu 12.04 platform.  
 
 
 Install Ruby version >= 1.9
