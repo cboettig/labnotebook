@@ -11,9 +11,12 @@ title: Older posts
 
         <div class="postpreview">
           {% for post in site.posts offset:9 %}
-          <!--  <div class="span3"> -->
-              {% include postexcerpt.html %}
-              <!-- </div> --> 
+          <div class="span6"> 
+            <h4><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
+            <p><span>{{ post.subtitle }}</span></p>
+            <p style="text-align:right; font-style:italic"> {{ post.date | date_to_string }}</p>
+            <br />
+          </div> 
           {% endfor %}
         </div>
         <ul>
@@ -22,7 +25,6 @@ title: Older posts
 
     <div class="row">
       <div class="span12">
-          <li> Earlier entries are still available in my <a href="http://www.carlboettiger.info/research/lab-notebook">Wordpress-based lab notebook</a>. </li> 
           <li> Even earlier entries are available in my <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook">OpenWetWare notebook</a>. </li> 
         </ul>
       </div> <!-- end span-->

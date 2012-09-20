@@ -1,10 +1,10 @@
-    <h4><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
-    <p><span>{{ post.subtitle }}</span></p>
-    <p style="text-align:right; font-style:italic"> {{ post.date | date_to_string }}</p>
-    {{ post.content | truncate:400 | strip_html }} 
-    <!-- note that post.content is pulled in with html formatting --> 
+<h4><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
+<p><span>{{ post.subtitle }}</span></p>
+<p style="text-align:right; font-style:italic"> {{ post.date | date_to_string }}</p>
+{{ post.content | strip_html | truncate:400 }} 
+<!-- note that post.content is pulled in with html formatting --> 
 <!--    </ul> </ol> </code> </strong> </em> </pre>  force close any open tags? --> 
-    <p> <a href="{{ site.url }}{{ post.url }}"> <em>Read more</em></a> </p>
+<p> <a href="{{ site.url }}{{ post.url }}"> <em>Read more</em></a> </p>
 <br />
 <br />
 

@@ -73,7 +73,7 @@ sudo apt-get install libmime-base64-urlsafe-perl libdigest-hmac-perl libdigest-s
 
 Then install
 
-```r
+```R
 
 install.packages("RAmazonS3", repo="http://www.omegahat.org/R")
 
