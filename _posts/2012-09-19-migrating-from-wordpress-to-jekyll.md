@@ -12,7 +12,7 @@ When I moved to the Jekyll notebook, I left the Wordpress site standing with all
 
 ### Converting shortcodes from Wordpress Plugins
 
-Migrating files using `exitwp` is a relatively seamless affair.  Unfortunately, my Wordpress posts make rather heavy use of plugins, which work through shortcodes that still appear in the converted files, such as `[flickr]`, `[latex]`, `[code lang="r"]`, and `[cite]`, for image embedding, equation embedding, syntax highlighting, and citations by DOI, respectively.  While a suite of Jekyll plugins exist for each of these tasks, I'd like my regular posts to be pure markdown (other than the YAML header), making it easy to migrate or reuse the content in the future in different platforms.  
+Migrating files using `exitwp` is a relatively seamless affair.  Unfortunately, my Wordpress posts make rather heavy use of plugins, which work through shortcodes that still appear in the converted files, such as `[flickr]`, `[latex]`, `[code lang="r"]`, and `[cite]`, for image embedding, equation embedding, syntax highlighting, and citations by DOI, respectively.  While a suite of Jekyll plugins exist for each of these tasks, I'd like my regular posts to be pure markdown (other than the YAML header), making it easy to migrate or reuse the content in the future in different platforms.  Here is the [R script I used for converting my shortcodes](https://github.com/cboettig/sandbox/blob/c489da83ca7a78345b7981be4de5933ae7d63ac0/shortcodes.R), as described below.  
 
 #### Syntax Highlighting short-codes
 
@@ -33,6 +33,11 @@ Many of my posts relied on kcite to generate bibliographies for the post using D
 ### URL Redirects
 
 My Jekyll site uses the SEO recommended structure of year/month/day/page-title for URLs, while my Wordpress site used simple random id numbers.  To ensure that links to the old Wordpress pages resolve to the newly migrated pages, I added a little Jekyll plugin, [redirects.rb](https://github.com/cboettig/labnotebook/blob/master/_plugins/redirects.rb). One of the elegant things about Jekyll is the ability to create such plugins that do this just the way you would image doing so -- creating auxiliary pages at each of the redirect URLs with a simple redirect command. To install, place `redirects.rb` in `_plugins`, `redirects.html` in `_layouts`, and in `_config.yml` add the line `redirects: yes` (see [site source](https://github.com/cboettig/labnotebook)).
+
+
+### Comments
+
+I am using Disqus
 
 
 ### Private entries
