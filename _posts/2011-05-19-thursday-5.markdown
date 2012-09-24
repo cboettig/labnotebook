@@ -1,0 +1,74 @@
+---
+comments: true
+date: 2011-05-19 10:52:22
+layout: post
+slug: thursday-5
+title: Thursday
+redirects: [/wordpress/archives/1732, /archives/1732]
+categories:
+- Logistics
+---
+
+
+	
+  * Finish and post core notes from yesterday.
+
+	
+  * Debugging locale problem in phylo packages = success.  Emmanuel has already patched drop.fossils() in the ape package, will see if Gieger and TreeSim try to handle locale issue directly too.  Problem in comparisons:
+
+
+
+```r
+
+
+> Sys.setlocale(locale = "") # default locale using UTF8
+ # message deleted
+ > "-1" > 0
+ [1] TRUE
+ > Sys.setlocale(locale = "C")
+ # message deleted
+ > "-1" > 0
+ [1] FALSE
+
+
+```
+
+
+	
+  * Posted MCMCMC notes from algorithms.
+
+	
+  * Hastings Meeting 10-10:30
+
+	
+  * Wainwright lab meeting 2-3p: Chris discusses Cameroon Cichlids and evidence for sympatric speciation.  Also can measure age/stress/fitness by rings on fish scales.  wow.
+
+	
+  * Hastings lab meeting 3-4p: Matt discusses transition to policy from science.  Sandy Liebhold joins us for the chat.
+
+	
+  * Catch up on reading. Get better at citing reading in notebook for reference.
+
+
+
+
+##### Today's reading
+
+
+
+
+
+	
+  * Heather's column in_ Nature_ (Piwowar _et. al._ 2011), and more details and longer full-text on [her blog](http://researchremix.wordpress.com/2011/05/19/nature-letter/).
+
+ 
+  * MCMCMC reference, Geyer, C.J. [Practical markov chain monte carlo](http://www.jstor.org/stable/2246094). Statistical Science 7, 473–483(1992). 
+
+
+﻿
+## References
+
+<p>Piwowar H, Vision T and Whitlock M (2011).
+&ldquo;Data Archiving is A Good Investment.&rdquo;
+<EM>Nature</EM>, <B>473</B>.
+ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/473285a">http://dx.doi.org/10.1038/473285a</a>.

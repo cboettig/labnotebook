@@ -1,0 +1,38 @@
+---
+comments: true
+date: 2011-02-18 15:21:41
+layout: post
+slug: friday
+title: Friday
+redirects: [/wordpress/archives/1038, /archives/1038]
+categories:
+- Logistics
+---
+
+
+	
+  * Spoke with Prof. Jim Carey about getting Data Mangement Workshop videocast with Cametasia (and possibly Adobe Connect for live streaming).  Jim has worked with Entomology seminar series, and UCTV on videocasting seminars, see his recent PLoS Biology paper [cite]10.1371/journal.pbio.1000289 [/cite].
+
+
+
+	
+  * Spoke with Marissa about some of the [resources at NCEAS](http://www.nceas.ucsb.edu/ecoinfo/tools). Learned a bit about data standards from [FGDC](http://www.nbii.gov/portal/server.pt?open=512&objID=236&mode=2&cached=true) and [NBII](http://www.nbii.gov).
+
+
+
+	
+  * Working on manuscript revisions (phylogenetics)
+
+	
+  * Writing (warning signals)
+
+	
+  * Revised Weds post, reviewing context for Goldman 1993 [cite]10.1007/BF00166252[/cite] relative to original simulation-based parametric bootstrap of Cox's statistic as illustrated in (McLachlan, 1987) in mixture models.
+
+
+## References
+
+<p>McLachlan G (1987).
+&ldquo;on Bootstrapping The Likelihood Ratio Test Stastistic For The Number of Components in A Normal Mixture.&rdquo;
+<EM>Applied Statistics</EM>, <B>36</B>.
+ISSN 00359254, <a href="http://dx.doi.org/10.2307/2347790">http://dx.doi.org/10.2307/2347790</a>.

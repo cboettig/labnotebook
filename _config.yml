@@ -6,7 +6,7 @@ author :
 
 permalink: /:year/:month/:day/:title.html
 redirects: yes
-exclude: [ _posts/source/ ]
+exclude: [ _posts/source/, _posts/_private/ ]
 
 markdown: pandoc
 pandoc:

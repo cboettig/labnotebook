@@ -1,0 +1,38 @@
+---
+comments: true
+date: 2011-11-18 17:32:00
+layout: post
+slug: friday-7
+title: Friday
+redirects: [/wordpress/archives/3346, /archives/3346]
+categories:
+- Logistics
+---
+
+Connecting weather fluctuations to trends in climate: should really consider replicating (Min _et. al._ 2011) and (Pall _et. al._ 2011).
+
+Ooh.. David's Nature Climate paper (McCollum _et. al._ 2011).  (Does UC Davis really not have access to this journal?)
+
+Sebastian mentioned his advisor's work on[ inverting the sphere without creating a fold](http://www.youtube.com/watch?v=R_w4HYXuo9M), including a proof through a series of physical models made with chickenwire.  Math is crazy.
+
+Reviewing Sebastian's manuscript on stochastic sinks at lab meeting.  Clear writing and one of my favorite cocktail-party results - persistence of coupled sink habitats.  A must read.
+
+** Integrating the densities instead of simulating probability distributions for the stochastic population dynamics would make the most sense.  Extra noise terms involve high-dimensional intergrals, consider the [cubature](http://ab-initio.mit.edu/wiki/index.php/Cubature) R package.
+
+Excellent lab group meeting given by Jamie today, population genetics results with red noise, extinction results.  Reminded me of my NSF proposal, see[ classic red noise results](http://www.carlboettiger.info/archives/2699), [NSF proposal.](http://www.carlboettiger.info/ajaxplorer/public/a048f2146403c451d9d4e6de8db2b038.php), and[ this calculation](http://www.carlboettiger.info/archives/3135).
+
+Progress on [pollen data](ftp://ftp.ncdc.noaa.gov/pub/data/paleo/pollen/readme_pollen.txt).
+## References
+
+<p>Min S, Zhang X, Zwiers F and Hegerl G (2011).
+&ldquo;Human Contribution to More-Intense Precipitation Extremes.&rdquo;
+<EM>Nature</EM>, <B>470</B>.
+ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature09763">http://dx.doi.org/10.1038/nature09763</a>.
+<p>Pall P, Aina T, Stone D, Stott P, Nozawa T, Hilberts A, Lohmann D and Allen M (2011).
+&ldquo;Anthropogenic Greenhouse Gas Contribution to Flood Risk in England And Wales in Autumn 2000.&rdquo;
+<EM>Nature</EM>, <B>470</B>.
+ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature09762">http://dx.doi.org/10.1038/nature09762</a>.
+<p>McCollum D, Krey V and Riahi K (2011).
+&ldquo;an Integrated Approach to Energy Sustainability.&rdquo;
+<EM>Nature Climate Change</EM>, <B>1</B>.
+ISSN 1758-678X, <a href="http://dx.doi.org/10.1038/nclimate1297">http://dx.doi.org/10.1038/nclimate1297</a>.

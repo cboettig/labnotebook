@@ -1,0 +1,107 @@
+---
+comments: true
+date: 2011-09-21 22:34:13
+layout: post
+slug: wednesday-9
+title: Wednesday
+redirects: [/wordpress/archives/2686, /archives/2686]
+categories:
+- Logistics
+---
+
+## Alan meeting
+
+
+
+
+
+	
+  * Sanchirico course, Hastings course
+
+	
+  * Berkeley visits
+
+	
+  * NIMBioS working group
+
+	
+  * Lab website, lab group meeting.
+
+
+
+
+## To Do
+
+
+
+
+
+	
+  * Finish THEE review
+
+	
+  * Evolution edits
+
+	
+  * Miller Application
+
+
+
+	
+  * Berkeley visits emails.
+
+	
+  * File ESA reimbursements.
+
+	
+  * File NIMBioS reimbursements.
+
+
+
+
+## Next steps
+
+
+
+
+
+	
+  * Paper for treebase/rfishbase packages?
+
+	
+  * wrightscape paper.
+
+	
+  * Training problem II.
+
+	
+  * Economics warning signals.  Costs of errors.  Updating (multiple decision points). Mitigation strategy.
+
+	
+  *  Inferring the uncertainty in model, adaptive management.
+
+
+
+
+### Lit-based steps:
+
+
+
+
+
+	
+  * close read / replicate stochastic transitions discrimination [cite]10.1029/2010GL044486[/cite].
+
+	
+  * close read of economic considerations, (Horan _et. al._ 2011)
+
+
+Classic Allee effect models with saddle-node bifurcations.
+
+Organizing: what I'd like from Merrit:  dropbox-style data storage.  _e.g_. also with Wordpress/server file
+## References
+
+<p>Horan R, Fenichel E, Drury K and Lodge D (2011).
+&ldquo;Managing Ecological Thresholds in Coupled Environmental-Human Systems.&rdquo;
+<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1005431108">http://dx.doi.org/10.1073/pnas.1005431108</a>.

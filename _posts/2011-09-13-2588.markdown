@@ -1,0 +1,197 @@
+---
+comments: true
+date: 2011-09-13 09:00:38
+layout: post
+slug: '2588'
+title: NIMBioS PDG Control, Tuesday
+redirects: [/wordpress/archives/2588, /archives/2588]
+categories:
+- Stochastic Population Dynamics
+tags:
+- NIMBioS
+- PDG Control
+- warning-signals
+---
+
+Tuesday, August 13
+8:00 Coffee & Breakfast at NIMBioS
+8:45 Outline for Day 2 (Donahue/Armsworth)
+
+
+### Adaptive Control, Jake
+
+
+Introduced by he two-armed bandit problem, Rothchild
+i = 1,2.
+$ T_i $ is the number of trials, $ N_i $ are numbers of successes.
+
+Define $$ \rho_i = \frac{1}{1+T_i}, \mu_i = \frac{N_i}{1+T_i} $$
+
+If i is played $ p_i $ becomes
+
+$$ \frac{p_i}{1+p_i} = \frac{1}{T+2} $$
+
+If i is played and successful $ \mu_i $ becomes
+
+$$ s(\mu_i) = \frac{\mu_i + p_i}{p_i+1} = \frac{N_i + 1 }{T_i + 2}$$
+
+whereas failure is
+
+$$ s(\mu_i) = \frac{\mu_i}{p_i+1} = \frac{N_i + 1 }{T_i + 2}$$
+
+$$ \lim_{T_i \to \infty} \frac{N_i}{T_i+1} = \tau_i $$, the true probability.
+
+Depends on prior information and luck. Costly to pull on uncertain machine.
+
+-------
+
+Consider fisheries example where
+$$ x = F(x) - h $$
+$$ F(x) = x^{\alpha} \epsilon |_{\epsilon ~ N(0, \sigma^2} $$
+
+$$ \ln F(x) = \alpha ln(x) + ln(\epsilon) =: y $$
+$ \alpha $ must be estimated.
+
+Frequentist:
+
+$$ \hat \alpha = \frac{\ln x' \ln F(x)}{\ln X' \ln x} $$
+
+Bayesian: $$ P(\alpha) N( \alpha_0, \sigma_{\alpha^2}) $$
+
+$$ f(\alpha | y ) \sim \exp\left( \tfrac{1}{2} (y-\alpha \ln(x) )' (y- \alpha \ln(x) \right) \exp \left( -\frac{1}{2} \frac{(\alpha - \alpha_0)^2}{\sigma_{\alpha}^2}\right) $$
+
+Myopic igonre additional variation in harvest to identify $ \hat \alpha $. More variation means better estimated $ \alpha $
+
+Michael raises two issues: applying this information elsewhere. If environment is changing, learning current condition is less valuable. (can't I learn the change rate?)
+
+Adaptive management experiment in corals.
+
+
+### 9:00 PDG Control: Approaches from Engineering & Discussion (Carl Toews)
+
+
+An adaptive talk on techniques.
+
+How do we quantify the volatility of a control law? (function space choice)
+How do we measure the distance between models? Between controls?
+Change an objective function to yield a better control law (regularization in inverse problems)
+
+
+#### Modeling, Inverse Problems
+
+
+$$ M : X \to Y $$
+Forward: predicting observations from parameters. Inverse: parameters from observation.
+Existence, uniqueness, stability.
+$$ M = \pmatrix{ 1 & 0 \\ 0 & \epsilon } $$
+Not unique if $ \epsilon = 0 $
+
+So:
+Cost functional: $ J(x) := ||M(x) = y_0|| $
+Regularization: $  \tilde J(x) := ||M(x) = y_0|| + \alpha ||x ||  $
+Optimize: $  x_0 = \min_{x\in X} \tilde J(x)  $
+
+Regularization means solving a suboptimal model. Fudge factor. Trade-off due to inverting an unstable operator vs error due to the objective function.
+
+Singular value decomposition regularization example:
+
+Linear regime [Kalman](http://en.wikipedia.org/wiki/Kalman_filter) filter exact solution. (e.g. uncertainty in stock size, based on harvest).
+
+True state evolves according to: $ x_{k+1} = g(x_k, v_k) $
+But the observation is some function of that: $ y_{k} = h(x_k, n_k) $
+
+Paul: Nonlinearity can be ignored by engineers, because they can intervene frequently. If you're doing management, forced to do policy control, you cannot intervene frequently enough to be linear. (e.g., $g(x_k, v_k $ is nonlinear.
+
+Alan, Frank: quite easy for $ h(x_k, n_k) $ to be nonlinear as well, such as x being the density and y being only the moments.
+
+
+#### Estimation
+
+
+
+
+#### Filtering
+
+
+[ Model predictive control](http://en.wikipedia.org/wiki/Model_predictive_control):
+
+
+
+	
+  1. Read control, disturbance, output variable
+
+	
+  2. Estimate state (e.g. Kalman Filter)
+
+	
+  3. Remove ill condition (regularization)
+
+	
+  4. Local steady-sate optimization (Linear or quadratic program)
+
+	
+  5. Dynamic optimization (Dynamic programming)
+
+	
+  6. outputs control variable
+
+
+
+
+## Training Problem II problem formulation
+
+
+How does decreasing uncertainty improve outcomes?  Expected value of perfect information?
+
+Model uncertainty vs parameter uncertainty.
+
+1) Adaptive management approach to coral-algae location of phase shift. vs Passive adaptive management/MPC.
+
+2) Nonlinearity in observation error
+
+H inverse.  dockside landings don't include discard/bycatch.  age & space from total biomass.
+
+3) Optimal sampling rates and intervention rate (rel to system timescale).  Compared to 3 yr rule on stock assessment.
+
+Jim's staged approach: Overall optimal.  Conditional on fishermen sampling. compare difference.
+
+4) Spatial signal of declines: most efficient fishing.
+
+[Dual control](http://en.wikipedia.org/wiki/Dual_control_theory)  = active adaptive management.
+
+<del>10:00 Break into Training Problem Groups</del>
+
+<del>TASK: Formalize Question. What is the biological problem? What is the control problem? Is</del>
+<del> there expertise you are missing? What resources do you need?</del>
+<del> 11:30 Report back to full group</del>
+12:00 Lunch at NIMBioS
+
+
+## Training problem III summary
+
+
+Claire reviews dispersal problem in larva on Caribbean reefs.
+
+Discussion of focal questions:
+
+
+
+	
+  * Unique aspects of life history problems
+
+	
+  * Metamorphosis timing, energy (optimal stopping time)
+
+	
+  * spawning trends and synchrony.  Synchronous settlement.
+
+
+Work backwards from advanced problem.
+
+Extreme value vs. mean
+
+1:00 Training Problem Groups (shuffle expertise as needed)
+TASK: Model formulation & What do you need for Wednesday?
+3:15 Break
+3:30 NIMBioS Seminar by Alan Hastings
+6:00 Dinner at the Armsworth’s
