@@ -11,16 +11,14 @@ categories:
 
 ## Disclaimer: Not a Blog
 
-
-[![](http://farm4.static.flickr.com/3053/3013680713_cfcebbd403_b.jpg)](http://www.flickr.com/photos/twid/3013680713/in/faves-cboettig/)Welcome to my open lab notebook.  This is the active, permanent record of all my scientific research, standing in place of the traditional bound lab notebook.  It is a record of ideas, and intuitions; results and mistakes.  Please bear in mind that the notebook is primarily a tool for me to do science, not communicate it.  I write my entries with the hope that they are intelligible to my future self; and maybe intelligible to my collaborators and experts in my field.  This is not a research blog, where each entry can be read alone and understood by a general audience in an edited and polished form. ((Okay, with the exception of those items posted in my Open Notebook Science category, which is more like a blog.  These entries still include me experimenting with  methods, tools and ideas, but are written with more of an audience in mind.))
+[![floatright](http://farm4.staticflickr.com/3053/3013680713_cfcebbd403_t.jpg)](http://www.flickr.com/photos/twid/3013680713/in/faves-cboettig/)Welcome to my open lab notebook.  This is the active, permanent record of all my scientific research, standing in place of the traditional bound lab notebook.  It is a record of ideas, and intuitions; results and mistakes.  Please bear in mind that the notebook is primarily a tool for me to do science, not communicate it.  I write my entries with the hope that they are intelligible to my future self; and maybe intelligible to my collaborators and experts in my field.  This is not a research blog, where each entry can be read alone and understood by a general audience in an edited and polished form. ((Okay, with the exception of those items posted in my Open Notebook Science category, which is more like a blog.  These entries still include me experimenting with  methods, tools and ideas, but are written with more of an audience in mind.))
 
 
 ## Philosophy: Why an open notebook?
 
-
 So you've probably noticed this lab notebook is openly accessible,  you can read it online without passwords or permissions.  And if you've  read the disclaimer at the top you've gathered that it isn't written for  you, it's written for me.  So why is it open?  What does that mean anyway?
 
-This icon, also on the bottom of m[![](http://onsclaims.wikispaces.com/file/view/ons-aci2.png/61358668/ons-aci2.png)](http://onsclaims.wikispaces.com)y webpage indicates that I make my best effort to make all content (AC) available as I go.  Other models involve some private results or information released only after some delay.  T[hese different icons ](http://onsclaims.wikispaces.com)are used across the scientific community to identify Open Notebook Science (ONS).  The other icon at the bottom of each page is the Creative Commons license.  In addition to being openly visible, anything in this notebook can be reused and reproduced under the terms of this license.
+This icon, also on the bottom of my [![floatright](http://onsclaims.wikispaces.com/file/view/ons-aci2.png/61358668/ons-aci2.png)](http://onsclaims.wikispaces.com) webpage indicates that I make my best effort to make all content (AC) available as I go.  Other models involve some private results or information released only after some delay.  [These different icons](http://onsclaims.wikispaces.com) are used across the scientific community to identify Open Notebook Science (ONS).  The other icon at the bottom of each page is the Creative Commons license.  In addition to being openly visible, anything in this notebook can be reused and reproduced under the terms of this license.
 
 Researchers have found many reasons for making their notebook open: better collaborations, greater visibility and broader impact for funding requirements, sharing detailed methods, solving the dilemma of  null results publishing, helping other scientists advance, demonstrating the viability of the idea or participation in a community of open science.   For myself, I decided to try ONS as an experiment.  As I go along, I record reflections about the experience in my notebook, so it has gotten a category alongside my scientific research topics.  Follow along and see how the experiment works out.
 
@@ -28,7 +26,7 @@ Researchers have found many reasons for making their notebook open: better colla
 ## An Integrated Notebook
 
 
-[![](http://www.carlboettiger.info/wp-content/uploads/2010/11/mynotebook-300x123.png)](http://www.carlboettiger.info/wp-content/uploads/2010/11/mynotebook.png)
+[![floatright](http://www.carlboettiger.info/wp-content/uploads/2010/11/mynotebook-300x123.png)](http://www.carlboettiger.info/wp-content/uploads/2010/11/mynotebook.png)
 
 In these pages you will find not only thoughts and ideas, but references to the literature I read, the codes or manuscripts I write, derivations I scribble and graphs I create.   I see my notebook as consisting not only of the entries here (in Wordpress), but the databases for articles, code and images that are embedded or linked from the notebook to external repositories. (Mendeley, Github, Flickr).
 
@@ -70,7 +68,7 @@ All of the other databases reflect the project categories: My Flickr tags ("[phy
 ## The Social Lab Notebook
 
 
-The services I integrate int[![](http://www.carlboettiger.info/wp-content/uploads/2010/11/social.png)](http://www.carlboettiger.info/wp-content/uploads/2010/11/social.png)o my notebook aren't just relational databases.  They are also all social networking platforms built around a particular type of data (blog entries, publications, images, code). All have RSS feeds that let them live-update each other.  All (except Wordpress) have a notion of contacts and social graph.
+The services I integrate into [![floatright](http://www.carlboettiger.info/wp-content/uploads/2010/11/social.png)](http://www.carlboettiger.info/wp-content/uploads/2010/11/social.png) my notebook aren't just relational databases.  They are also all social networking platforms built around a particular type of data (blog entries, publications, images, code). All have RSS feeds that let them live-update each other.  All (except Wordpress) have a notion of contacts and social graph.
 
 All have mobile applications,  a developer API so anyone can extend  them, a large user base, and provide a cost-free service.  In addition  to integrating with the notebook, they provide their own sophisticated  interface to their content.
 
@@ -84,7 +82,7 @@ Without additional effort, I simultaneously contribute to the rapidly growing da
 
 I originally became interested in the concept of Open Notebook Science through reading about the open notebook of [Cameron Neylon](http://cameronneylon.net/), and later also the groups of J[ean-Claude Bradley](http://usefulchem.blogspot.com/) and[ Steve Koch](http://openwetware.org/wiki/User:Skoch3).  I was later [featured in Science Careers](http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2010_04_09/caredit.a1000036) for a piece on open notebook science.  
 
-[![](http://www.carlboettiger.info/wp-content/uploads/2010/11/OWWEmblem.png)](http://openwetware.org/wiki/Main_Page)I began my experiment in ONS on the wiki-based platform [O](http://openwetware.org/wiki/User:Carl_Boettiger)[penWetWare ](http://openwetware.org/wiki/User:Carl_Boettiger)(OWW).   With a tool to create a notebook template and an established community of researchers with such notebooks (also sharing course content, experimental protocols, lab webpages, etc) it provided an excellent introduction.  I was swiftly contacted by established PIs offering encouragement, advice and even collaboration.  My original notebooks remain there, with future entries connected from this site automatically through the Category feed.  Limitations in my ability to customize, control and extend OWW mediawiki platform have led me to migrate to my own independently hosted site and domain here.
+[![floatright](http://www.carlboettiger.info/wp-content/uploads/2010/11/OWWEmblem.png)](http://openwetware.org/wiki/Main_Page)I began my experiment in ONS on the wiki-based platform [OpenWetWare](http://openwetware.org/wiki/User:Carl_Boettiger).   With a tool to create a notebook template and an established community of researchers with such notebooks (also sharing course content, experimental protocols, lab webpages, etc) it provided an excellent introduction.  I was swiftly contacted by established PIs offering encouragement, advice and even collaboration.  My original notebooks remain there, with future entries connected from this site automatically through the Category feed.  Limitations in my ability to customize, control and extend OWW mediawiki platform have led me to migrate to my own independently hosted site and domain here.
 
 
 ## Other resources

@@ -1,5 +1,7 @@
 ---
 layout: post
+category: open notebook thoughts
+tags: open-science 
 
 ---
 
