@@ -7,13 +7,15 @@ title: Vita
 
 publications
 ------------
+1. Carl Boettiger, Alan Hastings (2012). **Early Warning Signals and the
+  Prosecutor’s Fallacy.** *Proceedings of the Royal Society B* (in press).
 1. Carl Boettiger, Duncan Temple Lang, Peter
-  Wainwright. **rfishbase: exploring, manipulating and visualizing
+  Wainwright (2012). **rfishbase: exploring, manipulating and visualizing
   FishBase data from R.** *Journal of Fish Biology* (in press).
   ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md))
   ([code](https://github.com/ropensci/rfishbase)) ([software
   package](http://cran.at.r-project.org/web/packages/rfishbase/)).
-1. Carl Boettiger, Duncan Temple Lang.  **Treebase: An R
+1. Carl Boettiger, Duncan Temple Lang (2012).  **Treebase: An R
   package for discovery, access and manipulation of online
   phylogenies** In *Methods in Ecology and Evolution* (in press).
   ([preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md))
@@ -56,7 +58,6 @@ publications
 
 ### Submitted
 
-- Carl Boettiger, Alan Hastings. **Early Warning Signals and the Prosecutor’s Fallacy** 
 - Samantha A. Price, Lars Schmitz, Philip S. L. Anderson, Carl Boettiger, Peter C. Wainwright. **Comparing
 disparity between traits using the Ornstein-Uhlenbeck model: a test of
 functional constraint on the eyes of labrid fishes.**
