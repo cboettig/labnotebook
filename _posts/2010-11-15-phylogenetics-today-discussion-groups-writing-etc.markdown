@@ -6,7 +6,7 @@ slug: phylogenetics-today-discussion-groups-writing-etc
 title: 'Phylogenetics today:  Discussion groups, writing, etc'
 redirects: [/wordpress/archives/326, /archives/326]
 categories:
-- Open Notebook Thoughts
+- open-science
 - Phylogenetics
 ---
 

@@ -6,7 +6,7 @@ slug: the-case-for-better-data-citation-practices
 title: The Case for Better Data Citation Practices?
 redirects: [/wordpress/archives/2180, /archives/2180]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 An excellent question came up on ecoinformatics list today on data citation from Kyle Kwaiser at the Michigan Biological Station

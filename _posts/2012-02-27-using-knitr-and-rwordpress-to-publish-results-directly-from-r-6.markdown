@@ -6,7 +6,7 @@ slug: using-knitr-and-rwordpress-to-publish-results-directly-from-r-6
 title: Using knitr and RWordPress to publish results directly from R
 redirects: [/wordpress/archives/3974, /archives/3974]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 One of the great things about knitr is its flexibility.  Here I set knitr up to publish to Wordpress.

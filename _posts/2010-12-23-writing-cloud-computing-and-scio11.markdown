@@ -6,7 +6,7 @@ slug: writing-cloud-computing-and-scio11
 title: 'Writing, Cloud Computing, and #scio11'
 redirects: [/wordpress/archives/660, /archives/660]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 Working on a few things in today's lab notebook entry.  Some more notes on exploring cloud computing tools, sketching out some ideas for my #scio11 science online panel discussion on open notebook science, and otherwise working on my phylogenetics mansucript.

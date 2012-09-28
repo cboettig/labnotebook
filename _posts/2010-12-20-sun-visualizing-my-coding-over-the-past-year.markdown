@@ -6,7 +6,7 @@ slug: sun-visualizing-my-coding-over-the-past-year
 title: 'Sun: Visualizing my coding over the past year'
 redirects: [/wordpress/archives/641, /archives/641]
 categories:
-- Open Notebook Thoughts
+- open-science
 - Phylogenetics
 ---
 

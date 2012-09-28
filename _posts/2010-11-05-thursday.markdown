@@ -6,7 +6,7 @@ slug: thursday
 title: Thursday
 redirects: [/wordpress/archives/193, /archives/193]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 Wrote yesterday's entry on power spectral analysis difficulties from yesterday.  Why don't I remember my physics training better?  Bialek's Phy562 notes still very helpful.  No one else seems to write about this stuff clearly enough for me.  Including me. 8a-11a

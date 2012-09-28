@@ -6,7 +6,7 @@ slug: wrong-picture-wrong-model-why-warning-signals-dont-look-like-rare-events
 title: 'Wrong picture, wrong model: why warning signals don''t look like rare events'
 redirects: [/wordpress/archives/91, /archives/91]
 categories:
-- Open Notebook Thoughts
+- open-science
 - Stochastic Population Dynamics
 tags:
 - warning-signals

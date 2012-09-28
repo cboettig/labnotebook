@@ -6,7 +6,7 @@ slug: reflections-from-scio11-saturdays-open-science-track
 title: 'Reflections from #scio11: Saturday''s Open Science Track'
 redirects: [/wordpress/archives/792, /archives/792]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 Have just returned from the amazing and energetic science online 2011 conference, where I will now, like the rest of the attendees, turn to catching up on sleep, following new online acquaintances, struggling not to append #scio11 to everything I write, and composing that nearly obligatory post-event blog entry we all use like a glass of water after a party; with the hope in may help me metabolize the experience.

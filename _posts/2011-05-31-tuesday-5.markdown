@@ -3,12 +3,12 @@ comments: true
 date: 2011-05-31 14:38:59
 layout: post
 slug: tuesday-5
-title: 'Tuesday: PMC, confidence intervals; screen code tricks'
+title: 'Tuesday: PMC, confidence intervals; screen code-tricks'
 redirects: [/wordpress/archives/1860, /archives/1860]
 categories:
 - Phylogenetics
 tags:
-- code tricks
+- code-tricks
 ---
 
 ## PMC

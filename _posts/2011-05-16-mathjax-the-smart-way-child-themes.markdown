@@ -6,7 +6,7 @@ slug: mathjax-the-smart-way-child-themes
 title: 'MathJax the smart way: Child Themes'
 redirects: [/wordpress/archives/1697, /archives/1697]
 categories:
-- Open Notebook Thoughts
+- open-science
 tags:
 - plugins
 ---

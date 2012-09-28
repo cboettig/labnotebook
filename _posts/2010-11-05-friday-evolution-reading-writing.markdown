@@ -6,7 +6,7 @@ slug: friday-evolution-reading-writing
 title: 'Friday: Evolution reading, writing'
 redirects: [/wordpress/archives/204, /archives/204]
 categories:
-- Open Notebook Thoughts
+- open-science
 - Phylogenetics
 ---
 

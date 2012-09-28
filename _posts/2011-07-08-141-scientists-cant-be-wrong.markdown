@@ -6,7 +6,7 @@ slug: 141-scientists-cant-be-wrong
 title: 141 scientists can't be wrong?
 redirects: [/wordpress/archives/2140, /archives/2140]
 categories:
-- Open Notebook Thoughts
+- open-science
 tags:
 - research-blogging
 - science-communication

@@ -9,7 +9,7 @@ categories:
 - Phylogenetics
 - Stochastic Population Dynamics
 tags:
-- code tricks
+- code-tricks
 - reading
 ---
 

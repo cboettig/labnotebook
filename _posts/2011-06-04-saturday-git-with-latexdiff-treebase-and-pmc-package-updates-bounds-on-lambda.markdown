@@ -9,7 +9,7 @@ redirects: [/wordpress/archives/1895, /archives/1895]
 categories:
 - Phylogenetics
 tags:
-- code tricks
+- code-tricks
 ---
 
 ## bounds on lambda:

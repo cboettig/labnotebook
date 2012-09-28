@@ -6,7 +6,7 @@ slug: data-mangement-on-uc3-merritt-repository
 title: Data Mangement on UC3 Merritt Repository
 redirects: [/wordpress/archives/1019, /archives/1019]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 I've been trying to learn a little more about the potential for data management solutions through the [UC3 Merritt repository](http://www.cdlib.org/services/uc3/merritt/index.html),  and decide how this compares to commercial alternatives such as Amazon  S3, Picasa/Flickr (obviously for images only), and field-specific and  publication specific repositories such as Dryad.  Merritt email support  have been very helpful in answering my questions and concerns.

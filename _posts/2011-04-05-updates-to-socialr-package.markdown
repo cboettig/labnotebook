@@ -6,7 +6,7 @@ slug: updates-to-socialr-package
 title: Updates to socialR package
 redirects: [/wordpress/archives/1355, /archives/1355]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 Talking with Nick a bit about the socialR package, hope to find a chance to streamline the package a bit, move away from all system calls and interface directly with the APIs for Flickr, twitter, etc from R. This should avoid the command-line program dependencies and configurations I need to use currently.

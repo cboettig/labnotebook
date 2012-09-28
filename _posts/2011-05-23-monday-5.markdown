@@ -3,7 +3,7 @@ comments: true
 date: 2011-05-23 23:00:18
 layout: post
 slug: monday-5
-title: 'Monday: some code tricks, Algorithms group planning'
+title: 'Monday: some code-tricks, Algorithms group planning'
 redirects: [/wordpress/archives/1801, /archives/1801]
 categories:
 - Computation

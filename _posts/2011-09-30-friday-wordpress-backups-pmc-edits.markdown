@@ -9,7 +9,7 @@ categories:
 - Computation
 - Phylogenetics
 tags:
-- code tricks
+- code-tricks
 ---
 
 ## Wordpress local copy

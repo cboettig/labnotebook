@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3804, /archives/3804]
 categories:
 - Logistics
 tags:
-- code tricks
+- code-tricks
 ---
 
 ## Forage fish writing

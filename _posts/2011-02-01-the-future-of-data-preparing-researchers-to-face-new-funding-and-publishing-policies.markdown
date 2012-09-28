@@ -6,7 +6,7 @@ slug: the-future-of-data-preparing-researchers-to-face-new-funding-and-publishin
 title: 'The Future of Data: Plans for a UC Davis workshop'
 redirects: [/wordpress/archives/905, /archives/905]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 I have been working with several of the faculty of UC Davis to prepare a workshop for our department to (1) help make our researchers **aware** of the new requirements for NSF proposals and journal submissions with regard to data archiving, (2) To explore what new** ** **opportunities** this creates and what **tools **exist that will help our researchers take maximum advantage of it, and (3) to engage our research community in the discussion of **future standards **for sharing, standardizing, rewarding and funding the archiving of data.

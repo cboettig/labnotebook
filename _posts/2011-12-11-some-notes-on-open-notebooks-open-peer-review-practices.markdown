@@ -6,7 +6,7 @@ slug: some-notes-on-open-notebooks-open-peer-review-practices
 title: Some Notes on Open Notebooks, Open peer review practices.
 redirects: [/wordpress/archives/3533, /archives/3533]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 What follows is a collection of notes, examples, and reflections I've been meaning to write down.

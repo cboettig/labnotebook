@@ -7,9 +7,9 @@ title: Better dynamic documents (Sweave) with syntax highlighting, caching, etc
 redirects: [/wordpress/archives/3524, /archives/3524]
 categories:
 - Computation
-- Open Notebook Thoughts
+- open-science
 tags:
-- code tricks
+- code-tricks
 ---
 
 The highlight package is a simple solution for very nice syntax highlighted code boxes in latex documents.  Requires [switching the driver](http://stackoverflow.com/questions/5448608/changing-the-sweave-driver-from-the-command-line), which is best done from within R and requires creating a makefile though.  Needs the "highlight" package installed.  Here's a [simple makefile.](https://gist.github.com/1469063)

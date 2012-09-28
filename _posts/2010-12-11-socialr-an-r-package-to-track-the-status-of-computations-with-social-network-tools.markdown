@@ -6,7 +6,7 @@ slug: socialr-an-r-package-to-track-the-status-of-computations-with-social-netwo
 title: 'socialR: Reproducible Research & Notebook integration with R'
 redirects: [/wordpress/archives/565, /archives/565]
 categories:
-- Open Notebook Thoughts
+- open-science
 tags:
 - R
 ---

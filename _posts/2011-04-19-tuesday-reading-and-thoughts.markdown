@@ -6,7 +6,7 @@ slug: tuesday-reading-and-thoughts
 title: 'Tuesday: Reading and thoughts'
 redirects: [/wordpress/archives/1454, /archives/1454]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 ## Reading

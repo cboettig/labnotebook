@@ -6,7 +6,7 @@ slug: citing-r-packages
 title: Citing R packages
 redirects: [/wordpress/archives/4259, /archives/4259]
 categories:
-- Open Notebook Thoughts
+- open-science
 tags:
 - R
 ---

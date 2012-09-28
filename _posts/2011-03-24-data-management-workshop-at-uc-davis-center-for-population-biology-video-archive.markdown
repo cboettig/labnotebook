@@ -7,7 +7,7 @@ title: 'Data Management Workshop at UC Davis Center for Population Biology: Vide
   archive'
 redirects: [/wordpress/archives/1284, /archives/1284]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 Videos are now up from our workshop, The Future of Data, held at the UC Davis Center for Population Biology March 2nd-4th.

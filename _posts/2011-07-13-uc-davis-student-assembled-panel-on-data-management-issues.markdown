@@ -6,7 +6,7 @@ slug: uc-davis-student-assembled-panel-on-data-management-issues
 title: UC Davis Student Assembled Panel on Data Management Issues
 redirects: [/wordpress/archives/2170, /archives/2170]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 ## Panel Members

@@ -6,7 +6,7 @@ slug: citations
 title: Citations
 redirects: [/wordpress/archives/570, /archives/570]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 This evening I'm testing extensions to find a better way to include citations in my entries.  Thus far I've use Mendeley's convenient copy-paste citation tool to paste the whole citation in, which I suppose could work reasonably smoothly with the nice [footnotes plugin](http://) I recently adopted.  However, this still requires a couple more steps than I need to cite in my LaTeX text editor or in OpenOffice.

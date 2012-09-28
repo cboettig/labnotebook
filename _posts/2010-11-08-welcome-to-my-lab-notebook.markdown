@@ -6,7 +6,7 @@ slug: welcome-to-my-lab-notebook
 title: Welcome to my Lab Notebook
 redirects: [/wordpress/archives/211, /archives/211]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 ## Disclaimer: Not a Blog

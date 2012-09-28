@@ -6,7 +6,7 @@ slug: monday-2
 title: 'Monday: Writing, Mendeley groups, Notebook plugin tweaks'
 redirects: [/wordpress/archives/1083, /archives/1083]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 ## A day of Writing

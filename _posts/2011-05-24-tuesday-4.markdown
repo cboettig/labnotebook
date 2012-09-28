@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/1805, /archives/1805]
 categories:
 - Stochastic Population Dynamics
 tags:
-- code tricks
+- code-tricks
 - warning-signals
 ---
 

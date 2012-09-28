@@ -6,7 +6,7 @@ slug: following-my-computer-simulations-on-twitter
 title: Making R twitter?
 redirects: [/wordpress/archives/375, /archives/375]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 I'm running quite a few of my analyses on my remote server, a 16 core, 32 GB ram, Ubuntu server with Tesla GPU, named "zero" (we're creative folks).  It's easy to start lots of simulations (from ssh), harder to track when they are finished and verify results.  No longer -- "zero" now uses social media to share what she's up to.  Find her on twitter: @tweeting_cpu

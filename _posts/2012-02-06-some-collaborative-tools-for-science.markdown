@@ -6,7 +6,7 @@ slug: some-collaborative-tools-for-science
 title: Some Collaborative Tools for Science
 redirects: [/wordpress/archives/3628, /archives/3628]
 categories:
-- Open Notebook Thoughts
+- open-science
 - Teaching
 ---
 

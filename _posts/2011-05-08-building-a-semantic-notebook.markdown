@@ -6,7 +6,7 @@ slug: building-a-semantic-notebook
 title: Building a semantic notebook
 redirects: [/wordpress/archives/1626, /archives/1626]
 categories:
-- Open Notebook Thoughts
+- open-science
 tags:
 - plugins
 ---

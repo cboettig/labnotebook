@@ -6,7 +6,7 @@ slug: reproducible-research
 title: Some reproducible research practices in journals
 redirects: [/wordpress/archives/1160, /archives/1160]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 Interesting discussion on the Reproducible Research Group about rates at which the various reproducible research standards are used in the Journal of Biostatistics:

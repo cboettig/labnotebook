@@ -7,7 +7,7 @@ title: Citations in markdown using knitr
 redirects: [/wordpress/archives/4352, /archives/4352]
 categories:
 - Computation
-- Open Notebook Thoughts
+- open-science
 tags:
 - R
 ---

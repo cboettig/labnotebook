@@ -6,7 +6,7 @@ slug: reviews-organization-rewrites
 title: Reviews, organization, rewrites
 redirects: [/wordpress/archives/173, /archives/173]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 Today's a mixed bag of activities. Finished a journal review, comments confidential, recorded in my reviewed papers archive.  I then organized documents library (more below) and then back to paper revisions.

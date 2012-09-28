@@ -6,7 +6,7 @@ slug: knitr-github-and-a-new-phase-for-the-lab-notebook
 title: knitr, github, and a new phase for the lab notebook
 redirects: [/wordpress/archives/4325, /archives/4325]
 categories:
-- Open Notebook Thoughts
+- open-science
 tags:
 - R
 ---

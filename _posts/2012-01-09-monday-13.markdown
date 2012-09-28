@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3610, /archives/3610]
 categories:
 - Computation
 tags:
-- code tricks
+- code-tricks
 ---
 
 ### Bibtex, Mendeley & Sweave

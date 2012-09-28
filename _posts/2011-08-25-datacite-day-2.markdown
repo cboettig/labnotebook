@@ -6,7 +6,7 @@ slug: datacite-day-2
 title: DataCite Day 2
 redirects: [/wordpress/archives/2385, /archives/2385]
 categories:
-- Open Notebook Thoughts
+- open-science
 tags:
 - conference
 ---

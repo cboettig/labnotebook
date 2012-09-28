@@ -6,7 +6,7 @@ slug: open-f1000-reviews
 title: Open F1000 reviews?
 redirects: [/wordpress/archives/2095, /archives/2095]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 Sebastian has started [posting article reviews](http://www.eve.ucdavis.edu/sschreiber/reviews.shtml) on his website, and invites us (Teary - our theoretical ecology tea mailing list) to do likewise.  He uses a rather nifty [Jabref](http://jabref.sourceforge.net/) converter to display the reviews created as bibtex entries, using the format indicated below.

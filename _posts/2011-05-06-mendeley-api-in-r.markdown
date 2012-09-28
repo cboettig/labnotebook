@@ -6,7 +6,7 @@ slug: mendeley-api-in-r
 title: Mendeley API in R
 redirects: [/wordpress/archives/1614, /archives/1614]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 Started to implement the [Mendeley API](http://apidocs.mendeley.com/home/public-resources) in R, with much help and guidance from Prof. [Duncan Temple-Lang](http://www.stat.ucdavis.edu/~duncan/) in the Stats dept.  [R](http://www.r-project.org/) is a widely used statistical software environment, and this should facilitate real-time statistical analysis of the rich amount of publication data available in Mendeley.

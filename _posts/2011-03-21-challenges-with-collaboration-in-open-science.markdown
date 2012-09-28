@@ -6,7 +6,7 @@ slug: challenges-with-collaboration-in-open-science
 title: 'Challenges with Collaboration in Open Science '
 redirects: [/wordpress/archives/1229, /archives/1229]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 On Thursday ![](http://onsclaims.wikispaces.com/file/view/ons-acd2.png/61358142/ons-acd2.png) I silently switched my ONS claim from all-content, instant (aci) to all-content, delayed (acd).  This wasn't just an admission that I'm sometimes a day behind in posting my entries. That day's post was tagged private in wordpress, and didn't appear in the RSS feed.  I updated my socialR package to include a toggle to make uploaded images from public to private, and opened a private github repository.  No, nothing tragic has happened and this doesn't mean that everything I do will now be locked down until publication.  Rather this comes as a result of being sent some rather exciting data, _ which I don't have explicit permission to share_.

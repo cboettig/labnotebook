@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [Carl_talks]
+tags: [conference]
 categories:  Teaching
 ---
 

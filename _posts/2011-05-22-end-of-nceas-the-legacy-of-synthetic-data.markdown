@@ -6,7 +6,7 @@ slug: end-of-nceas-the-legacy-of-synthetic-data
 title: End of NCEAS & the legacy of synthetic data
 redirects: [/wordpress/archives/1788, /archives/1788]
 categories:
-- Open Notebook Thoughts
+- open-science
 - Phylogenetics
 - Stochastic Population Dynamics
 ---

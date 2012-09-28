@@ -6,7 +6,7 @@ slug: writing-reproducibly-in-the-open-with-knitr
 title: Writing reproducibly in the open with knitr
 redirects: [/wordpress/archives/4419, /archives/4419]
 categories:
-- Open Notebook Thoughts
+- open-science
 tags:
 - R
 ---

@@ -6,7 +6,7 @@ slug: open-notebook-science-abstract
 title: Open Notebook Science Abstract
 redirects: [/wordpress/archives/706, /archives/706]
 categories:
-- Open Notebook Thoughts
+- open-science
 ---
 
 In addition to my primary research categories, I make some entries in my lab notebook  to document and reflect on my experiment in open notebook science.  This includes my notes on tools I try out for open and collaborative science, including uses of social media, cloud computing, and scientific databases and repositories.
