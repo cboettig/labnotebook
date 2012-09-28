@@ -5,29 +5,21 @@ title: Older posts
 
 {% include header.html %}
 
-    <div class="row">
-      <div class="span12">
-        <h2>Archive ({{ site.posts | size }} entries) <a href="{{ site.url }}/atom.xml"><img src="/assets/img/icon-rss.png" alt="feed"></a></h2>
+<div class="row">
+  <div class="span12">
+    <h2>Archive ({{ site.posts | size }} entries) <a href="{{ site.url }}/atom.xml"><img src="/assets/img/icon-rss.png" alt="feed"></a></h2>
 
-        <div class="postpreview">
-          {% for post in site.posts offset:9 %}
-          <div class="span6"> 
-            <p> <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a> <span style="text-align:right; font-style:italic"> {{ post.date | date_to_string }}</span></p>
-          </div> 
-          {% endfor %}
-        </div>
-        <ul>
-      </div> <!-- end span-->
-    </div> <!--end row -->
-
-    <div class="row">
-      <div class="span12">
-          <li> Even earlier entries are available in my <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook">OpenWetWare notebook</a>. </li> 
-        </ul>
-      </div> <!-- end span-->
-    </div> <!--end row -->
-
-
+    <div class="postpreview">
+      {% for post in site.posts offset:9 %}
+      <div class="span6"> 
+        <p> <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a> 
+        <span style="text-align:right; font-style:italic"> {{ post.date | date_to_string }}</span></p>
+      </div> 
+      {% endfor %}
+    </div>
+    <ul>
+  </div> <!-- end span-->
+</div> <!--end row -->
 
 {% include footer.html %}
 
