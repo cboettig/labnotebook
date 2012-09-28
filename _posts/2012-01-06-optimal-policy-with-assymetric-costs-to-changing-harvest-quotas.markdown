@@ -18,11 +18,13 @@ The optimal policy with symmetric L1 costs to changing the quotas results in the
 
 When we apply an L1 norm cost of the same magnitude as before for decreasing quotas, but allow increasing quotas to be free (no cost to environmental lobby), the solution follows the Reed optimum is in purple (harvest_alt) (cost-free adjustment), while the blue is the harvest level being implemented with a cost:
 
-[flickr]http://www.flickr.com/photos/cboettig/6649003123[/flickr]
+![]( http://farm8.staticflickr.com/7141/6649003123_6798886656_o.png )
+
 
 This is for a single replicate, but we can verify this holds across an ensemble of 100 runs:
 
-[flickr size="small"]http://www.flickr.com/photos/cboettig/6649003241[/flickr]
+![]( http://farm8.staticflickr.com/7024/6649003241_59870df8e2_o.png )
+
 
 This is the same as the symmetric case when cost is relatively small. Since this case has the same cost to decrease quotas but no cost to increase quotas, it is overall a less expensive world in which to do business.
 
@@ -32,11 +34,13 @@ This is the same as the symmetric case when cost is relatively small. Since this
 
 Just tried this and we do indeed see policies that deviate from the Reed optimum (harvest_alt), with the blue harvest line changing far less often, but decreasing by amounts that seem about the same as the increases.
 
-[flickr]http://www.flickr.com/photos/cboettig/6649121277[/flickr]
+![]( http://farm8.staticflickr.com/7152/6649121277_e1a0b8cb61_o.png )
+
 
 The ensemble shows the tossing in the towel result of the symmetric case, where several of the replicates cease any changes at all and just send the population to 0 after a certain point.
 
-[flickr]http://www.flickr.com/photos/cboettig/6649121371[/flickr]
+![]( http://farm8.staticflickr.com/7148/6649121371_245e58870a_o.png )
+
 
 This is indeed worse than the optimum solution with symmetric costs at a matching penalty, where the solution is not to harvest
 
@@ -58,8 +62,10 @@ Symmetric costs with no scrap value result in this "tossing in the towel" patter
 
 Running the asymmetric costs with no scrap value, we find everything crashes immediately:
 
-[flickr]http://www.flickr.com/photos/cboettig/6649145241[/flickr]
+![]( http://farm8.staticflickr.com/7166/6649145241_7cf02e839d_o.png )
+
 
 Replicating this with costs 1/10th as high does this more gradually.
 
-[flickr]http://www.flickr.com/photos/cboettig/6649233637[/flickr]
+![]( http://farm8.staticflickr.com/7023/6649233637_33fdb45a53_o.png )
+

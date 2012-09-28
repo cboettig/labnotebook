@@ -120,4 +120,5 @@ dev.off()
 
 Which shows clear signs of the fallacy of elevated false positives for the simple indicators (strongest for variance), and nothing that might be mistaken for a false positives in the model-based indicator.  
 
-[flickr]http://www.flickr.com/photos/cboettig/6790266518[/flickr]
+![]( http://farm8.staticflickr.com/7054/6790266518_942ce1dfce_o.png )
+

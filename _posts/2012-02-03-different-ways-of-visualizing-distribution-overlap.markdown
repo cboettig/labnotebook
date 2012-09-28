@@ -19,31 +19,36 @@ I spend a lot of time comparing distributions.  There's lots of different ways 
 #### Distributions
 
 
-[flickr size="small"]http://www.flickr.com/photos/cboettig/6812863339[/flickr]
+![]( http://farm8.staticflickr.com/7159/6812863339_b757c2f54b_o.png )
+
 
 
 #### Boxplot
 
 
-[flickr size="small"]http://www.flickr.com/photos/cboettig/6812863299[/flickr]
+![]( http://farm8.staticflickr.com/7035/6812863299_a99d0ea040_o.png )
+
 
 
 #### Violinplot
 
 
-[flickr size="small"]http://www.flickr.com/photos/cboettig/6812863493[/flickr]
+![]( http://farm8.staticflickr.com/7020/6812863493_35aec6434d_o.png )
+
 
 
 #### Beanplot
 
 
-[flickr size="small"]http://www.flickr.com/photos/cboettig/6812863275[/flickr]
+![]( http://farm8.staticflickr.com/7154/6812863275_7d96bebf1f_o.png )
+
 
 
 #### ROC Curve
 
 
-[flickr size="small"]http://www.flickr.com/photos/cboettig/6812863387[/flickr]
+![]( http://farm8.staticflickr.com/7032/6812863387_fffa882deb_o.png )
+
 
 
 

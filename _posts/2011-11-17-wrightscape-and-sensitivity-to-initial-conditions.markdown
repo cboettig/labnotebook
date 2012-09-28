@@ -9,20 +9,26 @@ categories:
 - Phylogenetics
 ---
 
-[flickr size="small" float="left"]http://www.flickr.com/photos/cboettig/6355255495[/flickr]
+![]( http://farm7.staticflickr.com/6236/6355255495_9e411fa96e_o.png )
+
 
 Seems ouma performs poorly, though the sign of the effect seems correct.  Starting conditions cause this.
 
-[flickr size="small" float="left"]http://www.flickr.com/photos/cboettig/6355521393[/flickr] [flickr size="small" float="left"]http://www.flickr.com/photos/cboettig/6355521309[/flickr]
+![]( http://farm7.staticflickr.com/6102/6355521393_87bb3660bc_o.png )
+ ![]( http://farm7.staticflickr.com/6216/6355521309_56d048c641_o.png )
+
 
 
 Even starting conditions: improves the fit and flips the sign of the result.  
 
-[flickr size="small" float="left"]http://www.flickr.com/photos/cboettig/6355669139[/flickr] [flickr size="small" float="left"]http://www.flickr.com/photos/cboettig/6355606159[/flickr]
+![]( http://farm7.staticflickr.com/6111/6355669139_71c319e27f_o.png )
+ ![]( http://farm7.staticflickr.com/6037/6355606159_9e1c68d77a_o.png )
+
 
 
 More parameters: 
-[flickr size="small" float="left"]http://www.flickr.com/photos/cboettig/6355483585[/flickr]
+![]( http://farm7.staticflickr.com/6019/6355483585_2f66181ff2_o.png )
+
 
 
 
@@ -33,8 +39,10 @@ More parameters:
 
 Longer runs using simulated annealing can still get stuck.
 
-[flickr size="small" float="left"]http://www.flickr.com/photos/cboettig/6384795655[/flickr]
+![]( http://farm7.staticflickr.com/6052/6384795655_a51d85a30a_o.png )
 
-[flickr size="small" float="left"]http://www.flickr.com/photos/cboettig/6384795737[/flickr]
+
+![]( http://farm7.staticflickr.com/6231/6384795737_4923194030_o.png )
+
 
 

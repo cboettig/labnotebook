@@ -22,9 +22,11 @@ I consider the optimal stochastic-dynamic programming solution for the model spe
 
 Has essentially no impact on extinction risk on models without allee effects, but dramatic impact of 5% overestimate in a parameter.  Many optimally managed populations crash, compare to very few crashes of the same dynamics in unharvested scenario:
 
-[flickr size="small"]http://www.flickr.com/photos/cboettig/6339141969[/flickr]
+![]( http://farm7.staticflickr.com/6053/6339141969_0ff1be1d6a_o.png )
 
-[flickr size="small"]http://www.flickr.com/photos/cboettig/6339892296[/flickr]
+
+![]( http://farm7.staticflickr.com/6234/6339892296_18a8e5a0db_o.png )
+
 
 
 
@@ -64,7 +66,8 @@ Consider performing the stock assessment and updating the harvest quota (accordi
 ![]( http://farm7.staticflickr.com/6232/6345350242_8b11b20f21_o.png )
 
 
-[flickr size="small"]http://www.flickr.com/photos/cboettig/6345352340[/flickr]
+![]( http://farm7.staticflickr.com/6114/6345352340_8394155570_o.png )
+
 
 
 
@@ -96,7 +99,8 @@ This one is a bit different then the uncertainty experiments.  Since the populat
 
 Dramatically (100x) increasing reward for meeting boundary condition at or above allee threshold can decrease crashes even in spite of model parameter misspecification (5% lower growth, as above):
 
-[flickr  size="small"]http://www.flickr.com/photos/cboettig/6339906744[/flickr]
+![]( http://farm7.staticflickr.com/6111/6339906744_b68e322437_o.png )
+
 
 Direct (but finite) cost penalty on extinction, vs adjusting reward for meeting boundary condition? How is this implemented?
 

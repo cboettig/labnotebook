@@ -43,11 +43,13 @@ I think I have this right(?)  Slower to compute this much bigger optimum, but h
 
 L1 norm tends to follow the optimal solution to a point, and then give up on changing the policy -- putting the harvest all the way up and running the population to extinction:
 
-[flickr]http://www.flickr.com/photos/cboettig/6470200593[/flickr]
+![]( http://farm8.staticflickr.com/7150/6470200593_06f074a462_o.png )
+
 
 The "alternate" line shows what the fishstock would have been if there was no cost to changing the policy (the classical Reed optimum), and its harvest rate is shown as harvest_alt. Looking across the ensemble we see this pattern repeat, with the manager throwing in the hat and fishing out the population at different times:
 
-[flickr]http://www.flickr.com/photos/cboettig/6472332667[/flickr]
+![]( http://farm8.staticflickr.com/7023/6472332667_f75a3ccda6_o.png )
+
 
 Higher costs make this happen instantly, lower costs nearly mimic the Reed optimum strategy.
 

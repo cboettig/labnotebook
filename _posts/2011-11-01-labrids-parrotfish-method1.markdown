@@ -17,13 +17,15 @@ categories:
 #### Shift at intramandibular joint in BM rate only.
 
 
-[flickr]http://www.flickr.com/photos/cboettig/6302854244[/flickr]
+![]( http://farm7.staticflickr.com/6234/6302854244_cef4375e8d_o.png )
+
 
 
 #### Shift in constraint, $ \alpha $ at intramandibular innovation.
 
 
-[flickr]http://www.flickr.com/photos/cboettig/6301572694[/flickr]
+![]( http://farm7.staticflickr.com/6035/6301572694_8edc13de2a_o.png )
+
 
 
 ## Labrids: Wrasses vs parrotfish
@@ -34,12 +36,14 @@ categories:
 #### Shift in BM rate
 
 
-[flickr]http://www.flickr.com/photos/cboettig/6301602946[/flickr]
+![]( http://farm7.staticflickr.com/6039/6301602946_3042af8c2a_o.png )
+
 
 
 #### Shift in constraint, $ \alpha $
 
 
-[flickr]http://www.flickr.com/photos/cboettig/6301145351[/flickr]
+![]( http://farm7.staticflickr.com/6019/6301145351_d26cea9902_o.png )
+
 
 [Compare to: method2](http://www.carlboettiger.info/archives/3037)

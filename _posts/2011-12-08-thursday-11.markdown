@@ -28,7 +28,8 @@ Another day of working on 4 different projects at once.
 
 No way in Anchoveta data, look at time series:
 
-[flickr]http://www.flickr.com/photos/cboettig/6478073223[/flickr]
+![]( http://farm8.staticflickr.com/7142/6478073223_819460d349_o.png )
+
 
 
 #### Example in the cod data

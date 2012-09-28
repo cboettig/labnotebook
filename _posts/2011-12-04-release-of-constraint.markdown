@@ -13,9 +13,11 @@ categories:
 
 
 
-[flickr]http://www.flickr.com/photos/cboettig/6453857531[/flickr]
+![]( http://farm8.staticflickr.com/7157/6453857531_80d64da193_o.png )
 
-[flickr]http://www.flickr.com/photos/cboettig/6453857285[/flickr]
+
+![]( http://farm8.staticflickr.com/7004/6453857285_50d6a67275_o.png )
+
 
 
 

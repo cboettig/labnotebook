@@ -40,14 +40,16 @@ working on manuscript.  A few examples using the improved meta-data queries:
 
 
 Treebase growth by year and journal:
-[flickr]http://www.flickr.com/photos/cboettig/6791026230[/flickr]
+![]( http://farm8.staticflickr.com/7058/6791026230_1ab711cc7e_o.png )
+
 
 
 
 
 
 Exponential growth in the size of trees on treebase:
-[flickr]http://www.flickr.com/photos/cboettig/6937141295[/flickr]
+![]( http://farm8.staticflickr.com/7037/6937141295_ef0e6986fe_o.png )
+
 
 
 

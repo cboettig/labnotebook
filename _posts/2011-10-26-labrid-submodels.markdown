@@ -102,25 +102,29 @@ Note that this still estimates OU models, and hence has a global alpha, and uniq
 ### Labrid pharyngeal only, multi-sigma model:
 
 
-[flickr]http://www.flickr.com/photos/cboettig/6284633974[/flickr]
+![]( http://farm7.staticflickr.com/6093/6284633974_07a359fe14_o.png )
+
 
 
 ### Labrid pharyngeal, multi-alpha
 
 
-[flickr]http://www.flickr.com/photos/cboettig/6284114285[/flickr]
+![]( http://farm7.staticflickr.com/6045/6284114285_654c4c50fb_o.png )
+
 
 
 ### Labrid intramandibular only, multi-sigma model:
 
 
-[flickr]http://www.flickr.com/photos/cboettig/6284640552[/flickr]
+![]( http://farm7.staticflickr.com/6103/6284640552_364ee8de5e_o.png )
+
 
 
 ### Labrid intramandibular, multi-alpha
 
 
-[flickr]http://www.flickr.com/photos/cboettig/6284121123[/flickr]
+![]( http://farm7.staticflickr.com/6227/6284121123_e43b4ee70c_o.png )
+
 
 Full model plots with: [method2_plots.R](https://github.com/cboettig/wrightscape/commit/1c1dcc93c7d5185e2763503d38739a72b4b18d0e#diff-0)
 
