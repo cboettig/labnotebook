@@ -6,7 +6,7 @@ slug: thursday-6
 title: 'Thursday Meetings: Duncan; Alan'
 redirects: [/wordpress/archives/1826, /archives/1826]
 categories:
-- Logistics
+- logistics
 tags:
 - code-tricks
 ---

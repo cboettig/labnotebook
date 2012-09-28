@@ -6,7 +6,7 @@ slug: optimal-control-exploration
 title: Optimal Control Exploration
 redirects: [/wordpress/archives/2944, /archives/2944]
 categories:
-- Computation
+- computation
 tags:
 - PDG Control
 ---

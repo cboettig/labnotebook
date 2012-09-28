@@ -3,10 +3,10 @@ comments: true
 date: 2010-11-20 23:36:09
 layout: post
 slug: sat-phylogenetics-porting-tree-transformations-to-ouch
-title: 'Sat: Phylogenetics -- porting tree transformations to OUCH?'
+title: 'Sat: evolution -- porting tree transformations to OUCH?'
 redirects: [/wordpress/archives/374, /archives/374]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 The overnight runs yesterday [using the geiger models bm and lambda on the (transformed) Anoles dataset](https://github.com/cboettig/Comparative-Phylogenetics/commit/cb1161cd2c091aa0e037434ec03df14fc91e3360#diff-0) don't seem to converge, spooling jobs that continue running even when R exits -- probably that same problem in ape somewhere that was fixed by writing the tree out to Nexus and re-reading it, a very strange and subtle bug. [Will try this and restart the runs. ](https://github.com/cboettig/Comparative-Phylogenetics/commit/f5c8f113acefc59ef9844bdabdaf328cd33e335f#diff-0)

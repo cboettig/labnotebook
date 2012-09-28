@@ -6,7 +6,7 @@ slug: is-bm-nested-in-ou-understanding-likelihoods-of-ouch
 title: Is BM nested in OU?  Understanding likelihoods of ouch
 redirects: [/wordpress/archives/1107, /archives/1107]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 A quick run of the example ouch code given by 

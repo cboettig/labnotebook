@@ -2,12 +2,12 @@
 comments: true
 date: 2010-12-01 00:58:28
 layout: post
-slug: cpb-seminar-david-collar
-title: 'CPB seminar: David Collar'
+slug: cpb--david-collar
+title: 'CPB : David Collar'
 redirects: [/wordpress/archives/494, /archives/494]
 categories:
-- Phylogenetics
-- Seminar
+- evolution
+- seminar
 ---
 
 Identifying ecological constraint on morph and function using phylogenies.    

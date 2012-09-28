@@ -6,7 +6,7 @@ slug: warning-signals-manuscript
 title: Warning signals manuscript
 redirects: [/wordpress/archives/563, /archives/563]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

@@ -6,7 +6,7 @@ slug: training-problem-ii
 title: Training Problem II
 redirects: [/wordpress/archives/2652, /archives/2652]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

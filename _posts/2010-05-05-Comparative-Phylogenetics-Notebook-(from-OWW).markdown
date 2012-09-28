@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [code-tricks, Primates]
-categories:  Comparative_Phylogenetics
+categories: evolution
 ---
 
 

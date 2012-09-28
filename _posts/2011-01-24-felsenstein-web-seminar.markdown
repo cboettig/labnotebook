@@ -2,11 +2,11 @@
 comments: true
 date: 2011-01-24 11:13:08
 layout: post
-slug: felsenstein-web-seminar
-title: Felsenstein (web) Seminar
+slug: felsenstein-web-
+title: Felsenstein (web) seminar
 redirects: [/wordpress/archives/832, /archives/832]
 categories:
-- Seminar
+- seminar
 ---
 
 Joe Felsenstein on [phyloseminar](http://phyloseminar.org) ([watch here](http://evo.caltech.edu/evoGate/player/EVOPlayer.jnlp?fileToPlay=http://phyloseminar.org/recorded/10_felsenstein.evx)). This morning. [ref]These are my own notes as taken during the seminar and may not  accurately reflect everything.  I merely confirm with the speaker that  my notes are publicly visible.  My own commentary/thoughts indicated in  square brackets.[/ref] Discusses bridging population genetics & comparative methods: where does covariation in traits across a phylogeny come from?

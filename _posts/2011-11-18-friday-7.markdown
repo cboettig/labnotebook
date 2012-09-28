@@ -6,7 +6,7 @@ slug: friday-7
 title: Friday
 redirects: [/wordpress/archives/3346, /archives/3346]
 categories:
-- Logistics
+- logistics
 ---
 
 Connecting weather fluctuations to trends in climate: should really consider replicating (Min _et. al._ 2011) and (Pall _et. al._ 2011).

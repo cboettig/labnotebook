@@ -6,7 +6,7 @@ slug: phylo-monte-carlo-for-diversification-rates
 title: Phylo Monte Carlo for diversification rates
 redirects: [/wordpress/archives/741, /archives/741]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Writing function wrappers for geiger functions to perform  Phylogenetic Monte Carlo.  Any object that has methods defined for update.objecttype (object, data) and simulate.objecttype(data), and loglik.object(object) should be able to use the montecarlotest() function. OUCH almost does this but not quite, since the datatype returned by 'simulate' doesn't match that needed by 'update'. OUCH also uses S4 class styles.

@@ -6,7 +6,7 @@ slug: wrightscape-examples
 title: wrightscape examples
 redirects: [/wordpress/archives/3565, /archives/3565]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 [flickr-gallery mode="search" tags="phylogenetics" min_upload_date="2012-01-03 7:00:37" max_upload_date="2012-01-03 22:23:37"]

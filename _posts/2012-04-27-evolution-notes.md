@@ -2,7 +2,9 @@
 layout: post
 title: Project tracking (Evolution)
 category: evolution
+
 ---
+
 # Evolution
 
 I'm also still wrapping up a variety of projects on the Evolution front. 

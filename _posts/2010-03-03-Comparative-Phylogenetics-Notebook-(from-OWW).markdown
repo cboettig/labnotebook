@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Model_Choice, code-tricks]
-categories:  Comparative_Phylogenetics
+tags: [model-choice, code-tricks]
+categories: evolution
 ---
 
 

@@ -6,7 +6,7 @@ slug: labrid-submodels
 title: Labrid submodels
 redirects: [/wordpress/archives/3037, /archives/3037]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Updates to labrids results:

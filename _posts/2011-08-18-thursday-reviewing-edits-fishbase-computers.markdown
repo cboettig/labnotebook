@@ -6,7 +6,7 @@ slug: thursday-reviewing-edits-fishbase-computers
 title: 'Thursday: reviewing edits, fishbase, computers.'
 redirects: [/wordpress/archives/2370, /archives/2370]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - fishbase
 ---

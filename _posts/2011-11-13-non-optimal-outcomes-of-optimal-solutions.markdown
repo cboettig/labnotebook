@@ -6,7 +6,7 @@ slug: non-optimal-outcomes-of-optimal-solutions
 title: non-optimal outcomes of optimal solutions
 redirects: [/wordpress/archives/3296, /archives/3296]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

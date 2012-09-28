@@ -6,7 +6,7 @@ slug: numerical-challenges-in-likelihood-estimation-of-time-dep-ou-models
 title: Numerical challenges in likelihood estimation of time-dep OU models
 redirects: [/wordpress/archives/1169, /archives/1169]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

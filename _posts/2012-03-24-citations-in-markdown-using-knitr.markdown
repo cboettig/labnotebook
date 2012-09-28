@@ -6,7 +6,7 @@ slug: citations-in-markdown-using-knitr
 title: Citations in markdown using knitr
 redirects: [/wordpress/archives/4352, /archives/4352]
 categories:
-- Computation
+- computation
 - open-science
 tags:
 - R

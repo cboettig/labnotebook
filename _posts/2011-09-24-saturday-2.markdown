@@ -6,7 +6,7 @@ slug: saturday-2
 title: Saturday
 redirects: [/wordpress/archives/2756, /archives/2756]
 categories:
-- Logistics
+- logistics
 ---
 
 ## NIMBioS Working group follow-up:

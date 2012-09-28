@@ -6,7 +6,7 @@ slug: notes-on-bokma-2010-evolution-in-drifts-and-jumps
 title: 'Notes on Bokma 2010: evolution in drifts and jumps'
 redirects: [/wordpress/archives/886, /archives/886]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 [Bokma 2010](http://dx.doi.org/10.1093/sysbio/syq029) asks if there is an analytic expression for the likelihood in the evolutionary model he describes.

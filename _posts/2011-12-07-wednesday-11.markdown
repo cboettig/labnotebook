@@ -6,9 +6,9 @@ slug: wednesday-11
 title: Wednesday - wrightscape runs and various other things
 redirects: [/wordpress/archives/3488, /archives/3488]
 categories:
-- Logistics
-- Phylogenetics
-- Stochastic Population Dynamics
+- logistics
+- evolution
+- ecology
 tags:
 - warning-signals
 ---

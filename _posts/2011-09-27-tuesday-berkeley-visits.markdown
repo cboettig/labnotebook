@@ -6,7 +6,7 @@ slug: tuesday-berkeley-visits
 title: Tuesday - Berkeley visits
 redirects: [/wordpress/archives/2774, /archives/2774]
 categories:
-- Logistics
+- logistics
 ---
 
 In Berkeley for a few meetings with faculty and students.

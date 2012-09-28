@@ -6,7 +6,7 @@ slug: crashing-stocks-and-optimal-harvesting-effort-on-allee-effects
 title: Crashing stocks and optimal harvesting effort on Allee effects
 redirects: [/wordpress/archives/3252, /archives/3252]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

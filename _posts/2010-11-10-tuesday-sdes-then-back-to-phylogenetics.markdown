@@ -6,7 +6,7 @@ slug: tuesday-sdes-then-back-to-phylogenetics
 title: Tuesday - SDEs then back to phylogenetics
 redirects: [/wordpress/archives/272, /archives/272]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Nice meeting with Sebastian this morning, reviewed my spectral approach problem (see anything in Stochastic Population Dynamics / warning signals in the past week) and the multivariate [SDE problem Peter posed ](http://www.carlboettiger.info/archives/151)Oct 30th. No solutions yet but some ideas to get started.

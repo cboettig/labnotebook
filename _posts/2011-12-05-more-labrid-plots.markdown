@@ -6,7 +6,7 @@ slug: more-labrid-plots
 title: More labrid plots
 redirects: [/wordpress/archives/3427, /archives/3427]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ![]( http://farm8.staticflickr.com/7010/6444379007_dbb297e7e3_o.png )

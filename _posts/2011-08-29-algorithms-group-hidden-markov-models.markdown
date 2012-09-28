@@ -6,7 +6,7 @@ slug: algorithms-group-hidden-markov-models
 title: 'Algorithms group: Hidden Markov Models'
 redirects: [/wordpress/archives/2521, /archives/2521]
 categories:
-- Computation
+- computation
 tags:
 - algorithms
 ---

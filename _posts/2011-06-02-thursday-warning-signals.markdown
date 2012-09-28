@@ -6,7 +6,7 @@ slug: thursday-warning-signals
 title: 'Thursday: Warning Signals'
 redirects: [/wordpress/archives/1890, /archives/1890]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

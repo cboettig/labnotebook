@@ -3,10 +3,10 @@ comments: true
 date: 2010-11-11 08:13:49
 layout: post
 slug: phylogenetics-statistics
-title: 'Phylogenetics statistics '
+title: 'evolution statistics '
 redirects: [/wordpress/archives/286, /archives/286]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Exploring the best way for representing the Monte Carlo Likelihood approach visually, including comparison power and comparison to AIC.

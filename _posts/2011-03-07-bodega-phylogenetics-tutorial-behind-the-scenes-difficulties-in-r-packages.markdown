@@ -3,10 +3,10 @@ comments: true
 date: 2011-03-07 21:22:42
 layout: post
 slug: bodega-phylogenetics-tutorial-behind-the-scenes-difficulties-in-r-packages
-title: 'Bodega Phylogenetics Tutorial: behind the scenes difficulties in R packages'
+title: 'Bodega evolution Tutorial: behind the scenes difficulties in R packages'
 redirects: [/wordpress/archives/1157, /archives/1157]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Just finished my tutorial for comparative methods on continuous traits in R, which I'll be presenting on Wednesday with [Justen Whittall](http://www.jbwhittall.com/).  The [tutorial is up](http://bodegaphylo.wikispot.org/Continuous%5FCharacter%5FEvolution%5F%28Boettiger%29%5F2011) on the Bodega Phylogenetics Wiki, together with the necessary data files.

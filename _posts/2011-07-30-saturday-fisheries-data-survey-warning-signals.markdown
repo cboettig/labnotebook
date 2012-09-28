@@ -6,7 +6,7 @@ slug: saturday-fisheries-data-survey-warning-signals
 title: 'Saturday: Fisheries Data Survey, Warning Signals'
 redirects: [/wordpress/archives/2263, /archives/2263]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

@@ -6,9 +6,9 @@ slug: wednesday-simulated-model-fit-analysis-on-wrightscape-parrotfish-tree
 title: 'Wednesday: Simulated model fit analysis on wrightscape, parrotfish tree'
 redirects: [/wordpress/archives/1937, /archives/1937]
 categories:
-- Phylogenetics
+- evolution
 tags:
-- api
+- hpc
 ---
 
 

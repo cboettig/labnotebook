@@ -6,9 +6,9 @@ slug: sparkleshare-configuration
 title: Sparkleshare configuration
 redirects: [/wordpress/archives/3161, /archives/3161]
 categories:
-- Computation
+- computation
 tags:
-- site configuration
+- site-configuration
 ---
 
 Configured sparkleshare across my linux server & laptops, and android phone.  Provides a dropbox-style syncing and version history for all files using git.  I can sync as much space as I have hardisk capacity, with as many users and machines as I like, at no cost.  Wonderful.

@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [adaptive-dynamics, Primates, Warning_signals, Beetles, code-tricks]
-categories:  Stochastic_Population_Dynamics
+tags: [adaptive-dynamics, Primates, warning-signals, tribolium, code-tricks]
+categories: [ecology]
 ---
 
 

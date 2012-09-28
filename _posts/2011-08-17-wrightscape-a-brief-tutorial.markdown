@@ -6,7 +6,7 @@ slug: wrightscape-a-brief-tutorial
 title: 'Wrightscape: a brief tutorial'
 redirects: [/wordpress/archives/2355, /archives/2355]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 While the [wrightscape package](https://github.com/cboettig/wrightscape) is still in active development, I realize the code base doesn't contain any introductory examples.  So as a first tutorial, here's a short walk-through of the package.  We begin by loading the package and a few useful additional packages:

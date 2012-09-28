@@ -6,7 +6,7 @@ slug: thurs-writing-section-on-comparing-to-aic
 title: 'Thurs: writing section on comparing to AIC'
 redirects: [/wordpress/archives/635, /archives/635]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Phylogenetics writing still continues.

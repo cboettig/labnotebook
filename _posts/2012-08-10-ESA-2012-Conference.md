@@ -1,6 +1,7 @@
 ---
 layout: post
-tags: conferences
+category: ecology
+tags: conference
 
 ---
 

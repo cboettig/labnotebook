@@ -6,8 +6,8 @@ slug: tuesday-pandoc-citations-notes-various
 title: 'Tuesday: pandoc citations notes, various'
 redirects: [/wordpress/archives/4382, /archives/4382]
 categories:
-- Computation
-- Logistics
+- computation
+- logistics
 ---
 
 ## Markdown over latex?

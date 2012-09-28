@@ -6,7 +6,7 @@ slug: tuesday-simulations-appendix
 title: Tuesday, simulations & appendix
 redirects: [/wordpress/archives/1326, /archives/1326]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

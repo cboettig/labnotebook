@@ -6,7 +6,7 @@ slug: pdg-control-conference-call
 title: PDG Control Conference Call
 redirects: [/wordpress/archives/3109, /archives/3109]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

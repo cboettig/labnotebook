@@ -6,7 +6,7 @@ slug: short-note-trait-diversification-rates-controlled-by-other-traits
 title: 'Short note: Trait diversification rates controlled by other traits'
 redirects: [/wordpress/archives/151, /archives/151]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Peter posed an interesting question to me this afternoon: can we infer a model in which the rate of evolution in one trait (say, its Brownian diversification rate parameter) depends on the value of another trait (say, linearly and assume the other trait depends on Brownian motion).  Without all those assumptions we write this generally as:

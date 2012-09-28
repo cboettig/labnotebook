@@ -6,7 +6,7 @@ slug: sunday-6
 title: 'Sunday '
 redirects: [/wordpress/archives/3847, /archives/3847]
 categories:
-- Logistics
+- logistics
 ---
 
 ## phylogenetics

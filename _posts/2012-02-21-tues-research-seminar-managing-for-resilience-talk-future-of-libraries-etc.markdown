@@ -2,12 +2,12 @@
 comments: true
 date: 2012-02-21 19:20:40
 layout: post
-slug: tues-research-seminar-managing-for-resilience-talk-future-of-libraries-etc
-title: 'Tues: Research, Seminar (managing for resilience), talk (future of libraries),
+slug: tues-research--managing-for-resilience-talk-future-of-libraries-etc
+title: 'Tues: Research, seminar (managing for resilience), talk (future of libraries),
   etc...'
 redirects: [/wordpress/archives/3909, /archives/3909]
 categories:
-- Logistics
+- logistics
 ---
 
 ## research Stuff

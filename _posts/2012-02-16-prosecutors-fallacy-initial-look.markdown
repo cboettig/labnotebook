@@ -6,7 +6,7 @@ slug: prosecutors-fallacy-initial-look
 title: prosecutor's fallacy initial look
 redirects: [/wordpress/archives/3897, /archives/3897]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

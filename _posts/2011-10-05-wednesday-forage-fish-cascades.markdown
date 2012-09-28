@@ -6,7 +6,7 @@ slug: wednesday-forage-fish-cascades
 title: Wednesday - forage fish & cascades
 redirects: [/wordpress/archives/2832, /archives/2832]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

@@ -6,7 +6,7 @@ slug: algorithms-group-mcmcmc
 title: 'Algorithms group: MCMCMC'
 redirects: [/wordpress/archives/1736, /archives/1736]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - algorithms
 ---

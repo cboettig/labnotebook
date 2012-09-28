@@ -6,7 +6,7 @@ slug: peters-talk
 title: 'Peter''s talk '
 redirects: [/wordpress/archives/1198, /archives/1198]
 categories:
-- Seminar
+- seminar
 ---
 
 Peter spoke in Sebastian's lab meeting about a spatially explicit Moran model, for which he derives Fisher's wave equation and an ancestry process.  Here's what he says,

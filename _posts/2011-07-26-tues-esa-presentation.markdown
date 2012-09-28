@@ -6,7 +6,7 @@ slug: tues-esa-presentation
 title: 'Tues: ESA presentation'
 redirects: [/wordpress/archives/2247, /archives/2247]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

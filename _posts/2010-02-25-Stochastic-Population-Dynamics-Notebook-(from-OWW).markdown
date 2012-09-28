@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Warning_signals, code-tricks]
-categories:  Stochastic_Population_Dynamics
+tags: [warning-signals, code-tricks]
+categories: [ecology]
 ---
 
 

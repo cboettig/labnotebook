@@ -6,7 +6,7 @@ slug: phylogenetic-monte-carlo-for-the-laser-package
 title: Phylogenetic Monte Carlo for the Laser package
 redirects: [/wordpress/archives/974, /archives/974]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Laser simulations: First ensuring example has expected behaviour, can in general get the expected likelihood differences between fits of Yule and birth-death models.

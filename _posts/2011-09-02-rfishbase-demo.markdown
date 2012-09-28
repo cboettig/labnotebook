@@ -6,7 +6,7 @@ slug: rfishbase-demo
 title: 'rfishbase demo: Are there more Goby or Labrid species on reefs?'
 redirects: [/wordpress/archives/2529, /archives/2529]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - fishbase
 ---

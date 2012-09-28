@@ -6,7 +6,7 @@ slug: tues-fitting-the-limiting-ou-models-to-each-bifurcation
 title: 'Tues: Fitting the limiting OU models to each bifurcation'
 redirects: [/wordpress/archives/490, /archives/490]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - derivations
 - warning-signals

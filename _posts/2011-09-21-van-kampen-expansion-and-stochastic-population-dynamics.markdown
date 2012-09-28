@@ -6,7 +6,7 @@ slug: van-kampen-expansion-and-stochastic-population-dynamics
 title: Van Kampen Expansion and Stochastic population dynamics
 redirects: [/wordpress/archives/2694, /archives/2694]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

@@ -6,7 +6,7 @@ slug: thursday-8
 title: 'Thursday: sending off paper draft, starting applications'
 redirects: [/wordpress/archives/2131, /archives/2131]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

@@ -6,7 +6,7 @@ slug: weds
 title: Weds
 redirects: [/wordpress/archives/340, /archives/340]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Great discussion in Monte Carlo Seminar with Rannala on the two rate estimation papers.  See in-text notes, but focus on  mechanisms of speciation and extinction as intrinsic (lineage specific) or extrinsic (perhaps spatially specific or global).

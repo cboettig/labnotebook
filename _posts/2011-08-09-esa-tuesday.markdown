@@ -6,7 +6,7 @@ slug: esa-tuesday
 title: ESA Tuesday
 redirects: [/wordpress/archives/2302, /archives/2302]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - conference
 - warning-signals

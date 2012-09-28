@@ -6,7 +6,7 @@ slug: notes-during-revisions-on-phylogenetics-manuscript
 title: Notes during revisions on phylogenetics manuscript
 redirects: [/wordpress/archives/952, /archives/952]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 I have made the revisions to attempt to address Graham's annotations  and Peter's comments.  (revisions are also up on the git  repo.)   I have added a brief section introducing the models immediately after  the introduction.  I also rewrote more of the PMC method to include  definitions of p and power in the context of comparing model likelihood  ratios.  I moved the AIC section up before I talk about the other  comparisons.  How does this whole section work overall where I use a  different comparison of models to discuss a different issue/phenomena  anyway?  Recall I use:

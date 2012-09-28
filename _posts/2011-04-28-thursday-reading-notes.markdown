@@ -6,8 +6,8 @@ slug: thursday-reading-notes
 title: Reading Notes, presentation prep, treebase error handling
 redirects: [/wordpress/archives/1522, /archives/1522]
 categories:
-- Phylogenetics
-- Stochastic Population Dynamics
+- evolution
+- ecology
 tags:
 - code-tricks
 - reading

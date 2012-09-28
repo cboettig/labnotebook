@@ -6,7 +6,7 @@ slug: policy-costs-to-changing-mangement-tp-1b-apples-to-apples
 title: 'Policy costs to changing mangement, TP 1b: Apples to Apples'
 redirects: [/wordpress/archives/4334, /archives/4334]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

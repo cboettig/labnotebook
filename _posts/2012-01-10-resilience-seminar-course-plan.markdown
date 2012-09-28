@@ -2,12 +2,12 @@
 comments: true
 date: 2012-01-10 15:17:42
 layout: post
-slug: resilience-seminar-course-plan
-title: Resilience Seminar course plan
+slug: resilience--course-plan
+title: Resilience seminar course plan
 redirects: [/wordpress/archives/3728, /archives/3728]
 categories:
-- Logistics
-- Seminar
+- logistics
+- seminar
 ---
 
 Resilience Monte Carlo Seminar, 11am Tuesdays. Val Eviner.  

@@ -2,8 +2,9 @@
 layout: post
 title: knitcitations
 subtitle: An automated way to generate citations by dynamic lookup using Crossref DOIs or by bibtex files.
-categories: [OpenScience, computing]
+categories: open-science
 tags: R
+
 ---
 
 

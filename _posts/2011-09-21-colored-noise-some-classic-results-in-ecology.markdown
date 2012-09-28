@@ -6,7 +6,7 @@ slug: colored-noise-some-classic-results-in-ecology
 title: 'Colored noise: some classic results in ecology'
 redirects: [/wordpress/archives/2699, /archives/2699]
 categories:
-- Stochastic Population Dynamics
+- ecology
 ---
 
 Some of my early notes & derivations on the impact of red environmental noise on population dynamics.

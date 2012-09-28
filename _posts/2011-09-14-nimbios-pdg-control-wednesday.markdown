@@ -6,7 +6,7 @@ slug: nimbios-pdg-control-wednesday
 title: 'NIMBioS PDG Control: Wednesday'
 redirects: [/wordpress/archives/2590, /archives/2590]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - NIMBioS
 - PDG Control

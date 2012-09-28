@@ -6,7 +6,7 @@ slug: friday-updated-wrightscape-results
 title: Friday - updated wrightscape results - simulated examples
 redirects: [/wordpress/archives/3424, /archives/3424]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Consider two simulated datasets, one under a release of constraint (left) one under an increase in sigma (right).  Can we correctly discriminate between these models?

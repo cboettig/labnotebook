@@ -6,7 +6,7 @@ slug: mondaytuesday
 title: Monday/Tuesday
 redirects: [/wordpress/archives/4412, /archives/4412]
 categories:
-- Logistics
+- logistics
 ---
 
 ## knitr + markdown + pandoc + latex

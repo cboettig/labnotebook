@@ -6,7 +6,7 @@ slug: friday-8
 title: Friday
 redirects: [/wordpress/archives/4423, /archives/4423]
 categories:
-- Logistics
+- logistics
 ---
 
 ### Fishbase

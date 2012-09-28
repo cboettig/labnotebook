@@ -2,11 +2,11 @@
 comments: true
 date: 2011-07-07 16:45:05
 layout: post
-slug: segue-easy-cloud-computing-in-r-now-with-custom-packages
-title: 'Segue: Easy cloud computing in R, now with custom packages'
+slug: segue-easy-cloud-hpc-in-r-now-with-custom-packages
+title: 'Segue: Easy cloud hpc in R, now with custom packages'
 redirects: [/wordpress/archives/2133, /archives/2133]
 categories:
-- Computation
+- computation
 tags:
 - hpc
 ---

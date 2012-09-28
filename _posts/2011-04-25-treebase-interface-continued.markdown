@@ -6,7 +6,7 @@ slug: treebase-interface-continued
 title: TreeBASE interface continued...
 redirects: [/wordpress/archives/1496, /archives/1496]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Returning to exploration of treeBASE interface and my attempt to implement an R interface the API ([earlier entry](http://www.carlboettiger.info/archives/1382))

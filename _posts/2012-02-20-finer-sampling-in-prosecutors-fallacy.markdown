@@ -6,7 +6,7 @@ slug: finer-sampling-in-prosecutors-fallacy
 title: finer sampling in prosecutor's fallacy
 redirects: [/wordpress/archives/3905, /archives/3905]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

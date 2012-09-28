@@ -6,8 +6,8 @@ slug: sunday-5
 title: Sunday
 redirects: [/wordpress/archives/3173, /archives/3173]
 categories:
-- Computation
-- Logistics
+- computation
+- logistics
 ---
 
 ## Computing notes

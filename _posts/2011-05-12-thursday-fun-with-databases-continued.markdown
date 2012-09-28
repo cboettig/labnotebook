@@ -6,7 +6,7 @@ slug: thursday-fun-with-databases-continued
 title: 'Thursday: Fun with databases continued'
 redirects: [/wordpress/archives/1692, /archives/1692]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ## Dryad

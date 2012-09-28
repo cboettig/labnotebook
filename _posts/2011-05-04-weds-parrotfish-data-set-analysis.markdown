@@ -6,7 +6,7 @@ slug: weds-parrotfish-data-set-analysis
 title: 'Weds: Parrotfish data set analysis'
 redirects: [/wordpress/archives/1578, /archives/1578]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - plugins
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Model_Choice, adaptive-dynamics]
-categories:  Comparative_Phylogenetics
+tags: [model-choice, adaptive-dynamics]
+categories: evolution
 ---
 
 

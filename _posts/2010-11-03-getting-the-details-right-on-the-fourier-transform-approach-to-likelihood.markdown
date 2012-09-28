@@ -6,7 +6,7 @@ slug: getting-the-details-right-on-the-fourier-transform-approach-to-likelihood
 title: Getting the details right on the Fourier Transform approach to likelihood
 redirects: [/wordpress/archives/159, /archives/159]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

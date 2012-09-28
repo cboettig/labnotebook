@@ -2,11 +2,11 @@
 comments: true
 date: 2012-03-09 10:34:20
 layout: post
-slug: alex-pfaff-seminar-meeting
-title: Alex Pfaff Seminar, meeting
+slug: alex-pfaff--meeting
+title: Alex Pfaff seminar, meeting
 redirects: [/wordpress/archives/4273, /archives/4273]
 categories:
-- Seminar
+- seminar
 ---
 
 Notes from [Alex Pfaff](http://www.duke.edu/~asp9/cv&bio.html) talk at UTK (during my visit for PDG Control meeting).

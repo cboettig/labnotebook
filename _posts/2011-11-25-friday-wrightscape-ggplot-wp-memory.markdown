@@ -6,8 +6,8 @@ slug: friday-wrightscape-ggplot-wp-memory
 title: 'Friday: wrightscape, ggplot, wp memory'
 redirects: [/wordpress/archives/3393, /archives/3393]
 categories:
-- Computation
-- Phylogenetics
+- computation
+- evolution
 ---
 
 ## more sub-model comparisons

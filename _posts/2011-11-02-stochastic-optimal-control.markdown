@@ -6,7 +6,7 @@ slug: stochastic-optimal-control
 title: Stochastic Optimal Control
 redirects: [/wordpress/archives/3124, /archives/3124]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

@@ -6,7 +6,7 @@ slug: friday-optimal-control
 title: 'Friday: Optimal Control'
 redirects: [/wordpress/archives/2972, /archives/2972]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

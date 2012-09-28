@@ -6,7 +6,7 @@ slug: parameter-uncertainty-in-stochastic-control-problems-2
 title: Parameter uncertainty in stochastic control problems
 redirects: [/wordpress/archives/4276, /archives/4276]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 - reading

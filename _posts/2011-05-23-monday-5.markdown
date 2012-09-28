@@ -6,8 +6,8 @@ slug: monday-5
 title: 'Monday: some code-tricks, Algorithms group planning'
 redirects: [/wordpress/archives/1801, /archives/1801]
 categories:
-- Computation
-- Logistics
+- computation
+- logistics
 ---
 
 ## Teary

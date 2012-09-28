@@ -6,7 +6,7 @@ slug: wednesday-mcmc-and-mles-for-wrightscape
 title: Wednesday MCMC and MLEs for wrightscape
 redirects: [/wordpress/archives/1988, /archives/1988]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 

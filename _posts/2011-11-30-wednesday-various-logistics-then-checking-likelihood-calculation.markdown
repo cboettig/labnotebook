@@ -6,7 +6,7 @@ slug: wednesday-various-logistics-then-checking-likelihood-calculation
 title: Wednesday - various logistics, then checking likelihood calculation
 redirects: [/wordpress/archives/3419, /archives/3419]
 categories:
-- Logistics
+- logistics
 ---
 
 ## rOpenSci

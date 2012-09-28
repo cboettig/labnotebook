@@ -3,11 +3,11 @@ comments: true
 date: 2010-11-15 22:37:52
 layout: post
 slug: phylogenetics-today-discussion-groups-writing-etc
-title: 'Phylogenetics today:  Discussion groups, writing, etc'
+title: 'evolution today:  Discussion groups, writing, etc'
 redirects: [/wordpress/archives/326, /archives/326]
 categories:
 - open-science
-- Phylogenetics
+- evolution
 ---
 
 Interesting discussion of [a Lenski paper](http://www.mendeley.com/research/genome-evolution-and-adaptation-in-a-longterm-experiment-with-escherichia-coli?utm_source=desktop&utm_medium=0.9.8.1&utm_campaign=open_catalog&userDocumentId={98edad94-30b4-4e6e-a905-243c3391c835}) in Wainwright's 270.

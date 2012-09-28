@@ -6,7 +6,7 @@ slug: warning-signals-power-and-sufficient-statistics
 title: Warning Signals, Power and Sufficient Statistics
 redirects: [/wordpress/archives/763, /archives/763]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

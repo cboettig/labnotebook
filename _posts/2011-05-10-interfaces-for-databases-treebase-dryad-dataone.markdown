@@ -6,7 +6,7 @@ slug: interfaces-for-databases-treebase-dryad-dataone
 title: 'Interfaces for databases: TreeBASE, Dryad, DataONE'
 redirects: [/wordpress/archives/1660, /archives/1660]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - treebase
 ---

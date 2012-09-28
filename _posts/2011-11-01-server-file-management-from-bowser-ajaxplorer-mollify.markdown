@@ -6,9 +6,9 @@ slug: server-file-management-from-bowser-ajaxplorer-mollify
 title: 'server file management from bowser: ajaxplorer, mollify'
 redirects: [/wordpress/archives/3116, /archives/3116]
 categories:
-- Computation
+- computation
 tags:
-- site configuration
+- site-configuration
 ---
 
 A few notes on trying out some server-based file sharing solutions.  

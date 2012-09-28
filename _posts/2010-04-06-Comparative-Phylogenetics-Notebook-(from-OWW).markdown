@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [open-science]
-categories:  Comparative_Phylogenetics
+categories: evolution
 ---
 
 

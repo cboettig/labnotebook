@@ -6,7 +6,7 @@ slug: handling-other-sources-of-noise
 title: Handling other sources of noise
 redirects: [/wordpress/archives/3398, /archives/3398]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

@@ -6,7 +6,7 @@ slug: monday-misc-notes
 title: Monday, misc notes
 redirects: [/wordpress/archives/2994, /archives/2994]
 categories:
-- Logistics
+- logistics
 ---
 
 R packages relevant to the optimal control problems

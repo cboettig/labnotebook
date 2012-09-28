@@ -6,7 +6,7 @@ slug: accessing-phylognenies-in-treebase-from-r
 title: Accessing phylognenies in TreeBASE from R
 redirects: [/wordpress/archives/1502, /archives/1502]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - treebase
 ---

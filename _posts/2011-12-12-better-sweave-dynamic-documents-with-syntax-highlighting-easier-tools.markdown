@@ -6,7 +6,7 @@ slug: better-sweave-dynamic-documents-with-syntax-highlighting-easier-tools
 title: Better dynamic documents (Sweave) with syntax highlighting, caching, etc
 redirects: [/wordpress/archives/3524, /archives/3524]
 categories:
-- Computation
+- computation
 - open-science
 tags:
 - code-tricks

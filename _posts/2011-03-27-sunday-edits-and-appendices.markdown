@@ -6,7 +6,7 @@ slug: sunday-edits-and-appendices
 title: Sunday -- edits and appendices
 redirects: [/wordpress/archives/1309, /archives/1309]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

@@ -6,7 +6,7 @@ slug: tuesday-debugging
 title: Tuesday debugging
 redirects: [/wordpress/archives/3416, /archives/3416]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Wrote seven unit tests to identify source of how/why I can get $ \alpha $'s to be larger in the parrotfish group than wrasses (when only $alpha $ varies across regimes) on the same trait for which $ \sigma $'s are larger (when only they vary). Tests successively restrict pattern into the likelihood equation, some treatment of the regimes must be wrong.

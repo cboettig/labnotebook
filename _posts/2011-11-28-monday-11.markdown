@@ -6,7 +6,7 @@ slug: monday-11
 title: 'Monday: submodels for full traits'
 redirects: [/wordpress/archives/3401, /archives/3401]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ##  Two shifts 

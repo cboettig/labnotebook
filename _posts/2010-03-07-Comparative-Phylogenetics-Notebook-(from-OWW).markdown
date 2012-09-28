@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Phylogenetics_Software]
-categories:  Comparative_Phylogenetics
+tags: []
+categories: evolution
 ---
 
 

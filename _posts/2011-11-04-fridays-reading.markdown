@@ -6,7 +6,7 @@ slug: fridays-reading
 title: Friday's reading
 redirects: [/wordpress/archives/3145, /archives/3145]
 categories:
-- Logistics
+- logistics
 tags:
 - reading
 ---

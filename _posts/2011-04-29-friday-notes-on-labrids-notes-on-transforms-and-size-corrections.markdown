@@ -6,7 +6,7 @@ slug: friday-notes-on-labrids-notes-on-transforms-and-size-corrections
 title: 'Friday: Notes on Labrids, notes on Transforms and size-corrections'
 redirects: [/wordpress/archives/1534, /archives/1534]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 The specific traits were:

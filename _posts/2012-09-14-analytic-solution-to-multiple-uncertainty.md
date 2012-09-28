@@ -1,7 +1,7 @@
 ---
-layout: codepost
+layout: 
 categories: ecology
-tags: [codepost, decision-theory]
+tags: [ decision-theory]
 
 ---
 

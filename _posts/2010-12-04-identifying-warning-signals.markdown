@@ -6,7 +6,7 @@ slug: identifying-warning-signals
 title: Identifying Warning Signals
 redirects: [/wordpress/archives/516, /archives/516]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

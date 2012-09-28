@@ -6,7 +6,7 @@ slug: wednesday-9
 title: Wednesday
 redirects: [/wordpress/archives/2686, /archives/2686]
 categories:
-- Logistics
+- logistics
 ---
 
 ## Alan meeting

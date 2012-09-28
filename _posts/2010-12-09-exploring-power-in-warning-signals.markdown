@@ -6,7 +6,7 @@ slug: exploring-power-in-warning-signals
 title: Exploring Power in Warning Signals
 redirects: [/wordpress/archives/559, /archives/559]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

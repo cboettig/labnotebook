@@ -6,7 +6,7 @@ slug: friday-more-runs
 title: Friday, more runs
 redirects: [/wordpress/archives/2901, /archives/2901]
 categories:
-- Logistics
+- logistics
 ---
 
 A couple more runs:

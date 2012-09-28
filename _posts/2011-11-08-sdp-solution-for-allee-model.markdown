@@ -6,7 +6,7 @@ slug: sdp-solution-for-allee-model
 title: SDP solution for allee model
 redirects: [/wordpress/archives/3176, /archives/3176]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

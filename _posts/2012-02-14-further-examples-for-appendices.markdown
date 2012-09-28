@@ -6,7 +6,7 @@ slug: further-examples-for-appendices
 title: Further examples for appendices
 redirects: [/wordpress/archives/3860, /archives/3860]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

@@ -6,7 +6,7 @@ slug: warning-signals-summary-stats-vs-likelihood-on-real-and-simulated-data
 title: 'Warning signals: summary stats vs likelihood on real and simulated data'
 redirects: [/wordpress/archives/1177, /archives/1177]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

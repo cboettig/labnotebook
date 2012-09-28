@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Beetles, Warning_signals]
-categories:  Stochastic_Population_Dynamics
+tags: [tribolium, warning-signals]
+categories: [ecology]
 ---
 
 

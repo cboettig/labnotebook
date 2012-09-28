@@ -3,12 +3,12 @@ comments: true
 date: 2011-04-11 16:21:09
 layout: post
 slug: monday-abc-meeting-2
-title: 'Monday: ABC Meeting'
+title: 'Monday: algorithms Meeting'
 redirects: [/wordpress/archives/1397, /archives/1397]
 categories:
-- Seminar
+- seminar
 tags:
-- ABC
+- algorithms
 - algorithms
 ---
 

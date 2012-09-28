@@ -2,12 +2,12 @@
 comments: true
 date: 2011-02-25 14:36:16
 layout: post
-slug: phyloseminar-luke-harmon
-title: 'Phyloseminar: Luke Harmon'
+slug: phylo-luke-harmon
+title: 'Phylo: Luke Harmon'
 redirects: [/wordpress/archives/1108, /archives/1108]
 categories:
-- Phylogenetics
-- Seminar
+- evolution
+- seminar
 ---
 
 My notes on Luke Harmon's excellent talk on [Phyloseminar](http://phyloseminar.org/) this morning.  See the [recording](http://phyloseminar.org/recorded.html) of Luke's actual talk to know what he said, below are my thoughts and notes to myself having watched the talk.

@@ -6,7 +6,7 @@ slug: thrusday-corrected-calculation-implementing
 title: 'Thrusday - corrected calculation, implementing.  '
 redirects: [/wordpress/archives/3423, /archives/3423]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Implementing Wednesday night's calculations. Should transcribe full derivation from paper notebook, meanwhile (revealing how chaotic my work process really is):

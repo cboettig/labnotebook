@@ -6,7 +6,7 @@ slug: optimal-control-costs-to-policy-shifts
 title: Optimal control -- costs to policy shifts
 redirects: [/wordpress/archives/3492, /archives/3492]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

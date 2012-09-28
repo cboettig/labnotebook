@@ -6,8 +6,8 @@ slug: monday-scaling-wrightscape-examples
 title: 'Monday: scaling wrightscape examples'
 redirects: [/wordpress/archives/2473, /archives/2473]
 categories:
-- Computation
-- Phylogenetics
+- computation
+- evolution
 tags:
 - hpc
 ---

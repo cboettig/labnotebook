@@ -6,7 +6,7 @@ slug: rfishbase-tutorial-updated-extended
 title: rfishbase Tutorial - updated & extended
 redirects: [/wordpress/archives/2878, /archives/2878]
 categories:
-- Computation
+- computation
 tags:
 - fishbase
 ---

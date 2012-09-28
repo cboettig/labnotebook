@@ -6,7 +6,7 @@ slug: warning-signals-likelihoods-straight-up
 title: 'Warning signals: Likelihoods Straight-up'
 redirects: [/wordpress/archives/416, /archives/416]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - derivations
 - warning-signals

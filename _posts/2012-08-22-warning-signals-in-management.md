@@ -1,6 +1,7 @@
 ---
 layout: post
-tags: early-warning decision-theory
+category: ecology
+tags: warning-signals decision-theory
 
 ---
 

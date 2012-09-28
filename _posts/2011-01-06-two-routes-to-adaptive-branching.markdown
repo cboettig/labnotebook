@@ -6,9 +6,9 @@ slug: two-routes-to-adaptive-branching
 title: Two routes to adaptive branching
 redirects: [/wordpress/archives/733, /archives/733]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
-- Adaptive Dynamics
+- adaptive-dynamics
 ---
 
 Simulations completed, help accentuate the different paths for branching.  When the most failures occur while waiting for the first mutation to enter first established dimorphism, mutation rate seems limiting (left):

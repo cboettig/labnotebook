@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [Primates]
-categories:  Comparative_Phylogenetics
+categories: evolution
 ---
 
 

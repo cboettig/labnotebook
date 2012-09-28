@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My research workflow, based on Github
-category: OpenScience
+category: open-science
 ---
 
 This post outlines my current research workflow.  This has evolved over time, so only

@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Phylogenetics_Software, Labrids]
-categories:  Comparative_Phylogenetics
+tags: [ Labrids]
+categories: evolution
 ---
 
 

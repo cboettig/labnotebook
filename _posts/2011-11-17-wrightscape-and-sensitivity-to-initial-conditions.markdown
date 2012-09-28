@@ -6,7 +6,7 @@ slug: wrightscape-and-sensitivity-to-initial-conditions
 title: wrightscape and sensitivity to initial conditions
 redirects: [/wordpress/archives/3331, /archives/3331]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ![]( http://farm7.staticflickr.com/6236/6355255495_9e411fa96e_o.png )

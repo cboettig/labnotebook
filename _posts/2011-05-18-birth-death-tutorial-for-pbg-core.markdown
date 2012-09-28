@@ -6,8 +6,8 @@ slug: birth-death-tutorial-for-pbg-core
 title: Birth-death Tutorial for PBG Core
 redirects: [/wordpress/archives/1724, /archives/1724]
 categories:
-- Phylogenetics
-- Teaching
+- evolution
+- teaching
 ---
 
 Ran a introductory tutorial on birth-death models for phylogenetic trees in R today for Peter Wainwright's section of the Pop Bio Core sequence.  Notes below, in a manner that may suggest I was better organized than reality might attest.  Luckily the firsties are brilliant...

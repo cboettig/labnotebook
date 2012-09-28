@@ -6,7 +6,7 @@ slug: optimal-control-training-problem-2-problem-statement
 title: 'Training problem 2: the economist''s problem statement'
 redirects: [/wordpress/archives/3001, /archives/3001]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

@@ -6,6 +6,6 @@ slug: back-to-writing
 title: Back to Writing
 redirects: [/wordpress/archives/609, /archives/609]
 categories:
-- Phylogenetics
+- evolution
 ---
 

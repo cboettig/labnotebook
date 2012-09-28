@@ -6,7 +6,7 @@ slug: tuesday-2
 title: Tuesday
 redirects: [/wordpress/archives/1205, /archives/1205]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

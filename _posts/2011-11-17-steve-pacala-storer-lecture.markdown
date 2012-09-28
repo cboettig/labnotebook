@@ -6,7 +6,7 @@ slug: steve-pacala-storer-lecture
 title: Steve Pacala - Storer lecture
 redirects: [/wordpress/archives/3336, /archives/3336]
 categories:
-- Seminar
+- seminar
 ---
 
 Excellent visit from a former advisor, Steve Pacala, at Davis for a Storer lecture.

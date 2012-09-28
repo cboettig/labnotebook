@@ -6,7 +6,7 @@ slug: evolution-day-2
 title: Evolution Day 2
 redirects: [/wordpress/archives/2038, /archives/2038]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - conference
 ---

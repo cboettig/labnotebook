@@ -6,7 +6,7 @@ slug: warning-signals-in-fish-collapse
 title: Warning Signals in Fish Collapse
 redirects: [/wordpress/archives/3984, /archives/3984]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

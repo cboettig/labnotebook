@@ -6,7 +6,7 @@ slug: monday-12
 title: Monday
 redirects: [/wordpress/archives/3539, /archives/3539]
 categories:
-- Logistics
+- logistics
 tags:
 - plugins
 ---

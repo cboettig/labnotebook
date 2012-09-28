@@ -6,8 +6,8 @@ slug: sunday-scaling-runs
 title: 'Sunday: scaling, runs'
 redirects: [/wordpress/archives/2459, /archives/2459]
 categories:
-- Computation
-- Phylogenetics
+- computation
+- evolution
 ---
 
 laptop: ubuntu upgrades: 10.04 LTS -> 10.10 -> 11.04, geesh.

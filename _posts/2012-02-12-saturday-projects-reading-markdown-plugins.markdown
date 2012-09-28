@@ -6,7 +6,7 @@ slug: saturday-projects-reading-markdown-plugins
 title: 'Saturday: projects, reading, markdown plugins'
 redirects: [/wordpress/archives/3818, /archives/3818]
 categories:
-- Logistics
+- logistics
 tags:
 - plugins
 ---

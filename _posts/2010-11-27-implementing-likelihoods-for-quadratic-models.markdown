@@ -6,7 +6,7 @@ slug: implementing-likelihoods-for-quadratic-models
 title: Implementing Likelihoods for quadratic models
 redirects: [/wordpress/archives/452, /archives/452]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

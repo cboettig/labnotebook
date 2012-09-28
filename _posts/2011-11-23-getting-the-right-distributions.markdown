@@ -6,7 +6,7 @@ slug: getting-the-right-distributions
 title: Getting the right distributions
 redirects: [/wordpress/archives/3325, /archives/3325]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

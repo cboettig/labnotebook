@@ -6,7 +6,7 @@ slug: a-new-twist-on-the-approach
 title: A new twist on the approach
 redirects: [/wordpress/archives/144, /archives/144]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

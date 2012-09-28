@@ -6,7 +6,7 @@ slug: thursday-fisheries-course
 title: Thursday, Fisheries course
 redirects: [/wordpress/archives/2885, /archives/2885]
 categories:
-- Logistics
+- logistics
 tags:
 - forage fish
 ---

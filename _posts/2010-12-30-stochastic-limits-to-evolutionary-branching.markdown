@@ -6,9 +6,9 @@ slug: stochastic-limits-to-evolutionary-branching
 title: Stochastic limits to evolutionary branching
 redirects: [/wordpress/archives/715, /archives/715]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
-- Adaptive Dynamics
+- adaptive-dynamics
 ---
 
 My last post was a bit pessimistic, sometimes I can still miss the forest for the trees.  Hidden in those figures, the main point has been staring me in the face.  So let's try this again.

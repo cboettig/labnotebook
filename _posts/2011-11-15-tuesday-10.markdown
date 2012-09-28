@@ -6,7 +6,7 @@ slug: tuesday-10
 title: 'Tues: Sources of stochastic variation in optimal control'
 redirects: [/wordpress/archives/3313, /archives/3313]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

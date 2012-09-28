@@ -6,7 +6,7 @@ slug: squiggles
 title: Squiggles
 redirects: [/wordpress/archives/3863, /archives/3863]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

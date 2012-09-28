@@ -6,7 +6,7 @@ slug: academic-year-2011-summary
 title: Academic Year 2011 Summary
 redirects: [/wordpress/archives/2063, /archives/2063]
 categories:
-- Logistics
+- logistics
 ---
 
 Brief summary of events for this past academic year, as submitted to my dissertation committee.

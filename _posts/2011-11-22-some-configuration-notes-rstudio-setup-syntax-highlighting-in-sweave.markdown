@@ -6,7 +6,7 @@ slug: some-configuration-notes-rstudio-setup-syntax-highlighting-in-sweave
 title: 'some configuration notes: RStudio setup, syntax highlighting in sweave'
 redirects: [/wordpress/archives/3302, /archives/3302]
 categories:
-- Computation
+- computation
 ---
 
 Installing R-Studio on my dreamhost VPS server.  Dreamhost runs debian lenny, which is a bit dated, making it necessary to install from source.  (Would be easy on a modern ubuntu server).  Here we go. 

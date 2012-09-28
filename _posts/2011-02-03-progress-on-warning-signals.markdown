@@ -6,7 +6,7 @@ slug: progress-on-warning-signals
 title: Progress on warning signals
 redirects: [/wordpress/archives/936, /archives/936]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

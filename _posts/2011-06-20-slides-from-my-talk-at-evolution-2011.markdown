@@ -6,7 +6,7 @@ slug: slides-from-my-talk-at-evolution-2011
 title: Slides from my talk at Evolution 2011
 redirects: [/wordpress/archives/2027, /archives/2027]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - conference
 ---

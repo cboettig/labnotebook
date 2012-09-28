@@ -2,13 +2,13 @@
 comments: true
 date: 2012-03-29 12:08:51
 layout: post
-slug: data-to-knowledge-conference-uc-berkeley-application-abstract
-title: 'Data to Knowledge Conference, UC Berkeley: application abstract'
+slug: data-to-knowledge-conference-uc-berkeley-application-
+title: 'Data to Knowledge Conference, UC Berkeley: application '
 redirects: [/wordpress/archives/4390, /archives/4390]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
-- abstract
+- 
 - conference
 ---
 

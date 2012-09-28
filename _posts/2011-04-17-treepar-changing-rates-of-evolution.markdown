@@ -6,7 +6,7 @@ slug: treepar-changing-rates-of-evolution
 title: 'TreePar: changing rates of evolution'
 redirects: [/wordpress/archives/1423, /archives/1423]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ## Review & Comments on Article

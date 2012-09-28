@@ -6,7 +6,7 @@ slug: friday-lab-group-meeting-notes
 title: Friday (lab group meeting notes)
 redirects: [/wordpress/archives/3694, /archives/3694]
 categories:
-- Logistics
+- logistics
 ---
 
 Theme inspired by Jane Lubchenco's talk last week: how do we connect science to management?  We're breaking down this topic, with individual leaders for each week, as follows:

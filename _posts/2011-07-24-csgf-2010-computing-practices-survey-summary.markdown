@@ -2,11 +2,11 @@
 comments: true
 date: 2011-07-24 14:11:07
 layout: post
-slug: csgf-2010-computing-practices-survey-summary
+slug: csgf-2010-hpc-practices-survey-summary
 title: CSGF 2010 Computing Practices Survey Summary
 redirects: [/wordpress/archives/2221, /archives/2221]
 categories:
-- Computation
+- computation
 tags:
 - conference
 ---

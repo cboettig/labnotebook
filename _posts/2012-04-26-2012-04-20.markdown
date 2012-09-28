@@ -6,7 +6,7 @@ slug: '2012-04-20'
 title: '2012-04-20'
 redirects: [/wordpress/archives/4478, /archives/4478]
 categories:
-- Logistics
+- logistics
 ---
 
 ## Warning Signals

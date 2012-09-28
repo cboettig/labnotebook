@@ -2,11 +2,11 @@
 comments: true
 date: 2011-11-10 16:49:17
 layout: post
-slug: parallel-computing-on-clusters-in-r-mpi
-title: Parallel computing on clusters in R, MPI
+slug: parallel-hpc-on-clusters-in-r-mpi
+title: Parallel hpc on clusters in R, MPI
 redirects: [/wordpress/archives/3274, /archives/3274]
 categories:
-- Computation
+- computation
 tags:
 - hpc
 ---

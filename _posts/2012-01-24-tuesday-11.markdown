@@ -6,7 +6,7 @@ slug: tuesday-11
 title: Tuesday
 redirects: [/wordpress/archives/3714, /archives/3714]
 categories:
-- Logistics
+- logistics
 ---
 
 #### Resilience seminar

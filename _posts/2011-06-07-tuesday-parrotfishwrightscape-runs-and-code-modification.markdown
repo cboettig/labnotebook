@@ -6,7 +6,7 @@ slug: tuesday-parrotfishwrightscape-runs-and-code-modification
 title: 'Tuesday: Parrotfish/wrightscape runs and code modification'
 redirects: [/wordpress/archives/1931, /archives/1931]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ## Runs: Mon midnight:

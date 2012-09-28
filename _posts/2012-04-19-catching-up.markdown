@@ -6,7 +6,7 @@ slug: catching-up
 title: Catching up
 redirects: [/wordpress/archives/4451, /archives/4451]
 categories:
-- Logistics
+- logistics
 ---
 
 Catching up on notebook entries for last week and the beginning of this week in one go here.  In the process of wrapping up a variety of older projects, so this is kinda all over the place.

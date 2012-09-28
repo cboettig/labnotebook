@@ -6,7 +6,7 @@ slug: robust-control-uncertainty-reading-notes
 title: Robust control & uncertainty - reading notes
 redirects: [/wordpress/archives/4345, /archives/4345]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - reading
 ---

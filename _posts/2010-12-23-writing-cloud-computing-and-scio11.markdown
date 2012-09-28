@@ -2,7 +2,7 @@
 comments: true
 date: 2010-12-23 19:08:58
 layout: post
-slug: writing-cloud-computing-and-scio11
+slug: writing-cloud-hpc-and-scio11
 title: 'Writing, Cloud Computing, and #scio11'
 redirects: [/wordpress/archives/660, /archives/660]
 categories:

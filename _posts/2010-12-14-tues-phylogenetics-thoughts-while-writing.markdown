@@ -3,10 +3,10 @@ comments: true
 date: 2010-12-14 17:06:57
 layout: post
 slug: tues-phylogenetics-thoughts-while-writing
-title: 'Tues: Phylogenetics thoughts while writing...'
+title: 'Tues: evolution thoughts while writing...'
 redirects: [/wordpress/archives/622, /archives/622]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Again spending most of the day writing.  (Maybe) processing some ideas in writing by writing in my notebook as I make my edits.

@@ -3,10 +3,10 @@ comments: true
 date: 2011-01-11 15:38:41
 layout: post
 slug: phylogenetics-wrightscape
-title: Phylogenetics- wrightscape
+title: evolution- wrightscape
 redirects: [/wordpress/archives/775, /archives/775]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Interesting meeting with Peter to discuss a variety of issues in comparative phylogenetics.  Short notes:

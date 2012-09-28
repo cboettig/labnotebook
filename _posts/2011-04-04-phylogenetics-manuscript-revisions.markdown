@@ -3,10 +3,10 @@ comments: true
 date: 2011-04-04 22:48:21
 layout: post
 slug: phylogenetics-manuscript-revisions
-title: Phylogenetics manuscript revisions
+title: evolution manuscript revisions
 redirects: [/wordpress/archives/1354, /archives/1354]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Heard back from Graham Friday on manuscript revisions.  Notes on reviewing edits:

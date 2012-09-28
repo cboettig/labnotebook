@@ -6,7 +6,7 @@ slug: weds-example-sets-more-ec2
 title: 'Weds: Example sets & more EC2'
 redirects: [/wordpress/archives/628, /archives/628]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 A bit delayed from having to rerun analyses on EC2 (still learning...)  More to run today (lambda trials for Anoles -- should really recode this in C!).

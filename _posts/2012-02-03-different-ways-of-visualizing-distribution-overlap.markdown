@@ -6,7 +6,7 @@ slug: different-ways-of-visualizing-distribution-overlap
 title: Different ways of visualizing distribution overlap
 redirects: [/wordpress/archives/3785, /archives/3785]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

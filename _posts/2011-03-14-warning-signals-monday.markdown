@@ -6,7 +6,7 @@ slug: warning-signals-monday
 title: Warning Signals, Monday
 redirects: [/wordpress/archives/1185, /archives/1185]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

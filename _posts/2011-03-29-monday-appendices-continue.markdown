@@ -6,7 +6,7 @@ slug: monday-appendices-continue
 title: Monday, appendices continue...
 redirects: [/wordpress/archives/1317, /archives/1317]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

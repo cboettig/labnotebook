@@ -6,7 +6,7 @@ slug: optimal-policy-with-assymetric-costs-to-changing-harvest-quotas
 title: Optimal policy with assymetric costs to changing harvest quotas
 redirects: [/wordpress/archives/3595, /archives/3595]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 - warning-signals

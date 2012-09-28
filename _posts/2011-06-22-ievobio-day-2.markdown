@@ -6,7 +6,7 @@ slug: ievobio-day-2
 title: '#ievobio Day 2'
 redirects: [/wordpress/archives/2044, /archives/2044]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - conference
 - treebase

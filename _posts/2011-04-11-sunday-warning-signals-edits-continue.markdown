@@ -6,7 +6,7 @@ slug: sunday-warning-signals-edits-continue
 title: 'Sunday: Warning signals edits continue'
 redirects: [/wordpress/archives/1389, /archives/1389]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

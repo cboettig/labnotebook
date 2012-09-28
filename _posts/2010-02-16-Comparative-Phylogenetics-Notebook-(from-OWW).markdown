@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Model_Choice, Paper_Outlines]
-categories:  Comparative_Phylogenetics
+tags: [model-choice, ]
+categories: evolution
 ---
 
 

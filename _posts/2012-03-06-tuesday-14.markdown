@@ -6,7 +6,7 @@ slug: tuesday-14
 title: Tuesday
 redirects: [/wordpress/archives/4248, /archives/4248]
 categories:
-- Logistics
+- logistics
 ---
 
 

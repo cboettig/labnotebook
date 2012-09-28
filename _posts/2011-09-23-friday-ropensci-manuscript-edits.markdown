@@ -6,7 +6,7 @@ slug: friday-ropensci-manuscript-edits
 title: 'Friday: ropensci, manuscript edits'
 redirects: [/wordpress/archives/2741, /archives/2741]
 categories:
-- Logistics
+- logistics
 ---
 
 ## rOpenSci Conference Call

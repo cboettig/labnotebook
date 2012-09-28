@@ -6,7 +6,7 @@ slug: thursday-parrotfish-analysis
 title: 'Thursday: parrotfish analysis'
 redirects: [/wordpress/archives/1608, /archives/1608]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Summarizing parrotfish data under the single shift at the intramandibular joint.  See version stable code for data loading/transforms ([parrotfish_data.R](https://github.com/cboettig/wrightscape/blob/827da7db4b1825ca2f800002328c31c8fe0e1024/demos/parrotfish_data.R)), and for plots ([parrotfish.R](https://github.com/cboettig/wrightscape/blob/6e545b9ff299cb30f2e3a7e95acc09b0d42a1c3a/demos/parrotfish.R)) as shown, and for analysis functions ([loop_models_traits_regimes.R](https://github.com/cboettig/wrightscape/blob/6e545b9ff299cb30f2e3a7e95acc09b0d42a1c3a/demos/loop_models_traits_regimes.R)).  Models are named by the parameter which is regime-dependent.  Results are shown sorted by likelihood, so the best model is on top, and likelihood values are scaled by the weakest model.

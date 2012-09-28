@@ -6,7 +6,7 @@ slug: pretty-darn-good-control-working-group
 title: Pretty Darn Good Control Working Group
 redirects: [/wordpress/archives/2585, /archives/2585]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - NIMBioS
 - PDG Control

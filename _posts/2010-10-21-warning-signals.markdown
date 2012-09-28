@@ -6,7 +6,7 @@ slug: warning-signals
 title: Spatial Warning Signals, power, etc
 redirects: [/wordpress/archives/63, /archives/63]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

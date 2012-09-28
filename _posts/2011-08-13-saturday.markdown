@@ -6,7 +6,7 @@ slug: saturday
 title: 'Saturday: Post ESA, NSF Intersections post-doc?'
 redirects: [/wordpress/archives/2298, /archives/2298]
 categories:
-- Stochastic Population Dynamics
+- ecology
 ---
 
 

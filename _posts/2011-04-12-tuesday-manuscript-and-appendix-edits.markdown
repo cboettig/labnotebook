@@ -6,7 +6,7 @@ slug: tuesday-manuscript-and-appendix-edits
 title: 'Tuesday: manuscript and appendix edits'
 redirects: [/wordpress/archives/1409, /archives/1409]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

@@ -6,7 +6,7 @@ slug: wrightscape-labridparrotfish-results-evolution-pres
 title: Wrightscape labrid/parrotfish results; Evolution pres
 redirects: [/wordpress/archives/2011, /archives/2011]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ## Analysis

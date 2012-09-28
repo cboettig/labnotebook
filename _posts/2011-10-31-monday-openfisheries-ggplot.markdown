@@ -6,7 +6,7 @@ slug: monday-openfisheries-ggplot
 title: 'Monday: openfisheries & ggplot'
 redirects: [/wordpress/archives/3080, /archives/3080]
 categories:
-- Stochastic Population Dynamics
+- ecology
 ---
 
 [Andrew](http://www.andrewdyck.com/) has put together the preliminary API for the openfisheries.org project. I've begun an R package, rfisheries, to interface to the openfisheries project. It would be great to incorporate data from the [RAM Legacy database](http://ramlegacy.marinebiodiversity.ca/ram-legacy-stock-assessment-database/how-to-access-the-ram-legacy-database) and the [seaaroundus.org](http://seaaroundus.org/global/1/101.aspx) project, which may be done at the level of the R package or (perhaps more flexibly) directly through the developing openfisheries API.

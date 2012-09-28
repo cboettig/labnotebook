@@ -6,7 +6,7 @@ slug: friday
 title: Friday
 redirects: [/wordpress/archives/1038, /archives/1038]
 categories:
-- Logistics
+- logistics
 ---
 
 

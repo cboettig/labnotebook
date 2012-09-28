@@ -6,7 +6,7 @@ slug: algorithms-group-literate-programming
 title: 'Algorithms Group: Literate programming'
 redirects: [/wordpress/archives/2913, /archives/2913]
 categories:
-- Computation
+- computation
 tags:
 - algorithms
 ---

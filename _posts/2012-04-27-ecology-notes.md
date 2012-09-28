@@ -2,7 +2,7 @@
 layout: post
 title: Project tracking (Ecology)
 category: ecology
-tags: decision-theory early-warning 
+tags: decision-theory warning-signals 
 ---
 
 

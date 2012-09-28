@@ -6,7 +6,7 @@ slug: tweets-from-an-ecology-field-class
 title: 'Tweets from an Ecology Field class '
 redirects: [/wordpress/archives/415, /archives/415]
 categories:
-- Teaching
+- teaching
 ---
 
 I just spoke with Professor Mau Stanton, a leading researcher in our field and an [award-winning teacher](http://www.ucdavis.edu/spotlight/0305/natural.html), about the potential for using twitter in her field ecology course.  Though never having used any social media before, Mau has both clear and clever idea of how she wants to apply it in this 15-student field class.

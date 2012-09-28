@@ -6,8 +6,8 @@ slug: pdg-control-day-1-goals-by-training-problem
 title: PDG Control Day 1 goals by training problem
 redirects: [/wordpress/archives/4298, /archives/4298]
 categories:
-- Logistics
-- Stochastic Population Dynamics
+- logistics
+- ecology
 tags:
 - PDG Control
 ---

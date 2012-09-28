@@ -7,7 +7,7 @@ title: 'Friday: Evolution reading, writing'
 redirects: [/wordpress/archives/204, /archives/204]
 categories:
 - open-science
-- Phylogenetics
+- evolution
 ---
 
 Read through the article for Monday's PBG270, [a 2009 Nature paper ](http://www.ncbi.nlm.nih.gov/pubmed/20090752)from the Plotkin lab on mutational robustness and the rate of evolution.  They consider an interesting little setup.  Start with a Moran model (individual born, may mutate, choses who to replace at random), but allow the following mutational structure (landscape).  Of P possible genotypes, each can only move to one of K neighbors by a single mutation.  Call the genotype(s) of optimal fitness C.  Call all those genotypes that have C as a neighbor (can reach in one mutation) B.  All other genotypes that have the same phenotype as B but different K neighbors genotype A.  q is the probability that the mutation changes the genotype but not the phenotype; a measure of robustness.

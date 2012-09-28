@@ -6,7 +6,7 @@ slug: friday-4
 title: Friday
 redirects: [/wordpress/archives/1424, /archives/1424]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ## Reading

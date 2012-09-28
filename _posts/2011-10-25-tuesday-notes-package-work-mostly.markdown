@@ -6,7 +6,7 @@ slug: tuesday-notes-package-work-mostly
 title: 'Tuesday notes: package work mostly.'
 redirects: [/wordpress/archives/3020, /archives/3020]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ## Treebase release

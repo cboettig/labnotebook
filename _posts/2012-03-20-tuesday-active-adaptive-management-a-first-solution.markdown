@@ -6,7 +6,7 @@ slug: tuesday-active-adaptive-management-a-first-solution
 title: 'Tuesday: active adaptive management, a first solution'
 redirects: [/wordpress/archives/4311, /archives/4311]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

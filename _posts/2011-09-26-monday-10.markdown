@@ -6,7 +6,7 @@ slug: monday-10
 title: Monday
 redirects: [/wordpress/archives/2763, /archives/2763]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ## Phylogenetics paper

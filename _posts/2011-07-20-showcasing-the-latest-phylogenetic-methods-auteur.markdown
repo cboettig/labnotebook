@@ -6,7 +6,7 @@ slug: showcasing-the-latest-phylogenetic-methods-auteur
 title: 'Showcasing the latest phylogenetic methods: AUTEUR'
 redirects: [/wordpress/archives/2337, /archives/2337]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - R
 - research-blogging

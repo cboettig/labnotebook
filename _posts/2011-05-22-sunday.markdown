@@ -6,7 +6,7 @@ slug: sunday
 title: Sunday
 redirects: [/wordpress/archives/1789, /archives/1789]
 categories:
-- Logistics
+- logistics
 tags:
 - reading
 ---

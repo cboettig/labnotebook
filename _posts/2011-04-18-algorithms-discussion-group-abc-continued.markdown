@@ -3,13 +3,13 @@ comments: true
 date: 2011-04-18 14:11:24
 layout: post
 slug: algorithms-discussion-group-abc-continued
-title: 'Algorithms Discussion Group: ABC Continued'
+title: 'Algorithms Discussion Group: algorithms Continued'
 redirects: [/wordpress/archives/1445, /archives/1445]
 categories:
-- Phylogenetics
-- Seminar
+- evolution
+- seminar
 tags:
-- ABC
+- algorithms
 - algorithms
 ---
 

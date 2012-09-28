@@ -6,7 +6,7 @@ slug: monday-evolution-manuscript-revisions-early-burst-models-etc
 title: 'Monday: Evolution manuscript revisions; early burst models, etc'
 redirects: [/wordpress/archives/2340, /archives/2340]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ###  Evolution Manuscript Edits 

@@ -1,19 +1,12 @@
 ---
 layout: post
-tags: [Beetles, Warning_signals]
-categories:  Stochastic_Population_Dynamics
+tags: [tribolium, warning-signals]
+categories: [ecology]
 ---
 
+(Originally posted on OpenWetWare)
 
-
-
-
- 
-
-Next
-
-
- Goes Open
+The Lab Notebook Goes Open 
 ----------------------------------------
 
 -   This is the first entry in my lab notebook, but not the beginning of
@@ -51,7 +44,5 @@ Early Warning Signals
     The C code is also in continuous time (via Gillespie method), while
     netlogo is in discrete time. Both need some modification.
 
-\
 
-\
 

@@ -6,7 +6,7 @@ slug: optimal-control-next-steps
 title: Optimal control sample problems (Mostly continuous time by Pontryagin principle)
 redirects: [/wordpress/archives/3049, /archives/3049]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

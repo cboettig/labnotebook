@@ -6,7 +6,7 @@ slug: monday-13
 title: Monday - Sweave workflow
 redirects: [/wordpress/archives/3610, /archives/3610]
 categories:
-- Computation
+- computation
 tags:
 - code-tricks
 ---

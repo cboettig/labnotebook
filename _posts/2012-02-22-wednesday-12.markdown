@@ -6,7 +6,7 @@ slug: wednesday-12
 title: Wednesday
 redirects: [/wordpress/archives/3915, /archives/3915]
 categories:
-- Logistics
+- logistics
 ---
 
 

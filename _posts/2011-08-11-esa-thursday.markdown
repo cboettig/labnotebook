@@ -6,7 +6,7 @@ slug: esa-thursday
 title: ESA Thursday
 redirects: [/wordpress/archives/2300, /archives/2300]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - conference
 ---

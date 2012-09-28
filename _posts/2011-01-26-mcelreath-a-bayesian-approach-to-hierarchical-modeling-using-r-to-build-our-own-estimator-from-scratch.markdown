@@ -7,7 +7,7 @@ title: 'McElreath: A Bayesian approach to hierarchical modeling, using R to buil
   our own estimator from scratch'
 redirects: [/wordpress/archives/850, /archives/850]
 categories:
-- Seminar
+- seminar
 ---
 
 CPB workshop continues, introduction to Bayesian inference.

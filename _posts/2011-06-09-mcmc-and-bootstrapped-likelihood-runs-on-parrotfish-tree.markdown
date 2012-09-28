@@ -6,7 +6,7 @@ slug: mcmc-and-bootstrapped-likelihood-runs-on-parrotfish-tree
 title: mcmc and bootstrapped likelihood runs on parrotfish tree
 redirects: [/wordpress/archives/1951, /archives/1951]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ## Thursday Overview

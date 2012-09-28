@@ -6,7 +6,7 @@ slug: is-your-phylogeny-informative
 title: Is your phylogeny informative?
 redirects: [/wordpress/archives/3670, /archives/3670]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - my publications
 - R

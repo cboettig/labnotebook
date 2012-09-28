@@ -6,7 +6,7 @@ slug: '2268'
 title: 'Friday: ESA Practice Talk'
 redirects: [/wordpress/archives/2268, /archives/2268]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

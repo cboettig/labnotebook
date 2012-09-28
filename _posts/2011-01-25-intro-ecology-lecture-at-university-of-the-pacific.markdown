@@ -6,7 +6,7 @@ slug: intro-ecology-lecture-at-university-of-the-pacific
 title: Intro Ecology Lecture at University of the Pacific
 redirects: [/wordpress/archives/843, /archives/843]
 categories:
-- Teaching
+- teaching
 ---
 
 I was invited to give a guest lecture on introductory ecology for an introductory environmental science course at University of the Pacific in Stockton today.  This provided both a nice outreach opportunity and a chance to speak to a full introductory class for 1:45hr, which I haven't done before.

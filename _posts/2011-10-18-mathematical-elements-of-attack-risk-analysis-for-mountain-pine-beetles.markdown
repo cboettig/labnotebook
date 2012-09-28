@@ -3,10 +3,10 @@ comments: true
 date: 2011-10-18 08:00:46
 layout: post
 slug: mathematical-elements-of-attack-risk-analysis-for-mountain-pine-beetles
-title: Mathematical Elements of Attack Risk Analysis for Mountain Pine Beetles
+title: Mathematical Elements of Attack Risk Analysis for Mountain Pine tribolium
 redirects: [/wordpress/archives/2910, /archives/2910]
 categories:
-- Stochastic Population Dynamics
+- ecology
 ---
 
 (POWELL _et. al._ 2000)

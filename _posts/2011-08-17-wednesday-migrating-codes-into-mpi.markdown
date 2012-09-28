@@ -6,7 +6,7 @@ slug: wednesday-migrating-codes-into-mpi
 title: 'Wednesday: migrating codes into MPI'
 redirects: [/wordpress/archives/2362, /archives/2362]
 categories:
-- Computation
+- computation
 tags:
 - hpc
 ---

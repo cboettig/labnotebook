@@ -6,7 +6,7 @@ slug: monday-7
 title: Monday -
 redirects: [/wordpress/archives/1987, /archives/1987]
 categories:
-- Logistics
+- logistics
 ---
 
 

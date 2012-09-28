@@ -6,7 +6,7 @@ slug: two-questions
 title: Two questions
 redirects: [/wordpress/archives/386, /archives/386]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 I've been thinking about a few elements of the Monte Carlo approach that seem to be particularly subtle in interpretation. Thought I'd write them out here as a separate examples to help think through them.  Thoughts?

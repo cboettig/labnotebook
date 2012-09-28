@@ -6,7 +6,7 @@ slug: likelihoods-for-quadratic-models-cont
 title: Likelihoods for quadratic models cont
 redirects: [/wordpress/archives/461, /archives/461]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - derivations
 - warning-signals

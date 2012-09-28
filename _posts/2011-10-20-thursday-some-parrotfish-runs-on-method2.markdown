@@ -6,7 +6,7 @@ slug: thursday-some-parrotfish-runs-on-method2
 title: Thursday - some parrotfish & labrid runs on method2
 redirects: [/wordpress/archives/2960, /archives/2960]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Running:

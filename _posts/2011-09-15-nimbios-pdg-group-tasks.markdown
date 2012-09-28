@@ -6,7 +6,7 @@ slug: nimbios-pdg-group-tasks
 title: NIMBioS PDG group, Tasks
 redirects: [/wordpress/archives/2655, /archives/2655]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - NIMBioS
 - PDG Control

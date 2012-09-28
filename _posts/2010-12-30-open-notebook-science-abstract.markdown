@@ -2,7 +2,7 @@
 comments: true
 date: 2010-12-30 17:54:37
 layout: post
-slug: open-notebook-science-abstract
+slug: open-notebook-science-
 title: Open Notebook Science Abstract
 redirects: [/wordpress/archives/706, /archives/706]
 categories:

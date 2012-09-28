@@ -6,7 +6,7 @@ slug: algorithms-group-hmm-meets-em
 title: Algorithms Group, HMM meets EM
 redirects: [/wordpress/archives/2853, /archives/2853]
 categories:
-- Computation
+- computation
 tags:
 - algorithms
 ---

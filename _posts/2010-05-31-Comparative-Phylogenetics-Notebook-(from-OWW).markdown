@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [code-tricks]
-categories:  Comparative_Phylogenetics
+categories: evolution
 ---
 
 

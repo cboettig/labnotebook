@@ -6,7 +6,7 @@ slug: thursday-4
 title: Thursday
 redirects: [/wordpress/archives/1044, /archives/1044]
 categories:
-- Logistics
+- logistics
 ---
 
 Mostly working on manuscript revisions throughout this week.  Haven't really learned to integrate this workflow into the notebook.  In some ways it makes more sense not to, as it interrupts the flow of the research description.  But then it looks like I'm not doing anything when I have nothing meaningful in the entry.  Perhaps I should just put a heading saying "Writing."

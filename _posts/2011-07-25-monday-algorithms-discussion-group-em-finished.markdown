@@ -6,7 +6,7 @@ slug: monday-algorithms-discussion-group-em-finished
 title: 'Monday: Algorithms Discussion Group, EM finished'
 redirects: [/wordpress/archives/2215, /archives/2215]
 categories:
-- Computation
+- computation
 tags:
 - algorithms
 ---

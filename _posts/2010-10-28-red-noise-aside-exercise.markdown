@@ -6,7 +6,7 @@ slug: red-noise-aside-exercise
 title: Red Noise (aside exercise)
 redirects: [/wordpress/archives/134, /archives/134]
 categories:
-- Stochastic Population Dynamics
+- ecology
 ---
 
 Consider the first-order autoregressive process:

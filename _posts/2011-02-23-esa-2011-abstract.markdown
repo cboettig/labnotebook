@@ -2,11 +2,11 @@
 comments: true
 date: 2011-02-23 17:58:45
 layout: post
-slug: esa-2011-abstract
+slug: esa-2011-
 title: 'ESA 2011 Abstract: Limits to Detection of Early Warning Signals'
 redirects: [/wordpress/archives/1099, /archives/1099]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

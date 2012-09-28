@@ -6,7 +6,7 @@ slug: csgf-conference-notes
 title: CSGF Conference Notes
 redirects: [/wordpress/archives/2220, /archives/2220]
 categories:
-- Computation
+- computation
 tags:
 - conference
 ---

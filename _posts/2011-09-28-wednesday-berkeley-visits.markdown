@@ -6,7 +6,7 @@ slug: wednesday-berkeley-visits
 title: Wednesday - Berkeley visits
 redirects: [/wordpress/archives/2776, /archives/2776]
 categories:
-- Logistics
+- logistics
 ---
 
 

@@ -2,11 +2,11 @@
 comments: true
 date: 2011-02-04 18:30:12
 layout: post
-slug: warning-signals-computing
-title: Warning signals & computing
+slug: warning-signals-hpc
+title: Warning signals & hpc
 redirects: [/wordpress/archives/938, /archives/938]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

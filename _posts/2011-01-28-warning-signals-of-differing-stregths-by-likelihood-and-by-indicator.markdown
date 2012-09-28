@@ -6,7 +6,7 @@ slug: warning-signals-of-differing-stregths-by-likelihood-and-by-indicator
 title: Warning signals of differing stregths by likelihood and by indicator
 redirects: [/wordpress/archives/883, /archives/883]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

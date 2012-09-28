@@ -6,7 +6,7 @@ slug: estimating-phylogenetic-signal-lambda-on-large-trees
 title: Estimating phylogenetic signal (lambda) on large trees
 redirects: [/wordpress/archives/808, /archives/808]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Used a simulated tree of 600 taxa to show that lambda distribution continues to improve with larger taxa.  Recall the results with 13 taxa and with 23 taxa:

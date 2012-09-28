@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Regimes_model]
-categories:  Comparative_Phylogenetics
+tags: []
+categories: evolution
 ---
 
 

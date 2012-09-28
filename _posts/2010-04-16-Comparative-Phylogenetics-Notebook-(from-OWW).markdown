@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [code-tricks, conference, Paper_Outlines]
-categories:  Comparative_Phylogenetics
+tags: [code-tricks, conference ]
+categories: evolution
 ---
 
 

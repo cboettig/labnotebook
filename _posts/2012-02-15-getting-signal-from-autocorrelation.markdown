@@ -6,7 +6,7 @@ slug: getting-signal-from-autocorrelation
 title: getting signal from autocorrelation
 redirects: [/wordpress/archives/3885, /archives/3885]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

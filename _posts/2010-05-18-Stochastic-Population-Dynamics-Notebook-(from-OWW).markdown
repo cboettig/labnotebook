@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Beetles]
-categories:  Stochastic_Population_Dynamics
+tags: [tribolium]
+categories: [ecology]
 ---
 
 

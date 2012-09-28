@@ -6,8 +6,8 @@ slug: wrightscape-profiling
 title: wrightscape profiling
 redirects: [/wordpress/archives/1486, /archives/1486]
 categories:
-- Computation
-- Phylogenetics
+- computation
+- evolution
 ---
 
 Optimization at the R level is substantially slower than at the C level:

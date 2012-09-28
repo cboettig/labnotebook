@@ -6,7 +6,7 @@ slug: warning-signals-examples-and-tracking-graphs
 title: Warning Signals examples and tracking graphs
 redirects: [/wordpress/archives/1228, /archives/1228]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

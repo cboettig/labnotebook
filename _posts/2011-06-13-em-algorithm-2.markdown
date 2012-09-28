@@ -6,7 +6,7 @@ slug: em-algorithm-2
 title: EM Algorithm
 redirects: [/wordpress/archives/1980, /archives/1980]
 categories:
-- Seminar
+- seminar
 tags:
 - algorithms
 ---

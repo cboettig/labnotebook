@@ -6,7 +6,7 @@ slug: tuesday-3
 title: 'Tuesday: Parrotfish results, MCMCMC testing, APIs'
 redirects: [/wordpress/archives/1717, /archives/1717]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 

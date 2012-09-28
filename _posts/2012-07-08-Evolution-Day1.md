@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Evolution 2012 Conference, Day 1
-tags: [conferences, evolution]
+tags: [conference, evolution]
 category: evolution
 
 ---

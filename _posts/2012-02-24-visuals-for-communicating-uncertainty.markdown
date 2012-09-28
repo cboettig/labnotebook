@@ -6,7 +6,7 @@ slug: visuals-for-communicating-uncertainty
 title: 'Visuals for Communicating Uncertainty '
 redirects: [/wordpress/archives/3928, /archives/3928]
 categories:
-- Seminar
+- seminar
 ---
 
 Visiting the question of communicating uncertainty in Marissa's lab meeting, focusing on this excellent Science article (Spiegelhalter _et. al._ 2011).  Noam and Jamie are leading the discussion, and suggested we pick a few favorite examples.  None on my list really address the challenge of communicating uncertainty directly, though the first one probably comes closest.  I think they do highlight some of the potential and the challenges of good data visualization though, which is certainly one of the essential building blocks to visual communication of uncertainty.

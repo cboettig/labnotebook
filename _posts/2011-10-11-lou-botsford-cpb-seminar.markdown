@@ -2,11 +2,11 @@
 comments: true
 date: 2011-10-11 17:04:57
 layout: post
-slug: lou-botsford-cpb-seminar
-title: Loo Botsford, CPB Seminar
+slug: lou-botsford-cpb-
+title: Loo Botsford, CPB seminar
 redirects: [/wordpress/archives/2864, /archives/2864]
 categories:
-- Seminar
+- seminar
 ---
 
 ## "Effects of Fishing on the Sensitivity of Fisheries to Climate Variability"

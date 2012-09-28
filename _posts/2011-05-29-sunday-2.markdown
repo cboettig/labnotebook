@@ -6,7 +6,7 @@ slug: sunday-2
 title: Sunday
 redirects: [/wordpress/archives/1848, /archives/1848]
 categories:
-- Logistics
+- logistics
 ---
 
 

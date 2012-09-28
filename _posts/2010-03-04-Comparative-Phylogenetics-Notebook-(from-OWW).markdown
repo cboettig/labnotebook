@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [code-tricks, Phylogenetics_Software]
-categories:  Comparative_Phylogenetics
+tags: [code-tricks, ]
+categories: evolution
 ---
 
 

@@ -6,7 +6,7 @@ slug: practice-sicb-presentation
 title: Practice SICB Presentation
 redirects: [/wordpress/archives/553, /archives/553]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Gave my practice talk for Society for Integrative and Comparative Biology in Wainwright lab this afternoon, after (not quite) finishing the presentation.  Trying to figure out the best way to introduce these ideas to a broad audience (same challenge as with the manuscript).

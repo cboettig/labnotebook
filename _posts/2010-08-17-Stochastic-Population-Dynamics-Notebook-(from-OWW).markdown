@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Warning_signals]
-categories:  Stochastic_Population_Dynamics
+tags: [warning-signals]
+categories: [ecology]
 ---
 
 

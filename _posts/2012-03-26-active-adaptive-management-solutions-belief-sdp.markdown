@@ -6,7 +6,7 @@ slug: active-adaptive-management-solutions-belief-sdp
 title: 'Active adaptive management solutions: Belief SDP'
 redirects: [/wordpress/archives/4371, /archives/4371]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

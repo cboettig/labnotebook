@@ -6,7 +6,7 @@ slug: monday-wrightscape-meetings-pdg-meeting
 title: Monday - wrightscape meetings, PDG meeting
 redirects: [/wordpress/archives/3472, /archives/3472]
 categories:
-- Logistics
+- logistics
 ---
 
 Wrightscape -- added a user utility to to specify custom model types, such that some subset of the total number of regimes can share certain parameters.

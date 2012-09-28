@@ -6,7 +6,7 @@ slug: friday-some-random-notes
 title: 'Friday: some random notes'
 redirects: [/wordpress/archives/4306, /archives/4306]
 categories:
-- Logistics
+- logistics
 ---
 
 ## Computational tricks

@@ -6,7 +6,7 @@ slug: robert-hijmans-on-models-to-predict-sp-response-to-climate-change
 title: Robert Hijmans on Models to predict sp response to climate change
 redirects: [/wordpress/archives/803, /archives/803]
 categories:
-- Seminar
+- seminar
 ---
 
 Notes from seminar.[ref]These are my own notes as taken during the seminar and may not accurately reflect everything.  I merely confirm with the speaker that my notes are publicly visible.  My own commentary/thoughts indicated in square brackets.  [/ref]  Robert speaks to an utterly packed room.  Predicting future range of species:  4 topics.  1 cross-validation, 2 niches, 3 unit (sp?), 4 mechanism.  Presence-absence predictions from machine learning, maxent.

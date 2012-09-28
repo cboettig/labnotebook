@@ -6,8 +6,8 @@ slug: tuesday-rfishbase-rmpi-manuscripts
 title: 'Tuesday: rfishbase, Rmpi, manuscripts, ...'
 redirects: [/wordpress/archives/2379, /archives/2379]
 categories:
-- Computation
-- Phylogenetics
+- computation
+- evolution
 tags:
 - fishbase
 ---

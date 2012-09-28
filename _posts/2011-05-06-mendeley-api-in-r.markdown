@@ -2,7 +2,7 @@
 comments: true
 date: 2011-05-06 11:21:10
 layout: post
-slug: mendeley-api-in-r
+slug: mendeley-hpc-in-r
 title: Mendeley API in R
 redirects: [/wordpress/archives/1614, /archives/1614]
 categories:

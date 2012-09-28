@@ -1,6 +1,7 @@
 ---
 layout: codepost
 title: Policy functions and value functions under multiple uncertainty
+category: ecology
 tags: decision-theory
 
 ---
@@ -26,7 +27,7 @@ require(data.table)
 
 
 
-We consider a Beverton Holt state equation governing population dynamics, \\( f(x,h) = \frac{A x}{1 + B x} \\)
+We consider a Beverton Holt state equation governing population dynamics, $f(x,h) = \frac{A x}{1 + B x}$
 
 
 

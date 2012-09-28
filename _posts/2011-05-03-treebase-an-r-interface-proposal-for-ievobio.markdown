@@ -6,7 +6,7 @@ slug: treebase-an-r-interface-proposal-for-ievobio
 title: 'treeBASE R interface: proposal for #iEvoBio'
 redirects: [/wordpress/archives/1549, /archives/1549]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - treebase
 ---

@@ -6,7 +6,7 @@ slug: release-of-constraint
 title: Release of constraint
 redirects: [/wordpress/archives/3456, /archives/3456]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 

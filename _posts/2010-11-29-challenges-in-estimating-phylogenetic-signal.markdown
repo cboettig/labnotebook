@@ -6,7 +6,7 @@ slug: challenges-in-estimating-phylogenetic-signal
 title: Challenges in estimating phylogenetic signal
 redirects: [/wordpress/archives/478, /archives/478]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Uncertainty in estimate of lambda illustrated by simulating 1000 data sets on the Geopsiza tree under a model with lambda = 0.62.  Shows the high uncertainty in estimating lambda at all, despite the power in the estimate at this value.

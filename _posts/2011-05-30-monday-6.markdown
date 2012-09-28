@@ -6,7 +6,7 @@ slug: monday-6
 title: Monday
 redirects: [/wordpress/archives/1852, /archives/1852]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - plugins
 ---

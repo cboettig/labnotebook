@@ -6,8 +6,8 @@ slug: tuesday-two-insights
 title: Tuesday -- two insights
 redirects: [/wordpress/archives/3487, /archives/3487]
 categories:
-- Phylogenetics
-- Stochastic Population Dynamics
+- evolution
+- ecology
 tags:
 - warning-signals
 ---

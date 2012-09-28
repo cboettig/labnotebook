@@ -3,10 +3,10 @@ comments: true
 date: 2010-12-31 21:22:07
 layout: post
 slug: comparative-phylogenetics-is-the-data-informative
-title: 'Comparative Phylogenetics: Is the data informative?'
+title: 'Comparative evolution: Is the data informative?'
 redirects: [/wordpress/archives/721, /archives/721]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Working on my SICB talk, going a little further into the example of fitting the lambda model on the Anoles data to illustrate the ways in which we may lack sufficient data for the question.

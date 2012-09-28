@@ -7,8 +7,8 @@ title: End of NCEAS & the legacy of synthetic data
 redirects: [/wordpress/archives/1788, /archives/1788]
 categories:
 - open-science
-- Phylogenetics
-- Stochastic Population Dynamics
+- evolution
+- ecology
 ---
 
 The upcoming termination of NSF funding for [NCEAS](http://www.nceas.ucsb.edu/) has recently been receiving a bit of attention, including this nice piece in _Science_ (Stokstad, 2011).  I was particularly intrigued by [Oikos's treatment of this](http://oikosjournal.wordpress.com/2011/05/20/its-the-end-of-nceas-as-we-know-it-and-i-feel-fine/), in which Oikos editor Jeremy Fox writes,

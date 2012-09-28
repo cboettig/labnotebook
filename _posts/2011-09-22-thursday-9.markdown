@@ -6,7 +6,7 @@ slug: thursday-9
 title: Thursday
 redirects: [/wordpress/archives/2712, /archives/2712]
 categories:
-- Logistics
+- logistics
 tags:
 - forage fish
 ---

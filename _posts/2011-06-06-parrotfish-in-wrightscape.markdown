@@ -6,7 +6,7 @@ slug: parrotfish-in-wrightscape
 title: Parrotfish in wrightscape
 redirects: [/wordpress/archives/1921, /archives/1921]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 

@@ -2,11 +2,11 @@
 comments: true
 date: 2010-10-20 02:53:29
 layout: post
-slug: stochastic-population-dynamics-abstract
-title: Stochastic Population Dynamics Abstract
+slug: stochastic-population-dynamics-
+title: ecology Abstract
 redirects: [/wordpress/archives/237, /archives/237]
 categories:
-- Stochastic Population Dynamics
+- ecology
 ---
 
 Ecological population sizes fluctuate not only in response to  environmental fluctuations but because of the stochastic nature of  natural births and deaths. While in very large populations these  fluctuations have negligible impact, ecology rarely obliges us by  satisfying this limit. Age and stage structure in populations serve to  amplify the effect, where the fate of the population is determined by a  smaller subset of, say, the fecund adults alone. Demographic noise is  probably responsible for the ultimate extinction of many populations  once reduced to a small size. Yet the news isn’t all bad. Encoded in the  very fluctuations we observe are clues about the biology that we could  not see by looking only at averages. I am developing a theory of such  fluctuations that uses this noise to inform our decisions about  appropriate models and the underlying biological processes.

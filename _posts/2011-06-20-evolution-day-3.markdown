@@ -6,7 +6,7 @@ slug: evolution-day-3
 title: Evolution Day 3
 redirects: [/wordpress/archives/2040, /archives/2040]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - conference
 ---

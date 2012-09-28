@@ -6,7 +6,7 @@ slug: tuesday-9
 title: Tuesday
 redirects: [/wordpress/archives/2816, /archives/2816]
 categories:
-- Logistics
+- logistics
 ---
 
 ## Hastings seminar: Forest Pest Outbreaks

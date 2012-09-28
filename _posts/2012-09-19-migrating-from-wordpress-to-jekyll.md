@@ -1,7 +1,7 @@
 ---
 layout: post
-categories: [open notebook thoughts]
-tags: [open-science, site configuration]
+categories: [open-science]
+tags: [open-science, site-configuration]
 
 ---
 

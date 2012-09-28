@@ -7,7 +7,7 @@ title: 'Saturday: git with latexdiff, TreeBASE and PMC package updates, bounds o
   lambda'
 redirects: [/wordpress/archives/1895, /archives/1895]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - code-tricks
 ---

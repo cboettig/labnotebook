@@ -6,7 +6,7 @@ slug: warning-signals-comparing-methods-on-climate-data
 title: 'Warning Signals: Comparing Methods on Climate Data'
 redirects: [/wordpress/archives/1145, /archives/1145]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

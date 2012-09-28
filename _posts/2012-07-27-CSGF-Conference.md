@@ -1,6 +1,7 @@
 ---
 layout: post
-tags: [conferences, computing]
+category: computation
+tags: [conference, hpc]
 
 ---
 

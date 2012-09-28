@@ -6,7 +6,7 @@ slug: friday-more-labrid-parrotfish-wrightscape-examples
 title: 'Friday: more labrid & parrotfish wrightscape examples'
 redirects: [/wordpress/archives/2017, /archives/2017]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ## Runs from yesterday:

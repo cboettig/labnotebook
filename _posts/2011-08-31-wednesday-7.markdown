@@ -6,8 +6,8 @@ slug: wednesday-7
 title: Wednesday
 redirects: [/wordpress/archives/2512, /archives/2512]
 categories:
-- Phylogenetics
-- Stochastic Population Dynamics
+- evolution
+- ecology
 tags:
 - warning-signals
 ---

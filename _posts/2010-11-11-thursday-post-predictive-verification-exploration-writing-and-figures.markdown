@@ -6,7 +6,7 @@ slug: thursday-post-predictive-verification-exploration-writing-and-figures
 title: 'Thursday: Post-predictive verification exploration; writing and figures'
 redirects: [/wordpress/archives/299, /archives/299]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ### On Post-predictive Verification

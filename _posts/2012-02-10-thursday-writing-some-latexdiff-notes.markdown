@@ -6,7 +6,7 @@ slug: thursday-writing-some-latexdiff-notes
 title: 'Thursday: writing; some latexdiff notes'
 redirects: [/wordpress/archives/3804, /archives/3804]
 categories:
-- Logistics
+- logistics
 tags:
 - code-tricks
 ---

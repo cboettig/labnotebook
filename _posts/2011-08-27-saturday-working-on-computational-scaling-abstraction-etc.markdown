@@ -2,11 +2,11 @@
 comments: true
 date: 2011-08-27 23:44:09
 layout: post
-slug: saturday-working-on-computational-scaling-abstraction-etc
-title: 'Saturday: working on computational scaling, abstraction, etc'
+slug: saturday-working-on-computational-scaling-ion-etc
+title: 'Saturday: working on computational scaling, ion, etc'
 redirects: [/wordpress/archives/2450, /archives/2450]
 categories:
-- Computation
+- computation
 tags:
 - hpc
 ---

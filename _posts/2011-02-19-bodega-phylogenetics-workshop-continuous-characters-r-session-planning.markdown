@@ -3,11 +3,11 @@ comments: true
 date: 2011-02-19 03:45:09
 layout: post
 slug: bodega-phylogenetics-workshop-continuous-characters-r-session-planning
-title: 'Bodega Phylogenetics Workshop: Continuous Characters R session planning'
+title: 'Bodega evolution Workshop: Continuous Characters R session planning'
 redirects: [/wordpress/archives/1080, /archives/1080]
 categories:
-- Phylogenetics
-- Teaching
+- evolution
+- teaching
 ---
 
 Preparing for the Bodega Phylogenetics workshop.  I'll be covering the R tutorial following[ Justen Whittall's](http://www.jbwhittall.com/) introduction to continuous characters:

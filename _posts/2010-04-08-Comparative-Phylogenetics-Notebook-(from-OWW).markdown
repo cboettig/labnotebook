@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Labrids, open-science, Model_Choice]
-categories:  Comparative_Phylogenetics
+tags: [Labrids, open-science, model-choice]
+categories: evolution
 ---
 
 

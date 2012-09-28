@@ -6,7 +6,7 @@ slug: warning-signals-vs-model-choice
 title: Warning signals vs model choice
 redirects: [/wordpress/archives/848, /archives/848]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Evolution and iEvobio conference notes 
 category: evolution
-tags: conferences
+tags: conference
 
 ---
 

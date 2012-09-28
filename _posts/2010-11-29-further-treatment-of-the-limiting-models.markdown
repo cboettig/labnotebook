@@ -6,7 +6,7 @@ slug: further-treatment-of-the-limiting-models
 title: Further treatment of the limiting models
 redirects: [/wordpress/archives/468, /archives/468]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - derivations
 - warning-signals

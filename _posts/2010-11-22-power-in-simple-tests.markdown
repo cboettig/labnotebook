@@ -6,7 +6,7 @@ slug: power-in-simple-tests
 title: Power in simple tests
 redirects: [/wordpress/archives/409, /archives/409]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Exploring power in simple tree models. With the smaller tree from the _geospiza _dataset, (14 tips, left) is less than yesterday's in the _bimaculus Anoles_ (with 23 tips, right)

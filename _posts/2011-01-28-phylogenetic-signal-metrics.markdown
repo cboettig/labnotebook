@@ -6,7 +6,7 @@ slug: phylogenetic-signal-metrics
 title: Phylogenetic Signal metrics
 redirects: [/wordpress/archives/877, /archives/877]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Blomberg's K distribution under data simulated from BM on the geospiza tree (red) compared to simulating independent random draws from the Normal distribution.  

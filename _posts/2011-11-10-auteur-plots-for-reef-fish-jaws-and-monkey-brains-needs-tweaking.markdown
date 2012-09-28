@@ -6,7 +6,7 @@ slug: auteur-plots-for-reef-fish-jaws-and-monkey-brains-needs-tweaking
 title: Auteur plots for reef fish jaws and monkey brains -- needs tweaking
 redirects: [/wordpress/archives/3229, /archives/3229]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Looking at the diversification patterns from Auteur.  Longer rjmcmc runs aren't showing a significant difference, but more attention needed in parameters such as initial merge-split probability perhaps?  Seems to overestimate the change points.

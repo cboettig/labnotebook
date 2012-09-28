@@ -6,7 +6,7 @@ slug: monday-tuesday
 title: Monday / Tuesday
 redirects: [/wordpress/archives/4437, /archives/4437]
 categories:
-- Logistics
+- logistics
 ---
 
 

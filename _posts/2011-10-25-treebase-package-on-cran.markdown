@@ -6,7 +6,7 @@ slug: treebase-package-on-cran
 title: treebase package on cran
 redirects: [/wordpress/archives/3019, /archives/3019]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - R
 - treebase

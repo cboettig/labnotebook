@@ -6,7 +6,7 @@ slug: stochastic-optimization
 title: 'Stochastic optimization '
 redirects: [/wordpress/archives/3925, /archives/3925]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

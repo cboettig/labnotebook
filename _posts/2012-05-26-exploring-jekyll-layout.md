@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exploring Jekyll layout 
-category: OpenScience
+category: open-science
 tags: Jekyll
 ---
 

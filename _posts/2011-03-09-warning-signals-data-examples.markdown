@@ -6,7 +6,7 @@ slug: warning-signals-data-examples
 title: Warning Signals data examples
 redirects: [/wordpress/archives/1166, /archives/1166]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

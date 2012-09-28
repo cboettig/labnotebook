@@ -6,7 +6,7 @@ slug: monday-16
 title: Monday
 redirects: [/wordpress/archives/3856, /archives/3856]
 categories:
-- Logistics
+- logistics
 ---
 
 I've created the more extend-able [earlywarning](https://github.com/cboettig/earlywarning/) package out of my [warningsignals](https://github.com/cboettig/warningsignals/) package.  The individual-based simulations are carried out separately via my new [populationdynamics](https://github.com/cboettig/populationdynamics) package.

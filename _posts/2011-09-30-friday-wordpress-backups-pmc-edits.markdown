@@ -6,8 +6,8 @@ slug: friday-wordpress-backups-pmc-edits
 title: Friday, wordpress backups, pmc edits
 redirects: [/wordpress/archives/2799, /archives/2799]
 categories:
-- Computation
-- Phylogenetics
+- computation
+- evolution
 tags:
 - code-tricks
 ---

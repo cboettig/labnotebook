@@ -6,8 +6,8 @@ slug: monday
 title: Monday
 redirects: [/wordpress/archives/993, /archives/993]
 categories:
-- Phylogenetics
-- Stochastic Population Dynamics
+- evolution
+- ecology
 tags:
 - warning-signals
 ---

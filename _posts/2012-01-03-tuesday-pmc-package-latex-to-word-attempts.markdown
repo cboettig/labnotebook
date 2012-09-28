@@ -6,7 +6,7 @@ slug: tuesday-pmc-package-latex-to-word-attempts
 title: 'Tuesday: pmc package, latex to word attempts'
 redirects: [/wordpress/archives/3557, /archives/3557]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Back from Oz.

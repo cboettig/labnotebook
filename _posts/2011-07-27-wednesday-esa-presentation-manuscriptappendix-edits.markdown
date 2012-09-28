@@ -6,7 +6,7 @@ slug: wednesday-esa-presentation-manuscriptappendix-edits
 title: 'Wednesday: ESA presentation, manuscript/appendix edits '
 redirects: [/wordpress/archives/2244, /archives/2244]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - plugins
 - warning-signals

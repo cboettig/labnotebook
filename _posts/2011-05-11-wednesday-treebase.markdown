@@ -6,7 +6,7 @@ slug: wednesday-treebase
 title: 'Wednesday: Treebase'
 redirects: [/wordpress/archives/1670, /archives/1670]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - treebase
 ---

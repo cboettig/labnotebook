@@ -6,7 +6,7 @@ slug: treebase-exploratory-exercises-in-database-driven-phylogenetics
 title: 'TreeBase: exploratory exercises in database-driven phylogenetics'
 redirects: [/wordpress/archives/1382, /archives/1382]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Taking a look at the[ TreeBas](http://www.treebase.org/treebase-web/urlAPI.html)e database for potential project with Gabe & Duncan's Large Data seminar.  It would be interesting to get a working knowledge of the database and the API, making large-scale meta-analyses easy.  Many studies seem to select taxa based on what they have in their own lab rather than re-use existing phylogenies, not because it is better suited to answering the questions but because it is more familiar.  Access to larger data-sets than typically available in any individual lab, and the ability to test hypotheses across multiple phylogenies could be rather useful.

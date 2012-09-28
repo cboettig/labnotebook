@@ -7,7 +7,7 @@ title: 'Wrong picture, wrong model: why warning signals don''t look like rare ev
 redirects: [/wordpress/archives/91, /archives/91]
 categories:
 - open-science
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

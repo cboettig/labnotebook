@@ -3,10 +3,10 @@ comments: true
 date: 2010-11-18 20:05:16
 layout: post
 slug: thurs-phylogenetics-likelihood
-title: 'Thurs: Phylogenetics likelihood'
+title: 'Thurs: evolution likelihood'
 redirects: [/wordpress/archives/348, /archives/348]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Back to writing for today.  Working on discussion of non-nested models. Looking at the reverse comparison, can get the reverse p value.  The case of OU.3 vs the OU.4 model doesn't show either test to be significant at the 95\%  confidence level,but the case of OU.3 vs OU.15 (lets every species in the top two clades be unique) does:

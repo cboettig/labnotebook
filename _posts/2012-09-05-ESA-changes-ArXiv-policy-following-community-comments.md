@@ -1,6 +1,6 @@
 ---
 layout: post
-category: open notebook thoughts
+category: open-science
 tags: open-science 
 
 ---

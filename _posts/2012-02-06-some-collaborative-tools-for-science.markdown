@@ -7,7 +7,7 @@ title: Some Collaborative Tools for Science
 redirects: [/wordpress/archives/3628, /archives/3628]
 categories:
 - open-science
-- Teaching
+- teaching
 ---
 
 Ania Truszczynski invited me to give a little talk on the use of various collaborative tools for scientists.  I enjoyed presenting this as a chalk-talk, but alas no slides to link so here's a list of reference. Rather than the impossible attempt to be comprehensive, this is restricted to resources I use regularly and have found to be the best of their class.  All are freely available.

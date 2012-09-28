@@ -6,8 +6,8 @@ slug: tuesday-8
 title: Tuesday
 redirects: [/wordpress/archives/2487, /archives/2487]
 categories:
-- Phylogenetics
-- Stochastic Population Dynamics
+- evolution
+- ecology
 tags:
 - warning-signals
 ---

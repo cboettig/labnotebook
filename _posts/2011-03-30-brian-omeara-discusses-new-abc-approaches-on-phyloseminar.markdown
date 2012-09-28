@@ -2,14 +2,14 @@
 comments: true
 date: 2011-03-30 20:52:04
 layout: post
-slug: brian-omeara-discusses-new-abc-approaches-on-phyloseminar
-title: Brian O'Meara discusses new ABC approaches on Phyloseminar
+slug: brian-omeara-discusses-new-abc-approaches-on-phylo
+title: Brian O'Meara discusses new algorithms approaches on Phylo
 redirects: [/wordpress/archives/1329, /archives/1329]
 categories:
-- Phylogenetics
-- Seminar
+- evolution
+- seminar
 tags:
-- ABC
+- algorithms
 ---
 
 Brian gave an excellent overview of Approximate Bayesian Computing (ABC) and described the TreEvo software he is developing with post-doc Barb Banbury. My notes from the seminar, with my own comments _italics_ and  a few added references

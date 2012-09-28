@@ -6,7 +6,7 @@ slug: forage-fish
 title: Forage Fish course plan
 redirects: [/wordpress/archives/3635, /archives/3635]
 categories:
-- Stochastic Population Dynamics
+- ecology
 ---
 
 Forage fish winter quarter session starts, attempting to write the synthesis manuscript based on Fall quarter. Broke into groups to write sub-sections (2-4pgs) by 15 Feb.

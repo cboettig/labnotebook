@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Beetles, code-tricks]
-categories:  Stochastic_Population_Dynamics
+tags: [tribolium, code-tricks]
+categories: [ecology]
 ---
 
 

@@ -6,11 +6,11 @@ slug: monday-15
 title: Monday
 redirects: [/wordpress/archives/3756, /archives/3756]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - code-tricks
 - PDG Control
-- site configuration
+- site-configuration
 ---
 
 ### PDG Control, aside exercise

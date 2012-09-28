@@ -6,7 +6,7 @@ slug: tuesday-evolutionwrightscape-talk-sundry
 title: Tuesday - Evolution/wrightscape talk & sundry
 redirects: [/wordpress/archives/1983, /archives/1983]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ## Computing

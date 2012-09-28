@@ -6,7 +6,7 @@ slug: correcting-for-the-mean-dynamics
 title: Correcting for the mean dynamics
 redirects: [/wordpress/archives/108, /archives/108]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

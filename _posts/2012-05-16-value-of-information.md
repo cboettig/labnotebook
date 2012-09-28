@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Value of information, cost of bias
+category: ecology
 tags: decision-theory  
 ---
 

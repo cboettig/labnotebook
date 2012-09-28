@@ -6,7 +6,7 @@ slug: labrids-parrotfish-method1
 title: Labrids & Parrotfish, method1
 redirects: [/wordpress/archives/3088, /archives/3088]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ## Parrotfish only:

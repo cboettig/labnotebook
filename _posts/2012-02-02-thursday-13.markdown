@@ -6,7 +6,7 @@ slug: thursday-13
 title: Thursday
 redirects: [/wordpress/archives/3778, /archives/3778]
 categories:
-- Logistics
+- logistics
 tags:
 - reading
 ---

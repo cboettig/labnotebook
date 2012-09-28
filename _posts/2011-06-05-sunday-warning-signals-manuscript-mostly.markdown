@@ -6,7 +6,7 @@ slug: sunday-warning-signals-manuscript-mostly
 title: Sunday -- warning signals manuscript (mostly)
 redirects: [/wordpress/archives/1903, /archives/1903]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

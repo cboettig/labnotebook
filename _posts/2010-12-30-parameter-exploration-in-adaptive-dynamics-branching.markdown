@@ -6,9 +6,9 @@ slug: parameter-exploration-in-adaptive-dynamics-branching
 title: Parameter exploration in adaptive dynamics branching
 redirects: [/wordpress/archives/693, /archives/693]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
-- Adaptive Dynamics
+- adaptive-dynamics
 ---
 
 Ran a series of simulations overnight to explore aspects of time-to-branching at different phases of the branching process.  Still using only 16 replicates per data point, though increased maximum time for a run another order of magnitude to avoid timing out runs influencing the dataset for the slow-rate parameters.  Still seems to suggest a regime beyond which branching becomes completely improbable.  Not clear that the transition is a sharp as the Arrhenius approximation might suggest.

@@ -6,7 +6,7 @@ slug: fishbase-from-r-some-xml-parsing
 title: 'FishBASE from R: some XML parsing'
 redirects: [/wordpress/archives/2745, /archives/2745]
 categories:
-- Computation
+- computation
 tags:
 - fishbase
 ---

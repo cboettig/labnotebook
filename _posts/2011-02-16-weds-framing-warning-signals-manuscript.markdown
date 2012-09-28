@@ -6,7 +6,7 @@ slug: weds-framing-warning-signals-manuscript
 title: Weds & Framing warning signals manuscript
 redirects: [/wordpress/archives/966, /archives/966]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

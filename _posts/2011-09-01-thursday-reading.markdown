@@ -6,7 +6,7 @@ slug: thursday-reading
 title: Thursday Reading
 redirects: [/wordpress/archives/2544, /archives/2544]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - reading
 - warning-signals

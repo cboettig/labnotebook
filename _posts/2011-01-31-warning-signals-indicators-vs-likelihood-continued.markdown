@@ -6,7 +6,7 @@ slug: warning-signals-indicators-vs-likelihood-continued
 title: 'Warning signals: Indicators vs Likelihood continued'
 redirects: [/wordpress/archives/898, /archives/898]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

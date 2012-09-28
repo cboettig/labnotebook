@@ -6,7 +6,7 @@ slug: tuesday
 title: Tuesday
 redirects: [/wordpress/archives/999, /archives/999]
 categories:
-- Logistics
+- logistics
 ---
 
 In at 8:30.  10a and still getting through Google Reader journals, emails.

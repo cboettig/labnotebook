@@ -6,7 +6,7 @@ slug: algorithms-discussion-group-mcmc
 title: 'Algorithms Discussion Group: MCMC'
 redirects: [/wordpress/archives/1595, /archives/1595]
 categories:
-- Seminar
+- seminar
 tags:
 - algorithms
 ---

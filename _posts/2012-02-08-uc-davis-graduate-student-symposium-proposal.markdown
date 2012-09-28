@@ -6,7 +6,7 @@ slug: uc-davis-graduate-student-symposium-proposal
 title: UC Davis graduate student symposium proposal
 redirects: [/wordpress/archives/3800, /archives/3800]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

@@ -6,7 +6,7 @@ slug: friday-5
 title: Friday
 redirects: [/wordpress/archives/1894, /archives/1894]
 categories:
-- Logistics
+- logistics
 ---
 
 ## A day's agenda

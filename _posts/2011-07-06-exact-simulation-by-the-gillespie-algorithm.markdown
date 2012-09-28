@@ -6,7 +6,7 @@ slug: exact-simulation-by-the-gillespie-algorithm
 title: Exact Simulation by the Gillespie Algorithm
 redirects: [/wordpress/archives/2128, /archives/2128]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

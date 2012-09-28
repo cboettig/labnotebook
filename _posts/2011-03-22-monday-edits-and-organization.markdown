@@ -6,7 +6,7 @@ slug: monday-edits-and-organization
 title: Monday -- Edits and organization
 redirects: [/wordpress/archives/1267, /archives/1267]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

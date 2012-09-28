@@ -6,7 +6,7 @@ slug: comparative-methods-paper-statusto-do
 title: Comparative methods paper status/to-do
 redirects: [/wordpress/archives/1364, /archives/1364]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Finished revisions yesterday after rewriting introduction considerably.  Following Graham's comment, taking a closer look at aic error along power curves:

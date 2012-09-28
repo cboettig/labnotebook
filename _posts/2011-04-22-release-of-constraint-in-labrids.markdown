@@ -6,7 +6,7 @@ slug: release-of-constraint-in-labrids
 title: Release of constraint in labrids?
 redirects: [/wordpress/archives/1483, /archives/1483]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 Started writing outline, assembling references

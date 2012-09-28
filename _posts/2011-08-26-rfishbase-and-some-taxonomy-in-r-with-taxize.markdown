@@ -6,8 +6,8 @@ slug: rfishbase-and-some-taxonomy-in-r-with-taxize
 title: rfishbase and some taxonomy in R with taxize
 redirects: [/wordpress/archives/2443, /archives/2443]
 categories:
-- Computation
-- Phylogenetics
+- computation
+- evolution
 tags:
 - fishbase
 ---

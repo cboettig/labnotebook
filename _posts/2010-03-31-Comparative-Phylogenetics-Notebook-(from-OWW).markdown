@@ -1,7 +1,7 @@
 ---
 layout: post
-tags: [Paper_Outlines, Labrids]
-categories:  Comparative_Phylogenetics
+tags: [ Labrids]
+categories: evolution
 ---
 
 

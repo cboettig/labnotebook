@@ -6,7 +6,7 @@ slug: thursday-friday-saturday
 title: Thursday, Friday, Saturday
 redirects: [/wordpress/archives/4041, /archives/4041]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 ---

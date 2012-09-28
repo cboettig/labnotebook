@@ -6,7 +6,7 @@ slug: elegant-fast-data-manipulation-with-data-table
 title: Elegant & fast data manipulation with data.table
 redirects: [/wordpress/archives/3832, /archives/3832]
 categories:
-- Computation
+- computation
 tags:
 - R
 ---

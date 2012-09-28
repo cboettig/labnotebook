@@ -6,7 +6,7 @@ slug: optimal-control-examples-continued-bellman-dynamic-programming
 title: 'Optimal Control examples continued: Bellman,  Dynamic Programming'
 redirects: [/wordpress/archives/3076, /archives/3076]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - PDG Control
 - warning-signals

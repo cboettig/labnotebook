@@ -6,7 +6,7 @@ slug: tuesday-5
 title: 'Tuesday: PMC, confidence intervals; screen code-tricks'
 redirects: [/wordpress/archives/1860, /archives/1860]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - code-tricks
 ---

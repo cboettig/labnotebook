@@ -6,7 +6,7 @@ slug: sunday-manuscript-and-simulations
 title: Sunday - manuscript and simulations
 redirects: [/wordpress/archives/1249, /archives/1249]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

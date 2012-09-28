@@ -6,7 +6,7 @@ slug: '2588'
 title: NIMBioS PDG Control, Tuesday
 redirects: [/wordpress/archives/2588, /archives/2588]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - NIMBioS
 - PDG Control

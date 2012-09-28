@@ -6,7 +6,7 @@ slug: likelihood-expressions-for-branching-processes
 title: Likelihood expressions for branching processes
 redirects: [/wordpress/archives/2561, /archives/2561]
 categories:
-- Phylogenetics
+- evolution
 ---
 
 ### Lineage-through-time approach

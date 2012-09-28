@@ -6,7 +6,7 @@ slug: evolution-day-4-ievobio-day-1
 title: 'Evolution Day 4 / #ievobio Day 1'
 redirects: [/wordpress/archives/2042, /archives/2042]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - conference
 ---

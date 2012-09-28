@@ -6,7 +6,7 @@ slug: evolution-conference-day-1
 title: Evolution Conference Day 1
 redirects: [/wordpress/archives/2024, /archives/2024]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - conference
 ---

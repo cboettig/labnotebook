@@ -6,7 +6,7 @@ slug: sunday-a-few-treebase-r-package-updates
 title: 'Sunday: a few Treebase R package updates'
 redirects: [/wordpress/archives/1632, /archives/1632]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - treebase
 ---

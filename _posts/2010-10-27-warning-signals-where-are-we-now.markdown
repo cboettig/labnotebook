@@ -6,7 +6,7 @@ slug: warning-signals-where-are-we-now
 title: Warning Signals -- Where are we now?
 redirects: [/wordpress/archives/129, /archives/129]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---

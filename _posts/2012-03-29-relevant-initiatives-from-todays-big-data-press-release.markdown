@@ -6,7 +6,7 @@ slug: relevant-initiatives-from-todays-big-data-press-release
 title: Relevant initiatives from today's Big Data press release
 redirects: [/wordpress/archives/4392, /archives/4392]
 categories:
-- Logistics
+- logistics
 ---
 
 An [exciting day for Big Data](http://www.whitehouse.gov/blog/2012/03/29/big-data-big-deal) (particularly if your Berkeley).

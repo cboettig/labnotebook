@@ -6,7 +6,7 @@ slug: treebase-in-r-a-first-tutorial
 title: 'TreeBASE in R: a first tutorial'
 redirects: [/wordpress/archives/1702, /archives/1702]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - R
 - treebase

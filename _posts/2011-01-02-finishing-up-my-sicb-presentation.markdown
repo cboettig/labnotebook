@@ -6,7 +6,7 @@ slug: finishing-up-my-sicb-presentation
 title: 'Finishing up my #SICB Presentation'
 redirects: [/wordpress/archives/726, /archives/726]
 categories:
-- Phylogenetics
+- evolution
 tags:
 - conference
 ---

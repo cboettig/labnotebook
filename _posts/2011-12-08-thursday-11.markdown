@@ -6,8 +6,8 @@ slug: thursday-11
 title: Thursday
 redirects: [/wordpress/archives/3513, /archives/3513]
 categories:
-- Phylogenetics
-- Stochastic Population Dynamics
+- evolution
+- ecology
 ---
 
 Another day of working on 4 different projects at once.

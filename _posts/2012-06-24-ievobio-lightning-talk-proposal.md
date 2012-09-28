@@ -1,5 +1,7 @@
 ---
 layout: post
+category: open-science
+tags: conference
 
 ---
 

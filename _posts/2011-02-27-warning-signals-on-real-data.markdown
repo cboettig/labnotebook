@@ -6,7 +6,7 @@ slug: warning-signals-on-real-data
 title: Warning Signals on Real Data?
 redirects: [/wordpress/archives/1131, /archives/1131]
 categories:
-- Stochastic Population Dynamics
+- ecology
 tags:
 - warning-signals
 ---
