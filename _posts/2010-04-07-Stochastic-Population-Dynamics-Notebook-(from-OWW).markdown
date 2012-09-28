@@ -1,0 +1,44 @@
+---
+layout: post
+
+categories:  Stochastic_Population_Dynamics
+---
+
+
+
+
+
+ 
+
+
+
+
+
+Research
+--------
+
+-   Goal: complete outline for tomorrow's meeting.
+
+Notes
+-----
+
+### Theory Coffee
+
+-   Two more days before eve speaker nominations are due. Potentially
+    nominating:
+    -   [Brice
+        Kendall](http://www.fish.washington.edu/people/rayh/ "http://www.fish.washington.edu/people/rayh/")
+    -   [Ray
+        Hillborn](http://www.fish.washington.edu/people/rayh/ "http://www.fish.washington.edu/people/rayh/")
+        Model choice (Ecological Detective).
+
+-   Discussion of post-doc / job application process.
+
+### Education
+
+-   NIMBioS Computational Biology [Curriculum
+    Development](http://www.nimbios.org/tutorials/TT_curriculum "http://www.nimbios.org/tutorials/TT_curriculum")
+    July 6-9
+
+\
+
