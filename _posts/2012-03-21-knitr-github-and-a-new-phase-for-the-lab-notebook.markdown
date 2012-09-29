@@ -15,7 +15,7 @@ I have recently modified the basic workflow of my lab notebook since discovering
 
 Because knitr allows me to write a single file containing code and formatted text, and will automatically display the code and embed the images, I can avoid that more convoluted workflow and just write.
 
-[caption id="" align="alignright" width="284" caption="Github directory of results files"][![](http://farm8.staticflickr.com/7256/7003687571_09f79cfc15_o.png)](https://github.com/cboettig/pdg_control/blob/master/inst/examples)[/caption]
+![](http://farm8.staticflickr.com/7256/7003687571_09f79cfc15_o.png)](https://github.com/cboettig/pdg_control/blob/master/inst/examples)
 
 
 
@@ -26,7 +26,7 @@ in `inst/examples`, ((since I'm using the R package for projects and demo/ doesn
 
 The great thing about this is that I can just click on each script and see nicely rendered text, links, code, and figures right on github.
 
-[caption id="" align="alignright" width="293" caption="screenshot of an example entry (Reed.md)"][![example entry](http://farm7.staticflickr.com/6217/7003679683_d9f472efd6_o.png)](https://github.com/cboettig/pdg_control/blob/master/inst/examples/Reed.md)[/caption]
+![example entry](http://farm7.staticflickr.com/6217/7003679683_d9f472efd6_o.png)](https://github.com/cboettig/pdg_control/blob/master/inst/examples/Reed.md)
 
 While I can push this same markdown script to wordpress and have it be rendered in my notebook, I think maintaining these examples on github is preferable. Note that every script-name appears twice, once with and once without the `_knit_` extension. The `_knit_` extension indicates the file I ran to create the output (the code is in html comments so you can only see them in raw form). Because all the code is displayed in the output file (unless I call knitr options to surpress this), there's really no need to view the `_knit_` file to reproduce the example, everything is in one place in the output `.md` file.
 
@@ -34,7 +34,7 @@ These files benefit from the github managed version history, just clicking the h
 
 While I could update a post in the notebook in the same way, the version control of this wordpress notebook is more crude, and more importantly, the blog-format is designed for a linear flow, whereas in a given day I might update each of these example scripts. This seems like a much more natural workflow then having consecutive entries in the notebook with updated versions of the analysis the day before, and more natural than going back and changing a previous notebook entry.
 
-[caption id="" align="alignright" width="333" caption="Commit history for a script"][![](http://farm8.staticflickr.com/7094/7003692801_d14a23855e_o.png)](https://github.com/cboettig/pdg_control/commits/master/inst/examples/model_uncertainty.md)[/caption]
+![](http://farm8.staticflickr.com/7094/7003692801_d14a23855e_o.png)](https://github.com/cboettig/pdg_control/commits/master/inst/examples/model_uncertainty.md)
 
 Github can also gives nice snapshot of what's changed, along with the commit notes for each project, for each day. Now that I can display figures and formatted text on github, as well as code, what role does the Wordpress notebook play? I think this wordpress notebook can resume is proper role as a lab notebook, containing reflections and synthesis on what I've done, rather than the more comprehensive copies of each analysis and each figure. Because it's the internet, I can link to each of the analyses of that day using version-stable links from github, or links that always give the most recent version. This requires additional effort, but it's a reflection I should be doing anyway. We'll see how it goes. Meanwhile, welcome to the open lab notebook v2.0.
 

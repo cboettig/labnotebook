@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3670, /archives/3670]
 categories:
 - evolution
 tags:
-- my publications
+- my-publications
 - R
 - research-blogging
 ---

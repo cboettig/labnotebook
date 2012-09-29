@@ -1,5 +1,5 @@
 ---
-layout: 
+layout: codepost 
 categories: ecology
 tags: [ decision-theory]
 
@@ -8,8 +8,7 @@ tags: [ decision-theory]
 
 
 *No idea where I went wrong, but the final graphs are not what I expected*
-
-
+*Update: Integrated out some uncertainty in the expectation step, need to preserve full set of transtions*
 
 
 

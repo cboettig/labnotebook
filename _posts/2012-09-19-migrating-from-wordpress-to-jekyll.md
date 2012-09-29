@@ -39,7 +39,7 @@ My Jekyll site uses the SEO recommended structure of year/month/day/page-title f
 
 ### Comments
 
-I am using Disqus
+I am using Disqus as the comment engine for entries.  Since URLs change in the above step and I do not provide a unique disqus code to each page, I am attempting to migrate comments using the [Disqus "migrate threads" tool](http://help.disqus.com/customer/portal/articles/286778-using-the-migration-tools), which simply takes a csv file listing old and new urls in consecutive columns.  Will have to wait and see if this works.  
 
 
 ### Private entries
