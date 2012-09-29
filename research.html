@@ -53,6 +53,9 @@ title: Research
 
         $item.append('<span class="bullet">&sdot;</span>');
 
+        var $open_issues = $("<a>").attr("href", repo.html_url + "/open_issues").text(repo.open_issues + " open_issues");
+        $item.append($("<span>").addClass("open_issues").append($open_issues));
+
         var $watchers = $("<a>").attr("href", repo.html_url + "/watchers").text(repo.watchers + " watchers");
         $item.append($("<span>").addClass("watchers").append($watchers));
 
@@ -68,9 +71,9 @@ title: Research
         var $item = $("<li>").addClass("repo grid-1 " + (repo.language || '').toLowerCase());
         var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($item);
         $link.append($("<h2>").text(repo.name));
-        $link.append($("<h3>").text(repo.watchers + " watchers" + " / " + repo.forks + " forks"));
-        $link.append($("<p>").text(repoDescription(repo)));
-        $link.append($("<p>").text("Updated " + 
+        $link.append($("<h3>").text(repo.watchers + " watchers" + " / " + repo.open_issues + " open issues"));
+        $link.append($("<p style='line-height:.7em;'>").text(repoDescription(repo)));
+        $link.append($("<p style='line-height:.7em;'>").text("Updated " + 
           strftime("%h %e, %Y", repo.pushed_at)));
         $link.append($("<h3>").addClass("language").text(repo.language));
         
