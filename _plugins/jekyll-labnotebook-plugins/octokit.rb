@@ -1,4 +1,5 @@
 require 'octokit'
+require 'time'
 
 # should this cache?
 # TODO: show only top 3 issues? sort by date?  Show closed issues?
@@ -52,20 +53,21 @@ module Jekyll
       @text = text
       @address = "cboettig/"+"#{@text}"
     end
-
     def render(context)
-      repo = Octokit.commits(@address) 
+      day = context.environments.first["page"]["date"]
+      @until = (day + 60*60*24).iso8601
+      @since = day.iso8601
+      repo = Octokit.commits(@address, "master", {:since => @since, :until => @until}) 
       out = "<ul>"
-      for i in 0 ... [repo.size, 3].min
+      for i in 0 ... repo.size
         out = out + "<li>" +
           "<a href=\"" + repo[i].commit.url + "\">" +
           repo[i].commit.message +
           "</a>" +
-          " " + DateTime.parse(repo[i].commit.author.date).to_time.strftime("%I:%M %Y/%m/%d")  + "</li>"
+          " " + DateTime.parse(repo[i].commit.author.date).to_time.strftime("%I:%M%p %Y/%m/%d")  + "</li>"
       end
       out = out + "</ul>"
       out
-
     end
   end
 end
