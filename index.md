@@ -18,8 +18,8 @@ performance computing and large data sets. I am funded by a DoE Computational
 Science Graduate Fellowship
 ([CSGF](https://www.krellinst.org/csgf/community/fellows/profile?n=boettiger)).
 I keep an open [lab notebook](http://www.carlboettiger.info/lab-notebook.html),
-as I describe in this
-[introduction](http://www.carlboettiger.info/archives/211).
+as I describe in this (updated)
+[introduction](http://www.carlboettiger.info/2012/09/28/Welcome-to-my-lab-notebook.html).
 
 
 <ul class="unstyled" style="font-size:.8em;line-height=.8em">

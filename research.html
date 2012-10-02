@@ -72,8 +72,8 @@ title: Research
         var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($item);
         $link.append($("<h2>").text(repo.name));
         $link.append($("<h3>").text(repo.watchers + " watchers" + " / " + repo.open_issues + " open issues"));
-        $link.append($("<p style='line-height:.7em;'>").text(repoDescription(repo)));
-        $link.append($("<p style='line-height:.7em;'>").text("Updated " + 
+        $link.append($("<p style='line-height:.8em;'>").text(repoDescription(repo)));
+        $link.append($("<p style='line-height:.8em;'>").text("Updated " + 
           strftime("%h %e, %Y", repo.pushed_at)));
         $link.append($("<h3>").addClass("language").text(repo.language));
         
