@@ -1,9 +1,14 @@
+/* My additional customizations to the Twitter Bootstrap CSS */
+/*                                                           */
+/* I overwrite bootstrap.css and bootstrap-responsive.css 
+ * every time I tweak their configuration in less (less/variables.less),
+ * so my own CSS customizations are added here instead.  */
+
 /* Body and structure
 -------------------------------------------------- */
 body {
   position: relative;
   padding-top: 90px;
-  background-color: #fff;
   background-image: url(../img/grid-18px-masked.png);
   background-repeat: repeat-x;
   background-position: 0 40px;
@@ -74,8 +79,6 @@ hr.soften {
 .jumbotron .btn-large small {
   font-size: 14px;
 }
-
-
 /* Specific jumbotrons
 ------------------------- */
 .subhead {
@@ -85,6 +88,9 @@ hr.soften {
 .subhead h1 {
   font-size: 54px;
 }
+
+
+
 
 
 /* Footer
@@ -164,6 +170,58 @@ hr.soften {
   font-weight: bold;
 }
 
+
+
+
+/* Make markdown with floatright in the alt-text into a nice text-wrapped image */
+
+img[alt=floatright] { float:right;margin: 10px 10px }
+
+/* Remap inline code color */
+code {
+  padding: 2px 4px;
+  color: #333333; /* #d14; */
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+
+/* Use the bootstrap-css striped-table format for all tables */
+
+table {
+  width: 100%;
+  margin-bottom: 24px;
+}
+table th,
+table td {
+  padding: 8px;
+  line-height: 24px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+table th {
+  font-weight: bold;
+}
+table thead th {
+  vertical-align: bottom;
+}
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+table tbody tr:nth-child(odd) td,
+table tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+
+
 /* Misc
 -------------------------------------------------- */
 
@@ -171,23 +229,11 @@ img {
   max-width: 100%;
 }
 
-/* Make tables spaced out a bit more */
-h2 + table,
-h3 + table,
-h4 + table,
-h2 + .row {
-  margin-top: 5px;
-}
 
-/* Remove bottom margin on example forms in wells */
-form.well {
-  padding: 14px;
-}
 
-/* Tighten up spacing */
-.well hr {
-  margin: 18px 0;
-}
+
+
+
 
 /* Responsive Docs
 -------------------------------------------------- */
@@ -196,7 +242,6 @@ form.well {
   body {
     padding-top: 70px;
   }
-
   /* Change up some type stuff */
   h2 {
     margin-top: 27px;
@@ -208,7 +253,6 @@ form.well {
   h3 {
     margin-top: 18px;
   }
-
   /* Adjust the jumbotron */
   .jumbotron h1,
   .jumbotron p {
@@ -384,52 +428,10 @@ form.well {
 }
 
 
-/* Make markdown with floatright in the alt-text into a nice text-wrapped image */
 
-img[alt=floatright] { float:right;margin: 10px 10px }
 
-/* Remap inline code color */
-code {
-  padding: 2px 4px;
-  color: #333333; /* #d14; */
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
-}
 
-/* Use the bootstrap-css striped-table format for all tables */
 
-table {
-  width: 100%;
-  margin-bottom: 24px;
-}
-table th,
-table td {
-  padding: 8px;
-  line-height: 24px;
-  text-align: left;
-  vertical-align: top;
-  border-top: 1px solid #dddddd;
-}
-table th {
-  font-weight: bold;
-}
-table thead th {
-  vertical-align: bottom;
-}
-table caption + thead tr:first-child th,
-table caption + thead tr:first-child td,
-table colgroup + thead tr:first-child th,
-table colgroup + thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-  border-top: 0;
-}
-table tbody + tbody {
-  border-top: 2px solid #dddddd;
-}
-table tbody tr:nth-child(odd) td,
-table tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
-}
+
 
 

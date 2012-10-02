@@ -157,10 +157,10 @@ textarea {
 
 body {
   margin: 0;
-  font-family: Gill Sans, "Gill Sans MT", sans-serif;
+  font-family: quattrocento-sans, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
-  color: #073642;
+  color: #657b83;
   background-color: #fdf6e3;
 }
 
@@ -763,7 +763,7 @@ input,
 button,
 select,
 textarea {
-  font-family: Gill Sans, "Gill Sans MT", sans-serif;
+  font-family: quattrocento-sans, Helvetica, Arial, sans-serif;
 }
 
 label {
@@ -3699,7 +3699,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar-search .search-query {
   padding: 4px 9px;
-  font-family: Gill Sans, "Gill Sans MT", sans-serif;
+  font-family: quattrocento-sans, Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
