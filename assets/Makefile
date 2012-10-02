@@ -1,6 +1,23 @@
+BOOTSTRAP = ./css/bootstrap.css
+BOOTSTRAP_LESS = ./less/bootstrap.less
+BOOTSTRAP_RESPONSIVE = ./css/bootstrap-responsive.css
+BOOTSTRAP_RESPONSIVE_LESS = ./less/responsive.less
+DATE=$(shell date +%I:%M%p)
+CHECK=\033[32m✔\033[39m
+HR=\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
 
-bib:
-	bibtool -s -d -x citations.aux ~/Documents/Mendeley/bib/*.bib > citations.bib
 
-teaching:
-	pandoc --biblio citations.bib --template=template.md teaching.txt -o ../teaching.md
+#
+# BUILD DOCS
+#
+
+build:
+	@echo "${HR}\n"
+	@recess --compile ${BOOTSTRAP_LESS} > ${BOOTSTRAP}
+	@recess --compile ${BOOTSTRAP_RESPONSIVE_LESS} > ${BOOTSTRAP_RESPONSIVE}
+	@echo "Compiling LESS with Recess...               ${CHECK} Done"
+	@echo "Bootstrap CSS successfully built at ${DATE}."
+	@echo "${HR}\n"
+	@echo "\n"
+
+
