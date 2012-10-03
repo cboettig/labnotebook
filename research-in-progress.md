@@ -4,7 +4,7 @@ title: Research
 ---
 
 
-![floatright](assets/img/wadirum.jpg) I'm interested in problems 
+![floatright](assets/img/wadirum.png) I'm interested in problems 
 
 I began my PhD as a pencil+paper theorist.  A fortuitous training grant in Computational Science 
 
