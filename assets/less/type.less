@@ -10,7 +10,7 @@ p {
   margin: 0 0 @baseLineHeight / 2;
   small {
     font-size: @baseFontSize - 2;
-    color: @grayLight;
+    color: @bodytext;
   }
 }
 .lead {
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizelegibility; // Fix the character spacing for headings
   small {
     font-weight: normal;
-    color: @grayLight;
+    color: @bodytext;
   }
 }
 h1 {
@@ -151,7 +151,7 @@ hr {
   margin: @baseLineHeight 0;
   border: 0;
   border-top: 1px solid @hrBorder;
-  border-bottom: 1px solid @white;
+  border-bottom: 1px solid @background;
 }
 
 // Emphasis
@@ -162,7 +162,7 @@ em {
   font-style: italic;
 }
 .muted {
-  color: @grayLight;
+  color: @backgroundHighlights;
 }
 
 // Abbreviations and acronyms
@@ -179,7 +179,7 @@ abbr.initialism {
 blockquote {
   padding: 0 0 0 15px;
   margin: 0 0 @baseLineHeight;
-  border-left: 5px solid @grayLighter;
+  border-left: 5px solid @backgroundHighlights;
   p {
     margin-bottom: 0;
     #font > .shorthand(16px,300,@baseLineHeight * 1.25);
@@ -187,7 +187,7 @@ blockquote {
   small {
     display: block;
     line-height: @baseLineHeight;
-    color: @grayLight;
+    color: @backgroundHighlights;
     &:before {
       content: '\2014 \00A0';
     }
@@ -198,7 +198,7 @@ blockquote {
     float: right;
     padding-right: 15px;
     padding-left: 0;
-    border-right: 5px solid @grayLighter;
+    border-right: 5px solid @backgroundHighlights;
     border-left: 0;
     p,
     small {

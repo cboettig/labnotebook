@@ -3,7 +3,6 @@
 // -----------------------------------------------------
 
 
-
 // GLOBAL VALUES
 // --------------------------------------------------
 
@@ -17,14 +16,15 @@
 @base01:    #586e75;
 @base00:    #657b83;
 
-// ## Light base ## 
+//  Light base  
 // -------------------
 @base0:     #839496;
 @base1:     #93a1a1;
 @base2:     #eee8d5;
 @base3:     #fdf6e3;
 
-// ## Accent colors ##
+// Accent colors
+// -------------------------
 @blue:      #268bd2;
 @red:       #dc322f;
 @green:     #859900;
@@ -45,26 +45,48 @@
 @grayLighter:           @base2;
 @white:                 @base3;
 
-
-// Accent colors
-// -------------------------
+// Additional accent colors (twitter bootstrap)
+// ---------------------------------------------
 @pink:                  @magenta;
 @purple:                @violet;
 @blueDark:              #0064cd;
 
 
+// Solarized Light Theme
+//-----------------------
+@background: @base3;
+@backgroundHighlights: @base2;
+@comments: @base1;
+@bodytext: @base00; 
+@emphasis: @base01;
+@backgroundInverse: @base03;
+@backgroundInverseHighlights: @base02;
+
+// Solarized Dark Theme
+//-----------------------
+//@background: @base03;
+//@backgroundHighlights: @base02;
+//@comments: @base01;
+//@bodytext: @base0; 
+//@emphasis: @base1;
+
+
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
-@textColor:             @gray;
+@bodyBackground:        @background;
+@textColor:             @bodytext;
 
 
 // Links
 // -------------------------
-@linkColor:             lighten(@grayDarker, 15%);
+@linkColor:             @blue;
 @linkColorHover:        lighten(@linkColor, 15%);
 
 
+// Code (cboettig custom variable, used in code.less)
+// ------------------
+@codeBackground: @base03;
+@inlineCodeBackground: @background;
 // Typography
 // -------------------------
 @sansFontFamily:        quattrocento-sans, Helvetica, Arial, sans-serif;  //Gill Sans, "Gill Sans MT", sans-serif; 
@@ -84,15 +106,15 @@
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             @grayLighter; // for striping
-@tableBackgroundHover:              #f5f5f5; // for hover
-@tableBorder:                       #ddd; // table and cell border
+@tableBackgroundAccent:             @backgroundHighlights; // for striping
+@tableBackgroundHover:              @backgroundHighlights; // for hover
+@tableBorder:                       @comments; // table and cell border
 
 
 // Buttons
 // -------------------------
-@btnBackground:                     @white;
-@btnBackgroundHighlight:            @grayLighter;
+@btnBackground:                     @background;
+@btnBackgroundHighlight:            @backgroundHighlights;
 @btnBorder:                         #ccc;
 
 @btnPrimaryBackground:              @linkColor;
@@ -110,27 +132,27 @@
 @btnDangerBackground:               @red;
 @btnDangerBackgroundHighlight:      darken(@red, 15%);
 
-@btnInverseBackground:              @gray;
-@btnInverseBackgroundHighlight:     @grayDarker;
+@btnInverseBackground:              @backgroundInverse;
+@btnInverseBackgroundHighlight:     @backgroundInverseHighlights;
 
 
 // Forms
 // -------------------------
-@inputBackground:               @white;
-@inputBorder:                   #ccc;
+@inputBackground:               @background;
+@inputBorder:                   @backgroundHighlights;
 @inputBorderRadius:             3px;
-@inputDisabledBackground:       @grayLighter;
+@inputDisabledBackground:       @backgroundHighlights; //@grayLighter;
 @formActionsBackground:         #f5f5f5;
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            @white;
+@dropdownBackground:            @background;
 @dropdownBorder:                rgba(0,0,0,.2);
-@dropdownLinkColor:             @grayDark;
-@dropdownLinkColorHover:        @white;
+@dropdownLinkColor:             @backgroundHighlights;
+@dropdownLinkColorHover:        @background;
 @dropdownLinkBackgroundHover:   @linkColor;
-@dropdownDividerTop:            #e5e5e5;
-@dropdownDividerBottom:         @white;
+@dropdownDividerTop:            @backgroundHighlights; //#e5e5e5;
+@dropdownDividerBottom:         @background;
 
 
 
@@ -157,37 +179,37 @@
 
 // Input placeholder text color
 // -------------------------
-@placeholderText:         @grayLight;
+@placeholderText:         @comments;
 
 
 // Hr border color
 // -------------------------
-@hrBorder:                @grayLighter;
+@hrBorder:                @backgroundHighlights;
 
 
 // Navbar
 // -------------------------
 @navbarHeight:                    40px;
-@navbarBackground:                @grayDarker;
-@navbarBackgroundHighlight:       @grayDark;
+@navbarBackground:                @backgroundHighlights; //@grayDarker;
+@navbarBackgroundHighlight:       @background; //@grayDark;
 
-@navbarText:                      @grayLight;
-@navbarLinkColor:                 @grayLight;
-@navbarLinkColorHover:            @white;
+@navbarText:                      @bodytext; //@grayLight;
+@navbarLinkColor:                 @bodytext; // @grayLight;
+@navbarLinkColorHover:            darken(@bodytext, 15%); 
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      @navbarBackground;
+@navbarLinkBackgroundActive:      darken(@backgroundHighlights, 15%);
 
-@navbarSearchBackground:          @grayDark; 
-@navbarSearchBackgroundFocus:     @white;
-@navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
-@navbarSearchPlaceholderColor:    #ccc;
+@navbarSearchBackground:          darken(@background, 1%); 
+@navbarSearchBackgroundFocus:     @background; //@white;
+@navbarSearchBorder:              @comments; 
+@navbarSearchPlaceholderColor:    transparent;
 @navbarBrandColor:                @navbarLinkColor;
 
 
 // Hero unit
 // -------------------------
-@heroUnitBackground:              @grayLighter;
+@heroUnitBackground:              @backgroundHighlights;
 @heroUnitHeadingColor:            inherit;
 @heroUnitLeadColor:               inherit;
 

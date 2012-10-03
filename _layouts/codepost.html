@@ -1,31 +1,18 @@
 {% include postheader.html %}
-
-    <div class="row">
-      <div class="span7 offset1">
-        {{ content }}
-      </div>
-
-
-      <!-- Custom sidebar -->      
-      <div class="span3">
-        <div class="sidebar">
-          Posted on
-          <time pubdate datetime="{{ page.date | date_to_xmlschema }}" 
-                itemprop="datePublished">{{ page.date | date_to_long_string }}</time>.
-          <br />
-          {% include nextprevious.html %}
-          <br />
-          <p> <a class="btn btn-mini" href="https://github.com/cboettig/labnotebook/commits/master/_posts">history</a></p>
-          <br />
-          <br />
-          {% include pagetags.html %}
-          <br />
-          <br />
-          <p> {% include collapse.html %} </p>
-       </div>
-      </div>
-    </div>
-
+<div class="row">
+  <div class="span7 offset1">
+    {{ content }}
+  </div>
+  <!-- Custom sidebar -->      
+  <div class="span3">
+    <div class="sidebar">
+      {% include sidebar.html %}
+      <br />
+      <br />
+      <p> {% include collapse.html %} </p>
+   </div>
+  </div>
+</div>
 {% include disqus.html %}
 {% include footer.html %}
 
