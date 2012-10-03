@@ -12,6 +12,12 @@ table {
   background-color: @tableBackground;
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+// BASELINE STYLES
+// ---------------
+
+.table {
   width: 100%;
   margin-bottom: @baseLineHeight;
   // Cells
@@ -43,14 +49,6 @@ table {
   tbody + tbody {
     border-top: 2px solid @tableBorder;
   }
-
-  // Enable hover effect on all tables
-  tbody tr:hover td,
-  tbody tr:hover th {
-    background-color: @tableBackgroundHover;
-  }
-
-
 }
 
 

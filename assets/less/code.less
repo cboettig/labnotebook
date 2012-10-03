@@ -8,16 +8,16 @@ pre {
   padding: 0 3px 2px;
   #font > #family > .monospace;
   font-size: @baseFontSize - 1;
-  color: @bodytext;
+  color: @grayDark;
   .border-radius(3px);
 }
 
 // Inline code
 code {
   padding: 2px 4px;
-  color: @emphasis;
-  background-color: @inlineCodeBackground;
-  border: 1px solid @comments;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
 }
 
 // Blocks of code
@@ -31,8 +31,8 @@ pre {
   word-wrap: break-word;
   white-space: pre;
   white-space: pre-wrap;
-  background-color: @codeBackground;
-  border: 1px solid @comments; // fallback for IE7-8
+  background-color: #f5f5f5;
+  border: 1px solid #ccc; // fallback for IE7-8
   border: 1px solid rgba(0,0,0,.15);
   .border-radius(4px);
 
@@ -55,5 +55,3 @@ pre {
   max-height: 340px;
   overflow-y: scroll;
 }
-
-
