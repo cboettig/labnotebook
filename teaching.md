@@ -6,7 +6,7 @@ title: Teaching
 Philosophy
 ----------
 
-![floatright](http://www.carlboettiger.info/wp-content/uploads/2010/09/watch.jpg "watch")
+![floatright](/assets/img/watch.png)
 I am passionate about experiential, active learning that is
 problem-based, social, interdisciplinary, quantitative and leverages
 technology. Though poetically argued by such influential thinkers such
