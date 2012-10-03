@@ -30,15 +30,15 @@
 
 // Hover state
 .btn:hover {
-  color: @textColor;
+  color: @grayDark;
   text-decoration: none;
-  background-color: @backgroundHighlights;
- // *background-color: @backgroundHighlights; /* Buttons in IE7 don't get borders, so darken on hover */
- // background-position: 0 -15px;
+  background-color: darken(@white, 10%);
+  *background-color: darken(@white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
+  background-position: 0 -15px;
 
   // transition is only when going to hover, otherwise the background
   // behind the gradient (there for IE<=9 fallback) gets mismatched
-  //  .transition(background-position .1s linear);
+  .transition(background-position .1s linear);
 }
 
 // Focus state for keyboard and accessibility
@@ -49,8 +49,8 @@
 // Active state
 .btn.active,
 .btn:active {
-  background-color: @backgroundHighlights;
-  background-color: @backgroundHighlights e("\9");
+  background-color: darken(@white, 10%);
+  background-color: darken(@white, 15%) e("\9");
   background-image: none;
   outline: 0;
   .box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
@@ -60,7 +60,7 @@
 .btn.disabled,
 .btn[disabled] {
   cursor: default;
-  background-color: @backgroundHighlights;
+  background-color: darken(@white, 10%);
   background-image: none;
   .opacity(65);
   .box-shadow(none);
@@ -116,7 +116,7 @@
 .btn-info:hover,
 .btn-inverse,
 .btn-inverse:hover {
-  color: @background;
+  color: @white;
   text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 }
 // Provide *some* extra contrast for those who can get it

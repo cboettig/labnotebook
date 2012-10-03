@@ -1,0 +1,129 @@
+
+// Buttons 
+// ------------------------------------------------------------------
+
+.btn {
+  text-shadow: none;
+}
+
+.btn:hover {
+  color: @textColor;
+  text-decoration: none;
+  background-color: @backgroundHighlights;
+  *background-color: @backgroundHighlights; 
+}
+
+.btn.active,
+.btn:active {
+    background-color: @backgroundHighlights;
+      background-color: @backgroundHighlights e("\9");
+}
+
+.btn.disabled,
+.btn[disabled] {
+  background-color: @backgroundHighlights;
+}
+
+
+.btn-inverse,
+.btn-inverse:hover {
+  color: @background;
+  text-shadow: none;
+}
+
+
+// Code 
+// -----------------------------
+code,
+pre {
+  color: @bodytext;
+}
+
+// Inline code
+code {
+  color: @emphasis;
+  background-color: @inlineCodeBackground;
+  border: 1px solid @comments;
+}
+
+// Blocks of code
+pre {
+  background-color: @codeBackground;
+  border: 1px solid @comments; // fallback for IE7-8
+}
+
+
+// Tables
+//-----------------------------
+table {
+  width: 100%;
+  margin-bottom: @baseLineHeight;
+  // Cells
+  th,
+  td {
+    padding: 8px;
+    line-height: @baseLineHeight;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid @tableBorder;
+  }
+  th {
+    font-weight: bold;
+  }
+  // Bottom align for column headings
+  thead th {
+    vertical-align: bottom;
+  }
+  // Remove top border from thead by default
+  caption + thead tr:first-child th,
+  caption + thead tr:first-child td,
+  colgroup + thead tr:first-child th,
+  colgroup + thead tr:first-child td,
+  thead:first-child tr:first-child th,
+  thead:first-child tr:first-child td {
+    border-top: 0;
+  }
+  // Account for multiple tbody instances
+  tbody + tbody {
+    border-top: 2px solid @tableBorder;
+  }
+
+  // Enable hover effect on all tables
+  tbody tr:hover td,
+  tbody tr:hover th {
+    background-color: @tableBackgroundHover;
+  }
+}
+
+
+// Types
+//-----------------------------------------
+
+p {
+   small {
+    color: @textColor;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  small {
+    color: @textColor;
+  }
+}
+
+hr {
+  border-top: 1px solid @hrBorder;
+  border-bottom: 1px solid @background;
+}
+
+.muted {
+  color: @comments;
+}
+
+blockquote {
+  border-left: 5px solid @backgroundHighlights;
+  small {
+    color: @backgroundHighlights;
+  }
+}
+

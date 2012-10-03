@@ -1,5 +1,6 @@
 BOOTSTRAP = ./css/bootstrap.css
-BOOTSTRAP_LESS = ./less/bootstrap.less
+BOOTSTRAP_LESS = ./less/swatchmaker.less
+#BOOTSTRAP_LESS = ./less/bootstrap.less
 BOOTSTRAP_RESPONSIVE = ./css/bootstrap-responsive.css
 BOOTSTRAP_RESPONSIVE_LESS = ./less/responsive.less
 DATE=$(shell date +%I:%M%p)
