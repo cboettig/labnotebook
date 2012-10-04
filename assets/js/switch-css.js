@@ -1,9 +1,54 @@
-// *** TO BE CUSTOMISED ***
+/*
+
+Use: Add input toggles such as:
+
+    <form>
+      <input type="submit" onclick="switch_style('dark');return false;" name="theme" value="dark theme" id="dark" class="btn btn-mini pull-right"> 
+      <input type="submit" onclick="switch_style('light');return false;" name="theme" value="light theme" id="light" class="btn btn-mini pull-right">
+    </form>
+
+to the html.  Also modify the <body> tag to load the cookie for persistant styles:
+
+    <body  onload="set_style_from_cookie()"> <!-- Get persistent theme from the cookie -->
+
+Also be sure to include the javascript (can be in footer?):
+
+    <script type="text/javascript" src="{{ site.url }}/assets/js/switch-css.js"></script>
+
+*/
+
 
 var style_cookie_name = "style" ;
 var style_cookie_duration = 30 ;
 
-// *** END OF CUSTOMISABLE SECTION ***
+function set_cookie ( cookie_name, cookie_value,
+    lifespan_in_days, valid_domain )
+{
+    // http://www.thesitewizard.com/javascripts/cookies.shtml
+    var domain_string = valid_domain ?
+                       ("; domain=" + valid_domain) : '' ;
+    document.cookie = cookie_name +
+                       "=" + encodeURIComponent( cookie_value ) +
+                       "; max-age=" + 60 * 60 *
+                       24 * lifespan_in_days +
+                       "; path=/" + domain_string ;
+}
+
+function get_cookie(c_name)
+{
+  var i,x,y,ARRcookies=document.cookie.split(";");
+  for (i=0;i<ARRcookies.length;i++)
+  {
+    x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+    y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+    x=x.replace(/^\s+|\s+$/g,"");
+    if (x==c_name)
+      {
+      return unescape(y);
+      }
+    }
+}
+
 
 function switch_style ( css_title )
 {
@@ -24,35 +69,17 @@ function switch_style ( css_title )
       style_cookie_duration );
   }
 }
+
+
 function set_style_from_cookie()
 {
   var css_title = get_cookie( style_cookie_name );
-  if (css_title.length) {
-    switch_style( css_title );
+  if (css_title.length > 0) {
+    switch_style(css_title);
   }
 }
-function set_cookie ( cookie_name, cookie_value,
-    lifespan_in_days, valid_domain )
+
+function load()
 {
-    // http://www.thesitewizard.com/javascripts/cookies.shtml
-    var domain_string = valid_domain ?
-                       ("; domain=" + valid_domain) : '' ;
-    document.cookie = cookie_name +
-                       "=" + encodeURIComponent( cookie_value ) +
-                       "; max-age=" + 60 * 60 *
-                       24 * lifespan_in_days +
-                       "; path=/" + domain_string ;
-}
-function get_cookie ( cookie_name )
-{
-    // http://www.thesitewizard.com/javascripts/cookies.shtml
-    var cookie_string = document.cookie ;
-    if (cookie_string.length != 0) {
-        var cookie_value = cookie_string.match (
-                        '(^|;)[\s]*' +
-                        cookie_name +
-                        '=([^;]*)' );
-        return decodeURIComponent ( cookie_value[2] ) ;
-    }
-    return '' ;
+  alert("Page is loaded");
 }
