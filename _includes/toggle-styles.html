@@ -1,0 +1,16 @@
+
+<script type="text/javascript">
+var plusmin = 1;
+$(document).ready(function() {
+  // when click on the element with id="togglestyle"
+  $('#togglestyle').click(function(){
+    plusmin *= -1;        // change the polarity of "plusmin" var
+    var stl = plusmin>0 ? '{{ site.url }}/assets/css/light.css' : '{{ site.url }}/assets/css/dark.css';     // sets the css file, according to plusmin
+
+    // change the css file of the tag with id="stl" and rel="stylesheet"
+    $('#stl[rel=stylesheet]').attr('href', stl);
+  });
+});
+</script>
+
+
