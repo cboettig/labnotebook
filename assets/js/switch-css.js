@@ -3,18 +3,16 @@
 Use: Add input toggles such as:
 
     <form>
-      <input type="submit" onclick="switch_style('dark');return false;" name="theme" value="dark theme" id="dark" class="btn btn-mini pull-right"> 
-      <input type="submit" onclick="switch_style('light');return false;" name="theme" value="light theme" id="light" class="btn btn-mini pull-right">
+      <input type="submit" onclick="switch_style('dark');return false;" 
+             name="theme" value="dark" id="dark" class="btn btn-mini pull-right"> 
+      <input type="submit" onclick="switch_style('light');return false;" 
+             name="theme" value="light" id="light" class="btn btn-mini pull-right">
     </form>
 
-to the html.  Also modify the <body> tag to load the cookie for persistant styles:
-
-    <body  onload="set_style_from_cookie()"> <!-- Get persistent theme from the cookie -->
-
-Also be sure to include the javascript (can be in footer?):
+into the relevant html. Also be sure to include the javascript in the header so that css changes automatically first. 
 
     <script type="text/javascript" src="{{ site.url }}/assets/js/switch-css.js"></script>
-
+    <script type="text/javascript"> set_style_from_cookie(); </script> 
 */
 
 
