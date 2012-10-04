@@ -61,10 +61,14 @@ module Jekyll
       out = "<ul>"
       for i in 0 ... repo.size
         out = out + "<li>" +
-          "<a href=\"" + repo[i].commit.url + "\">" +
-          repo[i].commit.message +
+          repo[i].commit.message + " " + 
+          "<a href=\"" +
+          ## Adjust the link to a proper url
+          repo[i].commit.url.gsub("api\.", "").gsub("repos/","").gsub("git/", "").gsub("commits/", "commit/") + 
+          "\">" + 
+          DateTime.parse(repo[i].commit.author.date).to_time.strftime("%I:%M %P %Y/%m/%d") +
           "</a>" +
-          " " + DateTime.parse(repo[i].commit.author.date).to_time.strftime("%I:%M%p %Y/%m/%d")  + "</li>"
+          + "</li>"
       end
       out = out + "</ul>"
       out
