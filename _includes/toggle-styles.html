@@ -1,3 +1,12 @@
+<!--
+Use: Add a button to toggle styles between light and dark css. e.g.
+<input type="button" class="btn btn-mini" value="light/dark theme" id="togglestyle" />
+
+And add this in _includes/footer.html or _includes/javascript.html, eg
+{% include switch-styles.html %}
+
+Alternate method: see switch-css.js 
+-->
 
 <script type="text/javascript">
 var plusmin = 1;
@@ -12,5 +21,3 @@ $(document).ready(function() {
   });
 });
 </script>
-
-
