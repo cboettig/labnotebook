@@ -40,4 +40,6 @@ Here are a few screenshots in the different themes, varying the codeblock colors
 * Button text doesn't render well in the dark theme
 * My flickr-hosted figures render with a white background even if I generate transparent-background pngs, since flickr converts them to jpg.
 
+## Updates
 
+* I have added a little javascript to allow the user to toggle the theme between dark and light (see [switch-css.js](https://github.com/cboettig/labnotebook/blob/master/assets/js/switch-css.js))

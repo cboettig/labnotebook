@@ -12,13 +12,13 @@ I am a graduate student with
 Davis, working on regime shifts in ecology and evolution. Such shifts mark the
 most dramatic events in complex systems; understanding and forecasting these 
 events challenges the capacity of both our statistical methods and the data 
-available. My [research](http://www.carlboettiger.info/research) aims to extend
+available. My research aims to extend
 and quantify the limits of understanding through uncertainty modeling, high
 performance computing and large data sets. I am funded by a DoE Computational 
 Science Graduate Fellowship
-([CSGF](https://www.krellinst.org/csgf/community/fellows/profile?n=boettiger)).
+([CSGF](https://www.krellinst.org/csgf)).
 I keep an open [lab notebook](http://www.carlboettiger.info/lab-notebook.html),
-as I describe in this (updated)
+as I describe in this 
 [introduction](http://www.carlboettiger.info/2012/09/28/Welcome-to-my-lab-notebook.html).
 
 

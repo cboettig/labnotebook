@@ -68,7 +68,7 @@ module Jekyll
           "\">" + 
           DateTime.parse(repo[i].commit.author.date).to_time.strftime("%I:%M %P %Y/%m/%d") +
           "</a>" +
-          + "</li>"
+          "</li>"
       end
       out = out + "</ul>"
       out

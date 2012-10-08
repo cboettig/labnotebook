@@ -5,19 +5,9 @@ categories: evolution
 ---
 
 
-
-
-
- 
-
-
-
-
-
 iEvoBio Submission
 ------------------
 
-[Official submission as pdf.](/images/4/46/Ievobio.pdf "Ievobio.pdf")
 
 ### Quantifying Information in a Phylogenetic Tree: The Robustness of Phylogenetic Signal
 
@@ -51,35 +41,29 @@ open source software package for addressing these issues. In the spirit
 of the conference, this research and code are being developed and
 released in the open under GPL-v3.0 and Creative Commons by-sa licenses.
 
-\
-
-\
 
 1.  NESCent proposal style topics:
 
 ### Possible topics
 
-\1. Comparative Methods Workflow in R -- hackathon
+1. Comparative Methods Workflow in R hackathon
 
 -   Interfaces between programs
 -   Extensibility of existing software
 -   Redundancy of approaches
 -   User / developer dialog and interface
 
-\2. Reliability: evaluating the robustness of current methods
+2. Reliability: evaluating the robustness of current methods
 
 -   Model choice criteria
 -   Robustness to assumptions in tree, etc
 
-\3. Future of methods
+3. Future of methods
 
 -   Bayesian implementations
 -   High-dimensional data
 -   databases, standards
 
-\
-
-\
 
 Research
 --------
@@ -98,7 +82,6 @@ Seminars
 2.  Mendeley Shared Collection
 3.  Cite-U-Like group
 
-\
 
 Notes
 -----
@@ -106,7 +89,7 @@ Notes
 -   inclusion embedding (of Nescent ideas) done using curly brace
     transclusion, and
 
-~~~~ {.de1}
+~~~~ 
 <onlyinclude> </onlyinclude>
 <noinclude> </noinclude>
 ~~~~
@@ -115,5 +98,4 @@ See [wikimedia
 information](http://en.wikipedia.org/wiki/Wikipedia:Transclusion "http://en.wikipedia.org/wiki/Wikipedia:Transclusion")
 for more details.
 
-\
 
