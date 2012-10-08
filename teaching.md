@@ -53,7 +53,7 @@ learning, technology and biology. I've worked with middle school
 teachers on how to use simple computer simulation software
 ([netlogo](http://ccl.northwestern.edu/netlogo/)) to provide an
 exploratory approach to teaching ecology and evolution in the [SIRC
-program](http://sasp.ucdavis.edu/event/2011-12/science-river-city-sirc),
+program](http://sasp.ucdavis.edu),
 and have given guest lecture on ecological dynamics at [University of
 the Pacific](http://www.carlboettiger.info/archives/843). I'm a
 [member](http://www.nationallabnetwork.org/scientists/b1412e8c-1348-f09a-d368-919e80c4ee07)
@@ -76,7 +76,7 @@ interested educational research and a scientific approach to education,
 and as such try to follow a bit of what is going on in the educational
 literature. The papers mentioned above provide some of the foundational
 philosophy towards education. I maintain a [Mendeley reading
-list](http://www.mendeley.com/research-papers/collections/2520191/Education/)
+list](http://www.mendeley.com/groups/530011/education)
 of articles I encounter that may be of interest to others wanting to
 know more about educational research.
 [![floatright](http://carlboettiger.info/wp-content/uploads/2010/09/001_31.png "rss")](http://www.mendeley.com/groups/530011/education/feed/rss)
