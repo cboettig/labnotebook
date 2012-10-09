@@ -24,15 +24,15 @@ tags:
 
 
 	
-  * State equation: $ \dot x = x \exp \left( \alpha \left(1-\frac{x}{K}\right) \left( \frac{x-C}{K} \right) \right) - x h $
+  * State equation: $\dot x = x \exp \left( \alpha \left(1-\frac{x}{K}\right) \left( \frac{x-C}{K} \right) \right) - x h$
 
 
 	
-  * Utility function $ \pi(h, x, t) = \frac{h^{1+\gamma}}{1+\gamma} $
+  * Utility function $\pi(h, x, t) = \frac{h^{1+\gamma}}{1+\gamma}$
 
 
 	
-  * Boundary constraints: $ x(0) = X_0 \qquad x(T) = X_T $
+  * Boundary constraints: $x(0) = X_0 \qquad x(T) = X_T$
 
 
 
@@ -43,7 +43,7 @@ See problem statement and analytic BVP formulation details in [this post](http:/
 ![]( http://farm7.staticflickr.com/6232/6286772118_872b47a7f7_o.png )
 
 
-Decreasing the ecological dynamics timescale (growth rate $ \alpha $ ) leads to less fishing eventually but also slower decrease in fishing rate:
+Decreasing the ecological dynamics timescale (growth rate $\alpha$ ) leads to less fishing eventually but also slower decrease in fishing rate:
 
 ![]( http://farm7.staticflickr.com/6046/6286772066_b37c2e7588_o.png )
 

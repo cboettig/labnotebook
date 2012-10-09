@@ -70,7 +70,7 @@ Newton's.  Estimating Jacobian/Hessian by Quasi-Newton (Secant) approach.  e.g
 #### Inequality-Constrained Optimization:
 
 
-define Active set $ \mathcal A $ of constraints.  if $ c_i(x) \geq 0 $ then active when $ \lambda_i^* \geq 0 $, e.g. active for $ i \in \mathcal{A} $. If in the active set, can treat as equality, otherwise constraint is removed from Lagrangian.
+define Active set $\mathcal A$ of constraints.  if $c_i(x) \geq 0$ then active when $\lambda_i^* \geq 0$, e.g. active for $i \in \mathcal{A}$. If in the active set, can treat as equality, otherwise constraint is removed from Lagrangian.
 
 
 #### Quadratic Programming:
@@ -81,10 +81,10 @@ If we have
 
 
 	
-  * quadratic objective $ F(x) = g^T x + \frac{1}{2} x^T H x $, $ H $ positive-definite.  ($ H = 0 $ becomes a LP problem).
+  * quadratic objective $F(x) = g^T x + \frac{1}{2} x^T H x$, $H$ positive-definite.  ($H = 0$ becomes a LP problem).
 
 	
-  * linear constraints $ Ax = a, Bx \geq b $
+  * linear constraints $Ax = a, Bx \geq b$
 
 
 An active set algorithm:
@@ -93,7 +93,7 @@ An active set algorithm:
   1. Newton-minimize the active set Lagrangian (as equalities).
 
 	
-  2. Take the largest step in direction $ p $ that doesn't violate the inactive set. (step size $ \alpha  < 1 $ in $ \bar x = x + \alpha p $
+  2. Take the largest step in direction $p$ that doesn't violate the inactive set. (step size $\alpha  < 1$ in $\bar x = x + \alpha p$
 
 	
   3. If the step is restricted by inactive set, add to active set and repeat.
@@ -128,7 +128,7 @@ An active set algorithm:
 #### Nonlinear Programming
 
 
-minimize objective $ F(x)  $ subject to $ m $ constraints $ c_L \leq c(x) \leq c_U $ and the simple bounds $ x_L \leq x \leq x_U$ .
+minimize objective $F(x)$ subject to $m$ constraints $c_L \leq c(x) \leq c_U$ and the simple bounds $x_L \leq x \leq x_U$ .
 
 
 
@@ -183,38 +183,38 @@ Judd, K. L. (1998). _Numerical Methods in Economics._ The MIT Press. Retrieved 
 
 $$\max_u \int_O^T e^{\rho t} \pi(x,u,t) dt + W(x(T)) $$
 
-s.t. $ \dot x = f(x,u,t) $
+s.t. $\dot x = f(x,u,t)$
 
-$ x(0) = x_0 $
+$x(0) = x_0$
 
 Where we have:
 
 
 
 	
-  * $ n $ state variables $x \in R^n$,
+  * $n$ state variables $x \in R^n$,
 
 	
-  * $ m $ controls $ u \in R^m $,
+  * $m$ controls $u \in R^m$,
 
 	
-  * a discount rate $ \rho $,
+  * a discount rate $\rho$,
 
 	
-  * a rate of payoff $ \pi(x,u,t) : R^n \times R^m \times R \to R $, (a.k.a. the utility function)
+  * a rate of payoff $\pi(x,u,t) : R^n \times R^m \times R \to R$, (a.k.a. the utility function)
 
 	
-  * $ W(x(T))  $, a value of the terminal state, (or otherwise this is 0, and we have terminal condition $ x(T) = x^T $
+  * $W(x(T))$, a value of the terminal state, (or otherwise this is 0, and we have terminal condition $x(T) = x^T$
 
 	
-  * and $ f $ the law of motion (biology).
+  * and $f$ the law of motion (biology).
 
 
 We can define the current-value Hamiltonian:
 
 $$ H(x, u, \lambda, t) = \pi(x,u,t) + \lambda^T f(x,u,t) $$
 
-where $ \lambda \in R^n $ are shadow prices for $ x $, subject to the costate equations:
+where $\lambda \in R^n$ are shadow prices for $x$, subject to the costate equations:
 
 $$ \dot \lambda = \rho \lambda - (\partial_x \pi + \lambda^T \partial_x f ) $$
 
@@ -224,9 +224,9 @@ and then the maximum principle implies that we get the optimal control (time-dep
 
 $$ u(t) \in \arg \max_u H(x,u, \lambda, t) $$
 
-If $ H $ is $ C^2 $ and concave in $ u $, there's a unique solution $U(x,\lambda,t) $, given by first-order condition
+If $H$ is $C^2$ and concave in $u$, there's a unique solution $U(x,\lambda,t)$, given by first-order condition
 
-$ 0 = \partial_u H(x, U(x,\lambda,t), \lambda, t) $
+$0 = \partial_u H(x, U(x,\lambda,t), \lambda, t)$
 
 which satisfies the costate equation, the law of motion, and the boundary value problem.
 

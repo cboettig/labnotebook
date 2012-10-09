@@ -14,15 +14,15 @@ tags:
 ## Optimal control
 
 
-Imagine we're trying to minimize $ J = \theta( y(t_F), t_F) $
+Imagine we're trying to minimize $J = \theta( y(t_F), t_F)$
 
-subject to both the state equations: $ \dot y = f(y(t), u(t) ) $, Note these are continuous, applying at all times $t$.
+subject to both the state equations: $\dot y = f(y(t), u(t))$, Note these are continuous, applying at all times $t$.
 
-and boundary conditions: $ \psi(y(t_F), u(t_F), t_F) = 0 $. These are discrete, applying only at fixed time $t_F $.  We have to put the continuous constraint in as an integral:
+and boundary conditions: $\psi(y(t_F), u(t_F), t_F) = 0$. These are discrete, applying only at fixed time $t_F $.  We have to put the continuous constraint in as an integral:
 
 $$ \hat J = \left[\phi + \mathbf{\nu}^T \psi \right]_{t_F} - \int_{t_I}^{t_F} \mathbf{\lambda}^T \left(\dot{\mathbf{y}} - f(\mathbf{y}(t),\mathbf{u}(t)) \right) dt $$
 
-compare to the Lagrangian minimizing $F(x) $ under the constraint $ c(\mathbf{x} ) = 0 $
+compare to the Lagrangian minimizing $F(x)$ under the constraint $c(\mathbf{x} ) = 0$
 
 $$ F(\mathbf{x}) - \mathbf{\lambda}^T \mathbf{c}(\mathbf{x}) = F(\mathbf{x}) - \sum_{i=1}^m \lambda_i c_i(\mathbf{x}) $$
 
@@ -46,8 +46,8 @@ A(t) assets at ime t,
 and f(A) the return on invested assets
 
 From the statement of the problem, we have:
-the Hamiltonian: $ H = u(c) + \lambda ( f(A) + w(t) -c ) $
-and the costate eqn: $ \dot \lambda = \lambda (\rho - f'(A) ) $
+the Hamiltonian: $H = u(c) + \lambda ( f(A) + w(t) -c )$
+and the costate eqn: $\dot \lambda = \lambda (\rho - f'(A) )$
 and bdry conditions.
 
 assuming u concave in c, the maximum principle gives us:

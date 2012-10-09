@@ -24,7 +24,7 @@ and a chance for me to remember that I'm out of practice writing recursive funct
 #### Problem setup
 
 
-We consider some discrete-time state equation for (fish stock, $ x $) under some control parameter (harvest, $h$ ): 
+We consider some discrete-time state equation for (fish stock, $x$) under some control parameter (harvest, $h$): 
 
 $$ x_{t+1} = f(x_t, h) $$
 
@@ -32,7 +32,7 @@ We again have utility function, $ \pi(h) $ for diminishing returns on fish harve
 
 $$ \max_{h_t} \sum_{t=0}^T \beta^t \pi(h) $$
 
-subject to the state equation above and some boundary conditions $x_0 = X_0, \qquad x_T = X_T $.  First-order conditions are:
+subject to the state equation above and some boundary conditions $x_0 = X_0, \qquad x_T = X_T$.  First-order conditions are:
 
 $$ U'(h_t) = \beta U'(h_{t+1}) F'(x_{t+1} ) \forall t $$
 and solution will use a dynamic programming approach of the following recursion
@@ -61,7 +61,7 @@ Trivial case of no cost at boundary, harvests everything.
 Fish remaining are whatever wasn't harvested yet:
 $$ x_{t+1} = x_t - h_t $$
 
-Cost/profit of harvesting: Profit $ p(t) $ per fish (possibly varies with year), but cost gets harder $ c h^2 $, $c << p(t) $, 
+Cost/profit of harvesting: Profit $p(t)$ per fish (possibly varies with year), but cost gets harder $c h^2$, $c << p(t)$, 
 $$ U(h) = p h - c h^2 $$
 
 The algorithm can be specified by recursion, 
