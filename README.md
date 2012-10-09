@@ -6,28 +6,40 @@ title: About this site
 
 
 
-* [carlboettiger.info](http://carlboettiger.info) is hosted by [Dreamhost](http://dreamhost.org)
-* Source files can be found in its Github repository: [labnotebook](http://github.com/cboettig/labnotebook)
-* Please report any errors or other feedback in the [Issues Tracker](https://github.com/cboettig/labnotebook/issues)
+* Site source on Github: [cboettig/labnotebook](http://github.com/cboettig/labnotebook).
+* Please [report errors or give feedback](https://github.com/cboettig/labnotebook/issues).
 
 Site Features & Credits
 =======================
 
-* Colors and syntax highlighting with [Solarized](http://ethanschoonover.com/solarized) color schemes
-* Static site generation by [Jekyll](https://github.com/mojombo/jekyll)
-* Equations rendered in [Mathjax](http://www.mathjax.org/)
-* Reproducible, formated code from [knitr](http://yihui.name/knitr/)
-* CSS generated with [twitter bootstrap](http://twitter.github.com/bootstrap/)
-* [Custom plugins](https://github.com/cboettig/jekyll-labnotebook-plugins) for Twitter, Mendeley, Github
-* Site hosting by [Dreamhost](http://dreamhost.org)
+* Colors and syntax highlighting with [Solarized](http://ethanschoonover.com/solarized) 
+* Crisp equations rendered in [Mathjax](http://www.mathjax.org/)
+* Reproducible code execution with [knitr](http://yihui.name/knitr/)
+* CSS based on [twitter bootstrap](http://twitter.github.com/bootstrap/)
+* Static site generation with [Jekyll](https://github.com/mojombo/jekyll)
+* Twitter, Mendeley & Github [custom plugins](https://github.com/cboettig/labnotebook/tree/master/_plugins)
+* [Carbon-neutral site](http://www.dreamhost.com/green.cgi) hosting by [Dreamhost](http://dreamhost.org)
 * Source code hosting on [Github](https://github.com/)
 
 
+Notebook Archiving & Data Management
+====================================
 
-Installing Jekyll
-=================
+The lab notebook is written and maintained in plain text (UTF-8) using markdown. All files are kept in a version managed repository system using [git](http://git-scm.com/), which provides unique SHA hashes to protect against corruption. Synchronized backups of the git repository are maintained on both local and remote servers (RAID 6) to protect against hardware failures, as well as on the public international software repository, Github [github.com/cboettig](https://github.com/cboettig).  Version history preserves a time-line of changes and protects against user error.  Archival copies of notebook entries shall be published annually to [figshare](http://figshare.com) where they will be assigned DOIs and preserved by the [CLOCKSS](http://www.clockss.org/clockss/Home) geopolitically distributed 12 node global archive.
 
-This site is built by Jekyll, a static site generator which creates html pages from markdown files.  These instructions for building the site from source, based on my Ubuntu 12.04 platform.  
+
+
+
+Building from source
+====================
+
+This site is built by Jekyll, a static site generator which creates html pages from markdown files.  Here are the instructions for building the site from source, based on my Ubuntu 12.04 platform.  Feel free to adapt this configuration to your own needs.  
+
+Clone the site source-code from github:
+
+```bash
+git clone https://github.com/cboettig/labnotebook.git
+```
 
 
 Install Ruby version >= 1.9
@@ -83,4 +95,5 @@ Plugins are provided in the site source, so cloning this repository will give yo
 License
 -------
 
-[CC0](http://creativecommons.org/publicdomain/zero/1.0/)
+All original content is licensed under the Creative Commons Zero license, [CC0](http://creativecommons.org/publicdomain/zero/1.0/)
+
