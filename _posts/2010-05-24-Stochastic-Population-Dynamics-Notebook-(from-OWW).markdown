@@ -68,26 +68,26 @@ Reading
 
 A couple good articles today, see Mendeley for details.
 
-﻿1. Goel AK, Vattam SS, Rugaber S, et al. Learning Functional and Causal
+1. Goel AK, Vattam SS, Rugaber S, et al. Learning Functional and Causal
 Abstractions of Classroom Aquaria The SBF Theory of Understanding of
 Complex Systems ACT : Interactive Construction of SBF Models. In Review.
 2010.
 
-\2. Crutchfield JP, Whalen S. Structural Drift : The Population Dynamics
+2. Crutchfield JP, Whalen S. Structural Drift : The Population Dynamics
 of Sequential Learning. In review. 2010:1-14.
 
-\3. Raghib M, Hill Na, Dieckmann U. A multiscale maximum entropy moment
+3. Raghib M, Hill Na, Dieckmann U. A multiscale maximum entropy moment
 closure for locally regulated space-time point process models of
 population dynamics. Journal of mathematical biology. 2010. Available
 at:
 [http://www.ncbi.nlm.nih.gov/pubmed/20446087](http://www.ncbi.nlm.nih.gov/pubmed/20446087 "http://www.ncbi.nlm.nih.gov/pubmed/20446087").
 
-\4. Lindegren M, Möllmann C, Nielsen A, et al. Ecological forecasting
+4. Lindegren M, Möllmann C, Nielsen A, et al. Ecological forecasting
 under climate change: the case of Baltic cod. Proceedings. Biological
 sciences / The Royal Society. 2010. Available at:
 [http://www.ncbi.nlm.nih.gov/pubmed/20236982](http://www.ncbi.nlm.nih.gov/pubmed/20236982 "http://www.ncbi.nlm.nih.gov/pubmed/20236982").
 
-\5. Berkley Ha, Kendall BE, Mitarai S, Siegel Da. Turbulent dispersal
+5. Berkley Ha, Kendall BE, Mitarai S, Siegel Da. Turbulent dispersal
 promotes species coexistence. Ecology Letters. 2010;13(3):360-371.
 Available at:
 [http://blackwell-synergy.com/doi/abs/10.1111/j.1461-0248.2009.01427.x](http://blackwell-synergy.com/doi/abs/10.1111/j.1461-0248.2009.01427.x "http://blackwell-synergy.com/doi/abs/10.1111/j.1461-0248.2009.01427.x").

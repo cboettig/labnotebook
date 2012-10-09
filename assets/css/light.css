@@ -6601,6 +6601,58 @@ img {
   }
 }
 
+@page  {
+  margin: 1in;
+  size: 8.5in 11in;
+  widows: 2;
+  orphans: 4;
+}
+
+@media print {
+  .content {
+    font-size: 110%;
+  }
+  table {
+    page-break-inside: avoid;
+  }
+  img {
+    page-break-inside: avoid;
+  }
+  div.figure {
+    page-break-inside: avoid;
+  }
+  span {
+    page-break-inside: avoid;
+  }
+  .container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  body {
+    width: 7in !important;
+    max-width: 7in !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    color: #ccc;
+    background-color: #fff;
+  }
+  .navbar,
+  .footer,
+  .sidebar,
+  .disqus {
+    display: none !important;
+  }
+  hr {
+    width: 80% !important;
+    height: 0 !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    color: #ccc !important;
+    background: #ccc !important;
+    border-top: 1px solid #ccc !important;
+  }
+}
+
 .btn {
   text-shadow: none;
 }

@@ -46,7 +46,7 @@ released in the open under GPL-v3.0 and Creative Commons by-sa licenses.
 
 ### Possible topics
 
-1. Comparative Methods Workflow in R hackathon
+1. Comparative Methods Workflow hackathon
 
 -   Interfaces between programs
 -   Extensibility of existing software
