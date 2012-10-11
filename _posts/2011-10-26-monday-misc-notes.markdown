@@ -44,25 +44,29 @@ lunch with Alan & visiting professor from Ottowa, [Frithjof Lutscher](http://mys
   * Some git notes:  The quick git-undo for a destroyed file:
 
 
-[code]git checkout filename
+```bash
+git checkout filename
 ```
 
 
 This will checkout the file from HEAD, overwriting your change. If you've already committed changes, you need to go up one previous from head, using
 
-[code]git checkout HEAD^ filename
+```bash
+git checkout HEAD^ filename
 ```
 
 
 Or for two commits back,
 
-[code]git checkout HEAD^^ filename
+```bash
+git checkout HEAD^^ filename
 ```
 
 
 This command is also used to checkout branches, and you could happen to have a file with the same name as a branch. All is not lost, you will simply need to type:
 
-[code]git checkout -- filename
+```bash
+git checkout -- filename
 ```
 
 

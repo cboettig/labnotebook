@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: ecology
-tags: [decision-theory, pdg_control]
+tags: [decision-theory, PDG Control]
 
 
 ---
