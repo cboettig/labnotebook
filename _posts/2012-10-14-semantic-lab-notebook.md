@@ -44,7 +44,7 @@ Microdata introduces new attributes into HTML tags like `<div>`, `<span>`, `<h1>
 ```
 
 
-where the terms such as `name` and `url` have precise meanings attached to "Person", as specified at the "http://data-vocabulary.org/Address".  This ability to point to an external vocabulary is really the key concept of linked data.  In the spirit of HTML5, microdata is much simpler than RDFa, but also more limited.  [Here is an excellent comparison](http://manu.sporny.org/2011/uber-comparison-rdfa-md-uf/), but for our purposes we will use RDFa as it is more common in academic use and will more seemlessly allow us to use academic ontologies.  (While microdata has a clear mapping to RDF, it is not clear that any ontology that can be expressed in RDF can also be expressed in microdata).  
+where the terms such as `name` and `url` have precise meanings attached to "Person", as specified at the "http://data-vocabulary.org/Address".  This ability to point to an external vocabulary is really the key concept of linked data.  In the spirit of HTML5, microdata is much simpler than RDFa, but also more limited.  [Here is an excellent comparison](http://manu.sporny.org/2011/uber-comparison-rdfa-md-uf/), but for our purposes we will use RDFa as it is more common in academic use and will more seamlessly allow us to use academic ontologies.  (While microdata has a clear mapping to RDF, it is not clear that any ontology that can be expressed in RDF can also be expressed in microdata).  
 
 ### RDFa
 
@@ -71,19 +71,34 @@ Two older options lie at either extreme: the most basic is the older technique o
 
 An essential caveat is that these are all new approaches which may not render well in legacy browsers, particularly Windows Internet Explorer.  Some of these, like recognizing and styling the HTML5 semantic elements in IE, can be addressed in CSS, for which Twitter Bootstrap does a decent job.  Another caveat The HTML5 spec has not been finalized, and some things are still in flux, as the [removal](http://html5doctor.com/time-and-data-element/) and [reinstatement](http://www.brucelawson.co.uk/2012/best-of-time/) of the `<time>` element illustrates.  
 
+### Useful tools for checking implementation
+
+* [W3C HTML5 Validator](http://validator.w3.org/nu)
+* [Google rich snippets](http://www.google.com/webmasters/tools/richsnippets)
+* [RDF extraction tool](http://sparql.captsolo.net/browser/browser.py?url=http://www.w3.org/2007/08/pyRdfa/extract?uri=http://carlboettiger.info)
 
 Scholarly Semantic Markup for the Notebook
 ==========================================
 
 Now that we've familiarized ourselves with the options, it's time to see what semantic content we can implement. 
 
-* Page structure - HTML5
-* Blog structure - microdata from http://schema.org/BlogPosting, or Dublin Core?
-* Author metadata - foaf (Name, contact info, social networks, interests, publications).
-* Licenses - http://creativecommons/ns#  
-* Citations - SPAR ontologies, including purl.org/spar/CiTO, purl.org/spar/biro.  Also purl.org/ontologies/bibo, DC
-* Ecological data - EML http://knb.ecoinformatics.org/software/eml/
-* Taxonomic data - Darwin Core
+Content/Data      Example types               Links to Potential vocabularies
+------------      -------------               -------------------------------------------
+Page structure    `<header>`                  [HTML5](http://diveintohtml5.info/semantics.html)
+Post metadata     keywords, timestamps        [Schema.org microdata](http://schema.org/BlogPosting) or [Dublin Core](http://purl.org/terms/dc)
+Author metadata   Name, contact, networks,    [FOAF](http://xmlns.com/foaf/0.1/), [Dublin Core](http://purl.org/terms/dc)
+                  interests, publications) 
+Licenses          CC0                         [CreativeCommons](http://creativecommons.org/ns)
+Citations         bib info, reason for citing [CiTO](http://purl.org/spar/cito), [BiRO](http://purl.org/spar/biro), 
+                                              [bibo](http://purl.org/ontologies/bibo), [Dublin Core](http://purl.org/terms/dc)
+Taxonomic data    species names               [Darwin Core](http://rs.tdwg.org/dwc/terms/index.htm)
+Ecological data   datasets, software, methods [EML](http://knb.ecoinformatics.org/software/eml/)
 
-In another entry I will try and highlight where and what semantic content I have added.  HTML templates with Jekyll tags may be able to pull the actual values in from `_config.yaml` and the yaml headers, preserving the Jekyll ethos Markdown and YAML: human readable source without cluttered markup.  
+
+In another entry I will try and highlight where and what semantic content I have added (work in progress), with examples of each vocabulary.  The first four types are relatively static content that can be easily woven into the Jekyll template files.  Using Jekyll & Liquid to pull in template information from the `_config.yaml` should help avoid repetitive entry and make updating the linked data easier. The last three are entry-specific content, and will be more challenging.  I hope to add semantic support to [knitcitations](), including the option for CiTO types, which should make entry of citation data quick and easy ([SO question illustrating semantic citation](http://stackoverflow.com/questions/12867586)). 
+
+The last two are much richer, specific vocabularies.  For the moment, it might be best to use these to give more precise meaning to tags, which are already used as metadata on posts.  This would allow posts to be still created in simple markdown without the burden of adding in lines of RDFa and cluttering the markup.  Meanwhile full datasets provided in EML are likely to live as separate files, rather than as a random table in the middle of a notebook entry.  
+
+As always, feedback, corrections or suggestions are appreciated!
+
 

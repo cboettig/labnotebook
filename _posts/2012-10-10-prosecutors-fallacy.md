@@ -3,7 +3,6 @@ layout: post
 title: My Prosecutor's Fallacy paper and other recent warning signals literature
 categories: ecology
 tags: [warning-signals, my-publications, reading]
-published: false
 
 ---
 
