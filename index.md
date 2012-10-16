@@ -23,7 +23,7 @@ as I describe in this
 
 
 <ul class="unstyled" style="font-size:.8em;line-height=.8em">
-<li style="margin:-6px"> Office: 3156 <a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=wickson+Hall+UC+Davis,+Davis+CA&sll=37.0625,-95.677068&sspn=29.025693,65.390625&ie=UTF8&hq=wickson+Hall&hnear=University+of+California+Davis,+Davis,+Yolo,+California+95616&ll=38.542082,-121.751679&spn=0.003281,0.007982&t=h&z=17">Wickson Hall</a> 
+<li style="margin:-6px"> Office: 3156 <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=wickson+Hall+UC+Davis,+Davis+CA&amp;sll=37.0625,-95.677068&amp;sspn=29.025693,65.390625&amp;ie=UTF8&amp;hq=wickson+Hall&amp;hnear=University+of+California+Davis,+Davis,+Yolo,+California+95616&amp;ll=38.542082,-121.751679&amp;spn=0.003281,0.007982&amp;t=h&amp;z=17">Wickson Hall</a> 
 <li style="margin:-6px"> Mail: EVE Dept, UC Davis 1 Shields Ave, Davis CA 95616 </li>
 <li style="margin:-6px"> Email &amp; online networks: linked from icons below. </li>
 </ul>

@@ -95,5 +95,10 @@ Plugins are provided in the site source, so cloning this repository will give yo
 License
 -------
 
-All original content is licensed under the Creative Commons Zero license, [CC0](http://creativecommons.org/publicdomain/zero/1.0/)
+All original content is licensed by Carl Boettiger under the Creative Commons Zero license, [CC0](http://creativecommons.org/publicdomain/zero/1.0/).  This license is uniquely appropriate for data, code, and written content, and facilitates distribution & reuse.  Attribution or citation are appreciated where appropriate as proper scholarly practice.  (Newton, Darwin, and Shakespeare are similarly in the public domain, but no less cited for it).  Please cite or attribute this work as:
+
+<div vocab="http://purl.org/dc/terms/" typeof="bibliographicCitation">
+<span property="creator">Carl Boettiger</span> <span property="date">2012</span> <span property="title">Open Lab Notebook</span>, <a href="http://carlboettiger.info">http://carlboettiger.info</a> 
+</div>
+
 
