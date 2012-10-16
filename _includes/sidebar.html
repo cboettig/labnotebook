@@ -1,5 +1,6 @@
+<aside itemscope itemtype="http://schema.org/BlogPosting">
 Posted on
-<time pubdate datetime="{{ page.date | date_to_xmlschema }}" 
+<time datetime="{{ page.date | date_to_xmlschema }}" 
       itemprop="datePublished">{{ page.date | date_to_string }}</time>.
 <br />
 {% include nextprevious.html %}
@@ -8,4 +9,4 @@ Posted on
 <br />
 <br />
 {% include pagetags.html %}
-
+</aside>

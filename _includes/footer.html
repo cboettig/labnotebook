@@ -4,12 +4,12 @@
     <input type="submit" onclick="switch_style('light');return false;" name="theme" value="light" id="light" class="btn btn-mini pull-right">
   </form>
           <div class="row">
-            <div class="span4">
+            <div class="span4" vocab="http://xmlns.com/foaf/0.1/" typeof="Person">
               <!-- <a href="mailto:cboettig@gmail.com"><i class="icon-envelope"></i></a> -->
-              <a href="mailto:cboettig@gmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="{{site.url}}/assets/img/icon-email.png" alt="email"> </a> 
-              <a href="https://twitter.com/cboettig" onClick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><img src="{{site.url}}/assets/img/icon-twitter.png" alt="twitter"> </a> 
-              <a href="https://github.com/cboettig" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="{{site.url}}/assets/img/icon-github.png" alt="github"> </a> 
-              <a href="http://www.mendeley.com/profiles/carl-boettiger" onClick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); return false;"><img src="{{site.url}}/assets/img/icon-mendeley.png" alt="mendeley"></a> 
+              <a property="account" href="mailto:cboettig@gmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="{{site.url}}/assets/img/icon-email.png" alt="email"> </a>
+              <a property="account" href="https://twitter.com/cboettig" onClick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><img src="{{site.url}}/assets/img/icon-twitter.png" alt="twitter"> </a> 
+              <a property="account" href="https://github.com/cboettig" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="{{site.url}}/assets/img/icon-github.png" alt="github"> </a> 
+              <a property="account" href="http://www.mendeley.com/profiles/carl-boettiger" onClick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); return false;"><img src="{{site.url}}/assets/img/icon-mendeley.png" alt="mendeley"></a> 
         <a href="{{ site.url }}/atom.xml" onClick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.png" alt="feed"></a>
             </div>
             <div class="span2" style="text-align:center">
@@ -18,7 +18,7 @@
                 ><img src="http://onsclaims.wikispaces.com/file/view/ons-aci2-icon.png" alt="ONS"></a> 
             </div>
             <div class="span4">
-              <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/" onClick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0" style="float:right"></a> 
+              <a property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onClick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0" style="float:right"></a> 
             </div>
         </div>
       </footer>
