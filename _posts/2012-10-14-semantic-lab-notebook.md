@@ -48,7 +48,7 @@ where the terms such as `name` and `url` have precise meanings attached to "Pers
 
 ### RDFa
 
-RDFa can be written in a very similar manner.  The `itemprop` attribute is replaced by the `property` attribute, and `vocab` replaces `itemtype` and automatically implies `itemscope` to child nodes.  
+[RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/) can be written in a very similar manner.  The `itemprop` attribute is replaced by the `property` attribute, and `vocab` replaces `itemtype` and automatically implies `itemscope` to child nodes.  
 
 
 ```html
@@ -95,7 +95,7 @@ Taxonomic data    species names               [Darwin Core](http://rs.tdwg.org/d
 Ecological data   datasets, software, methods [EML](http://knb.ecoinformatics.org/software/eml/)
 
 
-In another entry I will try and highlight where and what semantic content I have added (work in progress), with examples of each vocabulary.  The first four types are relatively static content that can be easily woven into the Jekyll template files.  Using Jekyll & Liquid to pull in template information from the `_config.yaml` should help avoid repetitive entry and make updating the linked data easier. The last three are entry-specific content, and will be more challenging.  I hope to add semantic support to [knitcitations](), including the option for CiTO types, which should make entry of citation data quick and easy ([SO question illustrating semantic citation](http://stackoverflow.com/questions/12867586)). 
+In another entry I will try and highlight where and what semantic content I have added (work in progress), with examples of each vocabulary.  The first four types are relatively static content that can be easily woven into the Jekyll template files.  Using Jekyll & Liquid to pull in template information from the `_config.yaml` should help avoid repetitive entry and make updating the linked data easier. The last three are entry-specific content, and will be more challenging.  I hope to add semantic support to [knitcitations](https://github.com/cboettig/knitcitations), including the option for CiTO types, which should make entry of citation data quick and easy ([SO question illustrating semantic citation](http://stackoverflow.com/questions/12867586)). 
 
 The last two are much richer, specific vocabularies.  For the moment, it might be best to use these to give more precise meaning to tags, which are already used as metadata on posts.  This would allow posts to be still created in simple markdown without the burden of adding in lines of RDFa and cluttering the markup.  Meanwhile full datasets provided in EML are likely to live as separate files, rather than as a random table in the middle of a notebook entry.  
 
