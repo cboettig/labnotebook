@@ -92,7 +92,7 @@ Licenses          CC0                         [CreativeCommons](http://creativec
 Citations         bib info, reason for citing [CiTO](http://purl.org/spar/cito), [BiRO](http://purl.org/spar/biro), 
                                               [bibo](http://purl.org/ontologies/bibo), [Dublin Core](http://purl.org/terms/dc)
 Taxonomic data    species names               [Darwin Core](http://rs.tdwg.org/dwc/terms/index.htm)
-Ecological data   datasets, software, methods [EML](http://knb.ecoinformatics.org/software/eml/)
+Ecological data   measurements, units, etc     ~~[EML](http://knb.ecoinformatics.org/software/eml/)~~ [OBOE](http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl)
 
 
 In another entry I will try and highlight where and what semantic content I have added (work in progress), with examples of each vocabulary.  The first four types are relatively static content that can be easily woven into the Jekyll template files.  Using Jekyll & Liquid to pull in template information from the `_config.yaml` should help avoid repetitive entry and make updating the linked data easier. The last three are entry-specific content, and will be more challenging.  I hope to add semantic support to [knitcitations](https://github.com/cboettig/knitcitations), including the option for CiTO types, which should make entry of citation data quick and easy ([SO question illustrating semantic citation](http://stackoverflow.com/questions/12867586)). 
