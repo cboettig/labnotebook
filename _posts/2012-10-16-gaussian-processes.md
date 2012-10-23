@@ -1,16 +1,21 @@
 ---
 layout: post
-title: Getting started on Gaussian processes, embedding dimensions
+title: Gaussian processes
+category: ecology
+tags: nonparametric-bayes
 
 ---
 
-* Methods tutorial/overview with Steve.  
+* Great methods tutorial/overview with Steve.  Now getting up to speed on background reading in both Gaussian processes and embedding dimensions.  
+* Will also want to look into basis approximations for SDP acceleration.  
 
 ## Gaussian Processes
 
+* New project, New tag: nonparametric-bayes, and [associated github repostitory](https://github.com/cboettig/nonparametric-bayes)
+
 ### Reading
 
-* Rasmussen & Williams (2006) 2nd ed, [full text avialable online](http://www.GaussianProcess.org/gpml), Ch 1 & 2.
+* Rasmussen & Williams (2006) 2nd ed, [full text avialable online](http://www.GaussianProcess.org/gpml). read Ch 1 & 2.
 
 > Can be thought of as a Bayesian version of Support Vector Machines
 
@@ -26,9 +31,9 @@ Also reading:
 
 ### R support:
 
-* [gptk](http://cran.r-project.org/web/packages/gptk/)
+* [gausspr](http://rss.acs.unt.edu/Rdoc/library/kernlab/html/gausspr.html), see also the [package vignette](http://cran.at.r-project.org/web/packages/kernlab/vignettes/kernlab.pdf) (From the core team, probably a reasonable starting point).
+* [gptk](http://cran.r-project.org/web/packages/gptk/) (crude choice, poor software development practices)
 * [mlegp](http://cran.r-project.org/web/packages/mlegp/vignettes/mlegp.pdf)
-* [gausspr](http://rss.acs.unt.edu/Rdoc/library/kernlab/html/gausspr.html), see also the [package vignette](http://cran.at.r-project.org/web/packages/kernlab/vignettes/kernlab.pdf)
 * [manually](http://www.r-bloggers.com/gaussian-process-regression-with-r/) (e.g. for learning rather than performance)
 
 ## Embedding dimensions

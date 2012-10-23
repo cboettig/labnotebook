@@ -1,7 +1,7 @@
-<aside itemscope itemtype="http://schema.org/BlogPosting">
+<aside prefix="dc: http://purl.org/dc/terms/">
 Posted on
 <time datetime="{{ page.date | date_to_xmlschema }}" 
-      itemprop="datePublished">{{ page.date | date_to_string }}</time>.
+      property="dc:created">{{ page.date | date_to_string }}</time>.
 <br />
 {% include nextprevious.html %}
 <br />
