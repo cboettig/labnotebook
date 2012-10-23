@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Semantic markup for the lab notebook
 category: open-science 
 tags: semantic-web
-published: false
 
 ---
 
