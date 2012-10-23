@@ -1,5 +1,5 @@
 {% for tag in page.categories %}
-  <a rel="tag" class="tag" href="{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}">#<span property="dc:subject">{{ category }}</span></a>
-  {% unless page.categories.last == tag %}, {% endunless %}
+  <a rel="tag" class="category" href="{{ site.baseurl }}/categories.html#{{ category | cgi_escape }}"><span property="dc:subject">{{ category }}</span></a>
+  {% unless page.categories.last == category %}, {% endunless %}
 {% endfor %}
 
