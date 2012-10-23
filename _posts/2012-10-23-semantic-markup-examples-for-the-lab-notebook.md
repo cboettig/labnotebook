@@ -74,6 +74,8 @@ src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0"
 style="float:right"></a>
 ```
 
+![When these elements are combined in a given entry, the RDFa generates this structure](http://carlboettiger.info/assets/figures/post-rdfa.html)
+
 ### Easily entering RDFa
 
 All of this markup content is either generally static or filled in programatically by Jekyll from the YAML headers (e.g. title, categories, tags, date), leaving me free to put the RDFa into the template files just once and forget about it.  In this way I can continue to write everything in Markdown, rather than the more cumbersome HTML riddled by the addition of RDFa attributes. Unfortunately there is no easy way to escape this in writing the Homepage markup, described below, but a single case isn't so bad.  
@@ -101,6 +103,9 @@ property="schema:jobTitle">a graduate student</span>
 
 (This excerpt gives the general flavor, see the html source of [index.html](http://carlboettiger.info) for a full example.)
 
+![The homepage generates this RDFa structured graph (from rdfa.info/play)](http://carlboettiger.info/assets/figures/homepage-rdfa.png)
+
+
 
 ## Notes
 
@@ -120,7 +125,7 @@ Mixing ontologies had me very confused.
 
 
 ### Tools and Resources
-
+* [Google rich snippets](http://www.google.com/webmasters/tools/richsnippets)
 * [rdfa extractor](http://getschema.org/rdfaliteextractor/about) (into RDF, JSON, n3).  Also has validator, but doesn't point to the `nu` variant for html5. 
 * [RDFa Play](http://rdfa.info/play/). Wow, very nice.  
 * [sameAs.org](http://sameas.org) -- search onotologies for an existing term, identify identical terms in different ontologies, etc.  Simply brilliant, what I've always wanted!
