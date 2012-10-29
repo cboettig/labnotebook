@@ -29,8 +29,11 @@
 
   {% include navbar.html %}
 
-  <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
+
+  <div class="container"> <!-- Twitter bootstrap has all body content in a container except the javascript and analytics -->
     <!-- Custom masthead (big titles) --> 
+
+    <article> <!-- includes header and entry, but not footer -->
     <header class="jumbotron subhead">
       <h1 class="entry-title">{{ page.title }}</h1>
       <p>{{ page.subtitle }}</p>
