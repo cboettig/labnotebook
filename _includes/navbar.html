@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="{{ site.url }}/README.html">  <img style="float:right;" src="{{ site.url }}/assets/img/icon-info-circle-inverted.png" alt="info"></a>
+      <a class="brand" href="{{ site.url }}/README.html">  <img style="float:right;" src="{{ site.url }}/assets/img/icon-info-circle-inverted.png" alt="info" /></a>
       <div class="nav-collapse">
         <ul class="nav">
           {% if page.url == "/index.html" %}<li class="active">{% else %}<li>{% endif %}
@@ -31,10 +31,12 @@
 
         </ul>
       </div><!--/.nav-collapse -->
-       <form class="navbar-search pull-right" method="get" action="http://google.com/search">
-         <input type="hidden" name="q" value="site:carlboettiger.info">
-         <input type="text" class="search-query" name="q">
+      <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+         <p>
+         <input type="hidden" name="q" value="site:carlboettiger.info" />
+         <input type="text" class="search-query" name="q" />
          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+         </p>
        </form>
      </div> <!-- /container -->
    </div> <!-- /navbar-inner -->
