@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
-  <head>
+  <head prefix="dc: http://purl.org/dc/terms/">
+    <!-- HTML5 metadata -->
     <meta charset="utf-8" /> <!--same as <meta http-equiv='Content-Type' content='Type=text/html; charset=utf-8'> -->
-    <title>{{ page.title }}</title>
     <meta name="author" content="Carl Boettiger" />
     <meta name="keywords" content="Ecology, Evolution, Open Science, Reproducible Research" />
     <meta name="description" content="My open lab notebook: research in theoretical ecology and evolution" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }}</title>
 
-    <!-- Le styles -->
+    <!-- RDFa Metdata (in Dublin Core) -->
+    <meta property="dc:creator" content="Carl Boettiger" />
+    <meta property="dc:title" content="{{ page.title }}" />
+    <meta property="dc:type" content="Lab Notebook" />
+    <meta property="dc:format" content="text/html" />
+    <meta property="dc:language" content="en" />
+
+    <!-- CSS Stylesheets (toggled with javascript) -->
     <link href="{{ site.url }}/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light" />
     <link href="{{ site.url }}/assets/css/dark.css" rel="alternate stylesheet" type="text/css" title="dark" />
     <!-- Javascript needed for theme toggle, load immediately -->
@@ -24,12 +31,8 @@
 
   <div class="container"> <!-- Twitter bootstrap has all body content in a container -->
     <!-- Custom masthead (big titles) --> 
-    <header class="jumbotron subhead" vocab="http://purl.org/dc/terms/">
-      <h1 class="entry-title" property="title">{{ page.title }}</h1>
-      <meta property="creator" content="Carl Boettiger" />
-      <meta property="type" content="Lab Notebook" />
-      <meta property="format" content="text/html" />
-      <meta property="language" content="en" />
+    <header class="jumbotron subhead">
+      <h1 class="entry-title">{{ page.title }}</h1>
       <p>{{ page.subtitle }}</p>
     </header>
 
