@@ -5,22 +5,27 @@ tags: semantic-web
 
 ---
 
-All notebook entries are formatted with XHTML compliant (polyglot) HTML5 semantic structure.  This means that any entry can be parsed with a generic XML parser to extract the entry content in `<article>`, the `<header>`, `<footer>`, `<aside>`, etc.  The `<head>` section provides `<title>` and essential `<meta>` tags declaring the character encoding (which also sets the MIME type for HTML5), the 
+All notebook entries are formatted with XHTML compliant (polyglot) HTML5 semantic structure.  This means that any entry can be parsed with a generic XML parser to extract the entry content in `<article>`, the `<header>`, `<footer>`, `<aside>`, etc.  The `<head>` section provides `<title>` and essential `<meta>` tags declaring the character encoding (which also sets the MIME type for HTML5).   
 
-### Header 
+### Head 
 
-In `_includes/header.html` we introduce some basic academic archive metadata using the Dublin Core ontology:
-
-
-The html5 `<header>` seems like a good place for `dc:title`.  Other metadata is added invisibly using `content` in a `meta` tag.  It is possible that the `meta` tags would be better in the `header`.  
+In `_includes/header.html` we introduce some basic academic archive metadata using the Dublin Core ontology. The html5 `<header>` seems like a good place for `dc:title`.  Other metadata is added invisibly using `content` in a `meta` tag.  
 
 ```html
-<header class="jumbotron subhead" prefix="dc: http://purl.org/dc/terms/">
-  <h1 class="entry-title" property="dc.title">{% raw %}{{ page.title }}{% endraw %}</h1>
-  <meta name="author" propery="dc.creator" content="Carl Boettiger">
-  <meta property="dc.type" content="Lab Notebook">
-  <meta property="dc.format" content="text/html">
-  <meta property="dc.language" content="en">
+<head prefix="dc: http://purl.org/dc/terms/">
+<!-- HTML5 metadata -->
+<meta charset="utf-8" /> <!--same as <meta http-equiv='Content-Type' content='Type=text/html; charset=utf-8'> -->
+<meta name="author" content="Carl Boettiger" />
+<meta name="keywords" content="Ecology, Evolution, Open Science, Reproducible Research" />
+<meta name="description" content="My open lab notebook: research in theoretical ecology and evolution" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{% raw %}{{ page.title }}{% endraw %}</title>
+<!-- RDFa Metdata (in Dublin Core) -->
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:title" content="{% raw %}{{ page.title }}{% endraw %}" />
+<meta property="dc:type" content="Lab Notebook" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
 ```
 
 ### Sidebar
