@@ -35,7 +35,7 @@ $$ \mathbf{V}_t = \mathbf{P}_e + \delta \mathbf{V}_{t+1}(y_t) $$
 
 Thus $\operatorname{max}_q V_t(y_t) = v_t$.  Starting from the final timepoint, we know the ending value $v_T$ as a function of the ending state $y_T$, but have to re-express this value in terms of the previous state to calculate $V_{T-1}$ (e.g. we need $V_T(y_{T-1})$, but we have only $\operatorname{max}_q V_T(y_T)$.  This calculation requires that we go from the vector space of $y_T$ to that of $y_{T-1}$.  The transition matrix $F$ is our rule for updating between timesteps.  Unfortunately, $F$ operates in the space of true stock $x_t \to x_{t+1}$ rather than measured stock $y$, so we must first move into the vector space of observed variables.  Actually, we have quite a lot of transitions to do.  
 
-To start, we know the optimal value $v_t$ we can get in observing state $y_T$ (from $P_e(y_T)$).  The probability of observing $y_T$ when the true stock is $x_T$ is given by $\mathbf{M}^T$. $M(x_1, y_1) v_T[y_1] +  M(x_1, y_2) v_T[y_2] + \ldots $
+To start, we know the optimal value $v_t$ we can get in observing state $y_T$ (from $P_e(y_T)$).  The probability of observing $y_T$ when the true stock is $x_T$ is given by $\mathbf{M}^T \vec v_T$, moving us into the $x$ basis. $M(x_1, y_1) v_T[y_1] +  M(x_1, y_2) v_T[y_2] + \ldots = \tilde{v}_T[x_T]$ where the tilde denotes our change of basis.  $\mathbf{F}$ generates the true stock $x_T$ from the escaped population of the previous generation, $s_{T-1}$, \mathbf{Q}_q$ takes us from the escaped stock $s_{T-1}$ 
 
 We need to express $V_{t+1}$, the value for each possible state $y(t+1)_i$ we might observe, in terms of each possible currently observed state $y(t)_i$ and currently possible control measure $h_t$.   
 
