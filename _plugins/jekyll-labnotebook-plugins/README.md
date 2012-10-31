@@ -14,7 +14,7 @@ Ruby code to adjust output appearance, etc.  As I get better with Ruby
 and Liquid I may roll these up as proper generic plugins.
 
 
-For planned extensions and work-in-progress, see [Issues](https://github.com/cboettig/jekyll-labnotebook-plugins/issues)
+For planned extensions and work-in-progress, see [Issues](https://github.com/cboettig/labnotebook/issues)
 
 ## Installation
 
