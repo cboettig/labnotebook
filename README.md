@@ -17,6 +17,7 @@ Site Features & Credits
 * Reproducible code execution with [knitr](http://yihui.name/knitr/)
 * CSS based on [twitter bootstrap](http://twitter.github.com/bootstrap/)
 * Static site generation with [Jekyll](https://github.com/mojombo/jekyll)
+* Markdown parsing with [pandoc](http://johnmacfarlane.net/pandoc/) (supporting fenced code blocks, equations, tables and output to many formats)
 * Twitter, Mendeley & Github [custom plugins](https://github.com/cboettig/labnotebook/tree/master/_plugins)
 * [Carbon-neutral site](http://www.dreamhost.com/green.cgi) hosting by [Dreamhost](http://dreamhost.org)
 * Source code hosting on [Github](https://github.com/)
@@ -26,8 +27,6 @@ Notebook Archiving & Data Management
 ====================================
 
 The lab notebook is written and maintained in plain text (UTF-8) using markdown. All files are kept in a version managed repository system using [git](http://git-scm.com/), which provides unique SHA hashes to protect against corruption. Synchronized backups of the git repository are maintained on both local and remote servers (RAID 6) to protect against hardware failures, as well as on the public international software repository, Github [github.com/cboettig](https://github.com/cboettig).  Version history preserves a time-line of changes and protects against user error.  Archival copies of notebook entries shall be published annually to [figshare](http://figshare.com) where they will be assigned DOIs and preserved by the [CLOCKSS](http://www.clockss.org/clockss/Home) geopolitically distributed 12 node global archive.
-
-
 
 
 Building from source
@@ -58,7 +57,7 @@ sudo update-alternatives --config gem
 Install Jekyll and the dependencies needed for a few plugins.
 
 ```bash
-sudo gem install jekyll redcarpet2 feedzirra nokogiri twitter octokit pandoc-ruby
+sudo gem install jekyll feedzirra nokogiri twitter octokit pandoc-ruby
 ```
 
 
@@ -71,24 +70,23 @@ The site relies on following additional ruby gems (not available on the Jekyll c
 
 #### Required Gems
 
-* [redcarpet2](https://github.com/vmg/redcarpet/) -- Providing support for [Github-flavored markdown](http://github.github.com/github-flavored-markdown/)
 * [feedzirra](https://github.com/pauldix/feedzirra) -- Grab and format rss feed information  
 * [nokogiri](https://github.com/sparklemotion/nokogiri) -- parse HTML and XML 
 * [twitter](https://github.com/sferik/twitter) Ruby bindings to the Twitter API
 * [octokit](https://github.com/pengwynn/octokit) Ruby bindings to the Github API
 * [pandoc-ruby](https://github.com/alphabetum/pandoc-ruby) Ruby implementation of pandoc markdown interpreter (an alternative to redcarpet2)
 
+Note: Markdown is wonderful, but a huge headache due to it's many flavors.  I began using [redcarpet2](https://github.com/vmg/redcarpet/) via the [redcarpet2 plugin](https://github.com/nono/Jekyll-plugins) which powers [Github-flavored markdown](http://github.github.com/github-flavored-markdown/), but have exchanged this for Pandoc.  Pandoc markdown relies on a logically consistent internal grammar (leave it to the philosphers to write mathematically rigorous parser), something the original and some adaptations seriously lack.  On a pratical note, Pandoc is useful for it's wide support of conversion to other formats, including pdf and word docs for publication.  
 
 
 #### Third Party Plugins 
 
 Plugins are provided in the site source, so cloning this repository will give you a copy of them. In addition to my own plugins, I'd like to credit other developers for the following plugins:
 
-* [redcarpet2 plugin](https://github.com/nono/Jekyll-plugins)
 * [pandoc](https://github.com/dsanson/jekyll-pandoc-plugin)
 * [redirects](https://github.com/pelosi/marran.com/blob/master/_plugins/redirects.rb)
 * [tag-cloud](https://gist.github.com/2290195) 
-* my own custom [jekyll-plugins](https://github.com/cboettig/jekyll-labnotebook-plugins)
+* my own custom [jekyll-plugins](https://github.com/cboettig/labnotebook/tree/master/_plugins/jekyll-labnotebook-plugins)
 
 
 
