@@ -16,7 +16,8 @@ publications
   [doi:10.1111/j.1095-8649.2012.03464.x](http://dx.doi.org/10.1111/j.1095-8649.2012.03464.x)
   ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md))
   ([code](https://github.com/ropensci/rfishbase)) ([software
-  package](http://cran.at.r-project.org/web/packages/rfishbase/)).
+  package](http://cran.at.r-project.org/web/packages/rfishbase/)) 
+  ([pdf](http://carlboettiger.info/assets/files/rfishbase.pdf)).
 1. Carl Boettiger, Duncan Temple Lang (2012).  **Treebase: An R
   package for discovery, access and manipulation of online
   phylogenies** In *Methods in Ecology and Evolution* (in press). 
