@@ -1,11 +1,21 @@
 genus,species,sex,commonName,authority,trait_label,trait_value,trait_units,Trait error (+/- 1 se),population,latitudePoint,longitudePoint,latitudeMin,latitudeMax,longitudeMin,longitudeMax,reference
 Drosophila,simulans,male,fruit fly,,development_time,257,hours,3,Maryborough,25deg 33m S,,25deg 33m S,25deg 33m S,,,10.1111/j.1420-9101.2008.01617.x
-Drosophila,simulans,male,fruit fly,,development_time,250,hours,3,Brisbane,27d37m S,,27d37m S,27d37m S,,,11.1111/j.1420-9101.2008.01617.x
-Drosophila,simulans,male,fruit fly,,development_time,262,hours,3,Kingscliff,28d16,,28d16,28d16,,,12.1111/j.1420-9101.2008.01617.x
-Drosophila,simulans,male,fruit fly,,development_time,255,hours,3,Red Rock,29d59,,29d59,29d59,,,13.1111/j.1420-9101.2008.01617.x
-Drosophila,simulans,male,fruit fly,,development_time,256,hours,3,Tuncurry,32d11,,32d11,32d11,,,14.1111/j.1420-9101.2008.01617.x
-Drosophila,simulans,male,fruit fly,,development_time,265,hours,3,Sydney,33d57,,33d57,33d57,,,15.1111/j.1420-9101.2008.01617.x
-Drosophila,simulans,male,fruit fly,,development_time,260,hours,3,Moruya,35d55,,35d55,35d55,,,16.1111/j.1420-9101.2008.01617.x
-Drosophila,simulans,male,fruit fly,,development_time,260,hours,1,Greensborough,37d42,,37d42,37d42,,,17.1111/j.1420-9101.2008.01617.x
-Drosophila,simulans,male,fruit fly,,development_time,266,hours,3,Legana,41d21,,41d21,41d21,,,18.1111/j.1420-9101.2008.01617.x
-Drosophila,simulans,male,fruit fly,,development_time,256,hours,3,Sorell,42d46,,42d46,42d46,,,19.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,development_time,250,hours,3,Brisbane,27d37m S,,27d37m S,27d37m S,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,development_time,262,hours,3,Kingscliff,28d16,,28d16,28d16,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,development_time,255,hours,3,Red Rock,29d59,,29d59,29d59,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,development_time,256,hours,3,Tuncurry,32d11,,32d11,32d11,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,development_time,265,hours,3,Sydney,33d57,,33d57,33d57,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,development_time,260,hours,3,Moruya,35d55,,35d55,35d55,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,development_time,260,hours,1,Greensborough,37d42,,37d42,37d42,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,development_time,266,hours,3,Legana,41d21,,41d21,41d21,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,development_time,256,hours,3,Sorell,42d46,,42d46,42d46,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,wing_size,1.93,mm,0.02,Maryborough,25deg 33m S,,25deg 33m S,25deg 33m S,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,wing_size,1.92,mm,0.02,Brisbane,27d37m S,,27d37m S,27d37m S,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,wing_size,1.93,mm,0.02,Kingscliff,28d16,,28d16,28d16,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,wing_size,1.93,mm,0.02,Red Rock,29d59,,29d59,29d59,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,wing_size,1.96,mm,0.02,Tuncurry,32d11,,32d11,32d11,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,wing_size,1.95,mm,0.02,Sydney,33d57,,33d57,33d57,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,wing_size,1.96,mm,0.02,Moruya,35d55,,35d55,35d55,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,wing_size,1.97,mm,0.02,Greensborough,37d42,,37d42,37d42,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,wing_size,1.97,mm,0.02,Legana,41d21,,41d21,41d21,,,10.1111/j.1420-9101.2008.01617.x
+Drosophila,simulans,male,fruit fly,,wing_size,1.99,mm,0.02,Sorell,42d46,,42d46,42d46,,,10.1111/j.1420-9101.2008.01617.x
