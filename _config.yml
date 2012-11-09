@@ -1,9 +1,22 @@
-title : Carl Boettiger
+## Metadata 
+title: Lab Notebook 
 tagline: Theoretical ecology and evolution
-author :
-  name : Carl Boettiger
-  email : cboettig@gmail.com
+author:
+  name: Carl Boettiger
+  email: cboettig@gmail.com
+  givenName: Carl
+  familyName: Boettiger
+  twitter: cboettig
+  github: cboettig
+  mendeley: carl-boettiger
+keywords: Science, Ecology, Evolution, Open Science, Reproducible Research
+description: My open lab notebook- research in theoretical ecology and evolution
 
+
+# these are available to liquid filters with: site.author.givenName, etc
+
+## Functional configuration 
+url: http://www.carlboettiger.info
 permalink: /:year/:month/:day/:title.html
 redirects: yes
 exclude: [ _posts/source/, _posts/_private/ ]
@@ -11,6 +24,9 @@ exclude: [ _posts/source/, _posts/_private/ ]
 markdown: pandoc
 pandoc:
    extensions: [smart, mathjax]
+
+
+analytics: UA-18401403-1
 
 #markdown: redcarpet2
 #redcarpet:

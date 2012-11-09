@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About this site
+date: 2012-10-31
 
 ---
 
