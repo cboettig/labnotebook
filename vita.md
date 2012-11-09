@@ -18,23 +18,24 @@ publications
 ------------
 1. Carl Boettiger, Alan Hastings (2012). **Early Warning Signals and the
   Prosecutor’s Fallacy.** *Proceedings of the Royal Society B*. [doi:10.1098/rspb.2012.2085](http://dx.doi.org/10.1098/rspb.2012.2085)
+  ([pdf](http://www.mendeley.com/download/public/98752/4972355691/dd5fdd8ebbfc05d9ebf415761be200805254d22e/dl.pdf)) 
   ([arXiv](http://arxiv.org/abs/1210.1204)) ([code](https://github.com/cboettig/earlywarning/blob/prosecutor/inst/examples/fallacy.md)) 
 1. Carl Boettiger, Duncan Temple Lang, Peter
   Wainwright (2012). **rfishbase: exploring, manipulating and visualizing
   FishBase data from R.** *Journal of Fish Biology*. 
   [doi:10.1111/j.1095-8649.2012.03464.x](http://dx.doi.org/10.1111/j.1095-8649.2012.03464.x)
+  ([pdf](http://www.mendeley.com/download/public/98752/5024008901/62843551297c5c9d3e1c2e5513697b85fcc0b6fc/dl.pdf))
   ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md))
   ([code](https://github.com/ropensci/rfishbase)) 
   ([software package](http://cran.at.r-project.org/web/packages/rfishbase/)) 
-  ([pdf](http://www.mendeley.com/download/public/98752/5024008901/62843551297c5c9d3e1c2e5513697b85fcc0b6fc/dl.pdf)).
 1. Carl Boettiger, Duncan Temple Lang (2012).  **Treebase: An R
   package for discovery, access and manipulation of online
   phylogenies** In *Methods in Ecology and Evolution*. 
   [doi:10.1111/j.2041-210X.2012.00247.x](http://dx.doi.org/10.1111/j.2041-210X.2012.00247.x)
+  ([pdf](http://www.mendeley.com/download/public/98752/4976371531/463d3755b618c40e35dca223e27162c08fbc061a/dl.pdf))
   ([preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md))
   ([code](https://github.com/ropensci/treebase)) 
-  ([software package](http://cran.at.r-project.org/web/packages/treebase/)).
-  ([pdf](http://www.mendeley.com/download/public/98752/4976371531/463d3755b618c40e35dca223e27162c08fbc061a/dl.pdf))
+  ([software package](http://cran.at.r-project.org/web/packages/treebase/))
 1. Carl Boettiger and Alan Hastings (2012). **Quantifying Limits to Detection 
   of Early Warning for Critical Transitions.** 2527-2539. In *Journal of the Royal Society:
   Interface* 9 (75) [doi:10.1098/rsif.2012.0125](http://dx.doi.org/10.1098/rsif.2012.0125) 
