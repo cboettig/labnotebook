@@ -1,30 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
   <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#">
-    <!-- HTML5 metadata -->
-    <meta charset="utf-8" /> <!--same as <meta http-equiv='Content-Type' content='Type=text/html; charset=utf-8'> -->
+    <meta charset="utf-8" /> 
     <title>{{ page.title }}</title>
-    <meta name="author" content="Carl Boettiger" />
-    <meta name="keywords" content="Science, Ecology, Evolution, Open Science, Reproducible Research" />
-    <meta name="description" content="My open lab notebook: research in theoretical ecology and evolution" />
+    <meta name="author" content="{{ site.author.name }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- RDFa Metdata (in DublinCore and OpenGraph) -->
-    <meta property="dc:title" content="{{ page.title }}" />
-    <meta property="dc:creator" content="Carl Boettiger" />
-    <meta property="dc:date" content="{{page.date | date_to_xmlschema }}" />
-    <meta property="dc:type" content="Lab Notebook entry" /> <!-- article? entry?-->
-    <meta property="dc:format" content="text/html" />
-    <meta property="dc:language" content="en" />
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="og:author" content="Carl Boettiger" />  <!-- Should be Liquid? URI? -->
-    <meta property="http://ogp.me/ns/article#published_time" content="{{page.date | date_to_xmlschema }}" />
-    <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-    <meta property="og:url" content="{{ page.url }}" />
-    <meta property="og:type" content="article" />
-
+    {% include metadata.html %}
     <!-- CSS Stylesheets (toggled with javascript) -->
-    <link href="{{ site.url }}/assets/css/light.css" rel="stylesheet" type="text/css" id="stl" title="light" />
-    <link href="{{ site.url }}/assets/css/dark.css" rel="alternate stylesheet" type="text/css" title="dark" />
+    <link href="{{ site.url }}/assets/css/light.css" rel="stylesheet"
+          type="text/css" id="stl" title="light" />
+    <link href="{{ site.url }}/assets/css/dark.css" rel="alternate stylesheet" 
+          type="text/css" title="dark" />
     <!-- Javascript needed for theme toggle, load immediately -->
     <script type="text/javascript" src="{{ site.url }}/assets/js/switch-css.js"></script>
     <script type="text/javascript">
@@ -32,10 +18,8 @@
     </script>
   </head>
   <body> 
-
   {% include navbar.html %}
-
-  <div class="container"> <!-- Twitter bootstrap has all body content in a container except the javascript and analytics -->
+  <div class="container"> 
     <article> <!-- includes header and entry, but not footer -->
     <header class="jumbotron subhead">
       <h1 class="entry-title">{{ page.title }}</h1>
