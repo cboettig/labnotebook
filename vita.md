@@ -6,6 +6,12 @@ date: 2012-11-07
 
 ---
 
+education
+---------
+
+* 2012 Ph.D Population Biology, **University of California, Davis**. Mentor: Alan Hastings
+
+* 2007 A.B in Physics **Princeton University**, with honors and certificates in *biophysics* and *applied and computational mathematics.* 
 
 
 publications
@@ -47,7 +53,7 @@ publications
   ([pdf](http://www.mendeley.com/download/public/98752/4485545653/566ffaffaf0fa6fb8f847096b742bc465aca3a8e/dl.pdf))
   ([arXiv](http://arxiv.org/abs/1110.4944))
   ([code](https://github.com/cboettig/pmc))
-  [data in ![](http://carlboettiger.info/assets/img/dryad.jpg)](http://datadryad.org/handle/10255/dryad.37645)
+  ([data in ![](http://carlboettiger.info/assets/img/dryad.jpg)](http://datadryad.org/handle/10255/dryad.37645))
 1. Carl Boettiger, Jonathan Dushoff, Joshua S Weitz (2010) **Fluctuation
   domains in adaptive evolution.**, 6-13. In *Theoretical Population
   Biology* 77 (1).
@@ -64,16 +70,20 @@ publications
   ([pdf](http://www.mendeley.com/download/public/98752/3107796991/fa842dca56ce0d0941132db7cfdd0e259a448973/dl.pdf))
   ([arXiv](http://arxiv.org/abs/astro-ph/0603060))
 
-### Submitted
+### submitted
 
 - Samantha A. Price, Lars Schmitz, Philip S. L. Anderson, Carl Boettiger, Peter C. Wainwright. **Comparing
 disparity between traits using the Ornstein-Uhlenbeck model: a test of
 functional constraint on the eyes of labrid fishes.**
 
-Presentations
+presentations
 -------------
 -   Carl Boettiger (2012) Ecological Society of America Conference, Portland, OR.
     ([slides](http://www.slideshare.net/cboettig/esa-2012-talk))
+-   Carl Boettiger (2012) Computational Science Graduate Fellows Conference, Washington DC.  
+    ([video recording](http://www.youtube.com/watch?v=xwIIVdyKe4o))
+    ([slides](http://www.slideshare.net/cboettig/regime-shifts-in-ecology-and-evolution))
+    ([doi](http://dx.doi.org/10.6084/m9.figshare.97279))
 -   Invited speaker in SSB Symposium: Carl Boettiger (2012) Evolution Conference, Ottawa, CAN. 
     ([slides](http://www.slideshare.net/cboettig/evolution-13576088)) 
 -   Carl Boettiger & Alan Hastings. (2011) Ecological Society of
@@ -108,9 +118,9 @@ Presentations
     ([doi](http://dx.doi.org/10.1038/npre.2010.4949.1))
     ([slides](http://www.slideshare.net/cboettig/presentation-5348861))
 
-Theses
+theses
 ------
-
+1. Carl Boettiger (2012). **Regime shifts in ecology and evolution (PhD Dissertation)**. [doi:10.6084/m9.figshare.97218](http://dx.doi.org/10.6084/m9.figshare.97218) 
 1. Carl Boettiger, Stephen Pacala, David Huse (2007) 
   **Ensemble Behavior from Individual Dynamics in Multispecies Forest Populations.**
   *Princeton Physics Dept*. [Download PDF](http://www.mendeley.com/download/public/98752/3107796981/f36faf01ce5eefa266480067793881530f212fea/dl.pdf "Download file") (1.16 MB)
@@ -121,7 +131,7 @@ Theses
     *Princeton Physics Dept*. [Download PDF](http://www.mendeley.com/download/public/98752/3107796971/3a79ed95e8534fba508c93a54b9c757074657f2e/dl.pdf "Download file")
     (368.64 KB)
 
-Software
+software
 --------
 
 1. Carl Boettiger (2012). **pmc: Phylogenetic Monte Carlo.** [Stable version on CRAN](http://cran.r-project.org/web/packages/pmc/).
@@ -129,17 +139,44 @@ Software
     to TreeBASE. [Stable version on CRAN](http://cran.r-project.org/web/packages/treebase/).
 3. Carl Boettiger (2011). **rfishbase: Programmatic access to FishBase.**
     [Stable version on CRAN](http://cran.r-project.org/web/packages/rfishbase/).
-4. I am also a founding member of the [rOpenSci project](http://ropensci.org), which has currently produced 28 R packages for interacting with web data and recieved $5000 from Google to support a full-time summer student intern.  
-
+4. I am also a founding member of the [rOpenSci project](http://ropensci.org), which has currently produced over 30 R packages for interacting with web data and recieved $5000 from Google to support a full-time summer student intern.  
 
 See my [Software page](http://carlboettiger.info/software.html) for more. 
 
-<iframe src="http://www.mendeley.com/profiles/carl-boettiger/widget/7488/2655908770/eb0e7073c630009ad9f303bec5b11b7ee5cca39e/" width="600" height="650"></iframe>
+grants
+------
 
-Media coverage
+* 2012 Short-term visitor grant to NIMBioS. For research in optimal control
+* 2011,2012 PI on DoE Grant No. DE-AC02-05CH11231. 50,000 hr supercomputing on NERSC machines
+* 2009 IIASA YSSP fellowship. National Academy of Sciences, NSF Grant No. OISE-0738129, $8,000
+* 2008-2012 Computational Science Graduate Fellowship. Department of Energy, Grant No: DE-FG02-97ER25308, 4 yrs x $36,000/yr
+
+awards
+------
+
+* 2011 Mendeley \& PLoS Binary Battle software competition award, \$1,000
+* 2011 *Volterra Award* (Best student talk, ESA Theory Section)
+* 2007 Elected to Membership in the Society of *Sigma Xi*
+* 2007 Allen G. Shenstone Prize in Physics, Princeton University
+* 2007 The Class of 1870 Old English Prize, Princeton University
+* 2006 Kusaka Memorial Prize in Physics, Princeton University
+* 2006 Plasma Physics Fellow,  PPPL 
+
+
+Service
+-------
+
+Reviewer for:   *Theoretical Ecology*, *Journal of Mathematical Biology*,
+*Ecological Modelling*, *Evolution*, *Methods in Ecology and Evolution*,
+*Ecosphere*, *Proceedings of the Royal Society B*, *Journal of Theoretical Biology*,
+*PLoS ONE*, *Ecology*, *Conservation Letters*, *Ecology Letters*
+
+
+media coverage
 --------------
 
 -   Featured in [Science Careers](http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2010_04_09/caredit.a1000036)
+
 
 <h2> (<a href="http://www.carlboettiger.info/assets/files/cv.pdf"  onclick="var that=this;_gaq.push(['_trackEvent','Download','PDF',this.href]);setTimeout(function(){location.href=that.href;},200);return false;">CV as PDF</a>) </h2>
 
