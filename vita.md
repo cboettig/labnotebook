@@ -17,57 +17,58 @@ education
 publications
 ------------
 1. Carl Boettiger, Alan Hastings (2012). **Early Warning Signals and the
-  Prosecutor’s Fallacy.** *Proceedings of the Royal Society B*. [doi:10.1098/rspb.2012.2085](http://dx.doi.org/10.1098/rspb.2012.2085)
+  Prosecutor’s Fallacy** 4734-4739.  *Proceedings of the Royal Society B* 279 (1748).  
+  [doi](http://dx.doi.org/10.1098/rspb.2012.2085)
   ([pdf](http://www.mendeley.com/download/public/98752/4972355691/dd5fdd8ebbfc05d9ebf415761be200805254d22e/dl.pdf)) 
   ([arXiv](http://arxiv.org/abs/1210.1204)) ([code](https://github.com/cboettig/earlywarning/blob/prosecutor/inst/examples/fallacy.md)) 
 1. Carl Boettiger, Duncan Temple Lang, Peter
   Wainwright (2012). **rfishbase: exploring, manipulating and visualizing
-  FishBase data from R.** *Journal of Fish Biology*. 
-  [doi:10.1111/j.1095-8649.2012.03464.x](http://dx.doi.org/10.1111/j.1095-8649.2012.03464.x)
+  FishBase data from R**, 2030–2039. *Journal of Fish Biology*. 81 (6).
+  [doi](http://dx.doi.org/10.1111/j.1095-8649.2012.03464.x):10.1111/j.1095-8649.2012.03464.x
   ([pdf](http://www.mendeley.com/download/public/98752/5024008901/62843551297c5c9d3e1c2e5513697b85fcc0b6fc/dl.pdf))
   ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md))
   ([code](https://github.com/ropensci/rfishbase)) 
-  ([software package](http://cran.at.r-project.org/web/packages/rfishbase/)) 
+  ([R package](http://cran.at.r-project.org/web/packages/rfishbase/)) 
 1. Carl Boettiger, Duncan Temple Lang (2012).  **Treebase: An R
   package for discovery, access and manipulation of online
-  phylogenies** In *Methods in Ecology and Evolution*. 
-  [doi:10.1111/j.2041-210X.2012.00247.x](http://dx.doi.org/10.1111/j.2041-210X.2012.00247.x)
+  phylogenies**, *Methods in Ecology and Evolution*. 
+  [doi](http://dx.doi.org/10.1111/j.2041-210X.2012.00247.x):10.1111/j.2041-210X.2012.00247.x
   ([pdf](http://www.mendeley.com/download/public/98752/4976371531/463d3755b618c40e35dca223e27162c08fbc061a/dl.pdf))
   ([preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md))
   ([code](https://github.com/ropensci/treebase)) 
-  ([software package](http://cran.at.r-project.org/web/packages/treebase/))
+  ([R package](http://cran.at.r-project.org/web/packages/treebase/))
 1. Carl Boettiger and Alan Hastings (2012). **Quantifying Limits to Detection 
-  of Early Warning for Critical Transitions.** 2527-2539. In *Journal of the Royal Society:
-  Interface* 9 (75) [doi:10.1098/rsif.2012.0125](http://dx.doi.org/10.1098/rsif.2012.0125) 
+  of Early Warning for Critical Transitions**, 2527-2539. *Journal of the Royal Society:
+  Interface* 9 (75) [doi](http://dx.doi.org/10.1098/rsif.2012.0125):10.1098/rsif.2012.0125 
   ([pdf](http://www.mendeley.com/download/public/98752/4711221423/df767d6b5f0fbf44cc236470307992b019e6c149/dl.pdf))
   ([arXiv](http://arxiv.org/abs/1204.6231))
   ([code](https://github.com/cboettig/earlywarning))
 1. Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, Carl Boettiger and Brian
   O’Meara, (2012). **Modeling Stabilizing Selection: Expanding the
-  Ornstein-Uhlenbeck Model of Adaptive Evolution.** 2369-2383. In *Evolution* 66 (8). 
-  [doi:10.1111/j.1558-5646.2012.01619.x](http://dx.doi.org/10.1111/j.1558-5646.2012.01619.x) 
+  Ornstein-Uhlenbeck Model of Adaptive Evolution**, 2369-2383. *Evolution* 66 (8). 
+  [doi](http://dx.doi.org/10.1111/j.1558-5646.2012.01619.x):10.1111/j.1558-5646.2012.01619.x 
   ([pdf](http://www.mendeley.com/download/public/98752/4605481493/dfca8df9311b372425a204c1a6587ecee2b275dc/dl.pdf))
   ([code](http://cran.r-project.org/web/packages/OUwie/index.html))
 1. Carl Boettiger, Graham Coop, Peter Ralph (2012) **Is your phylogeny
-  informative? Measuring the power of comparative methods.**  2240-51. In *Evolution* 66 (7).
-  [doi:10.1111/j.1558-5646.2011.01574.x](http://dx.doi.org/10.1111/j.1558-5646.2011.01574.x) 
+  informative? Measuring the power of comparative methods**,  2240-51. *Evolution* 66 (7).
+  [doi](http://dx.doi.org/10.1111/j.1558-5646.2011.01574.x):10.1111/j.1558-5646.2011.01574.x 
   ([pdf](http://www.mendeley.com/download/public/98752/4485545653/566ffaffaf0fa6fb8f847096b742bc465aca3a8e/dl.pdf))
   ([arXiv](http://arxiv.org/abs/1110.4944))
   ([code](https://github.com/cboettig/pmc))
   ([data in ![](http://carlboettiger.info/assets/img/dryad.jpg)](http://datadryad.org/handle/10255/dryad.37645))
 1. Carl Boettiger, Jonathan Dushoff, Joshua S Weitz (2010) **Fluctuation
-  domains in adaptive evolution.**, 6-13. In *Theoretical Population
+  domains in adaptive evolution**, 6-13. *Theoretical Population
   Biology* 77 (1).
-  [doi:10.1016/j.tpb.2009.10.003](http://dx.doi.org/10.1016/j.tpb.2009.10.003) 
+  [doi](http://dx.doi.org/10.1016/j.tpb.2009.10.003):10.1016/j.tpb.2009.10.003 
   ([pdf](http://www.mendeley.com/download/public/98752/3107791751/8b066644aca2e396fd5e120d563026c8d560dc77/dl.pdf))
   ([arXiv](http://arxiv.org/abs/1004.4233))
   ([code](https://github.com/cboettig/fluctuationDomains))
   ([data in ![](http://carlboettiger.info/assets/img/dryad.jpg)](http://datadryad.org/handle/10255/dryad.37625))
 1. James J. Wray, Neta A. Bahcall, Paul Bode, Carl Boettiger, Phillip
   Hopkins. (2006) **The Shape, Multiplicity, and Evolution of
-  Superclusters in ΛCDM Cosmology**, 907-916. In *The Astrophysical
+  Superclusters in ΛCDM Cosmology**, 907-916. *The Astrophysical
   Journal* 652 (2).
-  [doi:10.1086/508600](http://dx.doi.org/10.1086/508600) 
+  [doi](http://dx.doi.org/10.1086/508600):10.1086/508600 
   ([pdf](http://www.mendeley.com/download/public/98752/3107796991/fa842dca56ce0d0941132db7cfdd0e259a448973/dl.pdf))
   ([arXiv](http://arxiv.org/abs/astro-ph/0603060))
 
