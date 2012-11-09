@@ -1,6 +1,9 @@
 ---
 layout: vita
 title: Vita 
+date: 2012-11-07
+
+
 ---
 
 
@@ -8,23 +11,24 @@ title: Vita
 publications
 ------------
 1. Carl Boettiger, Alan Hastings (2012). **Early Warning Signals and the
-  Prosecutor’s Fallacy.** *Proceedings of the Royal Society B* (in press). [doi:10.1098/rspb.2012.2085](http://dx.doi.org/10.1098/rspb.2012.2085)
+  Prosecutor’s Fallacy.** *Proceedings of the Royal Society B*. [doi:10.1098/rspb.2012.2085](http://dx.doi.org/10.1098/rspb.2012.2085)
   ([arXiv](http://arxiv.org/abs/1210.1204)) ([code](https://github.com/cboettig/earlywarning/blob/prosecutor/inst/examples/fallacy.md)) 
 1. Carl Boettiger, Duncan Temple Lang, Peter
   Wainwright (2012). **rfishbase: exploring, manipulating and visualizing
-  FishBase data from R.** *Journal of Fish Biology* (in press). 
+  FishBase data from R.** *Journal of Fish Biology*. 
   [doi:10.1111/j.1095-8649.2012.03464.x](http://dx.doi.org/10.1111/j.1095-8649.2012.03464.x)
   ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md))
-  ([code](https://github.com/ropensci/rfishbase)) ([software
-  package](http://cran.at.r-project.org/web/packages/rfishbase/)) 
-  ([pdf](http://carlboettiger.info/assets/files/rfishbase.pdf)).
+  ([code](https://github.com/ropensci/rfishbase)) 
+  ([software package](http://cran.at.r-project.org/web/packages/rfishbase/)) 
+  ([pdf](http://www.mendeley.com/download/public/98752/5024008901/62843551297c5c9d3e1c2e5513697b85fcc0b6fc/dl.pdf)).
 1. Carl Boettiger, Duncan Temple Lang (2012).  **Treebase: An R
   package for discovery, access and manipulation of online
-  phylogenies** In *Methods in Ecology and Evolution* (in press). 
+  phylogenies** In *Methods in Ecology and Evolution*. 
   [doi:10.1111/j.2041-210X.2012.00247.x](http://dx.doi.org/10.1111/j.2041-210X.2012.00247.x)
   ([preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md))
-  ([code](https://github.com/ropensci/treebase)) ([software
-  package](http://cran.at.r-project.org/web/packages/treebase/)).
+  ([code](https://github.com/ropensci/treebase)) 
+  ([software package](http://cran.at.r-project.org/web/packages/treebase/)).
+  ([pdf](http://www.mendeley.com/download/public/98752/4976371531/463d3755b618c40e35dca223e27162c08fbc061a/dl.pdf))
 1. Carl Boettiger and Alan Hastings (2012). **Quantifying Limits to Detection 
   of Early Warning for Critical Transitions.** 2527-2539. In *Journal of the Royal Society:
   Interface* 9 (75) [doi:10.1098/rsif.2012.0125](http://dx.doi.org/10.1098/rsif.2012.0125) 
@@ -43,7 +47,7 @@ publications
   ([pdf](http://www.mendeley.com/download/public/98752/4485545653/566ffaffaf0fa6fb8f847096b742bc465aca3a8e/dl.pdf))
   ([arXiv](http://arxiv.org/abs/1110.4944))
   ([code](https://github.com/cboettig/pmc))
-  ([data](http://datadryad.org/handle/10255/dryad.37645))
+  [data in ![](http://carlboettiger.info/assets/img/dryad.jpg)](http://datadryad.org/handle/10255/dryad.37645)
 1. Carl Boettiger, Jonathan Dushoff, Joshua S Weitz (2010) **Fluctuation
   domains in adaptive evolution.**, 6-13. In *Theoretical Population
   Biology* 77 (1).
@@ -51,7 +55,7 @@ publications
   ([pdf](http://www.mendeley.com/download/public/98752/3107791751/8b066644aca2e396fd5e120d563026c8d560dc77/dl.pdf))
   ([arXiv](http://arxiv.org/abs/1004.4233))
   ([code](https://github.com/cboettig/fluctuationDomains))
-  ([data](http://datadryad.org/handle/10255/dryad.37625))
+  ([data in ![](http://carlboettiger.info/assets/img/dryad.jpg)](http://datadryad.org/handle/10255/dryad.37625))
 1. James J. Wray, Neta A. Bahcall, Paul Bode, Carl Boettiger, Phillip
   Hopkins. (2006) **The Shape, Multiplicity, and Evolution of
   Superclusters in ΛCDM Cosmology**, 907-916. In *The Astrophysical

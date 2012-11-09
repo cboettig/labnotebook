@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Carl Boettiger 
-subtitle: Theoretical Ecology and Evolution
+title: Community
+date: 2012-10-03
 
 ---
 

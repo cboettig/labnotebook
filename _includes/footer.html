@@ -5,12 +5,12 @@
     <input type="submit" onclick="switch_style('light');return false;" name="theme" value="light" id="light" class="btn btn-mini pull-right" />
   </form>
           <div class="row">
-            <div class="span4" vocab="http://xmlns.com/foaf/0.1/" typeof="Person" resource="http://carlboettiger.info#me">
+            <div class="span4" vocab="http://xmlns.com/foaf/0.1/" typeof="Person" resource="{{site.url}}#me">
               <!-- <a href="mailto:cboettig@gmail.com"><i class="icon-envelope"></i></a> -->
-              <a property="account" href="mailto:cboettig@gmail.com" onclick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="{{site.url}}/assets/img/icon-email.png" alt="email" /> </a>
-              <a property="account" href="https://twitter.com/cboettig" onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><img src="{{site.url}}/assets/img/icon-twitter.png" alt="twitter" /> </a> 
-              <a property="account" href="https://github.com/cboettig" onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="{{site.url}}/assets/img/icon-github.png" alt="github" /> </a> 
-              <a property="account" href="http://www.mendeley.com/profiles/carl-boettiger" onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); return false;"><img src="{{site.url}}/assets/img/icon-mendeley.png" alt="mendeley" /></a> 
+              <a property="account" href="mailto:{{site.author.email}}" onclick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="{{site.url}}/assets/img/icon-email.png" alt="email" /> </a>
+              <a property="account" href="https://twitter.com/{{site.author.twitter}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><img src="{{site.url}}/assets/img/icon-twitter.png" alt="twitter" /> </a> 
+              <a property="account" href="https://github.com/{{site.author.github}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="{{site.url}}/assets/img/icon-github.png" alt="github" /> </a> 
+              <a property="account" href="http://www.mendeley.com/profiles/{{site.author.mendeley}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); return false;"><img src="{{site.url}}/assets/img/icon-mendeley.png" alt="mendeley" /></a> 
         <a href="{{ site.url }}/atom.xml" onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><img src="/assets/img/icon-rss.png" alt="feed" /></a>
             </div>
             <div class="span2" style="text-align:center">

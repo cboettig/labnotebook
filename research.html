@@ -3,20 +3,7 @@ layout: none
 title: Research
 
 ---
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <title>{{ title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My open lab notebook">
-    <meta name="author" content="Carl Boettiger">
-
-    <!-- Le styles -->
-    <link href="{{ site.url }}/assets/css/light.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/grid.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/style.css">
+{% include header.html %}
 
     <!-- Le javascript -->
     <script type="text/javascript" src="{{ site.url }}/assets/js/jquery.js"></script>
@@ -24,7 +11,6 @@ title: Research
     <script type="text/javascript" src="{{ site.url }}/assets/js/strftime.js"></script>
     <script type="text/javascript">
     (function ($, undefined) {
-
       // Put custom repo URL's in this object, keyed by repo name.
       var repoUrls = {
       };
@@ -67,12 +53,12 @@ title: Research
       function addRepo(repo) {
         var $item = $("<li>").addClass("repo grid-1 " + (repo.language || '').toLowerCase());
         var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($item);
-        $link.append($("<h2>").text(repo.name));
-        $link.append($("<h3>").text(repo.watchers + " watchers" + " / " + repo.open_issues + " open issues"));
+        $link.append($("<h3>").text(repo.name));
+        $link.append($("").text(repo.watchers + " watchers" + " / " + repo.open_issues + " open issues"));
         $link.append($("<p style='line-height:1em;'>").text(repoDescription(repo)));
         $link.append($("<p style='line-height:1em;'>").text("Updated " + 
           strftime("%h %e, %Y", repo.pushed_at)));
-        $link.append($("<h3>").addClass("language").text(repo.language));
+        //$link.append($("").addClass("language").text(repo.language));
         
         $item.appendTo("#repos");
       }
@@ -82,19 +68,14 @@ title: Research
 
         $(function () {
           $("#num-repos").text(repos.length);
-
           // Convert pushed_at to Date.
           $.each(repos, function (i, repo) {
             repo.pushed_at = new Date(repo.pushed_at);
-
             var weekHalfLife  = 1.146 * Math.pow(10, -9);
-
             var pushDelta    = (new Date) - Date.parse(repo.pushed_at);
             var createdDelta = (new Date) - Date.parse(repo.created_at);
-
             var weightForPush = 1;
             var weightForWatchers = 1.314 * Math.pow(10, 7);
-
             repo.hotness = weightForPush * Math.pow(Math.E, -1 * weekHalfLife * pushDelta);
             repo.hotness += weightForWatchers * repo.watchers / createdDelta;
           });
