@@ -1,0 +1,27 @@
+<!-- HTML5 metadata -->
+<meta name="keywords" content="{{ site.keywords }}" />
+<meta name="description" content="{{ site.description }}" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="{{ page.title }}" />
+<meta property="dc:creator" content="{{ site.author.name }}" />
+<meta property="dc:date" content="{{page.date | date_to_xmlschema }}" />
+<meta property="dc:type" content="Lab Notebook Entry" /> <!-- article? entry?-->
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:source" content="{{ site.title }}" />
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:author" content="{{site.url}}/index.html" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="{{ site.author.givenName }}"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="{{ site.author.familyName }}"/>
+<meta property="http://ogp.me/ns/article#published_time" content="{{page.date | date_to_xmlschema }}" />
+<meta property="og:site_name" content="{{ site.title }}" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="{{site.url}}{{ page.url }}" />
+<meta property="og:type" content="article" />
+<!-- Google Scholar Metadata -->
+<meta name="resource_type" content="{{site.title}}"/>
+<meta name="citation_journal_title" content="{{site.title}}"/>
+<meta name="citation_publication_date" content="{{page.date | date_to_string }}"/>
+<meta name="citation_date" content="{{page.date | date_to_string }}"/>
+<meta name="citation_author" content="{{ site.author.name }}"/>
+<meta name="citation_title" content="{{page.title}}"/>
