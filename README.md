@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About this site
-date: 2012-10-31
+date: 2012-11-09
 
 ---
 
@@ -18,7 +18,7 @@ Site Features & Credits
 * Reproducible code execution with [knitr](http://yihui.name/knitr/)
 * CSS based on [twitter bootstrap](http://twitter.github.com/bootstrap/)
 * Static site generation with [Jekyll](https://github.com/mojombo/jekyll)
-* Markdown parsing with [pandoc](http://johnmacfarlane.net/pandoc/) (supporting fenced code blocks, equations, tables and output to many formats)
+* Markdown parsing with [pandoc](http://johnmacfarlane.net/pandoc/) 
 * Twitter, Mendeley & Github [custom plugins](https://github.com/cboettig/labnotebook/tree/master/_plugins)
 * [Carbon-neutral site](http://www.dreamhost.com/green.cgi) hosting by [Dreamhost](http://dreamhost.org)
 * Source code hosting on [Github](https://github.com/)
@@ -82,22 +82,22 @@ Note: Markdown is wonderful, but a huge headache due to it's many flavors.  I be
 
 #### Third Party Plugins 
 
-Plugins are provided in the site source, so cloning this repository will give you a copy of them. In addition to my own plugins, I'd like to credit other developers for the following plugins:
+Plugins are provided in the site source, so cloning this repository will give you a copy of them. The site uses the following plugins:
 
 * [pandoc](https://github.com/dsanson/jekyll-pandoc-plugin)
 * [redirects](https://github.com/pelosi/marran.com/blob/master/_plugins/redirects.rb)
 * [tag-cloud](https://gist.github.com/2290195) 
-* my own custom [jekyll-plugins](https://github.com/cboettig/labnotebook/tree/master/_plugins/jekyll-labnotebook-plugins)
+* my custom [jekyll-plugins](https://github.com/cboettig/labnotebook/tree/master/_plugins/jekyll-labnotebook-plugins)
 
 
 
 License
 -------
 
-All original content is licensed by Carl Boettiger under the Creative Commons Zero license, [CC0](http://creativecommons.org/publicdomain/zero/1.0/).  This license is uniquely appropriate for data, code, and written content, and facilitates distribution & reuse.  Attribution or citation are appreciated where appropriate as proper scholarly practice.  (Newton, Darwin, and Shakespeare are similarly in the public domain, but no less cited for it).  Please cite or attribute this work as:
+All original content is licensed by Carl Boettiger under the Creative Commons Zero license, [CC0](http://creativecommons.org/publicdomain/zero/1.0/).  This license is uniquely appropriate for data, code, and written content, and facilitates distribution & reuse.  Please remember that attribution and citation are appreciated where appropriate as proper scholarly practice.  (Newton, Darwin, and Shakespeare are similarly in the public domain, but you wouldn't plagiarize from them).  Cite or attribute this work as:
 
 <div vocab="http://purl.org/dc/terms/" typeof="bibliographicCitation">
-<span property="creator">Carl Boettiger</span> <span property="date">2012</span> <span property="title">Open Lab Notebook</span>, <a property="http://creativecommons.org/ns#attributionURL" href="http://carlboettiger.info">http://carlboettiger.info</a> 
+<span property="creator">Carl Boettiger</span> (<span property="date">2012</span>). <span property="title">Lab Notebook</span>, <a property="http://creativecommons.org/ns#attributionURL" href="http://carlboettiger.info">http://carlboettiger.info</a> 
 </div>
 
-
+[Greycite](http://greycite.knowledgeblog.org/) can generate the citation information for any particular page given it's URL.  
