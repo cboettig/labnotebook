@@ -9,14 +9,12 @@ categories:
 - open-science
 ---
 
-T[![](http://www.carlboettiger.info/wp-content/uploads/2010/12/da_vinci-300x200.jpg)](http://www.carlboettiger.info/wp-content/uploads/2010/12/da_vinci.jpg)his post is a work in progress, a scratch pad for me to start assembling what I've been learning about and resources pertaining to the new policies emerging from NSF and journals relevant to ecology and evolution.  Hoping to highlight not only the policies, but the issues, opportunities, and concerns around them.
+This post is a work in progress, a scratch pad for me to start assembling what I've been learning about and resources pertaining to the new policies emerging from NSF and journals relevant to ecology and evolution.  Hoping to highlight not only the policies, but the issues, opportunities, and concerns around them.
 
-I am hoping to help organize a workshop to discuss these issues in my department this Winter.  The Davis Open Science group, is planning a series of these workshops, hoping to work with departments, the libraries and the UC Davis Office of Research and its [Responsible Conduct of Research ](http://www.research.ucdavis.edu/home.cfm?id=OVC,10,1622,2065)program (in compliance with NIH/NSF ethics requirements), as well as resident faculty and editors.  Suggestions on what you would like to see in such a workshop much appreciated.
+I am hoping to help organize a workshop to discuss these issues in my department this Winter.  The Davis Open Science group, is planning a series of these workshops, hoping to work with departments, the libraries and the UC Davis Office of Research and its [Responsible Conduct of Research ](http://www.research.ucdavis.edu/home.cfm?id=OVC,10,1622,2065) program (in compliance with NIH/NSF ethics requirements), as well as resident faculty and editors.  Suggestions on what you would like to see in such a workshop much appreciated.
 
 
-
-	
-  * The Association of Research Libraries has just released a [nice guide on the new polices ](http://www.arl.org/rtl/eresearch/escien/nsf/index.shtml)as well.
+* The Association of Research Libraries has just released a [nice guide on the new polices ](http://www.arl.org/rtl/eresearch/escien/nsf/index.shtml) as well.
 
 
 
@@ -27,8 +25,6 @@ I am hoping to help organize a workshop to discuss these issues in my department
 Each discipline has (or will have, [see notes and refs  by Heather Piwowar ](http://researchremix.wordpress.com/2010/11/15/nsf-where) it's own guidelines, but the basic gist is perhaps best summarized in excerpt from [this NSF statement](http://www.nsf.gov/pubs/policydocs/pappguide/nsf11001/gpg_2.jsp#dmp):
 
 This supplement should describe  how the proposal will conform to NSF  policy on the dissemination and  sharing of research results (see AAG  Chapter VI.D.4 ), and may include:
-
-
 
 	
   1. The types of data, samples, physical collections, software,   curriculum materials, and other materials to be produced in the course   of the project;
@@ -58,15 +54,13 @@ The American Naturalist
 
 _This journal requires, as a condition for publication, that data   supporting the results in the paper should be archived in an appropriate   public archive, such as GenBank, TreeBASE, Dryad, or the Knowledge   Network for Biocomplexity. Data are important products of the scientific   enterprise, and they should be preserved and usable for decades in the   future. Authors may elect to have the data publicly available at time  of  publication, or, if the technology of the archive allows, may opt to   embargo access to the data for a period up to a year after  publication.  Exceptions may be granted at the discretion of the editor,  especially  for sensitive information such as human subject data or the  location  of endangered species._
 
-﻿Whitlock, M.C. et al. [Data archiving](http://www.ncbi.nlm.nih.gov/pubmed/20073990). The American Naturalist 175, 145-6(2010).
+Whitlock, M.C. et al. [Data archiving](http://www.ncbi.nlm.nih.gov/pubmed/20073990). The American Naturalist 175, 145-6(2010).
 
-_Evolution _has a similar policy, outlined in:
+_Evolution_ has a similar policy, outlined in:
 
-﻿Fairbairn, D.J. [the Advent of Mandatory Data Archiving](http://doi.wiley.com/10.1111/j.1558-5646.2010.01182.x). Evolution (2010) (preprint)
+Fairbairn, D.J. [the Advent of Mandatory Data Archiving](http://doi.wiley.com/10.1111/j.1558-5646.2010.01182.x). Evolution (2010) (preprint)
 
 Journals with policy in place (links and editions coming)
-
-
 
 	
   * **The American Naturalist** (see Whitlock, 2010; above)
@@ -78,10 +72,10 @@ Journals with policy in place (links and editions coming)
   * **Journal of Evolutionary Biology** (as mentioned in Whitlock)
 
 	
-  * **Molecular Ecology **(as mentioned in Whitlock)
+  * **Molecular Ecology** (as mentioned in Whitlock)
 
 	
-  * **Heredity **(as mentioned in Whitlock)
+  * **Heredity** (as mentioned in Whitlock)
 
 	
   * ESA journals: **Ecology**, **Ecological** **Monographs**, **Ecological** **Applications**, and ** Frontiers**.  Currently have a position in Dryad board and a soft data deposition requirement.  Also maintains the Ecological Archive. (pers. comm.)
@@ -147,7 +141,7 @@ The need for data archiving in ecology and evolutionary biology has been persuas
   * Moore, A.J. et al. [The need for archiving data in evolutionary biology. ](http://www.ncbi.nlm.nih.gov/pubmed/20149022)Journal of evolutionary biology 23, 659-60(2010).
 
 	
-  * ﻿Piwowar, H. a, Day, R.S. & Fridsma, D.B. [Sharing detailed research data is associated with increased citation rate](http://www.ncbi.nlm.nih.gov/pubmed/17375194). PloS one 2, e308(2007).
+  * Piwowar, H. a, Day, R.S. & Fridsma, D.B. [Sharing detailed research data is associated with increased citation rate](http://www.ncbi.nlm.nih.gov/pubmed/17375194). PloS one 2, e308(2007).
 
 
 
@@ -197,9 +191,12 @@ The Data Citation collection on Mendeley provides an actively maintained collect
 
 Discussion continues on a few FF forum threads have helped assemble this information:
 
-[iframe http://friendfeed.com/science-2-0/8b143647/who-pays-for-archiving-costs-to-comply-with-new?embed=1 480 400]
+[1](http://friendfeed.com/science-2-0/8b143647/who-pays-for-archiving-costs-to-comply-with-new) [2](http://friendfeed.com/science-2-0/98efbfa5/where-best-place-to-start-learn-about-new-nsf)
 
-[iframe http://friendfeed.com/science-2-0/98efbfa5/where-best-place-to-start-learn-about-new-nsf?embed=1 480 400]
 
+
+**EDIT**
+
+Dryad maintains an [excellent list](http://datadryad.org/pages/jdap) of the growing number of Ecology and Evolution partner journals that mandate archiving
 _
 _

@@ -1,3 +1,3 @@
 #!/bin/bash
-jekyll --auto 
+jekyll 
 rsync -avz _site/ carlboettiger.info:~/carlboettiger.info/

@@ -2,7 +2,7 @@
 layout: post
 category: ecology
 tags: [multiple-uncertainty; decision-theory]
-
+updated: 2012-11-09
 
 ---
 
@@ -20,22 +20,22 @@ We consider this problem in a discrete state space where $y$ and $x$, $q$ and $h
 
 * Let $\mathbf{M}$ be the row-normalized $n_y$ by $n_x$ matrix whose elements are $z_m(y_i, x_j)$, the probability of observing a stock size $y_i$ from a true size $x_j$.  
 
-* Let $\mathbf{I}$ be the row-normalized $n_h$ by $n_q$ matrix whose elements are $z_i(h_i, q_j)$, the probability of implementing a harvest $h_i$ given a quota $q_j$
+* Let $\mathbf{I}$ be the row-normalized $n_h$ by $n_q$ matrix whose elements are $z_i(h_i, q_j)$, the probability of implementing a harvest $h_i$ given a quota $q_j$ **Edit**: I had been created in the code as $n_q$ by $n_h$, so had to be transposed.  
 
-* Let $\mathbf{F}_q$ be the tensor of row-normalized $n_q$ $n_x$ by $n_x$ transition matrices given by $z_g(x_j,  \sum_i \sum_j f(x_i, h_j) \mathbf{M}[y_k, x_i] \mathbf{I}[h_j, q_l] )$.  By summing over the uncertainty in measurement and implementation, $\mathbf{F}_q$ is in the space of observed state $y_t$ into the true stock at the next timestep $x_{t+1}$, given quota $q$.  We transfer into the future measured state through another application of $\mathbf{M} \mathbf{F}_q $.  
+* Let $\mathbf{F}_q$ be the tensor of row-normalized $n_q$ $n_x$ by $n_x$ transition matrices given by $z_g(x_j,  \sum_i \sum_j f(x_i, h_j) \mathbf{M}[y_k, x_i] \mathbf{I}[h_j, q_l] )$.  By summing over the uncertainty in measurement and implementation, $\mathbf{F}_q$ is in the space of observed state $y_t$ into the true stock at the next timestep $x_{t+1}$, given quota $q$.  We transfer into the future measured state through another application of $\mathbf{M} \mathbf{F}_q$.  
 
-* The profits expected given a measurement of the stock $y$ for a quota $q$ are $\sum_j \sum_i \Pi(x_i, h_j) p(x_i | y) p(h_j | q)$.  Hence the matrix of expected profits for each possible combination of $y_i$ and $q_j$ is given by the matrix product $\mathbf{M} \mathbf{P} \mathbf{I} =: \mathbf{P}_e$
+* The profits expected given a measurement of the stock $y$ for a quota $q$ are $\sum_j \sum_i \Pi(x_i, h_j) p(x_i | y) p(h_j | q)$.  Hence the matrix of expected profits for each possible combination of $y_i$ and $q_j$ is given by the matrix product $\mathbf{M} \mathbf{P} \mathbf{I} =: \mathbf{Q}$
 
 * Let $\mathbf{V}_t$ be the $n_y$ by $n_q$ matrix at time $t$ giving the value of choosing quota $q_j$ having observed stock $y_i$ and having selected the optimal $q_{t+1} \ldots q_{t_{\textrm{max}}}$, that is: 
 
-$$ \mathbf{V}_t = \mathbf{P}_e + \delta \mathbf{V}_{t+1}(y_t) $$
+$$ \mathbf{V}_t = \mathbf{Q} + \delta \mathbf{V}_{t+1}(y_t) $$
 
 * Let $\vec{v}_t$ be the $n_y$ vector with the maximum value of the each row (i.e. for each state $y_i$) of the matrix $\mathbf{V}_t$, and
 * let $\vec{d}_t$ be the $n_y$ vector whose elements give the column number (e.g. the $j$ determine the choice $q_j$) of the quota that corresponds to that value.  
 
 Thus $\operatorname{max}_q V_t(y_t) = v_t$.  Starting from the final timepoint, we know the ending value $v_T$ as a function of the ending state $y_T$.  The probability of ending up in each possible state for $y_T$, given a choice of quota $q$ and the current state $y_{T-1}$ is given by the transition matrix $\mathbf{M}\mathbf{F}_q$. The Bellman recursion becomes 
 
-$$ \mathbf{V}_t = \mathbf{P}_e + \delta \mathbf{M} \mathbf{F}_q v_{t+1} $$
+$$ \mathbf{V}_t[,q] = \mathbf{Q}[,q] + \delta \mathbf{M} \mathbf{F}_q v_{t+1} $$
 
 
 
@@ -91,13 +91,10 @@ Something seems to be a mistake, since the optimal policy under uncertainty does
 
 [example script](https://github.com/cboettig/pdg_control/blob/bbef99ec43c75ff1dca959c1511b44c5159f4f4c/inst/examples/mult_uncertainty_test.md)
 
-<!--
-but have to re-express this value in terms of the previous state to calculate $V_{T-1}$.  (e.g. we need $V_T(y_{T-1})$, but we have only $\operatorname{max}_q V_T(y_T)$.  This calculation requires that we go from the vector space of $y_T$ to that of $y_{T-1}$.  The transition matrix $F$ is our rule for updating between timesteps, $\mathbf{M} \mathbf{F}_q v_{t+1} $
- Unfortunately, $F$ operates in the space of true stock $x_t \to x_{t+1}$ rather than measured stock $y$, so we must first move into the vector space of observed variables.  Actually, we have quite a lot of transitions to do.  
-To start, we know the optimal value $v_t$ we can get in observing state $y_T$ (from $P_e(y_T)$).  The probability of observing $y_T$ when the true stock is $x_T$ is given by $\mathbf{M}^T \vec v_T$, moving us into the $x$ basis. $M(x_1, y_1) v_T[y_1] +  M(x_1, y_2) v_T[y_2] + \ldots = \tilde{v}_T[x_T]$ where the tilde denotes our change of basis.  $\mathbf{F}$ generates the true stock $x_T$ from the escaped population of the previous generation, $s_{T-1}$, $\mathbf{Q}_q$ takes us from the escaped stock $s_{T-1}$ 
-We need to express $V_{t+1}$, the value for each possible state $y(t+1)_i$ we might observe, in terms of each possible currently observed state $y(t)_i$ and currently possible control measure $h_t$.   
--->
+
+**Updated Edit**
 
 
+![](http://carlboettiger.info/assets/figures/2012-11-17-f6c225f69f-policyfunctions.png) 
 
-
+[See notes on code changes inline](https://github.com/cboettig/pdg_control/commit/954cea9310063150bb42567b19caa272b34d32c2)
