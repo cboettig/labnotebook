@@ -1,3 +1,4 @@
 _plugins/_cache
 _site
 assets/figures
+_plugins/jekyll-labnotebook-plugins/twitter_feed.rb
