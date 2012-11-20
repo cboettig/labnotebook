@@ -1,9 +1,8 @@
 require 'feedzirra'
 
-# Need to store feed in cache and just call update?
+# Example of parsing an atom feed (from github) using feedzirra 
 
 module Jekyll
-
   class FeedzirraBlockTag < Liquid::Tag
     def render(context)
       feed = Feedzirra::Feed.fetch_and_parse("https://github.com/cboettig.atom")

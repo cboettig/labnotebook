@@ -11,14 +11,9 @@ module Jekyll
       @text = text
       @address = "cboettig/"+"#{@text}"
     end
-
-
     def render(context) # learn how to write this to take an argument!
-
       repo = Octokit.issues(@address) # grab the data. Can this go in "initialize?"
-
       #  repo = Octokit.issues(@address, :status => "closed") # (Gets closed issues??)
-
       # Generate a list of all open issues, linking to github issue page.  
       out = "<ul>"
       for i in 0 ... [repo.size, 3].min ## displays up to 3.  sorted by date?
@@ -37,7 +32,6 @@ module Jekyll
       end
       out = out + "</ul>"
       out
-
     end
   end
 end
