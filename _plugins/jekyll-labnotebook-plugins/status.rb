@@ -22,8 +22,11 @@ module Jekyll
       # Could use octokit instead to get GFM
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
                                                  :autolink => true, :space_after_headers => true)
+
+      require '~/.twitter_auth.rb'
+
       out = "<ul>"
-      tweets = Twitter.user_timeline(@user)
+      tweets = @client.user_timeline(@user)
       for i in 0 ... @count.to_i
       out = out + "<li>" + markdown.render(tweets[i].text) +
         " <a href=\"http://twitter.com/" + @user + "/statuses/" + 
