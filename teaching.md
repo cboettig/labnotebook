@@ -11,19 +11,20 @@ Philosophy
 ![floatright](/assets/img/watch.png)
 I am passionate about experiential, active learning that is
 problem-based, social, interdisciplinary, quantitative and leverages
-technology. Though poetically argued by such influential thinkers such
+technology. Though borne out of my own experience as both student and instructor,
+my approach is also influenced by the examples of such thinkers
 as Professor [Eric Mazur](http://www.youtube.com/watch?v=WwslBPj8GgI)
-and [Sir Ken
-Robinson](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity.html);
-and well substantiated by research: the value of collaborative
-problem-solving in science education (Anderson et al. 2011), the immense
-evidence for active learning, (Cornelius-White 2007) the road-map for
-quantitative, interdisciplinary and research driven biology training
-(Bialek and Botstein 2004); it is a position also borne of my own
-experience. I am particularly interested in techniques that scale, and
-believe tools and approaches such as social media (Junco, Heiberger, and
-Loken 2010) and peer instruction can bring some of the benefits of small
-classes to into large lectures.
+and [Sir Ken Robinson](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity.html).
+Good teaching practices should be rooted in scientific study, not
+ancetode; and much of this philosphy is well borne out in the educational
+research literature.  Pieces that have been particularly influential for
+me include the evidence for the value of collaborative problem-solving
+in science education (Anderson et al. 2011); the immense evidence for
+active learning, (Cornelius-White 2007); the road-map for quantitative,
+interdisciplinary and research driven biology training (Bialek and
+Botstein 2004). I am also interested in how approaches such as the use
+of social media (Junco, Heiberger, and Loken 2010) and peer instruction
+can bring some of the benefits of small classes into large lectures.
 
 Experience
 ----------
@@ -56,12 +57,12 @@ teachers on how to use simple computer simulation software
 ([netlogo](http://ccl.northwestern.edu/netlogo/)) to provide an
 exploratory approach to teaching ecology and evolution in the [SIRC
 program](http://sasp.ucdavis.edu),
-and have given guest lecture on ecological dynamics at [University of
+and have gave a guest lecture on ecological dynamics at [University of
 the Pacific](http://www.carlboettiger.info/archives/843). I'm a
 [member](http://www.nationallabnetwork.org/scientists/b1412e8c-1348-f09a-d368-919e80c4ee07)
 of the [National Lab Network](http://www.nationallabnetwork.org) and I
 keep an open [teaching
-notebook](http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Teaching)
+notebook](http://www.carlboettiger.info/categories.html#teaching)
 where I reflect on my experiences.
 
 Education Research
