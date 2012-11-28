@@ -2,24 +2,28 @@
 layout: post
 title: My research workflow, based on Github
 category: open-science
+
 ---
 
-This post outlines my current research workflow.  This has evolved over time, so only
-my most recent projects hold completely to it, though almost all my projects follow the
-general R package structure.  Two main differences are visible in my earlier projects:
-I used to keep scripts in `demo` before they became the more complete knitr markdown 
-in `inst/examples`.  I previously relied on a custom package called socialR to post
-results from those scripts to flickr, and would then embed the results in my Wordpress
-notebook, linking back to the demo file in Github.  Knitr has allowed me to keep
-those figures, code and text in the package repository.  This keeps everything more 
-centralized (to Github), and lets each of the examples be updated in a more natural way
-than the linear record in the lab notebook.  (Images are still hosted on flickr to
-avoid committing the binary files, knitr handles this upload rather well.).  
+This post outlines my current research workflow.  This has evolved
+over time, so only my most recent projects hold completely to it,
+though almost all my projects follow the general R package structure.
+Two main differences are visible in my earlier projects: I used to keep
+scripts in `demo` before they became the more complete knitr markdown in
+`inst/examples`.  I previously relied on a custom package called socialR
+to post results from those scripts to flickr, and would then embed the
+results in my Wordpress notebook, linking back to the demo file in Github.
+Knitr has allowed me to keep those figures, code and text in the package
+repository.  This keeps everything more centralized (to Github), and lets
+each of the examples be updated in a more natural way than the linear
+record in the lab notebook.  (Images are still hosted on flickr to avoid
+committing the binary files, knitr handles this upload rather well.).
 
-I've recently gotten better at always including `Roxygen` documentation for packages.
-Since `knitr` and markdown are recent developments for me, many older and even working
-manuscripts are still local in LaTeX.  Being sensitive to the desires of collaborators
-means, that some projects are kept locally or hosted as private, secure repositories.  
+I've recently gotten better at always including `Roxygen` documentation
+for packages.  Since `knitr` and markdown are recent developments for
+me, many older and even working manuscripts are still local in LaTeX.
+Being sensitive to the desires of collaborators means, that some projects
+are kept locally or hosted as private, secure repositories.
 
 
 My Workflow
