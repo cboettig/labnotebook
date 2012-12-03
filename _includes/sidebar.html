@@ -5,7 +5,13 @@ Posted on
 <br />
 {% include nextprevious.html %}
 <br />
-<p> <a class="btn btn-mini" href="https://github.com/cboettig/labnotebook/commits/master/_posts">history</a></p>
+{% if defined?(page.modified) %} 
+  Last modified 
+  <time datetime="{{ page.modified | date_to_xmlschema }}" 
+  property="dc:modified">{{ page.modified | date_to_string }}</time>
+{% endif %}
+
+<p> <a class="btn btn-mini" href="{{ site.repo }}/blob/master/_posts{{page.url | github_link }}">history</a></p>
 <br />
 Posted in {% include pagecategories.html %}
 <br />

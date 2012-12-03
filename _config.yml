@@ -11,6 +11,7 @@ author:
   mendeley: carl-boettiger
 keywords: Science, Ecology, Evolution, Open Science, Reproducible Research
 description: My open lab notebook- research in theoretical ecology and evolution
+repo: https://github.com/cboettig/labnotebook
 
 
 # these are available to liquid filters with: site.author.givenName, etc
