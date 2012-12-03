@@ -1,5 +1,5 @@
-# codecogs plugin
-# Author: Carl Boettiger
+# Title: codecogs plugin
+# Author: Carl Boettiger, @cboettig
 # License: MIT
 #
 # A simple filter to replace mathjax-latex syntax with images of the 
