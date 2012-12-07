@@ -20,7 +20,6 @@ url: http://www.carlboettiger.info
 permalink: /:year/:month/:day/:title.html
 redirects: yes
 exclude: [ _posts/source/, _posts/_private/ ]
-auto: true
 
 markdown: pandoc
 pandoc:

@@ -21,28 +21,28 @@ Okay, straight forward exercise.  47 commits and 19 hours later, I have what I n
 
 ### Figure 3
 
-##### Stock (state variable) dynamics
+#### Stock (state variable) dynamics
 
-![State dynamics](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-p1.png) 
+![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-p1.png) 
 
-##### Harvest (control variable) dynamics
+#### Harvest (control variable) dynamics
 
-![Control dynamics](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure3.png) 
+![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure3.png) 
 
 
 ### Figure 4
 
-##### Stock (state variable) dynamics
+#### Stock (state variable) dynamics
 
-![plot of chunk Figure4S](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure4S1.png) 
+![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure4S1.png) 
 
-![plot of chunk Figure4S](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure4S2.png) 
+![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure4S2.png) 
 
 ##### Harvest (control variable) dynamics
 
-![plot of chunk Figure4](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure41.png) 
+![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure41.png) 
 
-![plot of chunk Figure4](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure42.png) 
+![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure42.png) 
 
 
 
@@ -54,7 +54,7 @@ These are calculated with `c0 = 30`.  There's corresponding figures when fishing
 
 The apples-to-apples illustration is also generated in this script.  
 
-![plot of chunk apples_plot](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-apples_plot.png) 
+![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-apples_plot.png) 
 
 
 
@@ -63,11 +63,14 @@ The apples-to-apples illustration is also generated in this script.
 
 Caching is pretty helpful in fiddling with these slow computations.  Sometimes it helps to copy the cache of the intensive part of a run over from the supercomputer to the local machine, and load the whole cache into an interactive R session.  Loading the whole cache can be done as such:
 
+
 ```r
 e <- environment()
 files <- gsub(".rdb", "", system('ls *.rdb', intern=TRUE))
 sapply(files, lazyLoad, env=e)
 ```
+
+
 providied the target chache directory doesn't have caches of different commits.  
 
 
