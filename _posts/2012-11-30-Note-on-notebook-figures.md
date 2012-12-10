@@ -31,7 +31,7 @@ An alternative strategy would be to upload each figure to figshare directly in t
 
 It's not easy to generate figures that display nicely in both dark and light themes (well, I should just tell ggplot to use a solarized set of theme colors, but I'm too lazy to write that).  Meanwhile, just setting the transparent background to the plot, and transparent grid lines against the grey boxes seems to do pretty well:
 
-![Example transparent plot](http://www.carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-p1.png)
+![Example transparent plot](http://carlboettiger.info/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-6.png)
 
 This is accomplished with the codeblock below.  Note that we need to tell `knitr` chunks to set the background of the png device to transparent, as well as telling ggplot what we want to be transparent:
 
@@ -41,9 +41,12 @@ theme_notebook <-
   theme_grey() + 
   theme(
     plot.background = element_rect(fill = "transparent", colour = NA),
+    panel.grid.major = element_line(colour = "transparent")),
     panel.grid.minor = element_line(colour = "transparent"))
 theme_set(theme_notebook)
 ```
+
+(It appears this makes the gridlines invisible, since they appear over the grey `panel.background`.  For now, best to leave them white, which shows up against the grey background in any event).  
 
 [^1]: One challenge this introduces is private posts (such as the reviews I write in peer review, which I sign but cannot publicly disclose).  Currently these are ignored by github (`.gitignore`) and by Jekyll (`exclude:` in `_config.yml`).  I suppose I could likewise simply tell tarball to ignore `_posts/private`.
 
