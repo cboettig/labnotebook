@@ -1,9 +1,9 @@
 Lower-Division
 --------------
 
-* AMS2: Pre-Statistics                                                             
+* AMS2: Pre-Statistics 
 * AMS3: Precalculus for Science and Engineering
-* AMS5: Statistics     
+* AMS5: Statistics
 * AMS7: Statistical Methods for the Biological, Environmental, and Health Sciences  
 * AMS7L: Statistical Methods for the Biological, Environmental, and Health Sciences Laboratory
 * AMS10: Mathematical Methods for Engineers I + II
@@ -23,8 +23,8 @@ Upper-Division
 * AMS114: Introduction to Dynamical Systems **
 * AMS115: Stochastic Modeling in Biology **
 * AMS118: Estimation and Introduction to Control of Stochastic Processes **
-* AMS131: Introduction to Probability Theory
-* AMS132: Classical and Bayesian Inference
+* AMS131: ~~Introduction to Probability Theory~~
+* AMS132: ~~Classical and Bayesian Inference~~
 * AMS147: Computational Methods and Applications **
 * ~~AMS156: Linear Regression~~
 * AMS162: Design and Analysis of Computer Simulation Experiments **
