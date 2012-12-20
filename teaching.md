@@ -16,7 +16,7 @@ my approach is also influenced by the examples of such thinkers
 as Professor [Eric Mazur](http://www.youtube.com/watch?v=WwslBPj8GgI)
 and [Sir Ken Robinson](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity.html).
 Good teaching practices should be rooted in scientific study, not
-ancetode; and much of this philosphy is well borne out in the educational
+anecdote; and much of this philosophy is well borne out in the educational
 research literature.  Pieces that have been particularly influential for
 me include the evidence for the value of collaborative problem-solving
 in science education (Anderson et al. 2011); the immense evidence for

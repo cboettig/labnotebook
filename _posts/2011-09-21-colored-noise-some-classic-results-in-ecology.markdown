@@ -11,7 +11,7 @@ categories:
 tags: colored-noise
 ---
 
-Some of my early notes & derivations on the impact of red environmental noise on population dynamics ([as pdf](assets/files/coloredNoise.pdf))
+Some of my early notes & derivations on the impact of red environmental noise on population dynamics ([as pdf](http://carlboettiger.info/assets/files/coloredNoise.pdf))
 
 
 * Roughgarden's [paper](http://www.jstor.org/stable/2459866)

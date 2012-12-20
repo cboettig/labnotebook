@@ -2,6 +2,7 @@
 layout: post
 categories: ecology
 tags: nonparametric-bayes
+modified: 2012-12-12
 
 ---
 
@@ -14,11 +15,11 @@ $$K(X, X') = \sigma^2 e^{\frac{(X-X')^2}{d}}$$
 
 And observations from $Z = f(X) + \varepsilon$, for which we seek to approximate $f$ as a (multivariate) Gaussian process, $Z | X ~ N(\mu, C)$. The covariance matrix $C$ is given by our kernel $K$, conditioned on our observations; the mean $\mu$ is given by a constant or linear model, likewise conditioned on our observations.  If the multivariate normal of observed and predicted points is,
 
-$$\begin{pmatrix} y_{\textrm{obs}} \ y_{\textrm{pred}} \end{pmatrix} \sim \mathcal{N}\left( \mathbf{0}, \begin{bmatrix} cov(X_o,X_o) & cov(X_o, X_p) \ cov(X_p,X_o) & cov(X_p, X_p) \end{bmatrix} \right)$$
+$$\begin{align}\begin{pmatrix} y_{\textrm{obs}} \ y_{\textrm{pred}} \end{pmatrix} \sim \mathcal{N}\left( \mathbf{0}, \begin{bmatrix} cov(X_o,X_o) & cov(X_o, X_p) \ cov(X_p,X_o) & cov(X_p, X_p) \end{bmatrix} \right)\end{align}$$
 
 the conditional probability is
 
-$$x|y \sim \mathcal{N}(E,C)$$ $$E = cov(X_p, X_o) (cov(X_o,X_o) + \varepsilon \mathbb{I}) ^{-1} y$$ $$C= cov(X_p, X_p) - cov(X_p, X_o) (cov(X_o,X_o)+ \varepsilon \mathbb{I} )^{-1} cov(X_o, X_p)$$
+$$x|y \sim \mathcal{N}(E,C)$$ $$E = \operatorname{cov}(X_p, X_o) (\operatorname{cov}(X_o,X_o) + \varepsilon \mathbb{I}) ^{-1} y$$ $$C= \operatorname{cov}(X_p, X_p) - \operatorname{cov}(X_p, X_o) (\operatorname{cov}(X_o,X_o)+ \varepsilon \mathbb{I} )^{-1} \operatorname{cov}(X_o, X_p)$$
 
 
 Our hyperparameters are $d$, $\sigma^2$, and $\varepsilon$, for which we need priors.  We'll use the inverse gamma,
