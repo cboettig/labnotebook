@@ -1,7 +1,7 @@
 ---
 layout: post
 category: ecology
-tags: [multiple-uncertainty; decision-theory]
+tags: [multiple-uncertainty, decision-theory]
 updated: 2012-11-09
 
 ---
