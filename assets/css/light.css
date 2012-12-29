@@ -5355,6 +5355,781 @@ a.badge:hover {
 .hero-unit li {
   line-height: 30px;
 }
+code {
+  font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
+  font-size: .8em;
+}
+.highlight .c {
+  color: #586e75;
+}
+/* Comment */
+.highlight .err {
+  color: #93a1a1;
+}
+/* Error */
+.highlight .g {
+  color: #93a1a1;
+}
+/* Generic */
+.highlight .k {
+  color: #859900;
+}
+/* Keyword */
+.highlight .l {
+  color: #93a1a1;
+}
+/* Literal */
+.highlight .n {
+  color: #93a1a1;
+}
+/* Name */
+.highlight .o {
+  color: #859900;
+}
+/* Operator */
+.highlight .x {
+  color: #cb4b16;
+}
+/* Other */
+.highlight .p {
+  color: #93a1a1;
+}
+/* Punctuation */
+.highlight .cm {
+  color: #586e75;
+}
+/* Comment.Multiline */
+.highlight .cp {
+  color: #859900;
+}
+/* Comment.Preproc */
+.highlight .c1 {
+  color: #586e75;
+}
+/* Comment.Single */
+.highlight .cs {
+  color: #859900;
+}
+/* Comment.Special */
+.highlight .gd {
+  color: #2aa198;
+}
+/* Generic.Deleted */
+.highlight .ge {
+  color: #93a1a1;
+  font-style: italic;
+}
+/* Generic.Emph */
+.highlight .gr {
+  color: #dc322f;
+}
+/* Generic.Error */
+.highlight .gh {
+  color: #cb4b16;
+}
+/* Generic.Heading */
+.highlight .gi {
+  color: #859900;
+}
+/* Generic.Inserted */
+.highlight .go {
+  color: #93a1a1;
+}
+/* Generic.Output */
+.highlight .gp {
+  color: #93a1a1;
+}
+/* Generic.Prompt */
+.highlight .gs {
+  color: #93a1a1;
+  font-weight: bold;
+}
+/* Generic.Strong */
+.highlight .gu {
+  color: #cb4b16;
+}
+/* Generic.Subheading */
+.highlight .gt {
+  color: #93a1a1;
+}
+/* Generic.Traceback */
+.highlight .kc {
+  color: #cb4b16;
+}
+/* Keyword.Constant */
+.highlight .kd {
+  color: #268bd2;
+}
+/* Keyword.Declaration */
+.highlight .kn {
+  color: #859900;
+}
+/* Keyword.Namespace */
+.highlight .kp {
+  color: #859900;
+}
+/* Keyword.Pseudo */
+.highlight .kr {
+  color: #268bd2;
+}
+/* Keyword.Reserved */
+.highlight .kt {
+  color: #dc322f;
+}
+/* Keyword.Type */
+.highlight .ld {
+  color: #93a1a1;
+}
+/* Literal.Date */
+.highlight .m {
+  color: #2aa198;
+}
+/* Literal.Number */
+.highlight .s {
+  color: #2aa198;
+}
+/* Literal.String */
+.highlight .na {
+  color: #93a1a1;
+}
+/* Name.Attribute */
+.highlight .nb {
+  color: #b58900;
+}
+/* Name.Builtin */
+.highlight .nc {
+  color: #268bd2;
+}
+/* Name.Class */
+.highlight .no {
+  color: #cb4b16;
+}
+/* Name.Constant */
+.highlight .nd {
+  color: #268bd2;
+}
+/* Name.Decorator */
+.highlight .ni {
+  color: #cb4b16;
+}
+/* Name.Entity */
+.highlight .ne {
+  color: #cb4b16;
+}
+/* Name.Exception */
+.highlight .nf {
+  color: #268bd2;
+}
+/* Name.Function */
+.highlight .nl {
+  color: #93a1a1;
+}
+/* Name.Label */
+.highlight .nn {
+  color: #93a1a1;
+}
+/* Name.Namespace */
+.highlight .nx {
+  color: #555555;
+}
+/* Name.Other */
+.highlight .py {
+  color: #93a1a1;
+}
+/* Name.Property */
+.highlight .nt {
+  color: #268bd2;
+}
+/* Name.Tag */
+.highlight .nv {
+  color: #268bd2;
+}
+/* Name.Variable */
+.highlight .ow {
+  color: #859900;
+}
+/* Operator.Word */
+.highlight .w {
+  color: #93a1a1;
+}
+/* Text.Whitespace */
+.highlight .mf {
+  color: #2aa198;
+}
+/* Literal.Number.Float */
+.highlight .mh {
+  color: #2aa198;
+}
+/* Literal.Number.Hex */
+.highlight .mi {
+  color: #2aa198;
+}
+/* Literal.Number.Integer */
+.highlight .mo {
+  color: #2aa198;
+}
+/* Literal.Number.Oct */
+.highlight .sb {
+  color: #586e75;
+}
+/* Literal.String.Backtick */
+.highlight .sc {
+  color: #2aa198;
+}
+/* Literal.String.Char */
+.highlight .sd {
+  color: #93a1a1;
+}
+/* Literal.String.Doc */
+.highlight .s2 {
+  color: #2aa198;
+}
+/* Literal.String.Double */
+.highlight .se {
+  color: #cb4b16;
+}
+/* Literal.String.Escape */
+.highlight .sh {
+  color: #93a1a1;
+}
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #2aa198;
+}
+/* Literal.String.Interpol */
+.highlight .sx {
+  color: #2aa198;
+}
+/* Literal.String.Other */
+.highlight .sr {
+  color: #dc322f;
+}
+/* Literal.String.Regex */
+.highlight .s1 {
+  color: #2aa198;
+}
+/* Literal.String.Single */
+.highlight .ss {
+  color: #2aa198;
+}
+/* Literal.String.Symbol */
+.highlight .bp {
+  color: #268bd2;
+}
+/* Name.Builtin.Pseudo */
+.highlight .vc {
+  color: #268bd2;
+}
+/* Name.Variable.Class */
+.highlight .vg {
+  color: #268bd2;
+}
+/* Name.Variable.Global */
+.highlight .vi {
+  color: #268bd2;
+}
+/* Name.Variable.Instance */
+.highlight .il {
+  color: #2aa198;
+}
+/* Literal.Number.Integer.Long */
+/* Pandoc does syntax highlighting using HTML markup from these classes */
+/* Based on kate's own default colors for Haskell */
+pre.sourceCode,
+table.sourceCode,
+table.sourceCode * {
+  font-family: monospace;
+}
+code.sourceCode span.kw {
+  color: #b58900;
+  font-weight: bold;
+}
+code.sourceCode span.dt {
+  color: #2aa198;
+}
+code.sourceCode span.dv {
+  color: #586e75;
+}
+code.sourceCode span.bn {
+  color: #cb4b16;
+}
+code.sourceCode span.fl {
+  color: #2aa198;
+}
+code.sourceCode span.ch {
+  color: #dc322f;
+}
+code.sourceCode span.st {
+  color: #d33682;
+}
+code.sourceCode span.co {
+  color: #586e75;
+  font-style: italic;
+}
+code.sourceCode span.al {
+  color: #859900;
+  font-weight: bold;
+}
+code.sourceCode span.fu {
+  color: #268bd2;
+}
+code.sourceCode span.er {
+  color: #dc322f;
+  font-weight: bold;
+}
+#dsq-content #dsq-comments .dsq-comment-body {
+  padding: 0.571em 0.786em;
+  /* Space between comment text and border */
+
+  background: #fdf6e3;
+  /* Comment body background color */
+
+  min-height: 70px;
+  /* Minimum comment body box height */
+
+  border-bottom: #93a1a1 1px solid;
+  /* Comment body bottom border */
+
+  border-left: #93a1a1 1px solid;
+  /* Comment body left border */
+
+  border-right: #93a1a1 1px solid;
+  /* Comment body right border */
+
+  border-top: #93a1a1 1px solid;
+  /* Comment body top border */
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #657b83;
+}
+.dsq-dc-logo {
+  display: none;
+  /* Turns off display of disqus logo */
+
+}
+/* My additional customizations to the Twitter Bootstrap CSS */
+/*                                                           */
+/* Tweak navbar brand link to be super sleek
+-------------------------------------------------- */
+.navbar-fixed-top .brand {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 20px;
+  float: right;
+  font-weight: bold;
+}
+/* Body and structure
+-------------------------------------------------- */
+body {
+  position: relative;
+  padding-top: 90px;
+  background-image: url(../img/grid-18px-masked.png);
+  background-repeat: repeat-x;
+  background-position: 0 40px;
+}
+/* Space out sub-sections more
+-------------------------------------------------- */
+section {
+  padding-top: 60px;
+}
+/* Jumbotrons
+-------------------------------------------------- */
+.jumbotron {
+  position: relative;
+}
+.jumbotron h1 {
+  margin-bottom: 9px;
+  font-size: 81px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.jumbotron p {
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+.jumbotron .btn-large {
+  font-size: 20px;
+  font-weight: normal;
+  padding: 14px 24px;
+  margin-right: 10px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.jumbotron .btn-large small {
+  font-size: 14px;
+}
+/* Specific jumbotrons
+------------------------- */
+.subhead {
+  padding-bottom: 0;
+  margin-bottom: 9px;
+}
+.subhead h1 {
+  font-size: 54px;
+}
+/* Footer
+-------------------------------------------------- */
+.footer {
+  margin-top: 45px;
+  padding: 35px 0 36px;
+  border-top: 1px solid #eee8d5;
+  font-size: 13px;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #657b83;
+}
+/* highlight (shrink fontsize for code)
+-------------------------------------------------- */
+.highlight code {
+  font-size: 13px;
+}
+.highlight code {
+  font-size: 13px;
+}
+/* Sidebar
+-------------------------------------------------- */
+.sidebar {
+  margin-left: 45px;
+  padding: 35px 35px 36px;
+  border-left: 1px solid #eee8d5;
+  font-size: 13px;
+}
+.sidebar p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+.sidebar h4 a {
+  color: inherit;
+  font-weight: bold;
+}
+/* postpreview
+-------------------------------------------------- */
+.postpreview {
+  margin-left: 45px;
+  padding: 35px 35px 36px;
+  border-left: 1px solid #eee8d5;
+  font-size: .85em;
+  line-height: 1.5em;
+  text-align: justify;
+}
+.postpreview h3 {
+  line-height: 22px;
+}
+.postpreview p {
+  margin-bottom: 0;
+  color: #657b83;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: justify;
+}
+.postpreview blockquote {
+  margin-bottom: 0;
+  color: #657b83;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: justify;
+}
+.postpreview h1 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.postpreview h2 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
+/* Make markdown with floatright in the alt-text into a nice text-wrapped image */
+img[alt=floatright] {
+  float: right;
+  margin: 10px 10px;
+}
+/* Misc
+-------------------------------------------------- */
+img {
+  max-width: 100%;
+}
+/* Responsive Docs
+-------------------------------------------------- */
+@media (max-width: 480px) {
+  /* Reduce padding above jumbotron */
+  body {
+    padding-top: 70px;
+  }
+  /* Change up some type stuff */
+  h2 {
+    margin-top: 27px;
+  }
+  h2 small {
+    display: block;
+    line-height: 18px;
+  }
+  h3 {
+    margin-top: 18px;
+  }
+  /* Adjust the jumbotron */
+  .jumbotron h1,
+  .jumbotron p {
+    text-align: center;
+    margin-right: 0;
+  }
+  .jumbotron h1 {
+    font-size: 45px;
+    margin-right: 0;
+  }
+  .jumbotron p {
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .jumbotron .btn {
+    display: block;
+    font-size: 18px;
+    padding: 10px 14px;
+    margin: 0 auto 10px;
+  }
+  /* Masthead (home page jumbotron) */
+  .masthead {
+    padding-top: 0;
+  }
+  /* Don't space out quick links so much */
+  .quick-links {
+    margin: 40px 0 0;
+  }
+  /* hide the bullets on mobile since our horizontal space is limited */
+  .quick-links .divider {
+    display: none;
+  }
+  /* center example sites */
+  .example-sites {
+    margin-left: 0;
+  }
+  .example-sites > li {
+    float: none;
+    display: block;
+    max-width: 280px;
+    margin: 0 auto 18px;
+    text-align: center;
+  }
+  .example-sites .thumbnail > img {
+    max-width: 270px;
+  }
+  table code {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  /* Modal example */
+  .modal-example .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+}
+@media (max-width: 768px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+  /* Jumbotron buttons */
+  .jumbotron .btn {
+    margin-bottom: 10px;
+  }
+  /* Subnav */
+  .subnav {
+    position: static;
+    top: auto;
+    z-index: auto;
+    width: auto;
+    height: auto;
+    background: #fff;
+    /* whole background property since we use a background-image for gradient */
+  
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .subnav .nav > li {
+    float: none;
+  }
+  .subnav .nav > li > a {
+    border: 0;
+  }
+  .subnav .nav > li + li > a {
+    border-top: 1px solid #e5e5e5;
+  }
+  .subnav .nav > li:first-child > a,
+  .subnav .nav > li:first-child > a:hover {
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+  }
+  /* Popovers */
+  .large-bird {
+    display: none;
+  }
+  .popover-well .popover-wrapper {
+    margin-left: 0;
+  }
+  /* Space out the show-grid examples */
+  .show-grid [class*="span"] {
+    margin-bottom: 5px;
+  }
+  /* Unfloat the back to top link in footer */
+  .footer .pull-right {
+    float: none;
+  }
+  .footer p {
+    margin-bottom: 9px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  /* Scale down the jumbotron content */
+  .jumbotron h1 {
+    font-size: 54px;
+  }
+  .jumbotron p {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 980px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+  /* Scale down the jumbotron content */
+  .jumbotron h1 {
+    font-size: 72px;
+  }
+}
+@media (max-width: 980px) {
+  /* Unfloat brand */
+  .navbar-fixed-top .brand {
+    float: left;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.btn {
+  text-shadow: none;
+}
+.btn:hover {
+  color: #657b83;
+  text-decoration: none;
+  background-color: #eee8d5;
+  *background-color: #eee8d5;
+}
+.btn.active,
+.btn:active {
+  background-color: #eee8d5;
+  background-color: #eee8d5 \9;
+}
+.btn.disabled,
+.btn[disabled] {
+  background-color: #eee8d5;
+}
+.btn-inverse,
+.btn-inverse:hover {
+  color: #fdf6e3;
+  text-shadow: none;
+}
+code,
+pre {
+  color: #657b83;
+}
+code {
+  color: #586e75;
+  background-color: #fdf6e3;
+  border: 1px solid #93a1a1;
+}
+pre {
+  background-color: #eee8d5;
+  border: 1px solid #93a1a1;
+}
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+table th,
+table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #93a1a1;
+}
+table th {
+  font-weight: bold;
+}
+table thead th {
+  vertical-align: bottom;
+}
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+table tbody + tbody {
+  border-top: 2px solid #93a1a1;
+}
+table tbody tr:hover td,
+table tbody tr:hover th {
+  background-color: #eee8d5;
+}
+p small {
+  color: #657b83;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  color: #657b83;
+}
+hr {
+  border-top: 1px solid #eee8d5;
+  border-bottom: 1px solid #fdf6e3;
+}
+.muted {
+  color: #93a1a1;
+}
+blockquote {
+  border-left: 5px solid #eee8d5;
+}
+blockquote small {
+  color: #eee8d5;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+.affix {
+  position: fixed;
+}
 .pull-right {
   float: right;
 }
