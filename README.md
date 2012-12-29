@@ -17,6 +17,7 @@ Site Features & Credits
 * Crisp equations rendered in [Mathjax](http://www.mathjax.org/)
 * Reproducible code execution with [knitr](http://yihui.name/knitr/)
 * CSS based on [twitter bootstrap](http://twitter.github.com/bootstrap/)
+* Scalable css icons from [FontAwesome](http://fortawesome.github.com/Font-Awesome)
 * Static site generation with [Jekyll](https://github.com/mojombo/jekyll)
 * Markdown parsing with [pandoc](http://johnmacfarlane.net/pandoc/) 
 * Twitter, Mendeley & Github [custom plugins](https://github.com/cboettig/labnotebook/tree/master/_plugins)
