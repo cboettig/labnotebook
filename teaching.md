@@ -81,8 +81,7 @@ literature. The papers mentioned above provide some of the foundational
 philosophy towards education. I maintain a [Mendeley reading
 list](http://www.mendeley.com/groups/530011/education)
 of articles I encounter that may be of interest to others wanting to
-know more about educational research.
-[![floatright](http://carlboettiger.info/wp-content/uploads/2010/09/001_31.png "rss")](http://www.mendeley.com/groups/530011/education/feed/rss)
+know more about educational research.  <a href="http://www.mendeley.com/groups/530011/education/feed/rss"><i class="icon-rss"></i></a>
 
 References
 ==========
