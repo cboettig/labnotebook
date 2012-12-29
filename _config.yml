@@ -19,7 +19,7 @@ repo: https://github.com/cboettig/labnotebook
 url: http://www.carlboettiger.info
 permalink: /:year/:month/:day/:title.html
 redirects: yes
-exclude: [ _posts/source/, _posts/_private/ ]
+exclude: [ _posts/source/, _posts/_private/, assets/figures]
 
 markdown: pandoc
 pandoc:
