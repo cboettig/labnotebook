@@ -1,8 +1,10 @@
 </article>
 <footer class="footer">
-  <form>
-    <input type="submit" onclick="switch_style('dark');return false;" name="theme" value="dark" id="dark" class="btn btn-mini pull-right" /> 
-    <input type="submit" onclick="switch_style('light');return false;" name="theme" value="light" id="light" class="btn btn-mini pull-right" />
+  <form style="font-size:10px">
+    <div class="input-prepend">
+      <a onclick="switch_style('dark'); return false;" name="theme" value="dark" id="dark" class="btn btn-mini pull-right"><i class="icon-adjust"></i> dark</a> 
+      <a onclick="switch_style('light');return false;" name="theme" value="light" id="light" class="btn btn-mini pull-right"><i class="icon-certificate"></i> light</a> 
+    </div>
   </form>
           <div class="row">
             <div class="span4 socialicons" vocab="http://xmlns.com/foaf/0.1/" typeof="Person" resource="#me">
