@@ -5709,7 +5709,16 @@ code.sourceCode span.er {
 
 }
 /* My additional customizations to the Twitter Bootstrap CSS */
-/*                                                           */
+/* Icons 
+---------------------------------*/
+.socialicons {
+  color: #586e75;
+  font-size: 20px;
+}
+.socialicons a {
+  color: #657b83;
+  font-size: 20px;
+}
 /* Tweak navbar brand link to be super sleek
 -------------------------------------------------- */
 .navbar-fixed-top .brand {
