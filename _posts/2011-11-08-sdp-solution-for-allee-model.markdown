@@ -9,6 +9,7 @@ categories:
 - ecology
 tags:
 - PDG Control
+modified: 2013-02-01
 ---
 
 Summarizing efforts from last few days setting up and running some stochastic dynamic programming optimization problems. As we are focusing on discrete time at the moment, these problems are solved by Bellman's equation (don't need Hamilton-Jacobi-Bellman formulation).
@@ -20,26 +21,26 @@ Summarizing efforts from last few days setting up and running some stochastic dy
 Choose the harvest level to optimize the profit
 $$ \max_h \sum_{t=0}^T \beta^t \pi(x,h,t) $$
 
-Subject to the boundary conditions $ X(0) = X_0, X(T) = X_T $ and the state equation:
+Subject to the boundary conditions $X(0) = X_0, X(T) = X_T$ and the state equation:
 $$ X(t+1) = Z(t) f(X(t)) $$
 
-Where $Z(t) $ is a normal random variable with mean unity and standard deviation $ \sigma $.
+Where $Z(t)$ is a normal random variable with mean unity and standard deviation $\sigma$.
 
 
 ### Stochastic Transition Matrices
 
 
-The problem is discrete in time, but we must still discritize the state and control variables. We define the state (population abundance) to assume only the values on a grid of size $ N $. In general the control variable could be defined on a separate grid (for instance, if we used effort-control) but as harvest is in the same units as the state variable (number of fish), we can use the same grid.
+The problem is discrete in time, but we must still discritize the state and control variables. We define the state (population abundance) to assume only the values on a grid of size $N$. In general the control variable could be defined on a separate grid (for instance, if we used effort-control) but as harvest is in the same units as the state variable (number of fish), we can use the same grid.
 
-The transition matrix $ \mathbf{T} $ maps all states $x_i $ to all other states $ x_j $ by their transition probabilities through the state equation:
+The transition matrix $\mathbf{T}  maps all states $x_i$ to all other states $x_j$ by their transition probabilities through the state equation:
 $$ P(x_j | x_i ) = \mathcal{N} \text{lognormal}\left( \frac{x_j}{f(x_i-h)}, \sigma \right) $$
 
-Where $ \mathcal{N} $ is just a normalization, $ \mathcal{N} = \sum_j P(x_j | x_i) = 1$. Note that the state equation is computed on the post-havest population $ x_i - h $, and hence a different matrix is produced for each possible value of $ h $ (for the moment we ignore the possibility that this function may vary explicitly with time as well, which would further increase the memory needed).
+Where $\mathcal{N}$ is just a normalization, $\mathcal{N} = \sum_j P(x_j | x_i) = 1$. Note that the state equation is computed on the post-havest population $x_i - h$, and hence a different matrix is produced for each possible value of $h$ (for the moment we ignore the possibility that this function may vary explicitly with time as well, which would further increase the memory needed).
 
 The stochastic dynamic programming solution just implements Bellman's equation:
 $$ V_{t} = \max_h \left( \mathbf{T}_h V_{t+1} + \pi(x_t, h_t) e^{-\delta (T-t)} \right) $$
 
-We begin with some final value $ V_T $ a vector of the "scrap" value of each possible end state. For instance, we can offer a fixed profit for all states above $ X_T $, and nothing otherwise. We then just iterate backwards, at each time-point trying all possible h values in the grid (from our set of transition matrices $ \mathbf{T}_h $ ) and selecting the best harvest level for each possible system state $ x_t $. Note this differs a bit from the way the boundary conditions are enforced in the deterministic continuous time case, and the exact value we put here may make a difference in different stochastic realizations.
+We begin with some final value $V_T$ a vector of the "scrap" value of each possible end state. For instance, we can offer a fixed profit for all states above $X_T$, and nothing otherwise. We then just iterate backwards, at each time-point trying all possible h values in the grid (from our set of transition matrices $\mathbf{T}_h$ ) and selecting the best harvest level for each possible system state $x_t$. Note this differs a bit from the way the boundary conditions are enforced in the deterministic continuous time case, and the exact value we put here may make a difference in different stochastic realizations.
 
 
 

@@ -28,7 +28,7 @@ We consider some discrete-time state equation for (fish stock, $x$) under some c
 
 $$ x_{t+1} = f(x_t, h) $$
 
-We again have utility function, $ \pi(h) $ for diminishing returns on fish harvest. Discrete time means we maximize over the discrete discounting rate $ \beta $ and sum over intervals:
+We again have utility function, $\pi(h)$ for diminishing returns on fish harvest. Discrete time means we maximize over the discrete discounting rate $\beta$ and sum over intervals:
 
 $$ \max_{h_t} \sum_{t=0}^T \beta^t \pi(h) $$
 
