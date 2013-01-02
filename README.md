@@ -97,9 +97,12 @@ License
 -------
 
 All original content is licensed by Carl Boettiger under the Creative Commons Zero license, [CC0](http://creativecommons.org/publicdomain/zero/1.0/).  This license is uniquely appropriate for data, code, and written content, and facilitates distribution & reuse.  Please remember that attribution and citation are appreciated where appropriate as proper scholarly practice.  (Newton, Darwin, and Shakespeare are similarly in the public domain, but you wouldn't plagiarize from them).  Cite or attribute this work as:
+<br/>
+
 
 <div vocab="http://purl.org/dc/terms/" typeof="bibliographicCitation">
-<span property="creator">Carl Boettiger</span> (<span property="date">2012</span>). <span property="title">Lab Notebook</span>, <a property="http://creativecommons.org/ns#attributionURL" href="http://carlboettiger.info">http://carlboettiger.info</a> 
+<span property="creator">Carl Boettiger</span> (<span property="date">2012</span>), <span property="title">"Page Title"</span>, <span property="source">Lab Notebook</span>, <a property="http://creativecommons.org/ns#attributionURL" href="http://carlboettiger.info">http://carlboettiger.info</a> 
 </div>
 
-[Greycite](http://greycite.knowledgeblog.org/) can generate the citation information for any particular page given it's URL.  
+
+<br/>with appropriate page title and publication date as indicated.  [Greycite](http://greycite.knowledgeblog.org/) is an excellent online tool that can generate the citation information for any particular page given it's URL.  
