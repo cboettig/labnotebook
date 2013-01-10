@@ -2,21 +2,34 @@
 <footer class="footer">
   <form style="font-size:10px">
     <div class="input-prepend">
-      <a onclick="switch_style('dark'); return false;" name="theme" value="dark" id="dark" class="btn btn-mini pull-right"><i class="icon-adjust"></i> dark</a> 
-      <a onclick="switch_style('light');return false;" name="theme" value="light" id="light" class="btn btn-mini pull-right"><i class="icon-certificate"></i> light</a> 
+      <span rel="tooltip" title="switch to dark theme">
+        <a onclick="switch_style('dark'); return false;" name="theme" value="dark" id="dark" class="btn btn-mini pull-right"><i class="icon-adjust"></i></a> 
+      </span>
+      <span rel="tooltip" title="switch to light theme">
+        <a onclick="switch_style('light');return false;" name="theme" value="light" id="light" class="btn btn-mini pull-right"><i class="icon-certificate"></i></a> 
+      </span>
     </div>
   </form>
           <div class="row">
             <div class="span4 socialicons" style="font-size:20px" vocab="http://xmlns.com/foaf/0.1/" typeof="Person" resource="#me">
-              <a href="mailto:cboettig@gmail.com"><a property="account" href="mailto:{{site.author.email}}" onclick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><i class="icon-envelope-alt"></i></a>
+              <span rel="tooltip" title="email me">
+                <a property="account" href="mailto:{{site.author.email}}" onclick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><i class="icon-envelope-alt"></i></a>
+              </span>
+              <span rel="tooltip" title="follow me on twitter (reading, discussing)">
                 <a property="account" href="https://twitter.com/{{site.author.twitter}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><i class="icon-twitter"></i></a> 
-                <!--              <a property="account" href="https://plus.google.com/{{site.author.gplus}}" onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); return false;"><i class="icon-google-plus"></i></a> -->
-              <a property="account" href="https://github.com/{{site.author.github}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><i class="icon-github" alt="github"></i></a> 
+              </span>
+              <!--              <a property="account" href="https://plus.google.com/{{site.author.gplus}}" onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); return false;"><i class="icon-google-plus"></i></a> -->
+              <span rel="tooltip" title="follow me on Github (code, research)">
+                <a property="account" href="https://github.com/{{site.author.github}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><i class="icon-github" alt="github"></i></a> 
+              </span>  
               <!--              <a property="account" href="http://www.mendeley.com/profiles/{{site.author.mendeley}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); return false;"><img src="/assets/img/icon-mendeley.png" alt="mendeley" /></a>  -->
-              <a href="/atom.xml" onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><i class="icon-rss" ></i></a>
+              <span rel="tooltip" title="subscribe to RSS feeds for my open lab notebook">
+                <a href="/atom.xml" onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><i class="icon-rss" ></i></a>
+              </span>
             </div>
             <div class="span2" style="text-align:center">
-              <span rel="tooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"><a rel="license" href="http://onsclaims.wikispaces.com/" 
+              <span rel="tooltip" 
+                    title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"><a rel="license" href="http://onsclaims.wikispaces.com/" 
                 onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" 
                 ><img src="http://onsclaims.wikispaces.com/file/view/ons-aci2-icon.png" alt="ONS" /></a>
             </span>
