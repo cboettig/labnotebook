@@ -14,6 +14,12 @@ I have worked in a variety of areas (outlined below).  For a more up-to-date or 
 look, why not see [what I am working on right now?](/lab-notebook.html)
 
 
+
+Category: 
+
+<i class="icon-columns"></i> Publications <i class="icon-github"></i> Code <i class="icon-beaker"></i> Data <i class="icon-book"></i>Reading <i class="icon-tags"></i> Tags  <i class="icon-camera"></i> Figures
+----------------------------------------- -------------------------------- -------------------------------- -------------------------------- ------------------------------- ------------------------------------
+
 Ecology
 =======
 
