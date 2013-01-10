@@ -8,16 +8,23 @@
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
+    <script src="{{ site.url }}/assets/js/bootstrap-transition.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-collapse.js"></script> <!-- for collapsing navbar-->
+    <script src="{{ site.url }}/assets/js/bootstrap-tooltip.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function (){
+        $("[rel=tooltip]").tooltip();
+      });
+    </script>
+
     <!-- Unused Twitter Bootstrap Javascript 
     <script src="{{ site.url }}/assets/js/bootstrap-dropdown.js"></script>
     <script src="{{ site.url }}/assets/js/google-code-prettify/prettify.js"></script>
-    <script src="{{ site.url }}/assets/js/bootstrap-transition.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-alert.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-modal.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-scrollspy.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-tab.js"></script>
-    <script src="{{ site.url }}/assets/js/bootstrap-tooltip.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-popover.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-button.js"></script>
     <script src="{{ site.url }}/assets/js/bootstrap-carousel.js"></script>
