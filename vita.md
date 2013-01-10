@@ -18,9 +18,7 @@ publications
 ------------
 1. Carl Boettiger, Alan Hastings (2013). **Tipping points: From patterns to predictions** *Nature* 493, 157–158. [doi](http://dx.doi.org/10.1038/493157a):10.1038/493157a
 1. Carl Boettiger, Alan Hastings (2012). **Early Warning Signals and the
-  Prosecutor’s Fallacy** 4734-4739.  *Proceedings of the Royal Society B* 279 (1748).  
-  [doi](http://dx.doi.org/10.1098/rspb.2012.2085):10.1098/rspb.2012.2085
-  ([pdf](http://www.mendeley.com/download/public/98752/4972355691/dd5fdd8ebbfc05d9ebf415761be200805254d22e/dl.pdf)) 
+  Prosecutor’s Fallacy** 4734-4739.  *Proceedings of the Royal Society B* 279 (1748). [doi](http://dx.doi.org/10.1098/rspb.2012.2085):10.1098/rspb.2012.2085 ([pdf](http://www.mendeley.com/download/public/98752/4972355691/dd5fdd8ebbfc05d9ebf415761be200805254d22e/dl.pdf)) 
   ([arXiv](http://arxiv.org/abs/1210.1204)) ([code](https://github.com/cboettig/earlywarning/blob/prosecutor/inst/examples/fallacy.md)) 
 1. Carl Boettiger, Duncan Temple Lang, Peter
   Wainwright (2012). **rfishbase: exploring, manipulating and visualizing
