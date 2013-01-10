@@ -13,12 +13,6 @@ me to large datasets where we might hope to resolve weak signals of interesting 
 I have worked in a variety of areas (outlined below).  For a more up-to-date or in depth
 look, why not see [what I am working on right now?](/lab-notebookmark.html)
 
-<div class="alert alert-info">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>Page in development</strong> Descriptions and mouse-overs below are not complete.
-</div>
-
-
 ### Ecology
 
 #### Population dynamics
@@ -26,6 +20,15 @@ look, why not see [what I am working on right now?](/lab-notebookmark.html)
 * Stochastic population dynamics [<i class="icon-github" style="color:#6c71c4;" rel="tooltip", title="populationdynamics R package repository"></i>](https://github.com/cboettig/populationdynamics) [<i class="icon-bookmark" style="color:#dc322f;"></i>](http://www.mendeley.com/bookmarks/634301/theoretical-ecology/papers/)
 [<i class="icon-tags" style="color:#b58900;", rel="tooltip", title="Notebook entries tagged as tribolium"></i>](tags.html/#tribolium) 
 * Early warning signals [<i class="icon-book" style="color:#2aa198;", rel="tooltip" title="Boettiger and Hastings, (2012). Quantifying the limits to detection of early warning signals"></i>](/vita.html) [<i class="icon-book" style="color:#2aa198;" rel="tooltip", title="Boettiger and Hastings, (2012). Early warning signals and the prosecutor's fallacy"></i>](/vita.html) [<i class="icon-book" style="color:#2aa198;", rel="tooltip" title="Boettiger and Hastings, (2013). Tipping Points: from patterns to predictions"></i>](/vita.html) [<i class="icon-github" style="color:#6c71c4;"></i>](https://github.com/cboettig/earlywarning) [<i class="icon-bookmark" style="color:#dc322f;"></i>](http://www.mendeley.com/bookmarks/530001/early-warning-signs/papers/) [<i class="icon-tags" style="color:#b58900;", rel="tooltip", title="Notebook entries tagged as warning-signals"></i>](tags.html/#warning-sginals) 
+
+
+
+<div class="alert alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong><i class="icon-warning-sign icon-3x" style="color:#dc322f;"></i> In development!</strong> Descriptions and mouse-overs on this page are not complete.   
+</div>
+
+
 
 #### Decision theory & Conservation
 
