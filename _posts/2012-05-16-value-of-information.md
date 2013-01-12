@@ -22,15 +22,15 @@ expands this result to consider the case in which the stock assessment may have 
 error, and the harvest process may have implementation error. In either event, the optimal
 harvest level for all possible values of stock for each interval in time (on a finite time-horizon)
 is computed by stochastic dynamic programming, given some price function for the harvest.
-This is implemented in [my R package, pdgControl](https://github.com/cboettig/pdg_control).
+This is implemented in [my R package, pdgControl](https://github.com/cboettig/pdg-control).
 
 I consider several cases in which we vary the management uncertainty and the stock uncertainty.
 I've considered four scenarios so far, (links to the runs of each scenario with R code and results)
 
-- ["Value of information" (VI)](https://github.com/cboettig/pdg_control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/value_of_information.md)
-- ["Value of stochasticity" (VS)](https://github.com/cboettig/pdg_control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/value_of_stochasticity.md)
-- ["Cost of underestimating" (CU)](https://github.com/cboettig/pdg_control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/cost_of_underestimating.md)
-- ["Reckless driver" (RD)](https://github.com/cboettig/pdg_control/blob/cfe87046bb29122b4e624459b63e4df5db34118d/inst/examples/reckless_driver.md)
+- ["Value of information" (VI)](https://github.com/cboettig/pdg-control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/value_of_information.md)
+- ["Value of stochasticity" (VS)](https://github.com/cboettig/pdg-control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/value_of_stochasticity.md)
+- ["Cost of underestimating" (CU)](https://github.com/cboettig/pdg-control/blob/e501e219ddae177804751f289355510a8c5fc88a/inst/examples/cost_of_underestimating.md)
+- ["Reckless driver" (RD)](https://github.com/cboettig/pdg-control/blob/cfe87046bb29122b4e624459b63e4df5db34118d/inst/examples/reckless_driver.md)
 
 Easiest to compare by putting these on a grid of manager uncertainty (across) vs true stochasticity (down):
 

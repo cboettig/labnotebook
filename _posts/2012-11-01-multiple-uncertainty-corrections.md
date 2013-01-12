@@ -89,7 +89,7 @@ Something seems to be a mistake, since the optimal policy under uncertainty does
 
 ![policy function under each source of uncertainty](http://farm8.staticflickr.com/7132/8158258480_972c8543e6.jpg)
 
-[example script](https://github.com/cboettig/pdg_control/blob/bbef99ec43c75ff1dca959c1511b44c5159f4f4c/inst/examples/mult_uncertainty_test.md)
+[example script](https://github.com/cboettig/pdg-control/blob/bbef99ec43c75ff1dca959c1511b44c5159f4f4c/inst/examples/mult_uncertainty_test.md)
 
 
 **Updated Edit**
@@ -97,4 +97,4 @@ Something seems to be a mistake, since the optimal policy under uncertainty does
 
 ![](http://carlboettiger.info/assets/figures/2012-11-17-f6c225f69f-policyfunctions.png) 
 
-[See notes on code changes inline](https://github.com/cboettig/pdg_control/commit/954cea9310063150bb42567b19caa272b34d32c2)
+[See notes on code changes inline](https://github.com/cboettig/pdg-control/commit/954cea9310063150bb42567b19caa272b34d32c2)

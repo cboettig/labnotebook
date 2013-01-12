@@ -7,7 +7,7 @@ modified: 2012-12-04
 ---
 
 
-Straight-forward tasks can sometimes take forever.  In advance of our upcoming conference call for the Pretty Darn Good Control (`pdg_control`) NIMBioS working group, I had a few remaining issues to touch up in Figures 3 and 4.  
+Straight-forward tasks can sometimes take forever.  In advance of our upcoming conference call for the Pretty Darn Good Control (`pdg-control`) NIMBioS working group, I had a few remaining issues to touch up in Figures 3 and 4.  
 
 Figure 3 shows harvest and stock dynamics under the different functional forms fo the cost.  The goal is to provide a very intuitive, visual sense of how the policies differ under these different functional forms, such as a fixed "transaction fee" (fixed) or a cost that is proportional to the size of the change in policy (L1), or the square of that change (L2), etc.  I had already cobbled together the code for this, but simply had to run over the same set of replicates and pick a window length appropriate to see the differences.  The trick was make sure we were comparing functional forms that had the same overall net impact on the Net Present Value of the stock.  In this way, the differences observed are due only to differences in the form of the cost, and not the total magnitude of the cost.  Figure 2 already provided a way to do this scaling, I simply needed to back out the scaling programmatically.  
 
@@ -46,9 +46,9 @@ Okay, straight forward exercise.  47 commits and 19 hours later, I have what I n
 
 
 
-[full knitr file here](https://github.com/cboettig/pdg_control/blob/25e6f1c1a599440be790a7ec047b8b63540255c5/inst/examples/policycosts/writeup.md)
+[full knitr file here](https://github.com/cboettig/pdg-control/blob/25e6f1c1a599440be790a7ec047b8b63540255c5/inst/examples/policycosts/writeup.md)
 
-These are calculated with `c0 = 30`.  There's corresponding figures when fishing effort itself is cost-free, `c0 = 0`.  See [costfree.md](https://github.com/cboettig/pdg_control/blob/cccec55a8ac2ef47dea99d45fdb732e5028aec98/inst/examples/policycosts/costfree.md).  Looks like the `c2` range needs to be extended for this run.  
+These are calculated with `c0 = 30`.  There's corresponding figures when fishing effort itself is cost-free, `c0 = 0`.  See [costfree.md](https://github.com/cboettig/pdg-control/blob/cccec55a8ac2ef47dea99d45fdb732e5028aec98/inst/examples/policycosts/costfree.md).  Looks like the `c2` range needs to be extended for this run.  
 
 ### Figure 2
 

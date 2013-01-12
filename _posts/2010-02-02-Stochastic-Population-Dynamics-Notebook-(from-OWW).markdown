@@ -4,10 +4,11 @@ tags: [tribolium, warning-signals]
 categories: [ecology]
 ---
 
-(Originally posted on OpenWetWare)
 
 The Lab Notebook Goes Open 
 ----------------------------------------
+
+(Originally posted on OpenWetWare)
 
 -   This is the first entry in my lab notebook, but not the beginning of
     the project. I have been exploring demographic and colored

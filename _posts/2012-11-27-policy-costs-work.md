@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: ecology
-tags: pdg_control
+tags: pdg-control
 
 ---
 
@@ -15,7 +15,7 @@ Example run with fixed linear costs on effort.
 - basic GP example in BH system, compared to Reed Optimum [09:17 am 2012/11/28](https://github.com/cboettig/nonparametric-bayes/commit/05e096fce1f65155b7b288be39d983717069edef)
 
 
-Content of current working example,  run on server *zero*.  See commit [942b2faa91](https://github.com/cboettig/pdg_control/blob/942b2faa91d4930622133f7c9385ef2c65e976f1/inst/examples/policycosts/policycosts_writeup_c0_30.md)
+Content of current working example,  run on server *zero*.  See commit [942b2faa91](https://github.com/cboettig/pdg-control/blob/942b2faa91d4930622133f7c9385ef2c65e976f1/inst/examples/policycosts/policycosts_writeup_c0_30.md)
 
 
 

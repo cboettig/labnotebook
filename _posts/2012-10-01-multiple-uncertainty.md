@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: ecology
-tags: [decision-theory, PDG Control]
+tags: [decision-theory, pdg-control]
 
 
 ---
@@ -38,5 +38,5 @@ Note that the implementation matrix is a function of the harvest level, so that 
 
 Linked in the automatically generated commit log:
 
-{% octokit_commits pdg_control%}
+{% octokit_commits pdg-control%}
 
