@@ -12,20 +12,12 @@
   </form>
           <div class="row">
             <div class="span4 socialicons" style="font-size:20px" vocab="http://xmlns.com/foaf/0.1/" typeof="Person" resource="#me">
-              <span rel="tooltip" title="email me">
-                <a property="account" href="mailto:{{site.author.email}}" onclick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><i class="icon-envelope-alt"></i></a>
-              </span>
-              <span rel="tooltip" title="follow me on twitter (reading, discussing)">
-                <a property="account" href="https://twitter.com/{{site.author.twitter}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><i class="icon-twitter"></i></a> 
-              </span>
+                <a property="account" href="mailto:{{site.author.email}}" onclick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><i class="icon-envelope-alt" rel="tooltip" title="email me"></i></a>
+                <a property="account" href="https://twitter.com/{{site.author.twitter}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><i class="icon-twitter" rel="tooltip" title="follow me on twitter (reading, discussing)"></i></a> 
               <!--              <a property="account" href="https://plus.google.com/{{site.author.gplus}}" onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); return false;"><i class="icon-google-plus"></i></a> -->
-              <span rel="tooltip" title="follow me on Github (code, research)">
-                <a property="account" href="https://github.com/{{site.author.github}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><i class="icon-github" alt="github"></i></a> 
-              </span>  
+                <a property="account" href="https://github.com/{{site.author.github}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><i class="icon-github" rel="tooltip" title="follow me on Github (code, research)"></i></a> 
               <!--              <a property="account" href="http://www.mendeley.com/profiles/{{site.author.mendeley}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); return false;"><img src="/assets/img/icon-mendeley.png" alt="mendeley" /></a>  -->
-              <span rel="tooltip" title="subscribe to RSS feeds for my open lab notebook">
-                <a href="/atom.xml" onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><i class="icon-rss" ></i></a>
-              </span>
+                <a href="/atom.xml" onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); return false;"><i class="icon-rss" rel="tooltip" title="subscribe to RSS feeds for my open lab notebook"></i></a>
             </div>
             <div class="span2" style="text-align:center">
               <span rel="tooltip" 

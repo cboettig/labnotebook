@@ -26,7 +26,7 @@ module Jekyll
             doc.xpath("//p[1]").text +  
             doc.xpath("//p[2]").text + 
   #          "<em>" + doc.css('blockquote').text + "</em>" + 
-            " <a href=\"" + feed.entries[i].url + "\">" +
+            " <a href=\"http://www.mendeley.com" + feed.entries[i].url + "\">" +
             feed.entries[i].published.strftime("%I:%M %Y/%m/%d") + "</a>" +
             "</li>" 
         end
