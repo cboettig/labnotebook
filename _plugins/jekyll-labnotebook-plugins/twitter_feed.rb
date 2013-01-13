@@ -23,7 +23,7 @@ module Jekyll
                                          :space_after_headers => true)
 
       out = "<ul>"
-      @client = Twitter::Client.new(YAML.load_file("~/twitter_auth.yaml"))
+      @client = Twitter::Client.new(YAML.load_file("/home/cboettig/.twitter_auth.yaml"))
       tweets = @client.user_timeline(@user)
       for i in 0 ... @count.to_i
       out = out + "<li>" + markdown.render(tweets[i].text) +

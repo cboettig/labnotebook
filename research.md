@@ -38,7 +38,7 @@ look, why not see [what I am working on right now?](/lab-notebookmark.html)
 
 #### Eco-informatics
 
-* Programmatic access to large data sets [<i class="icon-book" style="color:#2aa198;"></i>](/vita.html) [<i class="icon-book" style="color:#2aa198;"></i>](/vita.html)  [<i class="icon-github" style="color:#6c71c4;"></i>](https://github.com/ropensci/rfishbase) [<i class="icon-github" style="color:#6c71c4;"></i>](https://github.com/ropensci/treeBASE) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/)
+* Programmatic access to large data sets [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Boettiger & Temple Lang (2012). Treebase: An R package for discovery, access and manipulation of online phylogenies"></i>](/vita.html) [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Boettiger et al. (2012). rfishbase: exploring, manipulating and visualizing FishBase data from R"></i>](/vita.html)  [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="rfishbase R package"></i>](https://github.com/ropensci/rfishbase) [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="treebase R package"></i>](https://github.com/ropensci/treeBASE) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/)
 
 
 ### Evolution
