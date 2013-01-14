@@ -56,8 +56,6 @@ module Jekyll
       @options = markup # optional optionss passed in by opening tag
     end
     def render(context)
-      puts super
-      puts super.class
       path = super
      
       # Read in credentials and authenticate 
@@ -76,7 +74,12 @@ module Jekyll
       # Using  "#{@path}" doesn't work either
       
       # Extract the pageviews 
-      data.first.pageviews
+      if defined?(data.first.pageviews)
+        views = data.first.pageviews
+      else 
+        views = "(not calculated)"
+      end
+      views 
     end
   end
 end

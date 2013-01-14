@@ -16,10 +16,4 @@
 Posted in {% include pagecategories.html %}
 <br />
 tags: {% include pagetags.html %}
-
-<br />
-<br />
-<!-- GRR, this doesn't work either!  How do we pass the value of page.url inside the custom tag?  -->
-{% assign name = page.url %}
-pageviews: {% pageviews %}{{page.url}}{% endpageviews %}
 </aside>
