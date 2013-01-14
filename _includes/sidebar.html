@@ -5,7 +5,7 @@
 <br />
 {% include nextprevious.html %}
 <br />
-{% if defined?(page.modified) %} 
+{% if defined?(page.modified) %} <!-- Is thus actually accessing page.modified's value? -->
   Last modified 
   <time datetime="{{ page.modified | date_to_xmlschema }}" 
   property="dc:modified">{{ page.modified | date_to_string }}</time>
@@ -19,4 +19,7 @@ tags: {% include pagetags.html %}
 
 <br />
 <br />
+<!-- GRR, this doesn't work either!  How do we pass the value of page.url inside the custom tag?  -->
+{% assign name = page.url %}
+pageviews: {% pageviews %}{{page.url}}{% endpageviews %}
 </aside>
