@@ -28,8 +28,8 @@
 # 
 # Usage: 
 #
-#  Use by invoking the liquid code: 
-#      {% pageviews %} {{ page.url }} {% endpageviews %}
+#  Use by invoking the liquid code: (Note: No spaces around page.url!) 
+#      {% pageviews %}{{page.url}}{% endpageviews %}
 #  to show the pageviews of page.url.  Update the start date below,
 #  or remove to show views in the last 30 days.  Of course the analytics
 #  data shown can be arbitrarily customized, see the garb gem repository
