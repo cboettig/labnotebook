@@ -3,13 +3,13 @@ comments: true
 date: 2011-09-13 09:00:38
 layout: post
 slug: '2588'
-title: NIMBioS PDG Control, Tuesday
+title: NIMBioS pdg-control, Tuesday
 redirects: [/wordpress/archives/2588, /archives/2588]
 categories:
 - ecology
 tags:
 - NIMBioS
-- PDG Control
+- pdg-control
 - warning-signals
 ---
 
@@ -67,7 +67,7 @@ Michael raises two issues: applying this information elsewhere. If environment i
 Adaptive management experiment in corals.
 
 
-### 9:00 PDG Control: Approaches from Engineering & Discussion (Carl Toews)
+### 9:00 pdg-control: Approaches from Engineering & Discussion (Carl Toews)
 
 
 An adaptive talk on techniques.

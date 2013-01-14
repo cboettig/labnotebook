@@ -9,14 +9,14 @@ categories:
 - ecology
 tags:
 - NIMBioS
-- PDG Control
+- pdg-control
 - warning-signals
 ---
 
 Monday, August 12
 8:00 Coffee & Breakfast at NIMBioS
 8:45 Welcome to NIMBioS (Lou Gross, Director of NIMBioS)
-9:00 Intro to the PDG Control Working Group (Paul Armsworth)
+9:00 Intro to the pdg-control Working Group (Paul Armsworth)
 9:30 Introductions by each Working Group Participant
 5-minute self-introduction to the group, including your background, expertise, and current work
 10:30 Break

@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/4311, /archives/4311]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
 Spent way more of today than I wanted to hammering out the active adaptive management implementation for a trivial model-choice problem using the discretized belief-SDP approach.  

@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3492, /archives/3492]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
 Considering the case where there is a cost to changing the harvest quota (representing the cost of efforts to change policy).  We can imagine several scenarios that could introduce this:

@@ -84,7 +84,7 @@ Reply letter.
 Code polish and submit.
 
 
-## PDG Control
+## pdg-control
 
 
 Very clever! State-space too big for SDP?  Just simulate forward a few steps and call it good. Now with citation.  [cite]10.1111/j.2041-210X.2010.00069.x[/cite]

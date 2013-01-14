@@ -35,7 +35,7 @@ tags:
 
 
 
-### PDG Control Training Problem 1b & 2
+### pdg-control Training Problem 1b & 2
 
 
 

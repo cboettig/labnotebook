@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3595, /archives/3595]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 - warning-signals
 ---
 

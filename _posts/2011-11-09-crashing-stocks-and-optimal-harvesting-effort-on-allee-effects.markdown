@@ -93,7 +93,7 @@ The most interesting observation is the dashed green line -- the tipping point a
 
 
 
-### PDG Control updates
+### pdg-control updates
 
 
 
@@ -103,7 +103,7 @@ The most interesting observation is the dashed green line -- the tipping point a
   * update sent to Michael
 
 	
-  * List of some next steps for PDG Control Training problem II on the [github Issues tracker](https://github.com/cboettig/pdg_control/issues?sort=created&direction=desc&state=open).
+  * List of some next steps for pdg-control Training problem II on the [github Issues tracker](https://github.com/cboettig/pdg_control/issues?sort=created&direction=desc&state=open).
 
 
 ## References

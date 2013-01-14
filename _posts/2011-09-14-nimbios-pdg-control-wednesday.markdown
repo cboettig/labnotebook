@@ -3,13 +3,13 @@ comments: true
 date: 2011-09-14 14:54:29
 layout: post
 slug: nimbios-pdg-control-wednesday
-title: 'NIMBioS PDG Control: Wednesday'
+title: 'NIMBioS pdg-control: Wednesday'
 redirects: [/wordpress/archives/2590, /archives/2590]
 categories:
 - ecology
 tags:
 - NIMBioS
-- PDG Control
+- pdg-control
 ---
 
 Wednesday, August 14

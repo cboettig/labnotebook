@@ -9,11 +9,11 @@ categories:
 - ecology
 tags:
 - code-tricks
-- PDG Control
+- pdg-control
 - site-configuration
 ---
 
-### PDG Control, aside exercise
+### pdg-control, aside exercise
 
 
 Lab group commented that optimum in Reed model looks unrealistic due to frequency with which it shuts down all fishing. This is an artifact of not having extraction costs increase sufficiently for small catch, and can be easily fixed by increasing that cost (c in the profit eq, profits-costs = p*x-c/x)

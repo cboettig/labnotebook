@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3325, /archives/3325]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
 Determining the stochastic transition matrix is the essential computational step of SDP solution.  If stochasticity enters only in the growth process: 

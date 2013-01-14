@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3049, /archives/3049]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
 ###  Optimal Control by Pontryagin principle 

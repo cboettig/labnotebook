@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3925, /archives/3925]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
 ##  Surprising heterogeneity of profit distribution under a simple Beverton-Holt model 

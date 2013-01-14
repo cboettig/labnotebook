@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/4334, /archives/4334]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
 A central question of training problem 1b addressed at the working group was how to compare the different penalties.  Following up on those discussions, here are a few notes on how far I've gotten in the analysis regarding the best way to make these comparisons.

@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/4371, /archives/4371]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
 Have finally gotten my active adaptive management solutions working.

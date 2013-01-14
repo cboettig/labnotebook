@@ -30,7 +30,7 @@ categories:
 
 
 
-#### PDG Control
+#### pdg-control
 
 
 

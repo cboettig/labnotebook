@@ -106,7 +106,7 @@ R citations need a bit of formating work, but at least I have the proof of princ
 
 
 
-### PDG Control (Training Problem II)
+### pdg-control (Training Problem II)
 
 
 

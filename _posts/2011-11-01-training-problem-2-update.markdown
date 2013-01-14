@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3094, /archives/3094]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
 ## Problem Statement

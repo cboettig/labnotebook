@@ -9,7 +9,7 @@ categories:
 - ecology
 tags:
 - NIMBioS
-- PDG Control
+- pdg-control
 ---
 
 ## Tools

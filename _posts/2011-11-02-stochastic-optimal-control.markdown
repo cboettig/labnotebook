@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3124, /archives/3124]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
 Starting with Reed 1979 [cite]10.1016/0095-0696(79)90014-7[/cite].

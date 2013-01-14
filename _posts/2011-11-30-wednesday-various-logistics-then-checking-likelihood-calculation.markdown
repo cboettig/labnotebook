@@ -27,7 +27,7 @@ categories:
 
 
 
-## PDG Control / Warning Signals
+## pdg-control / Warning Signals
 
 
 

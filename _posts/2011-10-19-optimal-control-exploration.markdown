@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/2944, /archives/2944]
 categories:
 - computation
 tags:
-- PDG Control
+- pdg-control
 ---
 
 Translating Jim's Matlab code.

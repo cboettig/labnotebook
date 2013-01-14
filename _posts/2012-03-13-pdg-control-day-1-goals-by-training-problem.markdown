@@ -3,13 +3,13 @@ comments: true
 date: 2012-03-13 21:23:56
 layout: post
 slug: pdg-control-day-1-goals-by-training-problem
-title: PDG Control Day 1 goals by training problem
+title: pdg-control Day 1 goals by training problem
 redirects: [/wordpress/archives/4298, /archives/4298]
 categories:
 - logistics
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
 ## Training Problem I / Theme 1

@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3296, /archives/3296]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
 I consider the optimal stochastic-dynamic programming solution for the model specified with known stochasticity in population dynamics, but now vary the actual simulated dynamics to include further uncertainty or error not included in the optimal solution in different ways.  In some way this is an "unfair" analysis, as I really should be solving for the optimal solution in light of the fully uncertain space, but in practice this at least serves as a sensitivity analysis to the assumptions that certain quantities are perfectly known. I consider several scenarios below.  

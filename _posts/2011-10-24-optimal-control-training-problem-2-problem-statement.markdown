@@ -8,10 +8,10 @@ redirects: [/wordpress/archives/3001, /archives/3001]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
-### PDG Control
+### pdg-control
 
 
 Problem statement: Maximize profits subject to

@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/2652, /archives/2652]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 ---
 
 Consider a harvested fish population with discrete-time population dynamics under an allee effect:

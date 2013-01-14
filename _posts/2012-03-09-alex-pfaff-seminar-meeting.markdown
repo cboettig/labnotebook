@@ -9,7 +9,7 @@ categories:
 - seminar
 ---
 
-Notes from [Alex Pfaff](http://www.duke.edu/~asp9/cv&bio.html) talk at UTK (during my visit for PDG Control meeting).
+Notes from [Alex Pfaff](http://www.duke.edu/~asp9/cv&bio.html) talk at UTK (during my visit for pdg-control meeting).
 
 
 

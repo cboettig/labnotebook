@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3176, /archives/3176]
 categories:
 - ecology
 tags:
-- PDG Control
+- pdg-control
 modified: 2013-02-01
 ---
 
