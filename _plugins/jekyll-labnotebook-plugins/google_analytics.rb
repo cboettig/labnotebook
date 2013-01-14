@@ -40,6 +40,14 @@ require 'yaml'
 require 'chronic'
 
 module Jekyll
+
+  # Define return object
+  class Exits
+      extend Garb::Model
+      metrics :exits, :pageviews 
+      dimensions :page_path
+  end
+
   class GoogleAnalytics < Liquid::Tag
 
     # initialize tag use, e.g.: {% pageviews page.url %}
@@ -49,30 +57,31 @@ module Jekyll
     end
 
     def render(context)
+      puts @path
+     
       # Read in credentials and authenticate 
       cred = YAML.load_file("/home/cboettig/.garb_auth.yaml")
       Garb::Session.api_key = cred[:api_key]
       token = Garb::Session.login(cred[:username], cred[:password])
       profile = Garb::Management::Profile.all.detect {|p| p.web_property_id == cred[:ua]}
 
-      # Define return object
-      class Exits
-          extend Garb::Model
-          metrics :exits, :pageviews 
-          dimensions :page_path
-      end
-
       # place query, customize to modify results
       data = Exits.results(profile, 
-                           :filters => {:page_path.eql => @text}, 
+                           :filters => {:page_path.eql => @path}, 
                            :start_date => Chronic.parse("2011-01-01"))
-      data.results
-
-      a = data.results.to_s.split(/, */ )[2]
-      a.gsub(/pageviews=\"(\d+).*/, "\\1 ").to_i
+      #ARGHH!!! Why doesn't this work?  It works in IRB!  
+      # Giving the literal string instead of @path works.
+      # puts @path returns the correct value.  
+      # Using  "#{@path}" doesn't work either
+      
+      # Extract the pageviews 
+      data.first.pageviews
     end
   end
 end
 
 Liquid::Template.register_tag('pageviews', Jekyll::GoogleAnalytics)
+
+# Crazy way to extract data
+#      out = data.results.to_s.split(/, */ )[2].gsub(/pageviews=\"(\d+).*/, "\\1 ")
 
