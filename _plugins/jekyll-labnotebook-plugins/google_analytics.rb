@@ -28,7 +28,8 @@
 # 
 # Usage: 
 #
-#  Use simply by invoking the liquid code {% pageviews page.url %}
+#  Use by invoking the liquid code: 
+#      {% pageviews %} {{ page.url }} {% endpageviews %}
 #  to show the pageviews of page.url.  Update the start date below,
 #  or remove to show views in the last 30 days.  Of course the analytics
 #  data shown can be arbitrarily customized, see the garb gem repository
@@ -48,16 +49,16 @@ module Jekyll
       dimensions :page_path
   end
 
-  class GoogleAnalytics < Liquid::Tag
 
-    # initialize tag use, e.g.: {% pageviews page.url %}
-    def initialize(tag_name, text, tokens)
-      super
-      @path = text
+  class GoogleAnalytics < Liquid::Block
+    def initialize(tag_name, markup, tokens)
+      super # options that appear in block (between tag and endtag)
+      @options = markup # optional optionss passed in by opening tag
     end
-
     def render(context)
-      puts @path
+      puts super
+      puts super.class
+      path = super
      
       # Read in credentials and authenticate 
       cred = YAML.load_file("/home/cboettig/.garb_auth.yaml")
@@ -67,7 +68,7 @@ module Jekyll
 
       # place query, customize to modify results
       data = Exits.results(profile, 
-                           :filters => {:page_path.eql => @path}, 
+                           :filters => {:page_path.eql => path}, 
                            :start_date => Chronic.parse("2011-01-01"))
       #ARGHH!!! Why doesn't this work?  It works in IRB!  
       # Giving the literal string instead of @path works.
