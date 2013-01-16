@@ -20,7 +20,7 @@ $$ dX_t =  \sigma_x \sigma_y Y_t d W_t $$
 $$ dY_t = \sigma_y d W_t $$
 
 I believe this is non-linear, hence the distribution of trait values is not Gaussian.  Perhaps this should be obvious,  but late on a Friday let's simulate [(see code](http://github.com/cboettig/Comparative-Phylogenetics/blob/a27d60618f116fa167e15a077abaf54fb88fd258/demos/peters_Q.R)), and just look at the QQ-plot:
-![]( http://farm2.staticflickr.com/1406/5127610208_edb73d6483_o.png )
+![](http://farm2.staticflickr.com/1406/5127610208_edb73d6483_o.png)
 
 
 This means the distribution of trait values on the tree under the model will not be multivariate normal, unlike the case for all other nicer models we've considered.  I thought a transformation might save this, but I'm unfamiliar with multidimensional Lamperti transform and haven't come across any good coverage of it, either on the web or in Oksendal or Iacus.  Anyone?
