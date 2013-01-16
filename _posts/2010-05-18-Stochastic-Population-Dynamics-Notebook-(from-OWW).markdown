@@ -17,17 +17,13 @@ categories: [ecology]
 Noisy beetles
 -------------
 
-![Fig 1: Noise in lavae
-dominate](http://openwetware.org/images/thumb/3/30/Beetles_noise.png/400px-Beetles_noise.png)
+![](http://openwetware.org/images/thumb/3/30/Beetles_noise.png/400px-Beetles_noise.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 **Fig 1:** Noise in lavae dominate
 
-![Fig: 2 lower mortality, higher
-noise](http://openwetware.org/images/thumb/3/3f/Beetles_noise2.png/180px-Beetles_noise2.png)
+![](http://openwetware.org/images/thumb/3/3f/Beetles_noise2.png/180px-Beetles_noise2.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 **Fig: 2** lower mortality, higher noise
 

@@ -28,24 +28,21 @@ transients while equilbrium covariances agree.
 
 \
 
-![hastings covarainces, b1 = 0, b2 = .6, d1 = d2 = .1, c1 = c2 =.5, K
-=1e4](http://openwetware.org/images/thumb/e/e8/Crowley_covariance.png/400px-Crowley_covariance.png)
+![](http://openwetware.org/images/thumb/e/e8/Crowley_covariance.png/400px-Crowley_covariance.png)
 
-\
+hastings covariances, b1 = 0, b2 = .6, d1 = d2 = .1, c1 = c2 =.5, K
+=1e4
 
 -   Corrected figures from Friday:
 
 \
 
-![Fig 1. Parameters: b\_1 = .2, b\_2 = .1, d\_1 = d\_2 = c =
-.1](http://openwetware.org/images/thumb/2/26/Fixed_2.png/360px-Fixed_2.png)
+![](http://openwetware.org/images/thumb/2/26/Fixed_2.png/360px-Fixed_2.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Fig 1. Parameters: b\_1 = .2, b\_2 = .1, d\_1 = d\_2 = c = .1
 
-![Fig. 2. Parameters: b\_1 = .2, b\_2 = .1, d\_1 = d\_2 = .1, c =
-.15](http://openwetware.org/images/thumb/6/63/Fixed_bug.png/360px-Fixed_bug.png)
+![](http://openwetware.org/images/thumb/6/63/Fixed_bug.png/360px-Fixed_bug.png)
 
 ![image](/skins/common/images/magnify-clip.png)
 

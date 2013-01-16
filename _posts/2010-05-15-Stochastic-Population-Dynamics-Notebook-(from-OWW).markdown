@@ -25,25 +25,23 @@ Consider the Crowley model from last week which I'd implemented as an
 individual birth-death model: (*x* is the better competitor, *y* the
 better colonist)
 
-![ \\begin{align} \\dot x &= b\_1 x (K - x - y) - d\_1 x + c\_1 x y =
-\\alpha\_1(x,y) \\\\ \\dot y &= b\_2 y (K - x - y) - d\_1 y - c\_2 x y =
-\\beta\_1(x,y) \\end{align}
-](http://openwetware.org/images/math/7/5/b/75bbcc817dc349b3e49eee488c36554e.png)
+$$\begin{align} \dot x &= b_1 x (K - x - y) - d_1 x + c_1 x y =
+\alpha_1(x,y) \\ \dot y &= b_2 y (K - x - y) - d_1 y - c_2 x y =
+\beta_1(x,y) \end{align}$$
 
 I've implemented the linear noise approximation for this model as a
 system of coupled ODEs:
 
-![ \\begin{align} \\frac{d \\langle \\xi\^2 \\rangle}{d t} &= 2
-\\frac{\\partial \\alpha\_{1,0}}{\\partial \\phi} \\langle \\xi\^2
-\\rangle + 2 \\frac{\\partial \\alpha\_{1,0} }{\\partial \\psi} \\langle
-\\xi \\eta \\rangle + \\alpha\_{2,0} \\\\ \\frac{d \\langle \\xi \\eta
-\\rangle}{d t} &= \\left( \\frac{\\partial \\alpha\_{1,0}}{\\partial
-\\phi} + \\frac{\\partial \\beta\_{1,0} }{\\partial \\psi}
-\\right)\\langle \\xi \\eta \\rangle+ \\frac{\\partial \\alpha\_{1,0}
-}{\\partial \\psi} \\langle \\eta\^2 \\rangle \\\\ \\frac{d \\langle
-\\xi\^2 \\rangle}{d t} &= 2 \\frac{\\partial \\beta\_{1,0}}{\\partial
-\\psi} \\langle \\eta\^2 \\rangle + \\beta\_{2,0} \\end{align}
-](http://openwetware.org/images/math/b/a/1/ba156d602601209f3d2db74507362626.png)
+$$\begin{align} \frac{d \langle \xi^2 \rangle}{d t} &= 2
+\frac{\partial \alpha_{1,0}}{\partial \phi} \langle \xi^2
+\rangle + 2 \frac{\partial \alpha_{1,0} }{\partial \psi} \langle
+\xi \eta \rangle + \alpha_{2,0} \\ \frac{d \langle \xi \eta
+\rangle}{d t} &= \left( \frac{\partial \alpha_{1,0}}{\partial
+\phi} + \frac{\partial \beta_{1,0} }{\partial \psi}
+\right)\langle \xi \eta \rangle+ \frac{\partial \alpha_{1,0}
+}{\partial \psi} \langle \eta^2 \rangle \\ \frac{d \langle
+\xi^2 \rangle}{d t} &= 2 \frac{\partial \beta_{1,0}}{\partial
+\psi} \langle \eta^2 \rangle + \beta_{2,0} \end{align}$$
 
 And solved numerically ([R
 code](http://github.com/cboettig/structured-populations/blob/bd1769fef7af9eecf32a5ec40f886bc2b74dd1b9/R/noise_approx.R "http://github.com/cboettig/structured-populations/blob/bd1769fef7af9eecf32a5ec40f886bc2b74dd1b9/R/noise_approx.R"),

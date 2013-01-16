@@ -21,34 +21,33 @@ Structured Population Dynamics
 
 Macroscopic equations:
 
-![ \\begin{align} \\dot E &= f\_E(E,L,A) = -\\mu\_e E - c\_{le} E L -
-c\_{ae} E A - a\_e E + b A \\\\ \\dot L &= f\_L(E, L) = -\\mu\_L L +
-a\_e E - a\_L L \\\\ \\dot P &= f\_P(L,P) = -\\mu\_P P - a\_p P + a\_L
-L\\\\ \\dot A &= f\_A(P,A) = -\\mu\_A A + a\_p P \\end{align}
-](http://openwetware.org/images/math/1/c/2/1c26a2c6740e377965fa6e85d41e3f33.png)
+![ \begin{align} \dot E &= f_E(E,L,A) = -\mu_e E - c_{le} E L -
+c_{ae} E A - a_e E + b A \\ \dot L &= f_L(E, L) = -\mu_L L +
+a_e E - a_L L \\ \dot P &= f_P(L,P) = -\mu_P P - a_p P + a_L
+L\\ \dot A &= f_A(P,A) = -\mu_A A + a_p P \end{align}
 
 Has the corresponding variance-covariance dynamics
 
-![ \\begin{align} &\\frac{d}{dt} \\sigma\_E\^2 = 2\\partial\_E f\_E
-\\sigma\_E\^2 + g\_E + 2\\textrm{Cov}(E,L) \\partial\_L f\_E +
-2\\textrm{Cov}(E,A) \\partial\_A f\_E \\\\ &\\frac{d}{dt} \\sigma\_L\^2
-= 2\\partial\_L f\_L \\sigma\_L\^2 + g\_L + 2\\textrm{Cov}(E,L)
-\\partial\_E f\_L \\\\ &\\frac{d}{dt} \\sigma\_P\^2 = 2\\partial\_P f\_P
-\\sigma\_P\^2 + g\_P + 2\\textrm{Cov}(L,P) \\partial\_L f\_P \\\\
-&\\frac{d}{dt} \\sigma\_A\^2 = 2\\partial\_A f\_A \\sigma\_A\^2 + g\_A +
-2\\textrm{Cov}(P,A) \\partial\_P f\_A \\\\ &\\frac{d}{dt}
-\\textrm{Cov}(E,L) = \\left( \\partial\_E f\_E + \\partial\_L f\_L
-\\right) \\textrm{Cov}(E,L) + \\partial\_L f\_E \\sigma\_L\^2 +
-\\partial\_E f\_L \\sigma\_E\^2 \\\\ &\\frac{d}{dt} \\textrm{Cov}(E,A) =
-\\left( \\partial\_E f\_E + \\partial\_A f\_A \\right)
-\\textrm{Cov}(E,A) + \\partial\_A f\_E \\sigma\_A\^2 + \\partial\_E f\_A
-\\sigma\_E\^2 \\\\ &\\frac{d}{dt} \\textrm{Cov}(L,P) = \\left(
-\\partial\_P f\_P + \\partial\_L f\_L \\right) \\textrm{Cov}(L,P) +
-\\partial\_L f\_P \\sigma\_L\^2 + \\partial\_P f\_L \\sigma\_P\^2 \\\\
-&\\frac{d}{dt} \\textrm{Cov}(A,P) = \\left( \\partial\_P f\_P +
-\\partial\_A f\_A \\right) \\textrm{Cov}(A,P) + \\partial\_A f\_P
-\\sigma\_A\^2 + \\partial\_P f\_A \\sigma\_P\^2 \\end{align}
-](http://openwetware.org/images/math/1/2/4/1249afdfb5963c156af5b5709ac8a669.png)
+$$\begin{align} &\frac{d}{dt} \sigma_E^2 = 2\partial_E f_E
+\sigma_E^2 + g_E + 2\textrm{Cov}(E,L) \partial_L f_E +
+2\textrm{Cov}(E,A) \partial_A f_E \\ &\frac{d}{dt} \sigma_L^2
+= 2\partial_L f_L \sigma_L^2 + g_L + 2\textrm{Cov}(E,L)
+\partial_E f_L \\ &\frac{d}{dt} \sigma_P^2 = 2\partial_P f_P
+\sigma_P^2 + g_P + 2\textrm{Cov}(L,P) \partial_L f_P \\
+&\frac{d}{dt} \sigma_A^2 = 2\partial_A f_A \sigma_A^2 + g_A +
+2\textrm{Cov}(P,A) \partial_P f_A \\ &\frac{d}{dt}
+\textrm{Cov}(E,L) = \left( \partial_E f_E + \partial_L f_L
+\right) \textrm{Cov}(E,L) + \partial_L f_E \sigma_L^2 +
+\partial_E f_L \sigma_E^2 \\ &\frac{d}{dt} \textrm{Cov}(E,A) =
+\left( \partial_E f_E + \partial_A f_A \right)
+\textrm{Cov}(E,A) + \partial_A f_E \sigma_A^2 + \partial_E f_A
+\sigma_E^2 \\ &\frac{d}{dt} \textrm{Cov}(L,P) = \left(
+\partial_P f_P + \partial_L f_L \right) \textrm{Cov}(L,P) +
+\partial_L f_P \sigma_L^2 + \partial_P f_L \sigma_P^2 \\
+&\frac{d}{dt} \textrm{Cov}(A,P) = \left( \partial_P f_P +
+\partial_A f_A \right) \textrm{Cov}(A,P) + \partial_A f_P
+\sigma_A^2 + \partial_P f_A \sigma_P^2 \end{align}
+$$
 
 Where *g\_i* is the second jump moment, which is a function of the state
 (*E*, *L*, *P*, *A*) just as *f\_i* is. (In this case it will correspond
@@ -58,27 +57,22 @@ to the sum of all birth and death terms).
 
 Consider the dynamics are given by
 
-![ \\dot X\_i = f\_i(\\vec X)
-](http://openwetware.org/images/math/0/1/5/0155c412fb0a830912daef0b2e65b0dd.png)
+$$ \dot X_i = f_i(\vec X)$$
 
 and define variance-covariance matrix *M* and the Jacobian matrix of *f*
 as *J*. Then the dynamics of the diagonal elements (variance terms) are
 written as
 
-![ \\dot \\sigma\_i\^2 = 2 g\_i + 2\\sum\_k J\_{ik} M\_{ik} \\partial\_k
-f\_i
-](http://openwetware.org/images/math/a/0/9/a0963cc09f8b045656952fc47a21587f.png)
+$$ \dot \sigma_i^2 = 2 g_i + 2\sum_k J_{ik} M_{ik} \partial_k f_i$$
 
 While the dynamics of the off-diagonal elements (covariance terms) are
 given by
 
-![ \\frac{d}{dt} \\textrm{Cov(i,j)} = \\dot M\_{ij} = \\partial\_i f\_i
-M\_{ji} + \\partial\_j f\_j M\_{ij} + \\partial\_i f\_j M\_{ii} +
-\\partial\_j f\_i M\_{jj}
-](http://openwetware.org/images/math/b/b/d/bbd80770f9365cec3c61b2ce68e34a0a.png)
+$$ \frac{d}{dt} \textrm{Cov(i,j)} = \dot M_{ij} = \partial_i f_i
+M_{ji} + \partial_j f_j M_{ij} + \partial_i f_j M_{ii} +
+\partial_j f_i M_{jj}$$
 
 Track current implementation of the algorithm
 [here](http://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R "http://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R").
 
-\
 

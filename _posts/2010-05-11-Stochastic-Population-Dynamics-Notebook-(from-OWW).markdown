@@ -23,9 +23,8 @@ Demographic Noise
     class can reverberate through the entire population dynamics.
 -   Starting with a simple test case of a modified Crowley model:
 
-![ \\begin{align} \\dot x &= b\_1 x (K - x - y) - d\_1 x + c\_1 x y \\\\
-\\dot y &= b\_2 y (K - x - y) - d\_1 y - c\_2 x y \\end{align}
-](http://openwetware.org/images/math/7/5/f/75f2b0cfed3d87a63da03d093581eefd.png)
+$$\begin{align} \dot x &= b_1 x (K - x - y) - d_1 x + c_1 x y \\
+\dot y &= b_2 y (K - x - y) - d_1 y - c_2 x y \end{align}$$
 
 -   Model is implemented on a
     [branch](http://github.com/cboettig/warningSignals/tree/crowley# "http://github.com/cboettig/warningSignals/tree/crowley#")

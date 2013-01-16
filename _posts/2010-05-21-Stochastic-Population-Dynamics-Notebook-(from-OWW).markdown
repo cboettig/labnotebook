@@ -28,10 +28,10 @@ continuous, mean-field approximation of the density *p = X/V.* Then:
 
 \
 
-![ \\begin{align} & \\frac{d}{dt} E(p) = b(p)-d(p) + \\sum\_{j \\neq i}
-\\tau\_{ji}(p) - \\tau\_{ij}(p) =: f(p)\\\\ & \\frac{d}{dt} M =
-\\textrm{diag}( b(p) + d(p) ) - T + Df(p) M + M Df(p)\^T \\end{align}
-](http://openwetware.org/images/math/5/e/b/5eb413fd88e12c41c39cf48c811fc71a.png)
+$$\begin{align} & \frac{d}{dt} E(p) = b(p)-d(p) + \sum_{j \neq i}
+\tau_{ji}(p) - \tau_{ij}(p) =: f(p)\\ & \frac{d}{dt} M =
+\textrm{diag}( b(p) + d(p) ) - T + Df(p) M + M Df(p)^T \end{align}$$
+
 
 where *T* is a symmetric matrix with off-diagonal elements *i,j*
 τ~*i**j*~(*p*) + τ*j**i*(*p*) and diagonal elements chosen so that rows
@@ -48,18 +48,16 @@ equal. In the original model this represented competition for space by
 overgrowth and hence would more naturally be expressed as a two step
 process).
 
-![ \\begin{align} \\dot x &= b\_1 x (K - x - y)/K - d\_1 x + c x y/K
-\\\\ \\dot y &= b\_2 y (K - x - y)/K - d\_1 y - c x y/K \\end{align}
-](http://openwetware.org/images/math/7/c/4/7c49b2c47e74e60537d6345e8b7a9c6a.png)
+$$\begin{align} \dot x &= b_1 x (K - x - y)/K - d_1 x + c x y/K
+\\ \dot y &= b_2 y (K - x - y)/K - d_1 y - c x y/K \end{align}$$
 
 Interpreting the *cxy* terms as transitions rather than independent
 birth and death events results in the same mean-field dynamics but
 differing fluctuations. For instance, the covariance dynamics are:
 
-![ \\frac{d}{dt} \\textrm{Cov}(x,y) = \\left(b\_1 (1-2x-y)-d\_1 +c y +
-b\_2(1-x-2y)-d\_2 -c x \\right)\\textrm{Cov}(x,y) - (b\_1 x +c x
-)\\sigma\_y\^2 -(b\_2 y -c y)\\sigma\_x\^2 - cxy
-](http://openwetware.org/images/math/2/4/c/24c57b2b520fa2223fc7f059ade57d81.png)
+$$\frac{d}{dt} \textrm{Cov}(x,y) = \left(b_1 (1-2x-y)-d_1 +c y +
+b_2(1-x-2y)-d_2 -c x \right)\textrm{Cov}(x,y) - (b_1 x +c x
+)\sigma_y^2 -(b_2 y -c y)\sigma_x^2 - cxy $$
 
 Whereas interpreted as single-step birth and death the *cxy* term at the
 end is absent.
@@ -94,17 +92,13 @@ implementation at the moment.
 -   **Carl Boettiger 21:43, 26 May 2010 (EDT)**: Bug found, see
     corrected graphs on Tuesday's (5/25) entry.
 
-![Fig 1. Parameters: b\_1 = .2, b\_2 = .1, d\_1 = d\_2 = c =
-.1](http://openwetware.org/images/thumb/8/84/Compare_noise.png/360px-Compare_noise.png)
+![](http://openwetware.org/images/thumb/8/84/Compare_noise.png/360px-Compare_noise.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Fig 1. Parameters: b\_1 = .2, b\_2 = .1, d\_1 = d\_2 = c = .1
 
-![Fig. 2. Parameters: b\_1 = .2, b\_2 = .1, d\_1 = d\_2 = .1, c =
-.15](http://openwetware.org/images/thumb/f/f3/Compare_noise2.png/360px-Compare_noise2.png)
+![](http://openwetware.org/images/thumb/f/f3/Compare_noise2.png/360px-Compare_noise2.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Fig. 2. Parameters: b\_1 = .2, b\_2 = .1, d\_1 = d\_2 = .1, c = .15
 
