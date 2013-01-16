@@ -112,7 +112,7 @@ priors <- melt(priors, id="x")
 ggplot(priors) + geom_line(aes(x, value)) + facet_wrap(~variable, scale="free")
 ```
 
-![plot of chunk unnamed-chunk-5](http://carlboettiger.info/assets/figures/2012-12-10-9b2d792442-unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](http://www.carlboettiger.info/assets/figures/2012-12-10-9b2d792442-unnamed-chunk-5.png) 
 
 
 
@@ -166,7 +166,7 @@ ggplot(tgp_dat) +
     theme_bw() + theme(plot.background = element_rect(fill = "transparent",colour = NA))
 ```
 
-![plot of chunk gp-plot](http://carlboettiger.info/assets/figures/2012-12-10-9b2d792442-gp-plot.png) 
+![plot of chunk gp-plot](http://www.carlboettiger.info/assets/figures/2012-12-10-9b2d792442-gp-plot.png) 
 
 
 
@@ -180,7 +180,7 @@ posteriors <- melt(gp$trace$XX[[1]][,hyperparameters], id="index")
 ggplot(posteriors) + geom_histogram(aes(value)) + facet_wrap(~variable, scales="free")
 ```
 
-![plot of chunk unnamed-chunk-9](http://carlboettiger.info/assets/figures/2012-12-10-9b2d792442-unnamed-chunk-9.png) 
+![plot of chunk unnamed-chunk-9](http://www.carlboettiger.info/assets/figures/2012-12-10-9b2d792442-unnamed-chunk-9.png) 
 
 
 

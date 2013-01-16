@@ -9,7 +9,7 @@ Writing out a data management plan for myself.  Suggestions and feedback welcome
 
 ## Data Types and Structure
 
-All source code, documentation, scripts and data for the analyses performed in the course of this research shall be maintained in a digital compendium using the [R package structure](http://cran.r-project.org/doc/manuals/R-exts.html#Package-structure) as recommended in Gentleman and Lang (2007).  The progress and results of this research shall be regularly chronicled in an electronic lab notebook, maintained openly at [carlboettiger.info/lab-notebook.html](http://carlboettiger.info/lab-notebook.html).  Figures and other results are maintained with the source-code required to reproduce them by writing these analyses using [knitr](http://yihui.name/knitr) dynamic documentation.  
+All source code, documentation, scripts and data for the analyses performed in the course of this research shall be maintained in a digital compendium using the [R package structure](http://cran.r-project.org/doc/manuals/R-exts.html#Package-structure) as recommended in Gentleman and Lang (2007).  The progress and results of this research shall be regularly chronicled in an electronic lab notebook, maintained openly at [carlboettiger.info/lab-notebook.html](http://www.carlboettiger.info/lab-notebook.html).  Figures and other results are maintained with the source-code required to reproduce them by writing these analyses using [knitr](http://yihui.name/knitr) dynamic documentation.  
 
 ## Data Acquisition, Integrity and Quality
 

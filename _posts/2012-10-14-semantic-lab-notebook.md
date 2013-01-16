@@ -39,7 +39,7 @@ Microdata introduces new attributes into HTML tags like `<div>`, `<span>`, `<h1>
 ```html
 <div itemscope itemtype="http://data-vocabulary.org/Person">
   <h1 itemprop="name">Carl Boettiger</h1>
-  <a itemprop="url" href="http://carlboettiger.info">http://carlboettiger.info</a>
+  <a itemprop="url" href="http://www.carlboettiger.info">http://carlboettiger.info</a>
   <img itemprop="photo" src="https://en.gravatar.com/userimage/12904315/7edea703b826fbbe07f2ae4d95b8416b.jpg?16"/>
 </div>
 ```
@@ -55,7 +55,7 @@ where the terms such as `name` and `url` have precise meanings attached to "Pers
 ```html
 <div vocab="http://xmlns.com/foaf/0.1/" typeof="Person">
   <h1 property="name">Carl Boettiger</h1>
-  <a property="homepage" href="http://carlboettiger.info">http://carlboettiger.info</a>
+  <a property="homepage" href="http://www.carlboettiger.info">http://carlboettiger.info</a>
   <img property="depiction" src="https://en.gravatar.com/userimage/12904315/7edea703b826fbbe07f2ae4d95b8416b.jpg?16"/>
  </div>
 ```
@@ -76,7 +76,7 @@ An essential caveat is that these are all new approaches which may not render we
 
 * [W3C HTML5 Validator](http://validator.w3.org/nu)
 * [Google rich snippets](http://www.google.com/webmasters/tools/richsnippets)
-* [RDF extraction tool](http://sparql.captsolo.net/browser/browser.py?url=http://www.w3.org/2007/08/pyRdfa/extract?uri=http://carlboettiger.info)
+* [RDF extraction tool](http://sparql.captsolo.net/browser/browser.py?url=http://www.w3.org/2007/08/pyRdfa/extract?uri=http://www.carlboettiger.info)
 
 Scholarly Semantic Markup for the Notebook
 ==========================================

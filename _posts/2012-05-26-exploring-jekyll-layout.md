@@ -20,7 +20,7 @@ I wanted a nice way to embed feeds on my Jekyll site -- preferably at Jekyll-com
 
 ## Modifying layout of posts archive (lab notebook)
 
-#### Can I add columns with post previews, like [my Wordpress notebook](http://carlboettiger.info/research/lab-notebook)? Mission accomplished. 
+#### Can I add columns with post previews, like [my Wordpress notebook](http://www.carlboettiger.info/research/lab-notebook)? Mission accomplished. 
 
 I first considered using a plugin [plugin](https://github.com/sebcioz/jekyll-only_first_p) to get the frist paragraph (based on nokogiri parsing the html/xml).  While nokogiri is quite powerful, I often don't have just the right length content in the first paragraph -- some entries just launch into a list enviornment with no paragraphs to begin with. 
 

@@ -56,7 +56,7 @@ The `<footer>` contains licenses and contact information through social media.  
 
 ```html
 <div class="span4" vocab="http://xmlns.com/foaf/0.1/" typeof="Person"
-resource="http://carlboettiger.info#me">
+resource="http://www.carlboettiger.info#me">
   <a property="account" href="mailto:cboettig@gmail.com"><img
   src="/assets/img/icon-email.png" alt="email"> </a>
   <a property="account" href="https://twitter.com/cboettig"><img
@@ -79,7 +79,7 @@ src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0"
 style="float:right"></a>
 ```
 
-![When these elements are combined in a given entry, the RDFa generates this structure](http://carlboettiger.info/assets/figures/post-rdfa.png)
+![When these elements are combined in a given entry, the RDFa generates this structure](http://www.carlboettiger.info/assets/figures/post-rdfa.png)
 
 ### Easily entering RDFa
 
@@ -98,17 +98,17 @@ b. In practice it may be most robust to explicitly declare the relation by explo
 ```html
 <div id="me" prefix="foaf: http://xmlns.com/foaf/0.1/" prefix="schema:
 http://schema.org/Person" typeof="foaf:Person schema:Person"
-resource="http://carlboettiger.info#me"> 
+resource="http://www.carlboettiger.info#me"> 
 I am  <a property="foaf:homepage schema:url"
-href="http://carlboettiger.info"><span property="foaf:name
+href="http://www.carlboettiger.info"><span property="foaf:name
 schema:name"><span property="foaf:givenName schema:givenName">Carl</span>
 <span property="foaf:familyName schema:familyName">Boettiger</span></span></a>, <span
 property="schema:jobTitle">a graduate student</span>
 ```
 
-(This excerpt gives the general flavor, see the html source of [index.html](http://carlboettiger.info) for a full example.)
+(This excerpt gives the general flavor, see the html source of [index.html](http://www.carlboettiger.info) for a full example.)
 
-![The homepage generates this RDFa structured graph (from rdfa.info/play)](http://carlboettiger.info/assets/figures/homepage-rdfa.png)
+![The homepage generates this RDFa structured graph (from rdfa.info/play)](http://www.carlboettiger.info/assets/figures/homepage-rdfa.png)
 
 
 

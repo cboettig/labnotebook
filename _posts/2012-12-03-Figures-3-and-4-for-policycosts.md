@@ -23,26 +23,26 @@ Okay, straight forward exercise.  47 commits and 19 hours later, I have what I n
 
 #### Stock (state variable) dynamics
 
-![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-p1.png) 
+![](http://www.carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-p1.png) 
 
 #### Harvest (control variable) dynamics
 
-![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure3.png) 
+![](http://www.carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure3.png) 
 
 
 ### Figure 4
 
 #### Stock (state variable) dynamics
 
-![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure4S1.png) 
+![](http://www.carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure4S1.png) 
 
-![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure4S2.png) 
+![](http://www.carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure4S2.png) 
 
 ##### Harvest (control variable) dynamics
 
-![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure41.png) 
+![](http://www.carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure41.png) 
 
-![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure42.png) 
+![](http://www.carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-Figure42.png) 
 
 
 
@@ -54,7 +54,7 @@ These are calculated with `c0 = 30`.  There's corresponding figures when fishing
 
 The apples-to-apples illustration is also generated in this script.  
 
-![](http://carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-apples_plot.png) 
+![](http://www.carlboettiger.info/assets/figures/2012-12-05-72dc8741fb-apples_plot.png) 
 
 
 

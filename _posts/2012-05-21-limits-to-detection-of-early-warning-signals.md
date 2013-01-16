@@ -103,7 +103,7 @@ facility](http://www.nersc.gov/users/computational-systems/carver).
 # Accessing the data and code
 
 My organizational structure has evolved over the course of this project, 
-but mostly conforms to my [Github-based R-package structure](http://carlboettiger.info/2012/05/06/research-workflow.html)
+but mostly conforms to my [Github-based R-package structure](http://www.carlboettiger.info/2012/05/06/research-workflow.html)
 within the [`earlywarning` repository](https://github.com/cboettig/earlywarning).
 The `inst/examples` directory includes code to reproduce the analysis for
 the chemostat, simulation, and glaciation data.

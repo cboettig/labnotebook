@@ -22,26 +22,26 @@ Also fixed [knitcitations](https://github.com/cboettig/knitcitations) to at leas
 ### Using stationary data only 
 
 
-![Inferred GP](http://carlboettiger.info/assets/figures/2012-12-15-f42127cba3-gp-plot.png) 
+![Inferred GP](http://www.carlboettiger.info/assets/figures/2012-12-15-f42127cba3-gp-plot.png) 
 
-![plot of policy functions](http://carlboettiger.info/assets/figures/2012-12-15-f42127cba3-policy_plot.png) 
+![plot of policy functions](http://www.carlboettiger.info/assets/figures/2012-12-15-f42127cba3-policy_plot.png) 
 
-![fish stock dynamics](http://carlboettiger.info/assets/figures/2012-12-15-f42127cba3-sim-fish.png) 
+![fish stock dynamics](http://www.carlboettiger.info/assets/figures/2012-12-15-f42127cba3-sim-fish.png) 
 
-![harvest dynamics](http://carlboettiger.info/assets/figures/2012-12-15-f42127cba3-sim-harvest.png) 
+![harvest dynamics](http://www.carlboettiger.info/assets/figures/2012-12-15-f42127cba3-sim-harvest.png) 
 
 (see [myer-example.md](https://github.com/cboettig/nonparametric-bayes/blob/a3aad15b159aae10264e39ccf3cbe0cdb8aec279/inst/examples/myer-example.md) for code and more graphs & details)
 
 ### Using more data 
 
 
-![Inferred GP](http://carlboettiger.info/assets/figures/2012-12-15-003da6e98e-gp-plot.png) 
+![Inferred GP](http://www.carlboettiger.info/assets/figures/2012-12-15-003da6e98e-gp-plot.png) 
 
-![plot of policy functions](http://carlboettiger.info/assets/figures/2012-12-15-003da6e98e-policy_plot.png) 
+![plot of policy functions](http://www.carlboettiger.info/assets/figures/2012-12-15-003da6e98e-policy_plot.png) 
 
-![plot of sim-fish](http://carlboettiger.info/assets/figures/2012-12-15-003da6e98e-sim-fish.png) 
+![plot of sim-fish](http://www.carlboettiger.info/assets/figures/2012-12-15-003da6e98e-sim-fish.png) 
 
-![plot of sim-harvest](http://carlboettiger.info/assets/figures/2012-12-15-003da6e98e-sim-harvest.png) 
+![plot of sim-harvest](http://www.carlboettiger.info/assets/figures/2012-12-15-003da6e98e-sim-harvest.png) 
 
 (from [earlier myer-example.md](https://github.com/cboettig/nonparametric-bayes/blob/a1bc09a4a7a2edabbd63916416db6b095d1ead6b/inst/examples/myer-example.md))
 
@@ -49,13 +49,13 @@ Also fixed [knitcitations](https://github.com/cboettig/knitcitations) to at leas
 
 GP performs well, but Ricker performs adequately as well: [reed-example.md](https://github.com/cboettig/nonparametric-bayes/blob/cac79bcc42433a6b8720d5d4c5824c57a850a56c/inst/examples/reed-example.md) (shows an example with stationary data). 
 
-![plot of chunk gp-plot](http://carlboettiger.info/assets/figures/2012-12-15-8b057f1f24-gp-plot.png) 
+![plot of chunk gp-plot](http://www.carlboettiger.info/assets/figures/2012-12-15-8b057f1f24-gp-plot.png) 
 
-![plot of chunk policy_plot](http://carlboettiger.info/assets/figures/2012-12-15-8b057f1f24-policy_plot.png) 
+![plot of chunk policy_plot](http://www.carlboettiger.info/assets/figures/2012-12-15-8b057f1f24-policy_plot.png) 
 
-![plot of chunk sim-fish](http://carlboettiger.info/assets/figures/2012-12-15-8b057f1f24-sim-fish.png) 
+![plot of chunk sim-fish](http://www.carlboettiger.info/assets/figures/2012-12-15-8b057f1f24-sim-fish.png) 
 
-![plot of chunk sim-harvest](http://carlboettiger.info/assets/figures/2012-12-15-8b057f1f24-sim-harvest.png) 
+![plot of chunk sim-harvest](http://www.carlboettiger.info/assets/figures/2012-12-15-8b057f1f24-sim-harvest.png) 
 
 
 ## Other advances

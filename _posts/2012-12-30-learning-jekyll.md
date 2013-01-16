@@ -164,7 +164,7 @@ While having a university affiliated domain can appear more official and help wi
 
 
 
-[1]: Details on installing and running ruby gems for Jekyll will vary by operating system, so I won't bother with more details here.  Some further background for linux based platforms at least appears in my [site's info file](http://carlboettiger.info/README.html).  
+[1]: Details on installing and running ruby gems for Jekyll will vary by operating system, so I won't bother with more details here.  Some further background for linux based platforms at least appears in my [site's info file](http://www.carlboettiger.info/README.html).  
 
 [2]: I rely Pandoc, a markdown parser with a professor of Logic's notion of syntax, resolving some the ambiguities in the original specification and providing a convenient tool to transform its content into other formats beyond HTML, such as pdf, docx, and epub.
 
