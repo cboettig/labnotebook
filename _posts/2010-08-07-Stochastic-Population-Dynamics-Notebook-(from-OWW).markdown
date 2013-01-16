@@ -28,10 +28,9 @@ Warning Signals
 -   Implementing likelihood-based methods for early warning signals.
     Trying three models:
 
-![ \\begin{align} dX =& (\\theta\_1 + \\theta\_2 X) dt + \\theta\_3
-dW\_t \\\\ dX =&(\\alpha\_0+\\beta t) (\\theta + X) dt + \\sigma dW\_t
-\\\\ dX =& \\alpha(t) (\\theta + X) dt + \\sigma dW\_t \\end{align}
-](http://openwetware.org/images/math/3/f/8/3f8dd657158475757eb6bd177e3c3ad1.png)
+$$ \begin{align} dX =& (\theta_1 + \theta_2 X) dt + \theta_3
+dW_t \\ dX =&(\alpha_0+\beta t) (\theta + X) dt + \sigma dW_t
+\\ dX =& \alpha(t) (\theta + X) dt + \sigma dW_t \end{align}$$
 
 \
 
@@ -51,9 +50,4 @@ dW\_t \\\\ dX =&(\\alpha\_0+\\beta t) (\\theta + X) dt + \\sigma dW\_t
 3.  Simulation from actual population dynamics -- update warning signals
     method to return individual runs
 
-\
-
-\
-
-\
 

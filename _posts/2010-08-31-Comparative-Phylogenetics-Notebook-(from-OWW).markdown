@@ -31,13 +31,4 @@ feeds](http://www.readwriteweb.com/archives/6_ways_to_filter_your_rss_feeds.php 
 by date so that it would just show the current ones, none seem to manage
 this though.
 
-\
-
-\
-
-\
-
-Loading...
-
-\
 

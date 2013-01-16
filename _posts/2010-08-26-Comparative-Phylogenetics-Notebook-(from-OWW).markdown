@@ -100,28 +100,20 @@ New approach: multiple simulations from alpha
 
 #### Plots show decreasing power with decreasing alpha
 
-![Anoles data at alpha=25. Red curve is the LR distribution when
-simulations come from OU with alpha=25, blue line is LR distribution
-when simulations come from BM models fit to those OU-generated
-data](http://openwetware.org/images/thumb/e/ec/Power_alpha5.png/180px-Power_alpha5.png)
+![](http://openwetware.org/images/thumb/e/ec/Power_alpha5.png/180px-Power_alpha5.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Anoles data at alpha=25. Red curve is the LR distribution when
 simulations come from OU with alpha=25, blue line is LR distribution
 when simulations come from BM models fit to those OU-generated data
 
-![Anoles data at
-alpha=1.](http://openwetware.org/images/thumb/9/9a/Power_alpha1.png/180px-Power_alpha1.png)
+![](http://openwetware.org/images/thumb/9/9a/Power_alpha1.png/180px-Power_alpha1.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Anoles data at alpha=1.
 
-![Anoles data at
-alpha=0.25.](http://openwetware.org/images/thumb/7/79/Power_alpha.png/180px-Power_alpha.png)
+![](http://openwetware.org/images/thumb/7/79/Power_alpha.png/180px-Power_alpha.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Anoles data at alpha=0.25.
 
@@ -162,10 +154,8 @@ Anoles data at alpha=0.25.
  lines(density(out$t0_dist), col='red', lwd=3)
 ~~~~
 
-![Null distributions of the LR all lie on top of eachother regardless of
-sigma](http://openwetware.org/images/thumb/4/4b/Null_LR.png/180px-Null_LR.png)
+![](http://openwetware.org/images/thumb/4/4b/Null_LR.png/180px-Null_LR.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Null distributions of the LR all lie on top of eachother regardless of
 sigma
@@ -179,14 +169,9 @@ differ and so doesn't need to be re-simulated with different values.
 
 \
 
-![anoles
-power](http://openwetware.org/images/thumb/c/c1/Anoles_power.png/180px-Anoles_power.png)
-
-![image](/skins/common/images/magnify-clip.png)
+![](http://openwetware.org/images/thumb/c/c1/Anoles_power.png/180px-Anoles_power.png)
 
 anoles power
-
-\
 
 Meanwhile
 ---------
@@ -205,9 +190,7 @@ Meanwhile
     different" painting to the mix to demonstrate. --Carl Boettiger
     01:24, 27 August 2010 (EDT) Fixed, order of nodes conflicted.
 
-#### Slideshow of results
 
-[![image](http://pic.pbsrc.com/share/icons/embed/btn_geturs.gif)](http://photobucket.com/redirect/album?showShareLB=1)[![image](http://pic.pbsrc.com/share/icons/embed/btn_viewall.gif)](http://s1212.photobucket.com/albums/cc458/cboettig/)
 
 Code updates
 ------------

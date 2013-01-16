@@ -24,10 +24,8 @@ Adaptive Dynamics
 -   Updating the contour plot figure as per suggestions by Rupert and
     Ulf:
 
-![Branching times, original
-figure](http://openwetware.org/images/thumb/1/10/Butterfly.png/500px-Butterfly.png)
+![](http://openwetware.org/images/thumb/1/10/Butterfly.png/500px-Butterfly.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Branching times, original figure
 

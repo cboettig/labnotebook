@@ -26,7 +26,7 @@ necessary.
     where phylogenetically independent contrasts is misleading, but
     lambda/K definition of phylogenetic signal is also misleading.
 -   Power in phylogenetic tree:
--   ![image](http://openwetware.org/images/8/8c/Full_power_examples.png "Power in Trees")
+![](http://openwetware.org/images/8/8c/Full_power_examples.png)
 -   Likelihood ratio and model choice: Monte Carlo LR approach, support
     in the literature
     http://openwetware.org/wiki/User:Carl\_Boettiger/Notebook/Comparative\_Phylogenetics/2010/08/25.

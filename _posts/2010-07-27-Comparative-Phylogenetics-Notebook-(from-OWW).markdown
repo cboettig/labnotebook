@@ -17,10 +17,8 @@ categories: evolution
 Parameter Estimates for Labrid/Parrotfish model
 -----------------------------------------------
 
-![See fast\_boot and plot.wrightscape functions in code. Gape
-size](http://openwetware.org/images/4/41/Gape_pars.png)
+![](http://openwetware.org/images/4/41/Gape_pars.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 See fast\_boot and plot.wrightscape functions in
 [code](http://github.com/cboettig/wrightscape/blob/534fe67518edcb8b2488bf9d6ae7a4efe30f39cc/R/wrightscape.R "http://github.com/cboettig/wrightscape/blob/534fe67518edcb8b2488bf9d6ae7a4efe30f39cc/R/wrightscape.R").
@@ -28,10 +26,8 @@ See fast\_boot and plot.wrightscape functions in
 
 \
 
-![See fast\_boot and plot.wrightscape functions in code Jaw
-Protrusion](http://openwetware.org/images/1/19/Protrusion_pars.png)
+![](http://openwetware.org/images/1/19/Protrusion_pars.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 See fast\_boot and plot.wrightscape functions in
 [code](http://github.com/cboettig/wrightscape/blob/534fe67518edcb8b2488bf9d6ae7a4efe30f39cc/R/wrightscape.R "http://github.com/cboettig/wrightscape/blob/534fe67518edcb8b2488bf9d6ae7a4efe30f39cc/R/wrightscape.R")

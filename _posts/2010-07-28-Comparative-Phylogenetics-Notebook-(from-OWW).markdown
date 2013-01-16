@@ -39,11 +39,8 @@ code](http://github.com/cboettig/wrightscape/blob/8989487c30adbafb6e43ce8b623172
 
 \
 
-![Fig. 1 The Brownian Motion model is preferred to the OU.1 model
-(left). Two separate optima are supported over a single optima
-(right).](http://openwetware.org/images/thumb/4/4e/CetaceanModels.png/600px-CetaceanModels.png)
+![](http://openwetware.org/images/thumb/4/4e/CetaceanModels.png/600px-CetaceanModels.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 **Fig. 1** The Brownian Motion model is preferred to the OU.1 model
 (left). Two separate optima are supported over a single optima (right).
