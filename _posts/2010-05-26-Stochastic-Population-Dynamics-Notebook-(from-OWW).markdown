@@ -17,49 +17,41 @@ categories: [ecology]
 Rethinking Beetles Noise
 ------------------------
 
--   Noise in the larval class is damped by ![ \\partial\_L f\_L
-    ](http://openwetware.org/images/math/d/0/8/d084393ee59f54a76685ec96a58d5713.png)
+-   Noise in the larval class is damped by $\partial_L f_L$
     and grows proportional to its intrinsic variation and the
     contribution of other classes through their derivatives of *f*~*L*~,
-    that is, ![ \\partial\_E f\_l
-    ](http://openwetware.org/images/math/0/8/c/08c6845f4c466dddff7c0cf1d0c9bdd9.png)
+    that is,$\partial_E f_l$
     as well as the sum of its intrinsic rates (essentially whichever is
     larger). Taking *E* dynamics to be fast we might reduce to a
     continous time LPA model:
 
-![ \\begin{align} & \\dot L = a\_e \\frac{bA - c\_{ea} A - c\_{el}
-L}{a\_e + \\mu\_e} - a\_l - \\mu\_l \\\\ & \\dot P = a\_l L - \\mu\_p P
-- a\_p P \\\\ & \\dot A = a\_p P - \\mu\_a A \\end{align}
-](http://openwetware.org/images/math/8/8/6/8868897b28c0269a662476f8cdaba956.png)
+$$\begin{align} & \dot L = a_e \frac{bA - c_{ea} A - c_{el}
+L}{a_e + \mu_e} - a_l - \mu_l \\ & \dot P = a_l L - \mu_p P
+- a_p P \\ & \dot A = a_p P - \mu_a A \end{align}
+$$
 
 and the larval fluctuations are essentially:
 
-![ \\begin{align} \\sigma\^2\_L &= \\frac{\\nu + \\beta\_L}{2
-\\partial\_L f\_L} \\\\ \\nu &= \\frac{ 2(\\partial\_A f\_L)\^2
-\\sigma\_A\^2 }{\\partial\_L f\_L + \\partial\_A f\_A} \\\\ \\partial\_A
-L &= \\frac{a\_e (b - c\_{ea} ) }{a\_e + \\mu\_e} \\end{align}
-](http://openwetware.org/images/math/0/b/2/0b28c653e98e1add40660bcfa8397dfa.png)
+$$\begin{align} \sigma^2_L &= \frac{\nu + \beta_L}{2
+\partial_L f_L} \\ \nu &= \frac{ 2(\partial_A f_L)^2
+\sigma_A^2 }{\partial_L f_L + \partial_A f_A} \\ \partial_A
+L &= \frac{a_e (b - c_{ea} ) }{a_e + \mu_e} \end{align}
+$$
 
 where β~*i*~ is the intrinsic noise of the age class. Hence a class *i*
-which propagates large noise to another class *j* has a large ![
-\\partial\_i f\_j
-](http://openwetware.org/images/math/7/b/e/7be2b5af5d2cc89a7191b64172d0111a.png).
+which propagates large noise to another class *j* has a large $\partial_i f_j$
 If this term is a linear transition λ*X*~*i*~, then the same term
-appears in *f*~*i*~ and hence damps the noise ![ \\sigma\_i\^2
-](http://openwetware.org/images/math/8/5/8/858533c45c5df12a7e743e031638f296.png)
+appears in *f*~*i*~ and hence damps the noise $\sigma_i^2$
 and cancels out. Hence noise must propagate into a class through
 nonlinear transition rates OR through an asymmetry in the transition
-(i.e. the c\_1, c\_2 large noise example in the generalized crowley).
+(i.e. the c_1, c_2 large noise example in the generalized crowley).
 
 \
  Compare to noise in Eggs:
 
-![ \\sigma\^2\_E = \\frac{ \\frac{ (\\sigma\_L\^2 c\_{el} +\\sigma\_A\^2
-c\_{ea} )E\^2 }{\\mu\_A + \\mu\_L + a\_L}+ \\beta\_E/2}{\\mu\_E +
-c\_{ea} A + c\_{el} L + a\_e}
-](http://openwetware.org/images/math/c/b/4/cb43757c3eeb52669b9771261087ddd2.png)
-
-\
+$$\sigma^2_E = \frac{ \frac{ (\sigma_L^2 c_{el} +\sigma_A^2
+c_{ea} )E^2 }{\mu_A + \mu_L + a_L}+ \beta_E/2}{\mu_E +
+c_{ea} A + c_{el} L + a_e}$$
 
 Adding age delay to beetle dynamics
 -----------------------------------
