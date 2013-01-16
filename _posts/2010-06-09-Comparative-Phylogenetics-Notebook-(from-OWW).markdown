@@ -63,16 +63,16 @@ W(X\_i),\\,\\quad \\quad X\_i \\sim
 f\_\*](http://openwetware.org/images/math/a/9/d/a9d937b80a14419bcbcd9e73159727ea.png)
 
 This is the importance sampling estimator of
-![p\_t\\,](http://openwetware.org/images/math/1/e/4/1e48d42b7f9d92edeb2212f749b47b4a.png)
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANBAMAAABSlfMXAAAAMFBMVEX///+7u7tKSkpaWlqmpqYgICDo6OgLCwvR0dGSkpJsbGwAAAB+fn46OjosLCwUFBR7CVS7AAAAcElEQVQIHWNgEDJwVmQAAYUgh/QGIM04oYqBdQGQwcGxg4HdgK2BgYGngCH7ALMBAwPvBYbZDawODAzsBxgecVpbMjB0H2D5xuAKVH3cxi6BwRjIuMsI1BECZNQAMcOGHgagMUDwcQGD3yYHIIONAQD8oRcROLw0twAAAABJRU5ErkJggg==)
 and is unbiased. That is, the estimation procedure is to generate i.i.d.
 samples from
-![f\_\*\\,](http://openwetware.org/images/math/4/e/9/4e91b5d2c89ec590d25607953484706c.png)
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAAM1BMVEX////o6Oi7u7uSkpI6OjpsbGwEBATR0dEsLCwLCwtKSkogICBaWlp+fn6mpqYAAAAUFBSBjHY3AAAAe0lEQVQYGWWPWRLEIAhEGzdcUOf+px0TtIok/tjdwgMBPeS22JcPMdiEEudkA1/AbIParFu6ySPokrIMG/F8AAA/7fPS8mHWV0XpGpz1aW51Oocyf0Nco6v2MGOrt0fWPYNECXR9qijCoWGplPmwcA8LPZ9pexmnoO3wB3mWAnvUsJW4AAAAAElFTkSuQmCC)
 and for each sample which exceeds
-![t\\,](http://openwetware.org/images/math/0/c/6/0c68620ee2ea4f1286fcd672a47ea080.png),
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAOBAMAAAARcxsoAAAAKlBMVEX////o6OhsbGx+fn4LCws6OjqmpqZaWloAAADR0dEgICC7u7uSkpIsLCyaBYdvAAAAP0lEQVQIHWNgYFRgYGBgdgASrAFAgsWAgSG9IjyBgcEEyGMIBRHOQMzZCSSgypgYGLgKNjMw8FwuAArOZGAAANbDB5G/vmnDAAAAAElFTkSuQmCC),
 the estimate is incremented by the weight
-![W\\,](http://openwetware.org/images/math/2/f/1/2f1e8d5af98f2c9643b0334c73ccc25b.png)
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPBAMAAAAWtvJmAAAAMFBMVEX///9aWlosLCwgICA6Ojp+fn6mpqZKSkrR0dEAAADo6OgEBAS7u7tsbGySkpIUFBQAGxs7AAAAjElEQVQIHSXMMQrCQBBA0T8WS0yIiF5kBVPZCIK1pWV6G8ELCGIfMYqIxWIveASPkNrKMr0XcHac6jEzfAbjhduMtslsjlyhu4Z7QCrI+rAEd4PVlLRRnmHoyYOxt/PsUZ54dDx6hwNvebrSmHykyqOoRYOt8dgiF3vl2+DqYNtJiBWbQoP+zxLSV+QP3QsdHtm98LYAAAAASUVORK5CYII=)
 evaluated at the sample value. The results are averaged over
-![K\\,](http://openwetware.org/images/math/d/0/e/d0e1b8571128845c03a4cfac00d43b66.png)
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAOCAMAAAD+MweGAAAAM1BMVEX///9+fn5KSkogICBaWlqmpqa7u7ssLCw6Ojro6OgAAABsbGwEBAQLCwuSkpLR0dEUFBQK7AVDAAAAdUlEQVQIHT1PWRbEIAhLxbqgaO9/2mHR4QNCCHkAAE8iyq+CUqlZBToPr6DoVcTFB6PHAGjTUDlCw1I1rWUwYptN8sXDqE2vfE2NbPMdfdrmDRGdN963h9tozn/mXEN+grNxDRY/VyQUSL6oObFkNd2J2d/8AUjCAtJb8XZnAAAAAElFTkSuQmCC)
 trials.
 
 \
@@ -97,7 +97,7 @@ paintings *C*, OU parameters ![ \\vec \\theta
 and transition matrices ![ \\mathbb{Q}
 ](http://openwetware.org/images/math/d/4/5/d45a4aa156a8ac07ab80e7d9cf5fa79f.png).
 Still, as this problem is hard in the discrete case over
-![\\mathbb{Q}](http://openwetware.org/images/math/d/4/5/d45a4aa156a8ac07ab80e7d9cf5fa79f.png)
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAATCAMAAAB4HKeYAAAAM1BMVEX////R0dHo6Oh+fn4UFBQLCws6OjogICAEBAQsLCympqa7u7tKSkpaWlqSkpJsbGwAAAAal1eCAAAAiklEQVQYGVVQQRLEIAijgKIidf//2gV0pi0XJCExCrDrwnOIRlyqtD42hFK7s1r6TEBUctluCsDo6olrhZAIDNtCAYectGMkABzka87lz6zzy7vfvbYfA/pNdbhrVDiTN0HOmUgziIpFACy0c/rir5uVdmI5N5iGp3nKFVTfX7B4zSbySPA2fyn8AUqZBAL4yXS7AAAAAElFTkSuQmCC)
 (BayesTraits), optimizing the MCMC will still be interesting...
 
 -   Discussion of Hastings ratio

@@ -76,7 +76,7 @@ which is *only about half that computed over the time window (approx
   h                                                                                                     200
   a                                                                                                     160
   n                                                                                                     570.5
-  ![\\hat \\sigma\^2 ](http://openwetware.org/images/math/a/1/e/a1e7e8e2eb9f9575948aff1a2e672402.png)   1352
+  ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAAM1BMVEX///9sbGySkpJ+fn5KSkq7u7taWlro6OggICAsLCwLCwsAAAAUFBQ6OjoEBASmpqbR0dECTB8oAAAAjUlEQVQYGV1QWwLDIAiLr9iWVr3/aYfYTV0+UEICKLCikTGvBJAfwN07V0VzqTuZgCZtcM7/ajGOawhRFYagLTt8ADjIRDTz2nQLSXv4t9/QoxVRjCTR8Fb6kY+Tl5BucvnWEVnmNlqiTRdOFVBsC1mcsDdq/C7d5dX+IR6rFUWzdO2/Vp/Kc6e6/Y/5AFp1AzTXrpZRAAAAAElFTkSuQmCC)   1352
   ----------------------------------------------------------------------------------------------------- -------
 
 \
