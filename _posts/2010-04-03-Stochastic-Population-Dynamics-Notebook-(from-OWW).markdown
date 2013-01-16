@@ -21,10 +21,8 @@ Warning Signals Research
     [Dakos
     2008](http://hdl.handle.net/10.1073/pnas.0802430105 "doi:10.1073/pnas.0802430105"):
 
-![Deuterium signal over past 4
-glaciations](http://openwetware.org/images/thumb/e/ec/DeuteriumCore.png/600px-DeuteriumCore.png)
+![](http://openwetware.org/images/thumb/e/ec/DeuteriumCore.png/600px-DeuteriumCore.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Deuterium signal over past 4 glaciations
 

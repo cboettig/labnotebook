@@ -1,6 +1,5 @@
 ---
 layout: post
-tags: []
 categories: evolution
 ---
 
@@ -17,10 +16,8 @@ categories: evolution
 Phylogenetic Tree formats
 -------------------------
 
--   Consider a tree with N nodes. has ![ \\frac{N+1}{2}
-    ](http://openwetware.org/images/math/8/0/6/806f2a93c92cf6d7d9f090494e22ca5c.png)
-    tips and ![ \\frac{N-1}{2}
-    ](http://openwetware.org/images/math/b/2/9/b29839ea7c81cf5145ad5cc82365a8ed.png)
+-   Consider a tree with N nodes. has $\frac{N+1}{2}$
+    tips and $\frac{N-1}{2}$ 
     internal nodes.
 
 #### ape Format: class "phylo"
@@ -36,11 +33,9 @@ The order of the rows in the matrix doesn't matter.
 
 -   phy$edge.length -- the N-1 length numeric. Lengths of the edges in
     the same order as phy$edge. Optional for plotting.
--   phy$tip.label -- ![ \\frac{N+1}{2}
-    ](http://openwetware.org/images/math/8/0/6/806f2a93c92cf6d7d9f090494e22ca5c.png)
+-   phy$tip.label -- $\frac{N+1}{2}$
     length character vector. The index values correspond to the
--   phy$Nnode -- Number of internal nodes, equals ![ \\frac{N-1}{2}
-    ](http://openwetware.org/images/math/b/2/9/b29839ea7c81cf5145ad5cc82365a8ed.png)
+-   phy$Nnode -- Number of internal nodes, equals $\frac{N-1}{2}$
 
 These are the essential components of a phylo object. Optional parameter
 includes a list of names for internal nodes:

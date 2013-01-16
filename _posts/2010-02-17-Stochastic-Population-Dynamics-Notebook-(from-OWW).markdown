@@ -45,9 +45,8 @@ The red line shows the environmental change, which begins around t =
 200. The black line shows when the environmental variable hits the
 bifurcation point. Hence a reliable warning signal should occur between
 these two points. Looks like these work! Note that expected variance
-appears the least noisy. Dynamics of the model are ![ \\dot N =
-\\frac{eKN\^2}{h\^2+N\^2} - e N - a
-](http://openwetware.org/images/math/1/1/d/11dec717f8992ae05dde012fe7cd0aee.png)
+appears the least noisy. Dynamics of the model are 
+$$ \dot N = \frac{eKN\^2}{h^2+N^2} - e N - a $$
 
 With
 

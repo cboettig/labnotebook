@@ -19,10 +19,8 @@ Research
 
 ### Current Situation & Challenges
 
-![2000 bootstraps of models fitted to simulated ou2
-data](http://openwetware.org/images/thumb/2/22/Simulated_LR.png/200px-Simulated_LR.png)
+![](http://openwetware.org/images/thumb/2/22/Simulated_LR.png/200px-Simulated_LR.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 2000 bootstraps of models fitted to simulated ou2 data
 

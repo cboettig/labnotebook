@@ -5,15 +5,6 @@ categories: [ecology]
 ---
 
 
-
-
-
- 
-
-
-
-
-
 Parallelizing Code
 ------------------
 
@@ -45,7 +36,4 @@ Parallelizing Code
 
 * * * * *
 
-[HTML Comment Box](http://www.htmlcommentbox.com) is loading comments...
-
-\
 

@@ -61,8 +61,7 @@ Primary focus of today's discussion was rooted in Sunday's entry
 
 1.  the star burst tree demonstrates that α and σ aren't independent;
     then the tip variance is
-    ![\\frac{\\sigma\^2}{2\\alpha}(1-e\^{-2\\alpha
-    t})](http://openwetware.org/images/math/0/8/e/08e417731492414f9f1c6aaf090ad471.png)
+    ![\\frac{\\sigma\^2}{2\\alpha}(1-e\^{-2\\alpha t})](http://openwetware.org/images/math/0/8/e/08e417731492414f9f1c6aaf090ad471.png)
 2.  The likelihood calculation may be numerically inaccurate for small α
 
 ### Speed of computing probabilities for the Regimes model

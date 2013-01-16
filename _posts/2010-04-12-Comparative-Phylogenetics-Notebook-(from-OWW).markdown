@@ -8,13 +8,6 @@ categories: evolution
 
 
 
- 
-
-
-
-
-
-From User:Daniel Mietchen/Notebook/Evolutionary MRI/2010/04/12:
 
 Primate chronogram
 ------------------
@@ -27,5 +20,5 @@ Primate chronogram
     2](http://www.pnas.org/content/107/11/4797/F2.expansion.html "http://www.pnas.org/content/107/11/4797/F2.expansion.html")
     goes into our direction.
 
-\
+From User:Daniel Mietchen/Notebook/Evolutionary MRI/2010/04/12:
 

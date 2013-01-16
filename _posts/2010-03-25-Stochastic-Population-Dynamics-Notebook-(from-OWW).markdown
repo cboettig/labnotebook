@@ -17,9 +17,4 @@ categories: [ecology]
 Entry title
 -----------
 
--   Insert content here...
-
-\
-
-\
 

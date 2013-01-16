@@ -8,12 +8,6 @@ categories: [ecology]
 
 
 
- 
-
-
-
-
-
 Effective warning signals
 -------------------------
 
@@ -40,14 +34,10 @@ Effective warning signals
     and linear regression gives the eigenvalue and the variance.
 -   Tested using the Langevin model
 
-![ x\_{t+1} = x\_t \\left(1- \\frac{\\kappa}{\\gamma} \\Delta t \\right)
-+ \\Delta t \\sqrt{\\frac{2 K\_B T}{\\gamma} } \\xi\_t
-](http://openwetware.org/images/math/a/4/b/a4b7d6a34ddae316029729bd7c1b9303.png)
+$$ x_{t+1} = x_t \left(1- \frac{\kappa}{\gamma} \Delta t \right) + \Delta t \sqrt{\frac{2 K_B T}{\gamma} } x_t $$
 
 Whose correlation function is given by
 
-![ \\frac{K\_BT}{\\gamma} e\^{-\\kappa t / \\gamma}
-](http://openwetware.org/images/math/7/8/1/7811817fde052d555cadbfd36a77d213.png)
+$$ \frac{K_BT}{\gamma} e^{-\kappa t / \gamma}$$
 
-\
 

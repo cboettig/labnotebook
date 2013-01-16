@@ -19,17 +19,11 @@ Research
 
 ### Graham & Peter Meeting
 
-![Fig
-1](http://openwetware.org/images/thumb/2/22/Simulated_LR.png/100px-Simulated_LR.png)
-
-![image](/skins/common/images/magnify-clip.png)
+![](http://openwetware.org/images/thumb/2/22/Simulated_LR.png/100px-Simulated_LR.png)
 
 Fig 1
 
-![Fig
-2](http://openwetware.org/images/thumb/1/12/Simulated_2_LR_fitpar.png/100px-Simulated_2_LR_fitpar.png)
-
-![image](/skins/common/images/magnify-clip.png)
+![](http://openwetware.org/images/thumb/1/12/Simulated_2_LR_fitpar.png/100px-Simulated_2_LR_fitpar.png)
 
 Fig 2
 
@@ -42,5 +36,4 @@ Fig 2
     of graphs, should accept the first model where the data becomes
     typical.
 
-\
 

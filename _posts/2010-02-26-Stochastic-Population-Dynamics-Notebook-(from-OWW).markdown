@@ -7,13 +7,6 @@ categories: [ecology]
 
 
 
-
- 
-
-
-
-
-
 Friday
 ------
 

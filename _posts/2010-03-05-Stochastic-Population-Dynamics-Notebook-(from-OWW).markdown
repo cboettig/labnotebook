@@ -20,13 +20,11 @@ Meeting
 -   Basically I want to apply central limit theorem for stationary
     processes (accounts for covariances), assuming mean zero
 
-![ \\frac{X\_1 + ... + X\_n}{\\sqrt{\\sigma\^2 n}} \\propto N(0,1)
-](http://openwetware.org/images/math/1/4/1/141abb117709d04302d240f2cbbf2df6.png)
+$$\frac{X_1 + ... + X_n}{\sqrt{\sigma^2 n}} \propto N(0,1)$$
 
 where
 
-![ \\sigma\^2 = E X\^2 + 2 \\sum\_{i,j}\^n Cov(X\_i, X\_j)
-](http://openwetware.org/images/math/2/b/7/2b7baf7dc6d72616ccd1a5d72d4323cf.png)
+$$\sigma^2 = E X^2 + 2 \\sum_{i,j}^n Cov(X_i, X_j)$$
 
 -   Discussion of
     [Freidlin–Wentzell](http://en.wikipedia.org/wiki/Freidlin%E2%80%93Wentzell_theorem "http://en.wikipedia.org/wiki/Freidlin%E2%80%93Wentzell_theorem")
@@ -35,5 +33,4 @@ where
 -   Kurtz results don't really help in the case of ergodicity, can make
     statements about the (even non-stationary) ensemble limit.
 
-\
 

@@ -19,17 +19,13 @@ Warning Signals
 
 ### Current Puzzles & Goals
 
-![1
-rep](http://openwetware.org/images/thumb/c/cb/Warning.png/150px-Warning.png)
+![](http://openwetware.org/images/thumb/c/cb/Warning.png/150px-Warning.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 1 rep
 
-![100
-reps](http://openwetware.org/images/thumb/d/df/Warning100.png/150px-Warning100.png)
+![](http://openwetware.org/images/thumb/d/df/Warning100.png/150px-Warning100.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 100 reps
 

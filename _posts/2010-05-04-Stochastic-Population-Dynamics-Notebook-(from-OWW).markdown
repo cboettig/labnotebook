@@ -81,11 +81,9 @@ the R sde package accompanying the Iacus text.
 
 -   Linear growth assumption:
 
-![ \\exists \\quad K \\quad :: \\quad \\forall \\quad x
-](http://openwetware.org/images/math/f/0/f/f0fa18eefeb2fe80bd3f95ed6c6074a4.png)
+$\exists \quad K \quad :: \quad \forall \quad $
 
-![ |b(x,\\theta)| + |\\sigma(x,\\theta)| \\leq K(1+|x|)
-](http://openwetware.org/images/math/2/2/8/228467066aa1ebca79a987e2b36fecb4.png)
+$|b(x,\theta)| + |\sigma(x,\theta)| \leq K(1+|x|)$
 
 -   Global Lipshitz assumption:
 
@@ -97,10 +95,8 @@ the R sde package accompanying the Iacus text.
 
 -   Smooth coefficients (will use up to 3 times differentiable)
 
-Convergence of diffusion part estimator usually ![ \\sqrt n
-](http://openwetware.org/images/math/3/3/f/33f89d8758a725273b6b80612bb65276.png),
-with ![ n \\Delta\_n\^3 \\to 0
-](http://openwetware.org/images/math/4/3/2/432462b0b23ad64c9a1b29f761adb36f.png)
+Convergence of diffusion part estimator usually $\sqrt n$
+with $n \Delta_n^3 \to 0$ 
 
 #### Numerical methods
 

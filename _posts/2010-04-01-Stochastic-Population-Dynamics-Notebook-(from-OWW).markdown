@@ -17,20 +17,14 @@ categories: [ecology]
 Research
 --------
 
-![Single replicate. Almost all warning signals have significant
-correlation despite the constant
-environment.](http://openwetware.org/images/thumb/7/7a/False_warning.png/200px-False_warning.png)
+![](http://openwetware.org/images/thumb/7/7a/False_warning.png/200px-False_warning.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Single replicate. Almost all warning signals have significant
 correlation despite the constant environment.
 
-![False warning signals remain just as common when signals are averaged
-across 100
-replicates?](http://openwetware.org/images/thumb/a/a8/False_warning_with_replicates.png/200px-False_warning_with_replicates.png)
+![](http://openwetware.org/images/thumb/a/a8/False_warning_with_replicates.png/200px-False_warning_with_replicates.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 False warning signals remain just as common when signals are averaged
 across 100 replicates?

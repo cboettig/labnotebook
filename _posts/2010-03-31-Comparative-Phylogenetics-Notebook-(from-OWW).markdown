@@ -23,17 +23,13 @@ Biology Letters
 [format](http://rsbl.royalsocietypublishing.org/site/misc/styleandpolicy.xhtml "http://rsbl.royalsocietypublishing.org/site/misc/styleandpolicy.xhtml"),
 2500 words, 2 figures.
 
-![Fig
-1?](http://openwetware.org/images/thumb/7/71/2_data.png/100px-2_data.png)
+![Fig 1](http://openwetware.org/images/thumb/7/71/2_data.png/100px-2_data.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Fig 1?
 
-![Fig
-2?](http://openwetware.org/images/thumb/f/f7/Bootstrap_models.png/100px-Bootstrap_models.png)
+![Fig 2?](http://openwetware.org/images/thumb/f/f7/Bootstrap_models.png/100px-Bootstrap_models.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Fig 2?
 

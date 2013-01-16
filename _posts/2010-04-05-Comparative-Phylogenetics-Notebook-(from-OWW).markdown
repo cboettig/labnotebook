@@ -22,12 +22,7 @@ Research
 -   wrote the function peaks\_update() which update the painting as well
     as the OU peak parameters.
 
-![20 replicates, bootstraps the painting step as
-well](http://openwetware.org/images/thumb/e/e1/Bootstrap_painting.png/600px-Bootstrap_painting.png)
-
-![image](/skins/common/images/magnify-clip.png)
-
-20 replicates, bootstraps the painting step as well
+![](http://openwetware.org/images/thumb/e/e1/Bootstrap_painting.png/600px-Bootstrap_painting.png)
 
 Computing / Package
 -------------------

@@ -34,10 +34,8 @@ Research
 
 ### Labrids
 
-![200 reps, bootstraps that refit
-painting](http://openwetware.org/images/thumb/1/18/Labrids.png/200px-Labrids.png)
+![](http://openwetware.org/images/thumb/1/18/Labrids.png/200px-Labrids.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 200 reps, bootstraps that refit painting
 
@@ -55,10 +53,8 @@ painting](http://openwetware.org/images/thumb/1/18/Labrids.png/200px-Labrids.png
 
 ### Anoles
 
-![2000 reps, painting fixed, refit hansen
-pars](http://openwetware.org/images/thumb/2/20/Anoles.png/200px-Anoles.png)
+![](http://openwetware.org/images/thumb/2/20/Anoles.png/200px-Anoles.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 2000 reps, painting fixed, refit hansen pars
 
