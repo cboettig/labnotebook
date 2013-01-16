@@ -1,15 +1,8 @@
 ---
 layout: post
-
 categories: [ecology]
+
 ---
-
-
-
-
-
- 
-
 
 
 
@@ -17,9 +10,4 @@ categories: [ecology]
 Entry title
 -----------
 
--   Insert content here...
-
-\
-
-\
 

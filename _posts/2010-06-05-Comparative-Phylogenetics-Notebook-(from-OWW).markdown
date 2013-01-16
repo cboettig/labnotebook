@@ -19,10 +19,8 @@ Likelihood Calculation
 
 ### Direct Calculation of the Joint Probability
 
-![Fig 1 Sample
-tree](http://openwetware.org/images/thumb/d/d9/Sampletree.png/180px-Sampletree.png)
+![](http://openwetware.org/images/thumb/d/d9/Sampletree.png/180px-Sampletree.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 **Fig 1** Sample tree
 
@@ -33,12 +31,11 @@ tree](http://openwetware.org/images/thumb/d/d9/Sampletree.png/180px-Sampletree.p
     the transition probability rate *w*. Then the joint probability for
     a set of observed traits under this process can be written:
 
-![ \\begin{align} P(x\_1, x\_2, x\_3, x\_4) =& \\int d x\_7 \\Biggl[
-\\left[ \\int d x\_5 w(x\_7, x\_5, t\_5) w(x\_5, x\_1, t\_1) w(x\_5,
-x\_2, t\_1) \\right] \\\\ & \\times \\left[ \\int d x\_6 w(x\_7, x\_6,
-t\_6) w(x\_6, x\_3, t\_3) w(x\_6, x\_4, t\_3) \\right] P(x\_7) \\Biggr]
-\\end{align}
-](http://openwetware.org/images/math/0/a/c/0ac79d1c40c55d61a5acf6e240f06438.png)
+$$ \begin{align} P(x_1, x_2, x_3, x_4) =& \int d x_7 \Biggl[
+\left[ \int d x_5 w(x_7, x_5, t_5) w(x_5, x_1, t_1) w(x_5,
+x_2, t_1) \right] \\ & \times \left[ \int d x_6 w(x_7, x_6,
+t_6) w(x_6, x_3, t_3) w(x_6, x_4, t_3) \right] P(x_7) \Biggr]
+\end{align}$$
 
 -   The transition density from any state to any state can be
     represented as a matrix over the domain of the integral. So at each
@@ -55,10 +52,9 @@ t\_6) w(x\_6, x\_3, t\_3) w(x\_6, x\_4, t\_3) \\right] P(x\_7) \\Biggr]
     times the matrix (chalkboard boldface) of the internal node prunes
     that node down to a single vector, and this can be recursed:
 
-![ \\int d x\_5 w(x\_7, x\_5, t\_5) w(x\_5, x\_1, t\_1) w(x\_5, x\_2,
-t\_1) \\approx \\mathbb{W}\_5 (\\vec W\_1 \* \\vec W\_2) \\to \\vec W\_5
-](http://openwetware.org/images/math/8/1/6/8169d9da7630c0db3078b7f473f701e3.png)
-
+$$ \int d x_5 w(x_7, x_5, t_5) w(x_5, x_1, t_1) w(x_5, x_2,
+t_1) \approx \mathbb{W}_5 (\vec W_1 \* \vec W_2) \to \vec W_5
+$$
 -   See implementation in the code,
     [matrix\_method.c](http://github.com/cboettig/wrightscape/blob/master/src/matrix_method.c "http://github.com/cboettig/wrightscape/blob/master/src/matrix_method.c").
 
@@ -95,9 +91,7 @@ sigma and alpha are global parameters but there can be different values
 of theta under regimes, then the joint probability is *still*
 multivariate normal, so its likelihood is given by
 
-![ f\_X(x) = \\frac{1}{ (2\\pi)\^{k/2}|\\Sigma|\^{1/2} } \\exp\\!\\Big(
-{-\\tfrac{1}{2}}(x-\\mu)'\\Sigma\^{-1}(x-\\mu) \\Big),
-](http://openwetware.org/images/math/a/0/a/a0ad9db46854c4a616ce6959095cf21d.png)
+$$ f_X(x) = \frac{1}{ (2\pi)^{k/2}|\Sigma|^{1/2} } \exp\!\Big({-\tfrac{1}{2}}(x-\mu)'\Sigma^{-1}(x-\mu) \Big)$$
 
 -   The addition of regimes with different thetas alters the calculation
     of the means, which can still be done using the solution to the
@@ -105,9 +99,7 @@ multivariate normal, so its likelihood is given by
     time *t*~1~ in regime 1 followed by time *t*~2~ in regime 2 has
     expectation:
 
-![ E(X) = (X\_0 e\^{-\\alpha\_1 t\_1} + \\theta\_1) e\^{\\alpha\_2 t\_2}
-+ \\theta\_2
-](http://openwetware.org/images/math/2/f/b/2fb3833cbe74fff7dccf6210efd5a427.png)
+$$ E(X) = (X_0 e^{-\alpha_1 t_1} + \theta_1) e^{\alpha_2 t_2} + \theta_2$$
 
 and so forth. If we assume alpha and sigma are the same for all
 processes than the variance calculation is unaltered. We could also
@@ -160,16 +152,8 @@ reasonable distribution of paintings from the data by clustering.
 \
 
 -   In this way we can construct the probability of the parameter set of
-    the regimes ![ \\vec \\theta
-    ](http://openwetware.org/images/math/1/c/8/1c876a2b07f33c4f32b5f73a9d790a18.png),
-    and the transition probabilities ![ \\mathbb{Q}
-    ](http://openwetware.org/images/math/d/4/5/d45a4aa156a8ac07ab80e7d9cf5fa79f.png)
+    the regimes  $\vec \theta$ and the transition probabilities $\mathbb{Q}$  
     through a particular painting *C*
 
-![ P(X | \\vec \\theta, \\mathbb{Q} ) = P(X | C) P(C | \\mathbb{Q} )
-](http://openwetware.org/images/math/b/7/d/b7d74172c4b6e8084dc7907ec3dd6300.png)
-
-\
-
-\
+$$P(X | \vec \theta, \mathbb{Q} ) = P(X | C) P(C | \mathbb{Q} )$$
 

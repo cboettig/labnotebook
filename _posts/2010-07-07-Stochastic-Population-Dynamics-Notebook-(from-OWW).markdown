@@ -17,26 +17,19 @@ categories: [ecology]
 Ensemble simulations of beetle dynamics
 ---------------------------------------
 
-![code Fig
-1](http://openwetware.org/images/thumb/1/15/Gamma_beetle_ensemble_ibm.png/300px-Gamma_beetle_ensemble_ibm.png)
+![](http://openwetware.org/images/thumb/1/15/Gamma_beetle_ensemble_ibm.png/300px-Gamma_beetle_ensemble_ibm.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 [code](http://github.com/cboettig/structured-populations/commit/efdfa0a033b7597824797af8659397a7bf7b4f3b "http://github.com/cboettig/structured-populations/commit/efdfa0a033b7597824797af8659397a7bf7b4f3b")
 **Fig 1**
 
-![code Fig
-2](http://openwetware.org/images/thumb/d/da/Ibm_compare.png/300px-Ibm_compare.png)
+![](http://openwetware.org/images/thumb/d/da/Ibm_compare.png/300px-Ibm_compare.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 [code](http://github.com/cboettig/structured-populations/commit/efdfa0a033b7597824797af8659397a7bf7b4f3b "http://github.com/cboettig/structured-populations/commit/efdfa0a033b7597824797af8659397a7bf7b4f3b")
 **Fig 2**
 
-![code Fig
-3](http://openwetware.org/images/thumb/3/30/Stable_nodes.png/300px-Stable_nodes.png)
-
-![image](/skins/common/images/magnify-clip.png)
+![](http://openwetware.org/images/thumb/3/30/Stable_nodes.png/300px-Stable_nodes.png)
 
 [code](http://github.com/cboettig/structured-populations/commit/4f2d9ec4a0adf5170436f5ade875da92f39593c1 "http://github.com/cboettig/structured-populations/commit/4f2d9ec4a0adf5170436f5ade875da92f39593c1")
 **Fig 3**
