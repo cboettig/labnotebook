@@ -2,7 +2,12 @@
 layout: post
 categories: [ecology]
 
-title: Entry title
 ---
+
+
+
+
+Entry title
+-----------
 
 

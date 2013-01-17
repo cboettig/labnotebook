@@ -2,9 +2,20 @@
 layout: post
 
 categories: [ecology]
-title: Research Notes 
 ---
 
+
+
+
+
+ 
+
+
+
+
+
+Research
+--------
 
 -   Goal: complete outline for tomorrow's meeting.
 

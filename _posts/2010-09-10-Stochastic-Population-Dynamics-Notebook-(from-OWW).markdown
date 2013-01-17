@@ -1,14 +1,21 @@
 ---
 layout: post
-categories: [ecology]
-title:  Meeting with Alan
 
+categories: [ecology]
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Meeting with Alan
+-----------------
 
 ### Some discussion of references
 

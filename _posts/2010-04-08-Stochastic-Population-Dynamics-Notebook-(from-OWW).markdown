@@ -2,17 +2,29 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
-title: Back to warning signals 
 ---
 
 
 
 
 
+ 
+
+
+
+
+
 Research
+--------
 
 -   Reviewed timescales manuscript.
 -   Revisiting
+
+
+
+
+ 
+
 
 
 

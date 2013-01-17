@@ -2,14 +2,20 @@
 layout: post
 
 categories: evolution
-title:  Likelihood ratio ToDo
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Likelihood ratio ToDo
+---------------------
 
 -   Inclusion of power figure, discussion of power. (include comparison
     to smaller trees?)

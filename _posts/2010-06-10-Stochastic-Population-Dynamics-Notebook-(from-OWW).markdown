@@ -2,15 +2,20 @@
 layout: post
 
 categories: [ecology]
-tags: [tribolium]
-title: Questions in macroscopic dynamics 
 ---
 
 
 
 
 
+ 
+
+
+
+
+
 Questions
+---------
 
 Current population dynamics model macroscopic equations:
 

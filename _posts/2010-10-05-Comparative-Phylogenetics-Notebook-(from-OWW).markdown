@@ -1,10 +1,21 @@
 ---
 layout: post
-categories: evolution
-title:  LR Manuscript
 
+categories: evolution
 ---
 
+
+
+
+
+ 
+
+
+
+
+
+LR Manuscript
+-------------
 
 -   Still writing. Working on the comparisons to AIC section. Things to
     think about adding:

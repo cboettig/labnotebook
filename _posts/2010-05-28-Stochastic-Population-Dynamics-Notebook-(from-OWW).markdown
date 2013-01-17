@@ -2,14 +2,20 @@
 layout: post
 tags: [tribolium]
 categories: [ecology]
-title:  Conference call w/ Bob and Brett
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Conference call w/ Bob and Brett
+--------------------------------
 
 -   So far no large noise in larval class alone, several potential
     mechanisms we may have missed so far:

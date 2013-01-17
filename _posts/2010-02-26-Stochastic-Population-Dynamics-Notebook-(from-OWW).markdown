@@ -2,8 +2,13 @@
 layout: post
 
 categories: [ecology]
-title: Friday
 ---
+
+
+
+
+Friday
+------
 
 Not much chance for progress.
 

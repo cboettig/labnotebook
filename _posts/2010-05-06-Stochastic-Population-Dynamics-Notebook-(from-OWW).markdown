@@ -2,14 +2,20 @@
 layout: post
 tags: [warning-signals, code-tricks]
 categories: [ecology]
-title: warning signals and conditional probability 
 ---
 
 
 
 
 
+ 
+
+
+
+
+
 Goals
+-----
 
 -   Model choice exercise with sdes
 -   general likelihood calculation from simulation

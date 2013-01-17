@@ -2,14 +2,20 @@
 layout: post
 tags: [adaptive-dynamics, open-science]
 categories: evolution
-title:  Adaptive Dynamics
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Adaptive Dynamics
+-----------------
 
 -   Wrapping up paper on waiting time to branching in adaptive dynamics.
 -   Cleaning up code from summer. Now in a local git repository in

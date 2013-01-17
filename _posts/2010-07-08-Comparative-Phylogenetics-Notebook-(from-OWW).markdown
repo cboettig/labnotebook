@@ -2,14 +2,20 @@
 layout: post
 
 categories: evolution
-title:  Evolutionary Regime Shift examples
-
-
 ---
 
 
 
 
+
+ 
+
+
+
+
+
+Evolutionary Regime Shift examples
+----------------------------------
 
 Time to get more data and examples to start testing methods,
 particularly for cases in where regime shifts are hypothesized by

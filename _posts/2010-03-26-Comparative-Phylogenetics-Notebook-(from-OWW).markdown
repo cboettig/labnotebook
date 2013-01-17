@@ -2,14 +2,20 @@
 layout: post
 tags: [model-choice]
 categories: evolution
-title:  Still puzzling on LR
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Still puzzling on LR
+--------------------
 
 -   The likelihood ratios when parameters are not held fixed, using data
     originally generated from a two peak model. Has 1000 bootstrap

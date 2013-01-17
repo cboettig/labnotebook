@@ -1,15 +1,21 @@
 ---
 layout: post
+
 categories: evolution
-title: CSGF Conference Day 1
-tags: conference
 ---
 
 
 
 
 
+ 
+
+
+
+
+
 [CSGF Conference](http://www.krellinst.org/conf/csgf/ "http://www.krellinst.org/conf/csgf/"): Tuesday
+-----------------------------------------------------------------------------------------------------
 
 [Conference
 Agenda](http://www.krellinst.org/conf/csgf/2010-conference/conference-agenda "http://www.krellinst.org/conf/csgf/2010-conference/conference-agenda")

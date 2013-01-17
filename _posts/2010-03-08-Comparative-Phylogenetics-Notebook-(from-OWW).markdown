@@ -2,14 +2,20 @@
 layout: post
 tags: []
 categories: evolution
-title:  Bodega Phylogenetics Workshop Day 2
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Bodega Phylogenetics Workshop Day 2
+-----------------------------------
 
 Marine lab researchers are back, and network speeds have just about
 given up (down to bytes/s). This post is composed offline and will be

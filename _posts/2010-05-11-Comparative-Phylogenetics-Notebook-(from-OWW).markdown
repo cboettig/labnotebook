@@ -1,14 +1,21 @@
 ---
 layout: post
-categories: evolution
-title:  Peter Meeting
 
+categories: evolution
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Peter Meeting
+-------------
 
 Discussed potential solution to the model choice scenario:
 

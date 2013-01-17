@@ -1,15 +1,21 @@
 ---
 layout: post
-categories: [ecology]
-title: Warning signals paper outline 
 
+categories: [ecology]
 ---
 
 
 
 
 
+ 
+
+
+
+
+
 Research
+--------
 
 Writing up work just on ensemble vs single instance detection of regime
 shifts. See this entry

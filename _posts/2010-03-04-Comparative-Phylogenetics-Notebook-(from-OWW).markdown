@@ -2,14 +2,20 @@
 layout: post
 tags: [code-tricks, ]
 categories: evolution
-title:  Big Picture Comparative Phylogenetics
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Big Picture Comparative Phylogenetics
+-------------------------------------
 
 -   A [Task
     View](http://www.bio.unc.edu/faculty/vision/lab/CPM_taskview.html "http://www.bio.unc.edu/faculty/vision/lab/CPM_taskview.html")

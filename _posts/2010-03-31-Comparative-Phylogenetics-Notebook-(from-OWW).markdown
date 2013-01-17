@@ -2,13 +2,22 @@
 layout: post
 tags: [ Labrids]
 categories: evolution
-title: Labrid Fins Paper Outline
-
 ---
 
 
 
 
+
+ 
+
+
+
+
+
+Research
+--------
+
+### Labrid Paper Outline
 
 Biology Letters
 [format](http://rsbl.royalsocietypublishing.org/site/misc/styleandpolicy.xhtml "http://rsbl.royalsocietypublishing.org/site/misc/styleandpolicy.xhtml"),

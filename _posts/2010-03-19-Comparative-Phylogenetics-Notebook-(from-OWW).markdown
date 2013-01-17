@@ -2,14 +2,20 @@
 layout: post
 tags: [code-tricks, model-choice]
 categories: evolution
-title: Research 
 ---
 
 
 
 
 
+ 
+
+
+
+
+
 Research
+--------
 
 -   Bootstrapped against 2000 replicate simulations overnight on both
     the Anoles dataset and the Labrids dataset.

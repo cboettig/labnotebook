@@ -2,15 +2,20 @@
 layout: post
 
 categories: evolution
-title:  Power in trees continues
-
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Power in trees continues
+------------------------
 
 Discussion of power in trees need a counterpoint to the example of the
 star tree as being devoid of information content. The best example here

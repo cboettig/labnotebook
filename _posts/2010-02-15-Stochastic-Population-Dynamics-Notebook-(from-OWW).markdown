@@ -2,14 +2,20 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
-title:  Implementing warning signals metrics
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Implementing warning signals metrics
+------------------------------------
 
 The
 [code](http://code.google.com/p/popdyn/source/checkout "http://code.google.com/p/popdyn/source/checkout")

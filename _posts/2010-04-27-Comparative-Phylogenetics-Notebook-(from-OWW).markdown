@@ -2,14 +2,20 @@
 layout: post
 tags: [conference]
 categories: evolution
-title:  iEvoBio lightning talk
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+iEvoBio lightning talk
+----------------------
 
 Submitting a five minute lighting talk on open science. [Submitted
 version here](/images/8/89/Lightning.pdf "Lightning.pdf"), final text

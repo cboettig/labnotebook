@@ -2,14 +2,20 @@
 layout: post
 tags: [tribolium]
 categories: [ecology]
-title:  Likelihood calculations in tribolium dynamics
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Likelihood calculation
+----------------------
 
 -   Implemented the likelihood calculation in [simulate.R
     code](http://github.com/cboettig/structured-populations/blob/master/R/simulate.R "http://github.com/cboettig/structured-populations/blob/master/R/simulate.R").

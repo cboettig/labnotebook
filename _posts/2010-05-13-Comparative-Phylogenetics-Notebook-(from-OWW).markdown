@@ -2,14 +2,20 @@
 layout: post
 tags: [adaptive-dynamics, open-science, open-science]
 categories: evolution
-title:  Adaptive Dynamics
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Adaptive Dynamics
+-----------------
 
 ### Public code hosting
 

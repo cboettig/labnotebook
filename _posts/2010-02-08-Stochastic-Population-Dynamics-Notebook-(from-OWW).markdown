@@ -2,14 +2,20 @@
 layout: post
 
 categories: [ecology]
-title:  Updates to Code
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Updates to Code
+---------------
 
 -   Mostly organizational updates at the moment. Restructured the
     directory tree, and added proper [literate

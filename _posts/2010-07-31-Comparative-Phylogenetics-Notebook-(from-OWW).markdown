@@ -1,15 +1,21 @@
 ---
 layout: post
-tag: conference
-categories: evolution
-title:  Open Science Summit Day 3
 
+categories: evolution
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Open Science Summit Day 3
+-------------------------
 
 see previous day for links to more details on summit.
 

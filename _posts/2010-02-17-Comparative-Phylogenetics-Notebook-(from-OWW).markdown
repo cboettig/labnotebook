@@ -2,14 +2,20 @@
 layout: post
 
 categories: evolution
-title:  Meeting Goals
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Meeting Goals
+-------------
 
 ### Discussion of information in phyologenetic trees analysis
 

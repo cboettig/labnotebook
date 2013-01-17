@@ -2,14 +2,20 @@
 layout: post
 tags: [Primates]
 categories: evolution
-title:  Power in Trees
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Power in Trees
+--------------
 
 Following up after yesterday's meeting, I am working on implementing the
 confidence interval analysis and quantifying information in trees. This

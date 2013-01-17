@@ -2,14 +2,20 @@
 layout: post
 
 categories: evolution
-title:  Exploring Difficulties with Existing Methods continued
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Exploring Difficulties with Existing Methods continued
+------------------------------------------------------
 
 -   Working on manuscript for this today, hope to have a draft soon.
 

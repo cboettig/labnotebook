@@ -2,15 +2,20 @@
 layout: post
 tags: [model-choice]
 categories: evolution
-title:  Implementing an example of low and high power trees
-
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Implementing an example of low and high power trees
+---------------------------------------------------
 
 Code implementation in felsenstein\_tree.R
 

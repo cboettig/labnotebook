@@ -2,14 +2,20 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
-title:  Hastings Meeting
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Hastings Meeting
+----------------
 
 -   Discussion of cases where variance decreases before crash --
     misleading warning signals. Schreiber 2003

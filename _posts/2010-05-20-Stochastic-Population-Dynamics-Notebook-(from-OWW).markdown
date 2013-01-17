@@ -2,14 +2,20 @@
 layout: post
 tags: [tribolium]
 categories: [ecology]
-title:  Beetle dynamics exploration & adjustments
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Beetle dynamics exploration & adjustments
+-----------------------------------------
 
 -   Adjusted individual based Crowley model to follow same
     parameterization as the macroscopic model. IBM rules had divided b

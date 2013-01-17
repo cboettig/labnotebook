@@ -1,15 +1,21 @@
 ---
 layout: post
 tags: [conference]
-categories: open-science 
-title: Open Science Summit 
+categories: evolution
 ---
 
 
 
 
 
+ 
+
+
+
+
+
 [Open Science Summit](http://opensciencesummit.com/ "http://opensciencesummit.com/")
+------------------------------------------------------------------------------------
 
 First day of the Open Science Summit, began with excellent panel
 discussion including Cameron Neylon, Victoria Stodden, Peter Murray-Rust

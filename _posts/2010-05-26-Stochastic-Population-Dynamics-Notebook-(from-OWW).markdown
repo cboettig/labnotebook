@@ -2,14 +2,20 @@
 layout: post
 tags: [tribolium]
 categories: [ecology]
-title:  Rethinking Beetles Noise
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Rethinking Beetles Noise
+------------------------
 
 -   Noise in the larval class is damped by $\partial_L f_L$
     and grows proportional to its intrinsic variation and the

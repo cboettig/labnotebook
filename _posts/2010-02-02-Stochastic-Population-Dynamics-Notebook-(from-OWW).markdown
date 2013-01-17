@@ -2,8 +2,11 @@
 layout: post
 tags: [tribolium, warning-signals]
 categories: [ecology]
-title: The Lab Notebook Goes Open 
 ---
+
+
+The Lab Notebook Goes Open 
+----------------------------------------
 
 (Originally posted on OpenWetWare)
 

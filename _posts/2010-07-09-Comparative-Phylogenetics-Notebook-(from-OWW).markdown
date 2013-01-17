@@ -2,14 +2,20 @@
 layout: post
 
 categories: evolution
-title:  wrightscape Status / Thoughts
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Status / Thoughts
+-----------------
 
 -   **Goal:** BM vs OU vs proposed multipeak OU model with and without
     global alpha/sigma. Anoles dataset, carex dataset, labrids?

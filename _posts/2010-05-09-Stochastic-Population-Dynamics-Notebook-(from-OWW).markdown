@@ -2,14 +2,20 @@
 layout: post
 tags: [warning-signals, code-tricks]
 categories: [ecology]
-title:  Warning Signals with SDEs
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Warning Signals with SDEs
+-------------------------
 
 ### Summary
 

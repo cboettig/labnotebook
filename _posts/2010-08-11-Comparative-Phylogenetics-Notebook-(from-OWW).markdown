@@ -2,14 +2,20 @@
 layout: post
 tags: [adaptive-dynamics]
 categories: evolution
-title:  Adaptive Dynamics
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Adaptive Dynamics
+-----------------
 
 -   Adding demos directory for the simulations to create the figures in
     User:Carl Boettiger/Notebook/Comparative Phylogenetics/2010/05/03

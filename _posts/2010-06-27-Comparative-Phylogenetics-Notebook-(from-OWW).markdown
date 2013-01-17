@@ -1,15 +1,21 @@
 ---
 layout: post
-tags: conference
-categories: evolution
-title:  Evolution 2010 Day 2
 
+categories: evolution
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Evolution 2010 Day 2
+--------------------
 
 -   **Clay Cressler** : Can you trust evolutionary parameters estimated
     by complex phylogenetic comparative methods? A simulation study with

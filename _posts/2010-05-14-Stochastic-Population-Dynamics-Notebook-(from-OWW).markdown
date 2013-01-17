@@ -2,23 +2,29 @@
 layout: post
 tags: [tribolium]
 categories: [ecology]
-title:  Structured Population Dynamics
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Structured Population Dynamics
+------------------------------
 
 ### Beetle Model
 
 Macroscopic equations:
 
-$$\begin{align} \dot E &= f_E(E,L,A) = -\mu_e E - c_{le} E L -
+![ \begin{align} \dot E &= f_E(E,L,A) = -\mu_e E - c_{le} E L -
 c_{ae} E A - a_e E + b A \\ \dot L &= f_L(E, L) = -\mu_L L +
 a_e E - a_L L \\ \dot P &= f_P(L,P) = -\mu_P P - a_p P + a_L
-L\\ \dot A &= f_A(P,A) = -\mu_A A + a_p P \end{align}$$
+L\\ \dot A &= f_A(P,A) = -\mu_A A + a_p P \end{align}
 
 Has the corresponding variance-covariance dynamics
 

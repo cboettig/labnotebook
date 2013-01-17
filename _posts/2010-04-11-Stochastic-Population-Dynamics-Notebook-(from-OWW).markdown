@@ -2,8 +2,14 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
-title: Effective warning signals
 ---
+
+
+
+
+
+Effective warning signals
+-------------------------
 
 -   Predicting variance of variance by direct calculation -- still need
     to crunch some math for the expected convergence.

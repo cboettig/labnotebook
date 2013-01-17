@@ -2,14 +2,20 @@
 layout: post
 tags: [model-choice, ]
 categories: evolution
-title:  Updating manuscript
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Updating manuscript
+-------------------
 
 The progress of the past few days has lead to substantial revision
 proposals in my manuscript draft. Rewriting for discussion with Brian

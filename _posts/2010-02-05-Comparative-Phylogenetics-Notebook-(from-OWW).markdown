@@ -1,15 +1,21 @@
 ---
 layout: post
+
 categories: evolution
-title:  Lunch with Wainwright Lab
-
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Lunch with Wainwright Lab
+-------------------------
 
 Friday lunch with Wainwright lab continues to be a very useful chance to
 bounce ideas off of lab members with an excellent grasp of both the

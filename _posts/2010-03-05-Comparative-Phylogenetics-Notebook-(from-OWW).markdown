@@ -2,15 +2,20 @@
 layout: post
 
 categories: evolution
-title: Friday
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
 Friday
+------
 
 11a Sebastian Meeting (see Stochastic Population Dynamics Notebook)
 

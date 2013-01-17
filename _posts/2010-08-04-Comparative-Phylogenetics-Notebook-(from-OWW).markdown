@@ -1,14 +1,21 @@
 ---
 layout: post
+
 categories: evolution
-title: Exploring additional data sets 
 ---
 
 
 
 
 
+ 
+
+
+
+
+
 Data Format functions
+---------------------
 
 -   Spent much of the day trying to code an intelligent
     data-preprocessing function. Seems to mostly be working now, see

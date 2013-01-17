@@ -2,14 +2,20 @@
 layout: post
 tags: []
 categories: evolution
-title:  Bodega Phylogenetics Workshop Day 3
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Bodega Phylogenetics Workshop Day 3
+-----------------------------------
 
 Rich Glor, Character Evolution
 ------------------------------

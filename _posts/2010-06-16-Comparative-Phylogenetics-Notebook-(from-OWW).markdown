@@ -2,14 +2,20 @@
 layout: post
 
 categories: evolution
-title:  Wainwright Lab Meeting
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Wainwright Lab Meeting
+----------------------
 
 Presented a revised version of my talk for Evolution 2010, focusing on
 the inadequacy of information-criteria heuristics for model choice in

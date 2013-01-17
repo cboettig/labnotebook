@@ -2,8 +2,15 @@
 layout: post
 tags: [Primates]
 categories: evolution
-title: Primate chronogram
 ---
+
+
+
+
+
+
+Primate chronogram
+------------------
 
 -   [Jinchuan
     Xing](http://sites.google.com/site/chuanchuaner/ "http://sites.google.com/site/chuanchuaner/")

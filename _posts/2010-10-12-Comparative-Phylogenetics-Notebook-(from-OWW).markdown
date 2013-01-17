@@ -1,15 +1,21 @@
 ---
 layout: post
-categories: evolution
-title: Writing, AIC, bootstraps 
 
+categories: evolution
 ---
 
 
 
 
 
+ 
+
+
+
+
+
 a day of writing
+----------------
 
 Figuring out the best way to present the critique of AIC, introduction
 to the method, introduction to the power test. Seeking inspiration from

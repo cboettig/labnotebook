@@ -1,14 +1,21 @@
 ---
 layout: post
-categories: evolution
-title:  Implementing the new approach
 
+categories: evolution
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Implementing the new approach
+-----------------------------
 
 -   Spent just about the entire day off and on implementing the approach
     described in yesterday's entry. Code includes the more direct

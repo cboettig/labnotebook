@@ -2,14 +2,20 @@
 layout: post
 tags: [adaptive-dynamics]
 categories: evolution
-title:  Adaptive Dynamics
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Adaptive Dynamics
+-----------------
 
 -   Working on simulation based approach to summarize distribution of
     waiting times across different phases.

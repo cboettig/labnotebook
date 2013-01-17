@@ -2,14 +2,20 @@
 layout: post
 tags: [warning-signals, tribolium]
 categories: [ecology]
-title:  Alan Meeting, tibolium
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Alan Meeting
+------------
 
 -   Goals next week: Bob & Brian beetle data: what an analysis would be
     with complete stochastic description.

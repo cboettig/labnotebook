@@ -2,14 +2,20 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
-title: Warning Signals 
 ---
 
 
 
 
 
+ 
+
+
+
+
+
 Warning Signals
+---------------
 
 -   Working on implementation of the the TwoRates model looking for
     changepoint:

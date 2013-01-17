@@ -2,14 +2,20 @@
 layout: post
 tags: [tribolium]
 categories: [ecology]
-title:  Bug in Crowley model fixed!
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Bug fixed!
+----------
 
 -   Wasn't taking the Jacobian of the transition terms. Fixes the
     unstable behavior and disagreement between simulations and theory.

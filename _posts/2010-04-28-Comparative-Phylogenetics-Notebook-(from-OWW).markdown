@@ -2,14 +2,20 @@
 layout: post
 
 categories: evolution
-title:  Meetings
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Meetings
+--------
 
 -   Theory Coffee 10-11a: Varied discussion, including NEON project and
     future of large data.

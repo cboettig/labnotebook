@@ -2,13 +2,20 @@
 layout: post
 tags: [model-choice]
 categories: evolution
-title: Research 
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Research
+--------
 
 -   Bootstrap the fitted models (rather than allow the parameters to be
     refit, simply evaluate the likelihood of the model under each

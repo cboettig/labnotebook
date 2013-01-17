@@ -2,14 +2,20 @@
 layout: post
 
 categories: evolution
-title:  Wednesday
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Wednesday
+---------
 
 -   10-2p Finish preparing for EDG talk.
 

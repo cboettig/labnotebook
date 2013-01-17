@@ -2,14 +2,20 @@
 layout: post
 tags: [warning-signals, tribolium]
 categories: [ecology]
-title:  Meeting w Alan
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Meeting w/ Alan
+---------------
 
 -   Weekly check-in, following up on last week's meeting.
 

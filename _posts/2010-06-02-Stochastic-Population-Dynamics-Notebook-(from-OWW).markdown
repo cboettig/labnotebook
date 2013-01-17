@@ -1,14 +1,21 @@
 ---
 layout: post
-categories: [ecology]
-title:  Actually starting at Arkin Lab
 
+categories: [ecology]
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Actually starting at Arkin Lab
+------------------------------
 
 ### Meeting with M. Samoilov
 

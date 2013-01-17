@@ -2,14 +2,20 @@
 layout: post
 tags: [model-choice, code-tricks]
 categories: evolution
-title:  Solution to the strange behavior in ouch
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Solution to the strange behavior in ouch
+----------------------------------------
 
 Looks like my troubles actually stem from a bug in the code. I summarize
 the problem here, just as I posted in my query to R sig phylo.

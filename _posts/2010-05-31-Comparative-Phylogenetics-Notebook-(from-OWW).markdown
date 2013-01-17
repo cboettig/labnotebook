@@ -2,14 +2,20 @@
 layout: post
 tags: [code-tricks]
 categories: evolution
-title:  CSGF Survey
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+CSGF Survey
+-----------
 
 -   Wrote survey. Getting feedback and will send out this week.
 

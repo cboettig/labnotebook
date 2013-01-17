@@ -2,14 +2,20 @@
 layout: post
 
 categories: evolution
-title:  Roi and Sam Comparative Phylogenetics R Workshop
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Roi and Sam Comparative Phylogenetics R Workshop
+------------------------------------------------
 
 #### Day 2: 4p - 6:30p
 

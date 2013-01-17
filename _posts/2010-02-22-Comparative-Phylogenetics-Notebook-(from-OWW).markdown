@@ -2,13 +2,24 @@
 layout: post
 
 categories: evolution
-title: Monday 
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Monday
+------
 
 A little exploration on felsenstein\_tree.R, see svn log.
+
+\
+
+\
 

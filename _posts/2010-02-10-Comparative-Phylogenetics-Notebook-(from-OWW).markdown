@@ -2,14 +2,20 @@
 layout: post
 tags: [model-choice]
 categories: evolution
-title:  Follow-up on Parametric Bootstrapping
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Follow-up on Parametric Bootstrapping
+-------------------------------------
 
 -   Continuing on yesterday's discussion of parametric boostrapping
     implementation. Peter sent some very helpful comments and agreed to

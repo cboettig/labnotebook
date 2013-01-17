@@ -2,14 +2,20 @@
 layout: post
 tags: [model-choice, ]
 categories: evolution
-title:  Meeting with Graham and Peter
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Meeting with Graham and Peter
+-----------------------------
 
 ### Discussion of Model Comparisons
 

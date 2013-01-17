@@ -2,14 +2,20 @@
 layout: post
 tags: [adaptive-dynamics]
 categories: evolution
-title:  Adaptive Dynamics
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Adaptive Dynamics
+-----------------
 
 ### Computing Challenges
 

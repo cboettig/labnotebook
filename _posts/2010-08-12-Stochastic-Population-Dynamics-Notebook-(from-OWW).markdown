@@ -2,14 +2,20 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
-title:  Warning Signals
-
 ---
 
 
 
 
 
+ 
+
+
+
+
+
+Warning Signals
+---------------
 
 -   Reworking code to allow standard format for:
 
