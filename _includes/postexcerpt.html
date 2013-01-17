@@ -3,7 +3,7 @@
 <p style="text-align:right; font-style:italic"> {{ post.date | date_to_string }}</p>
 <p style="text-align:right; font-style:italic"> pageviews: {% pageviews %}{{post.url}}{% endpageviews %} </p>
 <article>
-{{ post.raw_content | markdownify | truncate:400 }} 
+{{ post.raw_content | markdownify | truncatewords:25 | strip_html }} 
 <!-- not that raw_content depends on custom generator, 
      see _plugins/jekyll-labnotebook-plugins/raw_content --> 
 </article> 
