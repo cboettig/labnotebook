@@ -1,0 +1,80 @@
+---
+layout: post
+tag: conference
+categories: evolution
+title: Evolution 2010 Day 3
+---
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+-   **Chris Martin**: Trophic innovation drives exceptional rates of
+    morphological diversification in two adaptive radiations of
+    Cyprinodon pupfishes
+
+Fantastic story of exceptional rates of evolution and trophic novelty in
+two tropical lakes. (8:45, Adaptation 9, talk 097002)
+
+-   **David Plachetzki**: Deep homology and the evolution of animal
+    senses: insights from Cnidaria
+
+Cnidarians have homologous proteins to opsins and taste receptors!
+
+-   **Jeremy Yoder**: Coevolution and gene flow in obligate pollination
+    mutualism
+
+Two species of joshua tree each with its own pollinator yucca moth. Moth
+larva laid in and eat some of Joshua tree fruit, obligate for
+pollination but if too many eggs are laid tree aborts that fruit. Nice
+gene flow story reflecting the ability/inability of each moth to
+cross-pollinate the other tree. Trees overlap in distribution only at
+one location (top of a horseshoe shape in Nevada).
+
+-   **Pat MacIntyre**: Adaptation and niche breath among polyploid
+    cytotypes of Claytonia perfoliata
+
+-   **Peter Ralph**: Spatial parallel evolution: one wave or many?
+
+Nice spatial spread genetic structure model
+
+-   **Tracy Heath** (Huelsenbeck group) A Dirchlet process model for
+    estimating lineage-specific substitution rates and dating
+    divergences
+
+[github source code?]
+
+-   **Charles Marshall**: Looking under the hood: the meaning of
+    Bayesian priors on divergence times in light of the nature of the
+    fossil record
+
+Excellent talk discussing limitations and challenges in dating fossils,
+particularly limitations in rock record itself. A couple nice papers for
+much better ways on selecting which fossils to use, etc.
+
+-   **Michael Turelli**: Spatial spread of CI-causing Wolbachia
+
+Cubic growth function for spread of wolbachia with an allee effect, and
+how this modifies Fisher's wave equation for spatial spread. Going to
+applied in 7 million dollar project in releasing wolbachia-infected
+mosquitoes in Australia to control Dange fever.
+
+-   **Tom Near**: Informed calibration priors and calibration sampling
+    strategies in molecular divergence time of ray-finned fishes
+
+-   NESCent information session
+
+-   Dinner with some NESCent folks
+
+\
+
