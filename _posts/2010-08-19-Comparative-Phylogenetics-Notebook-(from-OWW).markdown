@@ -1,21 +1,14 @@
 ---
 layout: post
-
 categories: evolution
+title: Writing 
 ---
 
 
 
 
 
- 
-
-
-
-
-
 Writing
--------
 
 -   revising likelihood ratio manuscript -- added a section of
     conceptual examples to link the model choice and phylogenetic signal

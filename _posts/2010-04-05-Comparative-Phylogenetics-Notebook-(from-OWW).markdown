@@ -2,20 +2,14 @@
 layout: post
 tags: [model-choice, Labrids]
 categories: evolution
+title:  Research
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Research
---------
 
 -   Bootstrapping procedures should have the option to refit the
     painting. Currently use the fixed painting but refit parameters.

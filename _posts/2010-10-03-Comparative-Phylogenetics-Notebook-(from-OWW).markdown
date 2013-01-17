@@ -2,20 +2,14 @@
 layout: post
 tags: [model-choice, adaptive-dynamics]
 categories: evolution
+title:  Likelihood Ratio Paper
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Likelihood Ratio Paper
-----------------------
 
 ### Higher resolution power plot for Anoles tree
 

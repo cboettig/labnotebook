@@ -1,21 +1,14 @@
 ---
 layout: post
-
 categories: evolution
+title:  Batch Data
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Batch Data
-----------
 
 -   Some of the nexus files don't seem to read into R. Opening and
     saving the file in figtree solves this.
@@ -33,87 +26,62 @@ manually, while the automation of the data conversions and the painting
 by clade reversed the label assignments). See User:Carl
 Boettiger/Notebook/Comparative Phylogenetics/2010/08/10.
 
-![Gape distance (weighted by body
-mass)](http://openwetware.org/images/thumb/f/f4/Gapedistance_mm_model.png/500px-Gapedistance_mm_model.png)
+![](http://openwetware.org/images/thumb/f/f4/Gapedistance_mm_model.png/500px-Gapedistance_mm_model.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Gape distance (weighted by body mass)
 
-![Gape distance (weighted by body
-mass)](http://openwetware.org/images/thumb/c/c3/Gapedistance_mm_pars.png/500px-Gapedistance_mm_pars.png)
+![](http://openwetware.org/images/thumb/c/c3/Gapedistance_mm_pars.png/500px-Gapedistance_mm_pars.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Gape distance (weighted by body mass)
 
-![Protrusion distance weighted by body
-mass](http://openwetware.org/images/thumb/b/b4/Protrusiondistance_mm_model.png/500px-Protrusiondistance_mm_model.png)
+![](http://openwetware.org/images/thumb/b/b4/Protrusiondistance_mm_model.png/500px-Protrusiondistance_mm_model.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Protrusion distance weighted by body mass
 
-![Protrusion distance weighted by body
-mass](http://openwetware.org/images/thumb/b/be/Protrusiondistance_mm_pars.png/500px-Protrusiondistance_mm_pars.png)
+![](http://openwetware.org/images/thumb/b/be/Protrusiondistance_mm_pars.png/500px-Protrusiondistance_mm_pars.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Protrusion distance weighted by body mass
 
-![Body
-Mass](http://openwetware.org/images/thumb/1/1f/Bodymass_g_model.png/500px-Bodymass_g_model.png)
-
-![image](/skins/common/images/magnify-clip.png)
+![](http://openwetware.org/images/thumb/1/1f/Bodymass_g_model.png/500px-Bodymass_g_model.png)
 
 Body Mass
 
-![Body
-Mass](http://openwetware.org/images/thumb/2/2b/Bodymass_g_pars.png/500px-Bodymass_g_pars.png)
+![](http://openwetware.org/images/thumb/2/2b/Bodymass_g_pars.png/500px-Bodymass_g_pars.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Body Mass
 
-![Jaw closing lever
-ratio](http://openwetware.org/images/thumb/6/60/Jawclosingleverratio_model.png/500px-Jawclosingleverratio_model.png)
+![](http://openwetware.org/images/thumb/6/60/Jawclosingleverratio_model.png/500px-Jawclosingleverratio_model.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Jaw closing lever ratio
 
-![Jaw closing lever
-ratio](http://openwetware.org/images/thumb/9/91/Jawclosingleverratio_pars.png/500px-Jawclosingleverratio_pars.png)
+![](http://openwetware.org/images/thumb/9/91/Jawclosingleverratio_pars.png/500px-Jawclosingleverratio_pars.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Jaw closing lever ratio
 
-![Jaw opening lever
-ratio](http://openwetware.org/images/thumb/3/36/Jawopeningleverratio_model.png/500px-Jawopeningleverratio_model.png)
+![](http://openwetware.org/images/thumb/3/36/Jawopeningleverratio_model.png/500px-Jawopeningleverratio_model.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Jaw opening lever ratio
 
-![Jaw opening lever
-ratio](http://openwetware.org/images/thumb/2/26/Jawopeningleverratio_pars.png/500px-Jawopeningleverratio_pars.png)
+![](http://openwetware.org/images/thumb/2/26/Jawopeningleverratio_pars.png/500px-Jawopeningleverratio_pars.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Jaw opening lever ratio
 
-![Jaw kinematic
-transmission](http://openwetware.org/images/thumb/4/4e/Jawkt_model.png/500px-Jawkt_model.png)
+![](http://openwetware.org/images/thumb/4/4e/Jawkt_model.png/500px-Jawkt_model.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Jaw kinematic transmission
 
-![Jaw kinematic
-transmission](http://openwetware.org/images/thumb/0/00/Jawkt_pars.png/500px-Jawkt_pars.png)
+![](http://openwetware.org/images/thumb/0/00/Jawkt_pars.png/500px-Jawkt_pars.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Jaw kinematic transmission
 
@@ -123,17 +91,12 @@ Various muscle mass traits do not seem to converge.
 
 ### Carnivora Traits
 
-![Carnivore size by habitat: aquatic vs
-terrestrial](http://openwetware.org/images/thumb/1/1d/Carnivora_models.png/500px-Carnivora_models.png)
-
-![image](/skins/common/images/magnify-clip.png)
+![(http://openwetware.org/images/thumb/1/1d/Carnivora_models.png/500px-Carnivora_models.png)
 
 Carnivore size by habitat: aquatic vs terrestrial
 
-![Carnivore size by habitat: aquatic vs
-terrestrial](http://openwetware.org/images/thumb/5/56/Carnivora_pars.png/500px-Carnivora_pars.png)
+![](http://openwetware.org/images/thumb/5/56/Carnivora_pars.png/500px-Carnivora_pars.png)
 
-![image](/skins/common/images/magnify-clip.png)
 
 Carnivore size by habitat: aquatic vs terrestrial
 

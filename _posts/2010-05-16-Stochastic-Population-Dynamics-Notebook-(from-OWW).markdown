@@ -1,21 +1,14 @@
 ---
 layout: post
-
 categories: [ecology]
+title: Crowley continued  
 ---
 
 
 
 
 
- 
-
-
-
-
-
 General matrix form and correcting equations
---------------------------------------------
 
 Pursuing a matrix form, seems I had missed some terms in the covariance
 equations Friday, which are suggested by the nice symmetry of this

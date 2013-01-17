@@ -2,20 +2,14 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
+title: Warning Sginals  
 ---
 
 
 
 
 
- 
-
-
-
-
-
 Reading
--------
 
 Trying to make this show reading of the day, the script below shows only
 current reading:

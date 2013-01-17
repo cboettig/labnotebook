@@ -2,20 +2,14 @@
 layout: post
 tags: [model-choice]
 categories: evolution
+title:  Bootstrapping Likelihood ratios
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Bootstrapping Likelihood ratios
--------------------------------
 
 -   Bootstraps of the likelihood ratio, holding the parameters fixed,
     finally completed.

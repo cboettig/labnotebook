@@ -2,20 +2,14 @@
 layout: post
 tags: [model-choice]
 categories: evolution
+title:  Power in trees
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Power in trees
---------------
 
 -   Back to Phylogenetics after a week with only population dynamics.
 

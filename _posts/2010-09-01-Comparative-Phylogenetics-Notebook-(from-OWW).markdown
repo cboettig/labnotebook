@@ -2,20 +2,13 @@
 layout: post
 tags: [open-science, code-tricks]
 categories: evolution
+title: embeding images 
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Entry title
------------
 
 Automated scripts for image uploads. Tag-based generation of a
 slideshow:

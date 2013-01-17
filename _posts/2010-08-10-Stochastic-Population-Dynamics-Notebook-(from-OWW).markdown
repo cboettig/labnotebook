@@ -2,20 +2,14 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
+title:  Warning Signals alternate models
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Warning Signals
----------------
 
 ### Alternate models
 

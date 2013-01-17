@@ -2,20 +2,14 @@
 layout: post
 tags: [code-tricks, model-choice]
 categories: evolution
+title:  Research
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Research
---------
 
 ### New Simulations
 

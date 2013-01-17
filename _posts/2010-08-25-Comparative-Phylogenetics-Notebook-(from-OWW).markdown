@@ -1,21 +1,14 @@
 ---
 layout: post
-
 categories: evolution
+title:  Likelihood Ratio Manuscript
+
+
 ---
 
 
 
 
-
- 
-
-
-
-
-
-Likelihood Ratio Manuscript
----------------------------
 
 ### Graham & Peter Meeting
 

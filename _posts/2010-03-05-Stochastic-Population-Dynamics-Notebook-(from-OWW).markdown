@@ -2,20 +2,13 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
+title: Sebastian Meeting 
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Meeting
--------
 
 -   Basically I want to apply central limit theorem for stationary
     processes (accounts for covariances), assuming mean zero

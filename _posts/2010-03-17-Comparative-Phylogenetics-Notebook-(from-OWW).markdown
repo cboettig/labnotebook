@@ -2,20 +2,12 @@
 layout: post
 tags: [model-choice, Labrids]
 categories: evolution
+title: Research 
 ---
 
 
 
 
-
- 
-
-
-
-
-
-Research
---------
 
 -   Maximum likelihood assignment based on arbitrary number of
     partitions now completed. Working on stochastic assignment.

@@ -1,21 +1,14 @@
 ---
 layout: post
-
 categories: evolution
+title:  Likelihood ratio update
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Likelihood ratio update
------------------------
 
 -   Sent drafts of Likelihood ratio paper to Peter Wainwright (Sunday
     08/08) and Graham Coop (Monday 08/09)

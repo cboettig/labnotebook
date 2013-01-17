@@ -1,21 +1,15 @@
 ---
 layout: post
-
+tags: conference
 categories: evolution
+title:  ievobio Day 1
 ---
 
 
 
 
 
- 
-
-
-
-
-
 iEvoBio day one
----------------
 
 Program:
 

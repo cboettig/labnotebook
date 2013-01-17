@@ -2,20 +2,14 @@
 layout: post
 tags: [adaptive-dynamics]
 categories: evolution
+title:  Adaptive Dynamics
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Adaptive Dynamics
------------------
 
 -   Modified code phase definitions: phasetime[0] is the first time
     dimorphism is established. Dimorphism may be lost and restablished,

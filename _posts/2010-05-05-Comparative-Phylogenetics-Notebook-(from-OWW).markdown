@@ -2,20 +2,14 @@
 layout: post
 tags: [code-tricks, Primates]
 categories: evolution
+title:  Primates
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Primates
---------
 
 -   Primates project now has a [Github
     repository](http://github.com/cboettig/sandbox "http://github.com/cboettig/sandbox").

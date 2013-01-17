@@ -1,21 +1,14 @@
 ---
 layout: post
-
 categories: evolution
+title:  Tuesday
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Tuesday
--------
 
 Much of today's activity included in yesterday's.
 

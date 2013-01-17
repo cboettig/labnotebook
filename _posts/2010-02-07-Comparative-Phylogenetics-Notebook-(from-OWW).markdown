@@ -2,20 +2,14 @@
 layout: post
 tags: [model-choice]
 categories: evolution
+title:  Exploring Difficulties with Existing Methods
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Exploring Difficulties with Existing Methods
---------------------------------------------
 
 -   Model choice plays an increasingly dominant role in comparative
     phylogenetics. The software OUCH of Butler and King (2004) is built

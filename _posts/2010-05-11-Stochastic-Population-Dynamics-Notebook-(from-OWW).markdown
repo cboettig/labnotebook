@@ -2,20 +2,14 @@
 layout: post
 tags: [tribolium]
 categories: [ecology]
+title:  Demographic Noise
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Demographic Noise
------------------
 
 ### Crowley Model
 

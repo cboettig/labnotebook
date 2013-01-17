@@ -2,20 +2,14 @@
 layout: post
 tags: []
 categories: evolution
+title: Exploring Maticce 
 ---
 
 
 
 
 
- 
-
-
-
-
-
 MATICCE
--------
 
 -   Testing out [Andrew
     Hipp's](http://redwood.mortonarb.org/lab_pages/hipp/ "http://redwood.mortonarb.org/lab_pages/hipp/")

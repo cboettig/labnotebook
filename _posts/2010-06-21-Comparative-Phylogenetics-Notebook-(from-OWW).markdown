@@ -1,21 +1,16 @@
 ---
 layout: post
-
+tags: conference
 categories: evolution
+title:  CSGF Conference
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
 [CSGF Conference](http://www.krellinst.org/conf/csgf/ "http://www.krellinst.org/conf/csgf/"): HPC Workshop
-----------------------------------------------------------------------------------------------------------
 
 I found the breakout sessions in the afternoon particularly fascinating
 for their paradigm-breaking look into the future of high performance

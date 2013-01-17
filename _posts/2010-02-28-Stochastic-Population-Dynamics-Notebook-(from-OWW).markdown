@@ -2,11 +2,8 @@
 layout: post
 
 categories: [ecology]
+title: Parallelizing Code
 ---
-
-
-Parallelizing Code
-------------------
 
 ### A solution!
 

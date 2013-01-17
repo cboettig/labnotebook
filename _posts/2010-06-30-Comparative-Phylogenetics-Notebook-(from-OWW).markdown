@@ -1,23 +1,13 @@
 ---
 layout: post
-
+tags: conference
 categories: evolution
+title:  ievobio day 2
 ---
 
 
 
 
-
- 
-
-
-
-
-
-iEvoBio day two
----------------
-
-Program:
 
 \
  My Lightning talk on Open Science:

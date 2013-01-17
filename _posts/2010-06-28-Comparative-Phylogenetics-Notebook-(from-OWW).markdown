@@ -1,21 +1,15 @@
 ---
 layout: post
-
+tags: conference
 categories: evolution
+title: Evolution 2010 Day 3 
 ---
 
 
 
 
 
- 
-
-
-
-
-
 [Evolution 2010](http://www.evolutionsociety.org/SSE2010/ "http://www.evolutionsociety.org/SSE2010/") Day 3
------------------------------------------------------------------------------------------------------------
 
 -   **Chris Martin**: Trophic innovation drives exceptional rates of
     morphological diversification in two adaptive radiations of

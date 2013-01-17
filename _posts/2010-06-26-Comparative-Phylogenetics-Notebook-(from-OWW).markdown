@@ -1,21 +1,15 @@
 ---
 layout: post
-
 categories: evolution
+tags: conference
+title: Evolution 2010 
 ---
 
 
 
 
 
- 
-
-
-
-
-
 Evolution 2010
---------------
 
 -   **Carl Boettiger** A new phylogenetic comparative method: detecting
     niches and transitions with continuous characters

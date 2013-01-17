@@ -1,21 +1,15 @@
 ---
 layout: post
-
+tags: [tribolium]
 categories: [ecology]
+title:  Gamma Waiting times on individual level
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Gamma Waiting times on individual level
----------------------------------------
 
 -   Wrote the proper record structure into C code to handle reporting to
     R, including ensemble data.

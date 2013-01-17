@@ -2,20 +2,14 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
+title:  Warning Signals
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Warning Signals
----------------
 
 -   Bootstrapping for likelihood ratios!
 -   Updated class behavior -- all simulation and fitting routines now

@@ -2,20 +2,14 @@
 layout: post
 tags: [model-choice]
 categories: evolution
+title:  Wainwright Meeting
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Wainwright Meeting
-------------------
 
 Discussed goals and appropriate approach. Settled on linear order rather
 than trying to directly implement the full MCMC over paintings solution

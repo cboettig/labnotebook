@@ -1,21 +1,15 @@
 ---
 layout: post
+tag: conference
+categories: open-science
+title:  Open Science Summit day 2
 
-categories: evolution
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Open Science Summit day 2
--------------------------
 
 Full day (really -- no breaks, lunch served during talks) of talks at
 the open science summit...

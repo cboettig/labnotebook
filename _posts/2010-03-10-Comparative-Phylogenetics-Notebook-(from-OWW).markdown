@@ -2,20 +2,14 @@
 layout: post
 tags: []
 categories: evolution
+title: Bodega Workshop Day 4
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Bodega Workshop Day 4
----------------------
 
 Morphological Evolution Day:
 

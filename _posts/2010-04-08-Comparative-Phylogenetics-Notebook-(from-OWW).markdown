@@ -2,20 +2,14 @@
 layout: post
 tags: [Labrids, open-science, model-choice]
 categories: evolution
+title: Labrids, Anoles, Comparative methods 
 ---
 
 
 
 
 
- 
-
-
-
-
-
 Research
---------
 
 -   Wrote summary function using bootstrap confidence intervals for the
     bootstraps of the likelihoods directly.

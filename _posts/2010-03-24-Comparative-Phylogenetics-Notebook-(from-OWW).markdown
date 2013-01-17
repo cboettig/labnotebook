@@ -2,20 +2,14 @@
 layout: post
 tags: [model-choice, Labrids, code-tricks]
 categories: evolution
+title:  Parallel R
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Parallel R
-----------
 
 -   Parallelized LR\_bootstrap\_all() and model\_bootstrap\_all()
     bootstrapping functions. Lets the bootstrapping of different models

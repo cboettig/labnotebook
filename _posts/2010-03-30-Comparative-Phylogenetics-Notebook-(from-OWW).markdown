@@ -2,20 +2,14 @@
 layout: post
 tags: [model-choice, Labrids]
 categories: evolution
+title:  Comparative Methods Research
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Research
---------
 
 ### Current Situation & Challenges
 

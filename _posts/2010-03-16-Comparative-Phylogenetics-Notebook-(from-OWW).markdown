@@ -1,21 +1,14 @@
 ---
 layout: post
-
 categories: evolution
+title:  Graham and Peter Meeting
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Graham & Peter Meeting
-----------------------
 
 -   Discussed inverse problem approach.
 -   Discussed bootstrapping likelihoods directly vs bootstrapping

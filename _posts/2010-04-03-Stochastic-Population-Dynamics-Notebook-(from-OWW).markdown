@@ -2,20 +2,14 @@
 layout: post
 
 categories: [ecology]
+title:  Warning Signals Research
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Warning Signals Research
-------------------------
 
 -   Deuterium early warning signal used for Glaciation I-IV presented in
     [Dakos

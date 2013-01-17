@@ -2,20 +2,14 @@
 layout: post
 
 categories: evolution
+title:  Comparative Phylogenetics Talk
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Comparative Phylogenetics Talk
-------------------------------
 
 Practice talk in Wainwright lab meeting next Weds. 12 minutes.
 

@@ -2,22 +2,11 @@
 layout: post
 tags: [adaptive-dynamics, Primates, warning-signals, tribolium, code-tricks]
 categories: [ecology]
+title:  Annual Progress Report
+
 ---
 
 
-
-
-
- 
-
-
-
-
-
-\
-
-Annual Progress Report
-----------------------
 
 Tomorrow will be meeting with my dissertation committee: Alan Hastings,
 Peter Wainwright, and Brian Moore. This provides a good opportunity to

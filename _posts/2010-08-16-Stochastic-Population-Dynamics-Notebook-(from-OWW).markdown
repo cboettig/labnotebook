@@ -2,20 +2,11 @@
 layout: post
 tags: [warning-signals, code-tricks]
 categories: [ecology]
+title: Warning Signals; S3 Code
 ---
 
 
 
-
-
- 
-
-
-
-
-
-Warning Signals
----------------
 
 -   bootstrapping models implemented
 -   improved handling of model classes -- included T, t0, N, and X0 in

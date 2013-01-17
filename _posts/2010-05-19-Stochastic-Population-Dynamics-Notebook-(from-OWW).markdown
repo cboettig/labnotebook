@@ -2,20 +2,14 @@
 layout: post
 tags: [tribolium]
 categories: [ecology]
+title:  Noisy Beetles
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Noisy Beetles
--------------
 
 ### Goals
 

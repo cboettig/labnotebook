@@ -1,21 +1,14 @@
 ---
 layout: post
-
 categories: evolution
+title:  Wednesday
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Wednesday
----------
 
 ### Monte Carlo
 

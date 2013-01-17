@@ -2,20 +2,14 @@
 layout: post
 
 categories: evolution
+title:  Cetartiodactyle data and other examples
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Cetartiodactyle data
---------------------
 
 -   Exploring the cetartiodactyle data (unreleased)
 -   Nelder-Mead fails to converge or improve upon the hansen model.

@@ -2,20 +2,14 @@
 layout: post
 
 categories: evolution
+title:  Writing continues
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Writing continues
------------------
 
 -   Deleting large sections is a great way to spur better writing.
     Revised organization substantially, discussion somewhat loose still.

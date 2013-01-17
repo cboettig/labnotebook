@@ -2,35 +2,21 @@
 layout: post
 tags: [code-tricks, Labrids]
 categories: evolution
+title: Notes 
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Research
---------
-
 -   Sent Peter updated draft of Labrids manuscript
 -   Writing up logarithms manuscript finally...
 -   Contacting Helen re. primates data
 -   Created Labrid Functional Morphology literature collection:
-
-* * * * *
-
-[Research](http://www.mendeley.com) collected using Mendeley
-
 -   Started stochastic methods and model inference collection:
 
 * * * * *
 
-[Research](http://www.mendeley.com) collected using Mendeley
 
 Various To Do
 -------------

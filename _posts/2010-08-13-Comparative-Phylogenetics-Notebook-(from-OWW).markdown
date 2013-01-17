@@ -2,20 +2,10 @@
 layout: post
 tags: [adaptive-dynamics]
 categories: evolution
+title:  Adaptive Dynamics
+
 ---
 
-
-
-
-
- 
-
-
-
-
-
-Adaptive Dynamics
------------------
 
 -   Wrote the code for a better interface to simulate coexistence times
     and creating contour plots from the results.

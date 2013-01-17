@@ -1,21 +1,14 @@
 ---
 layout: post
-tags: [conference]
 categories: evolution
+title:  Graham and Peter Meeting
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Graham & Peter Meeting
-----------------------
 
 Fantastic meeting with Graham and Peter today, covered a lot of ground.
 

@@ -1,21 +1,15 @@
 ---
 layout: post
-
 categories: evolution
+title:  Multitype OU Processes with varying alpha and sigma
+tag: derivation
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Multitype OU Processes with varying alpha and sigma
----------------------------------------------------
 
 Been meaning to sit down and work this one out for a while; somehow
 travel and conferences helped out with that -- now I only have to

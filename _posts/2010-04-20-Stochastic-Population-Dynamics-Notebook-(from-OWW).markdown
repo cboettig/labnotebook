@@ -2,20 +2,11 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
+title: Alan Meeting, updated outline 
 ---
 
 
-
-
-
- 
-
-
-
-
-
 Alan Meeting
-------------
 
 *From 03/31, see [below](#Updated_Outline) for more!*
 

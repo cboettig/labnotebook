@@ -2,20 +2,14 @@
 layout: post
 tags: []
 categories: evolution
+title:  Phylogenetics Workshop Day 5
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Phylogenetics Workshop Day 5
-----------------------------
 
 Last day of lectures: Lineage Diversification
 

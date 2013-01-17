@@ -2,20 +2,14 @@
 layout: post
 tags: [tribolium]
 categories: [ecology]
+title:  Beetles workshop Day 2
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Beetles workshop Day 2
-----------------------
 
 ### Goals
 

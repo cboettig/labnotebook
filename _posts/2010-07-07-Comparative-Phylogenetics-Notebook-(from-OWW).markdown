@@ -2,20 +2,14 @@
 layout: post
 
 categories: evolution
+title:  Multitype OU process interfaces
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Multitype OU process interfaces
--------------------------------
 
 -   Removing old implementations from the R package, so will need to
     grab them from the [version

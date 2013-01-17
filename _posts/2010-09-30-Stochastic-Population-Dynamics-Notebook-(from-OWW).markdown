@@ -1,21 +1,15 @@
 ---
 layout: post
-
 categories: [ecology]
+title: Resources for ABC / Bayesian inference in ecological and spatial context workshop
+  
 ---
 
 
 
 
 
- 
-
-
-
-
-
 Thursday
---------
 
 -   Alan will write introduction to manuscript. Schedule meeting for
     next week.

@@ -2,20 +2,10 @@
 layout: post
 tags: [model-choice]
 categories: evolution
+title: Research 
 ---
 
 
-
-
-
- 
-
-
-
-
-
-Research
---------
 
 -   A some point I'll want to think more seriously about incorporating
     geographic information into comparative analyses. At some level this

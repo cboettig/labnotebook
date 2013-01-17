@@ -2,20 +2,14 @@
 layout: post
 
 categories: [ecology]
+title:  Code Development for Exploring Regimes Shifts
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Code Development for Exploring Regimes Shifts
----------------------------------------------
 
 -   Just [committed
     changes](http://code.google.com/p/popdyn/source/list "http://code.google.com/p/popdyn/source/list")

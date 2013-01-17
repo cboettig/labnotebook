@@ -2,20 +2,14 @@
 layout: post
 
 categories: evolution
+title:  Post-Workshop
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Post-Workshop
--------------
 
 Working on a couple new ideas:
 

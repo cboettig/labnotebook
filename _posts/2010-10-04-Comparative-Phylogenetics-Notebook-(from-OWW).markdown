@@ -1,21 +1,11 @@
 ---
 layout: post
-
 categories: evolution
+title: Monday 
 ---
 
 
 
-
-
- 
-
-
-
-
-
-Monday
-------
 
 -   7:30 -- 8:30 Read ﻿article for Wainwright's 270:
 

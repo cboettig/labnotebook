@@ -1,21 +1,14 @@
 ---
 layout: post
-
 categories: evolution
+title:  Multivariate normal random variables
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Multivariate normal random variables
-------------------------------------
 
 -   GSL lacks a multivariate normal random variable option, so have
     implemented one using the eigenvalue decomposition (default method

@@ -1,20 +1,14 @@
 ---
 layout: post
 categories: evolution
+title:  Phylogenetic Tree formats
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Phylogenetic Tree formats
--------------------------
 
 -   Consider a tree with N nodes. has $\frac{N+1}{2}$
     tips and $\frac{N-1}{2}$ 

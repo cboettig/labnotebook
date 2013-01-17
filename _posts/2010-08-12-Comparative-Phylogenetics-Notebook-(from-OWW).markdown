@@ -2,20 +2,14 @@
 layout: post
 tags: [adaptive-dynamics]
 categories: evolution
+title:  Adaptive Dynamics
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Adaptive Dynamics
------------------
 
 -   Created plotting functions for:
 

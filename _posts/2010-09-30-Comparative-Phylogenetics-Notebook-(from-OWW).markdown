@@ -1,21 +1,15 @@
 ---
 layout: post
-tags: [adaptive-dynamics]
+tags: [adaptive-dynamics; seminar]
 categories: evolution
+title:  Adaptive Dynamics Updates
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Adaptive Dynamics Updates
--------------------------
 
 The numerical coexistence time simulations are still running, (Server
 rest brought down these runs two weeks ago, and they take a few weeks to

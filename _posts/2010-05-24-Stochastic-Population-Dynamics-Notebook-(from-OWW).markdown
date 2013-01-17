@@ -1,21 +1,14 @@
 ---
 layout: post
-
 categories: [ecology]
+title:  Status on Structured Populations
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Status on Structured Populations
---------------------------------
 
 ### Model roundup
 

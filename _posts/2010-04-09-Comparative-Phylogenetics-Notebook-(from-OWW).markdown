@@ -2,20 +2,14 @@
 layout: post
 tags: [Primates, code-tricks]
 categories: evolution
+title: Research, reading, tricks 
 ---
 
 
 
 
 
- 
-
-
-
-
-
 Research
---------
 
 -   Working on bootstrapping theta parameters
 -   bootstrapping multiple parameters doesn't seem effective in the

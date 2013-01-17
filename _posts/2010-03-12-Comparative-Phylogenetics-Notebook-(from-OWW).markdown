@@ -2,20 +2,14 @@
 layout: post
 tags: [ Labrids]
 categories: evolution
+title:  Bodega Workshop Presentations
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Bodega Workshop Presentations
------------------------------
 
 Final day of Bodega Phylogenetics workshop: a full day of student
 presentations. (High resolution images for the trees available by

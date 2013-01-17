@@ -2,20 +2,14 @@
 layout: post
 
 categories: evolution
+title:  Research
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Research
---------
 
 -   Trouble-shooting on parameter refitting version of LR bootstraps.
 

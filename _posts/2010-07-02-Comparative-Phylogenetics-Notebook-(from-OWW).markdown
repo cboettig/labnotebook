@@ -1,21 +1,14 @@
 ---
 layout: post
-
 categories: evolution
+title:  Generalizing the multi-type OU process: continued
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Generalizing the multi-type OU process: continued
--------------------------------------------------
 
 Efficiency updates:
 

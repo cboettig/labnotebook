@@ -2,20 +2,13 @@
 layout: post
 tags: [warning-signals, code-tricks]
 categories: [ecology]
+title:  The Ergodicity Question: Time averaging vs Ensemble averaging
 ---
 
 
 
 
 
- 
-
-
-
-
-
-The Ergodicity Question: Time averaging vs Ensemble averaging
--------------------------------------------------------------
 
 11am -- 3pm
 

@@ -2,20 +2,14 @@
 layout: post
 tags: [adaptive-dynamics, code-tricks]
 categories: evolution
+title:  Adaptive Dynamics
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Adaptive Dynamics
------------------
 
 ### compiling with R and C and parallel computing
 

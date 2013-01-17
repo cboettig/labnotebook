@@ -2,20 +2,14 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
+title:  Comparing to Analytic Dynamics
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Comparing to Analytic Dynamics
-------------------------------
 
 Goal for today: implement analytic calculations for warning signals.
 

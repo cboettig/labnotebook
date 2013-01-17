@@ -2,20 +2,14 @@
 layout: post
 tags: [tribolium]
 categories: [ecology]
+title:  Hastings Beetle Workshop
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Hastings Beetle Workshop
-------------------------
 
 [Bob
 Costantino](http://bill.srnr.arizona.edu/Bob_Costantino/cos1.html "http://bill.srnr.arizona.edu/Bob_Costantino/cos1.html")

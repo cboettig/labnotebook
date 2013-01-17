@@ -2,10 +2,8 @@
 layout: post
 
 categories: evolution
+title: Thursday
 ---
-
-Thursday
---------
 
 -   Some exploration with felsenstein\_tree.R, see svn log.
 

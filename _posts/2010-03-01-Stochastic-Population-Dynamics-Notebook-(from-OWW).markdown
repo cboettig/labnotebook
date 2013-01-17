@@ -2,20 +2,14 @@
 layout: post
 
 categories: [ecology]
+title:  Parallel at last
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Parallel at last
-----------------
 
 -   svn revision 27 should have functional parallel code! Certainly I've
     gotten much better at openmp in the past few days. Difficult to

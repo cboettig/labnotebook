@@ -2,20 +2,14 @@
 layout: post
 tags: [Labrids]
 categories: evolution
+title:  Computing
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Computing
----------
 
 -   Exploring parallel computing options. [OpenMP for distributed memory
     applications](http://www.ecn.purdue.edu/ParaMount/publications/HIPS07-smin.pdf "http://www.ecn.purdue.edu/ParaMount/publications/HIPS07-smin.pdf").

@@ -2,20 +2,14 @@
 layout: post
 
 categories: [ecology]
+title:  Large Intrinsic Noise in modified Crowley model
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Large Intrinsic Noise
----------------------
 
 ### Modified Crowley model
 

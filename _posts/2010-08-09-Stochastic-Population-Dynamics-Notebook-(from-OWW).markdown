@@ -1,21 +1,15 @@
 ---
 layout: post
-
+tags: warning-signals
 categories: [ecology]
+title:  Warning Signals by model choice
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Warning Signals by model choice
--------------------------------
 
 -   Finished implementation of simulation from saddle-node example
 -   Implemented simulation from transition density for all three models

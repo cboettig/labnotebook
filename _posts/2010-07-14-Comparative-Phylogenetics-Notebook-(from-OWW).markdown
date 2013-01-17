@@ -2,20 +2,14 @@
 layout: post
 
 categories: evolution
+title:  Organizing analyses, data, codes
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Organizing analyses, data, codes
---------------------------------
 
 ### Codes
 

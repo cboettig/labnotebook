@@ -2,20 +2,14 @@
 layout: post
 tags: [open-science]
 categories: evolution
+title:  Research
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Research
---------
 
 -   Seem to have successfully fixed the behavior when getting over
     parameterized models. See diffs against the git log for details.

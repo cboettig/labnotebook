@@ -1,20 +1,13 @@
 ---
 layout: post
-
 categories: evolution
+title:  Status update
+
 ---
 
 
 
 
-
- 
-
-
-
-
-Status update
--------------
 
 -   Actually out of town this day, but draft off to co-authors, will
     review Friday. meanwhile time to get back to some warning signals

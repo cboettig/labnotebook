@@ -2,20 +2,14 @@
 layout: post
 tags: [model-choice]
 categories: evolution
+title:  Parametric bootstrapping
+
 ---
 
 
 
 
 
- 
-
-
-
-
-
-Parametric bootstrapping
-------------------------
 
 -   There are several ways we can frame the bootstrapping question. What
     is the probability that we see a given likelihood ratio statistic
