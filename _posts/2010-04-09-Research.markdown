@@ -1,0 +1,72 @@
+---
+layout: post
+tags: [Primates, code-tricks]
+categories: evolution
+title: Research
+---
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+-   Working on bootstrapping theta parameters
+-   bootstrapping multiple parameters doesn't seem effective in the
+    context of the boot package, despite claiming it can use a vector of
+    stats. Certainly part of challenge is that different models have
+    different numbers of parameters, so this isn't a fixed size vector.
+    Approaching manually for the moment, inhibits use of bootstrap
+    confidence intervals function from the boot package.
+-   Some irregular behavior in bootstrapping parameters -- have to load
+    package and then reload likelihood\_bootstrap library source file or
+    else bootstraps are NAs, needs further investigation.
+-   formatting bootstrapping meaningfully -- following the ouch style
+    for the moment
+-   Sent Peter Wainwright a rough draft of Bio Let. manuscript.
+
+### Goals / ToDo
+
+-   Add bootstraps of parameters to manuscript,
+-   Function to bootstrap all parameters given list of all models.
+    Plotting function also.
+-   Write up *Evolution* note on AIC.
+-   Conference registrations
+-   NESCent whitepaper
+
+### Primates
+
+-   Graham pointed out a rather promising looking chronogram from a
+    supermatrix for [Primate phylogenetic
+    trees](http://hdl.handle.net/10.1186/1471-2148-9-259 "doi:10.1186/1471-2148-9-259")
+-   Contacted [Helen
+    Chatterjee](http://www.ucl.ac.uk/biology/academic-staff/chatterjee/chatterjee.htm "http://www.ucl.ac.uk/biology/academic-staff/chatterjee/chatterjee.htm")
+    re: primate phylogenies.
+-   Also see project details in Daniel's notebook
+
+Reading & Notes
+---------------
+
+-   Embedding google spreadsheets sounds much more promising than
+    formatting tables in OWW/html: Example from Anthony / Koch Lab
+-   OWW Stats
+-   [FF
+    discussion](http://friendfeed.com/sciencecommons/1416691d/hi-everyone-today-i-m-here-discussing-my "http://friendfeed.com/sciencecommons/1416691d/hi-everyone-today-i-m-here-discussing-my")
+    on Chelsea's Open Science article
+-   Embedding/Transclusion in
+    [OWW/mediawiki](http://en.citizendium.org/wiki/CZ:Transclusion "http://en.citizendium.org/wiki/CZ:Transclusion")
+    and
+    [examples](http://en.citizendium.org/wiki/User:Daniel_Mietchen#Research_areas "http://en.citizendium.org/wiki/User:Daniel_Mietchen#Research_areas")
+
+-   Exploring gist for code fragments. Embeddable gist:
+
+\
+

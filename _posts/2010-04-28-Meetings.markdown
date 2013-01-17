@@ -1,0 +1,35 @@
+---
+layout: post
+
+categories: evolution
+title: Meetings
+---
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+-   Theory Coffee 10-11a: Varied discussion, including NEON project and
+    future of large data.
+
+-   Hastings Lab Meeting 2-3p: David Kling presents bioeconomic model on
+    assisted migration. Model focuses on dynamic and spatial aspects,
+    reflects pattern of dispersal common in ideal free distribution with
+    dynamic carrying capacity, adds linear and quadratic costs.
+
+-   (Fire alarms in Wickson Hall don't make for a productive day).
+
+\
+
+\
+

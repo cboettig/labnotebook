@@ -1,0 +1,70 @@
+---
+layout: post
+
+categories: [ecology]
+title: Research
+---
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+Writing up work just on ensemble vs single instance detection of regime
+shifts. See this entry
+
+\
+
+### Outline
+
+**Title**
+
+*On the ability to detect leading indicators of catastrophe in
+unreplicated time series*
+
+**Introduction** Background on Warning Signals
+
+1.  [literature](http://www.mendeley.com/research-papers/collections/1374711/EarlyWarningSigns/ "http://www.mendeley.com/research-papers/collections/1374711/EarlyWarningSigns/")
+2.  Saddle Node bifurcation
+3.  Detecting decreasing stabilization -- gradual vs changepoint
+    estimation
+
+Reasons detection can fail:
+
+1.  Ergodicity: ensembles vs single instances
+2.  Sufficient statistical power
+3.  Appropriate dynamics
+
+**Methods**
+
+-   Defining an indicator -- significant Kendall rank correlation
+    coefficient τ as in
+    [doi:10.1073/pnas.0802430105](http://hdl.handle.net/10.1073/pnas.0802430105 "doi:10.1073/pnas.0802430105")
+-   Simulation approach
+-   Analytic limits
+-   accounting for delay?
+
+**Figures**
+
+-   Saddle node bifurcation example -- should discuss difference between
+    stochastic and deterministic edge?
+-   Single replicates using standard detection statistics
+
+**Results/Discussion**
+
+-   Misleading indicators
+-   Need for further exploration
+
+\
+
+\
+

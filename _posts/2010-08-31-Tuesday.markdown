@@ -1,0 +1,45 @@
+---
+layout: post
+
+categories: evolution
+title: Tuesday
+---
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+Much of today's activity included in yesterday's.
+
+Recording Reading
+-----------------
+
+Still looking for a good way to capture time snapshots of what I've
+read. Perhaps the Mendeley API will have a good solution. Here I try
+twapper-keeper to create an rss of my tweets on a given day, and the
+google api, but not very ideal solutions. Checked a variety of ways to
+[filter rss
+feeds](http://www.readwriteweb.com/archives/6_ways_to_filter_your_rss_feeds.php "http://www.readwriteweb.com/archives/6_ways_to_filter_your_rss_feeds.php")
+by date so that it would just show the current ones, none seem to manage
+this though.
+
+\
+
+\
+
+\
+
+Loading...
+
+\
+

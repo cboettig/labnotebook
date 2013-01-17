@@ -1,0 +1,139 @@
+---
+layout: post
+
+categories: [ecology]
+title: Research
+---
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+![Single replicate. Almost all warning signals have significant
+correlation despite the constant
+environment.](http://openwetware.org/images/thumb/7/7a/False_warning.png/200px-False_warning.png)
+
+![image](/skins/common/images/magnify-clip.png)
+
+Single replicate. Almost all warning signals have significant
+correlation despite the constant environment.
+
+![False warning signals remain just as common when signals are averaged
+across 100
+replicates?](http://openwetware.org/images/thumb/a/a8/False_warning_with_replicates.png/200px-False_warning_with_replicates.png)
+
+![image](/skins/common/images/magnify-clip.png)
+
+False warning signals remain just as common when signals are averaged
+across 100 replicates?
+
+-   Exploring statistical qualification of early warning signals. [Dakos
+    et. al.
+    (2008)](http://hdl.handle.net/10.1073/pnas.0802430105 "doi:10.1073/pnas.0802430105")
+    use a correlation significance test (based on Kendall's tau) on the
+    autocorrelation to detect the warning signals.
+-   Correlation significance test seems a very poor estimate of signal,
+    high false positive rate at any threshold p-value for sufficiently
+    frequent sampling. Carpenter [[1](#bibkey_Carpenter)] Fits a dynamic
+    linear model of the SD and argues it appears to trend up visually.
+
+1.  [Carpenter SR and Brock WA.
+    .](http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?cmd=prlinks&dbfrom=pubmed&retmode=ref&id=16958897 "View or buy article from publisher (if available)")
+    pmid:16958897.
+    [PubMed](http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&rettype=abstract&id=16958897 "PMID 16958897")
+    [HubMed](http://www.hubmed.org/display.cgi?uids=16958897 "PMID 16958897")
+    [Carpenter]
+
+-   Detecting switch points vs gradual change? See change point
+    estimation?
+
+-   Data from Dakos et. al. study available from
+    [NOAA](http://www.ncdc.noaa.gov/paleo/data.html "http://www.ncdc.noaa.gov/paleo/data.html")
+
+Computing
+---------
+
+-   Just wrote the R interface. Faster than running the C code,
+    generating a text file and reading it into Python (though could
+    spend time with swig at some point).
+-   added a minimal version, popdyn.c, that just reads out raw data
+    without all the on-the-fly statistics the full function does.
+-   Kendall statistics on metrics to determine warning signals. R
+    function.
+-   Fixed the gillespie interface. Gillespie function does get passed
+    the parameter structure, just makes an actual copy, allocating new
+    memory, in the gillespie function rather than calling alloc for the
+    first time.
+
+### Next Steps
+
+-   Will want to be able to adjust the rate of change in the environment
+    from the R commandline.
+-   The parallelization compiler flags are included in makevars and
+    called by R CMD SHLIB, but the .C call doesn't seem to engage all
+    processors. Exploring this with the r-sig-hpc list.
+
+Alan Meeting
+------------
+
+Goals:
+
+-   Purchase workstation by/before Sept 1st
+-   demonstrate simulations: Arbitrarily sensitive false alarms to
+    oversampling
+-   review manuscript outline
+-   Discuss the bootstrapping model comparisons example from the Labrid
+    dataset.
+
+Further Reading
+---------------
+
+-   Regarding the references, the statement about the "genericity" of
+    the saddle-node bifurcation can be found in section 4.2 of Perko's
+    "Differential equations and dynamical systems" book. The CLT for
+    stationary, ergodic sequences can be found in Durrett's book
+    "Probability: Theory and Examples". (from Sebastian)
+
+Workstation choices
+-------------------
+
+-   Sizing up options for our new computer server. Would be nice to be
+    able to explore [CUDA
+    GPU](http://en.wikipedia.org/wiki/CUDA#Supported_GPUs "http://en.wikipedia.org/wiki/CUDA#Supported_GPUs")
+    computing, considering
+    [tesla](http://www.nvidia.com/object/product_tesla_c1060_us.html "http://www.nvidia.com/object/product_tesla_c1060_us.html")
+    and fermi (better double-precision performance) options. Other
+    option, AMD released a 12 core chip, could possibly setup a 24
+    processor machine on two sockets. Getting comparisons from [silicon
+    mechanics](http://www.siliconmechanics.com/ "http://www.siliconmechanics.com/").
+    Ok, options under $5000 (after educational discount) are in:
+
+1.  2x Xeon Quad 2.4GHz, 12Mb Cache, 24GB RAM + Tesla C1060 active
+    cooled
+2.  2x Opteron 6128 8-core, 2 GHz, 32GB RAM + Tesla C1060 active cooled
+3.  2x Opteron 12-core, 1.9 GHz, 32 GB RAM
+
+-   Available on 4U and 1U forms. the 24 core machine could add 1-2 GPUs
+    later. The Tesla C2050 GPU is $1888 and is much better at double
+    precision, while the Tesla C1060 is $950.
+-   **Double precision vs single precision**
+    [comparisons](http://en.wikipedia.org/wiki/Nvidia_Tesla "http://en.wikipedia.org/wiki/Nvidia_Tesla").
+    C1060 does order of magnitude worse (933 vs 78 gigaflops) on single
+    vs double precision. The C2050 gets (1040 GFLOPS single, 520 GFLOPS
+    double). Looking into C2050 options...
+-   [C2050, next
+    gen/Fermi](http://www.nvidia.com/object/product_tesla_C2050_C2070_us.html "http://www.nvidia.com/object/product_tesla_C2050_C2070_us.html")
+    Release April 20th, we'll see.
+
+\
+

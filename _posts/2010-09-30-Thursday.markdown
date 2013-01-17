@@ -1,0 +1,44 @@
+---
+layout: post
+
+categories: [ecology]
+title: Thursday
+---
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+-   Alan will write introduction to manuscript. Schedule meeting for
+    next week.
+-   Scheduling the Hastings lab meeting
+    [doodle](http://www.doodle.com/r7ahgfgz4aw6h4ca "http://www.doodle.com/r7ahgfgz4aw6h4ca")
+-   Coordinate with Baskett lab
+
+#### Resources for ABC / Bayesian inference in ecological and spatial context workshop
+
+1.  Sisson Sa, Fan Y, Tanaka MM. Sequential Monte Carlo without
+    likelihoods. Proceedings of the National Academy of Sciences of the
+    United States of America. 2007;104(6):1760-5. Available at:
+    [http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1794282&tool=pmcentrez&rendertype=abstract](http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1794282&tool=pmcentrez&rendertype=abstract "http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1794282&tool=pmcentrez&rendertype=abstract").
+2.  de Valpine P, Hastings A. Fitting Population Models Incorporating
+    Process Noise and Observation Error. Ecological Monographs.
+    2002;72(1):57-76. Available at:
+    [http://www.esajournals.org/doi/abs/10.1890/0012-9615%282002%29072%5B0057%3AFPMIPN%5D2.0.CO%3B2](http://www.esajournals.org/doi/abs/10.1890/0012-9615%282002%29072%5B0057%3AFPMIPN%5D2.0.CO%3B2 "http://www.esajournals.org/doi/abs/10.1890/0012-9615%282002%29072%5B0057%3AFPMIPN%5D2.0.CO%3B2").
+3.  Bolker B. Ecological Models and Data in R. Princeton and Oxford:
+    Princeton University Press; 2007.
+
+\
+
+\
+
