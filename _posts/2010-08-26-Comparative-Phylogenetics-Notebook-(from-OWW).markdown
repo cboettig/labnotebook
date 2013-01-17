@@ -2,7 +2,7 @@
 layout: post
 tags: [model-choice]
 categories: evolution
-title:  Likelihood Ratio Paper: Power in Trees
+title:  Likelihood Ratio Paper- Power in Trees
 
 ---
 

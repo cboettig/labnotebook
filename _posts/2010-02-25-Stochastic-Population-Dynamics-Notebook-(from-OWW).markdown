@@ -2,7 +2,7 @@
 layout: post
 tags: [warning-signals, code-tricks]
 categories: [ecology]
-title:  The Ergodicity Question: Time averaging vs Ensemble averaging
+title:  The Ergodicity Question- Time averaging vs Ensemble averaging
 ---
 
 

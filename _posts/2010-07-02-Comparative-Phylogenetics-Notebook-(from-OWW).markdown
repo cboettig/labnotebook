@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: evolution
-title:  Generalizing the multi-type OU process: continued
+title:  Generalizing the multi-type OU process continued
 
 ---
 
@@ -33,7 +33,7 @@ Efficiency updates:
      0.00      0.14     0.00        1     0.00     0.00  fit_model
      0.00      0.14     0.00        1     0.00     0.00  multimin
 
--   calc\_gamma doesn't need to be called the *n*^2^ times in calc\_var,
+-   calc\_gamma doesn't need to be called the $n^2$ times in calc\_var,
     but could be stored from the calc\_mean computation, so it would be
     called no more than calc\_mean is. This would probably speed up
     calc\_var, since it's a significant fraction of that time, and leave
