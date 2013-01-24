@@ -9,7 +9,6 @@ title: Primate chronogram
 
 
 
-<<<<<<< HEAD:_posts/2010-04-12-Primate-chronogram.markdown
 
  
 
@@ -18,8 +17,6 @@ title: Primate chronogram
 
 
 From User:Daniel Mietchen/Notebook/Evolutionary MRI/2010/04/12:
-=======
->>>>>>> image-uri:_posts/2010-04-12-Comparative-Phylogenetics-Notebook-(from-OWW).markdown
 
 
 
@@ -32,5 +29,5 @@ From User:Daniel Mietchen/Notebook/Evolutionary MRI/2010/04/12:
     2](http://www.pnas.org/content/107/11/4797/F2.expansion.html "http://www.pnas.org/content/107/11/4797/F2.expansion.html")
     goes into our direction.
 
-From User:Daniel Mietchen/Notebook/Evolutionary MRI/2010/04/12:
+\
 

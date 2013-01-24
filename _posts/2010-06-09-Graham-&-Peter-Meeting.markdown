@@ -30,8 +30,10 @@ the joint probability across the tree is multivariate normal given the
 painting. This allows the calculation to be partitioned as outlined in
 Saturday's entry:
 
-$$ P(X | \vec \theta, \mathbb{Q} ) = P(X | C) P(C | \mathbb{Q} $$ 
+![ P(X | \\vec \\theta, \\mathbb{Q} ) = P(X | C) P(C | \\mathbb{Q} )
+](http://openwetware.org/images/math/b/7/d/b7d74172c4b6e8084dc7907ec3dd6300.png)
 
+\
 
 #### Importance Sampling
 
@@ -43,38 +45,42 @@ $$ P(X | \vec \theta, \mathbb{Q} ) = P(X | C) P(C | \mathbb{Q} $$
     generate from the same distribution as a weight from and these
     agree). A brief summary excerpted from Wikipedia:
 
+\
 
-$$\begin{align} p_t & {} = {E} [1(X \ge t)] \\ & {} = \int 1(x \ge t) \frac{f(x)}{f_*(x)} f_*(x) \,dx \\
-& {} = {E_*} [1(X \ge t) W(X)] \end{align}$$
+![ \\begin{align} p\_t & {} = {E} [1(X \\ge t)] \\\\ & {} = \\int 1(x
+\\ge t) \\frac{f(x)}{f\_\*(x)} f\_\*(x) \\,dx \\\\ & {} = {E\_\*} [1(X
+\\ge t) W(X)] \\end{align}
+](http://openwetware.org/images/math/3/7/3/373dde81b17f8f8f1d2b77732bbd9ada.png)
 
 where
 
-$$W(\cdot) \equiv \frac{f(\cdot)}{f_x\*(\cdot)}$$
+![W(\\cdot) \\equiv \\frac{f(\\cdot)}{f\_\*(\\cdot)}
+](http://openwetware.org/images/math/2/4/0/2406dfcf6682ef40f4c5142f0fceb5b6.png)
 
 is a likelihood ratio and is referred to as the weighting function. The
 last equality in the above equation motivates the estimator
 
-$$\hat p_t = \frac{1}{K}\,\sum_{i=1}^K 1(X_i \ge t) W(X_i),\,\quad 
-\quad X_i \sim f_* $$
-
-
+![ \\hat p\_t = \\frac{1}{K}\\,\\sum\_{i=1}\^K 1(X\_i \\ge t)
+W(X\_i),\\,\\quad \\quad X\_i \\sim
+f\_\*](http://openwetware.org/images/math/a/9/d/a9d937b80a14419bcbcd9e73159727ea.png)
 
 This is the importance sampling estimator of
-![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANBAMAAABSlfMXAAAAMFBMVEX///+7u7tKSkpaWlqmpqYgICDo6OgLCwvR0dGSkpJsbGwAAAB+fn46OjosLCwUFBR7CVS7AAAAcElEQVQIHWNgEDJwVmQAAYUgh/QGIM04oYqBdQGQwcGxg4HdgK2BgYGngCH7ALMBAwPvBYbZDawODAzsBxgecVpbMjB0H2D5xuAKVH3cxi6BwRjIuMsI1BECZNQAMcOGHgagMUDwcQGD3yYHIIONAQD8oRcROLw0twAAAABJRU5ErkJggg==)
+![p\_t\\,](http://openwetware.org/images/math/1/e/4/1e48d42b7f9d92edeb2212f749b47b4a.png)
 and is unbiased. That is, the estimation procedure is to generate i.i.d.
 samples from
-![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAAM1BMVEX////o6Oi7u7uSkpI6OjpsbGwEBATR0dEsLCwLCwtKSkogICBaWlp+fn6mpqYAAAAUFBSBjHY3AAAAe0lEQVQYGWWPWRLEIAhEGzdcUOf+px0TtIok/tjdwgMBPeS22JcPMdiEEudkA1/AbIParFu6ySPokrIMG/F8AAA/7fPS8mHWV0XpGpz1aW51Oocyf0Nco6v2MGOrt0fWPYNECXR9qijCoWGplPmwcA8LPZ9pexmnoO3wB3mWAnvUsJW4AAAAAElFTkSuQmCC)
+![f\_\*\\,](http://openwetware.org/images/math/4/e/9/4e91b5d2c89ec590d25607953484706c.png)
 and for each sample which exceeds
-![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAOBAMAAAARcxsoAAAAKlBMVEX////o6OhsbGx+fn4LCws6OjqmpqZaWloAAADR0dEgICC7u7uSkpIsLCyaBYdvAAAAP0lEQVQIHWNgYFRgYGBgdgASrAFAgsWAgSG9IjyBgcEEyGMIBRHOQMzZCSSgypgYGLgKNjMw8FwuAArOZGAAANbDB5G/vmnDAAAAAElFTkSuQmCC),
+![t\\,](http://openwetware.org/images/math/0/c/6/0c68620ee2ea4f1286fcd672a47ea080.png),
 the estimate is incremented by the weight
-![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPBAMAAAAWtvJmAAAAMFBMVEX///9aWlosLCwgICA6Ojp+fn6mpqZKSkrR0dEAAADo6OgEBAS7u7tsbGySkpIUFBQAGxs7AAAAjElEQVQIHSXMMQrCQBBA0T8WS0yIiF5kBVPZCIK1pWV6G8ELCGIfMYqIxWIveASPkNrKMr0XcHac6jEzfAbjhduMtslsjlyhu4Z7QCrI+rAEd4PVlLRRnmHoyYOxt/PsUZ54dDx6hwNvebrSmHykyqOoRYOt8dgiF3vl2+DqYNtJiBWbQoP+zxLSV+QP3QsdHtm98LYAAAAASUVORK5CYII=)
+![W\\,](http://openwetware.org/images/math/2/f/1/2f1e8d5af98f2c9643b0334c73ccc25b.png)
 evaluated at the sample value. The results are averaged over
-![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAOCAMAAAD+MweGAAAAM1BMVEX///9+fn5KSkogICBaWlqmpqa7u7ssLCw6Ojro6OgAAABsbGwEBAQLCwuSkpLR0dEUFBQK7AVDAAAAdUlEQVQIHT1PWRbEIAhLxbqgaO9/2mHR4QNCCHkAAE8iyq+CUqlZBToPr6DoVcTFB6PHAGjTUDlCw1I1rWUwYptN8sXDqE2vfE2NbPMdfdrmDRGdN963h9tozn/mXEN+grNxDRY/VyQUSL6oObFkNd2J2d/8AUjCAtJb8XZnAAAAAElFTkSuQmCC)
+![K\\,](http://openwetware.org/images/math/d/0/e/d0e1b8571128845c03a4cfac00d43b66.png)
 trials.
 
 \
 
--   Unfortunately having to know the $f_*(\cdot)$
+-   Unfortunately having to know the ![f\_\*(\\cdot)
+    ](http://openwetware.org/images/math/d/5/d/d5dd2924b7a98d52bb15c85b966071e6.png)
     term means that I cannot produce the painting library arbitrarily,
     but will be stuck finding the right painting only with the
     probability that I can simulate it from the prior.
@@ -83,13 +89,17 @@ trials.
 
 Partitioning the problem
 
-$ P(X | \vec \theta, \mathbb{Q} ) = P(X | C) P(C | \mathbb{Q} ) P(\mathbb{Q} ) P( \vec \theta)$
+![ P(X | \\vec \\theta, \\mathbb{Q} ) = P(X | C) P(C | \\mathbb{Q} ) P(
+\\mathbb{Q} ) P( \\vec \\theta)
+](http://openwetware.org/images/math/f/d/6/fd6dcd9d7346f612450994c84b39a7f5.png)
 
 and proposing paintings directly, we can MCMC over the space of possible
-paintings *C*, OU parameters $\vec \theta$ and transition matrices $\mathbb{Q}$
-
+paintings *C*, OU parameters ![ \\vec \\theta
+](http://openwetware.org/images/math/1/c/8/1c876a2b07f33c4f32b5f73a9d790a18.png)
+and transition matrices ![ \\mathbb{Q}
+](http://openwetware.org/images/math/d/4/5/d45a4aa156a8ac07ab80e7d9cf5fa79f.png).
 Still, as this problem is hard in the discrete case over
-![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAATCAMAAAB4HKeYAAAAM1BMVEX////R0dHo6Oh+fn4UFBQLCws6OjogICAEBAQsLCympqa7u7tKSkpaWlqSkpJsbGwAAAAal1eCAAAAiklEQVQYGVVQQRLEIAijgKIidf//2gV0pi0XJCExCrDrwnOIRlyqtD42hFK7s1r6TEBUctluCsDo6olrhZAIDNtCAYectGMkABzka87lz6zzy7vfvbYfA/pNdbhrVDiTN0HOmUgziIpFACy0c/rir5uVdmI5N5iGp3nKFVTfX7B4zSbySPA2fyn8AUqZBAL4yXS7AAAAAElFTkSuQmCC)
+![\\mathbb{Q}](http://openwetware.org/images/math/d/4/5/d45a4aa156a8ac07ab80e7d9cf5fa79f.png)
 (BayesTraits), optimizing the MCMC will still be interesting...
 
 -   Discussion of Hastings ratio
@@ -110,4 +120,5 @@ audience. Surprising to me as it is also the least biologically driven.
 Back to the drawing board now to figure out how to tell this story
 clearly and succinctly.
 
+\
 

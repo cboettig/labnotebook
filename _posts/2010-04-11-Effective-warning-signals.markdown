@@ -9,7 +9,6 @@ title: Effective warning signals
 
 
 
-<<<<<<< HEAD:_posts/2010-04-11-Effective-warning-signals.markdown
 
  
 
@@ -19,10 +18,6 @@ title: Effective warning signals
 
 
 
-=======
-Effective warning signals
--------------------------
->>>>>>> image-uri:_posts/2010-04-11-Stochastic-Population-Dynamics-Notebook-(from-OWW).markdown
 
 -   Predicting variance of variance by direct calculation -- still need
     to crunch some math for the expected convergence.
@@ -47,10 +42,14 @@ Effective warning signals
     and linear regression gives the eigenvalue and the variance.
 -   Tested using the Langevin model
 
-$$ x_{t+1} = x_t \left(1- \frac{\kappa}{\gamma} \Delta t \right) + \Delta t \sqrt{\frac{2 K_B T}{\gamma} } x_t $$
+![ x\_{t+1} = x\_t \\left(1- \\frac{\\kappa}{\\gamma} \\Delta t \\right)
++ \\Delta t \\sqrt{\\frac{2 K\_B T}{\\gamma} } \\xi\_t
+](http://openwetware.org/images/math/a/4/b/a4b7d6a34ddae316029729bd7c1b9303.png)
 
 Whose correlation function is given by
 
-$$ \frac{K_BT}{\gamma} e^{-\kappa t / \gamma}$$
+![ \\frac{K\_BT}{\\gamma} e\^{-\\kappa t / \\gamma}
+](http://openwetware.org/images/math/7/8/1/7811817fde052d555cadbfd36a77d213.png)
 
+\
 

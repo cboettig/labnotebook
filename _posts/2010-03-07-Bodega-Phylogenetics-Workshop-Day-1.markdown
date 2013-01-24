@@ -37,18 +37,23 @@ website.](http://bodegaphylo.wikispot.org/2010_Workshop "http://bodegaphylo.wiki
 θ = prob of heads on a single toss of a coin, *X* is \# of heads
 observed on *n* tosses. Choose a model: binomial:
 
-$$ p(x|\theta) = {n \choose{x}} \theta^x ( 1-\theta)^{n-x}$$
+![ p(x|\\theta) = {n \\choose{x}} \\theta\^x ( 1-\\theta)\^{n-x}
+](http://openwetware.org/images/math/0/8/8/08814f7faf92d830f210e2d233344ecd.png)
 
--   Maximize likelihood, find $\hat \theta = \frac{x}{n}$
+-   Maximize likelihood, find ![ \\hat \\theta = \\frac{x}{n}
+    ](http://openwetware.org/images/math/d/9/3/d93b13daa45e31c971a3b81deedcbc22.png)
 -   Bayesian
 
-$p(\theta | x) = \frac{p(x|\theta)p(\theta)}{p(x)} $
+![ p(\\theta | x) = \\frac{p(x|\\theta)p(\\theta)}{p(x)}
+](http://openwetware.org/images/math/8/1/0/810d3eb56ca4c96ecbe28c931a57bdc0.png)
 
 likelihood times prior over marginal equals the posterior. The prior is
 the source of controversy, though mathematically required if you want a
 posterior probability.
 
-The marginal can be hard to solve. $\int_0^1 p(x|\theta) p(\theta) d\theta$
+The marginal can be hard to solve. ![ \\int\_0\^1 p(x|\\theta)
+p(\\theta) d\\theta
+](http://openwetware.org/images/math/c/2/e/c2ec8ba5b21c63d5aa3063012cd7ea2b.png)
 
 So Bayesians solved trivial problems or just estimated moments (mean,
 etc), until along came MCMC and they could do these integrals...
@@ -127,7 +132,9 @@ slides](http://bodegaphylo.wikispot.org/MrBayes_Tutorial_%28Brown%29?sendfile=tr
 -   Bayesian approaches to contain this uncertainty, given sequences
     times and fossil calibrations:
 
-$$f(\theta, t, u | X) = \\frac{f(X|t,u,\theta)f(u|\theta) f(t| \theta) f(\theta) }{f(X)}$$
+![ f(\\theta, t, u | X) = \\frac{f(X|t,u,\\theta)f(u|\\theta) f(t|
+\\theta) f(\\theta) }{f(X)}
+](http://openwetware.org/images/math/e/2/d/e2df7c8faa415cdefa1b5bab5e8f7472.png)
 
 substitution rate (clock) *u*, branch length *v*, age *t*.
 

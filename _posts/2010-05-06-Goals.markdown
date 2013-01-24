@@ -46,30 +46,45 @@ Conditional probability
 Solution to the time dependent OU process, see Gardiner 4th ed. pg 111,
 eq. (4.5.109).
 
-Solve using $$f(X_t) = X_t \exp\left( - \int_0^t \alpha(s) ds \right) $$
-and apply [Ito 
+Solve using ![ f(X\_t) = X\_t \\exp\\left( - \\int\_0\^t \\alpha(s) ds
+\\right)
+](http://openwetware.org/images/math/2/6/1/261158506a921c58c07cce2014f09198.png)
+and apply [Ito
 formula](http://en.wikipedia.org/wiki/It%C5%8D%E2%80%93Doeblin%27s_formula "http://en.wikipedia.org/wiki/It%C5%8D%E2%80%93Doeblin%27s_formula"),
 giving
 
-$$X_t = X_0 \exp\left( - \int_0^t \alpha(s) ds \right) +\theta\left( 1- \exp\left( - \int_0^t \alpha(s) ds \right) \right) + \int_0\^t \sigma \exp\left( - \int_0^t \alpha(s) ds \right) dW_t$$
+![ X\_t = X\_0 \\exp\\left( - \\int\_0\^t \\alpha(s) ds \\right)
++\\theta\\left( 1- \\exp\\left( - \\int\_0\^t \\alpha(s) ds \\right)
+\\right) + \\int\_0\^t \\sigma \\exp\\left( - \\int\_0\^t \\alpha(s) ds
+\\right) dW\_t
+](http://openwetware.org/images/math/8/b/2/8b2d9515dd6a89360e9c97a122103193.png)
 
 And the moments are:
 
 \
 
-$$\begin{align} 
-E(X_T) &= X_0 \exp\left( - \int_0^T \alpha(s) ds \right) +\theta\left( 1- \exp\left( - \int_0^T \alpha(s) ds\right) \right) \\ \operatorname{Var}(X_T) &= \sigma^2
-\int_0^T \exp\left( -2 \int_0^t \alpha(s) ds \right) d t
-\end{align}
+![ \\begin{align} E(X\_T) &= X\_0 \\exp\\left( - \\int\_0\^T \\alpha(s)
+ds \\right) +\\theta\\left( 1- \\exp\\left( - \\int\_0\^T \\alpha(s) ds
+\\right) \\right) \\\\ \\operatorname{Var}(X\_T) &= \\sigma\^2
+\\int\_0\^T \\exp\\left( -2 \\int\_0\^t \\alpha(s) ds \\right) d t
+\\end{align}
+](http://openwetware.org/images/math/e/5/a/e5ab85ca602fb12998c2eb985474c7e6.png)
 
 -   Using the exact solution I can write down the conditional density
     function. We can evaluate both integrals for this linear increase
     model:
 
-$$\int_0^t (\beta t +\alpha_0 ) dt = \beta t^2/2 + \alpha_0 t$$
+![ \\int\_0\^t (\\beta t +\\alpha\_0 ) dt = \\beta t\^2/2 + \\alpha\_0 t
+](http://openwetware.org/images/math/e/8/f/e8f494fb0fc3fffba3ebbf121a70100a.png)
 
-$$\int_0^t e^{ - \beta s^2 - 2\alpha_0 s} ds = \frac{\sqrt{\pi}e^{\alpha_0^2/\beta} }{2\sqrt{\beta}} \left(\operatorname{erf} \left( \frac{ \alpha_0+\beta t }{ \sqrt{\beta} } \right) - \operatorname{erf} \left( \frac{ \alpha_0 }{ \sqrt{\beta} } \right) \right)$$
+![ \\int\_0\^t e\^{ - \\beta s\^2 - 2\\alpha\_0 s} ds =
+\\frac{\\sqrt{\\pi}e\^{\\alpha\_0\^2/\\beta} }{2\\sqrt{\\beta}} \\left(
+\\operatorname{erf} \\left( \\frac{ \\alpha\_0+\\beta t }{
+\\sqrt{\\beta} } \\right) - \\operatorname{erf} \\left( \\frac{
+\\alpha\_0 }{ \\sqrt{\\beta} } \\right) \\right)
+](http://openwetware.org/images/math/7/a/2/7a2b755c9174107368e4480c60e685b4.png)
 
+\
 
 -   Next, implement the conditional probability density in R:
 
