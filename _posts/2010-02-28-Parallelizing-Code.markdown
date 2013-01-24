@@ -6,19 +6,6 @@ title: Parallelizing Code
 ---
 
 
-
-
-
-
- 
-
-
-
-
-
-
-
-
 ### A solution!
 
 -   After a good bit more exploring permutations of openmp commands and
@@ -47,7 +34,4 @@ title: Parallelizing Code
 
 * * * * *
 
-[HTML Comment Box](http://www.htmlcommentbox.com) is loading comments...
-
-\
 

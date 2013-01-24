@@ -19,9 +19,4 @@ title: Entry title
 
 
 
--   Insert content here...
-
-\
-
-\
 

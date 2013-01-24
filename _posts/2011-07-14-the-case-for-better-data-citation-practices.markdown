@@ -11,7 +11,7 @@ categories:
 
 An excellent question came up on ecoinformatics list today on data citation from Kyle Kwaiser at the Michigan Biological Station
 
-![](http://www.carlboettiger.info/wp-content/uploads/2011/07/Cquote.png)
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAeCAYAAABe3VzdAAAApUlEQVRYw+2YSw6AIAwF0cR7cw2X3Mc7od0Zwre82CI0YUeGAUIpGLNCKJxz/t3Oyx9clrV+D3kwsR5gTIzNS4GoPbEheUYSBhUbVk56ouPKiR8GCpL4YvVU5LkUi/IfXFB9SmkFI1lN0Fo4ksWCluBIFhuYAyNZ3YIhGMlagr8UjEpOJahym6cSZL2yVCRrDdddVVEsVTTACwfR0is1APrLpNT/Bg5Ivn4lOcDjAAAAAElFTkSuQmCC)
 
 
 > I am working with graduate students this summer to archive their work at our field station. I want to tell them to cite their datasets on their CV's but I know this is not yet the norm.

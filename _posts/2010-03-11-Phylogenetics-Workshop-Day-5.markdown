@@ -32,8 +32,7 @@ tutorial](http://bodegaphylo.wikispot.org/Diversification_Rates_%28Moore%29 "htt
 4.  correlates of differential rates
 5.  parameter estimation speciation/extinction
 
-![ P = \\frac{2r}{n-1}
-](http://openwetware.org/images/math/2/7/c/27c62056e13cc9ba6d2455dd467aaf0a.png)
+$P = \frac{2r}{n-1}$
 
 #### correlates of differential rates
 
@@ -103,8 +102,7 @@ Thoughts & Ideas scratch pad
 
 1.  Density dependent estimates
 
-Levins model (logistic) style: ![ \\dot n = b n (S - n) - e n
-](http://openwetware.org/images/math/f/a/4/fa43e4271b9fd0673552b69b447d9860.png)
+Levins model (logistic) style: $\dot n = b n (S - n) - e n$
 
 calculate probability n conditional on non-extinction for remaining
 time. let's start by assuming stationarity across whole tree. Then the
@@ -121,8 +119,4 @@ ha, we often look for the other pattern -- accelerating rates.
 
 (Will develop this further. Also, evening session to focus on Labrid
 analysis, general research progress).
-
-\
-
-\
 

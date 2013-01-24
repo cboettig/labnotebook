@@ -1,15 +1,8 @@
 ---
 layout: post
-
 categories:  teaching
+
 ---
-
-
-
-
-
- 
-
 
 
 
@@ -33,7 +26,4 @@ GTC Session: Student Centered Learning: Successes, Failures and Strategies
     Learning literature here when I get a chance. Maybe should add one
     to the GTC blog too. Should add notes from the group sections also.
 
-\
-
-\
 
