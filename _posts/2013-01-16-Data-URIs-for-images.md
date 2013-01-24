@@ -2,27 +2,54 @@
 layout: post
 category: open-science
 tags: site-configuration
-published: false
 
 ---
 
-Have been back in manuscript writing mode for while, making for little by the way of notebook entries.  But in reading I came across the concept of [data URIs]() for images, and the concept is so clever and useful for the lab notebook as to warrant some discription.  
+
+Figures have been one of the standing challenges of the open notebook.  Displaying figures online requires that they are first uploaded to a server somewhere, which can make archiving notebook pages more difficult.  Data URIs offer a potential way to address this challenge, by embedding the image data directly into the entries.  
+
+## History of Figure management in the notebook
+
+When I first started an open online notebook on the MediaWiki platform [OpenWetWare](http://openwetware.org/wiki/User:Carl_Boettiger), I simply uploaded all images manually to the wiki. Soon I discovered that it was much easier to upload them programmatically.  To accomplish this, I used Flickr as the image hosting service.  Flickr gave me a few convenient tools like batch uploads, pre-sized images and slide-shows for embedding.  More conveniently, Flickr allowed me to automate the uploading of images through the API.  Using the API in my R scripts I could [automate uploading](http://www.carlboettiger.info/2010/12/10/socialr-an-r-package-to-track-the-status-of-computations-with-social-network-tools.html) of the figures as they were created when scripts were run.   This integration became easier with my adoption of `knitr`, which has the option to automatically upload images built in (using imgur.com).  I soon extended this to [use Flickr or Wordpress](http://www.carlboettiger.info/2012/02/28/knitr-with-flickr-and-wordpress.html).
+
+## Challenges of linked images
+
+While this simplified the workflow considerably, it does not lend itself to archiving content well.  Since [migrating to Jekyll](http://www.carlboettiger.info/2012/09/19/migrating-from-wordpress-to-jekyll.html), it is relatively straight forward to archive the notebook entry by entry in markdown format, without all the external web content for the appearance.  Unfortunately, with images linked in from Flickr and other external hosting services are not included in this way.  Even archiving the entire HTML source for the site doesn't help, since the figures are on a remote repository.  When I migrated my OWW and Wordpress notebooks to Jekyll, the image links remained pointing to OWW or Flickr or wherever the images were originally uploaded.  Should Flickr vanish (as Delicious effectively did), the images would be lost.  The copies of the notebook entries I [deposit on figshare]() only have the links to these entries, not the entries themselves.  Even if the images were copied over, the entry would still point to the original URL, not the copy.  To address this, I started [archiving the images locally](http://www.carlboettiger.info/2012/11/30/Note-on-notebook-figures.html). This removed the external dependency and kept everything together so that it could be archived in a way that preserved the link structure, but has its own drawbacks.   
+
+As I do far more runs of the scripts then I post to the notebook (though most of these can be found in the Github links), the image archive is much larger than what images are actually included in the notebook. Another issue is that the notebook source files are all conveniently managed with git and stored on Github, so storing the images locally involves explicitly excluding the image files which are both much larger and as binaries not ideal for version management.  
+
+## Data URIs
+
+The simple solution is to avoid linking the images externally, but instead embed the image data directly into the notebook entry.  [Data URIs](http://en.wikipedia.org/wiki/Data_URI_scheme) do exactly that, encoding all the image as part of the link url following a declaration of MIME type, such as
+
+```html
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA
+AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
+9TXL0Y4OHwAAAABJRU5ErkJggg==" 
+```
+
+Image data URIs are usually introduced to reduce the load and waiting time on the server, which has to query each external image separately (CSS sprites are a more effective way to accomplish that goal; which is what I use for the icons on this site).  They are also convenient for generating stand-alone HTML files, in which the externally linked data sources, such as images, CSS, etc, are encoded as 64bit data strings.  
 
 
-Figures have been one of the standing challenges of the 
+## Generating URIs 
 
-To display figures in an electronic notebook requires that they are uploaded somehow. 
+Given an image, we can generate the data URI using the `knitr` function `image_uri("image_name.png")`.  Knitr also supports data URIs as directly as an image output option, in just the same way that one would specify a custom upload function, using the command
 
-## Background
+```r
+opts_knit$set(upload.fun = image_uri)
+```
 
-I began by uploading images manually while the notebook was in wiki format on OpenWetWare.  Soon I discovered that it was much easier to upload them programmatically.  To accomplish this, I used Flickr as the image hosting service, which provided a convenient API for automating the process which integrated nicely with R.  When `knitr` appeared on the scene and became central to my workflow, I was pleased to discover that it already supported automatic uploads using the imgur service, and was easy to extend to Flickr, Wordpress or other server. 
+Pandoc can also generate HTML with data URIs for images in place of the remote image links using the `--self-contained` option, where it will download all the external images and encode them.  This may be the best strategy for creating archival versions of entries for figshare, etc.  Unfortunately the conversion is not available when running markdown to markdown, but can be effected using markdown to HTML, and then back.  The only downside of this approach is that the yaml header formatting is lost, and the output markdown used is Pandoc's flavor.
 
-Unfortunately, external content does not lend itself to archiving well.  Archiving a web based platform requires 
 
-Since I have moved to Jekyll, notebook entries have become more portable objects independent of the web servers and software.  The contents of each entry is contained as a markdown file in the `_posts` directory.  These plain-text, UTF-8 files are transformed into the HTML for the notebook posts, but can also be browsed directly in their repository, an advantage over database based methods. 
+## Difficulties of Data URIs
 
-## Difficulties
+1. **Not displayed in Github Markdown** My chief disappointment is realizing that Github's markdown renderer will not display data URIs, so images won't show up on the Github copy of `knitr` markdown files.  This is perhaps the most annoying, as it would be most convenient to have knitr always embed the images for my scripts and avoid external linking for Github files.  This would be particularly helpful for scripts run on remote servers where the compute nodes do not have external web connections and so images have to be uploaded from the head node after running the script.  Oh well, hopefully Github will consider addressing this.   
 
-The challenges with this approach are most obvious in considering the archiving the notebook.  
+I don't see a good reason why Github markdown doesn't display images, since markdown displays any other valid HTML.  Perhaps it is security related since almost anything can be put in a data URI.  It may have something to do with how there server is handling images to begin with, since the images that are displayed come not from the original URL but from a separate link on `akamai.net`.  I did send in a suggestion that they address this and was told they would look into it.   Meanwhile I will continue uploading these images externally, and converting to data URIs when generating the files for the notebook version. 
 
-Does not display on Github markdown files.  
+2. **Large File Sizes** Because all of the image encoding is embedded directly within the link, these data URIs are huge, which makes the markdown a deal less readable before it is rendered.  A decent editor can just fold these away (e.g. select block and `zf` in vim).  
+3. The data URIs increase the filesize of the HTML dramatically.  Compression is about 1/3rd more than the original image sizes.  This can slow load times and makes the repository larger.  As most images in the notebook are generated as basic pngs, the file sizes aren't huge (100 Kb range), but much larger than the raw HTML.  
+4. Not all browsers support Data URIs, so images may not render in older versions of IE 
+
+So now just about all of the existing images in the notebook have been converted to data URIs, and I have updated the [github repository](https://github.com/cboettig/labnotebook/blob/master/_posts/) and the permanent [figshare archives](http://figshare.com/authors/Carl%20Boettiger/96387) of entries to include the figures.  Feedback, suggestions or critiques of this strategy are welcome!
