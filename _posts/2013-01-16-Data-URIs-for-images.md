@@ -6,7 +6,7 @@ tags: site-configuration
 ---
 
 
-Figures have been one of the standing challenges of the open notebook.  Displaying figures online requires that they are first uploaded to a server somewhere, which can make archiving notebook pages more difficult.  Data URIs offer a potential way to address this challenge, by embedding the image data directly into the entries.  
+Figures have been one of the standing challenges of the open notebook.  Displaying figures online requires that they are first uploaded to a server somewhere, which can make archiving notebook pages more difficult.  I've recently discovered Data URIs, which provide a way to embed the image data directly into HTML (or markdown) entries.  I am trying to decide if they offer a better way to address this challenge, so working through my thinking here.  
 
 ## History of Figure management in the notebook
 
@@ -17,6 +17,7 @@ When I first started an open online notebook on the MediaWiki platform [OpenWetW
 While this simplified the workflow considerably, it does not lend itself to archiving content well.  Since [migrating to Jekyll](http://www.carlboettiger.info/2012/09/19/migrating-from-wordpress-to-jekyll.html), it is relatively straight forward to archive the notebook entry by entry in markdown format, without all the external web content for the appearance.  Unfortunately, with images linked in from Flickr and other external hosting services are not included in this way.  Even archiving the entire HTML source for the site doesn't help, since the figures are on a remote repository.  When I migrated my OWW and Wordpress notebooks to Jekyll, the image links remained pointing to OWW or Flickr or wherever the images were originally uploaded.  Should Flickr vanish (as Delicious effectively did), the images would be lost.  The copies of the notebook entries I [deposit on figshare](http://figshare.com/authors/Carl%20Boettiger/96387) only have the links to these entries, not the entries themselves.  Even if the images were copied over, the entry would still point to the original URL, not the copy.  To address this, I started [archiving the images locally](http://www.carlboettiger.info/2012/11/30/Note-on-notebook-figures.html). This removed the external dependency and kept everything together so that it could be archived in a way that preserved the link structure, but has its own drawbacks.   
 
 As I do far more runs of the scripts then I post to the notebook (though most of these can be found in the Github links), the image archive is much larger than what images are actually included in the notebook. Another issue is that the notebook source files are all conveniently managed with git and stored on Github, so storing the images locally involves explicitly excluding the image files which are both much larger and as binaries not ideal for version management.  
+
 
 ## Data URIs
 
@@ -54,4 +55,12 @@ I don't see a good reason why Github markdown doesn't display images, since mark
 - The data URIs increase the filesize of the HTML dramatically.  Compression is about 1/3rd more than the original image sizes.  This can slow load times and makes the repository larger.  As most images in the notebook are generated as basic pngs, the file sizes aren't huge (100 Kb range), but much larger than the raw HTML.  
 - Not all browsers support Data URIs, so images may not render in older versions of IE 
 - The markdown parser takes much longer to generate the output.  This appears to actually time out Jekyll building in my current notebook.  
+
+
+
+## Resolution
+
+I have a branch of the notebook, [image-uri](https://github.com/cboettig/labnotebook/blob/image-uri), in which (almost) all images are converted to data URIs.  Unfortunately, the images do not display on the Github copy and the branch takes rather much longer to compile, making this an inpractical standard solution for the notebook.  
+
+To address the primary concern is making sure that the archival copies on figshare include the images, I think I will stick with compiling an archival version with Data URIs while otherwise continuing to host the images on my webserver or an external server.  (Perhaps using my webserver only for images on the notebook and flickr for caching all runs?).  Archival copies can be made using Pandoc by generating the site using the `--self-contained` option for the pandoc parser in `_config.yaml`, though this is rather slow. Then the archive would be the HTML files in the `_site` directory, rather than the raw markdown files. While alternatively I could use a script to just render the markdown, overall it may make more sense to archive the stand-alone HTML, since it includes more metadata and the advantages of the XML formatting.  
 

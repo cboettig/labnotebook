@@ -1,0 +1,54 @@
+---
+layout: post
+published: false
+
+---
+
+
+```{r}
+doc <- xmlParse(getURLContent("http://www.carlboettiger.info/2012/12/27/notes.html"))
+```
+
+Not all namespaces have been declared in header in RDFa. Should probably be remedied:
+```{r}
+xmlNamespaces(doc)
+```
+
+
+```{r}
+ns = xmlNamespaces(doc)[[1]]$uri
+namespaces = c(ns=ns, dc="http://purl.org/dc/terms/")
+```
+
+Show the contents of the header node:
+
+```{r}
+getNodeSet(doc, "//ns:header", namespace=namespaces)
+```
+
+
+Get the text of the level-1 heading
+
+```{r}
+getNodeSet(doc, "//ns:header/ns:h1", namespace=namespaces, xmlValue)
+```
+
+
+```{r}
+xpathSApply(doc, "//ns:aside//@property", namespaces=namespaces)
+```
+
+
+```{r}
+xpathSApply(doc, "//ns:aside//ns:time", namespaces=namespaces, xmlAttrs)
+```
+
+```{r}
+xpathSApply(doc, "//ns:aside//ns:time", namespaces=namespaces, xmlValue)
+```
+
+
+Attributes of all nodes that have the property attribute
+```{r}
+xpathSApply(doc, "//node()[@property]", namespaces=namespaces, xmlAttrs)
+```
