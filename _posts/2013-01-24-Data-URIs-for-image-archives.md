@@ -6,7 +6,7 @@ tags: site-configuration
 ---
 
 
-Figures have been one of the standing challenges of the open notebook.  Displaying figures online requires that they are first uploaded to a server somewhere, which can make archiving notebook pages more difficult.  I've recently discovered Data URIs, which provide a way to embed the image data directly into HTML (or markdown) entries.  I am trying to decide if they offer a better way to address this challenge, so working through my thinking here.  
+Figures have been one of the standing challenges of the open notebook.  Displaying figures online requires that they are first uploaded to a server somewhere.  Recently I have used automated uploads to external servers such as figshare to host all images generated in the course of my research, and simply point to those graphs which I wish to include in a notebook page using an image link.  Unfortunately, this means that the images themselves are not being permanently archived when I deposit my notebook entries into their annual archives on figshare.  (Because figshare provides objects with unique identifier DOIs and benefits from [CLOCKSS](http://clockss.org) archival preservation, I use it to ensure a permanent backup of the notebook contents is available). I've recently discovered Data URIs, which provide a way to embed the image data directly into HTML (or markdown) entries.  I am trying to decide if they offer a better way to address this challenge, so working through my thinking here.  
 
 ## History of Figure management in the notebook
 
@@ -45,11 +45,15 @@ Pandoc can also generate HTML with data URIs for images in place of the remote i
 
 ## Difficulties of Data URIs
 
-1. **Not displayed in Github Markdown** My chief disappointment is realizing that Github's markdown renderer will not display data URIs, so images won't show up on the Github copy of `knitr` markdown files.  This is perhaps the most annoying, as it would be most convenient to have knitr always embed the images for my scripts and avoid external linking for Github files.  This would be particularly helpful for scripts run on remote servers where the compute nodes do not have external web connections and so images have to be uploaded from the head node after running the script.  Oh well, hopefully Github will consider addressing this.   
+### Not displayed in Github Markdown
+
+My chief disappointment is realizing that Github's markdown renderer will not display data URIs, so images won't show up on the Github copy of `knitr` markdown files.  It would have been most convenient to have knitr always embed the images for my scripts and avoid external linking for Github files.  This would be particularly helpful for scripts run on remote servers where the compute nodes do not have external web connections and so images have to be uploaded from the head node after running the script.  Oh well, hopefully Github will consider addressing this.   
 
 I don't see a good reason why Github markdown doesn't display images, since markdown displays any other valid HTML.  Perhaps it is security related since almost anything can be put in a data URI.  It may have something to do with how there server is handling images to begin with, since the images that are displayed come not from the original URL but from a separate link on `akamai.net`.  I did send in a suggestion that they address this and was told they would look into it.   Meanwhile I will continue uploading these images externally, and converting to data URIs when generating the files for the notebook version. 
 
-2. **Large File Sizes** Because all of the image encoding is embedded directly within the link, and these data URIs are huge.  This creates several issues.  
+### Large File Sizes
+
+Because all of the image encoding is embedded directly within the link, and these data URIs are huge.  This creates several issues.  
 
 - The markdown a deal less readable before it is rendered.  A decent editor can just fold these away (e.g. select block and `zf` in vim).  
 - The data URIs increase the filesize of the HTML dramatically.  Compression is about 1/3rd more than the original image sizes.  This can slow load times and makes the repository larger.  As most images in the notebook are generated as basic pngs, the file sizes aren't huge (100 Kb range), but much larger than the raw HTML.  
@@ -60,7 +64,9 @@ I don't see a good reason why Github markdown doesn't display images, since mark
 
 ## Resolution
 
-I have a branch of the notebook, [image-uri](https://github.com/cboettig/labnotebook/blob/image-uri), in which (almost) all images are converted to data URIs.  Unfortunately, the images do not display on the Github copy and the branch takes rather much longer to compile, making this an inpractical standard solution for the notebook.  
+I have a branch of the notebook, [image-uri](https://github.com/cboettig/labnotebook/blob/image-uri), in which (almost) all images are converted to data URIs.  Unfortunately, the images do not display on the Github copy and the branch takes rather much longer to compile, making this an impractical standard solution for the notebook.  
 
-To address the primary concern is making sure that the archival copies on figshare include the images, I think I will stick with compiling an archival version with Data URIs while otherwise continuing to host the images on my webserver or an external server.  (Perhaps using my webserver only for images on the notebook and flickr for caching all runs?).  Archival copies can be made using Pandoc by generating the site using the `--self-contained` option for the pandoc parser in `_config.yaml`, though this is rather slow. Then the archive would be the HTML files in the `_site` directory, rather than the raw markdown files. While alternatively I could use a script to just render the markdown, overall it may make more sense to archive the stand-alone HTML, since it includes more metadata and the advantages of the XML formatting.  
+As I discussed above, I have recently experimented with hosting all images I generate on the local server, removing the dependency and archival concerns of Figshare.  Unfortunately, it makes for a very large and potentially more fragile site to have to carry around the complete image log, 99% of which does not appear in the notebook but only on Github script runs.  Keeping only the images used in posts makes more sense, but requires an extra step which is otherwise redundant, since the web being what it is can just point to the external copy. To address the primary concern is making sure that the archival copies on figshare include the images, I think I will stick with compiling an archival version with Data URIs while otherwise continuing to host the images on Flickr.  
+
+Archival copies can be made using Pandoc by generating the site using the `--self-contained` option for the pandoc parser in `_config.yaml`, though this is rather slow. Then the archive would be the HTML files in the `_site` directory, rather than the raw markdown files. While alternatively I could use a script to just render the markdown, overall it may make more sense to archive the stand-alone HTML, since it includes more metadata and the advantages of the XML formatting.  
 
