@@ -15,7 +15,7 @@ What would a semantic lab notebook look like?  What would be possible with such
 
 There's been a lot written about the potential for linked data and a semantic web elsewhere [cite rel='cito:discusses']10.2200/S00334ED1V01Y201102WBE001[/cite], here I outline what's already possible and what I'd like to see in the context of a lab notebook. My notebook links three primary content sources: literature citations, graphs, and code; as I've [described before](http://www.carlboettiger.info/archives/211).  A more semantic version could make the connections between these elements explicit and machine readable, opening the door to many more possibilities.  
   
-[![](http://www.carlboettiger.info/wp-content/uploads/2010/11/mynotebook-300x123.png)](http://www.carlboettiger.info/wp-content/uploads/2010/11/mynotebook.png)
+![](http://www.carlboettiger.info/assets/files/mynotebook-300x123.png)
 
 
 ### Citations:

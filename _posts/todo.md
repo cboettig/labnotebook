@@ -7,21 +7,21 @@ published: false
 
 ### Tasks 
 
-- Policy costs                        MED
-  - Issues for 3.1, 3.2 figures         FAST
+- Policy costs                          MED
+  - Issues for 3.1, 3.2 figures         FAST  
   - Updated draft to team
-- Multiple Uncertainty                LOW
+- Multiple Uncertainty                  LOW
   - Figure 3 (using uniform noise)      FAST
   - Updated table                       FAST
-- Decision theory warning             LOW
-- Managed signals                     LOW
-- Comment piece                       HI
-  - Outline                             FAST 
-  - Select sections for Alan            FAST
-  - Writing                             SLOW
+- Decision theory warning               LOW
+- Managed signals                       LOW
+- Comment piece                         HI  -- DONE
+  - Outline                             FAST -- DONE
+  - Select sections for Alan            FAST -- DONE
+  - Writing                             SLOW -- DONE
 - nonparametric-bayes                 MED
-  - MLE query based on R&W posted to CV
-  - Reasonably performing example for Reed & May models (even if with hand-picked hyperparameters)
+  - MLE query based on R&W                   
+  - Reasonably performing example for Reed & May models (even if with hand-picked hyperparameters) -- DONE
   - Finish reading background info
   - Multispecies case?
 - EWS review work with Noam           MED
@@ -42,6 +42,6 @@ published: false
 * Data Dryad deposits for recent papers
 * Arxiv copies of recent papers
 * organize / clean / document github repositories
-
+* Write to John Drake, Ben Halpern
 
 

@@ -26,7 +26,7 @@ Researchers have found many reasons for making their notebook open: better colla
 ## An Integrated Notebook
 
 
-[![floatright](http://www.carlboettiger.info/wp-content/uploads/2010/11/mynotebook-300x123.png)](http://www.carlboettiger.info/wp-content/uploads/2010/11/mynotebook.png)
+![floatright](http://www.carlboettiger.info/assets/files/mynotebook-300x123.png)
 
 In these pages you will find not only thoughts and ideas, but references to the literature I read, the codes or manuscripts I write, derivations I scribble and graphs I create.   I see my notebook as consisting not only of the entries here (in Wordpress), but the databases for articles, code and images that are embedded or linked from the notebook to external repositories. (Mendeley, Github, Flickr).
 
@@ -68,7 +68,7 @@ All of the other databases reflect the project categories: My Flickr tags ("[phy
 ## The Social Lab Notebook
 
 
-The services I integrate into [![floatright](http://www.carlboettiger.info/wp-content/uploads/2010/11/social.png)](http://www.carlboettiger.info/wp-content/uploads/2010/11/social.png) my notebook aren't just relational databases.  They are also all social networking platforms built around a particular type of data (blog entries, publications, images, code). All have RSS feeds that let them live-update each other.  All (except Wordpress) have a notion of contacts and social graph.
+The services I integrate into ![floatright](http://www.carlboettiger.info/assets/files/social.png) my notebook aren't just relational databases.  They are also all social networking platforms built around a particular type of data (blog entries, publications, images, code). All have RSS feeds that let them live-update each other.  All (except Wordpress) have a notion of contacts and social graph.
 
 All have mobile applications,  a developer API so anyone can extend  them, a large user base, and provide a cost-free service.  In addition  to integrating with the notebook, they provide their own sophisticated  interface to their content.
 
@@ -82,7 +82,7 @@ Without additional effort, I simultaneously contribute to the rapidly growing da
 
 I originally became interested in the concept of Open Notebook Science through reading about the open notebook of [Cameron Neylon](http://cameronneylon.net/), and later also the groups of J[ean-Claude Bradley](http://usefulchem.blogspot.com/) and[ Steve Koch](http://openwetware.org/wiki/User:Skoch3).  I was later [featured in Science Careers](http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2010_04_09/caredit.a1000036) for a piece on open notebook science.  
 
-[![floatright](http://www.carlboettiger.info/wp-content/uploads/2010/11/OWWEmblem.png)](http://openwetware.org/wiki/Main_Page)I began my experiment in ONS on the wiki-based platform [OpenWetWare](http://openwetware.org/wiki/User:Carl_Boettiger).   With a tool to create a notebook template and an established community of researchers with such notebooks (also sharing course content, experimental protocols, lab webpages, etc) it provided an excellent introduction.  I was swiftly contacted by established PIs offering encouragement, advice and even collaboration.  My original notebooks remain there, with future entries connected from this site automatically through the Category feed.  Limitations in my ability to customize, control and extend OWW mediawiki platform have led me to migrate to my own independently hosted site and domain here.
+![floatright](http://www.carlboettiger.info/assets/files/OWWEmblem.png) I began my experiment in ONS on the wiki-based platform [OpenWetWare](http://openwetware.org/wiki/User:Carl_Boettiger).   With a tool to create a notebook template and an established community of researchers with such notebooks (also sharing course content, experimental protocols, lab webpages, etc) it provided an excellent introduction.  I was swiftly contacted by established PIs offering encouragement, advice and even collaboration.  My original notebooks remain there, with future entries connected from this site automatically through the Category feed.  Limitations in my ability to customize, control and extend OWW mediawiki platform have led me to migrate to my own independently hosted site and domain here.
 
 
 ## Other resources

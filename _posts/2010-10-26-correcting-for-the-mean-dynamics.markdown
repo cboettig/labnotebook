@@ -26,11 +26,12 @@ Yesterday I began to address concerns of different models that have different me
 
 
 With changing mean:
-[iframe http://www.carlboettiger.info/wp-content/uploads/2010/10/bifur.swf 300 300]
+
+<embed src="http://www.carlboettiger.info/assets/files/bifur.swf" width=300 height=300>
 
 With "constant" mean:
 
-[iframe http://www.carlboettiger.info/wp-content/uploads/2010/10/bifur_mean_const.swf 300 300]
+<embed src="http://www.carlboettiger.info/assets/files/bifur_mean_const.swf" width=300 height=300>
 
 Note that the mean changes quite suddenly at the end, though the loss of stability is more pronounced much earlier on.  (Images are is now sfw-flash objects instead of gif loops so can be  paused, etc by right click.  Hosted locally in this site's media library  as flickr stream doesn't support flash.)
 
@@ -81,6 +82,6 @@ $$ dX_t = \alpha(a, X_t) (\theta(a, X_t) - X_t)dt + \sigma(a, X_t) dW_t $$
 
 where the parameters are linear functions in time or in a (changing linearly with time).  So, what's the power spectrum of the time-dependent function
 $$ \langle\langle X_0 X_t \rangle \rangle = \sigma^2(\hat x) e^{-\alpha(\hat x, t) t} $$
-where $ \alpha(\hat x, t) $ is a function of $ a$ as given by the graphs above and $a$ changes linearly at some rate?  Is it to this that we must compare fits under models of changing and non-changing $ a$?
+where $\alpha(\hat x, t)$ is a function of $a$ as given by the graphs above and $a$ changes linearly at some rate?  Is it to this that we must compare fits under models of changing and non-changing $a$?
 
 

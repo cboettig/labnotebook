@@ -11,7 +11,6 @@ categories:
 
 An excellent question came up on ecoinformatics list today on data citation from Kyle Kwaiser at the Michigan Biological Station
 
-![](http://www.carlboettiger.info/wp-content/uploads/2011/07/Cquote.png)
 
 
 > I am working with graduate students this summer to archive their work at our field station. I want to tell them to cite their datasets on their CV's but I know this is not yet the norm.
