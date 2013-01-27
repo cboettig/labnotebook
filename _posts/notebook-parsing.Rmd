@@ -6,6 +6,12 @@ published: false
 
 
 ```{r}
+library(RCurl)
+library(XML)
+```
+
+
+```{r}
 doc <- xmlParse(getURLContent("http://www.carlboettiger.info/2012/12/27/notes.html"))
 ```
 
@@ -52,3 +58,23 @@ Attributes of all nodes that have the property attribute
 ```{r}
 xpathSApply(doc, "//node()[@property]", namespaces=namespaces, xmlAttrs)
 ```
+
+
+
+
+```{r}
+pages <- readLines("http://carlboettiger.info/sitemap.txt")
+pages <- pages[grep("\\.html", pages)]  # drop blank lines)
+pages <- pages[-grep("/archives/", pages)]  # drop redirect pages)
+pages <- pages[grep("/201\\d/", pages)]  # drop non-posts)
+```
+
+```{r}
+site <- lapply(pages, function(page) xmlParse(getURLContent(page, followlocation=TRUE)))
+```
+
+
+```{r}
+doi_pattern = "\\b(10[.][0-9]{4,}(?:[.][0-9]+)*/(?:(?!["&\\'<>])\\S)+)\\b"
+```
+

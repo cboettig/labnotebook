@@ -3,7 +3,6 @@ layout: post
 title: Jekyll vs Wordpress 
 subtitle: which is the better platform for an open lab notebook?
 category: open-science
-redirects: [open-science/2012/05/01/Jekyll-vs-Wordpress.html]
 
 ---
 
