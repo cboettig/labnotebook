@@ -23,7 +23,7 @@ exclude: [ _posts/source/, _posts/_private/, assets/figures]
 
 markdown: pandoc
 pandoc:
-   extensions: [smart, mathjax]
+   extensions: [smart, mathjax, self-contained]
 
 
 analytics: UA-18401403-1
