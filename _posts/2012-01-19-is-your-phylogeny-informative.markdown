@@ -47,42 +47,38 @@ But a more basic problem is that it's just not designed for hypothesis testing -
 
 When estimating parameters that scale branch length, I think we must be cautious because these are really data-hungry, and don't work well on small trees. Check out how few of these estimates of lambda on 100 replicate datasets hit near the correct value shown by vertical line:
 
-![]( http://farm8.staticflickr.com/7014/6727029515_bcfe58aedb_o.png )
+![](http://farm8.staticflickr.com/7014/6727029515_bcfe58aedb_o.png)
 
 
 The package commands are explained in more detail in the **[ package vignette](http://cran.r-project.org/web/packages/pmc/vignettes/pmc_tutorial.pdf)**, but the idea is simple. Running the pmc comparison between two models (for the model-choice step) looks like this:
 
 
-```R
-
+```r
 bm_v_lambda <- pmc(geospiza.tree, geospiza.data["wingL"],
   "BM", "lambda", nboot=100)
-
 ```
 
 
 Extracting the distribution of estimates for the parameter lambda got from fitting the lambda model (B) to data made by simulating under lambda model (A):
 
 
-```R
-
+```r
 lambdas <- subset(bm_v_lambda["par_dists"],
   comparison=="BB" & parameter=="lambda")
-
 ```
 
 
 To view the model comparison, just plot the pmc result:
 
 
-```R
+```r
 plot(bm_v_lambda)
 ```
 
 
 The substantial overlap in the likelihood ratios after simulating under either model indicate that we cannot choose between BM and lambda in this case.  I'll leave the paper to explain this approach in more detail, but it's just simulation and refitting.
 
-![]( http://farm8.staticflickr.com/7026/6727293465_4a2a545fdf_o.png )
+![](http://farm8.staticflickr.com/7026/6727293465_4a2a545fdf_o.png)
 
 
 You could just bootstrap the likelihoods or for nested models, look at the parameter distributions, but you get the maximum _statistical power_ from the ratio (says Neyman-Pearson Lemma).
@@ -117,27 +113,28 @@ It is also common and very useful to assign some summary statistic whose value i
 
 
 
-###### 
 Boettiger, C., Coop, G., & Ralph, P. (2012). IS YOUR PHYLOGENY INFORMATIVE? MEASURING THE POWER OF COMPARATIVE METHODS Evolution DOI: [10.1111/j.1558-5646.2012.01574.x](http://dx.doi.org/10.1111/j.1558-5646.2012.01574.x)
+
+
 ## References
 
 <p>Boettiger C, Coop G and Ralph P (2012).
 &ldquo;is Your Phylogeny Informative? Measuring The Power of Comparative Methods.&rdquo;
-<EM>Evolution</EM>.
+<em>Evolution</em>.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2012.01574.x">http://dx.doi.org/10.1111/j.1558-5646.2012.01574.x</a>.
 <p>Pagel M (1999).
 &ldquo;Unknown.&rdquo;
-<EM>Nature</EM>, <B>401</B>.
+<em>Nature</em>, <b>401</b>.
 ISSN 00280836, <a href="http://dx.doi.org/10.1038/44766">http://dx.doi.org/10.1038/44766</a>.
 <p>Losos J (2011).
 &ldquo;Seeing The Forest For The Trees: The Limitations of Phylogenies in Comparative Biology.&rdquo;
-<EM>The American Naturalist</EM>, <B>177</B>.
+<em>The American Naturalist</em>, <b>177</b>.
 ISSN 00030147, <a href="http://dx.doi.org/10.1086/660020">http://dx.doi.org/10.1086/660020</a>.
 <p>Freckleton R and Harvey P (2006).
 &ldquo;Detecting Non-Brownian Trait Evolution in Adaptive Radiations.&rdquo;
-<EM>Plos Biology</EM>, <B>4</B>.
+<em>Plos Biology</em>, <b>4</b>.
 ISSN 1544-9173, <a href="http://dx.doi.org/10.1371/journal.pbio.0040373">http://dx.doi.org/10.1371/journal.pbio.0040373</a>.
 <p>Harmon L, Losos J, Jonathan Davies T, Gillespie R, Gittleman J, Bryan Jennings W, Kozak K, McPeek M, Moreno-Roark F, Near T, Purvis A, Ricklefs R, Schluter D, Schulte II J, Seehausen O, Sidlauskas B, Torres-Carvajal O, Weir J and Mooers A (2010).
 &ldquo;Early Bursts of Body Size And Shape Evolution Are Rare in Comparative Data.&rdquo;
-<EM>Evolution</EM>.
+<em>Evolution</em>.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2010.01025.x">http://dx.doi.org/10.1111/j.1558-5646.2010.01025.x</a>.

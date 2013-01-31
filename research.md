@@ -39,14 +39,14 @@ look, why not see [what I am working on right now?](/lab-notebookmark.html)
 ### Evolution
 
 * Compartive phylogenetics [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Boettiger et al. (2012) Is your phylogeny informative? Measuring the power of comparative methods"></i> ](/vita.html) [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Beaulieu et al. (2012) Modeling Stabilizing Selection: Expanding the
-  Ornstein-Uhlenbeck Model of Adaptive Evolution"></i> ](/vita.html) [<i class="icon-globe"></i>](http://cran.r-project.org/web/packages/OUwie/index.html) [<i class="icon-github" style="color:#6c71c4;"></i>](https://github.com/cboettig/wrightscape) [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="R package for phylogenetic monte carlo"></i>](https://github.com/cboettig/pmc) [<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="reading in phylogenetic methods"></i>](http://www.mendeley.com/groups/529971/phylogenetic-methods/papers/) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/) [<i class="icon-beaker" rel="tooltip" title="Data from Boettiger et al. (2012), <em>Evolution</em>"></i>](http://datadryad.org/handle/10255/dryad.37645)
+  Ornstein-Uhlenbeck Model of Adaptive Evolution"></i> ](/vita.html) [<i class="icon-globe"></i>](http://cran.r-project.org/web/packages/OUwie/index.html) [<i class="icon-github" style="color:#6c71c4;"></i>](https://github.com/cboettig/wrightscape) [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="R package for phylogenetic monte carlo"></i>](https://github.com/cboettig/pmc) [<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="reading in phylogenetic methods"></i>](http://www.mendeley.com/groups/529971/phylogenetic-methods/papers/) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/) [<i class="icon-beaker" style="color:#859900;" rel="tooltip" title="Data from Boettiger et al. (2012), Evolution"></i>](http://datadryad.org/handle/10255/dryad.37645)
 
 * Adaptive dynamics [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Boettiger et al. (2010). Fluctuation Domains in adaptive evolution"></i>](/vita.html) [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="R package accompanying Boettiger et al. 2010"></i>](https://github.com/cboettig/fluctuationDomains) [<i class="icon-github" style="color:#6c71c4;" title="R package for simulating branching in adaptive dynamics (mostly a wrapper to my C++ code)"></i>](https://github.com/cboettig/AdaptiveDynamics) [<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="recent papers in Adaptive Dynamics"></i>](http://www.mendeley.com/groups/529981/adaptive-dynamics/papers/)
 
 
-
 - [Guide to project workflow](http://www.carlboettiger.info/2012/05/06/research-workflow.html)
 - [Data management plan](http://www.carlboettiger.info/2012/10/09/data-management-plan.htm)
+
 
 I also enjoy exposure to fieldwork whenever I can convince colleagues to take me along. Though my own research has no field component, I'm thankful for recent opportunities from surveying pitfall traps for tiger salamanders to helping excavate icthysaur fossils in the Nevada desert. Have a field site? I have eight+ years of experience as an alpine guide and can carry a shovel. 
 
@@ -59,8 +59,9 @@ I also enjoy exposure to fieldwork whenever I can convince colleagues to take me
 ------------------------------------------------------------------------------
 
 #### Key:
-<i class="icon-book icon-2x" style="color:#2aa198;"></i> Publications,   <i class="icon-github icon-2x" style="color:#6c71c4;"></i> Code,  <i class="icon-beaker icon-2x" style="color:#859900;;"></i> Data, <i class="icon-bookmark icon-2x" style="color:#dc322f;"></i> Reading,   <i class="icon-tags icon-2x" style="color:#b58900;"></i> Tags,   <i class="icon-bar-chart icon-2x" style="color:#cb4b16;"></i> Figures 
-<!-- <i class="icon-list icon-2x" style="color:#d33682;"></i> Categories -->
+
+<i class="icon-book" style="color:#2aa198;"></i> Publications,   <i class="icon-github" style="color:#6c71c4;"></i> Code,  <i class="icon-beaker" style="color:#859900;"></i> Data, <i class="icon-bookmark" style="color:#dc322f;"></i> Reading,   <i class="icon-tags" style="color:#b58900;"></i> Tags,   <i class="icon-bar-chart" style="color:#cb4b16;"></i> Figures 
+<!-- <i class="icon-list" style="color:#d33682;"></i> Categories -->
 
 
 

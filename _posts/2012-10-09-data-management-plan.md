@@ -42,7 +42,6 @@ Peer-reviewed publications will target preprint-friendly publishers and an autho
 
 Gentleman R and Temple Lang D (2007). "Statistical Analyses And
 Reproducible Research." _Journal of Computational And Graphical
-Statistics_, *16*. ISSN 1061-8600, <URL:
-http://dx.doi.org/10.1198/106186007X178663>.
+Statistics_, *16*. ISSN 1061-8600, doi: 10.1198/106186007X178663
 
 

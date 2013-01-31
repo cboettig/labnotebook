@@ -64,17 +64,20 @@ xpathSApply(doc, "//node()[@property]", namespaces=namespaces, xmlAttrs)
 
 ```{r}
 pages <- readLines("http://carlboettiger.info/sitemap.txt")
-pages <- pages[grep("\\.html", pages)]  # drop blank lines)
 pages <- pages[-grep("/archives/", pages)]  # drop redirect pages)
 pages <- pages[grep("/201\\d/", pages)]  # drop non-posts)
 ```
 
 ```{r}
+site <- lapply(pages, function(page){
+  sprintf("%s\n",  page)
+  try(getURLContent(page, followlocation=TRUE))
+})
+
+lapply(site, function(s) try(xmlParse(s)) )
+
+
 site <- lapply(pages, function(page) xmlParse(getURLContent(page, followlocation=TRUE)))
 ```
 
-
-```{r}
-doi_pattern = "\\b(10[.][0-9]{4,}(?:[.][0-9]+)*/(?:(?!["&\\'<>])\\S)+)\\b"
-```
 
