@@ -90,9 +90,11 @@ Belief MDP or POMDP.
 
 
 
+
 ## References
 
-<p>Martinet V and Doyen L (2007).
-&ldquo;Sustainability of an Economy With an Exhaustible Resource: A Viable Control Approach.&rdquo;
-<EM>Resource And Energy Economics</EM>, <B>29</B>.
+
+- Martinet V and Doyen L (2007).
+"Sustainability of an Economy With an Exhaustible Resource: A Viable Control Approach."
+*Resource And Energy Economics*, **29**.
 ISSN 09287655, <a href="http://dx.doi.org/10.1016/j.reseneeco.2006.03.003">http://dx.doi.org/10.1016/j.reseneeco.2006.03.003</a>.

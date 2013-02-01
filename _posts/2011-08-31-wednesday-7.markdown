@@ -66,29 +66,36 @@ Bill got me started on automatic reporting from the clusters using some bash scr
 
 
 Jacob, P., Robert, C. P., & Smith, M. H. (2010). Using parallel computation to improve Independent Metropolis--Hastings based estimation, 19. Retrieved from http://arxiv.org/abs/1010.1595
+
 ## References
 
-<p>Snyder R and Adler P (2011).
-&ldquo;Coexistence And Coevolution in Fluctuating Environments: Can The Storage Effect Evolve?&rdquo;
-<EM>The American Naturalist</EM>, <B>178</B>.
+
+- Snyder R and Adler P (2011).
+"Coexistence And Coevolution in Fluctuating Environments: Can The Storage Effect Evolve?"
+*The American Naturalist*, **178**.
 ISSN 00030147, <a href="http://dx.doi.org/10.1086/661905">http://dx.doi.org/10.1086/661905</a>.
-<p>Vasseur D and Fox J (2011).
-&ldquo;Adaptive Dynamics of Competition For Nutritionally Complementary Resources: Character Convergence, Displacement, And Parallelism.&rdquo;
-<EM>The American Naturalist</EM>, <B>178</B>.
+
+- Vasseur D and Fox J (2011).
+"Adaptive Dynamics of Competition For Nutritionally Complementary Resources: Character Convergence, Displacement, And Parallelism."
+*The American Naturalist*, **178**.
 ISSN 00030147, <a href="http://dx.doi.org/10.1086/661896">http://dx.doi.org/10.1086/661896</a>.
-<p>Organ C, Nunn C, Machanda Z and Wrangham R (2011).
-&ldquo;Phylogenetic Rate Shifts in Feeding Time During The Evolution of Homo.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- Organ C, Nunn C, Machanda Z and Wrangham R (2011).
+"Phylogenetic Rate Shifts in Feeding Time During The Evolution of Homo."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1107806108">http://dx.doi.org/10.1073/pnas.1107806108</a>.
-<p>Hanski I (2011).
-&ldquo;Inaugural Article: Eco-Evolutionary Spatial Dynamics in The Glanville Fritillary Butterfly.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- Hanski I (2011).
+"Inaugural Article: Eco-Evolutionary Spatial Dynamics in The Glanville Fritillary Butterfly."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1110020108">http://dx.doi.org/10.1073/pnas.1110020108</a>.
-<p>Robert C, Cornuet J, Marin J and Pillai N (2011).
-&ldquo;Lack of Confidence in Approximate Bayesian Computation Model Choice.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- Robert C, Cornuet J, Marin J and Pillai N (2011).
+"Lack of Confidence in Approximate Bayesian Computation Model Choice."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1102900108">http://dx.doi.org/10.1073/pnas.1102900108</a>.
-<p>Liebhold A and Bascompte J (2003).
-&ldquo;The Allee Effect, Stochastic Dynamics And The Eradication of Alien Species.&rdquo;
-<EM>Ecology Letters</EM>, <B>6</B>.
+
+- Liebhold A and Bascompte J (2003).
+"The Allee Effect, Stochastic Dynamics And The Eradication of Alien Species."
+*Ecology Letters*, **6**.
 ISSN 1461-023X, <a href="http://dx.doi.org/10.1046/j.1461-0248.2003.00405.x">http://dx.doi.org/10.1046/j.1461-0248.2003.00405.x</a>.

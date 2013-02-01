@@ -75,9 +75,11 @@ Big gaps:
 
 
 
+
 ## References
 
-<p>Worm B, Barbier E, Beaumont N, Duffy J, Folke C, Halpern B, Jackson J, Lotze H, Micheli F, Palumbi S, Sala E, Selkoe K, Stachowicz J and Watson R (2006).
-&ldquo;Impacts of Biodiversity Loss on Ocean Ecosystem Services.&rdquo;
-<EM>Science</EM>, <B>314</B>.
+
+- Worm B, Barbier E, Beaumont N, Duffy J, Folke C, Halpern B, Jackson J, Lotze H, Micheli F, Palumbi S, Sala E, Selkoe K, Stachowicz J and Watson R (2006).
+"Impacts of Biodiversity Loss on Ocean Ecosystem Services."
+*Science*, **314**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1132294">http://dx.doi.org/10.1126/science.1132294</a>.

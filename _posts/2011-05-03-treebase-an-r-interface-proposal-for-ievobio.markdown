@@ -27,13 +27,16 @@ To take full advantage of available data, researchers must have simple, familiar
   * **Source code**: [http://github.com/cboettig/treeBASE](http://github.com/cboettig/treeBASE)
 
 
+
 ## References
 
-<p>Whitlock M, McPeek M, Rausher M, Rieseberg L and Moore A (2010).
-&ldquo;Data Archiving.&rdquo;
-<EM>The American Naturalist</EM>, <B>175</B>.
+
+- Whitlock M, McPeek M, Rausher M, Rieseberg L and Moore A (2010).
+"Data Archiving."
+*The American Naturalist*, **175**.
 ISSN 0003-0147, <a href="http://dx.doi.org/10.1086/650340">http://dx.doi.org/10.1086/650340</a>.
-<p>Fairbairn D (2011).
-&ldquo;The Advent of Mandatory Data Archiving.&rdquo;
-<EM>Evolution</EM>, <B>65</B>.
+
+- Fairbairn D (2011).
+"The Advent of Mandatory Data Archiving."
+*Evolution*, **65**.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2010.01182.x">http://dx.doi.org/10.1111/j.1558-5646.2010.01182.x</a>.

@@ -43,13 +43,16 @@ I'd like to highlight that this panel was assembled and moderated by graduate st
 Nearly every discussion of these issues have raised the need to address social and cultural challenges to data sharing (_e.g._  (Reichman _et. al._ 2011), (Tenopir _et. al._ 2011)).  Forums such of these offer an excellent chance to start addressing these issues head-on.  I hope other universities will hold similar panels with their local experts to carry these discussions forward.  This video recording is archived on [uctv](http://uctv.tv).  
 
 
+
 ## References
 
-<p>Reichman O, Jones M and Schildhauer M (2011).
-&ldquo;Challenges And Opportunities of Open Data in Ecology.&rdquo;
-<EM>Science</EM>, <B>331</B>.
+
+- Reichman O, Jones M and Schildhauer M (2011).
+"Challenges And Opportunities of Open Data in Ecology."
+*Science*, **331**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1197962">http://dx.doi.org/10.1126/science.1197962</a>.
-<p>Tenopir C, Allard S, Douglass K, Aydinoglu A, Wu L, Read E, Manoff M, Frame M and Neylon C (2011).
-&ldquo;Data Sharing by Scientists: Practices And Perceptions.&rdquo;
-<EM>Plos One</EM>, <B>6</B>.
+
+- Tenopir C, Allard S, Douglass K, Aydinoglu A, Wu L, Read E, Manoff M, Frame M and Neylon C (2011).
+"Data Sharing by Scientists: Practices And Perceptions."
+*Plos One*, **6**.
 <a href="http://dx.doi.org/10.1371/journal.pone.0021101">http://dx.doi.org/10.1371/journal.pone.0021101</a>.

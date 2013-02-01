@@ -20,6 +20,7 @@ Model-based approaches are clearly on the rise (following my own 2012 paper in P
 Unfortunately such model-based approaches are too new to make it into either of the recent review-like comparisons of existing approaches to a common set of simulated data (Dakos et al. 2012) or empirical data (Lindegren et al. 2012).   
 
 
+
 ## References
 
 * Boettiger, C., & Hastings, A. (2012). Early warning signals and the prosecutor’s fallacy. Proceedings of the Royal Society B: Biological Sciences, (October). doi:10.1098/rspb.2012.2085

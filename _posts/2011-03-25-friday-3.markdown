@@ -53,21 +53,26 @@ Figures. Yesterday's to-do list. References. Wishing I could use tex instead of 
 
 
 
+
 ## References
 
-<p>Williams P and Hastings A (2011).
-&ldquo;Paradoxical Persistence Through Mixed-System Dynamics: Towards A Unified Perspective of Reversal Behaviours in Evolutionary Ecology.&rdquo;
-<EM>Proceedings of The Royal Society B: Biological Sciences</EM>, <B>278</B>.
+
+- Williams P and Hastings A (2011).
+"Paradoxical Persistence Through Mixed-System Dynamics: Towards A Unified Perspective of Reversal Behaviours in Evolutionary Ecology."
+*Proceedings of The Royal Society B: Biological Sciences*, **278**.
 ISSN 0962-8452, <a href="http://dx.doi.org/10.1098/rspb.2010.2074">http://dx.doi.org/10.1098/rspb.2010.2074</a>.
-<p>Schreiber S (2010).
-&ldquo;Interactive Effects of Temporal Correlations, Spatial Heterogeneity And Dispersal on Population Persistence.&rdquo;
-<EM>Proceedings of The Royal Society B: Biological Sciences</EM>, <B>277</B>.
+
+- Schreiber S (2010).
+"Interactive Effects of Temporal Correlations, Spatial Heterogeneity And Dispersal on Population Persistence."
+*Proceedings of The Royal Society B: Biological Sciences*, **277**.
 ISSN 0962-8452, <a href="http://dx.doi.org/10.1098/rspb.2009.2006">http://dx.doi.org/10.1098/rspb.2009.2006</a>.
-<p>Schreiber S, Bürger R and Bolnick D (2011).
-&ldquo;The Community Effects of Phenotypic And Genetic Variation Within A Predator Population.&rdquo;
-<EM>Ecology</EM>, <B>92</B>.
+
+- Schreiber S, Bürger R and Bolnick D (2011).
+"The Community Effects of Phenotypic And Genetic Variation Within A Predator Population."
+*Ecology*, **92**.
 ISSN 0012-9658, <a href="http://dx.doi.org/10.1890/10-2071.1">http://dx.doi.org/10.1890/10-2071.1</a>.
-<p>Ashander J, Krkošek M and Lewis M (2011).
-&ldquo;Aquaculture-Induced Changes to Dynamics of A Migratory Host And Specialist Parasite: A Case Study of Pink Salmon And Sea Lice.&rdquo;
-<EM>Theoretical Ecology</EM>, <B>5</B>.
+
+- Ashander J, Krkošek M and Lewis M (2011).
+"Aquaculture-Induced Changes to Dynamics of A Migratory Host And Specialist Parasite: A Case Study of Pink Salmon And Sea Lice."
+*Theoretical Ecology*, **5**.
 ISSN 1874-1738, <a href="http://dx.doi.org/10.1007/s12080-011-0122-4">http://dx.doi.org/10.1007/s12080-011-0122-4</a>.

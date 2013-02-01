@@ -107,9 +107,11 @@ $$ dX = \sigma dB_t $$
 
 It appears that leaving in html-style links in the text also does not create an issue, these render correctly as well.
 
+
 ## References
 
-<p>Stumpf M and Porter M (2012).
-&ldquo;Critical Truths About Power Laws.&rdquo;
-<EM>Science</EM>, <B>335</B>.
+
+- Stumpf M and Porter M (2012).
+"Critical Truths About Power Laws."
+*Science*, **335**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1216142">http://dx.doi.org/10.1126/science.1216142</a>.

@@ -21,25 +21,31 @@ Hypothesis they wish to displace runs something like this: Large benthic species
 
 Interesting review of "Early warning of climate tipping points" in Nature Climate Change: (Lenton, 2011); a remarkable number of the examples are ecological rather than more meteorological.  
 
+
 ## References
 
-<p>Frank K, Petrie B, Fisher J and Leggett W (2011).
-&ldquo;Transient Dynamics of an Altered Large Marine Ecosystem.&rdquo;
-<EM>Nature</EM>, <B>477</B>.
+
+- Frank K, Petrie B, Fisher J and Leggett W (2011).
+"Transient Dynamics of an Altered Large Marine Ecosystem."
+*Nature*, **477**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature10285">http://dx.doi.org/10.1038/nature10285</a>.
-<p>Jackson J (2001).
-&ldquo;Historical Overfishing And The Recent Collapse of Coastal Ecosystems.&rdquo;
-<EM>Science</EM>, <B>293</B>.
+
+- Jackson J (2001).
+"Historical Overfishing And The Recent Collapse of Coastal Ecosystems."
+*Science*, **293**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1059199">http://dx.doi.org/10.1126/science.1059199</a>.
-<p>Persson L, Amundsen P, De Roos A, Klemetsen A, Knudsen R and Primicerio R (2007).
-&ldquo;Culling Prey Promotes Predator Recovery&ndash;Alternative States in A Whole-Lake Experiment.&rdquo;
-<EM>Science</EM>, <B>316</B>.
+
+- Persson L, Amundsen P, De Roos A, Klemetsen A, Knudsen R and Primicerio R (2007).
+"Culling Prey Promotes Predator Recovery&ndash;Alternative States in A Whole-Lake Experiment."
+*Science*, **316**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1141412">http://dx.doi.org/10.1126/science.1141412</a>.
-<p>Fauchald P (2010).
-&ldquo;Predator–Prey Reversal: A Possible Mechanism For Ecosystem Hysteresis in The North Sea?&rdquo;
-<EM>Ecology</EM>, <B>91</B>.
+
+- Fauchald P (2010).
+"Predator–Prey Reversal: A Possible Mechanism For Ecosystem Hysteresis in The North Sea?"
+*Ecology*, **91**.
 ISSN 0012-9658, <a href="http://dx.doi.org/10.1890/09-1500.1">http://dx.doi.org/10.1890/09-1500.1</a>.
-<p>Lenton T (2011).
-&ldquo;Early Warning of Climate Tipping Points.&rdquo;
-<EM>Nature Climate Change</EM>, <B>1</B>.
+
+- Lenton T (2011).
+"Early Warning of Climate Tipping Points."
+*Nature Climate Change*, **1**.
 ISSN 1758-678X, <a href="http://dx.doi.org/10.1038/nclimate1143">http://dx.doi.org/10.1038/nclimate1143</a>.

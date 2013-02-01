@@ -145,9 +145,11 @@ A beautiful time-calibrated tree of 297 taxa.
 Step 3: read paper, repeating all of the author's analyses as we go.
 
 Looking at testing the authors conclusions based on laser and medusa against treepar run, but haven't navigated treepar's rather verbose, unformatted output yet.
+
 ## References
 
-<p>Derryberry E, Claramunt S, Derryberry G, Chesser R, Cracraft J, Aleixo A, Pérez-Emán J, Remsen Jr. J and Brumfield R (2011).
-&ldquo;Lineage Diversification And Morphological Evolution in A Large-Scale Continental Radiation: The Neotropical Ovenbirds And Woodcreepers (Aves: Furnariidae).&rdquo;
-<EM>Evolution</EM>, <B>65</B>.
+
+- Derryberry E, Claramunt S, Derryberry G, Chesser R, Cracraft J, Aleixo A, Pérez-Emán J, Remsen Jr. J and Brumfield R (2011).
+"Lineage Diversification And Morphological Evolution in A Large-Scale Continental Radiation: The Neotropical Ovenbirds And Woodcreepers (Aves: Furnariidae)."
+*Evolution*, **65**.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2011.01374.x">http://dx.doi.org/10.1111/j.1558-5646.2011.01374.x</a>.

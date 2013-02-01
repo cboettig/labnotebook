@@ -98,17 +98,21 @@ which is not normally distributed (sums of normals aren't normals).  (Note that
 
 It seems impossible to do the phylogenetic correction of (Revell, 2009) consistently.  One could instead assert that the ratio of some size to body-size is, say, Brownian, without asserting that the individual traits are Brownian, and have a perhaps more consistent size correction.
 
+
 ## References
 
-<p>WAINWRIGHT P, BELLWOOD D, WESTNEAT M, GRUBICH J and HOEY A (2004).
-&ldquo;A Functional Morphospace For The Skull of Labrid Fishes: Patterns of Diversity in A Complex Biomechanical System.&rdquo;
-<EM>Biological Journal of The Linnean Society</EM>, <B>82</B>.
+
+- WAINWRIGHT P, BELLWOOD D, WESTNEAT M, GRUBICH J and HOEY A (2004).
+"A Functional Morphospace For The Skull of Labrid Fishes: Patterns of Diversity in A Complex Biomechanical System."
+*Biological Journal of The Linnean Society*, **82**.
 <a href="http://dx.doi.org/10.1111/j.1095-8312.2004.00313.x">http://dx.doi.org/10.1111/j.1095-8312.2004.00313.x</a>.
-<p>Price S, Wainwright P, Bellwood D, Kazancioglu E, Collar D and Near T (2010).
-&ldquo;Functional Innovations And Morphological Diversification in Parrotfish.&rdquo;
-<EM>Evolution</EM>.
+
+- Price S, Wainwright P, Bellwood D, Kazancioglu E, Collar D and Near T (2010).
+"Functional Innovations And Morphological Diversification in Parrotfish."
+*Evolution*.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2010.01036.x">http://dx.doi.org/10.1111/j.1558-5646.2010.01036.x</a>.
-<p>Revell L (2009).
-&ldquo;Size-Correction And Principal Components For Interspecific Comparative Studies.&rdquo;
-<EM>Evolution</EM>, <B>63</B>.
+
+- Revell L (2009).
+"Size-Correction And Principal Components For Interspecific Comparative Studies."
+*Evolution*, **63**.
 ISSN 00143820, <a href="http://dx.doi.org/10.1111/j.1558-5646.2009.00804.x">http://dx.doi.org/10.1111/j.1558-5646.2009.00804.x</a>.

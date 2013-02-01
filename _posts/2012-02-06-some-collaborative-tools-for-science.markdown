@@ -69,9 +69,11 @@ We discussed that any of these tools can be used at varying degrees of openness.
 It's easy to worry about giving away your science.  But giving it away can be really hard, as anyone whose replicated someone else's publication knows.  I've tried to make it easy, but I bet it's never as simple as I imagine.  Can you find and replicate a graph I've produced this week, name two papers I've read (did I like them?), or find technical question where I've been stuck and the code where I implemented the solution someone suggested?  What question am I most interested in answering right now?  (Thinking I'll add answer links later).
 
 
+
 ## References
 
-<p>Eysenbach G (2011).
-&ldquo;Can Tweets Predict Citations? Metrics of Social Impact Based on Twitter And Correlation With Traditional Metrics of Scientific Impact.&rdquo;
-<EM>Journal of Medical Internet Research</EM>, <B>13</B>.
+
+- Eysenbach G (2011).
+"Can Tweets Predict Citations? Metrics of Social Impact Based on Twitter And Correlation With Traditional Metrics of Scientific Impact."
+*Journal of Medical Internet Research*, **13**.
 <a href="http://dx.doi.org/10.2196/jmir.2012">http://dx.doi.org/10.2196/jmir.2012</a>.

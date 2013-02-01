@@ -146,41 +146,51 @@ e.g.
 
 
 And wow, the new Ubuntu release (11.04, Natty Nawhal) is no small shift. OpenOffice->LibreOffice, Rhythmbox replaced with Banshee, and omg, the veritable GNOME interface replaced with something I've never heard of ([Unity](http://en.wikipedia.org/wiki/Unity_%28desktop_environment%29), developed by Canonical). Described as a "smart-phone style" interface and "easier than a Mac", I don't know -- if those things should count as universal praise. Overall pretty [promising](http://www.zdnet.com/blog/open-source/what-you-need-to-know-about-the-new-ubuntu/8760).
+
 ## References
 
-<p>Shelton A and Mangel M (2011).
-&ldquo;Fluctuations of Fish Populations And The Magnifying Effects of Fishing.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- Shelton A and Mangel M (2011).
+"Fluctuations of Fish Populations And The Magnifying Effects of Fishing."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1100334108">http://dx.doi.org/10.1073/pnas.1100334108</a>.
-<p>Dakos V, Kéfi S, Rietkerk M, van Nes E and Scheffer M (2011).
-&ldquo;Slowing Down in Spatially Patterned Ecosystems at The Brink of Collapse.&rdquo;
-<EM>The American Naturalist</EM>, <B>177</B>.
+
+- Dakos V, Kéfi S, Rietkerk M, van Nes E and Scheffer M (2011).
+"Slowing Down in Spatially Patterned Ecosystems at The Brink of Collapse."
+*The American Naturalist*, **177**.
 ISSN 00030147, <a href="http://dx.doi.org/10.1086/659945">http://dx.doi.org/10.1086/659945</a>.
-<p>Carpenter S, Cole J, Pace M, Batt R, Brock W, Cline T, Coloso J, Hodgson J, Kitchell J, Seekell D, Smith L and Weidel B (2011).
-&ldquo;Early Warnings of Regime Shifts: A Whole-Ecosystem Experiment.&rdquo;
-<EM>Science</EM>, <B>332</B>.
+
+- Carpenter S, Cole J, Pace M, Batt R, Brock W, Cline T, Coloso J, Hodgson J, Kitchell J, Seekell D, Smith L and Weidel B (2011).
+"Early Warnings of Regime Shifts: A Whole-Ecosystem Experiment."
+*Science*, **332**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1203672">http://dx.doi.org/10.1126/science.1203672</a>.
-<p>Watson J and Estes J (2011).
-&ldquo;Stability, Resilience, And Phase Shifts in Rocky Subtidal Communities Along The West Coast of Vancouver Island, Canada.&rdquo;
-<EM>Ecological Monographs</EM>, <B>81</B>.
+
+- Watson J and Estes J (2011).
+"Stability, Resilience, And Phase Shifts in Rocky Subtidal Communities Along The West Coast of Vancouver Island, Canada."
+*Ecological Monographs*, **81**.
 ISSN 0012-9615, <a href="http://dx.doi.org/10.1890/10-0262.1">http://dx.doi.org/10.1890/10-0262.1</a>.
-<p>Rabosky D, Donnellan S, Talaba A and Lovette I (2007).
-&ldquo;Exceptional Among-Lineage Variation in Diversification Rates During The Radiation of Australia'S Most Diverse Vertebrate Clade.&rdquo;
-<EM>Proceedings of The Royal Society B: Biological Sciences</EM>, <B>274</B>.
+
+- Rabosky D, Donnellan S, Talaba A and Lovette I (2007).
+"Exceptional Among-Lineage Variation in Diversification Rates During The Radiation of Australia'S Most Diverse Vertebrate Clade."
+*Proceedings of The Royal Society B: Biological Sciences*, **274**.
 ISSN 0962-8452, <a href="http://dx.doi.org/10.1098/rspb.2007.0924">http://dx.doi.org/10.1098/rspb.2007.0924</a>.
-<p>Rabosky D (2010).
-&ldquo;Extinction Rates Should Not be Estimated From Molecular Phylogenies.&rdquo;
-<EM>Evolution</EM>, <B>64</B>.
+
+- Rabosky D (2010).
+"Extinction Rates Should Not be Estimated From Molecular Phylogenies."
+*Evolution*, **64**.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2009.00926.x">http://dx.doi.org/10.1111/j.1558-5646.2009.00926.x</a>.
-<p>Alfaro M, Santini F, Brock C, Alamillo H, Dornburg A, Rabosky D, Carnevale G and Harmon L (2009).
-&ldquo;Nine Exceptional Radiations Plus High Turnover Explain Species Diversity in Jawed Vertebrates.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>106</B>.
+
+- Alfaro M, Santini F, Brock C, Alamillo H, Dornburg A, Rabosky D, Carnevale G and Harmon L (2009).
+"Nine Exceptional Radiations Plus High Turnover Explain Species Diversity in Jawed Vertebrates."
+*Proceedings of The National Academy of Sciences*, **106**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.0811087106">http://dx.doi.org/10.1073/pnas.0811087106</a>.
-<p>Sidlauskas B, Bernard C, Bloom D, Bronaugh W, Clementson M and Vari R (2011).
-&ldquo;Ichthyologists Hooked on Facebook.&rdquo;
-<EM>Science</EM>, <B>332</B>.
+
+- Sidlauskas B, Bernard C, Bloom D, Bronaugh W, Clementson M and Vari R (2011).
+"Ichthyologists Hooked on Facebook."
+*Science*, **332**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.332.6029.537-c">http://dx.doi.org/10.1126/science.332.6029.537-c</a>.
-<p>Price S, Wainwright P, Bellwood D, Kazancioglu E, Collar D and Near T (2010).
-&ldquo;Functional Innovations And Morphological Diversification in Parrotfish.&rdquo;
-<EM>Evolution</EM>.
+
+- Price S, Wainwright P, Bellwood D, Kazancioglu E, Collar D and Near T (2010).
+"Functional Innovations And Morphological Diversification in Parrotfish."
+*Evolution*.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2010.01036.x">http://dx.doi.org/10.1111/j.1558-5646.2010.01036.x</a>.

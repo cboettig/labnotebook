@@ -143,13 +143,16 @@ Looking over the[ NSF Biology post-doc position](http://www.nsf.gov/pubs/2010/ns
 > 
 
 
+
 ## References
 
-<p>Paradis E (2012).
-&ldquo;Shift in Diversification in Sister-Clade Comparisons: A More Powerful Test.&rdquo;
-<EM>Evolution</EM>, <B>66</B>.
+
+- Paradis E (2012).
+"Shift in Diversification in Sister-Clade Comparisons: A More Powerful Test."
+*Evolution*, **66**.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2011.01429.x">http://dx.doi.org/10.1111/j.1558-5646.2011.01429.x</a>.
-<p>Revell L, Mahler D, Peres-Neto P and Redelings B (2012).
-&ldquo;A New Phylogenetic Method For Identifying Exceptional Phenotypic Diversification.&rdquo;
-<EM>Evolution</EM>, <B>66</B>.
+
+- Revell L, Mahler D, Peres-Neto P and Redelings B (2012).
+"A New Phylogenetic Method For Identifying Exceptional Phenotypic Diversification."
+*Evolution*, **66**.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2011.01435.x">http://dx.doi.org/10.1111/j.1558-5646.2011.01435.x</a>.

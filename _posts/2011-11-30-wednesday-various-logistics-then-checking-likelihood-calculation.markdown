@@ -95,13 +95,16 @@ Into the C code, checking the equations & implementation of the likelihood calcu
 Day's plots on the feed:
 
 [flickr-gallery mode="search" tags="phylogenetics pdgcontrol" min_upload_date="2011-11-30 7:00:37" max_upload_date="2011-11-30 23:23:37"]
+
 ## References
 
-<p>Dulvy N, Sadovy Y and Reynolds J (2003).
-&ldquo;Extinction Vulnerability in Marine Populations.&rdquo;
-<EM>Fish And Fisheries</EM>, <B>4</B>.
+
+- Dulvy N, Sadovy Y and Reynolds J (2003).
+"Extinction Vulnerability in Marine Populations."
+*Fish And Fisheries*, **4**.
 ISSN 1467-2960, <a href="http://dx.doi.org/10.1046/j.1467-2979.2003.00105.x">http://dx.doi.org/10.1046/j.1467-2979.2003.00105.x</a>.
-<p>Le Quesne W and Jennings S (2012).
-&ldquo;Predicting Species Vulnerability With Minimal Data to Support Rapid Risk Assessment of Fishing Impacts on Biodiversity.&rdquo;
-<EM>Journal of Applied Ecology</EM>, <B>49</B>.
+
+- Le Quesne W and Jennings S (2012).
+"Predicting Species Vulnerability With Minimal Data to Support Rapid Risk Assessment of Fishing Impacts on Biodiversity."
+*Journal of Applied Ecology*, **49**.
 <a href="http://dx.doi.org/10.1111/j.1365-2664.2011.02087.x">http://dx.doi.org/10.1111/j.1365-2664.2011.02087.x</a>.

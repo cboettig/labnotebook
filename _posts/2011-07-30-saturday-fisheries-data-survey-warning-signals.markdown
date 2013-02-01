@@ -65,13 +65,16 @@ Working on incorporating comments from Friday's practice talk.
   * Some ESA planning
 
 
+
 ## References
 
-<p>Carpenter S and Brock W (2011).
-&ldquo;Early Warnings of Unknown Nonlinear Shifts: A Nonparametric Approach.&rdquo;
-<EM>Ecology</EM>, <B>92</B>.
+
+- Carpenter S and Brock W (2011).
+"Early Warnings of Unknown Nonlinear Shifts: A Nonparametric Approach."
+*Ecology*, **92**.
 ISSN 0012-9658, <a href="http://dx.doi.org/10.1890/11-0716.1">http://dx.doi.org/10.1890/11-0716.1</a>.
-<p>Johannes M (2004).
-&ldquo;The Statistical And Economic Role of Jumps in Continuous-Time Interest Rate Models.&rdquo;
-<EM>The Journal of Finance</EM>, <B>59</B>.
+
+- Johannes M (2004).
+"The Statistical And Economic Role of Jumps in Continuous-Time Interest Rate Models."
+*The Journal of Finance*, **59**.
 ISSN 0022-1082, <a href="http://dx.doi.org/10.1111/j.1540-6321.2004.00632.x">http://dx.doi.org/10.1111/j.1540-6321.2004.00632.x</a>.

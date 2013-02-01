@@ -51,13 +51,16 @@ Mostly working on manuscript revisions throughout this week.  Haven't really le
 
 
 [iframe https://github.com/cboettig/Comparative-Phylogenetics/commits/master/writeups/likelihoodRatio/likelihoodRatio.tex 100% 400]
+
 ## References
 
-<p>Peng R (2009).
-&ldquo;Reproducible Research And Biostatistics.&rdquo;
-<EM>Biostatistics</EM>, <B>10</B>.
+
+- Peng R (2009).
+"Reproducible Research And Biostatistics."
+*Biostatistics*, **10**.
 ISSN 1465-4644, <a href="http://dx.doi.org/10.1093/biostatistics/kxp014">http://dx.doi.org/10.1093/biostatistics/kxp014</a>.
-<p>Lee D, Ferguson C and Mitchell R (2009).
-&ldquo;Air Pollution And Health in Scotland: A Multicity Study.&rdquo;
-<EM>Biostatistics</EM>, <B>10</B>.
+
+- Lee D, Ferguson C and Mitchell R (2009).
+"Air Pollution And Health in Scotland: A Multicity Study."
+*Biostatistics*, **10**.
 ISSN 1465-4644, <a href="http://dx.doi.org/10.1093/biostatistics/kxp010">http://dx.doi.org/10.1093/biostatistics/kxp010</a>.

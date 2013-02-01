@@ -90,9 +90,11 @@ mostly education stuff
 
 
 [Should the Culture of University Science Education Be Changed?](http://www.physics.indiana.edu/~hake)
+
 ## References
 
-<p>Anderson W, Banerjee U, Drennan C, Elgin S, Epstein I, Handelsman J, Hatfull G, Losick R, O'Dowd D, Olivera B, Strobel S, Walker G and Warner I (2011).
-&ldquo;Changing The Culture of Science Education at Research Universities.&rdquo;
-<EM>Science</EM>, <B>331</B>.
+
+- Anderson W, Banerjee U, Drennan C, Elgin S, Epstein I, Handelsman J, Hatfull G, Losick R, O'Dowd D, Olivera B, Strobel S, Walker G and Warner I (2011).
+"Changing The Culture of Science Education at Research Universities."
+*Science*, **331**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1198280">http://dx.doi.org/10.1126/science.1198280</a>.

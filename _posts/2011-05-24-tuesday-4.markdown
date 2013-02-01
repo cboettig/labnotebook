@@ -52,8 +52,10 @@ tags:
   * Morgan's exit seminar. 4-5p
 
 
+
 ## References
 
-<p>Albert J (unknown).
-&ldquo;Bayesian Computation With R.&rdquo;
-<EM>Unknown</EM>.
+
+- Albert J (unknown).
+"Bayesian Computation With R."
+*Unknown*.

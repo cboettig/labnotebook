@@ -99,21 +99,26 @@ Different signals in different measurements:
   * stage structured lumping loses many of the fluctuations.
 
 
+
 ## References
 
-<p>Hsieh C, Reiss C, Hunter J, Beddington J, May R and Sugihara G (2006).
-&ldquo;Fishing Elevates Variability in The Abundance of Exploited Species.&rdquo;
-<EM>Nature</EM>, <B>443</B>.
+
+- Hsieh C, Reiss C, Hunter J, Beddington J, May R and Sugihara G (2006).
+"Fishing Elevates Variability in The Abundance of Exploited Species."
+*Nature*, **443**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature05232">http://dx.doi.org/10.1038/nature05232</a>.
-<p>Anderson C, Hsieh C, Sandin S, Hewitt R, Hollowed A, Beddington J, May R and Sugihara G (2008).
-&ldquo;Why Fishing Magnifies Fluctuations in Fish Abundance.&rdquo;
-<EM>Nature</EM>, <B>452</B>.
+
+- Anderson C, Hsieh C, Sandin S, Hewitt R, Hollowed A, Beddington J, May R and Sugihara G (2008).
+"Why Fishing Magnifies Fluctuations in Fish Abundance."
+*Nature*, **452**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature06851">http://dx.doi.org/10.1038/nature06851</a>.
-<p>BJORNSTAD O, NISBET R and FROMENTIN J (2004).
-&ldquo;Trends And Cohort Resonant Effects in Age-Structured Populations.&rdquo;
-<EM>Journal of Animal Ecology</EM>, <B>73</B>.
+
+- BJORNSTAD O, NISBET R and FROMENTIN J (2004).
+"Trends And Cohort Resonant Effects in Age-Structured Populations."
+*Journal of Animal Ecology*, **73**.
 ISSN 0021-8790, <a href="http://dx.doi.org/10.1111/j.0021-8790.2004.00888.x">http://dx.doi.org/10.1111/j.0021-8790.2004.00888.x</a>.
-<p>Worden L, Botsford L, Hastings A and Holland M (2010).
-&ldquo;Frequency Responses of Age-Structured Populations: Pacific Salmon as an Example.&rdquo;
-<EM>Theoretical Population Biology</EM>, <B>78</B>.
+
+- Worden L, Botsford L, Hastings A and Holland M (2010).
+"Frequency Responses of Age-Structured Populations: Pacific Salmon as an Example."
+*Theoretical Population Biology*, **78**.
 ISSN 00405809, <a href="http://dx.doi.org/10.1016/j.tpb.2010.07.004">http://dx.doi.org/10.1016/j.tpb.2010.07.004</a>.

@@ -311,9 +311,11 @@ tags:
 
 
 
+
 ## References
 
-<p>Greenspun P (1995).
-&ldquo;we Have Chosen Shame And Will Get War.&rdquo;
-<EM>Journal of Electronic Publishing</EM>, <B>1</B>.
+
+- Greenspun P (1995).
+"we Have Chosen Shame And Will Get War."
+*Journal of Electronic Publishing*, **1**.
 <a href="http://dx.doi.org/10.3998/3336451.0001.137">http://dx.doi.org/10.3998/3336451.0001.137</a>.

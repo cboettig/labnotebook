@@ -103,9 +103,11 @@ Example queries:
 
 
 
+
 ## References
 
-<p>Bortolussi N, Durand E, Blum M and Francois O (2005).
-&ldquo;Aptreeshape: Statistical Analysis of Phylogenetic Tree Shape.&rdquo;
-<EM>Bioinformatics</EM>, <B>22</B>.
+
+- Bortolussi N, Durand E, Blum M and Francois O (2005).
+"Aptreeshape: Statistical Analysis of Phylogenetic Tree Shape."
+*Bioinformatics*, **22**.
 ISSN 1367-4803, <a href="http://dx.doi.org/10.1093/bioinformatics/bti798">http://dx.doi.org/10.1093/bioinformatics/bti798</a>.

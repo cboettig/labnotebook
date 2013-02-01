@@ -90,17 +90,21 @@ Which is simply not useful, as it recovers our original expression (Factor out t
   * Try implementing automatic estimates for summary statistics? see [paper](http://arxiv.org/abs/1004.1112), via [C. Robert's blog](http://xianblog.wordpress.com/2011/04/18/semi-automatic-abc-revised/).
 
 
+
 ## References
 
-<p>Csilléry K, Blum M, Gaggiotti O and François O (2010).
-&ldquo;Approximate Bayesian Computation (Abc) in Practice.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>25</B>.
+
+- Csilléry K, Blum M, Gaggiotti O and François O (2010).
+"Approximate Bayesian Computation (Abc) in Practice."
+*Trends in Ecology &amp; Evolution*, **25**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2010.04.001">http://dx.doi.org/10.1016/j.tree.2010.04.001</a>.
-<p>Wegmann D, Leuenberger C and Excoffier L (2009).
-&ldquo;Efficient Approximate Bayesian Computation Coupled With Markov Chain Monte Carlo Without Likelihood.&rdquo;
-<EM>Genetics</EM>, <B>182</B>.
+
+- Wegmann D, Leuenberger C and Excoffier L (2009).
+"Efficient Approximate Bayesian Computation Coupled With Markov Chain Monte Carlo Without Likelihood."
+*Genetics*, **182**.
 ISSN 0016-6731, <a href="http://dx.doi.org/10.1534/genetics.109.102509">http://dx.doi.org/10.1534/genetics.109.102509</a>.
-<p>Marjoram P (2003).
-&ldquo;Markov Chain Monte Carlo Without Likelihoods.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>100</B>.
+
+- Marjoram P (2003).
+"Markov Chain Monte Carlo Without Likelihoods."
+*Proceedings of The National Academy of Sciences*, **100**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.0306899100">http://dx.doi.org/10.1073/pnas.0306899100</a>.

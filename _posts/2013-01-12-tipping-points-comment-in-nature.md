@@ -33,7 +33,8 @@ In our comment, this comes off as condeming the generality of warning signals.  
 Unfortunately the piece is not available open access (though do write to me for a reprint if you are interested).  I can distribute the original text in 6 months.  As an advocate for open science, my 0/9 record of publishing in open access journals might raise eyebrows, if also unequivocally demonstrating my commitment to pragmatism ;-). All my other papers are available through as green open access/preprints on arXiv, and I hope this one can join them when the terms permit.  
 
 
-# References
+
+## References
 
 1. Lade, S. J. & Gross, T. Early Warning Signals for Critical Transitions: A Generalized Modeling Approach. PLoS Computational Biology 8, e1002360 (2012). doi:10.1371/journal.pcbi.1002360
 1. Schreiber, S. J. & Rudolf, V. H. W. Crossing habitat boundaries: coupling dynamics of ecosystems through complex life cycles. Ecology Letters 11, 576–87 (2008). doi:10.1111/j.1461-0248.2008.01171.x

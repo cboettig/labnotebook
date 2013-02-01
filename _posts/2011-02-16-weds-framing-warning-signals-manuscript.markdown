@@ -99,13 +99,16 @@ Current paper uses the former of both, following the outline
  ![]( http://farm6.staticflickr.com/5172/5406203293_6d756a27d4_o.png )
  ![]( http://farm6.staticflickr.com/5260/5411625926_2f8fb084b2_o.png )
 
+
 ## References
 
-<p>Sullivan J and Joyce P (2005).
-&ldquo;Model Selection in Phylogenetics.&rdquo;
-<EM>Annual Review of Ecology, Evolution, And Systematics</EM>, <B>36</B>.
+
+- Sullivan J and Joyce P (2005).
+"Model Selection in Phylogenetics."
+*Annual Review of Ecology, Evolution, And Systematics*, **36**.
 ISSN 1543-592X, <a href="http://dx.doi.org/10.1146/annurev.ecolsys.36.102003.152633">http://dx.doi.org/10.1146/annurev.ecolsys.36.102003.152633</a>.
-<p>McLachlan G (1987).
-&ldquo;on Bootstrapping The Likelihood Ratio Test Stastistic For The Number of Components in A Normal Mixture.&rdquo;
-<EM>Applied Statistics</EM>, <B>36</B>.
+
+- McLachlan G (1987).
+"on Bootstrapping The Likelihood Ratio Test Stastistic For The Number of Components in A Normal Mixture."
+*Applied Statistics*, **36**.
 ISSN 00359254, <a href="http://dx.doi.org/10.2307/2347790">http://dx.doi.org/10.2307/2347790</a>.

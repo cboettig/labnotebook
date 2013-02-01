@@ -114,13 +114,16 @@ $$ \frac{dP}{dt} = sP\left( 1-\frac{P}{K(C)}\right) - fP$$
 K(C) is from territorial limits, rather than food limits.  (Blackwood _et. al._ 2010)
 
 Adding habitat quality (Blackwood _et. al._ 2011).
+
 ## References
 
-<p>Blackwood J, Hastings A and Mumby P (2010).
-&ldquo;The Effect of Fishing on Hysteresis in Caribbean Coral Reefs.&rdquo;
-<EM>Theoretical Ecology</EM>, <B>5</B>.
+
+- Blackwood J, Hastings A and Mumby P (2010).
+"The Effect of Fishing on Hysteresis in Caribbean Coral Reefs."
+*Theoretical Ecology*, **5**.
 ISSN 1874-1738, <a href="http://dx.doi.org/10.1007/s12080-010-0102-0">http://dx.doi.org/10.1007/s12080-010-0102-0</a>.
-<p>Blackwood J, Hastings A and Mumby P (2011).
-&ldquo;A Model-Based Approach to Determine The Long-Term Effects of Multiple Interacting Stressors on Coral Reefs.&rdquo;
-<EM>Ecological Applications</EM>, <B>21</B>.
+
+- Blackwood J, Hastings A and Mumby P (2011).
+"A Model-Based Approach to Determine The Long-Term Effects of Multiple Interacting Stressors on Coral Reefs."
+*Ecological Applications*, **21**.
 ISSN 1051-0761, <a href="http://dx.doi.org/10.1890/10-2195.1">http://dx.doi.org/10.1890/10-2195.1</a>.

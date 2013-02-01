@@ -231,13 +231,16 @@ $0 = \partial_u H(x, U(x,\lambda,t), \lambda, t)$
 which satisfies the costate equation, the law of motion, and the boundary value problem.
 
 
+
 ## References
 
-<p>Sanchirico J and Wilen J (2005).
-&ldquo;Optimal Spatial Management of Renewable Resources: Matching Policy Scope to Ecosystem Scale.&rdquo;
-<EM>Journal of Environmental Economics And Management</EM>, <B>50</B>.
+
+- Sanchirico J and Wilen J (2005).
+"Optimal Spatial Management of Renewable Resources: Matching Policy Scope to Ecosystem Scale."
+*Journal of Environmental Economics And Management*, **50**.
 ISSN 00950696, <a href="http://dx.doi.org/10.1016/j.jeem.2004.11.001">http://dx.doi.org/10.1016/j.jeem.2004.11.001</a>.
-<p>Sanchirico J, Wilen J and Coleman C (2010).
-&ldquo;Optimal Rebuilding of A Metapopulation.&rdquo;
-<EM>American Journal of Agricultural Economics</EM>, <B>92</B>.
+
+- Sanchirico J, Wilen J and Coleman C (2010).
+"Optimal Rebuilding of A Metapopulation."
+*American Journal of Agricultural Economics*, **92**.
 ISSN 0002-9092, <a href="http://dx.doi.org/10.1093/ajae/aaq045">http://dx.doi.org/10.1093/ajae/aaq045</a>.

@@ -85,9 +85,11 @@ Factors:
   * wind (disperses plume)
 
 
+
 ## References
 
-<p>POWELL J, KENNEDY B, WHITE P, BENTZ B, LOGAN J and ROBERTS D (2000).
-&ldquo;Mathematical Elements of Attack Risk Analysis For Mountain Pine Beetles.&rdquo;
-<EM>Journal of Theoretical Biology</EM>, <B>204</B>.
+
+- POWELL J, KENNEDY B, WHITE P, BENTZ B, LOGAN J and ROBERTS D (2000).
+"Mathematical Elements of Attack Risk Analysis For Mountain Pine Beetles."
+*Journal of Theoretical Biology*, **204**.
 ISSN 00225193, <a href="http://dx.doi.org/10.1006/jtbi.2000.1080">http://dx.doi.org/10.1006/jtbi.2000.1080</a>.

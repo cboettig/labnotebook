@@ -91,17 +91,21 @@ I'll have to figure out which posts I would actually tag as research blogging. 
 
 
 Pushed my [R tag](http://www.carlboettiger.info/archives/tag/r/feed/rss) as an RSS to [R-bloggers](http://www.r-bloggers.com/).  Includes two posts so far.
+
 ## References
 
-<p>Jones M, Schildhauer M, Reichman O and Bowers S (2006).
-&ldquo;The New Bioinformatics: Integrating Ecological Data From The Gene to The Biosphere.&rdquo;
-<EM>Annual Review of Ecology, Evolution, And Systematics</EM>, <B>37</B>.
+
+- Jones M, Schildhauer M, Reichman O and Bowers S (2006).
+"The New Bioinformatics: Integrating Ecological Data From The Gene to The Biosphere."
+*Annual Review of Ecology, Evolution, And Systematics*, **37**.
 ISSN 1543-592X, <a href="http://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110031">http://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110031</a>.
-<p>Asai D (2011).
-&ldquo;Measuring Student Development.&rdquo;
-<EM>Science</EM>, <B>332</B>.
+
+- Asai D (2011).
+"Measuring Student Development."
+*Science*, **332**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1207680">http://dx.doi.org/10.1126/science.1207680</a>.
-<p>Moskovitz C and Kellogg D (2011).
-&ldquo;Inquiry-Based Writing in The Laboratory Course.&rdquo;
-<EM>Science</EM>, <B>332</B>.
+
+- Moskovitz C and Kellogg D (2011).
+"Inquiry-Based Writing in The Laboratory Course."
+*Science*, **332**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1200353">http://dx.doi.org/10.1126/science.1200353</a>.

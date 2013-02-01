@@ -70,9 +70,11 @@ Checked profiling speed with http://gtmetrix.com/.  Added [wp-minify](http://wor
 Seems like further performance increases could best be accomplished with Content Delivery Network (CDN) option.  Several plugins provide this. [Use-google-libraries](http://wordpress.org/extend/plugins/use-google-libraries/) uses a couple public CDNs that google has made available for popular AJAX scripts such as jQuery.  Super Cache works with the extension [CDN sync tool](http://wordpress.org/extend/plugins/cdn-sync-tool/), [w3-total-cache](http://wordpress.org/extend/plugins/w3-total-cache) provides CDN option as well.
 
 Sounds like CDN for mathjax could be particularly valuable.  Some [description of this](http://sites.google.com/site/mathjaxproject/design-documents/cdn-hosting-plan) from the mathjax folks, not clear if they are providing the actual CDN or just the code to set one up?  Not clear how to implement this on wordpress, but seeing if the knowledge-blog folks have any ideas.
+
 ## References
 
-<p>Ane C, Larget B, Baum D, Smith S and Rokas A (2006).
-&ldquo;Bayesian Estimation of Concordance Among Gene Trees.&rdquo;
-<EM>Molecular Biology And Evolution</EM>, <B>24</B>.
+
+- Ane C, Larget B, Baum D, Smith S and Rokas A (2006).
+"Bayesian Estimation of Concordance Among Gene Trees."
+*Molecular Biology And Evolution*, **24**.
 ISSN 0737-4038, <a href="http://dx.doi.org/10.1093/molbev/msl170">http://dx.doi.org/10.1093/molbev/msl170</a>.

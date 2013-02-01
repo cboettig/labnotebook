@@ -67,13 +67,16 @@ since flickr_upload protocol wants a single element string for comments and tags
   * Interview with first Dean candidate 4:15-5:30.
 
 
+
 ## References
 
-<p>Schreiber S and Rudolf V (2008).
-&ldquo;Crossing Habitat Boundaries: Coupling Dynamics of Ecosystems Through Complex Life Cycles.&rdquo;
-<EM>Ecology Letters</EM>, <B>11</B>.
+
+- Schreiber S and Rudolf V (2008).
+"Crossing Habitat Boundaries: Coupling Dynamics of Ecosystems Through Complex Life Cycles."
+*Ecology Letters*, **11**.
 <a href="http://dx.doi.org/10.1111/j.1461-0248.2008.01171.x">http://dx.doi.org/10.1111/j.1461-0248.2008.01171.x</a>.
-<p>Rumala B, Hidary J, Ewool L, Emdin C and Scovell T (2011).
-&ldquo;Tailoring Science Outreach Through E-Matching Using A Community-Based Participatory Approach.&rdquo;
-<EM>Plos Biology</EM>, <B>9</B>.
+
+- Rumala B, Hidary J, Ewool L, Emdin C and Scovell T (2011).
+"Tailoring Science Outreach Through E-Matching Using A Community-Based Participatory Approach."
+*Plos Biology*, **9**.
 <a href="http://dx.doi.org/10.1371/journal.pbio.1001026">http://dx.doi.org/10.1371/journal.pbio.1001026</a>.

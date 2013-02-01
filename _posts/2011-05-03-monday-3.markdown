@@ -108,13 +108,16 @@ Application requires a list of outreach activities.  Assembling here for my rec
 
 
 
+
 ## References
 
-<p>Heled J and Drummond A (2009).
-&ldquo;Bayesian Inference of Species Trees From Multilocus Data.&rdquo;
-<EM>Molecular Biology And Evolution</EM>, <B>27</B>.
+
+- Heled J and Drummond A (2009).
+"Bayesian Inference of Species Trees From Multilocus Data."
+*Molecular Biology And Evolution*, **27**.
 ISSN 0737-4038, <a href="http://dx.doi.org/10.1093/molbev/msp274">http://dx.doi.org/10.1093/molbev/msp274</a>.
-<p>Liu L, Pearl D, Brumfield R and Edwards S (2008).
-&ldquo;Estimating Species Trees Using Multiple-Allele Dna Sequence Data.&rdquo;
-<EM>Evolution</EM>, <B>62</B>.
+
+- Liu L, Pearl D, Brumfield R and Edwards S (2008).
+"Estimating Species Trees Using Multiple-Allele Dna Sequence Data."
+*Evolution*, **62**.
 ISSN 00143820, <a href="http://dx.doi.org/10.1111/j.1558-5646.2008.00414.x">http://dx.doi.org/10.1111/j.1558-5646.2008.00414.x</a>.

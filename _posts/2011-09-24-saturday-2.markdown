@@ -76,9 +76,11 @@ _**Working on reviews (see private notes) **_3-6pm
 
 
 (Meredith _et. al._ 2011)
+
 ## References
 
-<p>Meredith R, Janecka J, Gatesy J, Ryder O, Fisher C, Teeling E, Goodbla A, Eizirik E, Simao T, Stadler T, Rabosky D, Honeycutt R, Flynn J, Ingram C, Steiner C, Williams T, Robinson T, Burk-Herrick A, Westerman M, Ayoub N, Springer M and Murphy W (2011).
-&ldquo;Impacts of The Cretaceous Terrestrial Revolution And Kpg Extinction on Mammal Diversification.&rdquo;
-<EM>Science</EM>, <B>334</B>.
+
+- Meredith R, Janecka J, Gatesy J, Ryder O, Fisher C, Teeling E, Goodbla A, Eizirik E, Simao T, Stadler T, Rabosky D, Honeycutt R, Flynn J, Ingram C, Steiner C, Williams T, Robinson T, Burk-Herrick A, Westerman M, Ayoub N, Springer M and Murphy W (2011).
+"Impacts of The Cretaceous Terrestrial Revolution And Kpg Extinction on Mammal Diversification."
+*Science*, **334**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1211028">http://dx.doi.org/10.1126/science.1211028</a>.

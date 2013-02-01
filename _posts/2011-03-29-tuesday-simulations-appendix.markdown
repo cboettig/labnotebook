@@ -51,9 +51,11 @@ Need code updates:
   * Still need to track filenames of code, not just commit numbers.
 
 
+
 ## References
 
-<p>Ralph P and Coop G (2010).
-&ldquo;Parallel Adaptation: One or Many Waves of Advance of an Advantageous Allele?&rdquo;
-<EM>Genetics</EM>, <B>186</B>.
+
+- Ralph P and Coop G (2010).
+"Parallel Adaptation: One or Many Waves of Advance of an Advantageous Allele?"
+*Genetics*, **186**.
 ISSN 0016-6731, <a href="http://dx.doi.org/10.1534/genetics.110.119594">http://dx.doi.org/10.1534/genetics.110.119594</a>.

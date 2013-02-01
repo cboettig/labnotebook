@@ -118,37 +118,46 @@ They find 3 data sets have true transitions with hysteresis, 1 which appears to 
 
 
 [Simple mechanistic models outperforming big autoregressive moving average models](http://andrewgelman.com/2012/01/the-last-word-on-the-canadian-lynx-series/).
+
 ## References
 
-<p>Page R (2012).
-&ldquo;Space, Time, Form: Viewing The Tree of Life.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>27</B>.
+
+- Page R (2012).
+"Space, Time, Form: Viewing The Tree of Life."
+*Trends in Ecology &amp; Evolution*, **27**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2011.12.002">http://dx.doi.org/10.1016/j.tree.2011.12.002</a>.
-<p>Michener W and Jones M (2012).
-&ldquo;Ecoinformatics: Supporting Ecology as A Data-Intensive Science.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>27</B>.
+
+- Michener W and Jones M (2012).
+"Ecoinformatics: Supporting Ecology as A Data-Intensive Science."
+*Trends in Ecology &amp; Evolution*, **27**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2011.11.016">http://dx.doi.org/10.1016/j.tree.2011.11.016</a>.
-<p>Porter J, Hanson P and Lin C (2012).
-&ldquo;Staying Afloat in The Sensor Data Deluge.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>27</B>.
+
+- Porter J, Hanson P and Lin C (2012).
+"Staying Afloat in The Sensor Data Deluge."
+*Trends in Ecology &amp; Evolution*, **27**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2011.11.009">http://dx.doi.org/10.1016/j.tree.2011.11.009</a>.
-<p>Hochachka W, Fink D, Hutchinson R, Sheldon D, Wong W and Kelling S (2012).
-&ldquo;Data-Intensive Science Applied to Broad-Scale Citizen Science.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>27</B>.
+
+- Hochachka W, Fink D, Hutchinson R, Sheldon D, Wong W and Kelling S (2012).
+"Data-Intensive Science Applied to Broad-Scale Citizen Science."
+*Trends in Ecology &amp; Evolution*, **27**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2011.11.006">http://dx.doi.org/10.1016/j.tree.2011.11.006</a>.
-<p>Parr C, Guralnick R, Cellinese N and Page R (2012).
-&ldquo;Evolutionary Informatics: Unifying Knowledge About The Diversity of Life.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>27</B>.
+
+- Parr C, Guralnick R, Cellinese N and Page R (2012).
+"Evolutionary Informatics: Unifying Knowledge About The Diversity of Life."
+*Trends in Ecology &amp; Evolution*, **27**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2011.11.001">http://dx.doi.org/10.1016/j.tree.2011.11.001</a>.
-<p>Brewer S, Jackson S and Williams J (2012).
-&ldquo;Paleoecoinformatics: Applying Geohistorical Data to Ecological Questions.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>27</B>.
+
+- Brewer S, Jackson S and Williams J (2012).
+"Paleoecoinformatics: Applying Geohistorical Data to Ecological Questions."
+*Trends in Ecology &amp; Evolution*, **27**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2011.09.009">http://dx.doi.org/10.1016/j.tree.2011.09.009</a>.
-<p>Giles J (2012).
-&ldquo;Going Paperless: The Digital Lab.&rdquo;
-<EM>Nature</EM>, <B>481</B>.
+
+- Giles J (2012).
+"Going Paperless: The Digital Lab."
+*Nature*, **481**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/481430a">http://dx.doi.org/10.1038/481430a</a>.
-<p>Spiegel D and Turner E (2011).
-&ldquo;Bayesian Analysis of The Astrobiological Implications of Life'S Early Emergence on Earth.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>109</B>.
+
+- Spiegel D and Turner E (2011).
+"Bayesian Analysis of The Astrobiological Implications of Life'S Early Emergence on Earth."
+*Proceedings of The National Academy of Sciences*, **109**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1111694108">http://dx.doi.org/10.1073/pnas.1111694108</a>.

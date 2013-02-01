@@ -56,7 +56,8 @@ On likelihood based model selection vs model based estimates of process:
 
 \
 
-### References
+
+## References
 
 1.  [Ellner SP and Rees M.
     .](http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?cmd=prlinks&dbfrom=pubmed&retmode=ref&id=16673349 "View or buy article from publisher (if available)")

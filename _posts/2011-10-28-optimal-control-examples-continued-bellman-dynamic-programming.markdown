@@ -146,21 +146,26 @@ Can these lead to oscillating solutions in as the number of state equations incr
 
 
 ### 
+
 ## References
 
-<p>Myers R, Barrowman N, Hutchings J and Rosenberg A (1995).
-&ldquo;Population Dynamics of Exploited Fish Stocks at Low Population Levels.&rdquo;
-<EM>Science</EM>, <B>269</B>.
+
+- Myers R, Barrowman N, Hutchings J and Rosenberg A (1995).
+"Population Dynamics of Exploited Fish Stocks at Low Population Levels."
+*Science*, **269**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.269.5227.1106">http://dx.doi.org/10.1126/science.269.5227.1106</a>.
-<p>Mumby P, Hastings A and Edwards H (2007).
-&ldquo;Thresholds And The Resilience of Caribbean Coral Reefs.&rdquo;
-<EM>Nature</EM>, <B>450</B>.
+
+- Mumby P, Hastings A and Edwards H (2007).
+"Thresholds And The Resilience of Caribbean Coral Reefs."
+*Nature*, **450**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature06252">http://dx.doi.org/10.1038/nature06252</a>.
-<p>Blackwood J, Hastings A and Mumby P (2010).
-&ldquo;The Effect of Fishing on Hysteresis in Caribbean Coral Reefs.&rdquo;
-<EM>Theoretical Ecology</EM>, <B>5</B>.
+
+- Blackwood J, Hastings A and Mumby P (2010).
+"The Effect of Fishing on Hysteresis in Caribbean Coral Reefs."
+*Theoretical Ecology*, **5**.
 ISSN 1874-1738, <a href="http://dx.doi.org/10.1007/s12080-010-0102-0">http://dx.doi.org/10.1007/s12080-010-0102-0</a>.
-<p>Horan R, Fenichel E, Drury K and Lodge D (2011).
-&ldquo;Managing Ecological Thresholds in Coupled Environmental-Human Systems.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- Horan R, Fenichel E, Drury K and Lodge D (2011).
+"Managing Ecological Thresholds in Coupled Environmental-Human Systems."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1005431108">http://dx.doi.org/10.1073/pnas.1005431108</a>.

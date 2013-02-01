@@ -51,9 +51,11 @@ Notes from [Alex Pfaff](http://www.duke.edu/~asp9/cv&bio.html) talk at UTK (duri
 
 Discussion of ideas from [Tetlock](http://www.amazon.com/Expert-Political-Judgment-Good-Know/dp/0691123020) [Bruce Bueno de Mesquita](http://www.amazon.com/The-Predictioneers-Game-ebook/dp/B002PXFYOC/ref=sr_1_3?ie=UTF8&qid=1331397537&sr=8-3), and [Kevin Slavin](http://www.ted.com/talks/kevin_slavin_how_algorithms_shape_our_world.html) math derived from the world to math shaping the world.
 
+
 ## References
 
-<p>Joppa L and Pfaff A (2010).
-&ldquo;Reassessing The Forest Impacts of Protection.&rdquo;
-<EM>Annals of The New York Academy of Sciences</EM>, <B>1185</B>.
+
+- Joppa L and Pfaff A (2010).
+"Reassessing The Forest Impacts of Protection."
+*Annals of The New York Academy of Sciences*, **1185**.
 <a href="http://dx.doi.org/10.1111/j.1749-6632.2009.05162.x">http://dx.doi.org/10.1111/j.1749-6632.2009.05162.x</a>.

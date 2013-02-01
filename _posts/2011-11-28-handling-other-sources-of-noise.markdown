@@ -77,9 +77,11 @@ Each uses the log-normal distribution with $ \sigma = 0.2$.  Jake points out eco
 
 ![]( http://farm8.staticflickr.com/7015/6387499095_cf513cf0df_o.png )
 
+
 ## References
 
-<p>Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005).
-&ldquo;Fishery Management Under Multiple Uncertainty.&rdquo;
-<EM>Journal of Environmental Economics And Management</EM>, <B>50</B>.
+
+- Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005).
+"Fishery Management Under Multiple Uncertainty."
+*Journal of Environmental Economics And Management*, **50**.
 ISSN 00950696, <a href="http://dx.doi.org/10.1016/j.jeem.2004.11.005">http://dx.doi.org/10.1016/j.jeem.2004.11.005</a>.

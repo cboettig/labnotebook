@@ -116,9 +116,11 @@ edits continue:
   * Our Open Science talk for incoming students: [audio](http://www.archive.org/details/ThingsIWishIKnewThreeYearsAgo-ByTheDavisOpenScienceGroup&reCache=1) and [slides](http://hazelnusse.github.com/DOS_WOW2011/)  (using [deck.js](http://imakewebthings.github.com/deck.js/)) now posted.
 
 
+
 ## References
 
-<p>Smith A, Brown C, Bulman C, Fulton E, Johnson P, Kaplan I, Lozano-Montes H, Mackinson S, Marzloff M, Shannon L, Shin Y and Tam J (2011).
-&ldquo;Impacts of Fishing Low-Trophic Level Species on Marine Ecosystems.&rdquo;
-<EM>Science</EM>, <B>333</B>.
+
+- Smith A, Brown C, Bulman C, Fulton E, Johnson P, Kaplan I, Lozano-Montes H, Mackinson S, Marzloff M, Shannon L, Shin Y and Tam J (2011).
+"Impacts of Fishing Low-Trophic Level Species on Marine Ecosystems."
+*Science*, **333**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1209395">http://dx.doi.org/10.1126/science.1209395</a>.

@@ -113,13 +113,16 @@ Next week: I'll present week 3 with Matt Whalen, possibly Patrick.
 
 
 
+
 ## References
 
-<p>Alder J, Campbell B, Karpouzi V, Kaschner K and Pauly D (2008).
-&ldquo;Forage Fish: From Ecosystems to Markets.&rdquo;
-<EM>Annual Review of Environment And Resources</EM>, <B>33</B>.
+
+- Alder J, Campbell B, Karpouzi V, Kaschner K and Pauly D (2008).
+"Forage Fish: From Ecosystems to Markets."
+*Annual Review of Environment And Resources*, **33**.
 ISSN 1543-5938, <a href="http://dx.doi.org/10.1146/annurev.environ.33.020807.143204">http://dx.doi.org/10.1146/annurev.environ.33.020807.143204</a>.
-<p>May R, Beddington J, Clark C, Holt S and Laws R (1979).
-&ldquo;Management of Multispecies Fisheries.&rdquo;
-<EM>Science</EM>, <B>205</B>.
+
+- May R, Beddington J, Clark C, Holt S and Laws R (1979).
+"Management of Multispecies Fisheries."
+*Science*, **205**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.205.4403.267">http://dx.doi.org/10.1126/science.205.4403.267</a>.

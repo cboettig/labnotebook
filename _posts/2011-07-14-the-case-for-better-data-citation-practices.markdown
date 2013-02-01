@@ -68,45 +68,56 @@ Sharing Data from Large-scale Biological Research Projects: A System of Triparti
 
 
 
+
 ## References
 
-<p>Reichman O, Jones M and Schildhauer M (2011).
-&ldquo;Challenges And Opportunities of Open Data in Ecology.&rdquo;
-<EM>Science</EM>, <B>331</B>.
+
+- Reichman O, Jones M and Schildhauer M (2011).
+"Challenges And Opportunities of Open Data in Ecology."
+*Science*, **331**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1197962">http://dx.doi.org/10.1126/science.1197962</a>.
-<p>Vision T (2010).
-&ldquo;Open Data And The Social Contract of Scientific Publishing.&rdquo;
-<EM>Bioscience</EM>, <B>60</B>.
+
+- Vision T (2010).
+"Open Data And The Social Contract of Scientific Publishing."
+*Bioscience*, **60**.
 ISSN 0006-3568, <a href="http://dx.doi.org/10.1525/bio.2010.60.5.2">http://dx.doi.org/10.1525/bio.2010.60.5.2</a>.
-<p>Mons B, van Haagen H, Chichester C, Hoen P, den Dunnen J, van Ommen G, van Mulligen E, Singh B, Hooft R, Roos M, Hammond J, Kiesel B, Giardine B, Velterop J, Groth P and Schultes E (2011).
-&ldquo;The Value of Data.&rdquo;
-<EM>Nature Genetics</EM>, <B>43</B>.
+
+- Mons B, van Haagen H, Chichester C, Hoen P, den Dunnen J, van Ommen G, van Mulligen E, Singh B, Hooft R, Roos M, Hammond J, Kiesel B, Giardine B, Velterop J, Groth P and Schultes E (2011).
+"The Value of Data."
+*Nature Genetics*, **43**.
 ISSN 1061-4036, <a href="http://dx.doi.org/10.1038/ng0411-281">http://dx.doi.org/10.1038/ng0411-281</a>.
-<p>unknown u (2009).
-&ldquo;Prepublication Data Sharing.&rdquo;
-<EM>Nature</EM>, <B>461</B>.
+
+- unknown u (2009).
+"Prepublication Data Sharing."
+*Nature*, **461**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/461168a">http://dx.doi.org/10.1038/461168a</a>.
-<p>Tenopir C, Allard S, Douglass K, Aydinoglu A, Wu L, Read E, Manoff M, Frame M and Neylon C (2011).
-&ldquo;Data Sharing by Scientists: Practices And Perceptions.&rdquo;
-<EM>Plos One</EM>, <B>6</B>.
+
+- Tenopir C, Allard S, Douglass K, Aydinoglu A, Wu L, Read E, Manoff M, Frame M and Neylon C (2011).
+"Data Sharing by Scientists: Practices And Perceptions."
+*Plos One*, **6**.
 <a href="http://dx.doi.org/10.1371/journal.pone.0021101">http://dx.doi.org/10.1371/journal.pone.0021101</a>.
-<p>Page R (2010).
-&ldquo;Enhanced Display of Scientific Articles Using Extended Metadata.&rdquo;
-<EM>Web Semantics: Science, Services And Agents on The World Wide Web</EM>, <B>8</B>.
+
+- Page R (2010).
+"Enhanced Display of Scientific Articles Using Extended Metadata."
+*Web Semantics: Science, Services And Agents on The World Wide Web*, **8**.
 ISSN 15708268, <a href="http://dx.doi.org/10.1016/j.websem.2010.03.004">http://dx.doi.org/10.1016/j.websem.2010.03.004</a>.
-<p>Constable H, Guralnick R, Wieczorek J, Spencer C and Peterson A (2010).
-&ldquo;Vertnet: A New Model For Biodiversity Data Sharing.&rdquo;
-<EM>Plos Biology</EM>, <B>8</B>.
+
+- Constable H, Guralnick R, Wieczorek J, Spencer C and Peterson A (2010).
+"Vertnet: A New Model For Biodiversity Data Sharing."
+*Plos Biology*, **8**.
 <a href="http://dx.doi.org/10.1371/journal.pbio.1000309">http://dx.doi.org/10.1371/journal.pbio.1000309</a>.
-<p>MOORE A, Mcpeek M, RAUSHER M, RIESEBERG L and WHITLOCK M (2010).
-&ldquo;The Need For Archiving Data in Evolutionary Biology.&rdquo;
-<EM>Journal of Evolutionary Biology</EM>, <B>23</B>.
+
+- MOORE A, Mcpeek M, RAUSHER M, RIESEBERG L and WHITLOCK M (2010).
+"The Need For Archiving Data in Evolutionary Biology."
+*Journal of Evolutionary Biology*, **23**.
 ISSN 1010061X, <a href="http://dx.doi.org/10.1111/j.1420-9101.2010.01937.x">http://dx.doi.org/10.1111/j.1420-9101.2010.01937.x</a>.
-<p>Whitlock M, McPeek M, Rausher M, Rieseberg L and Moore A (2010).
-&ldquo;Data Archiving.&rdquo;
-<EM>The American Naturalist</EM>, <B>175</B>.
+
+- Whitlock M, McPeek M, Rausher M, Rieseberg L and Moore A (2010).
+"Data Archiving."
+*The American Naturalist*, **175**.
 ISSN 0003-0147, <a href="http://dx.doi.org/10.1086/650340">http://dx.doi.org/10.1086/650340</a>.
-<p>Whitlock M (2011).
-&ldquo;Data Archiving in Ecology And Evolution: Best Practices.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>26</B>.
+
+- Whitlock M (2011).
+"Data Archiving in Ecology And Evolution: Best Practices."
+*Trends in Ecology &amp; Evolution*, **26**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2010.11.006">http://dx.doi.org/10.1016/j.tree.2010.11.006</a>.

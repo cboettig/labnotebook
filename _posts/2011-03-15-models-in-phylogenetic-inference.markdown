@@ -26,17 +26,21 @@ The strange thing about having a proportion of invariant sites (I) along with Ga
 
 
 The first claim referred to is between two distributions of I+$ \Gamma $ with $ \mu \neq \nu $ appearing graphically distinct.
+
 ## References
 
-<p>Perelman P, Johnson W, Roos C, Seuánez H, Horvath J, Moreira M, Kessing B, Pontius J, Roelke M, Rumpler Y, Schneider M, Silva A, O'Brien S, Pecon-Slattery J and Brosius J (2011).
-&ldquo;A Molecular Phylogeny of Living Primates.&rdquo;
-<EM>Plos Genetics</EM>, <B>7</B>.
+
+- Perelman P, Johnson W, Roos C, Seuánez H, Horvath J, Moreira M, Kessing B, Pontius J, Roelke M, Rumpler Y, Schneider M, Silva A, O'Brien S, Pecon-Slattery J and Brosius J (2011).
+"A Molecular Phylogeny of Living Primates."
+*Plos Genetics*, **7**.
 <a href="http://dx.doi.org/10.1371/journal.pgen.1001342">http://dx.doi.org/10.1371/journal.pgen.1001342</a>.
-<p>Allman E, Ané C and Rhodes J (2008).
-&ldquo;Identifiability of A Markovian Model of Molecular Evolution With Gamma-Distributed Rates.&rdquo;
-<EM>Advances in Applied Probability</EM>, <B>40</B>.
+
+- Allman E, Ané C and Rhodes J (2008).
+"Identifiability of A Markovian Model of Molecular Evolution With Gamma-Distributed Rates."
+*Advances in Applied Probability*, **40**.
 ISSN 0001-8678, <a href="http://dx.doi.org/10.1239/aap/1208358894">http://dx.doi.org/10.1239/aap/1208358894</a>.
-<p>Rogers J (2001).
-&ldquo;Maximum Likelihood Estimation of Phylogenetic Trees is Consistent When Substitution Rates Vary According to The Invariable Sites Plus Gamma Distribution.&rdquo;
-<EM>Systematic Biology</EM>, <B>50</B>.
+
+- Rogers J (2001).
+"Maximum Likelihood Estimation of Phylogenetic Trees is Consistent When Substitution Rates Vary According to The Invariable Sites Plus Gamma Distribution."
+*Systematic Biology*, **50**.
 ISSN 1063-5157, <a href="http://dx.doi.org/10.1080/106351501753328839">http://dx.doi.org/10.1080/106351501753328839</a>.

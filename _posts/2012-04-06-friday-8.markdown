@@ -154,17 +154,21 @@ Also looking at Mangel's Decision-making and investment under uncertainty, parti
 
 
 
+
 ## References
 
-<p>Carpenter S, Armbrust E, Arzberger P, Chapin F, Elser J, Hackett E, Ives A, Kareiva P, Leibold M, Lundberg P, Mangel M, Merchant N, Murdoch W, Palmer M, Peters D, Pickett S, Smith K, Wall D and Zimmerman A (2009).
-&ldquo;Accelerate Synthesis in Ecology And Environmental Sciences.&rdquo;
-<EM>Bioscience</EM>, <B>59</B>.
+
+- Carpenter S, Armbrust E, Arzberger P, Chapin F, Elser J, Hackett E, Ives A, Kareiva P, Leibold M, Lundberg P, Mangel M, Merchant N, Murdoch W, Palmer M, Peters D, Pickett S, Smith K, Wall D and Zimmerman A (2009).
+"Accelerate Synthesis in Ecology And Environmental Sciences."
+*Bioscience*, **59**.
 ISSN 0006-3568, <a href="http://dx.doi.org/10.1525/bio.2009.59.8.11">http://dx.doi.org/10.1525/bio.2009.59.8.11</a>.
-<p>Mangel M and Levin P (2005).
-&ldquo;Regime, Phase And Paradigm Shifts: Making Community Ecology The Basic Science For Fisheries.&rdquo;
-<EM>Philosophical Transactions of The Royal Society B: Biological Sciences</EM>, <B>360</B>.
+
+- Mangel M and Levin P (2005).
+"Regime, Phase And Paradigm Shifts: Making Community Ecology The Basic Science For Fisheries."
+*Philosophical Transactions of The Royal Society B: Biological Sciences*, **360**.
 ISSN 0962-8436, <a href="http://dx.doi.org/10.1098/rstb.2004.1571">http://dx.doi.org/10.1098/rstb.2004.1571</a>.
-<p>Mangel M (1994).
-&ldquo;Barrier Transitions Driven by Fluctuations, With Applications to Ecology And Evolution.&rdquo;
-<EM>Theoretical Population Biology</EM>, <B>45</B>.
+
+- Mangel M (1994).
+"Barrier Transitions Driven by Fluctuations, With Applications to Ecology And Evolution."
+*Theoretical Population Biology*, **45**.
 ISSN 00405809, <a href="http://dx.doi.org/10.1006/tpbi.1994.1002">http://dx.doi.org/10.1006/tpbi.1994.1002</a>.

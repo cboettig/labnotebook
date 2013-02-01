@@ -36,25 +36,31 @@ Discussed some relevant literature, mostly for the warning signals in fisheries 
 Upcoming working group at NIMBioS next week.
 
 
+
 ## References
 
-<p>Colchero F and Clark J (2012).
-&ldquo;Bayesian Inference on Age-Specific Survival For Censored And Truncated Data.&rdquo;
-<EM>Journal of Animal Ecology</EM>, <B>81</B>.
+
+- Colchero F and Clark J (2012).
+"Bayesian Inference on Age-Specific Survival For Censored And Truncated Data."
+*Journal of Animal Ecology*, **81**.
 <a href="http://dx.doi.org/10.1111/j.1365-2656.2011.01898.x">http://dx.doi.org/10.1111/j.1365-2656.2011.01898.x</a>.
-<p>Hutchings J (2000).
-&ldquo;Unknown.&rdquo;
-<EM>Nature</EM>, <B>406</B>.
+
+- Hutchings J (2000).
+"Unknown."
+*Nature*, **406**.
 ISSN 00280836, <a href="http://dx.doi.org/10.1038/35022565">http://dx.doi.org/10.1038/35022565</a>.
-<p>Minckley T, Shriver R and Shuman B (2012).
-&ldquo;Resilience And Regime Change in A Southern Rocky Mountain Ecosystem During The Past 17 000 Years.&rdquo;
-<EM>Ecological Monographs</EM>, <B>82</B>.
+
+- Minckley T, Shriver R and Shuman B (2012).
+"Resilience And Regime Change in A Southern Rocky Mountain Ecosystem During The Past 17 000 Years."
+*Ecological Monographs*, **82**.
 ISSN 0012-9615, <a href="http://dx.doi.org/10.1890/11-0283.1">http://dx.doi.org/10.1890/11-0283.1</a>.
-<p>Myers R, Barrowman N, Hutchings J and Rosenberg A (1995).
-&ldquo;Population Dynamics of Exploited Fish Stocks at Low Population Levels.&rdquo;
-<EM>Science</EM>, <B>269</B>.
+
+- Myers R, Barrowman N, Hutchings J and Rosenberg A (1995).
+"Population Dynamics of Exploited Fish Stocks at Low Population Levels."
+*Science*, **269**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.269.5227.1106">http://dx.doi.org/10.1126/science.269.5227.1106</a>.
-<p>Schröder A, Persson L and de Roos A (2012).
-&ldquo;Complex Shifts Between Food Web States in Response to Whole-Ecosystem Manipulations.&rdquo;
-<EM>Oikos</EM>, <B>121</B>.
+
+- Schröder A, Persson L and de Roos A (2012).
+"Complex Shifts Between Food Web States in Response to Whole-Ecosystem Manipulations."
+*Oikos*, **121**.
 <a href="http://dx.doi.org/10.1111/j.1600-0706.2011.19764.x">http://dx.doi.org/10.1111/j.1600-0706.2011.19764.x</a>.

@@ -86,33 +86,41 @@ At the end a mention of a couple other new directions that I agree are dead on.�
 Also mentions  Dan Rabosky concerns over estimations in rates (Rabosky, 2010).  I couldn't agree more that realistic diversification models are crucial.
 
 
+
 ## References
 
-<p>Rabosky D, Donnellan S, Talaba A and Lovette I (2007).
-&ldquo;Exceptional Among-Lineage Variation in Diversification Rates During The Radiation of Australia'S Most Diverse Vertebrate Clade.&rdquo;
-<EM>Proceedings of The Royal Society B: Biological Sciences</EM>, <B>274</B>.
+
+- Rabosky D, Donnellan S, Talaba A and Lovette I (2007).
+"Exceptional Among-Lineage Variation in Diversification Rates During The Radiation of Australia'S Most Diverse Vertebrate Clade."
+*Proceedings of The Royal Society B: Biological Sciences*, **274**.
 ISSN 0962-8452, <a href="http://dx.doi.org/10.1098/rspb.2007.0924">http://dx.doi.org/10.1098/rspb.2007.0924</a>.
-<p>Rabosky D and Glor R (2010).
-&ldquo;From The Cover: Equilibrium Speciation Dynamics in A Model Adaptive Radiation of Island Lizards.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>107</B>.
+
+- Rabosky D and Glor R (2010).
+"From The Cover: Equilibrium Speciation Dynamics in A Model Adaptive Radiation of Island Lizards."
+*Proceedings of The National Academy of Sciences*, **107**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1007606107">http://dx.doi.org/10.1073/pnas.1007606107</a>.
-<p>GREEN P (1995).
-&ldquo;Reversible Jump Markov Chain Monte Carlo Computation And Bayesian Model Determination.&rdquo;
-<EM>Biometrika</EM>, <B>82</B>.
+
+- GREEN P (1995).
+"Reversible Jump Markov Chain Monte Carlo Computation And Bayesian Model Determination."
+*Biometrika*, **82**.
 ISSN 0006-3444, <a href="http://dx.doi.org/10.1093/biomet/82.4.711">http://dx.doi.org/10.1093/biomet/82.4.711</a>.
-<p>Csilléry K, Blum M, Gaggiotti O and François O (2010).
-&ldquo;Approximate Bayesian Computation (Abc) in Practice.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>25</B>.
+
+- Csilléry K, Blum M, Gaggiotti O and François O (2010).
+"Approximate Bayesian Computation (Abc) in Practice."
+*Trends in Ecology &amp; Evolution*, **25**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2010.04.001">http://dx.doi.org/10.1016/j.tree.2010.04.001</a>.
-<p>FitzJohn R, Maddison W and Otto S (2009).
-&ldquo;Estimating Trait-Dependent Speciation And Extinction Rates From Incompletely Resolved Phylogenies.&rdquo;
-<EM>Systematic Biology</EM>, <B>58</B>.
+
+- FitzJohn R, Maddison W and Otto S (2009).
+"Estimating Trait-Dependent Speciation And Extinction Rates From Incompletely Resolved Phylogenies."
+*Systematic Biology*, **58**.
 ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syp067">http://dx.doi.org/10.1093/sysbio/syp067</a>.
-<p>FitzJohn R (2010).
-&ldquo;Quantitative Traits And Diversification.&rdquo;
-<EM>Systematic Biology</EM>, <B>59</B>.
+
+- FitzJohn R (2010).
+"Quantitative Traits And Diversification."
+*Systematic Biology*, **59**.
 ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syq053">http://dx.doi.org/10.1093/sysbio/syq053</a>.
-<p>Rabosky D (2010).
-&ldquo;Primary Controls on Species Richness in Higher Taxa.&rdquo;
-<EM>Systematic Biology</EM>, <B>59</B>.
+
+- Rabosky D (2010).
+"Primary Controls on Species Richness in Higher Taxa."
+*Systematic Biology*, **59**.
 ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syq060">http://dx.doi.org/10.1093/sysbio/syq060</a>.

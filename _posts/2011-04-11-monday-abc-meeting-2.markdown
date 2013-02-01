@@ -42,17 +42,21 @@ Explored a bit of the existing tools available explicitly for ABC computing.
   * The [Wikipedia entry](http://en.wikipedia.org/wiki/Approximate_Bayesian_computation) seems to have a decent entry with links to literature and existing tools
 
 
+
 ## References
 
-<p>Beaumont M (2010).
-&ldquo;Approximate Bayesian Computation in Evolution And Ecology.&rdquo;
-<EM>Annual Review of Ecology, Evolution, And Systematics</EM>, <B>41</B>.
+
+- Beaumont M (2010).
+"Approximate Bayesian Computation in Evolution And Ecology."
+*Annual Review of Ecology, Evolution, And Systematics*, **41**.
 ISSN 1543-592X, <a href="http://dx.doi.org/10.1146/annurev-ecolsys-102209-144621">http://dx.doi.org/10.1146/annurev-ecolsys-102209-144621</a>.
-<p>Csilléry K, Blum M, Gaggiotti O and François O (2010).
-&ldquo;Approximate Bayesian Computation (Abc) in Practice.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>25</B>.
+
+- Csilléry K, Blum M, Gaggiotti O and François O (2010).
+"Approximate Bayesian Computation (Abc) in Practice."
+*Trends in Ecology &amp; Evolution*, **25**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2010.04.001">http://dx.doi.org/10.1016/j.tree.2010.04.001</a>.
-<p>Liepe J, Barnes C, Cule E, Erguler K, Kirk P, Toni T and Stumpf M (2010).
-&ldquo;Abc-Sysbio&ndash;Approximate Bayesian Computation in Python With Gpu Support.&rdquo;
-<EM>Bioinformatics</EM>, <B>26</B>.
+
+- Liepe J, Barnes C, Cule E, Erguler K, Kirk P, Toni T and Stumpf M (2010).
+"Abc-Sysbio&ndash;Approximate Bayesian Computation in Python With Gpu Support."
+*Bioinformatics*, **26**.
 ISSN 1367-4803, <a href="http://dx.doi.org/10.1093/bioinformatics/btq278">http://dx.doi.org/10.1093/bioinformatics/btq278</a>.

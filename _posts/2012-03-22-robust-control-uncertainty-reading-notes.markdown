@@ -44,45 +44,56 @@ Also has a nice example in [cite]10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2
 (Brozović & Schlenker, 2011) is probably a richer example of an optimally managed system failing under uncertainty.  Shows the outcome can be very sensitive to assumptions about uncertainty in systems with alternative stable states; a nice example to further the point of  (Biggs _et. al._ 2009).  Shows with moderate uncertainty a precautionary behavior, while more severe uncertainty it precaution isn't worth it, since it cannot diminish the risk adequately.  
 
 (Meir _et. al._ 2004) Which seems to give  rise to the Possingham position on giving only rules of thumb from decision theoretic models.  Comes the closest to implementation uncertainty, considering the case in which a policy cannot be implemented immediately as it is formed.  This is really a red herring -- if implementation takes place over time, in principle that problem should be framed in the dynamic optimization.  The real bugbear here is not implementation uncertainty per se, but the fact that dynamic solutions (SDP) are not computationally feasible, so they test rules-of-thumb against the optimum for a small problem, in hopes that the extrapolation is valid.  The rules of thumb are "more effective" than a static solution; the optimal dynamic solution being unfeasible. It seems we'd be on firmer ground using small problems to provide counterexamples of when simple rules fail, than to use the lack of counterexample in a particular case as grounds for extrapolating.
+
 ## References
 
-<p>Fischer J, Peterson G, Gardner T, Gordon L, Fazey I, Elmqvist T, Felton A, Folke C and Dovers S (2009).
-&ldquo;Integrating Resilience Thinking And Optimisation For Conservation.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>24</B>.
+
+- Fischer J, Peterson G, Gardner T, Gordon L, Fazey I, Elmqvist T, Felton A, Folke C and Dovers S (2009).
+"Integrating Resilience Thinking And Optimisation For Conservation."
+*Trends in Ecology &amp; Evolution*, **24**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2009.03.020">http://dx.doi.org/10.1016/j.tree.2009.03.020</a>.
-<p>Polasky S, Carpenter S, Folke C and Keeler B (2011).
-&ldquo;Decision-Making Under Great Uncertainty: Environmental Management in an Era of Global Change.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>26</B>.
+
+- Polasky S, Carpenter S, Folke C and Keeler B (2011).
+"Decision-Making Under Great Uncertainty: Environmental Management in an Era of Global Change."
+*Trends in Ecology &amp; Evolution*, **26**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2011.04.007">http://dx.doi.org/10.1016/j.tree.2011.04.007</a>.
-<p>Regan H, Ben-Haim Y, Langford B, Wilson W, Lundberg P, Andelman S and Burgman M (2005).
-&ldquo;Robust Decision-Making Under Severe Uncertainty For Conservation Management.&rdquo;
-<EM>Ecological Applications</EM>, <B>15</B>.
+
+- Regan H, Ben-Haim Y, Langford B, Wilson W, Lundberg P, Andelman S and Burgman M (2005).
+"Robust Decision-Making Under Severe Uncertainty For Conservation Management."
+*Ecological Applications*, **15**.
 ISSN 1051-0761, <a href="http://dx.doi.org/10.1890/03-5419">http://dx.doi.org/10.1890/03-5419</a>.
-<p>Halpern B, Regan H, Possingham H and McCarthy M (2006).
-&ldquo;Accounting For Uncertainty in Marine Reserve Design.&rdquo;
-<EM>Ecology Letters</EM>, <B>9</B>.
+
+- Halpern B, Regan H, Possingham H and McCarthy M (2006).
+"Accounting For Uncertainty in Marine Reserve Design."
+*Ecology Letters*, **9**.
 ISSN 1461-023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x">http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x</a>.
-<p>Brock W and Xepapadeas A (2010).
-&ldquo;Robust Control And Hot Spots in Dynamic Spatially Interconnected Systems.&rdquo;
-<EM>Ssrn Electronic Journal</EM>.
+
+- Brock W and Xepapadeas A (2010).
+"Robust Control And Hot Spots in Dynamic Spatially Interconnected Systems."
+*Ssrn Electronic Journal*.
 <a href="http://dx.doi.org/10.2139/ssrn.1736486">http://dx.doi.org/10.2139/ssrn.1736486</a>.
-<p>Hansen L and Sargent T (2001).
-&ldquo;Robust Control And Model Uncertainty.&rdquo;
-<EM>American Economic Review</EM>, <B>91</B>.
+
+- Hansen L and Sargent T (2001).
+"Robust Control And Model Uncertainty."
+*American Economic Review*, **91**.
 ISSN 0002-8282, <a href="http://dx.doi.org/10.1257/aer.91.2.60">http://dx.doi.org/10.1257/aer.91.2.60</a>.
-<p>Hansen L, Sargent T, Turmuhambetova G and Williams N (2006).
-&ldquo;Robust Control And Model Misspecification.&rdquo;
-<EM>Journal of Economic Theory</EM>, <B>128</B>.
+
+- Hansen L, Sargent T, Turmuhambetova G and Williams N (2006).
+"Robust Control And Model Misspecification."
+*Journal of Economic Theory*, **128**.
 ISSN 00220531, <a href="http://dx.doi.org/10.1016/j.jet.2004.12.006">http://dx.doi.org/10.1016/j.jet.2004.12.006</a>.
-<p>Biggs R, Carpenter S and Brock W (2009).
-&ldquo;Spurious Certainty: How Ignoring Measurement Error And Environmental Heterogeneity May Contribute to Environmental Controversies.&rdquo;
-<EM>Bioscience</EM>, <B>59</B>.
+
+- Biggs R, Carpenter S and Brock W (2009).
+"Spurious Certainty: How Ignoring Measurement Error And Environmental Heterogeneity May Contribute to Environmental Controversies."
+*Bioscience*, **59**.
 ISSN 0006-3568, <a href="http://dx.doi.org/10.1525/bio.2009.59.1.10">http://dx.doi.org/10.1525/bio.2009.59.1.10</a>.
-<p>Brozović N and Schlenker W (2011).
-&ldquo;Optimal Management of an Ecosystem With an Unknown Threshold.&rdquo;
-<EM>Ecological Economics</EM>, <B>70</B>.
+
+- Brozović N and Schlenker W (2011).
+"Optimal Management of an Ecosystem With an Unknown Threshold."
+*Ecological Economics*, **70**.
 ISSN 09218009, <a href="http://dx.doi.org/10.1016/j.ecolecon.2010.10.001">http://dx.doi.org/10.1016/j.ecolecon.2010.10.001</a>.
-<p>Meir E, Andelman S and Possingham H (2004).
-&ldquo;Does Conservation Planning Matter in A Dynamic And Uncertain World?&rdquo;
-<EM>Ecology Letters</EM>, <B>7</B>.
+
+- Meir E, Andelman S and Possingham H (2004).
+"Does Conservation Planning Matter in A Dynamic And Uncertain World?"
+*Ecology Letters*, **7**.
 ISSN 1461-023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2004.00624.x">http://dx.doi.org/10.1111/j.1461-0248.2004.00624.x</a>.

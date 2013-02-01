@@ -38,21 +38,26 @@ categories:
 
 
 
+
 ## References
 
-<p>Gross T, Rudolf L, Levin S and Dieckmann U (2009).
-&ldquo;Generalized Models Reveal Stabilizing Factors in Food Webs.&rdquo;
-<EM>Science</EM>, <B>325</B>.
+
+- Gross T, Rudolf L, Levin S and Dieckmann U (2009).
+"Generalized Models Reveal Stabilizing Factors in Food Webs."
+*Science*, **325**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1173536">http://dx.doi.org/10.1126/science.1173536</a>.
-<p>Stadler T (2011).
-&ldquo;Mammalian Phylogeny Reveals Recent Diversification Rate Shifts.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- Stadler T (2011).
+"Mammalian Phylogeny Reveals Recent Diversification Rate Shifts."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1016876108">http://dx.doi.org/10.1073/pnas.1016876108</a>.
-<p>Stadler T (2011).
-&ldquo;Simulating Trees With A Fixed Number of Extant Species.&rdquo;
-<EM>Systematic Biology</EM>, <B>60</B>.
+
+- Stadler T (2011).
+"Simulating Trees With A Fixed Number of Extant Species."
+*Systematic Biology*, **60**.
 ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syr029">http://dx.doi.org/10.1093/sysbio/syr029</a>.
-<p>Hartmann K, Wong D and Stadler T (2010).
-&ldquo;Sampling Trees From Evolutionary Models.&rdquo;
-<EM>Systematic Biology</EM>, <B>59</B>.
+
+- Hartmann K, Wong D and Stadler T (2010).
+"Sampling Trees From Evolutionary Models."
+*Systematic Biology*, **59**.
 ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syq026">http://dx.doi.org/10.1093/sysbio/syq026</a>.

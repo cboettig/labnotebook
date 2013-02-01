@@ -87,9 +87,11 @@ git checkout 81e8a9fac4a862ca097ae2ef693fbfe33a0970c5 roc_curve_ex.R
 
 
 Reuse of phylogenetic info: Looking at [MIAPA](https://www.nescent.org/sites/evoio/MIAPA) project (Leebens-Mack _et. al._ 2006), [NSF ABI](http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=5444).  Wonder if the TreeBASE project (maybe with Dryad+Mendeley interfaces) can be turned into a[ iEvoBio challenge entry](http://ievobio.org/challenge.html) (deadline June 13!)
+
 ## References
 
-<p>Leebens-Mack J, Vision T, Brenner E, Bowers J, Cannon S, Clement M, Cunningham C, DePamphilis C, DeSalle R, Doyle J, Eisen J, Gu X, Harshman J, Jansen R, Kellogg E, Koonin E, Mishler B, Philippe H, Pires J, Qiu Y, Rhee S, Sjölander K, Soltis D, Soltis P, Stevenson D, Wall K, Warnow T and Zmasek C (2006).
-&ldquo;Taking The First Steps Towards A Standard For Reporting on Phylogenies: Minimum Information About A Phylogenetic Analysis (Miapa).&rdquo;
-<EM>Omics: A Journal of Integrative Biology</EM>, <B>10</B>.
+
+- Leebens-Mack J, Vision T, Brenner E, Bowers J, Cannon S, Clement M, Cunningham C, DePamphilis C, DeSalle R, Doyle J, Eisen J, Gu X, Harshman J, Jansen R, Kellogg E, Koonin E, Mishler B, Philippe H, Pires J, Qiu Y, Rhee S, Sjölander K, Soltis D, Soltis P, Stevenson D, Wall K, Warnow T and Zmasek C (2006).
+"Taking The First Steps Towards A Standard For Reporting on Phylogenies: Minimum Information About A Phylogenetic Analysis (Miapa)."
+*Omics: A Journal of Integrative Biology*, **10**.
 ISSN 1536-2310, <a href="http://dx.doi.org/10.1089/omi.2006.10.231">http://dx.doi.org/10.1089/omi.2006.10.231</a>.

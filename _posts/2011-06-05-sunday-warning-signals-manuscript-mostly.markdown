@@ -25,9 +25,11 @@ tags:
   * Writing and revisions on warning signals manuscript.
 
 
+
 ## References
 
-<p>Biggs R, Carpenter S and Brock W (2009).
-&ldquo;Turning Back From The Brink: Detecting an Impending Regime Shift in Time to Avert it.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>106</B>.
+
+- Biggs R, Carpenter S and Brock W (2009).
+"Turning Back From The Brink: Detecting an Impending Regime Shift in Time to Avert it."
+*Proceedings of The National Academy of Sciences*, **106**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.0811729106">http://dx.doi.org/10.1073/pnas.0811729106</a>.

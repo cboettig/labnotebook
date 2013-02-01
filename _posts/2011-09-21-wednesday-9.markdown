@@ -99,9 +99,11 @@ categories:
 Classic Allee effect models with saddle-node bifurcations.
 
 Organizing: what I'd like from Merrit:  dropbox-style data storage.  _e.g_. also with Wordpress/server file
+
 ## References
 
-<p>Horan R, Fenichel E, Drury K and Lodge D (2011).
-&ldquo;Managing Ecological Thresholds in Coupled Environmental-Human Systems.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- Horan R, Fenichel E, Drury K and Lodge D (2011).
+"Managing Ecological Thresholds in Coupled Environmental-Human Systems."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1005431108">http://dx.doi.org/10.1073/pnas.1005431108</a>.

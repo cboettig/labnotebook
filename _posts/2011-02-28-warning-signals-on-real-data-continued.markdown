@@ -158,9 +158,11 @@ and back to writing...
 
 
 
+
 ## References
 
-<p>Dakos V, Scheffer M, van Nes E, Brovkin V, Petoukhov V and Held H (2008).
-&ldquo;Slowing Down as an Early Warning Signal For Abrupt Climate Change.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>105</B>.
+
+- Dakos V, Scheffer M, van Nes E, Brovkin V, Petoukhov V and Held H (2008).
+"Slowing Down as an Early Warning Signal For Abrupt Climate Change."
+*Proceedings of The National Academy of Sciences*, **105**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.0802430105">http://dx.doi.org/10.1073/pnas.0802430105</a>.

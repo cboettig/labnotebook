@@ -171,13 +171,16 @@ Example threshold concerns: invasive species. Fire level.
   * Legal barriers / IP will be a major challenge facing future libraries.
 
 
+
 ## References
 
-<p>van Nes E and Scheffer M (2007).
-&ldquo;Slow Recovery From Perturbations as A Generic Indicator of A Nearby Catastrophic Shift.&rdquo;
-<EM>The American Naturalist</EM>, <B>169</B>.
+
+- van Nes E and Scheffer M (2007).
+"Slow Recovery From Perturbations as A Generic Indicator of A Nearby Catastrophic Shift."
+*The American Naturalist*, **169**.
 ISSN 0003-0147, <a href="http://dx.doi.org/10.1086/516845">http://dx.doi.org/10.1086/516845</a>.
-<p>Allen C, Cumming G, Garmestani A, Taylor P and Walker B (2011).
-&ldquo;Managing For Resilience.&rdquo;
-<EM>Wildlife Biology</EM>, <B>17</B>.
+
+- Allen C, Cumming G, Garmestani A, Taylor P and Walker B (2011).
+"Managing For Resilience."
+*Wildlife Biology*, **17**.
 ISSN 0909-6396, <a href="http://dx.doi.org/10.2981/10-084">http://dx.doi.org/10.2981/10-084</a>.

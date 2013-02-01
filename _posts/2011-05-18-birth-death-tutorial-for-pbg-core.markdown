@@ -320,9 +320,11 @@ However, the bootstrap of likelihood (rightmost histogram) does not register as 
 
 
 Some computers (my laptop) geiger's prune.extinct.taxa or Tanja's option to return a only extant taxa (complete=FALSE) end up dropping all tips always.  This bug (after some effort and help from mailing lists yesterday) is caused by having: Sys.setlocale(locale="en_US.UTF-8")  and can be fixed by using Sys.setlocale(locale="C")  [see mailing list threads](http://permalink.gmane.org/gmane.comp.lang.r.phylo/1358)...
+
 ## References
 
-<p>Stadler T (2011).
-&ldquo;Simulating Trees With A Fixed Number of Extant Species.&rdquo;
-<EM>Systematic Biology</EM>, <B>60</B>.
+
+- Stadler T (2011).
+"Simulating Trees With A Fixed Number of Extant Species."
+*Systematic Biology*, **60**.
 ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syr029">http://dx.doi.org/10.1093/sysbio/syr029</a>.

@@ -22,13 +22,16 @@ Why is it that I feel it we are much better at assembling such an illustrious au
 
 
 Simberloff, D. et al. (2011). Non-natives: 141 scientists object Nature, 475 (7354), 36-36 DOI: [10.1038/475036a](http://dx.doi.org/10.1038/475036a)
+
 ## References
 
-<p>Simberloff D (2011).
-&ldquo;Non-Natives: 141 Scientists Object.&rdquo;
-<EM>Nature</EM>, <B>475</B>.
+
+- Simberloff D (2011).
+"Non-Natives: 141 Scientists Object."
+*Nature*, **475**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/475036a">http://dx.doi.org/10.1038/475036a</a>.
-<p>Abbot P, Abe J, Alcock J, Alizon S, Alpedrinha J, Andersson M, Andre J, van Baalen M, Balloux F, Balshine S, Barton N, Beukeboom L, Biernaskie J, Bilde T, Borgia G, Breed M, Brown S, Bshary R, Buckling A, Burley N, Burton-Chellew M, Cant M, Chapuisat M, Charnov E, Clutton-Brock T, Cockburn A, Cole B, Colegrave N, Cosmides L, Couzin I, Coyne J, Creel S, Crespi B, Curry R, Dall S, Day T, Dickinson J, Dugatkin L, Mouden C, Emlen S, Evans J, Ferriere R, Field J, Foitzik S, Foster K, Foster W, Fox C, Gadau J, Gandon S, Gardner A, Gardner M, Getty T, Goodisman M, Grafen A, Grosberg R, Grozinger C, Gouyon P, Gwynne D, Harvey P, Hatchwell B, Heinze J, Helantera H, Helms K, Hill K, Jiricny N, Johnstone R, Kacelnik A, Kiers E, Kokko H, Komdeur J, Korb J, Kronauer D, Kümmerli R, Lehmann L, Linksvayer T, Lion S, Lyon B, Marshall J, McElreath R, Michalakis Y, Michod R, Mock D, Monnin T, Montgomerie R, Moore A, Mueller U, Noë R, Okasha S, Pamilo P, Parker G, Pedersen J, Pen I, Pfennig D, Queller D, Rankin D, Reece S, Reeve H, Reuter M, Roberts G, Robson S, Roze D, Rousset F, Rueppell O, Sachs J, Santorelli L, Schmid-Hempel P, Schwarz M, Scott-Phillips T, Shellmann-Sherman J, Sherman P, Shuker D, Smith J, Spagna J, Strassmann B, Suarez A, Sundström L, Taborsky M, Taylor P, Thompson G, Tooby J, Tsutsui N, Tsuji K, Turillazzi S, Úbeda F, Vargo E, Voelkl B, Wenseleers T, West S, West-Eberhard M, Westneat D, Wiernasz D, Wild G, Wrangham R, Young A, Zeh D, Zeh J and Zink A (2011).
-&ldquo;Inclusive Fitness Theory And Eusociality.&rdquo;
-<EM>Nature</EM>, <B>471</B>.
+
+- Abbot P, Abe J, Alcock J, Alizon S, Alpedrinha J, Andersson M, Andre J, van Baalen M, Balloux F, Balshine S, Barton N, Beukeboom L, Biernaskie J, Bilde T, Borgia G, Breed M, Brown S, Bshary R, Buckling A, Burley N, Burton-Chellew M, Cant M, Chapuisat M, Charnov E, Clutton-Brock T, Cockburn A, Cole B, Colegrave N, Cosmides L, Couzin I, Coyne J, Creel S, Crespi B, Curry R, Dall S, Day T, Dickinson J, Dugatkin L, Mouden C, Emlen S, Evans J, Ferriere R, Field J, Foitzik S, Foster K, Foster W, Fox C, Gadau J, Gandon S, Gardner A, Gardner M, Getty T, Goodisman M, Grafen A, Grosberg R, Grozinger C, Gouyon P, Gwynne D, Harvey P, Hatchwell B, Heinze J, Helantera H, Helms K, Hill K, Jiricny N, Johnstone R, Kacelnik A, Kiers E, Kokko H, Komdeur J, Korb J, Kronauer D, Kümmerli R, Lehmann L, Linksvayer T, Lion S, Lyon B, Marshall J, McElreath R, Michalakis Y, Michod R, Mock D, Monnin T, Montgomerie R, Moore A, Mueller U, Noë R, Okasha S, Pamilo P, Parker G, Pedersen J, Pen I, Pfennig D, Queller D, Rankin D, Reece S, Reeve H, Reuter M, Roberts G, Robson S, Roze D, Rousset F, Rueppell O, Sachs J, Santorelli L, Schmid-Hempel P, Schwarz M, Scott-Phillips T, Shellmann-Sherman J, Sherman P, Shuker D, Smith J, Spagna J, Strassmann B, Suarez A, Sundström L, Taborsky M, Taylor P, Thompson G, Tooby J, Tsutsui N, Tsuji K, Turillazzi S, Úbeda F, Vargo E, Voelkl B, Wenseleers T, West S, West-Eberhard M, Westneat D, Wiernasz D, Wild G, Wrangham R, Young A, Zeh D, Zeh J and Zink A (2011).
+"Inclusive Fitness Theory And Eusociality."
+*Nature*, **471**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature09831">http://dx.doi.org/10.1038/nature09831</a>.

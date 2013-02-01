@@ -155,25 +155,31 @@ Data reviews -- F1000?
 
 
 [flickr-gallery mode="search" tags="phylogenetics, PDG_Control" min_upload_date="2011-12-07 7:00:37" max_upload_date="2011-12-08 12:23:37"]
+
 ## References
 
-<p>Dulvy N, Sadovy Y and Reynolds J (2003).
-&ldquo;Extinction Vulnerability in Marine Populations.&rdquo;
-<EM>Fish And Fisheries</EM>, <B>4</B>.
+
+- Dulvy N, Sadovy Y and Reynolds J (2003).
+"Extinction Vulnerability in Marine Populations."
+*Fish And Fisheries*, **4**.
 ISSN 1467-2960, <a href="http://dx.doi.org/10.1046/j.1467-2979.2003.00105.x">http://dx.doi.org/10.1046/j.1467-2979.2003.00105.x</a>.
-<p>Le Quesne W and Jennings S (2012).
-&ldquo;Predicting Species Vulnerability With Minimal Data to Support Rapid Risk Assessment of Fishing Impacts on Biodiversity.&rdquo;
-<EM>Journal of Applied Ecology</EM>, <B>49</B>.
+
+- Le Quesne W and Jennings S (2012).
+"Predicting Species Vulnerability With Minimal Data to Support Rapid Risk Assessment of Fishing Impacts on Biodiversity."
+*Journal of Applied Ecology*, **49**.
 <a href="http://dx.doi.org/10.1111/j.1365-2664.2011.02087.x">http://dx.doi.org/10.1111/j.1365-2664.2011.02087.x</a>.
-<p>Molloy J (2011).
-&ldquo;The Open Knowledge Foundation: Open Data Means Better Science.&rdquo;
-<EM>Plos Biology</EM>, <B>9</B>.
+
+- Molloy J (2011).
+"The Open Knowledge Foundation: Open Data Means Better Science."
+*Plos Biology*, **9**.
 <a href="http://dx.doi.org/10.1371/journal.pbio.1001195">http://dx.doi.org/10.1371/journal.pbio.1001195</a>.
-<p>Carroll M (2011).
-&ldquo;Why Full Open Access Matters.&rdquo;
-<EM>Plos Biology</EM>, <B>9</B>.
+
+- Carroll M (2011).
+"Why Full Open Access Matters."
+*Plos Biology*, **9**.
 <a href="http://dx.doi.org/10.1371/journal.pbio.1001210">http://dx.doi.org/10.1371/journal.pbio.1001210</a>.
-<p>Hagedorn G, Mietchen D, Morris R, Agosti D, Penev L, Berendsohn W and Hobern D (2011).
-&ldquo;Creative Commons Licenses And The Non-Commercial Condition: Implications For The re-Use of Biodiversity Information.&rdquo;
-<EM>Zookeys</EM>, <B>150</B>.
+
+- Hagedorn G, Mietchen D, Morris R, Agosti D, Penev L, Berendsohn W and Hobern D (2011).
+"Creative Commons Licenses And The Non-Commercial Condition: Implications For The re-Use of Biodiversity Information."
+*Zookeys*, **150**.
 ISSN 1313-2989, <a href="http://dx.doi.org/10.3897/zookeys.150.2189">http://dx.doi.org/10.3897/zookeys.150.2189</a>.

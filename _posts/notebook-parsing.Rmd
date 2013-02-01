@@ -63,21 +63,25 @@ xpathSApply(doc, "//node()[@property]", namespaces=namespaces, xmlAttrs)
 
 
 ```{r}
-pages <- readLines("http://carlboettiger.info/sitemap.txt")
-pages <- pages[-grep("/archives/", pages)]  # drop redirect pages)
-pages <- pages[grep("/201\\d/", pages)]  # drop non-posts)
+pagelist <- readLines("http://carlboettiger.info/sitemap.txt")
+pagelist <- pagelist[-grep("/archives/", pagelist)]  # drop redirect pagelist)
+pagelist <- pagelist[grep("/201\\d/", pagelist)]  # drop non-posts)
 ```
 
 ```{r}
-site <- lapply(pages, function(page){
-  sprintf("%s\n",  page)
-  try(getURLContent(page, followlocation=TRUE))
-})
+pages <- lapply(pagelist, getURLContent, followlocation=TRUE)
+# Internal mechanism
+# pages <- system("ls _site/201*/*/*/*.html", intern=TRUE)
 
-lapply(site, function(s) try(xmlParse(s)) )
+site <- lapply(pages, function(s){ message(s); try(xmlParse(s)) })
+parse_fails <- sapply(site, is, "try-error") 
+parsed_pages <- site[!parse_fails] 
+```
 
+Pages that won't parse
 
-site <- lapply(pages, function(page) xmlParse(getURLContent(page, followlocation=TRUE)))
+```{r}
+pages[parse_fails]
 ```
 
 

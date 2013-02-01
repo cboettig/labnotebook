@@ -96,53 +96,66 @@ And catching up on some definite highlights from the open science blogs.
   * Our own open science community is getting going on Jason's provocative post on getting scooped in open science. Jonathan Eisen shares his experiences and Law Professor Mario Biagioli shares a preprint on Openness, secrecy, and priority in science.
 
 
+
 ## References
 
-<p>unknown u (2011).
-&ldquo;Academics Unhappy.&rdquo;
-<EM>Nature</EM>, <B>478</B>.
+
+- unknown u (2011).
+"Academics Unhappy."
+*Nature*, **478**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nj7370-549c">http://dx.doi.org/10.1038/nj7370-549c</a>.
-<p>unknown u (2011).
-&ldquo;Scientific Climate.&rdquo;
-<EM>Nature</EM>, <B>478</B>.
+
+- unknown u (2011).
+"Scientific Climate."
+*Nature*, **478**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/478428a">http://dx.doi.org/10.1038/478428a</a>.
-<p>Cormas P (2011).
-&ldquo;Empirical Tests For Nsf Classroom Programs.&rdquo;
-<EM>Science</EM>, <B>334</B>.
+
+- Cormas P (2011).
+"Empirical Tests For Nsf Classroom Programs."
+*Science*, **334**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.334.6055.453-a">http://dx.doi.org/10.1126/science.334.6055.453-a</a>.
-<p>Jones G (2011).
-&ldquo;Tree Models For Macroevolution And Phylogenetic Analysis.&rdquo;
-<EM>Systematic Biology</EM>, <B>60</B>.
+
+- Jones G (2011).
+"Tree Models For Macroevolution And Phylogenetic Analysis."
+*Systematic Biology*, **60**.
 ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syr086">http://dx.doi.org/10.1093/sysbio/syr086</a>.
-<p>Bielejec F, Rambaut A, Suchard M and Lemey P (2011).
-&ldquo;Spread: Spatial Phylogenetic Reconstruction of Evolutionary Dynamics.&rdquo;
-<EM>Bioinformatics</EM>, <B>27</B>.
+
+- Bielejec F, Rambaut A, Suchard M and Lemey P (2011).
+"Spread: Spatial Phylogenetic Reconstruction of Evolutionary Dynamics."
+*Bioinformatics*, **27**.
 ISSN 1367-4803, <a href="http://dx.doi.org/10.1093/bioinformatics/btr481">http://dx.doi.org/10.1093/bioinformatics/btr481</a>.
-<p>Pirrung M, Kennedy R, Caporaso J, Stombaugh J, Wendel D and Knight R (2011).
-&ldquo;Topiaryexplorer: Visualizing Large Phylogenetic Trees With Environmental Metadata.&rdquo;
-<EM>Bioinformatics</EM>, <B>27</B>.
+
+- Pirrung M, Kennedy R, Caporaso J, Stombaugh J, Wendel D and Knight R (2011).
+"Topiaryexplorer: Visualizing Large Phylogenetic Trees With Environmental Metadata."
+*Bioinformatics*, **27**.
 ISSN 1367-4803, <a href="http://dx.doi.org/10.1093/bioinformatics/btr517">http://dx.doi.org/10.1093/bioinformatics/btr517</a>.
-<p>Knape J and de Valpine P (2012).
-&ldquo;Are Patterns of Density Dependence in The Global Population Dynamics Database Driven by Uncertainty About Population Abundance?&rdquo;
-<EM>Ecology Letters</EM>, <B>15</B>.
+
+- Knape J and de Valpine P (2012).
+"Are Patterns of Density Dependence in The Global Population Dynamics Database Driven by Uncertainty About Population Abundance?"
+*Ecology Letters*, **15**.
 <a href="http://dx.doi.org/10.1111/j.1461-0248.2011.01702.x">http://dx.doi.org/10.1111/j.1461-0248.2011.01702.x</a>.
-<p>Ziebarth N, Abbott K and Ives A (2010).
-&ldquo;Weak Population Regulation in Ecological Time Series.&rdquo;
-<EM>Ecology Letters</EM>, <B>13</B>.
+
+- Ziebarth N, Abbott K and Ives A (2010).
+"Weak Population Regulation in Ecological Time Series."
+*Ecology Letters*, **13**.
 ISSN 1461023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2009.01393.x">http://dx.doi.org/10.1111/j.1461-0248.2009.01393.x</a>.
-<p>McClanahan T, Graham N, MacNeil M, Muthiga N, Cinner J, Bruggemann J and Wilson S (2011).
-&ldquo;Critical Thresholds And Tangible Targets For Ecosystem-Based Management of Coral Reef Fisheries.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- McClanahan T, Graham N, MacNeil M, Muthiga N, Cinner J, Bruggemann J and Wilson S (2011).
+"Critical Thresholds And Tangible Targets For Ecosystem-Based Management of Coral Reef Fisheries."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1106861108">http://dx.doi.org/10.1073/pnas.1106861108</a>.
-<p>Franklin J and Johnson K (2011).
-&ldquo;Societal Challenges in Understanding And Responding to Regime Shifts in Forest Landscapes.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- Franklin J and Johnson K (2011).
+"Societal Challenges in Understanding And Responding to Regime Shifts in Forest Landscapes."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1114045108">http://dx.doi.org/10.1073/pnas.1114045108</a>.
-<p>Hirota M, Holmgren M, Van Nes E and Scheffer M (2011).
-&ldquo;Global Resilience of Tropical Forest And Savanna to Critical Transitions.&rdquo;
-<EM>Science</EM>, <B>334</B>.
+
+- Hirota M, Holmgren M, Van Nes E and Scheffer M (2011).
+"Global Resilience of Tropical Forest And Savanna to Critical Transitions."
+*Science*, **334**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1210657">http://dx.doi.org/10.1126/science.1210657</a>.
-<p>Staver A, Archibald S and Levin S (2011).
-&ldquo;The Global Extent And Determinants of Savanna And Forest as Alternative Biome States.&rdquo;
-<EM>Science</EM>, <B>334</B>.
+
+- Staver A, Archibald S and Levin S (2011).
+"The Global Extent And Determinants of Savanna And Forest as Alternative Biome States."
+*Science*, **334**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1210465">http://dx.doi.org/10.1126/science.1210465</a>.

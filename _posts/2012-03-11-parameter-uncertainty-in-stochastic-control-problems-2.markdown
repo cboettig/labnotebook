@@ -140,21 +140,26 @@ Bueno de Mesquita (Bueno de Mesquita, 2010)
 
 
 
+
 ## References
 
-<p>Ludwig D and Hilborn R (1983).
-&ldquo;Adaptive Probing Strategies For Age-Structured Fish Stocks.&rdquo;
-<EM>Canadian Journal of Fisheries And Aquatic Sciences</EM>, <B>40</B>.
+
+- Ludwig D and Hilborn R (1983).
+"Adaptive Probing Strategies For Age-Structured Fish Stocks."
+*Canadian Journal of Fisheries And Aquatic Sciences*, **40**.
 ISSN 0706-652X, <a href="http://dx.doi.org/10.1139/f83-075">http://dx.doi.org/10.1139/f83-075</a>.
-<p>Walters C and Hilborn R (1976).
-&ldquo;Adaptive Control of Fishing Systems.&rdquo;
-<EM>Journal of The Fisheries Research Board of Canada</EM>, <B>33</B>.
+
+- Walters C and Hilborn R (1976).
+"Adaptive Control of Fishing Systems."
+*Journal of The Fisheries Research Board of Canada*, **33**.
 ISSN 0015-296X, <a href="http://dx.doi.org/10.1139/f76-017">http://dx.doi.org/10.1139/f76-017</a>.
-<p>Walters C and Hilborn R (1978).
-&ldquo;Ecological Optimization And Adaptive Management.&rdquo;
-<EM>Annual Review of Ecology And Systematics</EM>, <B>9</B>.
+
+- Walters C and Hilborn R (1978).
+"Ecological Optimization And Adaptive Management."
+*Annual Review of Ecology And Systematics*, **9**.
 ISSN 0066-4162, <a href="http://dx.doi.org/10.1146/annurev.es.09.110178.001105">http://dx.doi.org/10.1146/annurev.es.09.110178.001105</a>.
-<p>Bueno de Mesquita B (2010).
-&ldquo;Judging Judgment.&rdquo;
-<EM>Critical Review</EM>, <B>22</B>.
+
+- Bueno de Mesquita B (2010).
+"Judging Judgment."
+*Critical Review*, **22**.
 ISSN 0891-3811, <a href="http://dx.doi.org/10.1080/08913811.2010.541686">http://dx.doi.org/10.1080/08913811.2010.541686</a>.

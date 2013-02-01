@@ -119,17 +119,21 @@ Things I haven't gotten to today.  Should add these to their github repositories
 
 
 
+
 ## References
 
-<p>Losos J (2011).
-&ldquo;Seeing The Forest For The Trees: The Limitations of Phylogenies in Comparative Biology.&rdquo;
-<EM>The American Naturalist</EM>, <B>177</B>.
+
+- Losos J (2011).
+"Seeing The Forest For The Trees: The Limitations of Phylogenies in Comparative Biology."
+*The American Naturalist*, **177**.
 ISSN 00030147, <a href="http://dx.doi.org/10.1086/660020">http://dx.doi.org/10.1086/660020</a>.
-<p>Alberts B (2005).
-&ldquo;A Wakeup Call For Science Faculty.&rdquo;
-<EM>Cell</EM>, <B>123</B>.
+
+- Alberts B (2005).
+"A Wakeup Call For Science Faculty."
+*Cell*, **123**.
 ISSN 00928674, <a href="http://dx.doi.org/10.1016/j.cell.2005.11.014">http://dx.doi.org/10.1016/j.cell.2005.11.014</a>.
-<p>Mietchen D (2011).
-&ldquo;Peer Reviews: Make Them Public.&rdquo;
-<EM>Nature</EM>, <B>473</B>.
+
+- Mietchen D (2011).
+"Peer Reviews: Make Them Public."
+*Nature*, **473**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/473452b">http://dx.doi.org/10.1038/473452b</a>.

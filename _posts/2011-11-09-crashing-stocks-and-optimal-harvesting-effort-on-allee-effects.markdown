@@ -106,25 +106,31 @@ The most interesting observation is the dashed green line -- the tipping point a
   * List of some next steps for pdg-control Training problem II on the [github Issues tracker](https://github.com/cboettig/pdg_control/issues?sort=created&direction=desc&state=open).
 
 
+
 ## References
 
-<p>Mullon C, Freon P and Cury P (2005).
-&ldquo;The Dynamics of Collapse in World Fisheries.&rdquo;
-<EM>Fish And Fisheries</EM>, <B>6</B>.
+
+- Mullon C, Freon P and Cury P (2005).
+"The Dynamics of Collapse in World Fisheries."
+*Fish And Fisheries*, **6**.
 ISSN 1467-2960, <a href="http://dx.doi.org/10.1111/j.1467-2979.2005.00181.x">http://dx.doi.org/10.1111/j.1467-2979.2005.00181.x</a>.
-<p>Pinsky M, Jensen O, Ricard D and Palumbi S (2011).
-&ldquo;Unexpected Patterns of Fisheries Collapse in The World'S Oceans.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- Pinsky M, Jensen O, Ricard D and Palumbi S (2011).
+"Unexpected Patterns of Fisheries Collapse in The World'S Oceans."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1015313108">http://dx.doi.org/10.1073/pnas.1015313108</a>.
-<p>BRANCH T, JENSEN O, RICARD D, YE Y and HILBORN R (2011).
-&ldquo;Contrasting Global Trends in Marine Fishery Status Obtained From Catches And From Stock Assessments.&rdquo;
-<EM>Conservation Biology</EM>, <B>25</B>.
+
+- BRANCH T, JENSEN O, RICARD D, YE Y and HILBORN R (2011).
+"Contrasting Global Trends in Marine Fishery Status Obtained From Catches And From Stock Assessments."
+*Conservation Biology*, **25**.
 <a href="http://dx.doi.org/10.1111/j.1523-1739.2011.01687.x">http://dx.doi.org/10.1111/j.1523-1739.2011.01687.x</a>.
-<p>Dulvy N, Sadovy Y and Reynolds J (2003).
-&ldquo;Extinction Vulnerability in Marine Populations.&rdquo;
-<EM>Fish And Fisheries</EM>, <B>4</B>.
+
+- Dulvy N, Sadovy Y and Reynolds J (2003).
+"Extinction Vulnerability in Marine Populations."
+*Fish And Fisheries*, **4**.
 ISSN 1467-2960, <a href="http://dx.doi.org/10.1046/j.1467-2979.2003.00105.x">http://dx.doi.org/10.1046/j.1467-2979.2003.00105.x</a>.
-<p>Graham N, Chabanet P, Evans R, Jennings S, Letourneur Y, Aaron MacNeil M, McClanahan T, Öhman M, Polunin N and Wilson S (2011).
-&ldquo;Extinction Vulnerability of Coral Reef Fishes.&rdquo;
-<EM>Ecology Letters</EM>, <B>14</B>.
+
+- Graham N, Chabanet P, Evans R, Jennings S, Letourneur Y, Aaron MacNeil M, McClanahan T, Öhman M, Polunin N and Wilson S (2011).
+"Extinction Vulnerability of Coral Reef Fishes."
+*Ecology Letters*, **14**.
 <a href="http://dx.doi.org/10.1111/j.1461-0248.2011.01592.x">http://dx.doi.org/10.1111/j.1461-0248.2011.01592.x</a>.

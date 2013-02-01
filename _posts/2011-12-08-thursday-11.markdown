@@ -102,9 +102,11 @@ Checking expected behavior when the cost of change is high and the stock has sig
 in this limit the trivial solution is not to fish.
 
 Just implement NCO tracking on Reed's S.
+
 ## References
 
-<p>Dulvy N, Sadovy Y and Reynolds J (2003).
-&ldquo;Extinction Vulnerability in Marine Populations.&rdquo;
-<EM>Fish And Fisheries</EM>, <B>4</B>.
+
+- Dulvy N, Sadovy Y and Reynolds J (2003).
+"Extinction Vulnerability in Marine Populations."
+*Fish And Fisheries*, **4**.
 ISSN 1467-2960, <a href="http://dx.doi.org/10.1046/j.1467-2979.2003.00105.x">http://dx.doi.org/10.1046/j.1467-2979.2003.00105.x</a>.

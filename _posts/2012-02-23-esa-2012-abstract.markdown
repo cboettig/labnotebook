@@ -47,17 +47,21 @@ A nice if intuitive result (Peterson et al 2003) ((﻿Peterson, G., & Carpenter,
 
 A more immediate problem is the computational limitations of decision-theoretic approaches in handling full system complexity.  The curse of dimensionality is exacerbated by the need for higher dimensions to model parameter uncertainty as well as dynamic state variables, where adaptive management can learn actively or passively to update this uncertainty.   
 
+
 ## References
 
-<p>Polasky S, Carpenter S, Folke C and Keeler B (2011).
-&ldquo;Decision-Making Under Great Uncertainty: Environmental Management in an Era of Global Change.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>26</B>.
+
+- Polasky S, Carpenter S, Folke C and Keeler B (2011).
+"Decision-Making Under Great Uncertainty: Environmental Management in an Era of Global Change."
+*Trends in Ecology &amp; Evolution*, **26**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2011.04.007">http://dx.doi.org/10.1016/j.tree.2011.04.007</a>.
-<p>Fischer J, Peterson G, Gardner T, Gordon L, Fazey I, Elmqvist T, Felton A, Folke C and Dovers S (2009).
-&ldquo;Integrating Resilience Thinking And Optimisation For Conservation.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>24</B>.
+
+- Fischer J, Peterson G, Gardner T, Gordon L, Fazey I, Elmqvist T, Felton A, Folke C and Dovers S (2009).
+"Integrating Resilience Thinking And Optimisation For Conservation."
+*Trends in Ecology &amp; Evolution*, **24**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2009.03.020">http://dx.doi.org/10.1016/j.tree.2009.03.020</a>.
-<p>Brozović N and Schlenker W (2011).
-&ldquo;Optimal Management of an Ecosystem With an Unknown Threshold.&rdquo;
-<EM>Ecological Economics</EM>, <B>70</B>.
+
+- Brozović N and Schlenker W (2011).
+"Optimal Management of an Ecosystem With an Unknown Threshold."
+*Ecological Economics*, **70**.
 ISSN 09218009, <a href="http://dx.doi.org/10.1016/j.ecolecon.2010.10.001">http://dx.doi.org/10.1016/j.ecolecon.2010.10.001</a>.

@@ -59,13 +59,16 @@ BMC Molecular Biology journals has authors recommend reviewers, non-anonymous re
 Some vibrant discussion on non-commercial (NC) (and to some extent, share-alike, or SA) clauses in licenses on the open-knowledge list (and in the recent published literature: (Carroll, 2011), (Hagedorn _et. al._ 2011)). The question at hand is targeting Open Access publishers who use NC license, but has interesting reflections onto bloggers and software licenses.
 
 While I'd heard discontent with NC before (particularly around PLoS ONE clones using NC clause), I was surprised at the extent -- Creative Commons is apparently considering removing it since it is so problematic.  Similar troubles have dogged the share-alike/GPL clause for software (license incompatibility, etc), and it sounds that GPL is out of favor in preference for more open/permissive BSD licenses.
+
 ## References
 
-<p>Carroll M (2011).
-&ldquo;Why Full Open Access Matters.&rdquo;
-<EM>Plos Biology</EM>, <B>9</B>.
+
+- Carroll M (2011).
+"Why Full Open Access Matters."
+*Plos Biology*, **9**.
 <a href="http://dx.doi.org/10.1371/journal.pbio.1001210">http://dx.doi.org/10.1371/journal.pbio.1001210</a>.
-<p>Hagedorn G, Mietchen D, Morris R, Agosti D, Penev L, Berendsohn W and Hobern D (2011).
-&ldquo;Creative Commons Licenses And The Non-Commercial Condition: Implications For The re-Use of Biodiversity Information.&rdquo;
-<EM>Zookeys</EM>, <B>150</B>.
+
+- Hagedorn G, Mietchen D, Morris R, Agosti D, Penev L, Berendsohn W and Hobern D (2011).
+"Creative Commons Licenses And The Non-Commercial Condition: Implications For The re-Use of Biodiversity Information."
+*Zookeys*, **150**.
 ISSN 1313-2989, <a href="http://dx.doi.org/10.3897/zookeys.150.2189">http://dx.doi.org/10.3897/zookeys.150.2189</a>.

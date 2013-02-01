@@ -43,17 +43,21 @@ Reviewing my edits.
   * Jonah's Science paper, the subject of his Merton-Love seminar, (Piovia-Scott _et. al._ 2011)
 
 
+
 ## References
 
-<p>Marshall J (2011).
-&ldquo;Group Selection And Kin Selection: Formally Equivalent Approaches.&rdquo;
-<EM>Trends in Ecology &amp; Evolution</EM>, <B>26</B>.
+
+- Marshall J (2011).
+"Group Selection And Kin Selection: Formally Equivalent Approaches."
+*Trends in Ecology &amp; Evolution*, **26**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2011.04.008">http://dx.doi.org/10.1016/j.tree.2011.04.008</a>.
-<p>Davies T, Smith G, Bellstedt D, Boatwright J, Bytebier B, Cowling R, Forest F, Harmon L, Muasya A, Schrire B, Steenkamp Y, van der Bank M, Savolainen V and Kingsolver J (2011).
-&ldquo;Extinction Risk And Diversification Are Linked in A Plant Biodiversity Hotspot.&rdquo;
-<EM>Plos Biology</EM>, <B>9</B>.
+
+- Davies T, Smith G, Bellstedt D, Boatwright J, Bytebier B, Cowling R, Forest F, Harmon L, Muasya A, Schrire B, Steenkamp Y, van der Bank M, Savolainen V and Kingsolver J (2011).
+"Extinction Risk And Diversification Are Linked in A Plant Biodiversity Hotspot."
+*Plos Biology*, **9**.
 <a href="http://dx.doi.org/10.1371/journal.pbio.1000620">http://dx.doi.org/10.1371/journal.pbio.1000620</a>.
-<p>Piovia-Scott J, Spiller D and Schoener T (2011).
-&ldquo;Effects of Experimental Seaweed Deposition on Lizard And Ant Predation in an Island Food Web.&rdquo;
-<EM>Science</EM>, <B>331</B>.
+
+- Piovia-Scott J, Spiller D and Schoener T (2011).
+"Effects of Experimental Seaweed Deposition on Lizard And Ant Predation in an Island Food Web."
+*Science*, **331**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1200282">http://dx.doi.org/10.1126/science.1200282</a>.

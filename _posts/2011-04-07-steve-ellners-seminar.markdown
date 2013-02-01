@@ -68,29 +68,36 @@ Evolution seems most important when it is the cause of stasis rather than change
 
 
 
+
 ## References
 
-<p>Kendall u, Prendergast u and Bjornstad u (1998).
-&ldquo;The Macroecology of Population Dynamics: Taxonomic And Biogeographic Patterns in Population Cycles.&rdquo;
-<EM>Ecology Letters</EM>, <B>1</B>.
+
+- Kendall u, Prendergast u and Bjornstad u (1998).
+"The Macroecology of Population Dynamics: Taxonomic And Biogeographic Patterns in Population Cycles."
+*Ecology Letters*, **1**.
 ISSN 1461-023X, <a href="http://dx.doi.org/10.1046/j.1461-0248.1998.00037.x">http://dx.doi.org/10.1046/j.1461-0248.1998.00037.x</a>.
-<p>Zimmer C (1999).
-&ldquo;Complex Systems:Life After Chaos.&rdquo;
-<EM>Science</EM>, <B>284</B>.
+
+- Zimmer C (1999).
+"Complex Systems:Life After Chaos."
+*Science*, **284**.
 ISSN 00368075, <a href="http://dx.doi.org/10.1126/science.284.5411.83">http://dx.doi.org/10.1126/science.284.5411.83</a>.
-<p>Fussmann G (2000).
-&ldquo;Crossing The Hopf Bifurcation in A Live Predator-Prey System.&rdquo;
-<EM>Science</EM>, <B>290</B>.
+
+- Fussmann G (2000).
+"Crossing The Hopf Bifurcation in A Live Predator-Prey System."
+*Science*, **290**.
 ISSN 00368075, <a href="http://dx.doi.org/10.1126/science.290.5495.1358">http://dx.doi.org/10.1126/science.290.5495.1358</a>.
-<p>Yoshida T, Jones L, Ellner S, Fussmann G and Hairston N (2003).
-&ldquo;Rapid Evolution Drives Ecological Dynamics in A Predator–Prey System.&rdquo;
-<EM>Nature</EM>, <B>424</B>.
+
+- Yoshida T, Jones L, Ellner S, Fussmann G and Hairston N (2003).
+"Rapid Evolution Drives Ecological Dynamics in A Predator–Prey System."
+*Nature*, **424**.
 ISSN 00280836, <a href="http://dx.doi.org/10.1038/nature01767">http://dx.doi.org/10.1038/nature01767</a>.
-<p>Hairston N, Ellner S, Geber M, Yoshida T and Fox J (2005).
-&ldquo;Rapid Evolution And The Convergence of Ecological And Evolutionary Time.&rdquo;
-<EM>Ecology Letters</EM>, <B>8</B>.
+
+- Hairston N, Ellner S, Geber M, Yoshida T and Fox J (2005).
+"Rapid Evolution And The Convergence of Ecological And Evolutionary Time."
+*Ecology Letters*, **8**.
 ISSN 1461023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2005.00812.x">http://dx.doi.org/10.1111/j.1461-0248.2005.00812.x</a>.
-<p>Hairston N, Lampert W, Cáceres C, Holtmeier C, Weider L, Gaedke U, Fischer J, Fox J and Post D (1999).
-&ldquo;Unknown.&rdquo;
-<EM>Nature</EM>, <B>401</B>.
+
+- Hairston N, Lampert W, Cáceres C, Holtmeier C, Weider L, Gaedke U, Fischer J, Fox J and Post D (1999).
+"Unknown."
+*Nature*, **401**.
 ISSN 00280836, <a href="http://dx.doi.org/10.1038/46731">http://dx.doi.org/10.1038/46731</a>.

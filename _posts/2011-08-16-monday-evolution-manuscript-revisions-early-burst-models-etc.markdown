@@ -84,25 +84,31 @@ Doesn't really have any good demos set up yet.  Should add some use cases.  Migh
 
 Wordpress academic [plugins list](https://docs.google.com/document/d/1YeOgB9yzuIAdir1Sy-TGMqSdQjZDClmVTMtY-Z125LM/edit?pli=1) from Peter Krautzberger
 Adam Wilson's [page](http://hydrodictyon.eeb.uconn.edu/people/wilson/pubs.html) at UConn
+
 ## References
 
-<p>Felsenstein J (1988).
-&ldquo;Phylogenies And Quantitative Characters.&rdquo;
-<EM>Annual Review of Ecology And Systematics</EM>, <B>19</B>.
+
+- Felsenstein J (1988).
+"Phylogenies And Quantitative Characters."
+*Annual Review of Ecology And Systematics*, **19**.
 ISSN 0066-4162, <a href="http://dx.doi.org/10.1146/annurev.es.19.110188.002305">http://dx.doi.org/10.1146/annurev.es.19.110188.002305</a>.
-<p>Harmon L, Losos J, Jonathan Davies T, Gillespie R, Gittleman J, Bryan Jennings W, Kozak K, McPeek M, Moreno-Roark F, Near T, Purvis A, Ricklefs R, Schluter D, Schulte II J, Seehausen O, Sidlauskas B, Torres-Carvajal O, Weir J and Mooers A (2010).
-&ldquo;Early Bursts of Body Size And Shape Evolution Are Rare in Comparative Data.&rdquo;
-<EM>Evolution</EM>.
+
+- Harmon L, Losos J, Jonathan Davies T, Gillespie R, Gittleman J, Bryan Jennings W, Kozak K, McPeek M, Moreno-Roark F, Near T, Purvis A, Ricklefs R, Schluter D, Schulte II J, Seehausen O, Sidlauskas B, Torres-Carvajal O, Weir J and Mooers A (2010).
+"Early Bursts of Body Size And Shape Evolution Are Rare in Comparative Data."
+*Evolution*.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2010.01025.x">http://dx.doi.org/10.1111/j.1558-5646.2010.01025.x</a>.
-<p>Eastman J, Alfaro M, Joyce P, Hipp A and Harmon L (2011).
-&ldquo;A Novel Comparative Method For Identifying Shifts in The Rate of Character Evolution on Trees.&rdquo;
-<EM>Evolution</EM>, <B>65</B>.
+
+- Eastman J, Alfaro M, Joyce P, Hipp A and Harmon L (2011).
+"A Novel Comparative Method For Identifying Shifts in The Rate of Character Evolution on Trees."
+*Evolution*, **65**.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2011.01401.x">http://dx.doi.org/10.1111/j.1558-5646.2011.01401.x</a>.
-<p>Jaffe A, Slater G and Alfaro M (2011).
-&ldquo;The Evolution of Island Gigantism And Body Size Variation in Tortoises And Turtles.&rdquo;
-<EM>Biology Letters</EM>, <B>7</B>.
+
+- Jaffe A, Slater G and Alfaro M (2011).
+"The Evolution of Island Gigantism And Body Size Variation in Tortoises And Turtles."
+*Biology Letters*, **7**.
 ISSN 1744-9561, <a href="http://dx.doi.org/10.1098/rsbl.2010.1084">http://dx.doi.org/10.1098/rsbl.2010.1084</a>.
-<p>REDDING D, DeWOLFF C and MOOERS A (2010).
-&ldquo;Evolutionary Distinctiveness, Threat Status, And Ecological Oddity in Primates.&rdquo;
-<EM>Conservation Biology</EM>, <B>24</B>.
+
+- REDDING D, DeWOLFF C and MOOERS A (2010).
+"Evolutionary Distinctiveness, Threat Status, And Ecological Oddity in Primates."
+*Conservation Biology*, **24**.
 <a href="http://dx.doi.org/10.1111/j.1523-1739.2010.01532.x">http://dx.doi.org/10.1111/j.1523-1739.2010.01532.x</a>.

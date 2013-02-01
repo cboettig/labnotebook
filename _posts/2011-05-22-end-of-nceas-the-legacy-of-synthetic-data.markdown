@@ -48,21 +48,26 @@ As NCEAS authors Reichman, Jones & Schildhauer eloquently state, (Reichman _et. 
 Reichman, Jones & Schildhauer are putting their money on federated repositories such as [DataONE](https://www.dataone.org/) to address these challenges, which may be a key as well as economical solution.  But will such programs be funded more continuously than the synthesis centers that have jump-started them?  What role will future centers play in helping us address those challenges?
 
 
+
 ## References
 
-<p>Stokstad E (2011).
-&ldquo;Pioneering Center Ponders Future as Nsf Pulls Out.&rdquo;
-<EM>Science</EM>, <B>332</B>.
+
+- Stokstad E (2011).
+"Pioneering Center Ponders Future as Nsf Pulls Out."
+*Science*, **332**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.332.6032.905">http://dx.doi.org/10.1126/science.332.6032.905</a>.
-<p>Sidlauskas B, Ganapathy G, Hazkani-Covo E, Jenkins K, Lapp H, McCall L, Price S, Scherle R, Spaeth P and Kidd D (2009).
-&ldquo;Linking Big: The Continuing Promise of Evolutionary Synthesis.&rdquo;
-<EM>Evolution</EM>, <B>64</B>.
+
+- Sidlauskas B, Ganapathy G, Hazkani-Covo E, Jenkins K, Lapp H, McCall L, Price S, Scherle R, Spaeth P and Kidd D (2009).
+"Linking Big: The Continuing Promise of Evolutionary Synthesis."
+*Evolution*, **64**.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2009.00892.x">http://dx.doi.org/10.1111/j.1558-5646.2009.00892.x</a>.
-<p>Piwowar H, Vision T and Whitlock M (2011).
-&ldquo;Data Archiving is A Good Investment.&rdquo;
-<EM>Nature</EM>, <B>473</B>.
+
+- Piwowar H, Vision T and Whitlock M (2011).
+"Data Archiving is A Good Investment."
+*Nature*, **473**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/473285a">http://dx.doi.org/10.1038/473285a</a>.
-<p>Reichman O, Jones M and Schildhauer M (2011).
-&ldquo;Challenges And Opportunities of Open Data in Ecology.&rdquo;
-<EM>Science</EM>, <B>331</B>.
+
+- Reichman O, Jones M and Schildhauer M (2011).
+"Challenges And Opportunities of Open Data in Ecology."
+*Science*, **331**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1197962">http://dx.doi.org/10.1126/science.1197962</a>.

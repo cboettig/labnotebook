@@ -467,25 +467,31 @@ Mtg 1: Sep 12-15, 2011 (preliminary)
 
 
 ### 
+
 ## References
 
-<p>Mumby P, Hastings A and Edwards H (2007).
-&ldquo;Thresholds And The Resilience of Caribbean Coral Reefs.&rdquo;
-<EM>Nature</EM>, <B>450</B>.
+
+- Mumby P, Hastings A and Edwards H (2007).
+"Thresholds And The Resilience of Caribbean Coral Reefs."
+*Nature*, **450**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature06252">http://dx.doi.org/10.1038/nature06252</a>.
-<p>Blackwood J, Hastings A and Mumby P (2010).
-&ldquo;The Effect of Fishing on Hysteresis in Caribbean Coral Reefs.&rdquo;
-<EM>Theoretical Ecology</EM>, <B>5</B>.
+
+- Blackwood J, Hastings A and Mumby P (2010).
+"The Effect of Fishing on Hysteresis in Caribbean Coral Reefs."
+*Theoretical Ecology*, **5**.
 ISSN 1874-1738, <a href="http://dx.doi.org/10.1007/s12080-010-0102-0">http://dx.doi.org/10.1007/s12080-010-0102-0</a>.
-<p>Blackwood J, Hastings A and Mumby P (2011).
-&ldquo;A Model-Based Approach to Determine The Long-Term Effects of Multiple Interacting Stressors on Coral Reefs.&rdquo;
-<EM>Ecological Applications</EM>, <B>21</B>.
+
+- Blackwood J, Hastings A and Mumby P (2011).
+"A Model-Based Approach to Determine The Long-Term Effects of Multiple Interacting Stressors on Coral Reefs."
+*Ecological Applications*, **21**.
 ISSN 1051-0761, <a href="http://dx.doi.org/10.1890/10-2195.1">http://dx.doi.org/10.1890/10-2195.1</a>.
-<p>ARMSWORTH P (2001).
-&ldquo;Directed Motion in The Sea: Efficient Swimming by Reef Fish Larvae.&rdquo;
-<EM>Journal of Theoretical Biology</EM>, <B>210</B>.
+
+- ARMSWORTH P (2001).
+"Directed Motion in The Sea: Efficient Swimming by Reef Fish Larvae."
+*Journal of Theoretical Biology*, **210**.
 ISSN 00225193, <a href="http://dx.doi.org/10.1006/jtbi.2001.2299">http://dx.doi.org/10.1006/jtbi.2001.2299</a>.
-<p>Irisson J, LeVan A, Lara M and Planes S (2004).
-&ldquo;Strategies And Trajectories of Coral Reef Fish Larvae Optimizing Self-Recruitment.&rdquo;
-<EM>Journal of Theoretical Biology</EM>, <B>227</B>.
+
+- Irisson J, LeVan A, Lara M and Planes S (2004).
+"Strategies And Trajectories of Coral Reef Fish Larvae Optimizing Self-Recruitment."
+*Journal of Theoretical Biology*, **227**.
 ISSN 00225193, <a href="http://dx.doi.org/10.1016/j.jtbi.2003.10.016">http://dx.doi.org/10.1016/j.jtbi.2003.10.016</a>.

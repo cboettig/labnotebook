@@ -42,9 +42,11 @@ Visiting the question of communicating uncertainty in Marissa's lab meeting, foc
 
 (Spiegelhalter _et. al._ 2011) does a less excellent job addressing the some of the more basic problems in communicating uncertainty (though the conditional probability example comes close).  Uncertainty can be immensely counter-intuitive, as Mlodinow illustrates in one of my favorite [popular non-fiction books](http://www.amazon.com/Drunkards-Walk-Randomness-Rules-Lives/dp/0375424040).  He doesn't tackle visuals as a way of improving our intuition on the topic. I feel a proper treatment of the topic would start with some of the easily demonstrated fallacies around uncertainty Mlodinow discusses, and illustrate if and when visualizations can improve our accuracy.
 
+
 ## References
 
-<p>Spiegelhalter D, Pearson M and Short I (2011).
-&ldquo;Visualizing Uncertainty About The Future.&rdquo;
-<EM>Science</EM>, <B>333</B>.
+
+- Spiegelhalter D, Pearson M and Short I (2011).
+"Visualizing Uncertainty About The Future."
+*Science*, **333**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1191181">http://dx.doi.org/10.1126/science.1191181</a>.

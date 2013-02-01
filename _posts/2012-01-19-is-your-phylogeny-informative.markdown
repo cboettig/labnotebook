@@ -116,25 +116,31 @@ It is also common and very useful to assign some summary statistic whose value i
 Boettiger, C., Coop, G., & Ralph, P. (2012). IS YOUR PHYLOGENY INFORMATIVE? MEASURING THE POWER OF COMPARATIVE METHODS Evolution DOI: [10.1111/j.1558-5646.2012.01574.x](http://dx.doi.org/10.1111/j.1558-5646.2012.01574.x)
 
 
+
 ## References
 
-<p>Boettiger C, Coop G and Ralph P (2012).
-&ldquo;is Your Phylogeny Informative? Measuring The Power of Comparative Methods.&rdquo;
+
+- Boettiger C, Coop G and Ralph P (2012).
+"is Your Phylogeny Informative? Measuring The Power of Comparative Methods."
 <em>Evolution</em>.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2012.01574.x">http://dx.doi.org/10.1111/j.1558-5646.2012.01574.x</a>.
-<p>Pagel M (1999).
-&ldquo;Unknown.&rdquo;
+
+- Pagel M (1999).
+"Unknown."
 <em>Nature</em>, <b>401</b>.
 ISSN 00280836, <a href="http://dx.doi.org/10.1038/44766">http://dx.doi.org/10.1038/44766</a>.
-<p>Losos J (2011).
-&ldquo;Seeing The Forest For The Trees: The Limitations of Phylogenies in Comparative Biology.&rdquo;
+
+- Losos J (2011).
+"Seeing The Forest For The Trees: The Limitations of Phylogenies in Comparative Biology."
 <em>The American Naturalist</em>, <b>177</b>.
 ISSN 00030147, <a href="http://dx.doi.org/10.1086/660020">http://dx.doi.org/10.1086/660020</a>.
-<p>Freckleton R and Harvey P (2006).
-&ldquo;Detecting Non-Brownian Trait Evolution in Adaptive Radiations.&rdquo;
+
+- Freckleton R and Harvey P (2006).
+"Detecting Non-Brownian Trait Evolution in Adaptive Radiations."
 <em>Plos Biology</em>, <b>4</b>.
 ISSN 1544-9173, <a href="http://dx.doi.org/10.1371/journal.pbio.0040373">http://dx.doi.org/10.1371/journal.pbio.0040373</a>.
-<p>Harmon L, Losos J, Jonathan Davies T, Gillespie R, Gittleman J, Bryan Jennings W, Kozak K, McPeek M, Moreno-Roark F, Near T, Purvis A, Ricklefs R, Schluter D, Schulte II J, Seehausen O, Sidlauskas B, Torres-Carvajal O, Weir J and Mooers A (2010).
-&ldquo;Early Bursts of Body Size And Shape Evolution Are Rare in Comparative Data.&rdquo;
+
+- Harmon L, Losos J, Jonathan Davies T, Gillespie R, Gittleman J, Bryan Jennings W, Kozak K, McPeek M, Moreno-Roark F, Near T, Purvis A, Ricklefs R, Schluter D, Schulte II J, Seehausen O, Sidlauskas B, Torres-Carvajal O, Weir J and Mooers A (2010).
+"Early Bursts of Body Size And Shape Evolution Are Rare in Comparative Data."
 <em>Evolution</em>.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2010.01025.x">http://dx.doi.org/10.1111/j.1558-5646.2010.01025.x</a>.

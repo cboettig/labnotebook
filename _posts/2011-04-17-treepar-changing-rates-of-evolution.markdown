@@ -56,21 +56,26 @@ I hope I haven't seemed too critical here.  This is the first time I've really l
 
 
 
+
 ## References
 
-<p>Stadler T (2011).
-&ldquo;Mammalian Phylogeny Reveals Recent Diversification Rate Shifts.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- Stadler T (2011).
+"Mammalian Phylogeny Reveals Recent Diversification Rate Shifts."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1016876108">http://dx.doi.org/10.1073/pnas.1016876108</a>.
-<p>Bininda-Emonds O, Cardillo M, Jones K, MacPhee R, Beck R, Grenyer R, Price S, Vos R, Gittleman J and Purvis A (2007).
-&ldquo;The Delayed Rise of Present-Day Mammals.&rdquo;
-<EM>Nature</EM>, <B>446</B>.
+
+- Bininda-Emonds O, Cardillo M, Jones K, MacPhee R, Beck R, Grenyer R, Price S, Vos R, Gittleman J and Purvis A (2007).
+"The Delayed Rise of Present-Day Mammals."
+*Nature*, **446**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature05634">http://dx.doi.org/10.1038/nature05634</a>.
-<p>Stadler T (2011).
-&ldquo;Simulating Trees With A Fixed Number of Extant Species.&rdquo;
-<EM>Systematic Biology</EM>, <B>60</B>.
+
+- Stadler T (2011).
+"Simulating Trees With A Fixed Number of Extant Species."
+*Systematic Biology*, **60**.
 ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syr029">http://dx.doi.org/10.1093/sysbio/syr029</a>.
-<p>Hartmann K, Wong D and Stadler T (2010).
-&ldquo;Sampling Trees From Evolutionary Models.&rdquo;
-<EM>Systematic Biology</EM>, <B>59</B>.
+
+- Hartmann K, Wong D and Stadler T (2010).
+"Sampling Trees From Evolutionary Models."
+*Systematic Biology*, **59**.
 ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syq026">http://dx.doi.org/10.1093/sysbio/syq026</a>.

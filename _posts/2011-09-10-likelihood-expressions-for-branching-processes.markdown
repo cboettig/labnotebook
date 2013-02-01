@@ -55,9 +55,11 @@ Nee, S., Holmes, E. C., May, R. M., & Harvey, P. H. (1994). Extinction rates can
 Nee, S., May, R. M., & Harvey, P. H. (1994). The reconstructed evolutionary process. Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences, 344(1309), 305-311.
 
 Foote, M. (1999). Evolutionary and Preservational Constraints on Origins of Biologic Groups: Divergence Times of Eutherian Mammals. Science, 283(5406), 1310-1314. doi:10.1126/science.283.5406.1310
+
 ## References
 
-<p>Paradis E (2003).
-&ldquo;Analysis of Diversification: Combining Phylogenetic And Taxonomic Data.&rdquo;
-<EM>Proceedings of The Royal Society B: Biological Sciences</EM>, <B>270</B>.
+
+- Paradis E (2003).
+"Analysis of Diversification: Combining Phylogenetic And Taxonomic Data."
+*Proceedings of The Royal Society B: Biological Sciences*, **270**.
 ISSN 0962-8452, <a href="http://dx.doi.org/10.1098/rspb.2003.2513">http://dx.doi.org/10.1098/rspb.2003.2513</a>.

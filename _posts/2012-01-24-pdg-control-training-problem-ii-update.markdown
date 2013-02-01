@@ -59,9 +59,11 @@ _**Technical capacity and challenges**_
   * Curse of dimensionality is a major challenge to go beyond the 1D training problem into the 3D parrotfish model or the learning model.  We investigated Heuristic Sampling [cite]10.1111/j.2041-210X.2010.00069.x[/cite] as a possible solution but this far this seems to scale rather poorly with the  size of the control space.
 
 
+
 ## References
 
-<p>Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005).
-&ldquo;Fishery Management Under Multiple Uncertainty.&rdquo;
-<EM>Journal of Environmental Economics And Management</EM>, <B>50</B>.
+
+- Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005).
+"Fishery Management Under Multiple Uncertainty."
+*Journal of Environmental Economics And Management*, **50**.
 ISSN 00950696, <a href="http://dx.doi.org/10.1016/j.jeem.2004.11.005">http://dx.doi.org/10.1016/j.jeem.2004.11.005</a>.

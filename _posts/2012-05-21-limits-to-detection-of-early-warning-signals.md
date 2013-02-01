@@ -109,7 +109,8 @@ The `inst/examples` directory includes code to reproduce the analysis for
 the chemostat, simulation, and glaciation data.
 
 
-# References
+
+## References
 
 Boettiger, C., and Hastings, A. (2012). Quantifying limits to detection of early warning for critical transitions. Journal of The Royal Society Interface, 1-29. doi:10.1098/rsif.2012.0125
 

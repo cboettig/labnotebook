@@ -81,9 +81,11 @@ For that matter, the BM model in OUCH considers itself as having 2 degrees of fr
 
 [ref]Note that the command "sessionInfo()" will return the version number for attached packages.[/ref]
 
+
 ## References
 
-<p>Butler M and King A (2004).
-&ldquo;Phylogenetic Comparative Analysis: A Modeling Approach For Adaptive Evolution.&rdquo;
-<EM>The American Naturalist</EM>, <B>164</B>.
+
+- Butler M and King A (2004).
+"Phylogenetic Comparative Analysis: A Modeling Approach For Adaptive Evolution."
+*The American Naturalist*, **164**.
 ISSN 0003-0147, <a href="http://dx.doi.org/10.1086/426002">http://dx.doi.org/10.1086/426002</a>.

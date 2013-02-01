@@ -44,13 +44,16 @@ Robert, C.P. & Casella, G. _Introducing Monte Carlo Methods with R (Use R)_. 28
 
 
 
+
 ## References
 
-<p>Templeton A (2010).
-&ldquo;Coherent And Incoherent Inference in Phylogeography And Human Evolution.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>107</B>.
+
+- Templeton A (2010).
+"Coherent And Incoherent Inference in Phylogeography And Human Evolution."
+*Proceedings of The National Academy of Sciences*, **107**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.0910647107">http://dx.doi.org/10.1073/pnas.0910647107</a>.
-<p>Berger J, Fienberg S, Raftery A and Robert C (2010).
-&ldquo;Incoherent Phylogeographic Inference.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>107</B>.
+
+- Berger J, Fienberg S, Raftery A and Robert C (2010).
+"Incoherent Phylogeographic Inference."
+*Proceedings of The National Academy of Sciences*, **107**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1008762107">http://dx.doi.org/10.1073/pnas.1008762107</a>.

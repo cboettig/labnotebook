@@ -130,21 +130,26 @@ Exploring a couple plugins and modifications of lab notebook and workflow.  Cur
 
 
 {{github:cboettig}}
+
 ## References
 
-<p>Young M, Bell M and Brusatte S (2011).
-&ldquo;Craniofacial Form And Function in Metriorhynchidae (Crocodylomorpha: Thalattosuchia): Modelling Phenotypic Evolution With Maximum-Likelihood Methods.&rdquo;
-<EM>Biology Letters</EM>, <B>7</B>.
+
+- Young M, Bell M and Brusatte S (2011).
+"Craniofacial Form And Function in Metriorhynchidae (Crocodylomorpha: Thalattosuchia): Modelling Phenotypic Evolution With Maximum-Likelihood Methods."
+*Biology Letters*, **7**.
 ISSN 1744-9561, <a href="http://dx.doi.org/10.1098/rsbl.2011.0357">http://dx.doi.org/10.1098/rsbl.2011.0357</a>.
-<p>Hunt G, Bell M and Travis M (2008).
-&ldquo;Evolution Toward A New Adaptive Optimum: Phenotypic Evolution in A Fossil Stickleback Lineage.&rdquo;
-<EM>Evolution</EM>, <B>62</B>.
+
+- Hunt G, Bell M and Travis M (2008).
+"Evolution Toward A New Adaptive Optimum: Phenotypic Evolution in A Fossil Stickleback Lineage."
+*Evolution*, **62**.
 ISSN 00143820, <a href="http://dx.doi.org/10.1111/j.1558-5646.2007.00310.x">http://dx.doi.org/10.1111/j.1558-5646.2007.00310.x</a>.
-<p>Lande R (1976).
-&ldquo;Natural Selection And Random Genetic Drift in Phenotypic Evolution.&rdquo;
-<EM>Evolution</EM>, <B>30</B>.
+
+- Lande R (1976).
+"Natural Selection And Random Genetic Drift in Phenotypic Evolution."
+*Evolution*, **30**.
 ISSN 00143820, <a href="http://dx.doi.org/10.2307/2407703">http://dx.doi.org/10.2307/2407703</a>.
-<p>Horan R, Fenichel E, Drury K and Lodge D (2011).
-&ldquo;Managing Ecological Thresholds in Coupled Environmental-Human Systems.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- Horan R, Fenichel E, Drury K and Lodge D (2011).
+"Managing Ecological Thresholds in Coupled Environmental-Human Systems."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1005431108">http://dx.doi.org/10.1073/pnas.1005431108</a>.

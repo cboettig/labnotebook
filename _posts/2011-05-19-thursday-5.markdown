@@ -66,9 +66,11 @@ categories:
 
 
 ﻿
+
 ## References
 
-<p>Piwowar H, Vision T and Whitlock M (2011).
-&ldquo;Data Archiving is A Good Investment.&rdquo;
-<EM>Nature</EM>, <B>473</B>.
+
+- Piwowar H, Vision T and Whitlock M (2011).
+"Data Archiving is A Good Investment."
+*Nature*, **473**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/473285a">http://dx.doi.org/10.1038/473285a</a>.

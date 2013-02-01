@@ -105,9 +105,11 @@ abline(v=5, col="red", lwd=2, lty=2)
 
 ```
 
+
 ## References
 
-<p>Altekar G, Dwarkadas S, Huelsenbeck J and Ronquist F (2004).
-&ldquo;Parallel Metropolis Coupled Markov Chain Monte Carlo For Bayesian Phylogenetic Inference.&rdquo;
-<EM>Bioinformatics</EM>, <B>20</B>.
+
+- Altekar G, Dwarkadas S, Huelsenbeck J and Ronquist F (2004).
+"Parallel Metropolis Coupled Markov Chain Monte Carlo For Bayesian Phylogenetic Inference."
+*Bioinformatics*, **20**.
 ISSN 1367-4803, <a href="http://dx.doi.org/10.1093/bioinformatics/btg427">http://dx.doi.org/10.1093/bioinformatics/btg427</a>.

@@ -30,9 +30,11 @@ categories:
   * Revised Weds post, reviewing context for Goldman 1993 [cite]10.1007/BF00166252[/cite] relative to original simulation-based parametric bootstrap of Cox's statistic as illustrated in (McLachlan, 1987) in mixture models.
 
 
+
 ## References
 
-<p>McLachlan G (1987).
-&ldquo;on Bootstrapping The Likelihood Ratio Test Stastistic For The Number of Components in A Normal Mixture.&rdquo;
-<EM>Applied Statistics</EM>, <B>36</B>.
+
+- McLachlan G (1987).
+"on Bootstrapping The Likelihood Ratio Test Stastistic For The Number of Components in A Normal Mixture."
+*Applied Statistics*, **36**.
 ISSN 00359254, <a href="http://dx.doi.org/10.2307/2347790">http://dx.doi.org/10.2307/2347790</a>.

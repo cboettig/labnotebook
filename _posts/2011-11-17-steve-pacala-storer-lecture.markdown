@@ -84,17 +84,21 @@ Discussion of warning signals and potential data sets, particularly for spatial 
   * Varve lake pollen deposits -- very rich history.  Suggested a European database and US database, still trying to track these down. The [European](http://www.europeanpollendatabase.net/) one?
 
 
+
 ## References
 
-<p>Gersani M, Brown J, O'Brien E, Maina G and Abramsky Z (2001).
-&ldquo;Tragedy of The Commons as A Result of Root Competition.&rdquo;
-<EM>Journal of Ecology</EM>, <B>89</B>.
+
+- Gersani M, Brown J, O'Brien E, Maina G and Abramsky Z (2001).
+"Tragedy of The Commons as A Result of Root Competition."
+*Journal of Ecology*, **89**.
 ISSN 0022-0477, <a href="http://dx.doi.org/10.1046/j.0022-0477.2001.00609.x">http://dx.doi.org/10.1046/j.0022-0477.2001.00609.x</a>.
-<p>Purves D, Lichstein J, Strigul N and Pacala S (2008).
-&ldquo;Predicting And Understanding Forest Dynamics Using A Simple Tractable Model.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>105</B>.
+
+- Purves D, Lichstein J, Strigul N and Pacala S (2008).
+"Predicting And Understanding Forest Dynamics Using A Simple Tractable Model."
+*Proceedings of The National Academy of Sciences*, **105**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.0807754105">http://dx.doi.org/10.1073/pnas.0807754105</a>.
-<p>Schiermeier Q (2011).
-&ldquo;Climate And Weather: Extreme Measures.&rdquo;
-<EM>Nature</EM>, <B>477</B>.
+
+- Schiermeier Q (2011).
+"Climate And Weather: Extreme Measures."
+*Nature*, **477**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/477148a">http://dx.doi.org/10.1038/477148a</a>.

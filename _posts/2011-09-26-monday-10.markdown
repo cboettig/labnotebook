@@ -86,9 +86,11 @@ Sister-clade comparisons: how unbalanced does your tree need to be, to have 95% 
 
 
 
+
 ## References
 
-<p>Maddison W (2006).
-&ldquo;Confounding Asymmetries in Evolutionary Diversification And Character Change.&rdquo;
-<EM>Evolution</EM>, <B>60</B>.
+
+- Maddison W (2006).
+"Confounding Asymmetries in Evolutionary Diversification And Character Change."
+*Evolution*, **60**.
 ISSN 0014-3820, <a href="http://dx.doi.org/10.1111/j.0014-3820.2006.tb00517.x">http://dx.doi.org/10.1111/j.0014-3820.2006.tb00517.x</a>.

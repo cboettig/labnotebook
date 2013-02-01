@@ -75,17 +75,21 @@ categories:
 
 Also, Joe Felsenstein arrives today, meeting him at the airport around 5pm before dinner with the usual suspects.  Looking forward to the seminar and banquet tomorrow.
 
+
 ## References
 
-<p>Hilt S, Köhler J, Kozerski H, van Nes E and Scheffer M (2011).
-&ldquo;Abrupt Regime Shifts in Space And Time Along Rivers And Connected Lake Systems.&rdquo;
-<EM>Oikos</EM>, <B>120</B>.
+
+- Hilt S, Köhler J, Kozerski H, van Nes E and Scheffer M (2011).
+"Abrupt Regime Shifts in Space And Time Along Rivers And Connected Lake Systems."
+*Oikos*, **120**.
 <a href="http://dx.doi.org/10.1111/j.1600-0706.2010.18553.x">http://dx.doi.org/10.1111/j.1600-0706.2010.18553.x</a>.
-<p>Simons A (2011).
-&ldquo;Modes of Response to Environmental Change And The Elusive Empirical Evidence For Bet Hedging.&rdquo;
-<EM>Proceedings of The Royal Society B: Biological Sciences</EM>, <B>278</B>.
+
+- Simons A (2011).
+"Modes of Response to Environmental Change And The Elusive Empirical Evidence For Bet Hedging."
+*Proceedings of The Royal Society B: Biological Sciences*, **278**.
 ISSN 0962-8452, <a href="http://dx.doi.org/10.1098/rspb.2011.0176">http://dx.doi.org/10.1098/rspb.2011.0176</a>.
-<p>Santos J and Cannatella D (2011).
-&ldquo;Phenotypic Integration Emerges From Aposematism And Scale in Poison Frogs.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>108</B>.
+
+- Santos J and Cannatella D (2011).
+"Phenotypic Integration Emerges From Aposematism And Scale in Poison Frogs."
+*Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1010952108">http://dx.doi.org/10.1073/pnas.1010952108</a>.

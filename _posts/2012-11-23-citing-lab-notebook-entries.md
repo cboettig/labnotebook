@@ -37,6 +37,7 @@ I stumbled across Google's indexing of some of my lab notebook entries somewhat 
 
 
 
+
 ## References
 
 1. Titus Brown (2012) Posting blog entries to figshare, Living in an Ivory Basement. http://ivory.idyll.org/blog/posting-blog-entries-to-figshare.html 

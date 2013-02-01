@@ -90,17 +90,21 @@ Discussed this article on[ hiring statistics](http://www.sfu.ca/~mcollard/docume
 
 
 Excellent presentation on his corals work in CPB.
+
 ## References
 
-<p>Taylor C and Hastings A (2005).
-&ldquo;Allee Effects in Biological Invasions.&rdquo;
-<EM>Ecology Letters</EM>, <B>8</B>.
+
+- Taylor C and Hastings A (2005).
+"Allee Effects in Biological Invasions."
+*Ecology Letters*, **8**.
 ISSN 1461023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2005.00787.x">http://dx.doi.org/10.1111/j.1461-0248.2005.00787.x</a>.
-<p>Tobin P, Berec L and Liebhold A (2011).
-&ldquo;Exploiting Allee Effects For Managing Biological Invasions.&rdquo;
-<EM>Ecology Letters</EM>, <B>14</B>.
+
+- Tobin P, Berec L and Liebhold A (2011).
+"Exploiting Allee Effects For Managing Biological Invasions."
+*Ecology Letters*, **14**.
 <a href="http://dx.doi.org/10.1111/j.1461-0248.2011.01614.x">http://dx.doi.org/10.1111/j.1461-0248.2011.01614.x</a>.
-<p>Epanchin-Niell R and Hastings A (2010).
-&ldquo;Controlling Established Invaders: Integrating Economics And Spread Dynamics to Determine Optimal Management.&rdquo;
-<EM>Ecology Letters</EM>, <B>13</B>.
+
+- Epanchin-Niell R and Hastings A (2010).
+"Controlling Established Invaders: Integrating Economics And Spread Dynamics to Determine Optimal Management."
+*Ecology Letters*, **13**.
 ISSN 1461023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2010.01440.x">http://dx.doi.org/10.1111/j.1461-0248.2010.01440.x</a>.

@@ -263,9 +263,11 @@ details("21239388", "pmid")
 [Some Dryad papers ](http://datadryad.org/handle/10255/dryad.1705)have phylogenies, and the data deposition includes the BEAST xml files necessary to reproduce the phylogenies, but not, it seems, the phylogenies themselves.  It would be great to have some good examples of papers with data up on both TreeBASE and Dryad. Further, a pipeline that could regenerate the trees from the alignments might be interesting.
 
 RaXML for inferring branch lengths: A quick solution for trees that have only topologies would be to infer branch lengths conditional on the topology from the character matrix.  TreeBASE does not include this with the nexus file containing the tree, and would require a separate query to pull the character matrix.  This is handled in the read.nexus.data command.
+
 ## References
 
-<p>Rowe K, Aplin K, Baverstock P and Moritz C (2011).
-&ldquo;Recent And Rapid Speciation With Limited Morphological Disparity in The Genus Rattus.&rdquo;
-<EM>Systematic Biology</EM>, <B>60</B>.
+
+- Rowe K, Aplin K, Baverstock P and Moritz C (2011).
+"Recent And Rapid Speciation With Limited Morphological Disparity in The Genus Rattus."
+*Systematic Biology*, **60**.
 ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syq092">http://dx.doi.org/10.1093/sysbio/syq092</a>.

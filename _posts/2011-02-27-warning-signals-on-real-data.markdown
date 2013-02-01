@@ -53,21 +53,26 @@ I don't actually find the curve more useful than just seeing the two distributio
 
 
 ## Manuscript: Still Revising/Writing...
+
 ## References
 
-<p>Dakos V, Scheffer M, van Nes E, Brovkin V, Petoukhov V and Held H (2008).
-&ldquo;Slowing Down as an Early Warning Signal For Abrupt Climate Change.&rdquo;
-<EM>Proceedings of The National Academy of Sciences</EM>, <B>105</B>.
+
+- Dakos V, Scheffer M, van Nes E, Brovkin V, Petoukhov V and Held H (2008).
+"Slowing Down as an Early Warning Signal For Abrupt Climate Change."
+*Proceedings of The National Academy of Sciences*, **105**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.0802430105">http://dx.doi.org/10.1073/pnas.0802430105</a>.
-<p>Petit J, Jouzel J, Raynaud D, Barkov N, Barnola J, Basile I, Bender M, Chappellaz J, Davis M, Delaygue G, Delmotte M, Kotlyakov V, Legrand M, Lipenkov V, Lorius C, PÉpin L, Ritz C, Saltzman E and Stievenard M (1999).
-&ldquo;Unknown.&rdquo;
-<EM>Nature</EM>, <B>399</B>.
+
+- Petit J, Jouzel J, Raynaud D, Barkov N, Barnola J, Basile I, Bender M, Chappellaz J, Davis M, Delaygue G, Delmotte M, Kotlyakov V, Legrand M, Lipenkov V, Lorius C, PÉpin L, Ritz C, Saltzman E and Stievenard M (1999).
+"Unknown."
+*Nature*, **399**.
 ISSN 00280836, <a href="http://dx.doi.org/10.1038/20859">http://dx.doi.org/10.1038/20859</a>.
-<p>Tripati A, Backman J, Elderfield H and Ferretti P (2005).
-&ldquo;Eocene Bipolar Glaciation Associated With Global Carbon Cycle Changes.&rdquo;
-<EM>Nature</EM>, <B>436</B>.
+
+- Tripati A, Backman J, Elderfield H and Ferretti P (2005).
+"Eocene Bipolar Glaciation Associated With Global Carbon Cycle Changes."
+*Nature*, **436**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature03874">http://dx.doi.org/10.1038/nature03874</a>.
-<p>Hughen K (2000).
-&ldquo;Synchronous Radiocarbon And Climate Shifts During The Last Deglaciation.&rdquo;
-<EM>Science</EM>, <B>290</B>.
+
+- Hughen K (2000).
+"Synchronous Radiocarbon And Climate Shifts During The Last Deglaciation."
+*Science*, **290**.
 ISSN 00368075, <a href="http://dx.doi.org/10.1126/science.290.5498.1951">http://dx.doi.org/10.1126/science.290.5498.1951</a>.

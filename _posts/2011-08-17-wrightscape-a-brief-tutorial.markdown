@@ -128,13 +128,16 @@ Of course we would do well to parallelize this call over some large number of no
 
 
 
+
 ## References
 
-<p>REDDING D, DeWOLFF C and MOOERS A (2010).
-&ldquo;Evolutionary Distinctiveness, Threat Status, And Ecological Oddity in Primates.&rdquo;
-<EM>Conservation Biology</EM>, <B>24</B>.
+
+- REDDING D, DeWOLFF C and MOOERS A (2010).
+"Evolutionary Distinctiveness, Threat Status, And Ecological Oddity in Primates."
+*Conservation Biology*, **24**.
 <a href="http://dx.doi.org/10.1111/j.1523-1739.2010.01532.x">http://dx.doi.org/10.1111/j.1523-1739.2010.01532.x</a>.
-<p>Eastman J, Alfaro M, Joyce P, Hipp A and Harmon L (2011).
-&ldquo;A Novel Comparative Method For Identifying Shifts in The Rate of Character Evolution on Trees.&rdquo;
-<EM>Evolution</EM>, <B>65</B>.
+
+- Eastman J, Alfaro M, Joyce P, Hipp A and Harmon L (2011).
+"A Novel Comparative Method For Identifying Shifts in The Rate of Character Evolution on Trees."
+*Evolution*, **65**.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2011.01401.x">http://dx.doi.org/10.1111/j.1558-5646.2011.01401.x</a>.

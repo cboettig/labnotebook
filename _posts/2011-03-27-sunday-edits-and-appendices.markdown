@@ -60,13 +60,16 @@ p values no better an indicator on pearson than on kendall, though null is sensi
 
 
 
+
 ## References
 
-<p>Scheffer M (2010).
-&ldquo;Complex Systems: Foreseeing Tipping Points.&rdquo;
-<EM>Nature</EM>, <B>467</B>.
+
+- Scheffer M (2010).
+"Complex Systems: Foreseeing Tipping Points."
+*Nature*, **467**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/467411a">http://dx.doi.org/10.1038/467411a</a>.
-<p>Drake J and Griffen B (2010).
-&ldquo;Early Warning Signals of Extinction in Deteriorating Environments.&rdquo;
-<EM>Nature</EM>, <B>467</B>.
+
+- Drake J and Griffen B (2010).
+"Early Warning Signals of Extinction in Deteriorating Environments."
+*Nature*, **467**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature09389">http://dx.doi.org/10.1038/nature09389</a>.

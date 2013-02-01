@@ -33,9 +33,11 @@ For instance, the small geospiza data set (13 taxa) the OU fits better, but not 
 
 
 Should add parameter distributions for the above cases and run the model choice on a couple simulations with weaker EB parameters, as well as a couple of the real data sets.
+
 ## References
 
-<p>Harmon L, Losos J, Jonathan Davies T, Gillespie R, Gittleman J, Bryan Jennings W, Kozak K, McPeek M, Moreno-Roark F, Near T, Purvis A, Ricklefs R, Schluter D, Schulte II J, Seehausen O, Sidlauskas B, Torres-Carvajal O, Weir J and Mooers A (2010).
-&ldquo;Early Bursts of Body Size And Shape Evolution Are Rare in Comparative Data.&rdquo;
-<EM>Evolution</EM>.
+
+- Harmon L, Losos J, Jonathan Davies T, Gillespie R, Gittleman J, Bryan Jennings W, Kozak K, McPeek M, Moreno-Roark F, Near T, Purvis A, Ricklefs R, Schluter D, Schulte II J, Seehausen O, Sidlauskas B, Torres-Carvajal O, Weir J and Mooers A (2010).
+"Early Bursts of Body Size And Shape Evolution Are Rare in Comparative Data."
+*Evolution*.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2010.01025.x">http://dx.doi.org/10.1111/j.1558-5646.2010.01025.x</a>.

@@ -36,9 +36,11 @@ tags:
 Also working on clean-up and reorganization of directory structure.
 
 Aside: installed jetpack plugin, breaks flickr-gallery plugin unless video inclusion short-codes are disabled.  Removing jetpack brakes the API key for wp-stats, cannot seem to fix this, (says wrong API key, doesn't match the install of wp-stats), so have gone back to jetpack.
+
 ## References
 
-<p>Pagel M (1999).
-&ldquo;Unknown.&rdquo;
-<EM>Nature</EM>, <B>401</B>.
+
+- Pagel M (1999).
+"Unknown."
+*Nature*, **401**.
 ISSN 00280836, <a href="http://dx.doi.org/10.1038/44766">http://dx.doi.org/10.1038/44766</a>.
