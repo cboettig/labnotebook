@@ -5,31 +5,117 @@ published: false
 ---
 
 
+
+## Parsing semantic HTML
+
 ```{r}
 library(RCurl)
 library(XML)
+library(tm)
+library(wordcloud)
+library(RColorBrewer)
 ```
+
+We can get a list of pages to download from the sitemap
+
+```{r}
+pagelist <- readLines("http://carlboettiger.info/sitemap.txt")
+pagelist <- pagelist[grep("/201\\d/", pagelist)]  # drop non-posts)
+pages <- lapply(pagelist, getURLContent, followlocation=TRUE)
+```
+
+Or, if an archive is available locally, (e.g. from figshare cache), we can read the files in directly.  
 
 
 ```{r}
-doc <- xmlParse(getURLContent("http://www.carlboettiger.info/2012/12/27/notes.html"))
+pages <- system("ls _site/201*/*/*/*.html", intern=TRUE)
 ```
+
+We parse each of the pages as HTML so that we can manipulate them with XML tools
+
+
+```{r}
+html <- lapply(pages, htmlParse)
+```
+
+For instance, we can easily get the content of all entries:
+
+```{r}
+text <- sapply(html, xpathSApply, "//article", xmlValue) 
+```
+
+We can also extract metadata based on the semantic markup.  
+
+```{r}
+titles <- sapply(html, xpathSApply, "//title", xmlValue)
+categories <- sapply(html, xpathSApply, "//node()[@class='category']", xmlValue)
+tags <- sapply(html, xpathSApply, "//node()[@class='tag']", xmlValue)
+```
+
+R makes it easy to summarize this data, e.g. by generating a table of the number of entries in each category, or a wordcloud of the tags.  
+
+```{r}
+table(unlist(categories))
+wordcloud(Corpus(VectorSource(tags)))
+```
+
+
+We can perform more direct text mining as well. For instance, we extract all DOIs found in the text: 
+
+```{r}
+doi_pattern = "\\b(10[.][0-9]{4,}(?:[.][0-9]+)*/(?:(?![\"&\'<>])\\S)+)\\b"
+require(gsubfn)
+dois <- strapply(text, doi_pattern, perl=TRUE)    #text[-462]
+head(sort(table(unlist(dois))))
+```
+
+Or generate a wordcloud of the full text 
+
+```{r}
+
+carl <- Corpus(VectorSource(text))
+carl <- tm_map(carl, removePunctuation)
+carl <- tm_map(carl, tolower)
+carl <- tm_map(crude, function(x) removeWords(x, stopwords()))       
+
+carl.tdm <- TermDocumentMatrix(carl)
+carl.m <- as.matrix(carl.tdm)
+carl.v <- sort(rowSums(carl.m), decreasing=TRUE)
+carl.d <- data.frame(word=names(carl.v), freq=carl.v)
+
+
+wordcloud(carl.d$word,carl.d$freq, scale=c(8,.4),min.freq=3,
+max.words=100, random.order=FALSE, rot.per=.15, colors=pal2)
+```
+
+## XML parsing 
+
+Some entries have content that is not valid XML. 
+
+```{r} 
+site <- lapply(pages, function(s){ message(s); try(xmlParse(s)) })
+parse_fails <- sapply(site, is, "try-error") 
+parsed_pages <- site[!parse_fails] 
+```
+
+
 
 Not all namespaces have been declared in header in RDFa. Should probably be remedied:
 ```{r}
-xmlNamespaces(doc)
+xmlNamespaces(parsed_pages[[1]])
 ```
 
 
 ```{r}
-ns = xmlNamespaces(doc)[[1]]$uri
-namespaces = c(ns=ns, dc="http://purl.org/dc/terms/")
+ns = xmlNamespaces(doc)[[1]]$uri # we can get the w3 xhtml namespace this way, since it is declared at top
+namespaces = c(ns="http://www.w3.org/1999/xhtml", dc="http://purl.org/dc/terms/")
 ```
 
 Show the contents of the header node:
 
 ```{r}
 getNodeSet(doc, "//ns:header", namespace=namespaces)
+getNodeSet(doc, "//ns:article", namespace=namespaces)
 ```
 
 
@@ -62,26 +148,6 @@ xpathSApply(doc, "//node()[@property]", namespaces=namespaces, xmlAttrs)
 
 
 
-```{r}
-pagelist <- readLines("http://carlboettiger.info/sitemap.txt")
-pagelist <- pagelist[-grep("/archives/", pagelist)]  # drop redirect pagelist)
-pagelist <- pagelist[grep("/201\\d/", pagelist)]  # drop non-posts)
-```
 
-```{r}
-pages <- lapply(pagelist, getURLContent, followlocation=TRUE)
-# Internal mechanism
-# pages <- system("ls _site/201*/*/*/*.html", intern=TRUE)
-
-site <- lapply(pages, function(s){ message(s); try(xmlParse(s)) })
-parse_fails <- sapply(site, is, "try-error") 
-parsed_pages <- site[!parse_fails] 
-```
-
-Pages that won't parse
-
-```{r}
-pages[parse_fails]
-```
 
 
