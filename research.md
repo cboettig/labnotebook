@@ -11,7 +11,7 @@ I began my PhD as a pencil+paper theorist.  A fortuitous training grant in Compu
 bolstered my high performance computing skills while my interest in stochastic systems
 me to large datasets where we might hope to resolve weak signals of interesting processes. 
 I have worked in a variety of areas (outlined below).  For a more up-to-date or in depth
-look, why not see [what I am working on right now?](/lab-notebookmark.html)
+look, why not see [what I am working on right now](/lab-notebook.html)?
 
 ### Ecology
 
@@ -19,7 +19,7 @@ look, why not see [what I am working on right now?](/lab-notebookmark.html)
 * Stochastic population dynamics [<i class="icon-github" style="color:#6c71c4;" rel="tooltip", title="populationdynamics code repository"></i>](https://github.com/cboettig/populationdynamics) [<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="papers I'm reading in theoretical ecology"></i>](http://www.mendeley.com/groups/634301/theoretical-ecology/papers/)
 [<i class="icon-tags" style="color:#b58900;", rel="tooltip", title="Notebook entries tagged as tribolium"></i>](tags.html/#tribolium) 
 * Early warning signals [<i class="icon-book" style="color:#2aa198;", rel="tooltip" title="Boettiger and Hastings, (2012). Quantifying the limits to detection of early warning signals"></i>](/vita.html) [<i class="icon-book" style="color:#2aa198;" rel="tooltip", title="Boettiger and Hastings, (2012). Early warning signals and the prosecutor's fallacy"></i>](/vita.html) [<i class="icon-book" style="color:#2aa198;", rel="tooltip" title="Boettiger and Hastings, (2013). Tipping Points: from patterns to predictions"></i>](/vita.html) [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="earlywarning code repository"></i>](https://github.com/cboettig/earlywarning) [<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="papers I'm reading in early warning signals"></i>](http://www.mendeley.com/groups/530001/early-warning-signs/papers/) [<i class="icon-tags" style="color:#b58900;", rel="tooltip", title="Notebook entries tagged as warning-signals"></i>](tags.html/#warning-sginals) 
-* Conservation policy models, multiple uncertainty, tipping points. [<i class="icon-github" style="color:#6c71c4;"></i>](https://github.com/cboettig/pdg_control) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/) 
+* Conservation policy models, multiple uncertainty, tipping points. [<i class="icon-github" style="color:#6c71c4;"></i>](https://github.com/cboettig/pdg_control) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/#pdg-control) 
 * Non-parametric Bayesian methods and decision theory  [<i class="icon-github" style="color:#6c71c4;"></i>](https://github.com/cboettig/nonparametric-bayes) [<i class="icon-tags" style="color:#b58900;", rel="tooltip", title="Notebook entries tagged nonparametric-bayes"></i>](tags.html/#nonparametric-bayes)
 
 
@@ -32,19 +32,22 @@ look, why not see [what I am working on right now?](/lab-notebookmark.html)
 
 #### Eco-informatics
 
-* Programmatic access to large data sets [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Boettiger & Temple Lang (2012). Treebase: An R package for discovery, access and manipulation of online phylogenies"></i>](/vita.html) [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Boettiger et al. (2012). rfishbase: exploring, manipulating and visualizing FishBase data from R"></i>](/vita.html)  [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="rfishbase R package"></i>](https://github.com/ropensci/rfishbase) [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="treebase R package"></i>](https://github.com/ropensci/treeBASE) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/)
+* Programmatic access to large data sets [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Boettiger & Temple Lang (2012). Treebase: An R package for discovery, access and manipulation of online phylogenies"></i>](/vita.html) [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Boettiger et al. (2012). rfishbase: exploring, manipulating and visualizing FishBase data from R"></i>](/vita.html)  [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="rfishbase R package"></i>](https://github.com/ropensci/rfishbase) [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="treebase R package"></i>](https://github.com/ropensci/treeBASE) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/#fishbase) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/#treebase)
 * I'm a founding member of the [<i class="icon-globe"></i> ropensci](http://ropensci.org) Project, which has more details and links to software we provide.  
 
 
 ### Evolution
 
 * Compartive phylogenetics [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Boettiger et al. (2012) Is your phylogeny informative? Measuring the power of comparative methods"></i> ](/vita.html) [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Beaulieu et al. (2012) Modeling Stabilizing Selection: Expanding the
-  Ornstein-Uhlenbeck Model of Adaptive Evolution"></i> ](/vita.html) [<i class="icon-globe"></i>](http://cran.r-project.org/web/packages/OUwie/index.html) [<i class="icon-github" style="color:#6c71c4;"></i>](https://github.com/cboettig/wrightscape) [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="R package for phylogenetic monte carlo"></i>](https://github.com/cboettig/pmc) [<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="reading in phylogenetic methods"></i>](http://www.mendeley.com/groups/529971/phylogenetic-methods/papers/) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/) [<i class="icon-beaker" style="color:#859900;" rel="tooltip" title="Data from Boettiger et al. (2012), Evolution"></i>](http://datadryad.org/handle/10255/dryad.37645)
+  Ornstein-Uhlenbeck Model of Adaptive Evolution"></i> ](/vita.html) [<i class="icon-globe"></i>](http://cran.r-project.org/web/packages/OUwie/index.html) [<i class="icon-github" style="color:#6c71c4;"></i>](https://github.com/cboettig/wrightscape) [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="R package for phylogenetic monte carlo"></i>](https://github.com/cboettig/pmc) [<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="reading in phylogenetic methods"></i>](http://www.mendeley.com/groups/529971/phylogenetic-methods/papers/) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/#model-choice) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/#Labrids) [<i class="icon-beaker" style="color:#859900;" rel="tooltip" title="Data from Boettiger et al. (2012), Evolution"></i>](http://datadryad.org/handle/10255/dryad.37645)
 
-* Adaptive dynamics [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Boettiger et al. (2010). Fluctuation Domains in adaptive evolution"></i>](/vita.html) [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="R package accompanying Boettiger et al. 2010"></i>](https://github.com/cboettig/fluctuationDomains) [<i class="icon-github" style="color:#6c71c4;" title="R package for simulating branching in adaptive dynamics (mostly a wrapper to my C++ code)"></i>](https://github.com/cboettig/AdaptiveDynamics) [<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="recent papers in Adaptive Dynamics"></i>](http://www.mendeley.com/groups/529981/adaptive-dynamics/papers/)
+* Adaptive dynamics [<i class="icon-book" style="color:#2aa198;" rel="tooltip" title="Boettiger et al. (2010). Fluctuation Domains in adaptive evolution"></i>](/vita.html) [<i class="icon-github" style="color:#6c71c4;" rel="tooltip" title="R package accompanying Boettiger et al. 2010"></i>](https://github.com/cboettig/fluctuationDomains) [<i class="icon-github" style="color:#6c71c4;" title="R package for simulating branching in adaptive dynamics (mostly a wrapper to my C++ code)"></i>](https://github.com/cboettig/AdaptiveDynamics) [<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="recent papers in Adaptive Dynamics"></i>](http://www.mendeley.com/groups/529981/adaptive-dynamics/papers/) [<i class="icon-tags" style="color:#b58900;"></i>](tags.html/#adaptive-dynamics) [<i class="icon-beaker" style="color:#859900;" rel="tooltip" title="Data from Boettiger et al. (2010), Theoretical Population Biology"></i>](http://datadryad.org/handle/10255/dryad.37625)
 
 
-- [Guide to project workflow](http://www.carlboettiger.info/2012/05/06/research-workflow.html)
+
+### General information
+
+- [Overview of my project workflow](http://www.carlboettiger.info/2012/05/06/research-workflow.html)
 - [Data management plan](http://www.carlboettiger.info/2012/10/09/data-management-plan.htm)
 
 
@@ -53,7 +56,8 @@ I also enjoy exposure to fieldwork whenever I can convince colleagues to take me
 
 ### Teaching / Education 
 
-[<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="recent reading in research articles on education practices"></i>](http://www.mendeley.com/groups/530011/education/papers/)
+[<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="recent reading in research articles on education practices"></i>](http://www.mendeley.com/groups/530011/education/papers/) [<i class="icon-tags" style="color:#b58900;"></i>](categories.html/#teaching)
+
 
 
 ------------------------------------------------------------------------------
