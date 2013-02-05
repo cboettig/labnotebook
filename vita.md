@@ -176,7 +176,7 @@ Reviewer for:   *Theoretical Ecology*, *Journal of Mathematical Biology*,
 Interviews 
 ----------
 
-- **2012** Interviewed in (Nature)[http://www.nature.com/nature/journal/v493/n7434/full/nj7434-711a.html], Turning Point column. doi: [10.1038/nj7434-711a](http://dx.doi.org/10.1038/nj7434-711a)
+- **2012** Interviewed in [Nature](http://www.nature.com/nature/journal/v493/n7434/full/nj7434-711a.html), Turning Point column. doi: [10.1038/nj7434-711a](http://dx.doi.org/10.1038/nj7434-711a)
 -   **2010** Interviewed in [Science Careers](http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2010_04_09/caredit.a1000036). doi: [10.1126/science.caredit.a1000036](http://dx.doi.org/10.1126/science.caredit.a1000036)
 
 
