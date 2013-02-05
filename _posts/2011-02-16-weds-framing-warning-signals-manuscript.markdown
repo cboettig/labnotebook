@@ -57,7 +57,7 @@ Comparison of nested models -- stability loss has an extra parameter for the rat
 #### Model Adequacy / Goodness of Fit
 
 
-Perhaps "Model Adequacy" is the best way to describe this, if only because it is already used(Sullivan & Joyce, 2005) in describing parametric bootstrap approach.  References Goldman (1993)[cite]10.1007/BF00166252[/cite] in which this is done following Cox 1961/62, but as a model adequacy test in the following way:
+Perhaps "Model Adequacy" is the best way to describe this, if only because it is already used(Sullivan & Joyce, 2005) in describing parametric bootstrap approach.  References Goldman (1993)Goldman, 1993 in which this is done following Cox 1961/62, but as a model adequacy test in the following way:
 
 The focal model (whose "adequacy" we wish to test) is treated as the null, and the arbitrarily general model is treated as the test model (ironically it is the test model, not the null model, which is being used as the benchmark).  Goldman specifies the most unconstrained model for the phylogenetic inference from alignment data that still has i.i.d. sites.  Then adequacy is assessed then by whether or not the observed ratio falls in the tails of the distribution.
 
@@ -112,3 +112,7 @@ ISSN 1543-592X, <a href="http://dx.doi.org/10.1146/annurev.ecolsys.36.102003.152
 "on Bootstrapping The Likelihood Ratio Test Stastistic For The Number of Components in A Normal Mixture."
 *Applied Statistics*, **36**.
 ISSN 00359254, <a href="http://dx.doi.org/10.2307/2347790">http://dx.doi.org/10.2307/2347790</a>.
+
+
+
+-  Statistical Tests of Models of Dna Substitution NickGoldman 1993 *Journal of Molecular Evolution* **36**   - [10.1007/BF00166252](http://dx.doi.org/10.1007/BF00166252)

@@ -89,7 +89,7 @@ Species based. (Endangered species act, etc)
 
 
 	
-  * functional response traits. But: Difficult to measure. difficult to anticipate consequences. [cite]10.1111/j.1466-822X.2006.00212.x[/cite]
+  * functional response traits. But: Difficult to measure. difficult to anticipate consequences. Hobbs _et. al._ 2006
 
 	
   * Habitat structure & complexity. But:
@@ -184,3 +184,24 @@ ISSN 0003-0147, <a href="http://dx.doi.org/10.1086/516845">http://dx.doi.org/10.
 "Managing For Resilience."
 *Wildlife Biology*, **17**.
 ISSN 0909-6396, <a href="http://dx.doi.org/10.2981/10-084">http://dx.doi.org/10.2981/10-084</a>.
+
+
+
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order Richard J.Hobbs 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order SalvatoreArico 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order JamesAronson 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order Jill S.Baron 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order PeterBridgewater 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order Viki A.Cramer 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order Paul R.Epstein 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order John J.Ewel 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order Carlos A.Klink 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order Ariel E.Lugo 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order DavidNorton 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order DennisOjima 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order David M.Richardson 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order Eric W.Sanderson 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order FernandoValladares 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order MontserratVila 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order ReginoZamora 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)
+-  Novel Ecosystems: Theoretical And Management Aspects of The New Ecological World Order MartinZobel 2006 *Global Ecology And Biogeography* **15**   - [10.1111/j.1466-822X.2006.00212.x](http://dx.doi.org/10.1111/j.1466-822X.2006.00212.x)

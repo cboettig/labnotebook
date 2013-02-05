@@ -28,7 +28,7 @@ Some nice theoretical ecology papers out from our group recently, looking over t
   * Jamie's paper: (Ashander _et. al._ 2011) on sea-lice with Mark Lewis.
 
 	
-  * Also my entry on [ABC](http://www.carlboettiger.info/archives/1221) a few days ago suddenly gathered a bunch of traffic and suggested some more reading to me, [cite]10.1214/11-BA602[/cite], thanks to [Dan Lawson](http://www.maths.bris.ac.uk/~madjl/) at Bristol for pointing this out.  Sounds like there may be a straight-forward way to derive sufficient statistics for both models to allow comparisons, though not sure whether or not we are using even model-wise sufficient statistics in the new comparative phylogenetics applications.  Perhaps worth a bit more attention, but [cite]10.1214/11-BA602[/cite] is certainly worth a read.
+  * Also my entry on [ABC](http://www.carlboettiger.info/archives/1221) a few days ago suddenly gathered a bunch of traffic and suggested some more reading to me, Didelot _et. al._ 2011, thanks to [Dan Lawson](http://www.maths.bris.ac.uk/~madjl/) at Bristol for pointing this out.  Sounds like there may be a straight-forward way to derive sufficient statistics for both models to allow comparisons, though not sure whether or not we are using even model-wise sufficient statistics in the new comparative phylogenetics applications.  Perhaps worth a bit more attention, but Didelot _et. al._ 2011 is certainly worth a read.
 
 
 
@@ -76,3 +76,10 @@ ISSN 0012-9658, <a href="http://dx.doi.org/10.1890/10-2071.1">http://dx.doi.org/
 "Aquaculture-Induced Changes to Dynamics of A Migratory Host And Specialist Parasite: A Case Study of Pink Salmon And Sea Lice."
 *Theoretical Ecology*, **5**.
 ISSN 1874-1738, <a href="http://dx.doi.org/10.1007/s12080-011-0122-4">http://dx.doi.org/10.1007/s12080-011-0122-4</a>.
+
+
+
+-  Likelihood-Free Estimation of Model Evidence XavierDidelot 2011 *Bayesian Analysis* **6**   - [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)
+-  Likelihood-Free Estimation of Model Evidence Richard G.Everitt 2011 *Bayesian Analysis* **6**   - [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)
+-  Likelihood-Free Estimation of Model Evidence Adam M.Johansen 2011 *Bayesian Analysis* **6**   - [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)
+-  Likelihood-Free Estimation of Model Evidence Daniel J.Lawson 2011 *Bayesian Analysis* **6**   - [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)

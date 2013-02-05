@@ -26,7 +26,7 @@ I've joined a student-led seminar with Gabriel Becker in the Statistics departme
   * Morphological databases: Specialized databases with semantic tools (Dahdul _et. al._ 2010)
 
 	
-  * NEON observatories data [cite]10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2[/cite]
+  * NEON observatories data Keller _et. al._ 2008
 
 	
   * Satellite data (Overpeck _et. al._ 2011)
@@ -112,3 +112,10 @@ ISSN 1010061X, <a href="http://dx.doi.org/10.1111/j.1420-9101.2010.01937.x">http
 "A New Dawn For Citizen Science."
 *Trends in Ecology &amp; Evolution*, **24**.
 ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2009.03.017">http://dx.doi.org/10.1016/j.tree.2009.03.017</a>.
+
+
+
+-  A Continental Strategy For The National Ecological Observatory Network MichaelKeller 2008 *Frontiers in Ecology And The Environment* **6**   - [10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2](http://dx.doi.org/10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2)
+-  A Continental Strategy For The National Ecological Observatory Network David SSchimel 2008 *Frontiers in Ecology And The Environment* **6**   - [10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2](http://dx.doi.org/10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2)
+-  A Continental Strategy For The National Ecological Observatory Network William WHargrove 2008 *Frontiers in Ecology And The Environment* **6**   - [10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2](http://dx.doi.org/10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2)
+-  A Continental Strategy For The National Ecological Observatory Network Forrest MHoffman 2008 *Frontiers in Ecology And The Environment* **6**   - [10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2](http://dx.doi.org/10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2)

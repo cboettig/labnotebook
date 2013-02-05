@@ -69,7 +69,7 @@ Analysis of the global population dynamics database: uncertainty in abundance ma
 
 Things I've been meaning to give a closer look into: (McClanahan _et. al._ 2011), (Franklin & Johnson, 2011), (Hirota _et. al._ 2011), (Staver _et. al._ 2011),
 
-and still have to replicate the methodology of [cite]10.1029/2010GL044486[/cite]
+and still have to replicate the methodology of Ditlevsen & Johnsen, 2010
 
 These [regime shift videos](http://rs.resalliance.org/2010/12/13/resilience-and-regime-shift-videos/) are quite cute.
 
@@ -159,3 +159,8 @@ ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1210657">http://dx.do
 "The Global Extent And Determinants of Savanna And Forest as Alternative Biome States."
 *Science*, **334**.
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1210465">http://dx.doi.org/10.1126/science.1210465</a>.
+
+
+
+-  Tipping Points: Early Warning And Wishful Thinking Peter D.Ditlevsen 2010 *Geophysical Research Letters* **37**   - [10.1029/2010GL044486](http://dx.doi.org/10.1029/2010GL044486)
+-  Tipping Points: Early Warning And Wishful Thinking Sigfus J.Johnsen 2010 *Geophysical Research Letters* **37**   - [10.1029/2010GL044486](http://dx.doi.org/10.1029/2010GL044486)

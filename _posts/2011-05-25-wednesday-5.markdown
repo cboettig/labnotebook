@@ -78,7 +78,7 @@ Teaching second half of phylogenetics comparative methods tutorial in R in core 
 
 
 	
-  * Ooh: [cite]10.1111/j.2041-210X.2011.00112.x[/cite]
+  * Ooh: Stack _et. al._ 2011
 
 	
   * Losos's address from Evolution last year, out in Am Nat.   (Losos, 2011)
@@ -137,3 +137,9 @@ ISSN 00928674, <a href="http://dx.doi.org/10.1016/j.cell.2005.11.014">http://dx.
 "Peer Reviews: Make Them Public."
 *Nature*, **473**.
 ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/473452b">http://dx.doi.org/10.1038/473452b</a>.
+
+
+
+-  Rbrownie: an R Package For Testing Hypotheses About Rates of Evolutionary Change J. ConradStack 2011 *Methods in Ecology And Evolution* **2**   - [10.1111/j.2041-210X.2011.00112.x](http://dx.doi.org/10.1111/j.2041-210X.2011.00112.x)
+-  Rbrownie: an R Package For Testing Hypotheses About Rates of Evolutionary Change Luke J.Harmon 2011 *Methods in Ecology And Evolution* **2**   - [10.1111/j.2041-210X.2011.00112.x](http://dx.doi.org/10.1111/j.2041-210X.2011.00112.x)
+-  Rbrownie: an R Package For Testing Hypotheses About Rates of Evolutionary Change BrianO'Meara 2011 *Methods in Ecology And Evolution* **2**   - [10.1111/j.2041-210X.2011.00112.x](http://dx.doi.org/10.1111/j.2041-210X.2011.00112.x)

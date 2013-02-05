@@ -56,7 +56,7 @@ _**Technical capacity and challenges**_
   * We've developed an[ R package](https://github.com/cboettig/pdg_control) for stochastic dynamic programming that allows a user to quickly experiment with different levels & types of uncertainty on different biological and economic models from a library of options and create visualizations of the solutions over an ensemble of realizations.
 
 	
-  * Curse of dimensionality is a major challenge to go beyond the 1D training problem into the 3D parrotfish model or the learning model.  We investigated Heuristic Sampling [cite]10.1111/j.2041-210X.2010.00069.x[/cite] as a possible solution but this far this seems to scale rather poorly with the  size of the control space.
+  * Curse of dimensionality is a major challenge to go beyond the 1D training problem into the 3D parrotfish model or the learning model.  We investigated Heuristic Sampling Nicol & Chadès, 2011 as a possible solution but this far this seems to scale rather poorly with the  size of the control space.
 
 
 
@@ -67,3 +67,8 @@ _**Technical capacity and challenges**_
 "Fishery Management Under Multiple Uncertainty."
 *Journal of Environmental Economics And Management*, **50**.
 ISSN 00950696, <a href="http://dx.doi.org/10.1016/j.jeem.2004.11.005">http://dx.doi.org/10.1016/j.jeem.2004.11.005</a>.
+
+
+
+-  Beyond Stochastic Dynamic Programming: A Heuristic Sampling Method For Optimizing Conservation Decisions in Very Large State Spaces SamNicol 2011 *Methods in Ecology And Evolution* **2**   - [10.1111/j.2041-210X.2010.00069.x](http://dx.doi.org/10.1111/j.2041-210X.2010.00069.x)
+-  Beyond Stochastic Dynamic Programming: A Heuristic Sampling Method For Optimizing Conservation Decisions in Very Large State Spaces IadineChadès 2011 *Methods in Ecology And Evolution* **2**   - [10.1111/j.2041-210X.2010.00069.x](http://dx.doi.org/10.1111/j.2041-210X.2010.00069.x)

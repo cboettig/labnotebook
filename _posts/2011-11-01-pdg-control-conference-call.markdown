@@ -93,7 +93,7 @@ Literature on Uncertainty (**Jake**)
   * Uncertainty over stock assessment (pretty open).
 
 
-Look at **Michael**'s SDP code and Reed [cite]10.1016/0095-0696(79)90014-7[/cite].
+Look at **Michael**'s SDP code and Reed Reed, 1979.
 
 _Material_: see [Carl's summary](http://www.carlboettiger.info/archives/3094) and Jake's lit review.
 
@@ -106,3 +106,7 @@ Group is: Megan, Claire, Marie-Josee, Frank, ...
 **Megan**, **Claire**.  Spawning time and investment as optimization.  Claire running simulations over space/time to generate the return-on-investment curve.  Can then determine if there's a non-trivial optimization search to be done.
 
 _Material_: still coming.
+
+
+
+-  Optimal Escapement Levels in Stochastic And Deterministic Harvesting Models William JReed 1979 *Journal of Environmental Economics And Management* **6**   - [10.1016/0095-0696(79)90014-7](http://dx.doi.org/10.1016/0095-0696(79)90014-7)

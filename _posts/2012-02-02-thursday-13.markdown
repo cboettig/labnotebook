@@ -60,7 +60,7 @@ essentially see ([fishbase example](http://fishlab.ucdavis.edu/?p=395) , and [xp
 
 
 	
-  * Nice ecosphere paper on warning signals [cite]10.1890/ES11-00216.1[/cite]
+  * Nice ecosphere paper on warning signals Bestelmeyer _et. al._ 2011
 
 
 Four conclusions, not surprising perhaps but nice message:
@@ -161,3 +161,18 @@ ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/481430a">http://dx.doi.org/10
 "Bayesian Analysis of The Astrobiological Implications of Life'S Early Emergence on Earth."
 *Proceedings of The National Academy of Sciences*, **109**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1111694108">http://dx.doi.org/10.1073/pnas.1111694108</a>.
+
+
+
+-  Analysis of Abrupt Transitions in Ecological Systems Brandon T.Bestelmeyer 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems Aaron M.Ellison 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems William R.Fraser 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems Kristen B.Gorman 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems Sally J.Holbrook 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems Christine M.Laney 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems Mark D.Ohman 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems Debra P. C.Peters 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems Finn C.Pillsbury 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems AndrewRassweiler 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems Russell J.Schmitt 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems SapnaSharma 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)

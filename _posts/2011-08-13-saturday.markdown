@@ -44,7 +44,7 @@ categories:
   * Revisions on _Evolution_ manuscript
 
 	
-  * TreeBASE paper. See [cite]10.1111/j.2041-210X.2011.00138.x[/cite]
+  * TreeBASE paper. See Kemp _et. al._ 2012
 
 	
   * outline next steps on warning signals
@@ -156,3 +156,10 @@ Looking over the[ NSF Biology post-doc position](http://www.nsf.gov/pubs/2010/ns
 "A New Phylogenetic Method For Identifying Exceptional Phenotypic Diversification."
 *Evolution*, **66**.
 <a href="http://dx.doi.org/10.1111/j.1558-5646.2011.01435.x">http://dx.doi.org/10.1111/j.1558-5646.2011.01435.x</a>.
+
+
+
+-  Rncep: Global Weather And Climate Data at Your Fingertips Michael U.Kemp 2012 *Methods in Ecology And Evolution* **3**   - [10.1111/j.2041-210X.2011.00138.x](http://dx.doi.org/10.1111/j.2041-210X.2011.00138.x)
+-  Rncep: Global Weather And Climate Data at Your Fingertips E.Emiel van Loon 2012 *Methods in Ecology And Evolution* **3**   - [10.1111/j.2041-210X.2011.00138.x](http://dx.doi.org/10.1111/j.2041-210X.2011.00138.x)
+-  Rncep: Global Weather And Climate Data at Your Fingertips JudyShamoun-Baranes 2012 *Methods in Ecology And Evolution* **3**   - [10.1111/j.2041-210X.2011.00138.x](http://dx.doi.org/10.1111/j.2041-210X.2011.00138.x)
+-  Rncep: Global Weather And Climate Data at Your Fingertips WillemBouten 2012 *Methods in Ecology And Evolution* **3**   - [10.1111/j.2041-210X.2011.00138.x](http://dx.doi.org/10.1111/j.2041-210X.2011.00138.x)

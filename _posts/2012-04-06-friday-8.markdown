@@ -127,7 +127,7 @@ Also looking at Mangel's Decision-making and investment under uncertainty, parti
   * "Ecology, Conservation and Public Policy: A Vision for the 21st Century", Astor Lecture, University of Oxford, April 2007 [slides](http://www.soe.ucsc.edu/~msmangel/Astor%20talk.pdf)
 
 
-  * Ecosystem management perspective [cite]10.1126/science.1098222 [/cite], (Carpenter _et. al._ 2009), (Mangel & Levin, 2005)
+  * Ecosystem management perspective Pikitch, 2004, (Carpenter _et. al._ 2009), (Mangel & Levin, 2005)
 
 
   * Adaptive management NCEAS synthesis [cite]10.1002/(SICI)1520-6602(1998)1:1<16::AID-INBI3>3.0.CO;2-D[/cite]
@@ -172,3 +172,7 @@ ISSN 0962-8436, <a href="http://dx.doi.org/10.1098/rstb.2004.1571">http://dx.doi
 "Barrier Transitions Driven by Fluctuations, With Applications to Ecology And Evolution."
 *Theoretical Population Biology*, **45**.
 ISSN 00405809, <a href="http://dx.doi.org/10.1006/tpbi.1994.1002">http://dx.doi.org/10.1006/tpbi.1994.1002</a>.
+
+
+
+-  Ecology: Ecosystem-Based Fishery Management E. K.Pikitch 2004 *Science* **305**   - [10.1126/science.1098222](http://dx.doi.org/10.1126/science.1098222)

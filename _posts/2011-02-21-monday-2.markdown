@@ -19,7 +19,7 @@ categories:
   * Reviewed Chris's manuscript.
 
 	
-  * Completed my revisions to phylogenetics mansucript, meeting with Peter tomorrow to discuss.  Still need to work through the discussions of model adequacy [cite]10.1007/BF00166252[/cite], Cox's delta (1961/62), and going beyond (simulations by under both null and test distributions).
+  * Completed my revisions to phylogenetics mansucript, meeting with Peter tomorrow to discuss.  Still need to work through the discussions of model adequacy Goldman, 1993, Cox's delta (1961/62), and going beyond (simulations by under both null and test distributions).
 
 	
   * Meanwhile, a few thoughts:
@@ -82,3 +82,7 @@ MathJax plug-in looks great, but I can only get it to render the shortcode, not 
 wp-ToC: A table of contents generator based on the hierarchical headers.  While I generally use multiple posts to separate out different ideas, this could be quite useful in some longer posts that use multiple headings.  There's a variety of other ToC plugins, at this stage I think the simplest and lightest one would be the most valuable (not sure if this one meets that definition).
 
 Plugins have been incredibly useful in extending functionality, though I am a little wary of overloading the demands on my server.
+
+
+
+-  Statistical Tests of Models of Dna Substitution NickGoldman 1993 *Journal of Molecular Evolution* **36**   - [10.1007/BF00166252](http://dx.doi.org/10.1007/BF00166252)

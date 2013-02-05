@@ -16,7 +16,7 @@ categories:
 
 
 	
-  * Arxiv has several articles on the [EM-algorithm](http://en.wikipedia.org/wiki/Expectation-maximization_algorithm) from J. Statistical Science [cite]10.1214/09-STS312[/cite][cite]10.1214/08-STS270[/cite].  What makes this distinct from applying any traditional optimization routine (Nelder-Mead, simulated annealing, etc) to the likelihood function?  Just in that it determines the probability distribution as well as maximum?
+  * Arxiv has several articles on the [EM-algorithm](http://en.wikipedia.org/wiki/Expectation-maximization_algorithm) from J. Statistical Science unknown, unknown.  What makes this distinct from applying any traditional optimization routine (Nelder-Mead, simulated annealing, etc) to the likelihood function?  Just in that it determines the probability distribution as well as maximum?
 
 	
   * UPDATE ON EM: brief discussion with Graham, Peter, Yaniv on this, now my impression is: Not necessarily get the distribution, but doesn't just generically take a function and minimize it, but may not calculate the likelihood at each step.  Handles missing values, simulate the data.  We'll take a closer look at this in our Algorithms discussion group.
@@ -61,3 +61,7 @@ ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syr029">http://dx.doi.
 "Sampling Trees From Evolutionary Models."
 *Systematic Biology*, **59**.
 ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syq026">http://dx.doi.org/10.1093/sysbio/syq026</a>.
+
+
+
+-  Unknown unknownunknown unknown *Unknown* ****   - [](http://dx.doi.org/)

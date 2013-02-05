@@ -31,7 +31,7 @@ Next steps directions
 Send Alan: Slides, CV (for post doc apps)
 
 Discussed some relevant literature, mostly for the warning signals in fisheries questions:
-(Colchero & Clark, 2012), (Hutchings, 2000), [cite]10.1641/0006-3568(2004)054[0297:MFPCCF]2.0.CO;2[/cite], (Minckley _et. al._ 2012), (Myers _et. al._ 1995), (Schröder _et. al._ 2012)
+(Colchero & Clark, 2012), (Hutchings, 2000), HUTCHINGS & REYNOLDS, 2004, (Minckley _et. al._ 2012), (Myers _et. al._ 1995), (Schröder _et. al._ 2012)
 
 Upcoming working group at NIMBioS next week.
 
@@ -64,3 +64,8 @@ ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.269.5227.1106">http:/
 "Complex Shifts Between Food Web States in Response to Whole-Ecosystem Manipulations."
 *Oikos*, **121**.
 <a href="http://dx.doi.org/10.1111/j.1600-0706.2011.19764.x">http://dx.doi.org/10.1111/j.1600-0706.2011.19764.x</a>.
+
+
+
+-  Marine Fish Population Collapses: Consequences For Recovery And Extinction Risk JEFFREY A.HUTCHINGS 2004 *Bioscience* **54**   - [10.1641/0006-3568(2004)054[0297:MFPCCF]2.0.CO;2](http://dx.doi.org/10.1641/0006-3568(2004)054[0297:MFPCCF]2.0.CO;2)
+-  Marine Fish Population Collapses: Consequences For Recovery And Extinction Risk JOHN D.REYNOLDS 2004 *Bioscience* **54**   - [10.1641/0006-3568(2004)054[0297:MFPCCF]2.0.CO;2](http://dx.doi.org/10.1641/0006-3568(2004)054[0297:MFPCCF]2.0.CO;2)

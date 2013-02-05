@@ -11,7 +11,7 @@ tags:
 - pdg-control
 ---
 
-Starting with Reed 1979 [cite]10.1016/0095-0696(79)90014-7[/cite].
+Starting with Reed 1979 Reed, 1979.
 Consider the stochastic population growth model
 
 $$ X_{t+1} = Z_n f(X_n) $$
@@ -45,3 +45,7 @@ From the original Matlab example from michael (run in Octave):
 
 
 
+
+
+
+-  Optimal Escapement Levels in Stochastic And Deterministic Harvesting Models William JReed 1979 *Journal of Environmental Economics And Management* **6**   - [10.1016/0095-0696(79)90014-7](http://dx.doi.org/10.1016/0095-0696(79)90014-7)

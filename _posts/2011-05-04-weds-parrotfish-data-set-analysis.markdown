@@ -59,7 +59,7 @@ Now  dB_t is a vector of two random walks and $ \Sigma $ is a matrix, with terms
 	
   * Lars has a question on power in this study: (Young _et. al._ 2011)
 
-Hmm, Article compares "four" models, with interesting choice of attributions: BM (cites[ Brookstein 1987](http://paleobiol.geoscienceworld.org/cgi/content/abstract/13/4/446) instead of Felsenstein 1985?), BM with drift (Hunt _et. al._ 2008), "stasis" [cite]10.1023/A:1013308409951[/cite] (sounds like OU...), OU: Lande (Lande, 1976).  (Of course the study does not estimate power).
+Hmm, Article compares "four" models, with interesting choice of attributions: BM (cites[ Brookstein 1987](http://paleobiol.geoscienceworld.org/cgi/content/abstract/13/4/446) instead of Felsenstein 1985?), BM with drift (Hunt _et. al._ 2008), "stasis" Sheets & Mitchell, 2001 (sounds like OU...), OU: Lande (Lande, 1976).  (Of course the study does not estimate power).
 
 
 ## Misc
@@ -153,3 +153,8 @@ ISSN 00143820, <a href="http://dx.doi.org/10.2307/2407703">http://dx.doi.org/10.
 "Managing Ecological Thresholds in Coupled Environmental-Human Systems."
 *Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1005431108">http://dx.doi.org/10.1073/pnas.1005431108</a>.
+
+
+
+-  Unknown H. DavidSheets 2001 *Genetica* **112/113**   - [10.1023/A:1013308409951](http://dx.doi.org/10.1023/A:1013308409951)
+-  Unknown Charles E.Mitchell 2001 *Genetica* **112/113**   - [10.1023/A:1013308409951](http://dx.doi.org/10.1023/A:1013308409951)

@@ -14,7 +14,7 @@ Interesting discussion on the Reproducible Research Group about rates at which t
 ![]( http://farm6.staticflickr.com/5015/5472087649_8093f6b92e_o.png )
 
 
-from [cite]10.1109/MCSE.2010.113[/cite], which provides a great basis for recommendations to authors, publishers, and funders to ensure reproducible research. Victoria Stodden [describes](http://bit.ly/ikfpxK) two journals with Open Review and two with Associate Editors of Reproducible Research.
+from unknown, 2010, which provides a great basis for recommendations to authors, publishers, and funders to ensure reproducible research. Victoria Stodden [describes](http://bit.ly/ikfpxK) two journals with Open Review and two with Associate Editors of Reproducible Research.
 
 Some of the articles from Biostatistics discussing this practice: (Baker _et. al._ 2010), (Goodman, 2010), (Keiding, 2010),   (Donoho, 2010), (Groves, 2010) (Peng, 2009)
 
@@ -50,3 +50,7 @@ ISSN 1465-4644, <a href="http://dx.doi.org/10.1093/biostatistics/kxq031">http://
 "Reproducible Research And Biostatistics."
 *Biostatistics*, **10**.
 ISSN 1465-4644, <a href="http://dx.doi.org/10.1093/biostatistics/kxp014">http://dx.doi.org/10.1093/biostatistics/kxp014</a>.
+
+
+
+-  Reproducible Research unknownunknown 2010 *Computing in Science & Engineering* **12**   - [10.1109/MCSE.2010.113](http://dx.doi.org/10.1109/MCSE.2010.113)

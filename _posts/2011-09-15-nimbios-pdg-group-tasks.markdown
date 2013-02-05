@@ -63,7 +63,7 @@ $$ \dot y = G(x,y) $$
 
 4) Domain where controllability issues arise:
 
-a) Put y on fast time scale (see Kellner et al. [cite]10.1111/j.1755-263X.2010.00132.x[/cite])
+a) Put y on fast time scale (see Kellner et al. Kellner _et. al._ 2011)
 
 slow down y (numerically.  Perturbation theory)
 
@@ -334,3 +334,10 @@ Prob 2
 "Fishery Management Under Multiple Uncertainty."
 *Journal of Environmental Economics And Management*, **50**.
 ISSN 00950696, <a href="http://dx.doi.org/10.1016/j.jeem.2004.11.005">http://dx.doi.org/10.1016/j.jeem.2004.11.005</a>.
+
+
+
+-  Optimizing For Multiple Species And Multiple Values: Tradeoffs Inherent in Ecosystem-Based Fisheries Management Julie B.Kellner 2011 *Conservation Letters* **4**   - [10.1111/j.1755-263X.2010.00132.x](http://dx.doi.org/10.1111/j.1755-263X.2010.00132.x)
+-  Optimizing For Multiple Species And Multiple Values: Tradeoffs Inherent in Ecosystem-Based Fisheries Management James N.Sanchirico 2011 *Conservation Letters* **4**   - [10.1111/j.1755-263X.2010.00132.x](http://dx.doi.org/10.1111/j.1755-263X.2010.00132.x)
+-  Optimizing For Multiple Species And Multiple Values: Tradeoffs Inherent in Ecosystem-Based Fisheries Management AlanHastings 2011 *Conservation Letters* **4**   - [10.1111/j.1755-263X.2010.00132.x](http://dx.doi.org/10.1111/j.1755-263X.2010.00132.x)
+-  Optimizing For Multiple Species And Multiple Values: Tradeoffs Inherent in Ecosystem-Based Fisheries Management Peter J.Mumby 2011 *Conservation Letters* **4**   - [10.1111/j.1755-263X.2010.00132.x](http://dx.doi.org/10.1111/j.1755-263X.2010.00132.x)

@@ -14,7 +14,7 @@ tags:
 ## Variance and warning signals
 
 
-Sebastian has several examples of dynamical systems that decrease in variance as they approach a bifurcation.  In some sense this is not surprising, both are through the collapse of periodic attractors.  Figure 2d in TPB paper[cite]10.1016/S0040-5809(03)00072-8[/cite] has an example in a discrete system, and Figure 5a in the Ecology Letters paper (Schreiber & Rudolf, 2008) has a continuous-time example.  Consider for instance the supercritical Hopf bifurcation, in which a stable limit cycle vanishes into an unstable node, as in a van der Pol oscillator,
+Sebastian has several examples of dynamical systems that decrease in variance as they approach a bifurcation.  In some sense this is not surprising, both are through the collapse of periodic attractors.  Figure 2d in TPB paperSchreiber, 2003 has an example in a discrete system, and Figure 5a in the Ecology Letters paper (Schreiber & Rudolf, 2008) has a continuous-time example.  Consider for instance the supercritical Hopf bifurcation, in which a stable limit cycle vanishes into an unstable node, as in a van der Pol oscillator,
 
 $$\frac{d x}{dt} = -\mu(1-y^2) x-y $$
 
@@ -80,3 +80,7 @@ since flickr_upload protocol wants a single element string for comments and tags
 "Tailoring Science Outreach Through E-Matching Using A Community-Based Participatory Approach."
 *Plos Biology*, **9**.
 <a href="http://dx.doi.org/10.1371/journal.pbio.1001026">http://dx.doi.org/10.1371/journal.pbio.1001026</a>.
+
+
+
+-  Allee Effects, Extinctions, And Chaotic Transients in Simple Population Models Sebastian J.Schreiber 2003 *Theoretical Population Biology* **64**   - [10.1016/S0040-5809(03)00072-8](http://dx.doi.org/10.1016/S0040-5809(03)00072-8)

@@ -26,10 +26,10 @@ Their critique of decision theory focuses only on the fact that it requires prob
 
 Reading (Regan _et. al._ 2005), sounds like a sensitivity analysis on the uncertainty parameter. Authors refer to this as "info-gap theory," though it's not particularly different.  (While sensitivity analysis would do this parametrically using, say, the width of the distribution about a parameter), this rather more crudely it seems, just varies the best-estimate value of the parameter until the decision changes.
 
-Whoops (reading more), apparently it's a thing (i.e. gets it's own [wikipedia page](http://en.wikipedia.org/wiki/Info-gap_decision_theory), also appearing in the literature without Dr. Ben-Haim, [cite]10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2[/cite] (Halpern _et. al._ 2006)) though this still seems to [support](http://en.wikipedia.org/wiki/Info-gap_decision_theory#Alternatives) my characterization (the second author of the Eco Apps paper seems to be behind the term). Info-gap can also be framed as a Max Min approach.
+Whoops (reading more), apparently it's a thing (i.e. gets it's own [wikipedia page](http://en.wikipedia.org/wiki/Info-gap_decision_theory), also appearing in the literature without Dr. Ben-Haim, Nicholson & Possingham, 2007 (Halpern _et. al._ 2006)) though this still seems to [support](http://en.wikipedia.org/wiki/Info-gap_decision_theory#Alternatives) my characterization (the second author of the Eco Apps paper seems to be behind the term). Info-gap can also be framed as a Max Min approach.
 
 Whoops again, [apparently it's a controversy too](http://info-gap.moshe-online.com/), (as mentioned in the Fischer piece).
-[cite]10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2[/cite] Gives a rather nice list of papers that in single-species analyses have found ranking of management options to be robust to uncertainty and others where it is not (hardly surprising, but nice to have concrete examples).  Takes a simple info-gap approach to the multi-species case.
+Nicholson & Possingham, 2007 Gives a rather nice list of papers that in single-species analyses have found ranking of management options to be robust to uncertainty and others where it is not (hardly surprising, but nice to have concrete examples).  Takes a simple info-gap approach to the multi-species case.
 
 
 
@@ -39,7 +39,7 @@ Whoops again, [apparently it's a controversy too](http://info-gap.moshe-online.c
 Bill Brock's work in this area is particularly nice.  Cute proper technical example of model uncertainty in Hansen's recursive max/min expected utility (Brock & Xepapadeas, 2010).  Hansen's treatment on these is dense (below), but not at all clear that this is what we want to be optimizing.  See mathematical economics treatment of model uncertainty & misspecification in (Hansen & Sargent, 2001), (Hansen _et. al._ 2006)
 
 Brock also has a beautiful simple paper pointing out how uncertainties lead to conflicting conclusions , such as the debate over the fisheries collapse.  (Biggs _et. al._ 2009)
-Also has a nice example in [cite]10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2[/cite] of an apparently optimally managed system collapsing.  Applies a passive adaptive management solution learning about a choice between two given models (with fixed parameters), one which describes the system around the eutrophic stable state, the other around the oligotrophic.Note the actual dynamics cannot be represented as a sum of these beliefs, so this approach is doomed and the result is hardly surprising mathematically, which kinda makes it all the more clever as an example.
+Also has a nice example in Peterson _et. al._ 2003 of an apparently optimally managed system collapsing.  Applies a passive adaptive management solution learning about a choice between two given models (with fixed parameters), one which describes the system around the eutrophic stable state, the other around the oligotrophic.Note the actual dynamics cannot be represented as a sum of these beliefs, so this approach is doomed and the result is hardly surprising mathematically, which kinda makes it all the more clever as an example.
 
 (Brozović & Schlenker, 2011) is probably a richer example of an optimally managed system failing under uncertainty.  Shows the outcome can be very sensitive to assumptions about uncertainty in systems with alternative stable states; a nice example to further the point of  (Biggs _et. al._ 2009).  Shows with moderate uncertainty a precautionary behavior, while more severe uncertainty it precaution isn't worth it, since it cannot diminish the risk adequately.  
 
@@ -97,3 +97,11 @@ ISSN 09218009, <a href="http://dx.doi.org/10.1016/j.ecolecon.2010.10.001">http:/
 "Does Conservation Planning Matter in A Dynamic And Uncertain World?"
 *Ecology Letters*, **7**.
 ISSN 1461-023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2004.00624.x">http://dx.doi.org/10.1111/j.1461-0248.2004.00624.x</a>.
+
+
+
+-  Making Conservation Decisions Under Uncertainty For The Persistence of Multiple Species EmilyNicholson 2007 *Ecological Applications* **17**   - [10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2](http://dx.doi.org/10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2)
+-  Making Conservation Decisions Under Uncertainty For The Persistence of Multiple Species Hugh P.Possingham 2007 *Ecological Applications* **17**   - [10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2](http://dx.doi.org/10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2)
+-  Uncertainty And The Management of Multistate Ecosystems: an Apparently Rational Route to Collapse G. D.Peterson 2003 *Ecology* **84**   - [10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2](http://dx.doi.org/10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2)
+-  Uncertainty And The Management of Multistate Ecosystems: an Apparently Rational Route to Collapse S. R.Carpenter 2003 *Ecology* **84**   - [10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2](http://dx.doi.org/10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2)
+-  Uncertainty And The Management of Multistate Ecosystems: an Apparently Rational Route to Collapse W. A.Brock 2003 *Ecology* **84**   - [10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2](http://dx.doi.org/10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2)

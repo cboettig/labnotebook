@@ -90,7 +90,7 @@ categories:
 
 
 	
-  * close read / replicate stochastic transitions discrimination [cite]10.1029/2010GL044486[/cite].
+  * close read / replicate stochastic transitions discrimination Ditlevsen & Johnsen, 2010.
 
 	
   * close read of economic considerations, (Horan _et. al._ 2011)
@@ -107,3 +107,8 @@ Organizing: what I'd like from Merrit:  dropbox-style data storage.  _e.g_. al
 "Managing Ecological Thresholds in Coupled Environmental-Human Systems."
 *Proceedings of The National Academy of Sciences*, **108**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1005431108">http://dx.doi.org/10.1073/pnas.1005431108</a>.
+
+
+
+-  Tipping Points: Early Warning And Wishful Thinking Peter D.Ditlevsen 2010 *Geophysical Research Letters* **37**   - [10.1029/2010GL044486](http://dx.doi.org/10.1029/2010GL044486)
+-  Tipping Points: Early Warning And Wishful Thinking Sigfus J.Johnsen 2010 *Geophysical Research Letters* **37**   - [10.1029/2010GL044486](http://dx.doi.org/10.1029/2010GL044486)

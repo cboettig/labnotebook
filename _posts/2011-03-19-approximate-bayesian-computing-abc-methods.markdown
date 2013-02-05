@@ -29,7 +29,7 @@ There's some rather excellent discussion of these issues on [Christian Robert's 
 ### Update
 
 
-Dan Lawson (comments below) drew my attention to another paper treating this problem of model-wise sufficient statistics [cite]10.1214/11-BA602[/cite].  The authors propose a potentially straight-forward work-around: define a model M in which both the original models M1 and M2 are embedded.  They then demonstrate for exponential family models that sufficient statistics for M are sufficient statistics for comparing M1 and M2 by Bayes factors, if I've followed the argument correctly.  I'll try to work out an example in a phylogenetics context in the notebook when I get a chance.
+Dan Lawson (comments below) drew my attention to another paper treating this problem of model-wise sufficient statistics Didelot _et. al._ 2011.  The authors propose a potentially straight-forward work-around: define a model M in which both the original models M1 and M2 are embedded.  They then demonstrate for exponential family models that sufficient statistics for M are sufficient statistics for comparing M1 and M2 by Bayes factors, if I've followed the argument correctly.  I'll try to work out an example in a phylogenetics context in the notebook when I get a chance.
 
 
 ### Further reading
@@ -57,3 +57,10 @@ ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.0910647107">http://dx.do
 "Incoherent Phylogeographic Inference."
 *Proceedings of The National Academy of Sciences*, **107**.
 ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1008762107">http://dx.doi.org/10.1073/pnas.1008762107</a>.
+
+
+
+-  Likelihood-Free Estimation of Model Evidence XavierDidelot 2011 *Bayesian Analysis* **6**   - [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)
+-  Likelihood-Free Estimation of Model Evidence Richard G.Everitt 2011 *Bayesian Analysis* **6**   - [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)
+-  Likelihood-Free Estimation of Model Evidence Adam M.Johansen 2011 *Bayesian Analysis* **6**   - [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)
+-  Likelihood-Free Estimation of Model Evidence Daniel J.Lawson 2011 *Bayesian Analysis* **6**   - [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)

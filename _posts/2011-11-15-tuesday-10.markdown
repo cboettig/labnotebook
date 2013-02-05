@@ -13,9 +13,9 @@ tags:
 
 Adding stochasticity seems to have a small history. 
 
-Reed 1979 [cite]10.1016/0095-0696(79)90014-7[/cite] Uncertainty in _next year's stock_, "growth uncertainty" at the time of determining harvest.  Constant escapement policy, no chance of extinction.  
+Reed 1979 Reed, 1979 Uncertainty in _next year's stock_, "growth uncertainty" at the time of determining harvest.  Constant escapement policy, no chance of extinction.  
 
-Clark & Kirkwood 1986 [cite]10.1016/0095-0696(86)90024-0[/cite] Uncertainty in _this year's stock_, "measurement uncertainty" when determining harvest.  
+Clark & Kirkwood 1986 Clark & Kirkwood, 1986 Uncertainty in _this year's stock_, "measurement uncertainty" when determining harvest.  
 
 [Roughgarden & Smith (1996)](http://www.pnas.org/content/93/10/5078.short) consider both, and add uncertainty in harvest.  Sethi et al. 2005 (Sethi _et. al._ 2005) consider the economist's optimization of this.
 
@@ -70,3 +70,9 @@ Completed review for THEE.
 "Fishery Management Under Multiple Uncertainty."
 *Journal of Environmental Economics And Management*, **50**.
 ISSN 00950696, <a href="http://dx.doi.org/10.1016/j.jeem.2004.11.005">http://dx.doi.org/10.1016/j.jeem.2004.11.005</a>.
+
+
+
+-  on Uncertain Renewable Resource Stocks: Optimal Harvest Policies And The Value of Stock Surveys Colin W.Clark 1986 *Journal of Environmental Economics And Management* **13**   - [10.1016/0095-0696(86)90024-0](http://dx.doi.org/10.1016/0095-0696(86)90024-0)
+-  on Uncertain Renewable Resource Stocks: Optimal Harvest Policies And The Value of Stock Surveys Geoffrey P.Kirkwood 1986 *Journal of Environmental Economics And Management* **13**   - [10.1016/0095-0696(86)90024-0](http://dx.doi.org/10.1016/0095-0696(86)90024-0)
+-  Optimal Escapement Levels in Stochastic And Deterministic Harvesting Models William JReed 1979 *Journal of Environmental Economics And Management* **6**   - [10.1016/0095-0696(79)90014-7](http://dx.doi.org/10.1016/0095-0696(79)90014-7)

@@ -40,7 +40,7 @@ Nice paper by Carpenter and Brock comparing performance of non=parametric warnin
 
 $$ dx = \mu(x_t,\theta_t)d t + \sigma(x_t, \theta_t) d W + d(\sum Z_n) $$
 
-Where the $Z_n$ is a sum over discontinuous shocks.  Seems that this conclusion can be argued from first principles of stochastic processes -- convergences of parameter estimates should obey a central-limit theorem, though the time-varying case might be harder.  They seem to be estimated in a piece-wise constant manner over a sliding Gaussian window.  Mean and variance are just estimated from the first and second moments in the window, somehow jump terms are estimated as function of the sixth and forth moment.  This estimation approach comes from the econometrics literature [cite]10.1016/S0304-4076(03)00110-6[/cite], (Johannes, 2004).
+Where the $Z_n$ is a sum over discontinuous shocks.  Seems that this conclusion can be argued from first principles of stochastic processes -- convergences of parameter estimates should obey a central-limit theorem, though the time-varying case might be harder.  They seem to be estimated in a piece-wise constant manner over a sliding Gaussian window.  Mean and variance are just estimated from the first and second moments in the window, somehow jump terms are estimated as function of the sixth and forth moment.  This estimation approach comes from the econometrics literature Bandi & Nguyen, 2003, (Johannes, 2004).
 
 
 ## Presentation
@@ -78,3 +78,8 @@ ISSN 0012-9658, <a href="http://dx.doi.org/10.1890/11-0716.1">http://dx.doi.org/
 "The Statistical And Economic Role of Jumps in Continuous-Time Interest Rate Models."
 *The Journal of Finance*, **59**.
 ISSN 0022-1082, <a href="http://dx.doi.org/10.1111/j.1540-6321.2004.00632.x">http://dx.doi.org/10.1111/j.1540-6321.2004.00632.x</a>.
+
+
+
+-  on The Functional Estimation of Jump–Diffusion Models Federico M.Bandi 2003 *Journal of Econometrics* **116**   - [10.1016/S0304-4076(03)00110-6](http://dx.doi.org/10.1016/S0304-4076(03)00110-6)
+-  on The Functional Estimation of Jump–Diffusion Models Thong H.Nguyen 2003 *Journal of Econometrics* **116**   - [10.1016/S0304-4076(03)00110-6](http://dx.doi.org/10.1016/S0304-4076(03)00110-6)

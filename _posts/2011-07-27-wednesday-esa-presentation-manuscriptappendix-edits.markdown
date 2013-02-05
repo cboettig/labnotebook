@@ -46,7 +46,7 @@ tags:
 
 
 	
-  * Sam just pointed out the [MOTMOT package on CRAN](http://cran.r-project.org/web/packages/motmot/index.html) and it's paper in Methods in Ecology and Evolution [cite]10.1111/j.2041-210X.2011.00132.x[/cite].  A "Medusa" for traits algorithm.  Does a handful of different BM-like models (because it's always easier to transform the tree than to actually solve a new likelihood equation).  Rather worried about the proliferation of these non-Bayesian approaches when they don't compute confidence intervals.
+  * Sam just pointed out the [MOTMOT package on CRAN](http://cran.r-project.org/web/packages/motmot/index.html) and it's paper in Methods in Ecology and Evolution Thomas & Freckleton, 2012.  A "Medusa" for traits algorithm.  Does a handful of different BM-like models (because it's always easier to transform the tree than to actually solve a new likelihood equation).  Rather worried about the proliferation of these non-Bayesian approaches when they don't compute confidence intervals.
 
 	
   * Clever! [wordclouds](http://onertipaday.blogspot.com/2011/07/word-cloud-in-r.html?utm_source=twitterfeed&utm_medium=twitter&utm_campaign=Feed%3A+OneRTipADay+%28One+R+Tip+A+Day%29) in R.
@@ -126,3 +126,8 @@ Manuscript/Appendix
 
 
 In separate entry... delayed release.
+
+
+
+-  Motmot: Models of Trait Macroevolution on Trees Gavin H.Thomas 2012 *Methods in Ecology And Evolution* **3**   - [10.1111/j.2041-210X.2011.00132.x](http://dx.doi.org/10.1111/j.2041-210X.2011.00132.x)
+-  Motmot: Models of Trait Macroevolution on Trees Robert P.Freckleton 2012 *Methods in Ecology And Evolution* **3**   - [10.1111/j.2041-210X.2011.00132.x](http://dx.doi.org/10.1111/j.2041-210X.2011.00132.x)

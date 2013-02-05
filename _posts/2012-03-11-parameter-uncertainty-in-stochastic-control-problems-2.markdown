@@ -44,7 +44,7 @@ Training problem II discussion -- problem taxonomy: [stochastic ](www.carlboetti
 
 Still catching up on literature from 70s and 80s on optimal control with an uncertain parameter (uncertain model, or possibly, uncertain state).
 
-﻿Nicest walk through of different approaches in this collection is probably [cite]10.1016/0304-3800(82)90023-0[/cite], introducing the non-adaptive ("average equilibrium") strategy, passive adaptive management ("Myopic Bayes") and active adaptive management (also with Bayesian updating) approach (computed through policy iteration rather than value iteration (SDP)).
+﻿Nicest walk through of different approaches in this collection is probably Ludwig & Walters, 1982, introducing the non-adaptive ("average equilibrium") strategy, passive adaptive management ("Myopic Bayes") and active adaptive management (also with Bayesian updating) approach (computed through policy iteration rather than value iteration (SDP)).
 
 (Ludwig & Hilborn, 1983) discuss difficulties in estimating stock abundance, but in the context of not knowing the parameter values, as opposed to inherent errors in the stock size.
 
@@ -133,7 +133,7 @@ Iadine's [Markov decision process toolbox for Matlab](http://www.inra.fr/mia/T//
 
 
 Random ideas that have come up in discussions.
- * How not to do this: estimate confidence intervals [cite]10.1016/S1364-6613(97)01014-0[/cite], ([overconfidence effect](http://en.wikipedia.org/wiki/Overconfidence_effect))
+ * How not to do this: estimate confidence intervals Harvey, 1997, ([overconfidence effect](http://en.wikipedia.org/wiki/Overconfidence_effect))
  * Better: estimate largest reasonable value, smallest reasonable value.  Order matters
  * Better yet? Bet on outcomes (prediction market?)
 Bueno de Mesquita (Bueno de Mesquita, 2010)
@@ -163,3 +163,9 @@ ISSN 0066-4162, <a href="http://dx.doi.org/10.1146/annurev.es.09.110178.001105">
 "Judging Judgment."
 *Critical Review*, **22**.
 ISSN 0891-3811, <a href="http://dx.doi.org/10.1080/08913811.2010.541686">http://dx.doi.org/10.1080/08913811.2010.541686</a>.
+
+
+
+-  Confidence in Judgment NigelHarvey 1997 *Trends in Cognitive Sciences* **1**   - [10.1016/S1364-6613(97)01014-0](http://dx.doi.org/10.1016/S1364-6613(97)01014-0)
+-  Optimal Harvesting With Imprecise Parameter Estimates D.Ludwig 1982 *Ecological Modelling* **14**   - [10.1016/0304-3800(82)90023-0](http://dx.doi.org/10.1016/0304-3800(82)90023-0)
+-  Optimal Harvesting With Imprecise Parameter Estimates C.J.Walters 1982 *Ecological Modelling* **14**   - [10.1016/0304-3800(82)90023-0](http://dx.doi.org/10.1016/0304-3800(82)90023-0)

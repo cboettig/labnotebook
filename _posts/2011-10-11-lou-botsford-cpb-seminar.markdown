@@ -32,7 +32,7 @@ Outline:
   * Anderson et al no age structure model (Anderson _et. al._ 2008).  Imagine waht age structure would do.  Mortality rate as noise (funny, since it's not so variable). Assumed increase r leads to instability.
 
 	
-  * Shelton and Mangel (2011) [cite]10.1073/pnas.1100334108 [/cite].  some age structure, same dome-shaped Ricker for recruitment.  Conclude noise necessary for variability -- it's not in intrinsic oscillations (large r/chaotic).
+  * Shelton and Mangel (2011) Shelton & Mangel, 2011.  some age structure, same dome-shaped Ricker for recruitment.  Conclude noise necessary for variability -- it's not in intrinsic oscillations (large r/chaotic).
 
 
 
@@ -122,3 +122,8 @@ ISSN 0021-8790, <a href="http://dx.doi.org/10.1111/j.0021-8790.2004.00888.x">htt
 "Frequency Responses of Age-Structured Populations: Pacific Salmon as an Example."
 *Theoretical Population Biology*, **78**.
 ISSN 00405809, <a href="http://dx.doi.org/10.1016/j.tpb.2010.07.004">http://dx.doi.org/10.1016/j.tpb.2010.07.004</a>.
+
+
+
+-  Fluctuations of Fish Populations And The Magnifying Effects of Fishing A. O.Shelton 2011 *Proceedings of The National Academy of Sciences* **108**   - [10.1073/pnas.1100334108](http://dx.doi.org/10.1073/pnas.1100334108)
+-  Fluctuations of Fish Populations And The Magnifying Effects of Fishing M.Mangel 2011 *Proceedings of The National Academy of Sciences* **108**   - [10.1073/pnas.1100334108](http://dx.doi.org/10.1073/pnas.1100334108)
