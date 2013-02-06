@@ -164,15 +164,4 @@ ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1111694108">http://dx.do
 
 
 
--  Analysis of Abrupt Transitions in Ecological Systems Brandon T.Bestelmeyer 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
--  Analysis of Abrupt Transitions in Ecological Systems Aaron M.Ellison 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
--  Analysis of Abrupt Transitions in Ecological Systems William R.Fraser 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
--  Analysis of Abrupt Transitions in Ecological Systems Kristen B.Gorman 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
--  Analysis of Abrupt Transitions in Ecological Systems Sally J.Holbrook 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
--  Analysis of Abrupt Transitions in Ecological Systems Christine M.Laney 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
--  Analysis of Abrupt Transitions in Ecological Systems Mark D.Ohman 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
--  Analysis of Abrupt Transitions in Ecological Systems Debra P. C.Peters 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
--  Analysis of Abrupt Transitions in Ecological Systems Finn C.Pillsbury 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
--  Analysis of Abrupt Transitions in Ecological Systems AndrewRassweiler 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
--  Analysis of Abrupt Transitions in Ecological Systems Russell J.Schmitt 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
--  Analysis of Abrupt Transitions in Ecological Systems SapnaSharma 2011 *Ecosphere* **2**   - [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems Brandon T. Bestelmeyer, Aaron M. Ellison, William R. Fraser, Kristen B. Gorman, Sally J. Holbrook, Christine M. Laney, Mark D. Ohman, Debra P. C. Peters, Finn C. Pillsbury, Andrew Rassweiler, Russell J. Schmitt, Sapna Sharma,  2011 *Ecosphere* **2**    [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)

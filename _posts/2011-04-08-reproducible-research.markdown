@@ -53,4 +53,4 @@ ISSN 1465-4644, <a href="http://dx.doi.org/10.1093/biostatistics/kxp014">http://
 
 
 
--  Reproducible Research unknownunknown 2010 *Computing in Science & Engineering* **12**   - [10.1109/MCSE.2010.113](http://dx.doi.org/10.1109/MCSE.2010.113)
+-  Reproducible Research unknown unknown,  2010 *Computing in Science & Engineering* **12**    [10.1109/MCSE.2010.113](http://dx.doi.org/10.1109/MCSE.2010.113)

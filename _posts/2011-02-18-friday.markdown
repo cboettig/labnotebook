@@ -41,20 +41,5 @@ ISSN 00359254, <a href="http://dx.doi.org/10.2307/2347790">http://dx.doi.org/10.
 
 
 
--  University of California Research Seminar Network: A Prospectus James R.Carey 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus JohnChristian Laursen 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus Steven D.Glaser 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus StephenRaphael 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus Gregory H.Miller 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus JohnCrawford 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus Timothy F.Lane 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus Patricia J.LiWang 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus KimberlyHammond 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus TheodoreGroves 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus Jean-FrancoisPittet 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus DavidStuart 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus Phokion G.Kolaitis 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus LauraSerwer 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus MengfeiChen 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  University of California Research Seminar Network: A Prospectus KennethFeer 2010 *Plos Biology* **8**   - [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  Statistical Tests of Models of Dna Substitution NickGoldman 1993 *Journal of Molecular Evolution* **36**   - [10.1007/BF00166252](http://dx.doi.org/10.1007/BF00166252)
+-  University of California Research Seminar Network: A Prospectus James R. Carey, John Christian Laursen, Steven D. Glaser, Stephen Raphael, Gregory H. Miller, John Crawford, Timothy F. Lane, Patricia J. LiWang, Kimberly Hammond, Theodore Groves, Jean-Francois Pittet, David Stuart, Phokion G. Kolaitis, Laura Serwer, Mengfei Chen, Kenneth Feer,  2010 *Plos Biology* **8**    [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
+-  Statistical Tests of Models of Dna Substitution Nick Goldman,  1993 *Journal of Molecular Evolution* **36**    [10.1007/BF00166252](http://dx.doi.org/10.1007/BF00166252)

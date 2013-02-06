@@ -81,5 +81,4 @@ ISSN 0022-1082, <a href="http://dx.doi.org/10.1111/j.1540-6321.2004.00632.x">htt
 
 
 
--  on The Functional Estimation of Jump–Diffusion Models Federico M.Bandi 2003 *Journal of Econometrics* **116**   - [10.1016/S0304-4076(03)00110-6](http://dx.doi.org/10.1016/S0304-4076(03)00110-6)
--  on The Functional Estimation of Jump–Diffusion Models Thong H.Nguyen 2003 *Journal of Econometrics* **116**   - [10.1016/S0304-4076(03)00110-6](http://dx.doi.org/10.1016/S0304-4076(03)00110-6)
+-  on The Functional Estimation of Jump–Diffusion Models Federico M. Bandi, Thong H. Nguyen,  2003 *Journal of Econometrics* **116**    [10.1016/S0304-4076(03)00110-6](http://dx.doi.org/10.1016/S0304-4076(03)00110-6)

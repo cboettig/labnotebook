@@ -166,6 +166,5 @@ ISSN 0891-3811, <a href="http://dx.doi.org/10.1080/08913811.2010.541686">http://
 
 
 
--  Confidence in Judgment NigelHarvey 1997 *Trends in Cognitive Sciences* **1**   - [10.1016/S1364-6613(97)01014-0](http://dx.doi.org/10.1016/S1364-6613(97)01014-0)
--  Optimal Harvesting With Imprecise Parameter Estimates D.Ludwig 1982 *Ecological Modelling* **14**   - [10.1016/0304-3800(82)90023-0](http://dx.doi.org/10.1016/0304-3800(82)90023-0)
--  Optimal Harvesting With Imprecise Parameter Estimates C.J.Walters 1982 *Ecological Modelling* **14**   - [10.1016/0304-3800(82)90023-0](http://dx.doi.org/10.1016/0304-3800(82)90023-0)
+-  Confidence in Judgment Nigel Harvey,  1997 *Trends in Cognitive Sciences* **1**    [10.1016/S1364-6613(97)01014-0](http://dx.doi.org/10.1016/S1364-6613(97)01014-0)
+-  Optimal Harvesting With Imprecise Parameter Estimates D. Ludwig, C.J. Walters,  1982 *Ecological Modelling* **14**    [10.1016/0304-3800(82)90023-0](http://dx.doi.org/10.1016/0304-3800(82)90023-0)

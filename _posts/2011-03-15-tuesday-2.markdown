@@ -83,4 +83,4 @@ since flickr_upload protocol wants a single element string for comments and tags
 
 
 
--  Allee Effects, Extinctions, And Chaotic Transients in Simple Population Models Sebastian J.Schreiber 2003 *Theoretical Population Biology* **64**   - [10.1016/S0040-5809(03)00072-8](http://dx.doi.org/10.1016/S0040-5809(03)00072-8)
+-  Allee Effects, Extinctions, And Chaotic Transients in Simple Population Models Sebastian J. Schreiber,  2003 *Theoretical Population Biology* **64**    [10.1016/S0040-5809(03)00072-8](http://dx.doi.org/10.1016/S0040-5809(03)00072-8)

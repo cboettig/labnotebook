@@ -79,7 +79,4 @@ ISSN 1874-1738, <a href="http://dx.doi.org/10.1007/s12080-011-0122-4">http://dx.
 
 
 
--  Likelihood-Free Estimation of Model Evidence XavierDidelot 2011 *Bayesian Analysis* **6**   - [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)
--  Likelihood-Free Estimation of Model Evidence Richard G.Everitt 2011 *Bayesian Analysis* **6**   - [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)
--  Likelihood-Free Estimation of Model Evidence Adam M.Johansen 2011 *Bayesian Analysis* **6**   - [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)
--  Likelihood-Free Estimation of Model Evidence Daniel J.Lawson 2011 *Bayesian Analysis* **6**   - [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)
+-  Likelihood-Free Estimation of Model Evidence Xavier Didelot, Richard G. Everitt, Adam M. Johansen, Daniel J. Lawson,  2011 *Bayesian Analysis* **6**    [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)

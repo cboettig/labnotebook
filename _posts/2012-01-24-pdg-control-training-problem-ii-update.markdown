@@ -70,5 +70,4 @@ ISSN 00950696, <a href="http://dx.doi.org/10.1016/j.jeem.2004.11.005">http://dx.
 
 
 
--  Beyond Stochastic Dynamic Programming: A Heuristic Sampling Method For Optimizing Conservation Decisions in Very Large State Spaces SamNicol 2011 *Methods in Ecology And Evolution* **2**   - [10.1111/j.2041-210X.2010.00069.x](http://dx.doi.org/10.1111/j.2041-210X.2010.00069.x)
--  Beyond Stochastic Dynamic Programming: A Heuristic Sampling Method For Optimizing Conservation Decisions in Very Large State Spaces IadineChadès 2011 *Methods in Ecology And Evolution* **2**   - [10.1111/j.2041-210X.2010.00069.x](http://dx.doi.org/10.1111/j.2041-210X.2010.00069.x)
+-  Beyond Stochastic Dynamic Programming: A Heuristic Sampling Method For Optimizing Conservation Decisions in Very Large State Spaces Sam Nicol, Iadine Chadès,  2011 *Methods in Ecology And Evolution* **2**    [10.1111/j.2041-210X.2010.00069.x](http://dx.doi.org/10.1111/j.2041-210X.2010.00069.x)

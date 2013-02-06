@@ -162,5 +162,4 @@ ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1210465">http://dx.do
 
 
 
--  Tipping Points: Early Warning And Wishful Thinking Peter D.Ditlevsen 2010 *Geophysical Research Letters* **37**   - [10.1029/2010GL044486](http://dx.doi.org/10.1029/2010GL044486)
--  Tipping Points: Early Warning And Wishful Thinking Sigfus J.Johnsen 2010 *Geophysical Research Letters* **37**   - [10.1029/2010GL044486](http://dx.doi.org/10.1029/2010GL044486)
+-  Tipping Points: Early Warning And Wishful Thinking Peter D. Ditlevsen, Sigfus J. Johnsen,  2010 *Geophysical Research Letters* **37**    [10.1029/2010GL044486](http://dx.doi.org/10.1029/2010GL044486)

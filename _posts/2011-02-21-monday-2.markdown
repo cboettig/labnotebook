@@ -85,4 +85,4 @@ Plugins have been incredibly useful in extending functionality, though I am a li
 
 
 
--  Statistical Tests of Models of Dna Substitution NickGoldman 1993 *Journal of Molecular Evolution* **36**   - [10.1007/BF00166252](http://dx.doi.org/10.1007/BF00166252)
+-  Statistical Tests of Models of Dna Substitution Nick Goldman,  1993 *Journal of Molecular Evolution* **36**    [10.1007/BF00166252](http://dx.doi.org/10.1007/BF00166252)
