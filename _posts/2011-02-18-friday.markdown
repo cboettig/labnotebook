@@ -41,5 +41,5 @@ ISSN 00359254, <a href="http://dx.doi.org/10.2307/2347790">http://dx.doi.org/10.
 
 
 
--  University of California Research Seminar Network: A Prospectus James R. Carey, John Christian Laursen, Steven D. Glaser, Stephen Raphael, Gregory H. Miller, John Crawford, Timothy F. Lane, Patricia J. LiWang, Kimberly Hammond, Theodore Groves, Jean-Francois Pittet, David Stuart, Phokion G. Kolaitis, Laura Serwer, Mengfei Chen, Kenneth Feer,  2010 *Plos Biology* **8**    [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
--  Statistical Tests of Models of Dna Substitution Nick Goldman,  1993 *Journal of Molecular Evolution* **36**    [10.1007/BF00166252](http://dx.doi.org/10.1007/BF00166252)
+-  University of California Research Seminar Network: A Prospectus, James R. Carey, John Christian Laursen, Steven D. Glaser, Stephen Raphael, Gregory H. Miller, John Crawford, Timothy F. Lane, Patricia J. LiWang, Kimberly Hammond, Theodore Groves, Jean-Francois Pittet, David Stuart, Phokion G. Kolaitis, Laura Serwer, Mengfei Chen, Kenneth Feer,  (2010) *Plos Biology*, **8**    [10.1371/journal.pbio.1000289](http://dx.doi.org/10.1371/journal.pbio.1000289)
+-  Statistical Tests of Models of Dna Substitution, Nick Goldman,  (1993) *Journal of Molecular Evolution*, **36**    [10.1007/BF00166252](http://dx.doi.org/10.1007/BF00166252)

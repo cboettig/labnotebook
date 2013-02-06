@@ -52,4 +52,4 @@ ISSN 1758-678X, <a href="http://dx.doi.org/10.1038/nclimate1143">http://dx.doi.o
 
 
 
--  Tipping Points: Early Warning And Wishful Thinking Peter D. Ditlevsen, Sigfus J. Johnsen,  2010 *Geophysical Research Letters* **37**    [10.1029/2010GL044486](http://dx.doi.org/10.1029/2010GL044486)
+-  Tipping Points: Early Warning And Wishful Thinking, Peter D. Ditlevsen, Sigfus J. Johnsen,  (2010) *Geophysical Research Letters*, **37**    [10.1029/2010GL044486](http://dx.doi.org/10.1029/2010GL044486)

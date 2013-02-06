@@ -100,5 +100,5 @@ ISSN 1461-023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2004.00624.x">htt
 
 
 
--  Making Conservation Decisions Under Uncertainty For The Persistence of Multiple Species Emily Nicholson, Hugh P. Possingham,  2007 *Ecological Applications* **17**    [10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2](http://dx.doi.org/10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2)
--  Uncertainty And The Management of Multistate Ecosystems: an Apparently Rational Route to Collapse G. D. Peterson, S. R. Carpenter, W. A. Brock,  2003 *Ecology* **84**    [10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2](http://dx.doi.org/10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2)
+-  Making Conservation Decisions Under Uncertainty For The Persistence of Multiple Species, Emily Nicholson, Hugh P. Possingham,  (2007) *Ecological Applications*, **17**    [10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2](http://dx.doi.org/10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2)
+-  Uncertainty And The Management of Multistate Ecosystems: an Apparently Rational Route to Collapse, G. D. Peterson, S. R. Carpenter, W. A. Brock,  (2003) *Ecology*, **84**    [10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2](http://dx.doi.org/10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2)

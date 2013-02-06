@@ -164,4 +164,4 @@ ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1111694108">http://dx.do
 
 
 
--  Analysis of Abrupt Transitions in Ecological Systems Brandon T. Bestelmeyer, Aaron M. Ellison, William R. Fraser, Kristen B. Gorman, Sally J. Holbrook, Christine M. Laney, Mark D. Ohman, Debra P. C. Peters, Finn C. Pillsbury, Andrew Rassweiler, Russell J. Schmitt, Sapna Sharma,  2011 *Ecosphere* **2**    [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)
+-  Analysis of Abrupt Transitions in Ecological Systems, Brandon T. Bestelmeyer, Aaron M. Ellison, William R. Fraser, Kristen B. Gorman, Sally J. Holbrook, Christine M. Laney, Mark D. Ohman, Debra P. C. Peters, Finn C. Pillsbury, Andrew Rassweiler, Russell J. Schmitt, Sapna Sharma,  (2011) *Ecosphere*, **2**    [10.1890/ES11-00216.1](http://dx.doi.org/10.1890/ES11-00216.1)

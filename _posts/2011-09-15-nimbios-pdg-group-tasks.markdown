@@ -337,4 +337,4 @@ ISSN 00950696, <a href="http://dx.doi.org/10.1016/j.jeem.2004.11.005">http://dx.
 
 
 
--  Optimizing For Multiple Species And Multiple Values: Tradeoffs Inherent in Ecosystem-Based Fisheries Management Julie B. Kellner, James N. Sanchirico, Alan Hastings, Peter J. Mumby,  2011 *Conservation Letters* **4**    [10.1111/j.1755-263X.2010.00132.x](http://dx.doi.org/10.1111/j.1755-263X.2010.00132.x)
+-  Optimizing For Multiple Species And Multiple Values: Tradeoffs Inherent in Ecosystem-Based Fisheries Management, Julie B. Kellner, James N. Sanchirico, Alan Hastings, Peter J. Mumby,  (2011) *Conservation Letters*, **4**    [10.1111/j.1755-263X.2010.00132.x](http://dx.doi.org/10.1111/j.1755-263X.2010.00132.x)

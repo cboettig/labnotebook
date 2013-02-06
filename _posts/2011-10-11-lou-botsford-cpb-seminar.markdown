@@ -125,4 +125,4 @@ ISSN 00405809, <a href="http://dx.doi.org/10.1016/j.tpb.2010.07.004">http://dx.d
 
 
 
--  Fluctuations of Fish Populations And The Magnifying Effects of Fishing A. O. Shelton, M. Mangel,  2011 *Proceedings of The National Academy of Sciences* **108**    [10.1073/pnas.1100334108](http://dx.doi.org/10.1073/pnas.1100334108)
+-  Fluctuations of Fish Populations And The Magnifying Effects of Fishing, A. O. Shelton, M. Mangel,  (2011) *Proceedings of The National Academy of Sciences*, **108**    [10.1073/pnas.1100334108](http://dx.doi.org/10.1073/pnas.1100334108)

@@ -129,4 +129,4 @@ In separate entry... delayed release.
 
 
 
--  Motmot: Models of Trait Macroevolution on Trees Gavin H. Thomas, Robert P. Freckleton,  2012 *Methods in Ecology And Evolution* **3**    [10.1111/j.2041-210X.2011.00132.x](http://dx.doi.org/10.1111/j.2041-210X.2011.00132.x)
+-  Motmot: Models of Trait Macroevolution on Trees, Gavin H. Thomas, Robert P. Freckleton,  (2012) *Methods in Ecology And Evolution*, **3**    [10.1111/j.2041-210X.2011.00132.x](http://dx.doi.org/10.1111/j.2041-210X.2011.00132.x)

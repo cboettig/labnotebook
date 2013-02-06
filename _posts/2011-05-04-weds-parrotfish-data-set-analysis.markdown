@@ -156,4 +156,4 @@ ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1005431108">http://dx.do
 
 
 
--  Unknown H. David Sheets, Charles E. Mitchell,  2001 *Genetica* **112/113**    [10.1023/A:1013308409951](http://dx.doi.org/10.1023/A:1013308409951)
+-  Unknown, H. David Sheets, Charles E. Mitchell,  (2001) *Genetica*, **112/113**    [10.1023/A:1013308409951](http://dx.doi.org/10.1023/A:1013308409951)

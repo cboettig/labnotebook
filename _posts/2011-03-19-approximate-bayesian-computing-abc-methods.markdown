@@ -60,4 +60,4 @@ ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1008762107">http://dx.do
 
 
 
--  Likelihood-Free Estimation of Model Evidence Xavier Didelot, Richard G. Everitt, Adam M. Johansen, Daniel J. Lawson,  2011 *Bayesian Analysis* **6**    [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)
+-  Likelihood-Free Estimation of Model Evidence, Xavier Didelot, Richard G. Everitt, Adam M. Johansen, Daniel J. Lawson,  (2011) *Bayesian Analysis*, **6**    [10.1214/11-BA602](http://dx.doi.org/10.1214/11-BA602)

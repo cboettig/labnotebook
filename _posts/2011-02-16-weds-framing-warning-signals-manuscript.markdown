@@ -115,4 +115,4 @@ ISSN 00359254, <a href="http://dx.doi.org/10.2307/2347790">http://dx.doi.org/10.
 
 
 
--  Statistical Tests of Models of Dna Substitution Nick Goldman,  1993 *Journal of Molecular Evolution* **36**    [10.1007/BF00166252](http://dx.doi.org/10.1007/BF00166252)
+-  Statistical Tests of Models of Dna Substitution, Nick Goldman,  (1993) *Journal of Molecular Evolution*, **36**    [10.1007/BF00166252](http://dx.doi.org/10.1007/BF00166252)

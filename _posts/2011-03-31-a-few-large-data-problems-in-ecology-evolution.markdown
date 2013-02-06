@@ -115,4 +115,4 @@ ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2009.03.017">http://dx.
 
 
 
--  A Continental Strategy For The National Ecological Observatory Network Michael Keller, David S Schimel, William W Hargrove, Forrest M Hoffman,  2008 *Frontiers in Ecology And The Environment* **6**    [10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2](http://dx.doi.org/10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2)
+-  A Continental Strategy For The National Ecological Observatory Network, Michael Keller, David S Schimel, William W Hargrove, Forrest M Hoffman,  (2008) *Frontiers in Ecology And The Environment*, **6**    [10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2](http://dx.doi.org/10.1890/1540-9295(2008)6[282:ACSFTN]2.0.CO;2)
