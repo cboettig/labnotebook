@@ -23,6 +23,9 @@ module Jekyll
                                          :space_after_headers => true)
 
       out = "<ul>"
+
+
+      Twitter.connection_options = {:timeout => 50, :open_timeout => 20} # increase timeout to avoid frequent errors 
       @client = Twitter::Client.new(YAML.load_file("/home/cboettig/.twitter_auth.yaml"))
       tweets = @client.user_timeline(@user)
       for i in 0 ... @count.to_i
