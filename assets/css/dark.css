@@ -6364,6 +6364,23 @@ section {
   color: inherit;
   font-weight: bold;
 }
+/* Notebook feeds
+-------------------------------------------- */
+.feed {
+  margin-left: 45px;
+  padding: 35px 35px 36px;
+  border-left: 1px solid #073642;
+  font-size: 11px;
+}
+.feed p {
+  margin-bottom: 0;
+  font-size: 11px;
+}
+.feed h4 a {
+  color: inherit;
+  font-weight: bold;
+  font-size: 13px;
+}
 /* postpreview
 -------------------------------------------------- */
 .postpreview {
