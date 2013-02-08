@@ -19,8 +19,7 @@ module Jekyll
       # Initialize a redcarpet markdown renderer to autolink urls
       # Could use octokit instead to get GFM
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
-                                         :autolink => true, 
-                                         :space_after_headers => true)
+                                         :autolink => true)
 
       out = "<ul>"
 
