@@ -1,6 +1,5 @@
 ---
 layout: post
-published: false
 categories: 
   - ecology
   - open-science
@@ -11,7 +10,7 @@ tags:
 
 ---
 
-At home after birth of Edward since Jan 19th, little time for research. Assembled notes from a few side projects I've moved forward in the wee hours.  
+At home after birth of Edward since Jan 19th, leaving little time for research. Assembled notes from a few side projects I've moved forward in the wee hours. Covers the past several days.     
 
 
 XML and RDFa parsing
