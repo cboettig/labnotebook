@@ -10,28 +10,42 @@ date: 2012-09-28
   <div class="span12">
     <div class="sidebar">
       <div class="row">
-        <div class="span5">
-
-
-{% for category in site.categories %} 
-  <h2 id="{{ category[0] }}">{{ category[0] | join: "#" }}</h2>
-  <ul>
-    {% assign pages_list = category[1] %}  
-    {% include JB/pages_list %}
-  </ul>
-{% endfor %}
-
-</div>
-<div class="span3">
-
-<h3> All Categories </h3>
-<ul class="tag_box inline">
-  {% assign categories_list = site.categories %}
-  {% include JB/categories_list %}
-</ul>
+        <div class="span5 accordion" id="accordion2">
+        {% for category in site.categories %} 
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" 
+                 data-parent="#accordion2" href="#{{ category[0] }}" 
+                 style="text-align:center; color: #ffffff;
+                 background-image:url('/assets/img/notebook.png'); 
+                 background-repeat:no-repeat; background-size: 100%;" 
+                 rel="tooltip" title="click to expand/collapse"><h3 
+                    class="notebook-category">{{ category[0] | join: "#" }} ({{ category[1].size }})</h3></a>
+            </div>
+            <div id="{{ category[0] }}" class="accordion-body collapse"> <!-- add class="in" to start expanded -->
+              <div class="accordion-inner">
+                <ul>
+                  {% assign pages_list = category[1] %}  
+                  {% include JB/pages_list %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+        <div class="span3">
+          <h3> All Categories </h3>
+          <ul class="tag_box inline">
+            {% assign categories_list = site.categories %}
+            {% include JB/categories_list %}
+          </ul>
         </div> <!-- end span3--> 
       </div> <!-- end row--> 
     </div> <!-- end sidebar--> 
   </div> <!-- end row-->
 </div> <!-- end span12-->
+
+
+
+
 
