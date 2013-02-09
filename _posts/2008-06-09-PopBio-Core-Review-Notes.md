@@ -1,8 +1,11 @@
 ---
 layout: post
-category: 
+categories: 
   - ecology
   - evolution
+
+modified: 2013-02-08
+
 ---
 
 Embedded versions of my summary sheets for the Population Biology graduate group core course, organized by faculty member's section.  
