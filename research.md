@@ -13,6 +13,13 @@ me to large datasets where we might hope to resolve weak signals of interesting 
 I have worked in a variety of areas (outlined below).  For a more up-to-date or in depth
 look, why not see [what I am working on right now](/lab-notebook.html)?
 
+
+### Toolbox
+
+* **Analytic methods**: Dynamical systems, stochastic calculus, probability, master equation/linear noise approximation, optimal control
+* **Numerical methods**: High-performance computing, numerical differential equations, approximate likelihood methods, machine learning, stochastic dynamic programming.  
+* **Data Science methods**: Automating data extraction and data-mining from large data repositories (XML, regexp, semantic/linked data). Software development practices, authoring R packages, data management.
+
 ### Ecology
 
 
@@ -51,12 +58,12 @@ look, why not see [what I am working on right now](/lab-notebook.html)?
 - [Data management plan](http://www.carlboettiger.info/2012/10/09/data-management-plan.htm)
 
 
-I also enjoy exposure to fieldwork whenever I can convince colleagues to take me along. Though my own research has no field component, I'm thankful for recent opportunities from surveying pitfall traps for tiger salamanders to helping excavate icthysaur fossils in the Nevada desert. Have a field site? I have eight+ years of experience as an alpine guide and can carry a shovel. 
+I also enjoy exposure to fieldwork whenever I can convince colleagues to take me along. Though my own research has no field component, I'm thankful for recent opportunities from surveying pitfall traps for tiger salamanders to helping excavate icthysaur fossils in the Nevada desert. Have a field site that needs an extra pair of hands? I have over eight years of experience as an alpine guide and can carry a shovel. 
 
 
 ### Teaching / Education 
 
-[<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="recent reading in research articles on education practices"></i>](http://www.mendeley.com/groups/530011/education/papers/) [<i class="icon-tags" style="color:#b58900;"></i>](categories.html/#teaching)
+See my [Teaching](/teaching.html) statement.  [<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="recent reading in research articles on education practices"></i>](http://www.mendeley.com/groups/530011/education/papers/) [<i class="icon-tags" style="color:#b58900;"></i>](categories.html/#teaching)
 
 
 
