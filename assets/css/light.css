@@ -6263,6 +6263,9 @@ code.sourceCode span.er {
 .socialicons a {
   color: #657b83;
 }
+h3.notebook-category {
+  line-height: 15px;
+}
 /* excerpt */
 div.excerpt {
   height: 200px;
