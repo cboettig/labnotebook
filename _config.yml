@@ -26,9 +26,8 @@ pandoc:
   extensions: 
     - smart
     - mathjax
-#    - mathml            # Use mathml for equations (Archival, HTML5/XML valid syntax)
-#    - self-contained    # Archive images in posts as URIs
-
+    - mathml            # Use mathml for equations (Archival, HTML5/XML valid syntax)
+    - self-contained    # Archive images in posts as URIs
 
 analytics: UA-18401403-1
 
