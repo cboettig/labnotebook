@@ -6334,7 +6334,9 @@ div.excerpt {
   text-align: justify;
 }
 .postpreview h3 {
-  line-height: 22px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
 }
 .postpreview p {
   margin-bottom: 0;
@@ -6350,7 +6352,17 @@ div.excerpt {
   line-height: 18px;
   text-align: justify;
 }
-.postpreview h1 h2 h3 h4 {
+.postpreview h1 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.postpreview h2 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.postpreview h4 {
   font-size: 13px;
   line-height: 18px;
   font-weight: bold;
