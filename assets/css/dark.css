@@ -6350,12 +6350,7 @@ div.excerpt {
   line-height: 18px;
   text-align: justify;
 }
-.postpreview h1 {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: bold;
-}
-.postpreview h2 {
+.postpreview h1 h2 h3 h4 {
   font-size: 13px;
   line-height: 18px;
   font-weight: bold;
