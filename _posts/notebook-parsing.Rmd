@@ -4,7 +4,9 @@ published: false
 
 ---
 
-
+```{r}
+knit_options
+```
 
 ## Parsing semantic HTML
 
@@ -28,7 +30,7 @@ Or, if an archive is available locally, (e.g. from figshare cache), we can read 
 
 
 ```{r}
-pages <- system("ls _site/201*/*/*/*.html", intern=TRUE)
+pages <- system("ls ~/Documents/labnotebook/_site/2***/*/*/*.html", intern=TRUE)
 ```
 
 We parse each of the pages as HTML so that we can manipulate them with XML tools
@@ -76,7 +78,7 @@ Or generate a wordcloud of the full text
 carl <- Corpus(VectorSource(text))
 carl <- tm_map(carl, removePunctuation)
 carl <- tm_map(carl, tolower)
-carl <- tm_map(crude, function(x) removeWords(x, stopwords()))       
+carl <- tm_map(carl, function(x) removeWords(x, stopwords()))       
 
 carl.tdm <- TermDocumentMatrix(carl)
 carl.m <- as.matrix(carl.tdm)
@@ -85,14 +87,31 @@ carl.d <- data.frame(word=names(carl.v), freq=carl.v)
 
 
 wordcloud(carl.d$word,carl.d$freq, scale=c(8,.4),min.freq=3,
-max.words=100, random.order=FALSE, rot.per=.15, colors=pal2)
+          max.words=100, random.order=FALSE, rot.per=.15, 
+          colors = brewer.pal(8,"Dark2"))
+```
+
+## RDFa parsing
+
+
+Unfortunately the namespaces of the RDFa itself are less useful in the XML parsing, since they do not correspond to nodes or attributes, but appear only in the values of attributes.  As such, they do not act as XML namespaces.  We would need to first convert the RDFa to RDF to parse them as XML. We can perform this using the [Any23](http://any23.org) API
+
+```{r}
+download.file(paste("http://any23.org/rdfxml", "http://carlboettiger.info", sep="/"), "temp.xml")
+doc <- xmlParse("temp.xml")
+```
+
+Which creates a beautiful RDF XML file of all linked data found in the entry.   
+
+```{r, comment=NA}
+doc
 ```
 
 ## XML parsing 
 
 Some entries have content that is not valid XML. 
 
-```{r} 
+```{r warning=FALSE, message=FALSE} 
 site <- lapply(pages, function(s){ message(s); try(xmlParse(s)) })
 parse_fails <- sapply(site, is, "try-error") 
 parsed_pages <- site[!parse_fails] 
@@ -106,7 +125,9 @@ xmlNamespaces(parsed_pages[[1]])
 ```
 
 
-```{r}
+### XML parsing a single page example 
+
+```{r message=FALSE, warning=FALSE, error=FALSE}
 doc <- xmlParse(getURLContent("http://www.carlboettiger.info/2012/12/15/nonparametric-bayes-comparisons.html", followlocation=TRUE))
 namespaces = c(ns=xmlNamespaces(doc)[[1]]$uri)
 ```
@@ -122,13 +143,4 @@ We can extract explicit information of nodes and attributes using the xhtml name
 ```{r}
 xpathSApply(doc, "//ns:aside//ns:time", namespaces=namespaces, xmlValue)
 ```
-
-Unfortunately the namespaces of the RDFa itself are less useful in the XML parsing, since they do not correspond to nodes or attributes, but appear only in the values of attributes.  As such, they do not act as XML namespaces.  We would need to first convert the RDFa to RDF to parse them as XML. We can perform this using the [Any23](http://any23.org) API
-
-```{r}
-download.file(paste("http://any23.org/rdfxml", "http://carlboettiger.info", sep="/"), "temp.xml")
-doc <- xmlParse("temp.xml")
-```
-
-Which creates a beautiful RDF XML file of all linked data found in the entry.   
 

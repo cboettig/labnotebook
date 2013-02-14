@@ -1,7 +1,7 @@
 <header><h4><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4></header>
 <p><span>{{ post.subtitle }}</span></p>
-<p style="text-align:right; font-style:italic"> {{ post.date | date_to_string }}</p>
-<p style="text-align:right; font-style:italic"> pageviews: {% pageviews %}{{post.url}}{% endpageviews %} </p>
+<p style="font-style:italic"> {{ post.date | date_to_string }}</p>
+<p style="font-style:italic"> pageviews: {% pageviews %}{{post.url}}{% endpageviews %} </p>
 <article>
 <div class="excerpt">
 {{ post.content }} 
