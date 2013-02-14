@@ -31,6 +31,7 @@ pandoc:
     - mathjax
 #    - mathml            # Use mathml for equations (Archival, HTML5/XML valid syntax)
 #    - self-contained    # Archive images in posts as URIs.  Very slow, for archiving only.  
+#    - template: 'assets/datauri_template.html' # Use with 'self-contained' to avoid header text in body
 
 #markdown: redcarpet2
 #redcarpet:
