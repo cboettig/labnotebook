@@ -1,4 +1,12 @@
-## Useful metadata, available to a liquid filter as site.title, site.author.name, etc 
+## Standard Jeyll config options
+permalink: /:year/:month/:day/:title.html
+exclude: [ _posts/source/, _posts/_private/, assets/figures]
+
+## Flag to  turn on redirects plugin.  (Deactivate when redirects no longer get hits to save space)
+redirects: yes 
+
+## Useful metadata, available to a liquid filter as site.title, site.author.name, etc
+## Used in _inculdes templates headers and footers.  
 title: Lab Notebook 
 tagline: Theoretical ecology and evolution
 author:
@@ -11,28 +19,26 @@ author:
   mendeley: carl-boettiger
 keywords: Science, Ecology, Evolution, Open Science, Reproducible Research
 description: My open lab notebook- research in theoretical ecology and evolution
-
 url: http://www.carlboettiger.info
 repo: https://github.com/cboettig/labnotebook # used in linking history
+
+## Google Analytics key (in _includes/analytics.html)
 analytics: UA-18401403-1 
 
-# toggle on sidebar pageviews -- can take a long time for a large site 
-sidebar_pagviews: true
+## toggle on sidebar pageviews -- can take a long time for a large site 
+sidebar_pageviews: true
 
-## Functional configuration 
-permalink: /:year/:month/:day/:title.html
-redirects: yes
-exclude: [ _posts/source/, _posts/_private/, assets/figures]
+## Markdown Parser (standard Jekyll argument, extended to special parser)
 
-markdown: pandoc
-pandoc:
-  extensions: 
-    - smart
-    - mathjax
+markdown: redcarpet
+#pandoc:
+#  extensions: 
+#    - smart
+#    - mathjax
 #    - mathml            # Use mathml for equations (Archival, HTML5/XML valid syntax)
-#    - self-contained    # Archive images in posts as URIs.  Very slow, for archiving only.  
-#    - template: 'assets/datauri_template.html' # Use with 'self-contained' to avoid header text in body
 
-#markdown: redcarpet2
-#redcarpet:
-#  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+
+#    - template: 'assets/datauri_template.html' # Use with 'self-contained' to avoid header text in body
+#    - self-contained    # Archive images in posts as URIs.  Very slow, for archiving only.  
+
+
