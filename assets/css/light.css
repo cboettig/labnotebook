@@ -6266,11 +6266,6 @@ code.sourceCode span.er {
 h3.notebook-category {
   line-height: 15px;
 }
-/* excerpt */
-div.excerpt {
-  height: 200px;
-  overflow: hidden;
-}
 /* Footer
 -------------------------------------------------- */
 .footer {
@@ -6323,6 +6318,22 @@ div.excerpt {
   color: inherit;
   font-weight: bold;
 }
+/* excerpt 
+-----------------------------------------------------*/
+div.excerpt {
+  height: 200px;
+  overflow: hidden;
+}
+.excerpt h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
 /* postpreview
 -------------------------------------------------- */
 .postpreview {
@@ -6351,21 +6362,6 @@ div.excerpt {
   font-size: 13px;
   line-height: 18px;
   text-align: justify;
-}
-.postpreview h1 {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: bold;
-}
-.postpreview h2 {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: bold;
-}
-.postpreview h4 {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: bold;
 }
 /* Make markdown with floatright in the alt-text into a nice text-wrapped image 
 --------------------------------------------------------------------------------*/
