@@ -4,8 +4,15 @@ published: false
 
 ---
 
-```{r}
-knit_options
+An a [post a while back]() I originally put forward the idea of a semantic lab notebook.  Semantics, or linked data, are among the most powerful concepts to emerge in online science for scholarly data organization and communication. This lab notebook platform is an ideal testing grounds for these approaches. 
+
+
+
+
+
+```{r, include=FALSE}
+opts_chunk$set(comment=NA, warning=FALSE, message=FALSE)
+opts_knit$set(upload.fun = socialR::flickr.url)
 ```
 
 ## Parsing semantic HTML
@@ -105,42 +112,5 @@ Which creates a beautiful RDF XML file of all linked data found in the entry.
 
 ```{r, comment=NA}
 doc
-```
-
-## XML parsing 
-
-Some entries have content that is not valid XML. 
-
-```{r warning=FALSE, message=FALSE} 
-site <- lapply(pages, function(s){ message(s); try(xmlParse(s)) })
-parse_fails <- sapply(site, is, "try-error") 
-parsed_pages <- site[!parse_fails] 
-```
-
-
-
-Not all namespaces have been declared in header in RDFa. Should probably be remedied:
-```{r}
-xmlNamespaces(parsed_pages[[1]])
-```
-
-
-### XML parsing a single page example 
-
-```{r message=FALSE, warning=FALSE, error=FALSE}
-doc <- xmlParse(getURLContent("http://www.carlboettiger.info/2012/12/15/nonparametric-bayes-comparisons.html", followlocation=TRUE))
-namespaces = c(ns=xmlNamespaces(doc)[[1]]$uri)
-```
-
-```{r}
-set <- getNodeSet(doc, "//ns:meta[@property]", namespaces=namespaces)
-metadata <- cbind(sapply(set, xmlGetAttr, "content"), sapply(set, xmlGetAttr, "property"))
-metadata
-```
-
-We can extract explicit information of nodes and attributes using the xhtml namespace as well:
-
-```{r}
-xpathSApply(doc, "//ns:aside//ns:time", namespaces=namespaces, xmlValue)
 ```
 
