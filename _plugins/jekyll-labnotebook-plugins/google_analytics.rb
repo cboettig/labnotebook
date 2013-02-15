@@ -68,10 +68,6 @@ module Jekyll
       data = Exits.results(profile, 
                            :filters => {:page_path.eql => path}, 
                            :start_date => Chronic.parse("2011-01-01"))
-      #ARGHH!!! Why doesn't this work?  It works in IRB!  
-      # Giving the literal string instead of @path works.
-      # puts @path returns the correct value.  
-      # Using  "#{@path}" doesn't work either
       
       # Extract the pageviews 
       if defined?(data.first.pageviews)
