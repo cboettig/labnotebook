@@ -1,7 +1,9 @@
 ---
 layout: post
 categories: open-science
-tags: site-configuration
+tags: 
+  - site-configuration
+  - semantics
 
 ---
 

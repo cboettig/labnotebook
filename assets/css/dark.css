@@ -6324,12 +6324,22 @@ div.excerpt {
   height: 200px;
   overflow: hidden;
 }
-.excerpt h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.excerpt h1 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.excerpt h2 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.excerpt h3 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.excerpt h4 {
   font-size: 13px;
   line-height: 18px;
   font-weight: bold;

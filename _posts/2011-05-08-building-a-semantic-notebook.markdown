@@ -8,12 +8,13 @@ redirects: [/wordpress/archives/1626, /archives/1626]
 categories:
 - open-science
 tags:
-- plugins
+- semantics
+- site-configuration
 ---
 
 What would a semantic lab notebook look like?  What would be possible with such a structure, ideally?  What is already possible now?  There's a lot that can be done with an electronic notebook that adds value over a paper notebook: browsing by categories and tags, embedding links, time-stamping entries, searching the full text, and having automated trackbacks or pingbacks when a post is mentioned in another post or appears elsewhere on the web.  Despite these advantages, I think a lot more could be possible with a semantic notebook -- where links can be identified with an ontology describing the relationship.  I've found a couple current tools very promising, and would be interested in developing some of these much further.  
 
-There's been a lot written about the potential for linked data and a semantic web elsewhere [cite rel='cito:discusses']10.2200/S00334ED1V01Y201102WBE001[/cite], here I outline what's already possible and what I'd like to see in the context of a lab notebook. My notebook links three primary content sources: literature citations, graphs, and code; as I've [described before](http://www.carlboettiger.info/archives/211).  A more semantic version could make the connections between these elements explicit and machine readable, opening the door to many more possibilities.  
+There's been a lot written about the potential for linked data and a semantic web elsewhere <a rel="http://purl.org/spar/cito/discusses", resource="http://dx.doi.org/10.2200/S00334ED1V01Y201102WBE001">(Heath & Bizer, 2011)</a>, here I outline what's already possible and what I'd like to see in the context of a lab notebook. My notebook links three primary content sources: literature citations, graphs, and code; as I've [described before](http://www.carlboettiger.info/archives/211).  A more semantic version could make the connections between these elements explicit and machine readable, opening the door to many more possibilities.  
   
 ![](http://www.carlboettiger.info/assets/files/mynotebook-300x123.png)
 
@@ -26,7 +27,7 @@ There's been a lot written about the potential for linked data and a semantic we
 #### Existing capabilities
 
 
-A lot of linked-data meta-data is already supported for citations, but a lot more could be possible.  In my notebook, the citations are included by DOI whenever possible, using the [KCite](http://wordpress.org/extend/plugins/kcite/) plugin.  [DOI's are linked data](http://inkdroid.org/journal/2011/04/25/dois-as-linked-data/).  Further information can be added to any link using the [cite source='doi' rel='cito:discusses']10.1186/2041-1480-1-S1-S6[/cite] [cite source='url' rel='cito:discusses']http://wordpress.org/extend/plugins/link-to-link/[/cite] plugin, which in addition to DOIs can add indicate the reason for the citation.  [Link-2-Link](http://wordpress.org/extend/plugins/link-to-link/installation/) adds the citation to the link library in Wordpress, and can import bibtex documents, though this tends not to be as convenient as citing directly from DOI when it is available.  I'm not sure if [KCite](http://wordpress.org/extend/plugins/kcite/) will include the cito relationship if it is written in without [Link-2-Link](http://wordpress.org/extend/plugins/link-to-link/installation/), as:
+A lot of linked-data meta-data is already supported for citations, but a lot more could be possible.  In my notebook, the citations are included by DOI whenever possible, using the [KCite](http://wordpress.org/extend/plugins/kcite/) plugin (EDIT: now using my [knitcitations](https://github.com/cboettig/knitcitations/iss) package).  [DOI's are linked data](http://inkdroid.org/journal/2011/04/25/dois-as-linked-data/).  Further information can be added to any link using the CITO ontology.  <a rel="http://purl.org/spar/cito/usesMethodIn", resource="http://dx.doi.org/10.1186/2041-1480-1-S1-S6">Shotton (2010)</a>.  The link-to-link plugin,  <a rel="http://prul.org/spar/cito/discusses" resource='http://wordpress.org/extend/plugins/link-to-link'>(Fenner 2011)</a>, can in addition to DOIs can add indicate the reason for the citation.  [Link-2-Link](http://wordpress.org/extend/plugins/link-to-link/installation/) adds the citation to the link library in Wordpress, and can import bibtex documents, though this tends not to be as convenient as citing directly from DOI when it is available.  I'm not sure if [KCite](http://wordpress.org/extend/plugins/kcite/) will include the cito relationship if it is written in without [Link-2-Link](http://wordpress.org/extend/plugins/link-to-link/installation/), as:
 
     
     [cite source='doi' rel='cito:discusses']10.1186/2041-1480-1-S1-S6[/cite]

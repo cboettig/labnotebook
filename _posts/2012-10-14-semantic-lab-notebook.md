@@ -2,7 +2,9 @@
 layout: post
 title: Semantic Lab Notebook
 categories: open-science
-keywords: semantic-web
+tags: 
+- semantics
+- site-configuration
 
 ---
 

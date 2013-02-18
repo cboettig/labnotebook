@@ -17,12 +17,10 @@ An excellent question came up on ecoinformatics list today on data citation from
 
 Any general thoughts on how close we are to including datasets on CV's? Can you suggest recent papers that argue (decisively) for this practice? Here are two relevant but slightly tangential examples:
 
-Reichman, O. J., M. B. Jones, and M. P. Schildhauer. 2011. “Challenges and Opportunities of Open Data in Ecology.” Science 331 (6018) (February): 703-705.
+* Reichman, O. J., M. B. Jones, and M. P. Schildhauer. 2011. “Challenges and Opportunities of Open Data in Ecology.” Science 331 (6018) (February): 703-705.
+* Vision, Todd J. 2010. “Open Data and the Social Contract of Scientific Publishing.” BioScience 60 (5) (May): 330-331.
 
-Vision, Todd J. 2010. “Open Data and the Social Contract of Scientific Publishing.” BioScience 60 (5) (May): 330-331.
 
-
-(Reichman _et. al._ 2011) and (Vision, 2010)
 
 I gave a look over my Mendeley archives on the topic to come up with a few more. As this question seemed of interest to the FriendFeed groups ((yeah, so I was probably supposed to post this in G+, but not everyone can access that yet, right?)) I thought I'd take the liberty to share there. Unfortunately comments can't be formatted, so I'm adding my list here. Tried to include the relevant quote from the article unless that would mean quoting the whole thing. Will try and polish a bit later.
 
@@ -30,41 +28,17 @@ I gave a look over my Mendeley archives on the topic to come up with a few more.
 ## References arguing for Data Citation
 
 
+* Mons et al's piece is essentially an argument for data citation (Mons _et. al._ 2011)
+* Birney et al: "another would be to track the usage and citation of data sets using electronic systems similar to those used for traditional publications"(Birney, 2009), and cite this in support: Sharing Data from Large-scale Biological Research Projects: A System of Tripartite Responsibility (Wellcome Trust, 2003); [available here](www.wellcome.ac.uk/stellent/groups/ corporatesite/@policy_communications/documents/ web_document/wtd003207.pdf)
+* "Providing a secure but flexible cyberinfrastructure while promulgating best practices such as data citation and metadata reuse, will help build confidence in data sharing"(Tenopir _et. al._ 2011)
+* Rod discusses data citation quite a bit in print (Page, 2010)
+* "By ensuring that data remain curated at the source, and by showing the importance of data sharing to promote data citation and usage, we have grown past our original technology implementation and are ready to move into a long-term production environment that departs from the original model."(Constable _et. al._ 2010)
+* These three make mention of data citation, mostly in reference to increased citation rates of papers(MOORE _et. al._ 2010),(Whitlock _et. al._ 2010),(Whitlock, 2011)
+* Mark Parson's talk: http://ands.org.au/guides/data-citation-awareness.html
+* Heather's excellent [summary of resources](http://researchremix.wordpress.com/2011/05/17/resources-on-data-citation-principles/) on data citation principles
 
 
 
-
-	
-    * Mons et al's piece is essentially an argument for data citation (Mons _et. al._ 2011)
-
-	
-    * Birney et al: "another would be to track the usage and citation of data sets using electronic systems similar to those used for traditional publications"(unknown, 2009)
-and cite this in support:
-Sharing Data from Large-scale Biological Research Projects: A System of Tripartite Responsibility (Wellcome Trust, 2003); [available here](www.wellcome.ac.uk/stellent/groups/ corporatesite/@policy_communications/documents/ web_document/wtd003207.pdf)
-
-	
-    * "Providing a secure but flexible cyberinfrastructure while promulgating best practices such as data citation and metadata reuse, will help build confidence in data sharing"(Tenopir _et. al._ 2011)
-
-	
-    * Rod discusses data citation quite a bit in print (Page, 2010)
-
-	
-    * "By ensuring that data remain curated at the source, and by showing the importance of data sharing to promote data citation and usage, we have grown past our original technology implementation and are ready to move into a long-term production environment that departs from the original model."(Constable _et. al._ 2010)
-
-	
-    * These three make mention of data citation, mostly in reference to increased citation rates of papers(MOORE _et. al._ 2010),(Whitlock _et. al._ 2010),(Whitlock, 2011)
-
-	
-    * Mark Parson's talk: http://ands.org.au/guides/data-citation-awareness.html
-
-	
-    * Heather's excellent [summary of resources](http://researchremix.wordpress.com/2011/05/17/resources-on-data-citation-principles/) on data citation principles
-
-
-
-
-
-## The discussion on FF
 
 
 
