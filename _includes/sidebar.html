@@ -15,9 +15,6 @@
 <p> Posted in {% include pagecategories.html %} </p> 
 <p> tags: {% include pagetags.html %} </p>
 
-{% if site.sidebar_pageviews %}
-<!-- {{ site.sidebar_pageviews }} -->
-{% endif %}
+{% if site.pageviews %} <!-- {{ site.pageviews }} --> <p style="font-style:italic"> pageviews: {% pageviews %}{{page.url}}{% endpageviews %}</p>{% endif %}
 
-<p style="font-style:italic"> pageviews: {% pageviews %}{{page.url}}{% endpageviews %} </p>
 </aside>
