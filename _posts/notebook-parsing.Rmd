@@ -1,12 +1,19 @@
 ---
 layout: post
 published: false
+title: Features of the notebook part 1 -- leveraging linked data
 
 ---
 
-An a [post a while back]() I originally put forward the idea of a semantic lab notebook.  Semantics, or linked data, are among the most powerful concepts to emerge in online science for scholarly data organization and communication. This lab notebook platform is an ideal testing grounds for these approaches. 
+In keeping this open lab notebook, I have sought to address three goals (in addition to all the traditional reasons for keeping a lab notebook)
 
+1. Provide an educational resource
+2. Experiment with scientific infrastructure and tools for sharing and replicating research
+3. Facilitate the rapid and open dissemination of scientific research
 
+which are coincidentally evocative of [NSF broader impacts](http://www.nsf.gov/pubs/2007/nsf07046/nsf07046.jsp).  In this series of posts I plan to explore and illustrate some of my experiments with number 2 on this list, "experimenting with scientific infrastructure" -- namely, some of the web-based tools that advance the potential of this platform substantially beyond the utility of the venerable paper bound notebook.   
+
+An a [post a while back](/2011/05/08/building-a-semantic-notebook.html) I originally put forward the idea of a semantic lab notebook.  Semantics, or linked data, are among the most powerful concepts to emerge in online science for scholarly data organization and communication.  I have slowly been adding and exploring new ways to introduce semantic concepts into the notebook, which I have documented along the way under my [#semantics](http://www.carlboettiger.info/tags.html#semantics) tag. In this post, rather than discuss how to generate the semantic data, I try to focus on some of the things we can *do* with it.  This really just scratches the surface of possibilities, but should at least illustrate the general idea.  
 
 
 
@@ -16,6 +23,9 @@ opts_knit$set(upload.fun = socialR::flickr.url)
 ```
 
 ## Parsing semantic HTML
+
+Our first set of examples will address parsing the semantic HTML directly.  For background on how these elements are added to the notebook, see [this entry](/2012/10/14/semantic-lab-notebook.html).  We will use R with it's excellent collection of web, XML parsing, and text-mining tools to take advantage of the semantic structure.  First we load the required packages,
+
 
 ```{r}
 library(RCurl)
@@ -100,8 +110,10 @@ wordcloud(carl.d$word,carl.d$freq, scale=c(8,.4),min.freq=3,
 
 ## RDFa parsing
 
+RDF triples are the mainstay of semantic, linked data.  Unlike the more text-mining oriented examples above, data in this format follows a strict and universal standard which allows a machine to identify meaning rather precisely.  Critically, this allows one to automatically link data appearing in the notebook to data elsewhere on the web without the ambiguities of natural language that for instance, might confuse the animal jaguar with the car.  
 
-Unfortunately the namespaces of the RDFa itself are less useful in the XML parsing, since they do not correspond to nodes or attributes, but appear only in the values of attributes.  As such, they do not act as XML namespaces.  We would need to first convert the RDFa to RDF to parse them as XML. We can perform this using the [Any23](http://any23.org) API
+
+RDFa is a way of adding these precise statements to HTML, again see the [earlier entry](/2012/10/14/semantic-lab-notebook.html) on how this is done.  The technically inclined will note that the namespaces of the RDFa itself are not accessible in the XML parsing we used above, since they do not correspond to nodes or attributes, but appear only in the values of attributes.  Fortunately, there are many excellent tools to extract this RDFa data, turning it into the XML formatted RDF triples we need.  e can perform this using the [Any23](http://any23.org) API
 
 ```{r}
 download.file(paste("http://any23.org/rdfxml", "http://carlboettiger.info", sep="/"), "temp.xml")
@@ -114,3 +126,4 @@ Which creates a beautiful RDF XML file of all linked data found in the entry.
 doc
 ```
 
+We can now explore this data using the XML tools illustrated above.  The rigidity of the XML rather than HTML parsing and the use of namespaces gives us greater precision.  
