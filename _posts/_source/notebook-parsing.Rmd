@@ -78,6 +78,9 @@ table(unlist(categories))
 wordcloud(Corpus(VectorSource(tags)))
 ```
 
+### Extracting citations
+
+Citation information can be encoded 
 
 We can perform more direct text mining as well. For instance, we extract all DOIs found in the text: 
 

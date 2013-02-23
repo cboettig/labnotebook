@@ -1,0 +1,42 @@
+---
+layout: post
+tags: 
+- nonparametric-bayes
+- reading
+---
+
+
+Applied Math Club meeting
+-------------------------
+
+(See reading material from [Tuesday](/2013/02/19/notes.html).  
+
+- Start with stable age distribtution (indep of stock-recrutiment)
+- Consider the *Entropy* of that probability distribution, as function of mortality, by max age
+- Now consider the same for fecundity: the fraction/density of the population von Bertalanffy growth (fecundity)
+- effective mortality rate - mortality rate in an unfished population, distributed with same entropy as the fished population, 
+- Kullback-Leibler distance to measure fishing influence?
+
+
+- Mutual information and the design of surveys?
+- (information in catch data?)
+- Bonsall: Information content of global dynamics from individual patch dynamics?
+
+Reading
+-------
+
+* `r library(knitcitations)`Is there information in catch data: a comment piece highlighting the debate with Pauly on the affermative and Hilborn & Branch on the negative, `r citep("10.1038/494303a",cito="discusses")` and editoral commentary `r citep("10.1038/494282a",cito="discusses")`.  
+
+* Looking over this approximate dynamic programming (ADP) paper in MEE, `r citet("10.1111/j.2041-210X.2012.00242.x" cito="discusses")`.  Possibly promising.  I need to map out the space of ADP approaches and advantages/disadvantages a little more to get a better impression.  
+
+
+Misc
+----
+
+* [NCEAS Summer Institute](http://www.nceas.ucsb.edu/news/nceas-summer-institute-2013) for data synthesis.  Intriguing. 
+
+
+
+```{r echo=FALSE, results="asis"}
+bibliography("rdfa")
+```
