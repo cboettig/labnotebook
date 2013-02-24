@@ -9,7 +9,7 @@ tags:
 
  
 
-I have on ocassion been exploring the use of [semantic](/tags.html/#semantics) markup in the notebook.  One of the more intriguing ideas is the ability to add semantic meaning to citations through the CITO ontology of <span rel="tooltip" title="Shotton D (2010). Cito, The Citation Typing Ontology. _Journal
+I have on ocassion been exploring the use of [semantic](/tags.html/#semantics) markup in the notebook.  In this post I illustrate how I am handling semantic citations.  One of the more intriguing ideas is the ability to add semantic meaning to citations through the CITO ontology of <span rel="tooltip" title="Shotton D (2010). Cito, The Citation Typing Ontology. _Journal
 of Biomedical Semantics_, *1*. ISSN 2041-1480, 
 http://dx.doi.org/10.1186/2041-1480-1-S1-S6."><a href="http://dx.doi.org/10.1186/2041-1480-1-S1-S6" property="http://purl.org/spar/cito/usesMethodIn" >Shotton (2010)</a></span>.  Citation counts form a central part of academic discourse, but contain very little information regarding the reason for the citation.  Most notably, 'negative' citations refuting a claim carry just the same weight as those confirming or relying upon a claim.  Given the scale and expansion of academic literature, it is rarely reasonable to explore this citation graph manually.  CITO provides a language for embedding the meaning of the citation, such as "discusses", "refutes", or "usesMethodIn", to the citation.  (For instance, my earlier citation to Shotton identifies itself as "usesMethodIn", as I will explain). 
 
@@ -17,17 +17,29 @@ The main barrier to this approach is a lack of adoption.  One of the primary con
 
 ### Semantics in knitcitations
 
-Several months ago I created the R package [`knitcitations`](https://github.com/cboettig/knitcitations) to provide a citation platform for [knitr](http://yihui.name/knitr) dynamic documents, which provide executable code and automatic inclusion of results inside plain-text (markdown) descriptions.  I write most of my research scripts and many of my notebook entries in this manner. The package can generate citations by DOI, circumventing the need for maintaining bibtex or similar database of citation information, using commands such as `citet("10.1186/2041-1480-1-S1-S6")`.   Thanks to the Greycite API, the package can also cite articles and other content directly by URL. For instance, this post can be cited using `citet(http://carlboettiger.info/2012/02/22/semantic-citations-in-knitr-and-jekyll)` Extending the package to support CITO was rather straight forward.  Using the latest version of `knitcitations`, one can generate in-line citations with CITO semantics simply by passing the reason for the citation as well, such as `citet("10.1186/2041-1480-1-S1-S6", cito="usesMethodIn")`, which generates the following HTML:
+Several months ago I created the R package [knitcitations](https://github.com/cboettig/knitcitations) to provide a citation platform for [knitr](http://yihui.name/knitr) dynamic documents, which provide executable code and automatic inclusion of results inside plain-text (markdown) descriptions.  I write most of my research scripts and many of my notebook entries in this manner. The package can generate citations by DOI, circumventing the need for maintaining bibtex or similar database of citation information, using commands such as 
+
+```r
+citet("10.1186/2041-1480-1-S1-S6")
+```
+
+Extending the package to support CITO was rather straight forward.  Using the latest version of knitcitations, one can generate in-line citations with CITO semantics simply by passing the reason for the citation as well, such as 
+
+```r
+citet("10.1186/2041-1480-1-S1-S6", cito="usesMethodIn")
+```
+
+which generates the following HTML:
 
 ```html
 <a href='http://dx.doi.org/10.1186/2041-1480-1-S1-S6' property='http://purl.org/spar/cito/usesMethodIn' >Shotton (2010)</a>
 ```
 
-This provides a convient platform to generate semantic citations in this lab notebook.  As before, `knitcitations` will also generate a complete reference list at the end of the document by calling the `bibliography` function at the end. 
+This provides a convient platform to generate semantic citations in this lab notebook.  As before, knitcitations will also generate a complete reference list at the end of the document by calling the `bibliography` function at the end. 
 
 ### Semantic overkill?
 
-It is possible to add far more semantic data to this reference list at the end of an article.  Invisible semantic markup can identify to a machine what value corresponds to the volume number or issue number, or journal name, e,g, using the BIBO ontology.  I have added support for ths kind of markup to `knitcitations` as well, and [several](/2013/02/12/notes.html) [of](/2013/02/21/notes.html) my posts provide examples. The raw markup looks like this: 
+It is possible to add far more semantic data to this reference list at the end of an article.  Invisible semantic markup can identify to a machine what value corresponds to the volume number or issue number, or journal name, e,g, using the BIBO ontology.  I have added support for ths kind of markup to knitcitations as well, and [several](/2013/02/12/notes.html) [of](/2013/02/21/notes.html) my posts provide examples. The raw markup looks like this: 
 
 ```html
 <div prefix="dc: http://purl.org/dc/terms/,
@@ -63,7 +75,7 @@ Moreover, DOIs follows a specific construction that lets us reliably [identify t
 
 If we are not going to semantically mark up the reference list, we could consider abolishing the reference list all together.  After all, as a tool for the digital reader the concept is rather vestigal -- I hate losing my place by scrolling to the end of an article just to see to what reference number 7 refers.  With the method shown thus far, the reader can open the link to access this information, but that still interrupts the flow of reading.  The digitally native solution is a mouse-over or tooltip effect that displays this information, as many professional publishers already use in their HTML versions.  
 
-Once again, this is straight forward to support using the `knitcitations` package, at least for sites that include the popular [bootstrap](http://twitter.github.com/bootstrap) javascript libraries, such as this notebook.  I have added an option to the in-text citation functions to provide such tooltips in a span element, such that calling the command
+Once again, this is straight forward to support using the knitcitations package, at least for sites that include the popular [bootstrap](http://twitter.github.com/bootstrap) javascript libraries, such as this notebook.  I have added an option to the in-text citation functions to provide such tooltips in a span element, such that calling the command
 
 
 ```html
@@ -72,13 +84,19 @@ Biomedical Semantics_, *1*. ISSN 2041-1480, <URL:
 http://dx.doi.org/10.1186/2041-1480-1-S1-S6>.'><a href='http://dx.doi.org/10.1186/2041-1480-1-S1-S6' property='http://purl.org/spar/cito/usesMethodIn' >Shotton (2010)</a></span>
 ```
 
-This behavior can be toggled on by calling `cite_options(tooltip=TRUE)` after loading the knitcitations library.
+This behavior can be toggled on by calling 
+
+```r
+cite_options(tooltip=TRUE)
+```
+
+after loading the knitcitations library.
 
 ### Citing without DOIs
 
-Not all the literature we may wish to cite includes DOIs, such as [arXiv](http://arxiv.org) preprints, Wikipedia pages, or other academic blogs.  Even when a DOI is present it is not always trivial to locate.  With version 0.4-0, `knitcitations` can produce citations given any URL using the [Greycite API](http://greycite.knowledgeblog.org) (<span rel="tooltip" title="Lord P (2012). Greycite. 
+Not all the literature we may wish to cite includes DOIs, such as [arXiv](http://arxiv.org) preprints, Wikipedia pages, or other academic blogs.  Even when a DOI is present it is not always trivial to locate.  With version 0.4-0, knitcitations can produce citations given any URL using the [Greycite API](http://greycite.knowledgeblog.org) (<span rel="tooltip" title="Lord P (2012). Greycite. 
 http://knowledgeblog.org/greycite [Online. last-accessed:
-2012-10-10 13:36:24].  http://knowledgeblog.org/greycite."><a http://knowledgeblog.org/greycite property="http://purl.org/spar/cito/usesMethodIn" >Lord, 2012</a></span>). For instance, this citation is created with the command  `citep("http://knowledgeblog.org/greycite", cito="usesMethodIn")`.  
+2012-10-10 13:36:24].  http://knowledgeblog.org/greycite."><a href="http://knowledgeblog.org/greycite" property="http://purl.org/spar/cito/usesMethodIn" >Lord, 2012</a></span>). For instance, this citation is created with the command  `citep("http://knowledgeblog.org/greycite", cito="usesMethodIn")`.  
 
 
 
