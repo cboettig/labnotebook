@@ -8,6 +8,7 @@ redirects: [/wordpress/archives/2832, /archives/2832]
 categories:
 - ecology
 tags:
+- coursework
 - warning-signals
 ---
 

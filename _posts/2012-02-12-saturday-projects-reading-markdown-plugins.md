@@ -6,71 +6,36 @@ slug: saturday-projects-reading-markdown-site-configuration
 title: 'Saturday: projects, reading, markdown site-configuration'
 redirects: [/wordpress/archives/3818, /archives/3818]
 categories:
-- logistics
+- ecology 
 tags:
 - site-configuration
+- warning-signals
+- ropensci
 ---
 
 Greatly enjoyed seeing this perspective on power laws (Stumpf & Porter, 2012) Or as Richard McElreath put even more concisely,
 
-
-
-> 
-  People get amazed by power laws but never by normal distributions. Seems like some max ent outcomes astonish while others don't. When so many mechanisms aggregate to common densities, I'd hope we'd stop trying to argue that we can go backwards from pattern to process so easily.
-
-
-
-
+>  People get amazed by power laws but never by normal distributions. Seems like some max ent outcomes astonish while others don't. When so many mechanisms aggregate to common densities, I'd hope we'd stop trying to argue that we can go backwards from pattern to process so easily.
 
 
 ## Projects
 
-
-
-
-
-
-
-  * fishbase [example query for Peter](https://github.com/ropensci/rfishbase/commit/a1a9e0307288871b82caca921e9751bdc56b1942)
-
-
-  * Commit edits to warningsignals paper, send to Alan.  
-
-
-  * Things to show in warningsignals vignette/appendix: Increasing data improves estimates. Improves for autocorrelation 
-
-
-
+* fishbase [example query for Peter](https://github.com/ropensci/rfishbase/commit/a1a9e0307288871b82caca921e9751bdc56b1942)
+* Commit edits to warningsignals paper, send to Alan.  
+* Things to show in warningsignals vignette/appendix: Increasing data improves estimates. Improves for autocorrelation 
 
 
 ## Reading
 
 
-
-
-
-
-
-  * Remembered seeing this example, [scientific communication](http://worrydream.com/#!/ScientificCommunicationAsSequentialArt) as sequential art, a year or so ago but took a while to find it. Why [can't I search](http://webapps.stackexchange.com/questions/23797/advanced-search-options-for-my-links-in-delicious) my delicious links appropriately?
-
-
-  * [Data journalism](http://datajournalism.stanford.edu/), another nice take on visualizations
-
-
-  * [Hadley's tidy R](http://vimeo.com/33727555)
-
-
-
-
+* Remembered seeing this example, [scientific communication](http://worrydream.com/#!/ScientificCommunicationAsSequentialArt) as sequential art, a year or so ago but took a while to find it. Why [can't I search](http://webapps.stackexchange.com/questions/23797/advanced-search-options-for-my-links-in-delicious) my delicious links appropriately?
+* [Data journalism](http://datajournalism.stanford.edu/), another nice take on visualizations
+* [Hadley's tidy R](http://vimeo.com/33727555)
 
 
 ## some R tricks
 
-
-
 Moved this one to a separate entry, see [Elegant & fast data manipulation with data.table](http://www.carlboettiger.info/archives/3832)
-
-
 
 I always forget how to do this. 
 [gist id=1805250]

@@ -6,42 +6,28 @@ slug: monday-misc-notes
 title: Monday, misc notes
 redirects: [/wordpress/archives/2994, /archives/2994]
 categories:
-- logistics
+- ecology
+tags: 
+- pdg-control 
+- algorithms
 ---
 
 R packages relevant to the optimal control problems
 
 
-
-	
-  * BB: solving system of nonlinear equations
-
-	
-  * bvpSolve: boundary value problems
+* BB: solving system of nonlinear equations
+* bvpSolve: boundary value problems
 
 
 lunch with Alan & visiting professor from Ottowa, [Frithjof Lutscher](http://mysite.science.uottawa.ca/flutsche/).
 
 
-### ADG
-
-
-
-
-
+### ADG (algorithm discussion group)
 	
-  * Reviewed github, basic git commands.
-
-	
-  * Added roxygen function documentation
-
-	
-  * Created basic package, toyHMM
-
-
-
-	
-  * Some git notes:  The quick git-undo for a destroyed file:
+* Reviewed github, basic git commands.
+* Added roxygen function documentation
+* Created basic package, toyHMM
+* Some git notes:  The quick git-undo for a destroyed file:
 
 
 ```bash

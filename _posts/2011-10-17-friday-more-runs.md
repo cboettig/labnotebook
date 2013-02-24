@@ -6,7 +6,9 @@ slug: friday-more-runs
 title: Friday, more runs
 redirects: [/wordpress/archives/2901, /archives/2901]
 categories:
-- logistics
+- ecology
+tags: 
+- warning-signals
 ---
 
 A couple more runs:
@@ -40,17 +42,7 @@ IBM critical on first half of data:
 
 
 
-
-	
-  * Estimate the nonlinear model, show this method does worse than the linear estimation
-
-	
-  * Apply to systems with alternate dynamics.
-
-	
-  * Parameter distributions
-
-
-
-
-writing & formatting continue...
+* Estimate the nonlinear model, show this method does worse than the linear estimation
+* Apply to systems with alternate dynamics.
+* Parameter distributions
+* writing & formatting continue...

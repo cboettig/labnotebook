@@ -6,9 +6,10 @@ slug: doe-renewal-and-a-year-in-review
 title: DoE renewal and a year in review
 redirects: [/wordpress/archives/667, /archives/667]
 categories:
-- logistics
+- ecology
+- evolution
 tags:
-- 
+- progress-summary 
 ---
 
 This time of year I have to file my renewal for my DOE Fellowship, including a statement of accomplishments and a summary of the computational aspects of my work.  Seemed like a good idea to jot these down in my notebook as well:

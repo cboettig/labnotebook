@@ -6,25 +6,22 @@ slug: fridays-reading
 title: Friday's reading
 redirects: [/wordpress/archives/3145, /archives/3145]
 categories:
-- logistics
+- ecology
+- evolution
 tags:
 - reading
 ---
 
 ## Reading
 
-
 Catching up on journal table-of-contents/rss readings.
 
-
 ### News
-
 
 Australia Researchers unhappy (unknown, 2011)
 
 
 #### Climate change and Open Science
-
 
 Nature debate on the Berkeley climate team's (BEST) press release in advance of publication. (unknown, 2011) Editor critiques the stunt:
 
@@ -44,11 +41,7 @@ And suggests they might have posted the result on a preprint server and solicite
 
 #### Education
 
-
 A provocative letter on the lack of empirical support behind NSF's recently closed G-12 initiative (Cormas, 2011)
-
-
-
 
 ### Phylogenetics
 
@@ -78,22 +71,12 @@ And [this "database"](http://www.regimeshifts.org) is a great idea, but would be
 
 ## Open Science Blogs
 
-
 And catching up on some definite highlights from the open science blogs.
 
-
-
-	
-  * Cameron Neylon: [on building useful databases](http://cameronneylon.net/blog/building-the-perfect-data-repository-or-the-one-that-might-get-used/). insightful, practical, an so right.
-
-	
-  * Michael Nielsen gives [the best description](http://michaelnielsen.org/blog/open-access-a-short-summary/) of the state of Open Access publishing I've seen, including stories of some of the most exciting recent changes.
-
-	
-  * Heather Piwowar describes their [total-impact](http://researchremix.wordpress.com/2011/10/31/total-impact-party/) project.
-
-	
-  * Our own open science community is getting going on Jason's provocative post on getting scooped in open science. Jonathan Eisen shares his experiences and Law Professor Mario Biagioli shares a preprint on Openness, secrecy, and priority in science.
+* Cameron Neylon: [on building useful databases](http://cameronneylon.net/blog/building-the-perfect-data-repository-or-the-one-that-might-get-used/). insightful, practical, an so right.
+* Michael Nielsen gives [the best description](http://michaelnielsen.org/blog/open-access-a-short-summary/) of the state of Open Access publishing I've seen, including stories of some of the most exciting recent changes.
+* Heather Piwowar describes their [total-impact](http://researchremix.wordpress.com/2011/10/31/total-impact-party/) project.
+* Our own open science community is getting going on Jason's provocative post on getting scooped in open science. Jonathan Eisen shares his experiences and Law Professor Mario Biagioli shares a preprint on Openness, secrecy, and priority in science.
 
 
 

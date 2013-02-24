@@ -6,20 +6,16 @@ slug: thursday-fisheries-course
 title: Thursday, Fisheries course
 redirects: [/wordpress/archives/2885, /archives/2885]
 categories:
-- logistics
+- ecology
 tags:
-- forage fish
+- coursework 
+- ropensci
 ---
 
 Fisheries impact on forage fish.  Forage fish impact on the primary fisheries.
 
-
-
-	
-  * [Huxley, 1882](http://en.wikipedia.org/wiki/Sustainable_fisheries#cite_note-65): "Great Sea Fisheries cannot be exhausted" ([full address](http://aleph0.clarku.edu/huxley/SM5/fish.html))
-
-	
-  * Worm _et al._, 2006: All fish will collapse by 2050 (Worm _et. al._ 2006)
+* [Huxley, 1882](http://en.wikipedia.org/wiki/Sustainable_fisheries#cite_note-65): "Great Sea Fisheries cannot be exhausted" ([full address](http://aleph0.clarku.edu/huxley/SM5/fish.html))
+* Worm _et al._, 2006: All fish will collapse by 2050 (Worm _et. al._ 2006)
 
 
 Benguela Current upwelling (Anchovy collapse)
@@ -44,34 +40,17 @@ Groundfish, like cod, can eat primarily forage fish, or invertebrates
 
 Big gaps:
 
-
-
-	
-  * modeling tools, non-equilibrium.
-
-	
-  * examples where forage fish collapse
-
-	
-  * variability, impact of variability.
-
-	
-  * Where the heck are the innate oscillations.
-
+* modeling tools, non-equilibrium.
+* examples where forage fish collapse
+* variability, impact of variability.
+* Where the heck are the innate oscillations.
 
 
 
 ## rOpenSci
-
-
-
-
-
 	
-  * Final revisions on Digital Catalyst grant
-
-	
-  * Digital catalyst grant submitted.
+* Final revisions on Digital Catalyst grant
+* Digital catalyst grant submitted.
 
 
 

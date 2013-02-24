@@ -6,7 +6,11 @@ slug: wednesday-meetings
 title: Wednesday -- meetings
 redirects: [/wordpress/archives/3680, /archives/3680]
 categories:
-- logistics
+- ecology
+tags: 
+- ropensci
+- early-warning
+- code-tricks
 ---
 
 ### Alan meeting
@@ -16,8 +20,6 @@ write write write
 
 
 ### Duncan Meeting
-
-
 
 
 #### Troubleshooting S3 and S4
@@ -38,7 +40,6 @@ What a headache.  See [stackQ](http://stackoverflow.com/questions/8884607/r-usi
 
 ### Meredith Meeting
 
-
 Run a science policy workshop with Davis open science group?
 
 
@@ -48,35 +49,17 @@ Run a science policy workshop with Davis open science group?
 Detecting release of constraint through phylogenetic methods
 
 
-
-	
-  * Figure 1: cartoon of the difference between the release of constraint and the brownie model.
-
-
-
-	
-  * Figure 2: Traits (Peter)
-
-	
-  * Figure 3: regimes phylogeny
-
-	
-  * Figure 4: Flow diagram of the model choice process
-
-	
-  * Figure 5: Figure Model choice, <-- must be intuitive!
-
-	
-  * Figure 6: panel Figure for parameters.  <- barplot
-
-
+* Figure 1: cartoon of the difference between the release of constraint and the brownie model.
+* Figure 2: Traits (Peter)
+* Figure 3: regimes phylogeny
+* Figure 4: Flow diagram of the model choice process
+* Figure 5: Figure Model choice, <-- must be intuitive!
+* Figure 6: panel Figure for parameters.  <- barplot
 
 
 ## And back to Work...
 
-
-pmc fixed, maybe?  Vignette needs expanded explanations and simpler syntax, plus figure fixed.
-
-Evolution post?
+* pmc fixed, maybe?  Vignette needs expanded explanations and simpler syntax, plus figure fixed.
+* Evolution post?
 
 
