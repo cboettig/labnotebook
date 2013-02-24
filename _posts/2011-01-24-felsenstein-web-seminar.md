@@ -6,6 +6,8 @@ slug: felsenstein-web-
 title: Felsenstein (web) seminar
 redirects: [/wordpress/archives/832, /archives/832]
 categories:
+- phylogenetics
+tags: 
 - seminar
 ---
 

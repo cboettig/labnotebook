@@ -6,6 +6,8 @@ slug: steve-ellners-
 title: Steve Ellner's seminar
 redirects: [/wordpress/archives/1374, /archives/1374]
 categories:
+- ecology
+tags: 
 - seminar
 ---
 

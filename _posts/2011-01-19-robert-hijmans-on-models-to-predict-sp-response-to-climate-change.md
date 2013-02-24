@@ -6,6 +6,8 @@ slug: robert-hijmans-on-models-to-predict-sp-response-to-climate-change
 title: Robert Hijmans on Models to predict sp response to climate change
 redirects: [/wordpress/archives/803, /archives/803]
 categories:
+- ecology
+tags: 
 - seminar
 ---
 

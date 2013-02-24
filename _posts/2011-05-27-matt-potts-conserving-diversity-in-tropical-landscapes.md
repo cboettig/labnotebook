@@ -6,6 +6,8 @@ slug: matt-potts-conserving-diversity-in-tropical-landscapes
 title: 'Matt Potts: Conserving Diversity in Tropical Landscapes'
 redirects: [/wordpress/archives/1833, /archives/1833]
 categories:
+- ecology
+tags: 
 - seminar
 ---
 

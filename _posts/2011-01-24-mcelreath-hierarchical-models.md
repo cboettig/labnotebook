@@ -6,6 +6,8 @@ slug: mcelreath-hierarchical-models
 title: McElreath Hierarchical Models
 redirects: [/wordpress/archives/839, /archives/839]
 categories:
+- ecology
+tags: 
 - seminar
 ---
 

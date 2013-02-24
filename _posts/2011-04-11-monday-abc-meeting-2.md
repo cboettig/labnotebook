@@ -6,9 +6,8 @@ slug: monday-abc-meeting-2
 title: 'Monday: algorithms Meeting'
 redirects: [/wordpress/archives/1397, /archives/1397]
 categories:
-- seminar
+- computation
 tags:
-- algorithms
 - algorithms
 ---
 

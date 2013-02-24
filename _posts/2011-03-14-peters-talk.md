@@ -6,6 +6,8 @@ slug: peters-talk
 title: 'Peter''s talk '
 redirects: [/wordpress/archives/1198, /archives/1198]
 categories:
+- evolution
+tags: 
 - seminar
 ---
 

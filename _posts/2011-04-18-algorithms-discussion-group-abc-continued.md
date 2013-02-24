@@ -6,10 +6,8 @@ slug: algorithms-discussion-group-abc-continued
 title: 'Algorithms Discussion Group: algorithms Continued'
 redirects: [/wordpress/archives/1445, /archives/1445]
 categories:
-- evolution
-- seminar
+- computation 
 tags:
-- algorithms
 - algorithms
 ---
 

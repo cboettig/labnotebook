@@ -6,6 +6,8 @@ slug: alex-pfaff--meeting
 title: Alex Pfaff seminar, meeting
 redirects: [/wordpress/archives/4273, /archives/4273]
 categories:
+- ecology
+tags: 
 - seminar
 ---
 

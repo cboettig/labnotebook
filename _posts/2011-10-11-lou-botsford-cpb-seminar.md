@@ -6,6 +6,8 @@ slug: lou-botsford-cpb-
 title: Loo Botsford, CPB seminar
 redirects: [/wordpress/archives/2864, /archives/2864]
 categories:
+- ecology
+tags: 
 - seminar
 ---
 

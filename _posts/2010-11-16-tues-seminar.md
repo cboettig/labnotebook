@@ -6,6 +6,8 @@ slug: tues-
 title: Tues seminar
 redirects: [/wordpress/archives/337, /archives/337]
 categories:
+- ecology
+tags: 
 - seminar
 ---
 

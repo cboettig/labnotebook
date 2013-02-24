@@ -6,6 +6,8 @@ slug: steve-pacala-storer-lecture
 title: Steve Pacala - Storer lecture
 redirects: [/wordpress/archives/3336, /archives/3336]
 categories:
+- ecology
+tags: 
 - seminar
 ---
 

@@ -7,6 +7,7 @@ title: 'CPB : David Collar'
 redirects: [/wordpress/archives/494, /archives/494]
 categories:
 - evolution
+tags: 
 - seminar
 ---
 
