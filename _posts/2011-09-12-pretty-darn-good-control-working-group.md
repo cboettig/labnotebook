@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/2585, /archives/2585]
 categories:
 - ecology
 tags:
-- NIMBioS
+- pdg-control
 - pdg-control
 - warning-signals
 ---

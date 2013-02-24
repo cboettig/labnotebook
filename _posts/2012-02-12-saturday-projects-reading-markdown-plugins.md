@@ -2,13 +2,13 @@
 comments: true
 date: 2012-02-12 13:40:37
 layout: post
-slug: saturday-projects-reading-markdown-plugins
-title: 'Saturday: projects, reading, markdown plugins'
+slug: saturday-projects-reading-markdown-site-configuration
+title: 'Saturday: projects, reading, markdown site-configuration'
 redirects: [/wordpress/archives/3818, /archives/3818]
 categories:
 - logistics
 tags:
-- plugins
+- site-configuration
 ---
 
 Greatly enjoyed seeing this perspective on power laws (Stumpf & Porter, 2012) Or as Richard McElreath put even more concisely,

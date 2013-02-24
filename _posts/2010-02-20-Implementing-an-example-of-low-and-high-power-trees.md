@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [model-choice]
+tags: [pmc]
 categories: evolution
 title: Implementing an example of low and high power trees
 ---

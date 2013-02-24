@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/1697, /archives/1697]
 categories:
 - open-science
 tags:
-- plugins
+- site-configuration
 ---
 
 Adding mathjax by modifying the header.php file in my wordpress theme, [as recommended by MathJax website](http://www.mathjax.org/docs/1.1/platforms/wordpress.html), isn't stable to upgrades of the theme, which simply replace the header.php file with a fresh version.  The "correct" way to do this is using [child themes,](http://codex.wordpress.org/Child_Themes) which are pretty simple, even though this got me writing my first php functions.

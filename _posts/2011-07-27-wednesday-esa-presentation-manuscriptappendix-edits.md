@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/2244, /archives/2244]
 categories:
 - ecology
 tags:
-- plugins
+- site-configuration
 - warning-signals
 ---
 

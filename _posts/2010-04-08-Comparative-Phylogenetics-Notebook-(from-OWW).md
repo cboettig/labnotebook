@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [Labrids, open-science, model-choice]
+tags: [Labrids, open-science, pmc]
 categories: evolution
 ---
 

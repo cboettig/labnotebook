@@ -3,12 +3,12 @@ comments: true
 date: 2011-09-15 08:59:36
 layout: post
 slug: nimbios-pdg-group-tasks
-title: NIMBioS PDG group, Tasks
+title: pdg-control PDG group, Tasks
 redirects: [/wordpress/archives/2655, /archives/2655]
 categories:
 - ecology
 tags:
-- NIMBioS
+- pdg-control
 - pdg-control
 ---
 

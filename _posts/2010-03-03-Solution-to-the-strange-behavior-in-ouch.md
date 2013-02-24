@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [model-choice, code-tricks]
+tags: [pmc, code-tricks]
 categories: evolution
 title: Solution to the strange behavior in ouch
 ---

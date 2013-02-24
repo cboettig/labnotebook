@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [model-choice, adaptive-dynamics]
+tags: [pmc, adaptive-dynamics]
 categories: evolution
 title: Likelihood Ratio Paper
 ---

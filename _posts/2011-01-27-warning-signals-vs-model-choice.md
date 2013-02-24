@@ -2,7 +2,7 @@
 comments: true
 date: 2011-01-27 17:11:14
 layout: post
-slug: warning-signals-vs-model-choice
+slug: warning-signals-vs-pmc
 title: Warning signals vs model choice
 redirects: [/wordpress/archives/848, /archives/848]
 categories:

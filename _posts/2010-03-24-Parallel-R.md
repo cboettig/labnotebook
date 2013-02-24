@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [model-choice, Labrids, code-tricks]
+tags: [pmc, Labrids, code-tricks]
 categories: evolution
 title: Parallel R
 ---

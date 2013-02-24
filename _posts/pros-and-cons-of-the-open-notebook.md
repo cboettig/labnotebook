@@ -1,5 +1,9 @@
-
-
+---
+layout: post
+published: false
+category: open-science
+tags: site-configuration
+---
 
 
 http://academia.stackexchange.com/questions/5753/open-lab-notebook-in-early-postdoc-career-advantages-vs-disadvantages

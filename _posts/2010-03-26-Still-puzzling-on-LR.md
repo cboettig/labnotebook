@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [model-choice]
+tags: [pmc]
 categories: evolution
 title: Still puzzling on LR
 ---
