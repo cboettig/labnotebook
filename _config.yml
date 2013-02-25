@@ -6,7 +6,7 @@ exclude: [ _posts/source/, _posts/_private/, assets/figures]
 redirects: yes 
 
 ## Flag to turn on search index plugin
-searchindex: yes
+searchindex: no
 
 ## Useful metadata, available to a liquid filter as site.title, site.author.name, etc
 ## Used in _inculdes templates headers and footers.  
