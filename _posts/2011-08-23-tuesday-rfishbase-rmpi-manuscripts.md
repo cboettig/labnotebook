@@ -2,14 +2,14 @@
 comments: true
 date: 2011-08-23 15:10:24
 layout: post
-slug: tuesday-rfishbase-rmpi-manuscripts
-title: 'Tuesday: rfishbase, Rmpi, manuscripts, ...'
+slug: tuesday-rropensci-rmpi-manuscripts
+title: 'Tuesday: rropensci, Rmpi, manuscripts, ...'
 redirects: [/wordpress/archives/2379, /archives/2379]
 categories:
 - computation
 - evolution
 tags:
-- fishbase
+- ropensci
 ---
 
 ## rfishbase

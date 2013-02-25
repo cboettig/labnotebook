@@ -11,7 +11,7 @@ categories:
 tags: 
 - ropensci
 - seminar
-- warning-sginals
+- warning-signals
 - pmc
 - pdg-control
 ---

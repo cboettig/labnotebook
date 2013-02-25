@@ -2,14 +2,14 @@
 comments: true
 date: 2011-05-16 19:46:54
 layout: post
-slug: treebase-in-r-a-first-tutorial
+slug: ropensci-in-r-a-first-tutorial
 title: 'TreeBASE in R: a first tutorial'
 redirects: [/wordpress/archives/1702, /archives/1702]
 categories:
 - evolution
 tags:
 - R
-- treebase
+- ropensci
 ---
 
 My TreeBASE R package is essentially functional now.  Here's a quick tutorial on the kinds of things it can do.  Grab the [treebase package here](https://github.com/cboettig/treeBASE/archives/master), install and load the library into R.

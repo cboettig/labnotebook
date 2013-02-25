@@ -3,7 +3,7 @@ comments: true
 date: 2011-04-28 13:59:43
 layout: post
 slug: thursday-reading-notes
-title: Reading Notes, presentation prep, treebase error handling
+title: Reading Notes, presentation prep, ropensci error handling
 redirects: [/wordpress/archives/1522, /archives/1522]
 categories:
 - evolution

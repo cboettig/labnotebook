@@ -2,13 +2,13 @@
 comments: true
 date: 2011-05-10 09:55:57
 layout: post
-slug: interfaces-for-databases-treebase-dryad-dataone
+slug: interfaces-for-databases-ropensci-dryad-dataone
 title: 'Interfaces for databases: TreeBASE, Dryad, DataONE'
 redirects: [/wordpress/archives/1660, /archives/1660]
 categories:
 - evolution
 tags:
-- treebase
+- ropensci
 ---
 
 ## Next Steps

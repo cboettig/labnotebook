@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: [ecology, evolution]
-tags: [fishbase, ropensci]
+tags: [ropensci, ropensci]
 
 ---
 

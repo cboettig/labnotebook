@@ -9,7 +9,7 @@ categories:
 - ecology
 tags: 
 - ropensci
-- early-warning
+- warning-signals 
 - code-tricks
 ---
 

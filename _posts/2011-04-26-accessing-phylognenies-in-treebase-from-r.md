@@ -2,13 +2,13 @@
 comments: true
 date: 2011-04-26 14:10:22
 layout: post
-slug: accessing-phylognenies-in-treebase-from-r
+slug: accessing-phylognenies-in-ropensci-from-r
 title: Accessing phylognenies in TreeBASE from R
 redirects: [/wordpress/archives/1502, /archives/1502]
 categories:
 - evolution
 tags:
-- treebase
+- ropensci
 ---
 
 I've recently (([25 April](http://www.carlboettiger.info/archives/1496), [8 April](http://www.carlboettiger.info/archives/1382))) begun a project to see if I can search for and load phylogenies from [TreeBASE](http://www.treebase.org/) directly into R. Thanks to the rather brilliant API in place (documented on the [treeBASE wiki](https://sourceforge.net/apps/mediawiki/treebase/index.php?title=API)) for TreeBASE, some advice from [Rutger Vos](http://rutgervos.blogspot.com/) (TreeBASE developer), and some [xpaths](http://en.wikipedia.org/wiki/XPath) R code from Gabe Becker (stats grad student, UC Davis), I have a (mostly) working demonstration.  As I get a chance, I'll be adding the rest of the [queries available in the API](https://spreadsheets.google.com/pub?key=rL--O7pyhR8FcnnG5-ofAlw), improve the error handling and give some more thought to a user interface.  A long cry from a mature package, but a decent proof-of-principle and a nice test-piece for me to learn a bit of how to make web calls and parse xml from R.

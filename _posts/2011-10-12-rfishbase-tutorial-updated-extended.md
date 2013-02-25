@@ -2,13 +2,13 @@
 comments: true
 date: 2011-10-12 11:59:49
 layout: post
-slug: rfishbase-tutorial-updated-extended
-title: rfishbase Tutorial - updated & extended
+slug: rropensci-tutorial-updated-extended
+title: rropensci Tutorial - updated & extended
 redirects: [/wordpress/archives/2878, /archives/2878]
 categories:
 - computation
 tags:
-- fishbase
+- ropensci
 ---
 
 Updated rfishbase package.  Include querying for a list of scientific names and the addition of more quantitative traits, though the selection is still somewhat limited.  Demo includes how to grab some data to match a phylogenetic tree, and some regular expression (grep) searches for feeding behavior.

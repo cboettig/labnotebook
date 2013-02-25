@@ -2,13 +2,13 @@
 comments: true
 date: 2011-08-18 15:03:16
 layout: post
-slug: thursday-reviewing-edits-fishbase-computers
-title: 'Thursday: reviewing edits, fishbase, computers.'
+slug: thursday-reviewing-edits-ropensci-computers
+title: 'Thursday: reviewing edits, ropensci, computers.'
 redirects: [/wordpress/archives/2370, /archives/2370]
 categories:
 - evolution
 tags:
-- fishbase
+- ropensci
 ---
 
 ## Graham & Peter meeting

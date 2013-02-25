@@ -2,7 +2,7 @@
 comments: true
 date: 2011-04-25 10:11:31
 layout: post
-slug: treebase-interface-continued
+slug: ropensci-interface-continued
 title: TreeBASE interface continued...
 redirects: [/wordpress/archives/1496, /archives/1496]
 categories:

@@ -9,7 +9,7 @@ categories:
 - evolution
 tags:
 - conference
-- treebase
+- ropensci
 ---
 
 Day 2 is every bit as packed as day 1, and then some do to the higher concentration of lightning talks. Other coverage of #ievobio is starting to find it's way to the web:
