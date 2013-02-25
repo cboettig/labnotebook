@@ -22,19 +22,26 @@ Applied Math Club meeting
 - (information in catch data?)
 - Bonsall: Information content of global dynamics from individual patch dynamics?
 
-Reading
--------
-
-* `r library(knitcitations)`Is there information in catch data: a comment piece highlighting the debate with Pauly on the affermative and Hilborn & Branch on the negative, `r citep("10.1038/494303a",cito="discusses")` and editoral commentary `r citep("10.1038/494282a",cito="discusses")`.  
-
-* Looking over this approximate dynamic programming (ADP) paper in MEE, `r citet("10.1111/j.2041-210X.2012.00242.x" cito="discusses")`.  Possibly promising.  I need to map out the space of ADP approaches and advantages/disadvantages a little more to get a better impression.  
-
-
 Misc
 ----
 
 * [NCEAS Summer Institute](http://www.nceas.ucsb.edu/news/nceas-summer-institute-2013) for data synthesis.  Intriguing. 
 
+Reading
+-------
+
+* `r library(knitcitations)`Is there information in catch data: a comment piece highlighting the debate with Pauly on the affermative and Hilborn & Branch on the negative, `r citep("10.1038/494303a",cito="discusses")` and editoral commentary `r citep("10.1038/494282a",cito="discusses")`.  
+
+* Looking over this approximate dynamic programming (ADP) paper in MEE, `r citet("10.1111/j.2041-210X.2012.00242.x", cito="discusses")`.  Possibly promising.  I need to map out the space of ADP approaches and advantages/disadvantages a little more to get a better impression.  
+
+
+* `r citet("10.1111/j.2041-210X.2012.00242.x", "discusses")`: A new method for ADP? Or maybe not so new? see: `r citet("http://www.cs.rutgers.edu/~lihong/pub/Li06Towards.pdf", "discusses")`, _Towards a unified theory of state abstraction for MDPs_.
+
+* Cute analysis on malaria as branching process in policy forum piece in Science (with Alex's mentor) `r citet("10.1126/science.1229509", "discusses")`.
+
+* And following up on today's chats about information theory, a neat paper from Marc `r citet("10.1111/jeb.12010", "discusses")`
+
+* and making the rounds on the blogosphere bashing MAXENT, `r citet("10.1111/j.1541-0420.2012.01824.x", "discusses")`
 
 
 ```{r echo=FALSE, results="asis"}

@@ -59,3 +59,15 @@ Other activities today
 * Bonsall speaker dinner
 
 
+
+## Further reading 
+
+Following up on discussions today, seemed like a good time to reread: 
+
+- Bonsall, M. B. & Hastings, A. 2004 Demographic and environmental stochasticity in predator – prey metapopulation dynamics. , 1043–1055. (doi:10.1111/j.0021-8790.2004.00874.x)
+
+Also taking a look at the 'stochastic focusing' literature.  Unclear if the term has caught on much beyond Paulsson and co. though.  
+
+- Paulsson, J., Berg, O. G. & Ehrenberg, M. 2000 Stochastic focusing: fluctuation-enhanced sensitivity of intracellular regulation. Proceedings of the National Academy of Sciences of the United States of America 97, 7148–53. (doi:10.1073/pnas.110057697)
+
+
