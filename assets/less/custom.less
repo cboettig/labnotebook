@@ -209,4 +209,61 @@ section {
 
 
 
+/* Search 
+-----------------------------*/
+
+/* SEARCH */
+
+#search { 
+
+  position: relative;
+  margin-bottom: 20px;
+  
+  .form-search  { 
+
+      position: absolute; top: -1px; right: 5px;
+
+      text-align: right; padding: 6px 0 0; margin: 0 0 6px; 
+      label       { padding: 4px 10px 0 0 ; }
+      input       { height: 14px; font-size: 12px; }
+      .icon-remove  { position: absolute; right: 4px; top: 10px; }
+
+    }
+    
+}
+
+#search-results {
+
+  display: none;
+  overflow: scroll;
+  background: @white;
+
+  padding: 6px 0;
+  
+  max-height: 800px;
+
+  .search-entry { 
+    
+      padding: 12px 0 10px; 
+      border-bottom: 1px dotted @grayLight;
+      
+      &.selected  { background: @grayLighter; }
+      
+      a           { color: @textColor; }
+      .title      { font-family: @sansFontFamily; -webkit-font-smoothing: antialiased; font-size: @baseFontSize; line-height: @baseLineHeight; background: none; }
+      .title a    { color: @textColor !important; }
+      .timestamp  { font-size: 11px; color: @grayLight; }
+      .date       { display: none; }
+      .description  { margin-bottom: 6px; }
+
+    }
+
+    &.thinking {
+        display: block;
+        height: 60px;  
+      }
+      
+}
+
+
 

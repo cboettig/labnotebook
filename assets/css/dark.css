@@ -6434,6 +6434,74 @@ section {
 .subhead h1 {
   font-size: 54px;
 }
+/* Search 
+-----------------------------*/
+/* SEARCH */
+#search {
+  position: relative;
+  margin-bottom: 20px;
+}
+#search .form-search {
+  position: absolute;
+  top: -1px;
+  right: 5px;
+  text-align: right;
+  padding: 6px 0 0;
+  margin: 0 0 6px;
+}
+#search .form-search label {
+  padding: 4px 10px 0 0 ;
+}
+#search .form-search input {
+  height: 14px;
+  font-size: 12px;
+}
+#search .form-search .icon-remove {
+  position: absolute;
+  right: 4px;
+  top: 10px;
+}
+#search-results {
+  display: none;
+  overflow: scroll;
+  background: #fdf6e3;
+  padding: 6px 0;
+  max-height: 800px;
+}
+#search-results .search-entry {
+  padding: 12px 0 10px;
+  border-bottom: 1px dotted #93a1a1;
+}
+#search-results .search-entry.selected {
+  background: #eee8d5;
+}
+#search-results .search-entry a {
+  color: #839496;
+}
+#search-results .search-entry .title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  line-height: 20px;
+  background: none;
+}
+#search-results .search-entry .title a {
+  color: #839496 !important;
+}
+#search-results .search-entry .timestamp {
+  font-size: 11px;
+  color: #93a1a1;
+}
+#search-results .search-entry .date {
+  display: none;
+}
+#search-results .search-entry .description {
+  margin-bottom: 6px;
+}
+#search-results.thinking {
+  display: block;
+  height: 60px;
+}
 .btn {
   text-shadow: none;
 }

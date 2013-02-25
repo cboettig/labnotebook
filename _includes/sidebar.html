@@ -1,9 +1,16 @@
 <aside prefix="dc: http://purl.org/dc/terms/ og:http://ogp.me/ns/article#">
-<i class="icon-calendar"></i>
-<time datetime="{{ page.date | date_to_xmlschema }}" 
-      property="dc:created">{{ page.date | date_to_string }}</time>.
+  <p> <i class="icon-calendar"></i>
+    <time datetime="{{ page.date | date_to_xmlschema }}" 
+          property="dc:created">{{ page.date | date_to_string }}</time>. </p>
 <br />
-{% include nextprevious.html %}
+          {% if page.previous %}
+            <p><a class="btn btn-mini" rel="prev" href='{{ page.previous.url }}'><i class="icon-chevron-left"></i> prev</a>
+          {% endif %}
+          {% if page.next %}
+          <a class="btn btn-mini" rel="next" href='{{ page.next.url }}'>next <i class="icon-chevron-right"></i></a></p>
+          {% else %}
+            </p>
+          {% endif %}
 <br />
 {% if defined?(page.modified) %} <!-- Is thus actually accessing page.modified's value? -->
   Last modified 
@@ -11,10 +18,26 @@
   property="dc:modified">{{ page.modified | date_to_string }}</time>
 {% endif %}
 
-<p> <a class="btn btn-mini" href="{{ site.repo }}/commits/master/_posts{{page.url | github_link }}"><i class="icon-time"></i> history</a></p>
-<p> Posted in {% include pagecategories.html %} </p> 
-<p> tags: {% include pagetags.html %} </p>
 
-{% if site.pageviews %} <!-- {{ site.pageviews }} --> <p style="font-style:italic"> pageviews: {% pageviews %}{{page.url}}{% endpageviews %}</p>{% endif %}
+<p> <a class="btn btn-mini" href="{{ site.repo }}/commits/master/_posts{{page.url | github_link }}"><i class="icon-time"></i> history</a></p>
+
+
+<p> Posted in 
+  {% for category in page.categories %} 
+    <a rel="tag" class="category" 
+       href="{{ site.baseurl }}/categories.html#{{ category | cgi_escape }}"><span property="dc:subject og:section">{{ category }}</span></a>
+    {% unless page.categories.last == category %}, {% endunless %}
+    {% endfor %}</p>
+
+
+<p> tags: 
+    {% for tag in page.tags %}
+    <a rel="tag" class="tag" 
+      href="{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}">#<span property="og:tag http://schema.org/BlogPosting/keywords">{{ tag }}</span></a>
+    {% unless page.tags.last == tag %}, {% endunless %}
+    {% endfor %}</p>
+
+
+{% if site.pageviews %} <p style="font-style:italic"> pageviews: {% pageviews %}{{page.url}}{% endpageviews %}</p>{% endif %}
 
 </aside>
