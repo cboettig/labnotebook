@@ -3,7 +3,7 @@ permalink: /:year/:month/:day/:title.html
 exclude: [ _posts/source/, _posts/_private/, assets/figures]
 
 ## Flag to  turn on redirects plugin.  (Deactivate when redirects no longer get hits to save space)
-redirects: yes 
+redirects: no 
 
 ## Flag to turn on search index plugin
 searchindex: no
@@ -29,7 +29,7 @@ repo: https://github.com/cboettig/labnotebook # used in linking history
 analytics: UA-18401403-1 
 
 ## toggle on sidebar pageviews -- can take a long time for a large site 
-pageviews: true
+pageviews: no
 
 
 
