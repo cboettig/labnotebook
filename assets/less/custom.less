@@ -220,12 +220,12 @@ section {
   margin-bottom: 20px;
   
   .form-search  { 
-
+  /*
       position: absolute; top: -1px; right: 5px;
-
       text-align: right; padding: 6px 0 0; margin: 0 0 6px; 
       label       { padding: 4px 10px 0 0 ; }
       input       { height: 14px; font-size: 12px; }
+  */
       .icon-remove  { position: absolute; right: 4px; top: 10px; }
 
     }
@@ -235,8 +235,8 @@ section {
 #search-results {
 
   display: none;
-  overflow: scroll;
-  background: @white;
+  overflow: auto;
+  background: @background;
 
   padding: 6px 0;
   
@@ -245,14 +245,19 @@ section {
   .search-entry { 
     
       padding: 12px 0 10px; 
-      border-bottom: 1px dotted @grayLight;
+      border-bottom: 1px dotted @backgroundHighlights;
       
-      &.selected  { background: @grayLighter; }
+      &.selected  { background: @background; }
       
       a           { color: @textColor; }
-      .title      { font-family: @sansFontFamily; -webkit-font-smoothing: antialiased; font-size: @baseFontSize; line-height: @baseLineHeight; background: none; }
+      .title      { font-family: @sansFontFamily; 
+                    -webkit-font-smoothing: 
+                    antialiased; 
+                    font-size: @baseFontSize; 
+                    line-height: @baseLineHeight; 
+                    background: none; }
       .title a    { color: @textColor !important; }
-      .timestamp  { font-size: 11px; color: @grayLight; }
+      .timestamp  { font-size: @baseFontSize; color: @emphasis; }
       .date       { display: none; }
       .description  { margin-bottom: 6px; }
 
@@ -261,9 +266,13 @@ section {
     &.thinking {
         display: block;
         height: 60px;  
-      }
+    }
       
 }
 
-
+/*
+@media (max-width: 979px) { 
+    #search .form-search input  { width: 120px; }
+}
+*/
 

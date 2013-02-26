@@ -27,27 +27,15 @@ module Jekyll
       self.process(@name)
       # Read the YAML data from the layout page.
       self.read_yaml(File.join(base, '_layouts'), 'search_post.html')
-      # Set the title for this page.
-
-      # debugger
-      self.data['type'] = post.data['type']
-      self.data['link'] = post.url
-      self.data['date'] = post.data['date']
-      self.data['name'] = post.data['name']
-      self.data['picture'] = post.data['picture']
-      self.data['images'] = post.data['images']
-      self.data['date'] = post.data['date']
       
-      if (post.data['type'] == nil)
-        self.data['title'] = post.data['title']
+      # Grab the metadata
+      self.data['title'] = post.data["title"] || post.slug.split('-').select {|w| w.capitalize! || w }.join(' ')
+      self.data['link'] = post.url  
+      self.data['date'] = post.date 
+      if post.data['tags'].class == Array
+        self.data['tags'] = post.data['tags'].join(", ") # empty (metadata)
       end
-
-      if (post.data['message'])
-        self.data['description'] = post.data['message']
-      else
-        self.data['description'] = post.data['description']
-      end
-
+       # self.content = post.content
     end
   end
 
@@ -100,8 +88,8 @@ module Jekyll
           rawtext << ' ' + self.posts[i].data['title'].downcase
         end
         
-        if self.posts[i].data['description']
-          rawtext << ' ' + self.posts[i].data['description'].downcase
+        if self.posts[i].data['content']
+          rawtext << ' ' + self.posts[i].data['content'].downcase
         end
 
         rawtext.scan(/[a-zA-Z0-9]{1,}/).each do |word|
