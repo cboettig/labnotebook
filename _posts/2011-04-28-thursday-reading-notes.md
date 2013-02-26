@@ -3,7 +3,7 @@ comments: true
 date: 2011-04-28 13:59:43
 layout: post
 slug: thursday-reading-notes
-title: Reading Notes, presentation prep, ropensci error handling
+title: Reading Notes, presentation prep treebase error handling
 redirects: [/wordpress/archives/1522, /archives/1522]
 categories:
 - evolution
@@ -20,38 +20,32 @@ tags:
 
 
 
-	
-    * Oikos journal [recently started](http://oikosjournal.wordpress.com/2011/03/01/welcome-to-the-oikos-blog/) a rather nice blog. A journal long responsible for some of the best examples of developing and confronting ecological theory with empirical results, with an commendable emphasis on general principles and synthesis, it's nice to see them enter the Web2.0 ecosystem. Editor Jeremy Fox has a nice [introduction](http://oikosjournal.wordpress.com/2011/03/20/fox-quick-biography-and-some-thoughts-on-the-past-and-future-of-oikos/) to the goals of the blog -- check out the "[new idea](http://oikosjournal.wordpress.com/category/new-ideas/)s" categories for worthwhile reading. Thanks to Ethan White's [post on Jabberwocky Ecology](http://jabberwocky.weecology.org/2011/04/27/oikos-has-a-blog-blogrolling/) for bringing this to my attention. Particularly enjoyed the classic Borges quote linked as a pdf in the discussion of hand waving in ecology, which was so good I had to jot it down here ((On Exactitude in Science
-Jorge Luis Borges, Collected Fictions, translated by Andrew Hurley.
-...In that Empire, the Art of Cartography attained such Perfection that the map of a single Province occupied the entirety of a City, and the map of the Empire, the entirety of a Province. In time, those Unconscionable Maps no longer satisfied, and the Cartographers Guilds struck a Map of the Empire whose size was that of the Empire, and which coincided point for point with it. The following Generations, who were not so fond of the Study of Cartography as their Forebears had been, saw that that vast Map was Useless, and not without some Pitilessness was it, that they delivered it up to the Inclemencies of Sun and Winters. In the Deserts of the West, still today, there are Tattered Ruins of that Map, inhabited by Animals and Beggars; in all the Land there is no other Relic of the Disciplines of Geography.
-—Suarez Miranda,Viajes de varones prudentes, Libro IV,Cap. XLV, Lerida, 1658))
 
-	
-    * Excellent/very relevant piece on fluctuations in fish population dynamics, (Shelton & Mangel, 2011).
+* Oikos journal [recently started](http://oikosjournal.wordpress.com/2011/03/01/welcome-to-the-oikos-blog/) a rather nice blog. A journal long responsible for some of the best examples of developing and confronting ecological theory with empirical results, with an commendable emphasis on general principles and synthesis, it's nice to see them enter the Web2.0 ecosystem. Editor Jeremy Fox has a nice [introduction](http://oikosjournal.wordpress.com/2011/03/20/fox-quick-biography-and-some-thoughts-on-the-past-and-future-of-oikos/) to the goals of the blog -- check out the "[new idea](http://oikosjournal.wordpress.com/category/new-ideas/)s" categories for worthwhile reading. Thanks to Ethan White's [post on Jabberwocky Ecology](http://jabberwocky.weecology.org/2011/04/27/oikos-has-a-blog-blogrolling/) for bringing this to my attention. Particularly enjoyed the classic Borges quote linked as a pdf in the discussion of hand waving in ecology, which was so good I had to jot it down here 
 
-	
-    * New warning signals [article](http://www.jstor.org/stable/full/10.1086/659945) by Vasilis in Am Nat.(Dakos _et. al._ 2011) ((Hmm.. JSTOR uses DOIs in its URL, but Am Nat doesn't seem to process the dois for the ahead-of-print articles. Hence no automatic citation)). And of course Carpenter et. al's empirical study in a lake ecosystem, in _Science_(Carpenter _et. al._ 2011)
+> #### On Exactitude in Science Jorge Luis Borges, Collected Fictions, translated by Andrew Hurley.
+> ...In that Empire, the Art of Cartography attained such Perfection that the map of a single Province occupied the entirety of a City, and the map of the Empire, the entirety of a Province. In time, those Unconscionable Maps no longer satisfied, and the Cartographers Guilds struck a Map of the Empire whose size was that of the Empire, and which coincided point for point with it. The following Generations, who were not so fond of the Study of Cartography as their Forebears had been, saw that that vast Map was Useless, and not without some Pitilessness was it, that they delivered it up to the Inclemencies of Sun and Winters. In the Deserts of the West, still today, there are Tattered Ruins of that Map, inhabited by Animals and Beggars; in all the Land there is no other Relic of the Disciplines of Geography.
 
-	
-    * Ecological monographs has a nice article on stability, resilience and phase shifts in the classic otter-urchin system, nice alterantive stable states example despite temporal and site heterogeneity. (Watson & Estes, 2011)
-
-	
-    * Species and trait diversification rates: Science article in electric fishes. (based on Brownie. Supplement claims AICc avoids type I errors associated with small sample size in chi^2, unfortunately I think the error rate remains high.) Diversification rates follow (Rabosky _et. al._ 2007), comparing fit by likelihood ratio, estimated mu/lambda by trying 4 values,
+> —Suarez Miranda, Viajes de varones prudentes, Libro IV,Cap. XLV, Lerida, 1658))
 
 
+* Excellent/very relevant piece on fluctuations in fish population dynamics, (Shelton & Mangel, 2011).
 
+* New warning signals [article](http://www.jstor.org/stable/full/10.1086/659945) by Vasilis in Am Nat.(Dakos _et. al._ 2011) ((Hmm.. JSTOR uses DOIs in its URL, but Am Nat doesn't seem to process the dois for the ahead-of-print articles. Hence no automatic citation)). And of course Carpenter et. al's empirical study in a lake ecosystem, in _Science_(Carpenter _et. al._ 2011)
+
+
+* Ecological monographs has a nice article on stability, resilience and phase shifts in the classic otter-urchin system, nice alterantive stable states example despite temporal and site heterogeneity. (Watson & Estes, 2011)
+
+
+* Species and trait diversification rates: Science article in electric fishes. (based on Brownie. Supplement claims AICc avoids type I errors associated with small sample size in chi^2, unfortunately I think the error rate remains high.) Diversification rates follow (Rabosky _et. al._ 2007), comparing fit by likelihood ratio, estimated mu/lambda by trying 4 values,
 
 
 > Given our small dataset and the difficulty in estimating extinction rates from comparative data (Rabosky, 2010), we set the relative extinction fraction to ε = μ / λ rather than attempting to estimate it from the data (Alfaro _et. al._ 2009). We repeated our analyses using a range of ε values (ε = 0, 0.5, 0.9, and 0.99) (Rabosky _et. al._ 2007).
 
-
 Hmm... irregular optimization method... Highlights the need for adequate power and estimates there-of to make inferences from phylogenetic data.
 
-
-
 	
-  * Also in _Science_ Sidlauskas and colleagues make the most of Facebook (Sidlauskas _et. al._ 2011) for fish ids.
-
+* Also in _Science_ Sidlauskas and colleagues make the most of Facebook (Sidlauskas _et. al._ 2011) for fish ids.
 
 
 
@@ -71,24 +65,11 @@ Presentation in Hastings lab on Warning Signals.  Background. methods. Results.
 
 
 
-
-	
-  * Replicate (Price _et. al._ 2010) (on full Labrid dataset?)
-
-	
-  * Repeat with release of constraint model, unconstrained model
-
-	
-  * MCMC implementation?
-
-	
-  * Assembling TreeBASE demo and further goals
-
-	
-  * Attempt improved optimizer for TreePar package
-
-
-
+* Replicate (Price _et. al._ 2010) (on full Labrid dataset?)
+* Repeat with release of constraint model, unconstrained model
+* MCMC implementation?
+* Assembling TreeBASE demo and further goals
+* Attempt improved optimizer for TreePar package
 
 ## Coding
 
@@ -108,8 +89,6 @@ ans <- try(read.nexus(con))
  }
 
 ```
-
-
 
 > 
 The second approach is to manage the HTTP request for the document so that you can detect when the file is not available. You can use either getURL() or getURLContent() in the RCurl package.

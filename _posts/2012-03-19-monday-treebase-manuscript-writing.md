@@ -2,8 +2,6 @@
 comments: true
 date: 2012-03-19 20:21:09
 layout: post
-slug: monday-ropensci-manuscript-writing
-title: 'Monday: ropensci manuscript writing'
 redirects: [/wordpress/archives/4324, /archives/4324]
 categories:
 - evolution

@@ -2,8 +2,8 @@
 comments: true
 date: 2011-10-12 11:59:49
 layout: post
-slug: rropensci-tutorial-updated-extended
-title: rropensci Tutorial - updated & extended
+slug: rfishbase-tutorial-updated-extended
+title: rfishbase Tutorial - updated & extended
 redirects: [/wordpress/archives/2878, /archives/2878]
 categories:
 - computation

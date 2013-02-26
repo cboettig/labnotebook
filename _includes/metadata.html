@@ -1,4 +1,6 @@
 
+
+<!-- Some liquid code so that pages get the site.time creation date -->
 {% if defined?(page.date) %} 
   {% assign date = page.date %}
   {% if date.class != Time %} 
@@ -8,9 +10,10 @@
   {% assign date = site.time %}
 {% endif %}
 
+
 <!-- HTML5 metadata -->
-<meta name="keywords" content="{{ site.keywords }}" />
-<meta name="description" content="{{ site.description }}" />
+<meta name="keywords" content="{{ page.tags | join: ', ' }}" />
+<meta name="description" content="{{ page.description }}" />
 <!-- RDFa Metadata (in DublinCore) -->
 <meta property="dc:title" content="{{ page.title }}" />
 <meta property="dc:creator" content="{{ site.author.name }}" />

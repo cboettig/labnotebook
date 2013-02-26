@@ -2,8 +2,6 @@
 comments: true
 date: 2011-10-25 19:06:38
 layout: post
-slug: ropensci-package-on-cran
-title: ropensci package on cran
 redirects: [/wordpress/archives/3019, /archives/3019]
 categories:
 - evolution

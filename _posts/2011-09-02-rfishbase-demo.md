@@ -2,8 +2,7 @@
 comments: true
 date: 2011-09-02 12:59:35
 layout: post
-slug: rropensci-demo
-title: 'rropensci demo: Are there more Goby or Labrid species on reefs?'
+title: 'rfishbase demo: Are there more Goby or Labrid species on reefs?'
 redirects: [/wordpress/archives/2529, /archives/2529]
 categories:
 - evolution
