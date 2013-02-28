@@ -1,6 +1,21 @@
-# From https://github.com/captaincanine/marran.com/blob/master/_plugins/generate_searchindex.rb
-# http://www.marran.com/tech/jquery-full-text-indexing-on-jekyll/
+# Modified from https://github.com/captaincanine/marran.com/blob/master/_plugins/generate_searchindex.rb
+# See documentation on: http://www.marran.com/tech/jquery-full-text-indexing-on-jekyll/
+#
 # Depends: fast_stemmer gem 
+# 
+# Installation: 
+#
+#   1. place script in _plugins directory
+#   2. Place copies of site-search.js and porter-stemmer.js in javascript folder and add to footer HTML
+#   3. add the value `sitesearch: yes` to _config.yml
+#   4. Create the return data template `search_post.html` in _layouts/ (see example in _/layouts)
+#   5. Add (and customize) the CSS for site search (see search section of custom.less)
+#
+# Details:
+#
+#   Note that the search_post.html in layouts does not have access to all page. variables, but only
+#   those passed to it in this script.  See below.  
+#
 
 module Jekyll
 
@@ -28,7 +43,7 @@ module Jekyll
       # Read the YAML data from the layout page.
       self.read_yaml(File.join(base, '_layouts'), 'search_post.html')
       
-      # Grab the metadata
+      #### Grab whatever metadata we will want to use in `search_post.html` here ##########
       self.data['title'] = post.data["title"] || post.slug.split('-').select {|w| w.capitalize! || w }.join(' ')
       self.data['link'] = post.url  
       self.data['date'] = post.date 
