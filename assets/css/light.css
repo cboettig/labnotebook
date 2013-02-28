@@ -6492,9 +6492,8 @@ section {
 #search-results .search-entry .description {
   margin-bottom: 6px;
 }
-#search-results.thinking {
-  display: block;
-  height: 60px;
+#search-results.thinking .icon-spinner .icon-spin {
+  display: inline-block;
 }
 /*
 @media (max-width: 979px) { 
