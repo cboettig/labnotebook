@@ -11,7 +11,7 @@
   </form>
           <div class="row">
             <div class="span4 socialicons" style="font-size:20px" vocab="http://xmlns.com/foaf/0.1/" typeof="Person" resource="#me">
-                <a property="account" alt="email" ref="mailto:{{site.author.email}}" onclick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><i class="icon-envelope-alt" rel="tooltip" title="email me"></i></a>
+                <a property="account" alt="email" href="mailto:{{site.author.email}}" onclick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><i class="icon-envelope-alt" rel="tooltip" title="email me"></i></a>
                 <a property="account" alt="twitter" href="https://twitter.com/{{site.author.twitter}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><i class="icon-twitter" rel="tooltip" title="follow me on twitter (reading, discussing)"></i></a> 
               <!--              <a property="account" href="https://plus.google.com/{{site.author.gplus}}" onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); return false;"><i class="icon-google-plus"></i></a> -->
                 <a property="account" alt="github" href="https://github.com/{{site.author.github}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><i class="icon-github" rel="tooltip" title="follow me on Github (code, research)"></i></a> 
