@@ -1,7 +1,9 @@
 ---
 layout: post
 category: open-science
-tag: site-configuration
+tags: 
+- site-configuration
+- Jekyll
 
 ---
 

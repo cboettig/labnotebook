@@ -8,8 +8,9 @@ tags: site-configuration
 
 (Each should link to a post)
 
+Constantly exploring features in  the Notebook -- check out the issues log for a list of implemented and pending activities.   
 
-1. **Mobile devices** Written
+1. **Mobile devices** 
 
 1. **knitr**  I now use the dynamic documentation software called knitr to write most entries that shore results and figures. The code to replicate the results is included automatically, ensuring that what I say I did and what code I actually ran to get the results are always consistent. 
 

@@ -1,8 +1,10 @@
 ---
 layout: post
-categories: open-science
-tags: site-configuration
 title: Solarized Colors with Twitter-Bootstrap?
+categories: open-science
+tags: 
+- site-configuration
+- Jekyll
 
 ---
 

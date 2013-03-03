@@ -2,7 +2,9 @@
 layout: post
 title: Semantic Lab Notebook
 categories: open-science
-tags: [semantics, site-configuration]
+tags: 
+- semantics
+- site-configuration
 
 ---
 
