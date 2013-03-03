@@ -1,0 +1,50 @@
+---
+layout: post
+published: false
+category: ecology
+
+---
+
+
+### Reviewing
+
+arg, reviewing.  so much time.  
+
+### Seminar
+
+[Kate Richerson](http://katericherson.wordpress.com/) gave a fanstastic presentation to mega group yesterday showing her integration of behavior and dispersal in krill dynamics.  She derives the krill's behavioral movement patterns through a stochastic dynamic programming solution rather than just dictate it to the dispersal model directly.  
+
+### Reading
+
+`r library(knitcitations)` `r cite_options(tooltip=TRUE)`.  
+
+- Provicative stuff in PNAS `r citet("10.1073/pnas.1216076110")`.  It would be nice to see the comparison against the generating model.  The forecasting errors of the fully Bayesian inference using the correct model shouldn't necessary be small, but they should be just as big as the Bayesian model expects them to be (e.g. over replicates, the Bayesian forecast error reflects the widths of the posteriors (modulo some statement about priors)).
+
+My worry with any approach doing better than the expected error is that it does so by generating biased estimation -- e.g. something in the forecasting method, rather than in the data, happens to be biased towards the 'right answer'.  In this example I don't think that is the case.
+
+We already know that the modes of the posteriors don't recover the correct model parameters of the generating model from an MCMC of such a complex model with limited data (though perhaps it is good to remind folks of this!), so it is not surprising that a heuristic approach can outperform this in cases.  
+
+It certainly is good to wrestle with these examples in any case.  Steve's one of my post-doc advisors now so no doubt I'm biased.  Noam also pointed out this earlier article in Ecology `r citet("10.1890/12-0904.1")`.  
+
+- In seminar, Marc mentioned the great paper by `r citet("10.1016/j.ecolmodel.2011.07.013", "discusses")` that uses the comparison of the optimal foraging strategy evolved by whales in their evolutionary environment to how that strategy performs today (similar spirit to the kinds of comparisons I am interested in with #multiple-uncertainty project.  
+
+
+Reading an old Schaffer paper `r citet("10.1086/284318", "discusses")`.
+
+- Though _Nature_ says the National Academy of Sciences needs an overhaul to stay relevant.  Probably true but they still do some excellent reports that could deserve more eyes, like this on model fitting `r citep("http://www.nap.edu/catalog.php?record_id=13395", "discusses")`.  We could do more VVUQ in ecology and evolution, and the value of presenting benchmark examples of this in simple (trivial) cases cannot be overstated, e.g. Fig 5.2.1.  
+
+- GP methods in Biometrika `r citet("10.1093/biomet/ass068", "discusses")` 
+
+- Luminaries of evolution forecast the future of the field, with an eye towards data and semantics in `r citet("10.1371/journal.pbio.1001466", "discusses")` 
+
+### Misc
+
+* wrote a quick CSL format for knitcitations. (Generate inline citations using the copy function in Mendeley library.  A bit silly since normally that would already generate the entire bibliographic citation.)
+* Should really make a CSL format for Mendeley to paste in a HTML citation (with full metadata in tooltip).   Might then use an existing format to copy-paste bib info at end.  
+
+
+```{r results="asis"}
+bibliography()
+```
+
+
