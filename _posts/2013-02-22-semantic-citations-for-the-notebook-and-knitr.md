@@ -11,7 +11,7 @@ tags:
 
 I have on ocassion been exploring the use of [semantic](/tags.html/#semantics) markup in the notebook.  In this post I illustrate how I am handling semantic citations.  One of the more intriguing ideas is the ability to add semantic meaning to citations through the CITO ontology of <span rel="tooltip" title="Shotton D (2010). Cito, The Citation Typing Ontology. _Journal
 of Biomedical Semantics_, *1*. ISSN 2041-1480, 
-http://dx.doi.org/10.1186/2041-1480-1-S1-S6."><a href="http://dx.doi.org/10.1186/2041-1480-1-S1-S6" property="http://purl.org/spar/cito/usesMethodIn" >Shotton (2010)</a></span>.  Citation counts form a central part of academic discourse, but contain very little information regarding the reason for the citation.  Most notably, 'negative' citations refuting a claim carry just the same weight as those confirming or relying upon a claim.  Given the scale and expansion of academic literature, it is rarely reasonable to explore this citation graph manually.  CITO provides a language for embedding the meaning of the citation, such as "discusses", "refutes", or "usesMethodIn", to the citation.  (For instance, my earlier citation to Shotton identifies itself as "usesMethodIn", as I will explain). 
+http://dx.doi.org/10.1186/2041-1480-1-S1-S6."><a href="http://dx.doi.org/10.1186/2041-1480-1-S1-S6" rel="http://purl.org/spar/cito/usesMethodIn" >Shotton (2010)</a></span>.  Citation counts form a central part of academic discourse, but contain very little information regarding the reason for the citation.  Most notably, 'negative' citations refuting a claim carry just the same weight as those confirming or relying upon a claim.  Given the scale and expansion of academic literature, it is rarely reasonable to explore this citation graph manually.  CITO provides a language for embedding the meaning of the citation, such as "discusses", "refutes", or "usesMethodIn", to the citation.  (For instance, my earlier citation to Shotton identifies itself as "usesMethodIn", as I will explain). 
 
 The main barrier to this approach is a lack of adoption.  One of the primary concerns is the burden it places on authors of adding the extra data.  On one hand, authors already bother formatting and reformatting layout, spelling, and reference order to the arcane specifications of different journals, which suggests authors can be persuaded to do some pretty tedious tasks if the publishers would require it.  After all, the task of adding citations is already much easier than it was in the days of paper journals.  Still, it is much simpler to remove a tedious requirement than to add a new one.  My hope is that intelligent tools can simplify this process, as they already have with other aspects of managing citations, and encourage the use of CITO.  In this spirit, I have recently started trying to consistently use the CITO ontology in my notebook entries as a test case, using some tools of my own design.  
 
@@ -46,7 +46,7 @@ It is possible to add far more semantic data to this reference list at the end o
                       bibo: http://purl.org/ontology/bibo/,
                       foaf: http://xmlns.com/foaf/spec/,
                       biro: http://purl.org/spar/biro/"
-        property="http://purl.org/spar/biro/ReferenceList"> <ul class='bibliography'> 
+        rel="http://purl.org/spar/biro/ReferenceList"> <ul class='bibliography'> 
 <li> <span property="dc:title">Fisheries: Does Catch Reflect Abundance?.</span> <span property="dc:creator"> <span property="foaf:givenName">Daniel</span> <span property="foaf:familyName">Pauly</span>, </span><span property="dc:creator"> <span property="foaf:givenName">Ray</span> <span property="foaf:familyName">Hilborn</span>, </span><span property="dc:creator"> <span property="foaf:givenName">Trevor A.</span> <span property="foaf:familyName">Branch</span>, </span>  (<span property="dc:date">2013</span>)  <span rel="http://purl.org/dc/terms/isPartOf" 
                             resource="[http://purl.org/dc/terms/journal]">
                         <span property="http://purl.org/dc/terms/title"
@@ -96,7 +96,7 @@ after loading the knitcitations library.
 
 Not all the literature we may wish to cite includes DOIs, such as [arXiv](http://arxiv.org) preprints, Wikipedia pages, or other academic blogs.  Even when a DOI is present it is not always trivial to locate.  With version 0.4-0, knitcitations can produce citations given any URL using the [Greycite API](http://greycite.knowledgeblog.org) (<span rel="tooltip" title="Lord P (2012). Greycite. 
 http://knowledgeblog.org/greycite [Online. last-accessed:
-2012-10-10 13:36:24].  http://knowledgeblog.org/greycite."><a href="http://knowledgeblog.org/greycite" property="http://purl.org/spar/cito/usesMethodIn" >Lord, 2012</a></span>). For instance, this citation is created with the command  `citep("http://knowledgeblog.org/greycite", cito="usesMethodIn")`.  
+2012-10-10 13:36:24].  http://knowledgeblog.org/greycite."><a href="http://knowledgeblog.org/greycite" rel="http://purl.org/spar/cito/usesMethodIn" >Lord, 2012</a></span>). For instance, this citation is created with the command  `citep("http://knowledgeblog.org/greycite", cito="usesMethodIn")`.  
 
 
 
