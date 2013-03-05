@@ -6,9 +6,9 @@ exclude: [ _posts/source/, _posts/_private/, assets/figures]
 ## Toggles to activate/deactivate various plugins  
 ## Deactivate these for faster site generation, or in creating archival versions ##
 
-redirects: yes     ## A flag to turn on the redirects plugin
-searchindex: yes   ## A flag to turn on the search index plugin.  
-pageviews: yes     ## toggle on sidebar pageviews 
+redirects: no     ## A flag to turn on the redirects plugin
+searchindex: no   ## A flag to turn on the search index plugin.  
+pageviews: no     ## toggle on sidebar pageviews 
 
 
 ## Useful metadata, available to a liquid filter as site.title, site.author.name, etc
