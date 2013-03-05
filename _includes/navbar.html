@@ -17,7 +17,7 @@
           <a href="/index.html">Home</a></li>
 
           {% if page.url == "/vita.html" %}<li class="active">{% else %}<li>{% endif %}
-          <a rel="foaf:publications" href="{{site.url}}/vita.html" about="{{site.url}}#me">Vita</a></li>
+          <a rel="foaf:publications" typeof="foaf:Person" about="{{site.url}}#me" href="{{site.url}}/vita.html">Vita</a></li>
 
           {% if page.url == "/research.html" %}<li class="active">{% else %}<li>{% endif %}
           <a href="/research.html">Research</a></li>

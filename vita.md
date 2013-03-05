@@ -6,16 +6,19 @@ date: 2012-11-07
 
 ---
 
+<div typeof="foaf:Person" about="{{site.url}}#me" >
+
 education
 ---------
 
-* 2012 Ph.D Population Biology, **University of California, Davis**. Mentor: Alan Hastings
+* 2012 Ph.D Population Biology, <a rel="foaf:schoolHomepage" href="http://ucdavis.edu">**University of California, Davis**</a>. Mentor: <a rel="foaf:knows" href="http://two.ucdavis.edu/~me" about="{{site.url}}#me">Alan Hastings</a>
 
-* 2007 A.B in Physics **Princeton University**, with honors and certificates in *biophysics* and *applied and computational mathematics.* 
+* 2007 A.B in Physics <a rel="foaf:schoolHomepage" href="http://princeton.edu">**Princeton University**</a>, with honors and certificates in *biophysics* and *applied and computational mathematics.* 
 
 
 publications
 ------------
+
 1. Carl Boettiger, Alan Hastings (2013). **Tipping points: From patterns to predictions** *Nature* 493, 157–158. [doi](http://dx.doi.org/10.1038/493157a):10.1038/493157a
 1. Carl Boettiger, Alan Hastings (2012). **Early Warning Signals and the
   Prosecutor’s Fallacy** 279 (1748) 4734-4739.  *Proceedings of the Royal Society B* 279 (1748). [doi](http://dx.doi.org/10.1098/rspb.2012.2085):10.1098/rspb.2012.2085 ([pdf](http://www.mendeley.com/download/public/98752/4972355691/dd5fdd8ebbfc05d9ebf415761be200805254d22e/dl.pdf)) 
@@ -183,3 +186,4 @@ Interviews
 <h2> (<a href="http://www.carlboettiger.info/assets/files/cv.pdf"  onclick="var that=this;_gaq.push(['_trackEvent','Download','PDF',this.href]);setTimeout(function(){location.href=that.href;},200);return false;">CV as PDF</a>) </h2>
 
 
+</div>
