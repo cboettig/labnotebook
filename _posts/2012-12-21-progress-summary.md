@@ -21,7 +21,7 @@ Steve and I have just started to look into the potential for state shifts and wa
 
 ## 20% Time: Independent projects
 
-1. **pdg-control Working group paper.** Updated analysis for Figures 3 and 4.  Updated draft.  Conference call for feedback from working group participants.  ([Current draft](https://github.com/cboettig/pdg-control/blob/master/inst/doc/policycosts/policycosts.tex))
+1. **pdg-control Working group paper.** Updated analysis for Figures 3 and 4.  Updated draft.  Conference call for feedback from working group participants.  ([Current draft](https://github.com/cboettig/pdg_control/blob/master/inst/doc/policycosts/policycosts.tex))
 2. Wrote **comment** piece on Early Warning Signals for *Nature*.  
 3. Working on EWS review paper for Theoretical Ecology with Noam Ross.  ([Current draft](https://github.com/cboettig/ews-review))
 4. Working on analysis optimal policies under multiple uncertainties (with Jim Sanchirico, Mike Springborn).  [#multiple-uncertainty](http://www.carlboettiger.info/tags.html#multiple-uncertainty) tag in notebook; currently analyses are part of [pdg-control](https://github.com/cboettig/pdg_control/tree/master/inst/examples) repository.  
@@ -66,7 +66,7 @@ Initial goal for manuscript is proof of concept piece with the aim of demonstrat
 ## 20% Time goals
 
 - Finish and submit EWS review paper: end of January
-- Finish and submit pdg-control policy costs paper (see [current issues](https://github.com/cboettig/pdg-control/issues?direction=desc&labels=policy+costs&milestone=&page=1&sort=created&state=open))
+- Finish and submit pdg-control policy costs paper (see [current issues](https://github.com/cboettig/pdg_control/issues?direction=desc&labels=policy+costs&milestone=&page=1&sort=created&state=open))
 - Finish the methods section for the Labrids paper 
 - Finish my pending review for *Environmental Modeling and Assessment*. 
 - Skype with pdg-control Working group, basic follow-up tasks.  

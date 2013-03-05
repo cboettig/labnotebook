@@ -46,9 +46,9 @@ Okay, straight forward exercise.  47 commits and 19 hours later, I have what I n
 
 
 
-[full knitr file here](https://github.com/cboettig/pdg-control/blob/25e6f1c1a599440be790a7ec047b8b63540255c5/inst/examples/policycosts/writeup.md)
+[full knitr file here](https://github.com/cboettig/pdg_control/blob/25e6f1c1a599440be790a7ec047b8b63540255c5/inst/examples/policycosts/writeup.md)
 
-These are calculated with `c0 = 30`.  There's corresponding figures when fishing effort itself is cost-free, `c0 = 0`.  See [costfree.md](https://github.com/cboettig/pdg-control/blob/cccec55a8ac2ef47dea99d45fdb732e5028aec98/inst/examples/policycosts/costfree.md).  Looks like the `c2` range needs to be extended for this run.  
+These are calculated with `c0 = 30`.  There's corresponding figures when fishing effort itself is cost-free, `c0 = 0`.  See [costfree.md](https://github.com/cboettig/pdg_control/blob/cccec55a8ac2ef47dea99d45fdb732e5028aec98/inst/examples/policycosts/costfree.md).  Looks like the `c2` range needs to be extended for this run.  
 
 ### Figure 2
 
