@@ -2,18 +2,14 @@
   <!-- ************* Buttons to toggle theme CSS ********************** -->
   <form style="font-size:10px">
     <div class="pull-right">
-      <span rel="tooltip" title="switch to dark theme">
-        <a onclick="switch_style('dark'); 
+        <a rel="tooltip" title="switch to dark theme" onclick="switch_style('dark'); 
                     recordOutboundLink(this, 'Outbound Links', 'dark theme'); 
                     return false;" 
             name="theme" value="dark" id="dark" class="btn btn-mini"><i class="icon-adjust"></i></a> 
-      </span>
-      <span rel="tooltip" title="switch to light theme">
-        <a onclick="switch_style('light'); 
+        <a rel="tooltip" title="switch to light theme" onclick="switch_style('light'); 
                     recordOutboundLink(this, 'Outbound Links', 'light theme'); 
                     return false;" 
             name="theme" value="light" id="light" class="btn btn-mini"><i class="icon-certificate"></i></a> 
-      </span>
     </div>
   </form>
 
@@ -45,17 +41,12 @@
 
 
     <div class="span2" style="text-align:center">
-      <span rel="tooltip" 
-            title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"><a href="http://onsclaims.wikispaces.com/" 
+      <a rel="tooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"href="http://onsclaims.wikispaces.com/" 
         onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" 
         ><img src="http://onsclaims.wikispaces.com/file/view/ons-aci2-icon.png" alt="ONS" /></a>
-      </span> 
-      <span rel="tooltip" title="This site uses linked data semantics. Click to extract as RDF XML.">
-     <a class="btn btn-mini" style="font-size: .8em" 
+     <a rel="tooltip" title="This site uses linked data semantics. Click to extract as RDF XML." class="btn btn-mini" style="font-size: .8em" 
        href="http://any23.org/?format=rdfxml&validate=validate&uri={{ site.url }}{{ page.url }}"><i 
          class="icon-cloud-download" onclick="recordOutboundLink(this, 'Outbound Links', 'RDF'); return false;"></i> RDF</a>
-     </span>
-
     </div>
     <div class="span4">
       <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0" style="float:right"/></a> 
