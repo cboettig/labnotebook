@@ -79,7 +79,7 @@ Once again, this is straight forward to support using the knitcitations package,
 
 
 ```html
-<span rel='tooltip' title='Shotton D (2010). "Cito, The Citation Typing Ontology." _Journal of
+<span class='showtooltip' title='Shotton D (2010). "Cito, The Citation Typing Ontology." _Journal of
 Biomedical Semantics_, *1*. ISSN 2041-1480, <URL:
 http://dx.doi.org/10.1186/2041-1480-1-S1-S6>.'><a href='http://dx.doi.org/10.1186/2041-1480-1-S1-S6' property='http://purl.org/spar/cito/usesMethodIn' >Shotton (2010)</a></span>
 ```
@@ -90,7 +90,16 @@ This behavior can be toggled on by calling
 cite_options(tooltip=TRUE)
 ```
 
-after loading the knitcitations library.
+after loading the knitcitations library. **EDIT**: Note that this requires the javascript trigger on the class `showtooltip`, which can be done by adding this to your header:
+
+```js
+    <script type="text/javascript">
+      $(document).ready(function (){
+        $(".showtooltip").tooltip();
+      });
+    </script>
+
+```
 
 ### Citing without DOIs
 
