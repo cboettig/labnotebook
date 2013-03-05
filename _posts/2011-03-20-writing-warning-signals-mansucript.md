@@ -18,7 +18,7 @@ Summary Paragraph
 
 1. Critical transitions exist (Holling, 1973), (May, 1977),(Scheffer _et. al._ 2001)
 2. Warning signals exist (Scheffer _et. al._ 2009), (Drake & Griffen, 2010)
-3. Warning signals are summary statistics, critical slowing down (<span rel="tooltip" title="Wissel C (1984). A Universal Law of The Characteristic Return Time
+3. Warning signals are summary statistics, critical slowing down (<span class="tooltip" title="Wissel C (1984). A Universal Law of The Characteristic Return Time
 Near Thresholds. _Oecologia_, *65*. ISSN 0029-8549, 
 http://dx.doi.org/10.1007/BF00384470."><a href="http://dx.doi.org/10.1007/BF00384470">Wissel, 1984</a></span>).
 4. Statement of **general problem:** double-edged sword -- no quantification of the chance detection scheme will fail.
@@ -67,7 +67,7 @@ Given that we're comparing models there's a full machinery to do this in a way t
 
 Avoid other bifurcation types:
 
-i.e. Hastings & Wysham(Hastings & Wysham, 2010), or supercritical Hopf, see Sebastian's examples(<span rel="tooltip" title="Schreiber S (2003). Allee Effects, Extinctions, And Chaotic Transients
+i.e. Hastings & Wysham(Hastings & Wysham, 2010), or supercritical Hopf, see Sebastian's examples(<span class="tooltip" title="Schreiber S (2003). Allee Effects, Extinctions, And Chaotic Transients
 in Simple Population Models. _Theoretical Population Biology_, *64*.
 ISSN 00405809,  http://dx.doi.org/10.1016/S0040-5809(03)00072-8."><a href="http://dx.doi.org/10.1016/S0040-5809(03)00072-8">Schreiber, 2003</a></span>)(Schreiber & Rudolf, 2008)), these would fail model adequacy, while summary-statistics approaches will not.  (May need to outline this better with examples).
 
