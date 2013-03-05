@@ -20,6 +20,18 @@ look, why not see [what I am working on right now](/lab-notebook.html)?
 * **Numerical methods**: High-performance computing, numerical differential equations, approximate likelihood methods, machine learning, stochastic dynamic programming.  
 * **Data Science methods**: Automating data extraction and data-mining from large data repositories (XML, regexp, semantic/linked data). Software development practices, authoring R packages, data management.
 
+------------------------------------------------------------------------------
+
+Links to various research products by area are provided below.  Mouse over for a description.
+
+#### Key:
+
+<i class="icon-book" style="color:#2aa198;"></i> Publications,   <i class="icon-github" style="color:#6c71c4;"></i> Code,  <i class="icon-beaker" style="color:#859900;"></i> Data, <i class="icon-bookmark" style="color:#dc322f;"></i> Reading,   <i class="icon-tags" style="color:#b58900;"></i> Tags,   <i class="icon-bar-chart" style="color:#cb4b16;"></i> Figures 
+<!-- <i class="icon-list" style="color:#d33682;"></i> Categories -->
+
+------------------------------------------------------------------------------
+
+
 ### Ecology
 
 
@@ -64,15 +76,6 @@ I also enjoy exposure to fieldwork whenever I can convince colleagues to take me
 ### Teaching / Education 
 
 See my [Teaching](/teaching.html) statement.  [<i class="icon-bookmark" style="color:#dc322f;" rel="tooltip" title="recent reading in research articles on education practices"></i>](http://www.mendeley.com/groups/530011/education/papers/) [<i class="icon-tags" style="color:#b58900;"></i>](categories.html/#teaching)
-
-
-
-------------------------------------------------------------------------------
-
-#### Key:
-
-<i class="icon-book" style="color:#2aa198;"></i> Publications,   <i class="icon-github" style="color:#6c71c4;"></i> Code,  <i class="icon-beaker" style="color:#859900;"></i> Data, <i class="icon-bookmark" style="color:#dc322f;"></i> Reading,   <i class="icon-tags" style="color:#b58900;"></i> Tags,   <i class="icon-bar-chart" style="color:#cb4b16;"></i> Figures 
-<!-- <i class="icon-list" style="color:#d33682;"></i> Categories -->
 
 
 
