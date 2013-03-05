@@ -27,7 +27,7 @@ doesn't report statistical significance on any of the examples presented.  This
 * Guttal's spatial skew/spatial variance (Guttal & Jayaprakash, 2008): (model only)
 * Carpenter's recent ecosystem experiment compares visually to a control, but no statistical significance test: (Carpenter _et. al._ 2011)
 * Drake & Griffen (Drake & Griffen, 2010), No attempt to quantify the probability, hinges on visual comparison to control.  ((Actually use a variety of proxies, just no formal quantification of the probability this would be observed by chance.  On the individual time series (appendix): "any increase or local maximum in the statistic" is assumed a significant increase. Text defines exceeding the running average by 2 sigma as significant increase -- asymptotically any data set becomes significant.))
-* Subsequent theoretical work (Brock & Carpenter, 2010), (Biggs _et. al._ 2009), (<span class="tooltip" title="Carpenter S and Brock W (2010). Early Warnings of Regime Shifts in
+* Subsequent theoretical work (Brock & Carpenter, 2010), (Biggs _et. al._ 2009), (<span class="showtooltip" title="Carpenter S and Brock W (2010). Early Warnings of Regime Shifts in
 Spatial Dynamics Using The Discrete Fourier Transform. _Ecosphere_,
 *1*. ISSN 2150-8925,  http://dx.doi.org/10.1890/ES10-00016.1."><a href="http://dx.doi.org/10.1890/ES10-00016.1">Carpenter & Brock, 2010</a></span>) doesn't address this either.
 * Observational system increases variance (fish stocks) (Hsieh _et. al._ 2006)
@@ -42,7 +42,7 @@ Spatial Dynamics Using The Discrete Fourier Transform. _Ecosphere_,
 
 * Dakos et al. PNAS paper (Dakos _et. al._ 2008) and Dakos et. al. spatial correlation paper (Gandhi _et. al._ 1998) are one of few examples with statistical significance using Kendall's correlation test, and at least in the appendix comparing it to a reasonable AR(1) null (under which the observed values of the statistic assume almost all values nearly uniformly and half of the examples loose statistical significance).
 
-* Litzow et al.   [cite source="pubmed"]18767612[/cite] uses method STARS from (<span class="tooltip" title="Rodionov S (2004). A Sequential Algorithm For Testing Climate Regime
+* Litzow et al.   [cite source="pubmed"]18767612[/cite] uses method STARS from (<span class="showtooltip" title="Rodionov S (2004). A Sequential Algorithm For Testing Climate Regime
 Shifts. _Geophysical Research Letters_, *31*. ISSN 0094-8276, 
 http://dx.doi.org/10.1029/2004GL019448."><a href="http://dx.doi.org/10.1029/2004GL019448">Rodionov, 2004</a></span>).
 

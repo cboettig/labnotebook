@@ -9,7 +9,7 @@ tags:
 
  
 
-I have on ocassion been exploring the use of [semantic](/tags.html/#semantics) markup in the notebook.  In this post I illustrate how I am handling semantic citations.  One of the more intriguing ideas is the ability to add semantic meaning to citations through the CITO ontology of <span class="tooltip" title="Shotton D (2010). Cito, The Citation Typing Ontology. _Journal
+I have on ocassion been exploring the use of [semantic](/tags.html/#semantics) markup in the notebook.  In this post I illustrate how I am handling semantic citations.  One of the more intriguing ideas is the ability to add semantic meaning to citations through the CITO ontology of <span class="showtooltip" title="Shotton D (2010). Cito, The Citation Typing Ontology. _Journal
 of Biomedical Semantics_, *1*. ISSN 2041-1480, 
 http://dx.doi.org/10.1186/2041-1480-1-S1-S6."><a href="http://dx.doi.org/10.1186/2041-1480-1-S1-S6" rel="http://purl.org/spar/cito/usesMethodIn" >Shotton (2010)</a></span>.  Citation counts form a central part of academic discourse, but contain very little information regarding the reason for the citation.  Most notably, 'negative' citations refuting a claim carry just the same weight as those confirming or relying upon a claim.  Given the scale and expansion of academic literature, it is rarely reasonable to explore this citation graph manually.  CITO provides a language for embedding the meaning of the citation, such as "discusses", "refutes", or "usesMethodIn", to the citation.  (For instance, my earlier citation to Shotton identifies itself as "usesMethodIn", as I will explain). 
 
@@ -94,7 +94,7 @@ after loading the knitcitations library.
 
 ### Citing without DOIs
 
-Not all the literature we may wish to cite includes DOIs, such as [arXiv](http://arxiv.org) preprints, Wikipedia pages, or other academic blogs.  Even when a DOI is present it is not always trivial to locate.  With version 0.4-0, knitcitations can produce citations given any URL using the [Greycite API](http://greycite.knowledgeblog.org) (<span class="tooltip" title="Lord P (2012). Greycite. 
+Not all the literature we may wish to cite includes DOIs, such as [arXiv](http://arxiv.org) preprints, Wikipedia pages, or other academic blogs.  Even when a DOI is present it is not always trivial to locate.  With version 0.4-0, knitcitations can produce citations given any URL using the [Greycite API](http://greycite.knowledgeblog.org) (<span class="showtooltip" title="Lord P (2012). Greycite. 
 http://knowledgeblog.org/greycite [Online. last-accessed:
 2012-10-10 13:36:24].  http://knowledgeblog.org/greycite."><a href="http://knowledgeblog.org/greycite" rel="http://purl.org/spar/cito/usesMethodIn" >Lord, 2012</a></span>). For instance, this citation is created with the command  `citep("http://knowledgeblog.org/greycite", cito="usesMethodIn")`.  
 
