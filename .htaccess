@@ -1,0 +1,6 @@
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([0-9a-zA-Z\_\-]+)$ $1.html
