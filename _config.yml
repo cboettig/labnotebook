@@ -8,7 +8,7 @@ exclude: [ _posts/source/, _posts/_private/, assets/figures]
 
 redirects: yes     ## A flag to turn on the redirects plugin
 searchindex: yes   ## A flag to turn on the search index plugin.  
-pageviews: false     ## toggle on sidebar pageviews 
+pageviews: no     ## toggle on sidebar pageviews 
 
 
 ## Useful metadata, available to a liquid filter as site.title, site.author.name, etc

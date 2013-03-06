@@ -4,7 +4,7 @@ category: open-science
 
 ---
 
-Writing out a data management plan for myself.  Suggestions and feedback welcome.   
+Writing out a <a href="#" rel="http://purl.org/spar/fabio/DataMangementPlan">data management plan</a> for myself.  Suggestions and feedback welcome.   
 
 
 ## Data Types and Structure
