@@ -61,12 +61,15 @@ module Jekyll
     def render(context)
       path = super
       
-      puts Dir.glob("*")
-#      buffer = File.open('../pageviews.txt', 'r').read
-#      result = Marshal.load(buffer)
       buffer = open('../pageviews.json')
       result = JSON.load(buffer) 
-      result[path][1]
+
+      if defined?(result[path][1]) 
+        views = result[path][1]
+      else 
+        views = "('not calculated')"
+      end
+      views
     end
   end
 
