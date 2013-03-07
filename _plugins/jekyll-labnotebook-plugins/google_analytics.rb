@@ -81,6 +81,16 @@ module Jekyll
       views 
     end
   end
+
+  class AnalyticsGenerator < Generator
+
+    safe true
+      
+      def generate(site)
+        puts 'hello world'
+      end
+  end
+
 end
 
 Liquid::Template.register_tag('pageviews', Jekyll::GoogleAnalytics)
