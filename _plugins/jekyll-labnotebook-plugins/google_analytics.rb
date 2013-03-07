@@ -39,6 +39,9 @@
 require 'garb'
 require 'yaml'
 require 'chronic'
+require 'rubygems'
+require 'json'
+
 
 module Jekyll
 
@@ -58,33 +61,48 @@ module Jekyll
     def render(context)
       path = super
 
-      # Set timeouts to be extra patient (60 sec is default)
-      Garb.open_timeout = 1200 # 20 minute timeout
-      Garb.read_timeout = 1200 # 20 minute timeout
-      # Read in credentials and authenticate 
-      cred = YAML.load_file("/home/cboettig/.garb_auth.yaml")
-      Garb::Session.api_key = cred[:api_key]
-      token = Garb::Session.login(cred[:username], cred[:password])
-      profile = Garb::Management::Profile.all.detect {|p| p.web_property_id == cred[:ua]}
-
-      # place query, customize to modify results
-      data = Exits.results(profile, 
-                           :filters => {:page_path.eql => path}, 
-                           :start_date => Chronic.parse("2011-01-01"))
-      
-      # Extract the pageviews 
-      if defined?(data.first.pageviews)
-        views = data.first.pageviews
-      else 
-        views = "(not calculated)"
-      end
-      views 
+      ## Better to create the Hash in the generator, and write data as json file
+      ## 
+      buffer = File.open('pageviews.txt', 'r').read
+#      buffer = open('pageviews.json')
+#      result = JSON.load(buffer)
+      result = Marshal.load(buffer)
+      result[path][1]
     end
   end
+
+
+
+  class AnalyticsGenerator < Generator
+
+    safe true
+      
+      def generate(site)
+         # Set timeouts to be extra patient (60 sec is default)
+        Garb.open_timeout = 1200 # 20 minute timeout
+        Garb.read_timeout = 1200 # 20 minute timeout
+        # Read in credentials and authenticate 
+        cred = YAML.load_file("/home/cboettig/.garb_auth.yaml")
+        Garb::Session.api_key = cred[:api_key]
+        token = Garb::Session.login(cred[:username], cred[:password])
+        profile = Garb::Management::Profile.all.detect {|p| p.web_property_id == cred[:ua]}
+
+        # place query, customize to modify results
+        data = Exits.results(profile, 
+                             :start_date => Chronic.parse("2011-01-01"))
+        result = Hash[data.collect{|row| [row.page_path, [row.exits, row.pageviews]]}]
+
+#        File.open("pageviews.json","w") do |f|
+#            f.write(JSON.pretty_generate(result))
+#        end
+#        JSON.dump(JSON.pretty_generate(result), file)
+
+        file = File.open('pageviews.txt', 'w')
+        Marshal.dump(result, file)
+      end
+  end
+
 end
 
 Liquid::Template.register_tag('pageviews', Jekyll::GoogleAnalytics)
-
-# Crazy way to extract data
-#      out = data.results.to_s.split(/, */ )[2].gsub(/pageviews=\"(\d+).*/, "\\1 ")
 
