@@ -39,6 +39,9 @@
 require 'garb'
 require 'yaml'
 require 'chronic'
+require 'rubygems'
+require 'json'
+
 
 module Jekyll
 
@@ -57,21 +60,9 @@ module Jekyll
     end
     def render(context)
       path = super
-
-      # Set timeouts to be extra patient (60 sec is default)
-      Garb.open_timeout = 1200 # 20 minute timeout
-      Garb.read_timeout = 1200 # 20 minute timeout
-      # Read in credentials and authenticate 
-      cred = YAML.load_file("/home/cboettig/.garb_auth.yaml")
-      Garb::Session.api_key = cred[:api_key]
-      token = Garb::Session.login(cred[:username], cred[:password])
-      profile = Garb::Management::Profile.all.detect {|p| p.web_property_id == cred[:ua]}
-
-      # place query, customize to modify results
-      data = Exits.results(profile, 
-                           :filters => {:page_path.eql => path}, 
-                           :start_date => Chronic.parse("2011-01-01"))
-      
+      buffer = File.open('pageviews.txt', 'r').read
+      data = Marshal.load(buffer) 
+      puts data.first
       # Extract the pageviews 
       if defined?(data.first.pageviews)
         views = data.first.pageviews
@@ -87,7 +78,20 @@ module Jekyll
     safe true
       
       def generate(site)
-        puts 'hello world'
+         # Set timeouts to be extra patient (60 sec is default)
+        Garb.open_timeout = 1200 # 20 minute timeout
+        Garb.read_timeout = 1200 # 20 minute timeout
+        # Read in credentials and authenticate 
+        cred = YAML.load_file("/home/cboettig/.garb_auth.yaml")
+        Garb::Session.api_key = cred[:api_key]
+        token = Garb::Session.login(cred[:username], cred[:password])
+        profile = Garb::Management::Profile.all.detect {|p| p.web_property_id == cred[:ua]}
+
+        # place query, customize to modify results
+        data = Exits.results(profile, 
+                             :start_date => Chronic.parse("2011-01-01"))
+        file = File.open('pageviews.txt', 'w')
+        Marshal.dump(data, file)
       end
   end
 
