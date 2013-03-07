@@ -9,7 +9,7 @@ lunr_excludes: [atom.xml]
 redirects: yes     ## A flag to turn on the redirects plugin
 lunr_searchindex: no   ## A flag to turn on the search index plugin.  
 searchindex: yes   ## A flag to turn on the search index plugin.  
-pageviews: no     ## toggle on sidebar pageviews 
+pageviews: yes     ## toggle on sidebar pageviews 
 
 
 ## Useful metadata, available to a liquid filter as site.title, site.author.name, etc
