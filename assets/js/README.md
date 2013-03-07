@@ -1,3 +1,40 @@
+# Javascript
+
+## Contents
+
+###  Twitter-bootstrap javascript files (consider using minified complete version instead), see below.  
+
+
+### JQuery
+
+- jquery-1.7.1.min.js JQuery js, used for almost all other javascript 
+- jquery
+
+### Marran's site search
+
+- porter-stemmer.js An external javascript stemming library used for search.
+- site-search.js the javascript defining the site search methods
+
+### Jekyll-lunr site search
+
+Dependencies:
+
+- lunr.min.js Javascript dependency for full-text search
+- mustache.js Layout dependency for search results
+- date.format.js 
+- URI.min.js    
+
+Base javascript
+
+### Misc
+
+- strftime.js
+- sorttable.js Sortable tables.
+- switch-css.js Customized javascript to toggle light vs dark theme
+
+ 
+
+
 ## 2.0 BOOTSTRAP JS PHILOSOPHY
 These are the high-level design rules which guide the development of Bootstrap's plugin apis.
 

@@ -1,12 +1,13 @@
 ## Standard Jeyll config options
 permalink: /:year/:month/:day/:title.html
 exclude: [ _posts/source/, _posts/_private/, assets/figures]
-
+lunr_excludes: [atom.xml]
 
 ## Toggles to activate/deactivate various plugins  
 ## Deactivate these for faster site generation, or in creating archival versions ##
 
 redirects: yes     ## A flag to turn on the redirects plugin
+lunr_searchindex: no   ## A flag to turn on the search index plugin.  
 searchindex: yes   ## A flag to turn on the search index plugin.  
 pageviews: no     ## toggle on sidebar pageviews 
 
