@@ -60,13 +60,12 @@ module Jekyll
     end
     def render(context)
       path = super
-
-      ## Better to create the Hash in the generator, and write data as json file
-      ## 
-      buffer = File.open('pageviews.txt', 'r').read
-#      buffer = open('pageviews.json')
-#      result = JSON.load(buffer)
-      result = Marshal.load(buffer)
+      
+      puts Dir.glob("*")
+#      buffer = File.open('../pageviews.txt', 'r').read
+#      result = Marshal.load(buffer)
+      buffer = open('../pageviews.json')
+      result = JSON.load(buffer) 
       result[path][1]
     end
   end
@@ -76,6 +75,7 @@ module Jekyll
   class AnalyticsGenerator < Generator
 
     safe true
+    priority :low
       
       def generate(site)
          # Set timeouts to be extra patient (60 sec is default)
@@ -92,13 +92,9 @@ module Jekyll
                              :start_date => Chronic.parse("2011-01-01"))
         result = Hash[data.collect{|row| [row.page_path, [row.exits, row.pageviews]]}]
 
-#        File.open("pageviews.json","w") do |f|
-#            f.write(JSON.pretty_generate(result))
-#        end
-#        JSON.dump(JSON.pretty_generate(result), file)
-
-        file = File.open('pageviews.txt', 'w')
-        Marshal.dump(result, file)
+        File.open("pageviews.json","w") do |f|
+            f.write(JSON.pretty_generate(result))
+        end
       end
   end
 
