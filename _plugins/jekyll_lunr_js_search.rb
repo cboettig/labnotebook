@@ -15,7 +15,6 @@ module Jekyll
     # The main content from each page is extracted and saved to disk as json
     def generate(site)
 
-      if (site.config['lunrsearchindex'])
         puts 'Running the search indexer...'
 
         # gather pages and posts
@@ -54,7 +53,6 @@ module Jekyll
         site.static_files << Jekyll::SearchIndexFile.new(site, site.dest, "/", filename)
 
         puts ''
-      end
     end
 
   private
