@@ -79,8 +79,8 @@ module Jekyll
       
       def generate(site)
          # Set timeouts to be extra patient (60 sec is default)
-        Garb.open_timeout = 1200 # 20 minute timeout
-        Garb.read_timeout = 1200 # 20 minute timeout
+        Garb.open_timeout = 120 # 2 minute timeout
+        Garb.read_timeout = 120 # 2 minute timeout
         # Read in credentials and authenticate 
         cred = YAML.load_file("/home/cboettig/.garb_auth.yaml")
         Garb::Session.api_key = cred[:api_key]
