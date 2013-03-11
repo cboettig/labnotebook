@@ -7,9 +7,9 @@ lunr_excludes: [atom.xml, 404.html, search.html]
 ## Deactivate these for faster site generation, or in creating archival versions ##
 
 redirects: yes     ## A flag to turn on the redirects plugin
-searchindex: yes   ## A flag to turn on the search index plugin.  
+searchindex: no   ## A flag to turn on the search index plugin.  
 pageviews: yes     ## toggle on sidebar pageviews 
-lunrsearch: no
+lunrsearch: yes
 
 
 
