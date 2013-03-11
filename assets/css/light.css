@@ -6363,6 +6363,25 @@ div.excerpt {
   line-height: 18px;
   text-align: justify;
 }
+/* CV styling 
+----------------------------------------------------*/
+.cv {
+  font-size: 13px;
+  line-height: 18px;
+  text-align: justify;
+}
+.cv ul,
+ol {
+  margin-left: 0;
+  margin-bottom: 30px;
+  list-style: none;
+}
+.cv li {
+  margin-bottom: 10px;
+}
+.cv strong {
+  font-weight: bolder;
+}
 /* Make markdown with floatright in the alt-text into a nice text-wrapped image 
 --------------------------------------------------------------------------------*/
 img[alt=floatright] {
@@ -6391,11 +6410,6 @@ body {
   background-image: url(../img/grid-18px-masked.png);
   background-repeat: repeat-x;
   background-position: 0 40px;
-}
-/* Space out sub-sections more
--------------------------------------------------- */
-section {
-  padding-top: 60px;
 }
 /* Jumbotrons
 -------------------------------------------------- */
@@ -6434,9 +6448,8 @@ section {
 .subhead h1 {
   font-size: 54px;
 }
-/* Search 
------------------------------*/
-/* SEARCH */
+/* Search (Marran method) 
+-----------------------------------------------------------------*/
 #search {
   position: relative;
   margin-bottom: 20px;
@@ -6492,14 +6505,11 @@ section {
 #search-results .search-entry .description {
   margin-bottom: 6px;
 }
-#search-results.thinking .icon-spinner .icon-spin {
-  display: inline-block;
+#search-results.thinking {
+  display: block;
+  background: #fdf6e3 url('/assets/img/spinner.gif') no-repeat center 20px;
+  height: 60px;
 }
-/*
-@media (max-width: 979px) { 
-    #search .form-search input  { width: 120px; }
-}
-*/
 .btn {
   text-shadow: none;
 }
