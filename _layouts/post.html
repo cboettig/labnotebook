@@ -1,19 +1,22 @@
+---
+layout: html5
+---
+
 {% include header.html %}
-      <div class="row">
-        <div class="span7 offset1">
-          <article>
-          {{ content }}
-          </article>
-        </div>
+<div class="row">
+  <div class="span7 offset1">
+    <article>
+    {{ content }}
+    </article>
+  </div>
+  <div class="span4">
+    <div class="sidebar">
+      {% include sidebar.html %}
+    </div>
+  </div>
+</div>
 
-
-        <!-- Custom sidebar -->      
-        <div class="span4">
-          <div class="sidebar">
-            {% include sidebar.html %}
-         </div>
-       </div>
-
-      </div>
 {% include disqus.html %}
 {% include footer.html %}
+{% include javascript.html %}
+{% include analytics.html %}
