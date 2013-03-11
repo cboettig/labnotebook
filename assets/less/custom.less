@@ -120,6 +120,27 @@ div.excerpt
   text-align: justify;
 }
 
+/* CV styling 
+----------------------------------------------------*/
+
+.cv {
+font-size: 13px;
+line-height: 18px;
+text-align: justify;         
+}
+.cv ul, ol { 
+margin-left: 0;
+margin-bottom: 30px;
+list-style: none;
+}
+.cv li {
+margin-bottom: 10px;
+}
+.cv strong {
+font-weight: bolder;
+}
+
+
 
 /* Make markdown with floatright in the alt-text into a nice text-wrapped image 
 --------------------------------------------------------------------------------*/
@@ -148,7 +169,6 @@ img {
 }
 
 
-
 /* Body and structure
 -------------------------------------------------- */
 body {
@@ -158,14 +178,6 @@ body {
   background-repeat: repeat-x;
   background-position: 0 40px;
 }
-
-
-/* Space out sub-sections more
--------------------------------------------------- */
-section {
-  padding-top: 60px;
-}
-
 
 
 /* Jumbotrons
@@ -209,10 +221,10 @@ section {
 
 
 
-/* Search 
------------------------------*/
 
-/* SEARCH */
+
+/* Search (Marran method) 
+-----------------------------------------------------------------*/
 
 #search { 
 
@@ -232,23 +244,20 @@ section {
     
 }
 
-#search-results {
 
+
+
+#search-results {
   display: none;
   overflow: auto;
   background: @background;
-
   padding: 6px 0;
-  
   max-height: 800px;
 
   .search-entry { 
-    
       padding: 12px 0 10px; 
       border-bottom: 1px dotted @backgroundHighlights;
-      
       &.selected  { background: @background; }
-      
       a           { color: @textColor; }
       .title      { font-family: @sansFontFamily; 
                     -webkit-font-smoothing: 
@@ -260,13 +269,7 @@ section {
       .timestamp  { font-size: @baseFontSize; color: @emphasis; }
       .date       { display: none; }
       .description  { margin-bottom: 6px; }
-
     }
-/*
-    &.thinking .icon-spinner .icon-spin {
-        display: inline-block;
-    }
-*/
     &.thinking  {
       display: block;
       background: @background url('/assets/img/spinner.gif') no-repeat center 20px;
@@ -275,9 +278,4 @@ section {
       
 }
 
-/*
-@media (max-width: 979px) { 
-    #search .form-search input  { width: 120px; }
-}
-*/
 

@@ -17,11 +17,11 @@ tags:
 * Comment piece / reply
 * [ews-review](https://github.com/cboettig/ews-review)
 * Comments on TE review?
-* IARPA? Conference, funding options?
+* IARPA Conference, funding options?
 
 #### Tasks 
 
-* On Marc's suggestion, writing comparison of pattern-based and mechanism based approaches to modeling, particularly in decision theory context. [draft]() in [nonparametric-bayes]()
+* On Marc's suggestion, writing comparison of pattern-based and mechanism based approaches to modeling, particularly in decision theory context. [draft](https://github.com/cboettig/nonparametric-bayes/blob/cb0f7d5f779bb424e5fb02b06463f946c360017d/inst/doc/beyond-mechanistic-models.md) in nonparametric-bayes
 * Review edits and writing on [ews-review](https://github.com/cboettig/ews-review)
 
 ## Tuesday 

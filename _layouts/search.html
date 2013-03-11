@@ -4,19 +4,14 @@ layout: html5
 
 {% include header.html %}
 <div class="row">
-  <div class="span7 offset1">
+  <div class="span8 offset1">
     <article>
     {{ content }}
     </article>
   </div>
-  <div class="span4">
-    <div class="sidebar">
-      {% include sidebar.html %}
-    </div>
-  </div>
 </div>
-
-{% include disqus.html %}
 {% include footer.html %}
 {% include javascript.html %}
+{% include lunr_search.html %}
 {% include analytics.html %}
+    

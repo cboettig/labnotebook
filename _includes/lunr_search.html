@@ -1,0 +1,27 @@
+
+<script id="search-results-template" type="text/mustache">
+  {{#entries}}
+    <article>
+      <h3>
+        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+        <a href="{{url}}">{{title}}</a></h3>
+    </article>
+  {{/entries}}
+</script>
+
+
+<script src="/assets/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+  $(function() {
+    $('#search-query').lunrSearch({
+      index:    '/search.json',
+      results:  '#search-results',
+      entries:  '.entries',
+      template: '#search-results-template'
+    });
+  });
+</script>
+
+
+
