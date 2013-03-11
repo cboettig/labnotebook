@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: search
 title: 404
 subtitle: Page not found
 date: 2012-11-08
@@ -18,28 +18,18 @@ Perhaps searching would help?
   <div class="entries">
   </div>
 </section>
-
 <script id="search-results-template" type="text/mustache">
-  {{#entries}}
-    <article>
+{% raw %}
+  {{#entries}} 
+    <article> 
       <h3>
-        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
-        <a href="{{url}}">{{title}}</a></h3>
-    </article>
+        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}} 
+        <a href="{{url}}">{{title}}</a> 
+      </h3> 
+    </article> 
   {{/entries}}
+{% endraw %}
 </script>
-<script src="/assets/js/search.min.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-  $(function() {
-    $('#search-query').lunrSearch({
-      index:    '/search.json',
-      results:  '#search-results',
-      entries:  '.entries',
-      template: '#search-results-template'
-    });
-  });
-</script>
-
 
 Still puzzled? Contact me through one of the linked icons below.
 

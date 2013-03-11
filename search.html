@@ -1,10 +1,18 @@
 ---
+<<<<<<< HEAD
 layout: default
 title: Search  
 date: 2012-11-08
 
 ---
 
+=======
+layout: search
+title: Search the notebook 
+date: 2012-11-08
+
+---
+>>>>>>> master
   
 <div id="search">
   <form action="/search" method="get" class="navbar-search pull-left">
@@ -15,6 +23,7 @@ date: 2012-11-08
   <div class="entries">
   </div>
 </section>
+<<<<<<< HEAD
 
 <script id="search-results-template" type="text/mustache">
   {{#entries}}
@@ -42,3 +51,18 @@ date: 2012-11-08
 </script>
 
 
+=======
+<script id="search-results-template" type="text/mustache">
+{% raw %}
+  {{#entries}} 
+    <article> 
+      <h3>
+        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}} 
+        <a href="{{url}}">{{title}}</a> 
+      </h3> 
+    </article> 
+  {{/entries}}
+{% endraw %}
+</script>
+
+>>>>>>> master

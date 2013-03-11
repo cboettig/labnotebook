@@ -1,4 +1,5 @@
 <footer class="footer">
+
   <!-- ************* Buttons to toggle theme CSS ********************** -->
   <form style="font-size:10px">
     <div class="pull-right">
@@ -41,8 +42,7 @@
          onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
          return false;"><i class="icon-rss"></i></a>
     </div>
-<!--**************** End social links **************************** -->
-
+    <!--**************** End social links **************************** -->
 
     <div class="span2" style="text-align:center">
       <a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="http://onsclaims.wikispaces.com/file/view/ons-aci2-icon.png" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a>
@@ -55,26 +55,10 @@
     <div class="span4">
       <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0" style="float:right"/></a> 
     </div>
-</div>
+  </div>
+  {% include COINS.html %}
+
 </footer>
-</div><!-- /container -->
-
-<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
-<span
-    class="Z3988" 
-    title="ctx_ver=Z39.88-2004
-    &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
-    &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-    &amp;rft.title={{ page.title}}
-    &amp;rft.creator={{site.author.name}}
-    &amp;rft.date={{ page.date | date: "%Y-%m-%d" }}
-    &amp;rft.language=EN
-    &amp;rft.rights=CC0
-    &amp;rft_id={{site.url}}{{page.url}}">
-</span>
 
 
-    {% include javascript.html %}
-    {% include analytics.html %}
-  </body>
-</html>
+
