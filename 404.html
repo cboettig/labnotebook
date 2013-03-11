@@ -18,6 +18,18 @@ Perhaps searching would help?
   <div class="entries">
   </div>
 </section>
+<script id="search-results-template" type="text/mustache">
+{% raw %}
+  {{#entries}} 
+    <article> 
+      <h3>
+        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}} 
+        <a href="{{url}}">{{title}}</a> 
+      </h3> 
+    </article> 
+  {{/entries}}
+{% endraw %}
+</script>
 
 Still puzzled? Contact me through one of the linked icons below.
 
