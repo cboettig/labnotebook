@@ -4,7 +4,6 @@ title: Search the notebook
 date: 2012-11-08
 
 ---
-
   
 <div id="search">
   <form action="/search" method="get" class="navbar-search pull-left">
@@ -15,4 +14,16 @@ date: 2012-11-08
   <div class="entries">
   </div>
 </section>
+<script id="search-results-template" type="text/mustache">
+{% raw %}
+  {{#entries}} 
+    <article> 
+      <h3>
+        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}} 
+        <a href="{{url}}">{{title}}</a> 
+      </h3> 
+    </article> 
+  {{/entries}}
+{% endraw %}
+</script>
 
