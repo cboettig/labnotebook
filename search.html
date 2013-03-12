@@ -2,9 +2,7 @@
 layout: search
 title: Search the notebook 
 date: 2012-11-08
-
----
-  
+---  
 <div id="search">
   <form action="/search" method="get" class="navbar-search pull-left">
     <input type="text" id="search-query" class="search-query" name="q" placeholder="Search" autocomplete="off">
@@ -14,6 +12,7 @@ date: 2012-11-08
   <div class="entries">
   </div>
 </section>
+
 <script id="search-results-template" type="text/mustache">
 {% raw %}
   {{#entries}} 
@@ -26,4 +25,3 @@ date: 2012-11-08
   {{/entries}}
 {% endraw %}
 </script>
-
