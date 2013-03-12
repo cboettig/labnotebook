@@ -2,7 +2,7 @@
 layout: default
 title: Calendar
 date: 2012-06-13
-
+exclude_from_search: true
 ---
 
 
