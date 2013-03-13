@@ -5,6 +5,8 @@ tags:
 - site-configuration
 - Jekyll
 
+exclude_from_search: true
+
 ---
 
 
@@ -38,14 +40,13 @@ I believe the best way to start with Jekyll is start with a really bare-bones si
 Start with an empty repository.  Create a markdown file, say, `index.md`.  Write whatever you want in standard markdown, just stick a [YAML](http://en.wikipedia.org/wiki/YAML) header on the top. Stick what?  From your standardized testing days, think something like  `markdown:html :: yaml:xml`.  Three `-` on their own line to start, three `-` on another line to close define the block of YAML data, whose mere existence is enough to get Jekyll to pay attention to that file.  Here we specify any metadata we want. 
 
 ```
+    ---
+    layout: default
+    ---
 
----
-layout: default
----
+    # My site title
 
-# My site title
-
-some text
+    some text
 
 ```
 

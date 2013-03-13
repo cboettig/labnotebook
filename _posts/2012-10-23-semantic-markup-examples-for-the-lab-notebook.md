@@ -5,6 +5,8 @@ tags:
 - semantics
 - site-configuration
 
+exclude_from_search: true
+
 ---
 
 All notebook entries are formatted with XHTML compliant (polyglot) HTML5 semantic structure.  This means that any entry can be parsed with a generic XML parser to extract the entry content in `<article>`, the `<header>`, `<footer>`, `<aside>`, etc.  The `<head>` section provides `<title>` and essential `<meta>` tags declaring the character encoding (which also sets the MIME type for HTML5).   
