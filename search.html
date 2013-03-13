@@ -1,8 +1,11 @@
 ---
 layout: search
-title: Search the notebook 
+title: Advanced search 
 date: 2012-11-08
 ---  
+
+This full-text search takes a while to load but will provide the most accurate results.  Please be patient.
+
 <div id="search">
   <form action="/search" method="get" class="navbar-search pull-left">
     <input type="text" id="search-query" class="search-query" name="q" placeholder="Search" autocomplete="off">
@@ -17,11 +20,23 @@ date: 2012-11-08
 {% raw %}
   {{#entries}} 
     <article> 
-      <h3>
+      <h4>
         {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}} 
         <a href="{{url}}">{{title}}</a> 
-      </h3> 
+      </h4> 
     </article> 
   {{/entries}}
 {% endraw %}
 </script>
+
+
+Alternatively, consider using this Google-based search query instead: 
+
+<form class="navbar-search pull-right" method="get" action="http://google.com/search">
+<p>
+<input type="hidden" name="q" value="site:carlboettiger.info" />
+<input type="text" class="search-query" name="q" />
+<button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+</p>
+</form>
+
