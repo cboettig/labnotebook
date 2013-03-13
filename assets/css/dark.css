@@ -6508,7 +6508,7 @@ body {
 #search-results.thinking {
   display: block;
   background: #002b36 url('/assets/img/spinner.gif') no-repeat center 20px;
-  height: 60px;
+  height: 40px;
 }
 .btn {
   text-shadow: none;
