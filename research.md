@@ -26,7 +26,7 @@ Links to various research products by area are provided below.  Mouse over for a
 
 #### Key:
 
-<i class="icon-book showtooltip" style="color:#2aa198;"></i> Publications,   <i class="icon-github showtooltip" style="color:#6c71c4;"></i> Code,  <i class="icon-beaker showtooltip" style="color:#859900;"></i> Data, <i class="icon-bookmark showtooltip" style="color:#dc322f;"></i> Reading,   <i class="icon-tags showtooltip" style="color:#b58900;"></i> Tags,   <i class="icon-bar showtooltip-chart" style="color:#cb4b16;"></i> Figures 
+<i class="icon-book showtooltip" style="color:#2aa198;"></i> Publications,   <i class="icon-github showtooltip" style="color:#6c71c4;"></i> Code,  <i class="icon-beaker showtooltip" style="color:#859900;"></i> Data, <i class="icon-bookmark showtooltip" style="color:#dc322f;"></i> Reading,   <i class="icon-tags showtooltip" style="color:#b58900;"></i> Tags,   <i class="icon-bar-chart showtooltip" style="color:#cb4b16;"></i> Figures 
 <!-- <i class="icon-list showtooltip" style="color:#d33682;"></i> Categories -->
 
 ------------------------------------------------------------------------------
