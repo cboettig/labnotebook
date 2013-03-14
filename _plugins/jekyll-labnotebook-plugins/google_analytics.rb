@@ -67,7 +67,7 @@ module Jekyll
       if defined?(result[path][1]) 
         views = result[path][1]
       else 
-        views = "('not calculated')"
+        views = "(not calculated)"
       end
       views
     end
