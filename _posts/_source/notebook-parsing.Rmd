@@ -2,18 +2,16 @@
 layout: post
 published: false
 title: Features of the notebook part 1 -- leveraging linked data
+category: open-science
+tags: 
+- notebook-technology
+- semantics
+- blog
 
 ---
 
-In keeping this open lab notebook, I have sought to address three goals (in addition to all the traditional reasons for keeping a lab notebook)
 
-1. Provide an educational resource
-2. Experiment with scientific infrastructure and tools for sharing and replicating research
-3. Facilitate the rapid and open dissemination of scientific research
-
-which are coincidentally evocative of [NSF broader impacts](http://www.nsf.gov/pubs/2007/nsf07046/nsf07046.jsp).  In this series of posts I plan to explore and illustrate some of my experiments with number 2 on this list, "experimenting with scientific infrastructure" -- namely, some of the web-based tools that advance the potential of this platform substantially beyond the utility of the venerable paper bound notebook.   
-
-An a [post a while back](/2011/05/08/building-a-semantic-notebook.html) I originally put forward the idea of a semantic lab notebook.  Semantics, or linked data, are among the most powerful concepts to emerge in online science for scholarly data organization and communication.  I have slowly been adding and exploring new ways to introduce semantic concepts into the notebook, which I have documented along the way under my [#semantics](http://www.carlboettiger.info/tags.html#semantics) tag. In this post, rather than discuss how to generate the semantic data, I try to focus on some of the things we can *do* with it.  This really just scratches the surface of possibilities, but should at least illustrate the general idea.  
+In a [post a while back](/2011/05/08/building-a-semantic-notebook.html) I originally put forward the idea of a semantic lab notebook.  Semantics, or linked data, are among the most powerful concepts to emerge in online science for scholarly data organization and communication.  I have slowly been adding and exploring new ways to introduce semantic concepts into the notebook, which I have documented along the way under my [#semantics](http://www.carlboettiger.info/tags.html#semantics) tag. In this post, rather than discuss how to generate the semantic data, I try to focus on some of the things we can *do* with it.  This really just scratches the surface of possibilities, but should at least illustrate the general idea.  
 
 
 
