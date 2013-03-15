@@ -1,20 +1,26 @@
-# CSS file index
+CSS file index
+=================
 
 
-bootstrap.css
-: fundamental css for twitter bootstrap
+General CSS
+-----------
+
+light.css
+: CSS built on twitter bootstrap using the Solarized "light" color scheme. Default css theme.  Replaces bootstrap.css
+
+dark.css
+: CSS built on twitter bootstrap using the Solarized "dark" color scheme
 
 bootstrap-responsive.css 
 : twitter-bootstrap files for responsive sizing for different displays
 
-bootstrap.min.css 
-: minimal css for twitter-bootstrap layouts
+All are generated automatically from `less` files.
 
-docs.css 
-: custom css based on twitter bootstrap
 
-solarized.css
-: Syntax highlighting, see http://ethanschoonover.com/solarized
+Specialty CSS
+-------------
+
+Used only on my software page. Not generated from `less`.  
 
 style.css
 : A stylesheet for github projects page, based on http://twitter.github.com
@@ -22,6 +28,15 @@ style.css
 grid.css
 : grid for github projects page, based on http://twitter.github.com
 
-tipuesearch.css
-: Stylesheet for tipue search
+Inactive CSS
+-----------
+
+bootstrap.css
+: fundamental css for twitter bootstrap
+
+
+bootstrap.min.css 
+: minimized css for twitter-bootstrap layouts
+
+
 
