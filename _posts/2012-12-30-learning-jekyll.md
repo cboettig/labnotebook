@@ -2,7 +2,7 @@
 layout: post
 category: open-science
 tags: 
-- site-configuration
+- notebook-technology
 - Jekyll
 
 exclude_from_search: true

@@ -3,7 +3,7 @@ layout: post
 category: open-science 
 tags: 
 - semantics
-- site-configuration
+- notebook-technology
 
 exclude_from_search: true
 

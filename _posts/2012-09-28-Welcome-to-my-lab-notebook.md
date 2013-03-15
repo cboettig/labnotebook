@@ -2,7 +2,9 @@
 layout: post
 title: Welcome to my Lab Notebook - Reloaded
 category: open-science
-tag: open-science
+tags: 
+- notebook-technology
+- Jekyll 
 
 ---
 

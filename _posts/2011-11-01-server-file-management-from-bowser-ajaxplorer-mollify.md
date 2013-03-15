@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/3116, /archives/3116]
 categories:
 - computation
 tags:
-- site-configuration
+- notebook-technology
 ---
 
 A few notes on trying out some server-based file sharing solutions.  

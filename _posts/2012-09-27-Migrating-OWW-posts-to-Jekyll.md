@@ -1,7 +1,10 @@
 ---
 layout: post
 category: open-science
-tags: code-tricks
+tags: 
+- notebook-technology
+- Jekyll
+- code-tricks
 
 ---
 

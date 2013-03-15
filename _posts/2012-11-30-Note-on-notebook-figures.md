@@ -1,7 +1,8 @@
 ---
 layout: post
 category: open-science
-tags: [site-configuration]
+tags: 
+- notebook-technology
 
 ---
 

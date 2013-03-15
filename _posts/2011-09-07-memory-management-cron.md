@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/2546, /archives/2546]
 categories:
 - computation
 tags:
-- site-configuration
+- notebook-technology
 ---
 
 Create the memcheck.sh script that will write a mem.log file with the data, and a[ gnuplot script](http://t16web.lanl.gov/Kawano/gnuplot/datetime-e.html) that will plot it.

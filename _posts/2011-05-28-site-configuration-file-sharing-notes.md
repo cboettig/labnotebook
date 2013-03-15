@@ -2,13 +2,13 @@
 comments: true
 date: 2011-05-28 23:22:02
 layout: post
-slug: site-configuration-file-sharing-notes
+slug: notebook-technology-file-sharing-notes
 title: 'Site configuration: file sharing notes'
 categories:
 - open-science
 tags:
 - code-tricks
-- site-configuration
+- notebook-technology
 ---
 
 Easiest way to share files is ssh onto the carlboettiger.info server,  change into the directory carlboettiger.info/ and create a new directory there -- i.e. share/.  This behaves as a regular static webpage directory that will list the files provided.

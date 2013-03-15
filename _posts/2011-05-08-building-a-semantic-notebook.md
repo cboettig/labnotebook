@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/1626, /archives/1626]
 categories:
 - open-science
 tags:
-- site-configuration
+- notebook-technology
 - open-science
 - semantics
 ---

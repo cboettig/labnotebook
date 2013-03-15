@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: open-science
-tags: [site-configuration, semantics]
+tags: [notebook-technology, semantics]
 
 ---
 

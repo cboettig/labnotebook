@@ -2,7 +2,7 @@
 layout: post
 published: false
 category: open-science
-tags: site-configuration
+tags: notebook-technology
 
 ---
 

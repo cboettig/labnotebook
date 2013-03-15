@@ -2,7 +2,9 @@
 layout: post
 title: Exploring Jekyll layout 
 category: open-science
-tags: Jekyll
+tags: 
+- notebook-technology
+- Jekyll
 ---
 
 Jekyll works wonderfully with little knowledge beyond basic html/css to create `_layout` templates and then you're free to write beautiful pages and posts in markdown.  But adding more dynamic content, the kind of cool stuff avialable in so many wordpress plugins, tends to require a little understanding of the template formatting language, [Liquid](https://github.com/Shopify/liquid).  Liquid is actually super simple and powerful way to build a dynamic website.  The project's wiki provides a great introduction, starting with

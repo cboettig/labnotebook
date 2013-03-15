@@ -10,7 +10,7 @@ categories:
 tags:
 - ropensci
 - warning-signals
-- site-configuration
+- notebook-technology
 - wrightscape
 - code-tricks
 ---

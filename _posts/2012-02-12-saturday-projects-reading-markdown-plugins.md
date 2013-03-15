@@ -2,13 +2,13 @@
 comments: true
 date: 2012-02-12 13:40:37
 layout: post
-slug: saturday-projects-reading-markdown-site-configuration
-title: 'Saturday: projects, reading, markdown site-configuration'
+slug: saturday-projects-reading-markdown-notebook-technology
+title: 'Saturday: projects, reading, markdown notebook-technology'
 redirects: [/wordpress/archives/3818, /archives/3818]
 categories:
 - ecology 
 tags:
-- site-configuration
+- notebook-technology
 - warning-signals
 - ropensci
 ---

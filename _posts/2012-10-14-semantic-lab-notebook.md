@@ -4,7 +4,7 @@ title: Semantic Lab Notebook
 categories: open-science
 tags: 
 - semantics
-- site-configuration
+- notebook-technology
 
 ---
 

@@ -89,7 +89,7 @@ R citations need a bit of formating work, but at least I have the proof of princ
 
 Lots of stuff going on.
 
-  * Website transfer to new server.  Possibly consider jekyll site.
+  * Website transfer to new server.  Possibly consider Jekyll site.
   * Synthesis paper on text mining
   * Google summer-of-code applicants
   * ESA & Evolution tutorials

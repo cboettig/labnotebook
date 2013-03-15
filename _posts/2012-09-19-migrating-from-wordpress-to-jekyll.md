@@ -2,8 +2,8 @@
 layout: post
 categories: open-science
 tags: 
-- site-configuration
-- jekyll
+- notebook-technology
+- Jekyll
 
 ---
 

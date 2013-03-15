@@ -7,7 +7,7 @@ title: Citation tools & Future of Publishing
 redirects: [/wordpress/archives/1021, /archives/1021]
 categories:
 - open-science
-tags: [site-configuration, open-science, semantics]
+tags: [notebook-technology, open-science, semantics]
 
 ---
 

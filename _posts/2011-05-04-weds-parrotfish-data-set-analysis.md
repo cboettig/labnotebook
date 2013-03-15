@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/1578, /archives/1578]
 categories:
 - evolution
 tags:
-- site-configuration
+- notebook-technology
 ---
 
 ## Parrotfish
