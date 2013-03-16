@@ -6305,9 +6305,7 @@ h3.notebook-category {
 /* Notebook feeds
 -------------------------------------------- */
 .feed {
-  margin-left: 45px;
   padding: 35px 35px 36px;
-  border-left: 1px solid #eee8d5;
   font-size: 11px;
 }
 .feed p {
@@ -6337,9 +6335,7 @@ div.excerpt {
 /* postpreview
 -------------------------------------------------- */
 .postpreview {
-  margin-left: 45px;
   padding: 35px 35px 36px;
-  border-left: 1px solid #eee8d5;
   font-size: .85em;
   line-height: 1.5em;
   text-align: justify;
