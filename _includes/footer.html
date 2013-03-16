@@ -1,25 +1,31 @@
 <footer class="footer">
-
   <!-- ************* Buttons to toggle theme CSS ********************** -->
-  <form style="font-size:10px">
-    <div class="pull-right">
-        <a onclick="switch_style('dark'); 
-                    recordOutboundLink(this, 'Outbound Links', 'dark theme'); 
-                    return false;" 
-           name="theme" value="dark" id="dark" 
-           class="btn btn-mini"><span class="showtooltip" title="switch to dark theme"><i class="icon-adjust"></i></span></a>
-        
-        <a onclick="switch_style('light'); 
-                    recordOutboundLink(this, 'Outbound Links', 'light theme'); 
-                    return false;" 
-           name="theme" value="light" id="light" 
-           class="btn btn-mini"><span class="showtooltip" title="switch to light theme"><i class="icon-certificate"></i></span></a> 
+    <div class="row">
+      <div class="span12">
+        <form style="font-size:10px" class="pull-right">
+          <a onclick="switch_style('dark'); 
+                      recordOutboundLink(this, 'Outbound Links', 'dark theme'); 
+                      return false;" 
+             name="theme" value="dark" id="dark" 
+             class="btn btn-mini"><span class="showtooltip" 
+                                        title="switch to dark theme"><i class="icon-adjust"></i>
+                                   </span></a>
+          
+          <a onclick="switch_style('light'); 
+                      recordOutboundLink(this, 'Outbound Links', 'light theme'); 
+                      return false;" 
+             name="theme" value="light" id="light" 
+             class="btn btn-mini"><span class="showtooltip" 
+                                        title="switch to light theme"><i class="icon-certificate"></i>
+                                  </span></a>
+        </form>
+      </div>
     </div>
-  </form>
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="span4 socialicons" style="font-size:20px" typeof="foaf:Person" about="{{site.url}}#me">
+    <div class="span3 socialicons" style="font-size:20px" typeof="foaf:Person" about="{{site.url}}#me">
+      <p>
           <a rel="foaf:account" alt="email" href="mailto:{{site.author.email}}" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'email'); 
              return false;"><span class="showtooltip" title="email me"><i class="icon-envelope-alt"></i></span></a>
@@ -35,26 +41,38 @@
              return false;"><i class="icon-google-plus"></i></a>
           <a rel="foaf:account" href="http://www.mendeley.com/profiles/{{site.author.mendeley}}" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
-             return false;"><img src="/assets/img/icon-mendeley.png" alt="mendeley" /></a>  
+             return false;"><img src="/assets/img/icon-mendeley.png" alt="mendeley" /></a> 
+           citations on google-scholar
+           stackoverflow
       -->
       <a alt="rss" type="application/atom+xml" href="/atom.xml"  
          class="showtooltip" title="subscribe to RSS feeds for my open lab notebook" 
          onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
          return false;"><i class="icon-rss"></i></a>
+       </p>
     </div>
     <!--**************** End social links **************************** -->
-
-    <div class="span2" style="text-align:center">
+    <div class="span1">
+      <br />
+    </div>
+    <div class="span4">
+      <p>
       <a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="http://onsclaims.wikispaces.com/file/view/ons-aci2-icon.png" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a>
 
       <a title="This site uses linked data semantics. Click to extract as RDF XML." class="btn btn-mini showtooltip" style="font-size: .8em" 
        href="http://any23.org/?format=rdfxml&validate=validate&uri={{ site.url }}{{ page.url }}"><i 
          class="icon-cloud-download" onclick="recordOutboundLink(this, 'Outbound Links', 'RDF'); return false;"></i> RDF</a>
+      </p>
+    </div>
+    <div class="span1">
+      <br />
+    </div>
+    <div class="span3">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0"/></a> 
+      </p>
+    </div>
 
-    </div>
-    <div class="span4">
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0" style="float:right"/></a> 
-    </div>
   </div>
   {% include COINS.html %}
 
