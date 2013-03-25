@@ -1,8 +1,7 @@
 ---
 comments: true
-date: 2010-10-21 04:08:33
+date: 2010-10-21 
 layout: post
-slug: warning-signals
 title: Spatial Warning Signals, power, etc
 redirects: [/wordpress/archives/63, /archives/63]
 categories:
@@ -24,7 +23,16 @@ Meanwhile, returning to my work with power in warning signals.  Working on a mor
 ![]( http://farm5.staticflickr.com/4089/5101650050_2cc9530a89_o.png )
 
 
-Note that the eigenvalue lambda is evaluated at the fixed point in each case, and over sufficient range in the bifurcation parameter, the change is non-linear.  The bifurcation seems to happen at about $$a=174$$, corresponding to an equilibrium population of  $ \hat x = 525$.  lambda doesn't depend on the bifurcation parameter $$a$$ except through the value of $ \hat x $;  Unfortunately closed form expressions for $$ \frac{e K x^2}{h^2+x^2}-e x - a = 0$$ aren't particularly manageable.  The jump in $$ \hat x $$ which results in a jump in lambda is the result of the numerical minimizer starting to grab the other root -- of course lambda should in fact pass smoothly through zero, triggering the bifurcation.
+Note that the eigenvalue lambda is evaluated at the fixed point in each
+case, and over sufficient range in the bifurcation parameter, the change
+is non-linear.  The bifurcation seems to happen at about $a=174$,
+corresponding to an equilibrium population of  $\hat x = 525$.  lambda
+doesn't depend on the bifurcation parameter $$a$$ except through the
+value of $\hat x$;  Unfortunately closed form expressions for $\frac{e
+K x^2}{h^2+x^2}-e x - a = 0$ aren't particularly manageable.  The jump in
+$\hat x$ which results in a jump in lambda is the result of the numerical
+minimizer starting to grab the other root -- of course lambda should in
+fact pass smoothly through zero, triggering the bifurcation.
 
 
 ### and in the literature...
