@@ -8,7 +8,7 @@ lunr_excludes: [atom.xml, 404.html, search.html, categories.md, tags.md, calenda
 
 redirects: yes     ## A flag to turn on the redirects plugin
 searchindex: yes   ## A flag to turn on the search index plugin.  
-pageviews: yes     ## toggle on sidebar pageviews 
+pageviews: no     ## toggle on sidebar pageviews 
 lunrsearch: no    ## Javascript will still be included, but Jekyll won't build the database
 
 
