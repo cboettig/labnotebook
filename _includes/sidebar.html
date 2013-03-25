@@ -16,7 +16,7 @@
   <br />
 
 
-  <p> <a class="btn btn-mini" href="{{ site.repo }}/commits/master/_posts{{page.url | github_link }}"><i class="icon-time"></i> history</a></p>
+  <p> <a class="btn btn-mini" href="{{ site.repo }}/commits/master/_posts{{page.path}}"><i class="icon-time"></i> history</a></p>
 
 
   <p> Posted in 
@@ -39,11 +39,12 @@
   {% if site.pageviews %} <p style="font-style:italic"> pageviews: {% pageviews %}{{page.url}}{% endpageviews %}</p>{% endif %}
   <br/>
   <br/>
-  <small><p>
+  <p><small>
     Last modified: <time 
-                  datetime="{{ page.url | git_modified | date_to_xmlschema }}" 
-                  property="dc:modified">{{ page.url | git_modified | date_to_string }}</time>
-  </p><p> SHA Hash: <a href="{{ site.repo }}/commit/{{page.url | git_sha }}"> {{ page.url | git_sha }}</a></p>
-  </small>
+                  datetime="{{ page.path | git_modified | date_to_xmlschema }}" 
+                  property="dc:modified">{{ page.path | git_modified | date_to_string }}</time></small>
+  </p>
+  <p><small> SHA Hash: <a href="{{ site.repo }}/commit/{{page.path | git_sha }}"> {{ page.path | git_sha }}</a></small></p>
+  
 
 </aside>

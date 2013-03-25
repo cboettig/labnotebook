@@ -14,6 +14,10 @@
 # {{ post.url | github.link }}
 # 
 
+## Replaced by more robust solution: just use {{ post.path }}
+## See the Generator in base_name.rb
+
+
 module TextFilter
   def github_link(input)
     input.gsub(/(\d\d\d\d)\/(\d\d)\/(\d\d)\/(.*)\.html/, "\\1-\\2-\\3-\\4.md")
