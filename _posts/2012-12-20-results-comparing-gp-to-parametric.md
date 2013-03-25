@@ -7,11 +7,11 @@ tags: nonparametric-bayes
 
 Comparison of the Gaussian process inference to the true optimum and a parametric estimate.   
 
-![](http://www.carlboettiger.info/assets/figures/2012-12-20-23-12-06-60abafd424-unnamed-chunk-22.png) 
+![](/assets/figures/assets/figures/2012-12-20-23-12-06-60abafd424-unnamed-chunk-22.png) 
 
 Comparison across 100 simulations under the policies inferred from each approach show the nearly optimal performance of the GP and the tragic crashes introduced by the parametric management.  
 
-![](http://www.carlboettiger.info/assets/figures/2012-12-20-23-12-07-60abafd424-unnamed-chunk-23.png)
+![](/assets/figures/assets/figures/2012-12-20-23-12-07-60abafd424-unnamed-chunk-23.png)
 
 
 ## Sensitivity analysis
@@ -22,15 +22,15 @@ Working through an exploratory sensitivity analysis to see GP performance over d
 
 Distribution of yield over replicates shows the parametric model performing rather poorly, while most of the GP replicates perform nearly optimally.  
 
-![](http://www.carlboettiger.info/assets/figures/2012-12-20-23-13-46-60abafd424-unnamed-chunk-3.png)
+![](/assets/figures/assets/figures/2012-12-20-23-13-46-60abafd424-unnamed-chunk-3.png)
 
 * [smaller noise](https://github.com/cboettig/nonparametric-bayes/blob/60abafd4242b3840454b3a138a428a1c633e73fd/inst/examples/myers-exploration.md):
 
-![](http://www.carlboettiger.info/assets/figures/2012-12-20-22-57-55-96ad28dd6e-unnamed-chunk-3.png)
+![](/assets/figures/assets/figures/2012-12-20-22-57-55-96ad28dd6e-unnamed-chunk-3.png)
 
 [larger growth-rate parameters](https://github.com/cboettig/nonparametric-bayes/blob/9d5cd1f027bdfe5f356dce83756726c95a6fcdd8/inst/examples/myers-exploration.md):
 
-![](http://www.carlboettiger.info/assets/figures/2012-12-20-20-50-42-3f7bd6aa34-unnamed-chunk-3.png)
+![](/assets/figures/assets/figures/2012-12-20-20-50-42-3f7bd6aa34-unnamed-chunk-3.png)
 
 
 

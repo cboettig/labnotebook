@@ -8,7 +8,7 @@ title: Multiple uncertainty corrected
 
 Fixed the [multiple uncertainty calculation](http://www.carlboettiger.info/2012/11/01/multiple-uncertainty-corrections.html) implementation.  Code had transposed $\mathbb{I}$, also one of the $\mathbb{M}$ matrices.  Should still confirm final implementation.  In the below example each case has log-normal growth noise present.  The non-monotonic section of the measurement uncertainty
 
-![](http://www.carlboettiger.info/assets/figures/2012-11-17-f6c225f69f-policyfunctions.png) 
+![](/assets/figures/assets/figures/2012-11-17-f6c225f69f-policyfunctions.png) 
 
 
 [See notes on code changes inline.](https://github.com/cboettig/pdg_control/commit/954cea9310063150bb42567b19caa272b34d32c2)

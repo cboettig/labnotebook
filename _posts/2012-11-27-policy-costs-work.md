@@ -144,7 +144,7 @@ dat <- melt(dat, id = "c2")
 ggplot(dat, aes(c2, value, col = variable)) + geom_point() + geom_line()
 ```
 
-![plot of chunk npv-plot](http://www.carlboettiger.info/assets/figures/2012-11-28-5e6d8d80ac-npv-plot.png) 
+![plot of chunk npv-plot](/assets/figures/assets/figures/2012-11-28-5e6d8d80ac-npv-plot.png) 
 
 
 Find the value of `c2` that brings each penalty closest to 75% of the cost-free adjustment value:
@@ -154,7 +154,7 @@ Find the value of `c2` that brings each penalty closest to 75% of the cost-free 
 ggplot(dat, aes(c2, (npv0 - value)/npv0, col = variable)) + geom_point() + geom_line()
 ```
 
-![plot of chunk apples_plot](http://www.carlboettiger.info/assets/figures/2012-11-28-5e6d8d80ac-apples_plot.png) 
+![plot of chunk apples_plot](/assets/figures/assets/figures/2012-11-28-5e6d8d80ac-apples_plot.png) 
 
 
 
@@ -268,7 +268,7 @@ p0 <- ggplot(dt) + geom_line(aes(time, alternate), col = "grey20", lwd = 1) +
 p0
 ```
 
-![plot of chunk p0](http://www.carlboettiger.info/assets/figures/2012-11-28-5e6d8d80ac-p0.png) 
+![plot of chunk p0](/assets/figures/assets/figures/2012-11-28-5e6d8d80ac-p0.png) 
 
 
 
@@ -279,7 +279,7 @@ p1 <- ggplot(dt) + geom_line(aes(time, alternate), col = "grey20", lwd = 1) +
 p1
 ```
 
-![plot of chunk p1](http://www.carlboettiger.info/assets/figures/2012-11-28-5e6d8d80ac-p1.png) 
+![plot of chunk p1](/assets/figures/assets/figures/2012-11-28-5e6d8d80ac-p1.png) 
 
 
 
@@ -290,6 +290,6 @@ p2 <- ggplot(dt) + geom_line(aes(time, harvest_alt), col = "grey20", lwd = 1) +
 p2
 ```
 
-![plot of chunk p2](http://www.carlboettiger.info/assets/figures/2012-11-28-5e6d8d80ac-p2.png) 
+![plot of chunk p2](/assets/figures/assets/figures/2012-11-28-5e6d8d80ac-p2.png) 
 
 

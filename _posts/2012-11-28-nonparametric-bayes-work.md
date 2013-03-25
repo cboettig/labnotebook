@@ -45,11 +45,11 @@ Added necessary hyperparameter for variance in the covariance kernel $\tau$, in 
 Now getting reasonable performance of the Gaussian process relative to the optimal policy (also see earlier examples below).  Comforting to see that the Gaussian Process results in slightly larger uncertainty and manages slightly more conservatively (higher standing stock, lower harvests).  Very conservative outside range of data -- resulting in a policy function deviating strongly from Reed's constant escapement.  
 
 
-![plot of chunk unnamed-chunk-2](http://www.carlboettiger.info/assets/figures/2012-11-28-ca583db171-unnamed-chunk-2.png) 
+![plot of chunk unnamed-chunk-2](/assets/figures/assets/figures/2012-11-28-ca583db171-unnamed-chunk-2.png) 
 
-![plot of chunk policy_plot](http://www.carlboettiger.info/assets/figures/2012-11-28-ca583db171-policy_plot.png) 
+![plot of chunk policy_plot](/assets/figures/assets/figures/2012-11-28-ca583db171-policy_plot.png) 
 
-![plot of chunk simplot](http://www.carlboettiger.info/assets/figures/2012-11-28-ca583db171-simplot.png) 
+![plot of chunk simplot](/assets/figures/assets/figures/2012-11-28-ca583db171-simplot.png) 
 
 
 ### Functionalize package

@@ -16,14 +16,14 @@ Exploring this by comparing evolution of the probability density for the populat
 
 #### GP transition function
 
-![plot of chunk gp-F-sim](http://www.carlboettiger.info/assets/figures/2012-12-15-a3aad15b15-gp-F-sim.png) 
+![plot of chunk gp-F-sim](/assets/figures/assets/figures/2012-12-15-a3aad15b15-gp-F-sim.png) 
 
 
 Whereas the actual transition function moves the stock to a tight window around the high carrying capacity:
 
 #### true transition function
 
-![plot of chunk par-F-sim](http://www.carlboettiger.info/assets/figures/2012-12-15-a3aad15b15-par-F-sim.png) 
+![plot of chunk par-F-sim](/assets/figures/assets/figures/2012-12-15-a3aad15b15-par-F-sim.png) 
 
 
 Often this results in a policy function that harvests all the fish, since they won't persist.  Exploring approaches to avoid such solutions, such as adding a reward for leaving some standing stock at the boundary time (issue [#10](https://github.com/cboettig/nonparametric-bayes/issues/10)).
