@@ -1,9 +1,7 @@
 ---
 comments: true
-date: 2010-10-21 23:03:16
+date: 2010-10-21 
 layout: post
-slug: warning-signals-2
-title: Warning Signals
 redirects: [/wordpress/archives/76, /archives/76]
 categories:
 - ecology

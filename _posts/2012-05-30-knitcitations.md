@@ -7,6 +7,8 @@ tags: R
 
 ---
 
+**EDIT**: Note that this package has evolved quite a bit from this initial post.  While the basic interface is the same, support for additional features and some choices in formatting differ from what is presented here.  Please see the [README](https://github.com/cboettig/knitcitations/) for the latest introduction to the package.  
+
 
 Markdown is becoming an increasingly popular platform for lightweight and online publishing.  While traditional publishing tools like LaTeX and word processors have long had integrated bibliographic management, few tools handle citations for lightweight publishing. I am finding myself more and more drawn to markdown rather then tex/Rnw as my standard format (not least of which is the ease of displaying the files on github, particularly now that we have automatic image uploading.   I've taken a little whack at generating in-text citations using knitr and other R tools.  
 
@@ -50,10 +52,9 @@ r <- ref("10.1111/j.1461-0248.2005.00827.x")
 print(r, "html")
 ```
 
-<p>Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006).
-&ldquo;Accounting For Uncertainty in Marine Reserve Design.&rdquo;
-<EM>Ecology Letters</EM>, <B>9</B>.
-ISSN 1461-023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x">http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x</a>.
+Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006). “Accounting
+For Uncertainty in Marine Reserve Design.” *Ecology Letters*, 9. ISSN 1461-023X,
+[http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x](http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x).
 
 
 
@@ -268,36 +269,32 @@ As we go along adding inline citations, R stores the list of citation info.  The
 bibliography("html") 
 ```
 
-<p>Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006).
-&ldquo;Accounting For Uncertainty in Marine Reserve Design.&rdquo;
-<EM>Ecology Letters</EM>, <B>9</B>.
-ISSN 1461-023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x">http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x</a>.
+Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006). “Accounting
+For Uncertainty in Marine Reserve Design.” *Ecology Letters*, **9**.
+ISSN 1461-023X,
+[http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x](http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x).
 
-<p>Abrams PA, Ruokolainen L, Shuter BJ and Mccann KS (2012).
-&ldquo;Harvesting Creates Ecological Traps: Consequences of Invisible Mortality Risks in Predator–Prey Metacommunities.&rdquo;
-<EM>Ecology</EM>, <B>93</B>.
-ISSN 0012-9658, <a href="http://dx.doi.org/10.1890/11-0011.1">http://dx.doi.org/10.1890/11-0011.1</a>.
+Abrams PA, Ruokolainen L, Shuter BJ and Mccann KS (2012). “Harvesting
+Creates Ecological Traps: Consequences of Invisible Mortality Risks in
+Predator–Prey Metacommunities.” *Ecology*, **93**. ISSN 0012-9658,
+[http://dx.doi.org/10.1890/11-0011.1](http://dx.doi.org/10.1890/11-0011.1).
 
-<p>Michaels S and Tyre AJ (2012).
-&ldquo;How Indeterminism Shapes Ecologists’ Contributions to Managing Socio-Ecological Systems.&rdquo;
-<EM>Conservation Letters</EM>.
-<a href="http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x">http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x</a>.
+Michaels S and Tyre AJ (2012). “How Indeterminism Shapes Ecologists’
+Contributions to Managing Socio-Ecological Systems.” *Conservation
+Letters*.
+[http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x](http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x).
 
-<p>Halpern BS, Pyke CR, Fox HE, Haney JC, Schlaepfer MA and Zaradic P (2006).
-&ldquo;Gaps And Mismatches Between Global Conservation Priorities And Spending.&rdquo;
-<EM>Conservation Biology</EM>, <B>20</B>.
-<a href="http://dx.doi.org/10.1111/j.1523-1739.2005.00258.x">http://dx.doi.org/10.1111/j.1523-1739.2005.00258.x</a>.
+Halpern BS, Pyke CR, Fox HE, Haney JC, Schlaepfer MA and Zaradic P
+(2006). “Gaps And Mismatches Between Global Conservation Priorities And
+Spending.” *Conservation Biology*, **20**.
+[http://dx.doi.org/10.1111/j.1523-1739.2005.00258.x](http://dx.doi.org/10.1111/j.1523-1739.2005.00258.x).
 
-<p>Xie Y (2012).
-<EM>knitr: A general-purpose package for dynamic report generation in R</EM>.
-R package version 0.5.4, <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.
+Xie Y (2012). *knitr: A general-purpose package for dynamic report
+generation in R*. R package version 0.5.4,
+[http://yihui.name/knitr/](http://yihui.name/knitr/).
 
-<p>Francois R (2011).
-<EM>bibtex: bibtex parser</EM>.
-R package version 0.3-0, <a href="http://CRAN.R-project.org/package=bibtex">http://CRAN.R-project.org/package=bibtex</a>.
-
-
-
+Francois R (2011). *bibtex: bibtex parser*. R package version 0.3-0,
+[http://CRAN.R-project.org/package=bibtex](http://CRAN.R-project.org/package=bibtex).
 
 ## Reflections 
 
@@ -316,4 +313,6 @@ The only other tool I know of that provides dynamic citations by DOI look-up is 
 for different blogging platforms, including Wordpress and Jekyll.  
 
 So why knitcitations?   My goal is primarily to bring this functionality to knitr users who rely on the markdown format rather than the latex format and are interested in dynamic citations and web-based publishing.  I hope it finds its niche.  
+
+
 

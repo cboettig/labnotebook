@@ -1,8 +1,7 @@
 ---
 comments: true
-date: 2010-10-20 02:53:29
+date: 2010-10-20 
 layout: post
-slug: stochastic-population-dynamics-
 title: ecology Abstract
 redirects: [/wordpress/archives/237, /archives/237]
 categories:
@@ -14,28 +13,17 @@ Ecological population sizes fluctuate not only in response to  environmental flu
 This is the cover page to my stochastic population dynamics research.  Below are live  feeds for the current entries in the notebook, most recent articles,  figures and commits to the code.
 
 
-## [Notebook Entries](http://www.carlboettiger.info/archives/category/stochastic-population-dynamics/)
+- [Notebook Entries](http://www.carlboettiger.info/archives/category/stochastic-population-dynamics/)
 
+- [Entries from before 20-Oct-2010](http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Stochastic_Population_Dynamics)
 
-[rssinpage rssfeed='http://www.carlboettiger.info/archives/category/stochastic-population-dynamics/feed' rssformat='x: Y' rssitems="5" rssdateformat='j F Y' rsstimezone='America/Los_Angeles']
+- [Recently Added Articles](http://www.mendeley.com/groups/634301/theoretical-ecology/overview/)
 
-[Entries from before 20-Oct-2010](http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Stochastic_Population_Dynamics)
+- [reading feed](http://www.mendeley.com/groups/634301/theoretical-ecology/feed/rss)
 
+- [Recent Figures](http://www.flickr.com/photos/cboettig/tags/stochpop/)
 
-## [Recently Added Articles](http://www.mendeley.com/groups/634301/theoretical-ecology/overview/)
+- [Code Updates](https://github.com/cboettig/structured-populations)
 
-
-[rssinpage rssfeed='http://www.mendeley.com/groups/634301/theoretical-ecology/feed/rss' rssformat='x: Y' rssdateformat='j F Y' rsstimezone='America/Los_Angeles']
-
-
-## [Recent Figures](http://www.flickr.com/photos/cboettig/tags/stochpop/)
-
-
-[flickr-gallery mode="tag" tags="stoch_pop" `tag_mode="all"`]
-
-
-## [Code Updates](https://github.com/cboettig/structured-populations)
-
-
-[cetsEmbedRSS  id=https://github.com/cboettig/structured-populations/commits/master.atom  itemcount=5 itemauthor=0 itemdate=1 itemcontent=0]
+- [code feed](https://github.com/cboettig/structured-populations/commits/master.atom)
 
