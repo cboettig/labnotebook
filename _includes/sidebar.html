@@ -16,7 +16,10 @@
   <br />
 
 
-  <p> <a class="btn btn-mini" href="{{ site.repo }}/commits/master/_posts{{page.path}}"><i class="icon-time"></i> history</a></p>
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-mini" 
+          href="{{ site.repo }}/commits/master/_posts{{page.path}}"><i class="icon-time"></i> history</a></p>
 
 
   <p> Posted in 

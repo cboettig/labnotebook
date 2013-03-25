@@ -13,7 +13,8 @@ layout: html5
     </div>
     <div class="span2 sidebar"><!-- Custom sidebar -->    
       <a href="http://www.carlboettiger.info/assets/files/cv.pdf"  
-        onclick="var that=this;_gaq.push(['_trackEvent','Download','PDF',this.href]); 
+        onclick="var that=this;
+        _gaq.push(['_trackEvent','Download','PDF',this.href]); 
         setTimeout(function(){location.href=that.href;},200);
         return false;" class="btn btn-large"><i class="icon-file-alt"></i> pdf</a>
     </div>
