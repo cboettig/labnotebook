@@ -7,7 +7,7 @@ tags: R
 
 ---
 
-**EDIT**: Note that this package has evolved quite a bit from this initial post.  While the basic interface is the same, support for additional features and some choices in formatting differ from what is presented here.  Please see the [README](https://github.com/cboettig/knitcitations/) for the latest introduction to the package.  
+**EDIT**: Note that this package has evolved quite a bit from this initial post.  While the basic interface is the same, support for additional features and some choices in formatting differ from what is presented here.  Please see the [README](https://github.com/cboettig/knitcitations/) for the latest introduction to the package. Readers may also be interested in the more recent post discussing the [introduction of several new features including semantic tools in the `knitcitations` package](http://www.carlboettiger.info/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html) 
 
 
 Markdown is becoming an increasingly popular platform for lightweight and online publishing.  While traditional publishing tools like LaTeX and word processors have long had integrated bibliographic management, few tools handle citations for lightweight publishing. I am finding myself more and more drawn to markdown rather then tex/Rnw as my standard format (not least of which is the ease of displaying the files on github, particularly now that we have automatic image uploading.   I've taken a little whack at generating in-text citations using knitr and other R tools.  
