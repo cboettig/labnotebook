@@ -1,8 +1,7 @@
 ---
 comments: true
-date: 2010-10-30 02:07:25
+date: 2010-10-30 
 layout: post
-slug: short-note-trait-diversification-rates-controlled-by-other-traits
 title: 'Short note: Trait diversification rates controlled by other traits'
 redirects: [/wordpress/archives/151, /archives/151]
 categories:
