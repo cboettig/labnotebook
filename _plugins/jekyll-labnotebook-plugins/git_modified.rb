@@ -22,9 +22,13 @@ require 'chronic'
 module TextFilter
   def git_modified(input)
     path = input.gsub(/(\d\d\d\d)\/(\d\d)\/(\d\d)\/(.*)\.html/, "\\1-\\2-\\3-\\4.md")
-    puts path
     modif = `git log -n 1 --format="%ai" -- ../_posts/#{path}`
     modif = Chronic.parse(modif)
+    if modif.class != Time
+      puts "error in obtaining time for"
+      puts path
+    end
+    modif
   end
 end
 Liquid::Template.register_filter(TextFilter)
