@@ -39,7 +39,8 @@ ugh, looks like libraries on zero haven't been kept up.  Some delays before prod
 ## Tuesday
 
 * More writing
-* Assemble material for applied math club.  Going with particle filtering `r citep("10.1073/pnas.0603181103", "discusses")`  and the `pomp` vignette
+* Assemble material for applied math club.  Going with particle filtering  (<span rel="tooltip" title="Ionides E, Breto C and King A (2006). Inference For Nonlinear Dynamical Systems. _Proceedings of The National Academy of Sciences_, *103*. ISSN 0027-8424, http://dx.doi.org/10.1073/pnas.0603181103."><a href="http://dx.doi.org/10.1073/pnas.0603181103" rel="http://purl.org/spar/cito/discusses" >Ionides _et. al._ 2006</a></span>)
+ and the `pomp` vignette
 * ropensci reviewing
 
 ### Misc

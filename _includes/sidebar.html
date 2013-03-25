@@ -18,8 +18,8 @@
 
   {% if defined?(page.modified) %} <!-- Is thus actually accessing page.modified's value? -->
     Last modified 
-    <time datetime="{{ page.modified | date_to_xmlschema }}" 
-    property="dc:modified">{{ page.modified | date_to_string }}</time>
+    <time datetime="{{ page.url | git_modified | date_to_xmlschema }}" 
+    property="dc:modified">{{ page.url | git_modified }}</time>
   {% endif %}
 
 
@@ -45,4 +45,6 @@
 
   {% if site.pageviews %} <p style="font-style:italic"> pageviews: {% pageviews %}{{page.url}}{% endpageviews %}</p>{% endif %}
 
+  <p> SHA Hash: {{ page.url | git_sha }} </p>
+  
 </aside>
