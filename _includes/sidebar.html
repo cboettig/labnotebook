@@ -39,12 +39,14 @@
   {% if site.pageviews %} <p style="font-style:italic"> pageviews: {% pageviews %}{{page.url}}{% endpageviews %}</p>{% endif %}
   <br/>
   <br/>
-  <p><small> 
-  Last modified: <time 
+  <small><p>
+    {% capture page_modified %}{{ page.url | git_modified }}{% endcapture %} 
+    {% if true %} <!-- defined?(page_modified) -->
+    Last modified: <time 
                   datetime="{{ page.url | git_modified | date_to_xmlschema }}" 
                   property="dc:modified">{{ page.url | git_modified | date_to_string }}</time>
-  </p>
-  <p> SHA Hash: <a href="{{ site.repo }}/commit/{{page.url | git_sha }}"> {{ page.url | git_sha }}</a></p>
+    {% endif %}
+  </p><p> SHA Hash: <a href="{{ site.repo }}/commit/{{page.url | git_sha }}"> {{ page.url | git_sha }}</a></p>
   </small>
 
 </aside>
