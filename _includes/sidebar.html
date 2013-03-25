@@ -3,7 +3,6 @@
     <time datetime="{{ page.date | date_to_xmlschema }}" 
     property="dc:created">{{ page.date | date_to_string }}</time>. 
   </p>
-
   <br />
 
   {% if page.previous %}
@@ -15,12 +14,6 @@
     </p>
   {% endif %}
   <br />
-
-  {% if defined?(page.modified) %} <!-- Is thus actually accessing page.modified's value? -->
-    Last modified 
-    <time datetime="{{ page.url | git_modified | date_to_xmlschema }}" 
-    property="dc:modified">{{ page.url | git_modified }}</time>
-  {% endif %}
 
 
   <p> <a class="btn btn-mini" href="{{ site.repo }}/commits/master/_posts{{page.url | github_link }}"><i class="icon-time"></i> history</a></p>
@@ -44,7 +37,14 @@
 
 
   {% if site.pageviews %} <p style="font-style:italic"> pageviews: {% pageviews %}{{page.url}}{% endpageviews %}</p>{% endif %}
+  <br/>
+  <br/>
+  <p><small> 
+  Last modified: <time 
+                  datetime="{{ page.url | git_modified | date_to_xmlschema }}" 
+                  property="dc:modified">{{ page.url | git_modified | date_to_string }}</time>
+  </p>
+  <p> SHA Hash: <a href="{{ site.repo }}/commit/{{page.url | git_sha }}"> {{ page.url | git_sha }}</a></p>
+  </small>
 
-  <p> SHA Hash: {{ page.url | git_sha }} </p>
-  
 </aside>
