@@ -2,21 +2,7 @@
 layout: post
 tags: [warning-signals]
 categories: [ecology]
-title: Derin & Alan Meeting
 ---
-
-
-
-
-
-
- 
-
-
-
-
-
-
 
 
 1-2pm
@@ -48,49 +34,41 @@ system has reached stationarity. I do these calculations and compare:
 
 Equilibrium population size solves
 
-![ e n - a = \\frac{e K n\^2}{n\^2+h\^2}
-](http://openwetware.org/images/math/5/0/4/50409eac37385b0e75a7d5b94a249b68.png)
+$$ e n - a = \frac{e K n^2}{n^2+h^2}$$
+
 
 Equilibrium variance should be given by
 
-![ \\hat \\sigma\^2 = \\frac{d(\\hat n)}{b'(\\hat n)-d'(\\hat n)} =
-\\frac{e \\hat n - a}{ 2 e K \\hat n (1 - \\frac{\\hat n}{\\hat n\^2 +
-h\^2}) - e}
-](http://openwetware.org/images/math/9/8/4/984bee1f37fc55d1531298dd923cf2cf.png)
+$$ \hat \sigma^2 = \frac{d(\hat n)}{b'(\hat n)-d'(\hat n)} =
+\frac{e \hat n - a}{ 2 e K \hat n (1 - \frac{\hat n}{\hat n^2 +
+h^2}) - e} $$
 
 ### Time averaging from simulation doesn't match analytic prediction!
 
-The analytic solution to ![\\hat n
-](http://openwetware.org/images/math/d/c/7/dc7d7f7fe7100ee2871e1a20997b927c.png)
+The analytic solution to $\hat n$
 is the general solution to a cubic so not very pretty, but easy to
 calculate numerically in order to give the variance estimate; using the
 values below I confirm that ODE solver and analytic solution above agree
-(![ \\hat \\sigma\^2 =
-1352](http://openwetware.org/images/math/e/1/6/e16bd56231e8b3d18142046d889f115f.png)),
+$ \hat \sigma^2 = 1352$,
 which is *only about half that computed over the time window (approx
 2360)!* Parameter values and solutions from analytics are:
 
-\
 
-  ----------------------------------------------------------------------------------------------------- -------
-  e                                                                                                     0.5
-  K                                                                                                     1000
-  h                                                                                                     200
-  a                                                                                                     160
-  n                                                                                                     570.5
-  ![\\hat \\sigma\^2 ](http://openwetware.org/images/math/a/1/e/a1e7e8e2eb9f9575948aff1a2e672402.png)   1352
-  ----------------------------------------------------------------------------------------------------- -------
-
-\
+  ------------------ -------
+  e                  0.5
+  K                  1000
+  h                  200
+  a                  160
+  n                  570.5
+  $\hat \sigma^2$    1352
+  ----------------   -------
 
 ### Test of higher order corrections
 
 I try the higher order correction to the mean dynamics (accounts for
 inflation effect of the variance):
 
-![ \\frac{d}{dt} E(n) = \\alpha\_1(n) + \\frac{1}{2} \\sigma\^2
-\\alpha\_1''(n)
-](http://openwetware.org/images/math/e/6/0/e609fec1c507aecf6352efdd7a4d4d25.png)
+\frac{d}{dt} E(n) = \alpha_1(n) + \frac{1}{2} \sigma^2 \alpha_1''(n)
 
 Though not surprisingly, the effect is negligible. In this case the
 average is slightly higher (572.5) and variance slightly lower (1349),
@@ -145,8 +123,6 @@ Reflections on Warning Signals literature
     promising way to detect the trend nor should the window size choice
     depend on such things as knowing the time the crash occurs.
 
-\
-
 ### Current Library
 
 (Also a chance to test Mendeley library embedding)
@@ -183,8 +159,4 @@ significantly slower than my simple Euler scheme; particularly with the
 (nearly irrelevant) higher order correction to the mean dynamics.
 
 * * * * *
-
-\
-
-\
 
