@@ -47,7 +47,7 @@ a <- generic_ews(Z, detrending="gaussian")
 
 
 
-![](/assets/figures/assets/figures/2012-12-18-6c85b56d2c-mei2012.png)
+![](/assets/figures/2012-12-18-6c85b56d2c-mei2012.png)
 
 How about the data from MacDonald (2005)
 
@@ -68,5 +68,5 @@ dev.off()
 ```
 
 
-![](/assets/figures/assets/figures/2012-12-18-6c85b56d2c-pdo-macdonald2005.png)
+![](/assets/figures/2012-12-18-6c85b56d2c-pdo-macdonald2005.png)
 

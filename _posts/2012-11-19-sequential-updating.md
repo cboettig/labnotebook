@@ -52,7 +52,7 @@ And probably needs to be written in C at least to have any hope of scaling. See 
 Match is perfect (jittered to avoid overplotting the lazy way):
 
 
-![Sequential vs direct calculation of the mean](/assets/figures/assets/figures/2012-11-19-58073767b5-unnamed-chunk-6.png) 
+![Sequential vs direct calculation of the mean](/assets/figures/2012-11-19-58073767b5-unnamed-chunk-6.png) 
 
 Now should rewrite to use a grid for the covariance matrices of each data point.  Memory intensive but should be much faster than function recursion.  
 

@@ -95,6 +95,6 @@ Something seems to be a mistake, since the optimal policy under uncertainty does
 **Updated Edit**
 
 
-![](/assets/figures/assets/figures/2012-11-17-f6c225f69f-policyfunctions.png) 
+![](/assets/figures/2012-11-17-f6c225f69f-policyfunctions.png) 
 
 [See notes on code changes inline](https://github.com/cboettig/pdg_control/commit/954cea9310063150bb42567b19caa272b34d32c2)

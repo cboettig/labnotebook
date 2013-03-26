@@ -32,7 +32,7 @@ An alternative strategy would be to upload each figure to figshare directly in t
 
 It's not easy to generate figures that display nicely in both dark and light themes (well, I should just tell ggplot to use a solarized set of theme colors, but I'm too lazy to write that).  Meanwhile, just setting the transparent background to the plot, and transparent grid lines against the grey boxes seems to do pretty well:
 
-![Example transparent plot](/assets/figures/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-6.png)
+![Example transparent plot](/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-6.png)
 
 This is accomplished with the codeblock below.  Note that we need to tell `knitr` chunks to set the background of the png device to transparent, as well as telling ggplot what we want to be transparent:
 

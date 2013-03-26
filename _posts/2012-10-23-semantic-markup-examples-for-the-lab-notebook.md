@@ -83,7 +83,7 @@ src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0"
 style="float:right"></a>
 ```
 
-![When these elements are combined in a given entry, the RDFa generates this structure](/assets/figures/assets/figures/post-rdfa.png)
+![When these elements are combined in a given entry, the RDFa generates this structure](/assets/figures/post-rdfa.png)
 
 ### Easily entering RDFa
 
@@ -112,7 +112,7 @@ property="schema:jobTitle">a graduate student</span>
 
 (This excerpt gives the general flavor, see the html source of [index.html](http://www.carlboettiger.info) for a full example.)
 
-![The homepage generates this RDFa structured graph (from rdfa.info/play)](/assets/figures/assets/figures/homepage-rdfa.png)
+![The homepage generates this RDFa structured graph (from rdfa.info/play)](/assets/figures/homepage-rdfa.png)
 
 
 

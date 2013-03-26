@@ -85,7 +85,7 @@ pars <- melt(gp$trace$XX[[1]], id = "index")
 ggplot(pars, aes(index, value)) + geom_line() + facet_wrap(~variable, scales="free_y")
 ```
 
-![plot of chunk unnamed-chunk-5](/assets/figures/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-5.png) 
 
 
 It is possible to calculate summary statistics and check out the distribution of these fellows.  
@@ -103,7 +103,7 @@ mean(gp$trace$XX[[1]][,"nug"])
 ggplot(pars, aes(value)) + geom_histogram() + facet_wrap(~variable, scales="free")
 ```
 
-![plot of chunk unnamed-chunk-6](/assets/figures/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-6.png) 
+![plot of chunk unnamed-chunk-6](/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-6.png) 
 
 
 
@@ -139,7 +139,7 @@ Plot the posterior Gaussian Process:
 p1 + theme_notebook
 ```
 
-![plot of chunk gp-plot](/assets/figures/assets/figures/2012-12-04-046b509f8d-gp-plot.png) 
+![plot of chunk gp-plot](/assets/figures/2012-12-04-046b509f8d-gp-plot.png) 
 
 
 
@@ -186,7 +186,7 @@ policy_plot <- ggplot(policies, aes(stock, stock - value, color=variable)) +
 policy_plot + theme_notebook
 ```
 
-![plot of chunk policy_plot](/assets/figures/assets/figures/2012-12-04-046b509f8d-policy_plot.png) 
+![plot of chunk policy_plot](/assets/figures/2012-12-04-046b509f8d-policy_plot.png) 
 
 
 We can see what happens when we attempt to manage a stock using this:
@@ -209,7 +209,7 @@ simplot <- ggplot(df) + geom_line(aes(time,value, color=variable))
 simplot + theme_notebook
 ```
 
-![plot of chunk simplot](/assets/figures/assets/figures/2012-12-04-046b509f8d-simplot.png) 
+![plot of chunk simplot](/assets/figures/2012-12-04-046b509f8d-simplot.png) 
 
 
 
