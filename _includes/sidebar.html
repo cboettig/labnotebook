@@ -47,7 +47,7 @@
                   datetime="{{ page.path | git_modified | date_to_xmlschema }}" 
                   property="dc:modified">{{ page.path | git_modified | date_to_string }}</time></small>
   </p>
-  <p><small> SHA Hash: <a href="{{ site.repo }}/commit/{{page.path | git_sha }}"> {{ page.path | git_sha }}</a></small></p>
+  <p><small> SHA Hash: <a href="{{ site.repo }}/commit/{{page.path | git_sha }}/_posts/{{ page.path }}"> {{ page.path | git_sha }}</a></small></p>
   
 
 </aside>
