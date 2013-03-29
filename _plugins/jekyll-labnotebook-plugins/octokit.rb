@@ -1,8 +1,20 @@
+# Author: Carl Boettiger
+# License: MIT
+# Description: Jekyll plugins for interacting with the Github API using the 
+#   'octokit' gem.  Currently provides a way to embed commits and isues
+#   from a given repository.  Be sure to set the user below.  
+
+# Examples:
+#  {% octokit_issues nonparametric-bayes%}
+#  {% octokit_commits nonparametric-bayes%}
+
+# TODO: show only top 3 issues? sort by date?  Show closed issues?
+
+
+
 require 'octokit'
 require 'time'
-
-# should this cache?
-# TODO: show only top 3 issues? sort by date?  Show closed issues?
+require 'chronic'
 
 module Jekyll
   class OctokitIssues < Liquid::Tag
@@ -16,7 +28,7 @@ module Jekyll
       #  repo = Octokit.issues(@address, :status => "closed") # (Gets closed issues??)
       # Generate a list of all open issues, linking to github issue page.  
       out = "<ul>"
-      for i in 0 ... [repo.size, 3].min ## displays up to 3.  sorted by date?
+      for i in 0 ... [repo.size, 5].min ## displays up to 5.  sorted by date?
         lab = ""
         if repo[i].labels[0].class == Hashie::Mash  # Get labels for issues, with color, where applicable 
           lab = " (<font color=\"#" + repo[i].labels[0].color + 
@@ -40,6 +52,9 @@ Liquid::Template.register_tag('octokit_issues', Jekyll::OctokitIssues)
 
 
 
+
+## Commit gets issues on the day given.  
+
 module Jekyll
   class OctokitCommits < Liquid::Tag
     def initialize(tag_name, text, tokens)
@@ -48,12 +63,13 @@ module Jekyll
       @address = "cboettig/"+"#{@text}"
     end
     def render(context)
-      day = context.environments.first["page"]["date"]
-      @until = (day + 60*60*24).iso8601
-      @since = day.iso8601
-      repo = Octokit.commits(@address, "master", {:since => @since, :until => @until}) 
+      # day = Time.now # context.environments.first["page"]["date"]
+      # @until = Chronic.parse("Now") #(day + 60*60*24).iso8601
+      # @since = Chronic.parse("One day ago") #day.iso8601
+      # repo = Octokit.commits(@address, "master", {:since => @since, :until => @until}) 
+      repo = Octokit.commits(@address, "master")
       out = "<ul>"
-      for i in 0 ... repo.size
+      for i in 0 ... [repo.size, 5].min
         out = out + "<li>" +
           repo[i].commit.message + " " + 
           "<a href=\"" +

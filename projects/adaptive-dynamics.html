@@ -1,0 +1,73 @@
+---
+title: adaptive-dynamics 
+layout: page
+published: false
+---
+
+{% capture project %}adaptive-dynamics{% endcapture %}
+
+<div class="row">
+  <div class="span7">
+    <h2> Abstract </h2>
+    This project is not currently active.  I still stay loosely abrest of this literature, so the reading list is somewhat more recent.   
+    </div>
+
+    <div class="span4 sidebar">
+    <h3> Collaborators </h3>
+    <ul>
+      <li> Joshua Weitz </li>
+      <li> Jonathan Dushoff </li>
+      <li> Ulf Dieckmann </li>
+      <li> Rupert </li>
+    </ul>
+
+    <h3> Funding and Support/Affiliation </h3>
+    <ul>
+      <li> </li>
+    </ul>
+    </div>
+</div>
+
+<!-- add icons to title text -->  
+
+<hr>
+
+<div class="row">
+  <div calss="span12">
+    <div class="span4">
+      <h4><a href="https://github.com/cboettig/AdaptiveDynamics" style="color:#6c71c4;"><i class="icon-github"></i> Recent Commits</a> </h4>
+      {% octokit_commits AdaptiveDynamics%}
+    </div>
+    <div class="span4">
+      <h4><a href="https://github.com/cboettig/AdaptiveDynamics/issues" style="color:#d33682;"> <i class="icon-list"></i> Active Issues / Next Steps</a> </h4>
+      {% octokit_issues AdaptiveDynamics%}
+    </div>
+    <div class="span4">
+      <h4><a href="" style="color:#dc322f;"> <i class="icon-bookmark" ></i> Reading</a> </h4>
+      {% mendeley_feed 529981/adaptive-dynamics, 4 %}
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div calss="span12">
+    <div class="span4">
+      <h4> <a href="/vita.html" style="color:#2aa198;"><i class="icon-book"></i> Publications</a> </h4>
+     </div>
+     <div class="span4">
+      <h4> <a href="/tags.html#{{ project }}" style="color:#b58900;"><i class="icon-tags" ></i>Tagged notebook entries</a> </h4>
+        {% for post in site.tags.adaptive-dynamics limit:8 %}
+        <p> <a href="{{ post.url }}">{{ post.title }}</a> 
+    <span style="font-style:italic"> {{ post.date | date_to_string }}</span></p>
+        {% endfor %}
+    </div>
+    <div class="span4">
+      <h4> Data sets </h4>
+    </div>
+  </div>
+</div>
+
+
+
