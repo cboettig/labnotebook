@@ -15,6 +15,7 @@
 require 'octokit'
 require 'time'
 require 'chronic'
+require 'yaml'
 
 module Jekyll
   class OctokitIssues < Liquid::Tag
@@ -24,7 +25,9 @@ module Jekyll
       @address = "cboettig/"+"#{@text}"
     end
     def render(context) # learn how to write this to take an argument!
-      repo = Octokit.issues(@address) # grab the data. Can this go in "initialize?"
+      cred = YAML.load_file("/home/cboettig/.github_cred.yml")
+      client = Octokit::Client.new(:login => cred[:username], :password => cred[:password])
+      repo = client.issues(@address) # grab the data. Can this go in "initialize?"
       #  repo = Octokit.issues(@address, :status => "closed") # (Gets closed issues??)
       # Generate a list of all open issues, linking to github issue page.  
       out = "<ul>"
@@ -67,7 +70,9 @@ module Jekyll
       # @until = Chronic.parse("Now") #(day + 60*60*24).iso8601
       # @since = Chronic.parse("One day ago") #day.iso8601
       # repo = Octokit.commits(@address, "master", {:since => @since, :until => @until}) 
-      repo = Octokit.commits(@address, "master")
+      cred = YAML.load_file("/home/cboettig/.github_cred.yml")
+      client = Octokit::Client.new(:login => cred[:username], :password => cred[:password])
+      repo = client.commits(@address, "master")
       out = "<ul>"
       for i in 0 ... [repo.size, 5].min
         out = out + "<li>" +
