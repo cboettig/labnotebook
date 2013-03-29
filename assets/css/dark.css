@@ -6286,6 +6286,10 @@ h3.notebook-category {
 .highlight code {
   font-size: 13px;
 }
+/* Project-credits */
+border-left {
+  border-left: 1px solid #073642;
+}
 /* Sidebar
 -------------------------------------------------- */
 .sidebar {
