@@ -6287,8 +6287,10 @@ h3.notebook-category {
   font-size: 13px;
 }
 /* Project-credits */
-border-left {
-  border-left: 1px solid #073642;
+.borderleft {
+  border-left: 2px solid #073642;
+  margin-left: 2px;
+  padding: 2px;
 }
 /* Sidebar
 -------------------------------------------------- */
