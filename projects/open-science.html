@@ -1,0 +1,72 @@
+---
+title: My experiments with open science 
+layout: page
+published: false
+---
+
+{% capture project %}open-science{% endcapture %}
+
+<div class="row">
+  <div class="span7">
+    <h2> Abstract </h2>
+    <!-- Pull Readme and parse Abstract with Nokogiri? -->
+    This tag unites several projects.  
+
+    </div>
+
+    <div class="span4 sidebar">
+    <h3> Collaborators </h3>
+    <ul>
+      <li>  </li>
+    </ul>
+
+    <h3> Funding and Support/Affiliation </h3>
+    <ul>
+      <li> </li>
+    </ul>
+    </div>
+</div>
+
+<!-- add icons to title text -->  
+
+<hr>
+
+<div class="row">
+  <div calss="span12">
+    <div class="span4">
+      <h4><a href="https://github.com/cboettig/labnotebook" style="color:#6c71c4;"><i class="icon-github"></i> Recent Commits</a> </h4>
+      {% octokit_commits labnotebook%}
+    </div>
+    <div class="span4">
+      <h4><a href="https://github.com/cboettig/labnotebook/issues" style="color:#d33682;"> <i class="icon-list"></i> Active Issues / Next Steps</a> </h4>
+      {% octokit_issues labnotebook%}
+    </div>
+    <div class="span4">
+      <h4><a href="" style="color:#dc322f;"> <i class="icon-bookmark" ></i> Reading</a> </h4>
+      {% mendeley_feed 530031/future-of-science, 4 %}
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div calss="span12">
+    <div class="span4">
+      <h4> <a href="/vita.html" style="color:#2aa198;"><i class="icon-book"></i> Publications</a> </h4>
+     </div>
+     <div class="span4">
+      <h4> <a href="/tags.html#{{ project }}" style="color:#b58900;"><i class="icon-tags" ></i>Tagged notebook entries</a> </h4>
+        {% for post in site.tags.open-science limit:8 %}
+        <p> <a href="{{ post.url }}">{{ post.title }}</a> 
+    <span style="font-style:italic"> {{ post.date | date_to_string }}</span></p>
+        {% endfor %}
+    </div>
+    <div class="span4">
+      <h4> Data sets </h4>
+    </div>
+  </div>
+</div>
+
+
+

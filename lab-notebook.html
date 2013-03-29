@@ -2,79 +2,75 @@
 title: Lab Notebook 
 subtitle: (<a href="http://www.carlboettiger.info/2012/09/28/Welcome-to-my-lab-notebook.html">Introduction</a>)
 redirects: [/research/lab-notebook, /wordpress/research/lab-notebook]
-layout: html5
+layout: page
 
 ---
 
 
-{% include header.html %}
+<div class="row feed">
+  <div class="span3 offset1">
+    <h4>  <a property="account" href="https://github.com/{{site.author.github}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><i class="icon-github" alt="github"></i> Coding </a></h4> 
+     <div class="excerpt">
+        {% github_feed cboettig, 5 %}
+    </div>
+  </div>
+  <div class="span3">
+    <h4> <a property="account" href="https://twitter.com/{{site.author.twitter}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><i class="icon-twitter"></i> Discussing </a></h4> 
+     <div class="excerpt">
+       {% twitter_feed cboettig, 5 %}
+    </div> 
+  </div> 
+  <div class="span3">
+    <h4> <a href="http://www.mendeley.com/groups/634301/theoretical-ecology/papers/" onClick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); return false;"><i class="icon-book"></i> Reading </a></h4> 
+    <div class="excerpt">
+      {% mendeley_feed 634301/theoretical-ecology, 4 %}
+    </div>
+  </div> 
+</div>
 
-    <div class="row feed">
-      <div class="span3 offset1">
-        <h4>  <a property="account" href="https://github.com/{{site.author.github}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><i class="icon-github" alt="github"></i> Coding </a></h4> 
-         <div class="excerpt">
-            {% github_feed cboettig, 5 %}
+<hr>
+<div class="row postpreview">
+  <div class="span11 offset1">
+    <div class="row">
+      <h4> <a href="{{ site.url }}/atom.xml"
+              onClick="recordOutboundLink(this,
+              'Outbound Links', 'RSS'); return false;"
+              style="color: inherit;"
+              ><i class="icon-rss" ></i> Entries</a></h4>
+      {% for post in site.posts limit:3 %}
+        <div class="span3">
+          {% include postexcerpt.html %}
         </div>
-      </div>
-      <div class="span3">
-        <h4> <a property="account" href="https://twitter.com/{{site.author.twitter}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><i class="icon-twitter"></i> Discussing </a></h4> 
-         <div class="excerpt">
-           {% twitter_feed cboettig, 5 %}
-        </div> 
-      </div> 
-      <div class="span3">
-        <h4> <a href="http://www.mendeley.com/groups/634301/theoretical-ecology/papers/" onClick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); return false;"><i class="icon-book"></i> Reading </a></h4> 
-        <div class="excerpt">
-          {% mendeley_feed 634301/theoretical-ecology, 4 %}
-        </div>
-      </div> 
+      {% endfor %}
     </div>
 
-    <hr>
-    <div class="row postpreview">
-      <div class="span11 offset1">
-        <div class="row">
-          <h4> <a href="{{ site.url }}/atom.xml"
-                  onClick="recordOutboundLink(this,
-                  'Outbound Links', 'RSS'); return false;"
-                  style="color: inherit;"
-                  ><i class="icon-rss" ></i> Entries</a></h4>
-          {% for post in site.posts limit:3 %}
-            <div class="span3">
-              {% include postexcerpt.html %}
-            </div>
-          {% endfor %}
+    <div class="row">
+      {% for post in site.posts limit:3 offset:3 %}
+        <div class="span3">
+          {% include postexcerpt.html %}
         </div>
-
-        <div class="row">
-          {% for post in site.posts limit:3 offset:3 %}
-            <div class="span3">
-              {% include postexcerpt.html %}
-            </div>
-          {% endfor %}
-        </div>
-
-        <div class="row">
-          {% for post in site.posts limit:3 offset:6 %}
-            <div class="span3">
-              {% include postexcerpt.html %}
-            </div>
-          {% endfor %}
-        </div>
-
-      </div>
-    </div> <!--end row -->
+      {% endfor %}
+    </div>
 
     <div class="row">
-      <div class="span11 offset1">
-        <div class="socialicons">
-          <p> <a href="/archive.html"><i class="icon-calendar"></i> All entries by date</a></p> 
-          <p> <a href="/categories.html"><i class="icon-list"></i> All entries by category</a> </p>
-          <p> <a href="/tags.html"><i class="icon-tags"></i> All entries by tag</a> </p>
+      {% for post in site.posts limit:3 offset:6 %}
+        <div class="span3">
+          {% include postexcerpt.html %}
         </div>
-      </div> <!--end span9 -->
-    </div> <!--end row -->
+      {% endfor %}
+    </div>
 
-{% include footer.html %}
-{% include javascript.html %}
-{% include analytics.html %}
+  </div>
+</div> <!--end row -->
+
+<div class="row">
+  <div class="span11 offset1">
+    <div class="socialicons">
+      <p> <a href="/archive.html"><i class="icon-calendar"></i> All entries by date</a></p> 
+      <p> <a href="/categories.html"><i class="icon-list"></i> All entries by category</a> </p>
+      <p> <a href="/tags.html"><i class="icon-tags"></i> All entries by tag</a> </p>
+    </div>
+  </div> <!--end span9 -->
+</div> <!--end row -->
+
+
