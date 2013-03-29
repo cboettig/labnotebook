@@ -8,17 +8,34 @@ layout: page
   <div class="span2">
 <ul class="nav nav-list">
 <li class="nav-header">Active Projects</li>
-<li><a href="/projects/nonparametric-bayes">Nonparametric Bayes</a></li>
-<li><a href="/projects/multiple-uncertainty">Multiple Uncertainty</a></li>
-<li><a href="/projects/warning-signals">Early Warning Signals</a></li>
-<li><a href="/projects/open-science">Open Science</a></li>
-<li><a href="/projects/ropensci">ropensci</a></li>
-<li class="nav-header">Earlier Projects</li> 
-<li><a href="/projects/adaptive-dynamics">Adaptive Dynamics</a></li>
-<li><a href="/projects/phylogenetics">Phylogenetics</a></li>
+<li 
+  {% if page.url == '/projects/nonparametric-bayes.html' %} 
+    class="active" 
+  {% endif %} ><a href="/projects/nonparametric-bayes.html">Nonparametric Bayes</a></li>
+<li {% if page.url == '/projects/multiple-uncertainty.html' %} 
+    class="active" 
+  {% endif %} ><a href="/projects/multiple-uncertainty.html">Multiple Uncertainty</a></li>
+<li {% if page.url == '/projects/warning-signals.html' %} 
+    class="active" 
+  {% endif %} ><a href="/projects/warning-signals.html">Early Warning Signals</a></li>
+<li  {% if page.url == '/projects/open-science.html' %} 
+    class="active" 
+  {% endif %}><a href="/projects/open-science.html">Open Science</a></li>
+<li  {% if page.url == '/projects/ropensci.html' %} 
+    class="active" 
+  {% endif %}><a href="/projects/ropensci.html">ropensci</a></li>
+<li  class="nav-header">Earlier Projects</li> 
+<li  {% if page.url == '/projects/adaptive-dynamics.html' %} 
+    class="active" 
+  {% endif %}><a href="/projects/adaptive-dynamics.html">Adaptive Dynamics</a></li>
+<li  {% if page.url == '/projects/phylogenetics.html' %} 
+    class="active" 
+  {% endif %}><a href="/projects/phylogenetics.html">Phylogenetics</a></li>
 </ul>
   </div>
   <div class="span10">
+    <div class="borderleft">
     {{ content }}
+    </div>
   </div>
 </div>

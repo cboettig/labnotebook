@@ -1,18 +1,18 @@
 ---
-title: Early Warning for warning-signals of ecological regime shifts  
-layout: page
+title: Early warning for warning-signals of ecological regime shifts  
+layout: project
 ---
 
 {% capture project %}warning-signals{% endcapture %}
 
 <div class="row">
-  <div class="span7">
+  <div class="span6">
     <h2> Abstract </h2>
     <!-- Pull Readme and parse Abstract with Nokogiri? -->
     
     </div>
 
-    <div class="span4 sidebar">
+    <div class="span3 sidebar">
     <h3> Collaborators </h3>
     <ul>
       <li> Alan Hastings </li>
@@ -32,16 +32,16 @@ layout: page
 <hr>
 
 <div class="row">
-  <div calss="span12">
-    <div class="span4">
+  <div calss="span10">
+    <div class="span3">
       <h4><a href="https://github.com/cboettig/{{ project }}" style="color:#6c71c4;"><i class="icon-github"></i> Recent Commits</a> </h4>
       {% octokit_commits earlywarning%}
     </div>
-    <div class="span4">
+    <div class="span3">
       <h4><a href="https://github.com/cboettig/{{ project }}/issues" style="color:#d33682;"> <i class="icon-list"></i> Active Issues / Next Steps</a> </h4>
       {% octokit_issues earlywarning%}
     </div>
-    <div class="span4">
+    <div class="span3">
       <h4><a href="" style="color:#dc322f;"> <i class="icon-bookmark" ></i> Reading</a> </h4>
       {% mendeley_feed 530001/early-warning-signs, 4 %}
     </div>
@@ -51,8 +51,8 @@ layout: page
 <hr>
 
 <div class="row">
-  <div calss="span12">
-    <div class="span4">
+  <div calss="span10">
+    <div class="span3">
       <h4> <a href="/vita.html" style="color:#2aa198;"><i class="icon-book"></i> Publications</a> </h4>
 
 <ol prefix="datacite: http://purl.org/spar/datacite/">
@@ -67,14 +67,14 @@ layout: page
 </ol>
 
      </div>
-     <div class="span4">
+     <div class="span3">
       <h4> <a href="/tags.html#{{ project }}" style="color:#b58900;"><i class="icon-tags" ></i>Tagged notebook entries</a> </h4>
         {% for post in site.tags.warning-signals limit:8 %}
         <p> <a href="{{ post.url }}">{{ post.title }}</a> 
     <span style="font-style:italic"> {{ post.date | date_to_string }}</span></p>
         {% endfor %}
     </div>
-    <div class="span4">
+    <div class="span3">
       <h4> Data sets </h4>
     </div>
   </div>
