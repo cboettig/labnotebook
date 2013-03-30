@@ -34,9 +34,12 @@ layout: project
 <div class="row">
   <div calss="span10">
     <div class="span3">
-      <h4><a href="https://github.com/cboettig/{{ project }}" style="color:#6c71c4;"><i class="icon-github"></i> Recent Commits</a> </h4>
-      {% octokit_commits earlywarning%}
-    </div>
+       <h4> <a href="/tags.html#{{ project }}" style="color:#b58900;"><i class="icon-tags" ></i>Tagged notebook entries</a> </h4>
+        {% for post in site.tags.warning-signals limit:8 %}
+          <p> <a href="{{ post.url }}">{{ post.title }}</a> 
+          <span style="font-style:italic"> {{ post.date | date_to_string }}</span></p>
+        {% endfor %}
+   </div>
     <div class="span3">
       <h4><a href="https://github.com/cboettig/{{ project }}/issues" style="color:#d33682;"> <i class="icon-list"></i> Active Issues / Next Steps</a> </h4>
       {% octokit_issues earlywarning%}
@@ -68,11 +71,8 @@ layout: project
 
      </div>
      <div class="span3">
-      <h4> <a href="/tags.html#{{ project }}" style="color:#b58900;"><i class="icon-tags" ></i>Tagged notebook entries</a> </h4>
-        {% for post in site.tags.warning-signals limit:8 %}
-        <p> <a href="{{ post.url }}">{{ post.title }}</a> 
-    <span style="font-style:italic"> {{ post.date | date_to_string }}</span></p>
-        {% endfor %}
+      <h4><a href="https://github.com/cboettig/{{ project }}" style="color:#6c71c4;"><i class="icon-github"></i> Recent Commits</a> </h4>
+      {% octokit_commits earlywarning%}
     </div>
     <div class="span3">
       <h4> Data sets </h4>
