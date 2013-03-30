@@ -31,7 +31,7 @@ module Jekyll
       #  repo = Octokit.issues(@address, :status => "closed") # (Gets closed issues??)
       # Generate a list of all open issues, linking to github issue page.  
       out = "<ul>"
-      for i in 0 ... [repo.size, 5].min ## displays up to 5.  sorted by date?
+      for i in 0 ... [repo.size, 8].min ## displays up to 5.  sorted by date?
         lab = ""
         if repo[i].labels[0].class == Hashie::Mash  # Get labels for issues, with color, where applicable 
           lab = " (<font color=\"#" + repo[i].labels[0].color + 
@@ -74,7 +74,7 @@ module Jekyll
       client = Octokit::Client.new(:login => cred[:username], :password => cred[:password])
       repo = client.commits(@address, "master")
       out = "<ul>"
-      for i in 0 ... [repo.size, 5].min
+      for i in 0 ... [repo.size, 8].min
         out = out + "<li>" +
           repo[i].commit.message + " " + 
           "<a href=\"" +
