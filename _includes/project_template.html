@@ -1,0 +1,53 @@
+<!-- Must not involve indentation (of 4 or more spaces) if template is to be pulled into markdown files! -->
+<div class="row">
+<div class="span10">
+<div class="span6">
+<h2> Abstract </h2>
+{{ page.abstract }}
+</div>
+<div class="span3">
+<div class="borderleft">
+<h3> Collaborators </h3>
+{{ project_collaborators }}
+<h3> Funding and Support/Affiliation </h3>
+{{ project_funding }} 
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="row">
+<div calss="span10">
+<div class="span3">
+<h4> <a href="/tags.html#{{ page.tag }}" style="color:#b58900;"><i class="icon-tags" ></i>Tagged notebook entries</a> </h4>
+{{ project_entries }}
+</div>
+<div class="span3">
+<h4><a href="https://github.com/cboettig/{{ page.github }}/issues" style="color:#d33682;"> <i class="icon-list"></i> Active Issues / Next Steps</a> </h4>
+{{ project_issues }}
+</div>
+<div class="span3">
+<h4><a href="" style="color:#dc322f;"> <i class="icon-bookmark" ></i> Reading</a> </h4>
+{{ project_feed }}
+</div>
+</div>
+<hr>
+<div class="row">
+<div calss="span10">
+<div class="span3">
+<h4> <a href="/vita.html" style="color:#2aa198;"><i class="icon-book"></i> Publications</a> </h4>
+{{ project_publications }} 
+</div>
+<div class="span3">
+  <h4><a href="https://github.com/cboettig/{{ page.github }}" style="color:#6c71c4;"><i class="icon-github"></i> Recent Commits</a> </h4>
+{{ project_commits }}
+</div>
+<div class="span3">
+<h4> Data sets </h4>
+{{ project_data }}
+</div>
+</div>
+</div>
+
+
+
