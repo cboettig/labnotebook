@@ -99,6 +99,11 @@ module Jekyll
       
         rawtext = self.posts[i].to_s.downcase
 
+
+        title = self.posts[i].slug.split('-').select {|w| w.capitalize! || w }.join(' ')
+        if title
+          rawtext << ' ' + title
+
         if self.posts[i].data['title']
           rawtext << ' ' + self.posts[i].data['title'].downcase
         end
