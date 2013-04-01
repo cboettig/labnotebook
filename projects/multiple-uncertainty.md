@@ -34,7 +34,7 @@ abstract: "This project is an exploration into measuring and comparing the value
 {% endfor %}
 {% endcapture %}
 
-{% capture project_data %}
+{% capture project_presentations %}
 
 {% endcapture %}
 

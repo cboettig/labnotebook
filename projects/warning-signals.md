@@ -3,7 +3,34 @@ title: Early warning for warning-signals of ecological regime shifts
 layout: project
 tag: warning-signals 
 github: earlywarning
-abstract:
+abstract: 
+|
+Can we predict the approach of a regime shift before it happens? Without
+having observed a transition it may be impossible to identify mechanistic
+models of the responsible processes.  Despite this limitation, we may find
+certain patterns typical of systems approaching a critical transition
+that could provide an early warning signal of a shift (Scheffer et
+al. 2009). This is both an exciting possibility and an immense challenge -
+even detailed models frequently fail to provide accurate forecasts when
+extrapolated beyond the range of the data. The highly nonlinear nature of
+regime shifts and the lack of data outside of the current regime makes
+this forecasting problem even more challenging. A potential indicator
+that is too general risks false positives that do not correspond to
+an approaching transition, while specific indicators may miss more
+transitions. I was recently able to quantify these probabilities of
+false alarms and missed detections and investigate the trade-off between
+these errors for proposed early warning indicators (Boettiger & Hastings
+2012). We further introduced a generic model-based indicator that can
+better minimize both errors at once.
+
+Better indicators and approaches that can synthesize large and diverse
+data streams may improve such forecasts, but predicting regime shifts will
+always be an uncertain business. We may at best quantify the probability
+that a regime shift will occur, a percent chance of a transition. How to
+we decide what actions to take in face of such valuable but incomplete
+information? These questions have spurred me to explore questions in
+optimal control and decision theory, which I am exploring during my
+post-doctoral work (see Nonparametric-Bayes and Multiple Uncertainty).
 
 ---
 
@@ -46,9 +73,19 @@ abstract:
 <li>Carl Boettiger and Alan Hastings (2012). <strong>Quantifying Limits to Detection of Early Warning for Critical Transitions</strong>, 2527-2539. <em>Journal of the Royal Society: Interface</em> 9 (75) <a rel="datacite:doi" href="http://dx.doi.org/10.1098/rsif.2012.0125">doi</a>:10.1098/rsif.2012.0125 (<a href="http://www.mendeley.com/download/public/98752/4711221423/df767d6b5f0fbf44cc236470307992b019e6c149/dl.pdf">pdf</a>) (<a href="http://arxiv.org/abs/1204.6231">arXiv</a>) (<a href="https://github.com/cboettig/earlywarning">code</a>)</li>
 <li> Carl Boettiger*, Noam Ross*, Alan Hastings.  <strong>Early warning signals: The charted and uncharted territories</strong>. (Submitted) </li>
 </ul>
+
+
 {% endcapture %}
 
 {% capture project_data %}
+
+</ul>
+<li>Carl Boettiger (2012) Ecological Society of America Conference, Portland, OR. (<a href="http://www.slideshare.net/cboettig/esa-2012-talk">slides</a>)</li>
+<li>Carl Boettiger (2012) Computational Science Graduate Fellows Conference, Washington DC.<br /> (<a href="http://www.youtube.com/watch?v=xwIIVdyKe4o">video recording</a>) (<a href="http://www.slideshare.net/cboettig/regime-shifts-in-ecology-and-evolution">slides</a>) (<a href="http://dx.doi.org/10.6084/m9.figshare.97279">doi</a>)</li>
+
+<li>Carl Boettiger &amp; Alan Hastings. (2011) Ecological Society of America Conference; Austin, TX. In <em>Nature Precedings</em> (<a href="http://dx.doi.org/10.1038/npre.2012.6857.1">doi</a>) (<a href="http://www.slideshare.net/cboettig/limits-to-detection-for-early-warning-signals-of-population-collapse">slides</a>)</li>
+
+</ul> 
 
 {% endcapture %}
 
