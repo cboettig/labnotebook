@@ -1,9 +1,9 @@
 ---
-title: Nonparametric Bayesian Inference for Conservation Decisions
+title: Non-parametric Bayesian Inference for Conservation Decisions
 layout: project
 tag: nonparametric-bayes 
 github: nonparametric-bayes
-abstract: Research in nonparametric Bayesian inference for improving ecosystem management under substantial structural uncertainty.
+abstract: Decision-theoretic methods often rely on simple parametric models of ecological dynamics to compare the value of a potential sequence of actions.  Unfortunately, such simple models rarely capture the complexity or uncertainty found in most real ecosystems.  Non-parametric Bayesian methods offer a promising statistical approach for predictive modeling of ecological dynamics in regions of state space where the data is adequate, while at the same time offering more flexible patterns with greater uncertainty outside the observed data.  This contrasts from simple parametric models which provide relatively constant level of uncertainty in regions with and without adequate data.  The consequence of such misplaced confidence outside the data can lead to highly undesirable results that may be avoided with the more flexible non-parametric Bayesian approach.  
 
 ---
 

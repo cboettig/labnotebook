@@ -34,15 +34,15 @@ abstract: "Research in stochastic effects in Adaptive Dynamics.  Adaptive Dynami
 
 {% capture project_entries %}
 {% for post in site.tags.adaptive-dynamics limit:8 %}
-<p> <a href="{{ post.url }}">{{ post.title }}</a> 
-<span style="font-style:italic"> {{ post.date | date_to_string }}</span></p>
+- <a href="{{ post.url }}">{{ post.title }}</a><span style="font-style:italic"> {{ post.date | date_to_string }}</span>
+
 {% endfor %}
 {% endcapture %}
 
 {% capture project_publications %}
 <ul>
 <li >Carl Boettiger, Jonathan Dushoff, Joshua S Weitz (2010) <strong>Fluctuation domains in adaptive evolution</strong>, 6-13. <em>Theoretical Population Biology</em> 77 (1). <a rel="datacite:doi" href="http://dx.doi.org/10.1016/j.tpb.2009.10.003">doi</a>:10.1016/j.tpb.2009.10.003 (<a href="http://www.mendeley.com/download/public/98752/3107791751/8b066644aca2e396fd5e120d563026c8d560dc77/dl.pdf">pdf</a>) (<a href="http://arxiv.org/abs/1004.4233">arXiv</a>) (<a href="https://github.com/cboettig/fluctuationDomains">code</a>) (<a href="http://datadryad.org/handle/10255/dryad.37625">data</a>)</li>
-<li>Carl Boettiger, Joshua Weitz, Simon Levin (2007) <strong>Adaptive Dynamics: Branching Phenomena and the Canonical Equation</strong> <em>Princeton Physics Dept</em>. <a href="http://www.mendeley.com/download/public/98752/3107796951/191a62cc7aca52feb33075b833ac13eba1ed9679/dl.pdf" title="Download file">Download PDF</a> (775.55 KB)</li>
+<li>Carl Boettiger, Joshua Weitz, Simon Levin (2007) <strong>Adaptive Dynamics: Branching Phenomena and the Canonical Equation</strong> <em>Princeton Physics Dept</em>. <a href="http://www.mendeley.com/download/public/98752/3107796951/191a62cc7aca52feb33075b833ac13eba1ed9679/dl.pdf" title="Download file">Download PDF</a></li>
 <li>Carl Boettiger. (2009) Presentation at the International Institute of Applied Systems Analysis, Vienna; Austria. In <em>Nature Precedings,</em> (<a href="http://dx.doi.org/10.1038/npre.2012.6852.1">doi</a>) (<a href="http://www.slideshare.net/cboettig/iiasa-final">slides</a>)</li>
 </ul>
 {% endcapture %}

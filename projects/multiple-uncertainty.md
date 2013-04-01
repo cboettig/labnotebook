@@ -29,10 +29,11 @@ abstract: "This project is an exploration into measuring and comparing the value
 {% endcapture %}
 {% capture project_entries %}
 {% for post in site.tags.multiple-uncertainty limit:8 %}
-<p> <a href="{{ post.url }}">{{ post.title }}</a> 
-<span style="font-style:italic"> {{ post.date | date_to_string }}</span></p>
+- <a href="{{ post.url }}">{{ post.title }}</a> <span style="font-style:italic"> {{ post.date | date_to_string }}</span>
+
 {% endfor %}
 {% endcapture %}
+
 {% capture project_data %}
 
 {% endcapture %}
