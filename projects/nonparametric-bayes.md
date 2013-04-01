@@ -44,7 +44,7 @@ abstract: Decision-theoretic methods often rely on simple parametric models of e
 {% capture project_publications %}
 
 {% endcapture %}
-{% capture project_data %}
+{% capture project_presentations %}
 
 {% endcapture %}
 
