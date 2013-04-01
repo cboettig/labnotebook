@@ -20,7 +20,7 @@ For planned extensions and work-in-progress, see [Issues](https://github.com/cbo
 
 Install the necessary gem dependencies first.  These dependencies mean that you'll have to compile/build the Jekyll site locally, as these are not available on the Jekyll version running automatically on Github.
 
-    sudo gem install octokit feedzirra nokogiri redcarpet2
+    sudo gem install octokit feedzirra nokogiri garb 
 
 To install the plugins simply put them in a folder named `_plugins` in your
 Jekyll blog's root directory.  
@@ -42,4 +42,7 @@ Add twitter feed for given user
 Add github feed
 
     {% github_feed %}
+
+
+
 

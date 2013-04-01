@@ -1,3 +1,10 @@
+# From https://github.com/slashdotdash/jekyll-lunr-js-search
+# Author: Ben Smith, @slashdotdash
+# Configuration: See https://github.com/slashdotdash/jekyll-lunr-js-search/blob/master/README.md 
+# 
+
+
+
 require 'rubygems'
 require 'json'
 
