@@ -110,7 +110,7 @@ Plugins are provided in the site source, so cloning this repository will give yo
 * [redirects](https://github.com/pelosi/marran.com/blob/master/_plugins/redirects.rb) (page redirects)
 * [tag-cloud](https://gist.github.com/2290195)  
 * [generate_searchindex](https://github.com/cboettig/labnotebook/blob/master/_plugins/generate_searchindex.rb) Generate database for a fast stemming-based search algorithm (see javascript as well).  Customized from [Marran 2012](http://www.marran.com/tech/jquery-full-text-indexing-on-jekyll/). My current site search tool.  
-* [jekyll-lunr-search](https://github.com/cboettig/labnotebook/blob/master/_plugins/jekyll_lunr_js_search.rb) Generate database for a high quality but slow javascript-based search. 
+* [jekyll-lunr-search](https://github.com/cboettig/labnotebook/blob/master/_plugins/jekyll_lunr_js_search.rb) Generate database for a high quality but slow javascript-based search.  
 
 Additional Notes
 ----------------
