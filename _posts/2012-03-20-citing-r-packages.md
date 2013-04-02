@@ -9,7 +9,7 @@ categories:
 - open-science
 tags:
 - R
--blog
+- blog
 
 ---
 

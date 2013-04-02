@@ -55,7 +55,7 @@ post-doctoral work (see Nonparametric-Bayes and Multiple Uncertainty).
 {% endcapture %}
 
 {% capture project_commits %}
-{% octokit_issues earlywarning%}
+{% octokit_commits earlywarning%}
 {% endcapture %}
 
 {% capture project_feed %}
@@ -81,7 +81,7 @@ post-doctoral work (see Nonparametric-Bayes and Multiple Uncertainty).
 
 {% endcapture %}
 
-{% capture project_data %}
+{% capture project_presentations %}
 
 </ul>
 <li>Carl Boettiger (2012) Ecological Society of America Conference, Portland, OR. (<a href="http://www.slideshare.net/cboettig/esa-2012-talk">slides</a>)</li>
