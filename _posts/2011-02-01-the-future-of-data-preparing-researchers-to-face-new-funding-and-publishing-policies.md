@@ -9,32 +9,28 @@ categories:
 - open-science
 tags:
 - seminar
+- blog
+
 ---
 
-I have been working with several of the faculty of UC Davis to prepare a workshop for our department to (1) help make our researchers **aware** of the new requirements for NSF proposals and journal submissions with regard to data archiving, (2) To explore what new** ** **opportunities** this creates and what **tools **exist that will help our researchers take maximum advantage of it, and (3) to engage our research community in the discussion of **future standards **for sharing, standardizing, rewarding and funding the archiving of data.
+I have been working with several of the faculty of UC Davis to prepare a
+workshop for our department to (1) help make our researchers **aware**
+of the new requirements for NSF proposals and journal submissions with
+regard to data archiving, (2) To explore what **new opportunities**
+this creates and what **tools** exist that will help our researchers
+take maximum advantage of it, and (3) to engage our research community
+in the discussion of **future standards** for sharing, standardizing,
+rewarding and funding the archiving of data.
 
 I'm very pleased that we have an excellent panel of supportive faculty:
 
-
-
 	
-  * [Don Strong](http://strong.ucdavis.edu/), Editor-in-Chief of **Ecology**
-
-	
-  * [Marcel Holyoak](http://www.des.ucdavis.edu/faculty/holyoak/), Editor-in-Chief, **Ecology Letters
-**
-
-	
-  * [Jonathan Eisen,](http://phylogenomics.blogspot.com) Editor-in-Chief, **PLoS Biology**
-
-	
-  * [Alan Hastings](http://two.ucdavis.edu/~me/), founding Editor-in-Chief, **Theoretical Ecology**
-
-	
-  * [Robert Hijmans](http://www.des.ucdavis.edu/FacultyInfo.aspx?ID_Number=83), Asst Professor of Environmental Science & Policy and expert in software infrastructure for reproducible research.
-
-	
-  * [Trisha Cruse](http://www.cdlib.org/cdlinfo/2010/05/19/patricia-cruse-digital-preservation-pioneer/) Director of UC Curation Center at the University of California Digital Library
+* [Don Strong](http://strong.ucdavis.edu/), Editor-in-Chief of **Ecology**
+* [Marcel Holyoak](http://www.des.ucdavis.edu/faculty/holyoak/), Editor-in-Chief, **Ecology Letters**
+* [Jonathan Eisen,](http://phylogenomics.blogspot.com) Editor-in-Chief, **PLoS Biology**
+* [Alan Hastings](http://two.ucdavis.edu/~me/), founding Editor-in-Chief, **Theoretical Ecology**
+* [Robert Hijmans](http://www.des.ucdavis.edu/FacultyInfo.aspx?ID_Number=83), Asst Professor of Environmental Science & Policy and expert in software infrastructure for reproducible research.
+* [Trisha Cruse](http://www.cdlib.org/cdlinfo/2010/05/19/patricia-cruse-digital-preservation-pioneer/) Director of UC Curation Center at the University of California Digital Library
 
 
 We are currently working out the format of the workshop.  The current draft consists of three 1.5hr sessions, progressing through the three main goals above in an interactive format.
@@ -43,106 +39,46 @@ We are currently working out the format of the workshop.  The current draft con
 ### 1) Why Archive?
 
 
-
-
 ##### (Weds March 2nd 2:30-4p, LSA 1022)
 
-
-
-
-
-	
-  * New [requirements from funders](http://www.cdlib.org/services/uc3/datamanagement/funding.html) and publishers.
-
-	
-  * Recommended practice: What's ideal, what's  acceptable, what isn't?
-
-	
-  * Types/levels of archiving.  Why repositories?
-
-	
-  * Funding data repositories.
-
-	
-  * Access embargoes.  Citing data/getting credit.
-
-	
-  * Panel Q&A
+* New [requirements from funders](http://www.cdlib.org/services/uc3/datamanagement/funding.html) and publishers.
+* Recommended practice: What's ideal, what's  acceptable, what isn't?
+* Types/levels of archiving.  Why repositories?
+* Funding data repositories.
+* Access embargoes.  Citing data/getting credit.
+* Panel Q&A
 
 
 
 
 ### 2) Leveraging data archives: logistics
 
-
-
-
 ##### (Thurs March 3nd 2:30-4p, PES 3001)
 
 
-
-
-
-	
-  * The major repositories.
-
-	
-  * Discovering data.
-
-	
-  * Citing data.  Metadata,  DOIs, formats, persistent data
-
-	
-  * Sharing/archiving code?
-
-	
-  * Linked data, ontologies  & Semantic web.
-
-	
-  * Tools for reproducible research.
-
-	
-  * Panel Q&A
-
-
+* The major repositories.
+* Discovering data.
+* Citing data.  Metadata,  DOIs, formats, persistent data
+* Sharing/archiving code?
+* Linked data, ontologies  & Semantic web.
+* Tools for reproducible research.
+* Panel Q&A
 
 
 ### 3) Looking ahead: new scale, new science?
 
 
-
-
 ##### (Fri March 4nd 2:30-4p, PES 3001)
 
 
-
-
-
-	
-  * Challenges and Opportunities (_i.e._ [_Science_ issue](http://www.sciencemag.org/content/331/6018/692.short),[ _Science_ re: Ecology](http://www.sciencemag.org/content/331/6018/703.short))
-
-	
-  * Integrated databases, standards for data
-
-	
-  * Dryad "publication model" vs DataONE model, etc
-
-	
-  * Reproducible research
-
-	
-  * UC3's "data publication" concept?
-
-	
-  * Future of credit: Will you be scooped or will you be famous?
-
-	
-  * What roll we can/should have in shaping future standards, expectations & requirements
-
-	
-  * Panel Q&A
-
-
+* Challenges and Opportunities (_i.e._ [_Science_ issue](http://www.sciencemag.org/content/331/6018/692.short),[ _Science_ re: Ecology](http://www.sciencemag.org/content/331/6018/703.short))
+* Integrated databases, standards for data
+* Dryad "publication model" vs DataONE model, etc
+* Reproducible research
+* UC3's "data publication" concept?
+* Future of credit: Will you be scooped or will you be famous?
+* What roll we can/should have in shaping future standards, expectations & requirements
+* Panel Q&A
 
 
 ## Resources
@@ -155,17 +91,17 @@ See the recent discussion of these issues in [Science](http://www.sciencemag.org
 
 
 
-	
-  * [Depositing Data](http://www.datadryad.org/depositing)
 
-	
-  * [Using Data](http://www.datadryad.org/using)
+* [Depositing Data](http://www.datadryad.org/depositing)
 
-	
-  * [Dryad Partners (Publishers)](http://www.datadryad.org/partners)
 
-	
-  * [Archiving Policy](http://www.datadryad.org/jdap)
+* [Using Data](http://www.datadryad.org/using)
+
+
+* [Dryad Partners (Publishers)](http://www.datadryad.org/partners)
+
+
+* [Archiving Policy](http://www.datadryad.org/jdap)
 
 
 
@@ -175,8 +111,8 @@ Some great information also available from UC3:
 
 
 
-	
-  * [UC3 Data  Management Guidelines.](http://www.cdlib.org/services/uc3/datamanagement) In addition to summarizing the requirements, UC3 is also developing a "TurboTax" tool for data management:
+
+* [UC3 Data  Management Guidelines.](http://www.cdlib.org/services/uc3/datamanagement) In addition to summarizing the requirements, UC3 is also developing a "TurboTax" tool for data management:
 
 
 
@@ -187,16 +123,16 @@ Some great information also available from UC3:
 
 
 
-	
-  * [Merritt Repository services](http://merritt.cdlib.org/),  launched  in late summer 2010.
 
-	
-  * [EZID Identifier services](http://www.cdlib.org/services/uc3/ezid/):   obtain and manage long-term  identifiers (DOI, ARK) for their digital content.  Can assign identifiers to  anything: scientific datasets, technical reports, audio files, digital  photographs, and non-digital objects as well.  This spring the objects with DOIs  will appear in Web of Science. (Annual charge unlimited number of DOIs: $75/user, $375/group, or $1,125 for whole university)
+* [Merritt Repository services](http://merritt.cdlib.org/),  launched  in late summer 2010.
 
 
+* [EZID Identifier services](http://www.cdlib.org/services/uc3/ezid/):   obtain and manage long-term  identifiers (DOI, ARK) for their digital content.  Can assign identifiers to  anything: scientific datasets, technical reports, audio files, digital  photographs, and non-digital objects as well.  This spring the objects with DOIs  will appear in Web of Science. (Annual charge unlimited number of DOIs: $75/user, $375/group, or $1,125 for whole university)
 
-	
-  * Consultation  services: Individual consultation, also more workshops  on data citation, data sharing, and data rights this Fall.
+
+
+
+* Consultation  services: Individual consultation, also more workshops  on data citation, data sharing, and data rights this Fall.
 
 
 

@@ -4,6 +4,7 @@ category: open-science
 tags: 
 - semantics
 - knitcitations
+- blog
 
 ---
 

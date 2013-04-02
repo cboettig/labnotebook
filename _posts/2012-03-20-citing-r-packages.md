@@ -9,6 +9,8 @@ categories:
 - open-science
 tags:
 - R
+-blog
+
 ---
 
 I'm not always careful in citing all the R packages I use.  R actually has some rather nice built-in mechanisms to support this, so I really have no excuse.  Here's some quick examples:

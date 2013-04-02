@@ -5,6 +5,7 @@ category: open-science
 tags: 
 - notebook-technology
 - Jekyll 
+- blog
 
 ---
 

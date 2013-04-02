@@ -7,22 +7,17 @@ title: Data Mangement on UC3 Merritt Repository
 redirects: [/wordpress/archives/1019, /archives/1019]
 categories:
 - open-science
+tags: 
+- blog
 ---
 
 I've been trying to learn a little more about the potential for data management solutions through the [UC3 Merritt repository](http://www.cdlib.org/services/uc3/merritt/index.html),  and decide how this compares to commercial alternatives such as Amazon  S3, Picasa/Flickr (obviously for images only), and field-specific and  publication specific repositories such as Dryad.  Merritt email support  have been very helpful in answering my questions and concerns.
 
 
-
 	
-  * **Persistence**:  of the data itself, of the  URLs & object  identifiers, of access to the data?  Not surprisingly they have  standard redundancy backup procedures for archival standards in place.
-
-	
-  * **Object identifiers**:  UC3 also provides DOIs for objects  which can be purchased independently of archiving in the Merritt  repository and are indexed in Web of Science.
-
-
-
-	
-  * **Cost and pricing structure**: $1040/Tb/year, prorated for how much storage you actually use.  No charge for upload/download, unlike S3.  [EZID](http://www.cdlib.org/services/uc3/ezid/index.html) for DOIs are separate charge:  Annual charge unlimited number of DOIs: $75/user, $375/group, or $1,125 for whole university
+* **Persistence**:  of the data itself, of the  URLs & object  identifiers, of access to the data?  Not surprisingly they have  standard redundancy backup procedures for archival standards in place.
+* **Object identifiers**:  UC3 also provides DOIs for objects  which can be purchased independently of archiving in the Merritt  repository and are indexed in Web of Science.
+* **Cost and pricing structure**: $1040/Tb/year, prorated for how much storage you actually use.  No charge for upload/download, unlike S3.  [EZID](http://www.cdlib.org/services/uc3/ezid/index.html) for DOIs are separate charge:  Annual charge unlimited number of DOIs: $75/user, $375/group, or $1,125 for whole university
 
 
 **The Good:** An institutional repository seems like a safer bet   than an Internet business, even if it's as large as Amazon or Google.    After all, the UC's have been around a lot longer.

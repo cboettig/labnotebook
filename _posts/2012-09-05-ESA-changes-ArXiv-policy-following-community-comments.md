@@ -1,7 +1,9 @@
 ---
 layout: post
 category: open-science
-tags: open-science 
+tags: 
+- open-science 
+- blog
 
 ---
 

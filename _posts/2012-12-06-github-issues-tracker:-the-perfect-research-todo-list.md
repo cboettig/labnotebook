@@ -1,7 +1,9 @@
 ---
 layout: post
 category: open-science
-tag: notebook-technology
+tags:
+- notebook-technology
+- blog
 
 ---
 

@@ -1,7 +1,10 @@
 ---
 layout: post
 categories: open-science
-tags: [notebook-technology, semantics]
+tags: 
+- notebook-technology
+- semantics
+- blog
 
 ---
 

@@ -7,6 +7,8 @@ title: Journey to freedom - a code's tale of open source license migration
 redirects: [/wordpress/archives/3765, /archives/3765]
 categories:
 - open-science
+tags: 
+- blog
 ---
 
 My software wants to be free. It wants to be seen and used and loved by as many people as possible. When first it heard of open source licenses, it set sail to join the company of great software in the promised land, but finding true freedom has been a tortured journey.

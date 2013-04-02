@@ -4,7 +4,7 @@ categories: open-science
 tags: 
 - notebook-technology
 - Jekyll
-
+- blog
 ---
 
 Thanks to a recent bugfix in the [exitwp](https://github.com/thomasf/exitwp) scripts I was able to export all my Wordpress entries.  The script pulls the entries from the Wordpress database and formats them in markdown, along with extracting all metadata such as timestamp, tags, categories, publication status, and Wordpress id number, which are all embedded as YAML header information.  

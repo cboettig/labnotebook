@@ -7,6 +7,8 @@ title: Thoughts on the New Policies for Data Archiving at NSF and in Common Jour
 redirects: [/wordpress/archives/502, /archives/502]
 categories:
 - open-science
+tags:
+- blog
 ---
 
 This post is a work in progress, a scratch pad for me to start assembling what I've been learning about and resources pertaining to the new policies emerging from NSF and journals relevant to ecology and evolution.  Hoping to highlight not only the policies, but the issues, opportunities, and concerns around them.

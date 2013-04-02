@@ -9,6 +9,7 @@ categories:
 - open-science
 tags:
 - R
+- blog
 ---
 
 I have recently modified the basic workflow of my lab notebook since discovering [knitr](http://yihui.name/knitr/). Before, I would write code files which I could track on [github](https://github.com), push figures created by the code to flickr, and then write a notebook entry on wordpress describing what I was doing. I'd embed each figure I wanted into the entry, and each figure got an automatic link to github for the script that created it (which usually worked, though it didn't say where in the script the command came from, and it required manually specifying the script name).
