@@ -3,7 +3,11 @@
 <div class="span10">
 <div class="span6">
 <h2> Abstract </h2>
+{% if project_abstract %}
+{{ project_abstract }}
+{% elsif page.abstract %}
 {{ page.abstract }}
+{% endif %}
 </div>
 <div class="span3">
 <div class="borderleft">
@@ -27,7 +31,7 @@
 {{ project_entries }}
 </div>
 <div class="span3">
-<h4><a href="" style="color:#dc322f;"> <i class="icon-bookmark" ></i> Reading</a> </h4>
+<h4><a href="{{ reading_list }} " style="color:#dc322f;"> <i class="icon-bookmark" ></i> Reading</a> </h4>
 {{ project_feed }}
 </div>
 </div>
@@ -43,7 +47,7 @@
 {{ project_issues }}
 </div>
 <div class="span3">
-<h4 style="style=color:#cb4b16;"> <i class="icon-bar-chart"></i> Presentations &amp; other resources </h4>
+  <h4> <a href="/vita.html" style="style=color:#cb4b16;"><i class="icon-bar-chart"></i> Slides, etc </a></h4>
 {{ project_presentations }}
 </div>
 </div>
