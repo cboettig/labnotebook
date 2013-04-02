@@ -3,8 +3,11 @@ title: Early warning for warning-signals of ecological regime shifts
 layout: project
 tag: warning-signals 
 github: earlywarning
-abstract: 
-|
+
+---
+
+{% capture project_abstract %} 
+
 Can we predict the approach of a regime shift before it happens? Without
 having observed a transition it may be impossible to identify mechanistic
 models of the responsible processes.  Despite this limitation, we may find
@@ -32,7 +35,7 @@ information? These questions have spurred me to explore questions in
 optimal control and decision theory, which I am exploring during my
 post-doctoral work (see Nonparametric-Bayes and Multiple Uncertainty).
 
----
+{% endcapture %} 
 
 {% capture project_collaborators %}
 - Alan Hastings 
@@ -58,6 +61,7 @@ post-doctoral work (see Nonparametric-Bayes and Multiple Uncertainty).
 {% capture project_feed %}
 {% mendeley_feed 530001/early-warning-signs, 4 %}
 {% endcapture %}
+{% capture reading_list %}http://mendeley.com/groups/530001/early-warning-signs/papers{% endcapture %}
 
 {% capture project_entries %}
 {% for post in site.tags.warning-signals limit:8 %}

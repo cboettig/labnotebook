@@ -21,12 +21,16 @@ abstract: "This project is an exploration into measuring and comparing the value
 {% capture project_issues %}
 {% octokit_issues multiple_uncertainty%}
 {% endcapture %}
+
 {% capture project_commits %}
 {% octokit_commits multiple_uncertainty%}
 {% endcapture %}
+
 {% capture project_feed %}
 {% mendeley_feed 634301/theoretical-ecology, 4 %}
 {% endcapture %}
+{% capture reading_list %}http://mendeley.com/groups/634301/theoretical-ecology/papers{% endcapture %}
+
 {% capture project_entries %}
 {% for post in site.tags.multiple-uncertainty limit:8 %}
 - <a href="{{ post.url }}">{{ post.title }}</a> <span style="font-style:italic"> {{ post.date | date_to_string }}</span>
@@ -37,6 +41,7 @@ abstract: "This project is an exploration into measuring and comparing the value
 {% capture project_presentations %}
 
 {% endcapture %}
+
 
 
 {% include project_template.html %}

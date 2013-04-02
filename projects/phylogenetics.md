@@ -3,8 +3,11 @@ title: Comparative phylogenetic methods
 layout: project
 tag: Labrids 
 github: wrightscape
-abstract: 
-| 
+
+---
+
+{% capture project_abstract %}
+
 Evolutionary transitions that allow biodiversity to expand to a new
 habitat or new feeding niche punctuate the history of life on this
 planet. Can we identify when such shifts occurred, and find hints
@@ -40,7 +43,8 @@ the limits of information balances my development of richer models,
 ensuring that the complexity of the models not out-pace the complexity
 of the data available.
 
----
+{% endcapture %}
+
 
 {% capture project_collaborators %}
 - Peter Wainwright 
@@ -71,6 +75,7 @@ of the data available.
 {% capture project_feed %}
 {% mendeley_feed 529971/phylogenetic-methods, 3 %}
 {% endcapture %}
+{% capture reading_list %}http://mendeley.com/groups/529971/phylogenetic-methods/papers{% endcapture %}
 
 {% capture project_entries %}
 {% for post in site.categories.evolution limit:8 %}

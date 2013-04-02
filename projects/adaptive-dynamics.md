@@ -31,6 +31,7 @@ abstract: "Research in stochastic effects in Adaptive Dynamics.  Adaptive Dynami
 {% capture project_feed %}
 {% mendeley_feed 529981/adaptive-dynamics, 3 %}
 {% endcapture %}
+{% capture reading_list %}http://mendeley.com/groups/529981/adaptive-dynamics/papers{% endcapture %}
 
 {% capture project_entries %}
 {% for post in site.tags.adaptive-dynamics limit:8 %}
@@ -47,12 +48,13 @@ abstract: "Research in stochastic effects in Adaptive Dynamics.  Adaptive Dynami
 </ul>
 {% endcapture %}
 
-{% capture project_data %}
+{% capture project_presentations %}
 <strong> Software </strong>
 - Simulate explicit ecological and evolutionary dynamics leading to branching: [AdaptiveDynamics](https://github.com/cboettig/AdaptiveDynamics) (R, C++)
 - Illustrate Fluctuation domains: [fluctuationDomains](https://github.com/cboettig/fluctuationDomains) (R, C)
 
 {% endcapture %}
+
 
 
 

@@ -33,6 +33,8 @@ abstract: Decision-theoretic methods often rely on simple parametric models of e
 {% capture project_feed %}
 {% mendeley_feed 634301/theoretical-ecology, 3 %}
 {% endcapture %}
+{% capture reading_list %}http://mendeley.com/groups/634301/theoretical-ecology/papers{% endcapture %}
+
 
 {% capture project_entries %}
 {% for post in site.tags.nonparametric-bayes limit:8 %}
@@ -44,9 +46,12 @@ abstract: Decision-theoretic methods often rely on simple parametric models of e
 {% capture project_publications %}
 
 {% endcapture %}
+
+
 {% capture project_presentations %}
 
 {% endcapture %}
+
 
 
 
