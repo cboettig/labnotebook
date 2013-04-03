@@ -13,8 +13,7 @@ ecology and evolution that are closely related at least in my
 own head if no where else.  I enjoy questions of ["Pasteur's Quadrant"](http://en.wikipedia.org/wiki/Pasteur%27s_quadrant), basic
 science with clear policy relevance, and am fascinated with how we can
 better confront theoretical models with a rapidly expanding array of
-real world data, and what role new statistical and computational tools
-will play in that process.  These interests couple to a long standing
+real world data.  These interests couple to a long standing
 passion for mathematical biology, where I have always been interested
 in the role of nonlinear and stochastic dynamics -- two themes that run
 throughout my work.
@@ -39,7 +38,7 @@ under [multiple uncertainty](/projects/multiple-uncertainty.html),
 and my part in a NIMBioS working group on [Pretty Darn Good
 Control](/projects/pdg-control.html), seeking to replace _optimal_
 solutions of toy problems with merely decent solutions for more realistic
-ones.
+scenarios.
 
 
 ### Project Landing Pages
