@@ -3,7 +3,7 @@ title: Stochastic effects in Adaptive Dynamics
 layout: project 
 tag: adaptive-dynamics 
 github: AdaptiveDynamics
-abstract: "Research in stochastic effects in Adaptive Dynamics.  Adaptive Dynamics extends evolutionary game theory into the context of dynamical systems rather that stationary strategies.  Unlike much evolutionary theory, this approach permits rich, density-dependent ecological interactions to drive the evolutionary dynamics rather than more abstract claims about fitness.  However, most of the genetic richness is lost, making this more informative about the evoltionary stability of ecological dynamics under evolutionary perturbation than a detailed evolutionary model.  While most of adaptive dynamics works in the deterministic limits of ordinary differential equations, my work extends this to the stochastic context."
+abstract: "Adaptive Dynamics extends evolutionary game theory into the context of dynamical systems rather that stationary strategies.  Unlike much evolutionary theory, this approach permits rich, density-dependent ecological interactions to drive the evolutionary dynamics rather than more abstract claims about fitness.  However, most of the genetic richness is lost, making this more informative about the evoltionary stability of ecological dynamics under evolutionary perturbation than a detailed evolutionary model.  While most of adaptive dynamics works in the deterministic limits of ordinary differential equations, my work extends this to the stochastic context."
 
 ---
 
@@ -50,6 +50,7 @@ abstract: "Research in stochastic effects in Adaptive Dynamics.  Adaptive Dynami
 
 {% capture project_presentations %}
 <strong> Software </strong>
+
 - Simulate explicit ecological and evolutionary dynamics leading to branching: [AdaptiveDynamics](https://github.com/cboettig/AdaptiveDynamics) (R, C++)
 - Illustrate Fluctuation domains: [fluctuationDomains](https://github.com/cboettig/fluctuationDomains) (R, C)
 

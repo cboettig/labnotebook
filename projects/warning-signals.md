@@ -1,5 +1,5 @@
 ---
-title: Early warning for warning-signals of ecological regime shifts  
+title: Early warning signals for ecological regime shifts  
 layout: project
 tag: warning-signals 
 github: earlywarning
