@@ -1,8 +1,11 @@
 ---
-layout: codepost
+layout: post
 title: Policy functions and value functions under multiple uncertainty
 category: ecology
-tags: decision-theory
+tags: 
+- decision-theory
+- multiple-uncertainty
+code: true
 
 ---
 

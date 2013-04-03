@@ -1,8 +1,8 @@
 ---
-layout: codepost
+layout: post
 category: ecology
 tags: nonparametric-bayes
-
+code: true
 
 ---
 

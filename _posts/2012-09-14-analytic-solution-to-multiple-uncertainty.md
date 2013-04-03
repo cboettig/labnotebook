@@ -1,8 +1,10 @@
 ---
-layout: codepost 
+layout: post 
 categories: ecology
-tags: [ decision-theory]
-
+tags: 
+- decision-theory
+- multiple-uncertainty
+code: true
 ---
 
 

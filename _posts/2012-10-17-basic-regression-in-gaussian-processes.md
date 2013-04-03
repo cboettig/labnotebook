@@ -1,8 +1,9 @@
 ---
-layout: codepost
+layout: post
 title: Basic regression in Gaussian processes 
 category: ecology
 tag: nonparametric-bayes
+code: true
 
 ---
 

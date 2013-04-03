@@ -49,5 +49,12 @@
   </p>
   <p><small> SHA Hash: <a href="{{ site.repo }}/commit/{{page.path | git_sha }}/_posts/{{ page.path }}"> {{ page.path | git_sha }}</a></small></p>
   
+  <br/>
+  <br/>
+
+  {% if page.code %}
+  {% include collapse %}
+  {% endif %}
+
 
 </aside>
