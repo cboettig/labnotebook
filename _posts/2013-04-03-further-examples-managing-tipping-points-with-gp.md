@@ -10,11 +10,13 @@ code: true
 
 
 
+See also:
+
+* http://www.carlboettiger.info/2012/12/20/results-comparing-gp-to-parametric.html
 
 
 
-
-Fixed priors on hyperparameters, fixed model type.
+Example with fixed priors on hyperparameters, fixed model type.  
 
 
 ```r
