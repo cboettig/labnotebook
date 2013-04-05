@@ -1,13 +1,13 @@
 
 
 <!-- Some liquid code so that pages get the site.time creation date -->
-{% if defined?(page.date) %} 
+{% if page.date %} 
   {% assign date = page.date %}
-  {% if date.class != Time %} 
-    {% assign date = Time.parse(date) %}
-  {% endif %}
-{% else %}
-  {% assign date = site.time %}
+  {% else %}
+    {% capture date %} {{ page.path | git_modified }} {% endcapture %} 
+{% endif %}
+{% if date.class != Time %} 
+  {% assign date = Time.parse(date) %}
 {% endif %}
 
 
@@ -37,7 +37,7 @@
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <meta name="citation_author" content="{{ site.author.name }}"/>
-<meta name="citation_date" content="{{date | date_to_string }}"/>
+<meta name="citation_date" content="{{date | date_to_xmlschema }}"/>
 <meta name="citation_title" content="{{page.title}}"/>
 <meta name="citation_journal_title" content="{{site.title}}"/>
 
