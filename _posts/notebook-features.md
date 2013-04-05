@@ -12,8 +12,8 @@ tags:
 In keeping this open lab notebook, I have sought to address three goals
 (in addition to all the traditional reasons for keeping a lab notebook)
 
-1. Provide an educational resource 2. Experiment with scientific
-infrastructure and tools for sharing and replicating research
+1. Provide an educational resource 
+2. Experiment with scientific infrastructure and tools for sharing and replicating research
 3. Facilitate the rapid and open dissemination of scientific research
 
 which are coincidentally evocative of [NSF's Broader
@@ -37,11 +37,39 @@ posts describing these tools and techniques.
 reproducible code 
 -----------------
 
-**knitr**  (#2, reproducible) I now use the dynamic documentation software
+**knitr**  I now use the dynamic documentation software
 called knitr to write most entries that shore results and figures. The
 code to replicate the results is included automatically, ensuring that
 what I say I did and what code I actually ran to get the results are
-always consistent.
+always consistent.  
+
+As the code required for any given analysis can be quite involved, it 
+is not pratical to provide free-standing scripts in this way.  Instead,
+I write the algorithms as functions provided by an R package dedicated 
+to the project, e.g. [nonparametric-bayes](http://github.com/cboettig/nonparametric-bayes), [multiple-uncertainty](http://github.com/cboettig/multiple_uncertainty),
+or [warning-signals](http://github.com/cboettig/earlywarning), which is version-managed on Github.  The code 
+displayed in the post can then be limited to the specific calls to 
+analysis, data manipulation, and plotting functions unique to the 
+exploration shown, without repeating the code for all algorithms involved.
+
+The code for the analyses is also stored on github using the same 
+dynamic documentation approach with knitr.  These scripts are found
+in the `inst/examples` directory of my packages.  This approach allows
+a given analysis to evolve with my research in a more tractable way than
+simply pasting updated copies as successive notebook entries.  The
+notebook entries then become a place for me to synthesize the results
+of a script.  
+
+
+Though the package functions are usually backwards-compatible, proper 
+reproducibility is only attained by having the version of the package 
+from time of the result.  This is easily accomplished by the seemless
+integration of Github and R using the devtools package. Consider a figure
+from a page of the notebook, such as the final histogram plot from [this entry](http://www.carlboettiger.info/2012/12/20/results-comparing-gp-to-parametric.html).  The entry links to the script responsible for the figure,
+[https://github.com/cboettig/nonparametric-bayes/blob/9d5cd1f027bdfe5f356dce83756726c95a6fcdd8/inst/examples/myers-exploration.md](https://github.com/cboettig/nonparametric-bayes/blob/9d5cd1f027bdfe5f356dce83756726c95a6fcdd8/inst/examples/myers-exploration.md)
+
+
+
 
 Version history 
 ---------------
