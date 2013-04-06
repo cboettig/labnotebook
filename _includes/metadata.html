@@ -1,14 +1,18 @@
 
 
-<!-- Some liquid code so that pages get the site.time creation date -->
-{% if page.date %} 
-  {% assign date = page.date %}
-  {% else %}
-    {% capture date %} {{ page.path | git_modified }} {% endcapture %} 
-{% endif %}
+<!-- Some liquid code so that pages get the site.time creation date 
+      Would be nice to use github modified times, but doesn't handle 
+      the path for pages -->
+
+{% if defined?(page.date) %} 
+{% assign date = page.date %}
 {% if date.class != Time %} 
-  {% assign date = Time.parse(date) %}
+{% assign date = Time.parse(date) %}
 {% endif %}
+{% else %}
+{% assign date = site.time %}
+{% endif %}
+
 
 
 <!-- HTML5 metadata -->
