@@ -51,10 +51,14 @@ post-doctoral work (see Nonparametric-Bayes and Multiple Uncertainty).
 
 
 {% capture project_issues %}
+_issues feed from earlwarning repo. Also see [ews-review](https://github.com/cboettig/ews-review) for a separate warning-signals repository for a recent concepts paper only._
+
 {% octokit_issues earlywarning%}
 {% endcapture %}
 
 {% capture project_commits %}
+_This commits feed from master branch. Note that Prosecutor's Fallacy research and paper was developed on [prosecutor](https://github.com/cboettig/earlywarning/tree/prosecutor) branch of this repository._
+
 {% octokit_commits earlywarning%}
 {% endcapture %}
 
