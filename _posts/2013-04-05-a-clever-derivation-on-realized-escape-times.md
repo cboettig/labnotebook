@@ -41,25 +41,25 @@ The time we must wait before any trajectory can reach a given boundary is a clas
 
 $$ \tfrac{\sigma^2}{2} T_{xx} - x T_x = -1 $$
 
-With the appropriate boundary conditions $T(L) = T(-L) = 0$.  A little integration (see Dynkin's formula) shows this scales as $\exp(L^2/\simga^2)$ (Compare to the Brownian walk that doesn't have to escape any pull, which escapes at rate $L^2/\sigma^2$.  
+With the appropriate boundary conditions $T(L) = T(-L) = 0$.  A little integration (see Dynkin's formula) shows this scales as $\exp(L^2/\sigma^2)$ (Compare to the Brownian walk that doesn't have to escape any pull, which escapes at rate $L^2/\sigma^2$.  
 
 ## Exit time 
 
 Most trajectories will thus return many times to the origin (stable point) before finally escaping.  But if we focus just on the part of the trajectory from some value near the origin, that eventually escapes without ever crossing the origin again, 
 
-$$u_t(x,t) dt = Pr\left(\textrm{exit from }(0; L]\textrm{in the interval } (t, t + dt) \textrm{without having crossed} 0 | X(0) = x$$
+$$u_t(x,t) dt = Pr\left(\textrm{exit from }(0; L]\textrm{in the interval } (t, t + dt) \textrm{without having crossed} 0 | X(0) = x\right)$$
 
 We are interested in comparing the average time taken by trajectories exiting by time $t$ relative to the probability of exiting at all (i.e. as $t \to \infty$),
 
-$$ T_c(x) = \frac{\int^{\infty}_0 t u_t(x,t) dt }{lim_{t \to \infty} u(x,t) }$$
+$$ T_c(x) = \frac{\int^{\infty}_0 t u_t(x,t) dt }{\lim_{t \to \infty} u(x,t) }$$
 
 From here we set up the classic hitting time solution for the OU for the _time-dependent_ PDE,
 
-$$u_t = \tfrac{\sigma^2}{2} u_xx = x u_x $$,
+$$u_t = \frac{\sigma^2}{2} u_{xx} = x u_x $$
 
 and with initial condition $u(x,t=0) = 0$, $u(0,t) = 0$, and $u(L, t) = 1$.  A bit of effort and an approximation to Dawson's integral for $L \gg x$ leads Don to bound the mean time to exit, 
 
-$$T_c(x) < \tfrac{1}{\sigma} \log\left(\tfrac{L}{\sigma})$$ 
+$$T_c(x) < \frac{1}{\sigma} \log\left(\frac{L}{\sigma}\right)$$ 
 
 as claimed. 
 
