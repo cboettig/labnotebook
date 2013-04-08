@@ -93,13 +93,14 @@ module Jekyll
       key = cred[:consumer_key] 
       secret = cred[:consumer_secret]
 
+      ## Method 1 -- how do I get the token?
       key = cred[:key] 
       secret = cred[:secret] 
       token = cred[:token] 
       mendeley = Mendeley.new(token, secret)
       profile = mendeley.get('/oapi/profiles/info/me')
 
-     ## Method 2
+     ## Method 2 -- 
      require 'omniauth-mendeley'
       use OmniAuth::Builder do
         provider :mendeley, ENV[key], ENV[secret]
@@ -112,6 +113,7 @@ module Jekyll
                                      :request_token_path => '/oauth/request_token',
                                      :access_token_path => '/oauth/access_token',
                                      :authorize_path => '/oauth/authorize'})
+      ## Now what? looks like omniauth does this already...
 
     end
   end

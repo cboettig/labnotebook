@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Notebook Features: parsing linked data in the semantic notebook"
+code: true
 category: open-science
 tags: 
 - notebook-technology
