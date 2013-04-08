@@ -1,0 +1,28 @@
+
+{% case page.comment_count %}
+  {% when 0 %}
+  {% when 1 %}
+    <h3>1 Comment</h3>
+  {% else %}
+    <h3>{{page.comment_count}} Comments</h3>
+{% endcase %}
+{% for c in page.comments %}
+  <div class="comment {% cycle 'odd', 'even' %}">
+    <p class="comment_header">
+      From: {% if c.link and c.link != '' %}
+        <a href="{{c.link}}">{{c.name}}</a>
+      {% else %}
+        {{c.name}}
+      {% endif %}
+      <br />
+      <span class="comment_date">{{c.date}}</span>
+    </p>
+    <p>
+      {{c.comment | newline_to_br}}
+    </p>
+  </div>
+{% endfor %}
+
+<i class=icon-comments"></i> <a href="mailto:address?subject=Comment&body=%0D+From+post+{{ site.url | cgi_escape }}{{ page.url | cgi_escape }}", class="showtooltip", title="Comments are submitted by email and will appear when they are approved. Markdown & mathjax syntax welcome.">Leave a comment</a>
+
+
