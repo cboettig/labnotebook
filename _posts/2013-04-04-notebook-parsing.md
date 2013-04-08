@@ -102,7 +102,7 @@ table(unlist(categories))
 wordcloud(Corpus(VectorSource(tags)))
 ```
 
-![plot of chunk unnamed-chunk-8](http://farm9.staticflickr.com/8258/8620398951_0c2fd56e26_o.png) 
+![](http://farm9.staticflickr.com/8258/8620398951_0c2fd56e26_o.png) 
 
 
 ### Extracting citations
@@ -151,7 +151,7 @@ wordcloud(carl.d$word, carl.d$freq, scale = c(8, 0.4), min.freq = 3,
         "Dark2"))
 ```
 
-![plot of chunk unnamed-chunk-10](http://farm9.staticflickr.com/8385/8621498714_2fe3e04226_o.png) 
+![](http://farm9.staticflickr.com/8385/8621498714_2fe3e04226_o.png) 
 
 
 ## RDFa parsing
