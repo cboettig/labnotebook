@@ -1023,3 +1023,53 @@
     overflow: visible !important;
   }
 }
+@page  {
+  size: 8.5in 11in;
+  margin: 1in;
+  orphans: 4;
+  widows: 2;
+}
+@media print {
+  .content {
+    font-size: 110%;
+  }
+  table {
+    page-break-inside: avoid;
+  }
+  img {
+    page-break-inside: avoid;
+  }
+  div.figure {
+    page-break-inside: avoid;
+  }
+  span {
+    page-break-inside: avoid;
+  }
+  .container {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  body {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 7in !important;
+    width: 7in !important;
+    color: #ccc;
+    background-color: #fff;
+  }
+  .navbar,
+  .footer,
+  .sidebar,
+  .disqus {
+    display: none !important;
+  }
+  hr {
+    color: #ccc !important;
+    background: #ccc !important;
+    width: 80% !important;
+    height: 0mm !important;
+    border-top: 1px solid #ccc !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
