@@ -5,6 +5,9 @@
 #
 # Further development: Query CrossRef using the DOI and return the full citation information.  See: https://github.com/ottbot/crossref and https://github.com/CrossRef
 
+# What about arXiv, github, etc?  Ideally these outbound links should be tracked as well...
+
+
 module TextFilter
   def doi_parser(input)
     string = '<a rel="datacite:doi"
