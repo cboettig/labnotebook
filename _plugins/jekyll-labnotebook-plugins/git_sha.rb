@@ -9,7 +9,7 @@
 # {{ post.path | git_sha }}
 # 
 
-require 'ruby-git'
+# require 'ruby-git'
 
 
 module TextFilter
