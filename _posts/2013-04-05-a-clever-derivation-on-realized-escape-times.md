@@ -90,5 +90,4 @@ I may try and add a demonstration of Ludwig's result above when I get some more 
 
 - C. Boettiger, A. Hastings,   (2012) Early Warning Signals And The Prosecutor'S Fallacy.  *Proceedings of The Royal Society B: Biological Sciences*  **279**  4734-4739  [10.1098/rspb.2012.2085](http://dx.doi.org/10.1098/rspb.2012.2085)
 - R Lande,   (1985) Expected time for random genetic drift of a population between stable phenotypic states.  *Proceedings of the National Academy of Sciences*  [http://www.pnas.org/content/82/22/7641.abstract](http://www.pnas.org/content/82/22/7641.abstract)
-- unknown unknown,   (unknown) Unknown.  *Unknown*
 
