@@ -1,9 +1,12 @@
 <aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="{{ page.date | date_to_xmlschema }}" 
-    property="dc:created">{{ page.date | date_to_string }}</time>. 
-  </p>
-  <br />
+    property="dc:created">{{ page.date | date_to_string }}</time></p>
+  <p><small> modified: <time 
+            datetime="{{ page.path | git_modified | date_to_xmlschema }}" 
+            property="dc:modified">{{ page.path | git_modified | date_to_string }}</time></small></p>
+
+ <br />
 
   {% if page.previous %}
     <p><a class="btn btn-mini" rel="prev" href='{{ page.previous.url }}'><i class="icon-chevron-left"></i> prev</a>
@@ -12,48 +15,43 @@
   <a class="btn btn-mini" rel="next" href='{{ page.next.url }}'>next <i class="icon-chevron-right"></i></a></p>
   {% else %}
     </p>
-  {% endif %}
-  <br />
+    {% endif %}
 
+  <br />
 
   <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
             return false;" 
           class="btn btn-mini" 
           href="{{ site.repo }}/commits/master/_posts/{{page.path}}"><i class="icon-time"></i> history</a></p>
 
+  <br />
 
-  <p> Posted in 
+  <p><i class="icon-list"></i> Posted in 
     {% for category in page.categories %} 
       <a rel="dc:subject" class="category" 
          href="{{ site.baseurl }}/categories.html#{{ category | cgi_escape }}">{{ category }}</a>
-      {% unless page.categories.last == category %}, {% endunless %}
-      {% endfor %}</p>
+    {% unless page.categories.last == category %}, {% endunless %}
+    {% endfor %}</p>
 
-
-  <p> tags: 
+  <p> <i class="icon-tag"></i> tags: 
     {% for tag in page.tags %}
-      <!-- http://schema.org/BlogPosting/keywords -->
-      <a rel="og:tag" class="tag" 
-        href="{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}">#{{ tag }}</a>
-      {% unless page.tags.last == tag %}, {% endunless %}
-      {% endfor %}</p>
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+       href="{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}">#{{ tag }}</a>{% unless page.tags.last == tag %}, {% endunless %}
+    {% endfor %}</p>
 
+  <br/>
 
-  {% if site.pageviews %} <p style="font-style:italic"> pageviews: {% pageviews %}{{page.url}}{% endpageviews %}</p>{% endif %}
+  {% if site.pageviews %} <p style="font-style:italic"> <i class="icon-signal"></i> pageviews: {% pageviews %}{{page.url}}{% endpageviews %}</p>{% endif %}
+
   <br/>
-  <br/>
-  <p><small>
-    Last modified: <time 
-                  datetime="{{ page.path | git_modified | date_to_xmlschema }}" 
-                  property="dc:modified">{{ page.path | git_modified | date_to_string }}</time></small>
-  </p>
-  <p><small> SHA Hash: <a href="{{ site.repo }}/commit/{{page.path | git_sha }}/_posts/{{ page.path }}"> {{ page.path | git_sha }}</a></small></p>
-  
-  <br/>
+
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="{{ site.repo }}/commit/{{page.path | git_sha }}/_posts/{{ page.path }}"> {{ page.path | git_sha }}</a></small></p>
+    
   <br/>
 
   {% if page.code %}
-  {% include collapse.html %}
+  <p> <input type="button" class="btn btn-mini" value="toggle code" id="toggle_code" /> </p>
   {% endif %}
 
 
