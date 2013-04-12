@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Teaching
 date: 2012-10-08
 
