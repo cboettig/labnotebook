@@ -5,10 +5,12 @@
 <h2> Abstract </h2>
 {% if project_abstract %}
 {{ project_abstract }}
-<iframe src="github-btn.html?user={{site.author.github}}&repo={{page.github}}&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
+<iframe src="http://ghbtns.com/github-btn.html?user={{site.author.github}}&repo={{page.github}}&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
+<iframe src="http://ghbtns.com/github-btn.html?user={{site.author.github}}&repo={{page.github}}&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="20px" class="pull-right"></iframe>
 {% elsif page.abstract %}
 {{ page.abstract }}
-<iframe src="github-btn.html?user={{site.author.github}}&repo={{page.github}}&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
+<iframe src="http://ghbtns.com/github-btn.html?user={{site.author.github}}&repo={{page.github}}&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
+<iframe src="http://ghbtns.com/github-btn.html?user={{site.author.github}}&repo={{page.github}}&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="20px" class="pull-right"></iframe>
 {% endif %}
 </div>
 <div class="span3">
