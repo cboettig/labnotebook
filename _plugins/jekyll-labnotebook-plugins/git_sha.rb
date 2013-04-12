@@ -15,7 +15,7 @@
 
 module TextFilter
   def git_sha(input)
-    path = input #input.gsub(/(\d\d\d\d)\/(\d\d)\/(\d\d)\/(.*)\.html/, "\\1-\\2-\\3-\\4.md")
+    path = input 
     sha = `git log -n 1 --format="%H" -- #{path}`
     sha
   end
