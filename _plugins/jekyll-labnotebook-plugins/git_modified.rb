@@ -15,12 +15,13 @@ require 'chronic'
 
 module TextFilter
   def git_modified(input)
-    path = input #input.gsub(/(\d\d\d\d)\/(\d\d)\/(\d\d)\/(.*)\.html/, "\\1-\\2-\\3-\\4.md")
+    path = input 
     modif = `git log -n 1 --format="%ai" -- #{path}`
     modif = Chronic.parse(modif)
     if modif.class != Time
-      puts "error in obtaining time for"
+      puts "Error in obtaining time for"
       puts path
+      puts modif
     end
     modif
   end
