@@ -5,8 +5,10 @@
 <h2> Abstract </h2>
 {% if project_abstract %}
 {{ project_abstract }}
+<iframe src="github-btn.html?user={{site.author.github}}&repo={{page.github}}&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
 {% elsif page.abstract %}
 {{ page.abstract }}
+<iframe src="github-btn.html?user={{site.author.github}}&repo={{page.github}}&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
 {% endif %}
 </div>
 <div class="span3">

@@ -7,6 +7,7 @@
 # Example use: 
 #
 # {{ post.path | git_sha }}
+# {{ post.path | prepend:'../_posts/' | git_sha }}
 # 
 
 # require 'ruby-git'
@@ -15,7 +16,7 @@
 module TextFilter
   def git_sha(input)
     path = input #input.gsub(/(\d\d\d\d)\/(\d\d)\/(\d\d)\/(.*)\.html/, "\\1-\\2-\\3-\\4.md")
-    sha = `git log -n 1 --format="%H" -- ../_posts/#{path}`
+    sha = `git log -n 1 --format="%H" -- #{path}`
     sha
   end
 end

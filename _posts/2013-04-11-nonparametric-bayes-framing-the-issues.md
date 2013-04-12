@@ -11,18 +11,16 @@ tags:
 
 ## Marc meeting: nonparametric-bayes manuscript
 
-Very good meeting today going over some big picture considerations in the presentation of the nonparametic bayes manuscript with Marc.  (Also see new entries in issues log on nonparametric-bayes.)  Make it clear that we are making a point rather than providing a tool.  Focus on the Allee example.  
+Very good meeting today going over some big picture considerations in the presentation of the nonparametric-bayes manuscript with Marc.  (Also see new entries in issues log on nonparametric-bayes.)  Make it clear that we are making a point rather than providing a tool.  Focus on the tipping point context rather than the general management context.  
 
-(Comparison against a fully Bayesian model)
-
-(Comparison against an active learning parameteric model facing a tipping point)
-
+* Comparison against a parametric Bayesian model ([40](https://github.com/cboettig/nonparametric-bayes/issues/40))
+* Comparison against an active learning parametric model facing a tipping point ([41](https://github.com/cboettig/nonparametric-bayes/issues/41))
 * Marc pointed me to `r citet("10.1139/f85-132", "citesAsAuthority")` which I've amazingly not read yet, but is one of the best examples of where additional model "realism" leads to lower performance, which should justify it being a classic to the canon of theoretical ecology literature.  
 
 
 ## Implementation of the Bayesian state-space model for comparison
 
-
+Started on #40 this afternoon.  For simplicity/clarity, building off of the very similar problem by `r citet("", "usesMethodFrom")`
 
 
 
