@@ -33,7 +33,7 @@ We ask for the return time into a neighborhood $\sigma$ of the origin, starting 
 
 $$ \tfrac{dx}{dt} = - x $$
 
-implies $x_t = L (1 - e^{-t}) $, so setting $x_t = \sigma_t$ and solving for $t$, we find that $x_t$ is within $\sigma$ of $t$ in time $\log{L} - $\log{\sigma}$, or $\log{L/\sigma}$, as claimed.  
+implies $x_t = L (1 - e^{-t}) $, so setting $x_t = \sigma_t$ and solving for $t$, we find that $x_t$ is within $\sigma$ of $t$ in time $\log{L} - \log{\sigma}$, or $\log{L/\sigma}$, as claimed.  
 
 ## Waiting time
 
