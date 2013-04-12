@@ -1,25 +1,5 @@
 ---
-layout: html5
+layout: default
 ---
-
-{% include header.html %}
-    <div class="row">
-      <div class="span6 offset2">
-      <div class="cv">
-        <article>
         {{ content }}
-        </article>
-      </div>
-    </div>
-    <div class="span2 sidebar"><!-- Custom sidebar -->    
-      <a href="http://www.carlboettiger.info/assets/files/cv.pdf"  
-        onclick="var that=this;
-        _gaq.push(['_trackEvent','Download','PDF',this.href]); 
-        setTimeout(function(){location.href=that.href;},200);
-        return false;" class="btn btn-large"><i class="icon-file-alt"></i> pdf</a>
-    </div>
-  </div>
 
-{% include footer.html %}
-{% include javascript.html %}
-{% include analytics.html %}

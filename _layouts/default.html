@@ -1,12 +1,12 @@
 ---
-layout: page
+layout: html5
 ---
 
-<div class="row">
-  <div class="span8 offset1">
-    <article>
-    {{ content }}
-    </article>
-  </div>
-</div>
+{% include header.html %}
 
+{{ content }}
+
+{% include footer.html %}
+{% include javascript.html %}
+{% include analytics.html %}
+    
