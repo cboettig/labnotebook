@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Community
 date: 2013-03-11
 

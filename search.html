@@ -1,8 +1,15 @@
 ---
-layout: search
+layout: html5
 title: Advanced search 
 date: 2012-11-08
 ---  
+
+{% include header.html %}
+<div class="row">
+<div class="span8 offset1">
+<article>
+
+
 
 This full-text search takes a while to load but will provide the most accurate results.  Please be patient.
 
@@ -44,3 +51,13 @@ This full-text search takes a while to load but will provide the most accurate r
 </p>
 </form>
 
+
+</article>
+</div>
+</div>
+
+{% include footer.html %}
+<!-- Lunr Search javascript must follow "footer" -->
+{% include lunr_search.html %}
+{% include analytics.html %}
+ 
