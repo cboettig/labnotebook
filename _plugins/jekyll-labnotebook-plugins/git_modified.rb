@@ -7,7 +7,7 @@
 #
 # Example use: 
 #
-# {{ post.path | git_modified }}
+# {{ post.path | prepend:'../_posts/' | git_modified }}
 # 
 
 # require 'ruby-git'
@@ -16,7 +16,7 @@ require 'chronic'
 module TextFilter
   def git_modified(input)
     path = input #input.gsub(/(\d\d\d\d)\/(\d\d)\/(\d\d)\/(.*)\.html/, "\\1-\\2-\\3-\\4.md")
-    modif = `git log -n 1 --format="%ai" -- ../_posts/#{path}`
+    modif = `git log -n 1 --format="%ai" -- #{path}`
     modif = Chronic.parse(modif)
     if modif.class != Time
       puts "error in obtaining time for"

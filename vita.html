@@ -129,7 +129,20 @@ date: 2012-11-07
 </article>
 </div>
 </div>
-<div class="span2 sidebar"><!-- Custom sidebar -->    
+<div class="span2 sidebar"><!-- Custom sidebar -->   
+
+<p><i class="icon-calendar"></i>updated: <time 
+      datetime="{{ page.path | git_modified | date_to_xmlschema }}" 
+      property="dc:modified">{{ page.path | prepend:'../' | git_modified | date_to_string }}</time></p>
+<br />
+
+
+<p><small> <i class="icon-barcode"></i> SHA Hash: <a href="{{ site.repo }}/commit/{{ page.path | prepend:'../' | git_sha }}/{{ page.path }}"> {{ page.path| prepend:'../' | git_sha }}</a></small></p>
+<p><small><a href="https://github.com/cboettig/labnotebook/issues/89"> What is this?</a></small></p>
+
+
+<br />
+
 <a href="http://www.carlboettiger.info/assets/files/cv.pdf"  
    onclick="var that=this;
    _gaq.push(['_trackEvent','Download','PDF',this.href]); 

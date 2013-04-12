@@ -1,5 +1,9 @@
-module Jekyll
+## provide the Jekyll name of the page or post, e.g. 2013-02-02-notes.md
+## Makes this data available as if it was given in the yaml header, 
+## e.g. we can use `page.path` in Liquid filters and tags to access this name
 
+
+module Jekyll
   class PagePathGenerator < Generator
     safe true
     ## NOTE: post.dir gives the published directory path, e.g. 2013/02/02/ 
