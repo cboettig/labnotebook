@@ -130,15 +130,12 @@ date: 2012-11-07
 </div>
 </div>
 <div class="span2 sidebar"><!-- Custom sidebar -->   
-{% comment %}
 
 <p><i class="icon-calendar"></i>updated: <time 
-      datetime="{{ page.path | prepend:'../' | git_modified | date_to_xmlschema }}" 
-      property="dc:modified">{{ | git_modified | date_to_string }}</time></p>
+      datetime="{{ page.path  | git_mod | date_to_xmlschema }}" 
+      property="dc:modified">{{ | git_mod | date_to_string }}</time></p>
 <br />
-{% endcomment %}
 
-{{ page.path  | git_mod }}
 
 
 <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/labnotebook/issues/89"> (What is this?)</a></small></p>
