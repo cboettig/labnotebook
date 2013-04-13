@@ -1,17 +1,16 @@
 ---
-published: false
+category: ecology
+tags: 
+- warning-signals
+code: true
 
 ---
 
 
-We will need the following libraries to run this example.  If you don't have them, they can be installed from CRAN using the `install.packages` function.  
-
-
-```
-## Loading required package: bibtex
-```
-
-
+In this tutorial we walk through how to use the likelihood-based approach of <span class="showtooltip" title="Boettiger C and Hastings A (2012). Quantifying Limits to
+Detection of Early Warning For Critical Transitions. _Journal of
+The Royal Society Interface_, *9*, pp. 2527-2539. ISSN 1742-5689,
+ http://dx.doi.org/10.1098/rsif.2012.0125."><a href="http://dx.doi.org/10.1098/rsif.2012.0125" rel="http://purl.org/spar/cito/usesMethodFrom" >Boettiger & Hastings (2012)</a></span>  to provide an early warning signal for a critical transition, and how to generate ROC curves discussed in the same paper for comparing different early warning signals.  Context and details about the methodology are presented in the paper; here we focus on using the methodology provided in the accompanying R package.  All of the examples shown here can be reproduced by pasting the code provided into an R terminal.  We will need the following libraries to run this example.  If you don't have them, they can be installed from CRAN using the `install.packages` function.  
 
 
 ```r
@@ -31,10 +30,7 @@ library(earlywarning)
 ```
 
 
-
-
-We begin by loading the ibm_critical data provided by Drake & Griffen, (2010). We plot the raw data to take a look at it. 
-
+We begin by loading the `ibm_critical` data provided in the package (from an individual-based model simulation of a critical transition). We plot the raw data to take a look at it. 
 
 
 ```r
@@ -42,7 +38,7 @@ data("ibms")
 plot(ibm_critical, type="b")
 ```
 
-![plot of chunk unnamed-chunk-1](http://farm9.staticflickr.com/8261/8641108753_956f179a1d_o.png) 
+![](http://farm9.staticflickr.com/8261/8641108753_956f179a1d_o.png) 
 
 
 
@@ -64,7 +60,6 @@ Perform the bootstrapped model comparison on the parallel cluster.
 runtime <- system.time(
 reps <- mclapply(1:200, function(i) compare(A, B)))
 ```
-
 
 Which took 4176.78 seconds to run for the example shown here.  
 
@@ -95,7 +90,7 @@ We use this data to generate the overlapping distributions shown in Boettiger & 
 ggplot(lr) + geom_density(aes(value, fill=simulation), alpha=0.6) + geom_vline(aes(xintercept=observed))
 ```
 
-![plot of chunk lr_ratio_plot](http://farm9.staticflickr.com/8245/8642325058_d70eaee962_o.png) 
+![](http://farm9.staticflickr.com/8245/8642325058_d70eaee962_o.png) 
 
 
 
@@ -107,7 +102,7 @@ roc <- roc_data(lr)
 ggplot(roc) + geom_line(aes(False.positives, True.positives))
 ```
 
-![plot of chunk roc](http://farm9.staticflickr.com/8402/8641224925_83a045afbb_o.png) 
+![](http://farm9.staticflickr.com/8402/8641224925_83a045afbb_o.png) 
 
 
 
@@ -133,7 +128,7 @@ These data are formatted like the likeihood ratio data above, only that the stat
 ggplot(var) + geom_density(aes(value, fill=simulation), alpha=0.6) + geom_vline(aes(xintercept=observed))
 ```
 
-![plot of chunk var_ratio](http://farm9.staticflickr.com/8265/8642341382_1d87080d5c_o.png) 
+![](http://farm9.staticflickr.com/8265/8642341382_1d87080d5c_o.png) 
 
 
 
@@ -145,6 +140,10 @@ indicators <- melt(list(var = roc_data(var), acor = roc_data(acor), skew = roc_d
 ggplot(indicators) + geom_line(aes(False.positives, True.positives, color=L1)) 
 ```
 
-![plot of chunk unnamed-chunk-3](http://farm9.staticflickr.com/8122/8641241253_4c3704523e_o.png) 
+![](http://farm9.staticflickr.com/8122/8641241253_4c3704523e_o.png) 
 
+
+
+
+- C. Boettiger, A. Hastings,   (2012) Quantifying Limits to Detection of Early Warning For Critical Transitions.  *Journal of The Royal Society Interface*  **9**  2527-2539  [10.1098/rsif.2012.0125](http://dx.doi.org/10.1098/rsif.2012.0125)
 
