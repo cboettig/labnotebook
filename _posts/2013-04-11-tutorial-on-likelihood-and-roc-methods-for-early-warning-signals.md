@@ -1,4 +1,5 @@
 ---
+layout: post
 category: ecology
 tags: 
 - warning-signals
