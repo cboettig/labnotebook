@@ -1,5 +1,5 @@
 ---
-title: nonparametric-bayes: framing the issues
+title: "nonparametric-bayes: framing the issues for the manuscript"
 layout: post
 categories: ecology
 tags:
