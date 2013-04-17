@@ -108,11 +108,19 @@ module Jekyll
 
       ### Method 3
       require 'oauth'
-      con = OAuth::Consumer.new(key, secret,
+      @callback_url = "http://carlboettiger.info"
+      @consumer = OAuth::Consumer.new(key, secret,
                                     {:site => 'http://api.mendeley.com',
                                      :request_token_path => '/oauth/request_token',
                                      :access_token_path => '/oauth/access_token',
                                      :authorize_path => '/oauth/authorize'})
+      @request_token = @consumer.get_request_token(:oauth_callback => @callback_url)
+      session[:request_token] = @request_token
+      redirect_to @request_token.authorize_url(:oauth_callback => @callback_url)
+
+      @consumer = OAuth::Consumer.new(key,secret, :site => "http://api.mendeley.com")
+
+
       ## Now what? looks like omniauth does this already...
 
     end
