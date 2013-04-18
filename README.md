@@ -60,7 +60,7 @@ sudo update-alternatives --config gem
 Install Jekyll and the dependencies needed for a few plugins.
 
 ```bash
-sudo gem install jekyll feedzirra nokogiri twitter octokit pandoc-ruby
+sudo gem install jekyll feedzirra nokogiri twitter octokit pandoc-ruby garb chronic json time 
 ```
 
 
@@ -73,12 +73,17 @@ The site relies on following additional ruby gems (not available on the Jekyll c
 
 #### Required Gems
 
-* [feedzirra](https://github.com/pauldix/feedzirra) -- Grab and format rss feed information  
+* [feedzirra](https://github.com/pauldix/feedzirra) -- Grab and format RSS feed information  
 * [nokogiri](https://github.com/sparklemotion/nokogiri) -- parse HTML and XML 
 * [twitter](https://github.com/sferik/twitter )-- Ruby bindings to the Twitter API
 * [octokit](https://github.com/pengwynn/octokit) -- Ruby bindings to the Github API
 * [pandoc-ruby](https://github.com/alphabetum/pandoc-ruby) -- Ruby implementation of pandoc markdown interpreter (an alternative to redcarpet2)
 * [garb](https://github.com/vigetlabs/garb) -- Google API 
+* [chronic](https://github.com/mojombo/chronic) -- parse timestamps
+* [json](https://github.com/flori/json) -- parse json
+
+<!-- dependency of jekyll already * [redcarpet](https://github.com/vmg/redcarpet) -- markdown parsing, currently used by some custom plugins for formatting.  -->
+<!-- Potential gems, not needed yet: faraday, faraday_middleware, oauth, ruby-git -->
 
 ### Custom Plugins
 
