@@ -37,11 +37,10 @@
 
 
 require 'garb'
-require 'yaml'
 require 'chronic'
 require 'rubygems'
 require 'json'
-
+require 'yaml'
 
 module Jekyll
 
