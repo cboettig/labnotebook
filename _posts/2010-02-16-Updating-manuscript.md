@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [pmc, ]
+tags: pmc
 categories: evolution
 title: Updating manuscript
 ---
