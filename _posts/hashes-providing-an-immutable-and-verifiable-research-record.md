@@ -66,7 +66,8 @@ data or publication.
 Version managing the notebook and code has many more practical day-to-day
 benefits, such as recovering from a mistaken deleted or corrupted file, 
 merging changes made on different machines or by collaborators, or creating
-branches to test new features without disrupting current version.  
+branches to test new features without disrupting current version, and
+comparing differences as a file evolves.  
 
 
 
