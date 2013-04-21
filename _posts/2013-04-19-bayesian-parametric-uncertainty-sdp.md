@@ -1,26 +1,15 @@
 ---
-title: "SDP with parametric uncertainty from Bayesian inference"
 layout: post
 category: ecology
 tags:
 - nonparametric-bayes
-code: true
-
+code: yes
 ---
 
 
 
 
 
-```r
-opts_chunk$set(tidy = FALSE, warning = FALSE, message = FALSE)
-opts_knit$set(upload.fun = socialR::flickr.url)
-theme_set(theme_bw(base_size = 10))
-theme_update(panel.background = element_rect(fill = "transparent", 
-    colour = NA), plot.background = element_rect(fill = "transparent", colour = NA))
-cbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", 
-    "#0072B2", "#D55E00", "#CC79A7")
-```
 
 
 Adapting the parametric uncertainty represented by the posterior distributions of the Bayesian estimate (see [earlier notes](http://carlboettiger.info/2013/04/12/parametric-bayesian-example.html)) to the stochastic dynamic programming solution for the optimal policy.  Simply requires evaluating the expectation over the distribution, but is computationally intensive given the spread and the three parameters.  
@@ -97,6 +86,7 @@ First, sanity test. Use the correct parameter values (slightly perturbed).
 pardist <- mcmcall
 pardist[,1] = p[2] + rnorm(100, 0, 0.000001)
 pardist[,4] = p[1] + rnorm(100, 0, 0.000001)
+pardist[,2] = sigma_g + rnorm(100, 0, 0.000001)
 pardist[,5] = p[3] + rnorm(100, 0, 0.000001)
 ```
 
@@ -128,7 +118,7 @@ policies <- melt(data.frame(stock=x_grid, pars.uncert = x_grid[s_opt$D], pars.fi
 ggplot(policies, aes(stock, stock - value, color=variable)) + geom_line(alpha=1) + xlab("stock size") + ylab("escapement") 
 ```
 
-![](http://farm9.staticflickr.com/8239/8664751264_4673b8dc92_o.png) 
+![plot of chunk unnamed-chunk-6](http://farm9.staticflickr.com/8247/8664808783_af5240ec6e_o.png) 
 
 
 ## Using actual estimates
@@ -176,7 +166,7 @@ policies <- melt(data.frame(stock=x_grid, pars.uncert = x_grid[s_opt$D], pars.fi
 ggplot(policies, aes(stock, stock - value, color=variable)) + geom_line(alpha=1) + xlab("stock size") + ylab("escapement") 
 ```
 
-![](http://farm9.staticflickr.com/8253/8664759708_d3be6550e9_o.png) 
+![plot of chunk unnamed-chunk-11](http://farm9.staticflickr.com/8264/8664820975_f29cc8d3be_o.png) 
 
 
 
@@ -184,8 +174,7 @@ ggplot(policies, aes(stock, stock - value, color=variable)) + geom_line(alpha=1)
 
 So far this is just a proof of principle example.  
 
-* Needs to be adjusted to account for uncertainty in the estimates of the measurement noise process as well. 
+* Needs to be adjusted to account for uncertainty in the estimates of the noise processes as well. 
 * Needs to be written as generic and documented functions, add to nonparametric-bayes package routines.  
-
 
 
