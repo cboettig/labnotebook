@@ -43,15 +43,18 @@ code, analyses, and manuscripts are collected into Github repositories
 by project.  This allows my analysis and paper writing to benefit from
 this same immutable and verifiable record.  Because GitHub uses the SHA
 hashes in its link structure, this also provides a convenient way to link
-to a particular version of code in a given entry, and be sure that the
-contents of that link never change (if for some reason GitHub vanished
-or changed its link structure, we could still recover what file the
-link pointed to using the SHA hash and a copy of the repository safely
-archived elsewhere).
+to a particular version of code in a given entry.  This way, I can be sure 
+the contents of the file displayed at that link never change, even as I
+continue to update that file.  Even if the file or containing directory
+is later deleted or moved, the link will still resolve.  Only if the
+entire project repo were deleted or if Github itself dissolved would 
+the link be lost.  Even then, using the SHA hash given in the link
+we could determine the contents of the file from some other copy of 
+the repository (such as a local or figshare archive).  
 
 
-Tobias is actually working on his own approach which is
-somewhat superior to the simple method of using git.  The Github hash
+Tobias is actually working on his own SHA hash approach which is
+somewhat superior to the simpler method of using git.  The Github hash
 corresponds to the state of the entire repository/notebook at the time of
 the commit, rather than the contents of an individual file.  Consequently,
 one would need a snapshot of the entire repository, available on Github,
@@ -60,10 +63,11 @@ based on the contents of the file directly -- so far, only RDF data --
 that could proivde a unique and verifiable reference for any scholarly
 data or publication.
 
-Version managing the notebook and code have many more practical day-to-day
+Version managing the notebook and code has many more practical day-to-day
 benefits, such as recovering from a mistaken deleted or corrupted file, 
 merging changes made on different machines or by collaborators, or creating
-branches to test new features without disrupting current version.  
+branches to test new features without disrupting current version, and
+comparing differences as a file evolves.  
 
 
 

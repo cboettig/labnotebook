@@ -73,3 +73,28 @@ Such metrics are less well suited to aggregate questions such as "what content i
 
 
 
+
+Some example feedback
+---------------------
+
+
+
+<blockquote>
+Hi Carl,
+Given the time and thought you've put into open science, I'm guessing you'd like to know what impact you're having. The 'reproducible research' bug bit me during my PhD but I never did much about it. A major hurdle was transferring all my analyses to a digital and reproducible format. Just getting in the mindset of documenting all my work (a la open lab notebook) made this a natural part of my workflow, instead of an extra inconvenience. I'm mixed on science blogs, but think the open lab notebook is an awesome idea. I found your website I forget how and it provided awesome detail on getting started. I heavily trolled your notes and github which were huge in getting jekyll etc started. I promise you that the time you put into those pages was compensated in my time (...which makes me a parasite I guess...). Score another for open science. Not sure if I can help in any immediate way, but let me know if I can. Cheers and keep up the awesome work!
+
+John
+</blockquote>
+
+
+
+<blockquote>
+Hi Carl,
+I have been looking at your labnotebook repo a ton over the last few days as I set up a blog. Just wanted to let you know how much I appreciate your commitment to putting all your work and code out in the open. It's this spirit that makes the internet great!
+
+Best,
+
+Justin
+</blockquote>
+
+
