@@ -1,5 +1,6 @@
 ---
-title: "Hashes: Providing an immutable and verifiable research record"
+title: "Notebook features: SHA Hashes" 
+subtitle: "Providing an immutable and verifiable research record"
 layout: post
 published: false
 category: open-science
