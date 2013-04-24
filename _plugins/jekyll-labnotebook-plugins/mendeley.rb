@@ -503,8 +503,36 @@ module Jekyll
       end
     end
     def render(context)
-      # Initialize a redcarpet markdown renderer to autolink urls
-      # Could use octokit instead to get GFM
+
+      m = Mendeley.new
+
+      ## Get category ID numbers
+      category_ids = m.folders()
+      puts JSON.parse(category_ids.body)
+      
+      ### Get doc id numbers from category
+      category = m.folder_documents(@category)
+      doc_ids = JSON.parse(category.body)["document_ids"]
+
+      # Should loop over all doc_ids
+      # Can we get the results of folder_documents sorted by date added please?  
+      docs = m.library_doc_details(doc_ids[0])
+      doc = JSON.parse(docs.body)
+
+
+
+      authors = ""
+      for i in 0 ... [doc["authors"].length, 3].min
+        authors = authors + doc["authors"][i]["surname"] + " "
+      end
+
+      if doc["authors"].length > 3
+        authors = authors + "et al."
+      else
+        authors = authors +". "
+
+      authors + doc["year"] + ". " + doc["title"] + ". " + doc["publication_outlet"] + " " + doc["volume"] + " " + doc["issue"] +" doi:" doc["doi"]
+
       out = "<ul>"
       
       for i in 0 ... @count.to_i
