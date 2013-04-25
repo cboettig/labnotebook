@@ -34,30 +34,26 @@ notebook features, I thought it might be helpful to write a series of
 posts describing these tools and techniques.
 
 
-* Reproducible Research: embedding code and dynamic documents
-* Hashes: providing an immutable and verifiable record of research
+* [Reproducible code: embedding code and dynamic documents]()
+* [Hashes: An immutable and verifiable record of research]()
+
+* [Digital archiving]()
+* [Readable, multi-device typography]()
+
 * Understanding use: notebook analytics
 
-* Collaborative benefits of the Git/Github model
-* Online access, Offline access 
-* 
-* 
+* A fast, inexpensive, and scalable online platform 
+* Online essentials: link, tag, search
 
+* Social network integration
+* Comments
 
-
-reproducible code 
------------------
 
 Collaborative benefits of the Git/Github model
 ----------------------------------------------
 
-
-
-
-
-Online access, Offline access 
+Online access, Off-line access 
 -----------------------------
-
 
 Edit anywhere.  Though many sites that have the benefit of online access
 through browser-based editors like the Wordpress dashboard, this brings
@@ -69,15 +65,8 @@ available).  This site sits in a local repository where it can easily
 be edited off-line.
 
 
-
-
-
-Archiving 
----------
-
-
-A Fast and cheap online platform 
---------------------------------
+A fast, inexpensive, and scalable online platform 
+-------------------------------------------------
 
 One goal in exploring technology for the notebook is to identify
 approaches that can easily be employed by other scholars with a minimum
@@ -119,17 +108,10 @@ More tools for communicating / sharing
 Social network integration 
 --------------------------
 
-Plugins for Mendeley, Github, Twitter
-
-
+Plugins for Mendeley, Github, Twitter, Google Analytics. (figshare?)  
 RSS/Atom feed 
--------------
 
 
-Beautiful equations with Mathjax 
---------------------------------
-
-Math also in RSS feeds and readers without javascript.
 
 
 Visitor analytics 
@@ -146,36 +128,36 @@ accessible to archiving or management.
 
 
 
-Link, Tag 
----------
 
-Along with search, Links and tags are one of those fundamental advantages
+
+
+Online essentials: Link, Tag, Search
+------------------------------------
+
+Search, links and tags are one of those fundamental advantages
 of an electronic laboratory notebook, just as they are fundamental to
-the web itself.
-
-Links and tags both help save time, avoid duplication of effort, and
+the web itself.  Links and tags both help save time, avoid duplication of effort, and
 add structure.
 
+### Tags
+
 Unlike physical notebooks or folders, tags allow
+
+### Links
 
 Both links and tags in the notebook are semantically enhanced, allowing
 machines to benefit from these structures as well as human readers.
 
 
-Site search 
------------
+### Site search 
 
 Many ways.  Local tools provide the most powerful approach.
 
-1. grep/sed in the file repository.  2. Javascript-based search.
+1. grep/sed in the file repository.  
+2. Javascript-based search.
 3. Google's index.
 
 
 
 
-
-
-
-Readable, multi-device typography 
---------------------------------
 
