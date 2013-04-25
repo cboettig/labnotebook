@@ -89,5 +89,11 @@ the reader can set viewing preferences such as a light or dark theme.
 
 Solarized colors
 
+Beautiful equations with Mathjax 
+--------------------------------
+
+Math also in RSS feeds and readers without javascript.
+
+
 
 
