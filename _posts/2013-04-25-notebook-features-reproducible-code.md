@@ -1,7 +1,6 @@
 ---
 title: "Notebook features: reproducible code"
 layout: post
-published: false
 category: open-science
 tags: 
 - notebook-technology
@@ -9,11 +8,18 @@ tags:
 
 ---
 
-I now use the dynamic documentation software
-called knitr to write most entries that shore results and figures. The
-code to replicate the results is included automatically, ensuring that
-what I say I did and what code I actually ran to get the results are
-always consistent.  
+I now use the dynamic documentation software called
+[knitr](http://yihui.name/knitr) to write most entries that shore results
+and figures. The code to replicate the results is included automatically,
+ensuring that what I say I did and what code I actually ran to get the
+results are consistent.  Though I have written about knitr before, both regarding
+its [use in my notebook](http://carlboettiger.info/2012/03/21/knitr-github-and-a-new-phase-for-the-lab-notebook.html) and 
+[in my manuscripts](http://carlboettiger.info/2012/04/07/writing-reproducibly-in-the-open-with-knitr.html),
+here I provide a quick summary of how a reader might actually reproduce
+a figure or result they come across in the notebook, as well as some of 
+the possible problems involved.  
+
+
 
 As the code required for any given analysis can be quite involved, it 
 is not pratical to provide free-standing scripts in this way.  Instead,
@@ -42,7 +48,7 @@ from a page of the notebook, such as the final histogram plot from [this entry](
 
 We can install the entire research compendium at exactly the state it was at 
 the time of the analysis using the hash (long chain of seemingly random characters, 
-see the entry on [hashes]()) using the clever `devtools` R package,
+see the (upcoming) entry on [hashes]()) using the clever `devtools` R package,
 
 ```r
 install_github("nonparametric-bayes", "cboettig", "9d5cd1f027bdfe5f356dce83756726c95a6fcdd8") 
@@ -58,14 +64,19 @@ In practice such fine-grained control and invistigation is more important
 than simply being able to regenerate what has already been done without
 any further input.
 
-(This is not, however, entirely failsafe. The package may depend on
+
+This is not entirely failsafe. The package may depend on
 other packages, which themselves may have changed.  For my use cases, it
 is a deal more reliable than running the current version of a package
 that is actively changing during my research.  Readers interested
 in even more robust replication and verification should take a look
 at Roger Peng's package `stashR` package and associated publications
-`r citet(citation("stashR"))`.
+<span class="showtooltip" data-html="true" title="<p>Eckel S and Peng RD (2012). stashR: A Set of Tools for Administering SHared Repositories. R package version 0.3-5."><a href="http://CRAN.R-project.org/package=stashR">Eckel & Peng (2012)</a></span> .
 
 
+## References
+
+
+- Sandy Eckel, Roger Peng,   (2012) stashR: A Set of Tools for Administering SHared Repositories.  [http://CRAN.R-project.org/package=stashR](http://CRAN.R-project.org/package=stashR)
 
 
