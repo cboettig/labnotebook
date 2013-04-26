@@ -19,10 +19,8 @@ In keeping this open lab notebook, I have sought to address three goals
 which are coincidentally evocative of [NSF's Broader
 Impacts](http://www.nsf.gov/pubs/2007/nsf07046/nsf07046.jsp) areas.
 In this series of posts I plan to explore and illustrate some of
-my experiments with number 2 on this list, "experimenting with
-scientific infrastructure" -- namely, some of the web-based tools
-that advance the potential of this platform substantially beyond the
-utility of the venerable paper bound notebook.  Many of these have
+my experiments to address these goals through various web-based tools
+available for an open notebook platform.  Many of these have
 been documented in the notebook itself as I experiment with them (see
 [#notebook-technology](http://www.carlboettiger.info/tags.html#notebook-technology)).
 Not all of those experiments pan out and older tools and techniques
@@ -31,6 +29,7 @@ usually more technical notes written to help me think through and remember
 what I'm trying out.  In order to provide a more accessible snapshot of
 notebook features, I thought it might be helpful to write a series of
 posts describing these tools and techniques.
+
 
 
 Below is an index of posts in this theme that I will continue to 
