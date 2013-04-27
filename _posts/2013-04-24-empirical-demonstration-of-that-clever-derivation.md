@@ -11,21 +11,15 @@ Another unexpected gem from keeping an online notebook: Empirical evidence for t
 
 After Marc pointed out to me that there is a clever analytic demonstration to back my claims about realized exit times being fast (posted earlier in my notebook under the title, [a clever derivation of realized escape times](http://carlboettiger.info/2013/04/05/a-clever-derivation-on-realized-escape-times.html), I've enjoyed a bit of a tangent in understanding this result that has long since been worked out by mathematicians but appears to be periodically rediscovered in ecological and evolutionary work in the most delightful ways. 
 
-For instance, <span class="showtooltip" data-html="true" title="<p>Lande R (1985). &ldquo;Expected time for random genetic drift of a population between stable phenotypic states.&rdquo; ."><a href="http://www.pnas.org/content/82/22/7641.short" rel="http://purl.org/spar/cito/citesAsEvidence" >Lande (1985)</a></span>  shows how this result can explain a pattern of punctuated equilibrium, such as sudden rapid jumps such as illustrated below in a simulation example from <a href="http://dx.doi.org/none" rel="http://purl.org/spar/cito/citesAsAuthority" >Freidlin _et. al._ (1998)</a> , need not result from some external process but are in fact the most likely trajectories to be seen in a purely stochastic transition.  
+For instance, <span class="showtooltip" data-html="true" title="<p>Lande R (1985). &ldquo;Expected time for random genetic drift of a population between stable phenotypic states.&rdquo; ."><a href="http://www.pnas.org/content/82/22/7641.short" rel="http://purl.org/spar/cito/citesAsEvidence" >Lande (1985)</a></span>  shows how this result can explain a pattern of punctuated equilibrium, such as sudden rapid jumps such as illustrated below in a simulation example from <a href="http://www.amazon.com/Perturbations-Dynamical-Grundlehren-mathematischen-Wissenschaften/dp/0387983627" rel="http://purl.org/spar/cito/citesAsAuthority" >Freidlin _et. al._ (1998)</a>, need not result from some external process but are in fact the most likely trajectories to be seen in a purely stochastic transition.  
+
+![from Mangel 2006, Theoretical Biologist's toolbox](http://farm9.staticflickr.com/8258/8684251521_124e51b5d3_o.png)
 
 Ludwig (1975) considered this result in a more ecological context, addressing a variety of questions about persistence and coexistence that are naturally represented as hitting time problems as well.  Note that the this result is interesting precisely in its contrast from the more familiar hitting time problems in that we focus on the time the realized trajectory actually takes to exit, rather than the waiting time until that exit occurs (e.g. the frequency of the transtions shown in the figure above).  
 
 
 
-These examples appear to be rediscoveries of particular cases that result more generally from the large deviation theory 
-
-```
-
-Error in out$doi : $ operator is invalid for atomic vectors
-
-```
-
-, which states that the most likely path can be found by minimizing a variation equation (Hamiltonian, analgous to the minimizing action along paths in classical mechanics or the optimization under constraint of Jacobi-Bellman).  For a system of discrete steps (e.g. births and deaths) in one dimension this is particularly trivial: the most likely path is the monotonic one (this should be easy to see by considering the likelihood of $N$ death events occuring in sequence vs that of $N-1$ death events interrupted by 1 birth and followed by 2 deaths.)  
+These examples appear to be rediscoveries of particular cases that result more generally from the large deviation theory of Fiedlin and Wentzell, which states that the most likely path can be found by minimizing a variation equation (Hamiltonian, analgous to the minimizing action along paths in classical mechanics or the optimization under constraint of Jacobi-Bellman).  For a system of discrete steps (e.g. births and deaths) in one dimension this is particularly trivial: the most likely path is the monotonic one (this should be easy to see by considering the likelihood of $N$ death events occuring in sequence vs that of $N-1$ death events interrupted by 1 birth and followed by 2 deaths.)  
 
 ## Empirical demonstrations? 
 
@@ -45,7 +39,7 @@ Commendably, the authors make the data and code available (as an R script and .R
 
 
 - John M. Drake, Blaine D. Griffen,   (2009) Speed of Expansion And Extinction in Experimental Populations.  *Ecology Letters*  **12**  772-778  [10.1111/j.1461-0248.2009.01325.x](http://dx.doi.org/10.1111/j.1461-0248.2009.01325.x)
-- Mark Freidlin, Alexander Wentzell, M.I. Freidlin, A.D. Wentzell,   (1998) {Random Perturbations of Dynamical Systems (Grundlehren der mathematischen Wissenschaften)}.  429-NA  [http://www.amazon.com/Perturbations-Dynamical-Grundlehren-mathematischen-Wissenschaften/dp/0387983627](http://www.amazon.com/Perturbations-Dynamical-Grundlehren-mathematischen-Wissenschaften/dp/0387983627)
+- Mark Freidlin, Alexander Wentzell,  (1998) {Random Perturbations of Dynamical Systems (Grundlehren der mathematischen Wissenschaften)}.  429-NA  [http://www.amazon.com/Perturbations-Dynamical-Grundlehren-mathematischen-Wissenschaften/dp/0387983627](http://www.amazon.com/Perturbations-Dynamical-Grundlehren-mathematischen-Wissenschaften/dp/0387983627)
 - R Lande,   (1985) Expected time for random genetic drift of a population between stable phenotypic states.  *Proceedings of the National Academy of Sciences*  [http://www.pnas.org/content/82/22/7641.short](http://www.pnas.org/content/82/22/7641.short)
 - Mathieu Faure, Sebastian Schreiber,   (2011) Quasi-Stationary distributions for Randomly perturbed dynamical systems.  *arXiv.org*  [http://arxiv.org/abs/1101.3420](http://arxiv.org/abs/1101.3420)
 
