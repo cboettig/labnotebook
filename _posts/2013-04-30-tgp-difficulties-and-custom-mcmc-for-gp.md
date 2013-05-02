@@ -1,6 +1,5 @@
 ---
-title: Difficulties with tgp; taking custom mcmc approach for GPs 
-published: false
+title: "Difficulties with tgp; taking custom mcmc approach for GPs"
 layout: post
 category: ecology
 tags:
