@@ -5,6 +5,8 @@ category: ecology
 tags:
 - nonparametric-bayes
 
+code: true
+
 ---
 
 
