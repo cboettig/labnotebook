@@ -2,13 +2,16 @@
 title: "Notebook features: SHA Hashes" 
 subtitle: "Providing an immutable and verifiable research record"
 layout: post
-published: false
 category: open-science
 tags: 
 - notebook-technology
 - blog
 
 ---
+
+Note: this entry is part of a [series of posts](http://carlboettiger.info/2013/04/26/notebook-features-introduction.html) 
+which explain some of the techinical features of my lab notebook.
+
 
 I version manage all changes to my entry using git. Each page
 is linked to its source history on Github, which will display a list
