@@ -39,7 +39,7 @@ it in the comments.
 
 ### Written
 
-1. [Reproducible code: embedding code and dynamic documents](http://carlboettiger.info/2013/04/25/notebook-features-reproducible-code.html)
+1. [Reproducible code: embedding code and dynamic documents](http://carlboettiger.info/2013/04/26/notebook-features-reproducible-code.html)
 1. [Parsing linked data in the semantic notebook](http://carlboettiger.info/2013/04/04/notebook-parsing.html)
 1. [Hashes: An immutable and verifiable record of research](http://carlboettiger.info/2013/05/03/notebook-features-hashes-providing-an-immutable-and-verifiable-research-record.html)
 
