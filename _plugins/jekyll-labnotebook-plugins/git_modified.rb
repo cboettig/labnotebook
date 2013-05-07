@@ -1,4 +1,4 @@
-# Title: git_modified.rb
+# Title: git_mod.rb
 # Author: Carl Boettiger, @cboettig
 # Licence: MIT
 # Description: A custom filter to return the date that git has for the page modification time 
@@ -7,23 +7,18 @@
 #
 # Example use: 
 #
-# {{ post.path | prepend:'../_posts/' | git_modified }}
+# {{ post.path | prepend:'_posts/' | git_modified }}
 # 
 
-# require 'ruby-git'
 require 'chronic'
+require 'git'
 
-module TextFilter
-  def git_modified(input)
-    path = input 
-    modif = `git log -n 1 --format="%ai" -- #{path}`
-    modif = Chronic.parse(modif)
-    if modif.class != Time
-      puts "Error in obtaining time for"
-      puts path
-      puts modif
+module Jekyll
+  module GitModFilter
+    def git_modified(input)
+      g = Git.open("/home/cboettig/Documents/labnotebook")
+      g.log(1).object("vita.html").first.date
     end
-    modif
   end
 end
-Liquid::Template.register_filter(TextFilter)
+Liquid::Template.register_filter(Jekyll::GitModFilter)

@@ -3,8 +3,8 @@
     <time datetime="{{ page.date | date_to_xmlschema }}" 
     property="dc:created">{{ page.date | date_to_string }}</time></p>
   <p><small> modified: <time 
-            datetime="{{ page.path | prepend:'../_posts/' | git_modified | date_to_xmlschema }}" 
-            property="dc:modified">{{ page.path | prepend:'../_posts/' | git_modified | date_to_string }}</time></small></p>
+            datetime="{{ page.path | prepend:'_posts/' | git_modified | date_to_xmlschema }}" 
+            property="dc:modified">{{ page.path | prepend:'_posts/' | git_modified | date_to_string }}</time></small></p>
 
  <br />
 
@@ -46,7 +46,7 @@
 
   <br/>
 
-  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="{{ site.repo }}/commit/{{page.path | prepend:'../_posts/' | git_sha }}/_posts/{{ page.path }}"> {{ page.path | prepend:'../_posts/' | git_sha }}</a></small></p>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="{{ site.repo }}/commit/{{page.path | prepend:'_posts/' | git_sha }}/_posts/{{ page.path }}"> {{ page.path | prepend:'_posts/' | git_sha }}</a></small></p>
     
   <br/>
 

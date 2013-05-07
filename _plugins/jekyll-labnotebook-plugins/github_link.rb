@@ -18,9 +18,11 @@
 ## See the Generator in base_name.rb
 
 
-module TextFilter
-  def github_link(input)
-    input.gsub(/(\d\d\d\d)\/(\d\d)\/(\d\d)\/(.*)\.html/, "\\1-\\2-\\3-\\4.md")
+module Jekyll
+  module GithubLinkFilter
+    def github_link(input)
+      input.gsub(/(\d\d\d\d)\/(\d\d)\/(\d\d)\/(.*)\.html/, "\\1-\\2-\\3-\\4.md")
+    end
   end
 end
-Liquid::Template.register_filter(TextFilter)
+Liquid::Template.register_filter(Jekyll::GithubLinkFilter)
