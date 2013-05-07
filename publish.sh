@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Compile the site
-jekyll 
+jekyll build 
 
 ## Copy site to repository for github hosting
 rsync -az _site/ ~/Documents/code/cboettig.github.com  
