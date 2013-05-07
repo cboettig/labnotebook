@@ -2,11 +2,12 @@
 # Author: Carl Boettiger, @cboettig
 # License: MIT
 
-
-module TextFilter
-  def track_link(input)
-    '"onclick="recordOutboundLink(this, \"Link\", \"' + input + '\"); 
-    return false;"'
+module Jekyll
+  module TrackLinkFilter
+    def track_link(input)
+      '"onclick="recordOutboundLink(this, \"Link\", \"' + input + '\"); 
+      return false;"'
+    end
   end
-end
-Liquid::Template.register_filter(TextFilter)
+end 
+Liquid::Template.register_filter(Jekyll::TrackLinkFilter)

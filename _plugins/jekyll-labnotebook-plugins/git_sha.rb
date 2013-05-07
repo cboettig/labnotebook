@@ -7,17 +7,17 @@
 # Example use: 
 #
 # {{ post.path | git_sha }}
-# {{ post.path | prepend:'../_posts/' | git_sha }}
+# {{ post.path | prepend:'_posts/' | git_sha }}
 # 
 
-# require 'ruby-git'
+require 'git'
 
-
-module TextFilter
-  def git_sha(input)
-    path = input 
-    sha = `git log -n 1 --format="%H" -- #{path}`
-    sha
+module Jekyll
+  module GitSHAFilter
+    def git_sha(input)
+      g = Git.open("/home/cboettig/Documents/labnotebook")
+      g.log(1).object("vita.html").first.sha
+    end
   end
 end
-Liquid::Template.register_filter(TextFilter)
+Liquid::Template.register_filter(Jekyll::GitSHAFilter)

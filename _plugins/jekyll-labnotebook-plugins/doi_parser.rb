@@ -7,11 +7,12 @@
 
 # What about arXiv, github, etc?  Ideally these outbound links should be tracked as well...
 
-
-module TextFilter
-  def doi_parser(input)
-    string = '<a rel="datacite:doi" href="http://dx.doi.org/' + input + '" onclick="recordOutboundLink(this, \'DOI\', \'' + input + '\'); return false;">doi</a>:' + input + ' (<a href="/assets/files/pubs/' + input + '.pdf" onclick="var that=this; _gaq.push([\'_trackEvent\',\'Publication\',\'' + input + '\',this.href]); setTimeout(function(){location.href=that.href;},200); return false;">pdf</a>)'
-    string
+module Jekyll
+  module DoiFilter
+    def doi_parser(input)
+      string = '<a rel="datacite:doi" href="http://dx.doi.org/' + input + '" onclick="recordOutboundLink(this, \'DOI\', \'' + input + '\'); return false;">doi</a>:' + input + ' (<a href="/assets/files/pubs/' + input + '.pdf" onclick="var that=this; _gaq.push([\'_trackEvent\',\'Publication\',\'' + input + '\',this.href]); setTimeout(function(){location.href=that.href;},200); return false;">pdf</a>)'
+      string
+    end
   end
-end
-Liquid::Template.register_filter(TextFilter)
+end 
+Liquid::Template.register_filter(Jekyll::DoiFilter)
