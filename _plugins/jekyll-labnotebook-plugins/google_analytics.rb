@@ -38,9 +38,7 @@
 
 require 'garb'
 require 'chronic'
-require 'rubygems'
 require 'json'
-require 'yaml'
 
 module Jekyll
 
@@ -85,9 +83,12 @@ module Jekyll
 #        Garb.read_timeout = 120 # 2 minute timeout
         ## Read in credentials and authenticate 
         cred = YAML.load_file("/home/cboettig/.garb_auth.yaml")
-        Garb::Session.api_key = cred[:api_key]
-        token = Garb::Session.login(cred[:username], cred[:password])
-        profile = Garb::Management::Profile.all.detect {|p| p.web_property_id == cred[:ua]}
+
+        puts "Garb authenticating for " + cred[":username"]
+
+        Garb::Session.api_key = cred[":api_key"]
+        token = Garb::Session.login(cred[":username"], cred[":password"])
+        profile = Garb::Management::Profile.all.detect {|p| p.web_property_id == cred[":ua"]}
 
         # place query, customize to modify results
         data = Exits.results(profile, 
