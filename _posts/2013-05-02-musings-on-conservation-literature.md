@@ -1,11 +1,12 @@
 ---
 layout: post
-published: false
+categort: ecology
+tags:
+- blog
+- conservation
 
 ---
 
-
-## Musings on conservation literature
 
 Just because I'm a theorist deeply entrenched in methodological concerns about uncertainty and decision making doesn't mean I don't think about practical conservation from time to time.  Some musings from my [comment here](http://dynamicecology.wordpress.com/2013/04/29/the-implementation-gap-in-conservation-biology-is-math-contributing-to-the-problem), copied over for my own reference.  
 
