@@ -8,8 +8,13 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+
+
 // CSS Reset
 @import "reset.less";
+
+
+@import "variables-light.less"; // Syntax highlight colors 
 
 // Core variables and mixins
 @import "variables.less"; // Modify this for custom colors, font-sizes, etc
@@ -59,6 +64,14 @@
 @import "accordion.less";
 @import "carousel.less";
 @import "hero-unit.less";
+
+
+// Additional styles
+@import "syntax-highlights.less";   // Add syntax highlighting
+@import "disqus.less";              // Customize disqus
+@import "custom.less";              // Custom classes
+
+
 
 // Utility classes
 @import "utilities.less"; // Has to be last to override when necessary
