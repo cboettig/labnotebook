@@ -5685,6 +5685,594 @@ a.badge:hover {
 .hero-unit li {
   line-height: 30px;
 }
+code {
+  font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
+  font-size: .8em;
+}
+.highlight .c {
+  color: #586e75;
+}
+/* Comment */
+.highlight .err {
+  color: #93a1a1;
+}
+/* Error */
+.highlight .g {
+  color: #93a1a1;
+}
+/* Generic */
+.highlight .k {
+  color: #46a546;
+}
+/* Keyword */
+.highlight .l {
+  color: #93a1a1;
+}
+/* Literal */
+.highlight .n {
+  color: #93a1a1;
+}
+/* Name */
+.highlight .o {
+  color: #46a546;
+}
+/* Operator */
+.highlight .x {
+  color: #f89406;
+}
+/* Other */
+.highlight .p {
+  color: #93a1a1;
+}
+/* Punctuation */
+.highlight .cm {
+  color: #586e75;
+}
+/* Comment.Multiline */
+.highlight .cp {
+  color: #46a546;
+}
+/* Comment.Preproc */
+.highlight .c1 {
+  color: #586e75;
+}
+/* Comment.Single */
+.highlight .cs {
+  color: #46a546;
+}
+/* Comment.Special */
+.highlight .gd {
+  color: #2aa198;
+}
+/* Generic.Deleted */
+.highlight .ge {
+  color: #93a1a1;
+  font-style: italic;
+}
+/* Generic.Emph */
+.highlight .gr {
+  color: #9d261d;
+}
+/* Generic.Error */
+.highlight .gh {
+  color: #f89406;
+}
+/* Generic.Heading */
+.highlight .gi {
+  color: #46a546;
+}
+/* Generic.Inserted */
+.highlight .go {
+  color: #93a1a1;
+}
+/* Generic.Output */
+.highlight .gp {
+  color: #93a1a1;
+}
+/* Generic.Prompt */
+.highlight .gs {
+  color: #93a1a1;
+  font-weight: bold;
+}
+/* Generic.Strong */
+.highlight .gu {
+  color: #f89406;
+}
+/* Generic.Subheading */
+.highlight .gt {
+  color: #93a1a1;
+}
+/* Generic.Traceback */
+.highlight .kc {
+  color: #f89406;
+}
+/* Keyword.Constant */
+.highlight .kd {
+  color: #049cdb;
+}
+/* Keyword.Declaration */
+.highlight .kn {
+  color: #46a546;
+}
+/* Keyword.Namespace */
+.highlight .kp {
+  color: #46a546;
+}
+/* Keyword.Pseudo */
+.highlight .kr {
+  color: #049cdb;
+}
+/* Keyword.Reserved */
+.highlight .kt {
+  color: #9d261d;
+}
+/* Keyword.Type */
+.highlight .ld {
+  color: #93a1a1;
+}
+/* Literal.Date */
+.highlight .m {
+  color: #2aa198;
+}
+/* Literal.Number */
+.highlight .s {
+  color: #2aa198;
+}
+/* Literal.String */
+.highlight .na {
+  color: #93a1a1;
+}
+/* Name.Attribute */
+.highlight .nb {
+  color: #ffc40d;
+}
+/* Name.Builtin */
+.highlight .nc {
+  color: #049cdb;
+}
+/* Name.Class */
+.highlight .no {
+  color: #f89406;
+}
+/* Name.Constant */
+.highlight .nd {
+  color: #049cdb;
+}
+/* Name.Decorator */
+.highlight .ni {
+  color: #f89406;
+}
+/* Name.Entity */
+.highlight .ne {
+  color: #f89406;
+}
+/* Name.Exception */
+.highlight .nf {
+  color: #049cdb;
+}
+/* Name.Function */
+.highlight .nl {
+  color: #93a1a1;
+}
+/* Name.Label */
+.highlight .nn {
+  color: #93a1a1;
+}
+/* Name.Namespace */
+.highlight .nx {
+  color: #555555;
+}
+/* Name.Other */
+.highlight .py {
+  color: #93a1a1;
+}
+/* Name.Property */
+.highlight .nt {
+  color: #049cdb;
+}
+/* Name.Tag */
+.highlight .nv {
+  color: #049cdb;
+}
+/* Name.Variable */
+.highlight .ow {
+  color: #46a546;
+}
+/* Operator.Word */
+.highlight .w {
+  color: #93a1a1;
+}
+/* Text.Whitespace */
+.highlight .mf {
+  color: #2aa198;
+}
+/* Literal.Number.Float */
+.highlight .mh {
+  color: #2aa198;
+}
+/* Literal.Number.Hex */
+.highlight .mi {
+  color: #2aa198;
+}
+/* Literal.Number.Integer */
+.highlight .mo {
+  color: #2aa198;
+}
+/* Literal.Number.Oct */
+.highlight .sb {
+  color: #586e75;
+}
+/* Literal.String.Backtick */
+.highlight .sc {
+  color: #2aa198;
+}
+/* Literal.String.Char */
+.highlight .sd {
+  color: #93a1a1;
+}
+/* Literal.String.Doc */
+.highlight .s2 {
+  color: #2aa198;
+}
+/* Literal.String.Double */
+.highlight .se {
+  color: #f89406;
+}
+/* Literal.String.Escape */
+.highlight .sh {
+  color: #93a1a1;
+}
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #2aa198;
+}
+/* Literal.String.Interpol */
+.highlight .sx {
+  color: #2aa198;
+}
+/* Literal.String.Other */
+.highlight .sr {
+  color: #9d261d;
+}
+/* Literal.String.Regex */
+.highlight .s1 {
+  color: #2aa198;
+}
+/* Literal.String.Single */
+.highlight .ss {
+  color: #2aa198;
+}
+/* Literal.String.Symbol */
+.highlight .bp {
+  color: #049cdb;
+}
+/* Name.Builtin.Pseudo */
+.highlight .vc {
+  color: #049cdb;
+}
+/* Name.Variable.Class */
+.highlight .vg {
+  color: #049cdb;
+}
+/* Name.Variable.Global */
+.highlight .vi {
+  color: #049cdb;
+}
+/* Name.Variable.Instance */
+.highlight .il {
+  color: #2aa198;
+}
+/* Literal.Number.Integer.Long */
+/* Pandoc does syntax highlighting using HTML markup from these classes */
+/* Based on kate's own default colors for Haskell */
+pre.sourceCode,
+table.sourceCode,
+table.sourceCode * {
+  font-family: monospace;
+}
+code.sourceCode span.kw {
+  color: #ffc40d;
+  font-weight: bold;
+}
+code.sourceCode span.dt {
+  color: #2aa198;
+}
+code.sourceCode span.dv {
+  color: #586e75;
+}
+code.sourceCode span.bn {
+  color: #f89406;
+}
+code.sourceCode span.fl {
+  color: #2aa198;
+}
+code.sourceCode span.ch {
+  color: #9d261d;
+}
+code.sourceCode span.st {
+  color: #d33682;
+}
+code.sourceCode span.co {
+  color: #586e75;
+  font-style: italic;
+}
+code.sourceCode span.al {
+  color: #46a546;
+  font-weight: bold;
+}
+code.sourceCode span.fu {
+  color: #049cdb;
+}
+code.sourceCode span.er {
+  color: #9d261d;
+  font-weight: bold;
+}
+#dsq-content #dsq-comments .dsq-comment-body {
+  padding: 0.571em 0.786em;
+  /* Space between comment text and border */
+
+  background: #fdf6e3;
+  /* Comment body background color */
+
+  min-height: 70px;
+  /* Minimum comment body box height */
+
+  border-bottom: #93a1a1 1px solid;
+  /* Comment body bottom border */
+
+  border-left: #93a1a1 1px solid;
+  /* Comment body left border */
+
+  border-right: #93a1a1 1px solid;
+  /* Comment body right border */
+
+  border-top: #93a1a1 1px solid;
+  /* Comment body top border */
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+.dsq-dc-logo {
+  display: none;
+  /* Turns off display of disqus logo */
+
+}
+/* My additional customizations to the Twitter Bootstrap CSS */
+/* Icons 
+---------------------------------*/
+.socialicons {
+  color: #586e75;
+}
+.socialicons a {
+  color: #657b83;
+}
+h3.notebook-category {
+  line-height: 15px;
+}
+/* Footer
+-------------------------------------------------- */
+.footer {
+  margin-top: 45px;
+  padding: 35px 0 36px;
+  border-top: 1px solid #eee8d5;
+  font-size: 13px;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #657b83;
+}
+/* highlight (shrink fontsize for code)
+-------------------------------------------------- */
+.highlight code {
+  font-size: 13px;
+}
+.highlight code {
+  font-size: 13px;
+}
+/* Project-credits */
+.borderleft {
+  border-left: 2px solid #eee8d5;
+  padding: 0px 8px;
+}
+/* Sidebar
+-------------------------------------------------- */
+.sidebar {
+  margin-left: 45px;
+  padding: 35px 35px 36px;
+  border-left: 1px solid #eee8d5;
+  font-size: 13px;
+}
+.sidebar p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+.sidebar h4 a {
+  color: inherit;
+  font-weight: bold;
+}
+/* Notebook feeds
+-------------------------------------------- */
+.feed {
+  padding: 35px 35px 36px;
+  font-size: 11px;
+}
+.feed p {
+  margin-bottom: 0;
+  font-size: 11px;
+}
+.feed h4 a {
+  color: inherit;
+  font-weight: bold;
+}
+/* excerpt 
+-----------------------------------------------------*/
+div.excerpt {
+  height: 200px;
+  overflow: hidden;
+}
+.excerpt h1,
+.excerpt h2,
+.excerpt h3,
+.excerpt h4,
+.excerpt h5,
+.excerpt h6 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
+/* postpreview
+-------------------------------------------------- */
+.postpreview {
+  padding: 35px 35px 36px;
+  font-size: .85em;
+  line-height: 1.5em;
+  text-align: justify;
+}
+.postpreview h3 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.postpreview p {
+  margin-bottom: 0;
+  color: #657b83;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: justify;
+}
+.postpreview blockquote {
+  margin-bottom: 0;
+  color: #657b83;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: justify;
+}
+/* CV styling 
+----------------------------------------------------*/
+.cv {
+  font-size: 13px;
+  line-height: 18px;
+  text-align: justify;
+}
+.cv ul,
+ol {
+  margin-left: 0;
+  margin-bottom: 30px;
+  list-style: none;
+}
+.cv li {
+  margin-bottom: 10px;
+}
+.cv strong {
+  font-weight: bolder;
+}
+/* Make markdown with floatright in the alt-text into a nice text-wrapped image 
+--------------------------------------------------------------------------------*/
+img[alt=floatright] {
+  float: right;
+  margin: 10px 10px;
+}
+/* Misc
+-------------------------------------------------- */
+img {
+  max-width: 100%;
+}
+/* Tweak navbar brand link to be super sleek
+-------------------------------------------------- */
+.navbar-fixed-top .brand {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 20px;
+  float: right;
+  font-weight: bold;
+}
+/* Body and structure
+-------------------------------------------------- */
+body {
+  position: relative;
+  padding-top: 90px;
+  background-image: url(../img/grid-18px-masked.png);
+  background-repeat: repeat-x;
+  background-position: 0 40px;
+}
+/* Jumbotrons
+-------------------------------------------------- */
+.jumbotron {
+  position: relative;
+}
+.jumbotron h1 {
+  margin-bottom: 9px;
+  font-size: 40px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.jumbotron h3 {
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+/* Search (Marran method) 
+-----------------------------------------------------------------*/
+#search {
+  position: relative;
+  margin-bottom: 20px;
+}
+#search   .form-search {
+  /*
+      position: absolute; top: -1px; right: 5px;
+      text-align: right; padding: 6px 0 0; margin: 0 0 6px; 
+      label       { padding: 4px 10px 0 0 ; }
+      input       { height: 14px; font-size: 12px; }
+  */
+
+}
+#search   .form-search  .icon-remove {
+  position: absolute;
+  right: 4px;
+  top: 10px;
+}
+#search-results {
+  display: none;
+  overflow: auto;
+  background: #fdf6e3;
+  padding: 6px 0;
+  max-height: 800px;
+}
+#search-results  .search-entry {
+  padding: 12px 0 10px;
+  border-bottom: 1px dotted #eee8d5;
+}
+#search-results  .search-entry.selected {
+  background: #fdf6e3;
+}
+#search-results  .search-entry a {
+  color: #333333;
+}
+#search-results  .search-entry .title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  line-height: 20px;
+  background: none;
+}
+#search-results  .search-entry .title a {
+  color: #333333 !important;
+}
+#search-results  .search-entry .timestamp {
+  font-size: 14px;
+  color: #586e75;
+}
+#search-results  .search-entry .date {
+  display: none;
+}
+#search-results  .search-entry .description {
+  margin-bottom: 6px;
+}
+#search-results.thinking {
+  display: block;
+  background: #fdf6e3 url('/assets/img/spinner.gif') no-repeat center 20px;
+  height: 40px;
+}
 .pull-right {
   float: right;
 }

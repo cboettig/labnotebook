@@ -6352,11 +6352,13 @@ hr {
   color: #586e75;
 }
 blockquote {
-  font-size: 14px;
   border-left: 5px solid #073642;
 }
 blockquote small {
   color: #073642;
+}
+blockquote p {
+  font-size: 14px;
 }
 .pull-right {
   float: right;
