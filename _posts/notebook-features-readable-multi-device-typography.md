@@ -32,7 +32,6 @@ Fortunately, appearance is also fast becoming the greatest handy-cap of
 the PDF format, thanks to the rise of mobile devices.
 
 
-
 Given the importance of a visually appealing, uncluttered appearance
 in communicating scientific content, the notebook has become  
 a platform for me to experiment with layout and design. I've taken
@@ -75,8 +74,6 @@ of their articles, though this is changing in newer journals such as
 [peerJ]() and [eLife]() (which are both great sources of inspiration).
 
 
-
-
 Features such as pop-up text giving the full citation save the reader
 from scrolling to the bottom of a page and losing their place.
 
@@ -87,12 +84,54 @@ these different layouts to suit the user.  Even within a given medium
 the reader can set viewing preferences such as a light or dark theme.
 
 
-Solarized colors
+Thematic alternate color schemes
+--------------------------------
+
+The site uses an off-white background with a fading gridline backdrop 
+evocative of an older lab notebook.  The colors come from the carefully
+crafted and popular [Solarized]() color scheme, which follows some 
+sophisticated design principles outlined on its own webpage.  One feature
+of the color choices is the ability to render in both dark and light
+backgrounds, as demonstrated on the page.  The notebook provides a simple
+Javascript to switch between my personal implementations of both dark
+and light themes, (as well as the "alternate stylesheet" designation 
+for browsers that support it).  The literature I have seen is inconclusive
+about the preference for dark or light backgrounds, except that changing
+between environments can reduce fatigue.  Just as many e-readers support
+this kind of toggling, the notebook provides such functionality in any browser.
+
+Solarized colors provide a visual appeal and distinctiveness, but do not offer
+the high contrast often recommended for reading. To address this I have also
+added a black and white theme for readers prefering higher contrast. 
+
+Solarized colors are particularly useful in code blocks, in which they 
+provide flexible syntax highlighting using custom CSS file tuned for 
+Pandoc's code block output.  An [earlier post](http://carlboettiger.info/2012/10/02/solarized-colors.html) from when I first adopted
+a Solarized theme has become a somewhat popular source of information.
+
+
+
 
 Beautiful equations with Mathjax 
 --------------------------------
 
-Math also in RSS feeds and readers without javascript.
+Equation rendering is an essential part of much scientific writing.
+For a long time LaTeX was pretty much the only option for this, but 
+[MathJax]() has now made equation rendering on the web frequently
+superior to even what LaTeX can offer. Mathjax provides a LaTeX
+equation rendering engine, with the added benefit of vector graphics
+that can look excellent at any size.  Javascript means the user
+can interact with the equation, zooming in or opening a dialog to
+copy the equation in TeX or mathml form.
+
+While the LaTeX format is the simplest for input, the Pandoc parser
+can render mathjax to display in the HTML source either using the original
+LaTeX format or using the XML-flavor MathML syntax, which may be 
+advantageous for certain machine-reading exercises. 
+
+The notebook also provides equations in RSS feeds and atom readers 
+without the use of javascript by using a little Jekyll plugin 
+and the Codecogs API to generate images of each equation.
 
 
 
