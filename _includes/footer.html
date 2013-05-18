@@ -33,9 +33,7 @@
   <div class="row">
     <div class="span3 socialicons" style="font-size:20px" typeof="foaf:Person" about="{{site.url}}#me">
       <p>
-          <a rel="foaf:account" alt="email" href="mailto:{{site.author.email}}" 
-             onclick="recordOutboundLink(this, 'Outbound Links', 'email'); 
-             return false;"><span class="showtooltip" title="email me"><i class="icon-envelope-alt"></i></span></a>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js" language="javascript"></script> 
           <a rel="foaf:account" alt="twitter" href="https://twitter.com/{{site.author.twitter}}" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
              return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="icon-twitter"></i></span></a> 
