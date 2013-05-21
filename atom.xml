@@ -13,7 +13,6 @@ redirects: [feed, wordpress/feed]
  <id>{{ site.url }}</id>
  <author>
    <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
  </author>
  <rights>CC0</rights>
  {% for post in site.posts %}
