@@ -95,7 +95,7 @@ fig2a <- ggplot(dat,aes(x=x,y=value)) +
 fig2a
 ```
 
-![plot of chunk unnamed-chunk-9](../../../assets/figures/2012-10-18-81840d8794-unnamed-chunk-9.png) 
+![plot of draws from the null distribution](http://farm9.staticflickr.com/8377/8591045456_0f9f7191d5_o.png)
 
 
 ### Posterior distribution given the data
@@ -160,7 +160,7 @@ fig2b <- ggplot(dat,aes(x=x,y=value)) +
 fig2b
 ```
 
-![plot of chunk unnamed-chunk-13](../../../assets/figures/2012-10-18-81840d8794-unnamed-chunk-13.png) 
+![plot of draws from the posterior, with no proces noise](http://farm9.staticflickr.com/8237/8591045344_918138a53a_o.png) 
 
 
 Additive noise
@@ -205,7 +205,7 @@ fig2c <- ggplot(dat,aes(x=x,y=value)) +
 fig2c
 ```
 
-![plot of chunk unnamed-chunk-16](../../../assets/figures/2012-10-18-81840d8794-unnamed-chunk-16.png) 
+![plot of chunk unnamed-chunk-16](http://farm9.staticflickr.com/8380/8589945565_174d4ac88a_o.png) 
 
 
 Note that unlike the previous case, the posterior no longer collapses completely around the neighborhood of the test points.  
