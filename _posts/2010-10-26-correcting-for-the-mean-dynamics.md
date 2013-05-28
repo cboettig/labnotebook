@@ -47,7 +47,7 @@ Starting from the expansion of the master equation and taking the linear noise a
 
 $$ dX_t = \left[ b(X_t)-d(X_t) \right] dt + \sqrt{\frac{b(X_t) + d(X_t)}{N}}dW_t $$
 
-Around the equilibrium $ \hat x $ we have variance
+Around the equilibrium $\hat x$ we have variance
 
 $$ \frac{b(\hat x) + d(\hat x)}{2 N  \left[\ partial_x b(x) - d(x)\right]_{x = \hat x}} $$
 
@@ -59,17 +59,17 @@ $$ \sigma^2(\hat x) = \frac{b(\hat x) + d(\hat x)}{N} $$
 and can write the correlation function:
 $$ \langle\langle X_0 X_t \rangle \rangle = \sigma^2(\hat x) e^{-\alpha(\hat x) t} $$
 
-It is precisely this $ \alpha(\hat x) $ that we wish to estimate.  Now it changes due to changes in $ \hat x $ as well as changes in the bifurcation parameter, $ a$, which of course also influences $ \hat x $ directly.  So we want to rewrite this as a function of the bifurcation parameter alone:
+It is precisely this $\alpha(\hat x)$ that we wish to estimate.  Now it changes due to changes in $\hat x$ as well as changes in the bifurcation parameter, $a$, which of course also influences $\hat x$ directly.  So we want to rewrite this as a function of the bifurcation parameter alone:
 
 $$ \partial_x  \left[b(x,a) - d(x,a)\right]_{x = \hat x(a)} =: f(a) $$
 
-A little tired of LaTeX writing, I  approximate $ \alpha(a)|_{\hat x} $,  the slope at equilibrium as a function of the bifurcation parameter. Going astray: [calculation here](http://www.flickr.com/photos/cboettig/5118738314), [results graphed here](http://farm2.static.flickr.com/1419/5118172479_aaf1a2d5a1_m.jpg), upshot is assuming saturation doesn't capture the bifurcation.  Applying that approximation earlier to the derivative expression gives a slope of $ -e $, no $ a$ dependence at saturation anyway.
+A little tired of LaTeX writing, I  approximate $\alpha(a)|_{\hat x}$,  the slope at equilibrium as a function of the bifurcation parameter. Going astray: [calculation here](http://www.flickr.com/photos/cboettig/5118738314), [results graphed here](http://farm2.static.flickr.com/1419/5118172479_aaf1a2d5a1_m.jpg), upshot is assuming saturation doesn't capture the bifurcation.  Applying that approximation earlier to the derivative expression gives a slope of $-e$, no $a$ dependence at saturation anyway.
 
 
 #### Numerical Solution
 
 
-Foregoing a complete analytic treatment, we can solve for function numerically to get the picture.  For the first model with the steady changing mean, we see the mean, the eigenvalue $ alpha$, demographic noise term $ \sigma^2$, and total variance:
+Foregoing a complete analytic treatment, we can solve for function numerically to get the picture.  For the first model with the steady changing mean, we see the mean, the eigenvalue $\alpha$, demographic noise term $\sigma^2$, and total variance:
 ![]( http://farm2.staticflickr.com/1178/5119205688_e05388859a_o.png )
 
 
@@ -81,7 +81,9 @@ And for the second model (note smaller values of a now lead to the bifurcation):
 $$ dX_t = \alpha(a, X_t) (\theta(a, X_t) - X_t)dt + \sigma(a, X_t) dW_t $$
 
 where the parameters are linear functions in time or in a (changing linearly with time).  So, what's the power spectrum of the time-dependent function
-$$ \langle\langle X_0 X_t \rangle \rangle = \sigma^2(\hat x) e^{-\alpha(\hat x, t) t} $$
+
+$$\langle\langle X_0 X_t \rangle \rangle = \sigma^2(\hat x) e^{-\alpha(\hat x, t) t} $$
+
 where $\alpha(\hat x, t)$ is a function of $a$ as given by the graphs above and $a$ changes linearly at some rate?  Is it to this that we must compare fits under models of changing and non-changing $a$?
 
 
