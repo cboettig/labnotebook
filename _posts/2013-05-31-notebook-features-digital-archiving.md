@@ -1,4 +1,5 @@
 ---
+published: false
 title: "Notebook features: digital archiving"
 layout: post
 category: open-science
@@ -8,6 +9,8 @@ tags:
 
 ---
 
+Note: this entry is part of a [series of posts](http://carlboettiger.info/2013/04/26/notebook-features-introduction.html) 
+which explain some of the techinical features of my lab notebook.
 
 
 Archival preservation of digital scholarly content is an important
@@ -26,7 +29,7 @@ be difficult to satisfy simultaneously: providing a robust backup copy
 of the _content_, and providing a consistent location (such as a URL)
 where the content can be retrieved.  
 
-### A custom domain
+## A custom domain
 
 The simplest archival measure employed in the notebook comes from hosting
 through my own domain, [carlboettiger.info](http://carlboettiger.info)
@@ -55,7 +58,7 @@ there own data, and no doubt I am no exception. How can the content and
 its identifying addresses outlive me or my interest in it?
 
 
-### PURLs: preserving identifiers
+## PURLs: preserving identifiers
 
 [PURLs](http://purl.org), or Persistent Uniform Resource Locators,
 provide a DOI-like mechanism for addressing the challenge of link-rot.  As [Geoffrey Bilder eloquently
@@ -93,7 +96,7 @@ of permanent identifiers for every page in the notebook.
 
 
 
-### GitHub: preserving content and versions
+## GitHub: preserving content and versions
 
 Committing content to an external repository is the recommended way
 to avoid link-rot from the user errors and website changes that so
@@ -122,7 +125,7 @@ all links from the notebook to Github using PURLs.
 
 
 
-### fig**share**
+## fig**share**
 
 One of the most comprehensive approaches I have come across so far
 uses fig**share**. This offers the most promising avenue for content
@@ -198,15 +201,10 @@ or the source files used to create it
 ([labnotebook](https://github.com/cboettig/labnotebook)).
 
 
-### What about persistent locators then?
-
 Of course this fails to address the preservation of externally
 linked content. The most frequent outbound links point to other
 publications through, usually their DOIs, which we hope will take care of
-themselves. 
-
-
-The most important externally linked content in the notebook entries are the links to
+themselves. The most important externally linked content in the notebook entries are the links to
 scripts, functions, and manuscripts in the various project repositories
 on Github.  The simplest solution is to embed the most important scripts
 in the notebook entries themselves.  Archiving the project repositories
