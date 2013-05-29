@@ -42,11 +42,11 @@ it in the comments.
 1. [Reproducible code: embedding code and dynamic documents](http://carlboettiger.info/2013/04/26/notebook-features-reproducible-code.html)
 1. [Parsing linked data in the semantic notebook](http://carlboettiger.info/2013/04/04/notebook-parsing.html)
 1. [Hashes: An immutable and verifiable record of research](http://carlboettiger.info/2013/05/03/notebook-features-hashes-providing-an-immutable-and-verifiable-research-record.html)
+1. [Digital archiving](http://carlboettiger.info/2013/05/31/notebook-features-digital-archiving.html)
 
 
 ### Planned
 
-1. [Digital archiving]()
 1. [Readable, multi-device typography]()
 1. [Notebook analytics: Who reads this stuff anyway?]()
 1. [A fast, inexpensive, and scalable online platform]()
