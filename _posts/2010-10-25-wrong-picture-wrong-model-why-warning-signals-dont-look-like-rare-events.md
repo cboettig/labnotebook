@@ -42,7 +42,7 @@ Then the unstable point moves a great deal closer but no stability is lost until
 ### Noise dependence on mean
 
 
-In general, the noise magnitude scales with the system state, as either $ \propto \sqrt{X_t} d W_t$ (in our demographic examples) or linearly. (environmental noise)   The decreasing state can obscure the increasing variance due to loss of stability.  Methods which simply subtract out a trend will fail to reflect this phenomenon.  At least for ecological systems where the state is a population abundance driven by a birth-death process, the assumption of no dependence,
+In general, the noise magnitude scales with the system state, as either $\propto \sqrt{X_t} d W_t$ (in our demographic examples) or linearly. (environmental noise)   The decreasing state can obscure the increasing variance due to loss of stability.  Methods which simply subtract out a trend will fail to reflect this phenomenon.  At least for ecological systems where the state is a population abundance driven by a birth-death process, the assumption of no dependence,
 
 $$ dX_t = \alpha (\theta - X_t) dt + \sigma dW_t $$
 
