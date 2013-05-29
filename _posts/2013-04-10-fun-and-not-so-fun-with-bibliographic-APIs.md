@@ -1,5 +1,4 @@
 ---
-published: false
 layout: post
 title: "Notebook tweaks: APIs in Ruby, Github hosting"
 category: open-science
