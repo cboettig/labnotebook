@@ -165,7 +165,7 @@ unassociated with that domain, difficult to view, and divorced from my usual wor
 unlike my usual publishing source-code to Github and website to my domain. It 
 also raises questions of just what to archive and when.  I discuss some of these 
 strengths and challenges as a separate post, [archiving the lab notebook on 
-figshare: advantages and challenges](http://purl.org/cboettig/2013-05-31-notebook-features-archiving-with-figshare). 
+figshare: advantages and challenges](http://purl.org/cboettig/2013/05/31/notebook-features-archiving-with-figshare). 
 
 
 ## Conclusions
