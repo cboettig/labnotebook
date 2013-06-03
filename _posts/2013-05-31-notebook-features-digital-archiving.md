@@ -10,7 +10,7 @@ tags:
 
 Note: this entry is part of a [series of
 posts](http://carlboettiger.info/2013/04/26/notebook-features-introduction.html)
-which explain some of the techinical features of my lab notebook.
+which explain some of the technical features of my lab notebook.
 
 
 Archival preservation of digital scholarly content is an important
@@ -136,10 +136,10 @@ I think of good metadata as the third leg to proper digital archiving,
 in addition to permanent identifiers and backup of content. We want to 
 be able to point a tool at the permanent identifier / URL of an entry
 and extract reliable information on the author, time published and last 
-modified, title, author, key words, etc that might be useful in citing 
+modified, title, author, key words, etc. that might be useful in citing 
 or categorizing the content.  Providing this information is really the
 subject of adding [Semantic metadata](http://carlboettiger.info/2012/10/23/semantic-markup-examples-for-the-lab-notebook.html) to the site, and is covered in 
-another entry in this series. Meanwhile, the [Greycite]() tool
+another entry in this series. Meanwhile, the [Greycite](http://greycite.knowledgeblog.org) tool
 and it's API are an excellent way to extract this metadata into 
 a variety of useful formats, working much the same way that 
 CrossRef's tool does using DOIs. Here is an [example query](http://greycite.knowledgeblog.org/?uri=http%3A%2F%2Fpurl.org%2Fcboettig%2F2012%2F10%2F23%2Fsemantic-markup-examples-for-the-lab-notebook.html)
@@ -154,7 +154,7 @@ CrossRef's tool does using DOIs. Here is an [example query](http://greycite.know
 
 Depositing a copy of the notebook on fig**share** is one of the most 
 robust archival solutions of which I am currently aware.  Not so much 
-because it has the coveted [DOI]() solution to the permanent identifier
+because it has the coveted DOI solution to the permanent identifier
 problem but because it has the promise of [CLOCKSS](http://clocks.org) archiving, should
 anything ever happen to fig**share**. 
 
@@ -162,10 +162,10 @@ anything ever happen to fig**share**.
 Nevertheless, it raises several challenges. The native home for the content is as 
 rendered HTML at my domain, not as raw HTML on an archive completely
 unassociated with that domain, difficult to view, and divorced from my usual workflow,
-unlike my usual publishing source-code to github and website to my domain. It 
+unlike my usual publishing source-code to Github and website to my domain. It 
 also raises questions of just what to archive and when.  I discuss some of these 
 strengths and challenges as a separate post, [archiving the lab notebook on 
-figshare: advantages and challenges](). 
+figshare: advantages and challenges](http://purl.org/cboettig/2013-05-31-notebook-features-archiving-with-figshare). 
 
 
 ## Conclusions
