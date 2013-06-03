@@ -49,15 +49,15 @@ a DOI is simply a tool to fight [link-rot](https://en.wikipedia.org/wiki/Link_ro
 
 
 So you might ask, why does the ability to remap the address have anything
-to do with being "permanent?"  It doesn't, really.  The permenance comes
+to do with being "permanent?"  It doesn't, really.  The permanence comes
 not so much from the technology as from the social contract that goes with
 it.  As CrossRef's [Geoffery Bilder eloquently explains](http://blogs.plos.org/mfenner/2009/02/17/interview_with_geoffrey_bilder/), a publisher
-can only recieve DOIs if they promise to keep these redirects up-to-date.
+can only receive DOIs if they promise to keep these redirects up-to-date.
 A publisher who fails to maintain this responsibility would presumably
-lose their right to recieve DOIs.  A brilliant, simple, social incentive.
+lose their right to receive DOIs.  A brilliant, simple, social incentive.
 
-This still does not guarentee permenance -- e.g. what would happen to the
-content if the publisher dissapears.  That problem is not addressed by the
+This still does not guarantee permanence -- e.g. what would happen to the
+content if the publisher disappears.  That problem is not addressed by the
 DOI technology itself, but by a robust backup archiving solution, such as
 [CLOCKSS](http://clocks.org), which provides a geo-politically distributed
 network of backup copies for many journals.  Again the social contract
@@ -90,14 +90,14 @@ because these references are indexed by the infamous citation counters
 like Thompson-Reuters. (A frequent complaint is that many journals
 do not similarly index citations appearing in the reference list of
 the supplementary materials, making it difficult or impossible to give
-appropiate attribution to large numbers of data providers, for instance).
+appropriate attribution to large numbers of data providers, for instance).
 Does having a DOI address this problem? 
 
 #### Citation counts in DOIs
 
 Counting citations depends on who is counting them.  The most well-known
 is Thompson-Reuters, which has their own process for deciding what gets
-counted (based on publisher), so no gaurentee there.  Meanwhile Google
+counted (based on publisher), so no guarantee there.  Meanwhile Google
 Scholar counts anything meeting it's [indexing requirements & arbitrary
 selection](http://carlboettiger.info/2012/11/23/citing-lab-notebook-entries.html).
 I have recently learned that CrossRef just launched it's own [internal
@@ -108,7 +108,7 @@ However, most proposals to make some alternative research product
 "citable" by giving it a DOI use DataCite DOIs (e.g. fig**share**,
 PeerJ Preprints), which lag behind in this feature.  Moving the control
 of citation data beyond the grasp of particular publishing companies
-like TR is undoubtably an important step forward.  The [Open Citation
+like TR is undoubtedly an important step forward.  The [Open Citation
 Project](http://www.jisc.ac.uk/whatwedo/programmes/inf11/jiscexpo/jiscopencitation.aspx)
 is a more comprehensive, if very young, move in this direct.  (Hat tip
 to Martin Fenner for explaining CrossRef citations to me).
@@ -135,7 +135,7 @@ and reliable way to encapsulate each of these concepts as "has a DOI,"
 it also appears to put these features beyond the reach of individual
 researchers. If issues of persistent URLs, archived content, and rich
 metadata tools are always reduced to "has a DOI," publishers become the
-only path to achieve these ends. On the contary, a rich collection of
+only path to achieve these ends. On the contrary, a rich collection of
 tools is available to researchers.
 
 So what do we mean when we say a DOI makes something 'citable?'  If this
@@ -152,10 +152,14 @@ not simply a "brand name" researchers recognize.
 In a [recent
 post](http://purl.org/cboettig/2013/05/31/notebook-features-digital-archiving)
 in a series on technical features of my open notebook, I discuss some
-of the tools available to address these challenges.
+of the tools available to address these challenges. In particular:
+
+* The use of [PURLs](http://en.wikipedia.org/wiki/Persistent_uniform_resource_locator) for persistent identifiers
+* Git for archival redundancy
+* [Greycite](http://greycite.knowledgeblog.org) for metadata extraction
 
 
-
+Of course, if you ever need a DOI for a research product, there is always [figshare](http://figshare.com).  
 
 
 
