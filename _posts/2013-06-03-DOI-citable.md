@@ -1,5 +1,4 @@
 ---
-published: false
 title: "DOI != citable"
 layout: post
 category: open-science
@@ -17,20 +16,20 @@ I feel I see this kind of comment almost daily:
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Again and again, researchers suggest that  DOI to makes something
-"citable".  And this [frustrates me]() incredibly.
+"citable".  And this [frustrates me](https://twitter.com/cboettig/status/337986074624282624).
 
 Don't get me wrong.  I love DOIs, and I love CrossRef.  And I bang on
 the table when I have some old journal article that doesn't yet have
 a DOI.  I use DOIs every day in many ways.  I use CrossRef's APIs all
 the time to draw in metadata for citations in my notebook (through my
-[knitcitations]() package), and to import metadata into my reference
-manager [Mendeley]().  I've written my own implementations in R and
+[knitcitations](http://github.com/cboettig/knitcitations) package), and to import metadata into my reference
+manager, Mendeley.  I've written my own implementations in R and
 ruby, and keep an eye on their exciting new tools on the [Crossref
-Github page]().  I wrote to bibsonomy when I realized they were not
+Github page](https://github.com/crossref).  I wrote to bibsonomy when I realized they were not
 using the CrossRef API to look up metadata by DOIs, and they have now
 implemented this feature.  I use DOIs to look up papers I've come across,
-and to share content I am reading. (Crossref's [DOI shortener]() is great
-for this).  I even use DOI-based links to [embed semantic information]()
+and to share content I am reading. (Crossref's [DOI shortener](http://shortdoi.org/) is great
+for this).  I even use DOI-based links to [embed semantic information](http://carlboettiger.info/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html)
 into links and citations of articles.
 
 
@@ -46,13 +45,13 @@ Type http://dx.doi.org/mnn into any browser and get redirected to where
 the article actually lives.  Why does that make it permanent?  Because if
 the journal decides to change their URL structure, the DOI's redirect
 can just be mapped to the new address and voila, it still works. That is,
-a DOI is simply a tool to fight [link-rot]().
+a DOI is simply a tool to fight [link-rot](https://en.wikipedia.org/wiki/Link_rot).
 
 
 So you might ask, why does the ability to remap the address have anything
 to do with being "permanent?"  It doesn't, really.  The permenance comes
 not so much from the technology as from the social contract that goes with
-it.  As CrossRef's [Geoffery Bilder eloquently explains](), a publisher
+it.  As CrossRef's [Geoffery Bilder eloquently explains](http://blogs.plos.org/mfenner/2009/02/17/interview_with_geoffrey_bilder/), a publisher
 can only recieve DOIs if they promise to keep these redirects up-to-date.
 A publisher who fails to maintain this responsibility would presumably
 lose their right to recieve DOIs.  A brilliant, simple, social incentive.
@@ -76,10 +75,10 @@ and the links to it.
 
 So what does this have to do with being citable?  Obviously these are
 nice properties to have for things we cite -- but they are by no means
-a requirement.  (As [Noam Ross observes](), try finding a permanent
+a requirement.  (As [Noam Ross observes](https://twitter.com/noamross/status/337987521243918337), try finding a permanent
 identifier for "Personal Communication"). Books, reports, and other
 grey literature frequently appear in citations, as do links to websites.
-MLA even has guidelines on the proper format to [cite a tweet]() (which,
+MLA even has guidelines on the proper format to [cite a tweet](www.mla.org/style/handbook_faq/cite_a_tweet) (which,
 incidentally, come closer to having a permanent identifier and an archival
 strategy than most other things in this list).  So what do we mean by
 citable anyway?
@@ -94,32 +93,66 @@ the supplementary materials, making it difficult or impossible to give
 appropiate attribution to large numbers of data providers, for instance).
 Does having a DOI address this problem? 
 
-No! While there are various ways to be included in the citation counts
-of different services, none are guarenteed simply by having a DOI. So
-if "indexed by TR" is what we mean by "citable", a DOI isn't it.  
+#### Citation counts in DOIs
 
+Counting citations depends on who is counting them.  The most well-known
+is Thompson-Reuters, which has their own process for deciding what gets
+counted (based on publisher), so no gaurentee there.  Meanwhile Google
+Scholar counts anything meeting it's [indexing requirements & arbitrary
+selection](http://carlboettiger.info/2012/11/23/citing-lab-notebook-entries.html).
+I have recently learned that CrossRef just launched it's own [internal
+citation counting](https://github.com/articlemetrics/alm/wiki/Crossref),
+which is available from the CrossRef metadata (totals only for the
+public, publishers can resolve which articles did the citing...).
+However, most proposals to make some alternative research product
+"citable" by giving it a DOI use DataCite DOIs (e.g. fig**share**,
+PeerJ Preprints), which lag behind in this feature.  Moving the control
+of citation data beyond the grasp of particular publishing companies
+like TR is undoubtably an important step forward.  The [Open Citation
+Project](http://www.jisc.ac.uk/whatwedo/programmes/inf11/jiscexpo/jiscopencitation.aspx)
+is a more comprehensive, if very young, move in this direct.  (Hat tip
+to Martin Fenner for explaining CrossRef citations to me).
 
-Google Scholar already does it's own indexing, and the OpenCitations
-project aims to create a truly open citation database.  So does TR dictate what
-qualifies to go in the reference list of any journal?
+### Additional Metadata
+
+In addition to resolving links, DOI providers also serve a rich collection
+of metadata about the publication that can be [queried by DOI](http://www.crosscite.org/cn/) or
+by [other elements](https://github.com/CrossRef/cr-search) like author and title.  Rich semantic formats and
+disambiguation of author names by connections to ORCID IDs are among
+the many advantages of this.  Because many of these tools are publicly
+accessible by through their APIs, it is easy for other developers to
+build services upon them.
+
+## Conclusions
+
+While DOI providers have done an excellent job in ensuring persistent
+URLs, archived content, and valuable metadata, these things are largely
+the product of the social contract between publisher and the DOI provider.
+It is not possible for an author or organization to simply "get DOIs"
+for all their content. But it is not the only way to provide these
+features, either.  While I understand the value in providing a simple
+and reliable way to encapsulate each of these concepts as "has a DOI,"
+it also appears to put these features beyond the reach of individual
+researchers. If issues of persistent URLs, archived content, and rich
+metadata tools are always reduced to "has a DOI," publishers become the
+only path to achieve these ends. On the contary, a rich collection of
+tools is available to researchers.
+
+So what do we mean when we say a DOI makes something 'citable?'  If this
+is shorthand for the properties we would want in something citable:
+persistent identifier, archival content, machine-readable metadata, than
+we should start to recognize other things that share these features.
+Further innovation requires valuing the features the DOI provides,
+not simply a "brand name" researchers recognize.
 
 
 
 ## Alternative tools
 
-There are lots of schemes that address the challenges and features a DOI provides.
-That's the source of my frustration -- a DOI is often seen as the only road, and
-not because of it's features, but just because it is commonly used in research 
-publications.  
-
-
-
-### Redirects
-
-### Archiving
-
-### Metadata extraction
-
+In a [recent
+post](http://purl.org/cboettig/2013/05/31/notebook-features-digital-archiving)
+in a series on technical features of my open notebook, I discuss some
+of the tools available to address these challenges.
 
 
 
