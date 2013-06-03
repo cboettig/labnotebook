@@ -2,7 +2,6 @@
 title: Archiving the lab notebook on figshare
 subtitle: Advantages and challenges
 layout: post
-published: false
 category: open-science
 tags: 
 - notebook-technology
@@ -11,6 +10,7 @@ tags:
 
 ---
 
+## Robust archiving through CLOCKSS
 
 One of the most comprehensive approaches I have come across so far
 uses fig**share**. This offers the most promising avenue for content
@@ -70,6 +70,8 @@ in the notebook (relative path, categories and tags, timestamps and SHA
 hashes, etc). I have archived these entries in annual chunks following
 the year/month/day directory structure already employed on the site.
 
+### How about site assets?
+
 There is still additional external content used to render the
 site -- CSS and javascript files -- that are not captured in this
 approach. Though entries actually render [just fine without the css](http://stackoverflow.com/questions/14046738),
@@ -79,8 +81,7 @@ bit larger and more cluttered archive, and more to the point is a rather
 crude solution to a problem already solved by Internet archiving programs
 such as CLOCKSS or internetarchive.org.
 
-
-
+### Versioning?
 
 Lastly there is the concern of preserving the version history of
 entries.  Though fig**share** provides versioning of its content,
@@ -92,6 +93,8 @@ an ever more cumbersome archival object, one could include the
 or the source files used to create it
 ([labnotebook](https://github.com/cboettig/labnotebook)).
 
+
+### Connecting to the original instances?
 
 Of course this fails to address the preservation of externally
 linked content. The most frequent outbound links point to other
@@ -106,5 +109,19 @@ possible to identify the linked file using the SHA hash from these
 links (by matching it against the SHAs in the log).  See my entry on
 [SHA hashes](/2013/05/03/notebook-features-hashes-providing-an-immutable-and-verifiable-research-record.html)
 for more on this topic. 
+
+## Links to the archives
+
+Current and previous archives of my lab notebook can be found on figshare
+by year. Older versions of these archives have taken a different approach,
+including just archiving the markdown files.  The links use the DOI
+and point to the most recent version. (At this time linking to explicit
+versions with FigShare's DataCite DOI links doesn't appear to be working)
+
+* [Lab Notebook, 2010](http://dx.doi.org/10.6084/m9.figshare.96916)
+* [Lab Notebook, 2011](http://dx.doi.org/10.6084/m9.figshare.96919)
+* [Lab Notebook, 2012](http://dx.doi.org/10.6084/m9.figshare.106620)
+
+
 
 
