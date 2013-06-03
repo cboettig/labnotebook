@@ -42,7 +42,7 @@ it in the comments.
 1. [Reproducible code: embedding code and dynamic documents](http://carlboettiger.info/2013/04/26/notebook-features-reproducible-code.html)
 1. [Parsing linked data in the semantic notebook](http://carlboettiger.info/2013/04/04/notebook-parsing.html)
 1. [Hashes: An immutable and verifiable record of research](http://carlboettiger.info/2013/05/03/notebook-features-hashes-providing-an-immutable-and-verifiable-research-record.html)
-1. [Digital archiving](http://carlboettiger.info/2013/05/31/notebook-features-digital-archiving.html)
+1. [Digital archiving](http://carlboettiger.info/2013/05/31/notebook-features-digital-archiving.html). See also a separate entry on [advantages and challenges in archiving with figshare](http://purl.org/cboettig/2013-05-31-notebook-features-archiving-with-figshare), and some [comments about DOIs](/2013/06/03/DOI-citable.html)
 
 
 ### Planned
