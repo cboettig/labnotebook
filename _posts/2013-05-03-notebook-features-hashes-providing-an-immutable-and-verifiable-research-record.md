@@ -10,7 +10,7 @@ tags:
 ---
 
 Note: this entry is part of a [series of posts](http://carlboettiger.info/2013/04/26/notebook-features-introduction.html) 
-which explain some of the techinical features of my lab notebook.
+which explain some of the technical features of my lab notebook.
 
 
 I version manage all changes to my entry using git. Each page
@@ -18,7 +18,7 @@ is linked to its source history on Github, which will display a list
 of all previous edits to the post with an easy-to-read commit log and
 highlighted diffs.  A version history is often considered an essential
 part of an open lab notebook, where changes to the notebook are documented
-and preserved.  While wikis, google docs, dropbox, wordpress plugins,
+and preserved.  While wikis, Google docs, Dropbox, Wordpress plugins,
 or just regular backups can provide version history of pages, none come
 close to comparison with a full version management system such as git. 
 This is because git's underlying architecture is based on  
@@ -37,7 +37,7 @@ the version is what it claims to be.  [Tobias Kuhn](http://www.tkuhn.ch/)
 has [observed](http://www.force11.org/node/4301) that this is a valuable
 feature we should want to see for all scientific publishing. Each of my
 posts now displays its SHA hash on the sidebar along with other metadata.
-While the `history` button already provides a convient way to browse all
+While the `history` button already provides a convenient way to browse all
 previous versions of a post, I chose to display the SHA hash directly
 so that the hash value would be part of the document metadata, while
 also highlighting this feature.  
@@ -64,7 +64,7 @@ the commit, rather than the contents of an individual file.  Consequently,
 one would need a snapshot of the entire repository, available on Github,
 to perform the verification.  Tobias is looking into generating hashes
 based on the contents of the file directly -- so far, only RDF data --
-that could proivde a unique and verifiable reference for any scholarly
+that could provide a unique and verifiable reference for any scholarly
 data or publication.
 
 Version managing the notebook and code has many more practical day-to-day
