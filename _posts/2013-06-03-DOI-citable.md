@@ -59,7 +59,7 @@ lose their right to receive DOIs.  A brilliant, simple, social incentive.
 This still does not guarantee permanence -- e.g. what would happen to the
 content if the publisher disappears.  That problem is not addressed by the
 DOI technology itself, but by a robust backup archiving solution, such as
-[CLOCKSS](http://clocks.org), which provides a geo-politically distributed
+[CLOCKSS](http://clockss.org), which provides a geo-politically distributed
 network of backup copies for many journals.  Again the social contract
 comes into play -- presumably CrossRef would not provide a publisher
 with DOIs if they did not have such a robust archival solution in place.
