@@ -78,7 +78,7 @@ nice properties to have for things we cite -- but they are by no means
 a requirement.  (As [Noam Ross observes](https://twitter.com/noamross/status/337987521243918337), try finding a permanent
 identifier for "Personal Communication"). Books, reports, and other
 grey literature frequently appear in citations, as do links to websites.
-MLA even has guidelines on the proper format to [cite a tweet](www.mla.org/style/handbook_faq/cite_a_tweet) (which,
+MLA even has guidelines on the proper format to [cite a tweet](http://www.mla.org/style/handbook_faq/cite_a_tweet) (which,
 incidentally, come closer to having a permanent identifier and an archival
 strategy than most other things in this list).  So what do we mean by
 citable anyway?
