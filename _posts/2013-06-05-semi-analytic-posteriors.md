@@ -100,7 +100,7 @@ beta_grid[which.min(P_B.X)]
 
 Estimating the Myers model on this data:
 
-$$X_{t+1} = Z_t \frac{r X_t^{\theta}}{1 + X_t^{\theta} / K$$
+$$X_{t+1} = Z_t \frac{r X_t^{\theta}}{1 + X_t^{\theta} / K}$$
 
 With $Z_t$ lognormal, unit mean, std $\sigma$.  
 
