@@ -10,14 +10,18 @@
 # {{ post.path | prepend:'_posts/' | git_modified }}
 # 
 
-require 'chronic'
 require 'git'
-
+ 
 module Jekyll
   module GitModFilter
     def git_modified(input)
       g = Git.open("/home/cboettig/Documents/labnotebook")
-      g.log(1).object("vita.html").first.date
+      begin
+        out = g.log(1).object(input).first.date
+      rescue Exception => e # Keep going if we hit an exception, e.g. path is wrong
+          out = Time.now 
+      end
+      out 
     end
   end
 end

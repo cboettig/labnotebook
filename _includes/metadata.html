@@ -1,19 +1,20 @@
 
 
-<!-- Some liquid code so that pages get the site.time creation date 
-      Would be nice to use github modified times, but doesn't handle 
-      the path for pages -->
+<!-- Get date last modified from git log. (Uses current time if file entry not found, e.g. projects/)  -->
+{% capture modified %} {{ page.path | git_modified }} {% endcapture %}
 
-{% if defined?(page.date) %} 
-{% assign date = page.date %}
-{% if date.class != Time %} 
-{% assign date = Time.parse(date) %}
-{% endif %}
-{% else %}
-{% assign date = site.time %}
+
+<!-- For posts, page.date is the date they are published under, which we use as their 'canonical' dc:date -->
+{% if page.date %} 
+  {% assign date = page.date %}
+  {% else %} <!-- If we don't have a page.date, then use modified time (pages) -->
+  {% assign date = modified %} 
 {% endif %}
 
-
+<!-- Posts declare modified timestamps in the sidebar, so would be redundant to put here. But then 
+     pages don't have a dc:modified... unless we give them their own (modified) sidebar?  
+-->
+<!-- Ideally we would want date originally created from the _oldest_ git commit too...-->
 
 <!-- HTML5 metadata -->
 <meta name="keywords" content="{{ page.tags | join: ', ' }}" />
