@@ -1,7 +1,6 @@
 ---
 layout: project 
 title: Research
-date: 2013-04-02
 
 ---
 

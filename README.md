@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About this site
-date: 2012-11-09
 
 ---
 
