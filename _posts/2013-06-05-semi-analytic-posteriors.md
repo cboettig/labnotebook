@@ -19,7 +19,7 @@ simulataneous updating) can frustrate it considerably.  While multiple
 chains and long run times are the reasonable default, for simple enough
 models we can take a more direct approach.
 
-
+* Script matches commit [26d84c/semi-analytic-posteriors.md](https://github.com/cboettig/nonparametric-bayes/blob/26d84c5c147d853a075dc5b1c1be593a38d04f10/inst/examples/semi-analytic-posteriors.md)
 
 
 ### Generating Model and parameters
