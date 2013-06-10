@@ -31,7 +31,7 @@ A scientific R package _must must must_ have some automated tests that are run b
 
 I see authors write functions like this all the time:
 
-```{r}
+```r
 f <- myfunction(f, p){ 
   #  stuff
   o <- optim(f, p)
@@ -41,7 +41,7 @@ f <- myfunction(f, p){
 
 calling an existing library function like `optim` that has a whole host of very useful optional arguments that have a significant impact on how the algorithm functions. Whenever you a rich function like `optim`, please have the courtesy to make it's arguments available to future users and developers through your function call. Yes, most users will just want the default arguments, (or your default arguments, if different), and that can be handled just fine by providing default values as optional arguments.  R has a fantastic mechanism for this exact issue: the `...` argument. The above code could be fixed simply by using: 
 
-```{r}
+```r
 f <- myfunction(f, p, ...){ 
   #  stuff
   o <- optim(f, p, ...)
@@ -51,7 +51,7 @@ f <- myfunction(f, p, ...){
 
 which works just they way you think it would. If you have more than one such function (ask yourself if you can write shorter functions first and then) pass optional arguments as lists, 
 
-```{r}
+```r
 f <- myfunction(f, p, optim_options, fn2_options){
   # stuff
   o <- do.call(optim, as.list(c(f, p, optim_options)))
