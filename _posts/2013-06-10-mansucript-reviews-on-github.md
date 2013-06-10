@@ -1,5 +1,6 @@
 ---
-published: false
+title: 'maunscript reviews on github?'
+subtitle: 'examples and questions'
 layout: post
 category: open-science
 tags:
@@ -11,7 +12,9 @@ tags:
 I was recently impressed to learn of Trevor Bedford's strategy of seeking [pre-approval](https://twitter.com/trvrb/status/334310856982671361) for posting his reviewer's comments as Github issues.  Beyond providing links to the data and source-code, I generally don't advertise the open science nature of papers I submit -- I guess I assume that if the reader or reviewers care, it should be easy enough for them to discover it. Consequently I am usually immediately frustrated to realize that upon receiving my reviews I have to create a second, private repository for the review material, our replies to reviewers, etc., as I don't have permission to disclose that information. [^1]  I have recently stumbled across [several](http://www.steinsaltz.me.uk/pnas.html) [examples](http://theseamonster.net/2013/05/are-unreasonably-harsh-reviewers-retarding-the-pace-of-coral-reef-science/) of authors publishing to the web anonymous reviews they have received.  Though anonymous, I feel the practice potentially murky without explicit permission, so I would appreciate any insight others have on this.  
 
 
-Trevor's example suggests I should consider broaching this question when first submitting my review, so I am puzzling over the best way to do so.  One option would be to include such a request in the cover letter.  For example,
+### Asking permission
+
+Trevor's approach suggests I should consider broaching this question when first submitting my review, so I am puzzling over the best way to do so.  One option would be to include such a request in the cover letter.  For example,
 
 > The authors of this manuscript would like to request that the editor and reviewers indicate in their replies if they consent or decline to have their comments posted anonymously in the public [Issues Tracker](#) of this paper.  
 
@@ -21,7 +24,7 @@ Does this need the blessing of the journal? How would you feel about such a clau
 
 
 
-## Going further
+## Cover letters for open science manuscripts?
 
 
 While I lean towards a minimal statement such as the one above, perhaps a cover letter would be a good place to document some of the other open and reproducible features of the manuscript?  Or perhaps such statements should be added to the manuscript itself?  Among the options, I might point out:
