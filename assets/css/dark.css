@@ -6146,8 +6146,12 @@ div.excerpt {
   line-height: 18px;
   text-align: justify;
 }
-.cv ul,
-ol {
+.cv ul {
+  margin-left: 0;
+  margin-bottom: 30px;
+  list-style: none;
+}
+.cv ol {
   margin-left: 0;
   margin-bottom: 30px;
   list-style: none;
