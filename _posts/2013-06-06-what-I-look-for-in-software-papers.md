@@ -1,7 +1,7 @@
 ---
 published: false
 layout: post
-title: "What I look for in 'Sofware Papers'"
+title: "What I look for in 'Software Papers'"
 subtitle: "pet peeves and faux pas"
 category: ecology
 tags: 
@@ -10,16 +10,18 @@ tags:
 ---
 
 
-I am more and more frequently reviewing 'software papers:' which I define as publications whose primary purpose is to publicize a piece of scientific software and provide a traditional research product with hopes that it will receive citations and recognition from other researchers in grant and job reviews.  To me this feels very much like hacking the publication recognition system rather than the ideal way to recognize and track the role of software in research communities, but a very pratical one in the current climate.  I have written two myself, so I have been on both ends of this issue. 
+I am more and more frequently reviewing 'software papers:' which I define as publications whose primary purpose is to publicize a piece of scientific software and provide a traditional research product with hopes that it will receive citations and recognition from other researchers in grant and job reviews.  To me this feels very much like hacking the publication recognition system rather than the ideal way to recognize and track the role of software in research communities, but a very practical one in the current climate.  I have written two myself, so I have been on both ends of this issue. 
 
 I don't include "to document" the software as a purpose, since none do so very comprehensively, and besides, documentation belongs in the software, not in a journal. "Publicize" usually includes some motivating examples that could convince many readers that the software does something useful for them without too much effort.  As such, I expect the paper to provide the journal's audience with a clear motivation for why the package is useful, and at least one functioning "wow" example that I can run and understand without difficulty. This is a low bar, though still often missed in round 1, that I hope will encourage these kinds of contributions.  But that is not why I am writing this post.
 
 
-I see papers about software packages primarily as invitations to review the software itself, not just the paper. I assume most other authors, reviewers and editors on this content share this implicit assumption, but I'd love to hear first hand from anyone else.  When I review software, there are some pet peeves or faux pas that I see appear again and again, so I thought I'd take a moment to write them out here.  (If you end up with a copy-paste of this at some later date, my apologies but I got tired of writing the same thing over and over again.  And if it's not signed, then someone else also got tired of writing the same thing over and over again.)
+I see papers about software packages primarily as invitations to review the software itself, not just the paper. I assume most other authors, reviewers and editors on this content share this implicit assumption, but I'd love to hear first hand from anyone else.  When I review software, there are some pet peeves or _faux pas_ that I see appear again and again, so I thought I'd take a moment to write them out here.  (If you end up with a copy-paste of this at some later date, my apologies but I got tired of writing the same thing over and over again.  And if it's not signed, then someone else also got tired of writing the same thing over and over again.)
 
-As I am almost always reviewing R packages, the software already meets some very basic standards required by submission to CRAN: dependencies and license stated, built-in documentation, passing some minimal automatic checks, etc.  (See the [CRAN Policies]() and the [Writing R Extensions Manual]() for details).  This is great, as it clears the first few hurdles of installation, etc without much fuss, but still provides a bar that is by itself unacceptably low for published scientific software. Here is a list of the things I see that most often frustrate me.  This isn't intended as a style-guide or a comprehensive list of best practices. 
+As I am almost always reviewing R packages, the software already meets some very basic standards required by submission to CRAN: dependencies and license stated, built-in documentation, passing some minimal automatic checks, etc.  (See the [CRAN Policies](http://cran.r-project.org/web/packages/policies.html) and the [Writing R Extensions Manual](http://cran.r-project.org/doc/manuals/R-exts.html) for details).  This is great, as it clears the first few hurdles of installation, etc. without much fuss, but still provides a bar that is by itself unacceptably low for published scientific software. Here is a list of the things I see that most often frustrate me.  This isn't intended as a style-guide or a comprehensive list of best practices, just my own pet peeves. Critiques and suggestions welcome. 
 
 ## Primary Issues
+
+
 
 ### Automatic tests
 
@@ -37,7 +39,7 @@ f <- myfunction(f, p){
 }
 ```
 
-calling an existing library function like `optim` that has a whole host of very useful optional arguments that have a significant impact on how the algorithm functions. Whenever you a rich function like `optim`, please have the courtesy to make it's arguments avaiable to future users and developers through your function call. Yes, most users will just want the default arguments, (or your default arguments, if different), and that can be handled just fine by providing default values as optional arguments.  R has a fantastic mechansim for this exact issue: the `...` argument. The above code could be fixed simply by using: 
+calling an existing library function like `optim` that has a whole host of very useful optional arguments that have a significant impact on how the algorithm functions. Whenever you a rich function like `optim`, please have the courtesy to make it's arguments available to future users and developers through your function call. Yes, most users will just want the default arguments, (or your default arguments, if different), and that can be handled just fine by providing default values as optional arguments.  R has a fantastic mechanism for this exact issue: the `...` argument. The above code could be fixed simply by using: 
 
 ```{r}
 f <- myfunction(f, p, ...){ 
@@ -63,20 +65,18 @@ arguments can also be extracted with `list(...)$arg1` etc.
 A converse of this issue is not providing default arguments where it might be natural to do so.  This does not bother me so much, as it is probably useful to force the user to think how many iterations `n` are appropriate for their problem rather than just assuming that `100` is good because it is the default.  The only time this case is annoying is when the argument will not be changing -- such as a user's authentication token to access a web resource.  Don't make me manually pass the token to every function in the library please. 
 
 
-
 ### Development site and bug tracker
 
-I would really like to see a link to the software development page, such as r-forge or Github.  The primary asset in this context is pointing reviewers to an address with a bug tracking system where issues can be assigned ticket numbers and readers can transparently see if a package is being actively maintained.  A reader who comes across the paper years later who has only an email address that may or may not work has little way to determine what the latest version of the code is, whether it is actively maintained, or whether earlier versions that may have been in used in previous publications suffered from any significant bugs.  Ideally these sites 
-As either a researcher or developer I am
+I would really like to see a link to the software development page, such as r-forge or Github.  The primary asset in this context is pointing reviewers to an address with a bug tracking system where issues can be assigned ticket numbers and readers can transparently see if a package is being actively maintained.  A reader who comes across the paper years later who has only an email address that may or may not work has little way to determine what the latest version of the code is, whether it is actively maintained, or whether earlier versions that may have been in used in previous publications suffered from any significant bugs. 
 
-
-### Cite your dependencies
+### Cite your dependencies!
 
 We write software papers with the sometimes vain hope that they will be cited by users, so authors of such papers should at least follow these best practices themselves. R includes a native mechanism for providing citations to packages, `citation(packagename)`, including the information for any software paper published along with it.  Be sure to add your own software papers to the `CITATION` file.  More information can be found in my post on [Citing R packages](http://purl.org/cboettig/2012/03/20/citing-r-packages.html). 
 
 
 ## Other issues
 
+These are other things that commonly frustrate me, but fall on a bit more of a continuum of style rather than gross oversights. 
 
 ### Functionalize the code
 
@@ -84,11 +84,11 @@ Style guides will tell you to keep functions short, not more than a screen or 20
 
 ### Stable, clean, and complete return objects
 
-An extension of providing optional arguments to functions is to also provide access to all of their return information.  To extend the example from wrapping `optim`, this would involve returning the convergence information.  Using object classes and helper functions for return objects helps keep code stable and lets users leverage exisiting code for similar objects, such as fitting or plotting routines. More discussion on this topic based on my own experiences in the post, [we need more object oriented design in comparative methods](http://carlboettiger.info/2013/04/23/we need more object oriented design in comparative methods). 
+An extension of providing optional arguments to functions is to also provide access to all of their return information.  To extend the example from wrapping `optim`, this would involve returning the convergence information.  Using object classes and helper functions for return objects helps keep code stable and lets users leverage existing code for similar objects, such as fitting or plotting routines. More discussion on this topic based on my own experiences in the post, [we need more object oriented design in comparative methods](http://carlboettiger.info/2013/04/23/we need more object oriented design in comparative methods). 
 
 ### State a license
 
-Because CRAN requires this through the DESCRIPTION file, R package authors rarely neglect this entirely.  A sometimes misconception is that because R itself is primarily dual-licensed under GPL-2 and GPL-3 that R packages must use a GPL license due to the "viral" clause of the GPL.  This clause only applies if you are modifying existing GPL functions directly and is not a requirement for R packages, which recognize a large array of licenses.  My own recomendation for authors seeking to maximize the impact of  their work is to use [MIT](), [BSD](), or [CC0]() license for the package.  CC0 has the advantage of being suitable for and data or documentation included, but authors should do there homework and decide what is best for them. 
+Because CRAN requires this through the DESCRIPTION file, R package authors rarely neglect this entirely.  A sometimes misconception is that because R itself is primarily dual-licensed under GPL-2 and GPL-3 that R packages must use a GPL license due to the "viral" clause of the GPL.  This clause only applies if you are modifying existing GPL functions directly and is not a requirement for R packages, which recognize a large array of licenses.  My own recommendation for authors seeking to maximize the impact of  their work is to use MIT, BSD (2 clause), or CC0 license for the package.  CC0 has the advantage of being suitable for and data or documentation included, but authors should do there homework and decide what is best for them. 
 
 
 ### IMPORTS not DEPENDS
@@ -99,7 +99,6 @@ Many developers overlook that package dependencies that provide functions your f
 If you are an author, editor, or reviewer of R software packages, what are your pet peeves? 
 
 
-(as proposed in 
 
-[faux pas](http://carlboettiger.info/2011/06/04/saturday-git-with-latexdiff-treebase-and-pmc-package-updates-bounds-on-lambda.html)
+[^1]: I listed some of these complaints at the end of a post almost exactly 2 years ago, see [faux pas](http://carlboettiger.info/2011/06/04/saturday-git-with-latexdiff-treebase-and-pmc-package-updates-bounds-on-lambda.html).  As I continue to see many of the same issues I believe these are relatively common mistakes. 
 
