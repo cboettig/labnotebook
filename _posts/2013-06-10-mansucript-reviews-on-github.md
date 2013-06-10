@@ -1,5 +1,5 @@
 ---
-title: 'maunscript reviews on github?'
+title: 'manuscript reviews on github?'
 subtitle: 'examples and questions'
 layout: post
 category: open-science
