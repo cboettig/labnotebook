@@ -195,7 +195,7 @@ file.  More information can be found in my post on [Citing R
 packages](http://purl.org/cboettig/2012/03/20/citing-r-packages.html).
 
 
-Major Revisions 
+"Major Revisions"
 ---------------
 
 These are other things that commonly frustrate me, but fall on a bit
@@ -222,8 +222,7 @@ for return objects helps keep code stable and lets users leverage
 existing code for similar objects, such as fitting or plotting
 routines. More discussion on this topic based on my own experiences
 in the post, [we need more object oriented design in comparative
-methods](http://carlboettiger.info/2013/04/23/we need more object oriented
-design in comparative methods).
+methods](http://carlboettiger.info/2013/04/23/we-need-more-object-oriented-design-in-comparative-methods.html#comment-878249659)
 
 ### State a license
 
@@ -241,8 +240,8 @@ homework and decide what is best for them.
 
 
 
-Minor Revisions 
----------------
+"Minor Revisions"
+----------------
 
 
 Consistent use of coding style, good documentation, clear examples,
