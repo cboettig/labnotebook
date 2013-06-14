@@ -34,7 +34,7 @@ $$ = -\sum_t^{T-1} M_t^2 -\frac{\left(\sum_t^{T-1} M_t\right)^2}{T-1}  +(T-1)\le
 
 Returning this expression into our exponential in place of the sum of squares, we have 
 
-$$P(r, \beta, \sigma | X) = \frac{1}{\sqrt{2 \pi \sigma^2}^{T-1}} \exp\left(\frac{(T-1)\left( \frac{\sum_t^{T-1} M_t}{T-1} - a\right)^2}{2 \sigma^2}\right) \exp\left(\frac{-\sum_t^{T-1} M_t^2 -\frac{\left(\sum_t^{T-1} M_t\right)^2}{T-1} }{2 \sigma^2}\right) $$
+$$P(r, \beta, \sigma | X) = \frac{1}{\sqrt{2 \pi \sigma^2}^{T-1}} \exp\left(-\frac{(T-1)\left( \frac{\sum_t^{T-1} M_t}{T-1} - a\right)^2}{2 \sigma^2}\right) \exp\left(\frac{-\sum_t^{T-1} M_t^2 -\frac{\left(\sum_t^{T-1} M_t\right)^2}{T-1} }{2 \sigma^2}\right) $$
 
 
 Note that the second $\exp$ term does not depend on $a$. The remaining argument has Gaussian form in $da$, so after pulling out the constant terms we can easily integrate this over $da$.  (Note that we have an implicit uniform prior on $a$ here).
