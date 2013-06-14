@@ -43,7 +43,7 @@ $$ \int \exp\left(\frac{-\left(\frac{\sum_t^{T-1} M_t}{T-1} - a \right)^2}{2 \si
 
 which we can combine with the remaining terms to recover
 
-$ \frac{1}{(T-1)\left(2 \pi \sigma^2 \right)^{T-2}} \exp\left(\frac{-\sum M_t^2 + \frac{\left(\sum M_t\right)^2}{T-1}}{2\sigma^2} \right)$$ 
+$$ \frac{1}{(T-1)\left(2 \pi \sigma^2 \right)^{T-2}} \exp\left(\frac{-\sum M_t^2 + \frac{\left(\sum M_t\right)^2}{T-1}}{2\sigma^2} \right)$$ 
 
 
 ## marginalizing over $\sigma$
