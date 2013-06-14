@@ -8,7 +8,7 @@ redirects: [/wordpress/archives/461, /archives/461]
 categories:
 - ecology
 tags:
-- derivations
+- derivation
 - warning-signals
 ---
 
