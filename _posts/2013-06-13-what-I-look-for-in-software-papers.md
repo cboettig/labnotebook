@@ -93,6 +93,23 @@ of the review I might give; which like any other use of these terms is more of a
 measure of how annoyed I am then anything else.  Critiques and suggestions welcome.
 
 
+### Edit:
+
+The comments from other reviewers, authors, and editors have been fantastic,
+thank you all.  I particularly appreciate the opportunity to have reviewing 
+styles critiqued, something that does not happen in normal peer review.  
+
+Just a note on my headings here. I do not see any of these things as
+"gatekeeping requirements" and have intentionally omitted the option of
+"_Reject_".  I would reject such a paper for methodological flaws, etc.,
+but not for any of the reasons on my list below. The list is intended
+only to improve, not prevent, software publication.
+
+I believe any of the decisions below typically result in a revision
+to the same journal, that authors judiciously choose how to respond to
+reviewer comments guided by the editor's own feedback, and that it is
+ultimately the editor's decision whether any of this is relevant. `</edit>`
+
 
 "Reject and resubmit" 
 --------------------
