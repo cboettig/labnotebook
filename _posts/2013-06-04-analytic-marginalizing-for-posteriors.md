@@ -13,9 +13,9 @@ $$ X_{t+1} = X_t r e^{-\beta X_t + \sigma Z_t } $$
 
 with $Z_t$ a unit normal random variable.  The likelihood of the sequence of $T$ observations of $X$ under this model is thus
 
-$$P(r, \beta, \sigma | X) = \frac{1}{\sqrt{2 \pi \sigma^2}^{T-1}} \exp\left(\frac{\sum_t^{T-1} \left(\log X_{t+1} - \log X_t - \log r + \beta X_t\right)^2 }{2 \sigma^2}\right) $$
+$$P(X | r, \beta, \sigma) = \frac{1}{\sqrt{2 \pi \sigma^2}^{T-1}} \exp\left(\frac{\sum_t^{T-1} \left(\log X_{t+1} - \log X_t - \log r + \beta X_t\right)^2 }{2 \sigma^2}\right) $$
 
-To integrate out $r$, $\int P(r, \beta, \sigma | X) P(r) dr$, we'll make this look like a Gaussian in $\log r$ by completing the square; getting the square on the outside of the sum. First we collect all the other terms as the factor, $M_t$;
+To integrate out $r$, $P(X | \beta, \sigma) = \int P(X | r, \beta, \sigma ) P(r) dr$, we'll make this look like a Gaussian in $\log r$ by completing the square; getting the square on the outside of the sum. First we collect all the other terms as the factor, $M_t$;
 
 $$M_t := \log X_{t+1} - \log X_t + \beta X_t$$
 
