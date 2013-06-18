@@ -16,7 +16,7 @@ module Jekyll
   module GitSHAFilter
     def git_sha(input)
       g = Git.open("/home/cboettig/Documents/labnotebook")
-      g.log(1).object("vita.html").first.sha
+      g.log(1).object(input).first.sha
     end
   end
 end
