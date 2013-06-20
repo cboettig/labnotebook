@@ -18,6 +18,9 @@ When writing the manuscript, the presentation of an analysis does not often foll
 Figures still benefit from the dynamic context
 
 
+### gotchas 
+
+we can't toggle global chunk and keep cache
 
 
 
