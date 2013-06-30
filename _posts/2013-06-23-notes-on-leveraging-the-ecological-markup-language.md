@@ -1,6 +1,5 @@
 ---
 layout: post
-published: false
 categories: ecology
 tags:
 - semantics
@@ -10,7 +9,7 @@ tags:
 ---
 
 
-This post creates new tag [eml]() for posts discussing the Ecological Markup Langauge or the implementation of an R parser thereof ([reml](https://github.com/ropensci/reml)).  
+This post creates new tag [eml](/tags.html#eml) for posts discussing the Ecological Markup Langauge or the implementation of an R parser thereof ([reml](https://github.com/ropensci/reml)).  
 
 
 ### Why EML?  
@@ -30,43 +29,45 @@ These sites seem to do a better job generating this data than making any use of 
 
 ### Generating EML
 
-[Metacat][metacat] a GPL program written in Java by EML authors Matt and co, describes itself as a database that uses EML to store data. It might be a useful tool for generating EML, but looks pretty intimidating to me.   
+[Metacat][metacat] a GPL program written in Java by EML authors Matt and co, describes itself as a database that uses EML to store data. It might be a useful tool for generating EML, but looks pretty intimidating to me.  It probably provides the "[Web Software Interface](http://knb.ecoinformatics.org/knb/cgi-bin/register-dataset.cgi?cfg=knb)" that provides rather minimal EML 
 
-[Morpho][morpho] is aimed at documenting species trait data, and looks like a rather useful if tedious tool for generating EML files.  
-
-
-
-
-
-
-
-They give far less verbage to describing the dificulty of this approach, for the developers of the standard, for the implementation of tools that can use the standard, and for users themselves.  
+[Morpho][morpho] is aimed at documenting species trait data, and looks like a rather useful if tedious tool for generating EML files. Unfortunately, without the ability to script inputs or automatically detect existing data structures, we are forced through the rather arduous process of adding all metadata annotation each time.  
 
 
 ## What can a package offer?
 
-Translating xpath commands into R function wrappers probably provides little utility.  Do we really need a `get_authors` function in place of `getNodeSet(doc, "//creator")`?  Of course we might want to convert the returned nodes into characters strings or R `person` objects.  We might want to  
+Translating xpath commands into R function wrappers probably provides little utility.  Do we really need a `get_authors` function in place of `getNodeSet(doc, "//creator")`?  Of course we might want to convert the returned nodes into characters strings or R `person` objects.  Or providing larger chunks of metadata extracted into a single R object, or text-based summary (e.g. markdown or yaml).  
+
+A package could also provide utilities to generate EML from R objects, leveraging the metadata implicit in R objects that is not present in a CSV (in which there is no built-in notion of whether a column is numeric or character string, what missing value characters it uses, or really if it is consistent at all.  Avoiding manual specification of these things makes the metadata annotation less tedious as well.  
+
+Of course such ideas are just the beginning.  Ideally a package could help tackle the grand challenge of heterogeneous data integration, though this might have to wait for more semantics than are natively found EML.  
 
 
-What do Kepler, Metacat, Morpho, etc provide for interfaces with EML?  
-
-
-
-## 
-
-Can I have endpoints (URLs) for all public EML files in KNB?  
 
 
 [1]: http://10.1146/annurev.ecolsys.37.091305.110031 
-[metacat]: 
+[metacat]: http://dx.doi.org/10.1109/4236.957896 
 [LTER]: http://dx.doi.org/10.1007/978-90-481-8782-9_5
-[morpho]: 
-
+[morpho]: http://knb.ecoinformatics.org/morphoportal.jsp
   
 
-* Annual Review discussing "ecoinformatics" and the EML approach `r citet("10.1146/annurev.ecolsys.37.091305.110031", "discusses")`. 
-* The use of ontologies in ecology `r citet("10.1016/j.tree.2007.11.007", "usesMethodIn")` 
-* Updated, shorter review in TREE `r citet("10.1016/j.tree.2011.11.016", "discusses")`
-* Simple EML introduction in _Frontiers_ `r citet("10.1890/0012-9623(2005)86[158:MTVOED]2.0.CO;2", "discusses")`
+
+* Annual Review discussing "ecoinformatics" and the EML approach <span class="showtooltip" title="Jones M, Schildhauer M, Reichman O and Bowers S (2006). 'The New Bioinformatics: Integrating Ecological Data From The Gene to The Biosphere.' Annual Review of Ecology, Evolution, And Systematics, 37, pp. 519-544. ISSN 1543-592X."><a href="http://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110031" rel="http://purl.org/spar/cito/discusses" >Jones et al. (2006)</a></span> . 
+* The use of ontologies in ecology <span class="showtooltip" title="Madin J, Bowers S, Schildhauer M and Jones M (2008). 'Advancing Ecological Research With Ontologies.' Trends in Ecology &amp; Evolution, 23, pp. 159-168. ISSN 01695347."><a href="http://dx.doi.org/10.1016/j.tree.2007.11.007" rel="http://purl.org/spar/cito/usesMethodIn" >Madin et al. (2008)</a></span>  
+* Updated, shorter review in TREE <span class="showtooltip" title="Michener W and Jones M (2012). 'Ecoinformatics: Supporting Ecology as A Data-Intensive Science.' Trends in Ecology &amp; Evolution, 27, pp. 85-93. ISSN 01695347."><a href="http://dx.doi.org/10.1016/j.tree.2011.11.016" rel="http://purl.org/spar/cito/discusses" >Michener & Jones (2012)</a></span> 
+* Simple EML introduction in _Frontiers_ <span class="showtooltip" title="Fegraus E, Andelman S, Jones M and Schildhauer M (2005). 'Maximizing The Value of Ecological Data With Structured Metadata: an Introduction to Ecological Metadata Language (Eml) And Principles For Metadata Creation.' Bulletin of The Ecological Society of America, 86, pp. 158-168. ISSN 0012-9623."><a href="http://dx.doi.org/10.1890/0012-9623(2005)86[158:MTVOED]2.0.CO;2" rel="http://purl.org/spar/cito/discusses" >Fegraus et al. (2005)</a></span> 
+* metacat paper, <span class="showtooltip" title="Jones M, Berkley C, Bojilova J and Schildhauer M (2001). 'Managing Scientific Metadata.' Ieee Internet Computing, 5, pp. 59-68. ISSN 10897801."><a href="http://dx.doi.org/10.1109/4236.957896" rel="http://purl.org/spar/cito/discusses" >Jones et al. (2001)</a></span> 
+* LTER paper, <span class="showtooltip" title="Müller F, Baessler C, Schubert H, Klotz S, Gosz J, Waide R and Magnuson J (unknown). 'Long-Term Ecological Research.' Unknown."><a href="" rel="http://purl.org/spar/cito/discusses" >Müller et al. (unknown)</a></span> 
+
+
+## References
+
+
+- Eric H. Fegraus, Sandy Andelman, Matthew B. Jones, Mark Schildhauer,   (2005) Maximizing The Value of Ecological Data With Structured Metadata: an Introduction to Ecological Metadata Language (Eml) And Principles For Metadata Creation.  *Bulletin of The Ecological Society of America*  **86**  158-168  [10.1890/0012-9623(2005)86[158:MTVOED]2.0.CO;2](http://dx.doi.org/10.1890/0012-9623(2005)86[158:MTVOED]2.0.CO;2)
+- M.B. Jones, C. Berkley, J. Bojilova, M. Schildhauer,   (2001) Managing Scientific Metadata.  *Ieee Internet Computing*  **5**  59-68  [10.1109/4236.957896](http://dx.doi.org/10.1109/4236.957896)
+- Matthew B. Jones, Mark P. Schildhauer, O.J. Reichman, Shawn Bowers,   (2006) The New Bioinformatics: Integrating Ecological Data From The Gene to The Biosphere.  *Annual Review of Ecology, Evolution, And Systematics*  **37**  519-544  [10.1146/annurev.ecolsys.37.091305.110031](http://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110031)
+- Joshua S. Madin, Shawn Bowers, Mark P. Schildhauer, Matthew B. Jones,   (2008) Advancing Ecological Research With Ontologies.  *Trends in Ecology & Evolution*  **23**  159-168  [10.1016/j.tree.2007.11.007](http://dx.doi.org/10.1016/j.tree.2007.11.007)
+- William K. Michener, Matthew B. Jones,   (2012) Ecoinformatics: Supporting Ecology as A Data-Intensive Science.  *Trends in Ecology & Evolution*  **27**  85-93  [10.1016/j.tree.2011.11.016](http://dx.doi.org/10.1016/j.tree.2011.11.016)
+- Felix Müller, Cornelia Baessler, Hendrik Schubert, Stefan Klotz, James R. Gosz, Robert B. Waide, John J. Magnuson,   (unknown) Long-Term Ecological Research.  *Unknown*
 
 
