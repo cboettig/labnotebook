@@ -98,3 +98,34 @@ Justin
 </blockquote>
 
 
+
+<blockquote>
+Hey Carl, 
+
+I started reading your lab notebook which provided very interesting insights to workflow management for scientific manuscripts. I am determined to use a similar workflow now and was hoping to take examples from your "ews review" on github.
+
+I get most of it, however, I was looking for the knitr ".Rmd" document to understand the global chunk settings and how you integrated everything together to produce the manuscript. I could only find the final .md files. I assume you used pandoc to convert into pdf? 
+
+Really appreciate your effort towards the open lab notebook. Better late than never, I intend to start one myself thanks to you!
+
+Best Regards,
+
+Vijay
+</blockquote>
+
+
+
+<blockquote>
+Carl,
+    hope you don't mind the 'cold-call' but I was impressed with your GitHub Pages web site and have been trying to implement the same. I lecture in a small college in NW Ireland and am transitioning much of my programming exercises for my classes to GitHub. 
+
+...
+
+Rgds,
+J
+
+</blockquote>
+
+
+
+
