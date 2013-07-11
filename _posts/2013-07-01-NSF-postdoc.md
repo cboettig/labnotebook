@@ -11,13 +11,18 @@ Today I officially start my NSF mathematical biology post-doc with mentors Marc 
 3. **What learning strategies can be employed to reduce uncertainty without increasing the chance of accidentally crossing a tipping point?**
 
 
-The project brings me into rather new ground into at least two new methodologies (Optimal control, specifically through stochastic dynamic programming -- something I have been recently introduced to by economists in a NIMBIOS working group)  and a new ecological system (fisheries dynamics). I had to smile on seeing that some of my reviewers fretted that the project sounded too similar to my thesis work.  While potentially understandable from a comparison of my thesis title and my NSF proposal title, I have always feared I had the opposite problem.[^1]  I was also flattered to be considered experienced in fisheries modeling, my foray into the morphology of fish jaws during my comparative phylogenetics work hardly seems very relevant to fish population dynamics.
+The project brings me into rather new ground into at least two new methodologies (Optimal control, specifically through stochastic dynamic programming -- something I have been recently introduced to by economists in a NIMBIOS working group)  and a new ecological system (fisheries dynamics). I had to smile on seeing that some of my reviewers fretted that the project sounded too similar to my thesis work.  While potentially understandable from a comparison of my thesis title and my NSF proposal title, I have always feared I had the opposite problem.[^1]  
+
 
 In an academic context, I tend to ignore my open science topics unless others bring them up. So this proposal was one of the first times my open notebook featured prominently in my broader impacts and my data management plan.
 
 ### Broader Impacts
 
+
+
 ### Data Management 
+
+I posted a draft of my [data management plan](http://carlboettiger.info/2012/10/09/data-management-plan.html) in my notebook previously. It appears that reviewers are not asked to comment directly on the data management plan, so I have no direct feedback from the panel.  
 
 ### Reviews
 
@@ -25,8 +30,6 @@ In an academic context, I tend to ignore my open science topics unless others br
 #### Comments on notebook
 
 > The PI operates a blog (open notebook) that already receives attention and is an interesting way to promote engagement and learning across a broad community of scientific peers and perhaps the public. 
-
-> Outcomes would include and disseminate data, software, analyses and conclusions for reproduction and discussion via an Open laboratory notebook/blog maintained by the author and linked to social media channels. These outcomes might be used by government agencies, policy makers, and private sector executives to assess and make ecological decisions.
 
 > the notebook/blog could be developed into an online asynchronous classroom to mentor others in applying the results. 
 
@@ -36,16 +39,8 @@ In an academic context, I tend to ignore my open science topics unless others br
 
 1. Reviewer 1 expresses a desire for a case-study application
 2. More on broader public and undeserved groups
-3. Has "some similarities to the dissertation" (echoed in panel summary)
-
-I am cautious to divine too much from my reviews, since they may not completely reflect either the discussion of my proposal or the reasons for the program officers decisions -- written reviews are brief summaries made before the discussion and the NSF committees only advise program officers -- but suffice it to say none had any comment about data management.  (It appears NSF doesn't explicitly ask for comments on this section either.)  
-
-(
+3. Has "some similarities to the dissertation" 
 
 
 
-[^1]: After moving from an undergraduate in physics, I did my best to stitch my graduate work for an evolution and ecology PhD under a unifying theme in my dissertation, but it could hardly have been more across the map.  My dissertation had three papers: one in Adaptive Dynamics, one in Comparative Phylogenetics, and one in warning signals of ecological shifts -- there was no overlap in authors and essentially no overlap in the topic or reference lists (okay, Cox 1968, in the latter two).  I didn't even attempt to weave in my two ecoinformatics papers.  
-
-My undergraduate was similiarly varied.  I spent summer 2004 in an astrophysics lab (lambda CDM models with Neta Bahcall), 2005 sequencing extremeophilic microbes in a geomicrobiology lab (with TC Onstott), 2006 doing computational methods for boundary value problems during a plasma physics fellowship (with Hersh Rabitz).  Though a physics major I wrote my first JP on population dynamics under clonal interference (David Huse), my second on adaptive dynamics (with Joshua Weitz), and my thesis on forest canopy models (with Stephen Pacala).  
-
-It's all a logical path of closely connected ideas in my mind of course, but I usually assume others don't see those threads...   
+[^1]: After moving from an undergraduate in physics, I did my best to stitch my graduate work for an evolution and ecology PhD under a unifying theme in my dissertation, but it could hardly have been more across the map.  My dissertation had three papers: one in Adaptive Dynamics, one in Comparative Phylogenetics, and one in warning signals of ecological shifts -- there was no overlap in authors and essentially no overlap in the topic or reference lists (okay, Cox 1968, in the latter two).  I didn't even attempt to weave in my two ecoinformatics papers.  My undergraduate was similiarly varied.  I spent summer 2004 in an astrophysics lab (lambda CDM models with Neta Bahcall), 2005 sequencing extremeophilic microbes in a geomicrobiology lab (with TC Onstott), 2006 doing computational methods for boundary value problems during a plasma physics fellowship (with Hersh Rabitz).  Though a physics major I wrote my first JP on population dynamics under clonal interference (David Huse), my second on adaptive dynamics (with Joshua Weitz), and my thesis on forest canopy models (with Stephen Pacala).  It's all a logical path of closely connected ideas in my mind of course, but I usually assume others don't see those threads...   
