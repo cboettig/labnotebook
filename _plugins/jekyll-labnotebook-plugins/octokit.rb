@@ -25,6 +25,8 @@ module Jekyll
       @address = "cboettig/"+"#{@text}"
     end
     def render(context) # learn how to write this to take an argument!
+      puts "Getting Github Issues via octokit.rb"
+
       cred = YAML.load_file("/home/cboettig/.github_cred.yml")
       client = Octokit::Client.new(:login => cred[":username"], :password => cred[":password"])
       repo = client.issues(@address) # grab the data. Can this go in "initialize?"
@@ -66,6 +68,7 @@ module Jekyll
       @address = "cboettig/"+"#{@text}"
     end
     def render(context)
+      puts "Getting Github Commits via octokit.rb"
       # day = Time.now # context.environments.first["page"]["date"]
       # @until = Chronic.parse("Now") #(day + 60*60*24).iso8601
       # @since = Chronic.parse("One day ago") #day.iso8601

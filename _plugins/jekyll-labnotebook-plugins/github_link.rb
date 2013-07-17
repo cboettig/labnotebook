@@ -21,6 +21,7 @@
 module Jekyll
   module GithubLinkFilter
     def github_link(input)
+#      puts "Github links added by github_link plugin"
       input.gsub(/(\d\d\d\d)\/(\d\d)\/(\d\d)\/(.*)\.html/, "\\1-\\2-\\3-\\4.md")
     end
   end

@@ -15,6 +15,7 @@ require 'git'
 module Jekyll
   module GitSHAFilter
     def git_sha(input)
+      puts "Getting git SHA with git_sha.rb"
       g = Git.open("/home/cboettig/Documents/labnotebook")
       g.log(1).object(input).first.sha
     end

@@ -9,6 +9,7 @@ module Jekyll
     ## NOTE: post.dir gives the published directory path, e.g. 2013/02/02/ 
     # and post.base not valid  
     def generate(site)
+      puts "Generating page path metadata with base_name.rb"
       site.posts.each do |post|
         post.data['path'] = post.name
       end

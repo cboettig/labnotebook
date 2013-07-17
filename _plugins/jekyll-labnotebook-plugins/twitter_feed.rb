@@ -16,6 +16,9 @@ module Jekyll
       end
     end
     def render(context)
+      
+      puts "Generating twitter feed with twitter API and twitter_feed.rb"
+
       # Initialize a redcarpet markdown renderer to autolink urls
       # Could use octokit instead to get GFM
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
