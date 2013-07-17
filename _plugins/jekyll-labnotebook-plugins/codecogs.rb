@@ -18,6 +18,7 @@
 module Jekyll
   module ImageFilter
     def codecogs(input)
+    puts "generating images for equations in RSS feed with codecogs.rb"
     desired = input.gsub(/\\\[\s*(.*?)\s*\\\]/, "<div style=\"text-align:center;\"><img src=\"http://latex.codecogs.com/png.latex?\\1\" alt=\"\\1\" /></div>") 
     desired.gsub(/\\\(\s*(.*?)\s*\\\)/, "<img src=\"http://latex.codecogs.com/png.latex?\\1\\inline\"/>")
     end
