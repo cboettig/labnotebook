@@ -10,6 +10,7 @@
 module Jekyll
   class RawContent < Generator
     def generate(site)
+      puts "Storing raw md versions as post metadata with raw_content.rb"
       site.posts.each do |post|
         post.data['raw_content'] = post.content
       end

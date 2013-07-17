@@ -15,6 +15,7 @@ require 'git'
 module Jekyll
   module GitModFilter
     def git_modified(input)
+      puts "Getting date modified from git using git_mod.rb"
       g = Git.open("/home/cboettig/Documents/labnotebook")
       begin
         out = g.log(1).object(input).first.date

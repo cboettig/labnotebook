@@ -56,6 +56,7 @@ module Jekyll
       @options = markup # optional optionss passed in by opening tag
     end
     def render(context)
+      puts "Rendering Google Analytics Data"
       path = super
       
       buffer = open('../pageviews.json')
@@ -78,6 +79,8 @@ module Jekyll
     priority :low
       
       def generate(site)
+
+        puts "Getting Google Analytics data"
          ## Set timeouts to be extra patient if necessary
 #        Garb.open_timeout = 120 # 2 minute timeout
 #        Garb.read_timeout = 120 # 2 minute timeout
