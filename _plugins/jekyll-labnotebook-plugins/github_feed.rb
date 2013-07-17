@@ -16,6 +16,7 @@ module Jekyll
       end
     end
     def render(context)
+      puts "Generating Github feed from rss using feedzirra with github_feed.rb"
       feed = Feedzirra::Feed.fetch_and_parse("https://github.com/" + @user + ".atom")
       # consider formatting properly
       if defined?(feed.entries)
