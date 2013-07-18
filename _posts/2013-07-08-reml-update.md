@@ -4,8 +4,8 @@ published: false
 category: ecology
 tags:
 - ropensci
-- reml
+- eml
 
 ---
 
-
+Made substanial progress on the [reml](http://purl.org/git/reml) project
