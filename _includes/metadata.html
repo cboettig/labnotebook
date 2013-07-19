@@ -1,7 +1,7 @@
 
 
 <!-- Get date last modified from git log. (Uses current time if file entry not found, e.g. projects/)  -->
-{% capture modified %} {{ page.path | git_modified }} {% endcapture %}
+{% capture modified %} {{ page.modified }} {% endcapture %}
 
 
 <!-- For posts, page.date is the date they are published under, which we use as their 'canonical' dc:date -->
