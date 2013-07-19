@@ -34,7 +34,6 @@ module Jekyll
       site.pages.each do |page|
         begin
           path = File.join(".", page.dir, page.name)
-          puts path
           modified = g.log(1).object(path).first.date
           sha = g.log(1).object(path).first.sha
         rescue Exception => e 
