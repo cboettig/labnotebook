@@ -50,28 +50,6 @@ module Jekyll
   end
 
 
-  class GoogleAnalytics < Liquid::Block
-    def initialize(tag_name, markup, tokens)
-      super # options that appear in block (between tag and endtag)
-      @options = markup # optional optionss passed in by opening tag
-    end
-    def render(context)
-      puts "Rendering Google Analytics Data"
-      path = super
-      
-      buffer = open('../pageviews.json')
-      result = JSON.load(buffer) 
-
-      if defined?(result[path][1]) 
-        views = result[path][1]
-      else 
-        views = "(not calculated)"
-      end
-      views
-    end
-  end
-
-
 
   class AnalyticsGenerator < Generator
 
@@ -98,9 +76,17 @@ module Jekyll
                              :start_date => Chronic.parse("2011-01-01"))
         result = Hash[data.collect{|row| [row.page_path, [row.exits, row.pageviews]]}]
 
-        File.open("pageviews.json","w") do |f|
-            f.write(JSON.pretty_generate(result))
+
+        ## Loop over posts, appending the pageviews data to the metadata
+        site.posts.each do |post|
+          if defined?(result[path][1]) 
+            views = result[path][1]
+          else 
+            views = "(not calculated)"
+          end
+          post.data['pageviews'] = views
         end
+
       end
   end
 
