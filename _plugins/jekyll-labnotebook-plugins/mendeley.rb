@@ -436,7 +436,7 @@ class Mendeley
   $default_site = config[":default_site"]
 
   ## Debugging
-  puts "Keys successfully loaded for " + $default_site + " Key: " + $default_key + " Secret: " + $default_secret
+  puts "Keys successfully loaded for " + $default_site 
 
 
   def initialize(username=nil, password=nil, consumer_key=$default_key, consumer_secret=$default_secret, site=$default_site)
