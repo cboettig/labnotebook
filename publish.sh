@@ -13,6 +13,7 @@ rsync -az _site/ ~/Documents/code/cboettig.github.com
 cd ~/Documents/code/cboettig.github.com  
 git add *
 git commit -a -m "update site"
+git pull -s ours
 git push
 echo "Site updated on Github server"
 
