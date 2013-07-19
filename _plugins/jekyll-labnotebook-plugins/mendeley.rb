@@ -539,7 +539,7 @@ end
 
       file = @category + "_library.json" 
 
-      if !File.exist?("library.json") 
+      if !File.exist?(file) 
         doc_ids = JSON.parse(category.body)["document_ids"]
         ## GOODNESS GRACIOUS, Mendeley forces us to make an API call for EACH DOCUMENT IN THE LIBRARY  
         library = Array.new

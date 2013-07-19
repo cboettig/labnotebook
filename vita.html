@@ -169,14 +169,14 @@ title: Vita
 <div class="span2 sidebar"><!-- Custom sidebar -->   
 
 <p><i class="icon-calendar"></i> updated: <time 
-      datetime="{{ page.path  | git_modified | date_to_xmlschema }}" 
-      property="dc:modified">{{ page.path | git_modified | date_to_string }}</time></p>
+      datetime="{{ page.modified | date_to_xmlschema }}" 
+      property="dc:modified">{{ page.modified | date_to_string }}</time></p>
 <br />
 
 
 
 <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/labnotebook/issues/89"> (What is this?)</a></small></p>
-<p><small> <a href="{{ site.repo }}/commit/{{ page.path | git_sha }}/{{ page.path }}"> {{ page.path|  git_sha }}</a></small></p>
+<p><small> <a href="{{ site.repo }}/commit/{{ page.sha }}/{{ page.path }}"> {{ page.sha }}</a></small></p>
 
 
 <br />

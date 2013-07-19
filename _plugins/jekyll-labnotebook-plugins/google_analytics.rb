@@ -49,8 +49,6 @@ module Jekyll
       dimensions :page_path
   end
 
-
-
   class AnalyticsGenerator < Generator
 
     safe true
@@ -62,6 +60,7 @@ module Jekyll
          ## Set timeouts to be extra patient if necessary
 #        Garb.open_timeout = 120 # 2 minute timeout
 #        Garb.read_timeout = 120 # 2 minute timeout
+        
         ## Read in credentials and authenticate 
         cred = YAML.load_file("/home/cboettig/.garb_auth.yaml")
 
@@ -79,18 +78,16 @@ module Jekyll
 
         ## Loop over posts, appending the pageviews data to the metadata
         site.posts.each do |post|
-          if defined?(result[path][1]) 
-            views = result[path][1]
+
+          if defined?(result[post.url][1]) 
+            views = result[post.url][1]
           else 
             views = "(not calculated)"
           end
           post.data['pageviews'] = views
         end
-
       end
   end
 
 end
-
-Liquid::Template.register_tag('pageviews', Jekyll::GoogleAnalytics)
 

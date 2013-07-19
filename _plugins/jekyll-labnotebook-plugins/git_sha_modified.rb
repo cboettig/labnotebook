@@ -20,8 +20,9 @@ module Jekyll
       ## Loop over posts 
       site.posts.each do |post|
         begin
-          modified = g.log(1).object(post.name).first.date
-          sha = g.log(1).object(post.name).first.sha
+          path = '_posts/' + post.name
+          modified = g.log(1).object(path).first.date
+          sha = g.log(1).object(path).first.sha
         rescue Exception => e 
           modified = Time.now 
           sha = "not yet committed" 
@@ -32,14 +33,15 @@ module Jekyll
       ## Loop over pages 
       site.pages.each do |page|
         begin
-          modified = g.log(1).object(page.name).first.date
-          sha = g.log(1).object(page.name).first.sha
+          path = page.dir + page.name
+          modified = g.log(1).object(path).first.date
+          sha = g.log(1).object(path).first.sha
         rescue Exception => e 
           modified = Time.now 
           sha = "not yet committed" 
         end
-        post.data['sha'] = sha
-        post.data['modified'] = modified
+        page.data['sha'] = sha
+        page.data['modified'] = modified
       end
 
 
