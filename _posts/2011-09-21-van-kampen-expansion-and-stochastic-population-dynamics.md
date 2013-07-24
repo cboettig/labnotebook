@@ -13,4 +13,4 @@ tags:
 
 Embedding a file from some of my earlier work illustrating the use of the linear noise approximation  describing demographic noise processes and highlighting some of the more interesting results therein.
 
-<embed src="http://www.carlboettiger.info/assets/files/EcologyLinNoise.pdf">
+<embed src="http://www.carlboettiger.info/assets/files/EcologyLinNoise.pdf" width=700 height=500>

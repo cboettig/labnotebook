@@ -12,7 +12,7 @@ tags: colored-noise
 
 Some of my early notes & derivations on the impact of red environmental noise on population dynamics as pdf:
 
-<embed src="http://carlboettiger.info/assets/files/coloredNoise.pdf">
+<embed src="http://carlboettiger.info/assets/files/coloredNoise.pdf" width=700 height=500>
 
 
 * Roughgarden's [paper](http://www.jstor.org/stable/2459866)
