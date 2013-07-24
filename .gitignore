@@ -2,3 +2,5 @@ _plugins/_cache
 _site
 assets/figures
 pageviews.json
+*library.json
+*/*library.json
