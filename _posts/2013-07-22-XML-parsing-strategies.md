@@ -1,4 +1,5 @@
 ---
+layout: post
 subtitle: parsing NeXML
 category: evolution
 tags: 
