@@ -9,6 +9,10 @@ tags:
 ---
 
 
+**Update** Thanks to the rich discussion in the comments and beyond,
+I've revised my thoughts on this somewhat, as I discuss in [this more
+recent post](/2013/07/09/reviewing-software-revisited.html).  
+
 I am more and more frequently reviewing 'software papers:' which I
 define as publications whose primary purpose is to publicize a piece
 of scientific software and provide a traditional research product
