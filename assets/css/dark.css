@@ -6103,7 +6103,7 @@ div.excerpt {
   overflow: hidden;
 }
 div.scroll {
-  height: 200px;
+  height: 110%;
   overflow: scroll;
   width: 110%;
 }
