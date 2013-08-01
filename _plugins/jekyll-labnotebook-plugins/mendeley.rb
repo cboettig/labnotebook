@@ -579,7 +579,7 @@ end
              doc["publication_outlet"].to_s + "</em> <strong>" + 
              doc["volume"].to_s + "</strong>" + " " + 
              doc["issue"].to_s + " " + 
-             doc["doi"].to_s + "</li>" + "\n"
+             '<a href="http://dx.doi.org/' + doc["doi"].to_s + '">' + doc["doi"].to_s + "</a> </li>" + "\n"
       end
 
       out
