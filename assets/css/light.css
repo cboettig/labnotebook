@@ -6102,6 +6102,11 @@ div.excerpt {
   height: 200px;
   overflow: hidden;
 }
+div.scroll {
+  height: 200px;
+  overflow: scroll;
+  width: 110%;
+}
 .excerpt h1,
 .excerpt h2,
 .excerpt h3,
