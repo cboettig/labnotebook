@@ -1,20 +1,29 @@
 ---
 layout: post
 published: false
+tags: 
+- blog
+- open-science
+- workflow
+- R 
 
 ---
 
+For a while now I have been using the [knitr](http://yihui.name/knitr) dynamic documentation/reproducible research software for my project workflow.  Most discussion of dynamic documentation focuses on 'finished' products such as journal articles or reports.  Over the past year, I have found the dynamic documentation framework to be particularly useful as I develop ideas, and remarkably more challenging to then integrate into a final paper in a way that really takes advantage of its features.  I explain both in some detail here.  
+
+My former workflow followed a pattern no doubt familiar to many:
+
 * Bash away in an R terminal, paste useful bits into an R script...
-* Write manuscript, including only figures, tables, and inline values returned from R.  
+* Write manuscript separately, pasitng in figures, tables, and inline values returned from R.  
 
+This doesn't leave much of a record of what I did or why, which is particularly frustrating when some discussion reminds me of an earlier idea. 
 
-
-Start off writing a `.Rmd` file, intermixing notes to myself and code chunks.  Chunks break up the code into conceptual elements, markdown gives me a more expressive way to write notes than comment lines do.  Output figures, tables, and inline values inserted.  So far so good.  I version manage this creature in git/Github.  Great, now I have a trackable history of what is going on, and all is well:
+When I begin a new project, I start off writing a `.Rmd` file, intermixing notes to myself and code chunks.  Chunks break up the code into conceptual elements, markdown gives me a more expressive way to write notes than comment lines do.  Output figures, tables, and inline values inserted.  So far so good.  I version manage this creature in git/Github.  Great, now I have a trackable history of what is going on, and all is well:
 
 1. Document my thinking and code as I go along on a single file scratch-pad
 2. Version-stamped history of what I put in and what I got out on each step of the way
 3. Rich markup with equations, figures, tables, embedded.  
-
+4. Caching of script chunks, allowing me to tweak and rerun an analysis without having to execute the whole script.  While we can of course duplicate that behavior with careful save and load commands in a script, in knitr this comes for free.
 
 ### Two kinds of trouble.  
 
