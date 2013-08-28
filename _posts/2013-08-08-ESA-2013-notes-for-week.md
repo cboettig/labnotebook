@@ -49,7 +49,7 @@ Afternoon inteview with Virginia Gewin on Yeakel's talk.  Remarkable challenge t
 
 - Open Science session in evening
 
-Amazing talk and later discussion with Russell Niches.  
+Amazing talk and later discussion with Russell Neches.  
 
 - open hardware and 3D printers for scientific research.  3 examples: 
   - cheaper than alternatives (water quality monitor on rduino chip, tweets data)
