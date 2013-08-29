@@ -495,8 +495,12 @@ $p=x$ to be absorbed at either boundary $a=0$ or $b=1$:
 
 $$\begin{aligned}
 T(x) &= \frac{2 \left[\left(\int_a^x\frac{\mathrm{d}y}{\psi(y)}\right)\int_x^b \frac{\mathrm{d}y'}{\psi(y')} \int_a^{y'} \frac{\mathrm{d}z \psi(z)}{B(z)} - \left(\int_x^b\frac{\mathrm{d}y}{\psi(y)}\right)\int_a^x \frac{\mathrm{d}y'}{\psi(y')} \int_a^{y'} \frac{\mathrm{d}z \psi(z)}{B(z)}\right]}{\int_a^b \frac{\mathrm{d}y}{\psi(y)}}
-\label{7integrals} 
-\intertext{where}
+\label{7integrals}
+\end{aligned}$$
+
+where
+
+$$\begin{aligned}
 \psi(x) &= \exp\left( \int_0^x \mathrm{d}x' \frac{2A(x')}{B(x')} \right)\end{aligned}$$
 
 Though these integrals can be computed numerically, a small noise limit
@@ -534,10 +538,9 @@ $$\exp{- (\min(V(0), V(1)) - V(p^*) )}$$
 Results
 =======
 
-![](figure/short.jpg)
+![](http://farm6.staticflickr.com/5445/9625166692_cedb531293_o.png)
 
-![](figure/long.jpg)
+![](http://farm3.staticflickr.com/2814/9621930087_57533b9105_o.png)
 
-[fig:times]
 
 [^1]: note that $n(p) \approx k_2$ for small $p$.
