@@ -9,6 +9,7 @@ title: About this site
 * Site source on Github: [cboettig/labnotebook](http://github.com/cboettig/labnotebook).
 * Please [report errors or give feedback](https://github.com/cboettig/labnotebook/issues).
 
+
 Site Features & Credits
 =======================
 
@@ -20,8 +21,8 @@ Site Features & Credits
 * Static site generation with [Jekyll](https://github.com/mojombo/jekyll)
 * Markdown parsing with [pandoc](http://johnmacfarlane.net/pandoc/) 
 * Twitter, Mendeley & Github [custom plugins](https://github.com/cboettig/labnotebook/tree/master/_plugins)
-* [Carbon-neutral site](http://www.dreamhost.com/green.cgi) hosting by [Dreamhost](http://dreamhost.org)
-* Source code hosting on [Github](https://github.com/)
+<!-- * [Carbon-neutral site](http://www.dreamhost.com/green.cgi) hosting by [Dreamhost](http://dreamhost.org) -->
+* Site and source code hosting on [Github](https://github.com/)
 * Uptime monitoring from my.pingdom.com; see [status report](http://stats.pingdom.com/fy1sae94ydyi/616612)
 * CDN from [cloudflare](https://www.cloudflare.com/)
 
