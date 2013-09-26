@@ -1,4 +1,5 @@
 ---
+title: Reflections on the Mozilla Science Code Review Pilot
 layout: post
 category: open-science
 tags: 
