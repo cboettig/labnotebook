@@ -9,9 +9,9 @@ categories:
 - open-science
 ---
 
-**Update**: The original [source file](https://raw.github.com/cboettig/sandbox/b71f7f359164b1ff3b9609d5ded2324fafdc14b6/wordpress_knit_.md) for this post, generates [this output file](https://raw.github.com/cboettig/sandbox/b71f7f359164b1ff3b9609d5ded2324fafdc14b6/wordpress.md) formatted for wordpress.  The source file has been knitted for markdown formatting so this post displays in Jekyll.  
+**Update**: The original [source file](https://raw.github.com/cboettig/sandbox/b71f7f359164b1ff3b9609d5ded2324fafdc14b6/wordpress_knit_.md) for this post, generates [this output file](https://raw.github.com/cboettig/sandbox/b71f7f359164b1ff3b9609d5ded2324fafdc14b6/wordpress.md) formatted for wordpress.  The source file has been knitted for markdown formatting so this post displays in Jekyll. The rendered post relies on Wordpress shortcodes, as raw the output file shows above. The [markdown-based rendering](https://github.com/cboettig/sandbox/blob/b71f7f359164b1ff3b9609d5ded2324fafdc14b6/wordpress.md) shows the images and the shortcodes wordpress uses for codeblocks.  
 
-
+-------------------------------------------
 
 One of the great things about knitr is its flexibility.  Here I set knitr up to publish to Wordpress.
 I will then use RWordPress to publish the output automatically.   
@@ -61,13 +61,10 @@ library(ggplot2)
 qplot(hp, mpg, data = mtcars) + geom_smooth()
 ```
 
-![plot of chunk md-cars](ex-out-md-cars1.png) 
-
 ```r
 ggpcp(mtcars) + geom_line()
 ```
 
-![plot of chunk md-cars](ex-out-md-cars2.png) 
 
 
 
