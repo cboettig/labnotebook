@@ -66,5 +66,17 @@ I also enjoy exposure to fieldwork whenever I can convince colleagues to take me
 - [Overview of my project workflow](http://www.carlboettiger.info/2012/05/06/research-workflow.html)
 - [Data management plan](http://www.carlboettiger.info/2012/10/09/data-management-plan.htm)
 
-</div>
+
+### Perspectives and practices in Open Science
+
+My somewhat uncommon approach to my own research ocassionally attracts attention of those outside my own field.  I have recently been interviewed by various journals asking to share my perspective and motivation.   
+
+* On _peer review of scientific code_: Check Hayden E (2013). "Mozilla Plan Seeks to Debug Scientific Code." _Nature_, 501, pp. 472-472. {{ 10.1038/501472a | doi_parser }}. _A few entries provide more detail on my perspective on [software papers](http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html) and on [research scripts](http://carlboettiger.info/2013/09/25/mozilla-software-review.html)._
+* On _data sharing practices_: Van Noorden R (2013). "Data-Sharing: Everything on Display." _Nature_, 500, pp. 243-245. {{ 10.1038/nj7461-243a | doi_parser }}  _My own practices are documented in [my research workflow](http://www.carlboettiger.info/2012/05/06/research-workflow.html)_
+* Gershwin, Virginia (2013). "Turning Point: Carl Boettiger" _Nature_, 493 p 711  {{ "10.1038/nj7434-711a" | doi_parser }} 
+* Wald, Chelsea (2010).  "Scientists Embrace Openness" _Science_. {{ "10.1126/science.caredit.a1000036" | doi_parser }} _I an several other researchers practicing open notebook science are interviewed about the practice._
+
+
+
+</div> <!-- end span7-->
 
