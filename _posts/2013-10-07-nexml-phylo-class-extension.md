@@ -159,7 +159,7 @@ Again, we check a few methods:
 
 ```r
  b <- new("nexmlTree", bird.orders, nexml = as(bird.orders, "nexml"))
-is(a, "phylo")
+is(b, "phylo")
 ```
 
 ```
