@@ -9,8 +9,8 @@ Below are a fwe links to my more commonly used social network profiles and inter
 
 * __[<i class="icon-github"></i> Github](http://github.com/cboettig)__ -- The web-based home of my research.  Star, watch, or fork a project you're interested in.  
 * __[<i class="icon-twitter"></i> Twitter](http://twitter.com/cboettig)__ -- My primary social network, which is why it gets a contact link in my footer.  
-* __[<i class="icon-stackoverflow"></i> StackOverflow](http://stackoverflow.com/users/258662/carl)__ -- Profile includes [links](http://stackexchange.com/users/94826/cboettig?tab=accounts) to other stackexchange platforms I use.
-* __[<i class="icon-google-plus-sign"></i> Google Plus](https://plus.google.com/112929796403983408632/about)__ -- Largely a subset of my Twitter feed. Does facilitate a bit more extended discussion.  
+* __[<i class="icon-stackexchange"></i> StackOverflow](http://stackoverflow.com/users/258662/carl)__ -- Profile includes [links](http://stackexchange.com/users/94826/cboettig?tab=accounts) to other stackexchange platforms I use.
+* <a href="https://plus.google.com/112929796403983408632?rel=author"><strong><i class="icon-google-plus-sign"></i> Google Plus</strong></a> -- Largely a subset of my Twitter feed. Does facilitate a bit more extended discussion.  
 * __[<i class="icon-search"></i> Google Scholar profile](http://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ)__ -- See what Google thinks are my publications, along with it's take on my citation data. Sign up for alerts! 
 * __[<i class="icon-book"></i> Mendeley](http://www.mendeley.com/profiles/carl-boettiger/)__ -- I maintain several public groups reflecting my reading in various projects.
 * __[<i class="icon-beaker"></i> Figshare](http://figshare.com/authors/Carl%20Boettiger/96387)__ -- Figshare is my go-to database for robust permanent archiving of other scholarly outputs, including grant applications, theses, etc.  
