@@ -75,10 +75,18 @@ module Jekyll
                              :start_date => Chronic.parse("2011-01-01"))
         result = Hash[data.collect{|row| [row.page_path, [row.exits, row.pageviews]]}]
 
+        ## Loop over pages, appending the pageviews data to the metadata
+        site.pages.each do |page|
+          if defined?(result[page.url][1]) 
+            views = result[page.url][1]
+          else 
+            views = "(not calculated)"
+          end
+          page.data['pageviews'] = views
+        end
 
         ## Loop over posts, appending the pageviews data to the metadata
         site.posts.each do |post|
-
           if defined?(result[post.url][1]) 
             views = result[post.url][1]
           else 
