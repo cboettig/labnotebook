@@ -3,6 +3,7 @@ title: Early warning signals for ecological regime shifts
 layout: project
 tag: warning-signals 
 github: earlywarning
+path: 'projects/'
 
 ---
 
@@ -76,6 +77,11 @@ _This commits feed from master branch. Note that Prosecutor's Fallacy research a
 
 {% capture project_publications %}
 <ul prefix="datacite: http://purl.org/spar/datacite/">
+
+  <li> <strong>Carl Boettiger</strong>, Alan Hastings. (2013) No early warning signals for stochastic transitions: insights from large deviation theory.  <em>Proceedings of the Royal Society B</em>. {{"10.1098/rspb.2013.1372" | doi_pdf_parser }} (<a href="http://arxiv.org/abs/1307.4415">arXiv</a>) (<a href="https://github.com/cboettig/prosecutors-fallacy">repository</a>) </li> 
+
+  <li> <strong>Carl Boettiger</strong>*, Noam Ross*, Alan Hastings. (2013) Early warning signals: The charted and uncharted territories. <em>Theoretical Ecology</em> {{"10.1007/s12080-013-0192-6" | doi_pdf_parser }} (<a href="http://arxiv.org/abs/1305.6700">arXiv</a>) (<a href="https://github.com/cboettig/ews-review">repository</a>) </li>
+
 <li>Carl Boettiger, Alan Hastings (2013). <strong>Tipping points: From patterns to predictions</strong> <em>Nature</em> 493, 157–158. <a rel="datacite:doi" href="http://dx.doi.org/10.1038/493157a">doi</a>:10.1038/493157a</li>
 <li>Carl Boettiger, Alan Hastings (2012). <strong>Early Warning Signals and the Prosecutor’s Fallacy</strong> 279 (1748) 4734-4739. <em>Proceedings of the Royal Society B</em> 279 (1748). <a rel="datacite:doi" href="http://dx.doi.org/10.1098/rspb.2012.2085">doi</a>:10.1098/rspb.2012.2085 (<a href="http://www.mendeley.com/download/public/98752/4972355691/dd5fdd8ebbfc05d9ebf415761be200805254d22e/dl.pdf">pdf</a>) (<a href="http://arxiv.org/abs/1210.1204">arXiv</a>) (<a href="https://github.com/cboettig/earlywarning/blob/prosecutor/inst/examples/fallacy.md">code</a>) (<a href="http://dx.doi.org/10.5061/dryad.2k462">data</a>)</li>
 <li>Carl Boettiger and Alan Hastings (2012). <strong>Quantifying Limits to Detection of Early Warning for Critical Transitions</strong>, 2527-2539. <em>Journal of the Royal Society: Interface</em> 9 (75) <a rel="datacite:doi" href="http://dx.doi.org/10.1098/rsif.2012.0125">doi</a>:10.1098/rsif.2012.0125 (<a href="http://www.mendeley.com/download/public/98752/4711221423/df767d6b5f0fbf44cc236470307992b019e6c149/dl.pdf">pdf</a>) (<a href="http://arxiv.org/abs/1204.6231">arXiv</a>) (<a href="https://github.com/cboettig/earlywarning">code</a>)</li>

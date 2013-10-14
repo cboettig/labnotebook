@@ -3,6 +3,7 @@ title: Comparative phylogenetic methods
 layout: project
 tag: Labrids 
 github: wrightscape
+path: 'projects/'
 
 ---
 
