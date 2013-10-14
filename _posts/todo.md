@@ -21,13 +21,12 @@ See issues logs in respective repos
 - colored noise equation
 - Sebastian two-step transition & beetles simulation  
 
+* Vasilis: web page of plain-english explanation
+* Vasilis: Contributions to code
 
-* [x] Comments to Vasilis re: package   
+* Bayesian warning signal method
+
 * Write to [Amber Mace](http://www.linkedin.com/pub/amber-mace/7/a94/b43)?
 * pomp on the bifurcation model.  run both pmcmc and iterative filtering mif
-* Data Dryad deposits for recent papers
-* Arxiv copies of recent papers
-* [x] organize / clean / document github repositories
-* [x] Write to John Drake, Ben Halpern
 
 
