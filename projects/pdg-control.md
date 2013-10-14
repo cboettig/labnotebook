@@ -3,6 +3,7 @@ title: Pretty Darn Good Control
 layout: project
 tag: pdg-control 
 github: pdg_control
+path: 'projects/'
 
 ---
 

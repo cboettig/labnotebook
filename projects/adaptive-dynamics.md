@@ -4,6 +4,7 @@ layout: project
 tag: adaptive-dynamics 
 github: AdaptiveDynamics
 abstract: "Adaptive Dynamics extends evolutionary game theory into the context of dynamical systems rather that stationary strategies.  Unlike much evolutionary theory, this approach permits rich, density-dependent ecological interactions to drive the evolutionary dynamics rather than more abstract claims about fitness.  However, most of the genetic richness is lost, making this more informative about the evoltionary stability of ecological dynamics under evolutionary perturbation than a detailed evolutionary model.  While most of adaptive dynamics works in the deterministic limits of ordinary differential equations, my work extends this to the stochastic context."
+path: 'projects/'
 
 ---
 
