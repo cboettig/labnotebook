@@ -19,6 +19,12 @@ module Jekyll
       start = Time.now
       g = Git.open("/home/cboettig/Documents/labnotebook")
 
+      ## FIXME takes over a second per post!  
+      # That's almost 15 minutes at the moment.... Would be much much faster if we could 
+      # generate a data file and read in as a hash containing the path, sha, and commit time
+      # for each post.  Then in looping over posts we could just look up sha and timestamp
+      # from the path in the hash, rather than calling git gem each time.  
+
       ## Loop over posts 
       site.posts.each do |post|
         begin
