@@ -10,12 +10,15 @@ module Jekyll
     # and post.base not valid  
     def generate(site)
       puts "Generating page path metadata with base_name.rb"
+      start = Time.now
       site.posts.each do |post|
         post.data['path'] = post.name
       end
       site.pages.each do |post|
         post.data['path'] = post.name
       end
+      finish = Time.now
+      puts "Time elapsed #{(finish - start)} seconds"
     end
   end
 end

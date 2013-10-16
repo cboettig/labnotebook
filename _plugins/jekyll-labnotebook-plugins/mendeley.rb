@@ -529,6 +529,7 @@ end
       m = Mendeley.new
 
       puts "Get category ID numbers, display to terminal for reference"
+      start = Time.now
       ## Get category ID numbers, display to terminal for reference
       category_ids = m.folders()
       all_categores = JSON.parse(category_ids.body)
@@ -581,6 +582,8 @@ end
              doc["issue"].to_s + " " + 
              '<a href="http://dx.doi.org/' + doc["doi"].to_s + '">' + doc["doi"].to_s + "</a> </li>" + "\n"
       end
+      finish = Time.now
+      puts "Time elapsed #{(finish - start)} seconds"
 
       out
     end
