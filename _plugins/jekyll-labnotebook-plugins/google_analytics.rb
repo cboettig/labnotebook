@@ -74,6 +74,9 @@ module Jekyll
         data = Exits.results(profile, 
                              :start_date => Chronic.parse("2008-01-01"))
         result = Hash[data.collect{|row| [row.page_path, [row.exits, row.pageviews]]}]
+        ## FIXME Unclear why this does not include data on pages, e.g. vita.html, research.html, etc.  
+        ### Perhaps need to search for these explicitly, but rather annoying...
+
 
         ## Loop over pages, appending the pageviews data to the metadata
         site.pages.each do |page|
