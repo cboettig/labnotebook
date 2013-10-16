@@ -14,7 +14,9 @@ module Jekyll
   class RawContent < Generator
     def generate(site)
 
+      
       puts "Getting date modified and sha data from git"
+      start = Time.now
       g = Git.open("/home/cboettig/Documents/labnotebook")
 
       ## Loop over posts 
@@ -44,6 +46,8 @@ module Jekyll
         page.data['modified'] = modified
       end
 
+      finish = Time.now
+      puts "Time elapsed #{(finish - start)} seconds"
 
 
     end

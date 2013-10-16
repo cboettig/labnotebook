@@ -57,6 +57,7 @@ module Jekyll
       def generate(site)
 
         puts "Getting Google Analytics data"
+        start = Time.now
          ## Set timeouts to be extra patient if necessary
 #        Garb.open_timeout = 120 # 2 minute timeout
 #        Garb.read_timeout = 120 # 2 minute timeout
@@ -97,6 +98,10 @@ module Jekyll
           end
           post.data['pageviews'] = views
         end
+
+      finish = Time.now
+      puts "Time elapsed #{(finish - start)} seconds"
+
       end
   end
 
