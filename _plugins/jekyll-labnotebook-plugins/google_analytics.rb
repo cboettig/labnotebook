@@ -72,7 +72,7 @@ module Jekyll
 
         # place query, customize to modify results
         data = Exits.results(profile, 
-                             :start_date => Chronic.parse("2011-01-01"))
+                             :start_date => Chronic.parse("2008-01-01"))
         result = Hash[data.collect{|row| [row.page_path, [row.exits, row.pageviews]]}]
 
         ## Loop over pages, appending the pageviews data to the metadata
