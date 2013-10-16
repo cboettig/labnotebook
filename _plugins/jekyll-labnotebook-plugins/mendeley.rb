@@ -549,7 +549,15 @@ end
           library << JSON.parse(docs.body)
         end
         ## Sort everything in the library by date added
-        library = library.sort_by { |k| Date::strptime(k["dateAccessed"], "%d/%m/%y") }.reverse!
+        require 'date' 
+        library = library.sort_by { |k| 
+          date = k["dateAccessed"]
+          if(!date.is_a?(String)) 
+            date = "01/01/08"
+          end
+          Date::strptime(date, "%d/%m/%y") 
+        }.reverse!
+
         # Write out
         File.open(file, "w") do |f|
             f.write(JSON.pretty_generate(library))
