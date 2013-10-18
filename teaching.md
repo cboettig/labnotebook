@@ -7,23 +7,37 @@ title: Teaching
 Philosophy
 ----------
 
-![floatright](/assets/img/watch.png)
-I am passionate about experiential, active learning that is
-problem-based, social, interdisciplinary, quantitative and leverages
-technology. Though borne out of my own experience as both student and instructor,
-my approach is also influenced by the examples of such thinkers
-as Professor [Eric Mazur](http://www.youtube.com/watch?v=WwslBPj8GgI)
-and [Sir Ken Robinson](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity.html).
-Good teaching practices should be rooted in scientific study, not
-anecdote; and much of this philosophy is well borne out in the educational
-research literature.  Pieces that have been particularly influential for
-me include the evidence for the value of collaborative problem-solving
-in science education (Anderson et al. 2011); the immense evidence for
-active learning, (Cornelius-White 2007); the road-map for quantitative,
-interdisciplinary and research driven biology training (Bialek and
-Botstein 2004). I am also interested in how approaches such as the use
-of social media (Junco, Heiberger, and Loken 2010) and peer instruction
-can bring some of the benefits of small classes into large lectures.
+![floatright](/assets/img/watch.png) I am passionate about experiential,
+active learning that is problem-based, social, interdisciplinary,
+quantitative and leverages technology. Though borne out of my own
+experience as both student and instructor, my approach is also
+influenced by the examples of such thinkers as Nobel laureate
+[Carl Wieman](http://doi.org/10.1126/science.340.6130.292
+"profile in Science Magazine (pdf)"), Professor [Eric
+Mazur](http://www.youtube.com/watch?v=WwslBPj8GgI
+"lecture on teaching (YouTube recording)") and [Sir Ken
+Robinson](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity.html
+"TED talk").  Good teaching practices should be rooted in scientific
+study, not anecdote; and much of this philosophy is well borne
+out in the educational research literature.  Pieces that have
+been particularly influential for me include the evidence for
+the value of collaborative problem-solving in science education
+([Anderson et al. 2011](http://doi.org/10.1126/science.1198280
+"Science education.  Changing the culture of science education at
+research universities.")); the immense evidence for active learning,
+([Cornelius-White 2007](http://doi.org/10.3102/003465430298563
+"Learner-Centered Teacher-Student Relationships Are Effective: A
+Meta-Analysis")); the road-map for quantitative, interdisciplinary
+and research driven biology training ([Bialek & Botstein
+2004](http://doi.org/10.1126/science.1095480 "Introductory science and
+mathematics education for 21st-Century biologists.")). I am also
+interested in how approaches such as the use of social media ([Junco,
+et al 2010](http://doi.org/10.1111/j.1365-2729.2010.00387.x "The
+effect of Twitter on college student engagement and grades")), peer
+instruction, and delibrate practice ([Deslauriers, Schelew & Wieman
+2011](http://doi.org/10.1126/science.1201783 "Improved Learning in a
+Large-Enrollment Physics Class")) can bring some of the benefits of
+small classes into large lectures.
 
 Experience
 ----------
@@ -82,27 +96,4 @@ list](http://www.mendeley.com/groups/530011/education)
 of articles I encounter that may be of interest to others wanting to
 know more about educational research.  <a href="http://www.mendeley.com/groups/530011/education/feed/rss"><i class="icon-rss"></i></a>
 
-References
-==========
 
-Anderson, W. A., U. Banerjee, C. L. Drennan, S. C. R. Elgin, I. R.
-Epstein, Jo Handelsman, G. F. Hatfull, et al. 2011. “Science education.
-Changing the culture of science education at research universities.”
-*Science (New York, N.Y.)* 331 (jan): 152–3.
-doi:10.1126/science.1198280.
-[http://www.ncbi.nlm.nih.gov/pubmed/21233371](http://www.ncbi.nlm.nih.gov/pubmed/21233371 "http://www.ncbi.nlm.nih.gov/pubmed/21233371").
-
-Bialek, William, and David Botstein. 2004. “Introductory science and
-mathematics education for 21st-Century biologists.” *Science* 303:
-788–90.
-[http://www.ncbi.nlm.nih.gov/pubmed/14764865](http://www.ncbi.nlm.nih.gov/pubmed/14764865 "http://www.ncbi.nlm.nih.gov/pubmed/14764865").
-
-Cornelius-White, J. 2007. “Learner-Centered Teacher-Student
-Relationships Are Effective: A Meta-Analysis.” *Review of Educational
-Research* 77: 113–143.
-[http://rer.sagepub.com/cgi/doi/10.3102/003465430298563](http://rer.sagepub.com/cgi/doi/10.3102/003465430298563 "http://rer.sagepub.com/cgi/doi/10.3102/003465430298563").
-
-Junco, R., G. Heiberger, and E. Loken. 2010. “The effect of Twitter on
-college student engagement and grades.” *Journal of Computer Assisted
-Learning* (dec). doi:10.1111/j.1365-2729.2010.00387.x.
-[http://doi.wiley.com/10.1111/j.1365-2729.2010.00387.x](http://doi.wiley.com/10.1111/j.1365-2729.2010.00387.x "http://doi.wiley.com/10.1111/j.1365-2729.2010.00387.x").
