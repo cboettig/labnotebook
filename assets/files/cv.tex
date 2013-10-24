@@ -32,19 +32,24 @@ urlcolor=blue           % color of external links
 % also modify text height...defaults to 9 in  %larger number means more text per page!
 \textheight 9.2in
 
-%\usepackage{fancyhdr}
-%\pagestyle{fancyplain}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
 %\fancyhf{}
 %\rhead{ \fancyplain{}{\thepage} }
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\fancyplain{}{\thepage} }
+\rfoot{\fancyplain{}{Boettiger}}
 
 \name{Carl Boettiger}
 %\address{Center for Population Biology, \\ 1 Shields Avenue\\University of California, Davis \\ Davis, CA 96516}
-\address{\textbf{Work:} 110 Shaffer Rd \\ 
+\address{\textbf{Work:} \\
+                 110 Shaffer Rd \\ 
                  Santa Cruz, CA 95050, USA \\
                  cboettig@soe.ucsc.edu  \\
                  http://carlboettiger.info
         } 
-\address{\textbf{Home:} 2534 Bombadil Lane, \\ 
+\address{\textbf{Home:} \\
+                 2534 Bombadil Lane \\ 
                  Davis CA 95616, USA \\ 
                  cboettig@gmail.com
         }
@@ -73,23 +78,23 @@ Mentors: Marc Mangel \& Stephen Munch
 
 \title{\textbf{University of California, Davis}}\location{Davis, CA 95616}\dates{Ph.D. 09/18/2012}
 \begin{position}
-Ph.D Population Biology, \\
+Ph.D Population Biology \\
 %Completed Sept 18 2012, Awarded Dec 14 2012. \\
 Mentor: Alan Hastings
 \end{position}
 
-\title{\textbf{Princeton University}}\location{Princeton, NJ 08544}\dates{6/2007}
+\title{\textbf{Princeton University}}\location{Princeton, NJ 08544}\dates{06/2007}
 \begin{position}
 A.B  in Physics with Honors \\ 
-Certificate in Biophysics, Certificate in Applied and Computational Mathematics\\
-Mentor: Stephen Pacala
+Certificate in Biophysics; Certificate in Applied and Computational Mathematics\\
+Mentors: Stephen Pacala, Simon Levin, David Huse
 \end{position}
 
 \section{Publications}
 
 \begin{etaremune}[start = 11]
-\item  Carl Boettiger, Alan Hastings. (2013) No early warning signals for stochastic transitions: insights from large deviation theory. {\it Proceedings of the Royal Society B}. \href{http://doi.org/10.1098/rspb.2013.1372}{doi:10.1098/rspb.2013.1372}
-\item  Carl Boettiger*, Noam Ross*, Alan Hastings. (2013) Early warning signals: The charted and uncharted territories. {\it Theoretical Ecology} \href{http://doi.org/10.1007/s12080-013-0192-6}{doi:10.1007/s12080-013-0192-6}
+\item  Boettiger, C., Hastings, A. (2013) ``No early warning signals for stochastic transitions: insights from large deviation theory.'' {\it Proceedings of the Royal Society B}. \href{http://doi.org/10.1098/rspb.2013.1372}{doi:10.1098/rspb.2013.1372}
+\item  Boettiger, C.$^*$, Ross, N.$^*$, Hastings, A. (2013) ``Early warning signals: The charted and uncharted territories.'' {\it Theoretical Ecology} \href{http://doi.org/10.1007/s12080-013-0192-6}{doi:10.1007/s12080-013-0192-6}
 \item  Boettiger, C., Hastings, A. (2013) ``Tipping points: From patterns to predictions.'' {\it Nature}. 493, 157-158. \href{http://dx.doi.org/10.1038/493157a}{doi:10.1038/493157a}
 \item Boettiger, C., Hastings, A. (2012) ``Early Warning Signals and the Prosecutor's Fallacy.'' {\it Proceedings of the Royal Society B}. 279(1748) 4734-4739.   \href{http://dx.doi.org/10.1098/rspb.2012.2085}{doi: 10.1098/rspb.2012.2085}
 \item Boettiger, C., Temple-Lang, D., Wainwright, P.C. (2012) ``rfishbase: exploring, manipulating and visualizing FishBase data from R'' {\it Journal of Fish Biology}. 81(6) 2030-2039. \href{http://dx.doi.org/10.1111/j.1095-8649.2012.03464.x}{doi: 10.1111/j.1095-8649.2012.03464.x}
@@ -100,6 +105,7 @@ Mentor: Stephen Pacala
 \item Boettiger, C., Dushoff, J., Weitz, J. S. (2010) ``Variation in the phenotypic dynamics of evolving populations,'' {\it Theoretical Population Biology} 77, 6-13. \href{http://dx.doi.org/10.1016/j.tpb.2009.10.003}{doi: 10.1016/j.tpb.2009.10.003}
 \item Wray, J., Bahcall, N., Bode, P., Boettiger, C., Hopkins, P.  (2006)  ``The Shape, Multiplicity, and Evolution of Superclusters in $\Lambda$ CDM Cosmology.''  {\it Astrophysical Journal} 652, 907. \href{http://dx.doi.org/10.1086/508600}{doi: 10.1086/508600}
 \end{etaremune}
+{ \footnotesize $^*$ denotes equal contribution.}
 
 \section{Presentations} 
 \section{\textnormal{2013}}
@@ -153,38 +159,32 @@ Mentor: Stephen Pacala
 \body
 \end{format}
 
-\title{\emph{\textbf{NSF} Mathematical Biology Postdoctoral Scholar}, DBI-1306697}\dates{2013-15}
+\title{\textbf{NSF} Mathematical Biology Postdoctoral Scholar}\dates{2013-15}
 \begin{position}
-  Management for an uncertain world: robust decision theory in face of regime shifts (\textbf{\$138,000})
+  Management for an uncertain world: robust decision theory in face \\
+  of regime shifts Grant No:  DBI-1306697 (\$138,000)
   \vspace{-.25cm}
 \end{position}
 
-\title{\emph{Co-PI on \textbf{Sloan Foundation} Grant}}
+\title{Co-PI on \textbf{Alfred P. Sloan Foundation} Grant}
 \begin{position}
-  For work on the \href{http://ropensci.org}{rOpenSci Project}  (\textbf{\$180,000})
+  For work on the \href{http://ropensci.org}{rOpenSci Project}  (\$180,000)
   \vspace{-.25cm}
 \end{position}
 
-
-\title{\emph{Short-term visitor grant to NIMBioS}}\dates{2012}
-\begin{position}
-  For research in optimal control
-  \vspace{-.25cm}
-\end{position}
-
-\title{\emph{PI on DOE Grant No. DE-AC02-05CH11231}}\dates{2011, renewed 2012}
+\title{PI 50,000 hrs \textbf{DOE} supercomputing time}\dates{2011, renewed 2012}
 \begin{position} 
-50,000 hr supercomputing on NERSC machines
+  NERSC center, Department of Energy, Grant No. DE-AC02-05CH11231
   \vspace{-.25cm}
 \end{position}
 
-\title{\emph{\textbf{NAS} IIASA YSSP fellowship}}\dates{2009}
+\title{\textbf{IIASA} YSSP fellowship}\dates{2009}
 \begin{position} 
-  National Academy of Sciences, NSF Grant No. OISE-0738129, (\$8,000)
+  award from the National Academy of Sciences, \textbf{NSF} Grant No. OISE-0738129, (\$8,000)
   \vspace{-.25cm}
 \end{position}
 
-\title{\emph{\textbf{DOE} Computational Science Graduate Fellowship}}\dates{2008-2012}
+\title{\textbf{DOE} Computational Science Graduate Fellowship}\dates{2008-2012}
 \begin{position} 
   Department of Energy, Grant No: DE-FG02-97ER25308, (\$144,000)
   \vspace{-.25cm}
@@ -197,28 +197,26 @@ Mentor: Stephen Pacala
 \body
 \end{format}
 
-
-
 \title{\emph{Volterra Award} (Best student talk, ESA Theory)}\dates{2011}
-\begin{position} \vspace{-.7cm} \end{position}
+\begin{position} \vspace{-.8cm} \end{position}
 
 \title{\emph{Mendeley \& PLoS software competition}, \$1,000}\dates{2011}
-\begin{position} \vspace{-.7cm} \end{position}
+\begin{position} \vspace{-.8cm} \end{position}
 
 \title{Elected to Membership in the Society of \emph{Sigma Xi}}\dates{2007}
-\begin{position}   \vspace{-.7cm} \end{position}
+\begin{position}   \vspace{-.8cm} \end{position}
 
 \title{\emph{Allen G. Shenstone Prize in Physics}, Princeton}\dates{2007}
-\begin{position}   \vspace{-.7cm} \end{position}
+\begin{position}   \vspace{-.8cm} \end{position}
 
 \title{\emph{The Class of 1870 Old English Prize},  Princeton}\dates{2007}
-\begin{position}   \vspace{-.7cm} \end{position}
+\begin{position}   \vspace{-.8cm} \end{position}
 
 \title{\emph{Kusaka Memorial Prize in Physics}, Princeton}\dates{2006}
-\begin{position}   \vspace{-.7cm} \end{position}
+\begin{position}   \vspace{-.8cm} \end{position}
 
 \title{\emph{Plasma Physics Fellow},  PPPL }\dates{2006}
-\begin{position}   \vspace{-.7cm} \end{position}
+\begin{position}   \vspace{-.8cm} \end{position}
 
 
 
@@ -235,8 +233,7 @@ Mentor: Stephen Pacala
 More software at \href{http://github.com/cboettig}{http://github.com/cboettig}
 }
 
-\section{Service}
-\subsection{Reviewer for:}
+\section{Reviewer for:}
 \section{\textnormal{2013}}
 \emph{Theoretical Ecology}, \emph{Francis \& Taylor}, \emph{Ideas in Ecology and Evolution}, \emph{The R Journal}, \emph{National Science Foundation}, \emph{Proceedings of the Royal Society B}, \emph{Journal of Open Research Software}, \emph{Canadian Journal of Fisheries and Aquatic Sciences} 
 
@@ -249,20 +246,20 @@ More software at \href{http://github.com/cboettig}{http://github.com/cboettig}
 \section{\textnormal{2010 \& prior}}
 \emph{Theoretical Ecology}, \emph{Journal of Mathematical Biology}, \emph{Ecological Modelling}, \emph{Ecology}
 
-\subsection{Other Service:} 
+\section{Other Service:} 
 \begin{format}
 \title{l}\dates{r}\\
 \body 
 \end{format}
 
 \title{Student  member for the CBS Dean search.}\dates{2011}
-\begin{position} \vspace{-.7cm} \end{position}
+\begin{position} \vspace{-.8cm} \end{position}
 \title{Co-chaired the student group on Open Science}\dates{2010-12}
-\begin{position} \vspace{-.7cm} \end{position}
+\begin{position} \vspace{-.8cm} \end{position}
 \title{Co-chaired the Graduate Teaching Community}\dates{2009-10}
-\begin{position} \vspace{-.7cm} \end{position}
+\begin{position} \vspace{-.8cm} \end{position}
 \title{Student member for the CPB program review.}\dates{2010}
-\begin{position} \vspace{.5cm} \end{position}
+\begin{position} \vspace{0cm} \end{position}
 
 
 \section{Teaching\\Experience}
@@ -273,55 +270,36 @@ More software at \href{http://github.com/cboettig}{http://github.com/cboettig}
 
 \title{ESA Workshop Instructor}
 \dates{Aug 2012}
-\begin{position}  
-  \vspace{-.5cm}
-\end{position}
-
+\begin{position} \vspace{-.8cm} \end{position}
 \title{Mentor for Google Summer of Code, R-Project}
 \dates{Summer 2012}
-\begin{position}
-  \vspace{-.5cm}
-\end{position}
-
+\begin{position} \vspace{-.8cm} \end{position}
 \title{Instructor, Bodega Phylogenetics Workshop}
 \dates{Winter 2011}
-\begin{position}
-  \vspace{-.5cm}
-\end{position}
-
-
+\begin{position} \vspace{-.8cm} \end{position}
 \title{Student Mentor, CLIMB program}
 \dates{Spring, Summer 2008}
-\begin{position}
-  \vspace{-.5cm}
-\end{position}
-
+\begin{position} \vspace{-.8cm} \end{position}
 \title{Teaching Assistant: Introductory Zoology}
-\dates{Winter 2008}
-\begin{position}
-  \vspace{-.5cm}
-\end{position}
+\dates{Winter 2008} \begin{position} \vspace{-.0cm} \end{position}
 
 
 
 
 \section{Interviews}
 
-My somewhat uncommon approach to my own research ocassionally attracts attention of those outside my own field.  I have recently been interviewed by various journals asking to share my perspective and motivation:  
-
-
-Check Hayden E (2013). "Mozilla Plan Seeks to Debug Scientific Code." \emph{Nature}, 501, pp. 472-472. \href{http://doi.org/10.1038/501472a}{doi:10.1038/501472a} \\
-Van Noorden R (2013). "Data-Sharing: Everything on Display." \emph{Nature}, 500, pp. 243-245. \href{http://doi.org/10.1038/nj7461-243a}{10.1038/nj7461-243a} \\
-Gershwin, Virginia (2013). "Turning Point: Carl Boettiger" \emph{Nature}, 493 p 711 \href{http://doi.org/10.1038/nj7434-711a}{10.1038/nj7434-711a} \\ 
-Wald, Chelsea (2010). "Scientists Embrace Openness" \emph{Science}. \href{http://doi.org/10.1126/science.caredit.a1000036}{10.1126/science.caredit.a1000036} 
-
-
+Check Hayden E (2013). "Mozilla Plan Seeks to Debug Scientific Code." \textbf{Nature}, 501, pp. 472-472. \href{http://doi.org/10.1038/501472a}{doi:10.1038/501472a} \\ 
+Van Noorden R (2013). "Data-Sharing: Everything on Display." \textbf{Nature}, 500, pp. 243-245. \href{http://doi.org/10.1038/nj7461-243a}{10.1038/nj7461-243a} \\
+Gershwin, Virginia (2013). "Turning Point: Carl Boettiger" \textbf{Nature}, 493 p 711 \href{http://doi.org/10.1038/nj7434-711a}{10.1038/nj7434-711a} \\
+Wald, Chelsea (2010). "Scientists Embrace Openness" \textbf{Science}. \href{http://doi.org/10.1126/science.caredit.a1000036}{10.1126/science.caredit.a1000036} 
 
 \section{References}
 
 Alan Hastings, Dept of Env Sci \& Policy, UC Davis \href{mailto:amhastings@ucdavis.edu}{amhastings@ucdavis.edu} \\ 
 Simon Levin, Dept of Ecology \& Evolution, Princeton \href{mailto:slevin@princeton.edu}{slevin@princeton.edu} \\
-Marc Mangel, Dept of Applied Math \& Statistics, UC Santa Cruz \href{mailto:msmangel@ucsc.edu}{msmangel@ucsc.edu} \\
+Stephan Munch, Southwest Fisheries Science Center, NOAA \href{mailto:steve.munch@noaa.gov}{steve.munch@noaa.gov} \\
+
+%Marc Mangel, Dept of Applied Math \& Statistics, UC Santa Cruz \href{mailto:msmangel@ucsc.edu}{msmangel@ucsc.edu} \\
 %\\
 % Sebastian Schreiber, Dept of Evolution \& Ecology, UC Davis \href{mailto:sschreiber@ucdavis.edu}{sschreiber@ucdavis.edu} \\
 %Peter Wainwright, Dept of Evolution \& Ecology, UC Davis \href{mailto:pcwainwright@ucdavis.edu}{pcwainwright@ucdavis.edu} \\
