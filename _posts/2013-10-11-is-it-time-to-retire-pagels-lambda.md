@@ -1,5 +1,4 @@
 ---
-published: false
 layout: post
 title: "Is it time to retire Pagel's lambda?"
 category: evolution
@@ -9,7 +8,7 @@ tags:
 ---
 
 
-Pagel's $\lambda$ (lambda), introduced in [Pagel 1999]() as a potential measure of "phylogenetic signal," the extent to which correlations in traits reflect their shared evolutionary history (as approximated by Brownian motion).  
+Pagel's $\lambda$ (lambda), introduced in [Pagel 1999](http://doi.org/10.1038/44766 "Inferring the historical patterns of biological evolution. in Nature.") as a potential measure of "phylogenetic signal," the extent to which correlations in traits reflect their shared evolutionary history (as approximated by Brownian motion).  
 
 Numerous critiques and ready alternatives have not appeared to decrease it's popularity.  There are many issues with the statistic, some of which I attempt to summarise below.  
 
