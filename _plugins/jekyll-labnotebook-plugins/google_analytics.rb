@@ -74,17 +74,24 @@ module Jekyll
         # place query, customize to modify results
         data = Exits.results(profile, 
                              :start_date => Chronic.parse("2008-01-01"))
+        # drop the filter?  
         result = Hash[data.collect{|row| [row.page_path, [row.exits, row.pageviews]]}]
+
         ## FIXME Unclear why this does not include data on pages, e.g. vita.html, research.html, etc.  
         ### Perhaps need to search for these explicitly, but rather annoying...
 
-
         ## Loop over pages, appending the pageviews data to the metadata
         site.pages.each do |page|
-          if defined?(result[page.url][1]) 
+          if defined?(result[page.url][1])   # Apparently not defined for pages... perhaps filter is 
             views = result[page.url][1]
-          else 
+          else          
+            # Query pages explicitly since they aren't showing up in the above
+            page_results = Exits.results(profile, :filters => {:page_path.eql => page.url})
+            if defined?(result.pageviews)
+              views = result.pageviews
+            else
             views = "(not calculated)"
+            end
           end
           page.data['pageviews'] = views
         end
