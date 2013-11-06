@@ -39,9 +39,14 @@ tags:
 - Alien risk assessments `r citet("10.1111/ele.12003")`, shows a dominance of rank scoring over truely quantitative approaches. Limitations to each.  
 - It's not the model complexity, but the implementation interface that poses the real barrier. Also need better integration needs.   
 
-#### Mike Bonsall
 
 -------------
+
+####  Breakout session: Spatial strategies for management
+
+Scott Barrett 
+
+
 
 ### PDG Control 
 
