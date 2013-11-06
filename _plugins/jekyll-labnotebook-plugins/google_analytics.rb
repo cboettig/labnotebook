@@ -87,8 +87,8 @@ module Jekyll
           else          
             # Query pages explicitly since they aren't showing up in the above
             page_results = Exits.results(profile, :filters => {:page_path.eql => page.url})
-            if defined?(result.pageviews)
-              views = result.pageviews
+            if defined?(page_results.pageviews)
+              views = page_results.pageviews
             else
             views = "(not calculated)"
             end
