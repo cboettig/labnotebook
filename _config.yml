@@ -10,7 +10,7 @@ redirects: yes     ## A flag to turn on the redirects plugin
 searchindex: yes   ## A flag to turn on the search index plugin.  
 pageviews: yes    ## toggle on sidebar pageviews 
 lunrsearch: no    ## Javascript will still be included, but Jekyll won't build the database
-
+gitstamps: yes
 
 
 ## Useful metadata, available to a liquid filter as site.title, site.author.name, etc
