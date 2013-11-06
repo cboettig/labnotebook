@@ -24,20 +24,29 @@ All other problems arise from this.  While it is okay that a statistic does not 
 
 To demonstrate this, we can consider two cases in which phylogeny has the identical effect of explaining trait correlations, and yet have very different lambdas. Consider that Researcher 1 examines the phylogeny in Figure 1 and estimates very little phylogenetic signal, $\lambda = 0.1$. 
 
-```{r}
+
+```r
 library(ape)
-cat("(((A_sp:10,B_sp:10):1,C_sp:11):1,D_sp:12);", file="ex.tre", sep="\n")
+cat("(((A_sp:10,B_sp:10):1,C_sp:11):1,D_sp:12);", file = "ex.tre", sep = "\n")
 ex <- read.tree("ex.tre")
 plot(ex)
 ```
 
+![Figure 1](http://farm4.staticflickr.com/3708/10715190003_f2f21044be_o.png) 
+
+
 Now Researcher 2 discovers closely related sister species of some of the taxa originally studied, as in Figure 2. 
 
-```{r}
-cat("((((A_sp:1, A2_sp:1):9,(B_sp:1, B2_sp:1):9):1,(C_sp:1, C2_sp:1):10):1,(D_sp:1, D2_sp:1):11);", file = "ex2.tre", sep = "\n")
+
+```r
+cat("((((A_sp:1, A2_sp:1):9,(B_sp:1, B2_sp:1):9):1,(C_sp:1, C2_sp:1):10):1,(D_sp:1, D2_sp:1):11);", 
+    file = "ex2.tre", sep = "\n")
 ex2 <- read.tree("ex2.tre")
 plot(ex2)
 ```
+
+![Figure 2](http://farm6.staticflickr.com/5482/10715001046_f914f6ecee_o.png) 
+
 
 There traits of sister taxa are very similar (indeed let us assume the sister species are hard to distinguish morphologically - perhaps why they were overlooked by Researcher 1).  The OU or BM model estimates made by researcher 1 will closely agree with with those of Researcher 1, since the sister taxa have quite similar traits.  Yet the $\lambda$ estimates differs greatly -- all of a sudden the phylogenetic signal must be quite high!  
 
