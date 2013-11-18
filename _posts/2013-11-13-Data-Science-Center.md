@@ -24,12 +24,12 @@ His list of problems to be tackled by this Data Science Initiative includes some
 Well that's a different tune than the usual big data hype[^1]. While it is easy to find anecdotes that support each of these charges, it is more difficult to assess just how rare or pervasive they really are. Though these are not new complaints among ecologists, the solutions (or at least antidotes) proposed in a Data Science Culture given a rather different emphasis.  At first glance, the Data Science Culture sounds like the more familiar call for an interdisciplinary culture, emphasizing that the world would be a better place if only domain scientists learned more mathematics, statistics and computer science.  It is not.  
 
 
-#### the problem, part 1: junk statistics?  
-#### aka giving guns to R children?
+##### the problem, part 1: junk statistics?  
+##### aka giving guns to R children?
 
 As to whether ecologists choose methods to match their pants, we have at least some data beyond anecdote. A survey earlier this year by Joppa et al. [(2013) _Science_](http://doi.org/10.1126/science.1231535)) has indeed shown that most ecologists select methods software guided primarily by concerns of fashion (in other words, whatever everybody else uses). The recent expansion of readily available statistical software has greatly increased the number of shirts on the rack.  Titles in _Ecology_ reflect the trend of rising complexity in ecological models, such as [Living Dangerously with big fancy models](http://doi.org/10.1890/10-1124.1) and [Are exercises like this a good use of anybody's time?](http://doi.org/10.1890/10-0052.1)).  Because software enables researchers to make use of methods without the statistical knowledge of how to implement them from the ground up, many echo the position so memorably [articulated by Jim Clark](http://press.princeton.edu/titles/8348.html) that we "handing guns to children."  This belittling position usually leads to a call for improved education and training in mathematical and statistical underpinnings (see each of the 9 articles in another [_Ecology_ Forum](http://doi.org/10.1890/08-1402.1) on this topic), or the occassional wistful longing for a simpler time.  
 
-##### the solution, part 1: Data publication?  -->
+##### the solution, part 1: Data publication?  
 
 What is most interesting to me in Perez's perspective on the Data Science Institute in an emphasis on changing _incentives_ more than changing _educational_ practices.  Perez characterizes the fundamental objective of the initiative as a _cultural shift in which_ 
 
