@@ -24,11 +24,12 @@ His list of problems to be tackled by this Data Science Initiative includes some
 Well that's a different tune than the usual big data hype[^1]. While it is easy to find anecdotes that support each of these charges, it is more difficult to assess just how rare or pervasive they really are. Though these are not new complaints among ecologists, the solutions (or at least antidotes) proposed in a Data Science Culture given a rather different emphasis.  At first glance, the Data Science Culture sounds like the more familiar call for an interdisciplinary culture, emphasizing that the world would be a better place if only domain scientists learned more mathematics, statistics and computer science.  It is not.  
 
 
-#### giving guns to R children? 
+#### the problem, part 1: junk statistics?  
+#### aka giving guns to R children?
 
 As to whether ecologists choose methods to match their pants, we have at least some data beyond anecdote. A survey earlier this year by Joppa et al. [(2013) _Science_](http://doi.org/10.1126/science.1231535)) has indeed shown that most ecologists select methods software guided primarily by concerns of fashion (in other words, whatever everybody else uses). The recent expansion of readily available statistical software has greatly increased the number of shirts on the rack.  Titles in _Ecology_ reflect the trend of rising complexity in ecological models, such as [Living Dangerously with big fancy models](http://doi.org/10.1890/10-1124.1) and [Are exercises like this a good use of anybody's time?](http://doi.org/10.1890/10-0052.1)).  Because software enables researchers to make use of methods without the statistical knowledge of how to implement them from the ground up, many echo the position so memorably [articulated by Jim Clark](http://press.princeton.edu/titles/8348.html) that we "handing guns to children."  This belittling position usually leads to a call for improved education and training in mathematical and statistical underpinnings (see each of the 9 articles in another [_Ecology_ Forum](http://doi.org/10.1890/08-1402.1) on this topic), or the occassional wistful longing for a simpler time.  
 
-#### Incentives over Education? 
+##### the solution, part 1: Data publication?  -->
 
 What is most interesting to me in Perez's perspective on the Data Science Institute in an emphasis on changing _incentives_ more than changing _educational_ practices.  Perez characterizes the fundamental objective of the initiative as a _cultural shift in which_ 
 
@@ -41,19 +42,23 @@ Data scales in a way that publications do not, even (or rather, especially) with
 
 -->
 
-#### Incentives for better software?
-
+##### the problem, part 2: junk software 
 
 As Perez is careful to point out, those implementing and publishing methods aren't helping either. Unreliable, inextensible and opaque computational implementations act both as barriers to adoption and validation.  Trouble with scientific software has been well recognized by the literature (e.g. [Merali (2010), _Nature_](http://doi.org/10.1038/467775a), [Inces et al. (2012), _Nature_](http://doi.org/10.1038/nature10836)), the news ([Times Higher Education](http://www.timeshighereducation.co.uk/news/save-your-work-give-software-engineers-a-career-track/2006431.article)) and funding agencies ([National Science Foundation](http://www.nsf.gov/pubs/2013/nsf13525/nsf13525.htm)). While it is difficult to assess the frequency of software bugs that may really alter the results (though see Inces et al.), designs that will make software challenging or impossible to maintain, scale to larger tasks or extend as methods evolve are more readily apparent.  Cultural challenges around software run as deep as they do around data.  When Mozilla's Science Lab [undertook a review of code](http://doi.org/10.1038/501472a) associated with scientific publications, they took some criticism from other [advocates](http://simplystatistics.org/2013/09/26/how-could-code-review-discourage-code-disclosure-reviewers-with-motivation/) of publishing code.  I encountered this first hand in replies from authors, editors and reviewers on my own blog post [suggesting we raise the bar](http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html) on the review of methodological implementations. Despite disagreement about where that bar should be, I think we all felt the community could benefit from clearer guidance or consensus on how to review papers in which the software implementation plays an essential part and contribution.  
 
+
+##### the solution, part 2: software publication? 
+
 As in the case of data, educational practices are the route usually suggested to address better programming practices, and no doubt these are important.  Once again though, it is interesting to think how a higher incentive on such research products might also improve their quality, or at least facilitate distilling the good from the bad from the ugly, more easily. Yet in this case, I think there is a potential downside as well.   
+
+###### Or not? 
 
 While widespread recognition of its importance will no doubt help bring us faster software, fewer bugs and more user-friendly interfaces, it may do more harm than good.  Promotion of software as a product can lead to empire-building, for which ESRI's ArcGIS might be a poster child. The scientific concepts become increasingly opaque, while training in a conceptually rich academic field gives way to more mindless training in the user interface of a single giant software tool.  I believe that good scientific software should be modular -- small code bases that can be easily understood, inter-operable, and perform a single task well (the Unix model).  This lets us build more robust computational infrastructure tailored to the problem at hand, just as individual Lego bricks may be assembled and reassembled.   Unfortunately, I do not see how recognition for software products would promote small modules over vast software platforms, or interoperability with other software instead of an exclusive walled garden. 
 
 <!-- include image of lego brick tower?-->
 
 
-#### Data Science
+#### Data Science Culture is Data Sharing Culture? 
 
 In raising these questions, Perez brings the role of a Data Science Institute down from the clouds of superficial pattern-finding in astronomically large data sets that bear no resemblance to what most of us work on, and places front and center the challenges of designing, selecting, implementing and interpreting the richer statistical analyses we face each day. In the process of bolstering the data and methodology upon which we base research today, we may open up the doors to better, faster, and bigger science tomorrow.  
 
