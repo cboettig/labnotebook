@@ -15,7 +15,9 @@ Fernando Perez, a research scientist at UC Berkeley closely involved with the pr
 
 His list of problems to be tackled by this Data Science Initiative includes some particularly catching references to issues that have raised themselves on Dynamic Ecology before:  
 
+<!--
 > - An incentive structure that favors individualism, hyper-specialization and "novelty" to a toxic extreme
+--> 
 
 > - people grab methods like shirts from a rack, to see if they work with the pants they are wearing that day
 
