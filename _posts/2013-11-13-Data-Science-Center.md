@@ -57,11 +57,17 @@ While widespread recognition of its importance will no doubt help bring us faste
 <!-- include image of lego brick tower?-->
 
 
+#### So, change incentives _how_?
+
+If this provides some argument as to why one might want to change incentives around data and software publication, I have said nothing to suggest how.  After all, as ecologists we're trained to reflect on the impact a policy would have, not advocate for what should be done about it.  If the decision-makers agree about the effects of the given incentives, then choosing what to reward should be easier.  
+
+
+<!--
 #### Data Science Culture is Data Sharing Culture? 
 
 In raising these questions, Perez brings the role of a Data Science Institute down from the clouds of superficial pattern-finding in astronomically large data sets that bear no resemblance to what most of us work on, and places front and center the challenges of designing, selecting, implementing and interpreting the richer statistical analyses we face each day. In the process of bolstering the data and methodology upon which we base research today, we may open up the doors to better, faster, and bigger science tomorrow.  
 
-
+-->
 
 
 [^1]: Probably for reasons discussed [recently on Dynamic Ecology](http://dynamicecology.wordpress.com/2013/11/07/the-one-true-route-to-good-science-is/comment-page-1/#comment-20373) about politicians and dirty laundry. 
