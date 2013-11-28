@@ -124,10 +124,10 @@ Markdown is wonderful, but a huge headache due to it's many flavors.  I began us
 
 
 
-License
--------
+Copyrights & License
+--------------------
 
-All original content is placed in the public domain by Carl Boettiger to the extent possible under law by the Creative Commons Zero license, [CC0](http://creativecommons.org/publicdomain/zero/1.0/).  This license is uniquely appropriate for data, code, and written content, and facilitates distribution & reuse. (Plugins are also provided under the [MIT](http://opensource.org/licenses/MIT) license).  Please remember that attribution and citation are appreciated where appropriate as proper scholarly practice.  (Newton, Darwin, and Shakespeare are similarly in the public domain, but you wouldn't plagiarize from them).  Cite or attribute this work as:
+All original content is placed in the public domain by Carl Boettiger to the extent possible under law by the Creative Commons Zero declaration, [CC0](http://creativecommons.org/publicdomain/zero/1.0/).  (Plugins are also provided under the [MIT](http://opensource.org/licenses/MIT) license).  Please remember that attribution and citation are appreciated where appropriate as proper scholarly practice.  (Newton, Darwin, and Shakespeare are similarly in the public domain, but you wouldn't plagiarize from them).  Cite or attribute this work as:
 <br/>
 
 <div vocab="http://purl.org/dc/terms/" typeof="bibliographicCitation">
