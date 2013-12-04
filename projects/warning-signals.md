@@ -64,7 +64,7 @@ _This commits feed from master branch. Note that Prosecutor's Fallacy research a
 {% endcapture %}
 
 {% capture project_feed %}
-{% mendeley_feed 530001/early-warning-signs, 4 %}
+{% mendeley_feed 56626131, 4 %}
 {% endcapture %}
 {% capture reading_list %}http://mendeley.com/groups/530001/early-warning-signs/papers{% endcapture %}
 

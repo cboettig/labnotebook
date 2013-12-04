@@ -30,7 +30,7 @@ path: 'projects/'
 {% endcapture %}
 
 {% capture project_feed %}
-{% mendeley_feed 529981/adaptive-dynamics, 3 %}
+{% mendeley_category_feed 56626021, 3 %}
 {% endcapture %}
 {% capture reading_list %}http://mendeley.com/groups/529981/adaptive-dynamics/papers{% endcapture %}
 
