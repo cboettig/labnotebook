@@ -74,7 +74,7 @@ of the data available.
 {% endcapture %}
 
 {% capture project_feed %}
-{% mendeley_feed 529971/phylogenetic-methods, 3 %}
+{% mendeley_category_feed 56626001, 3 %}
 {% endcapture %}
 {% capture reading_list %}http://mendeley.com/groups/529971/phylogenetic-methods/papers{% endcapture %}
 

@@ -532,8 +532,11 @@ end
       start = Time.now
       ## Get category ID numbers, display to terminal for reference
       category_ids = m.folders()
-      all_categores = JSON.parse(category_ids.body)
-     
+      all_categories = JSON.parse(category_ids.body)
+      File.open("mendeley_category_ids.json", "w") do |f|
+        f.write(JSON.pretty_generate(all_categories))
+      end
+
       puts "Get doc id numbers from category"
       category = m.folder_documents(@category, 1, 10000)  # max of 10000 items, should get max from all_categories[]['size']
 #      category = m.folder_documents("56626111",1, 10)
