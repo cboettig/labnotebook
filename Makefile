@@ -8,7 +8,7 @@ all:
 sync: 
 	cd ~/Documents/code/cboettig.github.com  
 	git pull -s ours
-	cd - 
+	cd ~/Documents/labnotebook 
 
 ## Compile the site onto cboettig.github.om 
 jekyll: 
