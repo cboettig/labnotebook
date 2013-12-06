@@ -76,28 +76,35 @@ module Jekyll
                              :start_date => Chronic.parse("2008-01-01"))
         # drop the filter?  
         result = Hash[data.collect{|row| [row.page_path, [row.exits, row.pageviews]]}]
+        File.open("google_analytics.json", "w") do |f|
+              f.write(JSON.pretty_generate(result))
+        end
 
         ## FIXME Unclear why this does not include data on pages, e.g. vita.html, research.html, etc.  
         ### Perhaps need to search for these explicitly, but rather annoying...
 
         ## Loop over pages, appending the pageviews data to the metadata
         site.pages.each do |page|
-          if defined?(result[page.url][1])   # Apparently not defined for pages... perhaps filter is 
-            views = result[page.url][1]
-          else          
-            # Query pages explicitly since they aren't showing up in the above
-            page_data = Exits.results(profile, :filters => {:page_path.eql => page.url})
-            page_results = Hash[page_data.collect{|row| [row.page_path, [row.exits, row.pageviews]]}]
+          if(!page.url.match "/archives/") ## Don't do these redirect pages
+            if defined?(result[page.url][1])   # Apparently not defined for pages... perhaps filter is 
+              views = result[page.url][1]
+            else          
+              # Query pages explicitly since they aren't showing up in the above
+              page_data = Exits.results(profile, 
+                                        :filters => {:page_path.eql => page.url},
+                                        :start_date => Chronic.parse("2008-01-01"))
+              page_results = Hash[page_data.collect{|row| [row.page_path, [row.exits, row.pageviews]]}]
 
-#            puts page.url
-#            puts page_results[page.url][1]
-            if defined?(page_results[page.url][1])
-              views = page_results[page.url][1]
-            else
-            views = "(not calculated)"
+              puts page.url
+              if defined?(page_results[page.url][1])
+                views = page_results[page.url][1]
+              else
+              views = "(not calculated)"
+              end
             end
+            page.data['pageviews'] = views
+            puts views
           end
-          page.data['pageviews'] = views
         end
 
         ## Loop over posts, appending the pageviews data to the metadata
