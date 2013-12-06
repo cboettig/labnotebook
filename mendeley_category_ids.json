@@ -1,0 +1,149 @@
+[
+  {
+    "id": "56625991",
+    "name": "Evolutionary Theory",
+    "size": 101,
+    "version": "2",
+    "parent": -1
+  },
+  {
+    "id": "56626001",
+    "name": "Phylogenetic Methods",
+    "size": 450,
+    "version": "3",
+    "parent": "56625991"
+  },
+  {
+    "id": "56626011",
+    "name": "Diversification Rates",
+    "size": 20,
+    "version": "3",
+    "parent": "56625991"
+  },
+  {
+    "id": "56626021",
+    "name": "Adaptive Dynamics",
+    "size": 32,
+    "version": "3",
+    "parent": "56625991"
+  },
+  {
+    "id": "56626031",
+    "name": "Other",
+    "size": 26,
+    "version": "2",
+    "parent": -1
+  },
+  {
+    "id": "56626041",
+    "name": "Education",
+    "size": 100,
+    "version": "3",
+    "parent": "56626031"
+  },
+  {
+    "id": "56626051",
+    "name": "geospatial life history",
+    "size": 20,
+    "version": "3",
+    "parent": "56626031"
+  },
+  {
+    "id": "56626061",
+    "name": "General interest",
+    "size": 48,
+    "version": "3",
+    "parent": "56626031"
+  },
+  {
+    "id": "56626071",
+    "name": "Friendly Review - private",
+    "size": 11,
+    "version": "3",
+    "parent": "56626031"
+  },
+  {
+    "id": "56626081",
+    "name": "My Presentations",
+    "size": 7,
+    "version": "3",
+    "parent": "56626031"
+  },
+  {
+    "id": "56626091",
+    "name": "KinSync Collection",
+    "size": 2,
+    "version": "3",
+    "parent": "56626031"
+  },
+  {
+    "id": "56626101",
+    "name": "Review - private",
+    "size": 45,
+    "version": "2",
+    "parent": -1
+  },
+  {
+    "id": "56626111",
+    "name": "Theoretical Ecology",
+    "size": 730,
+    "version": "2",
+    "parent": -1
+  },
+  {
+    "id": "56626121",
+    "name": "Management",
+    "size": 73,
+    "version": "3",
+    "parent": "56626111"
+  },
+  {
+    "id": "56626131",
+    "name": "Early Warning Signs",
+    "size": 191,
+    "version": "3",
+    "parent": "56626111"
+  },
+  {
+    "id": "56626141",
+    "name": "Ecoinformatics",
+    "size": 37,
+    "version": "3",
+    "parent": "56626111"
+  },
+  {
+    "id": "56626151",
+    "name": "PDG Control",
+    "size": 124,
+    "version": "3",
+    "parent": "56626111"
+  },
+  {
+    "id": "56626161",
+    "name": "Forage Fish",
+    "size": 8,
+    "version": "3",
+    "parent": "56626111"
+  },
+  {
+    "id": "56626171",
+    "name": "Future of Science",
+    "size": 276,
+    "version": "2",
+    "parent": -1
+  },
+  {
+    "id": "56864151",
+    "name": "Math Methods and Model Inference",
+    "size": 399,
+    "version": "2",
+    "parent": -1
+  },
+  {
+    "id": "68607981",
+    "name": "Software",
+    "size": 157,
+    "version": "3",
+    "parent": "56864151"
+  }
+]

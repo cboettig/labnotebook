@@ -18,7 +18,7 @@ jekyll:
 ## Upload to github
 publish: 
 	cd ~/Documents/code/cboettig.github.com  
-	git add *
+	git add -A 
 	git commit -a -m "update site"
 	git push
 	echo "Site updated on Github server"
@@ -26,3 +26,8 @@ publish:
 
 clean:
 	rm -f *_library.json gitdata.json
+
+view:
+	cd ~/Documents/code/cboettig.github.com  
+	ruby -rwebrick -e 'WEBrick::HTTPServer.new(:Port=>4000,:DocumentRoot=>".").start'
+
