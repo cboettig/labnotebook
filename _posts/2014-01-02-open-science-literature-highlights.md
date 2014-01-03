@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+category: open-science
 
 ---
 
