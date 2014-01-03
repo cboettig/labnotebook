@@ -1,7 +1,7 @@
 {
   "/": [
     "7485",
-    "20117"
+    "20118"
   ],
   "/ Hastings student at UC Davis": [
     "0",
@@ -2644,8 +2644,8 @@
     "10"
   ],
   "/2012/03/20/citing-r-packages.html": [
-    "1855",
-    "2008"
+    "1857",
+    "2010"
   ],
   "/2012/03/20/friday-some-random-notes.html": [
     "2",
@@ -2668,8 +2668,8 @@
     "32"
   ],
   "/2012/03/24/citations-in-markdown-using-knitr.html": [
-    "1479",
-    "1955"
+    "1480",
+    "1956"
   ],
   "/2012/03/24/citations-in-markdown-using-knitr.txt": [
     "0",
@@ -3911,6 +3911,14 @@
     "15",
     "53"
   ],
+  "/2013/12/10/notes.html": [
+    "0",
+    "1"
+  ],
+  "/2014/01/02/open-science-literature-highlights.html": [
+    "1",
+    "1"
+  ],
   "/211": [
     "0",
     "1"
@@ -3988,14 +3996,6 @@
     "1"
   ],
   "/404.html?page=/wp-admin/post.php&from=http://www.carlboettiger.info/wp-admin/post.php?post=905&action=edit": [
-    "0",
-    "1"
-  ],
-  "/404.html?page=/wp-admin/post.php?post=741&action=edit&from=http://www.carlboettiger.info/wp-admin/": [
-    "0",
-    "1"
-  ],
-  "/404.html?page=/wp-admin/u&from=": [
     "0",
     "1"
   ]
