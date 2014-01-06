@@ -9,7 +9,7 @@
   {
     "id": "56626001",
     "name": "Phylogenetic Methods",
-    "size": 450,
+    "size": 452,
     "version": "3",
     "parent": "56625991"
   },
@@ -86,28 +86,28 @@
   {
     "id": "56626111",
     "name": "Theoretical Ecology",
-    "size": 730,
+    "size": 738,
     "version": "2",
     "parent": -1
   },
   {
     "id": "56626121",
     "name": "Management",
-    "size": 73,
+    "size": 74,
     "version": "3",
     "parent": "56626111"
   },
   {
     "id": "56626131",
     "name": "Early Warning Signs",
-    "size": 191,
+    "size": 193,
     "version": "3",
     "parent": "56626111"
   },
   {
     "id": "56626141",
     "name": "Ecoinformatics",
-    "size": 37,
+    "size": 38,
     "version": "3",
     "parent": "56626111"
   },
@@ -128,7 +128,7 @@
   {
     "id": "56626171",
     "name": "Future of Science",
-    "size": 276,
+    "size": 281,
     "version": "2",
     "parent": -1
   },
@@ -142,7 +142,7 @@
   {
     "id": "68607981",
     "name": "Software",
-    "size": 157,
+    "size": 158,
     "version": "3",
     "parent": "56864151"
   }
