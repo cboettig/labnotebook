@@ -5,13 +5,14 @@ category: open-science
 tags: 
 - blog
 
-published: false
-
 ---
 
 
+I have occassionally been getting this question: 
 
-So, you're active on ResearchGate? Sounds like being accused of some scandal, doesn't it? 
+> So, you're active on ResearchGate?
+
+Sounds like being accused of some scandal, doesn't it? 
 
 I'm not generally active on it  - my impression is that the open science community is mostly skeptical about ResearchGate and any other "Social Network" for scientists, largely on the grounds that "we already use the same social networks everyone else uses." Some object on more philosophical grounds (profit, Mendeley, etc), but heck I publish in Elsevier/Springer/Wiley so I won't preach.  That's perhaps a US/elite institution centric view though; it seems more popular with a more international audience where things like basic access to pdfs may be more of an issue.  I present no data to back any if that up.  
 
@@ -24,7 +25,5 @@ Why is that impressive?  Mendeley, for all it's much more natural fit into most 
 By obtaining the full-text directly from the publisher, they show the considerable advantage of a well-funded network. Presumably this indicates that access was negotiated directly with the publisher, who agrees and even facilitates me sharing the full-text of my otherwise paywalled article on my RG profile.  That's a non-trivial contribution towards open access: Contrast this to Mendeley's more murky policy which encourages me to provide full text access through my user profile but places the legal responsibility directly on me to confirm that this permissible, or an organization like ORCID which despite (because of?) it's more non-profit and utilitarian values does not have permission to distribute my paywalled pdfs on my profile.  (Sure, my papers on arXiv already, but that isn't the point).  
 
 Likewise, using the citation data against the RG data on which researchers have profiles shows a vaguely intelligent use of data other platforms mostly ignore (providing useful suggestions using some understanding of the academic process rather than mindless application of some friend-of-a-friend network algorithm).  
-
-
 
 (The fact that RG pings unfortunate souls who might have signed up once but have no desire to see my "Activity" on RG is one of it's potentially effective marketing but more pernicious decisions.  Use does not necessarily imply trust). 

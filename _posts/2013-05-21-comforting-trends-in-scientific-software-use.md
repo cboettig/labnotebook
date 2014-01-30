@@ -1,19 +1,33 @@
 ---
-published: false
 layout: post
-category: ecology
+category: open-science
 tags: 
 - blog
 
 ---
+
+
+**Author's Note**: 
+Having refrained from actually posting this for 8 months, as I think I have quite mellowed more my critique. I do believe that education and peer review are the best way forward in tackling these issues, but cannot overstate how much of a long and rocky road that process will be.  The Mozilla Science Foundation is really leading these efforts with their code review pilots (as I have discussed in posts since writing this), and through their work with Software Carpentry training. Still, I leave this post as a bookmark of my intial thoughts and a reminder of these challenges.  
+
+Consider reading these other posts on software review and training:
+
+- [Reflections on the Mozilla Code Review Pilot](http://carlboettiger.info/2013/09/25/mozilla-software-review.html) (phase 1)
+- ISEES Meeting software lifecycle: [Day 1](http://carlboettiger.info/2013/08/13/ISEES-Day-1.html), [Day 2](http://carlboettiger.info/2013/08/14/ISEES-day-2.html)
+- ISEES Software training [Day 1](http://carlboettiger.info/2013/09/10/ISEES-training-workshop-day-1.html), [Day 2](http://carlboettiger.info/2013/09/11/ISEES-Workforce-Development-Day-2.html)
+
+- [Reviewing Software, revisited](http://carlboettiger.info/2013/07/09/reviewing-software-revisited.html)
+- [What I look for in software papers](http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html)
+
+------------
 
 I have just been reading through `r citet("10.1126/science.1231535", "critiques")`.
 While I agree  with a lot of the sentiment in this article, (we place
 way too little emphasis on good coding practices, validation, etc.),
 I actually found this article incredibly frustrating.  Following 
 a little [rant on Google+](https://plus.google.com/112929796403983408632/posts/8whV6rtvsuw) 
-(it has to be good for something, right?) and subsequent discussion, 
-I've tried formulating my thoughts into a blog post here.  
+(G+ has to be good for something, right?) and subsequent discussion, 
+I've tried formulating my thoughts into a blog post here.
 
 
 What first got my goat were the proposed "solutions" to the problem.

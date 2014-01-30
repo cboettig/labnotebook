@@ -1,7 +1,6 @@
 ---
 layout: post
 category: open-science
-published: false
 
 ---
 
@@ -11,6 +10,7 @@ published: false
 Far from implemented, though the tools and resources at the newly created [Project Open Data](http://project-open-data.github.io) (hosted on Github!) look very promising.  Some choice quotations below: 
 
 -----------------
+
 Pursuant to Executive Order of May 9, 2013, _"Making Open and Machine Readable the New  Default for Government Information"_
 
 

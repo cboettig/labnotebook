@@ -29,7 +29,6 @@ module Jekyll
       puts "Getting date modified and sha data from git"
       start = Time.now
       g = Git.open("/home/cboettig/Documents/labnotebook")
-
       ## FIXME takes over a second per post!  
       # That's almost 15 minutes at the moment.... Would be much much faster if we could 
       # generate a data file and read in as a hash containing the path, sha, and commit time
@@ -41,7 +40,6 @@ module Jekyll
         site.posts.each do |post|
           begin
             path = '_posts/' + post.name
-        
             modified = g.log(1).object(path).first.date
             sha = g.log(1).object(path).first.sha
           rescue Exception => e 

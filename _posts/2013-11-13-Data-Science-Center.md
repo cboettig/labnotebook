@@ -1,11 +1,17 @@
 ---
 title: Do we need a culture of Data Science in Academia? 
-published: false
 category: open-science
 tags: 
 - blog
 
 ---
+
+Just my draft copy of a [Guest blog post](http://dynamicecology.wordpress.com/2013/11/25/do-we-need-a-culture-of-data-science-in-academia-guest-post/) I wrote for Dynamic Ecology.  
+
+
+---------------------
+
+
 
 On Tuesday the [Whitehouse Office of Science and Technology Policy](http://www.nitrd.gov/nitrdgroups/index.php?title=Data_to_Knowledge_to_Action) announced the creation of a $37.8 million dollar initiative to promote a "Data Science Culture" in academic institutions, funded by the [Gordon and Betty Moore Foundation](http://www.moore.org/newsroom/press-releases/2013/11/12/%20bold_new_partnership_launches_to_harness_potential_of_data_scientists_and_big_data), [Alfred P. Sloan Foundation](http://www.sloan.org/fileadmin/media/files/press_releases/datascience.pdf), and hosted in centers at the universities UC Berkeley, University of Washington, and New York University. Sadly, these announcements give little description of just what such a center would do, beyond repeating the usual the hype of  "Big Data."  
 
