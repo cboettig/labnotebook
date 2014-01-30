@@ -9,14 +9,14 @@
   {
     "id": "56626001",
     "name": "Phylogenetic Methods",
-    "size": 452,
+    "size": 438,
     "version": "3",
     "parent": "56625991"
   },
   {
     "id": "56626011",
     "name": "Diversification Rates",
-    "size": 20,
+    "size": 19,
     "version": "3",
     "parent": "56625991"
   },
@@ -30,35 +30,35 @@
   {
     "id": "56626031",
     "name": "Other",
-    "size": 26,
+    "size": 25,
     "version": "2",
     "parent": -1
   },
   {
     "id": "56626041",
     "name": "Education",
-    "size": 100,
+    "size": 99,
     "version": "3",
     "parent": "56626031"
   },
   {
     "id": "56626051",
     "name": "geospatial life history",
-    "size": 20,
+    "size": 18,
     "version": "3",
     "parent": "56626031"
   },
   {
     "id": "56626061",
     "name": "General interest",
-    "size": 48,
+    "size": 47,
     "version": "3",
     "parent": "56626031"
   },
   {
     "id": "56626071",
     "name": "Friendly Review - private",
-    "size": 11,
+    "size": 9,
     "version": "3",
     "parent": "56626031"
   },
@@ -79,14 +79,14 @@
   {
     "id": "56626101",
     "name": "Review - private",
-    "size": 46,
+    "size": 42,
     "version": "2",
     "parent": -1
   },
   {
     "id": "56626111",
     "name": "Theoretical Ecology",
-    "size": 738,
+    "size": 717,
     "version": "2",
     "parent": -1
   },
@@ -100,21 +100,21 @@
   {
     "id": "56626131",
     "name": "Early Warning Signs",
-    "size": 193,
+    "size": 187,
     "version": "3",
     "parent": "56626111"
   },
   {
     "id": "56626141",
     "name": "Ecoinformatics",
-    "size": 38,
+    "size": 39,
     "version": "3",
     "parent": "56626111"
   },
   {
     "id": "56626151",
     "name": "PDG Control",
-    "size": 124,
+    "size": 121,
     "version": "3",
     "parent": "56626111"
   },
@@ -128,14 +128,14 @@
   {
     "id": "56626171",
     "name": "Future of Science",
-    "size": 281,
+    "size": 282,
     "version": "2",
     "parent": -1
   },
   {
     "id": "56864151",
     "name": "Math Methods and Model Inference",
-    "size": 399,
+    "size": 401,
     "version": "2",
     "parent": -1
   },
