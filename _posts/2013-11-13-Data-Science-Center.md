@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Do we need a culture of Data Science in Academia? 
 category: open-science
 tags: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 category: evolution
 tags: 
 - informatics
