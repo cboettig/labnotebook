@@ -81,6 +81,8 @@ The site relies on following additional ruby gems (not available on the Jekyll c
 * [garb](https://github.com/vigetlabs/garb) -- Google API 
 * [chronic](https://github.com/mojombo/chronic) -- parse timestamps
 * [json](https://github.com/flori/json) -- parse json
+* [git](https://github.com/schacon/ruby-git) -- ruby git interface
+
 
 <!-- dependency of jekyll already * [redcarpet](https://github.com/vmg/redcarpet) -- markdown parsing, currently used by some custom plugins for formatting.  -->
 <!-- Potential gems, not needed yet: faraday, faraday_middleware, oauth, ruby-git -->
