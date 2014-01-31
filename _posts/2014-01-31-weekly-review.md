@@ -4,9 +4,20 @@ published: false
 category: ecology
 tags: 
 - multiple-uncertainty
-
+- ropensci
 
 ---
+
+
+EML
+===
+
+bug fixes and replies to various input from community on EML package 
+
+Thoughts on understanding and using EML in research, including Dryad.   
+
+https://github.com/ropensci/EML/issues/82#issuecomment-33558301
+
 
 multiple-uncertainty
 ======================
@@ -68,5 +79,8 @@ Reading
 =======
 
 - _Nature_ on troubled times for the monitoring buoys used by the TAO early warning system for El Nino events [10.1038/505585a](http://doi.org/10.1038/505585a)
+
+
+- Nice pieces on reproducibility in Nature 10.1038/505612a and Science recently.  10.1126/science.1250475
 
 - 
