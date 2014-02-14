@@ -6,6 +6,8 @@ published: false
 
 
 
+
+
 ### Scratchpad, first go 
 
 Literature doesn't scale.  Engagement with most content is superficial.
@@ -91,6 +93,29 @@ reprint requests of a small piece she had written for the NY Times.)
 So what is impact?  What is it we really want to measure?
 
 -->
+
+### Third Go
+
+Reasons for optimism about change: 
+
+- Government mandates (Finch Report, Obama Executive Order, congressional bills)
+- Funders: NSF changes: data management plans, recognizes 'products' not 'papers'.  Moore & Sloan Foundation.  
+- Journals: Once we worried if openness was even allowed (preprints).  Now every month we learn of new data publication requirements (ESA Apps, Monographs. British Ecological Society. All PLoS.  Dryad integrated journals. Nature Science PNAS)
+
+These are drivers of change in an immediate sense, but also symptoms of deeper currents.  
+
+Economics: behavior of the aggregate.  
+
+Internet replaced the scientist-journal customer relationship with the library-journal one. This brought obvious advantages but relatively terrible side-effects to the economics: monopolies, secret deals, huge market inefficiencies (profit margins).  
+
+Change may be slow, but no one believes that this state, less than a few decades old, will be stable for decades to come.  
+
+Annette Thomas, Digital Science.  Platform.  
+
+rOpenSci as platform.  
+
+(a return to the) Publishing of data.  The publishing of code.  
+
 
 
 

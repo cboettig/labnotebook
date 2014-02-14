@@ -46,8 +46,11 @@ In the stochastic case, multiple harvests could all realize the $X_{t+1}$ that m
 NCEAS workshop prep
 ===================
 
-The agenda for the workshop, participant list, goals and intended outcomes can be found at https://projects.ecoinformatics.org/ecoinfo/projects/commdyn/wiki/First_Community_Workshop and is attached. 
-In preparation for the workshop we would like for you to
+The agenda for the workshop, participant
+list, goals and intended outcomes can be found at
+https://projects.ecoinformatics.org/ecoinfo/projects/commdyn/wiki/First_Community_Workshop
+and is attached.  In preparation for the workshop we would like for
+you to:
 
 -  If at all possible, identify and bring a dataset that includes community data for at least ten points in time at somewhat even intervals.
 
