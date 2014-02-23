@@ -1,8 +1,22 @@
 ---
 layout: post
-published: false
+category: ecology
+tags: 
+- conference
+- working-group
+- nceas 
+- community-metrics
+- workflows 
+
 
 ---
+
+
+(Day 2 work)
+-----------
+
+Hack-a-thon; no notebook entry but all progress appears in group Github repo: [github.com/NCEAS/commdyn/](https://github.com/NCEAS/commdyn/).  78 Commits in 2 days, nice work team.  
+
 
 Discussion 
 ----------
@@ -40,7 +54,6 @@ Data publications: Each processed dataset will be republished to the KNB along w
 
 - Private datasets will be privately/securely published 
 - Processed data will be appropriately linked back to the KNB
-- 
 
 
 Collaborative git environment share our work.  Still impenetrable to an outsider.  Why?

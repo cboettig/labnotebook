@@ -1,6 +1,12 @@
 ---
-published: false
 layout: post
+category: ecology
+tags: 
+- conference
+- working-group
+- nceas 
+- community-metrics
+- workflows 
 
 ---
 
@@ -18,24 +24,24 @@ Goals
 Participants
 ------------
  
-- Ilkay Altintas, UC San Diego, altintas at sdsc.edu
-- Carl Boettiger, UC Davis, cboettig at gmail.com
-- Erica Christensen, Utah State, erica.christensen at weecology.org
-- Elsa Cleland, UCSD, ecleland at ucsd.edu
-- Scott Collins, U New Mexico, scollins at sevilleta.unm.edu
-- Sam Fey, Dartmouth, Samuel.B.Fey.GR at dartmouth.edu
-- Corinna Gries, U Wisconsin, cgries at wisc.edu
-- Lauren Hallett, Berkeley, lauren.m.hallett at gmail.com
-- Stan Harpole, Iowa State, harpole at iastate.edu
-- Dave Harris, UC Davis, harry491 at gmail.com
-- Matt Jones, UC Santa Barbara, jones at nceas.ucsb.edu
-- Sydney Jones, U New Mexico, syd at sevilleta.unm.edu
-- Julie Ripplinger, Arizona State University, julie.ripplinger at asu.edu
-- Andrew Rypel, WDNR, andrew.rypel at wisconsin.gov
-- David Seekell, UVa, das9xx at virginia.edu
-- Elizabeth Siddon, U. Alaska Fairbanks, ecsiddon at alaska.edu
-- Eric Sokol, Virginia Tech, sokole at vt.edu
-- Lizzie Wolkovitch, UCSD/Harvard, lizzie at biodiversity.ubc.ca, wolkovich at fas.harvard.edu
+- Ilkay Altintas, UC San Diego, 
+- Carl Boettiger, UC Davis, 
+- Erica Christensen, Utah State,
+- Elsa Cleland, UCSD, 
+- Scott Collins, U New Mexico, 
+- Sam Fey, Dartmouth, 
+- Corinna Gries, U Wisconsin, 
+- Lauren Hallett, Berkeley,
+- Stan Harpole, Iowa State, 
+- Dave Harris, UC Davis, 
+- Matt Jones, UC Santa Barbara, 
+- Sydney Jones, U New Mexico, 
+- Julie Ripplinger, Arizona State University, 
+- Andrew Rypel, WDNR,
+- David Seekell, UVa, 
+- Elizabeth Siddon, U. Alaska Fairbanks, 
+- Eric Sokol, Virginia Tech,
+- Lizzie Wolkovitch, UCSD/Harvard, 
   
   
   
@@ -75,5 +81,5 @@ Agenda
 
 -------------------
 
-
+See most notes on the NCEAS etherpads  
 
