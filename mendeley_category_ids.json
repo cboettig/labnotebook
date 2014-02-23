@@ -79,7 +79,7 @@
   {
     "id": "56626101",
     "name": "Review - private",
-    "size": 42,
+    "size": 43,
     "version": "2",
     "parent": -1
   },
@@ -107,7 +107,7 @@
   {
     "id": "56626141",
     "name": "Ecoinformatics",
-    "size": 39,
+    "size": 42,
     "version": "3",
     "parent": "56626111"
   },
@@ -128,7 +128,7 @@
   {
     "id": "56626171",
     "name": "Future of Science",
-    "size": 282,
+    "size": 284,
     "version": "2",
     "parent": -1
   },
