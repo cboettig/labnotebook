@@ -18,7 +18,7 @@ jekyll:
 ## Upload to github
 publish: 
 	cd ~/Documents/code/cboettig.github.com  
-	git add -A 
+	git add . 
 	git commit -a -m "update site"
 	git push
 	echo "Site updated on Github server"
