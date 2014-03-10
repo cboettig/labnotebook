@@ -2,7 +2,7 @@
   {
     "id": "56625991",
     "name": "Evolutionary Theory",
-    "size": 101,
+    "size": 102,
     "version": "2",
     "parent": -1
   },
@@ -86,28 +86,28 @@
   {
     "id": "56626111",
     "name": "Theoretical Ecology",
-    "size": 719,
+    "size": 725,
     "version": "2",
     "parent": -1
   },
   {
     "id": "56626121",
     "name": "Management",
-    "size": 75,
+    "size": 79,
     "version": "3",
     "parent": "56626111"
   },
   {
     "id": "56626131",
     "name": "Early Warning Signs",
-    "size": 187,
+    "size": 190,
     "version": "3",
     "parent": "56626111"
   },
   {
     "id": "56626141",
     "name": "Ecoinformatics",
-    "size": 42,
+    "size": 44,
     "version": "3",
     "parent": "56626111"
   },
@@ -135,7 +135,7 @@
   {
     "id": "56864151",
     "name": "Math Methods and Model Inference",
-    "size": 402,
+    "size": 404,
     "version": "2",
     "parent": -1
   },
