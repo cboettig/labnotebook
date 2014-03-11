@@ -39,7 +39,8 @@ NIMBioS Working group
 {% endcapture %}
 
 {% capture project_feed %}
-{% mendeley_category_feed 56626151, 4 %}
+{% mendeley_feed 634301/theoretical-ecology, 4 %}
+<!-- {% comment %}{% raw %}{% mendeley_category_feed 56626151, 4 %}{% endraw %}{% endcomment %} -->
 {% endcapture %}
 {% capture reading_list %}http://mendeley.com/groups/634301/theoretical-ecology/papers{% endcapture %}
 
