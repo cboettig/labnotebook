@@ -3,7 +3,7 @@ layout: post
 categories: ecology
 tags: 
 - nonparametric-bayes
-- talk
+- conference 
 
 
 ---
