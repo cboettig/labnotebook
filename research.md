@@ -76,7 +76,7 @@ On peer review of scientific code:
 
 A few entries provide more detail on my perspective on [software papers](http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html) and on [research scripts](http://carlboettiger.info/2013/09/25/mozilla-software-review.html).
 
-On x_data sharing practices: 
+On data sharing practices: 
 
 * Van Noorden R (2013). "Data-Sharing: Everything on Display." _Nature_, 500, pp. 243-245. {{ "10.1038/nj7461-243a" | doi_parser }}  
 
