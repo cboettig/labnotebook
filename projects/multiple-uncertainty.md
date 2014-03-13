@@ -28,7 +28,7 @@ path: 'projects/'
 {% endcapture %}
 
 {% capture project_feed %}
-{<!-- {% comment %}{% raw %}{% mendeley_category_feed 56626111, 4 %}{% endraw %}{% endcomment %} -->
+<!-- {% comment %}{% raw %}{% mendeley_category_feed 56626111, 4 %}{% endraw %}{% endcomment %} -->
       {% mendeley_feed 634301/theoretical-ecology, 4 %}
 {% endcapture %}
 {% capture reading_list %}http://mendeley.com/groups/634301/theoretical-ecology/papers{% endcapture %}

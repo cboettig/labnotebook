@@ -1,7 +1,7 @@
 {
   "/": [
-    "7918",
-    "21289"
+    "7920",
+    "21299"
   ],
   "/ Hastings student at UC Davis": [
     "0",
@@ -856,8 +856,8 @@
     "1"
   ],
   "/2010/07/12/Multivariate-normal-random-variables.html": [
-    "14",
-    "20"
+    "15",
+    "21"
   ],
   "/2010/07/13/Bootstrapping-the-independent-alpha-sigma-models.html": [
     "2",
@@ -1185,7 +1185,7 @@
   ],
   "/2010/11/08/welcome-to-my-lab-notebook.html": [
     "357",
-    "822"
+    "823"
   ],
   "/2010/11/10/tuesday-sdes-then-back-to-phylogenetics.html": [
     "4",
@@ -1564,8 +1564,8 @@
     "16"
   ],
   "/2011/03/07/bodega-phylogenetics-tutorial-behind-the-scenes-difficulties-in-r-packages.html": [
-    "20",
-    "22"
+    "21",
+    "24"
   ],
   "/2011/03/09/warning-signals-data-examples.html": [
     "4",
@@ -1588,8 +1588,8 @@
     "2"
   ],
   "/2011/03/15/models-in-phylogenetic-inference.html": [
-    "912",
-    "1015"
+    "914",
+    "1017"
   ],
   "/2011/03/15/tuesday-2.html": [
     "0",
@@ -1728,8 +1728,8 @@
     "7"
   ],
   "/2011/04/17/treepar-changing-rates-of-evolution.html": [
-    "145",
-    "197"
+    "146",
+    "198"
   ],
   "/2011/04/18/algorithms-discussion-group-abc-continued.html": [
     "3",
@@ -1840,8 +1840,8 @@
     "38"
   ],
   "/2011/05/16/treebase-in-r-a-first-tutorial.html": [
-    "101",
-    "142"
+    "102",
+    "143"
   ],
   "/2011/05/17/tuesday-3.html": [
     "2",
@@ -1852,8 +1852,8 @@
     "189"
   ],
   "/2011/05/19/algorithms-group-mcmcmc.html": [
-    "454",
-    "530"
+    "457",
+    "533"
   ],
   "/2011/05/19/thursday-5.html": [
     "1",
@@ -2164,8 +2164,8 @@
     "15"
   ],
   "/2011/08/26/fishbase-from-r-some-xml-parsing.html": [
-    "549",
-    "629"
+    "550",
+    "630"
   ],
   "/2011/08/26/rfishbase-and-some-taxonomy-in-r-with-taxize.html": [
     "58",
@@ -2244,8 +2244,8 @@
     "1"
   ],
   "/2011/09/15/nimbios-pdg-group-tasks.html": [
-    "11",
-    "18"
+    "12",
+    "19"
   ],
   "/2011/09/19/monday-9.html": [
     "0",
@@ -2320,8 +2320,8 @@
     "10"
   ],
   "/2011/10/11/lou-botsford-cpb-seminar.html": [
-    "14",
-    "27"
+    "15",
+    "28"
   ],
   "/2011/10/12/rfishbase-tutorial-updated-extended.html": [
     "120",
@@ -2580,8 +2580,8 @@
     "10"
   ],
   "/2012/01/19/is-your-phylogeny-informative.html": [
-    "215",
-    "326"
+    "217",
+    "328"
   ],
   "/2012/01/20/friday-lab-group-meeting-notes.html": [
     "1",
@@ -2612,8 +2612,8 @@
     "83"
   ],
   "/2012/02/06/some-collaborative-tools-for-science.html": [
-    "134",
-    "231"
+    "135",
+    "232"
   ],
   "/2012/02/06/stackoverflow.com": [
     "0",
@@ -2632,8 +2632,8 @@
     "49"
   ],
   "/2012/02/12/elegant-fast-data-manipulation-with-data-table.html": [
-    "1636",
-    "1801"
+    "1646",
+    "1811"
   ],
   "/2012/02/12/saturday-projects-reading-markdown-plugins.html": [
     "6",
@@ -2696,8 +2696,8 @@
     "4"
   ],
   "/2012/02/27/using-knitr-and-rwordpress-to-publish-results-directly-from-r-6.html": [
-    "592",
-    "926"
+    "593",
+    "927"
   ],
   "/2012/02/27/using-knitr-and-rwordpress-to-publish-results-directly-from-r.html": [
     "1",
@@ -2748,8 +2748,8 @@
     "11"
   ],
   "/2012/03/20/citing-r-packages.html": [
-    "2159",
-    "2325"
+    "2162",
+    "2328"
   ],
   "/2012/03/20/friday-some-random-notes.html": [
     "2",
@@ -2760,8 +2760,8 @@
     "8"
   ],
   "/2012/03/21/knitr-github-and-a-new-phase-for-the-lab-notebook.html": [
-    "462",
-    "726"
+    "463",
+    "727"
   ],
   "/2012/03/21/policy-costs-to-changing-mangement-tp-1b-apples-to-apples.html": [
     "0",
@@ -2776,8 +2776,8 @@
     "4"
   ],
   "/2012/03/24/citations-in-markdown-using-knitr.html": [
-    "1686",
-    "2226"
+    "1689",
+    "2230"
   ],
   "/2012/03/24/citations-in-markdown-using-knitr.txt": [
     "0",
@@ -2860,8 +2860,8 @@
     "8"
   ],
   "/2012/05/01/Jekyll-vs-Wordpress.html": [
-    "2022",
-    "2609"
+    "2024",
+    "2611"
   ],
   "/2012/05/01/Jekyll-vs-Wordpress.html)": [
     "8",
@@ -2877,7 +2877,7 @@
   ],
   "/2012/05/03/testing-out-a-jekyll-based-notebook.html": [
     "8",
-    "56"
+    "57"
   ],
   "/2012/05/04/notes.html": [
     "43",
@@ -2892,8 +2892,8 @@
     "1"
   ],
   "/2012/05/06/research-workflow.html": [
-    "1635",
-    "2509"
+    "1641",
+    "2517"
   ],
   "/2012/05/06/research-workflow.html>....following": [
     "2",
@@ -2976,16 +2976,16 @@
     "1"
   ],
   "/2012/05/26/exploring-jekyll-layout.html": [
-    "1606",
-    "2007"
+    "1609",
+    "2010"
   ],
   "/2012/05/26/exploring-jekyll-layout.html?search-text=jekyll": [
     "0",
     "1"
   ],
   "/2012/05/30/knitcitations.html": [
-    "1307",
-    "1816"
+    "1312",
+    "1822"
   ],
   "/2012/05/30/knitcitations.html?search-text=": [
     "0",
@@ -2996,8 +2996,8 @@
     "24"
   ],
   "/2012/06/13/Sethi-policy-functions.html": [
-    "233",
-    "456"
+    "234",
+    "457"
   ],
   "/2012/06/13/Sethi-policy-functions.html?theme=light": [
     "0",
@@ -3136,8 +3136,8 @@
     "1"
   ],
   "/2012/09/28/Welcome-to-my-lab-notebook.html": [
-    "1004",
-    "3719"
+    "1010",
+    "3731"
   ],
   "/2012/10/01/multiple-uncertainty.html": [
     "12",
@@ -3149,7 +3149,7 @@
   ],
   "/2012/10/02/solarized-colors.html": [
     "1269",
-    "1875"
+    "1876"
   ],
   "/2012/10/05/lab-notebook.html": [
     "0",
@@ -3200,8 +3200,8 @@
     "6"
   ],
   "/2012/10/17/basic-regression-in-gaussian-processes.html": [
-    "352",
-    "465"
+    "354",
+    "467"
   ],
   "/2012/10/17/talkingpoints.html": [
     "1",
@@ -3304,8 +3304,8 @@
     "51"
   ],
   "/2012/11/23/citing-lab-notebook-entries.html": [
-    "435",
-    "559"
+    "436",
+    "560"
   ],
   "/2012/11/23/citing-lab-notebook-entries.html)": [
     "3",
@@ -3424,8 +3424,8 @@
     "18"
   ],
   "/2012/12/30/learning-jekyll.html": [
-    "3127",
-    "3998"
+    "3138",
+    "4010"
   ],
   "/2012/12/30/learning-jekyll.html?codekitCB=408422825.657119": [
     "1",
@@ -3464,8 +3464,8 @@
     "6"
   ],
   "/2013/01/24/Data-URIs-for-image-archives.html": [
-    "156",
-    "244"
+    "159",
+    "249"
   ],
   "/2013/01/24/Data-URIs-for-image-archives.html/wp-login.php?action=register": [
     "1",
@@ -3788,8 +3788,8 @@
     "100"
   ],
   "/2013/06/03/DOI-citable.html": [
-    "811",
-    "1020"
+    "813",
+    "1022"
   ],
   "/2013/06/03/www.mla.org/style/handbook_faq/cite_a_tweet": [
     "2",
@@ -3852,8 +3852,8 @@
     "54"
   ],
   "/2013/07/08/reml-update.html": [
-    "2",
-    "13"
+    "3",
+    "16"
   ],
   "/2013/07/09/reviewing-software-revisited.html": [
     "189",
@@ -4040,8 +4040,8 @@
     "1"
   ],
   "/2013/10/11/is-it-time-to-retire-pagels-lambda.html": [
-    "703",
-    "915"
+    "709",
+    "922"
   ],
   "/2013/10/16/notes.html": [
     "0",
@@ -4131,13 +4131,17 @@
     "5",
     "31"
   ],
+  "/2014/01/15/ASN-Conference.html": [
+    "0",
+    "1"
+  ],
   "/2014/01/31/notes.html": [
     "19",
-    "57"
+    "59"
   ],
   "/2014/01/31/weekly-review.html": [
-    "1",
-    "16"
+    "2",
+    "17"
   ],
   "/2014/02/05/workflows-working-group-day-1.html": [
     "2",
@@ -4145,15 +4149,23 @@
   ],
   "/2014/02/07/nceas-workflows-day3.html": [
     "2",
-    "15"
+    "16"
   ],
   "/2014/02/14/notes.html": [
     "10",
     "30"
   ],
   "/2014/03/07/notes.html": [
+    "1",
+    "5"
+  ],
+  "/2014/03/10/notes.html": [
     "0",
-    "4"
+    "1"
+  ],
+  "/2014/03/11/notes.html": [
+    "0",
+    "3"
   ],
   "/211": [
     "0",
@@ -6104,8 +6116,8 @@
     "4"
   ],
   "/OpenScience/2012/05/01/Jekyll-vs-Wordpress.html": [
-    "38",
-    "88"
+    "39",
+    "89"
   ],
   "/OpenScience/2012/05/01/Jekyll-vs-Wordpress.html/": [
     "0",
@@ -6120,8 +6132,8 @@
     "2"
   ],
   "/README.html": [
-    "816",
-    "1937"
+    "820",
+    "1946"
   ],
   "/WP-ADMIN": [
     "1",
@@ -9989,7 +10001,7 @@
   ],
   "/categories.html": [
     "86",
-    "750"
+    "752"
   ],
   "/categories.html/": [
     "0",
@@ -10105,7 +10117,7 @@
   ],
   "/community.html": [
     "272",
-    "2790"
+    "2791"
   ],
   "/community?preview=true&preview_id=44&preview_nonce=186274066b": [
     "0",
@@ -10272,8 +10284,8 @@
     "11"
   ],
   "/index.html": [
-    "1212",
-    "5815"
+    "1217",
+    "5823"
   ],
   "/index.html?search-text=": [
     "0",
@@ -10336,8 +10348,8 @@
     "20"
   ],
   "/lab-notebook.html": [
-    "3648",
-    "14319"
+    "3655",
+    "14345"
   ],
   "/lab-notebook.html revisited": [
     "0",
@@ -10732,24 +10744,24 @@
     "142"
   ],
   "/projects/multiple-uncertainty.html": [
-    "42",
-    "362"
+    "43",
+    "367"
   ],
   "/projects/nonparametric-bayes.html": [
-    "86",
-    "553"
+    "87",
+    "556"
   ],
   "/projects/open-science.html": [
     "51",
-    "381"
+    "382"
   ],
   "/projects/pdg-control.html": [
     "65",
-    "438"
+    "440"
   ],
   "/projects/phylogenetics.html": [
-    "97",
-    "218"
+    "99",
+    "221"
   ],
   "/projects/redirect.html": [
     "0",
@@ -10761,7 +10773,7 @@
   ],
   "/projects/warning-signals.html": [
     "190",
-    "595"
+    "598"
   ],
   "/publication": [
     "0",
@@ -10824,8 +10836,8 @@
     "1"
   ],
   "/research.html": [
-    "833",
-    "6802"
+    "834",
+    "6809"
   ],
   "/research.html?theme=dark": [
     "0",
@@ -10864,8 +10876,8 @@
     "1"
   ],
   "/research/lab-notebook/": [
-    "183",
-    "609"
+    "184",
+    "610"
   ],
   "/research/lab-notebook/index.html": [
     "0",
@@ -11173,7 +11185,7 @@
   ],
   "/share/NIMBioS PDG Control, Tuesday – Carl Boettiger.pdf": [
     "6",
-    "6"
+    "7"
   ],
   "/share/callgrind.out.13907": [
     "2",
@@ -11320,8 +11332,8 @@
     "781"
   ],
   "/teaching.html": [
-    "494",
-    "3756"
+    "495",
+    "3759"
   ],
   "/teaching.html?search-text=asdf": [
     "0",
@@ -11677,7 +11689,7 @@
   ],
   "/vita.html": [
     "1802",
-    "7024"
+    "7027"
   ],
   "/vita.html?theme=dark+theme": [
     "0",
@@ -11753,7 +11765,7 @@
   ],
   "/wordpress/": [
     "26",
-    "157"
+    "158"
   ],
   "/wordpress/?p=1702": [
     "4",
