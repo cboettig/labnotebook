@@ -13,10 +13,10 @@ tags:
 ![ASN's wordle of conference abstracts](https://pbs.twimg.com/media/BVCAYS7CQAA198y.jpg)
 
 - [Full program](http://t.co/P3pJ66g5jA), abstracts, etc.  
-- President's debate: are ecological communities saturated in species diversity? [youtube](http://t.co/8NOGWwQaRD)
-- [tweet log, maybe?] (https://twitter.com/search?q=%23ASN2014&src=typd&f=realtime). Or from the [editor's desk](http://comments.amnat.org/2014/02/tweets-of-asilomar-asn2014.html)
+- President's debate: are ecological communities saturated in species diversity? Watch the whole debate on **[youtube](http://t.co/8NOGWwQaRD)**
+- [tweet log, maybe?](https://twitter.com/search?q=%23ASN2014&src=typd&f=realtime). Or from the [editor's desk](http://comments.amnat.org/2014/02/tweets-of-asilomar-asn2014.html)
 
-![In beautiful Asilomar, image credit @svincenzi](https://twitter.com/svincenzi/status/423265712908406784/photo/1/large)
+![In beautiful Asilomar, image credit @svincenzi](https://pbs.twimg.com/media/Bd-97FbCIAAYZC4.jpg)
 
 Some highlights (such as on the top of my head 2 months later anyway, certainly others I've forgotten to mention. too many good talks in a short window).  
 
