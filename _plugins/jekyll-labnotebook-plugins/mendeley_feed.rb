@@ -22,17 +22,17 @@ module Jekyll
         for i in 0 ... @count.to_i
           doc = Nokogiri::HTML.parse(feed.entries[i].summary) # parse the content
           # Print title, content
-          out = out + "<li>" + 
+          out = out + "<li>" +
             feed.entries[i].title + ": " +
-            doc.xpath("//p[1]").text +  
-            doc.xpath("//p[2]").text + 
-  #          "<em>" + doc.css('blockquote').text + "</em>" + 
-            " <a href=\"http://www.mendeley.com" + feed.entries[i].url + "\">" +
+            doc.xpath("//p[1]").text +
+            doc.xpath("//p[2]").text +
+  #          "<em>" + doc.css('blockquote').text + "</em>" +
+            " <a href=\"" + feed.entries[i].url + "\">" +
             feed.entries[i].published.strftime("%I:%M %Y/%m/%d") + "</a>" +
-            "</li>" 
+            "</li>"
         end
         out + "</ul>"
-      else 
+      else
         " "
       end
     end
