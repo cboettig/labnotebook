@@ -1,4 +1,6 @@
 ---
+layout: post
+category: ecology 
 published: false
 
 ---
