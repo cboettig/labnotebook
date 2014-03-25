@@ -1,7 +1,7 @@
 {
   "/": [
-    "7960",
-    "21439"
+    "7970",
+    "21482"
   ],
   "/ Hastings student at UC Davis": [
     "0",
@@ -41,11 +41,11 @@
   ],
   "/2008/06/09/PopBio-Core-Review-Notes.html": [
     "1",
-    "12"
+    "13"
   ],
   "/2009/07/28/branching-times.html": [
     "1",
-    "9"
+    "10"
   ],
   "/2009/08/25/diffusion-solution.html": [
     "0",
@@ -89,7 +89,7 @@
   ],
   "/2010/02/03/Hastings-Meeting.html": [
     "1",
-    "14"
+    "15"
   ],
   "/2010/02/03/Stochastic-Population-Dynamics-Notebook-(from-OWW).html": [
     "0",
@@ -97,7 +97,7 @@
   ],
   "/2010/02/04/Teaching.html": [
     "0",
-    "14"
+    "15"
   ],
   "/2010/02/05/Comparative-Phylogenetics-Notebook-(from-OWW).html": [
     "0",
@@ -149,7 +149,7 @@
   ],
   "/2010/02/10/Follow-up-on-Parametric-Bootstrapping.html": [
     "0",
-    "6"
+    "7"
   ],
   "/2010/02/10/Meeting-w--Alan.html": [
     "0",
@@ -213,7 +213,7 @@
   ],
   "/2010/02/22/Teaching.html": [
     "0",
-    "7"
+    "8"
   ],
   "/2010/02/23/Comparing-to-Analytic-Dynamics.html": [
     "0",
@@ -429,7 +429,7 @@
   ],
   "/2010/04/05/Research.html": [
     "0",
-    "2"
+    "3"
   ],
   "/2010/04/06/Comparative-Phylogenetics-Notebook-(from-OWW).html": [
     "0",
@@ -729,7 +729,7 @@
   ],
   "/2010/05/26/Rethinking-Beetles-Noise.html": [
     "0",
-    "2"
+    "3"
   ],
   "/2010/05/26/Stochastic-Population-Dynamics-Notebook-(from-OWW).html": [
     "0",
@@ -1156,8 +1156,8 @@
     "1"
   ],
   "/2010/11/03/getting-the-details-right-on-the-fourier-transform-approach-to-likelihood.html": [
-    "75",
-    "79"
+    "76",
+    "80"
   ],
   "/2010/11/03/reviews-organization-rewrites.html": [
     "0",
@@ -1184,8 +1184,8 @@
     "33"
   ],
   "/2010/11/08/welcome-to-my-lab-notebook.html": [
-    "368",
-    "846"
+    "369",
+    "854"
   ],
   "/2010/11/10/tuesday-sdes-then-back-to-phylogenetics.html": [
     "4",
@@ -1532,8 +1532,8 @@
     "6"
   ],
   "/2011/02/19/bodega-phylogenetics-workshop-continuous-characters-r-session-planning.html": [
-    "4",
-    "5"
+    "5",
+    "6"
   ],
   "/2011/02/21/monday-2.html": [
     "13",
@@ -1564,8 +1564,8 @@
     "16"
   ],
   "/2011/03/07/bodega-phylogenetics-tutorial-behind-the-scenes-difficulties-in-r-packages.html": [
-    "21",
-    "24"
+    "22",
+    "26"
   ],
   "/2011/03/09/warning-signals-data-examples.html": [
     "4",
@@ -1588,8 +1588,8 @@
     "2"
   ],
   "/2011/03/15/models-in-phylogenetic-inference.html": [
-    "933",
-    "1040"
+    "939",
+    "1046"
   ],
   "/2011/03/15/tuesday-2.html": [
     "0",
@@ -1660,8 +1660,8 @@
     "3"
   ],
   "/2011/03/31/a-few-large-data-problems-in-ecology-evolution.html": [
-    "8",
-    "17"
+    "9",
+    "18"
   ],
   "/2011/04/01/thursday-finishing-up-appendices.html": [
     "0",
@@ -1712,8 +1712,8 @@
     "1"
   ],
   "/2011/04/12/a-bit-of-work-on-my-socialr-package-for-reproducible-research.html": [
-    "83",
-    "101"
+    "84",
+    "102"
   ],
   "/2011/04/12/tuesday-manuscript-and-appendix-edits.html": [
     "3",
@@ -1848,12 +1848,12 @@
     "5"
   ],
   "/2011/05/18/birth-death-tutorial-for-pbg-core.html": [
-    "163",
-    "195"
+    "166",
+    "198"
   ],
   "/2011/05/19/algorithms-group-mcmcmc.html": [
-    "467",
-    "543"
+    "470",
+    "546"
   ],
   "/2011/05/19/thursday-5.html": [
     "1",
@@ -1980,8 +1980,8 @@
     "3"
   ],
   "/2011/06/27/monday-warning-signals-manuscript.html": [
-    "8",
-    "14"
+    "9",
+    "15"
   ],
   "/2011/06/29/warning-signals-summary-statistic-performance-at-varying-sampling-effort.html": [
     "0",
@@ -2008,16 +2008,16 @@
     "1"
   ],
   "/2011/07/06/exact-simulation-by-the-gillespie-algorithm.html": [
-    "132",
-    "157"
+    "133",
+    "158"
   ],
   "/2011/07/07/early-warning-signals-presentation-notes.html": [
     "0",
     "6"
   ],
   "/2011/07/07/segue-easy-cloud-computing-in-r-now-with-custom-packages.html": [
-    "209",
-    "255"
+    "210",
+    "256"
   ],
   "/2011/07/07/thursday-8.html": [
     "0",
@@ -2164,12 +2164,12 @@
     "15"
   ],
   "/2011/08/26/fishbase-from-r-some-xml-parsing.html": [
-    "556",
-    "638"
+    "561",
+    "645"
   ],
   "/2011/08/26/rfishbase-and-some-taxonomy-in-r-with-taxize.html": [
-    "60",
-    "68"
+    "61",
+    "70"
   ],
   "/2011/08/27/saturday-working-on-computational-scaling-abstraction-etc.html": [
     "5",
@@ -2236,8 +2236,8 @@
     "7"
   ],
   "/2011/09/14/training-problem-ii.html": [
-    "22",
-    "29"
+    "23",
+    "30"
   ],
   "/2011/09/15/nimbios-pdg-control-thursday.html": [
     "0",
@@ -2296,8 +2296,8 @@
     "1"
   ],
   "/2011/09/29/thursday-10.html": [
-    "1",
-    "4"
+    "3",
+    "6"
   ],
   "/2011/09/30/friday-wordpress-backups-pmc-edits.html": [
     "1",
@@ -2325,7 +2325,7 @@
   ],
   "/2011/10/12/rfishbase-tutorial-updated-extended.html": [
     "120",
-    "190"
+    "191"
   ],
   "/2011/10/12/wednesday-10.html": [
     "0",
@@ -2388,8 +2388,8 @@
     "261"
   ],
   "/2011/10/28/optimal-control-examples-continued-bellman-dynamic-programming.html": [
-    "265",
-    "337"
+    "269",
+    "342"
   ],
   "/2011/10/31/monday-openfisheries-ggplot.html": [
     "20",
@@ -2404,8 +2404,8 @@
     "3"
   ],
   "/2011/11/01/server-file-management-from-bowser-ajaxplorer-mollify.html": [
-    "386",
-    "433"
+    "389",
+    "436"
   ],
   "/2011/11/01/training-problem-2-update.html": [
     "5",
@@ -2424,16 +2424,16 @@
     "1"
   ],
   "/2011/11/04/sparkleshare-configuration.html": [
-    "2606",
-    "3120"
+    "2610",
+    "3124"
   ],
   "/2011/11/06/sunday-5.html": [
     "0",
     "4"
   ],
   "/2011/11/08/sdp-solution-for-allee-model.html": [
-    "27",
-    "36"
+    "28",
+    "37"
   ],
   "/2011/11/09/crashing-stocks-and-optimal-harvesting-effort-on-allee-effects.html": [
     "24",
@@ -2472,8 +2472,8 @@
     "14"
   ],
   "/2011/11/22/some-configuration-notes-rstudio-setup-syntax-highlighting-in-sweave.html": [
-    "135",
-    "170"
+    "137",
+    "173"
   ],
   "/2011/11/23/getting-the-right-distributions.html": [
     "10",
@@ -2512,8 +2512,8 @@
     "1"
   ],
   "/2011/12/06/tuesday-two-insights.html": [
-    "1",
-    "4"
+    "2",
+    "5"
   ],
   "/2011/12/07/optimal-control-costs-to-policy-shifts.html": [
     "4",
@@ -2532,8 +2532,8 @@
     "1"
   ],
   "/2011/12/11/some-notes-on-open-notebooks-open-peer-review-practices.html": [
-    "8",
-    "13"
+    "9",
+    "15"
   ],
   "/2011/12/12/better-sweave-dynamic-documents-with-syntax-highlighting-easier-tools.html": [
     "50",
@@ -2580,8 +2580,8 @@
     "10"
   ],
   "/2012/01/19/is-your-phylogeny-informative.html": [
-    "219",
-    "335"
+    "220",
+    "336"
   ],
   "/2012/01/20/friday-lab-group-meeting-notes.html": [
     "1",
@@ -2612,8 +2612,8 @@
     "86"
   ],
   "/2012/02/06/some-collaborative-tools-for-science.html": [
-    "144",
-    "248"
+    "152",
+    "262"
   ],
   "/2012/02/06/stackoverflow.com": [
     "0",
@@ -2632,8 +2632,8 @@
     "49"
   ],
   "/2012/02/12/elegant-fast-data-manipulation-with-data-table.html": [
-    "1712",
-    "1880"
+    "1738",
+    "1908"
   ],
   "/2012/02/12/saturday-projects-reading-markdown-plugins.html": [
     "6",
@@ -2684,8 +2684,8 @@
     "14"
   ],
   "/2012/02/24/visuals-for-communicating-uncertainty.html": [
-    "12",
-    "21"
+    "13",
+    "24"
   ],
   "/2012/02/27/ex-out-md-cars1.png": [
     "1",
@@ -2696,8 +2696,8 @@
     "4"
   ],
   "/2012/02/27/using-knitr-and-rwordpress-to-publish-results-directly-from-r-6.html": [
-    "599",
-    "934"
+    "604",
+    "943"
   ],
   "/2012/02/27/using-knitr-and-rwordpress-to-publish-results-directly-from-r.html": [
     "1",
@@ -2705,7 +2705,7 @@
   ],
   "/2012/02/28/knitr-with-flickr-and-wordpress.html": [
     "261",
-    "400"
+    "401"
   ],
   "/2012/02/28/warning-signals-in-fish-collapse.html": [
     "27",
@@ -2732,8 +2732,8 @@
     "8"
   ],
   "/2012/03/11/parameter-uncertainty-in-stochastic-control-problems-2.html": [
-    "28",
-    "41"
+    "29",
+    "42"
   ],
   "/2012/03/13/pdg-control-day-1-goals-by-training-problem.html": [
     "3",
@@ -2748,8 +2748,8 @@
     "11"
   ],
   "/2012/03/20/citing-r-packages.html": [
-    "2193",
-    "2369"
+    "2214",
+    "2391"
   ],
   "/2012/03/20/friday-some-random-notes.html": [
     "2",
@@ -2760,8 +2760,8 @@
     "8"
   ],
   "/2012/03/21/knitr-github-and-a-new-phase-for-the-lab-notebook.html": [
-    "472",
-    "741"
+    "474",
+    "743"
   ],
   "/2012/03/21/policy-costs-to-changing-mangement-tp-1b-apples-to-apples.html": [
     "0",
@@ -2776,8 +2776,8 @@
     "4"
   ],
   "/2012/03/24/citations-in-markdown-using-knitr.html": [
-    "1714",
-    "2262"
+    "1735",
+    "2300"
   ],
   "/2012/03/24/citations-in-markdown-using-knitr.txt": [
     "0",
@@ -2792,8 +2792,8 @@
     "16"
   ],
   "/2012/03/27/tuesday-pandoc-citations-notes-various.html": [
-    "264",
-    "361"
+    "266",
+    "363"
   ],
   "/2012/03/29/data-to-knowledge-conference-uc-berkeley-application-abstract.html": [
     "10",
@@ -2824,8 +2824,8 @@
     "6"
   ],
   "/2012/04/07/writing-reproducibly-in-the-open-with-knitr.html": [
-    "1005",
-    "1687"
+    "1010",
+    "1695"
   ],
   "/2012/04/10/monday-tuesday.html": [
     "7",
@@ -2860,8 +2860,8 @@
     "8"
   ],
   "/2012/05/01/Jekyll-vs-Wordpress.html": [
-    "2053",
-    "2641"
+    "2066",
+    "2661"
   ],
   "/2012/05/01/Jekyll-vs-Wordpress.html)": [
     "8",
@@ -2877,7 +2877,7 @@
   ],
   "/2012/05/03/testing-out-a-jekyll-based-notebook.html": [
     "8",
-    "59"
+    "60"
   ],
   "/2012/05/04/notes.html": [
     "43",
@@ -2892,8 +2892,8 @@
     "1"
   ],
   "/2012/05/06/research-workflow.html": [
-    "1655",
-    "2552"
+    "1670",
+    "2581"
   ],
   "/2012/05/06/research-workflow.html>....following": [
     "2",
@@ -2976,16 +2976,16 @@
     "1"
   ],
   "/2012/05/26/exploring-jekyll-layout.html": [
-    "1634",
-    "2043"
+    "1648",
+    "2059"
   ],
   "/2012/05/26/exploring-jekyll-layout.html?search-text=jekyll": [
     "0",
     "1"
   ],
   "/2012/05/30/knitcitations.html": [
-    "1334",
-    "1853"
+    "1352",
+    "1880"
   ],
   "/2012/05/30/knitcitations.html?search-text=": [
     "0",
@@ -2996,8 +2996,8 @@
     "24"
   ],
   "/2012/06/13/Sethi-policy-functions.html": [
-    "235",
-    "460"
+    "238",
+    "465"
   ],
   "/2012/06/13/Sethi-policy-functions.html?theme=light": [
     "0",
@@ -3104,52 +3104,52 @@
     "27"
   ],
   "/2012/09/05/ESA-changes-ArXiv-policy-following-community-comments.html": [
-    "146",
-    "218"
+    "147",
+    "219"
   ],
   "/2012/09/12/notes.html": [
     "1",
     "22"
   ],
   "/2012/09/14/analytic-solution-to-multiple-uncertainty.html": [
-    "134",
-    "240"
+    "135",
+    "241"
   ],
   "/2012/09/14/analytic-solution-to-multiple-uncertainty.html?theme=light": [
     "1",
     "2"
   ],
   "/2012/09/19/migrating-from-wordpress-to-jekyll.html": [
-    "268",
-    "404"
+    "269",
+    "406"
   ],
   "/2012/09/19/prosecutors-fallacy.html": [
     "9",
     "20"
   ],
   "/2012/09/27/Migrating-OWW-posts-to-Jekyll.html": [
-    "32",
-    "90"
+    "33",
+    "91"
   ],
   "/2012/09/28/Welco": [
     "1",
     "1"
   ],
   "/2012/09/28/Welcome-to-my-lab-notebook.html": [
-    "1029",
-    "3801"
+    "1037",
+    "3853"
   ],
   "/2012/10/01/multiple-uncertainty.html": [
-    "12",
-    "160"
+    "13",
+    "162"
   ],
   "/2012/10/02/solarized-colors": [
     "3",
     "3"
   ],
   "/2012/10/02/solarized-colors.html": [
-    "1283",
-    "1894"
+    "1288",
+    "1904"
   ],
   "/2012/10/05/lab-notebook.html": [
     "0",
@@ -3161,7 +3161,7 @@
   ],
   "/2012/10/09/data-management-plan.htm": [
     "13",
-    "129"
+    "131"
   ],
   "/2012/10/09/data-management-plan.html": [
     "154",
@@ -3176,8 +3176,8 @@
     "1"
   ],
   "/2012/10/10/prosecutors-fallacy.html": [
-    "34",
-    "88"
+    "35",
+    "91"
   ],
   "/2012/10/11/notes.html": [
     "4",
@@ -3192,16 +3192,16 @@
     "177"
   ],
   "/2012/10/16/gaussian-processes.html": [
-    "134",
-    "249"
+    "135",
+    "250"
   ],
   "/2012/10/17/basic-regression-in-gaussian-processes": [
     "6",
     "6"
   ],
   "/2012/10/17/basic-regression-in-gaussian-processes.html": [
-    "369",
-    "484"
+    "373",
+    "490"
   ],
   "/2012/10/17/talkingpoints.html": [
     "1",
@@ -3304,8 +3304,8 @@
     "51"
   ],
   "/2012/11/23/citing-lab-notebook-entries.html": [
-    "437",
-    "561"
+    "439",
+    "564"
   ],
   "/2012/11/23/citing-lab-notebook-entries.html)": [
     "3",
@@ -3360,8 +3360,8 @@
     "35"
   ],
   "/2012/12/06/github-issues-tracker:-the-perfect-research-todo-list": [
-    "450",
-    "500"
+    "456",
+    "506"
   ],
   "/2012/12/06/github-issues-tracker:-the-perfect-research-todo-list.html": [
     "216",
@@ -3376,8 +3376,8 @@
     "1"
   ],
   "/2012/12/10/prior-distributions-for-tgp-mcmc.html": [
-    "61",
-    "91"
+    "62",
+    "92"
   ],
   "/2012/12/10/prior-distributions-for-tgp-mcmc.html?search-text=entropy": [
     "1",
@@ -3424,8 +3424,8 @@
     "18"
   ],
   "/2012/12/30/learning-jekyll.html": [
-    "3209",
-    "4108"
+    "3248",
+    "4171"
   ],
   "/2012/12/30/learning-jekyll.html?codekitCB=408422825.657119": [
     "1",
@@ -3464,8 +3464,8 @@
     "6"
   ],
   "/2013/01/24/Data-URIs-for-image-archives.html": [
-    "160",
-    "250"
+    "163",
+    "253"
   ],
   "/2013/01/24/Data-URIs-for-image-archives.html/wp-login.php?action=register": [
     "1",
@@ -3508,8 +3508,8 @@
     "59"
   ],
   "/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html": [
-    "237",
-    "419"
+    "239",
+    "422"
   ],
   "/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html?search-text=shotton": [
     "0",
@@ -3580,8 +3580,8 @@
     "36"
   ],
   "/2013/04/04/notebook-parsing.html": [
-    "53",
-    "131"
+    "54",
+    "133"
   ],
   "/2013/04/05/a-clever-derivation-on-realized-escape-times.html": [
     "37",
@@ -3644,8 +3644,8 @@
     "3"
   ],
   "/2013/04/23/we-need-more-object-oriented-design-in-comparative-methods.html": [
-    "237",
-    "347"
+    "238",
+    "348"
   ],
   "/2013/04/24/empirical-demonstration-of-that-clever-derivation.html": [
     "12",
@@ -3664,20 +3664,20 @@
     "17"
   ],
   "/2013/04/26/notebook-features-introduction.html": [
-    "27",
-    "219"
+    "29",
+    "232"
   ],
   "/2013/04/26/notebook-features-reproducible-code.html": [
     "28",
-    "120"
+    "121"
   ],
   "/2013/04/27/comparison-of-nonparametric-and-parametric-approaches": [
     "11",
     "12"
   ],
   "/2013/04/27/comparison-of-nonparametric-and-parametric-approaches.html": [
-    "68",
-    "120"
+    "69",
+    "121"
   ],
   "/2013/04/29/finishing-comparison-parametric-and-nonparametric.html": [
     "4",
@@ -3688,8 +3688,8 @@
     "34"
   ],
   "/2013/05/01/bayesian-GP-regression-by-metropolis-hastings.html": [
-    "47",
-    "74"
+    "48",
+    "76"
   ],
   "/2013/05/01/integrating-over-posterior-gp.html": [
     "3",
@@ -3705,7 +3705,7 @@
   ],
   "/2013/05/03/notebook-features-hashes-providing-an-immutable-and-verifiable-research-record.html": [
     "213",
-    "348"
+    "350"
   ],
   "/2013/05/03/notes.html": [
     "5",
@@ -3765,7 +3765,7 @@
   ],
   "/2013/05/31/notebook-features-archiving-with-figshare": [
     "1",
-    "8"
+    "9"
   ],
   "/2013/05/31/notebook-features-archiving-with-figshare.html": [
     "24",
@@ -3777,19 +3777,19 @@
   ],
   "/2013/05/31/notebook-features-digital-archiving.html": [
     "17",
-    "64"
+    "65"
   ],
   "/2013/06/03/ADMB-basic-example": [
     "8",
     "9"
   ],
   "/2013/06/03/ADMB-basic-example.html": [
-    "61",
-    "103"
+    "63",
+    "105"
   ],
   "/2013/06/03/DOI-citable.html": [
-    "823",
-    "1033"
+    "825",
+    "1042"
   ],
   "/2013/06/03/www.mla.org/style/handbook_faq/cite_a_tweet": [
     "2",
@@ -3800,8 +3800,8 @@
     "53"
   ],
   "/2013/06/04/sensitivity-of-gp-comparisons-in-further-examples.html": [
-    "9",
-    "37"
+    "10",
+    "38"
   ],
   "/2013/06/05/semi-analytic-posteriors.html": [
     "17",
@@ -3829,7 +3829,7 @@
   ],
   "/2013/06/13/what-I-look-for-in-software-papers.html": [
     "658",
-    "977"
+    "978"
   ],
   "/2013/06/18/blog.martinfenner.org/2013/06/19/citations-in-scholarly-markdown/": [
     "0",
@@ -3848,8 +3848,8 @@
     "88"
   ],
   "/2013/06/24/notes.html": [
-    "92",
-    "135"
+    "93",
+    "136"
   ],
   "/2013/06/26/starting-an-EML-package-for-R.html": [
     "16",
@@ -3884,8 +3884,8 @@
     "25"
   ],
   "/2013/07/22/XML-parsing-strategies.html": [
-    "81",
-    "105"
+    "83",
+    "107"
   ],
   "/2013/07/25/formal-semantics-with-reml.html": [
     "22",
@@ -3904,16 +3904,16 @@
     "8"
   ],
   "/2013/08/06/summarizing-earlier-warning-signal-under-control-notes.html": [
-    "10",
-    "33"
+    "11",
+    "34"
   ],
   "/2013/08/07/F1000-Research": [
     "2",
     "2"
   ],
   "/2013/08/07/F1000-Research.html": [
-    "11",
-    "35"
+    "12",
+    "36"
   ],
   "/2013/08/08/ESA-2013-notes-for-week.html": [
     "10",
@@ -3976,8 +3976,8 @@
     "2"
   ],
   "/2013/09/08/some-rfishbase-updates.html": [
-    "19",
-    "56"
+    "21",
+    "60"
   ],
   "/2013/09/09/lost-branches.html": [
     "7",
@@ -3996,8 +3996,8 @@
     "4"
   ],
   "/2013/09/11/extending-data-frame-class.html": [
-    "51",
-    "76"
+    "53",
+    "78"
   ],
   "/2013/09/16/notes.html": [
     "6",
@@ -4016,12 +4016,12 @@
     "51"
   ],
   "/2013/09/25/mozilla-software-review.html": [
-    "155",
-    "257"
+    "156",
+    "258"
   ],
   "/2013/09/30/regime-vs-state.html": [
-    "3",
-    "9"
+    "4",
+    "10"
   ],
   "/2013/10/07/nexml-phylo-class-extension.html": [
     "38",
@@ -4044,8 +4044,8 @@
     "1"
   ],
   "/2013/10/11/is-it-time-to-retire-pagels-lambda.html": [
-    "752",
-    "985"
+    "760",
+    "999"
   ],
   "/2013/10/16/notes.html": [
     "0",
@@ -4100,8 +4100,8 @@
     "22"
   ],
   "/2013/11/17/RNeXML-metadata-queries.html": [
-    "0",
-    "3"
+    "1",
+    "4"
   ],
   "/2013/11/19/notes.html": [
     "21",
@@ -4128,20 +4128,20 @@
     "16"
   ],
   "/2014/01/07/notes.html": [
-    "1",
-    "25"
+    "2",
+    "26"
   ],
   "/2014/01/09/notes.html": [
     "5",
     "31"
   ],
   "/2014/01/15/ASN-Conference.html": [
-    "0",
-    "4"
+    "1",
+    "8"
   ],
   "/2014/01/31/notes.html": [
-    "21",
-    "66"
+    "23",
+    "69"
   ],
   "/2014/01/31/weekly-review.html": [
     "3",
@@ -4153,23 +4153,23 @@
   ],
   "/2014/02/07/nceas-workflows-day3.html": [
     "3",
-    "17"
+    "18"
   ],
   "/2014/02/14/notes.html": [
-    "10",
-    "32"
+    "11",
+    "35"
   ],
   "/2014/03/07/notes.html": [
-    "2",
-    "9"
+    "3",
+    "14"
   ],
   "/2014/03/10/notes.html": [
     "0",
-    "10"
+    "12"
   ],
   "/2014/03/11/notes.html": [
-    "4",
-    "16"
+    "7",
+    "27"
   ],
   "/211": [
     "0",
@@ -6121,7 +6121,7 @@
   ],
   "/OpenScience/2012/05/01/Jekyll-vs-Wordpress.html": [
     "39",
-    "90"
+    "91"
   ],
   "/OpenScience/2012/05/01/Jekyll-vs-Wordpress.html/": [
     "0",
@@ -6136,8 +6136,8 @@
     "2"
   ],
   "/README.html": [
-    "836",
-    "1971"
+    "848",
+    "1991"
   ],
   "/WP-ADMIN": [
     "1",
@@ -6165,7 +6165,7 @@
   ],
   "/archive.html": [
     "24",
-    "338"
+    "340"
   ],
   "/archive/": [
     "1",
@@ -6177,7 +6177,7 @@
   ],
   "/archives.html": [
     "26",
-    "297"
+    "299"
   ],
   "/archives/": [
     "0",
@@ -10004,8 +10004,8 @@
     "3"
   ],
   "/categories.html": [
-    "86",
-    "757"
+    "87",
+    "762"
   ],
   "/categories.html/": [
     "0",
@@ -10120,8 +10120,8 @@
     "629"
   ],
   "/community.html": [
-    "277",
-    "2826"
+    "282",
+    "2847"
   ],
   "/community?preview=true&preview_id=44&preview_nonce=186274066b": [
     "0",
@@ -10149,7 +10149,7 @@
   ],
   "/ecology/2012/04/30/Sethi.html": [
     "18",
-    "66"
+    "67"
   ],
   "/economics/2012/04/30/Sethi.html": [
     "2",
@@ -10288,8 +10288,8 @@
     "11"
   ],
   "/index.html": [
-    "1247",
-    "5932"
+    "1263",
+    "5990"
   ],
   "/index.html?search-text=": [
     "0",
@@ -10352,8 +10352,8 @@
     "20"
   ],
   "/lab-notebook.html": [
-    "3711",
-    "14529"
+    "3734",
+    "14627"
   ],
   "/lab-notebook.html revisited": [
     "0",
@@ -10748,36 +10748,36 @@
     "150"
   ],
   "/projects/multiple-uncertainty.html": [
-    "43",
-    "376"
+    "44",
+    "379"
   ],
   "/projects/nonparametric-bayes.html": [
     "89",
-    "571"
+    "574"
   ],
   "/projects/open-science.html": [
     "53",
     "393"
   ],
   "/projects/pdg-control.html": [
-    "71",
-    "457"
+    "72",
+    "459"
   ],
   "/projects/phylogenetics.html": [
-    "100",
-    "224"
+    "101",
+    "225"
   ],
   "/projects/redirect.html": [
     "0",
     "1"
   ],
   "/projects/ropensci.html": [
-    "142",
-    "300"
+    "143",
+    "301"
   ],
   "/projects/warning-signals.html": [
     "194",
-    "621"
+    "623"
   ],
   "/publication": [
     "0",
@@ -10840,8 +10840,8 @@
     "1"
   ],
   "/research.html": [
-    "836",
-    "6896"
+    "840",
+    "6938"
   ],
   "/research.html?theme=dark": [
     "0",
@@ -10853,7 +10853,7 @@
   ],
   "/research/": [
     "1",
-    "16"
+    "17"
   ],
   "/research/:": [
     "0",
@@ -10873,15 +10873,15 @@
   ],
   "/research/lab-notebook": [
     "1131",
-    "4260"
+    "4261"
   ],
   "/research/lab-notebook.html": [
     "0",
     "1"
   ],
   "/research/lab-notebook/": [
-    "189",
-    "620"
+    "193",
+    "626"
   ],
   "/research/lab-notebook/index.html": [
     "0",
@@ -11036,8 +11036,8 @@
     "1"
   ],
   "/sandbox/math-jekyll.html": [
-    "5",
-    "7"
+    "6",
+    "8"
   ],
   "/sandbox/math1.html": [
     "0",
@@ -11304,8 +11304,8 @@
     "20"
   ],
   "/tags.html": [
-    "111",
-    "892"
+    "112",
+    "897"
   ],
   "/tags.html/": [
     "9",
@@ -11328,16 +11328,16 @@
     "1"
   ],
   "/talks/ievobio2012/": [
-    "49",
-    "73"
+    "50",
+    "74"
   ],
   "/teaching": [
     "246",
     "781"
   ],
   "/teaching.html": [
-    "498",
-    "3798"
+    "501",
+    "3815"
   ],
   "/teaching.html?search-text=asdf": [
     "0",
@@ -11688,16 +11688,16 @@
     "1"
   ],
   "/undefined": [
-    "1",
-    "9"
+    "2",
+    "10"
   ],
   "/vita": [
     "8",
     "16"
   ],
   "/vita.html": [
-    "1830",
-    "7128"
+    "1834",
+    "7153"
   ],
   "/vita.html?theme=dark+theme": [
     "0",
@@ -11750,6 +11750,14 @@
   "/web/20120724012200/http://www.carlboettiger.info/lab-notebook.html": [
     "0",
     "2"
+  ],
+  "/web/20130101173148/http://www.carlboettiger.info/research/lab-notebook": [
+    "0",
+    "2"
+  ],
+  "/web/20130113021628/http://www.carlboettiger.info/lab-notebook.html": [
+    "1",
+    "4"
   ],
   "/web/20130408041701/http://www.carlboettiger.info/research/lab-notebook": [
     "0",
