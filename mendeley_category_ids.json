@@ -93,14 +93,14 @@
   {
     "id": "56626121",
     "name": "Management",
-    "size": 80,
+    "size": 82,
     "version": "3",
     "parent": "56626111"
   },
   {
     "id": "56626131",
     "name": "Early Warning Signs",
-    "size": 195,
+    "size": 197,
     "version": "3",
     "parent": "56626111"
   },
@@ -128,14 +128,14 @@
   {
     "id": "56626171",
     "name": "Future of Science",
-    "size": 289,
+    "size": 292,
     "version": "2",
     "parent": -1
   },
   {
     "id": "56864151",
     "name": "Math Methods and Model Inference",
-    "size": 405,
+    "size": 406,
     "version": "2",
     "parent": -1
   },
