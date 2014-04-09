@@ -1,10 +1,12 @@
 <aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
-    <time datetime="{{ page.date | date_to_xmlschema }}" 
+    <time datetime="{{ page.date }}" 
     property="dc:created">{{ page.date | date_to_string }}</time></p>
+  {%if page.modified %}
   <p><small> modified: <time 
-            datetime="{{ page.modified | date_to_xmlschema }}" 
-            property="dc:modified">{{ page.modified | date_to_string }}</time></small></p>
+            datetime="{{ page.modified | string_to_date }}" 
+            property="dc:modified">{{ page.modified }}</time></small></p>
+  {% endif %} 
 
  <br />
 
