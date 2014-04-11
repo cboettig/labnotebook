@@ -1,7 +1,7 @@
 {
   "/": [
     "8076",
-    "21843"
+    "21844"
   ],
   "/ Hastings student at UC Davis": [
     "0",
@@ -1596,8 +1596,8 @@
     "2"
   ],
   "/2011/03/15/models-in-phylogenetic-inference.html": [
-    "986",
-    "1100"
+    "987",
+    "1103"
   ],
   "/2011/03/15/tuesday-2.html": [
     "1",
@@ -1860,8 +1860,8 @@
     "199"
   ],
   "/2011/05/19/algorithms-group-mcmcmc.html": [
-    "488",
-    "564"
+    "491",
+    "568"
   ],
   "/2011/05/19/thursday-5.html": [
     "1",
@@ -2396,8 +2396,8 @@
     "262"
   ],
   "/2011/10/28/optimal-control-examples-continued-bellman-dynamic-programming.html": [
-    "277",
-    "350"
+    "278",
+    "351"
   ],
   "/2011/10/31/monday-openfisheries-ggplot.html": [
     "21",
@@ -2432,8 +2432,8 @@
     "1"
   ],
   "/2011/11/04/sparkleshare-configuration.html": [
-    "2631",
-    "3152"
+    "2632",
+    "3153"
   ],
   "/2011/11/06/sunday-5.html": [
     "0",
@@ -2452,8 +2452,8 @@
     "3"
   ],
   "/2011/11/10/parallel-computing-on-clusters-in-r-mpi.html": [
-    "185",
-    "215"
+    "186",
+    "216"
   ],
   "/2011/11/10/thursday-12.html": [
     "0",
@@ -2644,8 +2644,8 @@
     "49"
   ],
   "/2012/02/12/elegant-fast-data-manipulation-with-data-table.html": [
-    "1905",
-    "2085"
+    "1906",
+    "2086"
   ],
   "/2012/02/12/saturday-projects-reading-markdown-plugins.html": [
     "6",
@@ -2996,8 +2996,8 @@
     "1"
   ],
   "/2012/05/30/knitcitations.html": [
-    "1394",
-    "1936"
+    "1395",
+    "1937"
   ],
   "/2012/05/30/knitcitations.html?search-text=": [
     "0",
@@ -3436,8 +3436,8 @@
     "18"
   ],
   "/2012/12/30/learning-jekyll.html": [
-    "3388",
-    "4353"
+    "3389",
+    "4354"
   ],
   "/2012/12/30/learning-jekyll.html?codekitCB=408422825.657119": [
     "1",
@@ -3520,8 +3520,8 @@
     "59"
   ],
   "/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html": [
-    "268",
-    "467"
+    "269",
+    "468"
   ],
   "/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html?search-text=shotton": [
     "0",
@@ -3784,8 +3784,8 @@
     "68"
   ],
   "/2013/05/28/notes.html": [
-    "79",
-    "125"
+    "80",
+    "126"
   ],
   "/2013/05/29/notes.html": [
     "32",
@@ -4218,6 +4218,14 @@
   "/2014/04/03/Wisconsin-visit.html": [
     "0",
     "7"
+  ],
+  "/2014/04/09/multiple-uncertainty-notes.html": [
+    "2",
+    "2"
+  ],
+  "/2014/04/10/multiple-uncertainty-notes.html": [
+    "0",
+    "1"
   ],
   "/211": [
     "0",
@@ -10349,7 +10357,7 @@
   ],
   "/index.html": [
     "1304",
-    "6194"
+    "6195"
   ],
   "/index.html?search-text=": [
     "0",
@@ -10413,7 +10421,7 @@
   ],
   "/lab-notebook.html": [
     "3980",
-    "15386"
+    "15389"
   ],
   "/lab-notebook.html revisited": [
     "0",
@@ -10845,10 +10853,10 @@
   ],
   "/projects/ropensci.html": [
     "146",
-    "314"
+    "315"
   ],
   "/projects/warning-signals.html": [
-    "208",
+    "207",
     "672"
   ],
   "/publication": [
@@ -11768,8 +11776,8 @@
     "17"
   ],
   "/vita.html": [
-    "1909",
-    "7423"
+    "1910",
+    "7425"
   ],
   "/vita.html?theme=dark+theme": [
     "0",
