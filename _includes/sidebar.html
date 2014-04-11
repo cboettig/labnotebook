@@ -4,7 +4,7 @@
     property="dc:created">{{ page.date | date_to_string }}</time></p>
   {%if page.modified %}
   <p><small> modified: <time 
-            datetime="{{ page.modified | string_to_date }}" 
+            datetime="{{ page.modified }}" 
             property="dc:modified">{{ page.modified }}</time></small></p>
   {% endif %} 
 
