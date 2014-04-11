@@ -12,9 +12,8 @@ require 'chronic'
 
 module Jekyll
   module StringToDateFilter
-    def codecogs(input)
-      puts input
-     input
+    def string_to_date(input)
+      Chronic.parse(input)
     end
   end
 end
