@@ -64,10 +64,7 @@ module Jekyll
 #        Garb.read_timeout = 120 # 2 minute timeout
 
         ## Read in credentials and authenticate
-        cred = YAML.load_file("/home/cboettig/.garb_auth.yaml")
-
-
-        puts "Garb authenticating for " + cred[":username"]
+        cred = YAML.load_file("_garb.yml")
 
 
         Garb::Session.api_key = cred[":api_key"]
