@@ -17,33 +17,35 @@ module Jekyll
     end
     def render(context)
 
-      puts "Generating twitter feed with twitter API and twitter_feed.rb"
+      if(site.twitter_api)
+        puts "Generating twitter feed with twitter API and twitter_feed.rb"
 
-      # Initialize a redcarpet markdown renderer to autolink urls
-      # Could use octokit instead to get GFM
-      markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
-                                         :autolink => true)
+        # Initialize a redcarpet markdown renderer to autolink urls
+        # Could use octokit instead to get GFM
+        markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+                                           :autolink => true)
 
-      out = "<ul>"
+        out = "<ul>"
 
 
-      cred = YAML.load_file("_twitter.yml")
+        cred = YAML.load_file("_twitter.yml")
 
-      @client = Twitter::REST::Client.new(
-        :consumer_key => cred[":consumer_key"],
-        :consumer_secret => cred[":consumer_secret"],
-        :access_token => cred[":oauth_token"],
-        :access_token_secret => cred[":oauth_token_secret"]
-      )
-      tweets = @client.user_timeline(@user)
-      for i in 0 ... @count.to_i
-      out = out + "<li>" +
-        markdown.render(tweets[i].text) +
-        " <a href=\"http://twitter.com/" + @user + "/statuses/" +
-        tweets[i].id.to_s + "\">"  + tweets[i].created_at.strftime("%I:%M %Y/%m/%d") + "</a> " +
-        "</li>"
+        @client = Twitter::REST::Client.new(
+          :consumer_key => cred[":consumer_key"],
+          :consumer_secret => cred[":consumer_secret"],
+          :access_token => cred[":oauth_token"],
+          :access_token_secret => cred[":oauth_token_secret"]
+        )
+        tweets = @client.user_timeline(@user)
+        for i in 0 ... @count.to_i
+        out = out + "<li>" +
+          markdown.render(tweets[i].text) +
+          " <a href=\"http://twitter.com/" + @user + "/statuses/" +
+          tweets[i].id.to_s + "\">"  + tweets[i].created_at.strftime("%I:%M %Y/%m/%d") + "</a> " +
+          "</li>"
+        end
+        out + "</ul>"
       end
-      out + "</ul>"
     end
   end
 end
