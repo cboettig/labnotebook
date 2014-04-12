@@ -1,37 +1,27 @@
 source "https://rubygems.org/"
 
-# The Jekyll gem
-gem "jekyll"
 
-# Github API (octokit plugin)
-gem "octokit", "~> 2.0"
+gem "rake", "~> 10.2.1"
 
-# HTML / XML parser
-gem "nokogiri"
-
-# RSS parser (mendeley_feed, github_feed parsing)
-gem "feedjira"
-
-# Natural language time parser (e.g. "Today", "Last Tuesday")
-gem "chronic"
-
-# Twitter API, for the twitter.rb plugin
-gem "twitter"
-
-# Google Analytics API, for google_analytics.rb plugin
-gem "garb"
-
-# JSON parser (probably not needed, garb and others import multi_json already)
+gem "jekyll", "~> 1.5.0"
+gem "jekyll-assets", "~> 0.7.6"
+gem "jekyll-scholar", "~> 2.0.0"
+gem "jekyll-pandoc", "~> 0.0.1"
+gem 'pandoc-ruby', '~> 0.7.5'
+gem 'psych', '~> 2.0.5'
 gem "json"
 
-# Ruby Wrapper for the Pandoc markdown parser
-gem "pandoc-ruby"
+#gem "faraday"
+#gem "faraday_middleware"
 
-# Git gem
-gem "git"
 
+gem "octokit", "~> 2.0"   # Github API (octokit plugin)
+gem "twitter", "~> 5.8.0" # Twitter API
+gem "garb", "~> 0.9.8"    # Google Analytics API
+gem "nokogiri"            # HTML / XML parser
+gem "feedjira"            # Atom/RSS parser
+gem "chronic"             # Natural language time parser
+
+gem "git"         # Git gem
 gem "redcarpet"
 
-gem "psych"
-
-# vim: syntax=ruby
