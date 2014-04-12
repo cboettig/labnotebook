@@ -28,7 +28,7 @@ end
 
 def check_destination
   unless Dir.exist? CONFIG["destination"]
-    sh "git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
+    sh "git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]} 1>/dev/null"
   end
 end
 
@@ -45,11 +45,9 @@ namespace :site do
 
     # Configure git if this is run in Travis CI
     if ENV["TRAVIS"]
-#      sh "git config --global user.name '#{ENV['GIT_NAME']}'"
-#      sh "git config --global user.email '#{ENV['GIT_EMAIL']}'"
-      sh "git config --global user.name '#{CONFIG['author']['name']}'"
-      sh "git config --global user.email '#{CONFIG['author']['email']}'"
-      sh "git config --global push.default simple"
+      sh "git config --global user.name '#{CONFIG['author']['name']}' 1>/dev/null"
+      sh "git config --global user.email '#{CONFIG['author']['email']}' 1>/dev/null"
+      sh "git config --global push.default simple 1>/dev/null"
     end
 
     # Make sure destination folder exists as git repo
