@@ -16,7 +16,7 @@ module Jekyll
       end
     end
     def render(context)
-      
+
       puts "Generating twitter feed with twitter API and twitter_feed.rb"
 
       # Initialize a redcarpet markdown renderer to autolink urls
@@ -27,21 +27,21 @@ module Jekyll
       out = "<ul>"
 
 
-      Twitter.connection_options = {:timeout => 50, :open_timeout => 20} # increase timeout to avoid frequent errors 
+#      Twitter.connection_options = {:timeout => 50, :open_timeout => 20} # increase timeout to avoid frequent errors
       cred = YAML.load_file("/home/cboettig/.twitter_auth.yaml")
 
-      @client = Twitter::Client.new(
+      @client = Twitter::REST::Client.new(
         :consumer_key => cred[":consumer_key"],
         :consumer_secret => cred[":consumer_secret"],
-        :oauth_token => cred[":oauth_token"],
-        :oauth_token_secret => cred[":oauth_token_secret"]
+        :access_token => cred[":oauth_token"],
+        :access_token_secret => cred[":oauth_token_secret"]
       )
       tweets = @client.user_timeline(@user)
       for i in 0 ... @count.to_i
-      out = out + "<li>" + 
+      out = out + "<li>" +
         markdown.render(tweets[i].text) +
-        " <a href=\"http://twitter.com/" + @user + "/statuses/" + 
-        tweets[i].id.to_s + "\">"  + tweets[i].created_at.strftime("%I:%M %Y/%m/%d") + "</a> " + 
+        " <a href=\"http://twitter.com/" + @user + "/statuses/" +
+        tweets[i].id.to_s + "\">"  + tweets[i].created_at.strftime("%I:%M %Y/%m/%d") + "</a> " +
         "</li>"
       end
       out + "</ul>"
