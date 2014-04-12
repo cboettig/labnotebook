@@ -1,24 +1,23 @@
 # Author: Carl Boettiger, @cboettig
 # License: MIT
 #
-# A simple filter to access the sha of a page
+# A simple filter to access the git modification time of a page
 # Example use:
 #
-# {{ page.name | git_sha }}
+# {{ page.name | git_mod }}
 #
 
 require 'git'
 require 'json'
 
 module Jekyll
-  module GitSHAFilter
-    def git_sha(input)
+  module GitModFilter
+    def git_mod(input)
       path = input # File.join(".", page.dir, page.name)
       g = Git.open("/home/cboettig/Documents/labnotebook") # replace with site source path, see martin's code maybe
-      # modified = g.log(1).object(path).first.date
-      sha = g.log(1).object(path).first.sha
-      sha
+      mod = g.log(1).object(path).first.date
+      mod
     end
   end
 end
-Liquid::Template.register_filter(Jekyll::GitSHAFilter)
+Liquid::Template.register_filter(Jekyll::GitModFilter)
