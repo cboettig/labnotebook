@@ -14,7 +14,7 @@ module Jekyll
   module GitModFilter
     def git_mod(input)
       path = input # File.join(".", page.dir, page.name)
-      g = Git.open("/home/cboettig/Documents/labnotebook") # replace with site source path, see martin's code maybe
+      g = Git.open(".") # replace with site source path, see martin's code maybe
       mod = g.log(1).object(path).first.date
       mod
     end
