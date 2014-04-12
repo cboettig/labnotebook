@@ -56,17 +56,13 @@ module Jekyll
 
       def generate(site)
 
+        cred = YAML.load_file("_garb.yml")
+        puts "authenticating user" + cred[":username"]
 
         if(site.config['pageviews'])
           puts "Getting Google Analytics data"
 
           start = Time.now
-           ## Set timeouts to be extra patient if necessary
-  #        Garb.open_timeout = 120 # 2 minute timeout
-  #        Garb.read_timeout = 120 # 2 minute timeout
-
-          ## Read in credentials and authenticate
-          cred = YAML.load_file("_garb.yml")
 
 
           Garb::Session.api_key = cred[":api_key"]
