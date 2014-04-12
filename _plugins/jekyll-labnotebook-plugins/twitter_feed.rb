@@ -27,8 +27,7 @@ module Jekyll
       out = "<ul>"
 
 
-#      Twitter.connection_options = {:timeout => 50, :open_timeout => 20} # increase timeout to avoid frequent errors
-      cred = YAML.load_file("/home/cboettig/.twitter_auth.yaml")
+      cred = YAML.load_file("_twitter.yml")
 
       @client = Twitter::REST::Client.new(
         :consumer_key => cred[":consumer_key"],

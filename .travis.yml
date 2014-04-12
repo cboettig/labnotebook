@@ -3,7 +3,23 @@ before_install:
 install:
 - travis_retry cabal install pandoc pandoc-citeproc
 - travis_retry bundle install
-script: bundle exec rake site:deploy
+script:
+  # build the key files
+-  echo -e $twitter > _twitter.yml
+-  echo -e $twitter2 >> _twitter.yml
+-  echo -e $twitter3 >> _twitter.yml
+-  echo -e $garb > _garb.yml
+-  echo -e $garb2 >> _garb.yml
+  # build the jekyll site
+- bundle exec rake site:deploy
+  # cleanup 
+- rm -f _twitter.yml _garb.yml
+
 env:
   global:
-    secure: cKwJU5R37CCPdtRNyT9apF6gU3HL9VgWxrfLz5jTbSWWqKhspvZ34JkL4ylqmoQnw0WYDMb67jHe5Kf7JsGqNwfn/tn80jWmrIN4Bvph3jnx15yF031ceIRChSFSTx03xVLeYfejTtmzxEQ7WmegdiawZTZg/u9YaIESlZxi2Ks=
+  - secure: cKwJU5R37CCPdtRNyT9apF6gU3HL9VgWxrfLz5jTbSWWqKhspvZ34JkL4ylqmoQnw0WYDMb67jHe5Kf7JsGqNwfn/tn80jWmrIN4Bvph3jnx15yF031ceIRChSFSTx03xVLeYfejTtmzxEQ7WmegdiawZTZg/u9YaIESlZxi2Ks=
+  - secure: KQ/tQbK/mO+HOhs0bgPhJSmlqt0vYaHgzr6t6P/d8mxsSfF1VnbHS0ThXU/SlfFR5KupMEYMhkQzIlazg4bavXi4n6tbLF1gW7jggI4HThoh7dkuvZpO+gZ19oJdgMeHJ4NWyrmy0vjgL5XtNreKKbPsx9tu5806O1r1pN2yNk8=
+  - secure: ICYOapqOWdS9fv86120T6dAQoxW9ahRa8gwignJObwMHvYJw9U6NLbfA1BgmVDkkUxQXPLCgJtxWr6y5Y33RdtRdGOPDAx6rPqjx0AC3WJcg5vMRFwMSNff1Zw/jsXqPqRcAr8xeqqm5Gs6e+DUmeMeOtvfo9xu14FIOmW6OWrg=
+  - secure: ZlQM61DsmpTA6ePQ0v6yjsSqAzvaGQKebmIO+XTfsAX6Rse4dA/aScYdOWlPxAyQSfMIEIxPUqgSQVInrKWrmV0UtZg52Dmkm22f9kN6s+qoOQ1fY4PC/fenUkg+f1MJN+r1D59YPO+wi6G5j1etuuf7yl3QwOeKgXFcuoN5+bA=
+  - secure: ITMbrjgSq0rjbXshYCh0R1WS/dP48eZ8KFFPpaTuOc+hzrgnb/hnuB9MCACZ/Jpp5XlkAXkjGr6yzNKFt7N4IXKzJ+hUTJhndQW8Q2hBEfpY+woW+/EqorT2o0V4NM/8FtPmxXvLUofrZzmorlyitU/KFtXCuw6TZnVX95AfAF0=
+  - secure: Ivc+cIXxtTEiE0p8P7b4YQf72WD+8t2uRkr1Pb4OaPwqvOtzurWIxjTP58+LI6hm1KEuMfWs7AWS1EevMgCb8LdHoDXXb1NI42lWtKskaZI2qjaWv9KxAghQ9V0QqblAJTW+55B7Sipc9ff4KN3NHjQmdqrSKro6TUfpmtwp8D0=

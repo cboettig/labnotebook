@@ -42,6 +42,7 @@ analytics: UA-18401403-1 ## Google Analytics key (in _includes/analytics.html)
 exclude: 
   - _posts/source/
   - assets/figures
-
+  - _garb.yml
+  - _twitter.yml
 
 
