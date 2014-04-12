@@ -1,7 +1,7 @@
 {
   "/": [
-    "8076",
-    "21844"
+    "8078",
+    "21848"
   ],
   "/ Hastings student at UC Davis": [
     "0",
@@ -1700,8 +1700,8 @@
     "12"
   ],
   "/2011/04/08/treebase-exploratory-exercises-in-database-driven-phylogenetics.html": [
-    "26",
-    "36"
+    "27",
+    "37"
   ],
   "/2011/04/08/warning-signals-3.html": [
     "0",
@@ -1860,8 +1860,8 @@
     "199"
   ],
   "/2011/05/19/algorithms-group-mcmcmc.html": [
-    "491",
-    "568"
+    "493",
+    "570"
   ],
   "/2011/05/19/thursday-5.html": [
     "1",
@@ -2172,8 +2172,8 @@
     "15"
   ],
   "/2011/08/26/fishbase-from-r-some-xml-parsing.html": [
-    "581",
-    "667"
+    "582",
+    "668"
   ],
   "/2011/08/26/rfishbase-and-some-taxonomy-in-r-with-taxize.html": [
     "62",
@@ -2333,7 +2333,7 @@
   ],
   "/2011/10/12/rfishbase-tutorial-updated-extended.html": [
     "123",
-    "198"
+    "199"
   ],
   "/2011/10/12/wednesday-10.html": [
     "0",
@@ -2644,8 +2644,8 @@
     "49"
   ],
   "/2012/02/12/elegant-fast-data-manipulation-with-data-table.html": [
-    "1906",
-    "2086"
+    "1909",
+    "2090"
   ],
   "/2012/02/12/saturday-projects-reading-markdown-plugins.html": [
     "6",
@@ -2788,8 +2788,8 @@
     "4"
   ],
   "/2012/03/24/citations-in-markdown-using-knitr.html": [
-    "1791",
-    "2375"
+    "1792",
+    "2376"
   ],
   "/2012/03/24/citations-in-markdown-using-knitr.txt": [
     "0",
@@ -2872,8 +2872,8 @@
     "8"
   ],
   "/2012/05/01/Jekyll-vs-Wordpress.html": [
-    "2106",
-    "2711"
+    "2107",
+    "2712"
   ],
   "/2012/05/01/Jekyll-vs-Wordpress.html)": [
     "8",
@@ -2905,7 +2905,7 @@
   ],
   "/2012/05/06/research-workflow.html": [
     "1727",
-    "2678"
+    "2679"
   ],
   "/2012/05/06/research-workflow.html>....following": [
     "2",
@@ -3148,8 +3148,8 @@
     "1"
   ],
   "/2012/09/28/Welcome-to-my-lab-notebook.html": [
-    "1133",
-    "4142"
+    "1135",
+    "4144"
   ],
   "/2012/10/01/multiple-uncertainty.html": [
     "13",
@@ -3436,8 +3436,8 @@
     "18"
   ],
   "/2012/12/30/learning-jekyll.html": [
-    "3389",
-    "4354"
+    "3391",
+    "4356"
   ],
   "/2012/12/30/learning-jekyll.html?codekitCB=408422825.657119": [
     "1",
@@ -3784,8 +3784,8 @@
     "68"
   ],
   "/2013/05/28/notes.html": [
-    "80",
-    "126"
+    "81",
+    "129"
   ],
   "/2013/05/29/notes.html": [
     "32",
@@ -3876,8 +3876,8 @@
     "95"
   ],
   "/2013/06/24/notes.html": [
-    "106",
-    "150"
+    "108",
+    "152"
   ],
   "/2013/06/26/starting-an-EML-package-for-R.html": [
     "17",
@@ -4072,8 +4072,8 @@
     "1"
   ],
   "/2013/10/11/is-it-time-to-retire-pagels-lambda.html": [
-    "837",
-    "1099"
+    "838",
+    "1101"
   ],
   "/2013/10/16/notes.html": [
     "0",
@@ -4219,13 +4219,17 @@
     "0",
     "7"
   ],
+  "/2014/04/08/multiple-uncertainty-notes.html": [
+    "1",
+    "1"
+  ],
   "/2014/04/09/multiple-uncertainty-notes.html": [
-    "2",
-    "2"
+    "1",
+    "3"
   ],
   "/2014/04/10/multiple-uncertainty-notes.html": [
     "0",
-    "1"
+    "2"
   ],
   "/211": [
     "0",
@@ -10188,8 +10192,8 @@
     "629"
   ],
   "/community.html": [
-    "288",
-    "2960"
+    "289",
+    "2963"
   ],
   "/community?preview=true&preview_id=44&preview_nonce=186274066b": [
     "0",
@@ -10357,7 +10361,7 @@
   ],
   "/index.html": [
     "1304",
-    "6195"
+    "6197"
   ],
   "/index.html?search-text=": [
     "0",
@@ -10420,8 +10424,8 @@
     "20"
   ],
   "/lab-notebook.html": [
-    "3980",
-    "15389"
+    "3982",
+    "15394"
   ],
   "/lab-notebook.html revisited": [
     "0",
@@ -10832,8 +10836,8 @@
     "411"
   ],
   "/projects/nonparametric-bayes.html": [
-    "95",
-    "615"
+    "96",
+    "616"
   ],
   "/projects/open-science.html": [
     "54",
@@ -10921,7 +10925,7 @@
   ],
   "/research.html": [
     "874",
-    "7183"
+    "7186"
   ],
   "/research.html?theme=dark": [
     "0",
@@ -11417,7 +11421,7 @@
   ],
   "/teaching.html": [
     "514",
-    "3935"
+    "3937"
   ],
   "/teaching.html?search-text=asdf": [
     "0",
@@ -11777,7 +11781,7 @@
   ],
   "/vita.html": [
     "1910",
-    "7425"
+    "7427"
   ],
   "/vita.html?theme=dark+theme": [
     "0",
