@@ -59,7 +59,7 @@ namespace :site do
     Dir.chdir(CONFIG["destination"]) { sh "git checkout #{DESTINATION_BRANCH}" }
 
     # Generate the site
-    sh "bundle exec jekyll build"
+    sh "bundle exec jekyll build --trace"
 
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
