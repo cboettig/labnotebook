@@ -57,6 +57,7 @@ module Jekyll
       def generate(site)
 
         puts "Getting Google Analytics data"
+
         start = Time.now
          ## Set timeouts to be extra patient if necessary
 #        Garb.open_timeout = 120 # 2 minute timeout
@@ -65,7 +66,9 @@ module Jekyll
         ## Read in credentials and authenticate
         cred = YAML.load_file("/home/cboettig/.garb_auth.yaml")
 
+
         puts "Garb authenticating for " + cred[":username"]
+
 
         Garb::Session.api_key = cred[":api_key"]
         token = Garb::Session.login(cred[":username"], cred[":password"])
@@ -94,7 +97,6 @@ module Jekyll
                                         :start_date => Chronic.parse("2008-01-01"))
               page_results = Hash[page_data.collect{|row| [row.page_path, [row.exits, row.pageviews]]}]
 
-              puts page.url
               if defined?(page_results[page.url][1])
                 views = page_results[page.url][1]
               else
@@ -102,7 +104,6 @@ module Jekyll
               end
             end
             page.data['pageviews'] = views
-            puts views
           end
         end
 
@@ -117,6 +118,8 @@ module Jekyll
         end
 
       finish = Time.now
+
+
       puts "Time elapsed #{(finish - start)} seconds"
 
       end
