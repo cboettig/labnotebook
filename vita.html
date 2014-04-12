@@ -209,7 +209,7 @@ title: Vita
                                                                {{"https://orcid.org/0000-0002-1642-628X" | track_link}} >0000-0002-1642-628X</a></li></p>
 
 <p><i class="icon-calendar"></i> updated: <time 
-      datetime="{{ page.name | git_mod }}" 
+      datetime="{{ page.name | git_mod | date_to_string }}" 
       property="dc:modified">{{ page.name | git_mod }}</time></p>
 <br />
 
