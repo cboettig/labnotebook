@@ -1,4 +1,4 @@
-require 'feedzirra' # atom/rss API
+require 'feedjira' # atom/rss API
 require 'nokogiri'  # Parse HTML
 
 
@@ -15,7 +15,7 @@ module Jekyll
     end
     def render(context)
       puts "Mendeley feed by RSS with mendeley_feed.rb"
-      feed = Feedzirra::Feed.fetch_and_parse("http://www.mendeley.com/groups/" + @text + "/feed/rss/")
+      feed = Feedjira::Feed.fetch_and_parse("http://www.mendeley.com/groups/" + @text + "/feed/rss/")
       if defined?(feed.entries)
         out = "<ul>"
         # consider formatting properly

@@ -1,5 +1,4 @@
 source "https://rubygems.org/"
-ruby '2.0.0'
 
 # The Jekyll gem
 gem "jekyll"
@@ -11,7 +10,7 @@ gem "octokit", "~> 2.0"
 gem "nokogiri"
 
 # RSS parser (mendeley_feed, github_feed parsing)
-gem "feedzirra"
+gem "feedjira"
 
 # Natural language time parser (e.g. "Today", "Last Tuesday")
 gem "chronic"
@@ -20,7 +19,7 @@ gem "chronic"
 gem "twitter"
 
 # Google Analytics API, for google_analytics.rb plugin
-gem "garb", :git=>'git@github.com:Sija/garb.git'
+gem "garb"
 
 # JSON parser (probably not needed, garb and others import multi_json already)
 gem "json"
@@ -29,8 +28,10 @@ gem "json"
 gem "pandoc-ruby"
 
 # Git gem
-gem "git", :git=>'git@github.com:schacon/ruby-git'
+gem "git"
 
 gem "redcarpet"
+
+gem "psych"
 
 # vim: syntax=ruby
