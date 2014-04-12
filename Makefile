@@ -12,7 +12,7 @@ sync:
 
 ## Compile the site onto cboettig.github.om 
 jekyll: 
-	jekyll build -d ~/Documents/code/cboettig.github.com  
+	bundle exec jekyll build -d ~/Documents/code/cboettig.github.com  
 
 
 ## Upload to github

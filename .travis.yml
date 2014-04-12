@@ -1,0 +1,21 @@
+language: haskell
+
+before_install:
+  ## Install R (only needed for knitr integration)
+  #  - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
+  #  - chmod 755 ./travis-tool.sh
+  # - ./travis-tool.sh bootstrap
+
+install:
+  ## Install R packages (only for knitr integration) 
+  # - ./travis-tool.sh install_github rstudio/rmarkdown
+  # - ./travis-tool.sh install_deps
+  # install pandoc
+  - travis_retry cabal install pandoc pandoc-citeproc
+  # Install jekyll and dependencies
+  - travis_retry bundle install
+
+script: bundle exec rake site:deploy
+env:
+  global:
+    secure: 
