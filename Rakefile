@@ -21,10 +21,16 @@ if REPO == "#{USERNAME}.github.io"
   SOURCE_BRANCH = CONFIG['branch'] || "source"
   DESTINATION_BRANCH = "master"
 else
-  SOURCE_BRANCH = "master"
-  DESTINATION_BRANCH = "gh-pages"
+#  SOURCE_BRANCH = "master"
+ SOURCE_BRANCH = "travis"
+ DESTINATION_BRANCH = "gh-pages"
 end
 
+def check_destination
+  unless Dir.exist? CONFIG["destination"]
+    sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
+  end
+end
 
 
 namespace :site do
@@ -39,8 +45,10 @@ namespace :site do
 
     # Configure git if this is run in Travis CI
     if ENV["TRAVIS"]
-      sh "git config --global user.name '#{ENV['GIT_NAME']}'"
-      sh "git config --global user.email '#{ENV['GIT_EMAIL']}'"
+#      sh "git config --global user.name '#{ENV['GIT_NAME']}'"
+#      sh "git config --global user.email '#{ENV['GIT_EMAIL']}'"
+      sh "git config --global user.name '#{CONFIG['author.name']}'"
+      sh "git config --global user.email '#{CONFIG['author.email']}'"
       sh "git config --global push.default simple"
     end
 
