@@ -9,13 +9,19 @@ author:
   github: cboettig
   mendeley: carl-boettiger
 url: http://carlboettiger.info
-repo: https://github.com/cboettig/labnotebook # used in linking history
 
-## Google Analytics key (in _includes/analytics.html)
-analytics: UA-18401403-1 
+# Github username (for travis/rake tasks, standard use)
+username: cboettig
+repo: https://github.com/cboettig/labnotebook 
 
 
-## Markdown Parser (standard Jekyll argument, extended to special parser)
+
+#relative_source: ../labnotebook/
+destination: ../labnotebook-gh-pages/
+
+
+
+## Markdown Parser 
 markdown: pandoc
 pandoc:
   extensions: 
@@ -27,10 +33,14 @@ pandoc:
 
 
 permalink: /:year/:month/:day/:title.html
-exclude: [ _posts/source/, _posts/_private/, assets/figures]
-
 redirects: yes     ## A flag to turn on the redirects plugin
 pageviews: yes    ## toggle on sidebar pageviews 
+analytics: UA-18401403-1 ## Google Analytics key (in _includes/analytics.html)
+
+
+exclude: 
+  - _posts/source/
+  - assets/figures
 
 
 
