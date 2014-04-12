@@ -33,10 +33,10 @@ module Jekyll
        out = "<ul>"
        for i in 0 ... [repo.size, 8].min ## displays up to 5.  sorted by date?
          lab = ""
-         if repo[i].labels[0].class == Hashie::Mash  # Get labels for issues, with color, where applicable
-           lab = " (<font color=\"#" + repo[i].labels[0].color +
-                 "\">" + repo[i].labels[0].name  + "</font>)"
-         end
+#         if repo[i].labels[0]  # Get labels for issues, with color, where applicable
+#           lab = " (<font color=\"#" + repo[i].labels[0].color +
+#                 "\">" + repo[i].labels[0].name  + "</font>)"
+#         end
          ## Actually only pulls open issues
          if repo[i].state == "open" # Print only open issues
            out = out + "<li> <a href=\"" + repo[i].html_url + "\">" +  repo[i].title + "</a> " + lab + "</li>"
@@ -80,7 +80,7 @@ module Jekyll
            ## Adjust the link to a proper url
            repo[i].commit.url.gsub("api\.", "").gsub("repos/","").gsub("git/", "").gsub("commits/", "commit/") +
            "\">" +
-           DateTime.parse(repo[i].commit.author.date).to_time.strftime("%I:%M %P %Y/%m/%d") +
+           repo[i].commit.author.date.strftime("%I:%M %P %Y/%m/%d") +
            "</a>" +
            "</li>"
        end
