@@ -13,7 +13,7 @@ url: http://carlboettiger.info
 
 # Github username (for travis/rake tasks, standard use)
 username: cboettig
-repo: https://github.com/cboettig/labnotebook 
+repo: labnotebook 
 
 
 
