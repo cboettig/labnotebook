@@ -1,13 +1,13 @@
 source "https://rubygems.org/"
-ruby '2.0.0' 
+ruby '2.0.0'
 
-# The Jekyll gem 
+# The Jekyll gem
 gem "jekyll"
 
 # Github API (octokit plugin)
-gem "octokit"
+gem "octokit", "~> 2.0"
 
-# HTML / XML parser 
+# HTML / XML parser
 gem "nokogiri"
 
 # RSS parser (mendeley_feed, github_feed parsing)
