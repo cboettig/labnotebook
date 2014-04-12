@@ -5,15 +5,15 @@ install:
 - travis_retry bundle install
 script:
   # build the key files
--  echo -e $twitter > _twitter.yml
--  echo -e $twitter2 >> _twitter.yml
--  echo -e $twitter3 >> _twitter.yml
--  echo -e $garb > _garb.yml
--  echo -e $garb2 >> _garb.yml
-  # build the jekyll site
-- bundle exec rake site:deploy
-  # cleanup 
-- rm -f _twitter.yml _garb.yml
+- echo -e $twitter > _twitter.yml
+- echo -e $twitter2 >> _twitter.yml
+- echo -e $twitter3 >> _twitter.yml
+- echo -e $garb > _garb.yml
+- echo -e $garb2 >> _garb.yml
+  ##  build the jekyll site
+#- bundle exec rake site:deploy
+  ## cleanup 
+- rm _twitter.yml _garb.yml
 
 env:
   global:
