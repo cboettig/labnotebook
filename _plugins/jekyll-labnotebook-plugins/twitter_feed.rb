@@ -17,7 +17,7 @@ module Jekyll
     end
     def render(context)
 
-      if(site.twitter_api)
+      if(site.config['twitter_api'])
         puts "Generating twitter feed with twitter API and twitter_feed.rb"
 
         # Initialize a redcarpet markdown renderer to autolink urls

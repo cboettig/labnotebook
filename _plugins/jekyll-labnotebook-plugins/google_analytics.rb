@@ -57,7 +57,7 @@ module Jekyll
       def generate(site)
 
 
-        if(site.pageviews)
+        if(site.config['pageviews'])
           puts "Getting Google Analytics data"
 
           start = Time.now
