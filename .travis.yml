@@ -1,8 +1,5 @@
 language: haskell
-before_install: 
-install:
-  #- travis_retry cabal install pandoc pandoc-citeproc
-  #- travis_retry bundle install
+
 script:
   # build the key files
 - echo -e $twitter > _twitter.yml
