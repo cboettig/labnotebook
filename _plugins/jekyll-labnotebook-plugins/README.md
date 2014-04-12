@@ -16,33 +16,3 @@ and Liquid I may roll these up as proper generic plugins.
 
 For planned extensions and work-in-progress, see [Issues](https://github.com/cboettig/labnotebook/issues)
 
-## Installation
-
-Install the necessary gem dependencies first.  These dependencies mean that you'll have to compile/build the Jekyll site locally, as these are not available on the Jekyll version running automatically on Github.
-
-    sudo gem install octokit feedzirra nokogiri garb 
-
-To install the plugins simply put them in a folder named `_plugins` in your
-Jekyll blog's root directory.  
-
-## Examples
-
-List recent open issues on a given repo:
-
-    {% octokit_issues pdg_control%}
-
-List recent commits on a given repo:
-
-    {% octokit_commits pdg_control%}
-
-Add twitter feed for given user
-
-    {% twitter_feed cboettig%} 
-
-Add github feed
-
-    {% github_feed %}
-
-
-
-
