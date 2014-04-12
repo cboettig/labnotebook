@@ -1,20 +1,4 @@
-## Standard Jeyll config options
-permalink: /:year/:month/:day/:title.html
-exclude: [ _posts/source/, _posts/_private/, assets/figures]
-lunr_excludes: [atom.xml, 404.html, search.html, categories.md, tags.md, calendar.md]
 
-## Toggles to activate/deactivate various plugins  
-## Deactivate these for faster site generation, or in creating archival versions ##
-
-redirects: yes     ## A flag to turn on the redirects plugin
-searchindex: yes   ## A flag to turn on the search index plugin.  
-pageviews: yes    ## toggle on sidebar pageviews 
-lunrsearch: no    ## Javascript will still be included, but Jekyll won't build the database
-gitstamps: yes
-
-
-## Useful metadata, available to a liquid filter as site.title, site.author.name, etc
-## Used in _inculdes templates headers and footers.  
 title: Lab Notebook 
 tagline: Theoretical ecology and evolution
 author:
@@ -40,5 +24,13 @@ pandoc:
 #    - template: 'assets/datauri_template.html'   # Use with 'self-contained' to avoid header text in body
 #    - self-contained                             # Archive images in posts as URIs.  Very slow, for archiving only.  
 #    - mathml                                     # Use mathml for equations (Archival, HTML5/XML valid syntax)
+
+
+permalink: /:year/:month/:day/:title.html
+exclude: [ _posts/source/, _posts/_private/, assets/figures]
+
+redirects: yes     ## A flag to turn on the redirects plugin
+pageviews: yes    ## toggle on sidebar pageviews 
+
 
 
