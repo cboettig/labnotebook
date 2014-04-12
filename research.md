@@ -74,6 +74,7 @@ I also enjoy exposure to fieldwork whenever I can convince colleagues to take me
 My somewhat uncommon approach to my own research ocassionally attracts attention of those outside my own field.  I have recently been interviewed by various journals asking to share my perspective and motivation.
 
 On peer review of scientific code:
+
 * Check Hayden E (2013). "Mozilla Plan Seeks to Debug Scientific Code." _Nature_, 501, pp. 472-472. {{ "10.1038/501472a" | doi_parser }}.
 
 A few entries provide more detail on my perspective on [software papers](http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html) and on [research scripts](http://carlboettiger.info/2013/09/25/mozilla-software-review.html).
