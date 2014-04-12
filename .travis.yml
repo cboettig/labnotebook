@@ -1,8 +1,8 @@
 language: haskell
 before_install: 
 install:
-- travis_retry cabal install pandoc pandoc-citeproc
-- travis_retry bundle install
+  #- travis_retry cabal install pandoc pandoc-citeproc
+  #- travis_retry bundle install
 script:
   # build the key files
 - echo -e $twitter > _twitter.yml
@@ -10,6 +10,8 @@ script:
 - echo -e $twitter3 >> _twitter.yml
 - echo -e $garb > _garb.yml
 - echo -e $garb2 >> _garb.yml
+- wc _garb.yml
+- wc _twitter.yml
   ##  build the jekyll site
 #- bundle exec rake site:deploy
   ## cleanup 
