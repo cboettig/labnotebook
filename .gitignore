@@ -1,7 +1,4 @@
 _plugins/_cache
 _site
 assets/figures
-pageviews.json
-gitdata.json
-*library.json
-*/*library.json
+*.json
