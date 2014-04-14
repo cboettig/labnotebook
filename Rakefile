@@ -32,14 +32,10 @@ REPO = CONFIG["repo"] || "#{USERNAME}.github.io"
 SOURCE_BRANCH = "master"
 DESTINATION_REPO = "#{USERNAME}.github.com"
 DESTINATION_BRANCH = "master"
-
-DESTINATION_DIR = CONFIG["destination"] || "_site"
-
-puts DESTINATION_DIR
+CONFIG["destination"] = CONFIG["destination"]
 
 def check_destination
-  unless Dir.exist? DESTINATION_DIR
-    sh "mkdir #{DESTINATION_DIR}"
+  unless Dir.exist? CONFIG["destination"]
     Open3.popen3("git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}"){ }
   end
 end
@@ -66,7 +62,7 @@ namespace :site do
     check_destination
 
 #    sh "git checkout #{SOURCE_BRANCH}"
-    Dir.chdir(DESTINATION_DIR) {
+    Dir.chdir(CONFIG["destination"]) {
       sh "git checkout #{DESTINATION_BRANCH}"
     }
 
@@ -76,9 +72,10 @@ namespace :site do
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
     Dir.chdir(CONFIG["destination"]) do
+      sh "pwd"
       sh "rm -f _twitter.yml _garb.yml"
       sh "git add --all ."
-      sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
+      sh "git commit -m 'Updating site'"
       sh "git push origin #{DESTINATION_BRANCH}"
       puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
     end
