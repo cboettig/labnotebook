@@ -8,27 +8,35 @@
 require 'rake'
 require 'date'
 require 'yaml'
+require 'open3'
 
 CONFIG = YAML.load(File.read('_config.yml'))
 USERNAME = CONFIG["username"] || ENV['GIT_NAME']
 REPO = CONFIG["repo"] || "#{USERNAME}.github.io"
 
-# Determine source and destination branch
-# User or organization: source -> master
-# Project: master -> gh-pages
-# Name of source branch for user/organization defaults to "source"
-if REPO == "#{USERNAME}.github.io"
-  SOURCE_BRANCH = CONFIG['branch'] || "source"
-  DESTINATION_BRANCH = "master"
-else
-#  SOURCE_BRANCH = "master"
- SOURCE_BRANCH = "travis"
- DESTINATION_BRANCH = "gh-pages"
-end
+## Deploy on #{USERNAME}.github.io, with source on a source branch
+
+#if REPO == "#{USERNAME}.github.io"
+#  SOURCE_BRANCH = CONFIG['branch'] || "source"
+#  DESTINATION_BRANCH = "master"
+
+## Deploy on a regular repo, with source on master branch and site on gh-pages
+
+#else
+# SOURCE_BRANCH = "master"
+# DESTINATION_BRANCH = "gh-pages"
+#end
+
+# Deploy on a different repo
+
+SOURCE_BRANCH = "master"
+DESTINATION_REPO = "#{USERNAME}.github.com"
+DESTINATION_BRANCH = "master"
+
 
 def check_destination
   unless Dir.exist? CONFIG["destination"]
-    sh "git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]} 1>/dev/null"
+    Open3.open("git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}"){ }
   end
 end
 
@@ -45,9 +53,9 @@ namespace :site do
 
     # Configure git if this is run in Travis CI
     if ENV["TRAVIS"]
-      sh "git config --global user.name '#{CONFIG['author']['name']}' 1>/dev/null"
-      sh "git config --global user.email '#{CONFIG['author']['email']}' 1>/dev/null"
-      sh "git config --global push.default simple 1>/dev/null"
+      Open3.open("git config --global user.name '#{CONFIG['author']['name']}'"){ }
+      Open3.open("git config --global user.email '#{CONFIG['author']['email']}'"){ }
+      Open3.open("git config --global push.default simple"){ }
     end
 
     # Make sure destination folder exists as git repo
