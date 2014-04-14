@@ -57,7 +57,6 @@ module Jekyll
       def generate(site)
 
         cred = YAML.load_file("_garb.yml")
-        puts "authenticating user" + cred[":username"]
 
         if(site.config['pageviews'])
           puts "Getting Google Analytics data"
