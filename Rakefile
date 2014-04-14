@@ -39,7 +39,7 @@ def check_destination
   unless Dir.exist? CONFIG["destination"]
     puts "Checking destination"
     Open3.popen3("git clone https://#{USERNAME}:#{TOKEN}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}") do |stdin, stdout, sterr|
-      stdout.read
+      sterr.read
     end
   end
 end
