@@ -15,7 +15,7 @@ url: http://carlboettiger.info
 username: cboettig
 repo: labnotebook 
 
-destination: _site
+destination: ../cboettig.github.com
 
 ## Markdown Parser 
 markdown: pandoc
