@@ -13,6 +13,7 @@ require 'open3'
 CONFIG = YAML.load(File.read('_config.yml'))
 USERNAME = CONFIG["username"] || ENV['GIT_NAME']
 REPO = CONFIG["repo"] || "#{USERNAME}.github.io"
+TOKEN = ENV['GH_TOKEN']
 
 ## Deploy on #{USERNAME}.github.io, with source on a source branch
 
@@ -36,7 +37,8 @@ CONFIG["destination"] = CONFIG["destination"]
 
 def check_destination
   unless Dir.exist? CONFIG["destination"]
-    Open3.popen3("git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}"){ }
+    puts TOKEN
+    Open3.popen3("git clone https://#{USERNAME}:#{TOKEN}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}"){ }
   end
 end
 
