@@ -33,9 +33,13 @@ SOURCE_BRANCH = "master"
 DESTINATION_REPO = "#{USERNAME}.github.com"
 DESTINATION_BRANCH = "master"
 
+DESTINATION_DIR = CONFIG["destination"] || "_site"
+
+puts DESTINATION_DIR
 
 def check_destination
-  unless Dir.exist? CONFIG["destination"]
+  unless Dir.exist? DESTINATION_DIR
+    Open3.popen3("mkdir #{DESTINATION_DIR}"){|stdout|  stdout.read }
     Open3.popen3("git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}"){ }
   end
 end
@@ -62,7 +66,9 @@ namespace :site do
     check_destination
 
     sh "git checkout #{SOURCE_BRANCH}"
-    Dir.chdir(CONFIG["destination"]) { sh "git checkout #{DESTINATION_BRANCH}" }
+    Dir.chdir(DESTINATION_DIR) {
+      sh "git checkout #{DESTINATION_BRANCH}"
+    }
 
     # Generate the site
     sh "bundle exec jekyll build --trace"

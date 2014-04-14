@@ -15,12 +15,7 @@ url: http://carlboettiger.info
 username: cboettig
 repo: labnotebook 
 
-
-
-#relative_source: ../labnotebook/
-destination: ../labnotebook-gh-pages/
-
-
+destination: _site
 
 ## Markdown Parser 
 markdown: pandoc
