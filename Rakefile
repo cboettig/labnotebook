@@ -39,7 +39,7 @@ puts DESTINATION_DIR
 
 def check_destination
   unless Dir.exist? DESTINATION_DIR
-    Open3.popen3("mkdir #{DESTINATION_DIR}"){|stdout|  stdout.read }
+    sh "mkdir #{DESTINATION_DIR}"
     Open3.popen3("git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}"){ }
   end
 end
@@ -65,7 +65,7 @@ namespace :site do
     # Make sure destination folder exists as git repo
     check_destination
 
-    sh "git checkout #{SOURCE_BRANCH}"
+#    sh "git checkout #{SOURCE_BRANCH}"
     Dir.chdir(DESTINATION_DIR) {
       sh "git checkout #{DESTINATION_BRANCH}"
     }
