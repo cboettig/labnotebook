@@ -4,8 +4,6 @@ title: Research
 
 ---
 
-<div class="span7">
-
 <img src="assets/img/wadirum.png" style="float:right; margin: 10px 10px;"/>
 I am interested in a variety of problems in theoretical
 ecology and evolution that are closely related at least in my
@@ -63,35 +61,24 @@ I also enjoy exposure to fieldwork whenever I can convince colleagues to take me
 ------------------------------------------------------------------------------
 
 
-### General information
+### General information & perspective pieces
 
 - [Overview of my project workflow](http://www.carlboettiger.info/2012/05/06/research-workflow.html)
 - [Data management plan](http://www.carlboettiger.info/2012/10/09/data-management-plan.htm)
+- [What I look for in software papers](http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html) and [research scripts](http://carlboettiger.info/2013/09/25/mozilla-software-review.html).
+
 
 
 ### Perspectives and practices in Open Science
 
 My somewhat uncommon approach to my own research ocassionally attracts attention of those outside my own field.  I have recently been interviewed by various journals asking to share my perspective and motivation.
 
-On peer review of scientific code:
-
+* Mascarelli, A. (2014) "Research tools: Jump off the page." _Nature_ 507, 523–525. {{ "10.1038/nj7493-523a" | doi_parser }}
 * Check Hayden E (2013). "Mozilla Plan Seeks to Debug Scientific Code." _Nature_, 501, pp. 472-472. {{ "10.1038/501472a" | doi_parser }}.
-
-A few entries provide more detail on my perspective on [software papers](http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html) and on [research scripts](http://carlboettiger.info/2013/09/25/mozilla-software-review.html).
-
-On data sharing practices:
-
 * Van Noorden R (2013). "Data-Sharing: Everything on Display." _Nature_, 500, pp. 243-245. {{ "10.1038/nj7461-243a" | doi_parser }}
-
-My own practices are documented in [my research workflow](http://www.carlboettiger.info/2012/05/06/research-workflow.html)
-
-* Gershwin, Virginia (2013). "Turning Point: Carl Boettiger" _Nature_, 493 p 711  {{ "10.1038/nj7434-711a" | doi_parser }}
-
+* Gewin, Virginia (2013). "Turning Point: Carl Boettiger" _Nature_, 493 p 711  {{ "10.1038/nj7434-711a" | doi_parser }}
 * Wald, Chelsea (2010).  "Scientists Embrace Openness" _Science_. {{ "10.1126/science.caredit.a1000036" | doi_parser }}
 
-I and several other researchers practicing open notebook science are interviewed about the practice.
 
 
-
-</div> <!-- end span7-->
 
