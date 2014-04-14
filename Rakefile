@@ -36,7 +36,7 @@ DESTINATION_BRANCH = "master"
 
 def check_destination
   unless Dir.exist? CONFIG["destination"]
-    Open3.open("git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}"){ }
+    Open3.popen3("git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}"){ }
   end
 end
 
@@ -53,9 +53,9 @@ namespace :site do
 
     # Configure git if this is run in Travis CI
     if ENV["TRAVIS"]
-      Open3.open("git config --global user.name '#{CONFIG['author']['name']}'"){ }
-      Open3.open("git config --global user.email '#{CONFIG['author']['email']}'"){ }
-      Open3.open("git config --global push.default simple"){ }
+      Open3.popen3("git config --global user.name '#{CONFIG['author']['name']}'"){ }
+      Open3.popen3("git config --global user.email '#{CONFIG['author']['email']}'"){ }
+      Open3.popen3("git config --global push.default simple"){ }
     end
 
     # Make sure destination folder exists as git repo
