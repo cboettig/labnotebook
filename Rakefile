@@ -9,6 +9,8 @@ require 'rake'
 require 'date'
 require 'yaml'
 require 'open3'
+require 'jekyll'
+
 
 CONFIG = YAML.load(File.read('_config.yml'))
 USERNAME = CONFIG["username"] || ENV['GIT_NAME']
@@ -38,8 +40,12 @@ CONFIG["destination"] = CONFIG["destination"]
 def check_destination
   unless Dir.exist? CONFIG["destination"]
     puts "Checking destination"
+
+    #@repo = Git.clone("https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git", :path => DESTINATION)
+
+
     Open3.popen3("git clone https://#{USERNAME}:#{TOKEN}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}") do |stdin, stdout, sterr|
-      sterr.read
+      stdin.close
     end
   end
 end
