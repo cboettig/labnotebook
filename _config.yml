@@ -30,12 +30,13 @@ pandoc:
 
 permalink: /:year/:month/:day/:title.html
 redirects: yes     ## A flag to turn on the redirects plugin
-pageviews: no    ## toggle on sidebar pageviews 
+pageviews: yes    ## toggle on sidebar pageviews 
 twitter_api: yes
 analytics: UA-18401403-1 ## Google Analytics key (in _includes/analytics.html)
 
 
-exclude: 
+exclude:
+  - .travis.yml
   - _posts/source/
   - assets/figures
   - _garb.yml
