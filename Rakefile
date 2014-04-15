@@ -10,46 +10,53 @@ require 'date'
 require 'yaml'
 require 'open3'
 require 'jekyll'
+require 'git'
 
+# read Jekyll configuration
+config = Jekyll::Configuration::DEFAULTS
+if File.exist? '_config.yml'
+  config = config.merge(Jekyll::Configuration.new.read_config_file('_config.yml'))
+end
+@destination = config["destination"]
+
+# read information from git repo
+# source branch is the current branch
+# destination branch is derived from source branch name
+path = File.expand_path File.dirname(__FILE__)
+repo = Git.open(path)
+
+
+@source_branch = repo.branches.find { |b| b.name if b.current && b.remote.nil? }
+@destination_branch = @source_branch == "master" ? "gh-pages" : "master"
+# @destination_branch = "master" ## doen by the above
+
+
+@git_user = repo.config('user.name')
+@git_email = repo.config('user.email')
+@remote = repo.remote(:origin).url
 
 CONFIG = YAML.load(File.read('_config.yml'))
 USERNAME = CONFIG["username"] || ENV['GIT_NAME']
-REPO = CONFIG["repo"] || "#{USERNAME}.github.io"
-TOKEN = ENV['GH_TOKEN']
+REPO = CONFIG["repo"]
+DESTINATION_REPO = CONFIG["destination_repo"]
+TOKEN = ENV["GH_TOKEN"]
 
-## Deploy on #{USERNAME}.github.io, with source on a source branch
-
-#if REPO == "#{USERNAME}.github.io"
-#  SOURCE_BRANCH = CONFIG['branch'] || "source"
-#  DESTINATION_BRANCH = "master"
-
-## Deploy on a regular repo, with source on master branch and site on gh-pages
-
-#else
-# SOURCE_BRANCH = "master"
-# DESTINATION_BRANCH = "gh-pages"
-#end
-
-# Deploy on a different repo
-
-SOURCE_BRANCH = "master"
-DESTINATION_REPO = "#{USERNAME}.github.com"
-DESTINATION_BRANCH = "master"
-CONFIG["destination"] = CONFIG["destination"]
 
 def check_destination
   unless Dir.exist? CONFIG["destination"]
     puts "Checking destination"
+    sh 'mkdir ../cboettig.github.com'
+#    @repo = Git.clone("https://github.com/#{USERNAME}/#{DESTINATION_REPO}.git", :name => "#{USERNAME}:#{TOKEN}", :path => @destination)
+    @repo = Git.clone("https://#{USERNAME}:#{TOKEN}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git", 'name', :path => @destination)
+#    @repo = Git.clone("https://#{USERNAME}:#{TOKEN}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git", 'name', :path => "../cboettig.github.com")
 
-    #@repo = Git.clone("https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git", :path => DESTINATION)
+#    Open3.popen3("git clone https://#{USERNAME}:#{TOKEN}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}") do |stdin, stdout, stderr|
+#      stderr.read
+#    end
 
 
-    Open3.popen3("git clone https://#{USERNAME}:#{TOKEN}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}") do |stdin, stdout, sterr|
-      stdin.close
-    end
   end
 end
-
 
 namespace :site do
 
@@ -63,8 +70,8 @@ namespace :site do
 
     # Configure git if this is run in Travis CI
     if ENV["TRAVIS"]
-      sh "git config --global user.name '#{CONFIG['author']['name']}'"
-      sh "git config --global user.email '#{CONFIG['author']['email']}'"
+      sh "git config --global user.name '#{@git_user}'"
+      sh "git config --global user.email '#{@git_email}'"
       sh "git config --global push.default simple"
     end
 
@@ -73,7 +80,7 @@ namespace :site do
 
 #    sh "git checkout #{SOURCE_BRANCH}"
     Dir.chdir(CONFIG["destination"]) {
-      sh "git checkout #{DESTINATION_BRANCH}"
+      sh "git checkout #{@destination_branch}"
     }
 
     # Generate the site
@@ -86,8 +93,8 @@ namespace :site do
       sh "rm -f _twitter.yml _garb.yml"
       sh "git add --all ."
       sh "git commit -m 'Updating site'"
-      sh "git push origin #{DESTINATION_BRANCH}"
-      puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
+      sh "git push origin #{@destination_branch}"
+      puts "Pushed updated branch #{@destination_branch} to GitHub Pages"
     end
   end
 end
