@@ -40,7 +40,7 @@ USERNAME = CONFIG["username"] || ENV['GIT_NAME']
 REPO = CONFIG["repo"]
 DESTINATION_REPO = CONFIG["destination_repo"]
 TOKEN = ENV["GH_TOKEN"]
-
+DESTINATION_BRANCH = "master"
 
 def check_destination
   unless Dir.exist? CONFIG["destination"]
@@ -70,8 +70,8 @@ namespace :site do
 
     # Configure git if this is run in Travis CI
     if ENV["TRAVIS"]
-      sh "git config --global user.name '#{@git_user}'"
-      sh "git config --global user.email '#{@git_email}'"
+      sh "git config --global user.name '#{CONFIG['author']['name']}'"
+      sh "git config --global user.email '#{CONFIG['author']['email']}'"
       sh "git config --global push.default simple"
     end
 
@@ -80,7 +80,7 @@ namespace :site do
 
 #    sh "git checkout #{SOURCE_BRANCH}"
     Dir.chdir(CONFIG["destination"]) {
-      sh "git checkout #{@destination_branch}"
+      sh "git checkout #{DESTINATION_BRANCH}"
     }
 
     # Generate the site
@@ -93,8 +93,8 @@ namespace :site do
       sh "rm -f _twitter.yml _garb.yml"
       sh "git add --all ."
       sh "git commit -m 'Updating site'"
-      sh "git push origin #{@destination_branch}"
-      puts "Pushed updated branch #{@destination_branch} to GitHub Pages"
+      sh "git push origin #{DESTINATION_BRANCH}"
+      puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
     end
   end
 end
