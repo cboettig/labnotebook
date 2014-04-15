@@ -58,14 +58,6 @@ entries, current literature I'm reading on the topic, etc.
 
 I also enjoy exposure to fieldwork whenever I can convince colleagues to take me along. Though my own research has no field component, I'm thankful for recent opportunities from surveying pitfall traps for tiger salamanders to helping excavate icthysaur fossils in the Nevada desert. Have a field site that needs an extra pair of hands? I have over eight years of experience as an alpine guide and can carry a shovel.
 
-------------------------------------------------------------------------------
-
-
-### General information & perspective pieces
-
-- [Overview of my project workflow](http://www.carlboettiger.info/2012/05/06/research-workflow.html)
-- [Data management plan](http://www.carlboettiger.info/2012/10/09/data-management-plan.htm)
-- [What I look for in software papers](http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html) and [research scripts](http://carlboettiger.info/2013/09/25/mozilla-software-review.html).
 
 
 
@@ -79,6 +71,9 @@ My somewhat uncommon approach to my own research ocassionally attracts attention
 * Gewin, Virginia (2013). "Turning Point: Carl Boettiger" _Nature_, 493 p 711  {{ "10.1038/nj7434-711a" | doi_parser }}
 * Wald, Chelsea (2010).  "Scientists Embrace Openness" _Science_. {{ "10.1126/science.caredit.a1000036" | doi_parser }}
 
+**Related posts**:
 
-
+- [Overview of my project workflow](http://www.carlboettiger.info/2012/05/06/research-workflow.html)
+- [Data management plan](http://www.carlboettiger.info/2012/10/09/data-management-plan.htm)
+- [What I look for in software papers](http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html) and [research scripts](http://carlboettiger.info/2013/09/25/mozilla-software-review.html).
 
