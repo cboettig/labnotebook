@@ -76,11 +76,13 @@ namespace :site do
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
     Dir.chdir(CONFIG["destination"]) do
-      sh "pwd"
       sh "rm -f _twitter.yml _garb.yml"
       sh "git add --all ."
       sh "git commit -m 'Updating site'"
-      sh "git push origin #{DESTINATION_BRANCH}"
+      Open3.popen3("git push origin #{DESTINATION_BRANCH}") do |stdin, stdout, stderr|
+        tmp = stderr.read
+      end
+
       puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
     end
   end
