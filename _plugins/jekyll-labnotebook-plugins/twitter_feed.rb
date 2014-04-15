@@ -1,5 +1,18 @@
+# Author: Carl Boettiger
+# License: MIT
 # Now requires authentication.  [See issue](https://github.com/sferik/twitter/issues/315#issuecomment-9204980)
 # on how to write authentication file
+#
+# Save authentication credentials in a file named _twitter.yml in the root directory as follows:
+#
+# :consumer_key: XXXXXXXXXXXXXXXX
+# :consumer_secret: XXXXXXXXXXXXXX
+# :oauth_token: XXXXXXXXXX
+# :oauth_token_secret: XXXXXXXXXXXXXXXX
+#
+# (Where your tokens are in place of the XXs)
+# For travis deployment, export these using travis encryption and allow travis to write the the yml file.
+#
 
 require 'twitter'   # Twitter API
 require 'redcarpet' # Formatting links

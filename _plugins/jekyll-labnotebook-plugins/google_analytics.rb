@@ -13,7 +13,7 @@
 #
 # Configuration:
 #
-#  Create an authentication file in your home directory (adjust the
+#  Create an authentication file in your project directory (adjust the
 #  YAML.load_file line below) with the following structure:
 #
 #
@@ -22,15 +22,16 @@
 #  :password: "XXXXXXXXXXXXX"
 #  :ua: "UA-XXXXXXXX-X"
 #
-#  and save the file as .garb_auth.yaml.  This prevents your
-#  secret credentials from being visible in the source code of your
-#  Jekyll site.
+#  and save the file as _garb.yml. Remember to add `_garb.yml` to
+#  .gitignore and the exclude list of `_config.yml`, (as you see in
+#  this repository.)  This prevents your secret credentials from being
+#  visible in the source code of your Jekyll site.
 #
-# Usage:
+# Usage: Add the following liquid code to any page or post template or contents:
 #
-#  Use by invoking the liquid code: (Note: No spaces around page.url!)
-#      {% pageviews %}{{page.url}}{% endpageviews %}
-#  to show the pageviews of page.url.  Update the start date below,
+#   {{ page.pageviews }}
+#
+# Configuration: Update the start date below,
 #  or remove to show views in the last 30 days.  Of course the analytics
 #  data shown can be arbitrarily customized, see the garb gem repository
 #  for details.
