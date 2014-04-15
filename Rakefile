@@ -19,6 +19,7 @@ if File.exist? '_config.yml'
 end
 @destination = config["destination"]
 
+
 # read information from git repo
 # source branch is the current branch
 # destination branch is derived from source branch name
@@ -35,12 +36,20 @@ repo = Git.open(path)
 @git_email = repo.config('user.email')
 @remote = repo.remote(:origin).url
 
+puts "From Jekyll parsing of config"
+puts @destination
+puts @git_user
+puts @remote
+
+
 CONFIG = YAML.load(File.read('_config.yml'))
 USERNAME = CONFIG["username"] || ENV['GIT_NAME']
 REPO = CONFIG["repo"]
 DESTINATION_REPO = CONFIG["destination_repo"]
 TOKEN = ENV["GH_TOKEN"]
 DESTINATION_BRANCH = "master"
+@destination = DESTINATION_REPO
+
 
 def check_destination
   unless Dir.exist? CONFIG["destination"]
@@ -78,10 +87,13 @@ namespace :site do
     # Make sure destination folder exists as git repo
     check_destination
 
+### make sure the focal repo is on the source branch
 #    sh "git checkout #{SOURCE_BRANCH}"
-    Dir.chdir(CONFIG["destination"]) {
-      sh "git checkout #{DESTINATION_BRANCH}"
-    }
+
+### Make sure destination directory is on the gh-pages/html branch
+#    Dir.chdir(CONFIG["destination"]) {
+#      sh "git checkout #{DESTINATION_BRANCH}"
+#    }
 
     # Generate the site
     sh "bundle exec jekyll build --trace"
