@@ -27,7 +27,11 @@ Figure 3
 
 ![](http://cboettig.github.com/multiple_uncertainty/carl_fig3.svg)
 
+**Now fixed**. See:
 
+* Updated code version of [carl_fig3.m](https://github.com/cboettig/multiple_uncertainty/blob/be2597935e166f1311f7d43df91750d07a69f7cc/inst/matlab/carl_fig3.m)
+
+![](http://carlboettiger.info/multiple_uncertainty/carl_figure3.svg)
 
 ----------------------------
 
