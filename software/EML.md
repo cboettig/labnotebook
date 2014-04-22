@@ -11,8 +11,8 @@ layout: software
 
 [![Build Status](https://travis-ci.org/cboettig/labnotebook.svg?branch=master)](https://travis-ci.org/cboettig/labnotebook)
 
-[About]
-=======
+About
+=====
 
 `EML` is an R package for reading, writing, integrating and publishing data using 
 the Ecological Metadata Language (EML) format.
@@ -37,14 +37,14 @@ as the source._
 
 
 
-[Installation]
-==============
+Installation
+============
 
 Install the R package:
 
 
 
-```coffee
+```r
 library("devtools")
 install_github("EML", "ropensci")
 ```
@@ -54,7 +54,7 @@ While the dependencies for basic functionality are kept to a minimum,
 to access all the functions and tests implemented in `EML` you'll need
 several additional packages from CRAN.
 
-```coffee
+```r
 install.packages(c("knitr", "rfigshare", "testthat", "RCurl", "dataone", "rrdf"))
 ```
 
@@ -62,14 +62,14 @@ install.packages(c("knitr", "rfigshare", "testthat", "RCurl", "dataone", "rrdf")
 Load the package:
 
 
-```coffee
+```r
 library("EML")
 ```
 
 
 
-[Usage]
-======
+Usage
+=====
 
 
 Writing R data into EML
@@ -82,7 +82,7 @@ can be created much like a `data.frame` by specifying additional arguments
 
 
 
-```coffee
+```r
 dat = data.set(river = c("SAC",  "SAC",   "AM"),
                spp   = c("king",  "king", "ccho"),
                stg   = c("smolt", "parr", "smolt"),
@@ -123,7 +123,7 @@ We will also specify a default creator who will also be used as the
 contact person for EML files created in this session.
 
 
-```coffee
+```r
 eml_config(creator="Carl Boettiger <cboettig@gmail.com>")
 ```
 
@@ -139,7 +139,7 @@ generate a minimally valid EML file documenting this dataset.
 
 
 
-```coffee
+```r
 eml_write(dat, file = "EML_example.xml")
 ```
 
@@ -166,7 +166,7 @@ This ensures that other software can correctly parse and interpret the
 metadata document:
 
 
-```coffee
+```r
 eml_validate("EML_example.xml") 
 ```
 
@@ -205,7 +205,7 @@ required to use EML and run the examples in the other sections.  See the
 <!-- We don't want to generate a DOI every time we run the vignette -->
 
 
-```coffee
+```r
 eml_publish("EML_example.xml", 
             description="Example EML file from EML",
             categories = "Ecology", 
@@ -245,7 +245,7 @@ automating the more tedious aspects of data discovery and integration.
 
 
 
-```coffee
+```r
 obj <- eml_read("EML_example.xml")
 ```
 
@@ -258,13 +258,13 @@ component elements of the metadata file.  See the documentation for a
 complete list.
 
 
-```coffee
+```r
 dat <- eml_get(obj, "data.set")
 ```
 
 
 
-```coffee
+```r
 eml_get(obj, "contact")
 ```
 
@@ -274,7 +274,7 @@ eml_get(obj, "contact")
 
 
 
-```coffee
+```r
 eml_get(obj, "citation_info")
 ```
 
@@ -333,7 +333,7 @@ Testing and development
 The advanced vignettes include some cutting edge functionality that depends on additional packages are not yet on CRAN and may not be stable.  To take advantage of these functions when indicated in the tutorial, consider installing the following packages:
 
 <!-- Not working
-```coffee
+```r
 install_github("Sxslt", "omegahat")
 install_github("XMLSchema", "omegahat")
 install_github("RHTMLForms", "omegahat")
@@ -342,7 +342,7 @@ install_github("RHTMLForms", "omegahat")
 
 
 
-```coffee
+```r
 library("devtools")
 install_github("RWordXML", "duncantl") 
 install.packages("Sxslt", repos="http://www.omegahat.org/R", type="source")
@@ -357,15 +357,17 @@ source.
 
 
 
-[License]
-=========
+License
+=======
 
 See [LICENSE](http://github.com/ropensci/EML/blob/master/LICENSE)
 
 
-[Support]
-=========
+Support
+=======
 
-***Suggestions, feature requests, bug reports and 
+***Suggestions, feature requests, bug reports, pull requests and 
 other feedback welcome!*** Please see our [issues
 tracker](https://github.com/ropensci/EML/issues)
+
+Interested in contributing to the package? Want to know more about how the project is organized? Please see our [contributing](http://github.com/ropensci/EML/blob/master/CONTRIBUTING.md) guidelines.  
