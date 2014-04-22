@@ -205,20 +205,19 @@ title: Vita
 </div>
 </div>
 <div class="span2 sidebar"><!-- Custom sidebar -->   
-<p> <i class-"icon-user"></i> Orcid ID: <a property="http://purl.org/spar/datacite/orcid" 
-                                                               href="https://orcid.org/0000-0002-1642-628X" 
-                                                               {{"https://orcid.org/0000-0002-1642-628X" | track_link}} >0000-0002-1642-628X</a></li></p>
 
-<p><i class="icon-calendar"></i> updated: <time 
-      datetime="{{ page.name | git_mod | date_to_string }}" 
-      property="dc:modified">{{ page.name | git_mod }}</time></p>
+<p><i class="icon-calendar"></i> Vita last updated: <time 
+      datetime="{{ page.name | git_mod }}" 
+      property="dc:modified">{{ page.name | git_mod | date_to_string }}</time></p>
 <br />
-
 
 
 <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/labnotebook/issues/89"> (What is this?)</a></small></p>
 <p><small> <a href="https://github.com/{{site.username}}/{{ site.repo }}/commit/{{ page.name | git_sha }}/{{ page.path }}"> {{ page.name | git_sha }}</a></small></p>
 
+<p> <i class-"icon-user"></i> My Orcid ID: <a property="http://purl.org/spar/datacite/orcid" 
+                                                               href="https://orcid.org/0000-0002-1642-628X" 
+                                                               {{"https://orcid.org/0000-0002-1642-628X" | track_link}} >0000-0002-1642-628X</a></li></p>
 
 <br />
 
