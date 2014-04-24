@@ -6,39 +6,41 @@ exclude_from_search: true
 ---
 
 <div class="row">
-  <div class="span12">
+  <div class="col-md-12">
     <div class="sidebar">
       <div class="row">
-        <div class="span5 accordion" id="accordion2">
+        <div class="col-md-5 accordion">
         {% for category in site.categories %} 
-          <div class="accordion-group">
-            <div class="accordion-heading">
-              <a class="accordion-toggle" data-toggle="collapse" 
-                 data-parent="#accordion2" href="#{{ category[0] }}" 
-                 style="text-align:center; color: #ffffff;
-                 background-image:url('/assets/img/notebook.png'); 
-                 background-repeat:no-repeat; background-size: 100%;" 
-                 rel="tooltip" title="click to expand/collapse"><h3 
-                    class="notebook-category">{{ category[0] | join: "#" }} ({{ category[1].size }})</h3></a>
-            </div>
-            <div id="{{ category[0] }}" class="accordion-body collapse"> <!-- add class="in" to start expanded -->
-              <div class="accordion-inner">
-                <ul>
-                  {% assign pages_list = category[1] %}  
-                  {% include JB/pages_list %}
-                </ul>
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <a class="panel-toggle" data-toggle="collapse" 
+                   data-parent="#accordion" href="#{{ category[0] }}" 
+                   style="text-align:center; color: #ffffff;
+                   background-image:url('/assets/img/notebook.png'); 
+                   background-repeat:no-repeat; background-size: 100%;" 
+                   rel="tooltip" title="click to expand/collapse"><h3 
+                      class="notebook-category">{{ category[0] | join: "#" }} ({{ category[1].size }})</h3></a>
+              </div>
+              <div id="{{ category[0] }}" class="panel-collapse collapse"> <!-- add class="in" to start expanded -->
+                <div class="panel-body">
+                  <ul>
+                    {% assign pages_list = category[1] %}  
+                    {% include JB/pages_list %}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         {% endfor %}
         </div>
-        <div class="span3 sidebar">
-          <p> I think of categories like seperate lab notebooks. Each entry is placed into one of the notebooks, offering a high-level classification of content. Most regular research entries are either in "ecology" or "evolution".  Being electronic, entries are very occassionally cross-listed between notebooks when appropriate.  Click on a notebook to see a chronological list of the entries.  Finer categorization of posts can be provided by <a href="/tags.html">tags</a>.  For even finer resolution, try searching or parsing the source. </p>
-        </div> <!-- end span3--> 
+        <div class="col-md-3 sidebar">
+
+        </div> <!-- end col-md-3--> 
       </div> <!-- end row--> 
     </div> <!-- end sidebar--> 
   </div> <!-- end row-->
-</div> <!-- end span12-->
+</div> <!-- end col-md-12-->
 
 
 
