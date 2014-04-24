@@ -3,13 +3,13 @@
   {% include header.html %}
 
       <div class="row">
-        <div class="span8">
+        <div class="col-md-8">
           {{ content }}
         </div>
 
 
         <!-- Custom sidebar -->      
-        <div class="span4">
+        <div class="col-md-4">
           <div class="sidebar">
             Posted on
             <time pubdate datetime="{{ page.date }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time>. <br>

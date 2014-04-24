@@ -8,7 +8,7 @@ layout: default
 
 
 <div class="row feed">
-  <div class="span3 offset1">
+  <div class="col-md-3 col-md-offset-1">
     <h4>  <a property="account" href="https://github.com/{{site.author.github}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><i class="icon-github" alt="github"></i> Coding </a></h4> 
     <div class="excerpt">
       <div class="scroll">
@@ -16,7 +16,7 @@ layout: default
       </div>
     </div>
   </div>
-  <div class="span3">
+  <div class="col-md-3">
     <h4> <a property="account" href="https://twitter.com/{{site.author.twitter}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><i class="icon-twitter"></i> Discussing </a></h4> 
      <div class="excerpt">
       <div class="scroll">
@@ -24,7 +24,7 @@ layout: default
       </div>
     </div> 
   </div> 
-  <div class="span3">
+  <div class="col-md-3">
     <h4> <a href="http://www.mendeley.com/groups/634301/theoretical-ecology/papers/" onClick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); return false;"><i class="icon-book"></i> Reading </a></h4> 
     <div class="excerpt">
       <div class="scroll">
@@ -36,7 +36,7 @@ layout: default
 
 <hr>
 <div class="row postpreview">
-  <div class="span11 offset1">
+  <div class="col-md-11 col-md-offset-1">
     <div class="row">
       <h4> <a href="{{ site.url }}/atom.xml"
               onClick="recordOutboundLink(this,
@@ -44,7 +44,7 @@ layout: default
               style="color: inherit;"
               ><i class="icon-rss" ></i> Entries</a></h4>
       {% for post in site.posts limit:3 %}
-        <div class="span3">
+        <div class="col-md-3">
           {% include postexcerpt.html %}
         </div>
       {% endfor %}
@@ -52,7 +52,7 @@ layout: default
 
     <div class="row">
       {% for post in site.posts limit:3 offset:3 %}
-        <div class="span3">
+        <div class="col-md-3">
           {% include postexcerpt.html %}
         </div>
       {% endfor %}
@@ -60,7 +60,7 @@ layout: default
 
     <div class="row">
       {% for post in site.posts limit:3 offset:6 %}
-        <div class="span3">
+        <div class="col-md-3">
           {% include postexcerpt.html %}
         </div>
       {% endfor %}
@@ -70,13 +70,13 @@ layout: default
 </div> <!--end row -->
 
 <div class="row">
-  <div class="span11 offset1">
+  <div class="col-md-11 col-md-offset-1">
     <div class="socialicons">
       <p> <a href="/archive.html"><i class="icon-calendar"></i> All entries by date</a></p> 
       <p> <a href="/categories.html"><i class="icon-list"></i> All entries by category</a> </p>
       <p> <a href="/tags.html"><i class="icon-tags"></i> All entries by tag</a> </p>
     </div>
-  </div> <!--end span9 -->
+  </div> <!--end col-md-9 -->
 </div> <!--end row -->
 
 
