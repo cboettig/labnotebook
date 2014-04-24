@@ -1,45 +1,9 @@
 <footer class="footer">
-  <!-- ************* Buttons to toggle theme CSS ********************** -->
-
-  <!--
-    <div class="row">
-      <div class="span12">
-        <form style="font-size:10px" class="pull-right">
-          <a onclick="switch_style('dark'); 
-                      recordOutboundLink(this, 'Outbound Links', 'dark theme'); 
-                      return false;" 
-             name="theme" value="dark" id="dark" 
-             class="btn btn-mini"><span class="showtooltip" 
-                                        title="switch to dark theme"><i class="icon-adjust"></i>
-                                   </span></a>
-          
-          <a onclick="switch_style('light'); 
-                      recordOutboundLink(this, 'Outbound Links', 'light theme'); 
-                      return false;" 
-             name="theme" value="light" id="light" 
-             class="btn btn-mini"><span class="showtooltip" 
-                                        title="switch to light theme"><i class="icon-certificate"></i>
-                                  </span></a>
-
-
-           <a onclick="switch_style('white'); 
-                      recordOutboundLink(this, 'Outbound Links', 'white theme'); 
-                      return false;" 
-             name="theme" value="white" id="white" 
-             class="btn btn-mini"><span class="showtooltip" 
-                                        title="switch to white theme"><i class="icon-circle-blank"></i>
-                                 </span></a>
-        </form>
-      </div>
-    </div>
-
-    -->
-
 
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="span3 socialicons" style="font-size:20px" typeof="foaf:Person" about="{{site.url}}#me">
+    <div class="col-md-3 socialicons" style="font-size:20px" typeof="foaf:Person" about="{{site.url}}#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js" language="javascript"></script> 
           <a rel="foaf:account" alt="twitter" href="https://twitter.com/{{site.author.twitter}}" 
@@ -64,34 +28,25 @@
          return false;"><i class="icon-rss"></i></a>
        </p>
     </div>
+
+    
     <!--**************** End social links **************************** -->
-    <div class="span1">
-      <br />
-    </div>
-    <div class="span4">
 
-      <p>
-      <a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="http://onsclaims.wikispaces.com/file/view/ons-aci2-icon.png" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a>
 
-      <!--
-      <a title="This site uses linked data semantics. Click to extract as RDF XML." class="btn btn-mini showtooltip" style="font-size: .8em" 
-       href="http://any23.org/?format=rdfxml&validate=validate&uri={{ site.url }}{{ page.url }}"><i 
-         class="icon-cloud-download"  onclick="recordOutboundLink(this, 'Outbound Links', 'RDF'); return false;"></i> RDF</a>
--->
-      </p>
+    <div class="col-md-4 col-md-offset-1">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="http://onsclaims.wikispaces.com/file/view/ons-aci2-icon.png" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
-    <div class="span1">
-      <br />
-    </div>
-    <div class="span3">
+
+
+    <div class="col-md-3 col-md-offset-1">
       <p>
       <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" alt="CC0"/></a> 
       </p>
     </div>
-
   </div>
-  {% include COINS.html %}
 
+
+  {% include COINS.html %}
 </footer>
 
 

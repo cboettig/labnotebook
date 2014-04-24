@@ -26,5 +26,4 @@ function toggle_R() {
   }
 }
 
-document.write('<button type="button" onclick="toggle_R();" style="position: absolute; top: 0; right: 0;">Hide/Show Source</button>')
 

@@ -11,10 +11,10 @@
  <br />
 
   {% if page.previous %}
-    <p><a class="btn btn-mini" rel="prev" href='{{ page.previous.url }}'><i class="icon-chevron-left"></i> prev</a>
+    <p><a class="btn btn-default" rel="prev" href='{{ page.previous.url }}'><i class="icon-chevron-left"></i> prev</a>
   {% endif %}
   {% if page.next %}
-  <a class="btn btn-mini" rel="next" href='{{ page.next.url }}'>next <i class="icon-chevron-right"></i></a></p>
+  <a class="btn btn-default" rel="next" href='{{ page.next.url }}'>next <i class="icon-chevron-right"></i></a></p>
   {% else %}
     </p>
     {% endif %}
@@ -23,7 +23,7 @@
 
   <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
             return false;" 
-          class="btn btn-mini" 
+          class="btn btn-default" 
           href="https://github.com/{{site.username}}/{{ site.repo }}/commits/master/_posts/{{page.path}}"><i class="icon-time"></i> history</a></p>
 
   <br />
@@ -52,10 +52,9 @@
 -->
     
   <br/>
-
   {% if page.code %}
-  <p> <input type="button" class="btn btn-mini" value="toggle code" id="toggle_code" /> </p>
+     <script src="/assets/js/toggleR.js"></script>
+     <button class="btn btn-default" type="button" onclick="toggle_R();">Hide/Show Source</button>
   {% endif %}
-
 
 </aside>

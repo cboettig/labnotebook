@@ -1,15 +1,14 @@
 
-Layouts 
+Layouts
 -------
 
 
-A collection of layouts for various pages in the notebook. 
+A collection of layouts for various pages in the notebook.
 
 ## Common layouts
 
-* `post` is the standard layout for posts. Provides a span 7, offset 1 column and a span 4 sidebar 
+* `post` is the standard layout for posts. Provides a span 7, offset 1 column and a span 4 sidebar
 * `page` is the standard layout for pages. Provides a span8, offset 1 single column.
-* `project` is the layout for project pages, with a project navbar (hardcoded) (including ../research.md)
 
 ## Scaffold layouts
 
