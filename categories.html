@@ -6,41 +6,32 @@ exclude_from_search: true
 ---
 
 <div class="row">
-  <div class="col-md-12">
-    <div class="sidebar">
-      <div class="row">
-        <div class="col-md-5 accordion">
-        {% for category in site.categories %} 
-          <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <a class="panel-toggle" data-toggle="collapse" 
-                   data-parent="#accordion" href="#{{ category[0] }}" 
-                   style="text-align:center; color: #ffffff;
-                   background-image:url('/assets/img/notebook.png'); 
-                   background-repeat:no-repeat; background-size: 100%;" 
-                   rel="tooltip" title="click to expand/collapse"><h3 
-                      class="notebook-category">{{ category[0] | join: "#" }} ({{ category[1].size }})</h3></a>
-              </div>
-              <div id="{{ category[0] }}" class="panel-collapse collapse"> <!-- add class="in" to start expanded -->
-                <div class="panel-body">
-                  <ul>
-                    {% assign pages_list = category[1] %}  
-                    {% include JB/pages_list %}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
+  <div class="col-md-8 accordion">
+  {% for category in site.categories %} 
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default" 
+        style="background-image:url('/assets/img/notebook.png'); 
+               background-repeat:no-repeat; background-size: 100%;">
+        <div class="panel-collapse">
+          <a class="panel-toggle" data-toggle="collapse" 
+            data-parent="#accordion" href="#{{ category[0] }}"> 
+          <h2 style="text-align:center; color: #ffffff; font-weight:bold" 
+             rel="tooltip" title="click to expand/collapse"
+             class="notebook-category">{{ category[0] | join: "#" }} ({{ category[1].size }})</h2></a>
         </div>
-        <div class="col-md-3 sidebar">
-
-        </div> <!-- end col-md-3--> 
-      </div> <!-- end row--> 
-    </div> <!-- end sidebar--> 
-  </div> <!-- end row-->
-</div> <!-- end col-md-12-->
+        <div id="{{ category[0] }}" class="panel-collapse collapse"> <!-- add class="in" to start expanded -->
+          <div class="panel-body">
+            <ul>
+              {% assign pages_list = category[1] %}  
+              {% include JB/pages_list %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div> <!-- end row-->
 
 
 
