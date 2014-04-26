@@ -11,12 +11,11 @@ require 'yaml'
 require 'open3'
 
 CONFIG = YAML.load(File.read('_config.yml'))
-USERNAME = CONFIG["username"] || ENV['GIT_NAME']
-REPO = CONFIG["repo"] || "#{USERNAME}.github.io"
+USERNAME = CONFIG["author"]["github"] || ENV['GIT_NAME']
 TOKEN = ENV['GH_TOKEN']
 
 ## Deploy on #{USERNAME}.github.io, with source on a source branch
-
+#REPO = CONFIG["repo"] || "#{USERNAME}.github.io"
 #if REPO == "#{USERNAME}.github.io"
 #  SOURCE_BRANCH = CONFIG['branch'] || "source"
 #  DESTINATION_BRANCH = "master"
