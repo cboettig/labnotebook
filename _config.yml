@@ -20,8 +20,8 @@ keep_files: figures
 
 
 ## Instead of needing an internal plugin, the pandoc parser for Jekyll is completely provided by the external gem
-gems:
-  - jekyll-pandoc
+#gems:
+#  - jekyll-pandoc
 
 ## Markdown Parser 
 markdown: pandoc
