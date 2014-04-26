@@ -149,7 +149,7 @@ DEPENDENCIES
   jekyll-assets (~> 0.7.6)
   jekyll-pandoc (~> 0.0.1)
   jekyll-scholar (~> 2.0.0)
-  json
+  json (~> 1.8)
   nokogiri
   octokit (~> 2.0)
   pandoc-ruby (~> 0.7.5)

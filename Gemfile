@@ -9,7 +9,7 @@ gem "jekyll-scholar", "~> 2.0.0"
 gem "jekyll-pandoc", "~> 0.0.1"
 gem 'pandoc-ruby', '~> 0.7.5'
 gem 'psych', '~> 2.0.5'
-gem "json"
+gem "json", '~>1.8'
 
 #gem "faraday"
 #gem "faraday_middleware"
