@@ -1,16 +1,26 @@
 language: haskell
-before_install: 
+
+
+before_install:
+  # Install R
+  - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
+  - chmod 755 ./travis-tool.sh
+  - ./travis-tool.sh bootstrap
+
 install:
-- travis_retry cabal install pandoc pandoc-citeproc
-- travis_retry bundle install
+  - ./travis-tool.sh install_deps
+  - travis_retry cabal install pandoc pandoc-citeproc
+  - travis_retry bundle install
+
 script:
-- echo -e $twitter > _twitter.yml
-- echo -e $twitter2 >> _twitter.yml
-- echo -e $twitter3 >> _twitter.yml
-- echo -e $garb > _garb.yml
-- echo -e $garb2 >> _garb.yml
-- bundle exec rake site:deploy
-- rm _twitter.yml _garb.yml
+  - echo -e $twitter > _twitter.yml
+  - echo -e $twitter2 >> _twitter.yml
+  - echo -e $twitter3 >> _twitter.yml
+  - echo -e $garb > _garb.yml
+  - echo -e $garb2 >> _garb.yml
+  - bundle exec rake site:deploy
+  - rm _twitter.yml _garb.yml
+
 env:
   global:
   - secure: VsIGjVbcGVsuNwTFOcnndTzxlpIoOp3x5HyMQ+9CiTKGg6rsSAZihMunOXp4woI6Tj/1uT339onTq0saf5+3QEcUR2OcGz+lo6M/4AW2rkcG8rpu8kWN4OzLR1Qn5vYzpkg2/HbdSA9aZDta6bmw8jkitMt3UyRZj/LX/MRM6mo=
