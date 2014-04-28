@@ -16,8 +16,8 @@ repo: https://github.com/cboettig/labnotebook # URL for source code repo
 destination: ../cboettig.github.com
 
 # should be the knitr figure path, avoids jekyll clobbering these files
-keep_files: 
-  - figures
+# Must always include .git (added by default if keep_files not specified)
+keep_files:  ['.git','figures']
 
 
 ## Instead of needing an internal plugin, the pandoc parser for Jekyll is completely provided by the external gem
