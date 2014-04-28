@@ -20,7 +20,8 @@ destination: ../cboettig.github.com
 keep_files:  ['.git','figures']
 
 
-## Instead of needing an internal plugin, the pandoc parser for Jekyll is completely provided by the external gem
+## Instead of needing an internal plugin, the pandoc parser for 
+## Jekyll is completely provided by the external gem. (Fails to compile at this time, so turned off)
 #gems:
 #  - jekyll-pandoc
 
