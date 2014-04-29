@@ -1,5 +1,4 @@
 _site
-assets/figures
-*.json
+google_analytics.json
 _garb.yml
 _twitter.yml
