@@ -10,10 +10,7 @@ author:
   mendeley: carl-boettiger
   email: cboettig@gmail.com
 url: http://carlboettiger.info
-
-# Github username (for travis/rake tasks, standard use)
-username: cboettig
-repo: labnotebook 
+repo: https://github.com/cboettig/labnotebook 
 
 destination: ../cboettig.github.com
 
