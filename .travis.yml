@@ -18,7 +18,7 @@ script:
   - echo -e $twitter3 >> _twitter.yml
   - echo -e $garb > _garb.yml
   - echo -e $garb2 >> _garb.yml
-  - bundle exec rake site:deploy
+  - bundle exec rake travis 
   - rm -f _twitter.yml _garb.yml
 
 env:
