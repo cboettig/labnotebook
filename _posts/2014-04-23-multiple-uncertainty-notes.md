@@ -41,12 +41,12 @@ matrix to zero:
 
 ### lognormal
 
-![](http://carlboettiger.info/multiple_uncertainty/lognormal_multiple_uncertainty.svg)
+![](http://cboettig.github.com/multiple_uncertainty/lognormal_multiple_uncertainty.svg)
 
 
 ### Uniform
 
-![](http://carlboettiger.info/multiple_uncertainty/multiple_uncertainty.svg)
+![](http://cboettig.github.com/multiple_uncertainty/multiple_uncertainty.svg)
 
 ### Comparisons
 
