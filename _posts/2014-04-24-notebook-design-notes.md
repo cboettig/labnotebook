@@ -8,9 +8,11 @@ category: labnotebook
 
 
 
-Flat UI design ([1](http://www.sitepoint.com/getting-started-flat-ui-design/), [2](http://en.wikipedia.org/wiki/Flat_UI_Design)). Basic concept is that users now realize they can click on things without them looking like actual three-dimensional buttons. (Along with links, checkboxes, and forms). Frequently seems to use many different [colors](http://flatuicolors.com) on a single page to bring some life back, though this might just make the design look like Windows 8 instead.
+Reading a little about Flat UI design ([1](http://www.sitepoint.com/getting-started-flat-ui-design/), [2](http://en.wikipedia.org/wiki/Flat_UI_Design)). Basic concept is that users now realize they can click on things without them looking like actual three-dimensional buttons. (Along with links, checkboxes, and forms). Frequently seems to use many different [colors](http://flatuicolors.com) on a single page to bring some life back, though this might just make the design look like Windows 8 instead. I've started noticing this everwhere now that I know what it is.
 
-Easy enough to implement in web design thanks to projects like [Flat-UI](http://designmodo.github.io/Flat-UI/). Not psyched about their colors or components myself, but rather nice to see the way they approach theming Bootstrap 3.1.1 without altering the original Bootstrap css. (Can potentially involve duplicating much of the original LESS).  I've found it easy to theme by adding a customized `variables.less` under the original (thereby overwriting the original where specified while otherwise using the original as default) and then adding my own `custom.less` at the bottom of the `bootstrap.less` file that wraps them all together.
+Easy enough to implement in web design thanks to projects like [Flat-UI](http://designmodo.github.io/Flat-UI/). Not psyched about their colors or components myself, but rather nice to see the way they approach theming Bootstrap 3.1.1 without altering the original Bootstrap css. (Can potentially involve duplicating much of the original LESS).
+
+I've found it easy to theme by adding a customized `variables.less` under the original (thereby overwriting the original where specified while otherwise using the original as default) and then adding my own `custom.less` at the bottom of the `bootstrap.less` file that wraps them all together.
 
 
 Looking into upgrading my css to Twitter [Bootstrap 3.1.1](http://getbootstrap.com). They have replaced a simple Makefile with the rather heavy nodejs based Grunt to compile the css. No doubt there are good reasons for this, but a couple rather terrible gotchas in building from the LESS (see below).  Otherwise the upgrades are mostly straight forward with a little regex to adopt the new grid class syntax.  After swapping in my old `.less` files as described above I only needed to update the navigation bar and the accordion folding on categories to have the transition completed.  Changes are subtle, but:
@@ -43,6 +45,11 @@ Developing almost anything (Ruby, R, javascript, haskell, tex, etc) seems to req
 - Configuring Custom URL / Domain name.
 - Configuring [Github CDN](https://github.com/blog/1715-faster-more-awesome-github-pages) with custom domain.  Not quite clear how this works, see query to [webmasters SO](http://webmasters.stackexchange.com/questions/56826/do-i-set-a-dns-a-record-for-the-new-github-pages-to-use-their-cdn/56862#56862).
 
+* __Edit__: Relatively straight-forward to fix. Adjusted dreamhost settings for carlboettiger.info from DNS to a redirect to www.carlboettiger.info. With the CNAME already set for www.carlboettiger.info and the Github CNAME configured, the rest is automatic.  Yay for for a free and easy CDN from Github.
+
+* Have to wonder: is it then still worth using alternative CDNs, e.g. for CSS and Javascript.  Currently MathJax, FontAwesome4 icons, JQuery, and Twitter Bootstrap Javascript are all on external CDNs.
+
+*
 
 ### Version managing the output (as well as the source)
 
