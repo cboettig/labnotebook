@@ -12,7 +12,7 @@ author:
 url: http://carlboettiger.info
 repo: https://github.com/cboettig/labnotebook 
 
-destination: ../cboettig.github.com
+destination: _site 
 
 ## Markdown Parser 
 markdown: pandoc
