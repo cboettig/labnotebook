@@ -1,3 +1,6 @@
+require 'fileutils'
+require 'rake'
+require 'tmpdir'
 require 'yaml'
 CONFIG = YAML.load(File.read('_config.yml'))
 
@@ -35,10 +38,5 @@ task :travis do
     end
   end
 end
-
-
-
-
-
 
 
