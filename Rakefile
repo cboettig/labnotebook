@@ -9,6 +9,7 @@ require 'rake'
 require 'date'
 require 'yaml'
 require 'open3'
+require 'fileutils'
 
 CONFIG = YAML.load(File.read('_config.yml'))
 USERNAME = CONFIG["author"]["github"] || ENV['GIT_NAME']
@@ -24,10 +25,12 @@ else
  SOURCE_BRANCH = "master"
  DESTINATION_BRANCH = "gh-pages"
 end
+DESTINATION_REPO = REPO
 
 def check_destination
   unless Dir.exist? CONFIG["destination"]
     puts "Checking destination"
+    FileUtils.mkdir_p CONFIG["destination"]
     Open3.popen3("git clone https://#{USERNAME}:#{TOKEN}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}") do |stdin, stdout, sterr|
       tmp = sterr.read
     end
@@ -55,7 +58,8 @@ namespace :site do
     # Make sure destination folder exists as git repo
     check_destination
 
-#    sh "git checkout #{SOURCE_BRANCH}"
+    sh "git checkout #{SOURCE_BRANCH}"
+    sh "ls"
     Dir.chdir(CONFIG["destination"]) {
       sh "git checkout #{DESTINATION_BRANCH}"
     }
