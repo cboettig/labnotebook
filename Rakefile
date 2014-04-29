@@ -1,83 +1,80 @@
-#############################################################################
-#
-# Modified version of jekyllrb Rakefile
-# https://github.com/jekyll/jekyll/blob/master/Rakefile
-#
-#############################################################################
-
-require 'rake'
-require 'date'
-require 'yaml'
-require 'open3'
+# Standard library
 require 'fileutils'
+require 'rake'
+require 'tmpdir'
+require 'yaml'
 
-CONFIG = YAML.load(File.read('_config.yml'))
-USERNAME = CONFIG["author"]["github"] || ENV['GIT_NAME']
-TOKEN = ENV['GH_TOKEN']
+# Load the configuration file
+config = YAML.load_file '_config.yml'
+config[:destination] ||= '_site/'
+config[:sub_content] ||= []
+destination = File.join config[:destination], '/'
 
-# Deploy on #{USERNAME}.github.io, with source on a source branch
-REPO = CONFIG["repo"] || "#{USERNAME}.github.io"
-if REPO == "#{USERNAME}.github.io"
-  SOURCE_BRANCH = CONFIG['branch'] || "source"
-  DESTINATION_BRANCH = "master"
-# Deploy on a regular repo, with source on master branch and site on gh-pages
-else
- SOURCE_BRANCH = "master"
- DESTINATION_BRANCH = "gh-pages"
+# Set "rake draft" as default task
+task :default => :draft
+
+# Spawn a server and kill it gracefully when interrupt is received
+def spawn *cmd
+  pid = Process.spawn 'bundle', 'exec', *cmd
+
+  switch = true
+  Signal.trap 'SIGINT' do
+    Process.kill( :QUIT, pid ) && Process.wait
+    switch = false
+  end
+  while switch do sleep 1 end
 end
-DESTINATION_REPO = REPO
 
-def check_destination
-  unless Dir.exist? CONFIG["destination"]
-    puts "Checking destination"
-    FileUtils.mkdir_p CONFIG["destination"]
-    Open3.popen3("git clone https://#{USERNAME}:#{TOKEN}@github.com/#{USERNAME}/#{DESTINATION_REPO}.git #{CONFIG["destination"]}") do |stdin, stdout, sterr|
-      tmp = sterr.read
-    end
+# rake build
+desc 'Generate the site'
+task :build do
+  system 'bundle', 'exec', 'jekyll', 'build'
+  config[:sub_content].each do |content|
+    repo = content[0]
+    branch = content[1]
+    dir = content[2]
+    rev = content[3]
+    Dir.chdir config[:destination] do
+      FileUtils.mkdir_p dir
+      system "git clone -b #{branch} #{repo} #{dir}"
+      Dir.chdir dir do
+        system "git checkout #{rev}" if rev
+        FileUtils.remove_entry_secure '.git'
+        FileUtils.remove_entry_secure '.nojekyll' if File.exists? '.nojekyll'
+      end if dir
+    end if Dir.exists? config[:destination]
   end
 end
 
 
-namespace :site do
+desc 'Generate site from Travis CI and publish site to GitHub Pages.'
+task :travis do
+  # if this is a pull request, do a simple build of the site and stop
+  if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
+    puts 'Pull request detected. Executing build only.'
+    system 'bundle exec rake build'
+    next
+  end
 
-  desc "Generate the site and push changes to remote origin"
-  task :deploy do
-    # Detect pull request
-    if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
-      puts 'Pull request detected. Not proceeding with deploy.'
-      exit
-    end
+  repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:').strip
+  deploy_url = repo.gsub %r{https://}, "https://#{ENV['GH_TOKEN']}@"
+  deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
+  rev = %x(git rev-parse HEAD).strip
 
-    # Configure git if this is run in Travis CI
-    if ENV["TRAVIS"]
-      sh "git config --global user.name '#{CONFIG['author']['name']}'"
-      sh "git config --global user.email '#{CONFIG['author']['email']}'"
-      sh "git config --global push.default simple"
-    end
+  Dir.mktmpdir do |dir|
+    dir = File.join dir, 'site'
+    system 'bundle exec rake build'
+    fail "Build failed." unless Dir.exists? destination
+    system "git clone --branch #{deploy_branch} #{repo} #{dir}"
+    system %Q(rsync -rt --del --exclude=".git" --exclude=".nojekyll" #{destination} #{dir})
+    Dir.chdir dir do
+      # setup credentials so Travis CI can push to GitHub
+      system "git config user.name '#{ENV['GIT_NAME']}'"
+      system "git config user.email '#{ENV['GIT_EMAIL']}'"
 
-    # Make sure destination folder exists as git repo
-    check_destination
-
-    sh "git checkout #{SOURCE_BRANCH}"
-    sh "ls"
-    Dir.chdir(CONFIG["destination"]) {
-      sh "git checkout #{DESTINATION_BRANCH}"
-    }
-
-    # Generate the site
-    sh "bundle exec jekyll build --trace"
-
-    # Commit and push to github
-    sha = `git log`.match(/[a-z0-9]{40}/)[0]
-    Dir.chdir(CONFIG["destination"]) do
-      sh "rm -f _twitter.yml _garb.yml"
-      sh "git add --all ."
-      sh "git commit -m 'Updating site'"
-      Open3.popen3("git push origin #{DESTINATION_BRANCH}") do |stdin, stdout, stderr|
-        tmp = stderr.read
-      end
-
-      puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
+      system 'git add --all'
+      system "git commit -m 'Built from #{rev}'."
+      system "git push -q #{deploy_url} #{deploy_branch}"
     end
   end
 end
