@@ -10,51 +10,34 @@ author:
   mendeley: carl-boettiger
   email: cboettig@gmail.com
 url: http://carlboettiger.info
-repo: https://github.com/cboettig/labnotebook # URL for source code repo
 
-## A local path where the site will be built and then pushed 
+# Github username (for travis/rake tasks, standard use)
+username: cboettig
+repo: labnotebook 
+
 destination: ../cboettig.github.com
-
-# should be the knitr figure path, avoids jekyll clobbering these files
-# Must always include .git (added by default if keep_files not specified)
-keep_files:  ['.git','figures']
-
-
-## Instead of needing an internal plugin, the pandoc parser for 
-## Jekyll is completely provided by the external gem. (Fails to compile at this time, so turned off)
-#gems:
-#  - jekyll-pandoc
 
 ## Markdown Parser 
 markdown: pandoc
-markdown_ext:  markdown,mkdown,mkdn,mkd,md,Rmd,rmd    # Adds Rmd and rmd to the common extensions.  
-
 pandoc:
   extensions: 
     - smart
     - mathjax
-    - csl: 'assets/apa.csl'
-    - bibliography: references.bib
 #    - template: 'assets/datauri_template.html'   # Use with 'self-contained' to avoid header text in body
-#    - self-contained                             # Archive any images in posts as URIs.  Very slow, for archiving only.  
+#    - self-contained                             # Archive images in posts as URIs.  Very slow, for archiving only.  
 #    - mathml                                     # Use mathml for equations (Archival, HTML5/XML valid syntax)
 
-knitr:
-  dev: svg
 
 permalink: /:year/:month/:day/:title.html
-redirects: yes            ## A flag to turn on the redirects plugin
-pageviews: no             ## toggle on sidebar pageviews 
-twitter_api: yes          ## toggle on twitter api
-analytics: UA-18401403-1  ## Google Analytics key (in _includes/analytics.html)
+redirects: yes     ## A flag to turn on the redirects plugin
+pageviews: no    ## toggle on sidebar pageviews 
+twitter_api: yes
+analytics: UA-18401403-1 ## Google Analytics key (in _includes/analytics.html)
 
 
 exclude:
-  - assets/apa.csl
-  - assets/references.bib
   - .travis.yml
   - _posts/source/
-  - assets/figures
   - assets/_bootstrap-3.1.1
   - _garb.yml
   - _twitter.yml
