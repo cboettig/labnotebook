@@ -14,8 +14,12 @@ repo: https://github.com/cboettig/labnotebook
 
 destination: _site 
 
+gems:
+  - jekyll-pandoc
+
 ## Markdown Parser 
 markdown: pandoc
+markdown_ext:  markdown,mkdown,mkdn,mkd,md,Rmd,rmd
 pandoc:
   extensions: 
     - smart
@@ -42,4 +46,7 @@ exclude:
   - _garb.yml
   - _twitter.yml
   - DESCRIPTION
+
+knitr:
+  dev: svg
 
