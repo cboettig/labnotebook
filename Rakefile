@@ -69,8 +69,8 @@ task :travis do
     system %Q(rsync -rt --del --exclude=".git" --exclude=".nojekyll" #{destination} #{dir})
     Dir.chdir dir do
       # setup credentials so Travis CI can push to GitHub
-      system "git config --global user.name '#{CONFIG['author']['name']}'"
-      system "git config --global user.email '#{CONFIG['author']['email']}'"
+      system "git config --global user.name '#{config['author']['name']}'"
+      system "git config --global user.email '#{config['author']['email']}'"
 
       system 'git add --all'
       system "git commit -m 'Built from #{rev}'."
