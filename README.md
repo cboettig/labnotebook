@@ -6,6 +6,11 @@ title: About this site
 
 [![Build Status](https://travis-ci.org/cboettig/labnotebook.svg?branch=master)](https://travis-ci.org/cboettig/labnotebook)
 
+
+Welcome to my online open lab notebook; home to all my research scribbles.  This README documents the technical information about this site. If you're looking for more about what this open lab notebook is about and why I keep it, consider starting with this [introduction](http://www.carlboettiger.info/2012/09/28/Welcome-to-my-lab-notebook.html), or [more about me](http://www.carlboettiger.info).
+
+
+
 * Site source on Github: [cboettig/labnotebook](http://github.com/cboettig/labnotebook).
 * Please [report errors or give feedback](https://github.com/cboettig/labnotebook/issues).
 
