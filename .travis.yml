@@ -8,17 +8,20 @@ before_install:
   - ./travis-tool.sh bootstrap
 
 install:
-  - ./travis-tool.sh install_deps
-  - travis_retry cabal install pandoc pandoc-citeproc
-  - travis_retry bundle install
+  - ./travis-tool.sh install_deps                      # Installs R dependencies (for knitr)
+  - travis_retry cabal install pandoc pandoc-citeproc  # Pandoc install using haskell (markdown parser)
+  - travis_retry bundle install                        # Installs ruby gems (for Jekyll & its plugins)
 
 script:
+  # 
   - echo -e $twitter > _twitter.yml
   - echo -e $twitter2 >> _twitter.yml
   - echo -e $twitter3 >> _twitter.yml
   - echo -e $garb > _garb.yml
   - echo -e $garb2 >> _garb.yml
+  # Now actually build the site
   - bundle exec rake travis 
+  # Clean up
   - rm -f _twitter.yml _garb.yml
 
 env:
