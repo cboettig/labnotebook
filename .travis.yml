@@ -1,6 +1,11 @@
 language: haskell
 
 
+before_script:
+  - sudo add-apt-repository ppa:marutter/c2d4u
+  - sudo apt-get update
+  - sudo apt-get install pandoc
+
 before_install:
   # Install R
   - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
@@ -9,7 +14,7 @@ before_install:
 
 install:
   - ./travis-tool.sh install_deps                      # Installs R dependencies (for knitr)
-  - travis_retry cabal install pandoc pandoc-citeproc  # Pandoc install using haskell (markdown parser)
+    #  - travis_retry cabal install pandoc pandoc-citeproc  # Pandoc install using haskell (markdown parser)
   - travis_retry bundle install                        # Installs ruby gems (for Jekyll & its plugins)
 
 script:
