@@ -1,6 +1,8 @@
 ---
 layout: post
-published: false
+category: computation
+tags:
+- cloud-computing
 
 ---
 
