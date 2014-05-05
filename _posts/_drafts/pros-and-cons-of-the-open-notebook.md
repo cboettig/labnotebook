@@ -29,13 +29,13 @@ Pros
   - existing collaborators
   - reviewers, readers
   - discovering collaborators, informal collaboration
-  - impact beyond colleagues - as a data source. as open science.  
+  - impact beyond colleagues - as a data source. as open science.
 
 - Rich readership statistics (views, reading time, sources, downloads, clicks)
 
 - Personal visibility
 - Additional motivation to produce results
-- establishing priority? 
+- establishing priority?
 
 
 Cons
@@ -45,12 +45,11 @@ Cons
 - Prior publication
 - claiming territory
 - Data deluge?
-- Time commitment? 
+- Time commitment?
 - Scaring your collaborators
-- 
-- Burden of 'asking permission' in seminars, collaborations, etc.  
+- Burden of 'asking permission' in seminars, collaborations, etc.
 
 
-Provided it permissible under the terms of your employment, otherwise you shouldn't be considering this in the first place.   
+Provided it permissible under the terms of your employment, otherwise you shouldn't be considering this in the first place.
 
 

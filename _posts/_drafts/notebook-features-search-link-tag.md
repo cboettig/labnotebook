@@ -3,7 +3,7 @@ title: "Online notebook essentials: link, tag, search"
 published: false
 layout: post
 category: open-science
-tags: 
+tags:
 - notebook-technology
 - blog
 
@@ -25,11 +25,11 @@ Both links and tags in the notebook are semantically enhanced, allowing
 machines to benefit from these structures as well as human readers.
 
 
-### Site search 
+### Site search
 
 Many ways.  Local tools provide the most powerful approach.
 
-1. grep/sed in the file repository.  
+1. grep/sed in the file repository.
 2. Javascript-based search.
 3. Google's index.
 

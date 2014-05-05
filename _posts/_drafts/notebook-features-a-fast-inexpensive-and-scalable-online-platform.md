@@ -3,7 +3,7 @@ title: "A fast, inexpensive, and scalable online platform"
 layout: post
 published: false
 category: open-science
-tags: 
+tags:
 - notebook-technology
 - blog
 
@@ -34,8 +34,18 @@ each time a new entry is submitted, updating all the dynamic content into
 static HTML files through Jekyll.  This allows the site to be served from
 platforms that do not require expensive memory, database access and PHP
 scripts -- the site can be deployed for about $1/mo on Amazon S3 static
-hosting, or for free on Github. Page load times are much faster and uptime
-is improved.  Javascript can be included in static sites, as it uses
+hosting, or *for free* on Github (as I do now).
+
+
+Page load times are much
+faster (often faster than 90\% of the web, including [www.google.com](http://google.com))
+and uptime is improved ([see current uptime statistics](http://stats.pingdom.com/fy1sae94ydyi/616612)). Github now
+provides it's own [Content Delivery Network](http://en.wikipedia.org/wiki/Content_delivery_network), or CDN, which provides
+copies of content on it's servers distributed around the globe for faster
+load times.
+
+
+Javascript can be included in static sites, as it uses
 the resources of the viewer's browser rather than the hosting server,
 providing for more interactive features such as the Mathjax equation
 rendering, tooltips, and analytics.  No essential content is provided
@@ -44,6 +54,5 @@ machine-parsing tools do not miss it.
 
 http://nearlyfreespeech.net will also provide free webhosting of static content.
 
-More tools for communicating / sharing
 
 
