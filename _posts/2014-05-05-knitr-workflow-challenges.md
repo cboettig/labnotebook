@@ -32,8 +32,8 @@ someone with a better strategy might be inspired to fill me in.
 
 
 
-What works: better than the old way
------------------------------------
+The old way
+-----------
 
 For a while now I have been using the [knitr](http://yihui.name/knitr)
 dynamic documentation/reproducible research software for my project
@@ -54,7 +54,11 @@ This doesn't leave much of a record of what I did or why, which is
 particularly frustrating when some discussion reminds me of an earlier
 idea.
 
-When I begin a new project, I start off writing a `.Rmd` file, intermixing
+
+Dynamic docs: `.Rmd` files
+------------------------
+
+When I begin a new project, I now start off writing a `.Rmd` file, intermixing
 notes to myself and code chunks.  Chunks break up the code into conceptual
 elements, markdown gives me a more expressive way to write notes than
 comment lines do.  Output figures, tables, and inline values inserted.
@@ -75,7 +79,7 @@ duplicate that behavior with careful save and load commands in a script,
 in knitr this comes for free.
 
 
-Limitations to .Rmd scripts alone
+Limitations to .Rmd alone
 ----------------------------------
 
 1. As I go along, the .Rmd files starts getting too big and cluttered
@@ -204,7 +208,73 @@ In an ideal world this is simple: a new idea can be explored on a new branch
 of the version control system and merged back in when necessary, and an
 entirely new project can be built as a new R package in a different repo that
 depends on the existing project. After several examples of each, I have learned
-that it is not so simple.
+that it is not so simple. Despite the nice tools, I've learned I still need
+to be careful in managing my workflows in order to leave behind material that
+is understandable, reproducible, and reflects clear provenance.  So far, I've
+learned this the hard way.
+
+
+### example: warning-signals project
+
+For instance, my work on early warning
+signals dates back to the start of my [open notebook on
+openwetware](http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Stochastic_Population_Dynamics/2010/02/09),
+when my code lived on a Google code page which seems to have
+disappeared. (At the time it was part of my 'stochastic population
+dynamics' project). When I moved to Github, this project got it's own
+repository, [warningsignals](https://github.com/cboettig/warningsignals),
+though after a major refactorization of the code I moved to a new
+repository, [earlywarning](https://github.com/cboettig/earlywarning).
+Okay, so far that was due to me not really knowing what I was doing.
+
+My first paper on this topic was based on the master branch of
+that repository, which still contains the code required. When
+one of the R dependencies was emoved from CRAN I was able to
+update the codebase to reflect the replacement package (see issue
+[#10](https://github.com/cboettig/earlywarning/issues/10)). Even
+before that paper appeared I started exploring other issues on
+different [branches](https://github.com/cboettig/earlywarning/network),
+with the `prosecutor` branch eventually becoming it's own paper,
+and then it's [own repository](https://github.com/cboettig/prosecutors-fallacy/).
+
+That paper sparked a comment letter in response to it, and the
+analysis involved in my reply piece was just developed on the
+same master branch of the prosecutor-fallacy repository. This
+leaves me with a total of three repositories across four branches,
+with one repo that corresponds more-or-less
+directly to a paper, one to two papers, and one to no papers.
+
+All four branches have diverged and unmerge-able code. Despite sharing and reusing
+functions across these projects, I often found it better to simply
+change the function on the new branch or new repo as I desired
+for the new work. These changes could not be easily merged back
+as they broke the original function calls of the earlier work.
+
+
+Hindsight being 20-20, it would have been preferable that I had
+maintained one repository, perhaps developed each paper on
+a different branch and clearly tagged the commit corresponding
+to the submission of each publication.  Ideally these could be merged
+back where possible to a master branch. Tagged commits provide
+a more natural solution than unmerged branches to deal with
+changes to the package that would break methods from earlier publications.
+
+
+### example: optimal control projects
+
+A different line of research began through a NIMBioS working group
+called "Pretty Darn Good Control", begining it's digital life in
+my [pdg_control](https://github.com/cboettig/pdg_control) repository. Working in different break-out
+groups as well as further investigation on my own soon created
+several different projects. Some of these have continue running towards
+publication, others terminating in dead ends, and still others becoming
+completely separate lines of work. Later work I have done in optimal
+control, such [nonparametric-bayes](https://github.com/cboettig/nonparametric-bayes) and [multiple_uncertainty](https://github.com/cboettig/multiple_uncertainty)
+depend on this package for certain basic functions, though both
+also contain their own diverged versions of functions that first
+appeared in [pdg_control](https://github.com/cboettig/pdg_control).
+
+
 
 
 
