@@ -1,6 +1,5 @@
 ---
 layout: post
-published: false
 title: "Deep challenges to dynamic documentation in daily workflows"
 category: open-science
 tags:
@@ -211,7 +210,9 @@ depends on the existing project. After several examples of each, I have learned
 that it is not so simple. Despite the nice tools, I've learned I still need
 to be careful in managing my workflows in order to leave behind material that
 is understandable, reproducible, and reflects clear provenance.  So far, I've
-learned this the hard way.
+learned this the hard way. I use this last section of the post to reflect
+on two of my own examples, as writing this helps me work through what I should
+have done differently.
 
 
 ### example: warning-signals project
@@ -274,8 +275,19 @@ depend on this package for certain basic functions, though both
 also contain their own diverged versions of functions that first
 appeared in [pdg_control](https://github.com/cboettig/pdg_control).
 
-
-
+Because the topics are rather different and the shared code footprint
+is quite small, separate repositories probably makes more sense here.
+Still, managing the code dependencies in separate repositories
+requires extra care, as checking out the right version of the focal
+repository does not guarentee that one will also have the right version
+of the [pdg_control] repository. Ideally I should note the hash of
+[pdg_control] on which I depend, and preferably install that package
+at that hash (easy enough thanks to `devtools`), since depending
+on a separate project that is also still changing can be troublesome.
+Alternatively it might make more sense to just duplicate the original
+code and remove this potentially frail dependency. After all, documenting
+the provenance need not rely on the dependency, and it is more natural
+to think of these separate repos as divergent forks.
 
 
 
