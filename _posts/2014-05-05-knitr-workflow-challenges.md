@@ -10,7 +10,7 @@ tags:
 
 ---
 
-We often discuss dynamic documents such as Sweave and knitr in reference
+We often discuss dynamic documents such as `Sweave` and `knitr` in reference
 to final products such as publications or software package vignettes.
 In this case, all the elements involved are already fixed: external
 functions, code, text, and so forth.  The dynamic documentation
@@ -46,7 +46,7 @@ I explain both in some detail here.
 My former workflow followed a pattern no doubt familiar to many:
 
 * Bash away in an R terminal, paste useful bits into an R script...
-* Write manuscript separately, pasitng in figures, tables, and inline
+* Write manuscript separately, pasting in figures, tables, and in-line
 values returned from R.
 
 This doesn't leave much of a record of what I did or why, which is
@@ -60,7 +60,7 @@ Dynamic docs: `.Rmd` files
 When I begin a new project, I now start off writing a `.Rmd` file, intermixing
 notes to myself and code chunks.  Chunks break up the code into conceptual
 elements, markdown gives me a more expressive way to write notes than
-comment lines do.  Output figures, tables, and inline values inserted.
+comment lines do.  Output figures, tables, and in-line values inserted.
 So far so good.  I version manage this creature in git/Github.  Great,
 now I have a trackable history of what is going on, and all is well:
 
@@ -81,7 +81,7 @@ in knitr this comes for free.
 Limitations to .Rmd alone
 ----------------------------------
 
-1. As I go along, the .Rmd files starts getting too big and cluttered
+1. As I go along, the `.Rmd` files starts getting too big and cluttered
 to easily follow the big picture of what I'm trying to do.
 
 2. Before long, my investigation branches.  Having followed one `.Rmd`
@@ -95,8 +95,8 @@ A solution? The R package "research compendium" approach
 I start abstracting tasks performed in chunks into functions, so I
 can re-use these things elsewhere, loop over them, and document them
 carefully somewhere I can reference that won't be in the way of what
-I'm thinking. I start to move thse functions into `R/` directory of an R
-package structure, documenting with Roxygen. I write unit tests for these
+I'm thinking. I start to move these functions into `R/` directory of an R
+package structure, documenting with `Roxygen`. I write unit tests for these
 functions (in `inst/tests`) to have quick tests to check their sanity
 without running my big scripts (recent habit).  The package structure
 helps me:
@@ -141,10 +141,10 @@ and/or parameters as it's argument and outputs a data frame with the
 results and inputs.
 
 
-I have explored using knitr's support for external chunk inclusion, which
+I have explored using `knitr`'s support for external chunk inclusion, which
 allows me to maintain a single R script with all commonly used chunks,
-and then import these chunks into multiple .Rmd files.  An example of
-this can be seen in my nonparametric-bayes repo, where several files
+and then import these chunks into multiple `.Rmd` files.  An example of
+this can be seen in my `nonparametric-bayes` repo, where several files
 (in the same directory) draw most of their code from [external-chunks.R](https://github.com/cboettig/nonparametric-bayes/blob/9232dfd814c40e3c48c5a837be110a870d8639da/inst/examples/BUGS/external-chunks.R).
 
 
@@ -174,7 +174,7 @@ to the chain.
 Problem 3: Synthesizing results into a manuscript
 --------------------------------------------------
 
-In some ways this is the easiest part, since the codebase is relatively
+In some ways this is the easiest part, since the code-base is relatively
 static and it is just a matter of selecting which results and figures
 to include and what code is necessary to generate it.  A few organizational
 challenges remain:
@@ -188,11 +188,11 @@ chunk options.  In practice, it means there is little benefit to having
 the chunks interwoven in the document.  What I tend to want is having
 all the chunks run at the beginning, such that any variables or results
 can easily be added (and their appearance tweaked by editing the code)
-as figure chunks or inline expressions. The only purpose of maintaining
+as figure chunks or in-line expressions. The only purpose of maintaining
 chunks instead of a simple script is the piecewise caching of chunk
 dependencies which can help debugging.
 
-Since displaying the code is surpressed, we are then left with the somewhat
+Since displaying the code is suppressed, we are then left with the somewhat
 ironic challenge of how best to present code as a supplement.  One option
 is simply to point to the source `.Rmd`, another is to use the `tangle()`
 option to extract all the code as a separate `.R` file.  In either case,
@@ -224,13 +224,13 @@ when my code lived on a Google code page which seems to have
 disappeared. (At the time it was part of my 'stochastic population
 dynamics' project). When I moved to Github, this project got it's own
 repository, [warningsignals](https://github.com/cboettig/warningsignals),
-though after a major refactorization of the code I moved to a new
+though after a major re-factorization of the code I moved to a new
 repository, [earlywarning](https://github.com/cboettig/earlywarning).
 Okay, so far that was due to me not really knowing what I was doing.
 
 My first paper on this topic was based on the master branch of
 that repository, which still contains the code required. When
-one of the R dependencies was emoved from CRAN I was able to
+one of the R dependencies was moved from CRAN I was able to
 update the codebase to reflect the replacement package (see issue
 [#10](https://github.com/cboettig/earlywarning/issues/10)). Even
 before that paper appeared I started exploring other issues on
@@ -264,7 +264,7 @@ changes to the package that would break methods from earlier publications.
 ### example: optimal control projects
 
 A different line of research began through a NIMBioS working group
-called "Pretty Darn Good Control", begining it's digital life in
+called "Pretty Darn Good Control", beginning it's digital life in
 my [pdg_control](https://github.com/cboettig/pdg_control) repository. Working in different break-out
 groups as well as further investigation on my own soon created
 several different projects. Some of these have continue running towards
@@ -279,7 +279,7 @@ Because the topics are rather different and the shared code footprint
 is quite small, separate repositories probably makes more sense here.
 Still, managing the code dependencies in separate repositories
 requires extra care, as checking out the right version of the focal
-repository does not guarentee that one will also have the right version
+repository does not guarantee that one will also have the right version
 of the [pdg_control] repository. Ideally I should note the hash of
 [pdg_control] on which I depend, and preferably install that package
 at that hash (easy enough thanks to `devtools`), since depending
