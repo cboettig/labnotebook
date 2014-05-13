@@ -213,19 +213,24 @@ title: Vita
       datetime="{{ page.name | git_mod }}" 
       property="dc:modified">{{ page.name | git_mod | date_to_string }}</time></p>
 <br />
-<p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/labnotebook/issues/89"> (What is this?)</a></small></p>
-<p><small> <a href="{{ site.repo }}/commit/{{ page.name | git_sha }}/{{ page.path }}"> {{ page.name | git_sha }}</a></small></p>
-<br />
-<p> <i class-"fa fa-user"></i> Orcid ID: <a property="http://purl.org/spar/datacite/orcid" 
-                                                               href="https://orcid.org/0000-0002-1642-628X" 
-                                                               {{"https://orcid.org/0000-0002-1642-628X" | track_link}} >0000-0002-1642-628X</a></li></p>
-<br />
-<a href="http://www.carlboettiger.info/assets/files/cv.pdf"  
+
+<p></i><a href="http://www.carlboettiger.info/assets/files/cv.pdf"  
    onclick="var that=this;
    _gaq.push(['_trackEvent','Download','PDF',this.href]); 
    setTimeout(function(){location.href=that.href;},200);
-   return false;" 
-   class="btn btn-default"><i class="fa fa-file-text-o fa-2x"></i> pdf</a>
+   return false;" class = "btn btn-default"><i class="fa fa-file-text-o fa-1x"><em>Download PDF</em></a>
+</p>
+<br />
+<p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/labnotebook/issues/89"> (What is this?)</a></small></p>
+<p><small> <a href="{{ site.repo }}/commit/{{ page.name | git_sha }}/{{ page.path }}"> {{ page.name | git_sha }}</a></small></p>
+<br />
+
+<p><img src="/assets/img/orcid.ico"/> <a property="http://purl.org/spar/datacite/orcid" 
+                                         href="https://orcid.org/0000-0002-1642-628X" 
+                                         {{"https://orcid.org/0000-0002-1642-628X" | track_link}} >0000-0002-1642-628X</a></li></p>
+<p><a href="https://impactstory.org/CarlBoettiger"><img src="/assets/img/impactstory.ico"/> ImpactStory </a></p>
+<p><a href="http://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ"><img src="/assets/img/google-scholar.ico"/> Google Scholar </a></p>
+
 </div>
 </div>
 
