@@ -206,7 +206,7 @@ title: Vita
 </article>
 </div>
 
-<div class="col-md-4 sidebar"><!-- Custom sidebar -->   
+<div class="col-md-4" style="border-left: 1px solid;"><!-- sidebar -->   
 
 <p> Vita last updated: </p>
 <p><i class="icon-calendar"></i> <time 
@@ -218,17 +218,20 @@ title: Vita
    onclick="var that=this;
    _gaq.push(['_trackEvent','Download','PDF',this.href]); 
    setTimeout(function(){location.href=that.href;},200);
-   return false;" class = "btn btn-default"><i class="fa fa-file-text-o fa-1x"><em>Download PDF</em></a>
+   return false;" class = "btn btn-default"><i class="fa fa-file-text-o fa-1x"></i>Download PDF</a>
 </p>
 <br />
 <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/labnotebook/issues/89"> (What is this?)</a></small></p>
 <p><small> <a href="{{ site.repo }}/commit/{{ page.name | git_sha }}/{{ page.path }}"> {{ page.name | git_sha }}</a></small></p>
 <br />
+<br />
 
 <p><img src="/assets/img/orcid.ico"/> <a property="http://purl.org/spar/datacite/orcid" 
                                          href="https://orcid.org/0000-0002-1642-628X" 
-                                         {{"https://orcid.org/0000-0002-1642-628X" | track_link}} >0000-0002-1642-628X</a></li></p>
+                                         {{"https://orcid.org/0000-0002-1642-628X" | track_link}} >https://orcid.org/0000-0002-1642-628X</a></li></p>
+<br />
 <p><a href="https://impactstory.org/CarlBoettiger"><img src="/assets/img/impactstory.ico"/> ImpactStory </a></p>
+<br />
 <p><a href="http://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ"><img src="/assets/img/google-scholar.ico"/> Google Scholar </a></p>
 
 </div>
