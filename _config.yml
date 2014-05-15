@@ -12,7 +12,8 @@ author:
 url: http://www.carlboettiger.info
 repo: https://github.com/cboettig/labnotebook 
 
-destination: _site 
+destination: ../_site 
+github_repo: labnotebook
 
 gems:
   - jekyll-pandoc
