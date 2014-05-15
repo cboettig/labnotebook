@@ -10,10 +10,11 @@ author:
   mendeley: carl-boettiger
   email: cboettig@gmail.com
 url: http://www.carlboettiger.info
-repo: https://github.com/cboettig/labnotebook 
+# repo: https://github.com/cboettig/labnotebook 
 
 destination: ../_site 
-github_repo: labnotebook
+username: cboettig
+repo: labnotebook
 
 gems:
   - jekyll-pandoc
