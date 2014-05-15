@@ -29,12 +29,11 @@ education
 
 
 
-<a href="{{site.url}}{{page.url}}#publications"
+<h2><a href="{{site.url}}{{page.url}}#publications"
          rel="foaf:publications"
          about="{{site.url}}#me"
-         style="color:inherit"
->publications</a>
------------------
+         style="color:inherit">publications</a></h2>
+
 
 </div> <!-- end typeof="foaf:Person" semantics -->
 <div prefix="datacite: http://purl.org/spar/datacite/">
