@@ -16,7 +16,7 @@ script:
 - echo -e $twitter3 >> _twitter.yml
 - echo -e $garb > _garb.yml
 - echo -e $garb2 >> _garb.yml
-- bundle exec rake site:deploy
+- bundle exec rake site:deploy --quiet
 - rm -f _twitter.yml _garb.yml
 env:
   global:
@@ -26,4 +26,4 @@ env:
   - secure: QqrejLFqsAWc72l367h3U8cv6BKiOyxlxVrTm+4rsJeJiAuTlvKeFh8ZprbBeOTE3CuwjuDhUnbkkHbuUP6lgKb9A32pBGZyabI4eow/djvT22aUFMmIVaL+RQgICRpHsZ/k/SWrQlizls2YvQ/8PaVb86dcI2YC7DF1nYr2kS8=
   - secure: aTL4r19Wu2xj7e7Uvvm910xGRm8KYOfhEDhRsT/SLT8qbkF2gYqFJYR/jNI2WYUbMrbIRh5sA/iE4eQmJBvk4djf6zSfazFIzGcnSjeVUnzXgJuerJ2M2PGI2o/cWWmVMe4VD2WCMZbT9AjdJ944CcN6jPYpE3X9Km7fnt6IqdA=
   - secure: icvzNMr7t2/cnZ+BZzmBzvyQyyjrssIOD1lYghfybaGQuJVpgwR+JqPXOvMNGtF4gXLhNdZjr6Vc+ijeS7W538akcqsMvkxXbSFx9hLTx869+JIebWhfBdyfGPVfmPgffj2yEjSvrCxuJRvPxCoecKfFLRGsDVUK8+a5m8e5gDU=
-  - secure: H1f9sQKRNN6lPC+663ub+YqmMUeiwtddX5Unu7/amll6O/43efKicIX2lmhJJIDgAZvQkCsLe2Rd8fhpF2q6a1cjtuw74AtzSmnarCNA/FxAgog2Z2sYju23WyS8OMtPdI49hcYTlyb5SpwKumUGQf9kSLIthHncLdBcQEeHK3U=
+  - secure: DWdhu6gSaRyp4xiJ1QEWoRTKSF54Pxm30Tpacyj5vfuXWCqMGqoNXQti9wNg+NhF2sDARqDquKdsZ/2zUzhejQguHZ6bfGjm4yz0wBY6AkFqTCvjrbrlrMQGnWjHPifwXgzOUdAjrzYozfI8Ip3kk4hIodQJKtcuAwzG26sCbQY=
