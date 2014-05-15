@@ -1,34 +1,23 @@
 language: haskell
-
-
 before_script:
-  - echo 'yes' | sudo add-apt-repository ppa:marutter/c2d4u
-  - sudo apt-get update
-  - sudo apt-get install pandoc
-
+- echo 'yes' | sudo add-apt-repository ppa:marutter/c2d4u
+- sudo apt-get update
+- sudo apt-get install pandoc
 before_install:
-  # Install R
-  - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
-  - chmod 755 ./travis-tool.sh
-  - ./travis-tool.sh bootstrap
-
+- curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
+- chmod 755 ./travis-tool.sh
+- ./travis-tool.sh bootstrap
 install:
-  - ./travis-tool.sh install_deps                      # Installs R dependencies (for knitr)
-    #  - travis_retry cabal install pandoc pandoc-citeproc  # Pandoc install using haskell (markdown parser)
-  - travis_retry bundle install                        # Installs ruby gems (for Jekyll & its plugins)
-
+- ./travis-tool.sh install_deps
+- travis_retry bundle install
 script:
-  # 
-  - echo -e $twitter > _twitter.yml
-  - echo -e $twitter2 >> _twitter.yml
-  - echo -e $twitter3 >> _twitter.yml
-  - echo -e $garb > _garb.yml
-  - echo -e $garb2 >> _garb.yml
-  # Now actually build the site
-  - bundle exec rake travis 
-  # Clean up
-  - rm -f _twitter.yml _garb.yml
-
+- echo -e $twitter > _twitter.yml
+- echo -e $twitter2 >> _twitter.yml
+- echo -e $twitter3 >> _twitter.yml
+- echo -e $garb > _garb.yml
+- echo -e $garb2 >> _garb.yml
+- bundle exec rake site:deploy
+- rm -f _twitter.yml _garb.yml
 env:
   global:
   - secure: VsIGjVbcGVsuNwTFOcnndTzxlpIoOp3x5HyMQ+9CiTKGg6rsSAZihMunOXp4woI6Tj/1uT339onTq0saf5+3QEcUR2OcGz+lo6M/4AW2rkcG8rpu8kWN4OzLR1Qn5vYzpkg2/HbdSA9aZDta6bmw8jkitMt3UyRZj/LX/MRM6mo=
@@ -37,3 +26,4 @@ env:
   - secure: QqrejLFqsAWc72l367h3U8cv6BKiOyxlxVrTm+4rsJeJiAuTlvKeFh8ZprbBeOTE3CuwjuDhUnbkkHbuUP6lgKb9A32pBGZyabI4eow/djvT22aUFMmIVaL+RQgICRpHsZ/k/SWrQlizls2YvQ/8PaVb86dcI2YC7DF1nYr2kS8=
   - secure: aTL4r19Wu2xj7e7Uvvm910xGRm8KYOfhEDhRsT/SLT8qbkF2gYqFJYR/jNI2WYUbMrbIRh5sA/iE4eQmJBvk4djf6zSfazFIzGcnSjeVUnzXgJuerJ2M2PGI2o/cWWmVMe4VD2WCMZbT9AjdJ944CcN6jPYpE3X9Km7fnt6IqdA=
   - secure: icvzNMr7t2/cnZ+BZzmBzvyQyyjrssIOD1lYghfybaGQuJVpgwR+JqPXOvMNGtF4gXLhNdZjr6Vc+ijeS7W538akcqsMvkxXbSFx9hLTx869+JIebWhfBdyfGPVfmPgffj2yEjSvrCxuJRvPxCoecKfFLRGsDVUK8+a5m8e5gDU=
+  - secure: H1f9sQKRNN6lPC+663ub+YqmMUeiwtddX5Unu7/amll6O/43efKicIX2lmhJJIDgAZvQkCsLe2Rd8fhpF2q6a1cjtuw74AtzSmnarCNA/FxAgog2Z2sYju23WyS8OMtPdI49hcYTlyb5SpwKumUGQf9kSLIthHncLdBcQEeHK3U=

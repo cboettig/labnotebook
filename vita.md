@@ -41,8 +41,7 @@ education
 
 1.  **Carl Boettiger**, Alan Hastings. (2013) No early warning signals
     for stochastic transitions: insights from large deviation theory.
-    *Proceedings of the Royal Society B*. {{"10.1098/rspb.2013.1372" |
-    doi_pdf_parser }} ([arXiv](http://arxiv.org/abs/1307.4415))
+    *Proceedings of the Royal Society B*. {{"10.1098/rspb.2013.1372" | doi_pdf_parser}} ([arXiv](http://arxiv.org/abs/1307.4415))
     ([repository](https://github.com/cboettig/prosecutors-fallacy))
 2.  **Carl Boettiger**\*, Noam Ross\*, Alan Hastings. (2013) Early
     warning signals: The charted and uncharted territories. *Theoretical
@@ -50,7 +49,7 @@ education
     ([arXiv](http://arxiv.org/abs/1305.6700))
     ([repository](https://github.com/cboettig/ews-review))
 3.  **Carl Boettiger**, Alan Hastings (2013). Tipping points: From
-    patterns to predictions, *Nature* 493, 157–158. {{ "10.1038/493157a" | doi_pdf_parser }}
+    patterns to predictions, *Nature* 493, 157–158. {{"10.1038/493157a" | doi_pdf_parser }}
 4.  **Carl Boettiger**, Alan Hastings (2012). Early Warning Signals and
     the Prosecutor’s Fallacy, *Proceedings of the Royal Society B* 279
     (1748) 4734-4739. {{ "10.1098/rspb.2012.2085" | doi_pdf_parser }}
@@ -59,39 +58,33 @@ education
     ([data](http://dx.doi.org/10.5061/dryad.2k462))
 5.  **Carl Boettiger**, Duncan Temple Lang, Peter Wainwright (2012).
     rfishbase: exploring, manipulating and visualizing FishBase data
-    from R, *Journal of Fish Biology*. 81 (6) 2030–2039. {{
-    "10.1111/j.1095-8649.2012.03464.x" | doi_pdf_parser }}
+    from R, *Journal of Fish Biology*. 81 (6) 2030–2039. {{"10.1111/j.1095-8649.2012.03464.x" | doi_pdf_parser }}
     ([preprint](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md))
     ([code](https://github.com/ropensci/rfishbase)) ([R
     package](http://cran.at.r-project.org/web/packages/rfishbase/))
 6.  **Carl Boettiger**, Duncan Temple Lang (2012). Treebase: An R
     package for discovery, access and manipulation of online
-    phylogenies, *Methods in Ecology and Evolution* 3 (6) 1060–1066. {{
-    "10.1111/j.2041-210X.2012.00247.x" | doi_pdf_parser }}
+    phylogenies, *Methods in Ecology and Evolution* 3 (6) 1060–1066. {{"10.1111/j.2041-210X.2012.00247.x" | doi_pdf_parser }}
     ([preprint](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md))
     ([code](https://github.com/ropensci/treebase)) ([R
     package](http://cran.at.r-project.org/web/packages/treebase/))
 7.  **Carl Boettiger** and Alan Hastings (2012). Quantifying Limits to
     Detection of Early Warning for Critical Transitions, *Journal of the
-    Royal Society: Interface* 9 (75) 2527-2539. {{
-    "10.1098/rsif.2012.0125" | doi_pdf_parser }}
+    Royal Society: Interface* 9 (75) 2527-2539. {{"10.1098/rsif.2012.0125" | doi_pdf_parser }}
     ([arXiv](http://arxiv.org/abs/1204.6231))
     ([code](https://github.com/cboettig/earlywarning))
 8.  Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, **Carl Boettiger** and
     Brian O’Meara, (2012). Modeling Stabilizing Selection: Expanding the
     Ornstein-Uhlenbeck Model of Adaptive Evolution, *Evolution* 66 (8)
-    2369-2383. {{ "10.1111/j.1558-5646.2012.01619.x" | doi_pdf_parser
-    }} ([code](http://cran.r-project.org/web/packages/OUwie/index.html))
+    2369-2383. {{"10.1111/j.1558-5646.2012.01619.x" | doi_pdf_parser}} ([code](http://cran.r-project.org/web/packages/OUwie/index.html))
 9.  **Carl Boettiger**, Graham Coop, Peter Ralph (2012) Is your
     phylogeny informative? Measuring the power of comparative methods,
-    *Evolution* 66 (7) 2240-51. {{ "10.1111/j.1558-5646.2011.01574.x" |
-    doi_pdf_parser }} ([arXiv](http://arxiv.org/abs/1110.4944))
+    *Evolution* 66 (7) 2240-51. {{ "10.1111/j.1558-5646.2011.01574.x" | doi_pdf_parser }} ([arXiv](http://arxiv.org/abs/1110.4944))
     ([code](https://github.com/cboettig/pmc))
     ([data](http://datadryad.org/handle/10255/dryad.37645))
 10. **Carl Boettiger**, Jonathan Dushoff, Joshua S Weitz (2010)
     Fluctuation domains in adaptive evolution, *Theoretical Population
-    Biology* 77 (1) 6-13. {{ "10.1016/j.tpb.2009.10.003" |
-    doi_pdf_parser }} ([arXiv](http://arxiv.org/abs/1004.4233))
+    Biology* 77 (1) 6-13. {{ "10.1016/j.tpb.2009.10.003" | doi_pdf_parser }} ([arXiv](http://arxiv.org/abs/1004.4233))
     ([code](https://github.com/cboettig/fluctuationDomains))
     ([data](http://datadryad.org/handle/10255/dryad.37625))
 11. James J. Wray, Neta A. Bahcall, Paul Bode, **Carl Boettiger**,
@@ -163,16 +156,14 @@ theses
     Dissertation). {{ "10.6084/m9.figshare.97218" | doi_parser }}
 2.  Carl Boettiger, Stephen Pacala, David Huse (2007) Ensemble Behavior
     from Individual Dynamics in Multispecies Forest Populations.
-    *Princeton Physics Dept*. {{ "10.6084/m9.figshare.678304" |
-    doi_parser }}
+    *Princeton Physics Dept*. {{ "10.6084/m9.figshare.678304" | doi_parser }}
     ([pdf](/assets/files/pubs/Boettiger-Pacala-Huse-2007-Princeton-Physics-Dept.pdf%20))
 3.  Carl Boettiger, Joshua Weitz, Simon Levin (2007) Adaptive Dynamics:
     Branching Phenomena and the Canonical Equation *Princeton Physics
     Dept*. {{ "10.6084/m9.figshare.678306" | doi_parser }}
     ([pdf](/assets/files/pubs/Boettiger-Weitz-Levin-2007-Princeton-Physics-Dept.pdf%20))
 4.  Carl Boettiger, David Huse (2006) Clonal Interference Models in
-    Population Genetics. *Princeton Physics Dept*. {{
-    "10.6084/m9.figshare.678305" | doi_parser }}
+    Population Genetics. *Princeton Physics Dept*. {{"10.6084/m9.figshare.678305" | doi_parser }}
     ([pdf](/assets/files/pubs/Boettiger-Huse-2006-Princeton-Physics-Dept.pdf%20))
 
 grants
@@ -184,13 +175,11 @@ grants
     Mathematical and Physical Sciences and
     Engineering](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm)
     [DBI-1306697.](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697)
-    $138,000. Link to proposal: {{ "10.6084/m9.figshare.652970" |
-    doi_parser }}
+    $138,000. Link to proposal: {{ "10.6084/m9.figshare.652970" |  doi_parser }}
 -   2011, 2012 PI on **Department of Energy** Grant No.
     DE-AC02-05CH11231. 50,000 hr on NERSC supercomputing resources.
 -   2009 **IIASA** YSSP fellowship. National Academy of Sciences, NSF
-    Grant No. OISE-0738129, $8,000. proposal: {{
-    "10.6084/m9.figshare.678310" | doi_parser }}
+    Grant No. OISE-0738129, $8,000. proposal: {{"10.6084/m9.figshare.678310" | doi_parser }}
 -   2008-2012 Computational Science Graduate Fellowship. **Department of
     Energy**, Grant No: DE-FG02-97ER25308, 4 yrs x $36,000/yr
 
@@ -290,8 +279,7 @@ interviews
 - Mascarelli, A. (2014) "Research tools: Jump off the page." *Nature*
   507, 523–525. {{ "10.1038/nj7493-523a" | doi_parser }}
 - Check Hayden E (2013). "Mozilla Plan Seeks to Debug Scientific
-  Code." *Nature*, 501, pp. 472-472. {{ "10.1038/501472a" |
-  doi_parser }}
+  Code." *Nature*, 501, pp. 472-472. {{ "10.1038/501472a" | doi_parser }}
 - Van Noorden R (2013). "Data-Sharing: Everything on Display."
   *Nature*, 500, pp. 243-245. {{ "10.1038/nj7461-243a" | doi_parser }}
 - Gewin, Virginia (2013). "Turning Point: Carl Boettiger"
