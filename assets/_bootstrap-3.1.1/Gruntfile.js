@@ -204,9 +204,9 @@ module.exports = function (grunt) {
         },
         src: 'dist/css/<%= pkg.name %>-theme.css'
       },
-      docs: {
-        src: 'docs/assets/css/_src/docs.css'
-      },
+//      docs: {
+//        src: 'docs/assets/css/_src/docs.css'
+//      },
       examples: {
         expand: true,
         cwd: 'docs/examples/',
