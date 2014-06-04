@@ -1,6 +1,5 @@
 ---
 layout: post
-published: false
 category: open-science
 tags:
 - blog
@@ -14,10 +13,10 @@ can be obtained rather than providing it upon request. At the end of
 the piece they pose several excellent questions, which I reflect on here.
 
 - When should an author choose Supplementary Files vs a repository
-vs figures and tables.
+vs figures and tables?
 
 To me, repositories should always be the default. Academic repositories
-provide robust permanent archiving (such as [CLOCKSS](http://clockss.org)
+provide robust permanent archiving (such as [CLOCKSS]
 backup), independent DOIs to content, often tracking of use metrics,
 enhanced discoverability, clear and appropriate licenses, richer metadata,
 as well as frequently providing things like API access and easy-to-use
@@ -89,8 +88,8 @@ view data (e.g. as a means to an ends, illustrated in the idea that it is okay t
 mistakes in the data as long as they don't change the conclusions).
 
 
-- And getting at the reason why we encourage data sharing: how much data,
-metadata, and explanation is necessary for replication?
+- __And getting at the reason why we encourage data sharing: how much data,
+metadata, and explanation is necessary for replication?__
 
 I agree that the "What" question is a crux issue, and one we are still
 figuring out by community. There are really two issues here: what data
@@ -117,10 +116,14 @@ another person's highly processed data). I think a useful minimum might
 be to provide any data shown in a figure or used in a statistical test
 that appears in the paper.
 
+Journal policies can help most in each of these cases by pointing authors
+to the policies of repositories and to subject-specific publications on
+these best practices.
 
-- A crucial issue that is much wider than PLOS is how to cite data and
+
+- __A crucial issue that is much wider than PLOS is how to cite data and
 give academic credit for data reuse, to encourage researchers to make
-data sharing part of their everyday routine.
+data sharing part of their everyday routine.__
 
 Again I agree that credit for data reuse is an important and largely
 cultural issue. Certainly editors can play there part as they already do
@@ -156,11 +159,11 @@ to place more trust in the opinions of people over current metrics.)-->
 
 
 
-- And for long-term preservation, we must ask who funds the costs of
+- __And for long-term preservation, we must ask who funds the costs of
 data sharing?  What file formats should be acceptable and what will
 happen in the future with data in obsolete file formats? Is there likely
 to be universal agreement on how long researchers should store data,
-given the different current requirements of institutions and funders?
+given the different current requirements of institutions and funders?__
 
 I think these are questions for the scientific data repositories and the
 fields they serve, rather than the journals, and for the most part they
@@ -199,6 +202,10 @@ the hands of those already leading the way and not re-invent the wheel).
 
 
 
-
+[Dublin Core Elements]: http://en.wikipedia.org/wiki/Dublin_Core
+[Ecological Metadata Language]: http://en.wikipedia.org/wiki/Ecological_Metadata_Language
+[figshare]: http://figshare.org
+[Dryad]: http://datadryad.org
+[CLOCKSS]: http://clockss.org
 
 
