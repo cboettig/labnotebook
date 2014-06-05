@@ -9,11 +9,19 @@ PLOS has posted an [excellent
 update](http://blogs.plos.org/biologue/2014/05/30/plos-data-policy-update/)
 reflecting on their experiences a few months in to their new data sharing
 policy, which requires authors to include a statement of where the data
-can be obtained rather than providing it upon request. At the end of
-the piece they pose several excellent questions, which I reflect on here.
+can be obtained rather than providing it upon request. They do a rather
+excellent job of highlighting common concerns and offering well justified
+and explained replies where appropriate.
 
-- When should an author choose Supplementary Files vs a repository
-vs figures and tables?
+
+At the end of the piece they pose several excellent questions, which I reflect on here
+(mostly as a way of figuring out my own thoughts on these issues).
+
+----------------
+
+
+- __When should an author choose Supplementary Files vs a repository
+vs figures and tables?__
 
 To me, repositories should always be the default. Academic repositories
 provide robust permanent archiving (such as [CLOCKSS]
@@ -36,8 +44,8 @@ question of "What" should be archived rather than "Where" (unless it is
 referring to separately archiving the figures and tables of the main text,
 which sounds like a great idea to me).
 
-- Should software/code be treated any differently from ‘data’? How
-should materials-sharing differ?
+- __Should software/code be treated any differently from ‘data’? How
+should materials-sharing differ?__
 
 At the highest level I think it is possible to see software as a 'type'
 of data. Like other data, it is in need of appropriate licensing, a
@@ -53,13 +61,15 @@ code and the unique challenges that it raises.  Traditional scientific
 data repositories are well ahead in establishing best practices for
 other data, but are rapidly working out approaches to code. The [guidelines](http://openresearchsoftware.metajnl.com/about/editorialPolicies)
 from the Journal of Open Research Software from the UK Software
-Sustainability Institute are a great example.
+Sustainability Institute are a great example. (I've written on this topic
+before, such as [what I look for in software papers](http://www.carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html) and on the topic
+of the [Mozilla Science Code review pilot](www.carlboettiger.info/2013/09/25/mozilla-software-review.html)
 
 I'm not informed enough to speak to sharing of non-digital material.
 
-- What does peer review of data mean, and should reviewers and editors
+- __What does peer review of data mean, and should reviewers and editors
 be paying more attention to data than they did previously, now that they
-can do so?
+can do so?__
 
 
 In as much as we are satisfied with the current definition of peer review
@@ -85,7 +95,11 @@ just like bugs in software.  But in this way they do eventually come to light,
 and that is somewhat less worrying if we view data the way we currently build publications
 (e.g. as fundamental building blocks of research) and publications as we currently
 view data (e.g. as a means to an ends, illustrated in the idea that it is okay to have
-mistakes in the data as long as they don't change the conclusions).
+mistakes in the data as long as they don't change the conclusions). Jonathan Eisen
+has some [excellent](http://www.slideshare.net/phylogenomics/jonathan-eisen-talk-on-open-science-at-bosc2012-ismb "see slide 13") [examples](https://www.youtube.com/watch?v=oWZzUe3Kxeo) in which openly sharing the data led to rapid
+discovery and correction of errors that might have been difficult to detect
+otherwise.
+
 
 
 - __And getting at the reason why we encourage data sharing: how much data,
