@@ -1,4 +1,5 @@
 ---
+title: "Is statistical software harmful?"
 layout: post
 category: open-science
 tags:
