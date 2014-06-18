@@ -1,71 +1,30 @@
 ---
-layout: page
+layout: default
 title: Tags
 header: Posts By Tag
 
 ---
 
 <div class="row">
-  <div class="span12">
-    <div class="sidebar">
-      <div class="row">
-        <div class="span5">
-        {% for tag in site.tags %} 
-          <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
-          <ul>
-            {% assign pages_list = tag[1] %}  
-            {% include JB/pages_list %}
-          </ul>
-          {% endfor %}
-        </div>
-        <div class="span3">
-        <!--
-        <h3>  All tags </h3>
-        <ul class="tag_box inline">
-          {% assign tags_list = site.tags %}  
-          {% include JB/tags_list %}
-        </ul>
-        -->
-          <div class='cloud'>
-            {% tag_cloud %}
-          </div>
-          <br/>
-          <br/>
-          <emph>Posts under the R tag are also featured on <a href="http://www.r-bloggers.com">R-bloggers.com</a></emph>
+  <div class="col-md-5 col-md-offset-1">
+    {% for tag in site.tags %} 
+    <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+    <ul>
+      {% assign pages_list = tag[1] %}  
+      {% include JB/pages_list %}
+    </ul>
+    {% endfor %}
+  </div>
+  <div class="col-md-3">
+    <div class='cloud'>
+      {% tag_cloud %}
+    </div>
+    <br/>
+    <br/>
+    <emph>Posts under the R tag are also featured on <a href="http://www.r-bloggers.com">R-bloggers.com</a></emph>
+  </div> 
+</div> 
 
 
-          <!--
-          <h3> Tags from Wordpress Notebook (entries before 25 April 2012) </h3>
-          <ul class="unstyled">
-            <li><a href="http://www.carlboettiger.info/wordpress/archives/tag/adaptive-dynamics">Adaptive Dynamics</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/code-tricks">Code Tricks</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/pdg-control">PDG Control</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/site-configuration">Site Configuration</a></li>
-            <li><a href="http://www.carlboettiger.info/wordpress/archives/tag/fishbase">Fishbase</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/nimbios">NIMBioS</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/api">Api</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/conference">Conference</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/abstract">Abstract</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/science-communication">Science-Communication</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/r">R</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/abc">ABC</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/my-publications-2">My Publications</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/progress-report">Progress Report</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/algorithms">Algorithms</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/research-blogging">Research-Blogging</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/forage-fish">Forage Fish</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/treebase">Treebase</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/hpc">Hpc</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/derivations">Derivations</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/plugins">Plugins</a></li>
-            <li><a href="http://www.carlboettiger.info/wordpress/archives/tag/warning-signals">Warning-Signals</a></li>
-            <li> <a href="http://www.carlboettiger.info/wordpress/archives/tag/reading">Reading</a></li>
-          </ul>
-          -->
 
-        </div> <!-- end span3--> 
-      </div> <!-- end row--> 
-    </div> <!-- end sidebar--> 
-  </div> <!-- end row-->
-</div> <!-- end span12-->
 
