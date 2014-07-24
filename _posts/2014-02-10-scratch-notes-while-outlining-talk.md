@@ -1,20 +1,19 @@
 ---
 layout: post
-category: ecology 
-published: false
+category: ecology
 
 ---
 
 
-Outlining seminar
+Scratch notes for my seminar
 
-
+```
 Part I: Tipping Points: Early Warning signals and decision theory
 
 
 Global change threats. So what do we do?
 
-This is a pendulum. easy to predict. 
+This is a pendulum. easy to predict.
 Not a pendulum. Oscillations not easy to predict. Crashes
 
 Tipping points
@@ -23,30 +22,31 @@ Tipping points
 
 No equation for $f_i(s,h)$
 
-Everything matters.  
+Everything matters.
 
-Data is good, getting better.  
+Data is good, getting better.
 
-Crushing our data under parameters.  Stop throwing out the data.  
+Crushing our data under parameters.  Stop throwing out the data.
 
 
-Early Warning signals 
+Early Warning signals
 
 
 Optimal Control problem -- Model the descision process! Action space!
 
-Model choice sucks. 
+Model choice sucks.
 
-Nonparametrics work.  
+Nonparametrics work.
 
 
-Why an informatics approach? 
+Why an informatics approach?
 
 What is Ecoinformatics?
 
+
  Theory      |     Data
 -------------|-------------
- Algorithms  |  Informatics 
+ Algorithms  |  Informatics
 
 
 
@@ -56,16 +56,16 @@ Today the models, data, and statistics are more numerous and more complex. An al
 
 Today's data needs similar infrastructure
 
-Bioinformatics, ATGC, vertically integrated.  
+Bioinformatics, ATGC, vertically integrated.
 
-No one need be told we are awash in data today. Yet it is not the data we have but the questions we face which demand this approach.  
+No one need be told we are awash in data today. Yet it is not the data we have but the questions we face which demand this approach.
 
-Let us recall how utterly desperate the warning signal idea is: an extrapolation, not based on averages but on the noise itself, and under the very assumption that everything is about to change suddenly and extrapolation should be impossible.  
+Let us recall how utterly desperate the warning signal idea is: an extrapolation, not based on averages but on the noise itself, and under the very assumption that everything is about to change suddenly and extrapolation should be impossible.
 
-That we seek to manage a fishery not knowing the dynamics not only for one species, but for the whole ecosystem that feeds and eats it, a variable and changing climate, and socio-economic winds every bit as daunting. Across scales of space, time and ecology.  
+That we seek to manage a fishery not knowing the dynamics not only for one species, but for the whole ecosystem that feeds and eats it, a variable and changing climate, and socio-economic winds every bit as daunting. Across scales of space, time and ecology.
 
 
-(sequentially add...) 
+(sequentially add...)
 Fishbase.  Treebase.  GBIF
 
 rOpenSci Story
@@ -75,15 +75,15 @@ rOpenSci Story
 - Building bridges, teaching tools. Rapid growth. Sloan
 
 
-- next challenges: from vertically integrated to metadata-driven. Better leverage your own data.   
+- next challenges: from vertically integrated to metadata-driven. Better leverage your own data.
 (out of scope? or some data management needed?  differentiate from future work proposal)
 
 
 (I think we can safely define vertically integrated and metadata driven database without "giving away" all future research proposals...)
 
-Risk in doing this: Prosecutor's fallacy.  
+Risk in doing this: Prosecutor's fallacy.
 
-A mandate to try.  Just as policy must be made on the best available science, science must be made on the best available data.  
+A mandate to try.  Just as policy must be made on the best available science, science must be made on the best available data.
 
 
 
@@ -92,47 +92,47 @@ A mandate to try.  Just as policy must be made on the best available science, sc
 Please don't show this, don't think this:
 
    Math     |     Ecology
-------------|------------------ 
+------------|------------------
  Statistics | Computer Science
 
 
-What does it do? 
+What does it do?
 
 Access / Discovery. (Data Mining?)
 Manipulation
-Management 
+Management
 
 Modular: Reusable, Interoperable components
 
-archiving. metadata.  
+archiving. metadata.
 
 
 -----------------------------------------------------------------------
 
-Who has big data already? Who needs you? 
+Who has big data already? Who needs you?
 The pitch to those not using external data
 The pitch to experimental scientist
 
 ---------------------------------------------
 
 
-- Fix figures.  Myers -> Maynard-Smith 
+- Fix figures.  Myers -> Maynard-Smith
 
 
 ------------------------------------------------------------------
 
-What is Ecoinformatics? 
+What is Ecoinformatics?
 =======================
 
 
 An analogy to computation
 -------------------------
 
-Ecoinformatics:data :: computation : models & theory.  
+Ecoinformatics:data :: computation : models & theory.
 
-We don't need a computer to do ecology.  But it sure helps.  
+We don't need a computer to do ecology.  But it sure helps.
 
-Statistics.  Visualization.  
+Statistics.  Visualization.
 
 
 On the transition to ecoinformatics: another analogy
@@ -152,7 +152,7 @@ Ecoinformatics seeks to address each of these challenges: archiving,
 sharing, manipulation, inter-operability, automation, and the reduction
 of human error.
 
-How do we do that? What does it look like?  
+How do we do that? What does it look like?
 
 
 Platform.
@@ -163,7 +163,7 @@ Yeah, but what does it look like for ecology?
 
 - Vertically integrated databases.  (literally - same column)
 - Metadata-driven databases.
-
+```
 
 
 
