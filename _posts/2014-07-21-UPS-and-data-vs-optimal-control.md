@@ -1,7 +1,7 @@
 ---
 layout: post
 category: ecology
-
+title: "UPS and data vs optimal control"
 ---
 
 
