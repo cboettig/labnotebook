@@ -5,9 +5,8 @@
 module Jekyll
   module TrackLinkFilter
     def track_link(input)
-      '"onclick="recordOutboundLink(this, \"Link\", \"' + input + '\"); 
-      return false;"'
+      'onclick="recordOutboundLink(this, "Link", "' + input + '"); return false;"'
     end
   end
-end 
+end
 Liquid::Template.register_filter(Jekyll::TrackLinkFilter)
