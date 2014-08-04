@@ -51,3 +51,4 @@ exclude:
 knitr:
   dev: svg
 
+
