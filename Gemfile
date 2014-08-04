@@ -20,7 +20,7 @@ gem "git"         # Git gem
 gem "redcarpet"
 
 ## Working locally only
-#gem "garb", "~> 0.9.8"    # Google Analytics API
+gem "garb", "~> 0.9.8"    # Google Analytics API
 
 ## Not working at the moment
 #gem "legato"
