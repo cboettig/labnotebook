@@ -47,7 +47,7 @@
   {% if site.pageviews %} <p style="font-style:italic"> <i class="icon-signal"></i> pageviews: {{ page.pageviews }}</p>{% endif %}
 
   <br/>
-  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/{{site.author.github}}/{{ site.repo }}/commit/{{page.path | prepend:'/_posts/' | git_sha }}/_posts/{{ page.path }}"> {{ page.path | prepend:'_posts/' | git_sha }}</a></small></p>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/{{site.author.github}}/{{ site.repo }}/commit/{{page.path | prepend:'_posts/' | git_sha }}/_posts/{{ page.path }}"> {{ page.path | prepend:'_posts/' | git_sha }}</a></small></p>
     
   <br/>
   {% if page.code %}
