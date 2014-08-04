@@ -4,8 +4,7 @@
 # A simple filter to access the sha of a page
 # Example use:
 #
-# {{ page.name | git_sha }}
-#
+#  {{ post.path | prepend:'_posts/' | git_sha }}
 
 require 'git'
 require 'json'

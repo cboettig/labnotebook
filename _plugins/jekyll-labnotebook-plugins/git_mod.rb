@@ -4,7 +4,8 @@
 # A simple filter to access the git modification time of a page
 # Example use:
 #
-# {{ page.name | git_mod }}
+#  {{ post.path | prepend:'_posts/' | git_mod }}
+#
 #
 
 require 'git'
