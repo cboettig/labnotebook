@@ -1,6 +1,6 @@
 language: haskell
 before_script:
-- echo 'yes' | sudo add-apt-repository ppa:marutter/c2d4u
+- sudo add-apt-repository -y ppa:marutter/c2d4u
 - sudo apt-get update
 - sudo apt-get install pandoc
 before_install:
