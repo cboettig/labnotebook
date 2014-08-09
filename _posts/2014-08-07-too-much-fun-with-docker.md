@@ -9,7 +9,7 @@ tags:
 **NOTE:** This post was originally drafted as a set of questions to the revived [ropensci-discuss list](https://groups.google.com/forum/#!forum/ropensci-discuss), hopefully readers might join the discussion from there.
 
 
-Been thinking about Docker and the discussion about reproducible research in the comments of Rich et al's recent post on the [rOpenSci blog](ropensci.org/blog/2014/06/09/reproducibility/) where quite a few of people mentioned the potential for Docker as a way to facilitate this.
+Been thinking about Docker and the discussion about reproducible research in the comments of Rich et al's recent post on the [rOpenSci blog](http://ropensci.org/blog/2014/06/09/reproducibility/) where quite a few of people mentioned the potential for Docker as a way to facilitate this.
 
 
 I've only just started playing around with Docker, and though I'm quite impressed, I'm still rather skeptical that non-crazies would ever use it productively.  Nevertheless, I've worked up some Dockerfiles to explore how one might use this approach to transparently document and manage a computational environment, and I was hoping to get some feedback from all of you.
