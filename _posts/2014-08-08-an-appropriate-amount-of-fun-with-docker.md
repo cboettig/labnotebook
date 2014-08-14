@@ -8,12 +8,12 @@ tags:
 ---
 
 
-_An update on my exploration with Docker. Title curtiousy of [Ted](https://twitter.com/DistribEcology/status/497523435371638784), with my hopes that this really does move us in a direction where we can spend less time thinking about the tools and computational environments. Not there yet though_
+_An update on my exploration with Docker. Title courtesy of [Ted](https://twitter.com/DistribEcology/status/497523435371638784), with my hopes that this really does move us in a direction where we can spend less time thinking about the tools and computational environments. Not there yet though_
 
 
 I've gotten RStudio Server working in the [ropensci-docker](https://github.com/ropensci/docker-ubuntu-r/blob/master/add-r-ropensci/Dockerfile) image (Issues/pull requests welcome!).
 
-    docker -d -p 8787:8787 cboettig/ropensci-docker
+    docker run -d -p 8787:8787 cboettig/ropensci-docker
 
 will make an RStudio server instance available to you in your browser at localhost:8787.  (Change the first number after the -p to have a different address).  You can log in with username:pw rstudio:rstudio and have fun.
 
