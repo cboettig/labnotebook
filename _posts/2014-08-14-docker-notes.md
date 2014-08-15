@@ -1,6 +1,5 @@
 ---
 layout: post
-published: false
 categories: open-science
 tags:
 - blog
