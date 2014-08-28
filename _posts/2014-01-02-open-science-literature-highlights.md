@@ -29,7 +29,7 @@ This set of interviews from Nature's Careers column this summer might make a mor
 
 ### open code: 
 
-I my opinion this is the upcoming big issue.  Of course open source has a long history in academia, but publishers and funders have paid a lot more attention to open data and open access (Creation of repositories like Dryad; required data deposition by many leading journals; funder's support of data synthesis initiatives, etc).  Interest in the potential for open code and concerns about reliability of increasingly software-driven results seem to be growing, this article does a good job providing concrete examples:
+In my opinion this is the upcoming big issue.  Of course open source has a long history in academia, but publishers and funders have paid a lot more attention to open data and open access (Creation of repositories like Dryad; required data deposition by many leading journals; funder's support of data synthesis initiatives, etc).  Interest in the potential for open code and concerns about reliability of increasingly software-driven results seem to be growing, this article does a good job providing concrete examples:
 
 - Ince, D. C., Hatton, L. & Graham-Cumming, J. 2012 The case for open computer programs. Nature 482, 485–488. (doi:[10.1038/nature10836](http://doi.org/10.1038/nature10836))
 
