@@ -1,6 +1,7 @@
 FROM ubuntu:14.04
 
 ## pass appropriate environmental variables to build successfully.  Including environments.  
+# ENV TWIT_KEY, TWIT_SECRET, TWIT_TOK, TWIT_TOK_SECRET, GIT_USER, 
 
 ## Configure ruby environment
 RUN apt-get -qq update && apt-get -qy upgrade
@@ -11,9 +12,7 @@ RUN gem install nokogiri -v '1.6.3.1'
 RUN git clone https://github.com/cboettig/labnotebook.git
 WORKDIR /labnotebook
 RUN bundle config build.nokogiri --use-system-libraries && bundle install && bundle update
-
-## Build site
-# RUN bundle exec rake site:build
+RUN gem install travis # For authentication
 
 
 ## Build environment for compiling Bootstrap >= 3.0.0 (Node.js / SASS environment)
@@ -27,4 +26,4 @@ RUN make
 
 
 WORKDIR /labnotebook
-## CMD bundle exec site deploy
+## CMD bundle exec rake site:deploy
