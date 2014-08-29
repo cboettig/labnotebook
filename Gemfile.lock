@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.1.1)
+    activesupport (4.1.5)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -22,26 +22,26 @@ GEM
     colorator (0.1)
     commander (4.1.6)
       highline (~> 1.6.11)
-    curb (0.8.5)
+    curb (0.8.6)
     equalizer (0.0.9)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
     fast-stemmer (1.0.2)
-    feedjira (1.2.0)
+    feedjira (1.3.1)
       curb (~> 0.8.1)
-      loofah (~> 1.2.1)
+      loofah (~> 2.0.0)
       sax-machine (~> 0.2.1)
     ffi (1.9.3)
     garb (0.9.8)
       activesupport (>= 2.2)
       multi_json (>= 1.3)
-    git (1.2.6)
+    git (1.2.8)
     highline (1.6.21)
     hike (1.2.3)
-    http (0.5.0)
+    http (0.5.1)
       http_parser.rb
     http_parser.rb (0.6.0)
-    i18n (0.6.9)
+    i18n (0.6.11)
     jekyll (1.5.1)
       classifier (~> 1.3)
       colorator (~> 0.1)
@@ -53,8 +53,51 @@ GEM
       redcarpet (~> 2.3.0)
       safe_yaml (~> 1.0)
       toml (~> 0.1.0)
-    jekyll-assets (0.7.8)
+    jekyll-assets (0.7.9)
       jekyll (>= 1.0.0, < 3.0.0)
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
+      sass
       sass
       sprockets (~> 2.10)
     jekyll-pandoc (0.0.8)
@@ -76,24 +119,24 @@ GEM
     logging (1.8.2)
       little-plugger (>= 1.1.3)
       multi_json (>= 1.8.4)
-    loofah (1.2.1)
-      nokogiri (>= 1.4.4)
+    loofah (2.0.1)
+      nokogiri (>= 1.5.9)
     maruku (0.7.0)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
-    mini_portile (0.5.3)
-    minitest (5.3.3)
-    multi_json (1.10.0)
+    mini_portile (0.6.0)
+    minitest (5.4.1)
+    multi_json (1.10.1)
     multipart-post (2.0.0)
     naught (1.0.0)
-    nokogiri (1.6.2)
-      mini_portile (~> 0.5.2)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
     octokit (2.7.2)
       sawyer (~> 0.5.2)
     pandoc-ruby (0.7.5)
     parslet (1.5.0)
       blankslate (~> 2.0)
-    posix-spawn (0.3.8)
+    posix-spawn (0.3.9)
     psych (2.0.5)
     pygments.rb (0.5.4)
       posix-spawn (~> 0.3.6)
@@ -101,14 +144,14 @@ GEM
     rack (1.5.2)
     rake (10.2.2)
     rb-fsevent (0.9.4)
-    rb-inotify (0.9.4)
+    rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    rb-kqueue (0.2.2)
+    rb-kqueue (0.2.3)
       ffi (>= 0.5.0)
     redcarpet (2.3.0)
     safe_yaml (1.0.3)
-    sass (3.3.7)
-    sawyer (0.5.4)
+    sass (3.4.2)
+    sawyer (0.5.5)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
     sax-machine (0.2.1)
@@ -119,7 +162,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    thread_safe (0.3.3)
+    thread_safe (0.3.4)
     tilt (1.4.1)
     toml (0.1.1)
       parslet (~> 1.5.0)
@@ -134,7 +177,7 @@ GEM
       memoizable (~> 0.4.0)
       naught (~> 1.0)
       simple_oauth (~> 0.2.0)
-    tzinfo (1.1.0)
+    tzinfo (1.2.2)
       thread_safe (~> 0.1)
     unicode (0.4.4.1)
     yajl-ruby (1.1.0)

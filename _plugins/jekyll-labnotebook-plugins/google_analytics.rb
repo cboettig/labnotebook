@@ -13,19 +13,6 @@
 #
 # Configuration:
 #
-#  Create an authentication file in your project directory (adjust the
-#  YAML.load_file line below) with the following structure:
-#
-#
-#  :api_key: "AIXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-#  :username: "XXXXXXXXXXXXX"
-#  :password: "XXXXXXXXXXXXX"
-#  :ua: "UA-XXXXXXXX-X"
-#
-#  and save the file as _garb.yml. Remember to add `_garb.yml` to
-#  .gitignore and the exclude list of `_config.yml`, (as you see in
-#  this repository.)  This prevents your secret credentials from being
-#  visible in the source code of your Jekyll site.
 #
 # Usage: Add the following liquid code to any page or post template or contents:
 #
@@ -57,7 +44,6 @@ module Jekyll
 
       def generate(site)
 
-        cred = YAML.load_file("_garb.yml")
 
         if(site.config['pageviews'])
           puts "Getting Google Analytics data"
@@ -65,9 +51,9 @@ module Jekyll
           start = Time.now
 
 
-          Garb::Session.api_key = cred[":api_key"]
-          token = Garb::Session.login(cred[":username"], cred[":password"])
-          profile = Garb::Management::Profile.all.detect {|p| p.web_property_id == cred[":ua"]}
+          Garb::Session.api_key = ENV["GARB_KEY"]
+          token = Garb::Session.login(ENV["GARB_NAME"], ENV["GARB_PASS"])
+          profile = Garb::Management::Profile.all.detect {|p| p.web_property_id == ENV["GARB_UA"]}
 
           # place query, customize to modify results
           data = Exits.results(profile,
