@@ -242,7 +242,7 @@ Paul Ludwig's paper where the simple model outperforms the generating complex mo
 
 3:00 Break
 3:15 Self-select into small groups to discuss Training Problems
-TASK: Identify 1-3 focal questions. What the biological problem? What’s the control problem?
+TASK: Identify 1-3 focal questions. What the biological problem? What's the control problem?
 
 
 ### Training Problem 1 Questions
@@ -290,7 +290,7 @@ TASK: Identify 1-3 focal questions. What the biological problem? What’s the co
 Participant list
 
 
-# [Pretty Darn Good’ Control](http://www.nimbios.org/workinggroups/WG_PDG)
+# [Pretty Darn Good' Control](http://www.nimbios.org/workinggroups/WG_PDG)
 
 
 

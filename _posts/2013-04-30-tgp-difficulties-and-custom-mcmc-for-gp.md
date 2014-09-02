@@ -139,6 +139,6 @@ ggplot(df, aes(value)) +
 ### Misc
 
 * 6 hours on trains, 2 hours on buses, 1.25 hours on bicycle, 6 hours in lab.  
-* Interesting reading in [The Secret History of OpenStack, the Free Cloud Software That’s Changing Everything](http://www.wired.com/wiredenterprise/2012/04/openstack/). Sounds just like the unlikely collaboration we need to emerge for a more robust and sustainable underlying scientific infrastructure.  
+* Interesting reading in [The Secret History of OpenStack, the Free Cloud Software That's Changing Everything](http://www.wired.com/wiredenterprise/2012/04/openstack/). Sounds just like the unlikely collaboration we need to emerge for a more robust and sustainable underlying scientific infrastructure.  
 
 

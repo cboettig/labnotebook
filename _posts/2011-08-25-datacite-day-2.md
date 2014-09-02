@@ -11,7 +11,7 @@ tags:
 - conference
 ---
 
-#### 9:00am–10:30am Session 4: Data and the Scholarly Output
+#### 9:00am-10:30am Session 4: Data and the Scholarly Output
 
 
 
@@ -40,14 +40,14 @@ see great example of the [ACRID database](http://www.cru.uea.ac.uk/cru/projects/
 
 
 
-#### 11:00am–12:30pm Session 5: The Role of Data Archives and Data Centers in Identifying and Preserving Data
+#### 11:00am-12:30pm Session 5: The Role of Data Archives and Data Centers in Identifying and Preserving Data
 
 
 
 
 
 	
-  1. Sarah Callaghan, Senior Research Scientist and Project Manager, British Atmospheric Data Centre at STFC. Citation and Publication by NERC’s Environmental Data Centres.
+  1. Sarah Callaghan, Senior Research Scientist and Project Manager, British Atmospheric Data Centre at STFC. Citation and Publication by NERC's Environmental Data Centres.
 
 	
   2. Bob Cook, Chief Scientist, Oak Ridge National Laboratory Distributed Active Archive Center, Environmental Sciences Division, Oak Ridge National Lab. Archiving Earth Science Data: Experiences of the ORNL Distributed Active Archive Center.

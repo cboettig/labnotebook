@@ -23,13 +23,13 @@ Unfortunately such model-based approaches are too new to make it into either of 
 
 ## References
 
-* Boettiger, C., & Hastings, A. (2012). Early warning signals and the prosecutor’s fallacy. Proceedings of the Royal Society B: Biological Sciences, (October). doi:10.1098/rspb.2012.2085
+* Boettiger, C., & Hastings, A. (2012). Early warning signals and the prosecutor's fallacy. Proceedings of the Royal Society B: Biological Sciences, (October). doi:10.1098/rspb.2012.2085
 
-* Kéfi, S., Dakos, V., Scheffer, M., Van Nes, E. H., & Rietkerk, M. (2012). Early warning signals also precede non-catastrophic transitions. Oikos, (June), no–no. doi:10.1111/j.1600-0706.2012.20838.x
+* Kéfi, S., Dakos, V., Scheffer, M., Van Nes, E. H., & Rietkerk, M. (2012). Early warning signals also precede non-catastrophic transitions. Oikos, (June), no-no. doi:10.1111/j.1600-0706.2012.20838.x
 
-* Perretti, C. T., & Munch, S. B. (2012). Regime shift indicators fail under noise levels commonly observed in ecological systems. Ecological Applications, 22(6), 1772–1779. doi:10.1890/11-0161.1
+* Perretti, C. T., & Munch, S. B. (2012). Regime shift indicators fail under noise levels commonly observed in ecological systems. Ecological Applications, 22(6), 1772-1779. doi:10.1890/11-0161.1
 
-* Boettiger, Carl, & Hastings, A. (2012). Quantifying limits to detection of early warning for critical transitions. Journal of The Royal Society Interface, 9(75), 2527 – 2539. doi:10.1098/rsif.2012.0125
+* Boettiger, Carl, & Hastings, A. (2012). Quantifying limits to detection of early warning for critical transitions. Journal of The Royal Society Interface, 9(75), 2527 - 2539. doi:10.1098/rsif.2012.0125
 
 * Lade, S. J., & Gross, T. (2012). Early Warning Signals for Critical Transitions: A Generalized Modeling Approach. (M. Pascual, Ed.)PLoS Computational Biology, 8(2), e1002360. doi:10.1371/journal.pcbi.1002360* Brock, W. A., & Carpenter, S. R. (2012). Early Warnings of Regime Shift When the Ecosystem Structure Is Unknown. (R. V. Solé, Ed.)PLoS ONE, 7(9), e45586. doi:10.1371/journal.pone.0045586
 

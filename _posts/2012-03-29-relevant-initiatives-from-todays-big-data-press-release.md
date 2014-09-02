@@ -18,12 +18,12 @@ An [exciting day for Big Data](http://www.whitehouse.gov/blog/2012/03/29/big-dat
 
   * Encouraging research universities to develop interdisciplinary graduate programs to prepare the next generation of data scientists and engineers;
   * Funding a $10 million Expeditions in Computing project based at the University of California, Berkeley, that will integrate three powerful approaches for turning data into information - machine learning, cloud computing, and crowd sourcing;
-  * Providing the first round of grants to support “EarthCube” – a system that will allow geoscientists to access, analyze and share information about our planet;
+  * Providing the first round of grants to support “EarthCube” - a system that will allow geoscientists to access, analyze and share information about our planet;
   * Convening researchers across disciplines to determine how Big Data can transform teaching and learning.
 
 ## DOE
 
-The Department of Energy will provide $25 million in funding to establish the Scalable Data Management, Analysis and Visualization (SDAV) Institute. Led by the Energy Department’s Lawrence Berkeley National Laboratory,
+The Department of Energy will provide $25 million in funding to establish the Scalable Data Management, Analysis and Visualization (SDAV) Institute. Led by the Energy Department's Lawrence Berkeley National Laboratory,
 
 ## DoD
 

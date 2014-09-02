@@ -46,8 +46,8 @@ singular strategy that is globally convergent but locally unstable.
 A population approaches by discrete jumps.
 
 Almost all quantitative theories of evolution have relied on stochastic
-models to address the impacts of chance events – such as mutations,
-births, deaths, and environmental changes – that affect the evolutionary
+models to address the impacts of chance events - such as mutations,
+births, deaths, and environmental changes - that affect the evolutionary
 process (Fisher 1937; Lande 1979; Coyne & Orr 2004). Adaptive dynamics
 theory typically considers two sources of stochasticity: random
 mutations and the loss of advantageous mutants to chance extinction
@@ -205,7 +205,7 @@ The deterministic theory applies both the limit of rare mutations (small
 $\mu$) and small mutational steps (small $\sigma_{\mu}$). In our
 treatment, either one of these can become the limiting factor and
 correspond to different regimes of adaptive branching. If mutations are
-very rare, we’ll see that the population must essentially survive phase
+very rare, we'll see that the population must essentially survive phase
 3 in a single mutational step. In this regime recieving a single
 mutation far enough into the $P_2$ region to survive the coexistence
 balance (phase 3 to 4). This corresponds to a single mutational step
@@ -214,7 +214,7 @@ Here branching is accomplished essentially by the single unlikely event
 being “rolled,” and transitions between phases are slow but rarely
 collapse to an earlier stage. When mutational step size is limiting,
 many mutational steps are required to get any population a distance of
-order $\sigma_c$ away – to escape the shadow of competition. In this
+order $\sigma_c$ away - to escape the shadow of competition. In this
 regime, successful branching appears as a lucky string of mutations,
 like a long series of flipping a coin and coming up heads rather than
 the singular improbable event. This regime is characterized by many
@@ -328,7 +328,7 @@ Coexistence
 
 Consider a population of two coexisting types, characterized by traits
 $x_1$ and $x_2$ respectively. The birth and death rates of each
-population are then given by expression  . We’ll assume that the
+population are then given by expression  . We'll assume that the
 populations can coexist, that is $(x_1, x_2)$ falls into the coexistence
 region $P_2$; *i.e.* that $C(x_1,x_2)K(x_2) /K_1(x_1) < 1 $ and
 $C(x_1, x_2) K(x_1)/K(x_2) < 1$. This guarentees that each population
@@ -359,7 +359,7 @@ $$\begin{aligned}
 \label{mastereq}\end{aligned}$$
 
 where $\text{E}_i^k$ is the step operator taking
-$f(N_i) \to f(N_{i+k})$. We apply van Kampen’s expansion of the master
+$f(N_i) \to f(N_{i+k})$. We apply van Kampen's expansion of the master
 equation to linear order to recover the following stochastic
 differential equation (Itô equation)
 
@@ -425,7 +425,7 @@ This tells us nothing about the survival of the resident, as it is only
 valid for small $p$. In most applications of this approach, it is
 assumed the resident quickly goes extinct once $p \sim o(1)$. If we
 consider the asymptotic behavior of the nonlinear PDE, Eq. , we see sure
-absorbtion at one boundary or the other. The asymptotic behavior needn’t
+absorbtion at one boundary or the other. The asymptotic behavior needn't
 concern us; as we really want to know how the expected lifetime of this
 dimporphic state compares with the rate at which mutants are entering
 this population. To do so we need the time dependent solution to the

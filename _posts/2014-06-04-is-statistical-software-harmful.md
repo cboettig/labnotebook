@@ -17,7 +17,7 @@ Google recently announced that it will be making it's own self-driving cars, rat
 
 Ben quotes prominent statisticians voicing fears that echo common concerns about self-driving cars:
 
-> Andrew Gelman attributes to Brad Efron the idea that “recommending that scientists use Bayes’ theorem is like giving the neighbourhood kids the key to your F-16″.
+> Andrew Gelman attributes to Brad Efron the idea that “recommending that scientists use Bayes' theorem is like giving the neighbourhood kids the key to your F-16″.
 
 I think it is particularly interesting and instructive that the quote Gelman attributes to Efron is about a mathematical theorem rather than about software (e.g. Bayes Theorem, not WinBUGS).  Even relatively simple statistical concepts like $p$ values can cause plenty of confusion, statistical package or no. The concerns are not unique to software, so the solutions cannot come through limiting access to software.
 

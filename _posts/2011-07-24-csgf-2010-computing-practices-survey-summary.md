@@ -11,9 +11,9 @@ tags:
 - conference
 ---
 
-Thanks to everyone who participated in the CSGF 2010 Survey.With too many things going on this year, I didn't conduct a survey at the 2011 Conference.  But as people were asking about the survey, I thought I could at least make last year's summary a bit more accessible.  The following comes from the pdf report I submitted to Krell and a few example figures from data.This year’s survey was longer and broader, recieving over 90 responses from fellows and alumni. Thanks to everyone who wrote in useful comments from last year, many appear as multiple choice options this year. This survey started out of my own ignorance about many of the methods and languages discussed at my first CSGF conference. Without what I’ve picked up from other fellows my answers to most of the survey questions would have been “never heard of it.”
+Thanks to everyone who participated in the CSGF 2010 Survey.With too many things going on this year, I didn't conduct a survey at the 2011 Conference.  But as people were asking about the survey, I thought I could at least make last year's summary a bit more accessible.  The following comes from the pdf report I submitted to Krell and a few example figures from data.This year's survey was longer and broader, recieving over 90 responses from fellows and alumni. Thanks to everyone who wrote in useful comments from last year, many appear as multiple choice options this year. This survey started out of my own ignorance about many of the methods and languages discussed at my first CSGF conference. Without what I've picked up from other fellows my answers to most of the survey questions would have been “never heard of it.”
 
-This year’s survey had three goals:
+This year's survey had three goals:
 
 
 
@@ -41,7 +41,7 @@ The results were full of surprises. I was unable to come across any obvious tren
 ![]( http://farm7.staticflickr.com/6003/5971726690_118e1d94f3_o.png )
 
 
-Scores on the good software practices quiz were reasonably high for scientists and mostly undifferentiated by year or discipline, scoring an average of 8 out of 16 points. We’re particularly good at documenting code (80%) and version management (> 60%) but almost no one uses a standards style checker or an automated test suite. Most fellows have experience in collaboratively writing software, working across disciplines and working across institutions. Some have experience on software development in large teams (> 10 researchers).
+Scores on the good software practices quiz were reasonably high for scientists and mostly undifferentiated by year or discipline, scoring an average of 8 out of 16 points. We're particularly good at documenting code (80%) and version management (> 60%) but almost no one uses a standards style checker or an automated test suite. Most fellows have experience in collaboratively writing software, working across disciplines and working across institutions. Some have experience on software development in large teams (> 10 researchers).
 
 ![]( http://farm7.staticflickr.com/6133/5971726626_2219a694de_o.png )
 

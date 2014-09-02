@@ -14,19 +14,19 @@ categories:
 The upcoming termination of NSF funding for [NCEAS](http://www.nceas.ucsb.edu/) has recently been receiving a bit of attention, including this nice piece in _Science_ (Stokstad, 2011).  I was particularly intrigued by [Oikos's treatment of this](http://oikosjournal.wordpress.com/2011/05/20/its-the-end-of-nceas-as-we-know-it-and-i-feel-fine/), in which Oikos editor Jeremy Fox writes,
 
 
-> that’s probably NCEAS’ biggest legacy–the sense that the answers to  all, or at least many, of our questions are already out there, in  existing data that just needs to be pulled together"
+> that's probably NCEAS' biggest legacy-the sense that the answers to  all, or at least many, of our questions are already out there, in  existing data that just needs to be pulled together"
 
 
 and then argues that this may have gone to far,
 
 
-> As the saying goes, if all you have is a hammer, everything looks like a  nail. Similarly, if all you have is the data you’ve currently got,  every question looks like one that can be answered with those data.
+> As the saying goes, if all you have is a hammer, everything looks like a  nail. Similarly, if all you have is the data you've currently got,  every question looks like one that can be answered with those data.
 
 
 I think this is an important point to raise, but it misses the mark.  I don't think anyone meant we should never collect new data.  I think the issue is rather that we never look back at the data we collect, as Jeremy very aptly acknowledges:
 
 
-> The sort of datasets I (and everyone I know) work with can be handled  easily on an ordinary laptop with ordinary software like Excel and R. [...] we’re getting along just fine without any  ecoinformatics or high performance computing resources.
+> The sort of datasets I (and everyone I know) work with can be handled  easily on an ordinary laptop with ordinary software like Excel and R. [...] we're getting along just fine without any  ecoinformatics or high performance computing resources.
 
 
 As he says, if all you have is a hammer, everything looks like a nail. This is _exactly_ why efforts such as NCEAS are so important. Darwin didn't need a laptop with Excel and R, he got along just fine.  So why is everyone using fancy laptops?

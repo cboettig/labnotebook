@@ -16,7 +16,7 @@ Biological Sciences_, *279*, pp. 4734-4739. ISSN 0962-8452,
 http://dx.doi.org/10.1098/rspb.2012.2085."><a href="http://dx.doi.org/10.1098/rspb.2012.2085" rel="http://purl.org/spar/cito/citesAsEvidence" >Boettiger & Hastings (2012)</a></span> ) that if purely stochastic transitions out of a potential well happen, then they happen fast (dispite the fact that waiting time for them to happen is very long).  Yesterday Marc mentioned an interesting proof of this from Don Ludwig, who was able to show that the waiting time to reach a large deviation in a time $t$, given that it reaches it at all, is of the same order as the return time from the large deviation to the equilibrium, $\log(L/\sigma)$.  That's an absolutely fascinating conclusion, indeed a bit stronger than even I had expected (the waiting time until an escape is observed rather different! -- of order $\exp(L^2/\sigma^2)$.  
 
 
-Don's derivation is repeated in pages 302-311 Marc's "Theoretical Biologist's Toolbox," rather delightfully too (e.g. the "Kumura Maneuver", or sidenotes such as "it is also kind of fun to do a web search with key words ‘Dawson’s Integral’").  <span class="showtooltip" title="Lande R (1985). Expected time for random genetic drift of a
+Don's derivation is repeated in pages 302-311 Marc's "Theoretical Biologist's Toolbox," rather delightfully too (e.g. the "Kumura Maneuver", or sidenotes such as "it is also kind of fun to do a web search with key words ‘Dawson's Integral'").  <span class="showtooltip" title="Lande R (1985). Expected time for random genetic drift of a
 population between stable phenotypic states. 
 http://www.pnas.org/content/82/22/7641.abstract [Online.
 last-accessed: 2013-04-08 19:58:49]. 

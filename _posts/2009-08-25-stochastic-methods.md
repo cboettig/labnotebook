@@ -39,7 +39,7 @@ The process is specified by the Master equation:
 $$\frac{\partial P(n,t)}{\partial t} = b(n-1)P(n-1,t)+d(n+1)P(n+1) - \left( b(n) + d(n)  \right) P(n)
 \label{mastereq}$$
 
-and approximated by the method of Kurtz (1971) or van Kampen’s linear
+and approximated by the method of Kurtz (1971) or van Kampen's linear
 nois expansion as:
 
 $$\frac{\partial P(\tilde n,t)}{\partial t} = - \underbrace{\frac{\partial \left( b(\tilde n)-d(\tilde n) \right)}{\partial \tilde n}}_{A(\tilde n) } \frac{\partial}{\partial \tilde n} \tilde n  P(\tilde n,t)+ \underbrace{\frac{b(\tilde n)+ d(\tilde n)}{2} }_{B(\tilde n)/2} \frac{\partial^2}{\partial \tilde n^2} P(\tilde n)

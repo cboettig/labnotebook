@@ -36,7 +36,7 @@ since the order of the arguments have changed, since `z` is not an optional argu
 
 Current CRAN guidelines state: 
 
-> A package or ‘R’ can appear more than once in the ‘Depends’ field, for example to give upper and lower bounds on acceptable versions.
+> A package or ‘R' can appear more than once in the ‘Depends' field, for example to give upper and lower bounds on acceptable versions.
 
 Any use of this will throw a NOTE, not sure if CRAN would object.  If the upper bound is not the most recent version on CRAN however, presumably CRAN will not take the package. Check seems to check against what is installed on the local system (which I believe does not support having multiple versions installed at once).  
 

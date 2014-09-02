@@ -64,7 +64,7 @@ My code development is regularly committed to a public version
 management repository. One can follow line by line changes, view my
 commit log and visualize branches and merges in the project. The code
 can be downloaded in the state it was at any point in its history to
-replicate my work and be reused in other projects. Github’s social
+replicate my work and be reused in other projects. Github's social
 coding tools connects me to similar researchers whose work I can follow,
 pose questions or begin a direct collaboration.
 
@@ -98,7 +98,7 @@ workflow. It reduces errors through greater transparency and review. It
 increases quality through better access to expert advice and building on
 established work. It increases impact by connecting to other data and
 being amplified by other researchers in the network. The more
-researchers adopt these approaches, the more effective they’ll become.
+researchers adopt these approaches, the more effective they'll become.
 
 \
 

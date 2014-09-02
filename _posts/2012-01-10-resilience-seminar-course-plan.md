@@ -18,7 +18,7 @@ Resilience Monte Carlo Seminar, 11am Tuesdays. Val Eviner.
 * Jan 24 Resilience of degraded vs. intact systems, Erica Case and Alex Webster
 * Jan 31 Novel ecosystems, Ania Truszczynski and Mark Noyes
 * Feb 7 Landscape configuration, Julia Moore
-* Feb 14 Assisted Migration, Anna O’Brien
+* Feb 14 Assisted Migration, Anna O'Brien
 * Feb 21 Designing and managing for resilience, Sarah McCullough and Caroline Wright
 * Feb 28 Thresholds/ uncertainty, Matt Meisner and Carl Boettiger
 * March 6 Managing for evolutionary potential, Jaime Ashander

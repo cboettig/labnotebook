@@ -90,7 +90,7 @@ ISSN 00368075, <a href="http://dx.doi.org/10.1126/science.284.5411.83">http://dx
 ISSN 00368075, <a href="http://dx.doi.org/10.1126/science.290.5495.1358">http://dx.doi.org/10.1126/science.290.5495.1358</a>.
 
 - Yoshida T, Jones L, Ellner S, Fussmann G and Hairston N (2003).
-"Rapid Evolution Drives Ecological Dynamics in A Predator–Prey System."
+"Rapid Evolution Drives Ecological Dynamics in A Predator-Prey System."
 *Nature*, **424**.
 ISSN 00280836, <a href="http://dx.doi.org/10.1038/nature01767">http://dx.doi.org/10.1038/nature01767</a>.
 

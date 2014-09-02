@@ -30,8 +30,8 @@ tags:
 2. We need quantify uncertainty stats
 3. ROC curve shows this trade-off
 4. ROC also compares different methods & data sizes (i.e. Fig 4)
-5. Quantifying “increasing variance” etc — we’ll use tau
-6. We’ll also do a likelihood-based method
+5. Quantifying “increasing variance” etc — we'll use tau
+6. We'll also do a likelihood-based method
 7. Introduce the datasets
 8. ROC curves on the data, Fig 3
 9. Quantifying data necessary, Fig 4
@@ -40,18 +40,18 @@ tags:
 
 (Marissa's comments)
 
->I struggled a bit with the flow in these three paragraphs. I see what you’re trying to do (go from
+>I struggled a bit with the flow in these three paragraphs. I see what you're trying to do (go from
 >
 >1) the idea of a trade-off, to
->2) what you’ll do, to
+>2) what you'll do, to
 >3) how your ROC methods illustrates the trade-off, to
->4) how you’ll apply ROCs),
+>4) how you'll apply ROCs),
 >
->but I didn’t fully understand the trade-off and why you were talking about it so much in the first paragraph until the ROC illustration described in the second paragraph.
+>but I didn't fully understand the trade-off and why you were talking about it so much in the first paragraph until the ROC illustration described in the second paragraph.
 >
 >Another approach might be to:
 >
->1) have a paragraph about no one having quantified both reliability and sensitivity and their dependence on data quality, ending with the point that that’s the goal of this manuscript. This paragraph won’t mention anything about trade-offs.
+>1) have a paragraph about no one having quantified both reliability and sensitivity and their dependence on data quality, ending with the point that that's the goal of this manuscript. This paragraph won't mention anything about trade-offs.
 >
 >2) Now introduce trade-offs with fig. 1: start a paragraph with a topic sentence like: “Our tool for quantifying reliability and sensitivity, receiver-operating characteristic (ROC) curves, also illustrates the trade-off between the two.”
 >

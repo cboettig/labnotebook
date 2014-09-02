@@ -19,8 +19,8 @@ LaTeX document was edited in the course of that research.
 
 We wish to establish the fate of a population into which a rare mutant
 is introduced near a branching point. Far from the branching point, we
-had only one concern – will the mutant survive? Near the branching
-point, we now have two concerns – the fate of the mutant and the fate of
+had only one concern - will the mutant survive? Near the branching
+point, we now have two concerns - the fate of the mutant and the fate of
 the original resident. For branching to proceed, both must persist. The
 traditional framework of density-independent diffusion theory is
 insuffient to handle this case. We must consider both resident and
@@ -43,7 +43,7 @@ $$\begin{aligned}
 \label{mastereq}\end{aligned}$$
 
 where $E_i^k$ is the step operator taking $f(N_i) \to f(N_{i+k})$. We
-apply van Kampen’s expansion of the master equation to linear order in
+apply van Kampen's expansion of the master equation to linear order in
 the system size $K_0$, the carrying capacity at the singular strategy.
 While several other options are possible, it is important to note that
 this approximation, which gives rise to a diffusion equation, is *not*
@@ -69,8 +69,8 @@ justifable under the right conditions. The first is that the total
 population size is a constant, $n_1 + n_2 = n$. Even at stationary
 state, this is not valid as the populations fluctuate according to , but
 these fluctuations become negligible for large $K_0$. However, the
-system is only near stationary state when $p$ is at it’s equilibrium
-value – it is not valid for all $p$. This is more problematic, as the
+system is only near stationary state when $p$ is at it's equilibrium
+value - it is not valid for all $p$. This is more problematic, as the
 resulting SDE will depend only on $k_1$ and not $k_2$. Only when
 $k_1 = k_2$ is this equation valid for any value of $p$. If mutational
 steps are small this will be approximately true. As we will see, smaller
@@ -127,7 +127,7 @@ applications of this approach, it is assumed the resident quickly goes
 extinct once $p \sim o(1)$. If we consider the asymptotic behavior of
 the nonlinear PDE, Eq. , we find not suprisingly that the asymptotic
 behavior is sure absorbtion at one boundary or the other. The asymptotic
-behavior needn’t concern us; as we really want to know how the expected
+behavior needn't concern us; as we really want to know how the expected
 lifetime of this dimporphic state compares with the rate at which
 mutants are entering this population. To do so we need the time
 dependent solution to the nonlinear equation .

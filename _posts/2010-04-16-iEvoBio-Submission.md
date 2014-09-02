@@ -13,10 +13,10 @@ title: iEvoBio Submission
 
 ### Quantifying Information in a Phylogenetic Tree: The Robustness of Phylogenetic Signal
 
-Since Felsenstein (1985)’s influential paper on phylogenetic contrasts,
+Since Felsenstein (1985)'s influential paper on phylogenetic contrasts,
 phylogenetically-based inferences of evolutionary patterns have gotten
 increasingly more complex (Hansen, 1997; Butler and King, 2004;
-Freckleton and Harvey, 2006; O’Meara et al., 2006; Pagel and Meade,
+Freckleton and Harvey, 2006; O'Meara et al., 2006; Pagel and Meade,
 2006). More and more sophisticated models are applied to datasets of
 species mean traits on a phylogenetic tree in an attempt to answer such
 questions as reconstructing ancestral states, identify changes in rates

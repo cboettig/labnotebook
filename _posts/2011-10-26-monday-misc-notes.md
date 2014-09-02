@@ -58,4 +58,4 @@ git checkout -- filename
 
 You can also do this with files from other branches, and such. `man git-checkout` has the details.
 
-The rest of the Internet will tell you to use `git reset --hard`, but this resets **all ** uncommitted changes you’ve made in your working copy. Type this with care.
+The rest of the Internet will tell you to use `git reset --hard`, but this resets **all ** uncommitted changes you've made in your working copy. Type this with care.

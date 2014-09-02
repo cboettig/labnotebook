@@ -28,7 +28,7 @@ tags:
 
 
 	
-  * Stacey Smith (U. of Nebraska-Lincoln) and Boris Igic (U.of Illinois-Chicago) – "Introduction to models of character state-dependent diversification"
+  * Stacey Smith (U. of Nebraska-Lincoln) and Boris Igic (U.of Illinois-Chicago) - "Introduction to models of character state-dependent diversification"
 
 
 Introduces the BiSSE model.
@@ -37,7 +37,7 @@ Introduces the BiSSE model.
 
 
 	
-  * Richard Fitzjohn (U. of British Columbia) – "Stochastic mapping incorporating differential diversification"
+  * Richard Fitzjohn (U. of British Columbia) - "Stochastic mapping incorporating differential diversification"
 
 
 ![]( http://farm6.staticflickr.com/5303/5846583940_998025ba25_o.jpg )
@@ -46,20 +46,20 @@ Introduces the BiSSE model.
 BiSSE comparison to traditional discrete-trait transition rate which ignores the correlation.
 
 	
-  * Folmer Bokma (Umeå University) – "Estimating speciation and extinction with incomplete phylogenies"
+  * Folmer Bokma (Umeå University) - "Estimating speciation and extinction with incomplete phylogenies"
 
 
 ![]( http://farm4.staticflickr.com/3008/5846029951_2424c3127b_o.jpg )
 
 
 	
-  * Emma Goldberg (University of Illinois-Chicago) – "Modes of speciation and character change from phylogenetic trees"
+  * Emma Goldberg (University of Illinois-Chicago) - "Modes of speciation and character change from phylogenetic trees"
 
 	
-  * Peter Wagner (Smithsonian Institution) – "Using stratigraphic compatibility to reveal general relationships between character combinations and diversification"
+  * Peter Wagner (Smithsonian Institution) - "Using stratigraphic compatibility to reveal general relationships between character combinations and diversification"
 
 	
-  * P. David Polly (Indiana U.) – "Morphological clocks: why phenotype is a poor predictor of time since common ancestry"
+  * P. David Polly (Indiana U.) - "Morphological clocks: why phenotype is a poor predictor of time since common ancestry"
 
 
 

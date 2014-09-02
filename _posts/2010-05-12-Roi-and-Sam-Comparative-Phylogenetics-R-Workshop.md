@@ -43,9 +43,9 @@ title: Roi and Sam Comparative Phylogenetics R Workshop
      ltt.plot() or plotLtt()
 
 -   Simulating trees (Yule and Birth/Death)
--   Tree statistics (gamma statistic – Pybus & Harvey etc.)
+-   Tree statistics (gamma statistic - Pybus & Harvey etc.)
 -   Laser
--   MEDUSA – shifts in diversification rates (in Gieger)
+-   MEDUSA - shifts in diversification rates (in Gieger)
 
 \
 

@@ -14,7 +14,7 @@ Below are my scribble notes in prep for an interview with Richard, a writier for
 
 > Advice for early-career scientists on how to think about organizing and publishing research data online.
  
-> Things like – why do it, 
+> Things like - why do it, 
 
 Good for science (idealist), good for reputation (careerist), etc, but most importantly: helps you do your research. 
 
@@ -40,16 +40,16 @@ Effortlessly share _rapidly changing_ content (data, code, manuscript drafts).  
 
 Lab Notebook: 
  
-> what things do you need to look out for (such as data permanence, how to make data citable and discoverable, how to fit in with your field’s requirements, etc).
+> what things do you need to look out for (such as data permanence, how to make data citable and discoverable, how to fit in with your field's requirements, etc).
 
 Metadata.  
 
->  I see that you’re a great advocate of sharing data and open science, and I’d be keen to talk about what you’ve got out of it, 
+>  I see that you're a great advocate of sharing data and open science, and I'd be keen to talk about what you've got out of it, 
 
 
->  what you’ve learned, 
+>  what you've learned, 
   
->  and any advice you’d give to early-career scientists who are wondering about how to start.
+>  and any advice you'd give to early-career scientists who are wondering about how to start.
 
 Start in your lab group, and make it habit.  You'll be the biggest beneficiary... 
 

@@ -13,10 +13,10 @@ tags:
 
 
 	
-  * 12:00pm–1:00pm Lunch
+  * 12:00pm-1:00pm Lunch
 
 	
-  * 1:15pm–2:00pm Keynote Address: John Wilbanks, Vice President for Science, Creative Commons. Citation in the Commons. ([Slides](http://www.slideshare.net/wilbanks/datacite-wilbanks))
+  * 1:15pm-2:00pm Keynote Address: John Wilbanks, Vice President for Science, Creative Commons. Citation in the Commons. ([Slides](http://www.slideshare.net/wilbanks/datacite-wilbanks))
 
 
 
@@ -32,7 +32,7 @@ tags:
 > Lesson of the Library of Babel, Early Web (Greenspun, 1995) Simple and weak is best -- scalable.  ([Rule of least power](http://t.co/uKj52Ql)).
 
 
-2:00pm–3:30pm Session 1: Exposing Dataset DOIs and Citations
+2:00pm-3:30pm Session 1: Exposing Dataset DOIs and Citations
 
 
 
@@ -70,10 +70,10 @@ tags:
 
 
 	
-  * Elizabeth Moss, Librarian, [ICPSR](http://www.icpsr.umich.edu/icpsrweb/ICPSR/), University of Michigan. Cite the Data! ICPSR’s Efforts to Improve Practice.
+  * Elizabeth Moss, Librarian, [ICPSR](http://www.icpsr.umich.edu/icpsrweb/ICPSR/), University of Michigan. Cite the Data! ICPSR's Efforts to Improve Practice.
 
 
-4:00pm–5:30pm Session 2: Beyond Citing Data: Trends and Practices
+4:00pm-5:30pm Session 2: Beyond Citing Data: Trends and Practices
 
 	
   1. John Kunze, Associate Director, University of California Curation Center, California Digital Library. Baby Steps Towards Data Publication.
@@ -85,11 +85,11 @@ tags:
   3. Joel Hammond, Director, Product Management & Development IP & Science Thomson Reuters. Exposing Dataset DOIs and Citations.
 
 
-5:30pm-6:15pm Session 3: Pecha Kucha – Rapid Fire Talks From DataCite Partners
+5:30pm-6:15pm Session 3: Pecha Kucha - Rapid Fire Talks From DataCite Partners
 
 
 
-6:30pm–9:00pm Reception
+6:30pm-9:00pm Reception
 
 
 ### Select from my twitter-log

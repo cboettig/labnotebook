@@ -37,7 +37,7 @@ Unfortunately the piece is not available open access (though do write to me for 
 ## References
 
 1. Lade, S. J. & Gross, T. Early Warning Signals for Critical Transitions: A Generalized Modeling Approach. PLoS Computational Biology 8, e1002360 (2012). doi:10.1371/journal.pcbi.1002360
-1. Schreiber, S. J. & Rudolf, V. H. W. Crossing habitat boundaries: coupling dynamics of ecosystems through complex life cycles. Ecology Letters 11, 576–87 (2008). doi:10.1111/j.1461-0248.2008.01171.x
+1. Schreiber, S. J. & Rudolf, V. H. W. Crossing habitat boundaries: coupling dynamics of ecosystems through complex life cycles. Ecology Letters 11, 576-87 (2008). doi:10.1111/j.1461-0248.2008.01171.x
 1. Dakos, V., Kéfi, S., Rietkerk, M., Nes, E. H. Van & Scheffer, M. Slowing Down in Spatially Patterned Ecosystems at the Brink of Collapse. The American Naturalist (2011).doi:10.1086/659945
-1. Bel, G., Hagberg, A. & Meron, E. Gradual regime shifts in spatially extended ecosystems. Theoretical Ecology 5, 591–604 (2012). doi:10.1007/s12080-011-0149-6
+1. Bel, G., Hagberg, A. & Meron, E. Gradual regime shifts in spatially extended ecosystems. Theoretical Ecology 5, 591-604 (2012). doi:10.1007/s12080-011-0149-6
 

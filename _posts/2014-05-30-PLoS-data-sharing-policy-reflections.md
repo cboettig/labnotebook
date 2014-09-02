@@ -44,7 +44,7 @@ question of "What" should be archived rather than "Where" (unless it is
 referring to separately archiving the figures and tables of the main text,
 which sounds like a great idea to me).
 
-- __Should software/code be treated any differently from ‘data’? How
+- __Should software/code be treated any differently from ‘data'? How
 should materials-sharing differ?__
 
 At the highest level I think it is possible to see software as a 'type'

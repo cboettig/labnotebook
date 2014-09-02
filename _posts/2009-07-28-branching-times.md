@@ -33,7 +33,7 @@ the resident trait $x$ nears the branching point, where the gap vanishes
 all together. This criterion can be evaluated directly at regular
 intervals throughout the simulation.
 
-Most often this condition will arise only transiently – a single mutant
+Most often this condition will arise only transiently - a single mutant
 satisifying the conditions but soon lost to drift. Hence our second
 requirement must be that the mutant successfully entering the
 coexistence region then proceeds to survive drift. Defining this second
@@ -42,7 +42,7 @@ the probability of survival may be well approximated by the
 Galton-Watson branching process. In theory, this probability can be
 converted into an expected waiting time in a straight-forward manner. In
 simulation, this is insufficent, as we want to identify the actual
-waiting time we need more than a probability – we need to indentify
+waiting time we need more than a probability - we need to indentify
 which populations actually survive. If selection is strong, we may hope
 to identify which populations have effectively survived drift by
 establishing some low-density threshold at which we declare the
@@ -55,7 +55,7 @@ If selection is strong, we can set this threshold quite low, and more
 importantly, the time to reach the threshold will be quite small
 compared to the time spent waiting for the mutation, and theory and
 simulation should match reasonably well. This latter observation is
-particularly convenient in that our calculation shouldn’t depend much on
+particularly convenient in that our calculation shouldn't depend much on
 the choice of threshold, as once the mutant establishes several clones
 the probability of survival quickly asymptotes to unity. If selection is
 weak, we are not so fortunate. Even relatively large mutant populations
@@ -73,7 +73,7 @@ only the case of strong selection, where a small, arbitrary threshold
 can reasonably guarentee the success of branching. Later we will want to
 quantify the meaning of strong, relative to the influence of drift. For
 now, it suffices that such a notion exists, and we need only focus on
-the first two steps – a mutant occurs and survives drift with
+the first two steps - a mutant occurs and survives drift with
 probability given by its selective coefficent, to have a reasonable
 approximation of the waiting time between simulation and experiment.
 
@@ -90,7 +90,7 @@ weak selection where a smaller population would fail.
 
 (A resource kernel that is similar in width to the competition kernel
 but very wide compared to the mutational step size may approach the
-branching region only by drift – fixing weakly deleterious mutations. )
+branching region only by drift - fixing weakly deleterious mutations. )
 
 Calculation
 ===========

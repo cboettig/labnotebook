@@ -41,7 +41,7 @@ ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1059199">http://dx.do
 ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1141412">http://dx.doi.org/10.1126/science.1141412</a>.
 
 - Fauchald P (2010).
-"Predator–Prey Reversal: A Possible Mechanism For Ecosystem Hysteresis in The North Sea?"
+"Predator-Prey Reversal: A Possible Mechanism For Ecosystem Hysteresis in The North Sea?"
 *Ecology*, **91**.
 ISSN 0012-9658, <a href="http://dx.doi.org/10.1890/09-1500.1">http://dx.doi.org/10.1890/09-1500.1</a>.
 

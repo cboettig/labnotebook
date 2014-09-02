@@ -56,7 +56,7 @@ variance $\sigma_{\mu}^2$.
 
 Consider a population of two coexisting types, characterized by traits
 $x_1$ and $x_2$ respectively. The birth and death rates of each
-population are then given by expression  . We’ll assume that the
+population are then given by expression  . We'll assume that the
 populations can coexist, that is $(x_1, x_2)$ falls into the coexistence
 region $P_2$; *i.e.* that $C(x_1,x_2)K(x_2) /K_1(x_1) < 1 $ and
 $C(x_1, x_2) K(x_1)/K(x_2) < 1$. This guarentees that each population
@@ -87,7 +87,7 @@ $$\begin{aligned}
 \label{mastereq}\end{aligned}$$
 
 where $\text{E}_i^k$ is the step operator taking
-$f(N_i) \to f(N_{i+k})$. We apply van Kampen’s expansion of the master
+$f(N_i) \to f(N_{i+k})$. We apply van Kampen's expansion of the master
 equation to linear order to recover the following stochastic
 differential equation (Itô equation)
 
@@ -153,7 +153,7 @@ This tells us nothing about the survival of the resident, as it is only
 valid for small $p$. In most applications of this approach, it is
 assumed the resident quickly goes extinct once $p \sim o(1)$. If we
 consider the asymptotic behavior of the nonlinear PDE, Eq. , we see sure
-absorbtion at one boundary or the other. The asymptotic behavior needn’t
+absorbtion at one boundary or the other. The asymptotic behavior needn't
 concern us; as we really want to know how the expected lifetime of this
 dimporphic state compares with the rate at which mutants are entering
 this population. To do so we need the time dependent solution to the

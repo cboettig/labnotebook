@@ -23,9 +23,9 @@ Who knew?  Working through basic regression scenarios.
 
 Also reading:
 
-* Deisenroth, M. P., Rasmussen, C. E., & Peters, J. (2009). Gaussian process dynamic programming. Neurocomputing, 72(7-9), 1508–1524. doi:10.1016/j.neucom.2008.12.019
+* Deisenroth, M. P., Rasmussen, C. E., & Peters, J. (2009). Gaussian process dynamic programming. Neurocomputing, 72(7-9), 1508-1524. doi:10.1016/j.neucom.2008.12.019
 * Kocijan, J., & Girard, A. (2005). Dynamic systems identification with Gaussian processes. … of Dynamical Systems. doi:10.1080/13873950500068567
-* Turner, R. (2010). State-space inference and learning with Gaussian processes. Proceedings of 13th …, 868–875. 
+* Turner, R. (2010). State-space inference and learning with Gaussian processes. Proceedings of 13th …, 868-875. 
 
 
 

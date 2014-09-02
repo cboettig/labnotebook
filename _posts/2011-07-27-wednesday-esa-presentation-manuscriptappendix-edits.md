@@ -43,7 +43,7 @@ Next year:
 * Evolution: Ottawa, Ontario, Canada - July 6-10
 * CSGF: not scheduled
 * SMB: Knoxville, TN: July 26-28
-* ESA: Portland, OR, August 5 – Friday, August 10, 2012
+* ESA: Portland, OR, August 5 - Friday, August 10, 2012
 
 ## ESA presentation
 

@@ -91,21 +91,21 @@ Updates to knitcitations
 Reading
 -------
 
-1. O’Dwyer, J. P. & Green, J. L. 2010 Field theory for biogeography: a spatially explicit model for predicting patterns of biodiversity. Ecology letters 13, 87–95. (doi:10.1111/j.1461-0248.2009.01404.x)
+1. O'Dwyer, J. P. & Green, J. L. 2010 Field theory for biogeography: a spatially explicit model for predicting patterns of biodiversity. Ecology letters 13, 87-95. (doi:10.1111/j.1461-0248.2009.01404.x)
 2. Stewart, E. C. A., Almes, G. T., Mccaulay, D. S. & Bradley, C. 2009 Cyberinfrastructure Software Sustainability and Reusability : Report from an NSF-funded workshop Report from an NSF-funded workshop held 27 and 28 March 2009. 
-3. Ingram, T. & Mahler, D. L. 2013 SURFACE: detecting convergent evolution from comparative data by fitting Ornstein-Uhlenbeck models with stepwise AIC. Methods in Ecology and Evolution , 1–25. (doi:10.1111/2041-210X.12034)
-4. Shelton, A. & Munch, S. 2012 Maternal age, fecundity, egg quality, and recruitment: linking stock structure to recruitment using an age-structured Ricker model. Canadian Journal of … 1641, 1631–1641. (doi:10.1139/F2012-082)
-5. Regan, T. J., Chadès, I. & Possingham, H. P. 2011 Optimally managing under imperfect detection: a method for plant invasions. Journal of Applied Ecology 48, 76–85. (doi:10.1111/j.1365-2664.2010.01915.x)
-6. Gewin, V. 2013 Turning point: Carl Boettiger. Nature 493, 711–711. (doi:10.1038/nj7434-711a)
+3. Ingram, T. & Mahler, D. L. 2013 SURFACE: detecting convergent evolution from comparative data by fitting Ornstein-Uhlenbeck models with stepwise AIC. Methods in Ecology and Evolution , 1-25. (doi:10.1111/2041-210X.12034)
+4. Shelton, A. & Munch, S. 2012 Maternal age, fecundity, egg quality, and recruitment: linking stock structure to recruitment using an age-structured Ricker model. Canadian Journal of … 1641, 1631-1641. (doi:10.1139/F2012-082)
+5. Regan, T. J., Chadès, I. & Possingham, H. P. 2011 Optimally managing under imperfect detection: a method for plant invasions. Journal of Applied Ecology 48, 76-85. (doi:10.1111/j.1365-2664.2010.01915.x)
+6. Gewin, V. 2013 Turning point: Carl Boettiger. Nature 493, 711-711. (doi:10.1038/nj7434-711a)
 7. Nicol, S. & Chadès, I. 2012 Which states matter? An application of an intelligent discretization method to solve a continuous POMDP in conservation biology. PloS one 7, e28993. (doi:10.1371/journal.pone.0028993)
-8. McDonald-Madden, E., Chadès, I., McCarthy, M. a, Linkie, M. & Possingham, H. P. 2011 Allocating conservation resources between areas where persistence of a species is uncertain. Ecological applications : a publication of the Ecological Society of America 21, 844–58. 
+8. McDonald-Madden, E., Chadès, I., McCarthy, M. a, Linkie, M. & Possingham, H. P. 2011 Allocating conservation resources between areas where persistence of a species is uncertain. Ecological applications : a publication of the Ecological Society of America 21, 844-58. 
 10. Krell 2011 The U.S. Department of Energy Computational Science Graduate Fellowship 1991-­‐2011: Recipient Outcomes and Programmatic Impacts. 
-11. Dougherty, D. T., Hilborn, R., Punt, A. E. & Stewart, I. J. 2013 Modeling co-occurring species : a simulation study on the effects of spatial scale for setting management targets. 8, 1–8. 
-12. Chadès, I., Martin, T. G., Nicol, S., Burgman, M. a, Possingham, H. P. & Buckley, Y. M. 2011 General rules for managing and surveying networks of pests, diseases, and endangered species. Proceedings of the National Academy of Sciences of the United States of America 108, 8323–8. (doi:10.1073/pnas.1016846108)
-13. Chad, I., Carwardine, J., Martin, T. G. & Nicol, S. In press. MOMDPs : A Solution for Modelling Adaptive Management Problems. , 267–273. 
+11. Dougherty, D. T., Hilborn, R., Punt, A. E. & Stewart, I. J. 2013 Modeling co-occurring species : a simulation study on the effects of spatial scale for setting management targets. 8, 1-8. 
+12. Chadès, I., Martin, T. G., Nicol, S., Burgman, M. a, Possingham, H. P. & Buckley, Y. M. 2011 General rules for managing and surveying networks of pests, diseases, and endangered species. Proceedings of the National Academy of Sciences of the United States of America 108, 8323-8. (doi:10.1073/pnas.1016846108)
+13. Chad, I., Carwardine, J., Martin, T. G. & Nicol, S. In press. MOMDPs : A Solution for Modelling Adaptive Management Problems. , 267-273. 
 14. Kapaun, U. & Quaas, M. 2012 Does the optimal size of a fish stock increase with environmental uncertainties? 
-16. Mattmann, C. A. 2013 Computing: A vision for data science. Nature 493, 473–5. (doi:10.1038/493473a)
-17. Seekell, D. a., Cline, T. J. & Winchcombe, R. J. 2013 Can Management Reduce Harvest Inequality in Recreational Fisheries? North American Journal of Fisheries Management 33, 148–152. (doi:10.1080/02755947.2012.746246) 
+16. Mattmann, C. A. 2013 Computing: A vision for data science. Nature 493, 473-5. (doi:10.1038/493473a)
+17. Seekell, D. a., Cline, T. J. & Winchcombe, R. J. 2013 Can Management Reduce Harvest Inequality in Recreational Fisheries? North American Journal of Fisheries Management 33, 148-152. (doi:10.1080/02755947.2012.746246) 
 
 
 

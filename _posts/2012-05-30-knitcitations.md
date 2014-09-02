@@ -278,10 +278,10 @@ ISSN 1461-023X,
 
 Abrams PA, Ruokolainen L, Shuter BJ and Mccann KS (2012). “Harvesting
 Creates Ecological Traps: Consequences of Invisible Mortality Risks in
-Predator–Prey Metacommunities.” *Ecology*, **93**. ISSN 0012-9658,
+Predator-Prey Metacommunities.” *Ecology*, **93**. ISSN 0012-9658,
 [http://dx.doi.org/10.1890/11-0011.1](http://dx.doi.org/10.1890/11-0011.1).
 
-Michaels S and Tyre AJ (2012). “How Indeterminism Shapes Ecologists’
+Michaels S and Tyre AJ (2012). “How Indeterminism Shapes Ecologists'
 Contributions to Managing Socio-Ecological Systems.” *Conservation
 Letters*.
 [http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x](http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x).

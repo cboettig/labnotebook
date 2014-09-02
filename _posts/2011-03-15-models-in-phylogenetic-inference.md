@@ -12,7 +12,7 @@ categories:
 Another phylogenetics paper (Perelman _et. al._ 2011) using GTR+I+G inspired me to look back over the discussion and objections with this model.  This model is the basis of 100s of publications, 40 alone in Sys Bio in 2006(Allman _et. al._ 2008).  There's a decent [discussion on Dechronization](http://treethinkers.blogspot.com/2009/04/when-we-fail-mrbayes.html) about the issue.  There's some treatment of identifiability on this issue, such as 2001 Sys Bio (Rogers, 2001) which suggests this is possible and a nice paper in Adv. Applied Prob (Allman _et. al._ 2008) that critiques this "proof" and provides one of the few proofs of any model being identifable: GTR+G.  Despite their critique of the earlier proof, Elizabeth, Cecile and John take the position that the claim may well be true, but the proof is not as trivial as Rogers suggests.
 
 
-> Furthermore, bridging either of the gaps in [11] is not a trivial matter.  Though we suspect that Rogers’ statement of identifiability is correct, at least for generic parameters, we have not been able to establish it by his method
+> Furthermore, bridging either of the gaps in [11] is not a trivial matter.  Though we suspect that Rogers' statement of identifiability is correct, at least for generic parameters, we have not been able to establish it by his method
 
 
 

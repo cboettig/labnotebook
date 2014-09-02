@@ -128,9 +128,9 @@ Option (B) is probably best, and just say "see supplement for details".  (As Dr
 # MISC
 
 
-Quantifying risk → realizing we often don’t have power to detect → improving power with likelihood approach.
+Quantifying risk → realizing we often don't have power to detect → improving power with likelihood approach.
 
-But also mention issues like we address the single replicates problem, (also less vulnerable to applying in the case when the bifurcation is the wrong type, because models won’t fit well, but everything has a variance so you don’t realize you’re applying the wrong theory...)
+But also mention issues like we address the single replicates problem, (also less vulnerable to applying in the case when the bifurcation is the wrong type, because models won't fit well, but everything has a variance so you don't realize you're applying the wrong theory...)
 
 
 
