@@ -18,6 +18,8 @@ repo: labnotebook
 gems:
   - jekyll-pandoc
 
+encoding: utf-8
+
 ## Markdown Parser 
 markdown: pandoc
 markdown_ext:  markdown,mkdown,mkdn,mkd,md,Rmd,rmd

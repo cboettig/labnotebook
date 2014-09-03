@@ -1,7 +1,6 @@
 ---
 layout: post
-published: false
-title: Docker tricks of the trade
+title: Docker tricks of the trade and best practices thoughts
 ---
 
 

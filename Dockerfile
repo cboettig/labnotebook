@@ -1,5 +1,8 @@
 FROM ubuntu:14.04
 
+LANG  en_US.UTF-8  
+LC_ALL en_US.UTF-8
+
 ## pass appropriate environmental variables to build successfully.  Including environments.  
 ENV TWIT_KEY X
 ENV TWIT_SECRET X
@@ -31,4 +34,5 @@ RUN make
 
 
 WORKDIR /labnotebook
-CMD bundle exec rake site:deploy
+CMD bundle exec jekyll build --trace
+#CMD bundle exec rake site:deploy
