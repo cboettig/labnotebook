@@ -1,0 +1,3 @@
+
+deploy:
+	docker run -v $(PWD):/labnotebook -e TWIT_KEY=$(TWIT_KEY) -e TWIT_SECRET=$(TWIT_SECRET) -e TWIT_TOK=$(TWIT_TOK) -e TWIT_TOK_SECRET=$(TWIT_TOK_SECRET) -e GIT_NAME=$(GIT_NAME) -e GIT_EMAIL=$(GIT_EMAIL) -e GH_TOKEN=$(GH_TOKEN) -e GARB_KEY=$(GARB_KEY) -e GARB_PASS=$(GARB_PASS) -e GARB_UA=$(GARB_UA) labnotebook 
