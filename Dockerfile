@@ -5,7 +5,7 @@ ENV LC_ALL en_US.UTF-8
 
 ## Configure ruby environment
 RUN apt-get -qq update && apt-get -qy upgrade
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install ruby1.9.1 ruby1.9.1-dev make bundler libxml2-dev libxslt1-dev libcurl4-openssl-dev git pandoc pandoc-citeproc
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install ruby1.9.1 ruby1.9.1-dev make bundler libxml2-dev libxslt1-dev libcurl4-openssl-dev git pandoc pandoc-citeproc debconf locale
 RUN gem install nokogiri -v '1.6.3.1'
 
 ## An ADD invalidates cache.  use RUN instead:
