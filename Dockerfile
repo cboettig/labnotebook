@@ -20,6 +20,7 @@ RUN gem install nokogiri -v '1.6.3.1'
 ## An ADD invalidates cache.  use RUN instead:
 RUN git clone https://github.com/cboettig/labnotebook.git
 WORKDIR /labnotebook
+RUN bundle config --global LANG en_US.UTF-8 &&  bundle config --global LC_ALL en_US.UTF-8  
 RUN bundle config build.nokogiri --use-system-libraries && bundle install && bundle update
 
 
