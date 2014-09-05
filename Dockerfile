@@ -1,17 +1,21 @@
 FROM ubuntu:14.04
 
-ENV LANG en_US.UTF-8  
+ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
+RUN locale-gen en_US.UTF-8 && dpkg-reconfigure locales
+
+RUN apt-get -qq update && apt-get -qy upgrade
 
 ## Configure ruby environment
-RUN apt-get -qq update && apt-get -qy upgrade
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install ruby1.9.1 ruby1.9.1-dev make bundler libxml2-dev libxslt1-dev libcurl4-openssl-dev git pandoc pandoc-citeproc debconf locale
-RUN gem install nokogiri -v '1.6.3.1'
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install ruby1.9.1 ruby1.9.1-dev make bundler libxml2-dev libxslt1-dev libcurl4-openssl-dev git pandoc pandoc-citeproc && gem install nokogiri -v '1.6.3.1'
 
-## An ADD invalidates cache.  use RUN instead:
-## RUN git clone https://github.com/cboettig/labnotebook.git
+
+### An ADD invalidates cache.  use RUN instead:
+### RUN git clone https://github.com/cboettig/labnotebook.git
 ADD . /labnotebook
 WORKDIR /labnotebook
+
+## Configure bundler and install gems listed in the Gemfile
 RUN bundle config --global LANG en_US.UTF-8 &&  bundle config --global LC_ALL en_US.UTF-8  
 RUN bundle config build.nokogiri --use-system-libraries && bundle install && bundle update
 
