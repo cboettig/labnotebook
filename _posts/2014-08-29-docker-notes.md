@@ -56,7 +56,7 @@ docker rm -f $(docker ps -a -q)
 
 We cannot directly install docker inside a docker container.  We can get around this by adding a complete virtualization layer -- e.g. docker running in vagrant/virtualbox running in docker.
 
-Alternatively, we can be somewhat more clever and tell our docker to simply use a different volume to store its AUFS layers. Matt Gruter has a [very clever example](https://github.com/mattgruter/dockerfile-doubledocker) of this, which can be used, e.g. to run a Drone server (which runs docker) inside a Docker container ([mattgruter/drone](://registry.hub.docker.com/u/mattgruter/drone/)).
+Alternatively, we can be somewhat more clever and tell our docker to simply use a different volume to store its AUFS layers. Matt Gruter has a [very clever example](https://github.com/mattgruter/dockerfile-doubledocker) of this, which can be used, e.g. to run a Drone server (which runs docker) inside a Docker container ([mattgruter/drone](http://registry.hub.docker.com/u/mattgruter/drone/)).
 
 I believe this only works if we run the outer docker image with `--privileged` permissions, e.g. we cannot use this approach on a server like Shippable that is dropping us into a prebuilt docker container.
 
