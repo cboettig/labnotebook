@@ -1,7 +1,7 @@
 ---
-category: computation
 layout: post
-tags
+category: computation
+tags:
 - docker
 ---
 
