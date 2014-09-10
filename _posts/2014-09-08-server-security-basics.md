@@ -4,7 +4,7 @@ published: false
 category: computing
 tags:
 - digitalocean
-
+- docker
 ---
 
 
