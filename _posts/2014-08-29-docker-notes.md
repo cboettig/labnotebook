@@ -29,19 +29,26 @@ Docker linguistics borrow from git terminology, but it's rather dangerous to int
 ## Keeping a clean docker environment
 
 - run interactive containers with `--rm` flag to avoid having to remove them later.
+
+- Remove all stopped containers:
+
+```bash
+docker rm $(docker ps -a | grep Exited | awk '{print $1}')
+```
+
+
 - Clean up un-tagged docker images:
 
 ```bash
 docker rmi $(docker images -q --filter "dangling=true")
 ```
 
-- Stop and remove all containers
+
+- Stop and remove all containers (including running containers!)
 
 ```bash
 docker rm -f $(docker ps -a -q)
 ```
-
-
 
 
 ## Docker and Continuous Integration

@@ -88,9 +88,13 @@ docker run -v /usr/local/bin:/target jpetazzo/nsenter
 
 Run `nsenter` to log into the docker image:
 
+{% raw %}
+
 ```
 nsenter -m -u -n -i -p -t `docker inspect --format '{{ .State.Pid }}' rstudio` /bin/bash
 ```
+
+{% endraw %}
 
 Modify usernames and passwords, etc:
 
