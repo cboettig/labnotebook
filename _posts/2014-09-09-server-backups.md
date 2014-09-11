@@ -1,6 +1,10 @@
 ---
 layout: post
 published: false
+category: computing
+tags:
+- digitalocean
+- docker
 
 ---
 

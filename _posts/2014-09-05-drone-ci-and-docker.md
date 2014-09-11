@@ -77,7 +77,7 @@ sudo docker -d -H 127.0.0.1:4243 &
 Launch a named repository in deamon mode:
 
 ```bash
-docker run -d -p 8787:8787 --name='rstudio' cboettig/rstudio
+docker run -d -p 8787:8787 --name='drone' mattgruter/drone
 ```
 
 Use a docker-based install to add `nsenter` into your executable path:
@@ -91,15 +91,27 @@ Run `nsenter` to log into the docker image:
 {% raw %}
 
 ```
-nsenter -m -u -n -i -p -t `docker inspect --format '{{ .State.Pid }}' rstudio` /bin/bash
+nsenter -m -u -n -i -p -t `docker inspect --format '{{ .State.Pid }}' drone` /bin/bash
 ```
 
 {% endraw %}
 
-Modify usernames and passwords, etc:
+Now we can update or delete images with `docker pull`, `docker rmi`, etc.
+
+This is useful with many containers, for instance, with our ssh container or rstudio container we may want to modify usernames and passwords, etc:
 
 ```bash
 useradd -m $USER && echo "$USER:$PASSWORD" | chpasswd
 ```
 
-Now exit and find that things are updated. Yay.
+
+### Making this easier:
+
+Add to `.bashrc`:
+
+```bash
+function dock { sudo nsenter -m -u -n -i -p -t `docker inspect --format {{.State.Pid}} "$1"` /bin/bash; }
+```
+
+This defines the function `dock` such that `dock <name>` will enter a running container named `<name>`.  Note that we have to have `nsenter` bound to the executable path as indicated above. Yay less typing.
+
