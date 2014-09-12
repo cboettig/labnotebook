@@ -10,35 +10,64 @@ tags:
 
 ## Security configuration
 
+We set up SSH key-only login on non-standard port, with root login forbidden. We then set up `ufw` firewall, `fail2ban`, and `tripwire`.
+
+1. Configure an [SSH key login](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2). Next, [Create a user, add to sudoers, and then disable root
+login.](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-12-04).  Edits `/etc/ssh/sshd_config`:
+
+  - Disabling root logins.  (We'll need to add ourselves to sudo first: (`adduser`, edit `/etc/sudoers`)
+  - Change ssh port from default to something else.
+  - Whitelist user login ids
+
+Additionally, let's be sure to disable password authentication: Add `PasswordAuthentication no` to `/etc/ssh/sshd_config`.  (editing PermitRootLogin only doesn't do this).
 
 
-1. Configure SSH key login.
-2. [Create a user, add to sudoers, and then disable root login.](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-12-04)  Also change ssh port from default to something else.  (`adduser`, edit `/etc/sudoers`, edit `/etc/ssh/sshd_config`). Also, add user to the docker group for convenience: `sudo addgroup cboettig docker`
+Locally add an entry in `~/.ssh/config` to alias the host and port to
+avoid having to remember these numbers for login.  Run `ssh-copy-id
+<droplet-ip>` to enable key-based login for the user.
 
-Locally add an entry in `~/.ssh/config` to alias the host and port to avoid having to remember these numbers for login.  Run `ssh-copy-id <droplet-ip>` to enable key-based login for the user.
 
-
-4. [Install and configure](https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server) `ufw`,
-
-If we're not using the default `ssh` port, we need to explicitly tell `ufw` what to allow.
+2. [Install and
+configure](https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server)
+`ufw` firewall.  As we're not using the default `ssh` port, we need to explicitly tell `ufw` which ssh port to allow.
 
 ```
 sudo ufw allow <PORT>/tcp
 ```
 
-and then [allow Docker](http://docs.docker.com/installation/ubuntulinux/#docker-and-ufw). (In `/etc/default/ufw` change `DEFAULT_FORWARD_POLICY` to ACCEPT, then:
+(The `/tcp` part is optional, saying only allow `tcp` protocol
+over that port, not other protocols.)
+
+We must also tell ufw to [allow
+Docker](http://docs.docker.com/installation/ubuntulinux/#docker-and-ufw):
+In `/etc/default/ufw` change `DEFAULT_FORWARD_POLICY` to ACCEPT, then:
 
 ```bash
 sudo ufw reload
 sudo ufw allow 2375/tcp
 ```
 
+and similarly allow any ports we export for our various services (Gitlab, Drone, etc).
 
-5. [Install and configure](https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-12-04) `fail2ban`. Be sure to assign config to match chosen ssh port.
-6. [Install and configure](https://www.digitalocean.com/community/tutorials/how-to-use-tripwire-to-detect-server-intrusions-on-an-ubuntu-vps) `tripwire`
+3. [Install and
+configure](https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-12-04)
+`fail2ban`. Prevents brute force password attacks.  Be sure to assign the config to match chosen ssh port.
 
-7. Update software
+4. [Install and
+configure](https://www.digitalocean.com/community/tutorials/how-to-use-tripwire-to-detect-server-intrusions-on-an-ubuntu-vps)
+`tripwire` (intrusion detection).
 
+5. Update software:
+
+```bash
+sudo apt-get -q update && sudo apt-get -qy dist-upgrade
+```
+
+and then also update tripwire log:
+
+```bash
+sudo tripwire --check --interactive
+```
 
 Note: Clearly all these steps need to be running on the server itself, not merely in a container image deployed on server so that they are securing access to the actual host.
 
@@ -46,22 +75,25 @@ Note: Clearly all these steps need to be running on the server itself, not merel
 
 ## Additional configuration
 
-[Enable swap](https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-12-04) on a small instance:
+While we're doing things, add user to the
+docker group for convenience: `sudo addgroup cboettig docker`
+
+[Enable swap](https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-12-04) on a small instance. Here we set up 1GB of swap (setting swap at twice the available RAM is the recommended rule-of-thumb, though makes less sense once RAM is large)
 
 ```bash
-sudo fallocate -l 2G /swapfile
+sudo fallocate -l 1G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 ```
 
-This will not be persistant on rebooting? edit `/etc/fstab`:
+To make this persistant on reboot edit `/etc/fstab`:
 
 ```bash
 sudo echo "/swapfile       none    swap    sw      0       0" >> /etc/fstab
 ```
 
-For better performance, tweak swappiness to 10:
+For better performance, we might tweak swappiness to 10 (default is 60 out of 100, where 0 is never swap and 1 is swap frequently):
 
 ```bash
 echo 10 | sudo tee /proc/sys/vm/swappiness
@@ -77,20 +109,33 @@ sudo chmod 0600 /swapfile
 
 ## Server modules
 
-Running different services as their own docker containers offers serveral advantages:
+Running different services as their own docker containers offers serveral
+advantages:
 
-- Containers often make it easier to install and deploy existing services, since the necessary configuration is scripted in the Dockerfile and we can often find Dockerfiles already made on [Docker Hub](http://hub.docker.com) for common services. This note illustrates several examples.
+- Containers often make it easier to install and deploy existing services,
+since the necessary configuration is scripted in the Dockerfile and we can
+often find Dockerfiles already made on [Docker Hub](http://hub.docker.com)
+for common services. This note illustrates several examples.
 
-- Containers may provide an added level of stability, since they run largely in isolation from each other.
+- Containers may provide an added level of stability, since they run
+largely in isolation from each other.
 
-- Containers can be [resource limited](http://stackoverflow.com/questions/16084741/how-do-i-set-resources-allocated-to-a-container-using-docker), e.g.
+- Containers can be [resource
+limited](http://stackoverflow.com/questions/16084741/how-do-i-set-resources-allocated-to-a-container-using-docker),
+e.g.
 
 ```bash
 docker run -it -m 100m -c 100 ubuntu /bin/bash
 ```
-would provide the container with 100 MB of RAM and 100 "shares" of CPU (acts kind of like a niceness, where the default share of a container is 1024. On multicore machines you can also pass `--cpuset "0"` or  `--cpuset "0,1"` etc, which is a list of which cpus (numbered 0 to n-1, as in `/proc/cpuinfo`) the container is permitted to use.
 
-As noted in the link, restricting disk space is more tricky, though might become easier down the road.
+would provide the container with 100 MB of RAM and 100 "shares" of CPU
+(acts kind of like a niceness, where the default share of a container
+is 1024. On multicore machines you can also pass `--cpuset "0"` or
+`--cpuset "0,1"` etc, which is a list of which cpus (numbered 0 to n-1,
+as in `/proc/cpuinfo`) the container is permitted to use.
+
+As noted in the link, restricting disk space is more tricky, though
+might become easier down the road.
 
 
 ### ssh server:
