@@ -250,7 +250,8 @@ list of my software packages.
 workshops
 ---------
 
--   2014 "A toolbox for analysis of long-term ecological dynamics using
+-   2014 _co-organizer_ "rOpenSci Hackathon (#rOpenHack)", Github HQ in San Fransisco, CA. ([summary](http://ropensci.org/blog/2014/05/14/ropenhack/), [video documentary](https://www.youtube.com/watch?v=iUcm5COsKJo&nofeather=True))
+-   2014 _invited to_ "A toolbox for analysis of long-term ecological dynamics using
     the Kepler Workflow System." A Working group of the National
     Ecological Analysis and Synthesis Center (**NCEAS**), Santa Barbara,
     CA.
@@ -277,6 +278,7 @@ workshops
 interviews
 ----------
 
+- Tachibana, C. (2014). "The paperless lab" _Science_ 345(6195) pp. 468-470. [10.1126/science.opms.p1400087](http://www.sciencemag.org/site/products/lst_20140613.xhtml)
 - Mascarelli, A. (2014) "Research tools: Jump off the page." *Nature*
   507, 523–525. {{ "10.1038/nj7493-523a" | doi_parser }}
 - Check Hayden E (2013). "Mozilla Plan Seeks to Debug Scientific
