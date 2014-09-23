@@ -31,7 +31,7 @@ tools. I've set the following alias in my `bashrc`.
 
 
 ```
-alias c='docker run --rm -it -v $(pwd):/home/$USER/`basename $PWD` -w /home/$USER/`basename $PWD` -e HOME=$HOME --user=$USER strata'
+alias c='docker run --rm -it -v $(pwd):/home/$USER/`basename $PWD` -w /home/$USER/`basename $PWD` -e HOME=$HOME -e USER=$USER --user=$USER strata'
 ```
 
 I can then just do `c R` (think `c` for container) to get R running in a container, `c bash` to drop into a bash shell on the container, `c pandoc --version` echoes the version of pandoc available on our container (or otherwise execute the container version of pandoc), and so forth.
@@ -56,6 +56,8 @@ The path after the colon specifies where this directory should live on the conta
 ```
 
 - `-e HOME=$HOME` sets the value of the environmental variable `HOME` to whatever it is on the host machine (e.g. `/home/username`), so that when R tries to access `~/`, it gets the user's directory and not the root directory.
+
+- `-e USER=$USER` though this seems redundant, we set the user environmental variable by default in the cboettig/rstudio image, so this overrides that environmental variable with the current user.
 
 - `--user=$USER` Specifies the user we log in as.  This is rather important, otherwise the we find that we are the root (or whatever user has been set in the Dockerfile).  That would cause any files we generate from the container to be owned by the root user, not our local user.  Note that this only works if the specific user has already been created (e.g. by `adduser`) on the container, otherwise this will fail.
 
