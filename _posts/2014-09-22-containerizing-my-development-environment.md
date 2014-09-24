@@ -36,9 +36,9 @@ alias c='docker run --rm -it -v $(pwd):/home/$USER/`basename $PWD` -w /home/$USE
 
 I can then just do `c R` (think `c` for container) to get R running in a container, `c bash` to drop into a bash shell on the container, `c pandoc --version` echoes the version of pandoc available on our container (or otherwise execute the container version of pandoc), and so forth.
 
-### explanation
+### explanation: a non-root container
 
-The break down of each of these arguments is as follows:
+The trick here is primarily to handle permissions appropriately.  Docker is run as a root user by default, which results in any files created or modified become owned by root instead of the user, which is clearly not desirable. Getting around this requires quite a bit of trickery. The break down of each of these arguments is as follows:
 
 - `--rm` remove this container when we quit, we don't need to let it persist as a stopped container we could later return to.
 - `-it` Interactive terminal
