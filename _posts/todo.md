@@ -5,28 +5,32 @@ published: false
 
 ---
 
-### Tasks 
 
-See issues logs in respective repos 
+### Pending ###
 
-- Policy costs                          MED
-- Multiple Uncertainty                  LOW
-- Decision theory warning               LOW
-- Managed signals                       LOW
-- EWS review work with Noam             MED
-- wrightscape                           FAST
+- nonparametric-bayes submission
+- RNeXML pending submission
+- docker submission
 
-### Rainy day
-- Rupert code
-- colored noise equation
-- Sebastian two-step transition & beetles simulation  
+### Tasks ###
 
-* Vasilis: web page of plain-english explanation
-* Vasilis: Contributions to code
+See issues logs in respective repos
 
+- EML to CRAN
+- Policy costs
+- Multiple Uncertainty
+- Decision theory warning
+- Managed signals
 * Bayesian warning signal method
 
-* Write to [Amber Mace](http://www.linkedin.com/pub/amber-mace/7/a94/b43)?
+### Rainy day ###
+
+- Rupert code
+- colored noise equation
+- Sebastian two-step transition & beetles simulation
+- wrightscape
+* Vasilis: web page of plain-english explanation
+* Vasilis: Contributions to code
 * pomp on the bifurcation model.  run both pmcmc and iterative filtering mif
 
 
