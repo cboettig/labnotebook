@@ -1,6 +1,5 @@
 ---
 layout: post
-published: false
 title: Reproducible research environments with Docker
 subtitle:
 category: open-science
@@ -162,7 +161,33 @@ check your server's public IP address.
 ## RStudio on Digital Ocean ##
 
 Docker also makes it very fast and easy to deploy an RStudio instance in the
-cloud, along with a complete computational environment pre-installed.
+cloud.  More importantly, it lets you deploy an instance that already has your
+preferred computational environment already completely installed and configured
+through your docker container.  Running Docker on a cloud machine can be useful
+for many purposes, such as:
+
+- Giving your collaborator access to your computational environment
+- Scaling up a computation to a larger machine
+- running RStudio from your ipad
+
+Because we use RStudio for this, we have both a completely secured
+connection and a familiar environment in which to interact with R.
+RStudio in the browser looks and feels identical to the desktop edition.
+Getting started with RStudio in the cloud is particularly easy using
+Docker and the DigitalOcean cloud provider. We can run RStudio in the
+[DigitalOcean cloud](https://www.digitalocean.com/pricing/) for less
+than 1 cent an hour ($5 / month if run continuously).  Creating an
+account and launching your first DigitalOcean droplet is dead easy.
+Head over to [DigitalOcean.com](http://digitalocean.com) because they
+do a much better job of walking you through the few simple steps than
+I would. Create the cheapest droplet type to get started and ssh into
+your image once it is up and running, using the ip-address for your
+droplet and the password sent to you by email or an [ssh key](https://cloud.digitalocean.com/ssh_keys).
+
+```bash
+ssh root@ip-address
+```
+
 
 ### Enable swapping if testing on the smallest image ###
 
@@ -170,7 +195,7 @@ The smallest Digital Ocean servers have only 512 MB of memory and no
 swap enabled.  Adding swap lets the machine cache things it doesn't
 need in active memory, which can be important for running things like
 `install.packages`.  On larger droplets this probably is not so much of
-an issue.  Here, we enable 4GB of swap on a tiny instance.  SSH into your
+an issue.  Here, we enable 1GB of swap.  SSH into your
 cloud server (or use the shell DigitalOcean provides in the browser),
 and run:
 
@@ -182,14 +207,77 @@ sudo swapon /swapfile
 ```
 
 
-### Log in and compute! ###
+### Launch RStudio ###
+
+We're now ready to run RStudio.  If you didn't select the `docker` application
+while creating your image, you can install it now:
+
+```bash
+curl -sSL https://get.docker.io/ubuntu/ | sudo sh
+```
+
+We're now ready to launch RStudio using docker, just as we did locally above.
+
+```bash
+docker run -e USER your_username -e PASSWORD a_secure_pw \
+  -d -p 8787:8787 --name rstudio cboettig/rstudio
+```
+
+Note that we pass a custom username and secure password in using the `-e` arguments
+since our RStudio instance will be publically reachable by it's ip.  We've also given
+the container a name `rstudio` so we can easily refer to it later.  We now go to
+`http://<your-droplet-ip-address>:8787` and login with these custom credentials
+and we're ready to compute.
+
+### Saving your work ###
+
+The best way to save your work is to commit your entire docker image.  This will
+save all installed packages, active RStudio sessions, files, and everything else,
+even if we destroy the droplet later.  This gives us the option of running our
+environment on a larger DigitalOcean image when the need arises, or running it
+locally using the `boot2docker` approach outlined above.
 
 
+From an ssh terminal into your droplet where you first ran docker, this command
+will save your container as an image called `user/rstudio` (use any name combination
+you like).
 
+```bash
+docker commit rstudio user/rstudio
+```
 
+If you create an account on [hub.docker.com](https://hub.docker.com) we can upload this as a
+public or private image that we can access from anywhere for later use:
 
+```bash
+docker push user/rstudio
+```
 
-### Remote Linux clusters without root ###
+Be sure to use this name to run your container in the future to pick up where
+you left off.  If you'd rather not use the Docker Hub to host your image,
+you can download the image file instead:
+
+```bash
+docker save -o rstudio.tar rstudio
+```
+
+Then from your local machine, `scp` the tar file to download it:
+
+```bash
+scp root@<ip-address>:~/rstudio.tar .
+```
+
+You can now destroy your droplet to avoid future charges when not in use.
+To deploy this image later, copy it over to the new machine and load in docker:
+
+```bash
+scp rstudio.tar root@<new-ip-address>:~
+docker load rstudio.tar
+```
+
+and then call `docker run` as before to get up and running.
+
+### Misc: Remote Linux clusters without root ###
 
 You can run the docker images on a remote linux cluster where you don't
 have root access, even if it doesn't have a web-accessible API (such as
