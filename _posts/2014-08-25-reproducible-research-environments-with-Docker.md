@@ -182,7 +182,7 @@ Head over to [DigitalOcean.com](http://digitalocean.com) because they
 do a much better job of walking you through the few simple steps than
 I would. Create the cheapest droplet type to get started and ssh into
 your image once it is up and running, using the ip-address for your
-droplet and the password sent to you by email or an [ssh key](https://cloud.digitalocean.com/ssh_keys).
+droplet and the password sent to you by email or an [ssh key](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2).
 
 ```bash
 ssh root@ip-address
