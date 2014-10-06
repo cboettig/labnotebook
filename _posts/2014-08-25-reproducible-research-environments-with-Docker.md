@@ -219,7 +219,7 @@ curl -sSL https://get.docker.io/ubuntu/ | sudo sh
 We're now ready to launch RStudio using docker, just as we did locally above.
 
 ```bash
-docker run -e USER your_username -e PASSWORD a_secure_pw \
+docker run -e USER=your_username -e=PASSWORD a_secure_pw \
   -d -p 8787:8787 --name rstudio cboettig/rstudio
 ```
 
