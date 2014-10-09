@@ -57,7 +57,7 @@ Building from source
 
 This site is developed for my own needs and may be difficult to adapt
 directly to another purpose.  If you are new to Jekyll, consider starting
-with a basic Jekyll template such as jekyll-bootstrap which will be
+with a basic Jekyll template such as [jekyll-bootstrap](http://jekyllbootstrap.com/) which will be
 considerably easier to adapt than working from this repository directly.
 
 
