@@ -126,7 +126,19 @@ already seeks to address.
 
 
 
+--------
 
+<!-- comments
+Ilya raises the question: Why not just use Github? I think it is important to note that:
+
+a) Github isn't forever, repositories come and go all the time, or move to new links, etc
+
+b) Re-creating and running an NIH-Github would be both expensive (Gitlab notwithstanding) and redundant -- researchers would continue to use Github etc.
+
+c) Github provides somewhat limited query-able metadata, that doesn't capture even the minimal list of fields suggested by the report.
+Leveraging existing scientific data repositories by linking them to versioned releases on software repositories addresses each of these problems.
+
+-->
 
 
 <!--

@@ -200,7 +200,7 @@ cloud server (or use the shell DigitalOcean provides in the browser),
 and run:
 
 ```bash
-sudo fallocate -l 4G /swapfile
+sudo fallocate -l 1G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
