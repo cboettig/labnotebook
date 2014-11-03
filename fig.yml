@@ -1,0 +1,22 @@
+
+web: 
+#  build: .
+  image: labnotebook
+  command: jekyll serve
+  volumes: $(pwd):/labnotebook
+  ports: 
+    - "4000"
+  environment:
+    - GIT_NAME
+    - GIT_EMAIL
+    - GH_TOKEN
+    - TWIT_KEY
+    - TWIT_SECRET
+    - TWIT_TOK
+    - TWIT_TOK_SECRET
+    - GARB_KEY
+    - GARB_NAME
+    - GARB_PASS
+    - GARB_UA
+
+
