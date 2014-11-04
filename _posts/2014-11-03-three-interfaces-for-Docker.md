@@ -14,7 +14,7 @@ Web-hosted Docker
 
 In this approach, RStudio-server is deployed on a webserver.
 
-Advantages: 
+### Advantages: ###
 
 - A user just needs a web browser and the URL of the server.
 - No need to install any local software.
@@ -22,7 +22,7 @@ Advantages:
 - Should work with any device that supports a modern browser, including most tablets.
 
 
-Disadvantages:
+### Disadvantages: ###
 
 - requires a network connection
 - requires access to a server with sufficient power
@@ -30,12 +30,9 @@ Disadvantages:
 - Need additional mechanisms for moving files on and off the server, such as git. 
 - No native interfaces available, must manage files, edit text etc through the RStudio IDE
 
-Setup:
+### Setup: ###
 
 The instructor or team-member responsible for the setup would simply need to install docker on server. If multiple students will be accessing a single RStudio-server instance, it must be configured for multiple users.  Alternately multiple containers can be run on different ports of the same server. 
-
-
-
 
 Hint: Users can also take advantage of the new R package [analogsea]() to quickly launch and manage an RStudio Server instance on the Digital Ocean cloud platform. Analogsea can also facilitate transfers of code and other files onto and off of the server.
 
@@ -45,19 +42,19 @@ Self-hosted Docker
 
 In this approach, the user 
 
-Advantages:
+### Advantages: ### 
 
 - No need for a network connection (at least once the container image is downloaded / transfered)
 - No need to have a server available (with the associated cost and security overhead)
 
-Disadvantages:
+### Disadvantages: ###
 
 - More setup: install `docker` locally, install boot2docker
 - Need git or `docker copy` to move files from the container to the host or vice versa.
 
 Hint: Users might also check out the R package [harbor]() for interacting with Docker locally from R.
 
-Setup: 
+### Setup: ###
 
 
 Integrated Docker

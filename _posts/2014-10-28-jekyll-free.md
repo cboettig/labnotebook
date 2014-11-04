@@ -60,7 +60,7 @@ with the additional `metadta.yaml` file, as follows:
 
 Note the `Rmd` building is somewhat more cumbersome since we have to bypass `rmarkdown:render` for this to work.
 
-I had to collapse all my `_includes` and nested `_layouts` into a single `layout`, replace the Jekyll Liquid blocks, `{{` with pandoc-template `$` ones, and write out a basic `metadata.yaml` file, and things are [good to go](http://io.carlboettiger.info/template/).  
+I had to collapse all my `_includes` and nested `_layouts` into a single `layout`, replace the Jekyll Liquid blocks, {% raw %} `{{` {% endraw %} with pandoc-template `$` ones, and write out a basic `metadata.yaml` file, and things are [good to go](http://io.carlboettiger.info/template/).  
 
 -------
 

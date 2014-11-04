@@ -5,12 +5,16 @@ published: false
 
 ---
 
+### Done ### 
+
+- --nonparametric-bayes submission--
+- --docker submission--
 
 ### Pending ###
 
-- nonparametric-bayes submission
 - RNeXML pending submission
-- docker submission
+- docker camera-ready copy
+- nonparametric-bayes revisions
 
 ### Tasks ###
 
@@ -22,6 +26,10 @@ See issues logs in respective repos
 - Decision theory warning
 - Managed signals
 * Bayesian warning signal method
+
+- Course design
+- Grant applications
+
 
 ### Rainy day ###
 
