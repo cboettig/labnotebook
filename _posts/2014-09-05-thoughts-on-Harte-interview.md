@@ -1,7 +1,8 @@
 ---
 layout: post
 category: ecology
-published: false
+tags: 
+- blog
 ---
 
 Read this delightful [John Harte
@@ -14,7 +15,7 @@ on a few pieces.
 what we most need
 
 I must disagree.  Bullet-proof insights are mathematical theorems. Their
-generality is an emprical question about their assumptions (not their
+generality is an empirical question about their assumptions (not their
 predictions).  (And lastly, I'm pretty much in support of the "what we
 most need" part, but it deserves to be substantiated. Certain objectives
 could be met just fine with a black box/crystal ball predictor of the
