@@ -5,31 +5,61 @@ published: false
 
 ---
 
-### Done ### 
 
-- --nonparametric-bayes submission--
-- --docker submission--
+before starting:
 
-### Pending ###
+- Papers: Docker, non-parametric-bayes, RNeXML, pdg-control published
+- Grants: NSF software grant submitted
+- Teaching: Framework for data-science course in place, engage network, SWC-cert
 
-- RNeXML pending submission
-- docker camera-ready copy
-- nonparametric-bayes revisions
+- research grant draft, identifying preliminary work
+  - Outline of projects for next 2-3 years, triaged projects
+  - substantial progress on groundwork for said projects
 
-### Tasks ###
 
-See issues logs in respective repos
+## Grants ##
 
-- EML to CRAN
-- Policy costs
-- Multiple Uncertainty
-- Decision theory warning
-- Managed signals
-* Bayesian warning signal method
+- SSE, SSI, or DIBB 
 
-- Course design
-- Grant applications
+## Papers ##
 
+- RNeXML 
+  - chat 2014-11-21
+- nonparametric-bayes
+  - Waiting on Steve revisions
+- PDG Control
+  - revise / tighten up text
+- multiple-uncertainty 
+
+## Teaching ##
+
+- SWC training
+  - Update PR for lesson
+  - Send Greg completed workshop page? 
+
+## Software ##
+
+- rocker
+  - review rocker-docs
+  - replies PR to official-images
+  - Post on SWC?
+- EML
+  - [CRAN Milestone]
+
+
+## Service ##
+
+- TE review, Dec 1
+
+## Infrastructure ## 
+
+- Revise decision-theoretic packages(?): pdg-control / multiple-uncertainty / nonparametric-bayes
+- Revise earlywarning? 
+
+
+## Admin ##
+
+- Updates from George on: Startup? Space? Hub? Student applicant? sign date?
 
 ### Rainy day ###
 
@@ -39,6 +69,5 @@ See issues logs in respective repos
 - wrightscape
 * Vasilis: web page of plain-english explanation
 * Vasilis: Contributions to code
-* pomp on the bifurcation model.  run both pmcmc and iterative filtering mif
-
+* pomp on the bifurcation model.
 
