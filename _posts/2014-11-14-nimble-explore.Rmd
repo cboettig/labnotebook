@@ -1,0 +1,74 @@
+---
+layout: post
+published: false
+
+---
+
+```{r}
+library("nimble")
+library("sde")
+```
+
+```{r}
+set.seed(123)
+d <- expression(1.5 * (1-x/10))
+s <- expression(1) 
+data <- as.data.frame(sde.sim(X0=6,drift=d, sigma=s, T=100, N=40))
+
+```
+
+
+```{r}
+code <- modelCode({
+     K ~ dunif(0.01, 40.0)
+    r0 ~ dunif(0.01, 20.0)
+  stdQ ~ dunif(1e-6, 100)
+
+  iQ <- 1 / (stdQ * stdQ);
+
+  x[1] ~ dunif(0, 10)
+  for(t in 1:(N-1)){
+    mu[t] <- log(x[t]) + r0 * (1 - x[t]/K) 
+    x[t+1] ~ dlnorm(mu[t], iQ) 
+  }
+})
+
+constants <- list(N = length(data$x))
+inits <- list(K = 6, r0 = 1, stdQ = 1)
+
+Rmodel <- nimbleModel(code=code, constants=constants, data=data, inits=inits)
+```
+
+create MCMC specification and algorithm
+
+```{r}
+mcmcspec <- MCMCspec(Rmodel)
+#mcmcspec$getSamplers()
+#mcmcspec$getMonitors()
+
+Rmcmc <- buildMCMC(mcmcspec)
+
+## compile model and MCMC algorithm
+Cmodel <- compileNimble(Rmodel)
+Cmcmc <- compileNimble(Rmcmc, project = Cmodel)
+
+## execute MCMC algorithm and extract samples
+Cmcmc(10000)
+samples <- as.matrix(nfVar(Cmcmc, 'mvSamples'))
+```
+
+
+Some quick impressions: 
+
+- Strange that `Rmodel` call has to be repeated before we can set up a custom MCMC ([nimble docs](http://r-nimble.org/examples)).  How/when was this object altered since it was defined in the above code?  Seems like this could be problematic for interpreting / reproducing results?
+
+- What's going on with `getSamplers()` and `getMonitors()`? are these in there just to show us what the defaults will be for our model?
+
+- why do we assign `Cmodel` if it seems we don't use it? (the compilation needs to be done but isn't explicitly passed to the next step).  Seems we can use `Cmodel` instead of `Rmodel` in the `Cmcmc <- compileNimble(Rmcmc, project = Cmodel)`, which makes the dependency more explicit, at least that notation is more explicit.  Seems like it should be possiple to omit the first `compileNimble()` and have the second call the `compileNimble` automatically if it gets an object whose class is that of `Rmodel` instead?  
+
+- Repeated calls to `Cmcmc` seem not to give the same results.  Are we adding additional mcmc steps by doing this?
+
+- We can't make repeated calls to the 'run once' function.
+
+- Don't understand what `simulate` does (or why it always returns NULL?). 
+
