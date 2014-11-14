@@ -11,10 +11,9 @@ library("sde")
 
 ```{r}
 set.seed(123)
-d <- expression(1.5 * (1-x/10))
+d <- expression(0.5 * (10-x))
 s <- expression(1) 
-data <- as.data.frame(sde.sim(X0=6,drift=d, sigma=s, T=100, N=40))
-
+data <- as.data.frame(sde.sim(X0=6,drift=d, sigma=s, T=100, N=400))
 ```
 
 
@@ -43,9 +42,6 @@ create MCMC specification and algorithm
 
 ```{r}
 mcmcspec <- MCMCspec(Rmodel)
-#mcmcspec$getSamplers()
-#mcmcspec$getMonitors()
-
 Rmcmc <- buildMCMC(mcmcspec)
 
 ## compile model and MCMC algorithm
@@ -57,18 +53,25 @@ Cmcmc(10000)
 samples <- as.matrix(nfVar(Cmcmc, 'mvSamples'))
 ```
 
+Query some details regarding our specification (set by default)
+
+```{r}
+mcmcspec$getSamplers()
+mcmcspec$getMonitors()
+```
+
 
 Some quick impressions: 
 
 - Strange that `Rmodel` call has to be repeated before we can set up a custom MCMC ([nimble docs](http://r-nimble.org/examples)).  How/when was this object altered since it was defined in the above code?  Seems like this could be problematic for interpreting / reproducing results?
 
-- What's going on with `getSamplers()` and `getMonitors()`? are these in there just to show us what the defaults will be for our model?
+- What's going on with `getSamplers()` and `getMonitors()`? Guessing these are in there just to show us what the defaults will be for our model?
 
-- why do we assign `Cmodel` if it seems we don't use it? (the compilation needs to be done but isn't explicitly passed to the next step).  Seems we can use `Cmodel` instead of `Rmodel` in the `Cmcmc <- compileNimble(Rmcmc, project = Cmodel)`, which makes the dependency more explicit, at least that notation is more explicit.  Seems like it should be possiple to omit the first `compileNimble()` and have the second call the `compileNimble` automatically if it gets an object whose class is that of `Rmodel` instead?  
+- why do we assign `Cmodel` if it seems we don't use it? (the compilation needs to be done but isn't explicitly passed to the next step).  Seems we can use `Cmodel` instead of `Rmodel` in the `Cmcmc <- compileNimble(Rmcmc, project = Cmodel)`, which makes the dependency more explicit, at least that notation is more explicit.  Seems like it should be possiple to omit the first `compileNimble()` and have the second call the `compileNimble` automatically if it gets an object whose class is that of `Rmodel` instead?
 
 - Repeated calls to `Cmcmc` seem not to give the same results.  Are we adding additional mcmc steps by doing this?
 
-- We can't make repeated calls to the 'run once' function.
+- Thinking an `as.data.frame` would be nicer than `as.matrix` in the `nfVar` `mvSamples` coercion.  
 
 - Don't understand what `simulate` does (or why it always returns NULL?). 
 
