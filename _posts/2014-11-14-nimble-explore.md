@@ -7,18 +7,68 @@ category: ecology
 
 A quick first exploration of [NIMBLE](http://r-nimble.org) and some questions. 
 
-```{r}
+
+```r
 library("nimble")
+```
+
+```
+## 
+## Attaching package: 'nimble'
+## 
+## The following object is masked from 'package:stats':
+## 
+##     simulate
+```
+
+```r
 library("sde")
+```
+
+```
+## Loading required package: MASS
+## Loading required package: stats4
+## Loading required package: fda
+## Loading required package: splines
+## Loading required package: Matrix
+## 
+## Attaching package: 'fda'
+## 
+## The following object is masked from 'package:nimble':
+## 
+##     inprod
+## 
+## The following object is masked from 'package:graphics':
+## 
+##     matplot
+## 
+## Loading required package: zoo
+## 
+## Attaching package: 'zoo'
+## 
+## The following objects are masked from 'package:base':
+## 
+##     as.Date, as.Date.numeric
+## 
+## sde 2.0.13
+## Companion package to the book
+## 'Simulation and Inference for Stochastic Differential Equations With R Examples'
+## Iacus, Springer NY, (2008)
+## To check the errata corrige of the book, type vignette("sde.errata")
 ```
 
 Let's simulate from a simple OU process: $dX = \alpha (\theta - X) dt + \sigma dB_t$
 
-```{r}
+
+```r
 set.seed(123)
 d <- expression(0.5 * (10-x))
 s <- expression(1) 
 data <- as.data.frame(sde.sim(X0=6,drift=d, sigma=s, T=100, N=400))
+```
+
+```
+## sigma.x not provided, attempting symbolic derivation.
 ```
 
 i.e. $\alpha = 0.5$, $\theta = 10$, $\sigma=1$, starting at $X_0 = 6$ and running for 100 time units with a dense sampling of 400 points.
@@ -26,7 +76,8 @@ i.e. $\alpha = 0.5$, $\theta = 10$, $\sigma=1$, starting at $X_0 = 6$ and runnin
 
 Le't now estimate a Ricker model based upon (set aside closed-form solutions to this estimate for the moment, since we're investigating MCMC behavior here).
 
-```{r}
+
+```r
 code <- modelCode({
       K ~ dunif(0.01, 40.0)
       r ~ dunif(0.01, 20.0)
@@ -51,21 +102,37 @@ Rmodel <- nimbleModel(code=code, constants=constants, data=data, inits=inits)
 
 NIMBLE certainly makes for a nice syntax so far.  Here we go now: create MCMC specification and algorithm
 
-```{r}
+
+```r
 mcmcspec <- MCMCspec(Rmodel)
 Rmcmc <- buildMCMC(mcmcspec)
 ```
 Note that we can also query some details regarding our specification (set by default)
 
-```{r}
+
+```r
 mcmcspec$getSamplers()
+```
+
+```
+## [1] RW sampler;   targetNode: K,  adaptive: TRUE,  adaptInterval: 200,  scale: 1
+## [2] RW sampler;   targetNode: r,  adaptive: TRUE,  adaptInterval: 200,  scale: 1
+## [3] RW sampler;   targetNode: sigma,  adaptive: TRUE,  adaptInterval: 200,  scale: 1
+```
+
+```r
 mcmcspec$getMonitors()
+```
+
+```
+## thin = 1: K, r, sigma, x
 ```
 
 
 Now we're ready to compile model and MCMC algorithm
 
-```{r}
+
+```r
 Cmodel <- compileNimble(Rmodel)
 Cmcmc <- compileNimble(Rmcmc, project = Cmodel)
 ```
@@ -74,17 +141,37 @@ Note we could have specified the `Rmodel` as the "project" (as shown in the exam
 
 And Now we can execute the MCMC algorithm in blazing fast C++ and then extract the samples
 
-```{r}
+
+```r
 Cmcmc(10000)
+```
+
+```
+## NULL
+```
+
+```r
 samples <- as.data.frame(as.matrix(nfVar(Cmcmc, 'mvSamples')))
 ```
 
 
 How do these estimates compare to theory:
 
-```{r}
+
+```r
 mean(samples$K)
+```
+
+```
+## [1] 10.05681
+```
+
+```r
 mean(samples$r)
+```
+
+```
+## [1] 0.180207
 ```
 
 
