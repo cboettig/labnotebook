@@ -41,7 +41,6 @@ before starting:
 
 - rocker
   - review rocker-docs
-  - replies PR to official-images
   - Post on SWC?
 - EML
   - [CRAN Milestone]
