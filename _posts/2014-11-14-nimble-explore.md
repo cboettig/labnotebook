@@ -10,52 +10,9 @@ A quick first exploration of [NIMBLE](http://r-nimble.org) and some questions.
 
 ```r
 library("nimble")
-```
-
-```
-## 
-## Attaching package: 'nimble'
-## 
-## The following object is masked from 'package:stats':
-## 
-##     simulate
-```
-
-```r
 library("sde")
 ```
 
-```
-## Loading required package: MASS
-## Loading required package: stats4
-## Loading required package: fda
-## Loading required package: splines
-## Loading required package: Matrix
-## 
-## Attaching package: 'fda'
-## 
-## The following object is masked from 'package:nimble':
-## 
-##     inprod
-## 
-## The following object is masked from 'package:graphics':
-## 
-##     matplot
-## 
-## Loading required package: zoo
-## 
-## Attaching package: 'zoo'
-## 
-## The following objects are masked from 'package:base':
-## 
-##     as.Date, as.Date.numeric
-## 
-## sde 2.0.13
-## Companion package to the book
-## 'Simulation and Inference for Stochastic Differential Equations With R Examples'
-## Iacus, Springer NY, (2008)
-## To check the errata corrige of the book, type vignette("sde.errata")
-```
 
 Let's simulate from a simple OU process: $dX = \alpha (\theta - X) dt + \sigma dB_t$
 
