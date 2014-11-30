@@ -20,6 +20,8 @@ before starting:
 ## Grants ##
 
 - SSE, SSI, or DIBB 
+- DEB / Career
+- CyberSEES
 
 ## Papers ##
 
@@ -46,6 +48,7 @@ before starting:
   - [CRAN Milestone]
 
 
+
 ## Service ##
 
 - TE review, Dec 1
@@ -69,4 +72,3 @@ before starting:
 * Vasilis: web page of plain-english explanation
 * Vasilis: Contributions to code
 * pomp on the bifurcation model.
-
