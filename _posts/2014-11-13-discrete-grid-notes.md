@@ -1,13 +1,15 @@
 ---
 layout: post
-published: false
+category: ecology
 
 ---
 
 
+
+
+Smoothing post-policy calc?
+
 ```r
-
-
 
 fig3 <- ggplot(policies, aes(stock, stock - value, color=method)) +
   stat_smooth(lwd=1.2, method="loess", degree=1, span=0.2, level=0, n=50) + 
