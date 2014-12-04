@@ -251,7 +251,6 @@ Rmcmc <- buildMCMC(mcmcspec)
 Cmcmc <- compileNimble(Rmcmc, project = Cmodel)
 ```
 
-But Nimble is very unhappy with our model:
 
 ```{r} 
 Cmcmc(1e4)
