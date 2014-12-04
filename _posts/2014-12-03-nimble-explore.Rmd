@@ -160,7 +160,7 @@ library(sde)
 set.seed(123)
 d <- expression(0.5 * (10-x))
 s <- expression(1) 
-data <- as.data.frame(sde.sim(X0=6,drift=d, sigma=s, T=100, N=400))
+data <- as.data.frame(sde.sim(X0=6,drift=d, sigma=s, T=10, N=100))
 ```
 
 
@@ -200,7 +200,7 @@ ou_mcmc <- compileNimble(ou_Rmcmc, project = ou_Cmodel)
 Run the MCMC
 
 ```{r}
-ou_mcmc(1e6)
+ou_mcmc(1e5)
 ```
 
 and examine the results
