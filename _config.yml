@@ -22,7 +22,7 @@ encoding: utf-8
 
 ## Markdown Parser 
 markdown: pandoc
-markdown_ext:  markdown,mkdown,mkdn,mkd,md,Rmd,rmd
+markdown_ext:  markdown,md #,Rmd,rmd
 pandoc:
   extensions: 
     - smart
