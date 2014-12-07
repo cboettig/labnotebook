@@ -1,4 +1,8 @@
 language: haskell
+branches:
+  - except:
+    - drafts
+    - gh-pages
 before_script:
 - sudo add-apt-repository -y ppa:marutter/c2d4u
 - sudo apt-get update
