@@ -1,0 +1,97 @@
+---
+layout: post
+category: ecology
+tags:
+  - earlywarning
+published: false
+---
+
+
+```{r embedded-svgs, include=FALSE}
+library(methods)
+library(knitr)
+local({
+  hook_plot = knit_hooks$get('plot')
+  knit_hooks$set(plot = function(x, options) {
+    if (!grepl('\\.svg', x)) return(hook_plot(x, options))
+    paste(readLines(x)[-1], collapse = '\n')
+  })
+})
+opts_chunk$set(dev='svg', fig.width=2, fig.height=3, cache=TRUE)
+```
+
+
+some sample data
+
+```{r}
+library(sde)
+library(nimble)
+set.seed(123)
+d <- expression(0.5 * (10-x))
+s <- expression(1) 
+data <- as.data.frame(sde.sim(X0=6,drift=d, sigma=s, T=10, N=100))
+```
+
+
+
+## LSN version ##
+
+```{r}
+lsn <- modelCode({
+   theta ~ dunif(1e-10, 100.0)
+   sigma ~ dunif(1e-10, 100.0)
+       m ~ dunif(-10, 10)
+    x[1] ~ dunif(0, 100)
+    y[1] ~ dunif(1e-10, 100.0) 
+
+  for(i in 1:(N-1)){
+    mu_x[i] <- x[i] + y[i] * (theta - x[i]) 
+    x[i+1] ~ dnorm(mu_t[i], sd = sigma) 
+    y[i+1] <- y[i] + m * t[i]
+  }
+})
+```
+
+Nimble parameters. Note we've made time explicit, we'll assume uniform spacing here:
+
+```{r}
+constants <- list(N = length(data$x), t = 1:length(data$x))
+inits <- list(theta = 6, m = 0, sigma = 1, y = rep(1,constants$N))
+```
+
+and here we go as before:
+
+```{r}
+Rmodel <- nimbleModel(code = lsn, 
+                      constants = constants, 
+                      data = data, 
+                      inits = inits)
+Cmodel <- compileNimble(Rmodel)
+mcmcspec <- MCMCspec(Rmodel, print=TRUE)
+Rmcmc <- buildMCMC(mcmcspec)
+Cmcmc <- compileNimble(Rmcmc, project = Cmodel)
+```
+
+
+```{r} 
+Cmcmc(1e4)
+```
+
+
+and examine results
+
+```{r}
+samples <- as.data.frame(as.matrix(nfVar(Cmcmc, 'mvSamples')))
+mean(samples$theta)
+```
+
+
+```{r fig.show='hold'}
+plot(samples[ , 'm'], type = 'l', xlab = 'iteration', ylab = expression(m))
+plot(samples[ , 'sigma'], type = 'l', xlab = 'iteration', ylab = expression(sigma))
+plot(samples[ , 'theta'], type = 'l', xlab = 'iteration', ylab = expression(theta))
+plot(samples[ , 'm'], samples[ , 'sigma'], xlab = expression(m), ylab = expression(simga))
+```
+
+
+
