@@ -1,37 +1,42 @@
 language: haskell
+
 branches:
-  - except:
-    - drafts
-    - gh-pages
+  only:
+    - master
+
 before_script:
-- sudo add-apt-repository -y ppa:marutter/c2d4u
-- sudo apt-get update
-- sudo apt-get install pandoc
+  - sudo add-apt-repository -y ppa:marutter/c2d4u
+  - sudo apt-get update
+  - sudo apt-get install pandoc
+
 before_install:
-- curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
-- chmod 755 ./travis-tool.sh
-- ./travis-tool.sh bootstrap
+  - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
+  - chmod 755 ./travis-tool.sh
+  - ./travis-tool.sh bootstrap
+
 install:
-- ./travis-tool.sh install_deps
-- travis_retry bundle install
+  - ./travis-tool.sh install_deps
+  - travis_retry bundle install
+
 script:
-- echo -e $twitter > _twitter.yml
-- echo -e $twitter2 >> _twitter.yml
-- echo -e $twitter3 >> _twitter.yml
-- echo -e $garb > _garb.yml
-- echo -e $garb2 >> _garb.yml
-- bundle exec rake site:deploy --quiet
-- rm -f _twitter.yml _garb.yml
+  - echo -e $twitter > _twitter.yml
+  - echo -e $twitter2 >> _twitter.yml
+  - echo -e $twitter3 >> _twitter.yml
+  - echo -e $garb > _garb.yml
+  - echo -e $garb2 >> _garb.yml
+  - bundle exec rake site:deploy --quiet
+  - rm -f _twitter.yml _garb.yml
+
 env:
   global:
-  - secure: VsIGjVbcGVsuNwTFOcnndTzxlpIoOp3x5HyMQ+9CiTKGg6rsSAZihMunOXp4woI6Tj/1uT339onTq0saf5+3QEcUR2OcGz+lo6M/4AW2rkcG8rpu8kWN4OzLR1Qn5vYzpkg2/HbdSA9aZDta6bmw8jkitMt3UyRZj/LX/MRM6mo=
-  - secure: Kz9DtwcEfan+1ErebbhadsQ/DEukPCI9orVyOzmpvABEx4Ur6jLYdt79Q/GEQPugggUNBs9XERmOx/wx/KJSvw/2VdoRaXskAWk66F6uOadYbrTYYZ95UJpv4X8cin21MSYOKLBeIJkZuX5PYUZg3FAGi7FUIu+UuUDNE7+lHaw=
-  - secure: nMlkJXkMRwcAWceb7/o4pwDP1A+VeVRUVoaCoCIk11621ROMw3a5VHyum6kNEAla+9Ce970+xCNAdTIKuuLw7HjLsyGBiBQhMWDyNof4su5zayBh+sB2S/RXI8117eLQg0HLvIltOvwT9obphAfn4AkEWeZ1yApEzjVjK4rhzgU=
-  - secure: QqrejLFqsAWc72l367h3U8cv6BKiOyxlxVrTm+4rsJeJiAuTlvKeFh8ZprbBeOTE3CuwjuDhUnbkkHbuUP6lgKb9A32pBGZyabI4eow/djvT22aUFMmIVaL+RQgICRpHsZ/k/SWrQlizls2YvQ/8PaVb86dcI2YC7DF1nYr2kS8=
-  - secure: aTL4r19Wu2xj7e7Uvvm910xGRm8KYOfhEDhRsT/SLT8qbkF2gYqFJYR/jNI2WYUbMrbIRh5sA/iE4eQmJBvk4djf6zSfazFIzGcnSjeVUnzXgJuerJ2M2PGI2o/cWWmVMe4VD2WCMZbT9AjdJ944CcN6jPYpE3X9Km7fnt6IqdA=
-  - secure: icvzNMr7t2/cnZ+BZzmBzvyQyyjrssIOD1lYghfybaGQuJVpgwR+JqPXOvMNGtF4gXLhNdZjr6Vc+ijeS7W538akcqsMvkxXbSFx9hLTx869+JIebWhfBdyfGPVfmPgffj2yEjSvrCxuJRvPxCoecKfFLRGsDVUK8+a5m8e5gDU=
-  - secure: DWdhu6gSaRyp4xiJ1QEWoRTKSF54Pxm30Tpacyj5vfuXWCqMGqoNXQti9wNg+NhF2sDARqDquKdsZ/2zUzhejQguHZ6bfGjm4yz0wBY6AkFqTCvjrbrlrMQGnWjHPifwXgzOUdAjrzYozfI8Ip3kk4hIodQJKtcuAwzG26sCbQY=
-  - secure: P71pPSaZWTNpwbHTEVyS0BMiQkGfHTLTLV2SaWdlCp6UH0R/CVVEXc0UpTyKSvDFR+8cIM0R6KfZ6oeUCgoceyVuFPuhmdTi29Bz6+PlzuZG1FWbfyLNKjzfZ87AeBwB5g4HyzW2gc/6PbkfZ2cFNVHpxA9jz1diEFbaGF+RGuE=
-  - secure: m2K3+SrzCoEh5cHLLI1pCojkggEI1periYXX8+T4BLcgR5KtTIgMlzx4WD9MNhmt6N5aXBzYWT7m//ywiputuu2w4RI2BeUCA59cXuSrzL/UXwOqr23gar8sBIUiydRPUTBC5XkQCh6P3yZU4L4hbnvAcLIPSGHHQHZXGrdnOVY=
-  - secure: rIPgoxN/chQchYVFwGUrp0q1JvywS1NNw1twB6DPFgxZICGE2kVTjymaCyTIpXE9BV9Q6Eumvsm/N7j7Lp6ldmsv4J1iheE9276BbTdWiE8/kR0JnR90j+zCon4PQnruPi16PUoYHaklnEoZz/WHSXgqBvNxYCteyggmUX7+4e0=
-  - secure: F3j/vSZKRkkb1t3loW5RDGp4CW5JeH6eQpULVXQ5U+5LBzTHr9zgzXF2yRhzzBLTsZ7A9ehrWpZE1EGaS/ud+mqDpS95EA5NpRR1Pb1tzPqKQeJ2alpxZl5l51C8JwNe3wjUoEwTYRXdLpC0HEa09vIhEhPrOy+dVYIqsDuN1TY=
+    - secure: VsIGjVbcGVsuNwTFOcnndTzxlpIoOp3x5HyMQ+9CiTKGg6rsSAZihMunOXp4woI6Tj/1uT339onTq0saf5+3QEcUR2OcGz+lo6M/4AW2rkcG8rpu8kWN4OzLR1Qn5vYzpkg2/HbdSA9aZDta6bmw8jkitMt3UyRZj/LX/MRM6mo=
+    - secure: Kz9DtwcEfan+1ErebbhadsQ/DEukPCI9orVyOzmpvABEx4Ur6jLYdt79Q/GEQPugggUNBs9XERmOx/wx/KJSvw/2VdoRaXskAWk66F6uOadYbrTYYZ95UJpv4X8cin21MSYOKLBeIJkZuX5PYUZg3FAGi7FUIu+UuUDNE7+lHaw=
+    - secure: nMlkJXkMRwcAWceb7/o4pwDP1A+VeVRUVoaCoCIk11621ROMw3a5VHyum6kNEAla+9Ce970+xCNAdTIKuuLw7HjLsyGBiBQhMWDyNof4su5zayBh+sB2S/RXI8117eLQg0HLvIltOvwT9obphAfn4AkEWeZ1yApEzjVjK4rhzgU=
+    - secure: QqrejLFqsAWc72l367h3U8cv6BKiOyxlxVrTm+4rsJeJiAuTlvKeFh8ZprbBeOTE3CuwjuDhUnbkkHbuUP6lgKb9A32pBGZyabI4eow/djvT22aUFMmIVaL+RQgICRpHsZ/k/SWrQlizls2YvQ/8PaVb86dcI2YC7DF1nYr2kS8=
+    - secure: aTL4r19Wu2xj7e7Uvvm910xGRm8KYOfhEDhRsT/SLT8qbkF2gYqFJYR/jNI2WYUbMrbIRh5sA/iE4eQmJBvk4djf6zSfazFIzGcnSjeVUnzXgJuerJ2M2PGI2o/cWWmVMe4VD2WCMZbT9AjdJ944CcN6jPYpE3X9Km7fnt6IqdA=
+    - secure: icvzNMr7t2/cnZ+BZzmBzvyQyyjrssIOD1lYghfybaGQuJVpgwR+JqPXOvMNGtF4gXLhNdZjr6Vc+ijeS7W538akcqsMvkxXbSFx9hLTx869+JIebWhfBdyfGPVfmPgffj2yEjSvrCxuJRvPxCoecKfFLRGsDVUK8+a5m8e5gDU=
+    - secure: DWdhu6gSaRyp4xiJ1QEWoRTKSF54Pxm30Tpacyj5vfuXWCqMGqoNXQti9wNg+NhF2sDARqDquKdsZ/2zUzhejQguHZ6bfGjm4yz0wBY6AkFqTCvjrbrlrMQGnWjHPifwXgzOUdAjrzYozfI8Ip3kk4hIodQJKtcuAwzG26sCbQY=
+    - secure: P71pPSaZWTNpwbHTEVyS0BMiQkGfHTLTLV2SaWdlCp6UH0R/CVVEXc0UpTyKSvDFR+8cIM0R6KfZ6oeUCgoceyVuFPuhmdTi29Bz6+PlzuZG1FWbfyLNKjzfZ87AeBwB5g4HyzW2gc/6PbkfZ2cFNVHpxA9jz1diEFbaGF+RGuE=
+    - secure: m2K3+SrzCoEh5cHLLI1pCojkggEI1periYXX8+T4BLcgR5KtTIgMlzx4WD9MNhmt6N5aXBzYWT7m//ywiputuu2w4RI2BeUCA59cXuSrzL/UXwOqr23gar8sBIUiydRPUTBC5XkQCh6P3yZU4L4hbnvAcLIPSGHHQHZXGrdnOVY=
+    - secure: rIPgoxN/chQchYVFwGUrp0q1JvywS1NNw1twB6DPFgxZICGE2kVTjymaCyTIpXE9BV9Q6Eumvsm/N7j7Lp6ldmsv4J1iheE9276BbTdWiE8/kR0JnR90j+zCon4PQnruPi16PUoYHaklnEoZz/WHSXgqBvNxYCteyggmUX7+4e0=
+    - secure: F3j/vSZKRkkb1t3loW5RDGp4CW5JeH6eQpULVXQ5U+5LBzTHr9zgzXF2yRhzzBLTsZ7A9ehrWpZE1EGaS/ud+mqDpS95EA5NpRR1Pb1tzPqKQeJ2alpxZl5l51C8JwNe3wjUoEwTYRXdLpC0HEa09vIhEhPrOy+dVYIqsDuN1TY=
