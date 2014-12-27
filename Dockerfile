@@ -49,6 +49,8 @@ RUN make
 
 
 WORKDIR /labnotebook
-CMD bundle exec jekyll build --trace
+EXPOSE 4000
+
+CMD bundle exec jekyll serve
 
 #CMD bundle exec rake site:deploy
