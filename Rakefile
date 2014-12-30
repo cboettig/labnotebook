@@ -219,7 +219,7 @@ namespace :site do
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
     Dir.chdir(EXTERNAL) do
-			sh "mv #{WORKDIR}/_site/* ."
+			sh "rsync -a #{WORKDIR}/_site/* ."
       sh "git add --all ."
       sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
       sh "git push origin #{DESTINATION_BRANCH} --quiet"
