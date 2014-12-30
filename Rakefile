@@ -12,6 +12,7 @@ require 'yaml'
 CONFIG = YAML.load(File.read('_config.yml'))
 USERNAME = CONFIG["username"]
 REPO = CONFIG["repo"]
+EXTERNAL = "../_site"
 
 # Determine source and destination branch
 # User or organization: source -> master
@@ -87,8 +88,8 @@ def parameterize(string, sep = '-')
 end
 
 def check_destination
-  unless Dir.exist? CONFIG["destination"]
-    sh "git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
+  unless Dir.exist? EXTERNAL 
+    sh "git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git ../#{EXTERNAL}"
   end
 end
 
@@ -208,14 +209,15 @@ namespace :site do
     check_destination
 
     sh "git checkout #{SOURCE_BRANCH}"
-    Dir.chdir(CONFIG["destination"]) { sh "git checkout #{DESTINATION_BRANCH}" }
+    Dir.chdir(EXTERNAL) { sh "git checkout #{DESTINATION_BRANCH}" }
 
     # Generate the site
     sh "bundle exec jekyll build --trace"
 
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
-    Dir.chdir(CONFIG["destination"]) do
+    Dir.chdir(EXTERNAL) do
+			sh "mv labnotebook/_site/* ."
       sh "git add --all ."
       sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
       sh "git push origin #{DESTINATION_BRANCH} --quiet"
