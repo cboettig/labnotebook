@@ -26,6 +26,8 @@ else
   DESTINATION_BRANCH = "gh-pages"
 end
 
+WORKDIR = Dir.pwd
+
 #############################################################################
 #
 # Helper functions
@@ -217,7 +219,7 @@ namespace :site do
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
     Dir.chdir(EXTERNAL) do
-			sh "mv labnotebook/_site/* ."
+			sh "mv #{WORKDIR}/_site/* ."
       sh "git add --all ."
       sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
       sh "git push origin #{DESTINATION_BRANCH} --quiet"
