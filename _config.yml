@@ -11,7 +11,6 @@ author:
   email: cboettig@gmail.com
 url: http://www.carlboettiger.info
 
-destination: ../_site 
 username: cboettig
 repo: labnotebook
 
@@ -50,6 +49,7 @@ exclude:
   - _garb.yml
   - _twitter.yml
   - DESCRIPTION
+  - Dockerfile
 
 knitr:
   dev: svg

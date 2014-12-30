@@ -1,9 +1,7 @@
-
 web: 
 #  build: .
-  image: labnotebook
-  command: jekyll serve
-  volumes: $(pwd):/labnotebook
+  image: cboettig/labnotebook
+  volumes: $(pwd):/data
   ports: 
     - "4000"
   environment:
