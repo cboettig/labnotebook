@@ -89,7 +89,7 @@ end
 
 def check_destination
   unless Dir.exist? EXTERNAL 
-    sh "git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git ../#{EXTERNAL}"
+    sh "git clone https://#{USERNAME}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{EXTERNAL}"
   end
 end
 
