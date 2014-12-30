@@ -1,6 +1,7 @@
-
+## be sure to do `source ../.notebook-env.sh` fist
+## Cannot run this in makefile since it doesn't understand 'source'
+## Cannot run with bash -c "source ../.notebook-env.sh" since then it's not available to the parent shell
 deploy:
-	bash -c "source ../.notebook-env.sh"
 	docker run --name labnotebook \
 		-v $(PWD):/data \
 		-w /data -d -P \
@@ -11,7 +12,6 @@ deploy:
 
 
 bash:
-	bash -c "source ../.notebook-env.sh"
 	docker run -v $(PWD):/data \
 		--rm -it \
 		-w /data \
