@@ -13,6 +13,7 @@ RUN apt-get update \
   && gem install nokogiri -v '1.6.3.1' 
 
 ADD Gemfile /data/Gemfile 
+ADD Gemfile.lock /data/Gemfile.lock
 
 RUN adduser docker sudo \
   && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
@@ -23,7 +24,8 @@ WORKDIR /data
 
 ## Configure bundler and install gems listed in the Gemfile
 RUN bundle config build.nokogiri --use-system-libraries \ 
-  && bundle install 
+  && bundle install \
+	&& bundle update
 
 EXPOSE 4000
 
