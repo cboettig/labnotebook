@@ -15,9 +15,8 @@ RUN apt-get update \
 ## Install additional R package dependencies
 RUN install2.r --error igraph sde \
 	&& install2.r --error --repo http://r-nimble.org nimble \
-	&& install2.r --error --repo http://yihui.name/xran servr \
+	&& installGithub.r yihui/servr \
 	&& rm -rf /tmp/downloaded_packages 
-
 
 ## (Docker won't cache layers depending on external files, so this goes last):
 ## Install additional Ruby gems. 
@@ -33,12 +32,14 @@ RUN bundle config build.nokogiri --use-system-libraries \
   && bundle install \
 	&& bundle update
 
-
 EXPOSE 4000
 
 ## Just Jekyll
 #ENTRYPOINT ["/usr/bin/bundle", "exec", "jekyll"]
 #CMD ["serve", "-H", "0.0.0.0"]
 
-## Knitr+Jekyll
-CMD Rscript -e 'servr::jekyll(port = 4000, host = "0.0.0.0")'
+## Build knitr+jekyll
+CMD Rscript -e 'servr::jekyll(serve = FALSE)'
+
+## Knitr+Jekyll+serve
+# CMD Rscript -e 'servr::jekyll(port = 4000, host = "0.0.0.0")'
