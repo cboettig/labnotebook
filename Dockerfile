@@ -13,29 +13,32 @@ RUN apt-get update \
   && gem install nokogiri -v '1.6.3.1' 
 
 ## Install additional R package dependencies
-
 RUN install2.r --error igraph sde \
 	&& install2.r --error --repo http://r-nimble.org nimble \
 	&& install2.r --error --repo http://yihui.name/xran servr \
 	&& rm -rf /tmp/downloaded_packages 
 
-## bundler likes to be a non-root user in sudoers.  Also handy generally.
+
+## (Docker won't cache layers depending on external files, so this goes last):
+## Install additional Ruby gems. 
+ADD Gemfile /data/Gemfile 
+ADD Gemfile.lock /data/Gemfile.lock
 RUN adduser docker sudo \
   && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
   && chown -R docker:docker /data
+## (bundler likes to be a non-root user in sudoers.)
 USER docker
 WORKDIR /data
-
-## Install additional Ruby gems
-## Configure bundler and install gems listed in the Gemfile
-ADD Gemfile /data/Gemfile 
-ADD Gemfile.lock /data/Gemfile.lock
 RUN bundle config build.nokogiri --use-system-libraries \ 
   && bundle install \
 	&& bundle update
 
+
 EXPOSE 4000
+
+## Just Jekyll
 #ENTRYPOINT ["/usr/bin/bundle", "exec", "jekyll"]
 #CMD ["serve", "-H", "0.0.0.0"]
 
+## Knitr+Jekyll
 CMD Rscript -e 'servr::jekyll(port = 4000, host = "0.0.0.0")'
