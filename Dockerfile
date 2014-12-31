@@ -29,8 +29,10 @@ WORKDIR /data
 ## Install additional Ruby gems
 ## Configure bundler and install gems listed in the Gemfile
 ADD Gemfile /data/Gemfile 
+ADD Gemfile.lock /data/Gemfile.lock
 RUN bundle config build.nokogiri --use-system-libraries \ 
-  && bundle install 
+  && bundle install \
+	&& bundle update
 
 EXPOSE 4000
 #ENTRYPOINT ["/usr/bin/bundle", "exec", "jekyll"]
