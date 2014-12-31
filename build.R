@@ -20,15 +20,17 @@ local({
   d = gsub('^_|[.][a-zA-Z]+$', '', a[1])
   knitr::opts_chunk$set(
     fig.path   = sprintf('assets/figures/%s/', d),
-    cache.path = sprintf('cache/%s/', d)
+    cache.path = sprintf('cache/%s/', d),
 		comment = NA,
 	  message = FALSE,
     warning = FALSE
   )
 
 	# Embed non-svgs directly into HTML as data-uris
-	if(knitr::opts_chunk$get('dev') != 'svg') 
-		knitr::opts_knit$set(upload.fun = image_uri) 
+	knitr::opts_knit$set(upload.fun = if(!is.null(knitr::opts_chunk$get('dev')) && knitr::opts_chunk$get('dev') == 'svg')
+																			knitr::opts_knit$get(upload.fun)
+																		else 
+																			knitr::image_uri) 
 
   knitr::opts_knit$set(base.url = '/')
   knitr::opts_knit$set(width = 70)

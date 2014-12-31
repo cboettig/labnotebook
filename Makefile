@@ -8,7 +8,12 @@ build:
 		-e TWIT_KEY -e TWIT_SECRET -e TWIT_TOK \
 		-e TWIT_TOK_SECRET -e GIT_NAME -e GIT_EMAIL \
 		-e GH_TOKEN -e GARB_KEY -e GARB_PASS -e GARB_UA \
-		cboettig/labnotebook Rscript -e servr::jekyll(serve=FALSE)
+		cboettig/labnotebook
+
+deploy:
+	git clone -b gh-pages git@github.com/cboettig/labnotebook.git _gh-pages
+	rsync -a _site/ _gh-pages/
+#	cd _gh-pages && git add --all . && git commit -m 'Site updated' && git push
 
 
 bash:
