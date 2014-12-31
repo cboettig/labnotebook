@@ -50,6 +50,7 @@ exclude:
   - _twitter.yml
   - DESCRIPTION
   - Dockerfile
+  - build.R
 
 knitr:
   dev: svg
