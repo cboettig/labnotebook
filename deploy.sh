@@ -6,5 +6,5 @@ else
 	cd _gh-pages && git pull origin gh-pages && cd ..
 fi
 rsync -a _site/ _gh-pages/
-#	cd _gh-pages && git add --all . && git commit -m 'Site updated' && git push
+cd _gh-pages && git add -A . && git commit -m 'Site updated' && git push
 

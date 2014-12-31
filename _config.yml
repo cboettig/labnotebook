@@ -44,11 +44,12 @@ exclude:
   - Rakefile
   - .travis.yml
   - _posts/*.Rmd
-  - _posts/source/
+  - _posts/source
   - assets/_bootstrap-3.1.1
   - Dockerfile
   - build.R
-
+  - _cache
+  - assets/figures/posts
 knitr:
   dev: svg
 
