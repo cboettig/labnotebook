@@ -3,7 +3,7 @@
 ## Cannot run with bash -c "source ../.notebook-env.sh" since then it's not available to the parent shell
 
 build:
-	docker run --name labnotebook \
+	docker run \
 		-v $(PWD):/data \
 		-w /data --rm \
 		-e TWIT_KEY -e TWIT_SECRET -e TWIT_TOK \
