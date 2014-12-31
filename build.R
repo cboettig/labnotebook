@@ -20,7 +20,7 @@ local({
   d = gsub('^_|[.][a-zA-Z]+$', '', a[1])
   knitr::opts_chunk$set(
     fig.path   = sprintf('assets/figures/%s/', d),
-    cache.path = sprintf('cache/%s/', d),
+    cache.path = sprintf('_cache/%s/', d),
 		comment = NA,
 	  message = FALSE,
     warning = FALSE
