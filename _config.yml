@@ -12,7 +12,7 @@ author:
 url: http://www.carlboettiger.info
 
 username: cboettig
-repo: labnotebook
+repo: cboettig.github.io 
 
 gems:
   - jekyll-pandoc

@@ -1,17 +1,9 @@
+library("knitr")
 library("methods")
 local({
   if (!file.exists('_config.yml')) return()
   x = iconv(readLines('_config.yml', encoding = 'UTF-8'), 'UTF-8')
   x = grep('^markdown:\\s*[a-z]+\\s*$', x, value = TRUE)
-})
-
-# Embed svgs directly into HTML
-local({
-	hook_plot = knitr::knit_hooks$get('plot')
-	knitr::knit_hooks$set(plot = function(x, options) {
-		if (!grepl('\\.svg', x)) return(hook_plot(x, options))
-		paste(readLines(x)[-1], collapse = '\n')
-	})
 })
 
 local({
@@ -31,11 +23,27 @@ local({
 		dev = 'png'
   )
 
-	# Embed non-svgs directly into HTML as data-uris
-	knitr::opts_knit$set(upload.fun = if(!is.null(knitr::opts_chunk$get('dev')) && knitr::opts_chunk$get('dev') == 'svg')
-																			knitr::opts_knit$get(upload.fun)
-																		else 
-																			knitr::image_uri) 
+	## Embed svgs directly -- doesn't work, causes weird knitr errors instead
+	## see: https://github.com/yihui/knitr/issues/754#issuecomment-68470335
+#	local({
+#		hook_plot = knit_hooks$get('plot')
+#		knit_hooks$set(plot = function(x, options) {
+#			if (!grepl('\\.svg', x)) return(hook_plot(x, options))
+#			paste(readLines(x)[-1], collapse = '\n')
+#		})
+#	})
+
+## Embed any non-svgs directly into HTML as data-uris
+
+	embed = function(x){
+			dev = knitr::opts_chunk$get('dev')
+			if(!is.null(dev))
+				if(dev == 'svg')
+					identity(x)
+			else  
+				image_uri(x)
+		}
+#	knitr::opts_knit$set(upload.fun = embed)
 
   knitr::opts_knit$set(base.url = '/')
   knitr::opts_knit$set(width = 70)
