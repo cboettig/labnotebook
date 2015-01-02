@@ -34,47 +34,14 @@ layout: default
   </div> 
 </div>
 
-<hr>
-<div class="row postpreview">
-  <div class="col-md-11 col-md-offset-1">
-    <div class="row">
-      <h4> <a href="{{ site.url }}/atom.xml"
-              onClick="recordOutboundLink(this,
-              'Outbound Links', 'RSS'); return false;"
-              style="color: inherit;"
-              ><i class="icon-rss" ></i> Entries</a></h4>
-      {% for post in site.posts limit:3 %}
-        <div class="col-md-3">
-          {% include postexcerpt.html %}
-        </div>
-      {% endfor %}
-    </div>
-
-    <div class="row">
-      {% for post in site.posts limit:3 offset:3 %}
-        <div class="col-md-3">
-          {% include postexcerpt.html %}
-        </div>
-      {% endfor %}
-    </div>
-
-    <div class="row">
-      {% for post in site.posts limit:3 offset:6 %}
-        <div class="col-md-3">
-          {% include postexcerpt.html %}
-        </div>
-      {% endfor %}
-    </div>
-
-  </div>
-</div> <!--end row -->
-
-<div class="row socialicons">
-  <div class="col-md-11 col-md-offset-1">
-      <p> <a href="/archive.html"><i class="icon-calendar"></i> All entries by date</a></p> 
-      <p> <a href="/categories.html"><i class="icon-list"></i> All entries by category</a> </p>
-      <p> <a href="/tags.html"><i class="icon-tags"></i> All entries by tag</a> </p>
-  </div> <!--end col-md-9 -->
-</div> <!--end row -->
-
-
+<h2><i class="icon-calendar"></i> Notebooks by year</h2>
+<ul class="list-unstyled">
+<li><a href="{{site.url}}/2015">2015 Notebook</a></li>
+<li><a href="{{site.url}}/2014">2014 Notebook</a></li>
+<li><a href="{{site.url}}/2013">2013 Notebook</a></li>
+<li><a href="{{site.url}}/2012">2012 Notebook</a></li>
+<li><a href="{{site.url}}/2011">2011 Notebook</a></li>
+<li><a href="{{site.url}}/2010">2010 Notebook</a></li>
+<li><a href="{{site.url}}/2009">2009 Notebook</a></li>
+<li><a href="{{site.url}}/2008">2008 Notebook</a></li>
+</ul>

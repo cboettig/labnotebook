@@ -1,5 +1,6 @@
 ---
 title: Archives
+layout: page
 ---
 
 - [2015]({{site.url}}/2015)
