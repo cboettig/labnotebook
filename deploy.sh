@@ -5,7 +5,7 @@ if [ "$DRONE_BRANCH" ]
   then 
     if [ "$DRONE_BRANCH" = "source" ]
       then
-        sudo apt-get install -y rsync
+        sudo apt-get update && sudo apt-get install -y rsync
         git config --global user.name cboettg
         git config --global user.email cboettig@server.com
         git clone -b source https://github.com/cboettig/cboettig.github.io ../source
