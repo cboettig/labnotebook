@@ -1,9 +1,0 @@
-image: cboettig/labnotebook
-script: 
-	- Rscript -e "servr::jekyll(serve=FALSE)"
-
-deploy:
-	bash:
-		script:
-			- ./deploy.sh  
-
