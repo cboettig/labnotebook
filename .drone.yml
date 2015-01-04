@@ -1,0 +1,7 @@
+image: cboettig/labnotebook
+deploy:
+  bash:
+    script:
+      - ./deploy.sh
+     
+

@@ -1,14 +1,16 @@
-#!/bin/bash
-
+#!/bin/bash -i
 set -e
-source /home/cboettig/.notebook-env.sh
-docker run --rm -v $(pwd):/data -w /data -e TWIT_KEY -e TWIT_SECRET -e TWIT_TOK -e TWIT_TOK_SECRET cboettig/labnotebook
 
-if [ ! -d _gh-pages ]; then
-	git clone -b master git@github.com:cboettig/cboettig.github.io _gh-pages
-else
-	cd _gh-pages && git pull origin master && cd ..
+if [ "$DRONE_BRANCH" ]
+  then 
+    if [ "$DRONE_BRANCH" = "source" ]
+      then
+        git config --global user.name cboettg
+        git config --global user.email cboettig@server.com
+        git clone -b source https://github.com/cboettig/cboettig.github.io ../source
+        cd ../source && Rscript -e 'servr::jekyll(serve=FALSE)'
+        cd .. && git clone https://cboettig:${GH_TOKEN}@github.com/cboettig/cboettig.github.io deploy 
+        cp -a source/_site/ deploy/ 
+        cd deploy && git add -A . && git commit -m 'Site updated' && git push
+    fi
 fi
-rsync -a _site/ _gh-pages/
-cd _gh-pages && git add -A . && git commit -m 'Site updated' && git push
-
