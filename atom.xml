@@ -1,11 +1,9 @@
 ---
 ---
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta rel="canonical" http-equiv="refresh" content="0;url=http://www.carlboettiger.info/{{'now' | date: "%Y"}}/atom.xml" />
-		<link rel="canonical" href="http://www.carlboettiger.info/{{'now' | date: "%Y"}}/atom.xml"/>
-  </head>
-</html>
+<redirect>
+<newLocation>
+http://www.carlboettiger.info/{{'now' | date: "%Y"}}/atom.xml
+</newLocation>
+</redirect>
+
