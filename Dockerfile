@@ -40,10 +40,10 @@ RUN install2.r --error igraph sde \
 ### (Docker won't cache layers depending on external files, so this goes last)
 ADD Gemfile /data/Gemfile 
 ADD Gemfile.lock /data/Gemfile.lock
-RUN adduser docker sudo \
+RUN adduser rstudio sudo \
   && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
-  && chown -R docker:docker /data
-USER docker
+  && chown -R rstudio:rstudio /data
+USER rstudio
 WORKDIR /data
 RUN bundle config build.nokogiri --use-system-libraries \ 
   && bundle install \
