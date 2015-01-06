@@ -1,7 +1,12 @@
 image: cboettig/labnotebook
+
+script:
+  - ./_build.sh
+
 deploy:
   bash:
     script:
-      - ./deploy.sh
+      - ./_deploy.sh
      
-
+cache:
+  - /tmp/drone-cache

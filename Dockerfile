@@ -51,6 +51,6 @@ RUN bundle config build.nokogiri --use-system-libraries \
 
 ### Expose port for server mode, but only knit+build by default ###
 EXPOSE 4000
-CMD Rscript -e 'servr::jekyll(serve = FALSE)'
+CMD Rscript -e 'servr::jekyll(serve = FALSE, script="_build.R")'
 
 
