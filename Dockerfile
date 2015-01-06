@@ -31,7 +31,7 @@ RUN apt-get update \
 ## Install additional R package dependencies ###
 RUN install2.r --error igraph sde \
 	&& install2.r --error --repo http://r-nimble.org nimble \
-	&& installGithub.r yihui/servr \
+	&& installGithub.r yihui/servr cboettig/earlywarning \
 	&& rm -rf /tmp/downloaded_packages 
 
 
@@ -48,6 +48,9 @@ WORKDIR /data
 RUN bundle config build.nokogiri --use-system-libraries \ 
   && bundle install \
   && bundle update
+
+## Create a jekyll as a function with reasonable defaults
+echo "jekyll <- function(serve=FALSE, port='4000', host='0.0.0.0', script='_build.R', ...) servr::jekyll(serve=serve,port=port,host=host,script=script, ...)" >> /etc/R/Rprofile.site
 
 ### Expose port for server mode, but only knit+build by default ###
 EXPOSE 4000
