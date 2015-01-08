@@ -11,8 +11,8 @@ author:
   email: cboettig@gmail.com
 url: http://www.carlboettiger.info
 
-username: cboettig
-repo: cboettig.github.io 
+baseurl: /
+repo: cboettig.github.io
 
 gems:
   - jekyll-pandoc
@@ -21,7 +21,7 @@ encoding: utf-8
 
 ## Markdown Parser 
 markdown: pandoc
-markdown_ext:  markdown,md #,Rmd,rmd
+markdown_ext:  markdown,md
 pandoc:
   extensions: 
     - smart
@@ -43,5 +43,3 @@ exclude:
   - Gemfile.lock
   - Dockerfile
   - .drone.yml
-
-    # we want .drone.yml and deploy.sh to move onto gh-pages branch for drone to work properly
