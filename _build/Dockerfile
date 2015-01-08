@@ -50,10 +50,10 @@ RUN bundle config build.nokogiri --use-system-libraries \
   && bundle update
 
 ## Create a jekyll as a function with reasonable defaults
-echo "jekyll <- function(serve=FALSE, port=4000, host='0.0.0.0', script='_build.R', ...) servr::jekyll(serve=serve,port=port,host=host,script=script, ...)" >> /etc/R/Rprofile.site
+echo "jekyll <- function(serve=FALSE, port=4000, host='0.0.0.0', script='_build/build.R', ...) servr::jekyll(serve=serve,port=port,host=host,script=script, ...)" >> /etc/R/Rprofile.site
 
 ### Expose port for server mode, but only knit+build by default ###
 EXPOSE 4000
-CMD Rscript -e 'servr::jekyll(serve = FALSE, script="_build.R")'
+CMD Rscript -e 'servr::jekyll(serve = FALSE, script="_build/build.R")'
 
 

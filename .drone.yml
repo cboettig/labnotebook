@@ -7,7 +7,7 @@ script:
   - rsync -a --delete /tmp/cache/ _cache/
   - rsync -a --delete /tmp/figures/ assets/figures/posts/
 ## Build site with knitr and jekyll
-  - Rscript -e 'servr::jekyll(serve=FALSE, script="_build.R")'
+  - Rscript -e 'servr::jekyll(serve=FALSE, script="_build/build.R")'
 ## update cache
   - rsync -a --delete _cache/ /tmp/cache/
   - rsync -a --delete assets/figures/posts/ /tmp/figures/
@@ -16,7 +16,7 @@ script:
 deploy:
   bash:
     script:
-      - ./_deploy.sh
+      - ./_build/deploy.sh
      
 cache:
   - /tmp/cache
