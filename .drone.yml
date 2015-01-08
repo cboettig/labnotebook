@@ -4,7 +4,7 @@ script:
   - ./_build/loadcache.sh
   - Rscript -e 'servr::jekyll(serve=FALSE, script="_build/build.R")'
   - rsync -a --delete _cache/ /tmp/cache/
-  - rsync -a --delete assets/figures/posts/ /tmp/figures/
+  - rsync -a --delete assets/figures/ /tmp/figures/
 
 ## if successful, deploy to Github pages branch
 deploy:
