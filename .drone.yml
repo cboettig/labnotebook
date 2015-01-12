@@ -2,8 +2,8 @@ image: cboettig/labnotebook
 
 script:
   - ./_build/loadcache.sh
-  - git config user.name "Carl Boettiger"
-  - git config user.email cboettig@gmail.com
+  - git config --global user.name "Carl Boettiger"
+  - git config --global user.email cboettig@gmail.com
   - Rscript -e 'servr::jekyll(serve=FALSE, script="_build/build.R")'
   - rsync -a --delete _cache/ /tmp/cache/
   - rsync -a --delete assets/figures/ /tmp/figures/
