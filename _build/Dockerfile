@@ -2,17 +2,19 @@
 # 
 # Provides the R+Ruby+Jekyll+javascript environment needed to build my lab notebook sites
 # 
-# Use: link the working directory of the site to build: 
+# Use: 
+#   link the working directory of the site to build. 
+#   (`-e` keys only needed if using the twitter plugin)
 # 
 #     docker run --rm -v $(pwd):/data -w /data \
 #     -e TWIT_KEY -e TWIT_SECRET -e TWIT_TOK - e TWIT_TOK_SECRET \
 #     cboettig/labnotebook
 # 
-# Serve locally by running deamonized with auto-assigned port (-dP) bu
+# Serve locally by running deamonized with auto-assigned port (-dP) by 
 # providing a custom CMD to jekyll:
 #
-#     docker run -dP ... \
-#     Rscript -e 'servr::jekyll(port = 4000, host = "0.0.0.0")'
+#     docker run -dP -v $(pwd)/data cboettig/labnotebook \
+#       Rscript -e 'servr::jekyll(port = 4000, host = "0.0.0.0")'
 
 FROM rocker/hadleyverse 
 MAINTAINER Carl Boettiger cboettig@ropensci.org 
@@ -49,11 +51,9 @@ RUN bundle config build.nokogiri --use-system-libraries \
   && bundle install \
   && bundle update
 
-## Create a jekyll as a function with reasonable defaults
-echo "jekyll <- function(serve=FALSE, port=4000, host='0.0.0.0', script='_build/build.R', ...) servr::jekyll(serve=serve,port=port,host=host,script=script, ...)" >> /etc/R/Rprofile.site
-
-### Expose port for server mode, but only knit+build by default ###
+### Expose port for jekyll serve ###
 EXPOSE 4000
-CMD Rscript -e 'servr::jekyll(serve = FALSE, script="_build/build.R")'
+
+
 
 
