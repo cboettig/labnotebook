@@ -12,7 +12,7 @@ Below are a few links to my more commonly used social network profiles and Inter
 * __[<i class = "fa fa-github"></i> Github](http://github.com/cboettig)__ -- The web-based home of my research.  Star, watch, or fork a project you're interested in.
 * __[<i class = "fa fa-twitter"></i> Twitter](http://twitter.com/cboettig)__ -- My primary social network, which is why it gets a contact link in my footer.
 * __[<i class = "fa fa-stack-overflow"></i> StackOverflow](http://stackoverflow.com/users/258662/carl)__ -- Profile includes [links](http://stackexchange.com/users/94826/cboettig?tab=accounts) to other stackexchange platforms I use.
-* __[<i class = "fa fa-file-image-o"></i> Figshare](http://figshare.com/authors/Carl%20Boettiger/96387)__ -- Figshare is my go-to database for robust permanent archiving of other scholarly outputs, including grant applications, theses, etc; though I use Dryad (data associated with pubs in Dryad-integrated journals), KNB (richer metadata) and Zenodo (mostly for Github-integration with software) as well. Note that the latter don't have the same concept of user profiles and network and thus aren't listed separately here. 
+* __[<i class = "ai ai-figshare"></i> Figshare](http://figshare.com/authors/Carl%20Boettiger/96387)__ -- Figshare is my go-to database for robust permanent archiving of other scholarly outputs, including grant applications, theses, etc; though I use Dryad (data associated with pubs in Dryad-integrated journals), KNB (richer metadata) and Zenodo (mostly for Github-integration with software) as well. Note that the latter don't have the same concept of user profiles and network and thus aren't listed separately here. 
 
 ## (Somewhat) maintained profiles ## 
 
