@@ -51,8 +51,8 @@ education
 	 Gaussian process dynamic programming. _Proceedings of the Royal Society B_ 
 	 282(1801), 8–11.
 	 {{ "10.1098/rspb.2014.1631" | doi_pdf_parser }}
-	 ([arXiv](http://arxiv.org/abs/1412.8081)),
-	 ([repository](https://github.com/cboettig/nonparametric-bayes)),
+	 ([arXiv](http://arxiv.org/abs/1412.8081))
+	 ([repository](https://github.com/cboettig/nonparametric-bayes))
 	 ([data](http://dx.doi.org/10.5061/dryad.mj226))
 <li> **Carl Boettiger**, Alan Hastings. (2013) No early warning signals
 	for stochastic transitions: insights from large deviation theory.
