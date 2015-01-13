@@ -55,5 +55,4 @@ RUN bundle config build.nokogiri --use-system-libraries \
 EXPOSE 4000
 
 
-
-
+CMD sudo supervisord

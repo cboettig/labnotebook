@@ -8,12 +8,12 @@ use the volumes option, `-v` to link the current working
 directory to the `/data` directory on the container:
 
 ```
-docker run --rm -i -v $(pwd):/data cboettig/labnotebook
+docker run --rm -i -v $(pwd):/data cboettig/labnotebook \
+  Rscript -e 'servr::jekyll(serve=FALSE, host="0.0.0.0", port=4000, script="build.R")'
 ```
 
-This will run the default command (a call to `servr::jekyll` with
-appropriate options) to run the R code and build the Jekyll site according
-to the configuration.
+This will run the call to `servr::jekyll` to run the R code and build
+the Jekyll site according to the configuration.
 
 The Docker container includes only general-purpose software required
 to build the site (R and Ruby), all the site content, layout etc is
