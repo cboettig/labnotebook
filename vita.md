@@ -41,7 +41,9 @@ education
 <ol reversed>
 
 <!--
-<li> __Carl Boettiger__. (2015) 
+<li> __Carl Boettiger__. (2015) An introduction to Docker for reproducible
+  research. SIGOPS Operating Systems Review. 
+	[arXiv](http://arxiv.org/abs/1410.0846)
 -->
 
 <li> __Carl Boettiger__, Marc Mangel, Stephan Munch. (2015)
