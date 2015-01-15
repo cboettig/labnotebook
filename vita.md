@@ -10,7 +10,7 @@ employment
 ----------
 
 - 2013 <span property="schema:jobTitle">NSF post-doctoral scholar</span> in the <a rel="schema:affiliation" href="http://boe.ucsc.edu/~msmangel/CSTAR.html">Center for Stock Assessment Research</a> at the <a rel="foaf:schoolHomepage" href="http://ucdavis.edu">University of California, Santa Cruz</a>.
-Mentors: <a rel="foaf:knows" href="http://users.soe.ucsc.edu/~msmangel/" about="{{site.url}}#me">Marc Mangel</a> <a rel="foaf:knows" href="http://swfsc.noaa.gov/staff.aspx?&amp;id=17294" about="{{site.url}}#me">Stephan Munch</a>
+Mentors: <a rel="foaf:knows" href="http://users.soe.ucsc.edu/~msmangel/" about="{{site.url}}#me">Marc Mangel</a>, <a rel="foaf:knows" href="http://swfsc.noaa.gov/staff.aspx?&amp;id=17294" about="{{site.url}}#me">Stephan Munch</a>
 
 
 education
