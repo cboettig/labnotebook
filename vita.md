@@ -121,55 +121,59 @@ education
 presentations
 -------------
 
+1.  Berkeley Initiative for Global Change Biology, student organized symposium, **Invited speaker**. 
+1.  Ecological Society of America, Sacramento CA
+1.  [DIMACS Global Change](http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html), Berkeley CA (May 2014) **Invited speaker**
 1.  Zoology Seminar, Wisconsin-Madison. (April 2014). **Invited
     speaker**
-2.  American Society of Naturalists, Asilomar, CA (Jan 2014)
-3.  Woods Hole Oceangraphic Institute (July 2013). **Invited speaker**
-4.  Ecological Society of America Conference, Minneapolis, MN. (Aug
+1.  Department of Environmental Science, Policy & Management, UC Berkeley. (March 2014_    
+1.  American Society of Naturalists, Asilomar, CA (Jan 2014)
+1.  Woods Hole Oceanographic Institute (July 2013). **Invited speaker**
+1.  Ecological Society of America Conference, Minneapolis, MN. (Aug
     2013)
-5.  UC Davis Dept of Environmental Resources and Economics; Davis, CA
+1.  UC Davis Dept of Environmental Resources and Economics; Davis, CA
     (May 2013). **Invited speaker**
-6.  Ecological Society of America Conference, Portland, OR. (Aug 2012)
+1.  Ecological Society of America Conference, Portland, OR. (Aug 2012)
     ([slides](http://www.slideshare.net/cboettig/esa-2012-talk))
-7.  Computational Science Graduate Fellows Conference, Washington DC.
+1.  Computational Science Graduate Fellows Conference, Washington DC.
     (July 2012)\
      ([video recording](http://www.youtube.com/watch?v=xwIIVdyKe4o))
     ([slides](http://www.slideshare.net/cboettig/regime-shifts-in-ecology-and-evolution))
     ([doi](http://dx.doi.org/10.6084/m9.figshare.97279))
-8.  Evolution Conference, Ottawa, CAN. **Invited speaker** for the
+1.  Evolution Conference, Ottawa, CAN. **Invited speaker** for the
     annual SSB Symposium. (July 2012)
     ([slides](http://www.slideshare.net/cboettig/evolution-13576088))
-9.  Ecological Society of America Conference; Austin, TX. (Aug 2011) In
+1.  Ecological Society of America Conference; Austin, TX. (Aug 2011) In
     *Nature Precedings*
     ([doi](http://dx.doi.org/10.1038/npre.2012.6857.1))
     ([slides](http://www.slideshare.net/cboettig/limits-to-detection-for-early-warning-signals-of-population-collapse))
-10. Evolution Conference; Norman, OK. (June 2011) In *Nature
+1. Evolution Conference; Norman, OK. (June 2011) In *Nature
     Precedings*, ([doi](http://dx.doi.org/10.1038/npre.2011.6080.1))
     ([slides](http://www.slideshare.net/cboettig/a-general-model-of-continuous-character-evolution))
-11. iEvoBio Conference; Norman, OK. (June 2011) *In Nature Precedings*,
+1. iEvoBio Conference; Norman, OK. (June 2011) *In Nature Precedings*,
     ([doi](http://dx.doi.org/10.1038/npre.2012.6851.1))
     ([slides](http://www.slideshare.net/cboettig/r-interface-to-treebase))
-12. Science Online; Durham, NC. (Jan 2011) In *Nature Precedings*,
+1. Science Online; Durham, NC. (Jan 2011) In *Nature Precedings*,
     ([doi](http://dx.doi.org/10.1038/npre.2012.6853.1))
     ([slides](http://www.slideshare.net/cboettig/scioslides))
-13. Society for Integrative and Comparative Biology. Salt Lake City,
+1. Society for Integrative and Comparative Biology. Salt Lake City,
     Utah. (Jan 2011) In *Nature Precedings*,
     ([doi](http://dx.doi.org/10.1038/npre.2011.6453.1))
     ([slides](http://www.slideshare.net/cboettig/is-your-phylogeny-informative))
-14. iEvoBio Conference; Portland, OR. (June 2010) In *Nature Precedings*
+1. iEvoBio Conference; Portland, OR. (June 2010) In *Nature Precedings*
     ([doi](http://dx.doi.org/10.1038/npre.2010.4602.1))
     ([slides](http://www.slideshare.net/cboettig/ievobio))
-15. Evolution Conference; Portland OR. (June 2010) In *Nature
+1. Evolution Conference; Portland OR. (June 2010) In *Nature
     Precedings* ([doi](10.1038/npre.2010.4615.1))
     ([slides](http://www.slideshare.net/cboettig/a-new-phylogenetic-comparative-method-detecting-niches-and-transitions-with-continuous-characters))
-16. University of Tennessee, Knoxville, TN. (Nov 2009)
-17. Center for Population Biology, Davis, CA. (Nov 2009)
+1. University of Tennessee, Knoxville, TN. (Nov 2009)
+1. Center for Population Biology, Davis, CA. (Nov 2009)
     ([slides](http://www.slideshare.net/cboettig/cpb-pres))
-18. International Institute of Applied Systems Analysis, Vienna;
+1. International Institute of Applied Systems Analysis, Vienna;
     Austria. (Aug 2009) In *Nature Precedings,*
     ([doi](http://dx.doi.org/10.1038/npre.2012.6852.1))
     ([slides](http://www.slideshare.net/cboettig/iiasa-final))
-19. Cornell Probability Summer School, Ithaca, NY. (June 2008) In
+1. Cornell Probability Summer School, Ithaca, NY. (June 2008) In
     *Nature Precedings,*
     ([doi](http://dx.doi.org/10.1038/npre.2010.4949.1))
     ([slides](http://www.slideshare.net/cboettig/presentation-5348861))
@@ -223,10 +227,16 @@ awards
 service
 -------
 
+- **[NCEAS Scientific Advisory Board](https://www.nceas.ucsb.edu/news/nceas-appoints-new-science-advisers)**
+
+- **[rOpenSci Leadership team](http://ropensci.org/about/#leadership)**
+
 Reviewer for:
 
 -   **2014** Theoretical Ecology, Biodiversity Data Journal, Ecology
-    Letters, Journal of Theoretical Biology
+    Letters, Journal of Theoretical Biology, American Naturalist, 
+    Proceedings of the National Academy of Sciences, Proceedings of 
+    the Royal Society B
 -   **2013** Theoretical Ecology, Francis & Taylor, Ideas in Ecology and
     Evolution, The R Journal, National Science Foundation, Proceedings
     of the Royal Society B, Journal of Open Research Software, Canadian
@@ -246,8 +256,8 @@ Reviewer for:
 -   Co-chaired the Graduate Teaching Community. 2009-10
 -   Student member for the CPB program review. 2010
 
-software
---------
+selected software
+-----------------
 
 -   Carl Boettiger (2013). knitcitations: Dynamic citations for dynamic
     documents. [Stable version on
@@ -274,6 +284,8 @@ list of my software packages.
 workshops
 ---------
 
+-  [Reproducible Science Hackathon: Curriculum & Workflow Development](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014). National Evolutionary Synthesis Center (**NESCent**), Durham, North Carolina. 
+-  2014 Second Workshop on Sustainable Software for Science: Practice and Experiences ([WSSSPE 2.0](http://wssspe.researchcomputing.org.uk/wssspe2/)). New Orleans, LA.
 -   2014 _co-organizer_ "rOpenSci Hackathon (#rOpenHack)", Github HQ in San Fransisco, CA. ([summary](http://ropensci.org/blog/2014/05/14/ropenhack/), [video documentary](https://www.youtube.com/watch?v=iUcm5COsKJo&nofeather=True))
 -   2014 _invited to_ "A toolbox for analysis of long-term ecological dynamics using
     the Kepler Workflow System." A Working group of the National
