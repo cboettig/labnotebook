@@ -121,12 +121,12 @@ education
 presentations
 -------------
 
-1.  Berkeley Initiative for Global Change Biology, student organized symposium, **Invited speaker**. 
-1.  Ecological Society of America, Sacramento CA
+1.  Berkeley Initiative for Global Change Biology, student organized symposium. (Oct 2014) **Invited speaker**. 
+1.  Ecological Society of America, Sacramento CA. (Aug 2014). 
 1.  [DIMACS Global Change](http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html), Berkeley CA (May 2014) **Invited speaker**
 1.  Zoology Seminar, Wisconsin-Madison. (April 2014). **Invited
     speaker**
-1.  Department of Environmental Science, Policy & Management, UC Berkeley. (March 2014_    
+1.  Department of Environmental Science, Policy & Management, UC Berkeley. (March 2014)    
 1.  American Society of Naturalists, Asilomar, CA (Jan 2014)
 1.  Woods Hole Oceanographic Institute (July 2013). **Invited speaker**
 1.  Ecological Society of America Conference, Minneapolis, MN. (Aug
