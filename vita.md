@@ -232,7 +232,8 @@ service
 - **[rOpenSci Leadership team](http://ropensci.org/about/#leadership)**
 
 Reviewer for:
-
+-   **2015** Proceedings of the National Academy of Sciences, Journal
+    of Statistical Software, Bioinformatics, Chapman & Hall, 
 -   **2014** Theoretical Ecology, Biodiversity Data Journal, Ecology
     Letters, Journal of Theoretical Biology, American Naturalist, 
     Proceedings of the National Academy of Sciences, Proceedings of 
