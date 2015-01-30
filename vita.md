@@ -40,11 +40,11 @@ education
 
 <ol reversed>
 
-<!--
 <li> __Carl Boettiger__. (2015) An introduction to Docker for reproducible
-  research. SIGOPS Operating Systems Review. 
-	[arXiv](http://arxiv.org/abs/1410.0846)
--->
+  research. ACM SIGOPS Operating Systems Review, Special Issue on Repeatability
+  and Sharing of Experimental Artifacts. 49(1), 71-79. 
+  {{"10.1145/2723872.2723882" | doi_pdf_parser }}
+	([arXiv](http://arxiv.org/abs/1410.0846))
 
 <li> __Carl Boettiger__, Marc Mangel, Stephan Munch. (2015)
 	 Avoiding tipping points in fisheries management through
@@ -232,7 +232,8 @@ service
 - **[rOpenSci Leadership team](http://ropensci.org/about/#leadership)**
 
 Reviewer for:
-
+-   **2015** Proceedings of the National Academy of Sciences, Journal
+    of Statistical Software, Bioinformatics, Chapman & Hall, 
 -   **2014** Theoretical Ecology, Biodiversity Data Journal, Ecology
     Letters, Journal of Theoretical Biology, American Naturalist, 
     Proceedings of the National Academy of Sciences, Proceedings of 
