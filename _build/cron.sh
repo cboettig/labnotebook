@@ -8,6 +8,7 @@ source /home/cboettig/.notebook-env.sh
 
 ## Set working directory
 cd /home/cboettig/lab-notebook/cboettig.github.io
+git pull https source
 
 ## Build site
 docker run --rm -ti -v $(pwd):/data \
