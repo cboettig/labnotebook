@@ -15,7 +15,11 @@ docker run --rm -ti -v $(pwd):/data \
   cboettig/labnotebook Rscript -e 'servr::jekyll(serve=FALSE, script="_build/build.R")'
 
 ## Deploy site
-  cd .. && git clone -b ${DEPLOY} https://cboettig:${GH_TOKEN}@github.com/cboettig/$REPO deploy 
-rsync -a $REPO/_site/ deploy/
+  if [ ! -d ../deploy ]
+    then cd .. && git clone -b ${DEPLOY} https://cboettig:${GH_TOKEN}@github.com/cboettig/$REPO deploy 
+    else 
+      cd ../deploy && git pull
+      cd ..
+  fi
+  rsync -a $REPO/_site/ deploy/
   cd deploy && git add -A . && git commit -m 'Site updated from cron' && git push
-
