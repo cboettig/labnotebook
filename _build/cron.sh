@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Needed for cron
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 # env variables
 REPO="cboettig.github.io"
