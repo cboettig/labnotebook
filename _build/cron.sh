@@ -14,7 +14,7 @@ cd /home/cboettig/lab-notebook/cboettig.github.io
 git pull https source
 
 ## Build site
-docker run --rm -ti -v $(pwd):/data \
+docker run --rm -v $(pwd):/data \
   -e TWIT_KEY=$TWIT_KEY -e TWIT_SECRET=$TWIT_SECRET -e TWIT_TOK=$TWIT_TOK -e TWIT_TOK_SECRET=$TWIT_TOK_SECRET \
   cboettig/labnotebook Rscript -e 'servr::jekyll(serve=FALSE, script="_build/build.R")'
 
