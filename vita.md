@@ -327,4 +327,6 @@ interviews
 - Wald, Chelsea (2010). "Scientists Embrace Openness" *Science*.
   {{ "10.1126/science.caredit.a1000036" | doi_parser }}
 
-
+<!--
+http://crastina.se/open-notebook-science-the-carl-boettiger-interview-2/
+-->
