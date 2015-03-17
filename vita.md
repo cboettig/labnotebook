@@ -227,35 +227,41 @@ awards
 service
 -------
 
-- **[NCEAS Scientific Advisory Board](https://www.nceas.ucsb.edu/news/nceas-appoints-new-science-advisers)**
+### [NCEAS Scientific Advisory Board](https://www.nceas.ucsb.edu/news/nceas-appoints-new-science-advisers) ###
 
-- **[rOpenSci Leadership team](http://ropensci.org/about/#leadership)**
+### [rOpenSci Leadership team](http://ropensci.org/about/#leadership) ###
 
-Reviewer for:
--   **2015** Proceedings of the National Academy of Sciences, Journal
-    of Statistical Software, Bioinformatics, Chapman & Hall, 
--   **2014** Theoretical Ecology, Biodiversity Data Journal, Ecology
-    Letters, Journal of Theoretical Biology, American Naturalist, 
-    Proceedings of the National Academy of Sciences, Proceedings of 
-    the Royal Society B
--   **2013** Theoretical Ecology, Francis & Taylor, Ideas in Ecology and
-    Evolution, The R Journal, National Science Foundation, Proceedings
-    of the Royal Society B, Journal of Open Research Software, Canadian
-    Journal of Fisheries and Aquatic Sciences
--   **2012** Theoretical Ecology, Evolution, Methods in Ecology and
-    Evolution, Proceedings of the Royal Society B, PLoS ONE, Ecology,
-    Conservation Letters, Ecology Letters
--   **2011** Theoretical Ecology, Ecological Modelling, Evolution,
-    Methods in Ecology and Evolution, Ecosphere
--   **2010 & prior** Theoretical Ecology, Journal of Mathematical
-    Biology, Ecological Modelling, Ecology
+#### Reviewer for: ####
+
+- **2015** Proceedings of the National Academy of Sciences, Journal
+  of Statistical Software, Bioinformatics, Chapman & Hall, 
+
+- **2014** Theoretical Ecology, Biodiversity Data Journal, Ecology
+  Letters, Journal of Theoretical Biology, American Naturalist, 
+  Proceedings of the National Academy of Sciences, Proceedings of 
+  the Royal Society B
+
+- **2013** Theoretical Ecology, Francis & Taylor, Ideas in Ecology and
+  Evolution, The R Journal, National Science Foundation, Proceedings
+  of the Royal Society B, Journal of Open Research Software, Canadian
+  Journal of Fisheries and Aquatic Sciences
+
+- **2012** Theoretical Ecology, Evolution, Methods in Ecology and
+  Evolution, Proceedings of the Royal Society B, PLoS ONE, Ecology,
+  Conservation Letters, Ecology Letters
+
+- **2011** Theoretical Ecology, Ecological Modelling, Evolution,
+  Methods in Ecology and Evolution, Ecosphere
+
+- **2010 & prior** Theoretical Ecology, Journal of Mathematical
+  Biology, Ecological Modelling, Ecology
 
 ### other service
 
--   Student member for the CBS Dean search. 2011
--   Co-chaired the student group on Open Science. 2010-12
--   Co-chaired the Graduate Teaching Community. 2009-10
--   Student member for the CPB program review. 2010
+- Student member for the CBS Dean search. 2011
+- Co-chaired the student group on Open Science. 2010-12
+- Co-chaired the Graduate Teaching Community. 2009-10
+- Student member for the CPB program review. 2010
 
 selected software
 -----------------
@@ -312,8 +318,8 @@ workshops
     deterministic spatial modeling in population
     dynamics](http://www.aimath.org/WWN/populationmodel/), Palo Alto, CA
 
-interviews
-----------
+media interviews
+----------------
 
 - Tachibana, C. (2014). "The paperless lab" _Science_ 345(6195) pp. 468-470. [10.1126/science.opms.p1400087](http://www.sciencemag.org/site/products/lst_20140613.xhtml)
 - Mascarelli, A. (2014) "Research tools: Jump off the page." *Nature*
