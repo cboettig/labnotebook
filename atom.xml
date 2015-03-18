@@ -1,9 +1,13 @@
 ---
 ---
+{% capture current %}{{ 'now' | date: "%Y" }}{% endcapture %}
 
-<redirect>
-<newLocation>
-http://www.carlboettiger.info/{{'now' | date: "%Y"}}/atom.xml
-</newLocation>
-</redirect>
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta rel="canonical" http-equiv="refresh" 
+          content="0;url={{ site.url }}{{ current }}/{{ path }}" />
+    <link rel="canonical" href="{{ site.url }}{{ current }}/{{ path }}"/>
+  </head>
+</html>
