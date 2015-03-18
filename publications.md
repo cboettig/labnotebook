@@ -1,5 +1,5 @@
 ---
-layout: vita
+layout: pubs
 title: Publications 
 ---
 
@@ -82,6 +82,9 @@ title: Publications
 	([arXiv](http://arxiv.org/abs/astro-ph/0603060))
 </ol>
 
+
+<!--
+
 theses
 ------
 
@@ -138,5 +141,5 @@ selected software
 -   I am also a founding member of the [rOpenSci
     project](http://ropensci.org) under which I have written several
     additional software projects
-
+-->
 

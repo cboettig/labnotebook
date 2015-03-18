@@ -31,11 +31,12 @@ education
 service
 -------
 
-- **[NCEAS Scientific Advisory Board](https://www.nceas.ucsb.edu/news/nceas-appoints-new-science-advisers)**
-- **[rOpenSci Leadership team](http://ropensci.org/about/#leadership)**
+- NCEAS Scientific Advisory [Board](https://www.nceas.ucsb.edu/news/nceas-appoints-new-science-advisers) 
+
+- rOpenSci Leadership [Team](http://ropensci.org/about/#leadership)
 
 
-Media coverage
+media coverage
 --------------
 
 - Tachibana, C. (2014). "The paperless lab" _Science_ 345(6195) pp. 468-470. [10.1126/science.opms.p1400087](http://www.sciencemag.org/site/products/lst_20140613.xhtml)

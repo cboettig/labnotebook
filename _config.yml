@@ -16,7 +16,6 @@ repo: cboettig.github.io
 
 gems:
   - jekyll-pandoc
-
 encoding: utf-8
 
 ## Markdown Parser 
@@ -26,10 +25,6 @@ pandoc:
   extensions: 
     - smart
     - mathjax
-#    - template: 'assets/datauri_template.html'   # Use with 'self-contained' to avoid header text in body
-#    - self-contained                             # Archive images in posts as URIs.  Very slow, for archiving only.  
-#    - mathml                                     # Use mathml for equations (Archival, HTML5/XML valid syntax)
-
 
 permalink: /:year/:month/:day/:title.html
 redirects: yes     ## A flag to turn on the redirects plugin
@@ -37,9 +32,25 @@ pageviews: no    ## toggle on sidebar pageviews
 twitter_api: yes
 analytics: UA-18401403-1 ## Google Analytics key (in _includes/analytics.html)
 
-
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - Dockerfile
   - .drone.yml
+
+# For local jekyll serve
+host: 0.0.0.0
+
+
+## Have pages & posts use their default layouts, respectively
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
