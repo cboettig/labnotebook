@@ -16,7 +16,7 @@
       link += (key.charAt(ltr))
     }
   }
-  document.write("<a rel='foaf:account' alt='email' href='mailto:"+link+"' onclick='recordOutboundLink(this, \'Outbound Links\', \'email\'); return false;'><span class='showtooltip' title='email me'><i class='icon-envelope-alt'></i></span></a>")
+  document.write("<a rel='foaf:account' alt='email' href='mailto:"+link+"' onclick='recordOutboundLink(this, \'Outbound Links\', \'email\'); return false;'><span class='showtooltip' title='email me'><i class='fa fa-envelope'></i></span></a>")
       
 }
 
