@@ -129,15 +129,11 @@ presentations
 1.  Department of Environmental Science, Policy & Management, UC Berkeley. (March 2014)    
 1.  American Society of Naturalists, Asilomar, CA (Jan 2014)
 1.  Woods Hole Oceanographic Institute (July 2013). **Invited speaker**
-1.  Ecological Society of America Conference, Minneapolis, MN. (Aug
-    2013)
-1.  UC Davis Dept of Environmental Resources and Economics; Davis, CA
-    (May 2013). **Invited speaker**
-1.  Ecological Society of America Conference, Portland, OR. (Aug 2012)
-    ([slides](http://www.slideshare.net/cboettig/esa-2012-talk))
+1.  Ecological Society of America Conference, Minneapolis, MN. (Aug 2013)
+1.  UC Davis Dept of Environmental Resources and Economics; Davis, CA (May 2013). **Invited speaker**
+1.  Ecological Society of America Conference, Portland, OR. (Aug 2012) ([slides](http://www.slideshare.net/cboettig/esa-2012-talk))
 1.  Computational Science Graduate Fellows Conference, Washington DC.
-    (July 2012)\
-     ([video recording](http://www.youtube.com/watch?v=xwIIVdyKe4o))
+    (July 2012) ([video recording](http://www.youtube.com/watch?v=xwIIVdyKe4o))
     ([slides](http://www.slideshare.net/cboettig/regime-shifts-in-ecology-and-evolution))
     ([doi](http://dx.doi.org/10.6084/m9.figshare.97279))
 1.  Evolution Conference, Ottawa, CAN. **Invited speaker** for the
@@ -227,14 +223,13 @@ awards
 service
 -------
 
-### [NCEAS Scientific Advisory Board](https://www.nceas.ucsb.edu/news/nceas-appoints-new-science-advisers) ###
-
-### [rOpenSci Leadership team](http://ropensci.org/about/#leadership) ###
+- NCEAS Scientific Advisory [Board](https://www.nceas.ucsb.edu/news/nceas-appoints-new-science-advisers)
+- [rOpenSci Leadership team](http://ropensci.org/about/#leadership) 
 
 #### Reviewer for: ####
 
 - **2015** Proceedings of the National Academy of Sciences, Journal
-  of Statistical Software, Bioinformatics, Chapman & Hall, 
+  of Statistical Software, Bioinformatics, Chapman & Hall, Ecology Letters 
 
 - **2014** Theoretical Ecology, Biodiversity Data Journal, Ecology
   Letters, Journal of Theoretical Biology, American Naturalist, 

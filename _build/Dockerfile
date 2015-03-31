@@ -31,9 +31,7 @@ RUN apt-get update \
   && gem install nokogiri -v '1.6.3.1' 
 
 ## Install additional R package dependencies ###
-RUN install2.r --error igraph sde \
-	&& install2.r --error --repo http://r-nimble.org nimble \
-	&& installGithub.r yihui/servr cboettig/earlywarning \
+RUN installGithub.r yihui/servr \
 	&& rm -rf /tmp/downloaded_packages 
 
 
