@@ -29,9 +29,7 @@ RUN apt-get update \
   && apt-get clean \ 
   && rm -rf /var/lib/apt/lists/ \
   && gem install nokogiri -v '1.6.3.1' 
-
-## Install additional R package dependencies ###
-RUN installGithub.r yihui/servr \
+  && installGithub.r yihui/servr \
 	&& rm -rf /tmp/downloaded_packages 
 
 
@@ -48,9 +46,10 @@ WORKDIR /data
 RUN bundle config build.nokogiri --use-system-libraries \ 
   && bundle install \
   && bundle update
+USER root
 
 ### Expose port for jekyll serve ###
 EXPOSE 4000
 
 
-CMD sudo supervisord
+# CMD sudo supervisord
