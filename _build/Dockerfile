@@ -20,9 +20,7 @@ FROM rocker/hadleyverse
 MAINTAINER Carl Boettiger cboettig@ropensci.org 
 
 ## Install basic ruby, javascript, and linux utils we need for the site ##
-RUN apt-get clean \ 
-  && rm -rf /var/lib/apt/lists/ \
-  && apt-get update \
+RUN apt-get update \
   && apt-get install -y \
     bundler \
     node \
