@@ -28,7 +28,7 @@ RUN apt-get update \
     rsync \ 
   && apt-get clean \ 
   && rm -rf /var/lib/apt/lists/ \
-  && gem install nokogiri -v '1.6.3.1' 
+  && gem install nokogiri -v '1.6.3.1' \ 
   && installGithub.r yihui/servr \
 	&& rm -rf /tmp/downloaded_packages 
 
