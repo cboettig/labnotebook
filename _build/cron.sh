@@ -7,6 +7,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 # env variables
 REPO="cboettig.github.io"
 DEPLOY="master"
+YEAR=2015
+
 source /home/cboettig/.notebook-env.sh
 
 ## Set working directory
@@ -26,4 +28,10 @@ docker run --rm -v $(pwd):/data \
       cd ..
   fi
   rsync -a $REPO/_site/ deploy/
-  cd deploy && git add -A . && git commit -m 'Site updated from cron' && git push
+  cd deploy \
+    && wget http://carlboettiger.info/${YEAR}/blog.xml \
+    && wget http://carlboettiger.info/${YEAR}/atom.xml \
+    && wget http://carlboettiger.info/${YEAR}/R.xml \
+    && git add -A . \
+    && git commit -m 'Site updated from cron' \
+    && git push
