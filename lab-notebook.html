@@ -9,7 +9,7 @@ layout: default
 
 <div class="row feed">
   <div class="col-md-3 col-md-offset-1">
-    <h4>  <a property="account" href="https://github.com/{{site.author.github}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><i class="icon-github" alt="github"></i> Coding </a></h4> 
+    <h4>  <a property="account" href="https://github.com/{{site.author.github}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><i class="fa fa-github" alt="github"></i> Coding </a></h4> 
     <div class="excerpt">
       <div class="scroll">
         {% github_feed cboettig, 5 %}
@@ -17,7 +17,7 @@ layout: default
     </div>
   </div>
   <div class="col-md-3">
-    <h4> <a property="account" href="https://twitter.com/{{site.author.twitter}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><i class="icon-twitter"></i> Discussing </a></h4> 
+    <h4> <a property="account" href="https://twitter.com/{{site.author.twitter}}" onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); return false;"><i class="fa fa-twitter"></i> Discussing </a></h4> 
      <div class="excerpt">
       <div class="scroll">
        {% twitter_feed cboettig, 5 %}
@@ -25,7 +25,7 @@ layout: default
     </div> 
   </div> 
   <div class="col-md-3">
-    <h4> <a href="http://www.mendeley.com/groups/634301/theoretical-ecology/papers/" onClick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); return false;"><i class="icon-book"></i> Reading </a></h4> 
+    <h4> <a href="http://www.mendeley.com/groups/634301/theoretical-ecology/papers/" onClick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); return false;"><i class="fa fa-book"></i> Reading </a></h4> 
     <div class="excerpt">
       <div class="scroll">
 {% mendeley_feed 634301/theoretical-ecology, 4 %}
@@ -35,8 +35,8 @@ layout: default
 </div>
 
 <div class='row'>
-<div class='col-md-6 col-md-offset-2'>
-<h2><i class="icon-calendar"></i> Notebooks by year</h2>
+<div class='col-md-4 col-md-offset-2'>
+<h2><i class="fa fa-calendar"></i> Notebooks</h2>
 <ul class="list-unstyled">
 <li><a href="{{site.url}}/2015">2015 Notebook</a></li>
 <li><a href="{{site.url}}/2014">2014 Notebook</a></li>
@@ -46,6 +46,14 @@ layout: default
 <li><a href="{{site.url}}/2010">2010 Notebook</a></li>
 <li><a href="{{site.url}}/2009">2009 Notebook</a></li>
 <li><a href="{{site.url}}/2008">2008 Notebook</a></li>
+</ul>
+</div>
+<div class='col-md-2'>
+<h2><i class="fa fa-rss"></i> RSS feeds</h2>
+<ul class="list-unstyled">
+<li><a href="{{site.url}}/atom.xml">Current notebook, all posts</a></li>
+<li><a href="{{site.url}}/blog.xml">Blog posts only</a></li>
+<li><a href="{{site.url}}/R.xml">R posts</a></li>
 </ul>
 </div>
 </div>
