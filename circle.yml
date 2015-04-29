@@ -4,8 +4,12 @@ machine:
 
 test:
   override:
-    - docker run -ti -e GH_TOKEN=$GH_TOKEN \
+    - docker run -ti -v $(pwd):/data -e GH_TOKEN=$GH_TOKEN \
       -e TWIT_KEY=$TWIT_KEY -e TWIT_SECRET=$TWIT_SECRET \
       -e TWIT_TOK=$TWIT_TOK -e TWIT_SECRET_KEY=$TWIT_SECRET_KEY \
-      cboettig/labnotebook Rscript _build/deploy.R 
+      cboettig/labnotebook R -e 'servr::jekyll(script="_build/build.R", serve=FALSE)'
+
+deployment:
+  override: - docker run -ti -v $(pwd):/data -e GH_TOKEN=$GH_TOKEN --entrypoint "/data/_build/deploy.sh" cboettig/labnotebook
+
 
