@@ -15,7 +15,8 @@ test:
       cboettig/labnotebook R -e 'servr::jekyll(script="_build/build.R", serve=FALSE)'
 
 deployment:
-  override: - docker run -ti -v $(pwd):/data -e GH_TOKEN=$GH_TOKEN --entrypoint "/data/_build/deploy.sh" cboettig/labnotebook
+  override: 
+  - docker run -ti -v $(pwd):/data -e GH_TOKEN=$GH_TOKEN --entrypoint "/data/_build/deploy.sh" cboettig/labnotebook
 
 
 
