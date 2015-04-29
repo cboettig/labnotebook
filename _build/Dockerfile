@@ -30,7 +30,8 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/ \
   && gem install nokogiri -v '1.6.3.1' \ 
   && installGithub.r yihui/servr \
-	&& rm -rf /tmp/downloaded_packages 
+	&& install2.r -r http://cran.rstudio.com git2r \
+  && rm -rf /tmp/downloaded_packages 
 
 
 ### Install additional Ruby gems given in the Gemfile ###  
