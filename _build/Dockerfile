@@ -19,6 +19,8 @@
 FROM rocker/hadleyverse 
 MAINTAINER Carl Boettiger cboettig@ropensci.org 
 
+ENV TERM xterm
+
 ## Install basic ruby, javascript, and linux utils we need for the site ##
 RUN apt-get update \
   && apt-get install -y \
