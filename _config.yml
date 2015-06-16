@@ -25,6 +25,7 @@ pandoc:
   extensions: 
     - smart
     - mathjax
+    - email-obfuscation: javascript
 
 permalink: /:year/:month/:day/:title.html
 redirects: yes     ## A flag to turn on the redirects plugin
