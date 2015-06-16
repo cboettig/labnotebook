@@ -33,7 +33,7 @@ Site Features & Credits
 * Uptime monitoring from my.pingdom.com; see [status report](http://stats.pingdom.com/fy1sae94ydyi/616612)
 * Markdown parsing with [pandoc](http://johnmacfarlane.net/pandoc/)
 - Portable build environment using [Docker](https://docker.com)
-- Automatic builds using [Drone-CI](https://github.com/drone/drone)
+- Automatic builds using [Circle-CI](https://circleci.com)
 
 
 Notebook Archiving & Data Management
