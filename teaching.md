@@ -4,18 +4,14 @@ title: Teaching
 
 ---
 
+
 ## Ecological Data Science
 
-Course in development, check back later. 
+Undergraduate level class. Course in development, check back later. 
 
-<!--
 
-## Topics in Ecoinformatics
+## Graduate seminars
 
-Course in development, check back later. 
+**TBD**. Topics in ecoinformatics? Theoretical ecology? Let me know what you'd like to see!
 
-## Topics in Theoretical Ecology
 
-Course in development, check back later. 
-
--->
