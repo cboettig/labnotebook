@@ -196,8 +196,10 @@ theses
 grants
 ------
 
+-   2014-2015 Co-PI on **Sloan Foundation** grant for the [rOpenSci
+    Project](http://ropensci.org), phase II, $300,000.
 -   2013-2014 Co-PI on **Sloan Foundation** grant for the [rOpenSci
-    Project](http://ropensci.org) $ 180,000.
+    Project](http://ropensci.org) $180,000.
 -   2013-2015 **NSF Postdoctoral Fellow**, [Intersections of Biology and
     Mathematical and Physical Sciences and
     Engineering](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm)
@@ -208,13 +210,11 @@ grants
 -   2009 **IIASA** YSSP fellowship. National Academy of Sciences, NSF
     Grant No. OISE-0738129, $8,000. proposal: {{"10.6084/m9.figshare.678310" | doi_parser }}
 -   2008-2012 Computational Science Graduate Fellowship. **Department of
-    Energy**, Grant No: DE-FG02-97ER25308, 4 yrs x $36,000/yr
+    Energy**, Grant No: DE-FG02-97ER25308, $149,000.
 
 awards
 ------
 
--   2011 Mendeley & PLoS Binary Battle software competition award,
-    $1,000
 -   2011 *Volterra Award* (Best student talk, ESA Theory Section)
 -   2007 Elected to Membership in the Society of *Sigma Xi*
 -   2007 Allen G. Shenstone Prize in Physics, Princeton University
@@ -231,8 +231,8 @@ service
 #### Reviewer for: ####
 
 - **2015** Proceedings of the National Academy of Sciences, Journal
-  of Statistical Software, Bioinformatics, Chapman & Hall, Ecology Letters 
-
+  of Statistical Software, Bioinformatics, Chapman & Hall, Ecology Letters,
+  Ecology
 - **2014** Theoretical Ecology, Biodiversity Data Journal, Ecology
   Letters, Journal of Theoretical Biology, American Naturalist, 
   Proceedings of the National Academy of Sciences, Proceedings of 
@@ -288,9 +288,10 @@ list of my software packages.
 workshops
 ---------
 
--  [Reproducible Science Hackathon: Curriculum & Workflow Development](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014). National Evolutionary Synthesis Center (**NESCent**), Durham, North Carolina. 
+- 2015 [rOpenSci unconference](http://unconf.ropensci.org/) GitHub HQ, San Fransisco CA.
+-  2014 [Reproducible Science Hackathon: Curriculum & Workflow Development](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014). National Evolutionary Synthesis Center (**NESCent**), Durham, North Carolina. 
 -  2014 Second Workshop on Sustainable Software for Science: Practice and Experiences ([WSSSPE 2.0](http://wssspe.researchcomputing.org.uk/wssspe2/)). New Orleans, LA.
--   2014 _co-organizer_ "rOpenSci Hackathon (#rOpenHack)", Github HQ in San Fransisco, CA. ([summary](http://ropensci.org/blog/2014/05/14/ropenhack/), [video documentary](https://www.youtube.com/watch?v=iUcm5COsKJo&nofeather=True))
+-   2014 _co-organizer_ "rOpenSci Hackathon (#rOpenHack)", GitHub HQ San Fransisco, CA. ([summary](http://ropensci.org/blog/2014/05/14/ropenhack/), [video documentary](https://www.youtube.com/watch?v=iUcm5COsKJo&nofeather=True))
 -   2014 _invited to_ "A toolbox for analysis of long-term ecological dynamics using
     the Kepler Workflow System." A Working group of the National
     Ecological Analysis and Synthesis Center (**NCEAS**), Santa Barbara,
