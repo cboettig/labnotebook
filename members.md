@@ -61,7 +61,7 @@ members:
 
 ## Interested in Joining?
 
-I'm always interested in talking with perspective undergraduate, graduate, or post-doctoral researches.  Please [contact me](http://carlboettiger.info) with a brief email explaining your background and interests if you are interested in joining the group. 
+I'm always interested in talking with perspective undergraduate, graduate, or post-doctoral researchers.  Please [contact me](http://carlboettiger.info) with a brief email explaining your background and interests if you are interested in joining the group. 
 
 Undergraduates interested in independent work may wish to participate through UC Berkeley's [SPUR](http://nature.berkeley.edu/site2/spur/) or [URAP](http://research.berkeley.edu/urap/) programs, or through a senior thesis project. 
 
