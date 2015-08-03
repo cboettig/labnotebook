@@ -232,7 +232,8 @@ service
 
 - **2015** Proceedings of the National Academy of Sciences, Journal
   of Statistical Software, Bioinformatics, Chapman & Hall, Ecology Letters,
-  Ecology
+  Ecology, PeerJ, Nature Communications, Theoretical Ecology
+
 - **2014** Theoretical Ecology, Biodiversity Data Journal, Ecology
   Letters, Journal of Theoretical Biology, American Naturalist, 
   Proceedings of the National Academy of Sciences, Proceedings of 
