@@ -50,10 +50,15 @@ RUN bundle config build.nokogiri --use-system-libraries \
   && bundle install \
   && bundle update
 
+## My git name
+RUN git config --system user.name Carl Boettiger \
+  && git config --system user.email cboettig@gmail.com
+
 ## Reset and tidy up
 USER root
 WORKDIR /
 RUN rm -rf /data
+
 ### Expose port for jekyll serve ###
 EXPOSE 4000
 
