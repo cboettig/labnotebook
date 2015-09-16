@@ -5,6 +5,17 @@ title: Publications
 
 <ol reversed>
 
+<li> __Carl Boettiger__, Michael Bode, James N. Sanchirico, Jacob LaRiviere,
+  Alan Hastings, and Paul Robert Armsworth. (2015) In press. Optimal management
+  of a stochastically varying population when policy adjustment is
+  costly. Ecological Applications. {{"10.1890/15-0236.1" | doi_pdf_parser }}
+  ([arXiv](http://arxiv.org/pdf/1507.07037v1.pdf)) ([github](https://github.com/cboettig/pdg_control))
+<li> __Carl Boettiger__, Scott Chamberlain, Rutger Vos and Hilmar
+  Lapp. (2015) RNeXML: a package for reading and writing richly annotated
+  phylogenetic, character, and trait data in R 
+  {{"10.1111/2041-210X.12469" | doi_pdf_parser }} 
+  ([arxiv](http://arxiv.org/abs/1506.02722))
+  ([github](https://github.com/ropensci/RNeXML))
 <li> __Carl Boettiger__. (2015) An introduction to Docker for reproducible
   research. ACM SIGOPS Operating Systems Review, Special Issue on Repeatability
   and Sharing of Experimental Artifacts. 49(1), 71-79. 
