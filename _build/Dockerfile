@@ -19,6 +19,7 @@
 FROM rocker/hadleyverse 
 MAINTAINER Carl Boettiger cboettig@ropensci.org 
 
+## So that things like `top` and `less` work correctly
 ENV TERM xterm
 
 ## Install basic ruby, javascript, and linux utils we need for the site ##
@@ -27,7 +28,8 @@ RUN apt-get update \
     bundler \
     nodejs \
     rake \
-    rsync \ 
+    rsync \
+    ssh \
   && apt-get clean \ 
   && rm -rf /var/lib/apt/lists/ \
   && gem install nokogiri -v '1.6.3.1' \ 
@@ -35,6 +37,7 @@ RUN apt-get update \
 	&& install2.r -r http://cran.rstudio.com git2r \
   && rm -rf /tmp/downloaded_packages 
 
+RUN echo "options(stringsAsFactors = FALSE)" >> /etc/R/Rprofile.site
 
 ### Install additional Ruby gems given in the Gemfile ###  
 ### (bundler likes to be a non-root user in sudoers.) 
