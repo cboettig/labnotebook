@@ -51,13 +51,12 @@ USER rstudio
 WORKDIR /data
 RUN bundle config build.nokogiri --use-system-libraries \ 
   && bundle install \
-  && bundle update \
-  && gem cleanup
+  && bundle update
 
 ## Reset and tidy up
 USER root
 WORKDIR /
-RUN rm -rf /data
+RUN rm -rf /data && gem cleanup
 
 ## My git name
 RUN git config --system user.name Carl Boettiger \
