@@ -31,16 +31,18 @@ education
 
 
 
-<h2><a href="{{site.url}}{{page.url}}#publications"
-         rel="foaf:publications"
-         about="{{site.url}}#me"
-         style="color:inherit">publications</a></h2>
+## <a href="{{site.url}}{{page.url}}#publications" rel="foaf:publications" about="{{site.url}}#me" style="color:inherit">publications</a>
 
 
 </div> <!-- end typeof="foaf:Person" semantics -->
 <div prefix="datacite: http://purl.org/spar/datacite/">
 
 <ol reversed>
+
+
+<li> __Carl Boettiger__,  Scott Chamberlain, Edmund Hart, Karthik Ram. (2015) 
+  Building Software, Building Community: Lessons from the rOpenSci Project
+  Journal of Open Research Software 3: e8, {{"10.5334/jors.bu" | doi_pdf_parser }}
 
 <li> __Carl Boettiger__, Michael Bode, James N. Sanchirico, Jacob LaRiviere,
   Alan Hastings, and Paul Robert Armsworth. (2015) In press. Optimal management
@@ -209,6 +211,7 @@ theses
 grants
 ------
 
+2015 PI, **NSF EAGER** grant for Codemeta project, [1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758) $165,782.
 -   2014-2015 Co-PI on **Sloan Foundation** grant for the [rOpenSci
     Project](http://ropensci.org), phase II, $300,000.
 -   2013-2014 Co-PI on **Sloan Foundation** grant for the [rOpenSci
