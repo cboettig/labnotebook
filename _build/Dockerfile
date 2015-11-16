@@ -51,7 +51,8 @@ USER rstudio
 WORKDIR /data
 RUN bundle config build.nokogiri --use-system-libraries \ 
   && bundle install \
-  && bundle update
+  && bundle update \
+  && gem cleanup
 
 ## Reset and tidy up
 USER root
