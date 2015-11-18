@@ -6,6 +6,7 @@ members:
     name:
       first: "Carl" 
       last: "Boettiger"
+    title: "Assistant Professor"
     homepage: "http://www.carlboettiger.info"
     github: "cboettig"
     twitter: "cboettig"
@@ -17,6 +18,7 @@ members:
     name:
       first: "Your"
       last: "Name Here?"
+    title" "Open Position"
     website: "/"
     github: ""
     twitter: ""
@@ -43,6 +45,7 @@ members:
   property="foaf:name"><span 
   property="foaf:givenName">{{member.name.first}}</span> <span
   property="foaf:familyName">{{member.name.last}}</span></span></a></p>
+<p><span property="http://schema.org/Person#jobTitle">{{member.title}}</span></p>
 <p class="socialicons">
   <a href="mailto:{{member.email}}" title="email"><i class="fa fa-envelope"></i></a>
   <a rel="foaf:account" href="https://twitter.com/{{member.twitter}}" title="Twitter"><i class="fa fa-twitter"></i></a> 
