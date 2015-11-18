@@ -1,7 +1,6 @@
 ---
 title: Lab Notebook 
 subtitle: (<a href="http://www.carlboettiger.info/2012/09/28/Welcome-to-my-lab-notebook.html">Introduction</a>)
-redirects: [/research/lab-notebook, /wordpress/research/lab-notebook]
 layout: default
 
 ---
@@ -34,26 +33,34 @@ layout: default
   </div> 
 </div>
 
-<div class='row'>
-<div class='col-md-3 col-md-offset-2'>
-<h2><i class="fa fa-calendar"></i> Notebooks</h2>
-<ul class="list-unstyled">
-<li><a href="{{site.url}}/2015">2015 Notebook</a></li>
-<li><a href="{{site.url}}/2014">2014 Notebook</a></li>
-<li><a href="{{site.url}}/2013">2013 Notebook</a></li>
-<li><a href="{{site.url}}/2012">2012 Notebook</a></li>
-<li><a href="{{site.url}}/2011">2011 Notebook</a></li>
-<li><a href="{{site.url}}/2010">2010 Notebook</a></li>
-<li><a href="{{site.url}}/2009">2009 Notebook</a></li>
-<li><a href="{{site.url}}/2008">2008 Notebook</a></li>
-</ul>
-</div>
-<div class='col-md-3'>
-<h2><i class="fa fa-rss"></i> RSS feeds</h2>
-<ul>
-<li><a href="{{site.url}}/atom.xml">All posts</a></li>
-<li><a href="{{site.url}}/blog.xml">Blog posts only</a></li>
-<li><a href="{{site.url}}/R.xml">R posts</a></li>
-</ul>
-</div>
+<div class='row feed'>
+  <div class='col-md-3 col-md-offset-1'>
+    <h3><i class="fa fa-pencil"></i> Recent Entries</h3>
+      <div class="excerpt">
+        <div class="scroll">
+        {% rss_feed  http://carlboettiger.info/atom.xml, 5 %}
+        </div>
+      </div>
+  </div>  
+  <div class='col-md-3'>
+    <h3><i class="fa fa-calendar"></i> Notebooks</h3>
+    <ul class="list-unstyled">
+      <li><a href="{{site.url}}/2015">2015 Notebook</a></li>
+      <li><a href="{{site.url}}/2014">2014 Notebook</a></li>
+      <li><a href="{{site.url}}/2013">2013 Notebook</a></li>
+      <li><a href="{{site.url}}/2012">2012 Notebook</a></li>
+      <li><a href="{{site.url}}/2011">2011 Notebook</a></li>
+      <li><a href="{{site.url}}/2010">2010 Notebook</a></li>
+      <li><a href="{{site.url}}/2009">2009 Notebook</a></li>
+      <li><a href="{{site.url}}/2008">2008 Notebook</a></li>
+    </ul>
+  </div>
+  <div class='col-md-3'>
+  <h3><i class="fa fa-rss"></i> RSS feeds</h3>
+  <ul>
+    <li><a href="{{site.url}}/atom.xml">All posts</a></li>
+    <li><a href="{{site.url}}/blog.xml">Blog posts only</a></li>
+    <li><a href="{{site.url}}/R.xml">R posts</a></li>
+  </ul>
+  </div>
 </div>

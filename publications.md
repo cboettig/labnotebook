@@ -1,10 +1,13 @@
 ---
-layout: pubs
+layout: vita 
 title: Publications 
 ---
 
 <ol reversed>
 
+<li> __Carl Boettiger__,  Scott Chamberlain, Edmund Hart, Karthik Ram. (2015) 
+  Building Software, Building Community: Lessons from the rOpenSci Project
+  Journal of Open Research Software 3: e8, {{"10.5334/jors.bu" | doi_pdf_parser }}
 <li> __Carl Boettiger__, Michael Bode, James N. Sanchirico, Jacob LaRiviere,
   Alan Hastings, and Paul Robert Armsworth. (2015) In press. Optimal management
   of a stochastically varying population when policy adjustment is

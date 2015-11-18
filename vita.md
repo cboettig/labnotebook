@@ -52,7 +52,7 @@ education
 
 <li> __Carl Boettiger__, Scott Chamberlain, Rutger Vos and Hilmar
   Lapp. (2015) RNeXML: a package for reading and writing richly annotated
-  phylogenetic, character, and trait data in R 
+  phylogenetic, character, and trait data in R. Methods in Ecology and Evolution. 
   {{"10.1111/2041-210X.12469" | doi_pdf_parser }} 
   ([arxiv](http://arxiv.org/abs/1506.02722))
   ([github](https://github.com/ropensci/RNeXML))
@@ -135,61 +135,71 @@ education
 	([arXiv](http://arxiv.org/abs/astro-ph/0603060))
 </ol>
 
-presentations
--------------
 
-1.  Berkeley Initiative for Global Change Biology, student organized symposium. (Oct 2014) **Invited speaker**. 
-1.  Ecological Society of America, Sacramento CA. (Aug 2014). 
-1.  [DIMACS Global Change](http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html), Berkeley CA (May 2014) **Invited speaker**
-1.  Zoology Seminar, Wisconsin-Madison. (April 2014). **Invited
-    speaker**
-1.  Department of Environmental Science, Policy & Management, UC Berkeley. (March 2014)    
-1.  American Society of Naturalists, Asilomar, CA (Jan 2014)
-1.  Woods Hole Oceanographic Institute (July 2013). **Invited speaker**
-1.  Ecological Society of America Conference, Minneapolis, MN. (Aug 2013)
-1.  UC Davis Dept of Environmental Resources and Economics; Davis, CA (May 2013). **Invited speaker**
-1.  Ecological Society of America Conference, Portland, OR. (Aug 2012) ([slides](http://www.slideshare.net/cboettig/esa-2012-talk))
-1.  Computational Science Graduate Fellows Conference, Washington DC.
-    (July 2012) ([video recording](http://www.youtube.com/watch?v=xwIIVdyKe4o))
-    ([slides](http://www.slideshare.net/cboettig/regime-shifts-in-ecology-and-evolution))
-    ([doi](http://dx.doi.org/10.6084/m9.figshare.97279))
-1.  Evolution Conference, Ottawa, CAN. **Invited speaker** for the
-    annual SSB Symposium. (July 2012)
-    ([slides](http://www.slideshare.net/cboettig/evolution-13576088))
-1.  Ecological Society of America Conference; Austin, TX. (Aug 2011) In
-    *Nature Precedings*
-    ([doi](http://dx.doi.org/10.1038/npre.2012.6857.1))
-    ([slides](http://www.slideshare.net/cboettig/limits-to-detection-for-early-warning-signals-of-population-collapse))
-1. Evolution Conference; Norman, OK. (June 2011) In *Nature
-    Precedings*, ([doi](http://dx.doi.org/10.1038/npre.2011.6080.1))
-    ([slides](http://www.slideshare.net/cboettig/a-general-model-of-continuous-character-evolution))
-1. iEvoBio Conference; Norman, OK. (June 2011) *In Nature Precedings*,
-    ([doi](http://dx.doi.org/10.1038/npre.2012.6851.1))
-    ([slides](http://www.slideshare.net/cboettig/r-interface-to-treebase))
-1. Science Online; Durham, NC. (Jan 2011) In *Nature Precedings*,
-    ([doi](http://dx.doi.org/10.1038/npre.2012.6853.1))
-    ([slides](http://www.slideshare.net/cboettig/scioslides))
-1. Society for Integrative and Comparative Biology. Salt Lake City,
-    Utah. (Jan 2011) In *Nature Precedings*,
-    ([doi](http://dx.doi.org/10.1038/npre.2011.6453.1))
-    ([slides](http://www.slideshare.net/cboettig/is-your-phylogeny-informative))
-1. iEvoBio Conference; Portland, OR. (June 2010) In *Nature Precedings*
-    ([doi](http://dx.doi.org/10.1038/npre.2010.4602.1))
-    ([slides](http://www.slideshare.net/cboettig/ievobio))
-1. Evolution Conference; Portland OR. (June 2010) In *Nature
-    Precedings* ([doi](10.1038/npre.2010.4615.1))
-    ([slides](http://www.slideshare.net/cboettig/a-new-phylogenetic-comparative-method-detecting-niches-and-transitions-with-continuous-characters))
-1. University of Tennessee, Knoxville, TN. (Nov 2009)
-1. Center for Population Biology, Davis, CA. (Nov 2009)
-    ([slides](http://www.slideshare.net/cboettig/cpb-pres))
-1. International Institute of Applied Systems Analysis, Vienna;
-    Austria. (Aug 2009) In *Nature Precedings,*
-    ([doi](http://dx.doi.org/10.1038/npre.2012.6852.1))
-    ([slides](http://www.slideshare.net/cboettig/iiasa-final))
-1. Cornell Probability Summer School, Ithaca, NY. (June 2008) In
-    *Nature Precedings,*
-    ([doi](http://dx.doi.org/10.1038/npre.2010.4949.1))
-    ([slides](http://www.slideshare.net/cboettig/presentation-5348861))
+grants
+------
+
+1.   Codemeta project (2015). NSF EAGER, [#1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758) $165,782.
+1.   [rOpenSci Project](http://ropensci.org), phase II. (2014, Co-PI). Alfred P. Sloan Foundation $300,000.
+1.  [rOpenSci Project](http://ropensci.org) (2013, Co-PI). Alfred P. Sloan Foundation $180,000. 
+1.  [NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013). NSF [#DBI-1306697](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697), $138,000. ([proposal](http://doi.org/10.6084/m9.figshare.652970))
+1.  Supercomputing grant (2011). DOE #DE-AC02-05CH11231. 50,000hrs.
+1.  IIASA YSSP fellowship (2009). National Academy of Sciences, OISE-0738129, $8,000. ([proposal](http://doi.org/10.6084/m9.figshare.678310))
+1.  Computational Science Graduate Fellowship (2008). Department of Energy, #DE-FG02-97ER25308, $149,000.
+
+
+invited talks
+--------------
+
+##### 2015
+
+- [Empirical Dynamical Modeling and Forecasting in Nonlinear Systems](http://ecows.oc.ntu.edu.tw/itnlws/), NTU, Taiwan.
+- [NSF Big Data Hubs](http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm) Design Charette, Western Region.
+
+##### 2014
+
+-  Berkeley Initiative for Global Change Biology (student organized), UC Berkeley, CA. 
+-  [DIMACS](http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html) Global Change, Berkeley CA.
+-  Zoology Seminar, University of Wisconsin, Madison, WI. 
+-  ESPM Seminar, UC Berkeley, CA.
+
+##### 2013
+
+- MBI speaker, [Sustainable Management of Living Natural Resources](http://www.mbi.ohio-state.edu/2013/ws3description.html), Columbus, OH.
+- WHOI Seminar speaker, Woods Hole, MA.
+- UC Davis Dept of Environmental Resources and Economics; Davis, CA.
+
+##### 2012 & prior
+
+- SSB Symposium speaker, Evolution Conference, Ottawa, CAN.
+- University of Tennessee, Knoxville, TN. 
+- Center for Population Biology, Davis, CA. 
+- International Institute of Applied Systems Analysis, Vienna, Austria.
+
+invited workshops
+-----------------
+
+**2015**
+
+- Data Intensive Training Workshop, NCEAS, Santa Barbara, CA 
+- [rOpenSci unconference](http://unconf.ropensci.org/), San Fransisco CA.
+- PDGC Workshop, NIMBIOS, Knoxville TN
+
+**2014 **
+
+- [rOpenSci unconference](http://ropensci.org/blog/2014/05/14/ropenhack/), San Fransisco CA.
+- [Reproducible Science: Curriculum & Workflow](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014), NESCent, Durham, NC. 
+- ([WSSSPE 2.0](http://wssspe.researchcomputing.org.uk/wssspe2/)). New Orleans, LA.
+- Workflows Working Group, NCEAS, Santa Barbara,  CA.
+
+**2013 & prior**
+
+- [Sustainable Management of Living Natural Resources](http://www.mbi.ohio-state.edu/2013/ws3description.html), MBI Columbus, OH.
+- Academic software & workforce development, [ISEES](http://isees.nceas.ucsb.edu). Oakland, CA.
+- Software Lifecycle, [ISEES](http://isees.nceas.ucsb.edu), Santa Barbara, CA.
+- [Pretty Darn Good Control](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville, TN
+- [Stochastic spatial modeling in population dynamics](http://www.aimath.org/WWN/populationmodel/), AIM, Palo Alto, CA
+
 
 theses
 ------
@@ -207,26 +217,6 @@ theses
 4.  Carl Boettiger, David Huse (2006) Clonal Interference Models in
     Population Genetics. *Princeton Physics Dept*. {{"10.6084/m9.figshare.678305" | doi_parser }}
     ([pdf](/assets/files/pubs/Boettiger-Huse-2006-Princeton-Physics-Dept.pdf%20))
-
-grants
-------
-
-2015 PI, **NSF EAGER** grant for Codemeta project, [1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758) $165,782.
--   2014-2015 Co-PI on **Sloan Foundation** grant for the [rOpenSci
-    Project](http://ropensci.org), phase II, $300,000.
--   2013-2014 Co-PI on **Sloan Foundation** grant for the [rOpenSci
-    Project](http://ropensci.org) $180,000.
--   2013-2015 **NSF Postdoctoral Fellow**, [Intersections of Biology and
-    Mathematical and Physical Sciences and
-    Engineering](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm)
-    [DBI-1306697.](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697)
-    $138,000. Link to proposal: {{ "10.6084/m9.figshare.652970" |  doi_parser }}
--   2011, 2012 PI on **Department of Energy** Grant No.
-    DE-AC02-05CH11231. 50,000 hr on NERSC supercomputing resources.
--   2009 **IIASA** YSSP fellowship. National Academy of Sciences, NSF
-    Grant No. OISE-0738129, $8,000. proposal: {{"10.6084/m9.figshare.678310" | doi_parser }}
--   2008-2012 Computational Science Graduate Fellowship. **Department of
-    Energy**, Grant No: DE-FG02-97ER25308, $149,000.
 
 awards
 ------
@@ -248,7 +238,8 @@ service
 
 - **2015** Proceedings of the National Academy of Sciences, Journal
   of Statistical Software, Bioinformatics, Chapman & Hall, Ecology Letters,
-  Ecology, PeerJ, Nature Communications, Theoretical Ecology
+  Ecology, PeerJ, F1000 Research, Journal of Librarianship & Scholarly Communication, 
+  Nature Communications, Theoretical Ecology, Trends in Ecology & Evolution, Grid Computing
 
 - **2014** Theoretical Ecology, Biodiversity Data Journal, Ecology
   Letters, Journal of Theoretical Biology, American Naturalist, 
@@ -270,6 +261,8 @@ service
 - **2010 & prior** Theoretical Ecology, Journal of Mathematical
   Biology, Ecological Modelling, Ecology
 
+<!--
+
 ### other service
 
 - Student member for the CBS Dean search. 2011
@@ -277,61 +270,27 @@ service
 - Co-chaired the Graduate Teaching Community. 2009-10
 - Student member for the CPB program review. 2010
 
+-->
+
 selected software
 -----------------
 
+-   Carl Boettiger, Scott Chamberlain, Rutger Vos and Hilmar
+    Lapp. (2015) RNeXML: a package for reading and writing richly annotated
+    phylogenetic, character, and trait data in R. On [CRAN](https://cran.rstudio.com/web/packages/RNeXML/) 
 -   Carl Boettiger (2013). knitcitations: Dynamic citations for dynamic
-    documents. [Stable version on
-    CRAN](http://cran.r-project.org/web/packages/knitcitations/).
+    documents. On [CRAN](http://cran.r-project.org/web/packages/knitcitations/).
 -   Carl Boettiger, Scott Chamberlain, Karthik Ram, Edmund Hart (2013).
     rfigshare: Programmatic access to the figshare data repository.
-    [Stable version on
-    CRAN](http://cran.r-project.org/web/packages/rfigshare/).
--   Carl Boettiger (2012). pmc: Phylogenetic Monte Carlo. [current
-    version](http://github.com/cboettig/pmc/).
+    On [CRAN](http://cran.r-project.org/web/packages/rfigshare/).
+-   Carl Boettiger (2012). pmc: Phylogenetic Monte Carlo. On [CRAN](https://cran.rstudio.com/web/packages/pmc/).
 -   Carl Boettiger & Duncan Temple Lang (2011). treebase: An R interface
-    to TreeBASE. [Stable version on
-    CRAN](http://cran.r-project.org/web/packages/treebase/).
+    to TreeBASE. On [CRAN](http://cran.r-project.org/web/packages/treebase/).
 -   Carl Boettiger (2011). rfishbase: Programmatic access to FishBase.
-    [Stable version on
-    CRAN](http://cran.r-project.org/web/packages/rfishbase/).
--   I am also a founding member of the [rOpenSci
-    project](http://ropensci.org) under which I have written several
-    additional software projects
+    On [CRAN](http://cran.r-project.org/web/packages/rfishbase/).
 
-See my [Github page](https://github.com/cboettig) for a more complete
-list of my software packages.
 
-workshops
----------
-
-- 2015 [rOpenSci unconference](http://unconf.ropensci.org/) GitHub HQ, San Fransisco CA.
--  2014 [Reproducible Science Hackathon: Curriculum & Workflow Development](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014). National Evolutionary Synthesis Center (**NESCent**), Durham, North Carolina. 
--  2014 Second Workshop on Sustainable Software for Science: Practice and Experiences ([WSSSPE 2.0](http://wssspe.researchcomputing.org.uk/wssspe2/)). New Orleans, LA.
--   2014 _co-organizer_ "rOpenSci Hackathon (#rOpenHack)", GitHub HQ San Fransisco, CA. ([summary](http://ropensci.org/blog/2014/05/14/ropenhack/), [video documentary](https://www.youtube.com/watch?v=iUcm5COsKJo&nofeather=True))
--   2014 _invited to_ "A toolbox for analysis of long-term ecological dynamics using
-    the Kepler Workflow System." A Working group of the National
-    Ecological Analysis and Synthesis Center (**NCEAS**), Santa Barbara,
-    CA.
--   2013 Mathematical Biology Institute (**MBI**) *invited speaker*,
-    [Sustainable Management of Living Natural
-    Resources](http://www.mbi.ohio-state.edu/2013/ws3description.html),
-    Columbus, OH.
--   2013 *invited to* Workforce development, a planning workshop for an
-    NSF software sustainability center: [Institute for Sustainable Earth
-    and Environmental Software](http://isees.nceas.ucsb.edu). Oakland
-    CA.
--   2013 *invited to* Software Lifecycle, a planning workshop for an NSF
-    software sustainability center: [Institute for Sustainable Earth and
-    Environmental Software](http://isees.nceas.ucsb.edu). National
-    Ecological Analysis and Synthesis Center (**NCEAS**), Santa Barbara,
-    CA.
--   2011-2013 National Institute for Mathematical and Biological
-    Synthesis (**NIMBioS**) working group: [Pretty Darn Good
-    Control](http://www.nimbios.org/workinggroups/WG_PDG), Knoxville, TN
--   2009 American Institute for Mathematics, [Stochastic and
-    deterministic spatial modeling in population
-    dynamics](http://www.aimath.org/WWN/populationmodel/), Palo Alto, CA
+I am also a founding member of the [rOpenSci project](http://ropensci.org). My software impact is also measured relative to other academics by [depsy.org](http://depsy.org/person/329935)
 
 media interviews
 ----------------
