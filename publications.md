@@ -1,5 +1,5 @@
 ---
-layout: vita 
+layout: pubs 
 title: Publications 
 ---
 
