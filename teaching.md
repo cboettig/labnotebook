@@ -5,7 +5,7 @@ title: Teaching
 ---
 
 
-## ESPM-88B: [Data Science in Ecology and the Environment](http://berkeley.carlboettiger.info/espm-88b)
+### ESPM-88B: [Data Science in Ecology and the Environment](http://berkeley.carlboettiger.info/espm-88b)
 
 - Next offered: **Spring 2016**  
 - Course website: [berkeley.carlboettiger.info/espm-88](http://berkeley.carlboettiger.info/espm-88b)
@@ -31,7 +31,7 @@ real-world data encountered in all areas of data science.
 
 
 
-## Graduate seminars
+### Graduate seminars
 
 **TBD**. Topics in ecoinformatics? Theoretical ecology? Let me know what you'd like to see!
 
