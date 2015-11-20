@@ -163,36 +163,30 @@ invited talks
 -  Zoology Seminar, University of Wisconsin, Madison, WI. 
 -  ESPM Seminar, UC Berkeley, CA.
 
-##### 2013
+##### 2013 & prior
 
 - MBI speaker, [Sustainable Management of Living Natural Resources](http://www.mbi.ohio-state.edu/2013/ws3description.html), Columbus, OH.
 - WHOI Seminar speaker, Woods Hole, MA.
 - UC Davis Dept of Environmental Resources and Economics; Davis, CA.
-
-##### 2012 & prior
-
 - SSB Symposium speaker, Evolution Conference, Ottawa, CAN.
-- University of Tennessee, Knoxville, TN. 
-- Center for Population Biology, Davis, CA. 
-- International Institute of Applied Systems Analysis, Vienna, Austria.
 
 invited workshops
 -----------------
 
-**2015**
+##### 2015
 
 - Data Intensive Training Workshop, NCEAS, Santa Barbara, CA 
 - [rOpenSci unconference](http://unconf.ropensci.org/), San Fransisco CA.
 - PDGC Workshop, NIMBIOS, Knoxville TN
 
-**2014 **
+##### 2014 
 
 - [rOpenSci unconference](http://ropensci.org/blog/2014/05/14/ropenhack/), San Fransisco CA.
 - [Reproducible Science: Curriculum & Workflow](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014), NESCent, Durham, NC. 
 - ([WSSSPE 2.0](http://wssspe.researchcomputing.org.uk/wssspe2/)). New Orleans, LA.
 - Workflows Working Group, NCEAS, Santa Barbara,  CA.
 
-**2013 & prior**
+##### 2013 & prior
 
 - [Sustainable Management of Living Natural Resources](http://www.mbi.ohio-state.edu/2013/ws3description.html), MBI Columbus, OH.
 - Academic software & workforce development, [ISEES](http://isees.nceas.ucsb.edu). Oakland, CA.
