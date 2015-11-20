@@ -183,7 +183,7 @@ invited workshops
 
 - [rOpenSci unconference](http://ropensci.org/blog/2014/05/14/ropenhack/), San Fransisco CA.
 - [Reproducible Science: Curriculum & Workflow](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014), NESCent, Durham, NC. 
-- ([WSSSPE 2.0](http://wssspe.researchcomputing.org.uk/wssspe2/)). New Orleans, LA.
+- [WSSSPE 2.0](http://wssspe.researchcomputing.org.uk/wssspe2/). New Orleans, LA.
 - Workflows Working Group, NCEAS, Santa Barbara,  CA.
 
 ##### 2013 & prior
@@ -192,7 +192,7 @@ invited workshops
 - Academic software & workforce development, [ISEES](http://isees.nceas.ucsb.edu). Oakland, CA.
 - Software Lifecycle, [ISEES](http://isees.nceas.ucsb.edu), Santa Barbara, CA.
 - [Pretty Darn Good Control](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville, TN
-- [Stochastic spatial modeling in population dynamics](http://www.aimath.org/WWN/populationmodel/), AIM, Palo Alto, CA
+- [Stochastic spatial modeling in population dynamics](http://www.aimath.org/WWN/populationmodel/), AIM, Palo Alto, CA.
 
 
 theses
@@ -203,14 +203,11 @@ theses
 2.  Carl Boettiger, Stephen Pacala, David Huse (2007) Ensemble Behavior
     from Individual Dynamics in Multispecies Forest Populations.
     *Princeton Physics Dept*. {{ "10.6084/m9.figshare.678304" | doi_parser }}
-    ([pdf](/assets/files/pubs/Boettiger-Pacala-Huse-2007-Princeton-Physics-Dept.pdf%20))
 3.  Carl Boettiger, Joshua Weitz, Simon Levin (2007) Adaptive Dynamics:
     Branching Phenomena and the Canonical Equation *Princeton Physics
     Dept*. {{ "10.6084/m9.figshare.678306" | doi_parser }}
-    ([pdf](/assets/files/pubs/Boettiger-Weitz-Levin-2007-Princeton-Physics-Dept.pdf%20))
 4.  Carl Boettiger, David Huse (2006) Clonal Interference Models in
     Population Genetics. *Princeton Physics Dept*. {{"10.6084/m9.figshare.678305" | doi_parser }}
-    ([pdf](/assets/files/pubs/Boettiger-Huse-2006-Princeton-Physics-Dept.pdf%20))
 
 awards
 ------
