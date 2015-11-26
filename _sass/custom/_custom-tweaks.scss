@@ -112,27 +112,38 @@ div.scroll
 ----------------------------------------------------*/
 
 .cv {
-font-size: 13px;
-line-height: 18px;
-text-align: justify;         
-}
-.cv ul { 
-margin-left: 0;
-margin-bottom: 30px;
-list-style: none;
-}
-.cv ol { 
-margin-left: 0;
-margin-bottom: 30px;
-list-style-type: decimal;
-}
-.cv li {
-margin-bottom: 10px;
-}
-.cv strong {
-font-weight: bolder;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: justify;         
 }
 
+.cv ul { 
+  margin-left: 0;
+  list-style: none;
+}
+
+
+.cv ol {
+  margin-left: 0;
+  padding-left: 0px;
+  padding-right: 40px;
+  list-style-type: decimal;
+  transform: rotate(180deg);
+}
+
+.cv ol > li {
+  transform: rotate(-180deg);
+  margin-bottom: 5px;
+}
+
+
+.cv li {
+  margin-bottom: 5px;
+}
+
+.cv strong {
+  font-weight: bolder;
+}
 
 
 /* Make markdown with floatright in the alt-text into a nice text-wrapped image 
