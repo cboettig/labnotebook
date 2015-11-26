@@ -1,0 +1,67 @@
+\documentclass[margin]{res}
+%\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+%\usepackage{palatcm}
+\usepackage{palatino}
+\usepackage{newcent}
+\usepackage{times}
+\usepackage{microtype}
+\usepackage[colorlinks]{hyperref}
+\usepackage{etaremune}
+
+\hypersetup{
+unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+pdftoolbar=false,        % show Acrobat’s toolbar?
+pdfmenubar=false,        % show Acrobat’s menu?
+pdffitwindow=false,     % window fit to page when opened
+pdfstartview={FitH},    % fits the width of the page to the window
+pdftitle={Carl Boettiger - Vita},    % title
+pdfauthor={Carl Boettiger},     % author
+colorlinks=true,       % false: boxed links; true: colored links
+linkcolor=red,          % color of internal links
+citecolor=blue,        % color of links to bibliography
+filecolor=blue,      % color of file links
+urlcolor=blue           % color of external links
+}
+
+\newsectionwidth{7em}
+\renewcommand{\sectionfont}[1]{\bf#1}
+% want the document to start higher?
+%\voffset = -.5in
+% also modify text height...defaults to 9 in  %larger number means more text per page!
+\textheight 9.2in
+
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhf{}
+\rhead{ \fancyplain{}{\thepage} }
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\fancyplain{}{\thepage} }
+\rfoot{\fancyplain{}{Boettiger}}
+
+\name{Carl Boettiger}
+\address{\textbf{Address:} \\
+                 ESPM Department, \\
+                 University of California, \\
+                 130 Mulford Hall \#3114, \\
+                 Berkeley, CA 94720, USA 
+         } 
+\address{\textbf{Contact:} \\
+                 email: cboettig@berkeley.edu \\
+                 twitter: \href{https://twitter.com/cboettig}{@cboettig} \\
+                 orcid: \href{https://orcid.org/0000-0002-1642-628X}{0000-0002-1642-628X} \\
+                 web: \href{http://carlboettiger.info}{http://carlboettiger.info}
+        }
+
+
+\begin{document}
+\begin{resume}
+
+  $body$
+
+\end{resume}
+\let\thefootnote\relax\footnote{Updated \today}
+\end{document}
+
+
