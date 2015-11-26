@@ -140,13 +140,14 @@ education
 grants
 ------
 
-1.   Codemeta project (2015). NSF EAGER, [#1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758) $165,782.
-1.   [rOpenSci Project](http://ropensci.org), phase II. (2014, Co-PI). Alfred P. Sloan Foundation $300,000.
-1.  [rOpenSci Project](http://ropensci.org) (2013, Co-PI). Alfred P. Sloan Foundation $180,000. 
-1.  [NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013). NSF [#DBI-1306697](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697), $138,000. ([proposal](http://doi.org/10.6084/m9.figshare.652970))
-1.  Supercomputing grant (2011). DOE #DE-AC02-05CH11231. 50,000hrs.
-1.  IIASA YSSP fellowship (2009). National Academy of Sciences, OISE-0738129, $8,000. ([proposal](http://doi.org/10.6084/m9.figshare.678310))
-1.  Computational Science Graduate Fellowship (2008). Department of Energy, #DE-FG02-97ER25308, $149,000.
+1. [rOpenSci Project](http://ropensci.org) (2015-2018, Co-PI). Helmsley Trust $2,900,000.
+1. Codemeta project (2015). NSF EAGER, [#1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758) $165,782.
+1. [rOpenSci Project](http://ropensci.org), phase II. (2014, Co-PI). Alfred P. Sloan Foundation $300,000.
+1. [rOpenSci Project](http://ropensci.org) (2013, Co-PI). Alfred P. Sloan Foundation $180,000. 
+1. [NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013). NSF [#DBI-1306697](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697), $138,000. ([proposal](http://doi.org/10.6084/m9.figshare.652970))
+1. Supercomputing grant (2011). DOE #DE-AC02-05CH11231. 50,000hrs.
+1. IIASA YSSP fellowship (2009). National Academy of Sciences, OISE-0738129, $8,000. ([proposal](http://doi.org/10.6084/m9.figshare.678310))
+1. Computational Science Graduate Fellowship (2008). Department of Energy, #DE-FG02-97ER25308, $149,000.
 
 
 invited talks
