@@ -60,8 +60,8 @@ WORKDIR /
 RUN rm -rf /data && gem cleanup
 
 ## My git name
-RUN git config --system user.name Carl Boettiger \
-  && git config --system user.email cboettig@gmail.com
+RUN git config --global user.name Carl Boettiger \
+  && git config --global user.email cboettig@gmail.com
 
 
 ### Expose port for jekyll serve ###
