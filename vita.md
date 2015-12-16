@@ -137,7 +137,7 @@ grants
 ------
 
 1. Computational Science Graduate Fellowship (2008). Department of Energy,
-   #DE-FG02-97ER25308, $149,000.
+   #DE-FG02-97ER25308, $149,000. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2010246.v1))
 
 2. IIASA YSSP fellowship (2009). National
    Academy of Sciences, OISE-0738129,
