@@ -157,7 +157,7 @@ grants
 
 7. Codemeta project (2015). NSF EAGER,
    [#1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
-   $165,782.
+   $165,782. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2055972))
 
 8. [rOpenSci Project](http://ropensci.org) (2015-2018, Co-PI). Helmsley
    Trust $2,900,000.
