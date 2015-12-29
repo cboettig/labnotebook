@@ -24,13 +24,12 @@ ENV TERM xterm
 
 ## Install basic ruby, javascript, and linux utils we need for the site ##
 RUN apt-get update \
-  && apt-get install -y \
+  && apt-get install -y -t unstable \
     bundler \
     curl \
     nodejs \
     rake \
     rsync \
-    ssh \
   && apt-get clean \ 
   && rm -rf /var/lib/apt/lists/ \
   && gem install nokogiri -v '1.6.3.1' \ 
