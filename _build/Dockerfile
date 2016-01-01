@@ -53,7 +53,7 @@ RUN bundle config build.nokogiri --use-system-libraries \
   && bundle install \
   && bundle update
 
-## My git name, must be done while we are user pid 1000, not root
+## My git name, must be done for user pid 1000, and root
 RUN git config --global user.name 'Carl Boettiger' \
   && git config --global user.email 'cboettig@gmail.com' \
   && git config --global credential.helper 'cache --timeout=3600' \
@@ -64,6 +64,12 @@ RUN git config --global user.name 'Carl Boettiger' \
 USER root
 WORKDIR /
 RUN rm -rf /data && gem cleanup
+
+## My git name, must be done for user pid 1000, and root
+RUN git config --global user.name 'Carl Boettiger' \
+  && git config --global user.email 'cboettig@gmail.com' \
+  && git config --global credential.helper 'cache --timeout=3600' \
+  && git config --global push.default simple
 
 
 ### Expose port for jekyll serve ###
