@@ -18,7 +18,7 @@ members:
     name:
       first: "Your"
       last: "Name Here?"
-    title" "Open Position"
+    title: "Open Position"
     website: "/"
     github: ""
     twitter: ""
