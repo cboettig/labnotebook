@@ -14,6 +14,18 @@ members:
     email: "cboettig@gmail.com"
     cv: "http://carlboettiger.info/vita.html"
     photo: "carl_circle.png"
+  - milad:
+    name:
+      first: "Milad" 
+      last: "Memarzadeh"
+    title: "Postdoctoral Researcher"
+    homepage: "#"
+    github: "miladm12"
+    twitter: "#"
+    orcid: "#"
+    email: "memarzadeh.milad@gmail.com"
+    cv: "#"
+    photo: "milad.png"
   - you:
     name:
       first: "Your"
