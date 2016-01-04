@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source ~/.notebook-env.sh
+source ~/.credentials/twitter/cboettig.sh
+
 docker run -e TWIT_KEY=$TWIT_KEY \
            -e TWIT_SECRET=$TWIT_SECRET \
            -e TWIT_TOK=$TWIT_TOK \

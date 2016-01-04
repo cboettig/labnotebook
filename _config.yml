@@ -11,7 +11,7 @@ author:
   email: cboettig@gmail.com
 url: http://www.carlboettiger.info
 
-baseurl: /
+baseurl: ""
 repo: cboettig.github.io
 
 gems:
