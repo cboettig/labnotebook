@@ -242,6 +242,12 @@ service
 
 - NCEAS Scientific Advisory [Board](https://www.nceas.ucsb.edu/news/nceas-appoints-new-science-advisers)
 - [rOpenSci Leadership team](http://ropensci.org/about/#leadership) 
+- Jestream NSF cloud computing Stakeholder Advisory Board
+
+#### Campus: ####
+
+- Berkeley Research Computing Advisory Committee
+- Data Science Education Committee
 
 #### Reviewer for: ####
 
