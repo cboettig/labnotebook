@@ -43,7 +43,7 @@ RUN echo "options(stringsAsFactors = FALSE)" >> /etc/R/Rprofile.site
 ### (bundler likes to be a non-root user in sudoers.) 
 ### (Docker won't cache layers depending on external files, so this goes last)
 ADD Gemfile /data/Gemfile 
-ADD Gemfile.lock /data/Gemfile.lock
+#ADD Gemfile.lock /data/Gemfile.lock
 RUN adduser rstudio sudo \
   && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
   && chown -R rstudio:rstudio /data
