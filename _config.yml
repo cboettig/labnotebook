@@ -23,7 +23,7 @@ sass:
   style: compressed
 
 ## Markdown Parser 
-markdown: pandoc
+markdown:Pandoc
 markdown_ext:  markdown,md
 pandoc:
   extensions: 
