@@ -8,7 +8,7 @@ employment
 
 - 2015 Assistant Professor, Department of [Environmental Science, Policy and Management](http://ourenvironment.berkeley.edu), [University of California Berkeley](http://www.berkeley.edu)
 
-- 2013 NSF post-doctoral scholar in the [Center for Stock Assessment Research](http://boe.ucsc.edu/~msmangel/CSTAR.html) at the [University of California, Santa Cruz](http://www.ucsc.edu)
+- 2013-2015 NSF Post-doctoral Scholar in the Department of [Applied Mathematics and Statistics](https://www.soe.ucsc.edu/departments/applied-mathematics-statistics) at the [University of California, Santa Cruz](http://www.ucsc.edu)
 Mentors: [Marc Mangel](http://users.soe.ucsc.edu/~msmangel/), [Stephan Munch](http://swfsc.noaa.gov/staff.aspx?&amp;id=17294)
 
 
