@@ -122,15 +122,15 @@ publications
    ([GitHub](https://github.com/ropensci/RNeXML))
    ([CRAN](http://cran.rstudio.com/web/packages/RNeXML))
 
-15. __Carl Boettiger__, Michael Bode, James N. Sanchirico, Jacob LaRiviere,
+15. __Carl Boettiger__,  Scott Chamberlain, Edmund Hart, Karthik Ram. (2015) 
+   Building Software, Building Community: Lessons from the rOpenSci Project.
+   _Journal of Open Research Software_ 3: e8, [doi](http://dx.doi.org/10.5334/jors.bu):10.5334/jors.bu
+
+16. __Carl Boettiger__, Michael Bode, James N. Sanchirico, Jacob LaRiviere,
    Alan Hastings, and Paul Robert Armsworth. (2015) Optimal management
    of a stochastically varying population when policy adjustment is
    costly. _Ecological Applications_ 26 (3) 808-817. [doi](http://dx.doi.org/10.1890/15-0236):10.1890/15-0236
    ([arXiv](http://arxiv.org/pdf/1507.07037v1.pdf)) ([GitHub](https://github.com/cboettig/pdg_control))
-
-16. __Carl Boettiger__,  Scott Chamberlain, Edmund Hart, Karthik Ram. (2015) 
-   Building Software, Building Community: Lessons from the rOpenSci Project.
-   _Journal of Open Research Software_ 3: e8, [doi](http://dx.doi.org/10.5334/jors.bu):10.5334/jors.bu
 
 
 grants
