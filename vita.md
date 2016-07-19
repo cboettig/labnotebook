@@ -169,7 +169,6 @@ invited talks
 ##### 2015
 
 - [Empirical Dynamical Modeling and Forecasting in Nonlinear Systems](http://ecows.oc.ntu.edu.tw/itnlws/), NTU, Taiwan.
-- [NSF Big Data Hubs](http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm) Design Charette, Western Region.
 
 ##### 2014
 
@@ -188,9 +187,17 @@ invited talks
 invited workshops
 -----------------
 
+##### 2016
+
+- [Force16 Codemeta Workshop](http://sched.co/5wK5), Portland OR (organizer)
+- [CodeMeta NSF Workshop](https://codemeta.github.io) Portland, OR (organizer)
+- [rOpenSci unconference](http://unconf16.ropensci.org), San Francisco, CA
+
 ##### 2015
 
-- Data Intensive Training Workshop, NCEAS, Santa Barbara, CA 
+- Moore-Sloan Data Science Environments: Second Annual Data Science Summit
+- [Data Intensive Training Workshop](https://github.com/NCEAS/ds-workshop-2015), NCEAS, Santa Barbara, CA 
+- [NSF Big Data Hubs](http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm) Design Charette, Western Region.
 - [rOpenSci unconference](http://unconf.ropensci.org/), San Fransisco CA.
 - PDGC Workshop, NIMBIOS, Knoxville TN
 
