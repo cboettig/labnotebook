@@ -22,7 +22,7 @@ MAINTAINER Carl Boettiger cboettig@ropensci.org
 ## So that things like `top` and `less` work correctly
 ENV TERM xterm
 
-## Install basic ruby, javascript, and linux utils we need for the site ##
+## Install basic ruby, javascript, and linux utils we need for Jekyll (hadleyverse provides R needs) ##
 RUN apt-get update \
   && apt-get install -y -t unstable \
     bundler \
@@ -33,8 +33,6 @@ RUN apt-get update \
   && apt-get clean \ 
   && rm -rf /var/lib/apt/lists/ \
   && gem install nokogiri -v '1.6.3.1' \ 
-  && installGithub.r yihui/servr \
-	&& install2.r -r http://cran.rstudio.com git2r \
   && rm -rf /tmp/downloaded_packages 
 
 RUN echo "options(stringsAsFactors = FALSE)" >> /etc/R/Rprofile.site
@@ -47,33 +45,19 @@ ADD Gemfile /data/Gemfile
 RUN adduser rstudio sudo \
   && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
   && chown -R rstudio:rstudio /data
-USER rstudio
-WORKDIR /data
-RUN bundle config build.nokogiri --use-system-libraries \ 
+
+RUN cd /data && bundle config build.nokogiri --use-system-libraries \ 
   && bundle install \
   && bundle update
 
 ## My git name, must be done for user pid 1000, and root
-RUN git config --global user.name 'Carl Boettiger' \
-  && git config --global user.email 'cboettig@gmail.com' \
-  && git config --global credential.helper 'cache --timeout=3600' \
-  && git config --global push.default simple
-
+RUN git config --system user.name 'Carl Boettiger' \
+  && git config --system user.email 'cboettig@gmail.com' \
+  && git config --system credential.helper 'cache --timeout=3600' \
+  && git config --system push.default simple
 
 ## Reset and tidy up
-USER root
-WORKDIR /
 RUN rm -rf /data && gem cleanup
-
-## My git name, must be done for user pid 1000, and root
-RUN git config --global user.name 'Carl Boettiger' \
-  && git config --global user.email 'cboettig@gmail.com' \
-  && git config --global credential.helper 'cache --timeout=3600' \
-  && git config --global push.default simple
-
 
 ### Expose port for jekyll serve ###
 EXPOSE 4000
-
-
-# CMD sudo supervisord
