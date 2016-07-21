@@ -85,35 +85,55 @@ members:
 <div class="row">
 <div class="col-md-8">
 
-<hr />
+------------
 
-<h2> Undergraduate Researchers </h2>
+## Undergraduate Researchers 
 
-<ul>
-  <li> Brian Thorsen </li>
-  <li> Shea Conlon </li>
-  <li> Anna Liu </li>
-  <li> Simon Greenhill </li>
-</ul>
+- Brian Thorsen
+- Shea Conlon
+- Anna Liu
+- Simon Greenhill
 
-<hr />
-
+----------
 
 <!--
-<h2> Group Alumni </h2>
+## Group Alumni 
 
-<hr />
+--------
 
 -->
 
-<h2> Interested in Joining? </h2>
 
-<p>I'm always interested in talking with perspective undergraduate, graduate, or post-doctoral researchers. Please <a href="http://carlboettiger.info">contact me</a> with a brief email explaining your background and interests if you are interested in joining the group.</p>
+## Interested in Joining?
 
-<p>Undergraduates interested in independent work may wish to participate through UC Berkeley's <a href="http://nature.berkeley.edu/site2/spur/">SPUR</a> or <a href="http://research.berkeley.edu/urap/">URAP</a> programs, or through a senior thesis project.</p>
+I'm always interested in talking with perspective undergraduate,
+graduate, or post-doctoral researchers. Please [contact
+me](http://carlboettiger.info) with a brief email explaining your
+background and interests if you are interested in joining the group.
 
-<p>Perspective graduate students in quantitative and computational ecology and environmental sciences should apply through the <a href="http://ourenvironment.berkeley.edu/graduate-programs/admissions/">ESPM Department Graduate Admissions</a> before Dec 1st. You may also wish to consider applying for an <a href="http://www.nsfgrfp.org/">NSF pre-doctoral fellowship</a>, the <a href="https://www.krellinst.org/csgf/">computational sciences graduate fellowship</a>, <a href="http://ndseg.asee.org/">NDSEG fellowship</a> or <a href="http://www.epa.gov/ncer/fellow/">EPA Star fellowship</a>.</p>
+Undergraduates interested in independent work may wish to participate
+through UC Berkeley's [SPUR](http://nature.berkeley.edu/site2/spur/) or
+[URAP](http://research.berkeley.edu/urap/) programs, or through a senior
+thesis project.
 
-<p>Perspective post-doctoral scholars should consider applying for the <a href="http://millerinstitute.berkeley.edu/page.php?nav=11">Miller fellowship</a>, the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503622">NSF's Biology post-doctoral fellowships</a>, McDonnell Foundation's <a href="https://www.jsmf.org/apply/fellowship/">complex systems post-doctoral fellowship</a> or the <a href="http://conbio.org/mini-sites/smith-fellows/apply/proposal-guidelines">Smith Fellows</a> in conservation research.</p>
+Perspective graduate students in quantitative and computational ecology
+and environmental sciences should apply through the [ESPM Department
+Graduate
+Admissions](http://ourenvironment.berkeley.edu/graduate-programs/admissions/)
+before Dec 1st. You may also wish to consider applying for an [NSF
+pre-doctoral fellowship](http://www.nsfgrfp.org/), the [computational
+sciences graduate fellowship](https://www.krellinst.org/csgf/), [NDSEG
+fellowship](http://ndseg.asee.org/) or [EPA Star
+fellowship](http://www.epa.gov/ncer/fellow/).
+
+Perspective post-doctoral scholars should consider applying for the
+[Miller
+fellowship](http://millerinstitute.berkeley.edu/page.php?nav=11), the
+[NSF's Biology post-doctoral
+fellowships](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503622),
+McDonnell Foundation's [complex systems post-doctoral
+fellowship](https://www.jsmf.org/apply/fellowship/) or the [Smith
+Fellows](http://conbio.org/mini-sites/smith-fellows/apply/proposal-guidelines)
+in conservation research.
 
 </div></div>
