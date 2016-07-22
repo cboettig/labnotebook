@@ -1,5 +1,5 @@
 <div  class="col-md-4"
- prefix="schema: http://schema.org/Person#" 
+ prefix="schema: http://schema.org/ foaf: http://xmlns.com/foaf/0.1" 
  typeof="foaf:Person schema:Person" 
  about="{{member.homepage}}"
  style="font-size:20px; text-align:center;">
@@ -11,7 +11,7 @@
   property="foaf:name"><span 
   property="foaf:givenName">{{member.name.first}}</span> <span
   property="foaf:familyName">{{member.name.last}}</span></span></a></p>
-<p><span property="http://schema.org/Person#jobTitle">{{member.title}}</span></p>
+<p><span property="schema:jobTitle">{{member.title}}</span></p>
 <p class="socialicons">
 <a href="mailto:{{member.email}}" title="email"><i class="fa fa-envelope"></i></a>
 {% if member.twitter != nil %}<a rel="foaf:account" href="https://twitter.com/{{member.twitter}}" title="Twitter"><i class="fa fa-twitter"></i></a>{% endif %}
