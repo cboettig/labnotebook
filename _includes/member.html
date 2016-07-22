@@ -1,0 +1,27 @@
+<div  class="col-md-4"
+ prefix="schema: http://schema.org/Person#" 
+ typeof="foaf:Person schema:Person" 
+ about="{{member.homepage}}"
+ style="font-size:20px; text-align:center;">
+
+<p><img property="foaf:depiction" src="assets/img/{{member.photo}}" alt="Photo of {{member.name.first}}"/></p>
+<p>
+<a property="foaf:homepage schema:url" 
+  href="{{member.homepage}}"><span
+  property="foaf:name"><span 
+  property="foaf:givenName">{{member.name.first}}</span> <span
+  property="foaf:familyName">{{member.name.last}}</span></span></a></p>
+<p><span property="http://schema.org/Person#jobTitle">{{member.title}}</span></p>
+<p class="socialicons">
+<a href="mailto:{{member.email}}" title="email"><i class="fa fa-envelope"></i></a>
+{% if member.twitter != nil %}<a rel="foaf:account" href="https://twitter.com/{{member.twitter}}" title="Twitter"><i class="fa fa-twitter"></i></a>{% endif %}
+{% if member.impactstory != nil %}<a rel="foaf:account" href="{{member.impactstory}}" title="ImpactStory"><i class="ai ai-impactstory"></i></a>{% endif %}
+{% if member.linkedin != nil %}<a rel="foaf:account" href="{{member.linkedin}}" title="LinkedIn"><i class="fa fa-linkedin"></i></a>{% endif %}
+{% if member.researchgate != nil %}<a rel="foaf:account" href="{{member.researchgate}}" title="ResearchGate"><i class="ai ai-researchgate"></i></a>{% endif %}
+{% if member.github != nil %}<a rel="foaf:account" href="https://github.com/{{member.github}}" title="GitHub"><i class="fa fa-github"></i></a>{% endif %}
+{% if member.orcid != nil %}<a rel="http://purl.org/spar/datacite/orcid" href="https://orcid.org/{{member.orcid}}" title="ORCID ID"><i class="ai ai-orcid"></i></a>{% endif %}
+{% if member.cv != nil %}<a rel="foaf:publications" href="{{member.cv}}" title="Publications"><i class="fa fa-file-text"></i></a>{% endif %}
+{% if member.googlescholar != nil %}<a rel="foaf:publications" href="{{member.googlescholar}}" title="Publications"><i class="ai ai-google-scholar"></i></a>{% endif %}</p>
+</div>
+
+
