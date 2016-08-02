@@ -25,6 +25,7 @@ ENV TERM xterm
 ## Install basic ruby, javascript, and linux utils we need for Jekyll (hadleyverse provides R needs) ##
 RUN apt-get update \
   && apt-get install -y -t unstable \
+    awscli \
     bundler \
     curl \
     nodejs \
