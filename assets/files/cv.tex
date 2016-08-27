@@ -1,446 +1,582 @@
-\documentclass[margin]{res}
-%\usepackage{geometry}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-%\usepackage{palatcm}
-\usepackage{palatino}
-\usepackage{newcent}
-\usepackage{times}
-\usepackage{microtype}
-\usepackage[colorlinks]{hyperref}
-\usepackage{etaremune}
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
 
-\hypersetup{
-unicode=false,          % non-Latin characters in Acrobat’s bookmarks
-pdftoolbar=false,        % show Acrobat’s toolbar?
-pdfmenubar=false,        % show Acrobat’s menu?
-pdffitwindow=false,     % window fit to page when opened
-pdfstartview={FitH},    % fits the width of the page to the window
-pdftitle={Carl Boettiger - Vita},    % title
-pdfauthor={Carl Boettiger},     % author
-colorlinks=true,       % false: boxed links; true: colored links
-linkcolor=red,          % color of internal links
-citecolor=blue,        % color of links to bibliography
-filecolor=blue,      % color of file links
-urlcolor=blue           % color of external links
-}
 
-\newsectionwidth{7em}
-\renewcommand{\sectionfont}[1]{\bf#1}
-% want the document to start higher?
-%\voffset = -.5in
-% also modify text height...defaults to 9 in  %larger number means more text per page!
-\textheight 9.2in
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
-\usepackage{fancyhdr}
-\pagestyle{fancyplain}
-%\fancyhf{}
-%\rhead{ \fancyplain{}{\thepage} }
-\renewcommand{\headrulewidth}{0pt}
-\cfoot{\fancyplain{}{\thepage} }
-\rfoot{\fancyplain{}{Boettiger}}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
 
-\name{Carl Boettiger}
-%\address{Center for Population Biology, \\ 1 Shields Avenue\\University of California, Davis \\ Davis, CA 96516}
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+% personal data
+\name{Carl}{Boettiger}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{my address, line 1, line 2, line 3, postcode}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \address{\textbf{Address:} \\
                  ESPM Department, \\
                  University of California, \\
                  130 Mulford Hall \#3114, \\
                  Berkeley, CA 94720, USA 
          } 
-\address{\textbf{Contact:} \\
-                 email: cboettig@berkeley.edu \\
-                 twitter: cboettig \\
-                 github: cboettig \\
-                 web: http://carlboettiger.info 
-        }
+
+
+
+\email{cboettig@berkeley.edu}                               % optional, remove / comment the line if not wanted
+\homepage{http://carlboettiger.info}                         % optional, remove / comment the line if not wanted
+\extrainfo{twitter: \href{https://twitter.com/cboettig}{@cboettig} \\
+           orcid: \href{https://orcid.org/0000-0002-1642-628X}{0000-0002-1642-628X} 
+
+           %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+
+
+\usepackage{etaremune}
+\makeatletter
+\long\def\thebibliography#1{%
+  \section*{\refname}%
+  \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}
+  \settowidth{\dimen0}{\@biblabel{#1}}%
+  \setlength{\dimen2}{\dimen0}%
+  \addtolength{\dimen2}{\labelsep}
+  \sloppy
+  \clubpenalty 4000 
+  \@clubpenalty 
+  \clubpenalty 
+  \widowpenalty 4000
+  \sfcode `\.\@m
+  \renewcommand{\labelenumi}{\@biblabel{\theenumi}} % labels like [3], [2], [1]
+  \begin{etaremune}[labelwidth=\dimen0,leftmargin=\dimen2]\@openbib@code
+}
+\def\endthebibliography{\end{etaremune}}
+\def\@bibitem#1{%
+  \item \if@filesw\immediate\write\@auxout{\string\bibcite{#1}{\the\value{enumi}}}\fi\ignorespaces
+}
+\makeatother
 
 
 \begin{document}
-\begin{resume}
-
-\section{Employment}
-\begin{format}
-\title{l}\location{r}\\\dates{r}\\
-\body\\
-\end{format}
-
-\title{\textbf{University of California, Berkeley}}\location{Berkeley, CA 94720}\dates{07/01/2015 - present}
-\begin{position}
-NSF Postdoctoral Researcher \\
-Mentors: Marc Mangel \& Stephan Munch 
-\end{position}
-
-\title{\textbf{University of California, Santa Cruz}}\location{Santa Cruz, CA 95064}\dates{10/15/2012 - 06/30/2015}
-\begin{position}
-NSF Postdoctoral Researcher \\
-Mentors: Marc Mangel \& Stephan Munch 
-\end{position}
-
-\section{Education}
-\begin{format}
-\title{l}\location{r}\\\dates{r}\\
-\body\\
-\end{format}
-
-\title{\textbf{University of California, Davis}}\location{Davis, CA 95616}\dates{Ph.D. 09/18/2012}
-\begin{position}
-Ph.D Population Biology \\
-%Completed Sept 18 2012, Awarded Dec 14 2012. \\
-Mentor: Alan Hastings
-\end{position}
-
-\title{\textbf{Princeton University}}\location{Princeton, NJ 08544}\dates{06/2007}
-\begin{position}
-A.B  in Physics with Honors \\ 
-Certificate in Biophysics; Certificate in Applied and Computational Mathematics\\
-Mentors: Stephen Pacala, Simon Levin, David Huse
-\end{position}
-
-\section{Publications}
-
-\begin{etaremune}[start = 16]
-\item Boettiger, C., Chamberlain, S., Hart, E., Ram, K. (2015) 
-  ``Building Software, Building Community: Lessons from the rOpenSci Project''
-  \emph{Journal of Open Research Software} 3: e8, doi:10.5334/jors.bu
-
-\item  Boettiger, C., Bode, M., Sanchirico, JN., LaRiviere, J., Hastings, A., and Armsworth PR. (2015) 
-  Optimal management of a stochastically varying population when policy adjustment is
-  costly. \emph{Ecological Applications}. doi:10.1890/15-0236.1
-
-\item Boettiger, C., Chamberlain, S., Vos, R., and Lapp, H. (2015) 
-  ``RNeXML: a package for reading and writing richly annotated
-  phylogenetic, character, and trait data in R.'' 
-  \emph{Methods in Ecology and Evolution} 
-  doi:10.1111/2041-210X.12469
-
-\item Carl Boettiger, C. (2015) ``An introduction to Docker for reproducible
-  research.'' ACM SIGOPS \emph{Operating Systems Review}, Special Issue on Repeatability
-  and Sharing of Experimental Artifacts. 49(1), 71-79. 
-  doi:10.1145/2723872.2723882
-
-\item Boettiger, C., Mangel, M., Munch, S. (2015) 
-      ``Avoiding tipping points in fisheries management through
-	    Gaussian process dynamic programming.'' 
-      \emph{Proceedings of the Royal Society B}. 282(1801), 8–11.
-      \href{http://doi.org/10.1098/rspb.2014.1631}{doi:10.1098/rspb.2014.1631}
-
-\item  Boettiger, C., Hastings, A. (2013) ``No early warning signals for stochastic transitions: insights from large deviation theory.'' {\it Proceedings of the Royal Society B}. \href{http://doi.org/10.1098/rspb.2013.1372}{doi:10.1098/rspb.2013.1372}
-\item  Boettiger, C.$^*$, Ross, N.$^*$, Hastings, A. (2013) ``Early warning signals: The charted and uncharted territories.'' {\it Theoretical Ecology} \href{http://doi.org/10.1007/s12080-013-0192-6}{doi:10.1007/s12080-013-0192-6}
-\item  Boettiger, C., Hastings, A. (2013) ``Tipping points: From patterns to predictions.'' {\it Nature}. 493, 157-158. \href{http://dx.doi.org/10.1038/493157a}{doi:10.1038/493157a}
-\item Boettiger, C., Hastings, A. (2012) ``Early Warning Signals and the Prosecutor's Fallacy.'' {\it Proceedings of the Royal Society B}. 279(1748) 4734-4739.   \href{http://dx.doi.org/10.1098/rspb.2012.2085}{doi: 10.1098/rspb.2012.2085}
-\item Boettiger, C., Temple-Lang, D., Wainwright, P.C. (2012) ``rfishbase: exploring, manipulating and visualizing FishBase data from R'' {\it Journal of Fish Biology}. 81(6) 2030-2039. \href{http://dx.doi.org/10.1111/j.1095-8649.2012.03464.x}{doi: 10.1111/j.1095-8649.2012.03464.x}
-\item Boettiger, C., Temple-Lang, D. (2012)  ``Programmatic access to TreeBASE phylogenies in R.'' {\it Methods in Ecology and Evolution}  \href{http://dx.doi.org/10.1111/j.2041-210X.2012.00247.x}{doi: 10.1111/j.2041-210X.2012.00247.x}
-\item Boettiger, C. Hastings, A (2012) ``Quantifying limits to detection of early warning for critical transitions.'' {\it Journal of The Royal Society Interface},  9(75), 2527-2539. \href{http://dx.doi.org/10.1098/rsif.2012.0125}{doi: 10.1098/rsif.2012.0125}.
-\item Beaulieu, J.M., Jhwueng, D., Boettiger, C., O'Meara, B. (2012) ``Modeling Stabilizing Selection: Expanding the Ornstein-Uhlenbeck Model of Adaptive Evolution,'' {\it Evolution}. 66(8) 2369-2383. \href{http://dx.doi.org/10.1111/j.1558-5646.2012.01619.x}{doi: 10.1111/j.1558-5646.2012.01619.x)}
-\item Boettiger, C., Coop, G,. Ralph, P. (2012) ``Is your phylogeny informative? Measuring the power of comparative methods.'' {\it Evolution}. 66(7) 2240-51. \href{http://dx.doi.org/10.1111/j.1558-5646.2012.01574.x}{doi: 10.1111/j.1558-5646.2012.01574.x}
-\item Boettiger, C., Dushoff, J., Weitz, J. S. (2010) ``Variation in the phenotypic dynamics of evolving populations,'' {\it Theoretical Population Biology} 77, 6-13. \href{http://dx.doi.org/10.1016/j.tpb.2009.10.003}{doi: 10.1016/j.tpb.2009.10.003}
-\item Wray, J., Bahcall, N., Bode, P., Boettiger, C., Hopkins, P.  (2006)  ``The Shape, Multiplicity, and Evolution of Superclusters in $\Lambda$ CDM Cosmology.''  {\it Astrophysical Journal} 652, 907. \href{http://dx.doi.org/10.1086/508600}{doi: 10.1086/508600}
-\end{etaremune}
-{ \footnotesize $^*$ denotes equal contribution.}
-
-
-\section{Presentations} 
-\section{\textnormal{2014}}
-  \emph{Zoology seminar, U Wisconsin-Madison, \textbf{invited speaker}}
-  \emph{American Society of Naturalists} Asilomar, CA \\ 
-\section{\textnormal{2013}}
-  \emph{Ecological Society of America} Minneapolis, MN \\ 
-  \emph{WHOI}; Cape Cod, MA \textbf{invited speaker}.\\
-  UC Davis Dept of Envir Resources and Econ; Davis, CA \textbf{invited speaker}.\\
-\section{\textnormal{2012}}
-  \emph{Ecological Society of America} Portland, OR. \\ 
-  \emph{Evolution}; Ottawa, CAN. SSB Symposium \textbf{invited speaker}.\\
-  \emph{iEvoBio}; Ottawa, CAN. \\
-  \emph{Computational Science}; Washington DC. 
-\section{\textnormal{2011}}
-  \emph{Ecological Society of America}; Austin, TX. \\
-  \emph{Evolution}; Norman, OK. \\
-  \emph{iEvoBio}; Norman, OK. \\
-  \emph{Science Online}; Durham, NC.\\
-  \emph{Society for Integrative and Comparative Biology.} Salt Lake City, UT. \\
- \section{\textnormal{2010/2009}}
-  \emph{iEvoBio}; Portland, OR. 2010 \\
-  \emph{Evolution}; Portland OR. 2010 \\
-  \emph{University of Tennessee}, Knoxville, TN. 2009 \\
-  \emph{IIASA}, Vienna; Austria. 2009
-
-
-\section{Invited Workshops}
-\begin{format}
-\title{l}\dates{r} \\
-\body
-\end{format}
-
-\title{NCEAS Working Group}\dates{2014}
-\begin{position}
-A toolbox for analysis of long-term ecological dynamics using the Kepler Workflow System
-\vspace{-.25cm}
-\end{position}
-
-
-\title{Mathematical Biology Institute (MBI), Columbus, OH}\dates{2013}
-\begin{position}
-\href{http://www.mbi.ohio-state.edu/2013/ws3description.html}{Sustainable Management of Living Natural Resources} Columbus, OH.  
-\vspace{-.25cm}
-\end{position}
-
-\title{Planning workshops for an NSF software sustainability center}\dates{2013}
-\begin{position}
-\href{http://isees.nceas.ucsb.edu}{Institute for Sustainable Earth and Environmental Software}. Mtgs in Oakland CA and Santa Barbara, CA
-\vspace{-.25cm}
-\end{position}
-
-
-
-\title{NIMBioS working group }\dates{2011-13}
-\begin{position}
-\href{http://www.nimbios.org/workinggroups/WG_PDG}{Pretty Darn Good Control}, Knoxville, TN  
-\vspace{-.25cm}
-\end{position}
-
-\title{American Institute for Mathematics}\dates{2011}
-\begin{position}
- \href{http://www.aimath.org/WWN/populationmodel}{Stochastic and deterministic spatial modeling in population dynamics}, Palo Alto, CA  \vspace{-.25cm}
-\end{position}
-
- 
-\section{Grants}
-\begin{format}
-\title{l}\dates{r} \\
-\body
-\end{format}
-
-\title{PI on \textbf{NSF} EAGER}\dates{2013-15}
-\begin{position}
-  The Codemeta Project: A Rosetta Stone for Software Metadata (\$165,782)
-  \vspace{-.25cm}
-\end{position}
-
-\title{Co-PI on \textbf{Helmsley Trust} Grant}\dates{2015-18}
-\begin{position}
-  For the \href{http://ropensci.org}{rOpenSci Project}  (\$2,900,000)
-  \vspace{-.25cm}
-\end{position}
-
-
-\title{\textbf{NSF} Mathematical Biology Postdoctoral Scholar}\dates{2013-15}
-\begin{position}
-  Management for an uncertain world: robust decision theory in face \\
-  of regime shifts Grant No:  DBI-1306697 (\$138,000)
-  \vspace{-.25cm}
-\end{position}
-
-\title{Co-PI on \textbf{Alfred P. Sloan Foundation} Grant, Phase II}\dates{2014-15}
-\begin{position}
-  For the \href{http://ropensci.org}{rOpenSci Project}  (\$300,000)
-  \vspace{-.25cm}
-\end{position}
-
-
-\title{Co-PI on \textbf{Alfred P. Sloan Foundation} Grant}\dates{2013-14}
-\begin{position}
-  For the \href{http://ropensci.org}{rOpenSci Project}  (\$180,000)
-  \vspace{-.25cm}
-\end{position}
-
-\title{PI 50,000 hrs \textbf{DOE} supercomputing time}\dates{2011, renewed 2012}
-\begin{position} 
-  NERSC center, Department of Energy, Grant No. DE-AC02-05CH11231
-  \vspace{-.25cm}
-\end{position}
-
-\title{\textbf{IIASA} YSSP fellowship}\dates{2009}
-\begin{position} 
-  award from the National Academy of Sciences, \textbf{NSF} Grant No. OISE-0738129, (\$8,000)
-  \vspace{-.25cm}
-\end{position}
-
-\title{\textbf{DOE} Computational Science Graduate Fellowship}\dates{2008-2012}
-\begin{position} 
-  Department of Energy, Grant No: DE-FG02-97ER25308, (\$144,000)
-  \vspace{-.25cm}
-\end{position}
-
-
-\section{Honors \& \\ Awards}
-\begin{format}
-\title{l}\dates{r}\\
-\body
-\end{format}
-
-\title{\emph{ASN Speaker Award} (Best post-doctoral talk)}\dates{2014}
-\begin{position} \vspace{-.8cm} \end{position}
-
-\title{\emph{Volterra Award} (Best student talk, ESA Theory)}\dates{2011}
-\begin{position} \vspace{-.8cm} \end{position}
-
-\title{\emph{Mendeley \& PLoS software competition}, \$1,000}\dates{2011}
-\begin{position} \vspace{-.8cm} \end{position}
-
-\title{Elected to Membership in the Society of \emph{Sigma Xi}}\dates{2007}
-\begin{position}   \vspace{-.8cm} \end{position}
-
-\title{\emph{Allen G. Shenstone Prize in Physics}, Princeton}\dates{2007}
-\begin{position}   \vspace{-.8cm} \end{position}
-
-\title{\emph{The Class of 1870 Old English Prize},  Princeton}\dates{2007}
-\begin{position}   \vspace{-.8cm} \end{position}
-
-\title{\emph{Kusaka Memorial Prize in Physics}, Princeton}\dates{2006}
-\begin{position}   \vspace{-.8cm} \end{position}
-
-\title{\emph{Plasma Physics Fellow},  PPPL }\dates{2006}
-\begin{position}   \vspace{-.8cm} \end{position}
-
-
-
-  
-  \section{Authored Software (selected)} 
-{ \footnotesize
-\texttt{RNeXML}: The semantically rich, next generation phylogenetic standard (NeXML) for R (2013) \\
-\texttt{reml}: Interpret, generate and publish Ecological Metadata (EML) files (2013) \\
-\texttt{wrightscape}: Infer adaptive landscapes from phylogenetic trees (2012) \\
-\texttt{knitcitations}: Dynamic citation manager for R. (2012) \\
-\texttt{pmc}: Phylogenetic Monte Carlo tools to quantify uncertainty in comparative methods. (2011)\\
-\texttt{treeBASE}: An R interface to the TreeBASE API (2011) \\
-\texttt{rfishbase}: An R interface to the fishbase database (2011) \\
-\texttt{BranchingTime}: Individual based simulations for adaptive dynamics. (2011) \\
-\texttt{populationdynamics}: Gillespie algorithms for exact simulation of common ecological models (2011) \\ 
-More software at \href{http://github.com/cboettig}{github.com/cboettig} and \href{http://github.com/ropensci}{github.com/ropensci} 
-}
-
-\section{Reviewer for:}
-
-\section{\textnormal{2014}}
-\emph{Proceedings of the Royal Society B}, \emph{Ecology Letters}, \emph{Pensoft Biodiversity Data Journal}, \emph{Theoretical Ecology}, emph{Journal of Theoretical Biology}
-
-\section{\textnormal{2013}}
-\emph{Theoretical Ecology}, \emph{Francis \& Taylor}, \emph{Ideas in Ecology and Evolution}, \emph{The R Journal}, \emph{National Science Foundation}, \emph{Proceedings of the Royal Society B}, \emph{Journal of Open Research Software}, \emph{Canadian Journal of Fisheries and Aquatic Sciences} 
-
-\section{\textnormal{2012}}
-\emph{Theoretical Ecology}, \emph{Evolution}, \emph{Methods in Ecology and Evolution}, \emph{Proceedings of the Royal Society B}, \emph{PLoS ONE}, \emph{Ecology}, \emph{Conservation Letters}, \emph{Ecology Letters} 
-
-\section{\textnormal{2011}}
-\emph{Theoretical Ecology}, \emph{Ecological Modelling}, \emph{Evolution}, \emph{Methods in Ecology and Evolution}, \emph{Ecosphere}, 
-
-\section{\textnormal{2010 \& prior}}
-\emph{Theoretical Ecology}, \emph{Journal of Mathematical Biology}, \emph{Ecological Modelling}, \emph{Ecology}
-
-\section{Other Service:} 
-\begin{format}
-\title{l}\dates{r}\\
-\body 
-\end{format}
-
-\title{Student  member for the CBS Dean search.}\dates{2011}
-\begin{position} \vspace{-.8cm} \end{position}
-\title{Co-chaired the student group on Open Science}\dates{2010-12}
-\begin{position} \vspace{-.8cm} \end{position}
-\title{Co-chaired the Graduate Teaching Community}\dates{2009-10}
-\begin{position} \vspace{-.8cm} \end{position}
-\title{Student member for the CPB program review.}\dates{2010}
-\begin{position} \vspace{0cm} \end{position}
-
-
-\section{Teaching\\Experience}
-\begin{format}
-\title{l}\dates{r}\\
-\body
-\end{format}
-
-\title{ESA Workshop Instructor}
-\dates{Aug 2012}
-\begin{position} \vspace{-.8cm} \end{position}
-\title{Mentor for Google Summer of Code, R-Project}
-\dates{Summer 2012}
-\begin{position} \vspace{-.8cm} \end{position}
-\title{Instructor, Bodega Phylogenetics Workshop}
-\dates{Winter 2011}
-\begin{position} \vspace{-.8cm} \end{position}
-\title{Student Mentor, CLIMB program}
-\dates{Spring, Summer 2008}
-\begin{position} \vspace{-.8cm} \end{position}
-\title{Teaching Assistant: Introductory Zoology}
-\dates{Winter 2008} \begin{position} \vspace{-.0cm} \end{position}
-
-
-
-
-\section{Interviews}
-
-Mascarelli, A. (2014) ``Research tools: Jump off the page.'' \textbf{Nature} 507, 523–525. \href{http://doi.org/10.1038/nj7493-523a}{doi:10.1038/nj7493-523a} \\
-Check Hayden E (2013). ``Mozilla Plan Seeks to Debug Scientific Code.'' \textbf{Nature}, 501, pp. 472-472. \href{http://doi.org/10.1038/501472a}{doi:10.1038/501472a} \\ 
-Van Noorden R (2013). ``Data-Sharing: Everything on Display.'' \textbf{Nature}, 500, pp. 243-245. \href{http://doi.org/10.1038/nj7461-243a}{doi:10.1038/nj7461-243a} \\
-Gewin, Virginia (2013). ``Turning Point: Carl Boettiger'' \textbf{Nature}, 493 p 711 \href{http://doi.org/10.1038/nj7434-711a}{doi:10.1038/nj7434-711a} \\
-Wald, Chelsea (2010). ``Scientists Embrace Openness'' \textbf{Science}. \href{http://doi.org/10.1126/science.caredit.a1000036}{doi:10.1126/science.caredit.a1000036} 
-
-\section{References}
-
-Alan Hastings, Dept of Env Sci \& Policy, UC Davis \href{mailto:amhastings@ucdavis.edu}{amhastings@ucdavis.edu} \\ 
-Marc Mangel, Dept of Applied Math \& Statistics, UC Santa Cruz \href{mailto:msmangel@ucsc.edu}{msmangel@ucsc.edu} \\
-Matt Jones, Director of Informatics, National Center for Ecological Analysis and Synthesis \href{mailto:jones@nceas.ucsv.edu}{jones@nceas.ucsb.edu} \\
-
-%% Simon Levin, Dept of Ecology \& Evolution, Princeton \href{mailto:slevin@princeton.edu}{slevin@princeton.edu} \\
-
-%% Stephan Munch, Southwest Fisheries Science Center, NOAA \href{mailto:steve.munch@noaa.gov}{steve.munch@noaa.gov} \\
-
-% Sebastian Schreiber, Dept of Evolution \& Ecology, UC Davis \href{mailto:sschreiber@ucdavis.edu}{sschreiber@ucdavis.edu} \\
-%Peter Wainwright, Dept of Evolution \& Ecology, UC Davis \href{mailto:pcwainwright@ucdavis.edu}{pcwainwright@ucdavis.edu} \\
-%Brian O'Meara, Dept of Ecology \& Evolution, Knoxville, TN \href{mailto:bomeara@utk.edu}{bomeara@utk.edu} \\
-%Jim Sanchirico, Dept of Env Sci \& Policy, UC Davis \href{mailto:jsanchirico@ucdavis.edu}{jsanchirico@ucdavis.edu} \\
-%Duncan Temple-Lang, Dept of Statistics, UC Davis \href{mailto:duncan@wald.ucdavis.edu}{duncan@wald.ucdavis.edu} \\
-
-
-
-\end{resume}
-\let\thefootnote\relax\footnote{Updated \today}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\small{Undergraduate electrical and electronic engineer completing the final year of a master's degree. Passionate about science, with strong technical, business, and interpersonal skills for working in a team and successfully completing a project.}
+
+\section{Previous Employment}
+
+\section{employment}\label{employment}
+
+\begin{itemize}
+\item
+  2015 Assistant Professor, Department of
+  \href{http://ourenvironment.berkeley.edu}{Environmental Science,
+  Policy and Management}, \href{http://www.berkeley.edu}{University of
+  California Berkeley}
+\item
+  2013-2015 NSF Post-doctoral Scholar in the Department of
+  \href{https://www.soe.ucsc.edu/departments/applied-mathematics-statistics}{Applied
+  Mathematics and Statistics} at the
+  \href{http://www.ucsc.edu}{University of California, Santa Cruz}
+  Mentors: \href{http://users.soe.ucsc.edu/~msmangel/}{Marc Mangel},
+  \href{http://swfsc.noaa.gov/staff.aspx?\&id=17294}{Stephan Munch}
+\end{itemize}
+
+\section{education}\label{education}
+
+\begin{itemize}
+\item
+  2012 Ph.D Population Biology, \href{http://ucdavis.edu}{University of
+  California, Davis}. Mentor: \href{http://two.ucdavis.edu/~me}{Alan
+  Hastings}
+\item
+  2007 A.B in Physics \href{http://princeton.edu}{Princeton University},
+  with honors and certificates in \emph{biophysics} and \emph{applied
+  and computational mathematics.}
+\end{itemize}
+
+\section{publications}\label{publications}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  James J. Wray, Neta A. Bahcall, Paul Bode, \textbf{Carl Boettiger},
+  Phillip Hopkins. (2006) The Shape, Multiplicity, and Evolution of
+  Superclusters in Lambda-CDM Cosmology, \emph{The Astrophysical
+  Journal} 652 (2) 907-916.
+  \href{http://dx.doi.org/10.1086/508600}{doi}:10.1086/508600
+  (\href{http://arxiv.org/abs/astro-ph/0603060}{preprint})
+\item
+  \textbf{Carl Boettiger}, Jonathan Dushoff, Joshua S Weitz (2010)
+  Fluctuation domains in adaptive evolution, \emph{Theoretical
+  Population Biology} 77 (1) 6-13.
+  \href{http://dx.doi.org/10.1016/j.tpb.2009.10.003}{doi}:10.1016/j.tpb.2009.10.003
+  (\href{http://arxiv.org/abs/1004.4233}{preprint})
+  (\href{https://github.com/cboettig/fluctuationDomains}{code})
+  (\href{http://datadryad.org/handle/10255/dryad.37625}{data})
+\item
+  \textbf{Carl Boettiger}, Graham Coop, Peter Ralph (2012) Is your
+  phylogeny informative? Measuring the power of comparative methods,
+  \emph{Evolution} 66 (7) 2240-51.
+  \href{http://dx.doi.org/10.1111/j.1558-5646.2011.01574.x}{doi}:10.1111/j.1558-5646.2011.01574.x
+  (\href{http://arxiv.org/abs/1110.4944}{preprint})
+  (\href{https://github.com/cboettig/pmc}{code})
+  (\href{http://datadryad.org/handle/10255/dryad.37645}{data})
+\item
+  Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, \textbf{Carl Boettiger} and
+  Brian O'Meara, (2012). Modeling Stabilizing Selection: Expanding the
+  Ornstein-Uhlenbeck Model of Adaptive Evolution, \emph{Evolution} 66
+  (8) 2369-2383.
+  \href{http://dx.doi.org/10.1111/j.1558-5646.2012.01619.x}{doi}:10.1111/j.1558-5646.2012.01619.x
+  (\href{http://cran.r-project.org/web/packages/OUwie/index.html}{software})
+\item
+  \textbf{Carl Boettiger} and Alan Hastings (2012). Quantifying Limits
+  to Detection of Early Warning for Critical Transitions, \emph{Journal
+  of the Royal Society: Interface} 9 (75) 2527-2539.
+  \href{http://dx.doi.org/10.1098/rsif.2012.0125}{doi}:10.1098/rsif.2012.0125
+  (\href{http://arxiv.org/abs/1204.6231}{preprint})
+  (\href{https://github.com/cboettig/earlywarning}{code})
+\item
+  \textbf{Carl Boettiger}, Duncan Temple Lang (2012). Treebase: An R
+  package for discovery, access and manipulation of online phylogenies,
+  \emph{Methods in Ecology and Evolution} 3 (6) 1060--1066.
+  \href{http://dx.doi.org/10.1111/j.2041-210X.2012.00247.x}{doi}:10.1111/j.2041-210X.2012.00247.x
+  (\href{https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md}{preprint})
+  (\href{https://github.com/ropensci/treebase}{code})
+  (\href{http://cran.at.r-project.org/web/packages/treebase/}{software})
+\item
+  \textbf{Carl Boettiger}, Duncan Temple Lang, Peter Wainwright (2012).
+  rfishbase: exploring, manipulating and visualizing FishBase data from
+  R, \emph{Journal of Fish Biology}. 81 (6) 2030--2039.
+  \href{http://dx.doi.org/10.1111/j.1095-8649.2012.03464.x}{doi}:10.1111/j.1095-8649.2012.03464.x
+  (\href{https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md}{preprint})
+  (\href{https://github.com/ropensci/rfishbase}{code})
+  (\href{http://cran.at.r-project.org/web/packages/rfishbase/}{software})
+\item
+  \textbf{Carl Boettiger}, Alan Hastings (2012). Early Warning Signals
+  and the Prosecutor's Fallacy, \emph{Proceedings of the Royal Society
+  B} 279 (1748) 4734-4739.
+  \href{http://dx.doi.org/10.1098/rspb.2012.2085}{doi}:10.1098/rspb.2012.2085
+  (\href{http://arxiv.org/abs/1210.1204}{preprint})
+  (\href{https://github.com/cboettig/prosecutors-fallacy}{code})
+  (\href{http://dx.doi.org/10.5061/dryad.2k462}{data})
+\item
+  \textbf{Carl Boettiger}, Alan Hastings (2013). Tipping points: From
+  patterns to predictions, \emph{Nature} 493, 157--158.
+  \href{http://dx.doi.org/10.1038/493157a}{doi}:10.1038/493157a
+\item
+  \textbf{Carl Boettiger}*, Noam Ross*, Alan Hastings. (2013) Early
+  warning signals: The charted and uncharted territories.
+  \emph{Theoretical Ecology}
+  \href{http://dx.doi.org/10.1007/s12080-013-0192-6}{doi}:10.1007/s12080-013-0192-6
+  (\href{http://arxiv.org/abs/1305.6700}{preprint})
+  (\href{https://github.com/cboettig/ews-review}{code})
+\item
+  \textbf{Carl Boettiger}, Alan Hastings. (2013) No early warning
+  signals for stochastic transitions: insights from large deviation
+  theory. \emph{Proceedings of the Royal Society B}.
+  \href{http://dx.doi.org/10.1098/rspb.2013.1372}{doi}:10.1098/rspb.2013.1372
+  (\href{http://arxiv.org/abs/1307.4415}{preprint})
+  (\href{https://github.com/cboettig/prosecutors-fallacy}{code})
+\item
+  \textbf{Carl Boettiger}, Marc Mangel, Stephan Munch. (2015) Avoiding
+  tipping points in fisheries management through Gaussian process
+  dynamic programming. \emph{Proceedings of the Royal Society B}
+  282(1801), 8--11.
+  \href{http://dx.doi.org/10.1098/rspb.2014.1631}{doi}:10.1098/rspb.2014.1631
+  (\href{http://arxiv.org/abs/1412.8081}{preprint})
+  (\href{https://github.com/cboettig/nonparametric-bayes}{code})
+  (\href{http://dx.doi.org/10.5061/dryad.mj226}{data})
+\item
+  \textbf{Carl Boettiger}. (2015) An introduction to Docker for
+  reproducible research. ACM SIGOPS Operating Systems Review, Special
+  Issue on Repeatability and Sharing of Experimental Artifacts. 49(1),
+  71-79.
+  \href{http://dx.doi.org/10.1145/2723872.2723882}{doi}:10.1145/2723872.2723882
+  (\href{http://arxiv.org/abs/1410.0846}{preprint})
+\item
+  \textbf{Carl Boettiger}, Scott Chamberlain, Rutger Vos and Hilmar
+  Lapp. (2015) RNeXML: a package for reading and writing richly
+  annotated phylogenetic, character, and trait data in R. Methods in
+  Ecology and Evolution.
+  \href{http://dx.doi.org/10.1111/2041-210X.12469}{doi}:10.1111/2041-210X.12469
+  (\href{http://arxiv.org/abs/1506.02722}{arxiv})
+  (\href{https://github.com/ropensci/RNeXML}{code})
+  (\href{http://cran.rstudio.com/web/packages/RNeXML}{software})
+\item
+  \textbf{Carl Boettiger}, Scott Chamberlain, Edmund Hart, Karthik Ram.
+  (2015) Building Software, Building Community: Lessons from the
+  rOpenSci Project. \emph{Journal of Open Research Software} 3: e8,
+  \href{http://dx.doi.org/10.5334/jors.bu}{doi}:10.5334/jors.bu
+\item
+  \textbf{Carl Boettiger}, Michael Bode, James N. Sanchirico, Jacob
+  LaRiviere, Alan Hastings, and Paul Robert Armsworth. (2015) Optimal
+  management of a stochastically varying population when policy
+  adjustment is costly. \emph{Ecological Applications} 26 (3) 808-817.
+  \href{http://dx.doi.org/10.1890/15-0236}{doi}:10.1890/15-0236
+  (\href{http://arxiv.org/pdf/1507.07037v1.pdf}{preprint})
+  (\href{https://github.com/cboettig/pdg_control}{code})
+\end{enumerate}
+
+\section{grants}\label{grants}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Computational Science Graduate Fellowship (2008). Department of
+  Energy, \#DE-FG02-97ER25308, 149,000 USD.
+  (\href{https://dx.doi.org/10.6084/m9.figshare.2010246}{proposal})
+\item
+  IIASA YSSP fellowship (2009). National Academy of Sciences,
+  OISE-0738129, 8,000 USD.
+  (\href{http://doi.org/10.6084/m9.figshare.678310}{proposal})
+\item
+  Supercomputing grant (2011). DOE \#DE-AC02-05CH11231. 50,000hrs.
+\item
+  \href{http://ropensci.org}{rOpenSci Project} (2013, Co-PI). Alfred P.
+  Sloan Foundation 180,000 USD.
+\item
+  \href{http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm}{NSF Biology
+  Post-doc} (2013). NSF
+  \href{http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697}{\#DBI-1306697},
+  138,000 USD.
+  (\href{http://doi.org/10.6084/m9.figshare.652970}{proposal})
+\item
+  \href{http://ropensci.org}{rOpenSci Project}, phase II. (2014, Co-PI).
+  Alfred P. Sloan Foundation 300,000 USD.
+\item
+  Codemeta project (2015). NSF EAGER,
+  \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758}{\#1549758}
+  165,782 USD.
+  (\href{https://dx.doi.org/10.6084/m9.figshare.2055972}{proposal})
+\item
+  \href{http://ropensci.org}{rOpenSci Project} (2015-2018, Co-PI).
+  Helmsley Trust 2,900,000 USD.
+\end{enumerate}
+
+\section{invited talks}\label{invited-talks}
+
+\subsection{2015}\label{section}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://ecows.oc.ntu.edu.tw/itnlws/}{Empirical Dynamical Modeling
+  and Forecasting in Nonlinear Systems}, NTU, Taiwan.
+\end{itemize}
+
+\subsection{2014}\label{section-1}
+
+\begin{itemize}
+\tightlist
+\item
+  Berkeley Initiative for Global Change Biology (student organized), UC
+  Berkeley, CA.
+\item
+  \href{http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html}{DIMACS}
+  Global Change, Berkeley CA.
+\item
+  Zoology Seminar, University of Wisconsin, Madison, WI.
+\item
+  ESPM Seminar, UC Berkeley, CA.
+\end{itemize}
+
+\subsection{2013 \& prior}\label{prior}
+
+\begin{itemize}
+\tightlist
+\item
+  MBI speaker,
+  \href{http://www.mbi.ohio-state.edu/2013/ws3description.html}{Sustainable
+  Management of Living Natural Resources}, Columbus, OH.
+\item
+  WHOI Seminar speaker, Woods Hole, MA.
+\item
+  UC Davis Dept of Environmental Resources and Economics; Davis, CA.
+\item
+  SSB Symposium speaker, Evolution Conference, Ottawa, CAN.
+\end{itemize}
+
+\section{invited workshops}\label{invited-workshops}
+
+\subsection{2016}\label{section-2}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://sched.co/5wK5}{Force16 Codemeta Workshop}, Portland OR
+  (organizer)
+\item
+  \href{https://codemeta.github.io}{CodeMeta NSF Workshop} Portland, OR
+  (organizer)
+\item
+  \href{http://unconf16.ropensci.org}{rOpenSci unconference}, San
+  Francisco, CA
+\end{itemize}
+
+\subsection{2015}\label{section-3}
+
+\begin{itemize}
+\tightlist
+\item
+  Moore-Sloan Data Science Environments: Second Annual Data Science
+  Summit
+\item
+  \href{https://github.com/NCEAS/ds-workshop-2015}{Data Intensive
+  Training Workshop}, NCEAS, Santa Barbara, CA
+\item
+  \href{http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm}{NSF Big Data
+  Hubs} Design Charette, Western Region.
+\item
+  \href{http://unconf.ropensci.org/}{rOpenSci unconference}, San
+  Fransisco CA.
+\item
+  PDGC Workshop, NIMBIOS, Knoxville TN
+\end{itemize}
+
+\subsection{2014}\label{section-4}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://ropensci.org/blog/2014/05/14/ropenhack/}{rOpenSci
+  unconference}, San Fransisco CA.
+\item
+  \href{https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014}{Reproducible
+  Science: Curriculum \& Workflow}, NESCent, Durham, NC.
+\item
+  \href{http://wssspe.researchcomputing.org.uk/wssspe2/}{WSSSPE 2.0}.
+  New Orleans, LA.
+\item
+  Workflows Working Group, NCEAS, Santa Barbara, CA.
+\end{itemize}
+
+\subsection{2013 \& prior}\label{prior-1}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://www.mbi.ohio-state.edu/2013/ws3description.html}{Sustainable
+  Management of Living Natural Resources}, MBI Columbus, OH.
+\item
+  Academic software \& workforce development,
+  \href{http://isees.nceas.ucsb.edu}{ISEES}. Oakland, CA.
+\item
+  Software Lifecycle, \href{http://isees.nceas.ucsb.edu}{ISEES}, Santa
+  Barbara, CA.
+\item
+  \href{http://www.nimbios.org/workinggroups/WG_PDG}{Pretty Darn Good
+  Control}, NIMBIOS, Knoxville, TN
+\item
+  \href{http://www.aimath.org/WWN/populationmodel/}{Stochastic spatial
+  modeling in population dynamics}, AIM, Palo Alto, CA.
+\end{itemize}
+
+\section{awards}\label{awards}
+
+\begin{itemize}
+\tightlist
+\item
+  2011 \emph{Volterra Award} (Best student talk, ESA Theory Section)
+\item
+  2007 Elected to Membership in the Society of \emph{Sigma Xi}
+\item
+  2007 Allen G. Shenstone Prize in Physics, Princeton University
+\item
+  2007 The Class of 1870 Old English Prize, Princeton University
+\item
+  2006 Kusaka Memorial Prize in Physics, Princeton University
+\item
+  2006 Plasma Physics Fellow, PPPL
+\end{itemize}
+
+\section{service}\label{service}
+
+\subsection{national}\label{national}
+
+\begin{itemize}
+\tightlist
+\item
+  NCEAS Scientific Advisory
+  \href{https://www.nceas.ucsb.edu/news/nceas-appoints-new-science-advisers}{Board}
+\item
+  \href{http://ropensci.org/about/\#leadership}{rOpenSci Leadership
+  team}
+\item
+  Jestream NSF cloud computing Stakeholder Advisory Board
+\end{itemize}
+
+\subsection{campus}\label{campus}
+
+\begin{itemize}
+\tightlist
+\item
+  UC Berkeley, Berkeley Research Computing Advisory Committee
+\end{itemize}
+
+\subsection{reviewer for:}\label{reviewer-for}
+
+\begin{itemize}
+\item
+  \textbf{2015} Proceedings of the National Academy of Sciences, Journal
+  of Statistical Software, Bioinformatics, Chapman \& Hall, Ecology
+  Letters, Ecology, PeerJ, F1000 Research, Journal of Librarianship \&
+  Scholarly Communication, Nature Communications, Theoretical Ecology,
+  Trends in Ecology \& Evolution, Grid Computing
+\item
+  \textbf{2014} Theoretical Ecology, Biodiversity Data Journal, Ecology
+  Letters, Journal of Theoretical Biology, American Naturalist,
+  Proceedings of the National Academy of Sciences, Proceedings of the
+  Royal Society B
+\item
+  \textbf{2013} Theoretical Ecology, Francis \& Taylor, Ideas in Ecology
+  and Evolution, The R Journal, National Science Foundation, Proceedings
+  of the Royal Society B, Journal of Open Research Software, Canadian
+  Journal of Fisheries and Aquatic Sciences
+\item
+  \textbf{2012} Theoretical Ecology, Evolution, Methods in Ecology and
+  Evolution, Proceedings of the Royal Society B, PLoS ONE, Ecology,
+  Conservation Letters, Ecology Letters
+\item
+  \textbf{2011} Theoretical Ecology, Ecological Modelling, Evolution,
+  Methods in Ecology and Evolution, Ecosphere
+\item
+  \textbf{2010 \& prior} Theoretical Ecology, Journal of Mathematical
+  Biology, Ecological Modelling, Ecology
+\end{itemize}
+
+\section{selected software}\label{selected-software}
+
+\begin{itemize}
+\tightlist
+\item
+  Carl Boettiger, Scott Chamberlain, Rutger Vos and Hilmar Lapp. (2015)
+  RNeXML: a package for reading and writing richly annotated
+  phylogenetic, character, and trait data in R. On
+  \href{https://cran.rstudio.com/web/packages/RNeXML/}{software}
+\item
+  Carl Boettiger (2013). knitcitations: Dynamic citations for dynamic
+  documents. On
+  \href{http://cran.r-project.org/web/packages/knitcitations/}{software}.
+\item
+  Carl Boettiger, Scott Chamberlain, Karthik Ram, Edmund Hart (2013).
+  rfigshare: Programmatic access to the figshare data repository. On
+  \href{http://cran.r-project.org/web/packages/rfigshare/}{software}.
+\item
+  Carl Boettiger (2012). pmc: Phylogenetic Monte Carlo. On
+  \href{https://cran.rstudio.com/web/packages/pmc/}{software}.
+\item
+  Carl Boettiger \& Duncan Temple Lang (2011). treebase: An R interface
+  to TreeBASE. On
+  \href{http://cran.r-project.org/web/packages/treebase/}{software}.
+\item
+  Carl Boettiger (2011). rfishbase: Programmatic access to FishBase. On
+  \href{http://cran.r-project.org/web/packages/rfishbase/}{software}.
+\end{itemize}
+
+I am also a founding member of the \href{http://ropensci.org}{rOpenSci
+project}. My software impact is also measured relative to other
+academics by \href{http://depsy.org/person/329935}{depsy.org}
+
+\section{theses}\label{theses}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Carl Boettiger, David Huse (2006) Clonal Interference Models in
+  Population Genetics. \emph{Princeton Physics Dept}.
+  \href{http://dx.doi.org/10.6084/m9.figshare.678305}{doi}:10.6084/m9.figshare.678305
+\item
+  Carl Boettiger, Joshua Weitz, Simon Levin (2007) Adaptive Dynamics:
+  Branching Phenomena and the Canonical Equation \emph{Princeton Physics
+  Dept}.
+  \href{http://dx.doi.org/10.6084/m9.figshare.678306}{doi}:10.6084/m9.figshare.678306
+\item
+  Carl Boettiger, Stephen Pacala, David Huse (2007) Ensemble Behavior
+  from Individual Dynamics in Multispecies Forest Populations.
+  \emph{Princeton Physics Dept}.
+  \href{http://dx.doi.org/10.6084/m9.figshare.678304}{doi}:10.6084/m9.figshare.678304
+\item
+  Carl Boettiger (2012). Regime shifts in ecology and evolution (PhD
+  Dissertation).
+  \href{http://dx.doi.org/10.6084/m9.figshare.97218}{doi}:10.6084/m9.figshare.97218
+\end{enumerate}
+
+\section{media interviews}\label{media-interviews}
+
+\begin{itemize}
+\tightlist
+\item
+  Tachibana, C. (2014). ``The paperless lab'' \emph{Science} 345(6195)
+  pp.~468-470.
+  \href{http://www.sciencemag.org/site/products/lst_20140613.xhtml}{10.1126/science.opms.p1400087}
+\item
+  Mascarelli, A. (2014) ``Research tools: Jump off the page.''
+  \emph{Nature} 507, 523--525.
+  \href{http://dx.doi.org/10.1038/nj7493-523a}{doi}:10.1038/nj7493-523a
+\item
+  Check Hayden E (2013). ``Mozilla Plan Seeks to Debug Scientific
+  Code.'' \emph{Nature}, 501, pp.~472-472.
+  \href{http://dx.doi.org/10.1038/501472a}{doi}:10.1038/501472a
+\item
+  Van Noorden R (2013). ``Data-Sharing: Everything on Display.''
+  \emph{Nature}, 500, pp.~243-245.
+  \href{http://dx.doi.org/10.1038/nj7461-243a}{doi}:10.1038/nj7461-243a
+\item
+  Gewin, Virginia (2013). ``Turning Point: Carl Boettiger''
+  \emph{Nature}, 493 p 711
+  \href{http://dx.doi.org/10.1038/nj7434-711a}{doi}:10.1038/nj7434-711a
+\item
+  Wald, Chelsea (2010). ``Scientists Embrace Openness'' \emph{Science}.
+  \href{http://dx.doi.org/10.1126/science.caredit.a1000036}{doi}:10.1126/science.caredit.a1000036
+\end{itemize}
+
 \end{document}
 
 
-
-\section{\textnormal{Submitted}}
-
-Samantha A. Price, Lars Schmitz, Philip S. L. Anderson, Carl Boettiger, Peter C. Wainwright. Comparing disparity between traits using the Ornstein-Uhlenbeck model: a test of functional constraint on the eyes of labrid fishes.
-
-Carl Boettiger, Noam Ross, Alan Hastings. Early warning signals: The charted and uncharted territories.
-
-
-
-
-
-\section{Computer \\ Languages}
-R, C, OpenMP, C++, XML, JSON, \LaTeX, SWeave, bash.\\
-python, html, ruby, jquery \\
-
-
-
-\section{Coursework, Princeton \\ {\footnotesize * = Graduate course}
-}
-
-MATHEMATICS\\
-Analysis in a Single Variable, Honors Linear Algebra, Analysis in Several Variables, Complex Analysis with Applications, Differential Equations, Statistics in Biology, Mathematical Modeling
-
-BIOLOGY\\
-Quant Principles in Cell Biology, Astrobiology, Advanced Lab in Molecular Biology, Honors Chemistry, Genetics, Method and Logic in Quantitative Biology*, Geomicrobiology*, Cellular and Biochemical Computation*
-
-PHYSICS\\
-Mechanics, Electromagnetism, Computational Physics Seminar,  Lagrangian Mechanics, Astronomy, Experimental Physics Seminar, Quantum Mechanics I, Quantum Mechanics II,  Thermal Physics, Advanced Physics Lab, Advanced Electromagnetism,  Biophysics* 
-
-HUMANITIES\\
-Intermediate French, Advanced French, History of Science, Cranks and Visionaries in Science, Social Revolution in Muslim World, Logic, Moral Philosophy, Shakespeare, Old English, Heroic Literature, Civilization Early Middle Ages
-
-
-\section{Coursework, UC Davis}
-ECOLOGY \& EVOLUTION \\
-Population Biology Core Sequence, Mathematical Methods in Ecology, Theoretical Ecology, Synchrony in Ecology, Resource Economics 
-
-COMPUTER SCIENCE \\
-Algorithms, Statistical Computing, Neural Networks 
-
-MATHEMATICS\\
-Stochastic Differential Equations I \& II, Mathematical Biology 
-
-  
+%% end of file `template.tex'.
 
 
