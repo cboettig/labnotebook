@@ -199,7 +199,7 @@ title: Vita
 - [Data Intensive Training Workshop](https://github.com/NCEAS/ds-workshop-2015), NCEAS, Santa Barbara, CA 
 - [NSF Big Data Hubs](http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm) Design Charette, Western Region.
 - [rOpenSci unconference](http://unconf.ropensci.org/), San Francisco CA.
-- P[Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville TN
+- [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville TN
 
 ## 2014 
 
@@ -213,7 +213,7 @@ title: Vita
 - [Sustainable Management of Living Natural Resources](http://www.mbi.ohio-state.edu/2013/ws3description.html), MBI Columbus, OH.
 - Academic software & workforce development, [ISEES](http://isees.nceas.ucsb.edu). Oakland, CA.
 - Software Lifecycle, [ISEES](http://isees.nceas.ucsb.edu), Santa Barbara, CA.
-- , NIMBIOS, Knoxville, TN
+- [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville, TN
 - [Stochastic spatial modeling in population dynamics](http://www.aimath.org/WWN/populationmodel/), AIM, Palo Alto, CA.
 
 
