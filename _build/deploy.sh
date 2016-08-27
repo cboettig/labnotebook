@@ -18,7 +18,7 @@ cd ../deploy \
     && wget -q http://carlboettiger.info/${YEAR}/atom.xml -O atom.xml \
     && wget -q http://carlboettiger.info/${YEAR}/R.xml -O R.xml \
     && git add -A . \
-    && git commit -m 'Site updated from circleci' \
+    && git commit -a -m 'Site updated from circleci' \
     && git push
 
 
