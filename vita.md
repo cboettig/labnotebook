@@ -20,9 +20,6 @@ title: Vita
   with honors and certificates in *biophysics*
   and *applied and computational mathematics.*
 
-# publications
-
-
 <!--
 17. T. Alex Perkins, C Boettiger, Benjamin L Phillips. (2016)
    After the games are over: life-history trade-offs drive
@@ -32,6 +29,9 @@ title: Vita
    ([code](https://github.com/TAlexPerkins/dispersal_tradeoffs))
 
 -->
+
+
+# publications
 
 16. __Carl Boettiger__, Michael Bode, James N. Sanchirico, Jacob LaRiviere,
    Alan Hastings, and Paul Robert Armsworth. (2015) Optimal management
