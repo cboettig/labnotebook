@@ -31,6 +31,7 @@ RUN apt-get update \
     nodejs \
     rake \
     rsync \
+    texlive-fonts-extra \
   && apt-get clean \ 
   && rm -rf /var/lib/apt/lists/ \
   && gem install nokogiri -v '1.6.3.1' \ 

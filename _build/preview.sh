@@ -10,4 +10,7 @@ docker run -e TWIT_KEY=$TWIT_KEY \
            -v $(pwd):/home/rstudio/data \
            -w /home/rstudio/data cboettig/labnotebook \
            jekyll serve -H 0.0.0.0
+
+sed -i 's/<ol/<ol reversed/' _site/vita.html
+
 #           R -e 'servr::jekyll(script="_build/build.R", serve=TRUE, host="0.0.0.0", port=4000)'

@@ -3,10 +3,16 @@
 REPO="cboettig.github.io"
 SOURCE="source"
 DEPLOY="master"
-YEAR="2015"
+YEAR="2016"
 
 git clone -b ${DEPLOY} https://cboettig:${GH_TOKEN}@github.com/cboettig/$REPO ../deploy 
+
+## hack to fix reverse ordering on vita
+sed -i 's/<ol/<ol reversed/' _site/vita.html
+
 rsync -a _site/ ../deploy/
+
+## hack to update feed to current year
 cd ../deploy \
     && wget -q http://carlboettiger.info/${YEAR}/blog.xml -O blog.xml \
     && wget -q http://carlboettiger.info/${YEAR}/atom.xml -O atom.xml \

@@ -22,6 +22,7 @@ title: Vita
 
 # publications
 
+
 <!--
 17. T. Alex Perkins, C Boettiger, Benjamin L Phillips. (2016)
    After the games are over: life-history trade-offs drive
@@ -140,28 +141,27 @@ title: Vita
 	 907-916. [doi:10.1086/50860](http://dx.doi.org/10.1086/508600).
 	 ([oa](http://arxiv.org/abs/astro-ph/0603060))
 
-
 # grants
 
-8. The rOpenSci Project (2015-2018, Co-PI). Helmsley Trust *2,900,000 USD*.
+- The rOpenSci Project (2015-2018, Co-PI). Helmsley Trust *2,900,000 USD*.
 
-7. The Codemeta project (2015). National Science Foundation EAGER Grant,
+- The Codemeta project (2015). National Science Foundation EAGER Grant,
    [#1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
    *165,782 USD*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2055972))
 
-6. The rOpenSci Project, Phase II funding (2014, Co-PI). Alfred P. Sloan Foundation *300,000 USD*.
+- The rOpenSci Project, Phase II funding (2014, Co-PI). Alfred P. Sloan Foundation *300,000 USD*.
 
-5. [NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013-2015). National Science Foundation
+- [NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013-2015). National Science Foundation
    [#DBI-1306697](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697),
    *138,000 USD*. ([proposal](http://doi.org/10.6084/m9.figshare.652970))
 
-4. The rOpenSci Project Phase I funding (2013, Co-PI). Alfred P. Sloan Foundation *180,000 USD*.
+- The rOpenSci Project Phase I funding (2013, Co-PI). Alfred P. Sloan Foundation *180,000 USD*.
 
-2. IIASA YSSP fellowship (2009). National
+- IIASA YSSP fellowship (2009). National
    Academy of Sciences, OISE-0738129,
    *8,000 USD*. ([proposal](http://doi.org/10.6084/m9.figshare.678310))
 
-1. Computational Science Graduate Fellowship (2008). Department of Energy,
+- Computational Science Graduate Fellowship (2008). Department of Energy,
    #DE-FG02-97ER25308, *149,000 USD*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2010246))
 
 

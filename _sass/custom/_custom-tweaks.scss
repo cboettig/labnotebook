@@ -118,7 +118,7 @@ div.scroll
 }
 
 .cv ul { 
-  margin-left: 0;
+  margin-left: -40px;
   list-style: none;
 }
 
@@ -128,11 +128,9 @@ div.scroll
   padding-left: 0px;
   padding-right: 40px;
   list-style-type: decimal;
-  transform: rotate(180deg);
 }
 
 .cv ol > li {
-  transform: rotate(-180deg);
   margin-bottom: 5px;
 }
 
@@ -145,6 +143,11 @@ div.scroll
   font-weight: bolder;
 }
 
+.cv h2 {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bolder;
+}
 
 /* Make markdown with floatright in the alt-text into a nice text-wrapped image 
 --------------------------------------------------------------------------------*/
