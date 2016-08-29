@@ -3,12 +3,12 @@
 REPO="cboettig.github.io"
 SOURCE="source"
 DEPLOY="master"
-YEAR="2016"
+YEAR="2015"
 
 git clone -b ${DEPLOY} https://cboettig:${GH_TOKEN}@github.com/cboettig/$REPO ../deploy 
 
 ## hack to fix reverse ordering on vita
-#sed -i 's/<ol/<ol reversed/' _site/vita.html
+sed -i 's/<ol/<ol reversed/' _site/vita.html
 
 rsync -a _site/ ../deploy/
 
