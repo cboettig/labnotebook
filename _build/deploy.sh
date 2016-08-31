@@ -6,6 +6,7 @@ DEPLOY="master"
 YEAR="2015"
 
 git clone -b ${DEPLOY} https://cboettig:${GH_TOKEN}@github.com/cboettig/$REPO ../deploy 
+assets/files/update_cv_pdf.sh
 
 ## hack to fix reverse ordering on vita
 sed -i 's/<ol/<ol reversed/' _site/vita.html
