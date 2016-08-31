@@ -145,8 +145,8 @@ title: Vita
 
 - The rOpenSci Project (2015-2018, Co-PI). Helmsley Trust *2,900,000 USD*.
 
-- The Codemeta project (2015). National Science Foundation EAGER Grant,
-   [#1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
+- The Codemeta project (2015). National Science Foundation
+   [#ACI-1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
    *165,782 USD*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2055972))
 
 - The rOpenSci Project, Phase II funding (2014, Co-PI). Alfred P. Sloan Foundation *300,000 USD*.
