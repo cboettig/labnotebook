@@ -7,7 +7,8 @@ title: Teaching
 
 ### ESPM-88B: [Data Science in Ecology and the Environment](http://berkeley.carlboettiger.info/espm-88b)
 
-- Next offered: **Spring 2016**  
+- Last offered: **Spring 2016**
+* Next offered: **Fall 2017?**
 - Course website: [berkeley.carlboettiger.info/espm-88](http://berkeley.carlboettiger.info/espm-88b)
 
 *This course is a "connector course" that will be open to freshmen
@@ -30,9 +31,13 @@ while also developing the practical skills for working with heterogeneous
 real-world data encountered in all areas of data science.
 
 
+### ESPM-290: Reproducible and Collaborative Data Science
 
-### Graduate seminars
+- Next offered: **Spring 2017**
+- Course website: coming soon
 
-**TBD**. Topics in ecoinformatics? Theoretical ecology? Let me know what you'd like to see!
-
+_This is a graduate-level course aimed at students enrolled in UC Berkeley
+NSF Research Trainee Program [**Environment and Society: Data Sciences
+for the 21st Century**](http://ds421.berkeley.edu) and other interested
+students in ecological, environmental or social science programs._
 
