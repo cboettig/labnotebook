@@ -28,7 +28,7 @@ Site Features & Credits
 * Colors and syntax highlighting with [Solarized](http://ethanschoonover.com/solarized)
 * Crisp equations rendered in [Mathjax](http://www.mathjax.org/)
 * Reproducible code execution with [knitr](http://yihui.name/knitr/) and [servr](http://github.com/yihui/servr)
-* CSS based on [twitter bootstrap](http://getboostrap.com)
+* CSS based on [twitter bootstrap](http://getbootstrap.com)
 * Scalable CSS icons from [FontAwesome](http://fortawesome.github.com/Font-Awesome) and [Academicons](https://github.com/jpswalsh/academicons)
 * Uptime monitoring from my.pingdom.com; see [status report](http://stats.pingdom.com/fy1sae94ydyi/616612)
 * Markdown parsing with [pandoc](http://johnmacfarlane.net/pandoc/)
