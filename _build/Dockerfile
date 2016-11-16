@@ -39,6 +39,7 @@ RUN apt-get update \
   && gem install nokogiri -v '1.6.3.1' \ 
   && rm -rf /tmp/downloaded_packages \ 
   && echo "options(stringsAsFactors = FALSE)" >> /etc/R/Rprofile.site \
+  && mkdir -p /data \
   && wget https://raw.githubusercontent.com/cboettig/cboettig.github.io/source/_build/Gemfile -O /data/Gemfile \
   && adduser rstudio sudo \
   && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
