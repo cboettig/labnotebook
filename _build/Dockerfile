@@ -16,7 +16,7 @@
 #     docker run -dP -v $(pwd)/data cboettig/labnotebook \
 #       Rscript -e 'servr::jekyll(port = 4000, host = "0.0.0.0")'
 
-FROM rocker/hadleyverse 
+FROM rocker/verse 
 MAINTAINER Carl Boettiger cboettig@ropensci.org 
 
 ## So that things like `top` and `less` work correctly
@@ -24,42 +24,33 @@ ENV TERM xterm
 
 ## Install basic ruby, javascript, and linux utils we need for Jekyll (hadleyverse provides R needs) ##
 RUN apt-get update \
-  && apt-get install -y -t unstable \
+  && apt-get install -y \
     awscli \
     bundler \
     curl \
+    less \
     nodejs \
     rake \
     rsync \
-    texlive-fonts-extra \
+    vim \
+#    texlive-fonts-extra \
   && apt-get clean \ 
   && rm -rf /var/lib/apt/lists/ \
   && gem install nokogiri -v '1.6.3.1' \ 
-  && rm -rf /tmp/downloaded_packages 
-
-RUN echo "options(stringsAsFactors = FALSE)" >> /etc/R/Rprofile.site
-
-### Install additional Ruby gems given in the Gemfile ###  
-### (bundler likes to be a non-root user in sudoers.) 
-### (Docker won't cache layers depending on external files, so this goes last)
-ADD Gemfile /data/Gemfile 
-#ADD Gemfile.lock /data/Gemfile.lock
-RUN adduser rstudio sudo \
+  && rm -rf /tmp/downloaded_packages \ 
+  && echo "options(stringsAsFactors = FALSE)" >> /etc/R/Rprofile.site \
+  && wget https://raw.githubusercontent.com/cboettig/cboettig.github.io/source/_build/Gemfile -O /data/Gemfile \
+  && adduser rstudio sudo \
   && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
-  && chown -R rstudio:rstudio /data
-
-RUN cd /data && bundle config build.nokogiri --use-system-libraries \ 
+  && chown -R rstudio:rstudio /data \
+  && cd /data && bundle config build.nokogiri --use-system-libraries \ 
   && bundle install \
-  && bundle update
-
-## My git name, must be done for user pid 1000, and root
-RUN git config --system user.name 'Carl Boettiger' \
+  && bundle update \
+  && git config --system user.name 'Carl Boettiger' \
   && git config --system user.email 'cboettig@gmail.com' \
   && git config --system credential.helper 'cache --timeout=3600' \
-  && git config --system push.default simple
-
-## Reset and tidy up
-RUN rm -rf /data && gem cleanup
+  && git config --system push.default simple \
+  && rm -rf /data && gem cleanup
 
 ### Expose port for jekyll serve ###
 EXPOSE 4000
