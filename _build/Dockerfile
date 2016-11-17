@@ -22,17 +22,18 @@ MAINTAINER Carl Boettiger cboettig@ropensci.org
 ## So that things like `top` and `less` work correctly
 ENV TERM xterm
 
+RUN echo "deb http://http.debian.net/debian testing main" > /etc/apt/sources.list.d/debian-testing.list \
+  && echo 'APT::Default-Release "stable";' > /etc/apt/apt.conf.d/default
+
 ## Install basic ruby, javascript, and linux utils we need for Jekyll (hadleyverse provides R needs) ##
 RUN apt-get update \
   && apt-get install -y \
     awscli \
-    bundler \
+    bundler/testing \
     curl \
-    less \
     nodejs \
-    rake \
+    rake/testing \
     rsync \
-    vim \
 #    texlive-fonts-extra \
   && apt-get clean \ 
   && rm -rf /var/lib/apt/lists/ \
