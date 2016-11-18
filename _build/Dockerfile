@@ -24,19 +24,18 @@ ENV TERM xterm
 
 RUN echo "deb http://deb.debian.org/debian testing main" > /etc/apt/sources.list.d/debian-testing.list \
   && echo 'APT::Default-Release "stable";' > /etc/apt/apt.conf.d/default
-
 ## Install basic ruby, javascript, and linux utils we need for Jekyll (hadleyverse provides R needs) ##
 RUN apt-get update \
-  && apt-get install -y -t testing bundler rake \
-  && apt-get -y install \
+  && apt-get install -y -t testing --no-install-recommends ruby-dev bundler \
+  && apt-get -y install --no-install-recommends \
     awscli \
     curl \
     nodejs \
     rsync \
-#    texlive-fonts-extra \
   && apt-get clean \ 
   && rm -rf /var/lib/apt/lists/ \
-  && gem install nokogiri -v '1.6.3.1' \ 
+  && gem install nokogiri \
+#-v '1.6.3.1' \ 
   && rm -rf /tmp/downloaded_packages \ 
   && echo "options(stringsAsFactors = FALSE)" >> /etc/R/Rprofile.site \
   && mkdir -p /data \
@@ -44,7 +43,8 @@ RUN apt-get update \
   && adduser rstudio sudo \
   && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
   && chown -R rstudio:rstudio /data \
-  && cd /data && bundle config build.nokogiri --use-system-libraries \ 
+  && cd /data \ 
+# && bundle config build.nokogiri --use-system-libraries \ 
   && bundle install \
   && bundle update \
   && git config --system user.name 'Carl Boettiger' \
