@@ -33,8 +33,15 @@ title: Vita
 
 # publications
 
+17. T Alex Perkins, __Carl Boettiger__, Benjamin L. Philips. (2016) After
+  the games are over: life-history trade-offs drive dispersal attenuation
+  following range expansion. _Ecology and Evolution_ 6 (18) 6425-6434. 
+  [doi:10.1002/ece3.2314](http://dx.doi.org/10.1002/ece3.2314).
+  ([oa](http://oadoi.org/10.1002/ece3.2314),
+  [code](https://github.com/TAlexPerkins/dispersal_tradeoffs))
+
 16. __Carl Boettiger__, Michael Bode, James N. Sanchirico, Jacob LaRiviere,
-   Alan Hastings, and Paul Robert Armsworth. (2015) Optimal management
+   Alan Hastings, and Paul Robert Armsworth. (2016) Optimal management
    of a stochastically varying population when policy adjustment is
    costly. _Ecological Applications_ 26 (3) 808-817. [doi:10.1890/15-0236](http://dx.doi.org/10.1890/15-0236).
    ([oa](http://arxiv.org/pdf/1507.07037v1.pdf), [code](https://github.com/cboettig/pdg_control))
