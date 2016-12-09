@@ -19,9 +19,6 @@
 FROM rocker/verse 
 MAINTAINER Carl Boettiger cboettig@ropensci.org 
 
-## So that things like `top` and `less` work correctly
-ENV TERM xterm
-
 RUN echo "deb http://deb.debian.org/debian testing main" > /etc/apt/sources.list.d/debian-testing.list \
   && echo 'APT::Default-Release "stable";' > /etc/apt/apt.conf.d/default
 ## Install basic ruby, javascript, and linux utils we need for Jekyll (hadleyverse provides R needs) ##
@@ -35,7 +32,6 @@ RUN apt-get update \
   && apt-get clean \ 
   && rm -rf /var/lib/apt/lists/ \
   && gem install nokogiri \
-#-v '1.6.3.1' \ 
   && rm -rf /tmp/downloaded_packages \ 
   && echo "options(stringsAsFactors = FALSE)" >> /etc/R/Rprofile.site \
   && mkdir -p /data \
@@ -44,13 +40,8 @@ RUN apt-get update \
   && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
   && chown -R rstudio:rstudio /data \
   && cd /data \ 
-# && bundle config build.nokogiri --use-system-libraries \ 
   && bundle install \
   && bundle update \
-  && git config --system user.name 'Carl Boettiger' \
-  && git config --system user.email 'cboettig@gmail.com' \
-  && git config --system credential.helper 'cache --timeout=3600' \
-  && git config --system push.default simple \
   && rm -rf /data && gem cleanup
 
 ### Expose port for jekyll serve ###
