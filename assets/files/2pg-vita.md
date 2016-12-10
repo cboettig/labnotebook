@@ -1,7 +1,3 @@
----
-layout: vita
-title: Vita
----
 
 # employment
 
