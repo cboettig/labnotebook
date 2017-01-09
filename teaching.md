@@ -9,7 +9,7 @@ title: Teaching
 
 - Last offered: **Spring 2016**
 * Next offered: **Fall 2017?**
-- Course website: [berkeley.carlboettiger.info/espm-88](http://berkeley.carlboettiger.info/espm-88b)
+- Course website: <https://berkeley.carlboettiger.info/espm-88>
 
 *This course is a "connector course" that will be open to freshmen
 enrolled in UC Berkeley's [Foundations of Data Science](http://data8.org)
@@ -31,10 +31,10 @@ while also developing the practical skills for working with heterogeneous
 real-world data encountered in all areas of data science.
 
 
-### ESPM-290: Reproducible and Collaborative Data Science
+### ESPM-290: [Reproducible and Collaborative Data Science](https://ds421.github.io/rcds/policies.html)
 
 - Next offered: **Spring 2017**
-- Course website: coming soon
+- Course website: <https://ds421.github.io/rcds/policies.html>
 
 _This is a graduate-level course aimed at students enrolled in UC Berkeley
 NSF Research Trainee Program [**Environment and Society: Data Sciences
