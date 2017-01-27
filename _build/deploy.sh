@@ -5,6 +5,7 @@ SOURCE="source"
 DEPLOY="master"
 YEAR="2015"
 
+rm -rf ../deploy
 git clone -b ${DEPLOY} https://cboettig:${GH_TOKEN}@github.com/cboettig/$REPO ../deploy 
 assets/files/update_cv_pdf.sh
 

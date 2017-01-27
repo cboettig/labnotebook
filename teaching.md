@@ -31,10 +31,10 @@ while also developing the practical skills for working with heterogeneous
 real-world data encountered in all areas of data science.
 
 
-### ESPM-290: [Reproducible and Collaborative Data Science](https://ds421.github.io/rcds/policies.html)
+### ESPM-290: [Reproducible and Collaborative Data Science](https://ds421.github.io/rcds)
 
 - Next offered: **Spring 2017**
-- Course website: <https://ds421.github.io/rcds/policies.html>
+- Course website: <https://ds421.github.io/rcds>
 
 _This is a graduate-level course aimed at students enrolled in UC Berkeley
 NSF Research Trainee Program [**Environment and Society: Data Sciences
