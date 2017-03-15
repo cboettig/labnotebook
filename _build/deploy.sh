@@ -5,6 +5,11 @@ SOURCE="source"
 DEPLOY="master"
 YEAR="2015"
 
+git config --global user.name "Carl Boettiger"
+git config --global user.email "cboettig@gmail.com"
+
+
+rm -rf ../deploy
 git clone -b ${DEPLOY} https://cboettig:${GH_TOKEN}@github.com/cboettig/$REPO ../deploy 
 assets/files/update_cv_pdf.sh
 

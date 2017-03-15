@@ -313,6 +313,7 @@ I am also a founding member of the [rOpenSci project](http://ropensci.org). My s
 
 # media interviews
 
+- Seltenrich, N. (2016). "Scaling the Heights of Data Science."  _Breakthroughs Magazine_.  <https://nature.berkeley.edu/breakthroughs/opensci-data>
 - Tachibana, C. (2014). "The paperless lab" _Science_ 345(6195) pp. 468-470. [10.1126/science.opms.p1400087](http://www.sciencemag.org/site/products/lst_20140613.xhtml)
 - Mascarelli, A. (2014) "Research tools: Jump off the page." *Nature*
   507, 523–525. [doi:10.1038/nj7493-523a](http://dx.doi.org/10.1038/nj7493-523a)
