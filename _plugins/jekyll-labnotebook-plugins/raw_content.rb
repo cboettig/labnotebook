@@ -12,7 +12,7 @@ module Jekyll
     def generate(site)
       puts "Storing raw md versions as post metadata with raw_content.rb"
       start = Time.now
-      site.posts.each do |post|
+      site.posts.docs.each do |post|
         post.data['raw_content'] = post.content
       end
 
