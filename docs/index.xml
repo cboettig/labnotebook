@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Carl Boettiger</title>
+    <link>/</link>
+    <description>Recent content on Carl Boettiger</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/members/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/members/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Community</title>
+      <link>/community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/community/</guid>
+      <description>Experiential Education I believe in experiential education and fostering an appreciation for the natural world in and outside of the classroom. I help organize and lead wilderness trips for disadvantaged children in Sacramento through Inner City Outings. I used to guide rock climbing, snow camping, and backpacking trips for college students and the general public through Davis Outdoor Adventures and Shasta Mountain Guides. I was introduced to outdoor leadership and education through Princeton&amp;rsquo;s orientation program, Outdoor Action, where I lead trips and trained leaders in both technical skills and group dynamics (see my Outdoor Guide C.</description>
+    </item>
+    
+    <item>
+      <title>Networks</title>
+      <link>/networks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/networks/</guid>
+      <description>Below are a few links to my more commonly used social network profiles and Internet habitats, along with a few comments. I am pretty consistently found under the user handle cboettig on social networks, though no guarantees.
+Actively Using ##   Github &amp;ndash; The web-based home of my research. Star, watch, or fork a project you&amp;rsquo;re interested in.  Twitter &amp;ndash; My primary social network, which is why it gets a contact link in my footer.</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/research/</guid>
+      <description>I am interested in a variety of problems in theoretical ecology and evolution that are closely related at least in my own head if no where else. I enjoy questions of &amp;ldquo;Pasteur&amp;rsquo;s Quadrant&amp;rdquo;, basic science with clear policy relevance, and am fascinated with how we can better confront theoretical models with a rapidly expanding array of real world data. These interests couple to a long standing passion for mathematical biology, where I have always been interested in the role of nonlinear and stochastic dynamics &amp;ndash; two themes that run throughout my work.</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>/teaching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/teaching/</guid>
+      <description>ESPM-88B: Data Science in Ecology and the Environment  Last offered: Spring 2016 Next offered: Fall 2017? Course website: https://berkeley.carlboettiger.info/espm-88  This course is a &amp;ldquo;connector course&amp;rdquo; that will be open to freshmen enrolled in UC Berkeley&amp;rsquo;s Foundations of Data Science course (DS-8/Stat-94/CS-94).
+Many of the greatest challenges we face today come from understanding and interacting with the natural world: from global climate change to the sudden collapse of fisheries and forests, from the spread of disease and invasive species to the unknown wealth of medical, cultural, and technological value we derive from nature.</description>
+    </item>
+    
+    <item>
+      <title>Vita</title>
+      <link>/vita/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/vita/</guid>
+      <description>employment  2015-current Assistant Professor, Department of Environmental Science, Policy and Management, University of California, Berkeley.
+ 2013-2015 NSF Post-doctoral Scholar in the Department of Applied Mathematics and Statistics, University of California, Santa Cruz. Mentors: Marc Mangel, Stephan Munch
+  education  2012 Ph.D Population Biology, University of California, Davis. Mentor: Alan Hastings
+ 2007 A.B in Physics, Princeton University, with honors and certificates in biophysics and applied and computational mathematics.</description>
+    </item>
+    
+  </channel>
+</rss>

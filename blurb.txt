@@ -1,4 +1,0 @@
-I'm an ecologist working on problems in ecological forecasting and decision theory. The rapid expansion in both computational power and the available ecological and environmental data enables and requires new mathematical and statistical approaches to these questions, as well as new tools for handling heterogeneous, incomplete, and rapidly evolving data sets. Ecology has much to learn about what is and isn’t useful from advances in informatics, computer science, and statistics for the challenges we face.  My research blends theoretical investigation with the creation of software tools to use and test these concepts in ecological questions.  
-
-I am a co-founder of the rOpenSci project (ropensci.org) and a science adviser to NCEAS (nceas.ucsb.edu). More information can be found on my website  (carlboettiger.info), including my an open lab notebook.
-

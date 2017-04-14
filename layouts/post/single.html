@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    {{ .Content }}
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      {{ partial "sidebar.html" . }}
+    </div>
+  </div>
+</div>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    {{ template "_internal/disqus.html" . }}
+  </div>
+</section>
+
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}
+ 

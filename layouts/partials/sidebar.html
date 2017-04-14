@@ -1,0 +1,27 @@
+<aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="{{ .Date }}" 
+    property="dc:created">{{ .Date }}</time></p>
+
+
+   <br />
+
+    <p><a class="btn btn-default" rel="prev" href='{{ .Next }}'><i class="icon-chevron-left"></i> prev</a>
+    <a class="btn btn-default" rel="next" href='{{ .Previous }}'>next <i class="icon-chevron-right"></i></a></p>
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/{{.Site.author.github}}/{{ .Site.repo }}/commits/master/_posts/{{.File.Path}}"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <br/>
+  {{ if isset .Params.code }}
+     <script src="{{"/js/toggleR.js" | relURL }}></script>
+     <button class="btn btn-default" type="button" onclick="toggle_R();">Hide/Show Source</button>
+  {{ end }}
+
+</aside>

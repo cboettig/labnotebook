@@ -1,0 +1,53 @@
+baseurl = "/"
+relativeurls = true
+languageCode = "en-us"
+title = "Carl Boettiger"
+googleAnalytics = "UA-18401403-1"
+disqusShortname = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+publishDir = "docs"
+theme = "carl"
+enableGitInfo = true
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+
+[[menu.main]]
+    name = "Home"
+    url = "/index.html"
+[[menu.main]]
+    name = "Members"
+    url = "/members/"
+[[menu.main]]
+    name = "Publications"
+    url = "/vita/"
+[[menu.main]]
+    name = "Teaching"
+    url = "/teaching/"
+
+
+
+[params]
+    name =  "Carl Boettiger"
+    twitter =  "cboettig"
+    github =  "cboettig"
+    email =  "cboettig@gmail.com"
+
+
+    date_format = "Mon, Jan 2, 2006"
+    description = "A website built through Hugo and blogdown."
+
+    # options for highlight.js (version, additional languages, and theme)
+    highlightjsVersion = "9.10.0"
+    highlightCDN = "//cdn.bootcss.com"
+    highlightjsLang = ["r", "yaml"]
+    highlightjsTheme = "github"
+
+    [params.logo]
+    url = "logo.png"
+    width = 50
+    height = 50
+    alt = "Logo"
+
+    
+
