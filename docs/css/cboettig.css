@@ -1,4 +1,10 @@
-body { padding-top: 80px; }
+body { 
+  padding-top: 80px; 
+  position: relative;
+  background-image: url(../img/grid-18px-masked.png);
+  background-repeat: repeat-x;
+  background-position: 0 40px;
+}
 @media screen and (max-width: 768px) {
     body { padding-top: 0px; }
 }
