@@ -8,7 +8,7 @@
   {{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
   {{ with .Site.Params.role }}<meta name="description" content="{{ . }}">{{ end }}
 
-    {{ $.Scratch.Set "highlight_enabled" true }}
+  {{ $.Scratch.Set "highlight_enabled" true }}
   {{ if isset .Params "highlight" }}
     {{ $.Scratch.Set "highlight_enabled" .Params.highlight }}
   {{ else if isset .Site.Params "highlight" }}
@@ -22,10 +22,16 @@
     <link rel="stylesheet" href="{{ "/css/highlight.min.css" | relURL }}">
     {{ end }}
   {{ end }}
+  
   <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | relURL }}">
   <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | relURL }}">
   <link rel="stylesheet" href="{{ "/css/academicons.min.css" | relURL }}">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  
+  {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
+  {{ end }}
+  
   <link rel="alternate" href="{{ .RSSLink | default .Site.RSSLink  }}" type="application/rss+xml" title="{{ .Site.Title }}">
   <link rel="feed" href="{{ .RSSLink | default .Site.RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}">
 

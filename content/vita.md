@@ -1,5 +1,6 @@
 ---
-type: vita
+type: page
+layout: vita
 title: Vita
 ---
 

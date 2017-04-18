@@ -1,4 +1,5 @@
 ---
-type: members
+type: page
+layout: members
 ---
 

@@ -12,11 +12,14 @@
     </article>
   </div>
   <div class="col-md-4" style="border-left: 1px solid #eee8d5;"><!-- sidebar -->   
-    <p> <i class="icon-calendar"></i> updated: <time 
-          datetime="{{ .Date }}" 
-          property="dc:modified">{{ .Date }}</time>
-    <br/>
+    <p> <i class="fa fa-calendar"></i>
+    <time datetime="{{ $.GitInfo.AuthorDate }}" itemprop="datePublished">
+      Updated: {{ $.GitInfo.AuthorDate.Format $.Site.Params.date_format }}
+    </time>
     </p>
+    <p> <i class="fa fa-barcode"></i> <a href="https://github.com/cboettig/labnotebook/issues/89">SHA</a>: <a href="https://github.com/cboettig/cboettig.github.io/commit/{{ $.GitInfo.Hash }}/vita.md">{{ $.GitInfo.AbbreviatedHash }}</a></p> 
+    </br >
+    
     <h4>Profiles and Metrics</h4>
     <p>
     <i class="ai ai-impactstory"></i><a href="https://impactstory.org/CarlBoettiger"> ImpactStory </a>

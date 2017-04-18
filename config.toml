@@ -32,6 +32,7 @@ enableGitInfo = true
     twitter =  "cboettig"
     github =  "cboettig"
     email =  "cboettig@gmail.com"
+    custom_css = ["cboettig.css"]
 
 
     date_format = "Mon, Jan 2, 2006"
