@@ -8,3 +8,15 @@ body {
 @media screen and (max-width: 768px) {
     body { padding-top: 0px; }
 }
+
+
+/* Definition lists
+------------------------------------------- */
+.dl-horizontal dt{
+  text-align: left;
+  width: auto;
+  padding-right: 1em;
+}
+
+.dl-horizontal dd{
+  margin-left: 100px;

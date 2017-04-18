@@ -4,8 +4,10 @@
 
 <article class="article" itemscope itemtype="http://schema.org/Article">
   <div class="article-container">
+    
     <div class="row">
       <div class="col-md-8 col-md-offset-1">
+      {{ with .Title }}<h1>{{ . }}</h1> {{ end }}  
 
         <div class="row">
         {{ range $.Site.Data.members }}

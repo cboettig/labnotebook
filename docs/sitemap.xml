@@ -2,14 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/members/</loc>
-    <lastmod>2017-04-18T14:06:59-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/</loc>
-    <lastmod>2017-04-18T14:06:59-07:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2017-04-18T14:20:31-07:00</lastmod>
   </url>
   
   <url>
@@ -20,6 +14,11 @@
   <url>
     <loc>/community/</loc>
     <lastmod>2017-04-14T07:55:54-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/members/</loc>
+    <lastmod>2017-04-18T14:06:59-07:00</lastmod>
   </url>
   
   <url>
