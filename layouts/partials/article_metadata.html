@@ -1,13 +1,23 @@
 
 <div class="article-metadata">
 
+  <p>
   <span class="article-date">
     <i class="fa fa-calendar"></i>
-    <time datetime="{{ $.Date }}" itemprop="datePublished">
-      {{ $.Date.Format $.Site.Params.date_format }}
+    {{ with $.Date }}
+    <time datetime="{{ . }}" itemprop="datePublished">
+      {{ .Format $.Site.Params.date_format }}
     </time>
+    {{ else }}
+    <time datetime="{{ $.GitInfo.AuthorDate }}" itemprop="dateModified">
+      Updated: {{ $.GitInfo.AuthorDate.Format $.Site.Params.date_format }}
+    </time>
+    {{ end }}
   </span>
+  </p>
+    
 
+  <p>
   {{ if isset $.Params "categories" }}
   {{ $categoriesLen := len $.Params.categories }}
   {{ if gt $categoriesLen 0 }}
@@ -20,7 +30,9 @@
   </span>
   {{ end }}
   {{ end }}
-
+  </p>
+  
+  <p>
   {{ if isset $.Params "tags" }}
   {{ $tagsLen := len $.Params.tags }}
   {{ if gt $tagsLen 0 }}
@@ -33,6 +45,6 @@
   </span>
   {{ end }}
   {{ end }}
-
+  </p>
 
 </div>

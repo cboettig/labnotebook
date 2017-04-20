@@ -1,18 +1,18 @@
 <aside prefix="og:http://ogp.me/ns/article#">
+  
+  
   {{ partial "article_metadata.html" . }}
  
-
+  <br />
+  
   <p><a class="btn btn-default" rel="prev" href='{{ .Next }}'><i class="icon-chevron-left"></i> prev</a>
     <a class="btn btn-default" rel="next" href='{{ .Prev }}'>next <i class="icon-chevron-right"></i></a></p>
 
   <br />
 
-  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
-            return false;" 
-          class="btn btn-default" 
-          href="https://github.com/{{ $.Site.Params.github}}/{{ $.Site.Params.repo }}/commits/master/_posts/{{.File.Path}}"><i class="icon-time"></i> history</a></p>
+  <p> <a class="btn btn-default" 
+         href="https://github.com/{{ .Site.Params.github}}/{{ .Site.Params.repo }}/commits/master/content/{{ .File.Path }}"><i class="icon-time"></i> history</a></p>
 
- <p> <i class="fa fa-barcode"></i> SHA: <a href="https://github.com/{{$.Site.Params.github}}/{{ $.Site.Params.repo }}/commit/{{ $.GitInfo.Hash }/{{ .Path }}">{{ $.GitInfo.AbbreviatedHash }}</a></p> 
-
+ {{ partial "git_sha" . }}
 
 </aside>

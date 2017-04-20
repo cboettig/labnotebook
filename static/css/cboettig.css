@@ -10,7 +10,7 @@ body {
 }
 
 
-/* Definition lists
+/* Definition lists (homepage)
 ------------------------------------------- */
 .dl-horizontal dt{
   text-align: left;
@@ -20,3 +20,15 @@ body {
 
 .dl-horizontal dd{
   margin-left: 100px;
+}
+
+/* CV styling 
+----------------------------------------------------*/
+
+.cv {
+  text-align: justify;         
+}
+.cv ul { 
+  list-style: none;
+}
+

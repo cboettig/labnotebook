@@ -1,11 +1,10 @@
 ---
 title: Migrating to Hugo and blogdown
-author: ~
+author: Carl Boettiger
 date: '2017-04-19'
 slug: ''
-categories: []
-tags: []
-draft: yes
+categories: [R]
+tags: [R, blog, openscience]
 path: ''
 ---
 

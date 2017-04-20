@@ -2,9 +2,9 @@
 {{ partial "navbar.html" . }}
 
 
-
+<div class="container">
 <div class="row cv">
-  <div class="col-md-7 col-md-offset-1">
+  <div class="col-md-8">
     <article>
 
       {{ .Content }}
@@ -13,11 +13,14 @@
   </div>
   <div class="col-md-4" style="border-left: 1px solid #eee8d5;"><!-- sidebar -->   
     <p> <i class="fa fa-calendar"></i>
-    <time datetime="{{ $.GitInfo.AuthorDate }}" itemprop="datePublished">
-      Updated: {{ $.GitInfo.AuthorDate.Format $.Site.Params.date_format }}
+    {{ with $.GitInfo }}
+    <time datetime="{{ .AuthorDate }}" itemprop="datePublished">
+      Updated: {{ .AuthorDate.Format $.Site.Params.date_format }}
     </time>
+    {{ end }}
     </p>
-    <p> <i class="fa fa-barcode"></i> <a href="https://github.com/cboettig/labnotebook/issues/89">SHA</a>: <a href="https://github.com/cboettig/cboettig.github.io/commit/{{ $.GitInfo.Hash }}/vita.md">{{ $.GitInfo.AbbreviatedHash }}</a></p> 
+    {{ partial "git_sha" . }}
+
     </br >
     
     <h4>Profiles and Metrics</h4>
@@ -42,7 +45,7 @@
   </div>
 </div>
 
-
+</div>
 
 {{ partial "footer_container.html" . }}
 {{ partial "footer.html" . }}

@@ -24,8 +24,9 @@ enableGitInfo = true
 [[menu.main]]
     name = "Teaching"
     url = "/teaching/"
-
-
+[[menu.main]]
+    name = "Lab Notebook"
+    url = "/lab-notebook"
 
 [params]
     name =  "Carl Boettiger"
