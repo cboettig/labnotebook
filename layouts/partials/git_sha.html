@@ -1,1 +1,1 @@
-<p> <i class="fa fa-barcode"></i> SHA: <a href="https://github.com/{{ $.Site.Params.github }}/{{ $.Site.Params.repo }}/commit/{{ if isset .GitInfo "Hash" }}{{ index .GitInfo "Hash" }}{{ end }}/{{ .File.Path }}">{{ if isset .GitInfo "AbbreviatedHash" }}{{ index .GitInfo "AbbreviatedHash" }}{{ end }}</a></p> 
+ <p> <i class="fa fa-barcode"></i> SHA: <a href="https://github.com/{{ $.Site.Params.github }}/{{ $.Site.Params.repo }}/commit/{{ with .GitInfo }}{{ .Hash }}{{ end }}/{{ .File.Path }}">{{ with .GitInfo }}{{ .AbbreviatedHash }}{{ end }}</a></p> 
