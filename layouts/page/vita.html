@@ -13,7 +13,7 @@
   </div>
   <div class="col-md-4" style="border-left: 1px solid #eee8d5;"><!-- sidebar -->   
     <p> <i class="fa fa-calendar"></i>
-    {{ with $.GitInfo }}
+    {{ with .GitInfo }}
     <time datetime="{{ .AuthorDate }}" itemprop="datePublished">
       Updated: {{ .AuthorDate.Format $.Site.Params.date_format }}
     </time>
