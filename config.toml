@@ -15,18 +15,23 @@ enableGitInfo = true
 [[menu.main]]
     name = "Home"
     url = "/index.html"
+    weight = 1
 [[menu.main]]
     name = "Members"
     url = "/members/"
+    weight = 2
 [[menu.main]]
     name = "Publications"
     url = "/vita/"
+    weight = 3
 [[menu.main]]
     name = "Teaching"
     url = "/teaching/"
+    weight = 4
 [[menu.main]]
     name = "Lab Notebook"
     url = "/lab-notebook"
+    weight = 5
 
 [params]
     name =  "Carl Boettiger"
