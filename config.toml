@@ -6,7 +6,7 @@ googleAnalytics = "UA-18401403-1"
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 publishDir = "docs"
-theme = "carl"
+#theme = "carl"
 enableGitInfo = true
 
 [permalinks]
@@ -33,7 +33,7 @@ enableGitInfo = true
     github =  "cboettig"
     email =  "cboettig@gmail.com"
     custom_css = ["cboettig.css"]
-
+    repo = "cboettig.github.io"
 
     date_format = "Mon, Jan 2, 2006"
     description = "A website built through Hugo and blogdown."

@@ -1,27 +1,18 @@
 <aside prefix="og:http://ogp.me/ns/article#">
-  <p> <i class="fa fa-calendar"></i>
-    <time datetime="{{ .Date }}" 
-    property="dc:created">{{ .Date }}</time></p>
+  {{ partial "article_metadata.html" . }}
+ 
 
-
-   <br />
-
-    <p><a class="btn btn-default" rel="prev" href='{{ .Next }}'><i class="icon-chevron-left"></i> prev</a>
-    <a class="btn btn-default" rel="next" href='{{ .Previous }}'>next <i class="icon-chevron-right"></i></a></p>
+  <p><a class="btn btn-default" rel="prev" href='{{ .Next }}'><i class="icon-chevron-left"></i> prev</a>
+    <a class="btn btn-default" rel="next" href='{{ .Prev }}'>next <i class="icon-chevron-right"></i></a></p>
 
   <br />
 
   <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
             return false;" 
           class="btn btn-default" 
-          href="https://github.com/{{.Site.author.github}}/{{ .Site.repo }}/commits/master/_posts/{{.File.Path}}"><i class="icon-time"></i> history</a></p>
+          href="https://github.com/{{ $.Site.Params.github}}/{{ $.Site.Params.repo }}/commits/master/_posts/{{.File.Path}}"><i class="icon-time"></i> history</a></p>
 
-  <br />
+ <p> <i class="fa fa-barcode"></i> SHA: <a href="https://github.com/{{$.Site.Params.github}}/{{ $.Site.Params.repo }}/commit/{{ $.GitInfo.Hash }/{{ .Path }}">{{ $.GitInfo.AbbreviatedHash }}</a></p> 
 
-  <br/>
-  {{ if isset .Params.code }}
-     <script src="{{"/js/toggleR.js" | relURL }}></script>
-     <button class="btn btn-default" type="button" onclick="toggle_R();">Hide/Show Source</button>
-  {{ end }}
 
 </aside>

@@ -1,5 +1,4 @@
-{{ $is_list := .is_list }}
-{{ $ := .content }}
+
 <div class="article-metadata">
 
   <span class="article-date">
@@ -35,8 +34,5 @@
   {{ end }}
   {{ end }}
 
-  {{ if ne $is_list 1 }}
-  {{ partial "share.html" $ }}
-  {{ end }}
 
 </div>
