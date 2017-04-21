@@ -7,7 +7,7 @@ disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 publishDir = "../carlboettiger.info"
 enableGitInfo = true
-uglyURLs = "true"
+uglyURLs = true
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
@@ -40,6 +40,7 @@ uglyURLs = "true"
     email =  "cboettig@gmail.com"
     custom_css = ["cboettig.css"]
     repo = "cboettig.github.io"
+    math = true
 
     date_format = "Mon, Jan 2, 2006"
     description = "A website built through Hugo and blogdown."
