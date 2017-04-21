@@ -6,8 +6,8 @@ googleAnalytics = "UA-18401403-1"
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 publishDir = "../carlboettiger.info"
-#theme = "carl"
 enableGitInfo = true
+uglyURLs = "true"
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
