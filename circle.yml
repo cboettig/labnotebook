@@ -6,4 +6,4 @@ machine:
 
 test:
   override:
-    - docker build -t labnotebook assets/Dockerfile 
+    - docker build -t labnotebook assets/
