@@ -1,0 +1,9 @@
+general:
+
+machine:
+  services:
+    - docker
+
+test:
+  override:
+    - docker build -t labnotebook assets/Dockerfile 
