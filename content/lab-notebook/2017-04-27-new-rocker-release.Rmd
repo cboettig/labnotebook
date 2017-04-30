@@ -1,0 +1,18 @@
+---
+title: "New rocker releases"
+author: Carl Boettiger
+date: '2017-04-27'
+categories: [R]
+tags: [R, docker, open-science]
+
+---
+
+R `3.4.0` and `devel` tags are now available in the Rocker versioned stack, and `latest` has been updated to `3.4.0`.  
+
+This means you can now run something like:
+
+    docker run -d -p 8787:8787 rocker/tidyverse:devel
+    
+to test out a recent version[^1] of R devel in RStudio with the `tidyverse` packages already installed.  Note that the packages are not themselves devel versions (e.g. from GitHub) but are instead the latest versions from CRAN, just as in the `latest` tag.  Only the base R system is on `devel`.  This can be handy for testing packages prior to CRAN release.  
+
+[^1]: `devel` tags should now be triggered nightly by a tag-specific curl POST from cron for each image.  Since this requires we remove the simple 'repository linking' in Docker hub to avoid the whole stack rebuilding all tags, this requires a second set of cron calls to see that the rest of the stack is also updated regularly.  These calls are currently scheduled to rebuild all tags on the first day of the month.  A bit more engineering, but at least the crontab should not require regular updating with new releases, since `devel` tag is always `devel`.  We'll see how well this part works.  

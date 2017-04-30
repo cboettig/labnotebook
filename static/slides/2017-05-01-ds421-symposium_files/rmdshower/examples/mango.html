@@ -1,0 +1,219 @@
+---
+title: "Mango Presentations in R Markdown"
+author: "Gábor Csárdi"
+email: "gcsardi@mango-solutions.com"
+maketitle: true
+output:
+  rmdshower::shower_presentation:
+    self_contained: false
+    katex: true
+    theme: mango
+---
+
+
+
+<div id="r-markdown" class="section level2">
+<h2>R Markdown</h2>
+<p>This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.</p>
+</div>
+<div id="shower" class="section level2">
+<h2>Shower</h2>
+<p>These slides use a template from the <a href="https://github.com/shower/shower">shower</a> presentation system. Notable features:</p>
+<ol style="list-style-type: decimal">
+<li>Works in all modern browsers</li>
+<li>Presentation fully keyboard accessible</li>
+<li>Multiple themes available</li>
+<li>Printable to PDF (Need Chrome version 49.0.2623 for two column slides)</li>
+</ol>
+<p class="note">
+Shower [’ʃəuə] noun. A person or thing that shows.
+</p>
+</div>
+<div id="slide-with-plain-text" class="section level2">
+<h2>Slide with Plain Text</h2>
+<p>Let me see your identification. You don’t need to see his identification. We don’t need to see his identification. These are not the droids your looking for. These are not the droids we’re looking for. He can go about his business. You can go about your business.</p>
+<p>Move along. Move along. Move along.</p>
+</div>
+<div id="two-column-layout" class="section level2">
+<h2>Two column layout</h2>
+<p class="double">
+What is it? Your fathers lightsaber. This is the weapon of a Jedi Knight. Not as clumsy or as random as a blaster. An elegant weapon for a more civilized time. For over a thousand generations the Jedi Knights were the guardians of peace and justice in the Old Republic. Before the dark times, before the Empire. How did my father die? A young Jedi named Darth Vader, who was a pupil of mine until he turned to evil, helped the Empire hunt down and destroy the Jedi Knights.
+</p>
+</div>
+<div id="two-column-layout-text-and-image" class="section level2">
+<h2>Two column layout, text and image</h2>
+<p class="double">
+How did I get into this mess? I really don’t know how. We seem to be made to suffer. It’s our lot in life. I’ve got to rest before I fall apart. My joints are almost frozen. What a desolate place this is. Where are you going? <img src="sw.jpg" class="one-col-image">
+</p>
+</div>
+<div id="two-column-layout-image-and-text" class="section level2">
+<h2>Two column layout, image and text</h2>
+<p class="double">
+<img src="sw.jpg" class="one-col-image"> How did I get into this mess? I really don’t know how. We seem to be made to suffer. It’s our lot in life. I’ve got to rest before I fall apart. My joints are almost frozen. What a desolate place this is. Where are you going?
+</p>
+</div>
+<div id="two-column-layout-independent-columns" class="section level2">
+<h2>Two column layout, independent columns</h2>
+<div class="double">
+<p class="double-flow">
+How did I get into this mess? I really don’t know how. We seem to be made to suffer.
+</p>
+<p class="double-flow">
+It’s our lot in life. I’ve got to rest before I fall apart.
+</p>
+</div>
+</div>
+<div id="lists" class="section level2">
+<h2>Lists</h2>
+<ol style="list-style-type: decimal">
+<li>Simple lists are marked with bullets</li>
+<li>Ordered lists begin with a number</li>
+<li>You can even nest lists one inside another
+<ul>
+<li>Or mix their types</li>
+<li>But do not go too far</li>
+<li>Otherwise audience will be bored</li>
+</ul></li>
+<li>Look, seven rows exactly!</li>
+</ol>
+</div>
+<div id="formulas" class="section level2">
+<h2>Formulas</h2>
+<p>Formulas are rendered by KaTeX, <a href="https://github.com/Khan/KaTeX" class="uri">https://github.com/Khan/KaTeX</a></p>
+<p>It supports both inline: <span class="math inline">\(y = x / 2\)</span> and displayed formulas:</p>
+<p><span class="math display">\[ x_{1,2} = \frac{- b \pm \sqrt{b^2 - 4ac}}{2a} \]</span></p>
+</div>
+<div id="slide-with-quote" class="section level2">
+<h2>Slide with quote</h2>
+<blockquote>
+<p>The bad news is that when ever you learn a new skill your going to suck. It’s going to be frustrating. The good news is that is typical and happens to everyone and it is only temporary. You can’t go from knowing nothing to becoming an expert without going through a period of great frustration and great suckiness.</p>
+</blockquote>
+<p><strong>Hadley Wickham﻿ </strong></p>
+</div>
+<div id="slide-with-r-code-and-output" class="section level2">
+<h2>Slide with R Code and Output</h2>
+<pre class="r"><code>summary(cars)</code></pre>
+<pre><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00</code></pre>
+</div>
+<div id="tables" class="section level2">
+<h2>Tables</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">mpg</th>
+<th align="center">cyl</th>
+<th align="center">disp</th>
+<th align="center">hp</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Mazda RX4</td>
+<td align="center">21</td>
+<td align="center">6</td>
+<td align="center">160</td>
+<td align="center">110</td>
+</tr>
+<tr class="even">
+<td align="center">Mazda RX4 Wag</td>
+<td align="center">21</td>
+<td align="center">6</td>
+<td align="center">160</td>
+<td align="center">110</td>
+</tr>
+<tr class="odd">
+<td align="center">Datsun 710</td>
+<td align="center">22.8</td>
+<td align="center">4</td>
+<td align="center">108</td>
+<td align="center">93</td>
+</tr>
+<tr class="even">
+<td align="center">Hornet 4 Drive</td>
+<td align="center">21.4</td>
+<td align="center">6</td>
+<td align="center">258</td>
+<td align="center">110</td>
+</tr>
+<tr class="odd">
+<td align="center">Hornet Sportabout</td>
+<td align="center">18.7</td>
+<td align="center">8</td>
+<td align="center">360.0</td>
+<td align="center">175</td>
+</tr>
+<tr class="even">
+<td align="center">Valiant</td>
+<td align="center">18.1</td>
+<td align="center">6</td>
+<td align="center">225.0</td>
+<td align="center">105</td>
+</tr>
+<tr class="odd">
+<td align="center">Duster 360</td>
+<td align="center">14.3</td>
+<td align="center">8</td>
+<td align="center">360.0</td>
+<td align="center">245</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="pictures" class="section level2 cover white">
+<h2>Pictures</h2>
+<p><img src="scifi.jpg" class="cover height"></p>
+<p class="white">
+And text on top of them.
+</p>
+</div>
+<div id="title-slide" class="section level1">
+<h1>Title slide</h1>
+<div id="lists-item-by-item" class="section level2">
+<h2>Lists item by item</h2>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>Lets you reveal list items one by one</li>
+<li>To keep some key points</li>
+<li>In secret from audience</li>
+<li>But it will work only once</li>
+<li>Nobody wants to see the same joke twice</li>
+</ol>
+</blockquote>
+</div>
+<div id="slide-with-plot" class="section level2">
+<h2>Slide with Plot</h2>
+<p><img src="/slides/2017-05-01-ds421-symposium_files/rmdshower/examples/mango_files/figure-html/unnamed-chunk-2-1.svg" width="672" /></p>
+</div>
+</div>
+<div id="full-page-plots" class="section level1">
+<h1>Full Page Plots</h1>
+<div id="section" class="section level2 fullpage">
+<h2></h2>
+<div class="fullpage width">
+<p><img src="/slides/2017-05-01-ds421-symposium_files/rmdshower/examples/mango_files/figure-html/unnamed-chunk-3-1.svg" width="672" /></p>
+</div>
+</div>
+<div id="more-information" class="section level2">
+<h2>More information</h2>
+<div id="about-rmdshower-httpsgithub.commangothecatrmdshower" class="section level3">
+<h3>About rmdshower: <a href="https://github.com/mangothecat/rmdshower" class="uri">https://github.com/mangothecat/rmdshower</a></h3>
+</div>
+<div id="about-r-markdown-httprmarkdown.rstudio.com" class="section level3">
+<h3>About R markdown: <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a></h3>
+</div>
+<div id="about-shower-httpsgithub.comshowershower" class="section level3">
+<h3>About shower: <a href="https://github.com/shower/shower" class="uri">https://github.com/shower/shower</a></h3>
+</div>
+<div id="example-shower-presentation-httpshwr.me" class="section level3">
+<h3>Example shower presentation: <a href="http://shwr.me/" class="uri">http://shwr.me/</a></h3>
+</div>
+</div>
+</div>
