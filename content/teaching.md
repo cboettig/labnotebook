@@ -1,7 +1,28 @@
 ---
 title: Teaching
-
+aliases: ["/teaching.html"]
 ---
+
+### ESPM-157: [Data Science & Global Change Ecology](http://berkeley.carlboettiger.info/espm-157/) 
+
+- Next offered: **Fall 2017**
+- Course website: <http://berkeley.carlboettiger.info/espm-157>
+
+_This is an upper-division undergraduate course designed to introduce students CNR majors to the fundamentals
+of data science, while also introducing students majoring in Data Science or related fields to key issues
+in global change ecology.
+
+### ESPM-288: [Reproducible and Collaborative Data Science](https://ds421.github.io/rcds)
+
+- Last offered: **Spring 2017** (As ESPM-290)
+- Next offered: **Spring 2018** 
+- Course website: <https://ds421.github.io/rcds>
+
+_This is a graduate-level course aimed at students enrolled in UC Berkeley
+NSF Research Trainee Program [**Environment and Society: Data Sciences
+for the 21st Century**](http://ds421.berkeley.edu) and other interested
+students in ecological, environmental or social science programs._
+
 
 
 ### ESPM-88B: [Data Science in Ecology and the Environment](http://berkeley.carlboettiger.info/espm-88b)
@@ -28,15 +49,4 @@ real-world ecological and environmental data sets. Through this hands-on
 approach, students will learn more about issues in the natural world
 while also developing the practical skills for working with heterogeneous
 real-world data encountered in all areas of data science.
-
-
-### ESPM-290: [Reproducible and Collaborative Data Science](https://ds421.github.io/rcds)
-
-- Next offered: **Spring 2017**
-- Course website: <https://ds421.github.io/rcds>
-
-_This is a graduate-level course aimed at students enrolled in UC Berkeley
-NSF Research Trainee Program [**Environment and Society: Data Sciences
-for the 21st Century**](http://ds421.berkeley.edu) and other interested
-students in ecological, environmental or social science programs._
 

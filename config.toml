@@ -7,7 +7,6 @@ disqusShortname = "cboettig"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 publishDir = "../carlboettiger.info"
 enableGitInfo = true
-uglyURLs = true
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"

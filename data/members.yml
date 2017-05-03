@@ -8,8 +8,8 @@ members:
     github: "cboettig"
     twitter: "cboettig"
     orcid: "0000-0002-1642-628X"
+    googlescholar: "https://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ"
     email: "cboettig@gmail.com"
-    cv: "http://carlboettiger.info/vita.html"
     photo: "carl.png"
   - milad:
     name:
@@ -19,11 +19,11 @@ members:
     homepage: "http://www.miladmemarzadeh.com/"
     researchgate: "https://www.researchgate.net/profile/Milad_Memarzadeh" 
     github: "miladm12"
+    twitter: "miladmemarzadeh"
     orcid: "0000-0001-7672-6033"
     email: "memarzadeh.milad@gmail.com"
     googlescholar: "https://scholar.google.com/citations?user=c28AlioAAAAJ"
     photo: "milad.png"
-    cv: "http://www.miladmemarzadeh.com/publications--service.html"
   - kari:
     name:
       first: "Kari" 
