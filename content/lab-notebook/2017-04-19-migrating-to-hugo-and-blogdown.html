@@ -9,30 +9,44 @@ tags: [R, blog, open-science]
 
 
 <p>After OpenWetWare (2010), Wordpress (2010 - 2012) and Jekyll (2012 - 2017), I move platforms once again: now to Hugo. Why the move? As usual, this site remains a way for me to explore new technologies, but the cutting edge is by no means the allure which leads me to migrate. Rather, I find myself ever trying to move towards simpler platforms, what’s easier to maintain, free to host, easier to replicate, and what makes best use of the most widely available and well-maintained existing software and avoids unncessary custom hacks. Nevertheless I still want the clean content model of a static website generator with reasonable control over content and structure.</p>
-<p>For a while Jekyll fit this reasonably well. Designed as the hacker’s platform, it was easy to customize and extend, but thanks to its association with GitHub, mainstream enough to be widely recognized and support a great deal of additional functionality.</p>
+<p>For a while Jekyll fit this reasonably well. Designed as the hacker’s platform, it was easy to customize and extend, but thanks to its association with GitHub, mainstream enough to be widely recognized and support a great deal of additional functionality. Martin Fenner maintains a nice pandoc extension for markdown, and Yihui’s <code>servr</code> package provided a basic mechanism for maintaining <code>.Rmd</code> posts. Some straight forward if somewhat cumbersome configuration on <a href="https://circleci.com">circleci.com</a> (at the time, travis did not support custom Docker use, and circle has always had a simpler model for managing secure credentials and debugging runs) could support automatic deployment, R builds and all. Yet Jekyll has always been a bit cumbersome about versioning, and my poorly hacked extensions in Ruby (pulling in RSS feeds, twitter, and git hashes for instance) were also showing their age.</p>
+<p>Meanwhile at RStudio, Yihui has a fully-fledged incarnation of an R blog engine, <a href="https://github.com/rstudio/blogdown">blogdown</a> built around the go-based static site generate <a href="https://hugodocs.info">Hugo</a>. True to the hype, Hugo is much faster to compile (even though using it’s built-in git module to get git hash and commit info slows it down a bit), though the speed hardly compelling by itself. More usefully, becuase Go is a compiled language, Hugo can be distributed as a platform-specific binary for Linux, Mac or Windows machines. This does mean a less extensible platform than Jekyll’s huge network of plugins, but the base system is pretty feature rich and well maintained. The <code>blogdown</code> package includes a handy function for installing the latest Hugo version for your platform directly from R. Hugo has proven popular, if not as well known as Jekyll – and I hope RStudio’s endorsement and integration with <code>blogdown</code> will help make it familiar if not something of a standard for the R community.</p>
+<div id="compared-to-jekyll" class="section level3">
+<h3>Compared to Jekyll</h3>
+<p>Hugo’s design is very similar to Jekyll, though it uses the Go templating system instead of ruby/liquid. The syntax and functionality of both are quite similar, though not identical. Go templates have a relative notion of “context,” which can be powerful but also a bit confusing. To me, the biggest nusiance in migrating is the relative lack of base/nested layouts. Jekyll makes it stupidly easy to have a <code>_layouts/default.html</code> and then define <code>_layouts/page.html</code> and <code>_layouts/post.html</code> based on the same template. Hugo has a notion of <code>_includes</code> (called <code>partials</code>), but no automatic nesting of layouts. (A somewhat recent and seemingly unitilized option in Hugo does allow a user to define special base layouts explicitly).</p>
 <p>Hugo does not (currently) support pandoc markdown, relying instead on Go’s markdown parser, <code>blackfriday</code>. <code>blackfriday</code> supports the basic extensions found on GitHub (tables, checkboxes), but differing flavors of markdown have always been a nuciance and R’s standardization around pandoc has been welcome.</p>
+</div>
+<div id="regarding-automated-builds" class="section level3">
+<h3>Regarding automated builds</h3>
+<p>One selling point of Jekyll has always been the integration with GitHub, which supports automated builds of the site. Of course the introduction of any plugins, let alone the Rmd files, breaks this model, requiring the considerably less streamlined setup for continuous-integration-based builds (e.g. via Travis or circleci). In practice, I don’t think this matters that much. For one, it’s almost always desirable to preview changes locally before posting them anyway, at which point one can commit this locally built version. While the somewhat clumsy dependencies of Jekyll and potentially slow build made having to wait for a local build for any small change rather annoying, Hugo’s speed and tighter R integration effectively solve that. There are still those occassional times when it would be nice to just fix some text or data file from GitHub’s editor on the run, rather than build the site locally, but by in large I think a local build model is simpler and so far have not added the automated deploy from circle back.</p>
+</div>
+<div id="github-deploy-hosting" class="section level3">
+<h3>GitHub deploy / hosting</h3>
+<p>GitHub’s recent option to host sites from a <code>docs/</code> directory on the <code>master</code> branh instead of a <code>gh-pages</code> branch has generally simplified the deployment for static sites, though this model doesn’t apply to user/org level repos like <code>cboettig.github.io</code>, which never used a <code>gh-pages</code> branch but treat <code>master</code> as the static site and keep source on some other branch, e.g. <code>source</code> in my case. These repos are no longer necessary to have a GitHub-hosted site, but they are the only way to have a single CNAME used across all repositories of the user/org. Since I still have old notebooks in repos like <code>2015</code> which I want deployed at <code>www.carlboettiger.info/2015</code> (instead of something like <code>2015.carlboettiger.info</code>), I need this shared CNAME. To keep a streamlined deploy, I keep two copies of my repository <code>cboettig.github.io</code> checked out, with one on the master branch renamed as <code>carlboettiger.info</code> and my <code>config.toml</code> pointing to it, <code>../carlboettiger.info</code>. That way I can build from the copy on the <code>source</code> branch and just push the resulting files on the master branch.</p>
+</div>
+<div id="r-code" class="section level3">
+<h3>R code</h3>
+<p>Just for fun, I’ll make this post as an <code>.Rmd</code> file to illustrate running R code:</p>
 <pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>## R version 3.4.0 (2017-04-21)
-## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Debian GNU/Linux 8 (jessie)
+## Platform: x86_64-apple-darwin15.6.0 (64-bit)
+## Running under: macOS Sierra 10.12.4
 ## 
 ## Matrix products: default
-## BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.12.so
+## BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRlapack.dylib
 ## 
 ## locale:
-##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
-##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
-##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=C             
-##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
-##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] compiler_3.4.0  backports_1.0.5 bookdown_0.3.18 magrittr_1.5   
+##  [1] compiler_3.4.0  backports_1.0.5 bookdown_0.3.19 magrittr_1.5   
 ##  [5] rprojroot_1.2   tools_3.4.0     htmltools_0.3.6 yaml_2.1.14    
-##  [9] Rcpp_0.12.10    stringi_1.1.5   rmarkdown_1.5   blogdown_0.0.30
+##  [9] Rcpp_0.12.10    stringi_1.1.5   rmarkdown_1.5   blogdown_0.0.33
 ## [13] knitr_1.15.20   methods_3.4.0   stringr_1.2.0   digest_0.6.12  
 ## [17] evaluate_0.10</code></pre>
+<p>Note that <code>blogdown</code> relies on a simple <code>make</code>-like caching rule to avoid recompiling the R code unless the Rmd file has a newer timestamp than the output html version, making it practical to maintain a large site with non-trivial R posts.</p>
+</div>
