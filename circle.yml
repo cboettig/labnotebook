@@ -1,0 +1,13 @@
+general:
+  branches:
+    only:
+      - source
+
+
+machine:
+  services:
+    - docker
+
+test:
+  override:
+    - docker build -t labnotebook assets/

@@ -3,11 +3,10 @@ relativeurls = true
 languageCode = "en-us"
 title = "Boettiger Group"
 googleAnalytics = "UA-18401403-1"
-disqusShortname = ""
+disqusShortname = "cboettig"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 publishDir = "../carlboettiger.info"
 enableGitInfo = true
-uglyURLs = true
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
