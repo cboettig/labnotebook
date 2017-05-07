@@ -9,7 +9,7 @@ publishDir = "../carlboettiger.info"
 enableGitInfo = true
 
 [permalinks]
-    post = "/:year/:month/:day/:slug/"
+    lab-notebook = "/:year/:month/:day/:slug/"
 
 [[menu.main]]
     name = "Home"
