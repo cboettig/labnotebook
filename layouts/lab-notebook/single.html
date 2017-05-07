@@ -1,9 +1,10 @@
-{{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
+{{ define "main" }}
 
 <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
+    {{ with .Title }}<h1>{{ . }}</h1> {{ end }}
+      
     {{ .Content }}
     </article>
   </div>
@@ -21,6 +22,5 @@
   </div>
 </section>
 
-{{ partial "footer_container.html" . }}
-{{ partial "footer.html" . }}
+{{ end }}
  

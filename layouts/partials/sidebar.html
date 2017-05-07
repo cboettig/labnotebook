@@ -5,13 +5,13 @@
  
   <br />
   
-  <p><a class="btn btn-default" rel="prev" href='{{ .Next }}'><i class="icon-chevron-left"></i> prev</a>
-    <a class="btn btn-default" rel="next" href='{{ .Prev }}'>next <i class="icon-chevron-right"></i></a></p>
+  <p><a class="btn btn-default" rel="prev" href='{{ with .NextInSection }}{{ .Permalink  }}{{ end }}'><i class="fa fa-chevron-left"></i> prev</a>
+    <a class="btn btn-default" rel="next" href='{{ with .PrevInSection }}{{ .Permalink }}{{ end }}'>next <i class="fa fa-chevron-right"></i></a></p>
 
   <br />
 
   <p> <a class="btn btn-default" 
-         href="https://github.com/{{ .Site.Params.github}}/{{ .Site.Params.repo }}/commits/master/content/{{ .File.Path }}"><i class="icon-time"></i> history</a></p>
+         href="https://github.com/{{ .Site.Params.github}}/{{ .Site.Params.repo }}/commits/master/content/{{ .File.Path }}"><i class="fa fa-clock-o"></i> history</a></p>
 
  {{ partial "git_sha" . }}
 

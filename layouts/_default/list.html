@@ -1,8 +1,6 @@
-{{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
+{{ define "main" }}
 
-<div class = "container">
-
+<!-- Optional Header Image -->
 {{ if .Params.header.image }}
 <div class="article-header">
   <img src="{{ "/img/" | relURL }}/{{ .Params.header.image }}" class="article-banner" itemprop="image">
@@ -11,29 +9,43 @@
 {{end}}
 
 
-
   {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
 
+   <!-- List pages can get Content and yaml metadata from an _index.md -->
   {{ with .Content }}
   <div class="article-style" itemprop="articleBody">{{ . }}</div>
   {{ end }}
 
-  {{ $paginator := .Paginate .Data.Pages }}
-  {{ range $paginator.Pages }}
-  <div>
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <div class="article-style">
-      {{ if .Params.summary }}
-      {{ printf "%s" .Params.summary | markdownify }}
-      {{ else if .Truncated }}
-      {{ printf "%s" .Summary | markdownify }}
-      {{ end }}
+  <div class="row"><div class="col-md-11 col-md-offset-1">
+  
+    <div class="row">
+    {{ range first 3 .Paginator.Pages }}
+    <div class="col-md-4">
+      <h4><a href="{{ .RelPermalink }}">{{ .Date.Format $.Site.Params.date_format }}</a></h4>
+      {{ if .Title }}<h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>{{ end }}
+      <div class="article-style">
+        {{  .Summary | markdownify }}
+      </div>
     </div>
-  </div>
+    {{ end }}
+    </div>
+
+   {{ if gt (len .Paginator.Pages) 3 }}
+    <div class="row">
+    {{ range after 3 .Paginator.Pages }}
+    <div class="col-md-4">
+      <h4><a href="{{ .RelPermalink }}">{{ .Date.Format $.Site.Params.date_format }}</a></h4>
+      {{ if .Title }}<h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>{{ end }}
+      <div class="article-style">
+        {{  .Summary | markdownify }}
+      </div>
+    </div>
+    {{ end }}
+    </div>
   {{ end }}
-
+  
   {{ partial "pagination" . }}
+  </div></div>
 
-</div>
-{{ partial "footer_container.html" . }}
-{{ partial "footer.html" . }}
+
+{{ end }}
