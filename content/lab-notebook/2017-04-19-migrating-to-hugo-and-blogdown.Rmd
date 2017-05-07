@@ -4,7 +4,7 @@ author: Carl Boettiger
 date: '2017-04-19'
 slug: ''
 categories: [R]
-tags: [R, blog, openscience]
+tags: [R, blog, open-science]
 path: ''
 ---
 
