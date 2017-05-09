@@ -5,6 +5,7 @@ MAINTAINER Carl Boettiger cboettig@ropensci.org
 RUN apt-get update && apt-get -y install --no-install-recommends \
   libopenblas-dev \
   liblapack-dev \
+  librdf0-dev \
   librsvg2-dev \
   libudunits2-dev \
   libsndfile1-dev \
