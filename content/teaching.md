@@ -10,7 +10,7 @@ aliases: ["/teaching.html"]
 
 _This is an upper-division undergraduate course designed to introduce students CNR majors to the fundamentals
 of data science, while also introducing students majoring in Data Science or related fields to key issues
-in global change ecology.
+in global change ecology._
 
 ### ESPM-288: [Reproducible and Collaborative Data Science](https://ds421.github.io/rcds)
 
