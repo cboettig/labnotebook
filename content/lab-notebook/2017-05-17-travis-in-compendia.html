@@ -1,0 +1,30 @@
+---
+date: 2017-05-17T22:00:15Z
+title: "Using travis-ci in research compendia and student repos"
+---
+
+
+
+<p>In general I’m a big believer in the R package mechanism as a convenient way to package and distribute a reproducible compendium of code, data, notebooks and manuscripts. However, it’s often overkill, particularly since passing basic continuous integration checks (e.g. via <code>devtools::use_travis()</code>) means running a relatively strict <code>R CMD check</code> that will worry about things such as documentation norms and details that aren’t always appropriate.</p>
+<p>What I most want is an easy way to confirm that any <code>.Rmd</code> notebooks in a repository can be successfully knit on an independent machine – i.e. that the compendium can access all the software / functions and data it needs. Sure, some additional checks might be necessary (though these are sometimes best formulated in possibly-hidden <code>.Rmd</code> chunks), but this would detect the main ills such as failing to load libraries or using user-specific absolute paths.</p>
+<p>A light-weight solution proposed in <a href="https://github.com/ropensci/unconf17/issues/5">this ropensci thread</a> inspired me to write this <a href="https://github.com/cboettig/compendium">mock-up compendium</a> which does just that, using a DESCRIPTION file to indicate dependencies and other metadata, and a <code>test.R</code> script called by <code>.travis.yml</code> to <code>rmarkdown::render</code> all the <code>.Rmds</code>:</p>
+<p>A minimal DESCRIPTION:</p>
+<pre><code>Package: compendium
+Version: 0.1.0
+Depends: tidyverse, rmarkdown</code></pre>
+<p>A Package name and version are required for <code>devtools::install()</code> to work. Hopefully this approach also helps transition users towards providing more metadata in DESCRIPTION files, such as Author, author role, and License information.</p>
+<p>Here’s my <code>test.R</code> script:</p>
+<pre class="r"><code>f &lt;- list.files(recursive = TRUE)
+Rmds &lt;- f[grepl(&quot;.Rmd$&quot;, f)]
+lapply(Rmds, rmarkdown::render)</code></pre>
+<p>though one could clearly imagine permutations on this. (The thread discusses supporting <code>make</code>, or using a particular directory structure to decide what does and doesn’t get run.)</p>
+<p>Getting this to exploit <code>r-travis</code> (which does a nice job of handling key things like installing and caching installs of packages) involves just a minor tweak to providing a different <code>script:</code> testing routine from the default of <code>R CMD build</code>, <code>R CMD INSTALL</code> and <code>R CMD CHECK</code>:</p>
+<p><code>.travis.yml</code>:</p>
+<pre class="yml"><code>language: R
+sudo: false
+cache: packages
+script: 
+  - R -e &quot;devtools::install()&quot;
+  - R -f test.R
+</code></pre>
+<p>We’ll see how this goes in practice.</p>
