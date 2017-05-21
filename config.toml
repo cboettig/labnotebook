@@ -39,6 +39,7 @@ enableGitInfo = true
     email =  "cboettig@gmail.com"
     custom_css = ["cboettig.css"]
     repo = "cboettig.github.io"
+    branch = "source"
     math = true
 
     date_format = "Mon, Jan 2, 2006"

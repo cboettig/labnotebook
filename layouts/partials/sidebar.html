@@ -10,9 +10,14 @@
 
   <br />
 
+<p> <a class="btn btn-default" 
+         href='https://github.com/{{ .Site.Params.github}}/{{ .Site.Params.repo }}/blob/{{ .Site.Params.branch }}/content/{{ .File.Path | replaceRE ".html$" ".Rmd"}}'><img src="/img/R.png"/> RMarkdown</a></p>
+
+
   <p> <a class="btn btn-default" 
-         href="https://github.com/{{ .Site.Params.github}}/{{ .Site.Params.repo }}/commits/master/content/{{ .File.Path }}"><i class="fa fa-clock-o"></i> history</a></p>
+         href='https://github.com/{{ .Site.Params.github}}/{{ .Site.Params.repo }}/commits/{{ .Site.Params.branch }}/content/{{ .File.Path | replaceRE ".html$" ".Rmd"}}'><i class="fa fa-clock-o"></i> History</a></p>
 
  {{ partial "git_sha" . }}
 
 </aside>
+
