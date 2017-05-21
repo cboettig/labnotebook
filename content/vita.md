@@ -29,6 +29,13 @@ aliases: ["/vita.html"]
 
 # publications
 
+
+18. Hampton, Jones, Wasser, Schuldhauer, Supp, Brun, Herandez, __Boettiger__, Collins,
+    Gross, Fernandez, Budden, White, Teal, Labou & Aukema. (2017) Skills and Knowledge
+    for Data Intensive Research. _BioScience_.
+    [doi:10.1093/biosci/bix025](https://doi.org/10.1093/biosci/bix025). 
+    ([oa](https://doi.org/10.1093/biosci/bix025))
+
 17. T Alex Perkins, __Carl Boettiger__, Benjamin L. Philips. (2016) After
   the games are over: life-history trade-offs drive dispersal attenuation
   following range expansion. _Ecology and Evolution_ 6 (18) 6425-6434. 
