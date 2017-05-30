@@ -1,0 +1,35 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "@id": "https://orcid.org/0000-0002-1642-628X",
+  "givenName": "Carl",
+  "familyName": "Boettiger",
+  "title": "Assistant Professor",
+  "email": "cboettig@berkeley.edu",
+  "url": "http://carlboettiger.info",
+  "image": "http://www.carlboettiger.info/img/carl.png",
+  "worksFor": {
+    "@id": "https://berkeley.edu", 
+    "@type": "Organization",
+    "name": "University of California, Berkeley"
+  }, 
+  "affiliation": "https://berkeley.edu",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ESPM Department, University of California, 130 Mulford Hall #3114",
+    "addressLocality": "Berkeley",
+    "addressRegion": "CA",
+    "postalCode": "94720-3114",
+    "addressCountry": "USA"
+  },
+  "sameAs": ["https://github.com/cboettig", "https://twitter.com/cboettig", "https://plus.google.com/+CarlBoettiger", "https://www.linkedin.com/in/cboettig/", "https://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ"],
+  "alumniOf": [{
+    "@id": "https://princeton.edu",
+    "@type": "Organization",
+    "name": "Princeton University"
+  }, {
+    "@id": "https://ucdavis.edu",
+    "@type": "Organization",
+    "name": "University of California, Davis"
+  }]
+}

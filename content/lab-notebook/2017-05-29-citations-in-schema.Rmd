@@ -1,0 +1,83 @@
+---
+draft: true
+---
+
+
+```{r message=FALSE}
+library(httr)
+library(magrittr)
+library(jsonld)
+library(jsonlite)
+
+```
+
+
+```{r}
+date_parts <- function(parts)
+  do.call(paste,
+          list(unlist(parts),
+               collapse = "-"))
+
+author_parse <- function(authors){
+  lapply(authors, function(a){
+    list(givenName = a$given,
+         familyName = a$family,
+         affiliation = list("@type" = "Organization",
+                            name = a$affiliation[[1]]$name))
+  })
+}
+```
+
+```{r}
+csl_to_schema <- function(doi, as = "list"){
+  
+csl <-
+  content(
+    GET(doi, add_headers(Accept="application/vnd.citationstyles.csl+json")),
+    as = "parsed", type = "application/json")
+
+schema <- 
+list("@context" = "http://schema.org",
+  "@type" = "ScholarlyArticle",
+  "@id" = paste0("https://doi.org/", csl$DOI),
+  "name" = csl$title,
+  
+  "dateCreated" = date_parts(csl$created$`date-parts`), 
+  "isPartOf" = list(
+    "@type" = "PublicationIssue",
+    "issueNumber" = csl$issue,
+    "datePublished" = date_parts(csl$`published-print`$`date-parts`), 
+    "isPartOf" = list(
+      "@type"= c("Periodical", "PublicationVolume"),
+      "volumeNumber" = csl$volume,
+      "name"= csl$`container-title`, # or csl$`journal-title`
+      "publisher" = csl$publisher
+    )
+  ), 
+  "author" = author_parse(csl$author),
+  "pagination" = csl$page,
+  license = csl$license[[1]]$URL) 
+ 
+  switch(as, 
+         "list" = return(schema),
+         "json" = return(toJSON(schema, auto_unbox=TRUE, pretty=TRUE)),
+         "file" = return(write_json(schema, "csl.json", auto_unbox=TRUE, pretty=TRUE))
+         )
+  
+}
+csl_to_schema(doi = "http://dx.doi.org/10.1002/ece3.2314", as="json")
+
+
+```
+
+
+
+
+
+
+```{r}
+"https://doi.org/10.1093/biosci/bix025" %>%
+  GET(add_headers(Accept="application/rdf+xml")) %>%
+  content(as = "parsed", type = "application/xml") %>%
+  write_xml("rdf.xml")
+```
