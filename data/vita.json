@@ -1,0 +1,212 @@
+
+"funder": [{
+  "@id": "http://dx.doi.org/10.13039/100007028",
+  "@type": "Organization",
+  "name": "Helmsley Charitable Trust"
+  },
+  {
+    "@id": "http://dx.doi.org/10.13039/100007523",
+    "name": "Division of Advanced Cyberinfrastructure",
+    "isPartOf": {
+      "@id": "http://dx.doi.org/10.13039/100000001",
+      "@type": "Organization",
+      "name": "National Science Foundation"
+    }
+  },
+  {
+    "@type": "Organization",
+    "@id": "http://dx.doi.org/10.13039/100000015",
+    "name": "Department of Energy"
+  },
+  {
+  "@id": "http://dx.doi.org/10.13039/100000879",
+  "@type": "Organization",
+  "name": "Alfred P Sloan Foundation"
+  },
+  {
+  "@type": "Organization",
+  "@id": "http://dx.doi.org/10.13039/100000209",
+  "name": "National Academy of Sciences"
+  }],
+"awardtext": 
+- The rOpenSci Project (2015-2018, Co-PI). Helmsley Trust *2,900,000 USD*.
+
+- The Codemeta project (2015). National Science Foundation
+   [#ACI-1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
+   *165,782 USD*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2055972))
+
+- The rOpenSci Project, Phase II funding (2014, Co-PI). Alfred P. Sloan Foundation *300,000 USD*.
+
+- [NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013-2015). National Science Foundation
+   [#DBI-1306697](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697),
+   *138,000 USD*. ([proposal](http://doi.org/10.6084/m9.figshare.652970))
+
+- The rOpenSci Project Phase I funding (2013, Co-PI). Alfred P. Sloan Foundation *180,000 USD*.
+
+- IIASA YSSP fellowship (2009). National
+   Academy of Sciences, OISE-0738129,
+   *8,000 USD*. ([proposal](http://doi.org/10.6084/m9.figshare.678310))
+
+- Computational Science Graduate Fellowship (2008). Department of Energy,
+   #DE-FG02-97ER25308, *149,000 USD*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2010246))"
+
+"@reverse": {
+  "attendee": [{
+    "@type": "Event",
+    "url": "http://ecows.oc.ntu.edu.tw/itnlws/",
+    "name": "Empirical Dynamical Modeling and Forecasting in Nonlinear Systems",
+    "location": {"@type": "Place", "name": "NTU, Taiwan"}
+    "startDate": "2015"
+  },
+  {
+    "@type": "Event",
+    "startDate": "2014",
+    "name": "Berkeley Initiative for Global Change Biology",
+    "location": "Berkeley, CA"
+  },
+  {
+    "@type": "Event",
+    "startDate": "2014",
+    "name": "DIMACS Global Change Biology",
+    "location": "Berkeley, CA",
+    "url": "http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html"
+  },{
+    "@type": "Event",
+    "startDate": "2014",
+    "name": "Zoology Seminar, University of Wisconsin",
+    "location": "Madison, WI"
+  },
+  {
+    "@type": "Event",
+    "startDate": "2014",
+    "name": "Berkeley Initiative for Global Change Biology",
+    "location": "Berkeley, CA"
+  },
+  {
+    "@type": "Event",
+    "startDate": "2013",
+    "name": "Sustainable Management of Living Natural Resources",
+    "location": "Columbus, OH"
+  },
+  {
+    "@type": "Event",
+    "startDate": "2013",
+    "name": "Woods Hole Oceanographic Institute Seminar Speaker",
+    "location": "Woods Hole, MA"
+  },
+  {
+    "@type": "Event",
+    "startDate": "2013",
+    "name": "UC Davis Dept of Environmental Resources and Economics Seminar Speaker",
+    "location": "Davis, CA"
+  },
+   {
+    "@type": "Event",
+    "startDate": "2012",
+    "name": "Society of Systematic Biology Symposium invited speaker, Evolution Conference",
+    "location": "Ottawa, CAN"
+  }]
+}
+
+
+"organizer": [
+  {
+    "@type": "Event",
+    "name": "Codemeta Workshop",
+    "startDate": "2016-04-15",
+    "endDate" "2016-04-17",
+    "location": "Portland, OR",
+    "sponsor": "#nsf"
+    "subEvent": {
+      "@type": "Event",
+      "name": "Force16 Codemeta Workshop",
+    }
+  }]
+  
+"participant":   [
+  {"@type": "Event",
+    "name": "rOpenSci Unconference",
+    "location": "San Francisco, CA",
+    "startDate": "2016",
+    "url": "http://unconf16.ropensci.org"
+  }
+]
+## 2016
+
+- [Force16 Codemeta Workshop](http://sched.co/5wK5), Portland OR (organizer)
+- [CodeMeta NSF Workshop](https://codemeta.github.io) Portland, OR (organizer)
+- [rOpenSci unconference](http://unconf16.ropensci.org), San Francisco, CA
+
+## 2015
+
+- Moore-Sloan Data Science Environments: Second Annual Data Science Summit
+- [Data Intensive Training Workshop](https://github.com/NCEAS/ds-workshop-2015), NCEAS, Santa Barbara, CA 
+- [NSF Big Data Hubs](http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm) Design Charette, Western Region.
+- [rOpenSci unconference](http://unconf.ropensci.org/), San Francisco CA.
+- [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville TN
+
+## 2014 
+
+- [rOpenSci unconference](http://ropensci.org/blog/2014/05/14/ropenhack/), San Francisco CA.
+- [Reproducible Science: Curriculum & Workflow](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014), NESCent, Durham, NC. 
+- [WSSSPE 2.0](http://wssspe.researchcomputing.org.uk/wssspe2/). New Orleans, LA.
+- Workflows Working Group, NCEAS, Santa Barbara,  CA.
+
+## 2013 & prior
+
+- [Sustainable Management of Living Natural Resources](http://www.mbi.ohio-state.edu/2013/ws3description.html), MBI Columbus, OH.
+- Academic software & workforce development, [ISEES](http://isees.nceas.ucsb.edu). Oakland, CA.
+- Software Lifecycle, [ISEES](http://isees.nceas.ucsb.edu), Santa Barbara, CA.
+- [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville, TN
+- [Stochastic spatial modeling in population dynamics](http://www.aimath.org/WWN/populationmodel/), AIM, Palo Alto, CA.
+
+
+"award": [
+  "Volterra Award (Best student talk, ESA Theory Section)",
+  "Sigma Xi",
+  "Allen G. Shenstone Prize in Physics, Princeton University",
+  "The Class of 1870 Old English Prize, Princeton University",
+  "Kusaka Memorial Prize in Physics, Princeton University"
+  ]
+  
+"member": [{
+  "@type": "Organization", 
+  "name": "NCEAS Scientific Advisory Board",
+  "isPartOf": "https://nceas.ucsb.edu"
+  },
+  {
+    "@type": "Organization",
+    "name": "rOpenSci Leadership Team",
+    "isPartOf": "http://ropensci.org"
+  },
+  {
+    "@type": "Organization",
+    "name": "Jetstream NSF Cloud Computing Stakeholder Advisory Board"
+  },
+  {
+    "@type": "Organization",
+    "name": "Berkeley Research Computing Advisory Committee",
+    "location": "UC Berkeley"
+  }
+
+"founder": {
+  "@type": "Organization",
+  "@id": "http://ropensci.org",
+  "name": "The rOpenSci Project",
+  "url": "http://ropensci.org"
+}
+
+# theses
+
+- Carl Boettiger, David Huse (2006) Clonal Interference Models in
+  Population Genetics. *Princeton Physics Dept*. [doi:10.6084/m9.figshare.678305](http://dx.doi.org/10.6084/m9.figshare.678305).
+- Carl Boettiger, Joshua Weitz, Simon Levin (2007) Adaptive Dynamics:
+  Branching Phenomena and the Canonical Equation *Princeton Physics
+  Dept*. [doi:10.6084/m9.figshare.678306](http://dx.doi.org/10.6084/m9.figshare.678306).
+- Carl Boettiger, Stephen Pacala, David Huse (2007) Ensemble Behavior
+  from Individual Dynamics in Multispecies Forest Populations.
+  *Princeton Physics Dept*. [doi:10.6084/m9.figshare.678304](http://dx.doi.org/10.6084/m9.figshare.678304).
+- Carl Boettiger (2012). Regime shifts in ecology and evolution (PhD
+  Dissertation). [doi:10.6084/m9.figshare.97218](http://dx.doi.org/10.6084/m9.figshare.97218).
+
+
