@@ -709,46 +709,46 @@
 
   
   "funder": [{
-    "@id": "http://dx.doi.org/10.13039/100007028",
+    "@id": "https://doi.org/10.13039/100007028",
     "@type": "Organization",
     "name": "Helmsley Charitable Trust"
     },
     {
-      "@id": "http://dx.doi.org/10.13039/100007523",
+      "@id": "https://doi.org/10.13039/100007523",
       "name": "Division of Advanced Cyberinfrastructure",
       "isPartOf": {
-        "@id": "http://dx.doi.org/10.13039/100000083",
+        "@id": "https://doi.org/10.13039/100000083",
         "@type": "Organization",
         "name": "Directorate for Computer and Information Science and Engineering",
         "isPartOf": {
-          "@id": "http://dx.doi.org/10.13039/100000001",
+          "@id": "https://doi.org/10.13039/100000001",
           "@type": "Organization",
           "name": "National Science Foundation"
         }
       }
     },
     {
-      "@id": "http://dx.doi.org/10.13039/100000076",
+      "@id": "https://doi.org/10.13039/100000076",
       "name": "Directorate for Biological Sciences",
       "isPartOf": {
-        "@id": "http://dx.doi.org/10.13039/100000001",
+        "@id": "https://doi.org/10.13039/100000001",
         "@type": "Organization",
         "name": "National Science Foundation"
       }
     },
     {
       "@type": "Organization",
-      "@id": "http://dx.doi.org/10.13039/100000015",
+      "@id": "https://doi.org/10.13039/100000015",
       "name": "Department of Energy"
     },
     {
     "@type": "Organization",  
-    "@id": "http://dx.doi.org/10.13039/100000879",
+    "@id": "https://doi.org/10.13039/100000879",
     "name": "Alfred P Sloan Foundation"
     },
     {
     "@type": "Organization",
-    "@id": "http://dx.doi.org/10.13039/100000209",
+    "@id": "https://doi.org/10.13039/100000209",
     "name": "National Academy of Sciences"
     }],
     
@@ -757,44 +757,42 @@
       "name": "The rOpenSci Project",
       "startDate": "2015-11-01",
       "endDate": "2018-10-31",
-      "funder": "http://dx.doi.org/10.13039/100007028",
+      "funder": "https://doi.org/10.13039/100007028",
       "amount": { "@type": "MonetaryAmount", "value": "2900000", "currency":  "USD" }
     },
     {
       "name": "The CodeMeta Project",
       "startDate": "2015-10-01",
       "endDate": "2017-09-30",
-      "funder": "http://dx.doi.org/10.13039/100007523",
+      "funder": "https://doi.org/10.13039/100007523",
       "amount": { "@type": "MonetaryAmount", "value": "165782", "currency":  "USD" },
       "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758",
       "identifier": "#ACI-1549758",
       "proposal": "https://dx.doi.org/10.6084/m9.figshare.2055972"
-      
+    },
+    {
+      "name": "The rOpenSci Project, Phase II funding (2014, Co-PI). Alfred P. Sloan Foundation *300,000 USD*."
+    },
+    {
+      "name": "[NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013-2015). National Science Foundation [#DBI-1306697](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697), *138,000 USD*. ([proposal](http://doi.org/10.6084/m9.figshare.652970))"
+    }, 
+    {
+      "name": "The rOpenSci Project Phase I funding (2013, Co-PI). Alfred P. Sloan Foundation *180,000 USD*."
+    }, 
+    {
+      "name": "IIASA YSSP fellowship (2009). National Academy of Sciences, OISE-0738129, *8,000 USD*. ([proposal](http://doi.org/10.6084/m9.figshare.678310))"
+    }, 
+    {
+      "name": "Computational Science Graduate Fellowship (2008). Department of Energy, #DE-FG02-97ER25308, *149,000 USD*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2010246))"
     }
-  
-  ] 
-  
-  - The rOpenSci Project, Phase II funding (2014, Co-PI). Alfred P. Sloan Foundation *300,000 USD*.
-  
-  - [NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013-2015). National Science Foundation
-     [#DBI-1306697](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697),
-     *138,000 USD*. ([proposal](http://doi.org/10.6084/m9.figshare.652970))
-  
-  - The rOpenSci Project Phase I funding (2013, Co-PI). Alfred P. Sloan Foundation *180,000 USD*.
-  
-  - IIASA YSSP fellowship (2009). National
-     Academy of Sciences, OISE-0738129,
-     *8,000 USD*. ([proposal](http://doi.org/10.6084/m9.figshare.678310))
-  
-  - Computational Science Graduate Fellowship (2008). Department of Energy,
-     #DE-FG02-97ER25308, *149,000 USD*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2010246))"
-  
+    ],
+    
   "@reverse": {
     "attendee": [{
       "@type": "Event",
       "url": "http://ecows.oc.ntu.edu.tw/itnlws/",
       "name": "Empirical Dynamical Modeling and Forecasting in Nonlinear Systems",
-      "location": {"@type": "Place", "name": "NTU, Taiwan"}
+      "location": {"@type": "Place", "name": "NTU, Taiwan"},
       "startDate": "2015"
     },
     {
@@ -845,7 +843,7 @@
       "name": "Society of Systematic Biology Symposium invited speaker, Evolution Conference",
       "location": "Ottawa, CAN"
     }]
-  }
+  },
   
   
   "organizer": [
@@ -853,15 +851,14 @@
       "@type": "Event",
       "name": "Codemeta Workshop",
       "startDate": "2016-04-15",
-      "endDate" "2016-04-17",
+      "endDate": "2016-04-17",
       "location": "Portland, OR",
-      "sponsor": "#nsf"
+      "sponsor": "#nsf",
       "subEvent": {
         "@type": "Event",
-        "name": "Force16 Codemeta Workshop",
+        "name": "Force16 Codemeta Workshop"
       }
-    }]
-    
+    }],
   "participant":   [
     {"@type": "Event",
       "name": "rOpenSci Unconference",
@@ -898,18 +895,36 @@
   - [Stochastic spatial modeling in population dynamics](http://www.aimath.org/WWN/populationmodel/), AIM, Palo Alto, CA.
   ",
 
-  
-"theses": "
-  - Carl Boettiger, David Huse (2006) Clonal Interference Models in
-    Population Genetics. *Princeton Physics Dept*. [doi:10.6084/m9.figshare.678305](http://dx.doi.org/10.6084/m9.figshare.678305).
-  - Carl Boettiger, Joshua Weitz, Simon Levin (2007) Adaptive Dynamics:
-    Branching Phenomena and the Canonical Equation *Princeton Physics
-    Dept*. [doi:10.6084/m9.figshare.678306](http://dx.doi.org/10.6084/m9.figshare.678306).
-  - Carl Boettiger, Stephen Pacala, David Huse (2007) Ensemble Behavior
-    from Individual Dynamics in Multispecies Forest Populations.
-    *Princeton Physics Dept*. [doi:10.6084/m9.figshare.678304](http://dx.doi.org/10.6084/m9.figshare.678304).
-  - Carl Boettiger (2012). Regime shifts in ecology and evolution (PhD
-    Dissertation). [doi:10.6084/m9.figshare.97218](http://dx.doi.org/10.6084/m9.figshare.97218)."
-
-  
+  "@reverse": "author": [
+    {
+      "@type": "Thesis",
+      "inSupportOf": "AB Degree, Princeton Physics Department",
+      "name": "Clonal Interference Models in Population Genetics",
+      "datePublished": "2006",
+      "@id": "https://doi.org/10.6084/m9.figshare.678305",
+      "author": ["David Huse"]
+    },
+    {
+      "@type": "Thesis",
+      "inSupportOf": "AB Degree, Princeton Physics Department",
+      "name": "Adaptive Dynamics: Branching Phenomena and the Canonical Equation",
+      "datePublished": "2006",
+      "@id": "https://doi.org/10.6084/m9.figshare.678306",
+      "author": ["Joshua Weitz", "Simon Levin"]
+    },
+    {
+      "@type": "Thesis",
+      "inSupportOf": "AB Degree, Princeton Physics Department",
+      "name": "Ensemble Behavior from Individual Dynamics in Multispecies Forest Populations.",
+      "datePublished": "2007",
+      "@id": "https://doi.org/10.6084/m9.figshare.678304",
+      "author": ["Stephen Pacala", "David Huse"]
+    },
+    {
+      "@type": "Thesis",
+      "inSupportOf": "PhD Degree, Population Biology, University of California, Davis",
+      "name": "Adaptive Dynamics: Branching Phenomena and the Canonical Equation",
+      "datePublished": "2012",
+      "@id": "https://doi.org/10.6084/m9.figshare.97218"
+    }
 }  
