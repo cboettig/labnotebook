@@ -557,8 +557,7 @@
         "familyName": "Hastings"
       }
     ],
-    "pagination": "2527-2539",
-    "license": {}
+    "pagination": "2527-2539"
   },
   {
  
@@ -706,9 +705,7 @@
       }
     ],
     "pagination": "907-916"
-  }]
-
-}
+  }],
 
   
   "funder": [{
@@ -719,6 +716,20 @@
     {
       "@id": "http://dx.doi.org/10.13039/100007523",
       "name": "Division of Advanced Cyberinfrastructure",
+      "isPartOf": {
+        "@id": "http://dx.doi.org/10.13039/100000083",
+        "@type": "Organization",
+        "name": "Directorate for Computer and Information Science and Engineering",
+        "isPartOf": {
+          "@id": "http://dx.doi.org/10.13039/100000001",
+          "@type": "Organization",
+          "name": "National Science Foundation"
+        }
+      }
+    },
+    {
+      "@id": "http://dx.doi.org/10.13039/100000076",
+      "name": "Directorate for Biological Sciences",
       "isPartOf": {
         "@id": "http://dx.doi.org/10.13039/100000001",
         "@type": "Organization",
@@ -731,8 +742,8 @@
       "name": "Department of Energy"
     },
     {
+    "@type": "Organization",  
     "@id": "http://dx.doi.org/10.13039/100000879",
-    "@type": "Organization",
     "name": "Alfred P Sloan Foundation"
     },
     {
@@ -740,12 +751,28 @@
     "@id": "http://dx.doi.org/10.13039/100000209",
     "name": "National Academy of Sciences"
     }],
-  "awardtext": 
-  - The rOpenSci Project (2015-2018, Co-PI). Helmsley Trust *2,900,000 USD*.
+    
+  "grant": [
+    {
+      "name": "The rOpenSci Project",
+      "startDate": "2015-11-01",
+      "endDate": "2018-10-31",
+      "funder": "http://dx.doi.org/10.13039/100007028",
+      "amount": { "@type": "MonetaryAmount", "value": "2900000", "currency":  "USD" }
+    },
+    {
+      "name": "The CodeMeta Project",
+      "startDate": "2015-10-01",
+      "endDate": "2017-09-30",
+      "funder": "http://dx.doi.org/10.13039/100007523",
+      "amount": { "@type": "MonetaryAmount", "value": "165782", "currency":  "USD" },
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758",
+      "identifier": "#ACI-1549758",
+      "proposal": "https://dx.doi.org/10.6084/m9.figshare.2055972"
+      
+    }
   
-  - The Codemeta project (2015). National Science Foundation
-     [#ACI-1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
-     *165,782 USD*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2055972))
+  ] 
   
   - The rOpenSci Project, Phase II funding (2014, Co-PI). Alfred P. Sloan Foundation *300,000 USD*.
   
