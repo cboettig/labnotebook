@@ -1,10 +1,5 @@
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
-    <script src="{{ "/js/jquery-1.12.3.min.js" | relURL }}"></script>
-    <script src="{{ "/js/bootstrap.min.js" | relURL }}"></script>
-    <script src="{{ "/js/isotope.pkgd.min.js" | relURL }}"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
-    <script src="{{ "/js/hugo-academic.js" | relURL }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     {{ range .Site.Params.custom_js }}
     <script src="{{ "/js/" | relURL }}{{ . }}"></script>
     {{ end }}
