@@ -9,6 +9,8 @@
 
     </article>
   </div>
+  
+  
   <div class="col-md-4" style="border-left: 1px solid #eee8d5;"><!-- sidebar -->   
     <p> <i class="fa fa-calendar"></i>
     {{ with .GitInfo }}
@@ -43,7 +45,8 @@
   </div>
 </div>
 
-<script type="application/ld+json" src = {{ "/js/carl_boettiger.json" | relURL }}>
+    <script type="application/ld+json" src = "{{ "/js/carl_boettiger.json" | relURL }}"></script> 
+
 
 {{ end }}
  
