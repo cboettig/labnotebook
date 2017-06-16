@@ -4,13 +4,9 @@ subtitle: "Dept of Environmental Science, Policy, and Management"
 aliases: ["/community.html", "/research.html"]
 ---
 
-Welcome to the research group of 
-<a property="foaf:homepage schema:url" href="http://carlboettiger.info">
-<span property="foaf:name"> <span property="foaf:givenName">Carl</span>
-<span property="foaf:familyName">Boettiger</span></span></a>,
-<span property="schema:jobTitle">Assistant Professor</span> in the Department of 
-<a rel="schema:affiliation" href="http://ourenvironment.berkeley.edu">Environmental Science, Policy and Management</a> at 
-<a rel="foaf:workplaceHomepage" href="http://www.berkeley.edu/">UC Berkeley</a>.
+Welcome to the research group of Carl Boettiger, Assistant Professor in the Department of 
+[Environmental Science, Policy and Management](http://ourenvironment.berkeley.edu)
+at [UC Berkeley](http://www.berkeley.edu).
 
 I work on problems in ecological forecasting and decision making under
 uncertainty, with applications for global change, conservation and
@@ -28,9 +24,10 @@ optimal control theory must be adapted both to take advantage of all
 available data while also dealing with its imperfections. My approach
 blends ecological theory with the synthesis of heterogeneous data and
 the development of software -- a combination now recognized as data
-science.<p/> <p><span rel="foaf:interest"> I am co-founder of the <a
-href="https://ropensci.org">rOpenSci project</a>, a senior fellow at
-<a href="http://bids.berkeley.edu">BIDS</a>, and a science adviser to
-<a href="http://nceas.ucsb.edu">NCEAS</a>, reflecting my interests in
-open science, data science, and ecoinformatics.</span>
+science
+
+I am co-founder of the [rOpenSci project](https://ropensci.org), a senior fellow at
+[BIDS](http://bids.berkeley.edu), and a science adviser to
+[NCEAS](http://nceas.ucsb.edu), reflecting my interests in
+open science, data science, and ecoinformatics.
 

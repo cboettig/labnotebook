@@ -4,7 +4,7 @@
   "@id": "https://orcid.org/0000-0002-1642-628X",
   "givenName": "Carl",
   "familyName": "Boettiger",
-  "title": "Assistant Professor",
+  "jobTitle": "Assistant Professor",
   "email": "cboettig@berkeley.edu",
   "url": "http://carlboettiger.info",
   "image": "http://www.carlboettiger.info/img/carl.png",
@@ -40,18 +40,19 @@
     ],
   
   "funder": [{
-    "@id": "https://doi.org/10.13039/100007028",
-    "@type": "Organization",
-    "name": "Helmsley Charitable Trust"
+      "@id": "https://doi.org/10.13039/100007028",
+      "@type": "Organization",
+      "name": "Helmsley Charitable Trust"
     },
     {
       "@id": "https://doi.org/10.13039/100007523",
+      "@type": "Organization",
       "name": "Division of Advanced Cyberinfrastructure",
-      "isPartOf": {
-        "@id": "https://doi.org/10.13039/100000083",
+      "parentOrganization": {
         "@type": "Organization",
+        "@id": "https://doi.org/10.13039/100000083",
         "name": "Directorate for Computer and Information Science and Engineering",
-        "isPartOf": {
+        "parentOrganization": {
           "@id": "https://doi.org/10.13039/100000001",
           "@type": "Organization",
           "name": "National Science Foundation"
@@ -60,8 +61,9 @@
     },
     {
       "@id": "https://doi.org/10.13039/100000076",
+      "@type": "Organization",
       "name": "Directorate for Biological Sciences",
-      "isPartOf": {
+      "parentOrganization": {
         "@id": "https://doi.org/10.13039/100000001",
         "@type": "Organization",
         "name": "National Science Foundation"
@@ -163,12 +165,12 @@
     "member": [{
       "@type": "Organization", 
       "name": "NCEAS Scientific Advisory Board",
-      "isPartOf": "https://nceas.ucsb.edu"
+      "parentOrganization": "https://nceas.ucsb.edu"
       },
       {
         "@type": "Organization",
         "name": "rOpenSci Leadership Team",
-        "isPartOf": "http://ropensci.org"
+        "parentOrganization": "http://ropensci.org"
       },
       {
         "@type": "Organization",
@@ -177,7 +179,8 @@
       {
         "@type": "Organization",
         "name": "Berkeley Research Computing Advisory Committee",
-        "location": "UC Berkeley"
+        "location": {"@type": "Place", 
+                     "name": "UC Berkeley, Berkeley, CA"}
       }],
     "founder": {
       "@type": "Organization",
@@ -202,66 +205,82 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "Stephanie E.",
           "familyName": "Hampton"
         },
         {
+          "@type": "Person",
           "givenName": "Matthew B.",
           "familyName": "Jones"
         },
         {
+          "@type": "Person",
           "givenName": "Leah A.",
           "familyName": "Wasser"
         },
         {
+          "@type": "Person",
           "givenName": "Mark P.",
           "familyName": "Schildhauer"
         },
         {
+          "@type": "Person",
           "givenName": "Sarah R.",
           "familyName": "Supp"
         },
         {
+          "@type": "Person",
           "givenName": "Julien",
           "familyName": "Brun"
         },
         {
+          "@type": "Person",
           "givenName": "Rebecca R.",
           "familyName": "Hernandez"
         },
         {
+          "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "Scott L.",
           "familyName": "Collins"
         },
         {
+          "@type": "Person",
           "givenName": "Louis J.",
           "familyName": "Gross"
         },
         {
+          "@type": "Person",
           "givenName": "Denny S.",
           "familyName": "Fernández"
         },
         {
+          "@type": "Person",
           "givenName": "Amber",
           "familyName": "Budden"
         },
         {
+          "@type": "Person",
           "givenName": "Ethan P.",
           "familyName": "White"
         },
         {
+          "@type": "Person",
           "givenName": "Tracy K.",
           "familyName": "Teal"
         },
         {
+          "@type": "Person",
           "givenName": "Stephanie G.",
           "familyName": "Labou"
         },
         {
+          "@type": "Person",
           "givenName": "Juliann E.",
           "familyName": "Aukema"
         }
@@ -285,14 +304,17 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "T. Alex",
           "familyName": "Perkins"
         },
         {
+          "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "Benjamin L.",
           "familyName": "Phillips"
         }
@@ -319,26 +341,32 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "Michael",
           "familyName": "Bode"
         },
         {
+          "@type": "Person",
           "givenName": "James N.",
           "familyName": "Sanchirico"
         },
         {
+          "@type": "Person",
           "givenName": "Jacob",
           "familyName": "LaRiviere"
         },
         {
+          "@type": "Person",
           "givenName": "Alan",
           "familyName": "Hastings"
         },
         {
+          "@type": "Person",
           "givenName": "Paul R.",
           "familyName": "Armsworth"
         }
@@ -379,18 +407,22 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "Scott",
           "familyName": "Chamberlain"
         },
         {
+          "@type": "Person",
           "givenName": "Rutger",
           "familyName": "Vos"
         },
         {
+          "@type": "Person",
           "givenName": "Hilmar",
           "familyName": "Lapp"
         }
@@ -416,6 +448,7 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
         }
@@ -442,14 +475,17 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "C.",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "M.",
           "familyName": "Mangel"
         },
         {
+          "@type": "Person",
           "givenName": "S.",
           "familyName": "Munch"
         }
@@ -474,10 +510,12 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "C.",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "A.",
           "familyName": "Hastings"
         }
@@ -502,14 +540,17 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "Noam",
           "familyName": "Ross"
         },
         {
+          "@type": "Person",
           "givenName": "Alan",
           "familyName": "Hastings"
         }
@@ -535,10 +576,12 @@
       },
       "author":  [
         {
+          "@type": "Person",
           "givenName": "C.",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "A.",
           "familyName": "Hastings"
         }
@@ -564,10 +607,12 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "C.",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "A.",
           "familyName": "Hastings"
         }
@@ -594,14 +639,17 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "C.",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "D. T.",
           "familyName": "Lang"
         },
         {
+          "@type": "Person",
           "givenName": "P. C.",
           "familyName": "Wainwright"
         }
@@ -628,10 +676,12 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "Duncan",
           "familyName": "Temple Lang"
         }
@@ -658,10 +708,12 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "C.",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "A.",
           "familyName": "Hastings"
         }
@@ -687,18 +739,22 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "Jeremy M.",
           "familyName": "Beaulieu"
         },
         {
+          "@type": "Person",
           "givenName": "Dwueng-Chwuan",
           "familyName": "Jhwueng"
         },
         {
+          "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "Brian C.",
           "familyName": "O’Meara"
         }
@@ -725,14 +781,17 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "Graham",
           "familyName": "Coop"
         },
         {
+          "@type": "Person",
           "givenName": "Peter",
           "familyName": "Ralph"
         }
@@ -759,14 +818,17 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "Jonathan",
           "familyName": "Dushoff"
         },
         {
+          "@type": "Person",
           "givenName": "Joshua S.",
           "familyName": "Weitz"
         }
@@ -793,30 +855,33 @@
       },
       "author": [
         {
+          "@type": "Person",
           "givenName": "James J.",
           "familyName": "Wray"
         },
         {
+          "@type": "Person",
           "givenName": "Neta A.",
           "familyName": "Bahcall"
         },
         {
+          "@type": "Person",
           "givenName": "Paul",
           "familyName": "Bode"
         },
         {
+          "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
         },
         {
+          "@type": "Person",
           "givenName": "Philip F.",
           "familyName": "Hopkins"
         }
       ],
       "pagination": "907-916"
     },
-    
-    
     {
       "@type": "Thesis",
       "inSupportOf": "AB Degree, Princeton Physics Department",
@@ -862,13 +927,13 @@
       "@type": ["Event", "InvitedTalk"],
       "startDate": "2014",
       "name": "Berkeley Initiative for Global Change Biology",
-      "location": "Berkeley, CA"
+      "location": {"@type": "Place", "name": "Berkeley, CA"}
     },
     {
       "@type": ["Event", "InvitedTalk"],
       "startDate": "2014",
       "name": "DIMACS Global Change Biology",
-      "location": "Berkeley, CA",
+      "location": {"@type": "Place", "name": "Berkeley, CA"},
       "url": "http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html"
     },{
       "@type": ["Event", "InvitedTalk"],
@@ -880,31 +945,31 @@
       "@type": ["Event", "InvitedTalk"],
       "startDate": "2014",
       "name": "Berkeley Initiative for Global Change Biology",
-      "location": "Berkeley, CA"
+      "location": {"@type": "Place", "name": "Berkeley, CA"}
     },
     {
       "@type": ["Event", "InvitedTalk"],
       "startDate": "2013",
       "name": "Sustainable Management of Living Natural Resources",
-      "location": "Columbus, OH"
+      "location": {"@type": "Place", "name": "Columbus, OH"}
     },
     {
       "@type": ["Event", "InvitedTalk"],
       "startDate": "2013",
       "name": "Woods Hole Oceanographic Institute Seminar Speaker",
-      "location": "Woods Hole, MA"
+      "location": {"@type": "Place", "name": "Woods Hole, MA"}
     },
     {
       "@type": ["Event", "InvitedTalk"],
       "startDate": "2013",
       "name": "UC Davis Dept of Environmental Resources and Economics Seminar Speaker",
-      "location": "Davis, CA"
+      "location": {"@type": "Place", "name": "Davis, CA"}
     },
      {
       "@type": ["Event", "InvitedTalk"],
       "startDate": "2012",
       "name": "Society of Systematic Biology Symposium invited speaker, Evolution Conference",
-      "location": "Ottawa, CAN"
+      "location": {"@type": "Place", "name": "Ottawa, CAN"}
     }],
   
     
@@ -914,19 +979,18 @@
         "name": "Codemeta Workshop",
         "startDate": "2016-04-15",
         "endDate": "2016-04-17",
-        "location": "Portland, OR",
+        "location": {"@type": "Place", "name": "Portland, OR"},
         "sponsor": "#nsf",
         "subEvent": {
           "@type": "Event",
           "name": "Force16 Codemeta Workshop"
         }
       }],
-      
     "participant":   [
       {
         "@type": ["Event", "Workshop"],
         "name": "rOpenSci Unconference",
-        "location": "San Francisco, CA",
+        "location": {"@type": "Place", "name": "San Francisco, CA"},
         "startDate": "2016",
         "url": "http://unconf16.ropensci.org"
       },
@@ -934,20 +998,20 @@
         "@type": ["Event", "Workshop"],
         "name": "Moore-Sloan Data Science Environments: Second Annual Data Science Summit",
         "startDate": "2015-10",
-        "location": "Seattle, WA"
+        "location": {"@type": "Place", "name": "Seattle, WA"}
       },
       {
         "@type": ["Event", "Workshop"],
         "name": "Data Intensive Training Workshop",
         "startDate": "2015-08",
-        "location": "NCEAS, Santa Barbara, CA",
+        "location": {"@type": "Place", "name": "NCEAS, Santa Barbara, CA"},
         "url": "https://github.com/NCEAS/ds-workshop-2015"
       },
       {
         "@type": ["Event", "Workshop"],
         "name": "NSF Big Data Hubs Design Charette, Western Region",
         "startDate": "2015-06",
-        "location": "Salt Lake City, Utah",
+        "location": {"@type": "Place", "name": "Salt Lake City, Utah"},
         "url": "http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm"
       },
       {
@@ -955,14 +1019,14 @@
         "name": "rOpenSci Unconf",
         "startDate": "2015-03-26",
         "endDate": "2015-03-27",
-        "location": "San Fransisco, CA",
+        "location": {"@type": "Place", "name": "San Fransisco, CA"},
         "url": "http://unconf.ropensci.org/"
       },
       {
        "@type": ["Event", "Workshop"],
         "name": "Pretty Darn Good Control Working group",
         "startDate": "2015",
-        "location": "NIMBIOS, Knoxville TN",
+        "location": {"@type": "Place", "name": "NIMBIOS, Knoxville TN"},
         "url": "http://www.nimbios.org/workinggroups/WG_PDG"
       },
       {
@@ -970,48 +1034,48 @@
         "name": "rOpenSci Unconf",
         "startDate": "2014-03-30",
         "endDate": "2014-04-01",
-        "location": "San Fransisco, CA",
+        "location": {"@type": "Place", "name": "San Fransisco, CA"},
         "url": "http://ropensci.org/blog/2014/05/14/ropenhack/"  
       },
       {
         "@type": ["Event", "Workshop"],
         "name": "Reproducible Science: Curriculum & Workflow",
         "startDate": "2014-12-08",
-        "location": "NESCent, Durham, NC",
+        "location": {"@type": "Place", "name": "NESCent, Durham, NC"},
         "url": "https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014"  
       },
       {
         "@type": ["Event", "Workshop"],
         "name": "WSSSPE 2.0: Workshop on Sustainable Software for Science: Practice and Experiences",
         "startDate": "2014-11-16",
-        "location": "New Orleans, LA",
+        "location": {"@type": "Place", "name": "New Orleans, LA"},
         "url": "http://wssspe.researchcomputing.org.uk/wssspe2"
       },
       {
         "@type": ["Event", "Workshop"],
         "name": "Workflows Working Group",
         "startDate": "2014",
-        "location": "NCEAS, Santa Barbara, CA"
+        "location": {"@type": "Place", "name": "NCEAS, Santa Barbara, CA"}
       },
       {
         "@type": ["Event", "Workshop"],
         "name": "Sustainable Management of Living Natural Resources",
         "startDate": "2013",
-        "location": "MBI Columbus, OH",
+        "location": {"@type": "Place", "name": "MBI Columbus, OH"},
         "url": "http://www.mbi.ohio-state.edu/2013/ws3description.html"
       },
       {
         "@type": ["Event", "Workshop"],
         "name": "Academic software & workforce development, ISEES",
         "startDate": "2013-08",
-        "location": "Oakland, CA",
+        "location": {"@type": "Place", "name": "Oakland, CA"},
         "url": "http://isees.nceas.ucsb.edu"
       },
       {
         "@type": ["Event", "Workshop"],
         "name": "Software Lifecycle, ISEES",
         "startDate": "2013",
-        "location": "Santa Barbara, CA",
+        "location": {"@type": "Place", "name": "Santa Barbara, CA"},
         "url": "http://isees.nceas.ucsb.edu"
       },
       {
@@ -1019,7 +1083,7 @@
         "name": "Pretty Darn Good Control Working group",
         "startDate": "2012-03-13",
         "endDate": "2012-03-15",
-        "location": "NIMBIOS, Knoxville, TN",
+        "location": {"@type": "Place", "name": "NIMBIOS, Knoxville, TN"},
         "url": "http://www.nimbios.org/workinggroups/WG_PDG"
       },
       {
@@ -1027,14 +1091,14 @@
         "name": "Pretty Darn Good Control Working group",
         "startDate": "2011-09-12",
         "endDate": "2011-09-15",
-        "location": "NIMBIOS, Knoxville, TN",
+        "location": {"@type": "Place", "name": "NIMBIOS, Knoxville, TN"},
         "url": "http://www.nimbios.org/workinggroups/WG_PDG"
       },
       {
         "@type": ["Event", "Workshop"],
         "name": "Stochastic spatial modeling in population dynamics",
         "startDate": "2008",
-        "location": "Palo Alto, CA",
+        "location": {"@type": "Place", "name": "Palo Alto, CA"},
         "url": "http://www.aimath.org/WWN/populationmodel/"
       }]
     }

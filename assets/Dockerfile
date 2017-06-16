@@ -1,9 +1,8 @@
-FROM rocker/verse:3.4.0
+FROM rocker/geospatial:3.4.0
 MAINTAINER Carl Boettiger cboettig@ropensci.org 
 
 ## Install additional R package dependencies ###
 RUN apt-get update && apt-get -y install --no-install-recommends \
-  libopenblas-dev \
   liblapack-dev \
   librdf0-dev \
   librsvg2-dev \
@@ -23,6 +22,7 @@ RUN apt-get update && apt-get -y install --no-install-recommends \
   && R -e "blogdown::install_hugo()" \
   # Save me from configuring this each time
   && git config --system user.name 'Carl Boettiger' \
-  && git config --system user.email 'cboettig@gmail.com'
+  && git config --system user.email 'cboettig@gmail.com' \
+  && installGithub.r boettiger-lab/pomdpplus
 
 

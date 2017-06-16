@@ -2,25 +2,17 @@
 
 <article class="article" itemscope itemtype="http://schema.org/Article">
 
-<div id="me"
-     prefix="schema: http://schema.org/Person#"
-     typeof="foaf:Person schema:Person"
-     about="http://carlboettiger.info#me">
-
+<div>
     {{ with .Title }}<h1>{{ . }}</h1> {{ end }}  
     {{ with .Params.subtitle }}<h2>{{ . }}</h2> {{ end }}  
-
 
   <div class="row">
     <div class="col-md-5 col-md-offset-1">
     
-
-
-      
       {{ .Content }}
        
     </div> <!-- END col-md-5-->
-    <div class="col-md-3"><img property="foaf:depiction" src="{{"/img/carl.png" | relURL }}" alt="Photo of Carl Boettiger"/></div>
+    <div class="col-md-3"><img src="{{"/img/carl.png" | relURL }}"/></div>
   </div> <!-- END row-->
   <div class="row">
     <div class="col-md-4 col-md-offset-1">
@@ -30,22 +22,55 @@
         <dt><i class="fa fa-user"></i> Office:</dt> <dd><a href="https://www.google.com/maps/place/Wellman+Hall,+Berkeley,+CA+94720/@37.8731768,-122.2649768,17z/data=!3m1!4b1!4m2!3m1!1s0x80857c20d77c84bb:0x1ddb86f685917787">203 Wellman Hall</a></dd>
         <dt><i class="fa fa-building"></i> Address:</dt>
         <dd>
-        <span property="schema:address"
-        typeof="http://schema.org/PostalAddress" vocab=
-        "http://schema.org/PostalAddress/"><span property=
-        "streetAddress">ESPM Department,<br/>University of California,<br/>130 Mulford Hall #3114</span>,<br/><span
-        property=  "addressLocality">Berkeley</span>, <span property=
-        "addressRegion">CA</span> <span property=
-        "postalCode">94720-3114</span>, <span property=
-        "addressCountry">USA</span></span> </dd>
+        ESPM Department,           <br/>
+        University of California,  <br/>
+        130 Mulford Hall #3114,    <br/>
+        Berkeley, CA 94720-3114 USA
+        </dd>
         <dt><i class="ai ai-orcid"></i> Orcid ID:</dt>
-        <dd><a property="http://purl.org/spar/datacite/orcid"
-        href="https://orcid.org/0000-0002-1642-628X">0000-0002-1642-628X</a></dd>
+        <dd><a href="https://orcid.org/0000-0002-1642-628X">0000-0002-1642-628X</a></dd>
       </dl>
     </div>
   </div>
 </div>
 </article>
 
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "@id": "https://orcid.org/0000-0002-1642-628X",
+  "givenName": "Carl",
+  "familyName": "Boettiger",
+  "jobTitle": "Assistant Professor",
+  "email": "cboettig@berkeley.edu",
+  "url": "http://carlboettiger.info",
+  "image": "http://www.carlboettiger.info/img/carl.png",
+  "worksFor": {
+    "@id": "https://berkeley.edu", 
+    "@type": "Organization",
+    "name": "University of California, Berkeley"
+  }, 
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ESPM Department, University of California, 130 Mulford Hall #3114",
+    "addressLocality": "Berkeley",
+    "addressRegion": "CA",
+    "postalCode": "94720-3114",
+    "addressCountry": "USA"
+  },
+  "sameAs": ["https://github.com/cboettig", "https://twitter.com/cboettig", "https://plus.google.com/+CarlBoettiger", "https://www.linkedin.com/in/cboettig/", "https://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ"],
+  "alumniOf": [{
+    "@id": "https://princeton.edu",
+    "@type": "Organization",
+    "name": "Princeton University"
+  }, {
+    "@id": "https://ucdavis.edu",
+    "@type": "Organization",
+    "name": "University of California, Davis"
+  }]
+}
+</script>
 {{ end }}
-   
+
+
