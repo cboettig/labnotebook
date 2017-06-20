@@ -1,4 +1,4 @@
-FROM rocker/geospatial:3.4.0
+FROM rocker/geospatial:latest
 MAINTAINER Carl Boettiger cboettig@ropensci.org 
 
 ## Install additional R package dependencies ###
@@ -6,7 +6,6 @@ RUN apt-get update && apt-get -y install --no-install-recommends \
   liblapack-dev \
   librdf0-dev \
   librsvg2-dev \
-  libudunits2-dev \
   libsndfile1-dev \
   libfftw3-dev \
   libxslt-dev \
