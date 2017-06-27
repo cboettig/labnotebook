@@ -22,6 +22,6 @@ RUN apt-get update && apt-get -y install --no-install-recommends \
   # Save me from configuring this each time
   && git config --system user.name 'Carl Boettiger' \
   && git config --system user.email 'cboettig@gmail.com' \
-  && installGithub.r boettiger-lab/pomdpplus
+  && installGithub.r boettiger-lab/pomdpplus boettiger-lab/mdplearning ropensci/hunspell
 
 
