@@ -36,6 +36,7 @@ enableGitInfo = true
     name =  "Carl Boettiger"
     twitter =  "cboettig"
     github =  "cboettig"
+    keybase = "cboettig"
     email =  "cboettig@gmail.com"
     custom_css = ["cboettig.css"]
     repo = "cboettig.github.io"

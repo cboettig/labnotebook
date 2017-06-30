@@ -21,7 +21,7 @@
     "postalCode": "94720-3114",
     "addressCountry": "USA"
   },
-  "sameAs": ["https://github.com/cboettig", "https://twitter.com/cboettig", "https://plus.google.com/+CarlBoettiger", "https://www.linkedin.com/in/cboettig/", "https://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ"],
+  "sameAs": ["https://github.com/cboettig", "https://twitter.com/cboettig", "https://plus.google.com/+CarlBoettiger", "https://www.linkedin.com/in/cboettig/", "https://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ", "https://keybase.io/cboettig"],
   "alumniOf": [{
     "@id": "https://princeton.edu",
     "@type": "Organization",
