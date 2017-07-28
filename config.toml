@@ -5,7 +5,7 @@ title = "Boettiger Group"
 googleAnalytics = "UA-18401403-1"
 disqusShortname = "cboettig"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
-publishDir = "../carlboettiger.info"
+# publishDir = "../carlboettiger.info"
 enableGitInfo = true
 
 [permalinks]
