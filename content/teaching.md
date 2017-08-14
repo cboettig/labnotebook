@@ -3,10 +3,10 @@ title: Teaching
 aliases: ["/teaching.html"]
 ---
 
-### ESPM-157: [Data Science & Global Change Ecology](http://berkeley.carlboettiger.info/espm-157/) 
+### ESPM-157: [Data Science & Global Change Ecology](https://espm-157.carlboettiger.info/) 
 
 - Next offered: **Fall 2017**
-- Course website: <http://berkeley.carlboettiger.info/espm-157>
+- Course website: <https://espm-157.carlboettiger.info>
 
 _This is an upper-division undergraduate course designed to introduce students CNR majors to the fundamentals
 of data science, while also introducing students majoring in Data Science or related fields to key issues
