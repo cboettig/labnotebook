@@ -6,7 +6,7 @@
     <description>Recent content in Boettiger Group, UC Berkeley on Boettiger Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 May 2017 22:00:15 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jun 2017 21:25:04 -0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -49,15 +49,6 @@ docker run -d -p 8787:8787 rocker/tidyverse:devel to test out a recent version1 
       
       <guid>/2017/04/19/migrating-to-hugo-and-blogdown/</guid>
       <description>After OpenWetWare (2010), Wordpress (2010 - 2012) and Jekyll (2012 - 2017), I move platforms once again: now to Hugo. Why the move? As usual, this site remains a way for me to explore new technologies, but the cutting edge is by no means the allure which leads me to migrate. Rather, I find myself ever trying to move towards simpler platforms, what’s easier to maintain, free to host, easier to replicate, and what makes best use of the most widely available and well-maintained existing software and avoids unncessary custom hacks.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/drafts/json_query/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/drafts/json_query/</guid>
-      <description>library(tidyverse) library(jsonlite) #library(printr) knitr::opts_chunk$set(comment=&amp;quot;&amp;quot;) options(stringsAsFactors=FALSE) x &amp;lt;- data.frame(driver = c(&amp;quot;Bowser&amp;quot;, &amp;quot;Peach&amp;quot;), occupation = c(&amp;quot;Koopa&amp;quot;, &amp;quot;Princess&amp;quot;)) x$vehicle &amp;lt;- data.frame(model = c(&amp;quot;Piranha Prowler&amp;quot;, &amp;quot;Royal Racer&amp;quot;)) x$vehicle$stats &amp;lt;- data.frame(speed = c(55, 34), weight = c(67, 24), drift = c(35, 32)) dat &amp;lt;- toJSON(x, pretty = TRUE) dat [ { &amp;quot;driver&amp;quot;: &amp;quot;Bowser&amp;quot;, &amp;quot;occupation&amp;quot;: &amp;quot;Koopa&amp;quot;, &amp;quot;vehicle&amp;quot;: { &amp;quot;model&amp;quot;: &amp;quot;Piranha Prowler&amp;quot;, &amp;quot;stats&amp;quot;: { &amp;quot;speed&amp;quot;: 55, &amp;quot;weight&amp;quot;: 67, &amp;quot;drift&amp;quot;: 35 } } }, { &amp;quot;driver&amp;quot;: &amp;quot;Peach&amp;quot;, &amp;quot;occupation&amp;quot;: &amp;quot;Princess&amp;quot;, &amp;quot;vehicle&amp;quot;: { &amp;quot;model&amp;quot;: &amp;quot;Royal Racer&amp;quot;, &amp;quot;stats&amp;quot;: { &amp;quot;speed&amp;quot;: 34, &amp;quot;weight&amp;quot;: 24, &amp;quot;drift&amp;quot;: 32 } } } ]  df &amp;lt;- fromJSON(dat) df  driver occupation vehicle.</description>
     </item>
     
     <item>
@@ -105,7 +96,7 @@ Actively Using    &amp;ndash; The web-based home of my research. Star, watch, or
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/</guid>
-      <description>ESPM-157: Data Science &amp;amp; Global Change Ecology  Next offered: Fall 2017 Course website: http://berkeley.carlboettiger.info/espm-157  This is an upper-division undergraduate course designed to introduce students CNR majors to the fundamentals of data science, while also introducing students majoring in Data Science or related fields to key issues in global change ecology.
+      <description>ESPM-157: Data Science &amp;amp; Global Change Ecology  Next offered: Fall 2017 Course website: https://espm-157.carlboettiger.info  This is an upper-division undergraduate course designed to introduce students CNR majors to the fundamentals of data science, while also introducing students majoring in Data Science or related fields to key issues in global change ecology.
 ESPM-288: Reproducible and Collaborative Data Science  Last offered: Spring 2017 (As ESPM-290) Next offered: Spring 2018 Course website: https://ds421.</description>
     </item>
     
