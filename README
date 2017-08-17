@@ -1,0 +1,6 @@
+# labnotebook
+
+Sources for <https://www.carlboettiger.info>
+
+- Written in [Blogdown](https://github.com/rstudio/blogdown) using the [Hugo](https://hugodocs.info) static site generator.
+- Deployed on [Netlify](https://netlify.com)
