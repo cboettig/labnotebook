@@ -1,6 +1,5 @@
 ---
 title: Lab Notebook
-aliases: ["/lab-notebook.html"]
 
 ---
 
