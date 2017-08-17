@@ -2,7 +2,6 @@
 type: page
 layout: vita
 title: Vita
-aliases: ["/vita.html"]
 ---
 
 # employment

@@ -1,7 +1,6 @@
 ---
 title: "Boettiger Group, UC Berkeley"
 subtitle: "Dept of Environmental Science, Policy, and Management"
-aliases: ["/community.html", "/research.html"]
 ---
 
 Welcome to the research group of Carl Boettiger, Assistant Professor in the Department of 

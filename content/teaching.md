@@ -1,6 +1,5 @@
 ---
 title: Teaching
-aliases: ["/teaching.html"]
 ---
 
 ### ESPM-157: [Data Science & Global Change Ecology](https://espm-157.carlboettiger.info/) 
