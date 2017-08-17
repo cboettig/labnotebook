@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Notes</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="reading, code-tricks" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Notes" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2014-07-31 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/07/31/notes.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Notes" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2014-07-31 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/07/31/notes.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2014-07-31 00:00:00 +0000"/>
+<meta name="citation_title" content="Notes"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Notes</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h2 id="berkeley-collaborative-environment">Berkeley Collaborative Environment</h2>
+<p>Trying out the Berkeley image (Essentially ubuntu 14.04 XFCE with ipython and RStudio installed, but finely tuned to improve user experience; e.g. solid colors for faster remote window connections.)</p>
+<p>Highly recommend <a href="https://t.co/TJ9ObbL8i8">their paper</a> for the first explanation I’ve actually been able to follow that provides a definition of “DevOpts” (essentially, using scripts rather than documentation to manage consistent cross-platform installation) and explains the differences and similarities between the various programs operating in this sphere, sometimes as alternatives and simultaneously.</p>
+<h4 id="virtual-machines.">Virtual machines.</h4>
+<p>Their approach focuses on running on top of a complete virtual machine. Primarily considers Oracle’s <code>virtualbox</code> for local use, Amazon’s AMI for cloud use. (For an emerging alternative to the full virtual machine approach, they discuss Docker).</p>
+<h4 id="configuration-management-cm-tools">Configuration management (CM) tools:</h4>
+<ul>
+<li><strong>Ansible</strong> (“playbooks”) used by the BCE to specify the complete software environment. Compares to: <strong>Chef</strong> (Ruby-based, “recipes”), <strong>Salt</strong> (Python based, “states”), and <strong>Puppet</strong> (“manifests”).</li>
+</ul>
+<h4 id="provisioning-tools">Provisioning tools:</h4>
+<ul>
+<li><p><strong>Packer</strong> Used at build time to create a machine image for the VM. Packer can use Ansible/Chef/Salt/Puppet files to do this. Results in a nice AMI for Amazon web console or an image for the virtualbox GUI.</p></li>
+<li><p><strong>Vagrant</strong> Offers a different approach. Rather than the developer creating a VM image using Packer and Ansible script that is ready to run on virtualbox or Amazon, the end user installs vagrant instead of virtualbox. Vagrant also handles the job of Packer, in preparing an environment to run (on Vagrant’s virtual machine, rather than on virtualbox). (Note that conversely, Packer can create a Vagrant virtual machine just as easily as it can create the Oracle virtualbox or Amazon AMI). Vagrant feels a lot more native, as the user works within their familiar OS tools for editing, etc, while vagrant makes sure that the execution of the software happens in a controlled, identical environment.</p></li>
+<li><p><strong>Docker</strong> offers a more modular alternative to a full virtual machine, with performance that is more like running on ‘bare metal’, sharing the kernel of the native OS; though at the moment it requires that be a linux kernel. Docker is typically deployed using Vagrant, (though stand-alone setup is emerging).</p></li>
+</ul>
+<p>From first glance, Vagrant sounds like a more elegant approach than having end users install Oracle’s virtual machine and then learn to live in a virtual window emulating the Ubuntu-XFCE desktop (particularly if those users are developers!). However, it seems that the BCE team found that Vagrant was harder for students to work with, since it required knowledge of the commandline.</p>
+<p>The paper also provides a fabulous case study of a major scientific software project using the “DevOpts” philosophy but without any of these new and emerging tools, relying only on scripts, makefiles, and Linux distribution package managers.</p>
+<h3 id="test-drive-impressions">Test drive impressions</h3>
+<p>Unfortunately, no luck getting virtualization running on my laptop (due to <a href="ttps://github.com/dlab-berkeley/collaboratool/issues/created_by/cboettig">BIOS issues</a>). Testing on Ubuntu desktop required a newer version of virtualbox than what’s in the 12.04 repos, but otherwise just worked. It’s straight forward to install additional needed software, and virtualbox gives the option of preserving the machine state on exit, presumably with the software. Not clear how that should be managed to avoid re-creating the problems that using a consistent image set out to avoid in the first place; perhaps requires re-provisioning a divergent image?</p>
+<p>Nice experience testing out the Amazon machine image, but I think the workflow would be improved if it provided RStudio server for a more interactive interface.</p>
+<h2 id="misc-tasks">Misc tasks</h2>
+<ul>
+<li><p>Working on reveal.js slides</p></li>
+<li><p>RNeXML manuscript edits from Francois’s comments</p></li>
+</ul>
+<h2 id="thoughts-on-namespaces-in-r">Thoughts on namespaces (in R)</h2>
+<p><em>Chatting with Scott about namespace practices, thought I’d put some of this down.</em></p>
+<p>I go back and forth on having a small namespace (particularly vs convenience functions). It is certainly easier to maintain, but from the user’s perspective I think it’s pretty easy to just ignore extra functions; as long as it’s well documented what functions they need to know to get started.</p>
+<p>I guess if a user needs to know too many functions to do anything, than it becomes hard to keep track of. That’s partly why I started wrapping exposed functions. For instance, you can just use <code>nexml_write</code> all the time and never use add_characters, add_trees, etc, since <code>nexml_write</code> takes additional trees and characters as arguments.</p>
+<p>But I like function calls to be as semantic as possible so the code is more self documenting. Sometimes <code>add_characters(nex)</code> is more self explanatory than <code>nexml_write(nex, characters = characters)</code>.</p>
+<p>The XML package really got me started on this. There’s usually like 4 or 5 ways to do the same thing. Sometimes that’s really annoying, but sometimes it helps write more transparent code or less verbose code (e.g. adding child nodes with <code>addChildren</code> vs passing as <code>.children</code> argument to <code>newXMLNode</code> – the former tends to be more semantic, the latter often more consise).</p>
+<h2 id="code-tricks-vim-pandoc">Code tricks: vim pandoc</h2>
+<p>Vim pandoc syntax highlighting</p>
+<ul>
+<li>Recognize <code>.Rmd</code> as a pandoc-syntax file extension. In <code>.vimrc</code> do:</li>
+</ul>
+<pre class="vim"><code>au BufRead,BufNewFile *.Rmd set filetype=pandoc</code></pre>
+<ul>
+<li>Enable syntax highlighting inside code blocks, by language. In vim session, do: <code>PandocHighlight r</code>. Unfortunately doesn’t recognize the default <code>.Rmd</code> format used by RStudio. This then enables syntax highlighting, folding, etc.</li>
+</ul>
+<p>If I recall correctly, knitr’s default markdown syntax,</p>
+<pre><code>```{r}</code></pre>
+<p>was intended to be a valid markdown syntax. It seems Github Flavored markdown is happy to recognize this as markdown syntax for a code block in the R language, but while pandoc recognizes this as a code block, it does not recognize the language.</p>
+<p>I believe Pandoc does recognize the format</p>
+<pre><code>```{.r options}</code></pre>
+<p>as the notation to specify the R language in this notation. I like this notation because it means that pandoc-aware syntax highlighters will highlight my code chunks as R code, which does not happen in the default syntax.</p>
+<p>I realize I could define this as an input hook for knitr, but am reluctant to do so as it makes my code slightly less familiar/less portable to other users (e.g. RStudio expects and integrates with only the standard notation.)</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2014-07-31 00:00:00 +0000" 
+    property="dc:created">31 Jul 2014</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2014/07/21/notes.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2014/08/06/notes.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2014/commits/master/_posts/2014-07-31-notes.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2014/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2014/tags.html#reading">#reading</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2014/tags.html#code-tricks">#code-tricks</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2014/commit/c5681f2d114f1d14edc8cfca17ee60c9e8ef6cfb/_posts/2014-07-31-notes.md"> c5681f2d114f1d14edc8cfca17ee60c9e8ef6cfb</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Notes
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2014-07-31
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/07/31/notes.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>knitcitations</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="R, knitcitations" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="knitcitations" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2012-05-30 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/05/30/knitcitations.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="knitcitations" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2012-05-30 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/05/30/knitcitations.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2012-05-30 00:00:00 +0000"/>
+<meta name="citation_title" content="knitcitations"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">knitcitations</h1>
+        <h2>An automated way to generate citations by dynamic lookup using Crossref DOIs or by bibtex files.</h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p><strong>EDIT</strong>: Note that this package has evolved quite a bit from this initial post. While the basic interface is the same, support for additional features and some choices in formatting differ from what is presented here. Please see the <a href="https://github.com/cboettig/knitcitations/">README</a> for the latest introduction to the package. Readers may also be interested in the more recent post discussing the <a href="http://www.carlboettiger.info/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html">introduction of several new features including semantic tools in the <code>knitcitations</code> package</a></p>
+<p>Markdown is becoming an increasingly popular platform for lightweight and online publishing. While traditional publishing tools like LaTeX and word processors have long had integrated bibliographic management, few tools handle citations for lightweight publishing. I am finding myself more and more drawn to markdown rather then tex/Rnw as my standard format (not least of which is the ease of displaying the files on github, particularly now that we have automatic image uploading. I’ve taken a little whack at generating in-text citations using knitr and other R tools.</p>
+<h2 id="installation">Installation</h2>
+<p>I’ve put some simple functions in a <code>knitcitations</code> package (see the most recent version of the <a href="http://github.com/cboettig/knitcitations">knitcitations package on github here</a>). The functions use the crossref API to grab citation information given a doi, so I don’t have to generate a bibtex file for papers I’m reading, (inspired by the <a href="http://wordpress.org/extend/plugins/kcite/">kcite</a> package for Wordpress). One can currently grab the package from Github</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(devtools)
+<span class="kw">install_github</span>(<span class="st">&quot;knitcitations&quot;</span>, <span class="st">&quot;cboettig&quot;</span>)</code></pre>
+<p>Let’s load the package into R and go for a spin.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(knitcitations)</code></pre>
+<h2 id="generating-citations">Generating citations</h2>
+<h3 id="doi-approach">DOI Approach</h3>
+<p>Then we can generate a citation given a DOI with the <code>ref</code> function:</p>
+<pre class="sourceCode r"><code class="sourceCode r">r &lt;-<span class="st"> </span><span class="kw">ref</span>(<span class="st">&quot;10.1111/j.1461-0248.2005.00827.x&quot;</span>)
+<span class="kw">print</span>(r, <span class="st">&quot;html&quot;</span>)</code></pre>
+<p>Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006). “Accounting For Uncertainty in Marine Reserve Design.” <em>Ecology Letters</em>, 9. ISSN 1461-023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x" class="uri">http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x</a>.</p>
+<p>Note that R allows bibitems to print in a variety of formats, including html.</p>
+<p>We can generate inline citations in the short name/date format with the <code>citet</code> function:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citet</span>(<span class="st">&quot;10.1111/j.1461-0248.2005.00827.x&quot;</span>)</code></pre>
+<p>[1] “Halpern <em>et. al.</em> (2006)”</p>
+<p>Similarly we can generate parenthetical citations with the <code>citep</code> function,</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citep</span>(<span class="kw">c</span>(<span class="st">&quot;10.1111/j.1461-0248.2005.00827.x&quot;</span>, <span class="st">&quot;10.1890/11-0011.1&quot;</span>))</code></pre>
+<p>[1] “(Halpern <em>et. al.</em> 2006; Abrams <em>et. al.</em> 2012)”</p>
+<p>Which can take a list of DOIs to cite parenthetically. The <code>citet</code> and <code>citep</code> functions are automatically retrieving the available metadata via the Crossref API, and R is storing the information to generate the final bibliography.</p>
+<h3 id="using-and-creating-citation-keys">Using and creating citation keys</h3>
+<p>When specifying a DOI for a citation, we can also give the citation a simple key name so we can use it later without having to remember the DOI, for instance, we can make the first citation of a particular example as</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citep</span>(<span class="kw">c</span>(<span class="dt">Michaels =</span> <span class="st">&quot;10.1111/j.1755-263X.2012.00241.x&quot;</span>))</code></pre>
+<p>[1] “(Michaels &amp; Tyre, 2012)”</p>
+<p>and then later use</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citep</span>(<span class="st">&quot;Michaels&quot;</span>)</code></pre>
+<p>[1] “(Michaels &amp; Tyre, 2012)”</p>
+<p>If we do not pass a key for the DOI we create, knitcitations will automatically generate a key of it’s own using the last name of the first author and the year. For instance, based on one of the DOI-citations we have already created, we can do</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citet</span>(<span class="st">&quot;Halpern2006&quot;</span>)</code></pre>
+<p>[1] “Halpern <em>et. al.</em> (2006)”</p>
+<p>and knitcitations recognizes the key. The function will try to avoid collisions in the key: if it is given or creates a key matching one that is already in use, it will see if the titles of the articles match. If the are the same, the same key is used to avoid a duplicate entry. This makes it safe to call</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citet</span>(<span class="kw">c</span>(<span class="dt">Halpern2006 =</span> <span class="st">&quot;10.1111/j.1461-0248.2005.00827.x&quot;</span>))</code></pre>
+<p>[1] “Halpern <em>et. al.</em> (2006)”</p>
+<p>even if we have earlier or later cited by the doi alone. Collision checking also avoids duplicating keys that correspond to different papers. If the titles are unique, knitcitations appends an underscore at the end of the automatically generated key. For instance, here we call a DOI that corresponds to a different citation with the same first author and year:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citet</span>(<span class="st">&quot;10.1111/j.1523-1739.2005.00258.x&quot;</span>)</code></pre>
+<pre><code>Warning message: Automatic key generation found a copy of this key, using Halpern2006_ instead</code></pre>
+<p>[1] “Halpern <em>et. al.</em> (2006)”</p>
+<p>A warning (not printed by knitr when this is used inline, but included in the log file) alerts us to the fact that this citation has been given an alternate key,</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citet</span>(<span class="st">&quot;Halpern2006_&quot;</span>)</code></pre>
+<p>[1] “Halpern <em>et. al.</em> (2006)”</p>
+<p>Of course if managing different keys sounds annoying, we can just call the DOI directly each time.</p>
+<h3 id="bibtex-approach">Bibtex Approach</h3>
+<p>If we have a bibtex file, we can use this for the citations as well. If you don’t have a bibtex file handy, you can make one containing the citation information for some of R’s packages:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write.bibtex</span>(<span class="kw">c</span>(<span class="st">&quot;bibtex&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;knitcitations&quot;</span>), <span class="dt">file =</span> <span class="st">&quot;example.bib&quot;</span>)</code></pre>
+<p>We could also have used the <code>ref</code> function write a bibtex file for our list of DOIs</p>
+<pre class="sourceCode r"><code class="sourceCode r">refs &lt;-<span class="st"> </span><span class="kw">lapply</span>(<span class="kw">c</span>(<span class="st">&quot;10.1111/j.1461-0248.2005.00827.x&quot;</span>, <span class="st">&quot;10.1890/11-0011.1&quot;</span>), 
+    ref)
+<span class="kw">write.bibtex</span>(refs, <span class="dt">file =</span> <span class="st">&quot;refs.bib&quot;</span>)</code></pre>
+<p>Once we have a bibtex file available, we must read it into R.</p>
+<pre class="sourceCode r"><code class="sourceCode r">bib &lt;-<span class="st"> </span><span class="kw">read.bibtex</span>(<span class="st">&quot;example.bib&quot;</span>)</code></pre>
+<p>We can now create citations from <code>bib</code> using the bibtex key,</p>
+<pre class="sourceCode r"><code class="sourceCode r">bib[[<span class="st">&quot;knitr&quot;</span>]]</code></pre>
+<p>Xie Y (2012). <em>knitr: A general-purpose package for dynamic report generation in R</em>. R package version 0.5.4, <URL:
+http://yihui.name/knitr/>.</p>
+<p>The inline citation tools can also now use this <code>bib</code> instead of a DOI to generate a citation,</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citet</span>(bib[[<span class="st">&quot;knitr&quot;</span>]])</code></pre>
+<p>[1] “Xie, (2012)”</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citep</span>(bib[<span class="kw">c</span>(<span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;bibtex&quot;</span>)])</code></pre>
+<p>[1] “(Xie, 2012; Francois, 2011)”</p>
+<p>Like the case of the DOI, after we have used a citation once, we can cite by the bibkey name directly, rather than having to reference the bibentry object (<em>e.g.</em> from the <code>bib</code> list):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citet</span>(<span class="st">&quot;knitr&quot;</span>)</code></pre>
+<p>[1] “Xie, (2012)”</p>
+<h3 id="using-the-inline-citations">Using the inline citations</h3>
+<p>The inline citation calls are designed to be used with knitr’s inline code blocks. In markdown, these are enclosed in ` r `. The output format will use the plain-text rendering rather than the code markup. Thus we can use the line <code>citep(&quot;10.1111/j.1461-0248.2005.00827.x&quot;)</code> to generate a parenthetical citation, (Halpern <em>et. al.</em> 2006). We can generate the in-text citations with <code>citet</code>, such as Xie, (2012).</p>
+<h2 id="generating-the-final-bibliography">Generating the final bibliography</h2>
+<p>As we go along adding inline citations, R stores the list of citation info. Then at the end of the document, use this command to print the bibliography generated by the use of our inline citations.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bibliography</span>(<span class="st">&quot;html&quot;</span>) </code></pre>
+<p>Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006). “Accounting For Uncertainty in Marine Reserve Design.” <em>Ecology Letters</em>, <strong>9</strong>. ISSN 1461-023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x" class="uri">http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x</a>.</p>
+<p>Abrams PA, Ruokolainen L, Shuter BJ and Mccann KS (2012). “Harvesting Creates Ecological Traps: Consequences of Invisible Mortality Risks in Predator-Prey Metacommunities.” <em>Ecology</em>, <strong>93</strong>. ISSN 0012-9658, <a href="http://dx.doi.org/10.1890/11-0011.1" class="uri">http://dx.doi.org/10.1890/11-0011.1</a>.</p>
+<p>Michaels S and Tyre AJ (2012). “How Indeterminism Shapes Ecologists’ Contributions to Managing Socio-Ecological Systems.” <em>Conservation Letters</em>. <a href="http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x" class="uri">http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x</a>.</p>
+<p>Halpern BS, Pyke CR, Fox HE, Haney JC, Schlaepfer MA and Zaradic P (2006). “Gaps And Mismatches Between Global Conservation Priorities And Spending.” <em>Conservation Biology</em>, <strong>20</strong>. <a href="http://dx.doi.org/10.1111/j.1523-1739.2005.00258.x" class="uri">http://dx.doi.org/10.1111/j.1523-1739.2005.00258.x</a>.</p>
+<p>Xie Y (2012). <em>knitr: A general-purpose package for dynamic report generation in R</em>. R package version 0.5.4, <a href="http://yihui.name/knitr/" class="uri">http://yihui.name/knitr/</a>.</p>
+<p>Francois R (2011). <em>bibtex: bibtex parser</em>. R package version 0.3-0, <a href="http://CRAN.R-project.org/package=bibtex" class="uri">http://CRAN.R-project.org/package=bibtex</a>.</p>
+<h2 id="reflections">Reflections</h2>
+<p>We could have justed printed bibliography in plain text format using with <code>bibliography()</code>. Note that it contains only the citations created with the inline citation commands <code>citet</code> and <code>citep</code>, in the order cited. All of these citations are stored in a hidden options variable in R when the inline functions are called. To reset the citation list (<em>i.e.</em> empty the contents of “bibliography()”) we can use the <code>cleanbib()</code> command, or set the option <code>bibliography(erase=TRUE)</code>. Typically we could hide the bibliography chunk using a inline knitr call or the chunk option “echo=FALSE”.</p>
+<p>I hope to add markup to format this a bit more nicely later. For instance, we want the links to appear as real links. Additionally, we may want to add markup around the citations, such as the reason for the citation into the link using the <a href="http://speroni.web.cs.unibo.it/cgi-bin/lode/req.py?req=http:/purl.org/spar/cito">Citation Typing Ontology</a>. Ideally I need a method to support different citation styles, even though it is silly in today’s world that the citation format is still a choice of the <em>publisher</em> and not a choice of the <em>reader</em>. This will probably require citeproc integration and a major upgrade. Please report any bugs, feature requests or citations on the <a href="https://github.com/cboettig/knitcitations/issues">Github issues tracker!</a></p>
+<h3 id="comparing-lightweight-citation-alternatives">Comparing lightweight citation alternatives</h3>
+<p>Several citation alternatives are available for lightweight publishing outside of this option, each with its own advantages and limitations. John MacFarlane’s <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a> is probably the most widely used citation manager for markdown files, working with a bibtex source file but formatting the citation lists using citeproc. It has the advantage of a more concise citation syntax, consistent with the source-readable goals of markdown and citation formating. Of course it is a markdown extension and will not be read by other markdown interpreters. This would be less of an issue of Pandoc could run markdown -&gt; markdown without garbling syntax of some other markdown interpreter, like Github-flavored markdown.</p>
+<p>The only other tool I know of that provides dynamic citations by DOI look-up is Phil Lord’s excellent Wordpress plugin, <a href="http://wordpress.org/extend/plugins/kcite/">kcite</a>. It now uses citeproc for formatting, automatically links the in-text citations to the bibliography, supports PubMed and ArXiv ids as well as DOIs and even web URLs (though not bibtex files). The major limitation for me is that it is limited to Wordpress with Wordpress specific shortcode. (Of course I introduce R-specific code here, but with the assumption of a knitr-based audience who probably uses github). A variety of other platform-specific plugins are available to convert bibtex files into citations for different blogging platforms, including Wordpress and Jekyll.</p>
+<p>So why knitcitations? My goal is primarily to bring this functionality to knitr users who rely on the markdown format rather than the latex format and are interested in dynamic citations and web-based publishing. I hope it finds its niche.</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2012-05-30 00:00:00 +0000" 
+    property="dc:created">30 May 2012</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/05/26/exploring-jekyll-layout.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/06/08/notes.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2012-05-30-knitcitations.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#R">#R</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#knitcitations">#knitcitations</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/1d2caa15a7c2fe3fe1402f064f5fceb4f99452d5/_posts/2012-05-30-knitcitations.md"> 1d2caa15a7c2fe3fe1402f064f5fceb4f99452d5</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=knitcitations
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2012-05-30
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/05/30/knitcitations.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

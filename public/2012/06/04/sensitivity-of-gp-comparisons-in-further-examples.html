@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Sensitivity Of Gp Comparisons In Further Examples</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="nonparametric-bayes" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Sensitivity Of Gp Comparisons In Further Examples" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2013-06-04 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/06/04/sensitivity-of-gp-comparisons-in-further-examples.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Sensitivity Of Gp Comparisons In Further Examples" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2013-06-04 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/06/04/sensitivity-of-gp-comparisons-in-further-examples.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2013-06-04 00:00:00 +0000"/>
+<meta name="citation_title" content="Sensitivity Of Gp Comparisons In Further Examples"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Sensitivity Of Gp Comparisons In Further Examples</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h1 id="comparison-of-nonparametric-bayesian-gaussian-process-estimates-to-standard-the-parametric-bayesian-approach">Comparison of Nonparametric Bayesian Gaussian Process estimates to standard the Parametric Bayesian approach</h1>
+<p>Plotting and knitr options, (can generally be ignored)</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(modeest)
+posterior.mode &lt;-<span class="st"> </span>function(x) {
+  <span class="kw">mlv</span>(x, <span class="dt">method=</span><span class="st">&quot;shorth&quot;</span>)$M
+}</code></pre>
+<h3 id="model-and-parameters">Model and parameters</h3>
+<p>Uses the model derived in <code>citet(&quot;10.1080/10236190412331335373&quot;)</code>, of a Ricker-like growth curve with an allee effect, defined in the pdgControl package,</p>
+<pre class="sourceCode r"><code class="sourceCode r">f &lt;-<span class="st"> </span>RickerAllee
+p &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">5</span>)
+K &lt;-<span class="st"> </span><span class="dv">10</span>  <span class="co"># approx, a li&#39;l&#39; less</span>
+allee &lt;-<span class="st"> </span><span class="dv">5</span> <span class="co"># approx, a li&#39;l&#39; less</span></code></pre>
+<p>Various parameters defining noise dynamics, grid, and policy costs.</p>
+<pre class="sourceCode r"><code class="sourceCode r">sigma_g &lt;-<span class="st"> </span><span class="fl">0.05</span>
+sigma_m &lt;-<span class="st"> </span><span class="fl">0.0</span>
+z_g &lt;-<span class="st"> </span>function() <span class="kw">rlnorm</span>(<span class="dv">1</span>, <span class="dv">0</span>, sigma_g)
+z_m &lt;-<span class="st"> </span>function() <span class="dv">1</span>+(<span class="dv">2</span>*<span class="kw">runif</span>(<span class="dv">1</span>, <span class="dv">0</span>,  <span class="dv">1</span>)-<span class="dv">1</span>) *<span class="st"> </span>sigma_m
+x_grid &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="fl">1.5</span> *<span class="st"> </span>K, <span class="dt">length=</span><span class="dv">50</span>)
+h_grid &lt;-<span class="st"> </span>x_grid
+profit &lt;-<span class="st"> </span>function(x,h) <span class="kw">pmin</span>(x, h)
+delta &lt;-<span class="st"> </span><span class="fl">0.01</span>
+OptTime &lt;-<span class="st"> </span><span class="dv">50</span>  <span class="co"># stationarity with unstable models is tricky thing</span>
+reward &lt;-<span class="st"> </span><span class="dv">0</span>
+xT &lt;-<span class="st"> </span><span class="dv">0</span>
+Xo &lt;-<span class="st">  </span>allee<span class="fl">+.5</span><span class="co"># observations start from</span>
+x0 &lt;-<span class="st"> </span>K <span class="co"># simulation under policy starts from</span>
+Tobs &lt;-<span class="st"> </span><span class="dv">40</span></code></pre>
+<h3 id="sample-data">Sample Data</h3>
+<pre class="sourceCode r"><code class="sourceCode r">  <span class="kw">set.seed</span>(<span class="dv">1234</span>)
+  <span class="co">#harvest &lt;- sort(rep(seq(0, .5, length=7), 5))</span>
+  x &lt;-<span class="st"> </span><span class="kw">numeric</span>(Tobs)
+  x[<span class="dv">1</span>] &lt;-<span class="st"> </span>Xo
+  nz &lt;-<span class="st"> </span><span class="dv">1</span>
+  for(t in <span class="dv">1</span>:(Tobs<span class="dv">-1</span>))
+    x[t<span class="dv">+1</span>] =<span class="st"> </span><span class="kw">z_g</span>() *<span class="st"> </span><span class="kw">f</span>(x[t], <span class="dt">h=</span><span class="dv">0</span>, <span class="dt">p=</span>p)
+  obs &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">0</span>,nz), 
+                          <span class="kw">pmax</span>(<span class="kw">rep</span>(<span class="dv">0</span>,Tobs<span class="dv">-1</span>), x[<span class="dv">1</span>:(Tobs<span class="dv">-1</span>)])), 
+                    <span class="dt">y =</span> <span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">0</span>,nz), 
+                          x[<span class="dv">2</span>:Tobs]))
+raw_plot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">time =</span> <span class="dv">1</span>:Tobs, <span class="dt">x=</span>x), <span class="kw">aes</span>(time,x)) +<span class="st"> </span><span class="kw">geom_line</span>()
+raw_plot</code></pre>
+<figure>
+<img src="http://farm8.staticflickr.com/7406/8954616307_5e7a9d3e27_o.png" alt="plot of chunk obs" /><figcaption>plot of chunk obs</figcaption>
+</figure>
+<h2 id="maximum-likelihood">Maximum Likelihood</h2>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">12345</span>)
+estf &lt;-<span class="st"> </span>function(p){ 
+    mu &lt;-<span class="st"> </span><span class="kw">f</span>(obs$x,<span class="dv">0</span>,p)
+    -<span class="kw">sum</span>(<span class="kw">dlnorm</span>(obs$y, <span class="kw">log</span>(mu), p[<span class="dv">4</span>]), <span class="dt">log=</span><span class="ot">TRUE</span>)
+}
+par &lt;-<span class="st"> </span><span class="kw">c</span>(p[<span class="dv">1</span>]*<span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>,.<span class="dv">4</span>), 
+         p[<span class="dv">2</span>]*<span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>,.<span class="dv">3</span>), 
+         p[<span class="dv">3</span>]*<span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>, .<span class="dv">3</span>), 
+         sigma_g *<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>,.<span class="dv">3</span>))
+o &lt;-<span class="st"> </span><span class="kw">optim</span>(par, estf, <span class="dt">method=</span><span class="st">&quot;L&quot;</span>, <span class="dt">lower=</span><span class="kw">c</span>(<span class="fl">1e-5</span>,<span class="fl">1e-5</span>,<span class="fl">1e-5</span>,<span class="fl">1e-5</span>))
+f_alt &lt;-<span class="st"> </span>f
+p_alt &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">as.numeric</span>(o$par[<span class="dv">1</span>]), <span class="kw">as.numeric</span>(o$par[<span class="dv">2</span>]), <span class="kw">as.numeric</span>(o$par[<span class="dv">3</span>]))
+sigma_g_alt &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(o$par[<span class="dv">4</span>])
+
+est &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">f =</span> f_alt, <span class="dt">p =</span> p_alt, <span class="dt">sigma_g =</span> sigma_g_alt, <span class="dt">mloglik=</span>o$value)</code></pre>
+<p>Mean predictions</p>
+<pre class="sourceCode r"><code class="sourceCode r">true_means &lt;-<span class="st"> </span><span class="kw">sapply</span>(x_grid, f, <span class="dv">0</span>, p)
+est_means &lt;-<span class="st"> </span><span class="kw">sapply</span>(x_grid, est$f, <span class="dv">0</span>, est$p)</code></pre>
+<h2 id="non-parametric-bayes">Non-parametric Bayes</h2>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#inv gamma has mean b / (a - 1) (assuming a&gt;1) and variance b ^ 2 / ((a - 2) * (a - 1) ^ 2) (assuming a&gt;2)</span>
+s2.p &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">5</span>)  
+d.p =<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">1</span>/<span class="fl">0.1</span>)</code></pre>
+<p>Estimate the Gaussian Process (nonparametric Bayesian fit)</p>
+<pre class="sourceCode r"><code class="sourceCode r">gp &lt;-<span class="st"> </span><span class="kw">gp_mcmc</span>(obs$x, <span class="dt">y=</span>obs$y, <span class="dt">n=</span><span class="fl">1e5</span>, <span class="dt">s2.p =</span> s2.p, <span class="dt">d.p =</span> d.p)
+gp_dat &lt;-<span class="st"> </span><span class="kw">gp_predict</span>(gp, x_grid, <span class="dt">burnin=</span><span class="fl">1e4</span>, <span class="dt">thin=</span><span class="dv">300</span>)</code></pre>
+<p>Show traces and posteriors against priors</p>
+<pre class="sourceCode r"><code class="sourceCode r">plots &lt;-<span class="st"> </span><span class="kw">summary_gp_mcmc</span>(gp, <span class="dt">burnin=</span><span class="fl">1e4</span>, <span class="dt">thin=</span><span class="dv">300</span>)</code></pre>
+<p><img src="figure/process-noise-only-gp_traces_densities1.png" alt="plot of chunk gp_traces_densities" /> <img src="http://farm4.staticflickr.com/3687/8954616527_4c7cefe499_o.png" alt="plot of chunk gp_traces_densities" /></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Summarize the GP model</span>
+tgp_dat &lt;-<span class="st"> </span>
+<span class="st">    </span><span class="kw">data.frame</span>(  <span class="dt">x =</span> x_grid, 
+                 <span class="dt">y =</span> gp_dat$E_Ef, 
+                 <span class="dt">ymin =</span> gp_dat$E_Ef -<span class="st"> </span><span class="dv">2</span> *<span class="st"> </span><span class="kw">sqrt</span>(gp_dat$E_Vf), 
+                 <span class="dt">ymax =</span> gp_dat$E_Ef +<span class="st"> </span><span class="dv">2</span> *<span class="st"> </span><span class="kw">sqrt</span>(gp_dat$E_Vf) )</code></pre>
+<h2 id="parametric-bayesian-models">Parametric Bayesian Models</h2>
+<p>We use the JAGS Gibbs sampler, a recent open source BUGS implementation with an R interface that works on most platforms. We initialize the usual MCMC parameters; see <code>?jags</code> for details.</p>
+<p>All parametric Bayesian estimates use the following basic parameters for the JAGS MCMC:</p>
+<pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span>x 
+N &lt;-<span class="st"> </span><span class="kw">length</span>(x);
+jags.data &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="st">&quot;N&quot;</span>,<span class="st">&quot;y&quot;</span>)
+n.chains &lt;-<span class="st"> </span><span class="dv">6</span>
+n.iter &lt;-<span class="st"> </span><span class="fl">1e6</span>
+n.burnin &lt;-<span class="st"> </span><span class="kw">floor</span>(<span class="dv">10000</span>)
+n.thin &lt;-<span class="st"> </span><span class="kw">max</span>(<span class="dv">1</span>, <span class="kw">floor</span>(n.chains *<span class="st"> </span>(n.iter -<span class="st"> </span>n.burnin)/<span class="dv">1000</span>))
+n.update &lt;-<span class="st"> </span><span class="dv">10</span></code></pre>
+<p>We will use the same priors for process and observation noise in each model,</p>
+<pre class="sourceCode r"><code class="sourceCode r">stdQ_prior_p &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">1e-6</span>, <span class="dv">100</span>)
+stdR_prior_p &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">1e-6</span>, .<span class="dv">1</span>)
+stdQ_prior  &lt;-<span class="st"> </span>function(x) <span class="kw">dunif</span>(x, stdQ_prior_p[<span class="dv">1</span>], stdQ_prior_p[<span class="dv">2</span>])
+stdR_prior  &lt;-<span class="st"> </span>function(x) <span class="kw">dunif</span>(x, stdR_prior_p[<span class="dv">1</span>], stdR_prior_p[<span class="dv">2</span>])</code></pre>
+<h3 id="parametric-bayes-of-correct-allen-model">Parametric Bayes of correct (Allen) model</h3>
+<p>We initiate the MCMC chain (<code>init_p</code>) using the true values of the parameters <code>p</code> from the simulation. While impossible in real data, this gives the parametric Bayesian approach the best chance at succeeding. <code>y</code> is the timeseries (recall <code>obs</code> has the <span class="math">\(x_t\)</span>, <span class="math">\(x_{t+1}\)</span> pairs)</p>
+<p>The actual model is defined in a <code>model.file</code> that contains an R function that is automatically translated into BUGS code by <em>R2WinBUGS</em>. The file defines the priors and the model. We write the file from R as follows:</p>
+<pre class="sourceCode r"><code class="sourceCode r">K_prior_p &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.01</span>, <span class="fl">40.0</span>)
+logr0_prior_p &lt;-<span class="st"> </span><span class="kw">c</span>(-<span class="fl">6.0</span>, <span class="fl">6.0</span>)
+logtheta_prior_p &lt;-<span class="st"> </span><span class="kw">c</span>(-<span class="fl">6.0</span>, <span class="fl">6.0</span>)
+
+bugs.model &lt;-<span class="st"> </span>
+<span class="kw">paste</span>(<span class="kw">sprintf</span>(
+<span class="st">&quot;model{</span>
+<span class="st">  K     ~ dunif(%s, %s)</span>
+<span class="st">  logr0    ~ dunif(%s, %s)</span>
+<span class="st">  logtheta ~ dunif(%s, %s)</span>
+<span class="st">  stdQ ~ dunif(%s, %s)&quot;</span>, 
+  K_prior_p[<span class="dv">1</span>], K_prior_p[<span class="dv">2</span>],
+  logr0_prior_p[<span class="dv">1</span>], logr0_prior_p[<span class="dv">2</span>],
+  logtheta_prior_p[<span class="dv">1</span>], logtheta_prior_p[<span class="dv">2</span>],
+  stdQ_prior_p[<span class="dv">1</span>], stdQ_prior_p[<span class="dv">2</span>]),
+
+  <span class="st">&quot;</span>
+<span class="st">  iQ &lt;- 1 / (stdQ * stdQ);</span>
+<span class="st">  r0 &lt;- exp(logr0)</span>
+<span class="st">  theta &lt;- exp(logtheta)</span>
+<span class="st">  y[1] ~ dunif(0, 10)</span>
+<span class="st">  for(t in 1:(N-1)){</span>
+<span class="st">    mu[t] &lt;- y[t] * exp(r0 * (1 - y[t]/K)* (y[t] - theta) / K )</span>
+<span class="st">    y[t+1] ~ dnorm(mu[t], iQ) </span>
+<span class="st">  }</span>
+<span class="st">}&quot;</span>)
+<span class="kw">writeLines</span>(bugs.model, <span class="st">&quot;allen_process.bugs&quot;</span>)</code></pre>
+<p>Write the priors into a list for later reference</p>
+<pre class="sourceCode r"><code class="sourceCode r">K_prior     &lt;-<span class="st"> </span>function(x) <span class="kw">dunif</span>(x, K_prior_p[<span class="dv">1</span>], K_prior_p[<span class="dv">2</span>])
+logr0_prior &lt;-<span class="st"> </span>function(x) <span class="kw">dunif</span>(x, logr0_prior_p[<span class="dv">1</span>], logr0_prior_p[<span class="dv">2</span>])
+logtheta_prior &lt;-<span class="st"> </span>function(x) <span class="kw">dunif</span>(x, logtheta_prior_p[<span class="dv">1</span>], logtheta_prior_p[<span class="dv">2</span>])
+par_priors  &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">K =</span> K_prior, <span class="dt">deviance =</span> function(x) <span class="dv">0</span> *<span class="st"> </span>x, 
+                    <span class="dt">logr0 =</span> logr0_prior, <span class="dt">logtheta =</span> logtheta_prior,
+                    <span class="dt">stdQ =</span> stdQ_prior)</code></pre>
+<p>We define which parameters to keep track of, and set the initial values of parameters in the transformed space used by the MCMC. We use logarithms to maintain strictly positive values of parameters where appropriate.</p>
+<pre class="sourceCode r"><code class="sourceCode r">jags.params=<span class="kw">c</span>(<span class="st">&quot;K&quot;</span>,<span class="st">&quot;logr0&quot;</span>,<span class="st">&quot;logtheta&quot;</span>,<span class="st">&quot;stdQ&quot;</span>) <span class="co"># be sensible about the order here</span>
+jags.inits &lt;-<span class="st"> </span>function(){
+  <span class="kw">list</span>(<span class="st">&quot;K&quot;</span>=<span class="st"> </span><span class="dv">8</span> *<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>, <span class="fl">0.1</span>),
+       <span class="st">&quot;logr0&quot;</span>=<span class="kw">log</span>(<span class="dv">2</span> *<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>, <span class="fl">0.1</span>) ),
+       <span class="st">&quot;logtheta&quot;</span>=<span class="kw">log</span>(  <span class="dv">5</span> *<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>, <span class="fl">0.1</span>) ), 
+       <span class="st">&quot;stdQ&quot;</span>=<span class="st"> </span><span class="kw">abs</span>( <span class="fl">0.1</span> *<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>, <span class="fl">0.1</span>)),
+       <span class="dt">.RNG.name=</span><span class="st">&quot;base::Wichmann-Hill&quot;</span>, <span class="dt">.RNG.seed=</span><span class="dv">123</span>)
+}
+
+<span class="kw">set.seed</span>(<span class="dv">1234</span>)
+<span class="co"># parallel refuses to take variables as arguments (e.g. n.iter = 1e5 works, but n.iter = n doesn&#39;t)</span>
+allen_jags &lt;-<span class="st"> </span><span class="kw">do.call</span>(jags.parallel, <span class="kw">list</span>(<span class="dt">data=</span>jags.data, <span class="dt">inits=</span>jags.inits, 
+                                      jags.params, <span class="dt">n.chains=</span>n.chains, 
+                                      <span class="dt">n.iter=</span>n.iter, <span class="dt">n.thin=</span>n.thin, 
+                                      <span class="dt">n.burnin=</span>n.burnin, 
+                                      <span class="dt">model.file=</span><span class="st">&quot;allen_process.bugs&quot;</span>))
+
+<span class="co"># Run again iteratively if we haven&#39;t met the Gelman-Rubin convergence criterion</span>
+<span class="kw">recompile</span>(allen_jags) <span class="co"># required for parallel</span>
+allen_jags &lt;-<span class="st"> </span><span class="kw">do.call</span>(autojags, <span class="kw">list</span>(<span class="dt">object=</span>allen_jags, <span class="dt">n.update=</span>n.update, 
+                                     <span class="dt">n.iter=</span>n.iter, <span class="dt">n.thin =</span> n.thin))</code></pre>
+<h4 id="convergence-diagnostics-for-allen-model">Convergence diagnostics for Allen model</h4>
+<p>R notes: this strips classes from the <code>mcmc.list</code> object (so that we have list of matrices; objects that <code>reshape2::melt</code> can handle intelligently), and then combines chains into one array. In this array each parameter is given its value at each sample from the posterior (index) for each chain.</p>
+<pre class="sourceCode r"><code class="sourceCode r">tmp &lt;-<span class="st"> </span><span class="kw">lapply</span>(<span class="kw">as.mcmc</span>(allen_jags), as.matrix) <span class="co"># strip classes the hard way...</span>
+allen_posteriors &lt;-<span class="st"> </span><span class="kw">melt</span>(tmp, <span class="dt">id =</span> <span class="kw">colnames</span>(tmp[[<span class="dv">1</span>]])) 
+<span class="kw">names</span>(allen_posteriors) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;index&quot;</span>, <span class="st">&quot;variable&quot;</span>, <span class="st">&quot;value&quot;</span>, <span class="st">&quot;chain&quot;</span>)
+<span class="kw">ggplot</span>(allen_posteriors) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(index, value)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>, <span class="dt">ncol=</span><span class="dv">1</span>)</code></pre>
+<figure>
+<img src="http://farm8.staticflickr.com/7432/8954617241_ee7c8ab2c6_o.png" alt="plot of chunk allen-traces" /><figcaption>plot of chunk allen-traces</figcaption>
+</figure>
+<pre class="sourceCode r"><code class="sourceCode r">allen_priors &lt;-<span class="st"> </span><span class="kw">ddply</span>(allen_posteriors, <span class="st">&quot;variable&quot;</span>, function(dd){
+    grid &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="kw">min</span>(dd$value), <span class="kw">max</span>(dd$value), <span class="dt">length =</span> <span class="dv">100</span>) 
+    <span class="kw">data.frame</span>(<span class="dt">value =</span> grid, <span class="dt">density =</span> par_priors[[dd$variable[<span class="dv">1</span>]]](grid))
+})
+
+<span class="kw">ggplot</span>(allen_posteriors, <span class="kw">aes</span>(value)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">stat_density</span>(<span class="dt">geom=</span><span class="st">&quot;path&quot;</span>, <span class="dt">position=</span><span class="st">&quot;identity&quot;</span>, <span class="dt">alpha=</span><span class="fl">0.7</span>) +
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>allen_priors, <span class="kw">aes</span>(<span class="dt">x=</span>value, <span class="dt">y=</span>density), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>, <span class="dt">ncol=</span><span class="dv">3</span>)</code></pre>
+<figure>
+<img src="http://farm9.staticflickr.com/8128/8954617519_134c3da154_o.png" alt="plot of chunk allen-posteriors" /><figcaption>plot of chunk allen-posteriors</figcaption>
+</figure>
+<p>Reshape the posterior parameter distribution data, transform back into original space, and calculate the mean parameters and mean function</p>
+<pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span>allen_posteriors
+A$index &lt;-<span class="st"> </span>A$index +<span class="st"> </span>A$chain *<span class="st"> </span><span class="kw">max</span>(A$index) <span class="co"># Combine samples across chains by renumbering index </span>
+pardist &lt;-<span class="st"> </span><span class="kw">acast</span>(A, index ~<span class="st"> </span>variable)
+<span class="co"># pardist &lt;- acast(allen_posteriors[2:3], 1:table(allen_posteriors$variable)[1] ~ variable) # NOT SURE WHY THIS FAILS </span>
+<span class="co"># transform model parameters back first</span>
+pardist[,<span class="st">&quot;logr0&quot;</span>] =<span class="st"> </span><span class="kw">exp</span>(pardist[,<span class="st">&quot;logr0&quot;</span>]) 
+pardist[,<span class="st">&quot;logtheta&quot;</span>] =<span class="st"> </span><span class="kw">exp</span>(pardist[,<span class="st">&quot;logtheta&quot;</span>])
+<span class="kw">colnames</span>(pardist)[<span class="kw">colnames</span>(pardist)==<span class="st">&quot;logtheta&quot;</span>] =<span class="st"> &quot;theta&quot;</span>
+<span class="kw">colnames</span>(pardist)[<span class="kw">colnames</span>(pardist)==<span class="st">&quot;logr0&quot;</span>] =<span class="st"> &quot;r0&quot;</span>
+bayes_coef &lt;-<span class="st"> </span><span class="kw">apply</span>(pardist,<span class="dv">2</span>, posterior.mode) 
+bayes_pars &lt;-<span class="st"> </span><span class="kw">unname</span>(<span class="kw">c</span>(bayes_coef[<span class="st">&quot;r0&quot;</span>], bayes_coef[<span class="st">&quot;K&quot;</span>], bayes_coef[<span class="st">&quot;theta&quot;</span>])) <span class="co"># parameters formatted for f</span>
+allen_f &lt;-<span class="st"> </span>function(x,h,p) <span class="kw">unname</span>(<span class="kw">RickerAllee</span>(x,h, <span class="kw">unname</span>(p[<span class="kw">c</span>(<span class="st">&quot;r0&quot;</span>, <span class="st">&quot;K&quot;</span>, <span class="st">&quot;theta&quot;</span>)])))
+allen_means &lt;-<span class="st"> </span><span class="kw">sapply</span>(x_grid, f, <span class="dv">0</span>, bayes_pars)
+bayes_pars</code></pre>
+<pre><code>[1] 0.01929 7.72010 0.06654</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(pardist)</code></pre>
+<pre><code>         K deviance       r0    theta   stdQ
+170 21.327    45.03 0.010484 3.826031 0.3737
+171 14.261    45.02 0.029587 0.019707 0.4387
+172  7.828    40.50 0.129248 2.769482 0.3795
+173 29.450    45.66 0.044378 0.006615 0.4461
+174 37.580    44.89 0.006334 1.252886 0.3766
+175 20.168    45.05 0.033854 0.144171 0.4294</code></pre>
+<h2 id="parametric-bayes-based-on-the-structurally-wrong-model-ricker">Parametric Bayes based on the structurally wrong model (Ricker)</h2>
+<pre class="sourceCode r"><code class="sourceCode r">K_prior_p &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.01</span>, <span class="fl">40.0</span>)
+logr0_prior_p &lt;-<span class="st"> </span><span class="kw">c</span>(-<span class="fl">6.0</span>, <span class="fl">6.0</span>)
+
+bugs.model &lt;-<span class="st"> </span>
+<span class="kw">paste</span>(<span class="kw">sprintf</span>(
+<span class="st">&quot;model{</span>
+<span class="st">  K    ~ dunif(%s, %s)</span>
+<span class="st">  logr0    ~ dunif(%s, %s)</span>
+<span class="st">  stdQ ~ dunif(%s, %s)&quot;</span>, 
+  K_prior_p[<span class="dv">1</span>], K_prior_p[<span class="dv">2</span>],
+  logr0_prior_p[<span class="dv">1</span>], logr0_prior_p[<span class="dv">2</span>],
+  stdQ_prior_p[<span class="dv">1</span>], stdQ_prior_p[<span class="dv">2</span>]),
+
+  <span class="st">&quot;</span>
+<span class="st">  iQ &lt;- 1 / (stdQ * stdQ);</span>
+<span class="st">  r0 &lt;- exp(logr0)</span>
+<span class="st">  y[1] ~ dunif(0, 10)</span>
+<span class="st">  for(t in 1:(N-1)){</span>
+<span class="st">    mu[t] &lt;- y[t] * exp(r0 * (1 - y[t]/K) )</span>
+<span class="st">    y[t+1] ~ dnorm(mu[t], iQ) </span>
+<span class="st">  }</span>
+<span class="st">}&quot;</span>)
+<span class="kw">writeLines</span>(bugs.model, <span class="st">&quot;ricker_process.bugs&quot;</span>)</code></pre>
+<p>Compute prior curves</p>
+<pre class="sourceCode r"><code class="sourceCode r">K_prior     &lt;-<span class="st"> </span>function(x) <span class="kw">dunif</span>(x, K_prior_p[<span class="dv">1</span>], K_prior_p[<span class="dv">2</span>])
+logr0_prior &lt;-<span class="st"> </span>function(x) <span class="kw">dunif</span>(x, logr0_prior_p[<span class="dv">1</span>], logr0_prior_p[<span class="dv">2</span>])
+par_priors &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">K =</span> K_prior, <span class="dt">deviance =</span> function(x) <span class="dv">0</span> *<span class="st"> </span>x, 
+                   <span class="dt">logr0 =</span> logr0_prior, <span class="dt">stdQ =</span> stdQ_prior)</code></pre>
+<p>We define which parameters to keep track of, and set the initial values of parameters in the transformed space used by the MCMC. We use logarithms to maintain strictly positive values of parameters where appropriate.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Uniform priors on standard deviation terms</span>
+jags.params=<span class="kw">c</span>(<span class="st">&quot;K&quot;</span>,<span class="st">&quot;logr0&quot;</span>, <span class="st">&quot;stdQ&quot;</span>)
+jags.inits &lt;-<span class="st"> </span>function(){
+  <span class="kw">list</span>(<span class="st">&quot;K&quot;</span>=<span class="dv">10</span> *<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>,.<span class="dv">5</span>),
+       <span class="st">&quot;logr0&quot;</span>=<span class="kw">log</span>(<span class="dv">1</span>) *<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>,.<span class="dv">5</span>),
+       <span class="st">&quot;stdQ&quot;</span>=<span class="kw">sqrt</span>(<span class="fl">0.05</span>) *<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>,.<span class="dv">5</span>),
+       <span class="dt">.RNG.name=</span><span class="st">&quot;base::Wichmann-Hill&quot;</span>, <span class="dt">.RNG.seed=</span><span class="dv">123</span>)
+}
+<span class="kw">set.seed</span>(<span class="dv">12345</span>) 
+ricker_jags &lt;-<span class="st"> </span><span class="kw">do.call</span>(jags.parallel, 
+                       <span class="kw">list</span>(<span class="dt">data=</span>jags.data, <span class="dt">inits=</span>jags.inits, 
+                            jags.params, <span class="dt">n.chains=</span>n.chains, 
+                            <span class="dt">n.iter=</span>n.iter, <span class="dt">n.thin=</span>n.thin, <span class="dt">n.burnin=</span>n.burnin,
+                            <span class="dt">model.file=</span><span class="st">&quot;ricker_process.bugs&quot;</span>))
+<span class="kw">recompile</span>(ricker_jags)</code></pre>
+<pre><code>Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+   Graph Size: 251
+
+Initializing model
+
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+   Graph Size: 251
+
+Initializing model
+
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+   Graph Size: 251
+
+Initializing model
+
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+   Graph Size: 251
+
+Initializing model
+
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+   Graph Size: 251
+
+Initializing model
+
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+   Graph Size: 251
+
+Initializing model</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">ricker_jags &lt;-<span class="st"> </span><span class="kw">do.call</span>(autojags, 
+                       <span class="kw">list</span>(<span class="dt">object=</span>ricker_jags, <span class="dt">n.update=</span>n.update, <span class="dt">n.iter=</span>n.iter, 
+                            <span class="dt">n.thin =</span> n.thin, <span class="dt">progress.bar=</span><span class="st">&quot;none&quot;</span>))</code></pre>
+<h4 id="convergence-diagnostics-for-parametric-bayes-ricker-model">Convergence diagnostics for parametric bayes Ricker model</h4>
+<pre class="sourceCode r"><code class="sourceCode r">tmp &lt;-<span class="st"> </span><span class="kw">lapply</span>(<span class="kw">as.mcmc</span>(ricker_jags), as.matrix) <span class="co"># strip classes the hard way...</span>
+ricker_posteriors &lt;-<span class="st"> </span><span class="kw">melt</span>(tmp, <span class="dt">id =</span> <span class="kw">colnames</span>(tmp[[<span class="dv">1</span>]])) 
+<span class="kw">names</span>(ricker_posteriors) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;index&quot;</span>, <span class="st">&quot;variable&quot;</span>, <span class="st">&quot;value&quot;</span>, <span class="st">&quot;chain&quot;</span>)
+
+<span class="kw">ggplot</span>(ricker_posteriors) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(index, value)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>, <span class="dt">ncol=</span><span class="dv">1</span>)</code></pre>
+<figure>
+<img src="http://farm8.staticflickr.com/7354/8954617787_8743f7915f_o.png" alt="plot of chunk ricker-traces" /><figcaption>plot of chunk ricker-traces</figcaption>
+</figure>
+<pre class="sourceCode r"><code class="sourceCode r">ricker_priors &lt;-<span class="st"> </span><span class="kw">ddply</span>(ricker_posteriors, <span class="st">&quot;variable&quot;</span>, function(dd){
+    grid &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="kw">min</span>(dd$value), <span class="kw">max</span>(dd$value), <span class="dt">length =</span> <span class="dv">100</span>) 
+    <span class="kw">data.frame</span>(<span class="dt">value =</span> grid, <span class="dt">density =</span> par_priors[[dd$variable[<span class="dv">1</span>]]](grid))
+})
+<span class="co"># plot posterior distributions</span>
+<span class="kw">ggplot</span>(ricker_posteriors, <span class="kw">aes</span>(value)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">stat_density</span>(<span class="dt">geom=</span><span class="st">&quot;path&quot;</span>, <span class="dt">position=</span><span class="st">&quot;identity&quot;</span>, <span class="dt">alpha=</span><span class="fl">0.7</span>) +
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>ricker_priors, <span class="kw">aes</span>(<span class="dt">x=</span>value, <span class="dt">y=</span>density), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>, <span class="dt">ncol=</span><span class="dv">2</span>)</code></pre>
+<figure>
+<img src="http://farm6.staticflickr.com/5326/8954618029_911b481fc8_o.png" alt="plot of chunk ricker-posteriors" /><figcaption>plot of chunk ricker-posteriors</figcaption>
+</figure>
+<p>Reshape posteriors data, transform back, calculate mode and corresponding function.</p>
+<pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span>ricker_posteriors
+A$index &lt;-<span class="st"> </span>A$index +<span class="st"> </span>A$chain *<span class="st"> </span><span class="kw">max</span>(A$index) <span class="co"># Combine samples across chains by renumbering index </span>
+ricker_pardist &lt;-<span class="st"> </span><span class="kw">acast</span>(A, index ~<span class="st"> </span>variable)
+ricker_pardist[,<span class="st">&quot;logr0&quot;</span>] =<span class="st"> </span><span class="kw">exp</span>(ricker_pardist[,<span class="st">&quot;logr0&quot;</span>]) <span class="co"># transform model parameters back first</span>
+<span class="kw">colnames</span>(ricker_pardist)[<span class="kw">colnames</span>(ricker_pardist)==<span class="st">&quot;logr0&quot;</span>] =<span class="st"> &quot;r0&quot;</span>
+bayes_coef &lt;-<span class="st"> </span><span class="kw">apply</span>(ricker_pardist,<span class="dv">2</span>, posterior.mode) <span class="co"># much better estimates from mode then mean</span>
+ricker_bayes_pars &lt;-<span class="st"> </span><span class="kw">unname</span>(<span class="kw">c</span>(bayes_coef[<span class="st">&quot;r0&quot;</span>], bayes_coef[<span class="st">&quot;K&quot;</span>]))
+
+ricker_f &lt;-<span class="st"> </span>function(x,h,p){
+  <span class="kw">sapply</span>(x, function(x){ 
+    x &lt;-<span class="st"> </span><span class="kw">pmax</span>(<span class="dv">0</span>, x-h) 
+    <span class="kw">pmax</span>(<span class="dv">0</span>, x *<span class="st"> </span><span class="kw">exp</span>(p[<span class="st">&quot;r0&quot;</span>] *<span class="st"> </span>(<span class="dv">1</span> -<span class="st"> </span>x /<span class="st"> </span>p[<span class="st">&quot;K&quot;</span>] )) )
+  })
+}
+ricker_means &lt;-<span class="st"> </span><span class="kw">sapply</span>(x_grid, Ricker, <span class="dv">0</span>, ricker_bayes_pars[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)])
+
+<span class="kw">head</span>(ricker_pardist)</code></pre>
+<pre><code>         K deviance       r0   stdQ
+170 30.871    44.59 0.011138 0.4164
+171 15.920    44.30 0.003492 0.4062
+172  8.630    46.04 0.040291 0.4962
+173  7.935    37.59 0.172355 0.3977
+174  8.622    42.76 0.096497 0.3325
+175  8.279    40.48 0.143866 0.4316</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">ricker_bayes_pars</code></pre>
+<pre><code>[1] 0.008073 8.011228</code></pre>
+<h2 id="myers-parametric-bayes">Myers Parametric Bayes</h2>
+<pre class="sourceCode r"><code class="sourceCode r">logr0_prior_p &lt;-<span class="st"> </span><span class="kw">c</span>(-<span class="fl">6.0</span>, <span class="fl">6.0</span>)
+logtheta_prior_p &lt;-<span class="st"> </span><span class="kw">c</span>(-<span class="fl">6.0</span>, <span class="fl">6.0</span>)
+logK_prior_p &lt;-<span class="st"> </span><span class="kw">c</span>(-<span class="fl">6.0</span>, <span class="fl">6.0</span>)
+
+bugs.model &lt;-<span class="st"> </span>
+<span class="kw">paste</span>(<span class="kw">sprintf</span>(
+<span class="st">&quot;model{</span>
+<span class="st">  logr0    ~ dunif(%s, %s)</span>
+<span class="st">  logtheta    ~ dunif(%s, %s)</span>
+<span class="st">  logK    ~ dunif(%s, %s)</span>
+<span class="st">  stdQ ~ dunif(%s, %s)&quot;</span>, 
+  logr0_prior_p[<span class="dv">1</span>], logr0_prior_p[<span class="dv">2</span>],
+  logtheta_prior_p[<span class="dv">1</span>], logtheta_prior_p[<span class="dv">2</span>],
+  logK_prior_p[<span class="dv">1</span>], logK_prior_p[<span class="dv">2</span>],
+  stdQ_prior_p[<span class="dv">1</span>], stdQ_prior_p[<span class="dv">2</span>]),
+
+  <span class="st">&quot;</span>
+<span class="st">  iQ &lt;- 1 / (stdQ * stdQ);</span>
+<span class="st">  r0 &lt;- exp(logr0)</span>
+<span class="st">  theta &lt;- exp(logtheta)</span>
+<span class="st">  K &lt;- exp(logK)</span>
+
+<span class="st">  y[1] ~ dunif(0, 10)</span>
+<span class="st">  for(t in 1:(N-1)){</span>
+<span class="st">    mu[t] &lt;- r0 * pow(abs(y[t]), theta) / (1 + pow(abs(y[t]), theta) / K)</span>
+<span class="st">    y[t+1] ~ dnorm(mu[t], iQ) </span>
+<span class="st">  }</span>
+<span class="st">}&quot;</span>)
+<span class="kw">writeLines</span>(bugs.model, <span class="st">&quot;myers_process.bugs&quot;</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">logK_prior     &lt;-<span class="st"> </span>function(x) <span class="kw">dunif</span>(x, logK_prior_p[<span class="dv">1</span>], logK_prior_p[<span class="dv">2</span>])
+logr_prior     &lt;-<span class="st"> </span>function(x) <span class="kw">dunif</span>(x, logr0_prior_p[<span class="dv">1</span>], logr0_prior_p[<span class="dv">2</span>])
+logtheta_prior &lt;-<span class="st"> </span>function(x) <span class="kw">dunif</span>(x, logtheta_prior_p[<span class="dv">1</span>], logtheta_prior_p[<span class="dv">2</span>])
+par_priors &lt;-<span class="st"> </span><span class="kw">list</span>( <span class="dt">deviance =</span> function(x) <span class="dv">0</span> *<span class="st"> </span>x, <span class="dt">logK =</span> logK_prior,
+                    <span class="dt">logr0 =</span> logr_prior, <span class="dt">logtheta =</span> logtheta_prior, 
+                    <span class="dt">stdQ =</span> stdQ_prior)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">jags.params=<span class="kw">c</span>(<span class="st">&quot;logr0&quot;</span>, <span class="st">&quot;logtheta&quot;</span>, <span class="st">&quot;logK&quot;</span>, <span class="st">&quot;stdQ&quot;</span>)
+jags.inits &lt;-<span class="st"> </span>function(){
+  <span class="kw">list</span>(<span class="st">&quot;logr0&quot;</span>=<span class="kw">log</span>(<span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>,.<span class="dv">1</span>)), 
+       <span class="st">&quot;logK&quot;</span>=<span class="kw">log</span>(<span class="dv">10</span> *<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>,.<span class="dv">1</span>)),
+       <span class="st">&quot;logtheta&quot;</span> =<span class="st"> </span><span class="kw">log</span>(<span class="dv">2</span> *<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>,.<span class="dv">1</span>)),  
+       <span class="st">&quot;stdQ&quot;</span>=<span class="kw">sqrt</span>(<span class="fl">0.5</span>) *<span class="st"> </span><span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>,.<span class="dv">1</span>),
+       <span class="dt">.RNG.name=</span><span class="st">&quot;base::Wichmann-Hill&quot;</span>, <span class="dt">.RNG.seed=</span><span class="dv">123</span>)
+}
+<span class="kw">set.seed</span>(<span class="dv">12345</span>)
+myers_jags &lt;-<span class="st"> </span><span class="kw">do.call</span>(jags.parallel, 
+                      <span class="kw">list</span>(<span class="dt">data=</span>jags.data, <span class="dt">inits=</span>jags.inits, jags.params, 
+                           <span class="dt">n.chains=</span>n.chains, <span class="dt">n.iter=</span>n.iter, <span class="dt">n.thin=</span>n.thin,
+                           <span class="dt">n.burnin=</span>n.burnin, <span class="dt">model.file=</span><span class="st">&quot;myers_process.bugs&quot;</span>))
+<span class="kw">recompile</span>(myers_jags)</code></pre>
+<pre><code>Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+   Graph Size: 291
+
+Initializing model
+
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+   Graph Size: 291
+
+Initializing model
+
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+   Graph Size: 291
+
+Initializing model
+
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+   Graph Size: 291
+
+Initializing model
+
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+   Graph Size: 291
+
+Initializing model
+
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+   Graph Size: 291
+
+Initializing model</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">myers_jags &lt;-<span class="st"> </span><span class="kw">do.call</span>(autojags, 
+                      <span class="kw">list</span>(myers_jags, <span class="dt">n.update=</span>n.update, <span class="dt">n.iter=</span>n.iter, 
+                           <span class="dt">n.thin =</span> n.thin, <span class="dt">progress.bar=</span><span class="st">&quot;none&quot;</span>))</code></pre>
+<p>Convergence diagnostics for parametric bayes</p>
+<pre class="sourceCode r"><code class="sourceCode r">tmp &lt;-<span class="st"> </span><span class="kw">lapply</span>(<span class="kw">as.mcmc</span>(myers_jags), as.matrix) <span class="co"># strip classes the hard way...</span>
+myers_posteriors &lt;-<span class="st"> </span><span class="kw">melt</span>(tmp, <span class="dt">id =</span> <span class="kw">colnames</span>(tmp[[<span class="dv">1</span>]])) 
+<span class="kw">names</span>(myers_posteriors) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;index&quot;</span>, <span class="st">&quot;variable&quot;</span>, <span class="st">&quot;value&quot;</span>, <span class="st">&quot;chain&quot;</span>)
+
+<span class="kw">ggplot</span>(myers_posteriors) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(index, value)) +
+<span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>, <span class="dt">ncol=</span><span class="dv">1</span>)</code></pre>
+<figure>
+<img src="http://farm9.staticflickr.com/8134/8955814112_feb5f6abb2_o.png" alt="plot of chunk myers-traces" /><figcaption>plot of chunk myers-traces</figcaption>
+</figure>
+<pre class="sourceCode r"><code class="sourceCode r">par_prior_curves &lt;-<span class="st"> </span><span class="kw">ddply</span>(myers_posteriors, <span class="st">&quot;variable&quot;</span>, function(dd){
+    grid &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="kw">min</span>(dd$value), <span class="kw">max</span>(dd$value), <span class="dt">length =</span> <span class="dv">100</span>) 
+    <span class="kw">data.frame</span>(<span class="dt">value =</span> grid, <span class="dt">density =</span> par_priors[[dd$variable[<span class="dv">1</span>]]](grid))
+})
+
+<span class="kw">ggplot</span>(myers_posteriors, <span class="kw">aes</span>(value)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">stat_density</span>(<span class="dt">geom=</span><span class="st">&quot;path&quot;</span>, <span class="dt">position=</span><span class="st">&quot;identity&quot;</span>, <span class="dt">alpha=</span><span class="fl">0.7</span>) +
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>par_prior_curves, <span class="kw">aes</span>(<span class="dt">x=</span>value, <span class="dt">y=</span>density), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>, <span class="dt">ncol=</span><span class="dv">3</span>)</code></pre>
+<figure>
+<img src="http://farm4.staticflickr.com/3772/8955814344_b654594c98_o.png" alt="plot of chunk myers-posteriors" /><figcaption>plot of chunk myers-posteriors</figcaption>
+</figure>
+<pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span>myers_posteriors
+A$index &lt;-<span class="st"> </span>A$index +<span class="st"> </span>A$chain *<span class="st"> </span><span class="kw">max</span>(A$index) <span class="co"># Combine samples across chains by renumbering index </span>
+myers_pardist &lt;-<span class="st"> </span><span class="kw">acast</span>(A, index ~<span class="st"> </span>variable)
+### myers_pardist &lt;- acast(myers_posteriors[2:3], 1:table(myers_posteriors$variable) ~ variable) 
+myers_pardist[,<span class="st">&quot;logK&quot;</span>] =<span class="st"> </span><span class="kw">exp</span>(myers_pardist[,<span class="st">&quot;logK&quot;</span>]) <span class="co"># transform model parameters back first</span>
+myers_pardist[,<span class="st">&quot;logr0&quot;</span>] =<span class="st"> </span><span class="kw">exp</span>(myers_pardist[,<span class="st">&quot;logr0&quot;</span>]) <span class="co"># transform model parameters back first</span>
+myers_pardist[,<span class="st">&quot;logtheta&quot;</span>] =<span class="st"> </span><span class="kw">exp</span>(myers_pardist[,<span class="st">&quot;logtheta&quot;</span>]) <span class="co"># transform model parameters back first</span>
+<span class="kw">colnames</span>(myers_pardist)[<span class="kw">colnames</span>(myers_pardist)==<span class="st">&quot;logK&quot;</span>] =<span class="st"> &quot;K&quot;</span>
+<span class="kw">colnames</span>(myers_pardist)[<span class="kw">colnames</span>(myers_pardist)==<span class="st">&quot;logr0&quot;</span>] =<span class="st"> &quot;r0&quot;</span>
+<span class="kw">colnames</span>(myers_pardist)[<span class="kw">colnames</span>(myers_pardist)==<span class="st">&quot;logtheta&quot;</span>] =<span class="st"> &quot;theta&quot;</span>
+
+
+bayes_coef &lt;-<span class="st"> </span><span class="kw">apply</span>(myers_pardist,<span class="dv">2</span>, posterior.mode) <span class="co"># much better estimates</span>
+myers_bayes_pars &lt;-<span class="st"> </span><span class="kw">unname</span>(<span class="kw">c</span>(bayes_coef[<span class="dv">2</span>], bayes_coef[<span class="dv">3</span>], bayes_coef[<span class="dv">1</span>]))
+myers_means &lt;-<span class="st"> </span><span class="kw">sapply</span>(x_grid, Myer_harvest, <span class="dv">0</span>, myers_bayes_pars)
+myers_f &lt;-<span class="st"> </span>function(x,h,p) <span class="kw">Myer_harvest</span>(x, h, p[<span class="kw">c</span>(<span class="st">&quot;r0&quot;</span>, <span class="st">&quot;theta&quot;</span>, <span class="st">&quot;K&quot;</span>)])
+<span class="kw">head</span>(myers_pardist)</code></pre>
+<pre><code>    deviance      K      r0 theta   stdQ
+170    37.69  32.42 0.32913 2.156 0.2818
+171    32.99  51.72 0.20896 2.373 0.3612
+172    40.26  52.83 0.22398 2.260 0.4654
+173    32.80  76.54 0.12968 2.749 0.3711
+174    32.81 216.04 0.04136 3.512 0.3907
+175    32.55 330.07 0.02654 3.813 0.3118</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">myers_bayes_pars</code></pre>
+<pre><code>[1] 31.8192  0.1065 34.4760</code></pre>
+<h3 id="phase-space-diagram-of-the-expected-dynamics">Phase-space diagram of the expected dynamics</h3>
+<pre class="sourceCode r"><code class="sourceCode r">models &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x=</span>x_grid, 
+                     <span class="dt">GP=</span>tgp_dat$y, 
+                     <span class="dt">True=</span>true_means, 
+                     <span class="dt">MLE=</span>est_means, 
+                     <span class="dt">Ricker=</span>ricker_means, 
+                     <span class="dt">Allen =</span> allen_means,
+                     <span class="dt">Myers =</span> myers_means)
+models &lt;-<span class="st"> </span><span class="kw">melt</span>(models, <span class="dt">id=</span><span class="st">&quot;x&quot;</span>)
+
+<span class="co"># some labels</span>
+<span class="kw">names</span>(models) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;method&quot;</span>, <span class="st">&quot;value&quot;</span>)
+
+<span class="co"># labels for the colorkey too</span>
+model_names =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;GP&quot;</span>, <span class="st">&quot;True&quot;</span>, <span class="st">&quot;MLE&quot;</span>, <span class="st">&quot;Ricker&quot;</span>, <span class="st">&quot;Allen&quot;</span>, <span class="st">&quot;Myers&quot;</span>)
+colorkey=cbPalette
+<span class="kw">names</span>(colorkey) =<span class="st"> </span>model_names </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">plot_gp &lt;-<span class="st"> </span><span class="kw">ggplot</span>(tgp_dat) +<span class="st"> </span><span class="kw">geom_ribbon</span>(<span class="kw">aes</span>(x,y,<span class="dt">ymin=</span>ymin,<span class="dt">ymax=</span>ymax), <span class="dt">fill=</span><span class="st">&quot;gray80&quot;</span>) +
+<span class="st">    </span><span class="kw">geom_line</span>(<span class="dt">data=</span>models, <span class="kw">aes</span>(x, value, <span class="dt">col=</span>method), <span class="dt">lwd=</span><span class="dv">1</span>, <span class="dt">alpha=</span><span class="fl">0.8</span>) +<span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">data=</span>obs, <span class="kw">aes</span>(x,y), <span class="dt">alpha=</span><span class="fl">0.8</span>) +<span class="st"> </span>
+<span class="st">    </span><span class="kw">xlab</span>(<span class="kw">expression</span>(X[t])) +<span class="st"> </span><span class="kw">ylab</span>(<span class="kw">expression</span>(X[t<span class="dv">+1</span>])) +
+<span class="st">    </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>cbPalette) 
+<span class="kw">print</span>(plot_gp)</code></pre>
+<figure>
+<img src="http://farm4.staticflickr.com/3820/8954618731_61ebc877be_o.png" alt="plot of chunk Figure1" /><figcaption>plot of chunk Figure1</figcaption>
+</figure>
+<h2 id="goodness-of-fit">Goodness of fit</h2>
+<p>This shows only the mean predictions. For the Bayesian cases, we can instead loop over the posteriors of the parameters (or samples from the GP posterior) to get the distribution of such curves in each case.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(MASS)
+step_ahead &lt;-<span class="st"> </span>function(x, f, p){
+  h =<span class="st"> </span><span class="dv">0</span>
+  x_predict &lt;-<span class="st"> </span><span class="kw">sapply</span>(x, f, h, p)
+  n &lt;-<span class="st"> </span><span class="kw">length</span>(x_predict) -<span class="st"> </span><span class="dv">1</span>
+  y &lt;-<span class="st"> </span><span class="kw">c</span>(x[<span class="dv">1</span>], x_predict[<span class="dv">1</span>:n])
+  y
+}
+step_ahead_posteriors &lt;-<span class="st"> </span>function(x){
+gp_f_at_obs &lt;-<span class="st"> </span><span class="kw">gp_predict</span>(gp, x, <span class="dt">burnin=</span><span class="fl">1e4</span>, <span class="dt">thin=</span><span class="dv">300</span>)
+df_post &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="kw">lapply</span>(<span class="kw">sample</span>(<span class="dv">100</span>), 
+  function(i){
+    <span class="kw">data.frame</span>(<span class="dt">time =</span> <span class="dv">1</span>:<span class="kw">length</span>(x), <span class="dt">stock =</span> x, 
+                <span class="dt">GP =</span> <span class="kw">mvrnorm</span>(<span class="dv">1</span>, gp_f_at_obs$Ef_posterior[,i], gp_f_at_obs$Cf_posterior[[i]]),
+                <span class="dt">True =</span> <span class="kw">step_ahead</span>(x,f,p),  
+                <span class="dt">MLE =</span> <span class="kw">step_ahead</span>(x,f,est$p), 
+                <span class="dt">Allen =</span> <span class="kw">step_ahead</span>(x, allen_f, pardist[i,]), 
+                <span class="dt">Ricker =</span> <span class="kw">step_ahead</span>(x, ricker_f, ricker_pardist[i,]), 
+                <span class="dt">Myers =</span> <span class="kw">step_ahead</span>(x, myers_f, myers_pardist[i,]))
+  }), <span class="dt">id=</span><span class="kw">c</span>(<span class="st">&quot;time&quot;</span>, <span class="st">&quot;stock&quot;</span>))
+}
+
+df_post &lt;-<span class="st"> </span><span class="kw">step_ahead_posteriors</span>(x)
+
+<span class="kw">ggplot</span>(df_post) +<span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(time, stock)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(time, value, <span class="dt">col=</span>variable, <span class="dt">group=</span><span class="kw">interaction</span>(L1,variable)), <span class="dt">alpha=</span>.<span class="dv">1</span>) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey, <span class="dt">guide =</span> <span class="kw">guide_legend</span>(<span class="dt">override.aes =</span> <span class="kw">list</span>(<span class="dt">alpha =</span> <span class="dv">1</span>))) </code></pre>
+<figure>
+<img src="http://farm4.staticflickr.com/3792/8954618965_9b92db0892_o.png" alt="plot of chunk Figureb" /><figcaption>plot of chunk Figureb</figcaption>
+</figure>
+<h2 id="optimal-policies-by-value-iteration">Optimal policies by value iteration</h2>
+<p>Compute the optimal policy under each model using stochastic dynamic programming. We begin with the policy based on the GP model,</p>
+<pre class="sourceCode r"><code class="sourceCode r">MaxT =<span class="st"> </span><span class="dv">1000</span>
+<span class="co"># uses expected values from GP, instead of integrating over posterior</span>
+<span class="co">#matrices_gp &lt;- gp_transition_matrix(gp_dat$E_Ef, gp_dat$E_Vf, x_grid, h_grid)</span>
+
+<span class="co"># Integrate over posteriors </span>
+matrices_gp &lt;-<span class="st"> </span><span class="kw">gp_transition_matrix</span>(gp_dat$Ef_posterior, gp_dat$Vf_posterior, x_grid, h_grid) 
+
+<span class="co"># Solve the SDP using the GP-derived transition matrix</span>
+opt_gp &lt;-<span class="st"> </span><span class="kw">value_iteration</span>(matrices_gp, x_grid, h_grid, MaxT, xT, profit, delta, reward)</code></pre>
+<p>Determine the optimal policy based on the allen and MLE models</p>
+<pre class="sourceCode r"><code class="sourceCode r">matrices_true &lt;-<span class="st"> </span><span class="kw">f_transition_matrix</span>(f, p, x_grid, h_grid, sigma_g)
+opt_true &lt;-<span class="st"> </span><span class="kw">value_iteration</span>(matrices_true, x_grid, h_grid, <span class="dt">OptTime=</span>MaxT, xT, profit, <span class="dt">delta=</span>delta)
+
+matrices_estimated &lt;-<span class="st"> </span><span class="kw">f_transition_matrix</span>(est$f, est$p, x_grid, h_grid, est$sigma_g)
+opt_estimated &lt;-<span class="st"> </span><span class="kw">value_iteration</span>(matrices_estimated, x_grid, h_grid, <span class="dt">OptTime=</span>MaxT, xT, profit, <span class="dt">delta=</span>delta)</code></pre>
+<p>Determine the optimal policy based on Bayesian Allen model</p>
+<pre class="sourceCode r"><code class="sourceCode r">matrices_allen &lt;-<span class="st"> </span><span class="kw">parameter_uncertainty_SDP</span>(allen_f, x_grid, h_grid, pardist, <span class="dv">4</span>)
+opt_allen &lt;-<span class="st"> </span><span class="kw">value_iteration</span>(matrices_allen, x_grid, h_grid, <span class="dt">OptTime=</span>MaxT, xT, profit, <span class="dt">delta=</span>delta)</code></pre>
+<p>Bayesian Ricker</p>
+<pre class="sourceCode r"><code class="sourceCode r">matrices_ricker &lt;-<span class="st"> </span><span class="kw">parameter_uncertainty_SDP</span>(ricker_f, x_grid, h_grid, <span class="kw">as.matrix</span>(ricker_pardist), <span class="dv">3</span>)
+opt_ricker &lt;-<span class="st"> </span><span class="kw">value_iteration</span>(matrices_ricker, x_grid, h_grid, <span class="dt">OptTime=</span>MaxT, xT, profit, <span class="dt">delta=</span>delta)</code></pre>
+<p>Bayesian Myers model</p>
+<pre class="sourceCode r"><code class="sourceCode r">matrices_myers &lt;-<span class="st"> </span><span class="kw">parameter_uncertainty_SDP</span>(myers_f, x_grid, h_grid, <span class="kw">as.matrix</span>(myers_pardist), <span class="dv">4</span>)
+myers_alt &lt;-<span class="st"> </span><span class="kw">value_iteration</span>(matrices_myers, x_grid, h_grid, <span class="dt">OptTime=</span>MaxT, xT, profit, <span class="dt">delta=</span>delta)</code></pre>
+<p>Assemble the data</p>
+<pre class="sourceCode r"><code class="sourceCode r">OPT =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">GP =</span> opt_gp$D, <span class="dt">True =</span> opt_true$D, <span class="dt">MLE =</span> opt_estimated$D, <span class="dt">Ricker =</span> opt_ricker$D, <span class="dt">Allen =</span> opt_allen$D, <span class="dt">Myers =</span> myers_alt$D)
+colorkey=cbPalette
+<span class="kw">names</span>(colorkey) =<span class="st"> </span><span class="kw">names</span>(OPT) </code></pre>
+<h2 id="graph-of-the-optimal-policies">Graph of the optimal policies</h2>
+<pre class="sourceCode r"><code class="sourceCode r">policies &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="kw">data.frame</span>(<span class="dt">stock=</span>x_grid, <span class="kw">sapply</span>(OPT, function(x) x_grid[x])), <span class="dt">id=</span><span class="st">&quot;stock&quot;</span>)
+<span class="kw">names</span>(policies) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;stock&quot;</span>, <span class="st">&quot;method&quot;</span>, <span class="st">&quot;value&quot;</span>)
+
+<span class="kw">ggplot</span>(policies, <span class="kw">aes</span>(stock, stock -<span class="st"> </span>value, <span class="dt">color=</span>method)) +
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">lwd=</span><span class="fl">1.2</span>, <span class="dt">alpha=</span><span class="fl">0.8</span>) +<span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;stock size&quot;</span>) +<span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;escapement&quot;</span>)  +
+<span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey)</code></pre>
+<figure>
+<img src="http://farm8.staticflickr.com/7348/8954619233_e007f06eab_o.png" alt="plot of chunk Figure2" /><figcaption>plot of chunk Figure2</figcaption>
+</figure>
+<h2 id="simulate-100-realizations-managed-under-each-of-the-policies">Simulate 100 realizations managed under each of the policies</h2>
+<pre class="sourceCode r"><code class="sourceCode r">sims &lt;-<span class="st"> </span><span class="kw">lapply</span>(OPT, function(D){
+  <span class="kw">set.seed</span>(<span class="dv">1</span>)
+  <span class="kw">lapply</span>(<span class="dv">1</span>:<span class="dv">100</span>, function(i) 
+    <span class="kw">ForwardSimulate</span>(f, p, x_grid, h_grid, x0, D, z_g, <span class="dt">profit=</span>profit, <span class="dt">OptTime=</span>OptTime)
+  )
+})
+
+dat &lt;-<span class="st"> </span><span class="kw">melt</span>(sims, <span class="dt">id=</span><span class="kw">names</span>(sims[[<span class="dv">1</span>]][[<span class="dv">1</span>]]))
+dt &lt;-<span class="st"> </span><span class="kw">data.table</span>(dat)
+<span class="kw">setnames</span>(dt, <span class="kw">c</span>(<span class="st">&quot;L1&quot;</span>, <span class="st">&quot;L2&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;method&quot;</span>, <span class="st">&quot;reps&quot;</span>)) 
+<span class="co"># Legend in original ordering please, not alphabetical: </span>
+dt$method =<span class="st"> </span><span class="kw">factor</span>(dt$method, <span class="dt">ordered=</span><span class="ot">TRUE</span>, <span class="dt">levels=</span><span class="kw">names</span>(OPT))</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(dt) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(time, fishstock, <span class="dt">group=</span><span class="kw">interaction</span>(reps,method), <span class="dt">color=</span>method), <span class="dt">alpha=</span>.<span class="dv">1</span>) +
+<span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey, <span class="dt">guide =</span> <span class="kw">guide_legend</span>(<span class="dt">override.aes =</span> <span class="kw">list</span>(<span class="dt">alpha =</span> <span class="dv">1</span>)))</code></pre>
+<figure>
+<img src="http://farm4.staticflickr.com/3808/8955815586_814e0c50d6_o.png" alt="plot of chunk Figure3" /><figcaption>plot of chunk Figure3</figcaption>
+</figure>
+<pre class="sourceCode r"><code class="sourceCode r">Profit &lt;-<span class="st"> </span>dt[, <span class="kw">sum</span>(profit), by=<span class="kw">c</span>(<span class="st">&quot;reps&quot;</span>, <span class="st">&quot;method&quot;</span>)]
+Profit[, <span class="kw">mean</span>(V1), by=<span class="st">&quot;method&quot;</span>]</code></pre>
+<pre><code>   method     V1
+1:     GP 24.908
+2:   True 26.532
+3:    MLE  4.420
+4: Ricker  8.363
+5:  Allen  7.041
+6:  Myers  7.347</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(Profit, <span class="kw">aes</span>(V1)) +<span class="st"> </span><span class="kw">geom_histogram</span>() +<span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(~method, <span class="dt">scales =</span> <span class="st">&quot;free_y&quot;</span>) +<span class="st"> </span><span class="kw">guides</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) +<span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;Total profit by replicate&quot;</span>)</code></pre>
+<figure>
+<img src="http://farm3.staticflickr.com/2881/8954620001_2722b7d9d9_o.png" alt="plot of chunk totalprofits" /><figcaption>plot of chunk totalprofits</figcaption>
+</figure>
+<pre class="sourceCode r"><code class="sourceCode r">allen_deviance &lt;-<span class="st"> </span><span class="kw">posterior.mode</span>(pardist[,<span class="st">&#39;deviance&#39;</span>])
+ricker_deviance &lt;-<span class="st"> </span><span class="kw">posterior.mode</span>(ricker_pardist[,<span class="st">&#39;deviance&#39;</span>])
+myers_deviance &lt;-<span class="st"> </span><span class="kw">posterior.mode</span>(myers_pardist[,<span class="st">&#39;deviance&#39;</span>])
+true_deviance &lt;-<span class="st"> </span><span class="dv">2</span>*<span class="kw">estf</span>(<span class="kw">c</span>(p, sigma_g))
+mle_deviance &lt;-<span class="st"> </span><span class="dv">2</span>*<span class="kw">estf</span>(<span class="kw">c</span>(est$p, est$sigma_g))
+
+<span class="kw">c</span>(<span class="dt">allen =</span> allen_deviance, <span class="dt">ricker=</span>ricker_deviance, <span class="dt">myers=</span>myers_deviance, <span class="dt">true=</span>true_deviance, <span class="dt">mle=</span>mle_deviance)</code></pre>
+<pre><code>  allen  ricker   myers    true     mle 
+  45.26   44.78   34.48  -61.08 -287.60 </code></pre>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2013-06-04 00:00:00 +0000" 
+    property="dc:created">04 Jun 2013</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/06/04/analytic-marginalizing-for-posteriors.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/06/05/semi-analytic-posteriors.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2013-06-04-sensitivity-of-gp-comparisons-in-further-examples.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#nonparametric-bayes">#nonparametric-bayes</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/b1b1fc38189438ee4adbaa910f869002c2005359/_posts/2013-06-04-sensitivity-of-gp-comparisons-in-further-examples.md"> b1b1fc38189438ee4adbaa910f869002c2005359</a></small></p>
+    
+  <br/>
+  
+     <script src="/assets/js/toggleR.js"></script>
+     <button class="btn btn-default" type="button" onclick="toggle_R();">Hide/Show Source</button>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Sensitivity Of Gp Comparisons In Further Examples
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2013-06-04
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/06/04/sensitivity-of-gp-comparisons-in-further-examples.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

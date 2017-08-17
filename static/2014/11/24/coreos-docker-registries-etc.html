@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Coreos Docker Registries Etc</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="infrastructure, docker, coreos, digitalocean" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Coreos Docker Registries Etc" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2014-11-24 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/11/24/coreos-docker-registries-etc.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Coreos Docker Registries Etc" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2014-11-24 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/11/24/coreos-docker-registries-etc.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2014-11-24 00:00:00 +0000"/>
+<meta name="citation_title" content="Coreos Docker Registries Etc"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Coreos Docker Registries Etc</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h2 id="a-secure-docker-registry">A secure docker registry</h2>
+<p>Running one’s own docker registry is far more elegant than moving tarballs between machines (e.g. when migrating between servers, particularly for images that may contain sensitive data such as security credentials). While it’s super convenient to have a containerized version of the Docker registry ready for action, it doesn’t do much good without putting it behind an HTTPS server (otherwise we have to restart our entire docker service with the insecure flag to permit communication with an unauthenticated registry – doesn’t sound like a good idea). So this meant learning how to use <code>nginx</code> load balancing, which I guess is useful to know more generally.</p>
+<h3 id="first-pass-nginx-on-ubuntu-server">First pass: nginx on ubuntu server</h3>
+<p>After a few false starts, decided the <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04">digitalocean guide</a> is easily the best (though steps 1-3 can be skipped by using a containerized <code>registry</code> instead). This runs <code>nginx</code> directly from the host OS, which is in some ways more straight forward but less portable. A few notes-to-self in working through the tutorial:</p>
+<ul>
+<li><p>Note: At first, nginx refuses to run because there’s was <code>default</code> configuration in <code>cd /etc/nginx/sites-enabled</code> that tries to create a conflict. Remove this and things go pretty nicely.</p></li>
+<li><p>Note: Running the registry container explicitly on port <code>127.0.0.1</code> provides an internal-only port that we can then point to from nginx. (Actually this will no longer matter when we use a containerized <code>nginx</code>, since we will simply not export these ports at all, but only expose the port of the <code>nginx</code> load balancer). Still, good to finally be aware of the difference between <code>127.0.0.1</code> and <code>0.0.0.0</code> (the publicly visible localhost, and the default if we supply only a port) in this context.</p></li>
+<li><p>Note: Running and configuring <code>nginx</code> Note that keys are specific to the url. This is necessary for the server signing request, but I believe could have been omitted in the root certificate. Here’s how w ego about creating a root key and certificate (<code>crt</code>), a server key, server signing request (<code>csr</code>), and then sign the latter with the former to get the server certificate.</p></li>
+</ul>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">openssl</span> genrsa -out dockerCA.key 2048
+<span class="kw">openssl</span> req -x509 -new -nodes -key dockerCA.key -days 10000 -out dockerCA.crt -subj <span class="st">&#39;/C=US/ST=Oregon/L=Portland/CN=coreos.carlboettiger.info&#39;</span>
+<span class="kw">openssl</span> genrsa -out docker-registry.key 2048
+<span class="kw">openssl</span> req -new -key docker-registry.key -out docker-registry.csr -subj <span class="st">&#39;/C=US/ST=Oregon/L=Portland/CN=coreos.carlboettiger.info&#39;</span>
+<span class="kw">openssl</span> x509 -req -in docker-registry.csr -CA dockerCA.crt -CAkey dockerCA.key -CAcreateserial -out docker-registry.crt -days 10000</code></pre>
+<p>Note that we also need the <code>htpasswd</code> file from above, which needs <code>apache2-utils</code> and so cannot be generated directly from the CoreOS terminal (though the <code>openssl</code> certs can):</p>
+<pre><code>sudo htpasswd -bc /etc/nginx/docker-registry.htpasswd $USERNAME $PASSWORD</code></pre>
+<p>Having created these ahead of time, I end up just copying my keys into the Dockerfile for my <code>nginx</code> instance (if we generated them on the container, we’d still need to get <code>dockerCA.crt</code> off the container to authenticate the client machines. Makes for a simple Dockerfile that we then build locally:</p>
+<pre><code>FROM ubuntu:14.04
+RUN apt-get update &amp;&amp; apt-get install -y apache2-utils curl nginx openssl supervisor
+COPY docker-registry /etc/nginx/sites-available/docker-registry
+RUN ln -s /etc/nginx/sites-available/docker-registry /etc/nginx/sites-enabled/docker-registry
+
+## Copy over certificates ##
+COPY docker-registry.crt /etc/ssl/certs/docker-registry 
+COPY docker-registry.key /etc/ssl/private/docker-registry 
+COPY docker-registry.htpasswd /etc/nginx/docker-registry.htpasswd
+
+
+EXPOSE 8080
+
+## use supervisord to persist
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+CMD [&quot;/usr/bin/supervisord&quot;]</code></pre>
+<p>Note that we need to install the <code>dockerCA.crt</code> certificate on any client that wants to access the private registry. On Ubuntu this looks like:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> mkdir /usr/local/share/ca-certificates/docker-dev-cert
+<span class="kw">sudo</span> cp devdockerCA.crt /usr/local/share/ca-certificates/docker-dev-cert
+<span class="kw">sudo</span> update-ca-certificates 
+<span class="kw">sudo</span> service docker restart</code></pre>
+<p>But on CoreOS we use a different directory (and restarting the docker service doesn’t seem possible or necessary):</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> cp dockerCA.crt /etc/ssl/certs/docker-cert
+<span class="kw">sudo</span> update-ca-certificates  </code></pre>
+<ul>
+<li><p>Note: Could not get the official <code>nginx</code> container to run the <code>docker-registry</code> config file as <code>/etc/nginx/nginx.conf</code>, either with or without adding <code>daemon off;</code> at the top of <code>/etc/nginx/nginx.conf</code>. With, it complains this is a duplicate, (despite being recommended on the <a href="https://registry.hub.docker.com/_/nginx">nginx container documentation</a>, though admittedly this already appears in the default command <code>[&quot;nginx&quot; &quot;-g&quot; &quot;daemon off;&quot;]</code>). Without, the error says that <code>upstream</code> directive is not allowed here. Not sure what to make of these errors, ended up running an ubuntu container and then just installing <code>nginx</code> etc following the digitalocean guide. Ended up dropping the <code>daemon off;</code> from the config file and running <code>service nginx start</code> through <code>supervisord</code> to ensure that the container stays up. Oh well.</p></li>
+<li><p>Note: I got a 502 error when calling <code>curl</code> against the the <code>nginx</code> container-provided URL (with or without SSL enabled), since from inside the <code>nginx</code> container we cannot access the host addresses. The simplest solution is to add <code>--net=&quot;host&quot;</code> when we <code>docker run</code> the <code>nginx</code> container, but this isn’t particularly secure. Instead, we’ll link directly to the ports of the <code>registry</code> container like this:</p></li>
+</ul>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">docker</span> run  --name=registry -p 8080:8080 registry
+<span class="kw">docker</span> run --name=nginx --net=container:registry nginx</code></pre>
+<p>Note that we do not need to export the registry port (e.g. <code>-p 5000:5000</code>) at all, but we do need to export the <code>nginx</code> load-balancer port <em>from the <code>registry</code> container</em> first, since we will simply be linking it’s network with the special <code>--net=container:registry</code>.</p>
+<p>Note that we would probably want to link a local directory to provide persistent storage for the <code>registry</code>; in the above example images committed to registry are lost when the container is destroyed.</p>
+<p>We can now log in:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">docker</span> login https://<span class="kw">&lt;</span>YOUR-DOMAIN<span class="kw">&gt;</span>:8080</code></pre>
+<p>We can now reference our private registry by using its full address in the namespace of the image in commands to <code>docker pull</code>, <code>push</code>, <code>run</code> etc.</p>
+<h2 id="migrating-gitlab-between-servers">Migrating gitlab between servers</h2>
+<p>This migration was my original motivation to configure the private docker registry; ironically it isn’t necessary for this case (though it’s useful for the drone image, for instance).</p>
+<p>Note that there is no need to migrate the redis and postgresql containers manually. Migrating the backup file over to the corresponding location in the linked volume and then running the backup-restore is sufficient. Upgrading is also surprisingly smooth; we can backup (just in case), then stop and remove the container (leaving the <code>redis</code> and <code>postgresql</code> containers running), pull and relaunch with otherwise matched option arguments and the upgrade runs automatically.</p>
+<p>When first launching the <code>gitlab</code> container on a tiny droplet running coreos, my droplet seems invariably to hang. Rebooting from the digitalocean terminal seems to fix this. A nice feature of <code>fleet</code> is that all the containers are restarted automatically after reboot, unlike when running these directly from <code>docker</code> on my ubuntu machine.</p>
+<h2 id="notes-on-fleet-unit-files">Notes on fleet unit files</h2>
+<p>Fleet unit files are actually pretty handy and straight forward. One trick is that we must quote commands in which we want to make use of environmental variables. For instance, one must write:</p>
+<pre><code>Environment=&quot;VERSION=1.0&quot;
+ExecStart=/bin/bash -c &quot;/usr/bin/docker run image:${VERSION}&quot;</code></pre>
+<p>in a <code>Service</code> block, rather than <code>ExecStart=/usr/bin/docker run ...</code> directly, for the substitution to work. It seems if we are using the more standard practice of environment files (which after all is the necessary approach to avoid having to edit the unit file directly one way or another anyway), we can avoid the <code>bin/bash</code> wrapper and insert the environment reference directly.</p>
+<p>If we’re not doing anything fancy wrt load balancing between different servers, we don’t have that much use for the corresponding “sidekick” unit files that keep our global <code>etcd</code> registry up to date. Perhaps these will see more use later.</p>
+<h2 id="cloud-config">Cloud-config</h2>
+<p>Note that we need to refresh the discovery url pretty-much anytime we completely destroy the cluster.</p>
+<p>A few edits to my cloud-config to handle initiating swap, essential for running most things (gitlab, rstudio) on tiny droplets. Still requires one manual reboot for the allocation to take effect. Adds this to the <code>units</code> section of <code>#cloud-config</code>:</p>
+<pre><code>    ## Configure SWAP as per https://github.com/coreos/docs/issues/52
+    - name: swap.service
+      command: start
+      content: |
+        [Unit]
+        Description=Turn on swap
+
+        [Service]
+        Type=oneshot
+        Environment=&quot;SWAPFILE=/1GiB.swap&quot;
+        RemainAfterExit=true
+        ExecStartPre=/usr/sbin/losetup -f ${SWAPFILE}
+        ExecStart=/usr/bin/sh -c &quot;/sbin/swapon $(/usr/sbin/losetup -j ${SWAPFILE} | /usr/bin/cut -d : -f 1)&quot;
+        ExecStop=/usr/bin/sh -c &quot;/sbin/swapoff $(/usr/sbin/losetup -j ${SWAPFILE} | /usr/bin/cut -d : -f 1)&quot;
+        ExecStopPost=/usr/bin/sh -c &quot;/usr/sbin/losetup -d $(/usr/sbin/losetup -j ${SWAPFILE} | /usr/bin/cut -d : -f 1)&quot;
+
+        [Install]
+        WantedBy=local.target
+
+    - name: swapalloc.service
+      command: start
+      content: |
+        [Unit]
+        Description=Allocate swap
+
+        [Service]
+        Type=oneshot
+        ExecStart=/bin/sh -c &quot;sudo fallocate -l 1024m /1GiB.swap &amp;&amp; sudo chmod 600 /1GiB.swap &amp;&amp; sudo chattr +C /1GiB.swap &amp;&amp; sudo mkswap /1GiB.swap&quot;
+</code></pre>
+<p>More probably be structured more elegantly, but it works. (Not much luck trying to tweak this into a bunch of <code>ExecStartPre</code> commands though.</p>
+<h2 id="nfs-sharing-on-coreos">NFS sharing on CoreOS?</h2>
+<p>Couldn’t figure this one out. <a href="http://serverfault.com/questions/647014/share-disks-through-nfs-on-a-coreos-cluster">My SO Q here</a></p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2014-11-24 00:00:00 +0000" 
+    property="dc:created">24 Nov 2014</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2014/11/19/coreos-and-other-infrastructure-notes.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2014/11/26/coreos-cluster-gotchas.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2014/commits/master/_posts/2014-11-24-coreos-docker-registries-etc.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2014/categories.html#computing">computing</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2014/tags.html#infrastructure">#infrastructure</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2014/tags.html#docker">#docker</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2014/tags.html#coreos">#coreos</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2014/tags.html#digitalocean">#digitalocean</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2014/commit/8da62cd96262b6443af69ed7d22698f81dcc8af5/_posts/2014-11-24-coreos-docker-registries-etc.md"> 8da62cd96262b6443af69ed7d22698f81dcc8af5</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Coreos Docker Registries Etc
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2014-11-24
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/11/24/coreos-docker-registries-etc.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

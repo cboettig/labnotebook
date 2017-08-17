@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Lab Notebook</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Lab Notebook" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/lab-notebook.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Lab Notebook" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/lab-notebook.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content=""/>
+<meta name="citation_title" content="Lab Notebook"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  class="active" >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Lab Notebook</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row postpreview">
+  <div class="col-md-11 col-md-offset-1">
+    <div class="row">
+			<h4> <a href="/2011/atom.xml"
+              onClick="recordOutboundLink(this,
+              'Outbound Links', 'RSS'); return false;"
+              style="color: inherit;"
+              ><i class="icon-rss" ></i> Entries</a></h4>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2011//12/12/monday-12.html">Monday</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 12 Dec 2011</p>
+
+<article>
+<div class="excerpt">
+<ul>
+<li>Wrote method2 test functions out in knitr/sweave. Sent document to Peter.</li>
+<li>Move my ropensci git origins to the ropensci github page.</li>
+<li>Ropensci comments on : recommended for anything non-trivial, including web calls. Richer tests should be put into testthat.</li>
+<li>Reply to Charles Jervis, biology high school teacher interested in tools to teach math/modeling in ecology.  Sounds like he’s already doing some cool stuff with phylogenies with his students.</li>
+<li>prepare vignette for rfishbase based on tutorial.</li>
+<li>prepare vignette for treebase base on tutorial.</li>
+</ul>
+<h2 id="misc-wordpressnotebook-stuff">Misc Wordpress/Notebook Stuff</h2>
+<p>Kcite upgrade – moves to a new platform, becomes author-year format, smaller format bibliography.  Whoops, it also breaks my dynamic header-footers – for some reason they no longer appear on any page or post not calling the kcite citation!  Fixed with a hack call to kcite function in my footer</p>
+<pre class="sourceCode html"><code class="sourceCode html"><span class="co">&lt;!-- MY ADDITION: KCITE HACK --&gt;</span>
+<span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="kw">&gt;</span>
+       <span class="kw">var</span> kcite_citation_data;
+<span class="kw">if</span>( kcite_citation_data == <span class="kw">undefined</span> ){
+kcite_citation_data = [];
+}
+&lt;<span class="ot">/script&gt;</span></code></pre>
+<p>but not happy about this.</p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2011//12/12/monday-12.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2011//12/12/better-sweave-dynamic-documents-with-syntax-highlighting-easier-tools.html">Better dynamic documents (Sweave) with syntax highlighting, caching, etc</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 12 Dec 2011</p>
+
+<article>
+<div class="excerpt">
+<p>The highlight package is a simple solution for very nice syntax highlighted code boxes in latex documents.  Requires <a href="http://stackoverflow.com/questions/5448608/changing-the-sweave-driver-from-the-command-line">switching the driver</a>, which is best done from within R and requires creating a makefile though.  Needs the “highlight” package installed.  Here’s a <a href="https://gist.github.com/1469063">simple makefile.</a></p>
+<p>A wealth/mess of Sweave related packages on the CRAN <a href="http://cran.r-project.org/web/views/ReproducibleResearch.html">taskview for Reproducible Research</a> (now what other software platform has a the equivalent of a Reproducible Research task view?)</p>
+<p>But why not really do things correctly? The <a href="http://yihui.github.com/knitr">knitr</a> package is beautiful. Abstracts the concept beyond just latex integration.  You can write in pure latex, (instead of noweb mix), in pure markdown, or pure html, embedding the R commands in comments.  knitr can run the code in those comments to generate a file of the same format, but with the dynamic content embedded.  Handles caching, syntax highlighting, and figures in a much more seamless manner.  It can also use the package author’s <a href="https://github.com/yihui/formatR">formatR</a>code to tidy up your code before including it.  You can convince R to use this for vignettes with a similar makefile.</p>
+<p>[gist id=1470786]</p>
+<p>The github markdown integration makes github look like a better and better candidate for a lab notebook.  Wonder how it handles mathjax or citations?</p>
+<p>Another nice find for bringing my older package documentation into roxygen form: <a href="https://github.com/yihui/Rd2roxygen">Rd2roxygen</a>.</p>
+<h2 id="more-ambitious-dynamic-documentation">More ambitious dynamic documentation</h2>
+<p>These improvements to Sweave are nice, though the dynamic document concept can certainly go much further.  <a href="http://www.dexy.it/features/">Dexy.it</a> is an interesting multi-lingual version, but doesn’t seem to combine source and the documentation in the same file.  Guess that can be kinda good, kinda bad. It seem to use a non-standard syntax, and while it’s python easy_install sounds fine, might still be a barrier to adoption among R users…</p>
+<p>Meanwhile, some notes form a presentation I saw recently that have a much more ambitious view of what’s possible.  Nov 22 (which I’ve recast into the language Tim Berners-Lee uses to describe linked-data on the web:</p>
+<ul>
+<li><p>One star – sweave</p></li>
+<li><p>two stars - XDynDocs multiple views (alternate analyses, full lab notebook)</p></li>
+<li><p>three stars - rfirefox - interactive web view</p></li>
+<li><p>star four - live data sources (self updating)</p></li>
+</ul>
+<p>Some people involved: Deborah Nolan, Thomas Lee, Paul Baines, Wolfgang Polonik, Duncan Temple-Lang, Gabriel Becker.</p>
+<p>some of my questions:</p>
+<ul>
+<li><p>In the context of these tools, do we distinguish documenting code from publishing analyses?</p></li>
+<li><p>Does this make remaining errors the more insidious?</p></li>
+</ul>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2011//12/12/better-sweave-dynamic-documents-with-syntax-highlighting-easier-tools.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2011//12/11/some-notes-on-open-notebooks-open-peer-review-practices.html">Some Notes on Open Notebooks, Open peer review practices.</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 11 Dec 2011</p>
+
+<article>
+<div class="excerpt">
+<p>What follows is a collection of notes, examples, and reflections I’ve been meaning to write down.</p>
+<h2 id="section"></h2>
+<h2 id="revealing-revisions">Revealing Revisions</h2>
+<p>Sharing version history is an important part of an open notebook really being open, and one reason why wikis have remained so popular for Open Notebook Science.  Wordpress (this platform) does version management internally, and the<a href="http://wordpress.org/extend/plugins/post-revision-display/">post-revision display plug-in</a>makes this visible on posts.  I had experimented but disabled this a while ago because I didn’t like visual impact of the long list at the end of my posts.  I may often put a post up early in the day and add subsequent notes as I go along, so my revisions are nearly exclusively additions (I show any cross-outs on the final copy anyway) so it seemed unnecessary.  Anyway, this <a href="http://ff.im/NPlPW">FF discussion</a> made me feel guilty so I added them back.  Luckily the manual mode lets me have this display in the metadata section, which feels a bit more out of the way. ((Configuration notes to self:  Directions basically follow the package instructions – I added  the two php lines to single.php in the sidebar section.  Would be overwritten by theme updates so I should write a <a href="http://www.carlboettiger.info/archives/1697">child theme,</a> but I understand <a href="http://somadesign.ca/projects/the-erudite/">my theme</a> is no longer being updated anyhow.  I’d have to edit the css to get color highlighting of the changes, doesn’t really fit with my theme.  My theme also doesn’t use the standard CSS file, but it’s own directory for css files which means I have to go outside the wordpress editor to edit it.)).  We’ll see.</p>
+<h2 id="revealing-impact">Revealing Impact</h2>
+<p>A while ago <a href="http://www.researchremix.org/wordpress/">Heather Piwowar</a> asked me about setting up WP Post Views on my notebook so that projects like total-impact could include the data.  There should be a good plugin that just uses the API from the standard statistics plugin (now part of jetpack) to display views on individual posts, but it seems there isn’t.  WP Post Views requires modifying the theme files, and requires the ajax-the-views plugin to update the display on sites using caching, and uses it’s own counter (so it’s view counts only start once it’s installed), but I don’t have time to write my own, so it now appears in the metadata section of the posts.</p>
+<h2 id="ons-logos">ONS Logos</h2>
+<p>Interesting <a href="http://andymaloney.wordpress.com/2011/11/24/ons-logo/#comment-69">discussion</a> by Andy Maloney on the use of ONS logos to track Open Notebook science.  (See mine in the footer “further information.”  The choice of ONS claim is a different discussion, e.g. <a href="http://www.carlboettiger.info/archives/1229#comment-491">here</a>).</p>
+<h2 id="journals-with-open-peer-review">Journals with Open Peer Review</h2>
+<p>Been meaning to jot these notes down, prompted to by the open-knowledge / <a href="https://plus.google.com/107449381177524115065/posts/5iQoPnuY5R8">G+ discussion</a> here.  Here’s a few different models of open peer review.</p>
+<p>Biology Direct has always practiced open peer review in which reviews are solicited; then having received the reviews (either positive or negative) the author can opt to have the paper published, can make changes &amp; publish, or can withdraw the paper. Any time the paper is published the reviews are published with it, with the reviewers name, and with the author’s reply to the reviews. <a href="http://www.biology-direct.com/" class="uri">http://www.biology-direct.com/</a></p>
+<p>The Nature journal EMBO has an innovative but less extreme process where reviews are solicited, identities are included, but the reviews are published (as a supplement) only if the paper is accepted. The open review is opt-in, with 95% opting in. Interestingly reviewers are encouraged to “cross-review” or comment on remarks of other reviewers. They have stats showing that about 10% of the time people download the peer-review comments when they download the paper, comparable to downloads of traditional supplements. <a href="http://www.nature.com/emboj/about/process.html" class="uri">http://www.nature.com/emboj/about/process.html</a></p>
+<p>Nature did an experiment with its flagship journal on unsolicited open peer review in 2006 in parallel with it’s traditional peer review. They deemed it unsuccessful due to low opt-in rates among authors and few &amp; lower quality reviews in the open. <a href="http://www.nature.com/nature/peerreview/debate/nature05535.html" class="uri">http://www.nature.com/nature/peerreview/debate/nature05535.html</a></p>
+<p>BMC Molecular Biology journals has authors recommend reviewers, non-anonymous review, and publishing of the reviews with the article.  <a href="http://www.biomedcentral.com/bmcmolbiol/authors/peerreview" class="uri">http://www.biomedcentral.com/bmcmolbiol/authors/peerreview</a></p>
+<h2 id="copyright-licenses">Copyright Licenses</h2>
+<p>Some vibrant discussion on non-commercial (NC) (and to some extent, share-alike, or SA) clauses in licenses on the open-knowledge list (and in the recent published literature: (Carroll, 2011), (Hagedorn <em>et. al.</em> 2011)). The question at hand is targeting Open Access publishers who use NC license, but has interesting reflections onto bloggers and software licenses.</p>
+<p>While I’d heard discontent with NC before (particularly around PLoS ONE clones using NC clause), I was surprised at the extent – Creative Commons is apparently considering removing it since it is so problematic.  Similar troubles have dogged the share-alike/GPL clause for software (license incompatibility, etc), and it sounds that GPL is out of favor in preference for more open/permissive BSD licenses.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><p>Carroll M (2011). “Why Full Open Access Matters.” <em>Plos Biology</em>, <strong>9</strong>. <a href="http://dx.doi.org/10.1371/journal.pbio.1001210">http://dx.doi.org/10.1371/journal.pbio.1001210</a>.</p></li>
+<li><p>Hagedorn G, Mietchen D, Morris R, Agosti D, Penev L, Berendsohn W and Hobern D (2011). “Creative Commons Licenses And The Non-Commercial Condition: Implications For The re-Use of Biodiversity Information.” <em>Zookeys</em>, <strong>150</strong>. ISSN 1313-2989, <a href="http://dx.doi.org/10.3897/zookeys.150.2189">http://dx.doi.org/10.3897/zookeys.150.2189</a>.</p></li>
+</ul>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2011//12/11/some-notes-on-open-notebooks-open-peer-review-practices.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+    </div>
+
+    <div class="row">
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2011//12/09/friday-9.html">Friday</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 09 Dec 2011</p>
+
+<article>
+<div class="excerpt">
+<h2 id="wrightscapepmc">Wrightscape/pmc</h2>
+<ul>
+<li>Writing up derivation from Thursday properly / for manuscript.</li>
+<li>Writing up test cases for method2, direct evaluation of covariance matrix for comparisons</li>
+<li>Minor revisions submitted to Evolution</li>
+</ul>
+<h2 id="pdg-control-to-do">pdg-control To Do</h2>
+<ul>
+<li>Implement the NCO.</li>
+<li>Implement HS SDP</li>
+<li>Closer read of (Sethi <em>et. al.</em> 2005), (Su &amp; Peterman, 2012) and <a href="http://www.webmeets.com/files/papers/aere/2011/237/Woodward%20and%20Tomberlin%20-%20Robust%20DP%20-%20Fisheries.AERE.pdf">Woodward &amp; Tomberlin</a></li>
+</ul>
+<h2 id="warning-signals">Warning signals</h2>
+<ul>
+<li>Allee effects in linear programming with different classes.</li>
+<li>Timescales of noise using van Kampen expansion.</li>
+</ul>
+<h2 id="image-log">Image Log</h2>
+<p>[flickr-gallery mode=“search” tags=“phylogenetics, PDG_Control” min_upload_date=“2011-12-09 7:00:37” max_upload_date=“2011-12-09 23:23:37”]</p>
+<h2 id="references">References</h2>
+<ul>
+<li><p>Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005). “Fishery Management Under Multiple Uncertainty.” <em>Journal of Environmental Economics And Management</em>, <strong>50</strong>. ISSN 00950696, <a href="http://dx.doi.org/10.1016/j.jeem.2004.11.005">http://dx.doi.org/10.1016/j.jeem.2004.11.005</a>.</p></li>
+<li><p>Su Z and Peterman R (2012). “Performance of A Bayesian State-Space Model of Semelparous Species For Stock-Recruitment Data Subject to Measurement Error.” <em>Ecological Modelling</em>, <strong>224</strong>. ISSN 03043800, <a href="http://dx.doi.org/10.1016/j.ecolmodel.2011.11.001">http://dx.doi.org/10.1016/j.ecolmodel.2011.11.001</a>.</p></li>
+</ul>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2011//12/09/friday-9.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2011//12/08/thursday-11.html">Thursday</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 08 Dec 2011</p>
+
+<article>
+<div class="excerpt">
+<p>Another day of working on 4 different projects at once.</p>
+<h2 id="warning-signals">Warning signals</h2>
+<ul>
+<li><p>review Alan pulses manuscript</p></li>
+<li><p>review (Dulvy <em>et. al.</em> 2003) Paper discussing the data you want $ $ the data you want</p></li>
+</ul>
+<p>No way in Anchoveta data, look at time series:</p>
+<figure>
+<img src="http://farm8.staticflickr.com/7142/6478073223_819460d349_o.png" />
+</figure>
+<h4 id="example-in-the-cod-data">Example in the cod data</h4>
+<figure>
+<img src="http://farm8.staticflickr.com/7157/6477872559_87a539f2df_o.png" />
+</figure>
+<p>using only up until 1991 data:</p>
+<figure>
+<img src="http://farm8.staticflickr.com/7028/6477872503_bc33d69793_o.png" />
+</figure>
+<ul>
+<li>Way forward – construct the step-wise predictor of probabilities.  Add the economic costs of both.  run in replicate — eek this will definitely be one for the NERSC cluster.  Is there really no policy to compare against?</li>
+</ul>
+<h2 id="wrightscape">wrightscape</h2>
+<ul>
+<li>Selecting figures, see section in <a href="http://www.carlboettiger.info/archives/3488">Yesterday’s post</a></li>
+</ul>
+<h2 id="evolution">Evolution</h2>
+<ol type="1">
+<li><p>describe the differences in optimization methods, and modify our mention of the Hessian to say that it may provide reasonable CIs, but not necessarily, and can be problematic to compute. – Done</p></li>
+<li><p>Consider AICc for comparison?  – supplement?</p></li>
+<li><p>Cite Revel &amp; Collar 2009 – Done</p></li>
+</ol>
+<p>Reply letter.</p>
+<p>Code polish and submit.</p>
+<h2 id="pdg-control">pdg-control</h2>
+<p>Very clever! State-space too big for SDP?  Just simulate forward a few steps and call it good. Now with citation.  Nicol &amp; Chadès, 2011</p>
+<p>Discussing with Paul – read:</p>
+<p>Checking expected behavior when the cost of change is high and the stock has significant scrap value (reward for non-zero terminal condition):</p>
+<figure>
+<img src="http://farm8.staticflickr.com/7158/6479108919_5818e93990_o.png" />
+</figure>
+<figure>
+<img src="http://farm8.staticflickr.com/7159/6479067329_108dc6e17d_o.png" />
+</figure>
+<p>in this limit the trivial solution is not to fish.</p>
+<p>Just implement NCO tracking on Reed’s S.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><p>Dulvy N, Sadovy Y and Reynolds J (2003). “Extinction Vulnerability in Marine Populations.” <em>Fish And Fisheries</em>, <strong>4</strong>. ISSN 1467-2960, <a href="http://dx.doi.org/10.1046/j.1467-2979.2003.00105.x">http://dx.doi.org/10.1046/j.1467-2979.2003.00105.x</a>.</p></li>
+<li><p>Beyond Stochastic Dynamic Programming: A Heuristic Sampling Method For Optimizing Conservation Decisions in Very Large State Spaces, Sam Nicol, Iadine Chadès, (2011) <em>Methods in Ecology And Evolution</em>, <strong>2</strong> <a href="http://dx.doi.org/10.1111/j.2041-210X.2010.00069.x">10.1111/j.2041-210X.2010.00069.x</a></p></li>
+</ul>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2011//12/08/thursday-11.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2011//12/07/wednesday-11.html">Wednesday - wrightscape runs and various other things</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 07 Dec 2011</p>
+
+<article>
+<div class="excerpt">
+<h2 id="pdg-control">pdg-control</h2>
+<ul>
+<li>plots for changing costs</li>
+<li>Report out to Training Problem II group.</li>
+</ul>
+<h3 id="ggplot-note">ggplot note</h3>
+<p>defining functions that return a ggplot object can be tricky. If you compute some objects in the plot function (stats etc), those stats are not stored by the object (due to lazy evaluation, usually a very nice time-saving feature), so the plot cannot be produced unless the function returns those things to the global environment (or from wherever the plot will be printed/evaluated). Can return them to the global env with “&lt;&lt;-” assignment, but seems poor form.</p>
+<h2 id="evolution">Evolution</h2>
+<h3 id="power-in-phylogenies">power in phylogenies</h3>
+<ul>
+<li>Hessian reply.  manuscript reply.</li>
+<li>Select wrightscape examples.</li>
+</ul>
+<h3 id="wrightscape">wrightscape</h3>
+<ul>
+<li>1530089 series: bm vs a2 on parrotfish tree. looks like close &amp; SH.y reject brownie, open almost does. kt almost does.</li>
+<li><a href="https://github.com/cboettig/wrightscape/commit/7a347b05696d179e442b2619d5a0dd5c70c284c8">7a347b0</a> series: bm vs a1 on parrotfish tree: (missing lr line).  More power, smaller diffs.  Kt maybe? must rerun these!</li>
+<li><a href="https://github.com/cboettig/wrightscape/commit/43352040ff429dab06a038632d16025775e87a5d">4335204</a>  bm vs a1 with the lines.</li>
+</ul>
+<p><img src="http://www.flickr.com/photos/cboettig/6475405483/in/photostream" alt="prot.y" /> sig. open sig in reverse</p>
+<ul>
+<li><p>cce5a5a/93a8630 series: labrid tree, intramandibular division, bm vs a1   (more power on larger tree, go for finer division between models?)   only bodymass rejects.  (cce5a5a missing lr line).</p></li>
+<li><p><a href="https://github.com/cboettig/wrightscape/blob/8382283f9b63f6dd3500baf75a9acaf441d62007/demo/labrid_power.R">8382283</a> now running labrid bm vs a2.</p></li>
+</ul>
+<p><img src="http://farm8.staticflickr.com/7175/6475405483_eb15f0aea9.jpg" alt="KT significant" /> </p>
+<figure>
+<img src="http://farm8.staticflickr.com/7156/6475405223_485794f9af_o.png" alt="closing: boarderline" /><figcaption>closing: boarderline</figcaption>
+</figure>
+<figure>
+<img src="http://farm8.staticflickr.com/7151/6475405179_f9046e73e3_o.png" alt="bodymass sig" /><figcaption>bodymass sig</figcaption>
+</figure>
+<figure>
+<img src="http://farm8.staticflickr.com/7022/6475405419_6b917dae8e.jpg" alt="open: kinda not really" /><figcaption>open: kinda not really</figcaption>
+</figure>
+<ul>
+<li>open &amp; prot.y significant in reverse</li>
+<li><a href="https://github.com/cboettig/wrightscape/commit/6befae4fdbce8ef5ab00c141e68e6681a391ed29">6befae4</a> Check out open and kt on a2 vs bm when regime=two_shifts.</li>
+</ul>
+<figure>
+<img src="http://farm8.staticflickr.com/7146/6477481011_65e328f325_m.jpg" alt="Prot" /><figcaption>Prot</figcaption>
+</figure>
+<figure>
+<img src="http://farm8.staticflickr.com/7033/6477480971_084c73eb32.jpg" alt="open" /><figcaption>open</figcaption>
+</figure>
+<figure>
+<img src="http://farm8.staticflickr.com/7027/6477480889_547db25f73.jpg" alt="kt" /><figcaption>kt</figcaption>
+</figure>
+<p><img src="http://farm8.staticflickr.com/7163/6477480785_4216e0f606_o.png" alt="bodymass" /> are significant.  Close is significant reversed (funny pattern at a2 anyhow).</p>
+<p>Make sure to run against standard ouch too!</p>
+<h2 id="warning-signals">Warning Signals</h2>
+<ul>
+<li>Alan Manuscript</li>
+<li>Reading: re data sources (Dulvy <em>et. al.</em> 2003)</li>
+<li>(Le Quesne &amp; Jennings, 2012)</li>
+<li>Example decisions under uncertainty of crash</li>
+</ul>
+<h2 id="reading">Reading</h2>
+<ul>
+<li>(Molloy, 2011)</li>
+<li>And on NC clause (Carroll, 2011), (Hagedorn <em>et. al.</em> 2011)</li>
+<li>Fiction: Non-commerical license means no one can make money from it. “I don’t want to give some entrepreneur a free lunch”</li>
+<li>Fact: NC means the journal (by holding the copyright) retains the right to <strong>sell</strong> your work to pharmaceuticals, teachers, researchers interested in text-mining,  (rather than those groups having <strong>free</strong> use).</li>
+<li>Data reviews – F1000?</li>
+</ul>
+<h2 id="graph-gallery">Graph gallery</h2>
+<p>[flickr-gallery mode=“search” tags=“phylogenetics, PDG_Control” min_upload_date=“2011-12-07 7:00:37” max_upload_date=“2011-12-08 12:23:37”]</p>
+<h2 id="references">References</h2>
+<ul>
+<li><p>Dulvy N, Sadovy Y and Reynolds J (2003). “Extinction Vulnerability in Marine Populations.” <em>Fish And Fisheries</em>, <strong>4</strong>. ISSN 1467-2960, <a href="http://dx.doi.org/10.1046/j.1467-2979.2003.00105.x">http://dx.doi.org/10.1046/j.1467-2979.2003.00105.x</a>.</p></li>
+<li><p>Le Quesne W and Jennings S (2012). “Predicting Species Vulnerability With Minimal Data to Support Rapid Risk Assessment of Fishing Impacts on Biodiversity.” <em>Journal of Applied Ecology</em>, <strong>49</strong>. <a href="http://dx.doi.org/10.1111/j.1365-2664.2011.02087.x">http://dx.doi.org/10.1111/j.1365-2664.2011.02087.x</a>.</p></li>
+<li><p>Molloy J (2011). “The Open Knowledge Foundation: Open Data Means Better Science.” <em>Plos Biology</em>, <strong>9</strong>. <a href="http://dx.doi.org/10.1371/journal.pbio.1001195">http://dx.doi.org/10.1371/journal.pbio.1001195</a>.</p></li>
+<li><p>Carroll M (2011). “Why Full Open Access Matters.” <em>Plos Biology</em>, <strong>9</strong>. <a href="http://dx.doi.org/10.1371/journal.pbio.1001210">http://dx.doi.org/10.1371/journal.pbio.1001210</a>.</p></li>
+<li><p>Hagedorn G, Mietchen D, Morris R, Agosti D, Penev L, Berendsohn W and Hobern D (2011). “Creative Commons Licenses And The Non-Commercial Condition: Implications For The re-Use of Biodiversity Information.” <em>Zookeys</em>, <strong>150</strong>. ISSN 1313-2989, <a href="http://dx.doi.org/10.3897/zookeys.150.2189">http://dx.doi.org/10.3897/zookeys.150.2189</a>.</p></li>
+</ul>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2011//12/07/wednesday-11.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+    </div>
+
+    <div class="row">
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2011//12/07/optimal-control-costs-to-policy-shifts.html">Optimal control -- costs to policy shifts</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 07 Dec 2011</p>
+
+<article>
+<div class="excerpt">
+<p>Considering the case where there is a cost to changing the harvest quota (representing the cost of efforts to change policy).  We can imagine several scenarios that could introduce this:</p>
+<ul>
+<li><p>Fixed cost to change</p></li>
+<li><p>Cost proportional to the size of the change (L1 norm)</p></li>
+<li><p>Cost proportional to the square of the size (L2 norm, i.e. small changes aren’t expensive, large ones are very expensive)</p></li>
+<li><p>asymmetric costs – lowering quotas may be harder than raising them</p></li>
+</ul>
+<h3 id="implementation">Implementation:</h3>
+<p>Before, we could calculate the optimal harvest rate for each value of the state variable $ x_t $ on the grid, at each time step (using Bellman’s equation for the value-to-go).  The optimal solution was given by a matrix of size n by T, where n is the grid size and T the stopping time  - n rows for the states, T columns for the timesteps.  Now we have to have the optimal harvest level at state $ x_t $ calculated out for each possible value of last year’s quota ( h_{t-1}  ), to know how big a change we’re considering.  This makes our matrix n by n by T (if harvest can assume any value on the grid, it has n options – we might make the harvest grid coarser or bounded at some h_max &lt; x_max).</p>
+<p>I think I have this right(?)  Slower to compute this much bigger optimum, but here we go:</p>
+<h3 id="results">Results</h3>
+<p>L1 norm tends to follow the optimal solution to a point, and then give up on changing the policy – putting the harvest all the way up and running the population to extinction:</p>
+<figure>
+<img src="http://farm8.staticflickr.com/7150/6470200593_06f074a462_o.png" />
+</figure>
+<p>The “alternate” line shows what the fishstock would have been if there was no cost to changing the policy (the classical Reed optimum), and its harvest rate is shown as harvest_alt. Looking across the ensemble we see this pattern repeat, with the manager throwing in the hat and fishing out the population at different times:</p>
+<figure>
+<img src="http://farm8.staticflickr.com/7023/6472332667_f75a3ccda6_o.png" />
+</figure>
+<p>Higher costs make this happen instantly, lower costs nearly mimic the Reed optimum strategy.</p>
+<h3 id="code">Code</h3>
+<p>available in R package form now,<a href="https://github.com/cboettig/pdg_control">install instructions</a>.</p>
+<p>(version of code used for figures should be linked from the figures as always too).</p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2011//12/07/optimal-control-costs-to-policy-shifts.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2011//12/06/tuesday-two-insights.html">Tuesday -- two insights</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 06 Dec 2011</p>
+
+<article>
+<div class="excerpt">
+<h2 id="control-optimization">Control &amp; Optimization</h2>
+<h3 id="dominique-bonvin-visit">Dominique Bonvin visit</h3>
+<ul>
+<li><p>two-step control (optimize parameters, optimize mean-square error between model and measurement also by parameter adjustment) fails when reality isn’t in the model set.  Problem is under-determined (N free variables, 4N equations).  (converges, but onto the wrong optimum).</p></li>
+<li><p>Better solution – adjust the penalty/regularization terms to to get better agreement between model and data</p></li>
+<li><p>Bonvin approach – adjust the control instead (NCO Control).  Can be almost model free in the control process.   (**)</p></li>
+</ul>
+<h3 id="pdg-control-training-problem-1b-2">pdg-control Training Problem 1b &amp; 2</h3>
+<ul>
+<li><p>Coded SDP with costs to changing quotas.</p></li>
+<li><p>Best way to visualize the optimal solution?</p></li>
+</ul>
+<h2 id="evolution">Evolution</h2>
+<ul>
+<li><p>Hessian calculation?  Non-trivial – how to get Hessian from a non-gradient method, or a gradient method when you need to handle bounds?  Various numerical challenges.</p></li>
+<li><p>Wrightscape model comparisons – comparing meaningful hypotheses! (**)</p></li>
+</ul>
+<h2 id="days-graphs-log">Day’s graphs log</h2>
+<p>[flickr-gallery mode=“search” tags=“phylogenetics, PDG_Control” min_upload_date=“2011-12-06 7:00:37” max_upload_date=“2011-12-06 23:23:37”]</p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2011//12/06/tuesday-two-insights.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2011//12/05/monday-wrightscape-meetings-pdg-meeting.html">Monday - wrightscape meetings, PDG meeting</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 05 Dec 2011</p>
+
+<article>
+<div class="excerpt">
+<p>Wrightscape – added a user utility to to specify custom model types, such that some subset of the total number of regimes can share certain parameters.</p>
+<h2 id="peter-meeting">Peter Meeting</h2>
+<ul>
+<li>Derivation – provide clear examples of the differences and by how much it matters.</li>
+<li>Expected result from the biology: the jaw lever traits should show greater changes than the other traits after a release of constraint.</li>
+<li>Based on previous studies, expect most of the action to be around the intramandibular joint innovation.</li>
+</ul>
+<h2 id="luke-meeting">Luke Meeting</h2>
+<ul>
+<li>Set up wrightscape to run on the <em>Anolis</em> ecomorph data.  Requires custom_Multitype() to specify separate shared and independent parameters on different regimes.</li>
+<li>Get wrightscape to compile on Luke’s Mac.  He has gsl libraries installed, yet somehow package won’t compile by R, complains that R cannot find gcc-4.2.  <strong>Solved</strong> aliased gcc to gcc-4.2, and compile worked fine.  Wish that didn’t take so long to think of.</li>
+<li>Up and running on Luke’s <em>Anolis</em> data.</li>
+</ul>
+<h2 id="pdg-training-problem-1-conference-call">PDG Training Problem 1 Conference Call</h2>
+<h3 id="b-penalties-on-rate-of-change-of-control-variable.">1b: penalties on rate of change of control variable.</h3>
+<ul>
+<li>c depend on h – not a velocity penalty.</li>
+<li>L_1 vs L_2  is a bigger penalty for large changes, small penalty for smaller</li>
+<li>Operational question: do penalties change the nature of the optimal policy?</li>
+<li>No cost penalties, upper bound on h</li>
+<li>Jake with h_max stochastic problem – lose the state independence, alter the Reed solution.</li>
+<li>Highlight differences from constant-escapement policy.</li>
+</ul>
+<h3 id="a-curvature-question">1a: curvature question</h3>
+<p>Focus on cases where state equation has stable node, chattering/limit cycles introduced by the control.</p>
+<p>[flickr-gallery mode=“search” tags=“phylogenetics” min_upload_date=“2011-12-05 8:00:37” max_upload_date=“2011-12-05 23:23:37”]</p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2011//12/05/monday-wrightscape-meetings-pdg-meeting.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+    </div>
+
+  </div>
+</div> <!--end row -->
+
+<div class="row socialicons">
+  <div class="col-md-11 col-md-offset-1">
+		<p> <a href="/2011/index.html"><i class="icon-calendar"></i> All entries by date</a></p> 
+      <p> <a href="/2011/categories.html"><i class="icon-list"></i> All entries by category</a> </p>
+      <p> <a href="/2011/tags.html"><i class="icon-tags"></i> All entries by tag</a> </p>
+  </div> <!--end col-md-9 -->
+</div> <!--end row -->
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Lab Notebook
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/lab-notebook.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

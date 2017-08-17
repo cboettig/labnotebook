@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Lab Notebook - R</title>
+ <link href="/2013/R.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2015-02-25T23:05:28+00:00</updated>
+ <id>http://www.carlboettiger.info</id>
+ <author>
+   <name>Carl Boettiger</name>
+   <email>cboettig@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Extending ape::phylo class to NeXML:</title>
+	 <link href="/2013/10/07/nexml-phylo-class-extension.html"/>
+   <updated>2013-10-07T00:00:00+00:00</updated>
+   <id>/10/07/nexml-phylo-class-extension</id>
+   <content type="html">&lt;p&gt;While working on the &lt;a href=&quot;https://github.com/ropensci/RNeXML&quot;&gt;RNeXML&lt;/a&gt; package, I have recently I have been puzzling over extending S3 objects to share some of the nice properties of S4 objects and methods while continuing to function with the potentially huge library of functions written to work with them. &lt;a href=&quot;http://stackoverflow.com/questions/17976217/make-s4-object-act-as-an-s3-class&quot;&gt;SO:&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To illustrate this issue, consider the S3 class &lt;code&gt;phylo&lt;/code&gt; provided by the &lt;code&gt;ape&lt;/code&gt; package and used by most of the 30+ packages that reverse depend or reverse import &lt;code&gt;ape&lt;/code&gt;. Despite this popularity, the S3 class has quite a few shortcomings (including inconsistent definition in ordering of it’s components, see the phylobase paper). To address these concerns, a hackathon consisting of many of the leading developers in this field created the &lt;code&gt;phylobase&lt;/code&gt; package with &lt;code&gt;S4&lt;/code&gt; definitions of &lt;code&gt;phylo&lt;/code&gt; objects that extend the class to handle additional types of data and address various other concerns that have arisen. Unfortunately, as far as I can tell, adoption of the new format has been lacking. In my mind, the greatest limitation of the new format is the lack of compatibility with existing methods build on the S3 type.&lt;/p&gt;
+&lt;p&gt;I never understood why phylobase did not do this. To illustrate the problem, let us load an S3 &lt;code&gt;phylo&lt;/code&gt; object and then coerce it into the &lt;code&gt;phylobase&lt;/code&gt; S4 type:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;library&lt;/span&gt;(phylobase)
+&lt;span class=&quot;kw&quot;&gt;library&lt;/span&gt;(ape)
+&lt;span class=&quot;kw&quot;&gt;data&lt;/span&gt;(bird.orders)
+bird.orders4 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;as&lt;/span&gt;(bird.orders, &lt;span class=&quot;st&quot;&gt;&amp;quot;phylo4&amp;quot;&lt;/span&gt;) &lt;span class=&quot;co&quot;&gt;# make ape::phylo tree into phylobase::phylo4 S4 class&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The S4 class has explicitly defined it’s own plotting method, so:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;plot&lt;/span&gt;(bird.orders4) &lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm8.staticflickr.com/7460/10145618405_f4b1a81df8_o.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;However, the original S3 plotting method fails:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;plot.phylo&lt;/span&gt;(bird.orders4) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Error: $ operator not defined for this S4 class&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More interesting functions, many of which may not have even existed when &lt;code&gt;phylobase&lt;/code&gt; was written, operate only on the S3 class:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt; S &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;10&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;47&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;69&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;214&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;161&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;17&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;355&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;51&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;56&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;10&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;39&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;152&lt;/span&gt;,
+             &lt;span class=&quot;dv&quot;&gt;6&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;143&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;358&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;103&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;319&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;23&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;291&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;313&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;196&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;1027&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;5712&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;bd.ext&lt;/span&gt;(bird.orders4, S)   &lt;span class=&quot;co&quot;&gt;# Fails &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Error: object &amp;quot;phy&amp;quot; is not of class &amp;quot;phylo&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While we can work around this with explicit coercion, this requirement is rather crude and breaks existing code users may already rely upon:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;bd.ext&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;as&lt;/span&gt;(bird.orders4, &lt;span class=&quot;st&quot;&gt;&amp;quot;phylo&amp;quot;&lt;/span&gt;), S)   &lt;span class=&quot;co&quot;&gt;# Works only after coercion &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;
+Extended Version of the Birth-Death Models to
+    Estimate Speciation and Extinction Rates
+
+    Data: phylogenetic: as(bird.orders4, &amp;quot;phylo&amp;quot;) 
+             taxonomic: S 
+        Number of tips: 23 
+              Deviance: 290.2 
+        Log-likelihood: -145.1 
+   Parameter estimates:
+      d / b = 2.315e-08   StdErr = 0.1542 
+      b - d = 0.2765   StdErr = 0.009578 
+   (b: speciation rate, d: extinction rate)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It appears this problem can be solved using &lt;code&gt;setOldClass&lt;/code&gt;. I’ve defined an the class &lt;code&gt;phyloS4&lt;/code&gt; which inherits all methods for the S3 &lt;code&gt;phylo&lt;/code&gt; class without having to explicitly declare those methods. In this way, we have the benefits of an S4 class while maintaining compatibility with all developers who only write functions based on the S3 class. (as long as functions don’t stupidly check the string identity &lt;code&gt;class(obj) == &amp;quot;phylo&amp;quot;&lt;/code&gt;, instead of using the proper class check &lt;code&gt;is(obj, &amp;quot;phylo&amp;quot;)&lt;/code&gt; – looking at you &lt;code&gt;ape::skyline&lt;/code&gt; and friends….)&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;setClass&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;phyloS4&amp;quot;&lt;/span&gt;, 
+         &lt;span class=&quot;kw&quot;&gt;representation&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;edge =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;matrix&amp;quot;&lt;/span&gt;,
+                        &lt;span class=&quot;dt&quot;&gt;Nnode =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;integer&amp;quot;&lt;/span&gt;,
+                        &lt;span class=&quot;dt&quot;&gt;tip.label =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;character&amp;quot;&lt;/span&gt;,
+                        &lt;span class=&quot;dt&quot;&gt;edge.length =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;numeric&amp;quot;&lt;/span&gt;))
+&lt;span class=&quot;kw&quot;&gt;setOldClass&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;phylo&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;S4Class=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;phyloS4&amp;quot;&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;selectMethod&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;show&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;phylo&amp;quot;&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;removeClass&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;phyloS4&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now consider using our S4 version, rather than the phylobase S4 version:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;a &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;phylo&amp;quot;&lt;/span&gt;, bird.orders)
+&lt;span class=&quot;kw&quot;&gt;is&lt;/span&gt;(a, &lt;span class=&quot;st&quot;&gt;&amp;quot;phylo&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;bd.ext&lt;/span&gt;(a, S)   &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;
+Extended Version of the Birth-Death Models to
+    Estimate Speciation and Extinction Rates
+
+    Data: phylogenetic: a 
+             taxonomic: S 
+        Number of tips: 23 
+              Deviance: 290.2 
+        Log-likelihood: -145.1 
+   Parameter estimates:
+      d / b = 2.315e-08   StdErr = 0.1542 
+      b - d = 0.2765   StdErr = 0.009578 
+   (b: speciation rate, d: extinction rate)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Class, &lt;code&gt;show&lt;/code&gt;, and &lt;code&gt;plot&lt;/code&gt;, and additional (&lt;code&gt;bd.ext&lt;/code&gt;) methods from the S3 class just work. Now we want to extend the class to contain additional metadata (in my case, the &lt;code&gt;nexml&lt;/code&gt; information):&lt;/p&gt;
+&lt;p&gt;I can then build a new class, &lt;code&gt;nexmlTree&lt;/code&gt; by extending this class. Again my new class acts like an S3 &lt;code&gt;phylo&lt;/code&gt; in any such functions, but adds a representation containing all the nexml data. This approach doesn’t minimize memory footprint, but usually that is not a concern for R users (otherwise coercion is always an option).&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;library&lt;/span&gt;(RNeXML)
+&lt;span class=&quot;kw&quot;&gt;setClass&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;nexmlTree&amp;quot;&lt;/span&gt;, &lt;span class=&quot;kw&quot;&gt;representation&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;nexml =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;nexml&amp;quot;&lt;/span&gt;), &lt;span class=&quot;dt&quot;&gt;contains=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;phylo&amp;quot;&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;setMethod&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;show&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;nexmlTree&amp;quot;&lt;/span&gt;, function(object) &lt;span class=&quot;kw&quot;&gt;print.phylo&lt;/span&gt;(object))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] &amp;quot;show&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again, we check a few methods:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt; b &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;nexmlTree&amp;quot;&lt;/span&gt;, bird.orders, &lt;span class=&quot;dt&quot;&gt;nexml =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;as&lt;/span&gt;(bird.orders, &lt;span class=&quot;st&quot;&gt;&amp;quot;nexml&amp;quot;&lt;/span&gt;))
+&lt;span class=&quot;kw&quot;&gt;is&lt;/span&gt;(b, &lt;span class=&quot;st&quot;&gt;&amp;quot;phylo&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;bd.ext&lt;/span&gt;(b, S)   &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;
+Extended Version of the Birth-Death Models to
+    Estimate Speciation and Extinction Rates
+
+    Data: phylogenetic: b 
+             taxonomic: S 
+        Number of tips: 23 
+              Deviance: 290.2 
+        Log-likelihood: -145.1 
+   Parameter estimates:
+      d / b = 2.315e-08   StdErr = 0.1542 
+      b - d = 0.2765   StdErr = 0.009578 
+   (b: speciation rate, d: extinction rate)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This provides the additional metadata while leaving us with an object that works with all existing functions.&lt;/p&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;I’m not quite sure why this required the &lt;code&gt;show&lt;/code&gt; method to be defined such that we wouldn’t get the S4 show method instead. As a default show method seems to be the only method automatically defined for the new class, I gather it is the only one we have to overwrite in preference for the &lt;code&gt;print.phylo()&lt;/code&gt; method.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Forking The R Journal</title>
+	 <link href="/2013/07/10/forking-the-R-journal.html"/>
+   <updated>2013-07-10T00:00:00+00:00</updated>
+   <id>/07/10/forking-the-R-journal</id>
+   <content type="html">&lt;p&gt;All I really wanted to do is cite a paper in &lt;em&gt;the R Journal&lt;/em&gt;, which is peer-reviewed, open access (CC-BY), LaTeX based and without author charges. Sure, I could do that already, but I like being able to programmatically generate citation metadata from a URL – we do have this thing called the internet now, and citations are just links, right? Unfortunately, nice as it is, the R journal doesn’t have HTML landing pages for articles that embed the metadata.&lt;/p&gt;
+&lt;p&gt;This makes it harder for Google Scholar to index the articles, and means that we cannot extract citation metadata from the URL using a tool like &lt;a href=&quot;http://greycite.knowledgeblog.org&quot;&gt;greycite&lt;/a&gt;. Until now.&lt;/p&gt;
+&lt;p&gt;I wrote to Editor-in-Chief Hadley Wickam about this, who responded in the best way possible: making the &lt;a href=&quot;ihttps://github.com/rjournal/rjournal.github.io&quot;&gt;journal website’s Github repository&lt;/a&gt; public. A fork and a little hacking later, and voila, we have html landing pages for &lt;em&gt;the R Journal&lt;/em&gt; with embedded metadata (pending a &lt;a href=&quot;https://github.com/rjournal/rjournal.github.io/pull/1&quot;&gt;pull request&lt;/a&gt;). Check out &lt;a href=&quot;https://github.com/cboettig/rjournal.github.io/commit/e70e84e6e53e6c04ec9864af162d7ba58439d4d5&quot;&gt;the source code&lt;/a&gt; for how this works – it’s really quite straight forward since the metadata is already available in &lt;code&gt;_config.yaml&lt;/code&gt;. The main step involves a &lt;a href=&quot;https://github.com/cboettig/rjournal.github.io/blob/e70e84e6e53e6c04ec9864af162d7ba58439d4d5/_plugins/article_html_pages.rb&quot;&gt;Generator plugin&lt;/a&gt; which builds a page for each article and makes the relevant article metadata available to the page. Then we can write a &lt;a href=&quot;https://github.com/cboettig/rjournal.github.io/blob/e70e84e6e53e6c04ec9864af162d7ba58439d4d5/_layouts/article.html&quot;&gt;page template&lt;/a&gt; using Liquid code to import the metadata.&lt;/p&gt;
+&lt;p&gt;The really exciting thing about this is the basic idea of forking a journal website and improving it. There’s a lot we could do to improve the R journal. I think that ideally we’d have HTML5 versions of the articles as well, something that would be straight forward if authors used knitr of course, but I realize that’s a bigger shift. One could also automatically enhance the HTML with quite a bit more semantic content, we could have animations, links the Rnw files, etc etc. I’d be happy to help and I’m sure others would too. R-journal is great but it could be so much more as an example and test-bed of innovation in statistical publishing.&lt;/p&gt;
+&lt;p&gt;Well, now that the journal is open for pull requests, hack away!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

@@ -1,11 +1,11 @@
-baseurl = "/"
+#baseurl = "/"
 relativeurls = true
 languageCode = "en-us"
 title = "Boettiger Group"
 googleAnalytics = "UA-18401403-1"
 disqusShortname = "cboettig"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
-publishDir = "public/"
+publishDir = "public"
 enableGitInfo = true
 
 [permalinks]
@@ -17,15 +17,15 @@ enableGitInfo = true
     weight = 1
 [[menu.main]]
     name = "Members"
-    url = "/members/"
+    url = "/members"
     weight = 2
 [[menu.main]]
     name = "Publications"
-    url = "/vita/"
+    url = "/vita"
     weight = 3
 [[menu.main]]
     name = "Teaching"
-    url = "/teaching/"
+    url = "/teaching"
     weight = 4
 [[menu.main]]
     name = "Lab Notebook"

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>knitr, github, and a new phase for the lab notebook</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="R, blog" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="knitr, github, and a new phase for the lab notebook" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2012-03-21 12:13:42 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/03/21/knitr-github-and-a-new-phase-for-the-lab-notebook.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="knitr, github, and a new phase for the lab notebook" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2012-03-21 12:13:42 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/03/21/knitr-github-and-a-new-phase-for-the-lab-notebook.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2012-03-21 12:13:42 +0000"/>
+<meta name="citation_title" content="knitr, github, and a new phase for the lab notebook"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">knitr, github, and a new phase for the lab notebook</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>I have recently modified the basic workflow of my lab notebook since discovering <a href="http://yihui.name/knitr/">knitr</a>. Before, I would write code files which I could track on <a href="https://github.com">github</a>, push figures created by the code to flickr, and then write a notebook entry on wordpress describing what I was doing. I’d embed each figure I wanted into the entry, and each figure got an automatic link to github for the script that created it (which usually worked, though it didn’t say where in the script the command came from, and it required manually specifying the script name).</p>
+<p>Because knitr allows me to write a single file containing code and formatted text, and will automatically display the code and embed the images, I can avoid that more convoluted workflow and just write.</p>
+<p><img src="http://farm8.staticflickr.com/7256/7003687571_09f79cfc15_o.png" />](https://github.com/cboettig/pdg_control/blob/master/inst/examples)</p>
+<p>What makes this so excellent is that knitr allows me to write in markdown, and github automatically displays nicely formatted markdown instead of raw script when you visit the page. So whereas before I would keep a bunch of working <a href="https://github.com/cboettig/pdg_control/tree/master/demo">R scripts</a> in <code>projectname/demo</code> I now keep a bunch of <a href="https://github.com/cboettig/pdg_control/tree/master/inst/examples">markdown scripts</a> in <code>inst/examples</code>, ((since I’m using the R package for projects and demo/ doesn’t want non-R scripts)).</p>
+<p>The great thing about this is that I can just click on each script and see nicely rendered text, links, code, and figures right on github.</p>
+<p><img src="http://farm7.staticflickr.com/6217/7003679683_d9f472efd6_o.png" alt="example entry" />](https://github.com/cboettig/pdg_control/blob/master/inst/examples/Reed.md)</p>
+<p>While I can push this same markdown script to wordpress and have it be rendered in my notebook, I think maintaining these examples on github is preferable. Note that every script-name appears twice, once with and once without the <code>_knit_</code> extension. The <code>_knit_</code> extension indicates the file I ran to create the output (the code is in html comments so you can only see them in raw form). Because all the code is displayed in the output file (unless I call knitr options to surpress this), there’s really no need to view the <code>_knit_</code> file to reproduce the example, everything is in one place in the output <code>.md</code> file.</p>
+<p>These files benefit from the github managed version history, just clicking the history button gives a list of all the former versions, with code and results right there.</p>
+<p>While I could update a post in the notebook in the same way, the version control of this wordpress notebook is more crude, and more importantly, the blog-format is designed for a linear flow, whereas in a given day I might update each of these example scripts. This seems like a much more natural workflow then having consecutive entries in the notebook with updated versions of the analysis the day before, and more natural than going back and changing a previous notebook entry.</p>
+<p><img src="http://farm8.staticflickr.com/7094/7003692801_d14a23855e_o.png" />](https://github.com/cboettig/pdg_control/commits/master/inst/examples/model_uncertainty.md)</p>
+<p>Github can also gives nice snapshot of what’s changed, along with the commit notes for each project, for each day. Now that I can display figures and formatted text on github, as well as code, what role does the Wordpress notebook play? I think this wordpress notebook can resume is proper role as a lab notebook, containing reflections and synthesis on what I’ve done, rather than the more comprehensive copies of each analysis and each figure. Because it’s the internet, I can link to each of the analyses of that day using version-stable links from github, or links that always give the most recent version. This requires additional effort, but it’s a reflection I should be doing anyway. We’ll see how it goes. Meanwhile, welcome to the open lab notebook v2.0.</p>
+<h2 id="a-few-more-details">A few more details</h2>
+<h5 id="longer-code-r-functions">Longer code &amp; R functions</h5>
+<p>When I write code longer than a few lines, I try to make it a function, or collection of functions, and include basic Roxygen-style documentation with it so I don’t have to read the code to remember how to use it. These functions naturally live in the <code>R/</code> directory of the project. The project’s R package can be installed, and all these functions are then available. Each of my example scripts calls functions belonging to the package, but those functions change less regularly. To fully reproduce the example, it would be necessary to grab a copy of the R package from the same commit-version as the script. In practice, most of the time any version of the package R functions could be used.</p>
+<h5 id="github-wiki">Github wiki</h5>
+<p>Github has wiki pages which I could use instead of putting my entries in <code>inst/example</code>, since both render markdown (the wiki will additionally render mathjax math, all be it as a png). However, the wiki is aimed at online editing, and exists as a separate repository, so just keeping the markdown files in the project directory is simpler.</p>
+<h5 id="images">Images</h5>
+<p>Github doesn’t actually host the images. In fact, my images are still being pushed to flickr, and you can see them there. Knitr is handling this automatically as the figures are created, keeping track of the links so they can be included in the output markdown. Knitr can do this with imgur out of the box, and I’ve also written a wrapper to let it push the images to a wordpress site. Doesn’t really matter where they are stored, they can always be viewed on Github.</p>
+<h5 id="heavy-computing">Heavy computing</h5>
+<p>I’ve found that the knitted markdown examples make the most sense for fast-running examples. Despite excellent caching support, I’ve found it best to run really long-running examples as external R scripts, and then save and import this data. Such scripts are often being run on a cluster that can’t push images to the internet anyway.</p>
+<h5 id="power-of-openness">Power of openness?</h5>
+<p>It occurs to me that this system would be harder but not impossible, in a closed environment. I could upload the figures to flickr with private status. The links are hashes, so cannot be guessed. If the output were then hosted on a secure site (running a markdown renderer, such as Jekyll), instead of github, these links would still work to display the images. Then one could give selected access to those pages. But the open solution works out of the box.</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2012-03-21 12:13:42 +0000" 
+    property="dc:created">21 Mar 2012</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/03/20/tuesday-active-adaptive-management-a-first-solution.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/03/21/policy-costs-to-changing-mangement-tp-1b-apples-to-apples.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2012-03-21-knitr-github-and-a-new-phase-for-the-lab-notebook.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#R">#R</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#blog">#blog</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/6c6c30c31b9ca851b325b4d1af1703677eaa3f74/_posts/2012-03-21-knitr-github-and-a-new-phase-for-the-lab-notebook.md"> 6c6c30c31b9ca851b325b4d1af1703677eaa3f74</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=knitr, github, and a new phase for the lab notebook
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2012-03-21
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/03/21/knitr-github-and-a-new-phase-for-the-lab-notebook.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Monday: some code-tricks, Algorithms group planning</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Monday: some code-tricks, Algorithms group planning" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2011-05-23 23:00:18 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/05/23/monday-5.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Monday: some code-tricks, Algorithms group planning" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2011-05-23 23:00:18 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/05/23/monday-5.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2011-05-23 23:00:18 +0000"/>
+<meta name="citation_title" content="Monday: some code-tricks, Algorithms group planning"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Monday: some code-tricks, Algorithms group planning</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h2 id="teary">Teary</h2>
+<p>Some discussion on combining Greek letters with variables in R.  Previously have solved this with substitute() command,</p>
+<pre class="sourceCode r"><code class="sourceCode r">x =<span class="st"> </span><span class="fl">4.5</span>
+<span class="kw">plot</span>(<span class="dv">1</span>:<span class="dv">10</span>, <span class="dt">main =</span> <span class="kw">substitute</span>(<span class="kw">paste</span>(<span class="st">&quot;Kendall &quot;</span>, tau ==<span class="st"> </span>val), <span class="kw">list</span>(<span class="dt">val =</span> x[<span class="dv">1</span>])))</code></pre>
+<p>but Peter has a more elegant solution that can be vectorized:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(<span class="kw">interaction</span>(<span class="st">&quot;sigma&quot;</span>,<span class="dv">1</span>:<span class="dv">5</span>, <span class="dt">sep=</span><span class="st">&quot; == &quot;</span>),function(x)<span class="kw">parse</span>(<span class="dt">text=</span>x))
+<span class="co">#for instance</span>
+<span class="kw">plot</span>(<span class="dv">0</span>)
+<span class="kw">legend</span>(<span class="st">&quot;topright&quot;</span>,<span class="dt">legend=</span><span class="kw">sapply</span>(<span class="kw">interaction</span>(<span class="st">&quot;sigma&quot;</span>,<span class="dv">1</span>:<span class="dv">5</span>, <span class="dt">sep=</span><span class="st">&quot; == &quot;</span>),function(x)<span class="kw">parse</span>(<span class="dt">text=</span>x)),<span class="dt">lty=</span><span class="dv">2</span>)</code></pre>
+<p>Better yet, <code>bquote</code> has a mechanism to evaluate an argument vs express the argument as a symbol, see gist id=1108159.</p>
+<ul>
+<li>Having other people to help code is great, we’re considering the teary list-serve as a potential source for R help now.</li>
+<li>Also very interesting discussion around the NCEAS model, it’s impact, and the role of ecoinformatics. Check out <a href="http://ice.ucdavis.edu/">UC Davis’s ICE lab</a>.</li>
+<li>Update comments/suggestions about Rblogging and CiTO, posted to Dave Munger. (not actually during teary)</li>
+</ul>
+<h2 id="algorithms-group">Algorithms group</h2>
+<p>Our group is gaining interest among others, so we spend most of today thinking about our goals and possible changes to the format that could address this while preserving our monkey-style approach of low preparation, liberal doses of mistakes, and actually hacking out working examples of trivial problems together. We also started reviewing the set up for the EM problem, which we’ll consider when Yaniv returns the week after next. Next week we’ll detour into Amazon EC2 tutorial instead.</p>
+<ul>
+<li>Nick has some great notes on the future of the session, which hopefully will be posted on the OWW page eventually. Meanwhile:</li>
+</ul>
+<blockquote>
+<p>The Algorithm Discussion Group began as a handful of students who met informally to implement toy models of various algorithms in R. Every week, ADG members gather in the Schreiber lab to discuss an algorithm, create code to run a sample problem, and interpret the results. Over the course of the last two months, we’ve covered ABC and (MC)^3, and plan to cover EM and HMM in the near future. While we talk about reading papers beforehand and coming to meetings prepared, it often devolves into shouting instructions at the computer monkey.</p>
+</blockquote>
+<p>Several students have expressed interest in joining our group over the last two months. Unfortunately, our current format would be suboptimal and unwieldy for groups with more than five or six members. We are instituting a few changes to open the group to new members and have three involvement options for interested students.</p>
+<p>Sign up for the mailing list with Alisa (<script type="text/javascript">
+<!--
+h='&#x75;&#x63;&#100;&#x61;&#118;&#x69;&#x73;&#46;&#x65;&#100;&#x75;';a='&#64;';n='&#x73;&#x65;&#100;&#x67;&#104;&#x69;&#102;&#x61;&#114;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x73;&#x65;&#100;&#x67;&#104;&#x69;&#102;&#x61;&#114;&#32;&#x61;&#116;&#32;&#x75;&#x63;&#100;&#x61;&#118;&#x69;&#x73;&#32;&#100;&#x6f;&#116;&#32;&#x65;&#100;&#x75;</noscript>). We envision this as a way for students to talk about algorithms, mathematics, statistics, and coding. Most importantly, it’s going to be a safe environment to ask questions and not worry about sounding goofy.</p>
+<p>Attend formal Algorithm Discussion Group meetings. Meetings will occur approximately monthly and be announced on the ADG mailing list. One student will lead the meetings and provide reading material and code prior to the event. The meetings will be interactive and accessible for students with beginning coding and rusty mathematical skills.</p>
+<p>The third option is to pitch algorithm meeting ideas to the organizing committee. Interested students can suggest algorithms with general applicability to Pop Bio student research and have the option of implementing the algorithm in R with the organizing committee and presenting it at the monthly meeting. Currently, the organizing committee is Alisa, Carl, Dave, Nick, and Yaniv, but we envision members rotating in and out as commitments change and students leave Davis.</p>
+<p>Anyway, reply to Alisa (<script type="text/javascript">
+<!--
+h='&#x75;&#x63;&#100;&#x61;&#118;&#x69;&#x73;&#46;&#x65;&#100;&#x75;';a='&#64;';n='&#x73;&#x65;&#100;&#x67;&#104;&#x69;&#102;&#x61;&#114;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x73;&#x65;&#100;&#x67;&#104;&#x69;&#102;&#x61;&#114;&#32;&#x61;&#116;&#32;&#x75;&#x63;&#100;&#x61;&#118;&#x69;&#x73;&#32;&#100;&#x6f;&#116;&#32;&#x65;&#100;&#x75;</noscript>) if you’re interested in participating further. This will be the last email to the CPB-student list and all future emails will be to the ADG list.</p>
+<ul>
+<li>updates to <a href="http://www.carlboettiger.info/archives/1736">MCMC</a> (with examples), and Dave pointed this <a href="http://cscs.umich.edu/~crshalizi/weblog/606.html">intriguing example</a> of bad behavior in MCMC convergence out.  Seems to be a rather different problem than I get from the priors, as it is rather contrived with a bimodal distribution to stump the particular centered prior, but oh well.</li>
+</ul>
+<h2 id="warning-signals">Warning Signals</h2>
+<p>Only a bit of real research today.  Updates to warningsignals, see git log.</p>
+<h2 id="discussion-for-gtc">Discussion for GTC</h2>
+<p>Great discussion about better alternatives to the cookbook lab report: 1. Moskovitz, C. &amp; Kellogg, D. <a href="http://dx.doi.org/10.1126/science.1200353">Science education. Inquiry-based writing in the laboratory course</a>. Science (New York, N.Y.) 332, 919-20(2011).</p>
+<ol start="2" type="1">
+<li><p>Asai, D.J.<a href="http://dx.doi.org/10.1126/science.1207680">Measuring student development</a>. Science (New York, N.Y.) 332, 895(2011).  Particularly interesting in that a big player is taking accurate assessment the effectiveness of educational impact seriously; something other funders (i.e. NSF broader impacts) have not done, and also in its reference to this <a href="http://nces.ed.gov/pubsearch/pubsinfo.asp?pubid=2000601">excellent study</a> characterizing gender and race/ethnicity differences in staying in the sciences.</p></li>
+<li><p>Deslauriers, L., Schelew, E. &amp; Wieman, C.<a href="http://dx.doi.org/10.1126/science.1201783">Improved Learning in a Large-Enrollment Physics Class</a>. Science 332, 862-864(2011), also discussed in this <a href="http://www.nytimes.com/2011/05/13/science/13teach.html?_r=2">NY Times piece</a>.</p></li>
+</ol>
+<p>Also looked into some work by Scott Freeman. Scott also sent the preprint for #2, which isn’t out yet, hence why I couldn’t find it.</p>
+<ol type="1">
+<li>Freeman, S. &amp; Parks, J.W. How accurate is peer grading? CBE life sciences education 9, 482-8(2010).</li>
+<li>Freeman, S., Haak, D. &amp; Wenderoth, M.P. Increased Course Structure Improves Performance in Introductory Biology. Education (2011).doi:10.1187/cbe.10-08-0105</li>
+<li>Entry and Persistence of Women and Minorities in College Science and Engineering Education Entry and Persistence of Women and Minorities in College Science and Engineering Education. Educational Research (2000).</li>
+<li>Freeman, S. et al. Prescribed Active Learning Increases Performance in Introductory Biology. Education 6, 132-139(2007).</li>
+</ol>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2011-05-23 23:00:18 +0000" 
+    property="dc:created">23 May 2011</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/05/22/sunday.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/05/24/tuesday-4.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2011-05-23-monday-5.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#computation">computation</a>
+    , 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#teaching">teaching</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/806d678bcb3a8f3d4d0612d8281804b4543d16de/_posts/2011-05-23-monday-5.md"> 806d678bcb3a8f3d4d0612d8281804b4543d16de</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Monday: some code-tricks, Algorithms group planning
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2011-05-23
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/05/23/monday-5.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

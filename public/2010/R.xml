@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Lab Notebook - R</title>
+ <link href="/2010/R.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2015-02-25T23:07:52+00:00</updated>
+ <id>http://www.carlboettiger.info</id>
+ <author>
+   <name>Carl Boettiger</name>
+   <email>cboettig@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>socialR: Reproducible Research & Notebook integration with R</title>
+	 <link href="/2010/12/11/socialr-an-r-package-to-track-the-status-of-computations-with-social-network-tools.html"/>
+   <updated>2010-12-11T03:44:54+00:00</updated>
+   <id>/12/11/socialr-an-r-package-to-track-the-status-of-computations-with-social-network-tools</id>
+   <content type="html">&lt;p&gt;I’ve created an R package that uses social media tools for reproducible research.  The goal of the package is this: whenever I run a code, output figures are automatically added to my figure repository (Flickr), linked to the timestamped version of the code that produced them in the code repository.  Figures should be tagged by project and be embedded selectively or automatically into this lab notebook.  The basic workflow of the notebook looks like this:[ref]Diagram of my notebook as presented at Science Online, 2011, see other slides in my &lt;a href=&quot;http://www.carlboettiger.info/archives/792&quot;&gt;entry on this&lt;/a&gt;.[/ref]&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm6.staticflickr.com/5259/5471680767_34c350314e_o.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;To do this, I use a few simple R functions that I wrap around  the system command-line programs git, flickr_upload, and hpc-autotweets to enable monitoring of my simulations through social media. The package has it’s own &lt;a href=&quot;https://github.com/cboettig/socialR&quot;&gt;git repository here&lt;/a&gt;.  This is a rather custom development to make for rapid deployment on my own machines, and depends largely on Linux tools external to R, so it may not be easily deployed by others.  See my earlier post, &lt;a href=&quot;http://www.carlboettiger.info/archives/375&quot;&gt;Making R Twitter&lt;/a&gt;, for examples and back story.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm5.staticflickr.com/4112/5196584707_663796eb6e_o.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;h2 id=&quot;basic-features&quot;&gt;Basic Features&lt;/h2&gt;
+&lt;p&gt;All of these tasks are run by wrapping any plot command with my command “social_plot()”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Push the running code version to Github.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Grab the git hashtag to reference this version of the code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Push figures to Flickr as they complete.  Tags images appropriately and provide link to the code (version-stable, on Github) that produces them in the description.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Tweet notification of a figure upload, parameter values, links to code, and timestamp.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Tweet when an error occurs.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;setup-install&quot;&gt;Setup / Install&lt;/h2&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;p&gt;Create a flickr account (need not be unique for the computer).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a twitter account (preferably separate one for the machine).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Install &lt;a href=&quot;http://search.cpan.org/~cpb/Flickr-Upload/flickr_upload&quot;&gt;flickr_upload&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;; sudo apt-get install libflickr-upload-perl&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Install &lt;a href=&quot;https://github.com/joshthecoder/tweepy/blob/master/INSTALL&quot;&gt;tweepy&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;easy_install tweepy&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(See link for more detailed instructions)&lt;/p&gt;
+&lt;ol start=&quot;5&quot; type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://search.cpan.org/~cpb/Flickr-Upload/flickr_upload#___top&quot;&gt;Configure flickr_upload credentials&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://jeffmiller.github.com/2010/05/31/twitter-from-the-command-line-in-python-using-oauth&quot;&gt;Configure OAuth for tweepy&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;future-modifications&quot;&gt;Future modifications&lt;/h2&gt;
+&lt;p&gt;Current program relies entirely on external command-line tools. Probably no easy solution to make this package self-contained and cross platform.  Still, a good bit of functionality can be added:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add option to include the git log message.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Smart/more informative git commit messages&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add option/default to use truncated git commit ID numbers&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Make Flickr discription actually link directly to code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Make twitter statements include urls/actual links (to code, files)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Identify machine credentials?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Documentation still needed&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Should verify if the git version is current&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Grab a DOI for the object (i.e. using EZID from UC3?)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

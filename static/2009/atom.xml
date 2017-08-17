@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Lab Notebook</title>
+ <link href="/2009/atom.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2015-02-10T20:38:50+00:00</updated>
+ <id>http://www.carlboettiger.info/2009</id>
+ <author>
+   <name>Carl Boettiger</name>
+   <email>cboettig@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Stochastic Methods</title>
+	 <link href="/2009/08/25/stochastic-methods.html"/>
+   <updated>2009-08-25T00:00:00+00:00</updated>
+   <id>/08/25/stochastic-methods</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;editorial note&lt;/strong&gt;: These notes pre-date the formal start of my online laboratory notebook, &lt;a href=&quot;http://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html&quot;&gt;Feb 2 2010: The Lab Notebook Goes Open&lt;/a&gt; and were adapted from a LaTeX document in which I kept notes on this topic during my summer at &lt;a href=&quot;http://www.iiasa.ac.at/&quot;&gt;IIASA&lt;/a&gt;. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.&lt;/p&gt;
+&lt;h1 id=&quot;extinction-probabilities&quot;&gt;Extinction Probabilities&lt;/h1&gt;
+&lt;p&gt;Gardiner (1985).&lt;/p&gt;
+&lt;p&gt;We consider single-step birth death models for the majority of this work. Though they will become multidimensional in later parts of the work, as we deal with multiple species or explicit environmental changes, for the time being we will focus on the one-dimensional bith-death process. The Markov process is defined over positive integers, &lt;span class=&quot;math&quot;&gt;\(n \in \mathbb{Z}^+\)&lt;/span&gt;, and will sometimes be assumed to be bounded above by some integer &lt;span class=&quot;math&quot;&gt;\(N\)&lt;/span&gt;. The process is determined by two state-dependent rates, &lt;span class=&quot;math&quot;&gt;\(b(n)\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(d(n)\)&lt;/span&gt;, as depicted here:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm4.staticflickr.com/3723/9624787798_6899d87bc1_o.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;The process is specified by the Master equation:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\frac{\partial P(n,t)}{\partial t} = b(n-1)P(n-1,t)+d(n+1)P(n+1) - \left( b(n) + d(n)  \right) P(n)
+\label{mastereq}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;and approximated by the method of Kurtz (1971) or van Kampen’s linear nois expansion as:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\frac{\partial P(\tilde n,t)}{\partial t} = - \underbrace{\frac{\partial \left( b(\tilde n)-d(\tilde n) \right)}{\partial \tilde n}}_{A(\tilde n) } \frac{\partial}{\partial \tilde n} \tilde n  P(\tilde n,t)+ \underbrace{\frac{b(\tilde n)+ d(\tilde n)}{2} }_{B(\tilde n)/2} \frac{\partial^2}{\partial \tilde n^2} P(\tilde n)
+\label{forward}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Note that &lt;span class=&quot;math&quot;&gt;\(n\to \tilde n\)&lt;/span&gt; where &lt;span class=&quot;math&quot;&gt;\(\tilde n \in \mathbb{R}\)&lt;/span&gt; has become a continuous value in the limit of large system size. The coefficients &lt;span class=&quot;math&quot;&gt;\(A(x)\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(B(x)\)&lt;/span&gt; are the jump moments &lt;span class=&quot;math&quot;&gt;\(\partial_x \alpha_{1,0}(x)\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\alpha_{2,0}(x)\)&lt;/span&gt; in the van Kampen expansion. This expression is known as the forward Kolmogrov equation. Its solution is a Guassian, with mean and variance given respectively by&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+\frac{\mathrm{d}x }{\mathrm{d}t} &amp;amp;= b(x)-d(x) \nonumber \\
+\frac{\mathrm{d}\sigma^2}{\mathrm{d}t} &amp;amp;= A(x) \sigma^2 + B(x)
+\label{moments}\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Related to  is the backward Kolmogrov equation which we use for first-passage time problems:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\frac{\partial P(\tilde n,t)}{\partial t} = A(\tilde n) \frac{\partial}{\partial \tilde n}  P(\tilde n,t)+ \tfrac{1}{2}  B(\tilde n)\frac{\partial^2}{\partial \tilde n^2} P(\tilde n)
+\label{backward}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;From this we have the first passage time starting at &lt;span class=&quot;math&quot;&gt;\(x\)&lt;/span&gt; across an absorbing boundary &lt;span class=&quot;math&quot;&gt;\(a &amp;lt; b\)&lt;/span&gt; given &lt;span class=&quot;math&quot;&gt;\(b\)&lt;/span&gt; is reflecting:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[T(x) = 2 \int^x_a \frac{\mathrm{d}y}{\psi(y)} \int_y^b \frac{\psi(z) }{B(z)} \mathrm{d}z
+\label{firstpassage}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where we define the integrating factor&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\exp\left( \int_a^y \mathrm{d}x \left[ \frac{2 A(x)}{B(x)} \right] \right)
+\label{integrating factor}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;It is useful to work these results out for some familiar models.&lt;/p&gt;
+&lt;h3 id=&quot;levins-model&quot;&gt;Levins Model&lt;/h3&gt;
+&lt;p&gt;We first consider the Levins model:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+b(n) &amp;amp;= c n \left( 1 - n/K \right) \nonumber \\
+d(n) &amp;amp;= e n
+\label{levins}\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\(K\)&lt;/span&gt; is the number of patches, and also the convenient measure of system size. In the limit of large &lt;span class=&quot;math&quot;&gt;\(K\)&lt;/span&gt;, &lt;span class=&quot;math&quot;&gt;\(\tilde n = \tfrac{n}{K}\)&lt;/span&gt; represents the fraction of occupied patches, and we have the coeffients:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+&amp;amp; A(\tilde n) = c(1-2 \tilde n)-e \\
+&amp;amp; B(\tilde n) = c \tilde n (1 - \tilde n) + e \tilde n\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;By way of  we have the equilibrium mean and variance:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+&amp;amp; \langle \tilde n \rangle = 1-\frac{e}{c} \\
+&amp;amp; \langle (\tilde n - \langle \tilde n \rangle )^2 \rangle = \frac{e}{c}\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;logistic-model&quot;&gt;Logistic Model&lt;/h3&gt;
+&lt;p&gt;A closely related model is the logistic with the following interpretation:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+&amp;amp; b(n) = r n \\
+&amp;amp; d(n) = \frac{r n^2}{K}\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Which has mean and variance both equal to &lt;span class=&quot;math&quot;&gt;\(K\)&lt;/span&gt;, and coefficents:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+&amp;amp; A(x) = r  - \frac{2 r x}{K} \\
+&amp;amp; B(x) = rx + \frac{rx^2}{K}\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Drift Effects</title>
+	 <link href="/2009/08/25/drift-effects.html"/>
+   <updated>2009-08-25T00:00:00+00:00</updated>
+   <id>/08/25/drift-effects</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;editorial note&lt;/strong&gt;: These notes pre-date the formal start of my online laboratory notebook, &lt;a href=&quot;http://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html&quot;&gt;Feb 2 2010: The Lab Notebook Goes Open&lt;/a&gt; and were adapted from a LaTeX document in which I kept notes on this topic during my summer at &lt;a href=&quot;http://www.iiasa.ac.at/&quot;&gt;IIASA&lt;/a&gt;. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;We wish to establish the fate of a population into which a rare mutant is introduced near a branching point. Far from the branching point, we had only one concern - will the mutant survive? Near the branching point, we now have two concerns - the fate of the mutant and the fate of the original resident. For branching to proceed, both must persist. The traditional framework of density-independent diffusion theory is insuffient to handle this case. We must consider both resident and mutant populations, with abundances &lt;span class=&quot;math&quot;&gt;\(N_1\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(N_2\)&lt;/span&gt; respectively. Under a series of approximations, we can again write this case as a one dimensional equation in the frequency of the mutant, &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt;; however, this time the equation will necessarily be nonlinear to have an additional intermediate stable state &lt;span class=&quot;math&quot;&gt;\(0&amp;lt;p&amp;lt;1\)&lt;/span&gt; in addition to the boundaries &lt;span class=&quot;math&quot;&gt;\(p=0\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(p=1\)&lt;/span&gt;. We briefly review the necessary approximations as an understanding of them is essential to develop the proper picture.&lt;/p&gt;
+&lt;p&gt;While the argument could be expressed in greater generality of generic birth and death rates, working with our particular example is instructive. For a dimorphic population, the master equations governing the probability distributions are:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+\frac{\mathrm{d}}{\mathrm{d}t} P(N_1,t) &amp;amp;= (\mathbb{E}_1 - 1) r N_1 \frac{N_1 + C(x_1, x_2) N_2}{K(x_1) }P(N_1) + (\mathbb{E}_1^{-1} - 1)r N_1 P(N_1) \nonumber \\
+\frac{\mathrm{d}}{\mathrm{d}t} P(N_2,t) &amp;amp;= (\mathbb{E}_2 - 1) r N_2 \frac{N_2 + C(x_2, x_1) N_1}{K(x_2) }P(N_2) + (\mathbb{E}_2^{-1} - 1)r N_2 P(N_2),
+\label{mastereq}\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where &lt;span class=&quot;math&quot;&gt;\(E_i^k\)&lt;/span&gt; is the step operator taking &lt;span class=&quot;math&quot;&gt;\(f(N_i) \to f(N_{i+k})\)&lt;/span&gt;. We apply van Kampen’s expansion of the master equation to linear order in the system size &lt;span class=&quot;math&quot;&gt;\(K_0\)&lt;/span&gt;, the carrying capacity at the singular strategy. While several other options are possible, it is important to note that this approximation, which gives rise to a diffusion equation, is &lt;em&gt;not&lt;/em&gt; based on the assumption of a large &lt;em&gt;population&lt;/em&gt; size, but a large &lt;em&gt;system&lt;/em&gt; size. Confusing the two is common in the literature. For instance, if the system size is an area, then the transformed variable that obeys the diffusion equation is the density of individuals (a naturally continuous quantity), not the number of individuals, and the approximation becomes better when larger areas are considered, not larger numbers in the same area (which just means a higher density). Having stated this, we take &lt;span class=&quot;math&quot;&gt;\(n_i = N_i/K_0\)&lt;/span&gt; and apply the expansion to recover the following stochastic differential equation (Itô expression)&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+\mathrm{d}n_1 = r n_1 \left(1 -  \frac{n_1 + C(x_1, x_2) n_2}{K(x_1) } \right) \mathrm{d}t + \frac{1}{\sqrt{K_o} } \sqrt{r n_1 \left(1 +  \frac{n_1 + C(x_1, x_2) n_2}{K(x_1) } \right) } \mathrm{d}W_1
+\label{sde}\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;and &lt;span class=&quot;math&quot;&gt;\(n_2\)&lt;/span&gt; similarly. This approximation is rigorously justified in the limit &lt;span class=&quot;math&quot;&gt;\(K_0 \to \infty\)&lt;/span&gt;. The next approximation is only heuristically justified at the moment, changing variables into &lt;span class=&quot;math&quot;&gt;\(p = n_1/(n_1+n_2)\)&lt;/span&gt;. The approximation makes two assumptions which are not strictly valid but justifable under the right conditions. The first is that the total population size is a constant, &lt;span class=&quot;math&quot;&gt;\(n_1 + n_2 = n\)&lt;/span&gt;. Even at stationary state, this is not valid as the populations fluctuate according to , but these fluctuations become negligible for large &lt;span class=&quot;math&quot;&gt;\(K_0\)&lt;/span&gt;. However, the system is only near stationary state when &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; is at it’s equilibrium value - it is not valid for all &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt;. This is more problematic, as the resulting SDE will depend only on &lt;span class=&quot;math&quot;&gt;\(k_1\)&lt;/span&gt; and not &lt;span class=&quot;math&quot;&gt;\(k_2\)&lt;/span&gt;. Only when &lt;span class=&quot;math&quot;&gt;\(k_1 = k_2\)&lt;/span&gt; is this equation valid for any value of &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt;. If mutational steps are small this will be approximately true. As we will see, smaller mutational steps will require larger populations and/or tighter competition kernels for branching to occur at all. Simplying notation by &lt;span class=&quot;math&quot;&gt;\(C(x_1, x_2) = C_{1,2}\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(K(X_i) = k_i\)&lt;/span&gt;, this gives us the one-dimensional nonlinear SDE in the frequency &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+\mathrm{d}p = r p \left(1 -  n \frac{p + c_{1,2}(1-p) }{k_1 } \right) \mathrm{d}t + \frac{1}{\sqrt{K_o n} } \sqrt{r p \left(1 +  n\frac{p + c_{1,2} (1-p) }{k_1 } \right) } \mathrm{d}W_1\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The extinction probability &lt;span class=&quot;math&quot;&gt;\(u(p,t)\)&lt;/span&gt; for this expression is given by the Backwards equation for the generator,&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\frac{\mathrm{d}}{\mathrm{d}t} u(p,t) = r p \left(1 -  n \frac{p + c_{12}(1-p) }{k_1 } \right) \partial_p u(p,t) + \frac{1}{2K_o n } r p \left(1 +  n\frac{p + c_{12} (1-p) }{k_1 } \right) \partial_p^2 u(p,t) 
+\label{u}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;with the boundary conditions &lt;span class=&quot;math&quot;&gt;\(u(0) = 1\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(u(1) = 1\)&lt;/span&gt; being absorbing.&lt;/p&gt;
+&lt;p&gt;After some rearrangement we can rewrite this as&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{gathered}
+\frac{\mathrm{d}}{\mathrm{d}t} u(p,t) = \left( rp \left( 1-\frac{n c_{12}}{k_1} \right) - \frac{r n}{k_1} p^2 (1 - c_{12} )\right)  \partial_p u(p,t) \\
++ \left( rp \left(1+\frac{n c_{12}}{k_1}\right)  + \frac{r n }{k_1} p^2 (1 - c_{12} ) \right) \frac{\partial_p^2 u(p,t)}{2K_0 n}\end{gathered}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Note then for &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; small we can neglect the terms quadratic in &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; and we are left with the backwards equation from the density independent case,&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\frac{\mathrm{d}}{\mathrm{d}t} u(p,t) =  rp \left( 1-\frac{n c_{12}}{k_1} \right)   \partial_p u(p,t) + rp \left(1+\frac{n c_{12}}{k_1}\right)   \frac{\partial_p^2 u(p,t)}{2K_0 n}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Setting equal to zero we have a simple ordinary differential equation for the stationary extinction probability:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+u &amp;amp;= 1 - e^{-2sp K_0 n} \\
+s &amp;amp;= \frac{r\left( 1-\frac{n c_{12}}{k_1} \right) }{ r\left(1+\frac{n c_{12}}{k_1}\right)} \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;and particularly for a frequency &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; corresponding to a single individual, a frequency of &lt;span class=&quot;math&quot;&gt;\(p=1/(N_1+N_2) =(1/K_0)/(n_1+n_2) = 1/(K_0 n)\)&lt;/span&gt;, this reduces to&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[u = 1-e^{-2s}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Assuming $ rp ( 1- ) 0$, the time-dependent solution is:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+u &amp;amp;= 1-e^{-p \psi(t) } \\
+\psi(t) &amp;amp;= \frac{2 s K_0 n}{1-e^{ r\left( 1-\frac{n c_{12}}{k_1} \right) t } }
+\label{timedep}\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This tells us nothing about the survival of the resident. In most applications of this approach, it is assumed the resident quickly goes extinct once &lt;span class=&quot;math&quot;&gt;\(p \sim o(1)\)&lt;/span&gt;. If we consider the asymptotic behavior of the nonlinear PDE, Eq. , we find not suprisingly that the asymptotic behavior is sure absorbtion at one boundary or the other. The asymptotic behavior needn’t concern us; as we really want to know how the expected lifetime of this dimporphic state compares with the rate at which mutants are entering this population. To do so we need the time dependent solution to the nonlinear equation .&lt;/p&gt;
+&lt;p&gt;This poses some trouble in choosing &lt;span class=&quot;math&quot;&gt;\(p = 1/(nK_0)\)&lt;/span&gt; as the initial mutant frequency. In the linear case, this always canceled perfectly with the noise term, &lt;span class=&quot;math&quot;&gt;\(nK_0\)&lt;/span&gt;, leaving a fixation probability that did not depend on the population size (system size), given that it was large enough to justify the linear noise approximation in the first place. This is no longer the case. Larger populations result in the mutant frequency &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; being much smaller. While the noise also decreases, we do not observe the perfect balance of the linear system. While an analytic, time-dependent solution for &lt;span class=&quot;math&quot;&gt;\(u\)&lt;/span&gt; in this case is not possible, numerical solutions illustrate the much smaller populations having significantly higher survival probability, due to the higher value of &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; from which they start given a single mutation.&lt;/p&gt;
+&lt;p&gt;This seems unreasonable. A smaller population should be more suseptible to the accidental loss of a set of coexisting types, as observed in the simulations. I am unclear as to the explanation.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm4.staticflickr.com/3726/9621550031_05054cdb02_o.png&quot; /&gt;
+&lt;/figure&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Diffusion Solution</title>
+	 <link href="/2009/08/25/diffusion-solution.html"/>
+   <updated>2009-08-25T00:00:00+00:00</updated>
+   <id>/08/25/diffusion-solution</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;editorial note&lt;/strong&gt;: These notes pre-date the formal start of my online laboratory notebook, &lt;a href=&quot;http://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html&quot;&gt;Feb 2 2010: The Lab Notebook Goes Open&lt;/a&gt; and were adapted from a LaTeX document in which I kept notes on this topic during my summer at &lt;a href=&quot;http://www.iiasa.ac.at/&quot;&gt;IIASA&lt;/a&gt;. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+\mathrm{d}n_1 = r n_1 \left(1 -  \frac{n_1 + C(x_1, x_2) n_2}{K(x_1) } \right) \mathrm{d}t + \frac{1}{\sqrt{K_o} } \sqrt{r n_1 \left(1 +  \frac{n_1 + C(x_1, x_2) n_2}{K(x_1) } \right) } \mathrm{d}W_1\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+p &amp;amp;= \frac{n_1}{n}, \quad q = 1-p = \frac{n_2}{n} \quad n = n_1 + n_2 \\
+\mathrm{d}p &amp;amp;= \frac{\mathrm{d}n_1}{n}, \quad \mathrm{d}q = \frac{\mathrm{d}n_2}{n} \\
+\mathrm{d}n &amp;amp;= \mathrm{d}n_1 + \mathrm{d}n_2 = n (\mathrm{d}p + \mathrm{d}q) \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+\mathrm{d}p(p,n) = \alpha_1(p,n) \mathrm{d}t + \sqrt{ \alpha_2(p,n) } \mathrm{d}W_p \\
+\mathrm{d}n(p,n) = \beta_1(p,n) \mathrm{d}t +  \sqrt{ \beta_2(p,n) } \mathrm{d}W_n\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+f_i(p) =  r p \left(1 -  n(p) \frac{p + c_{12}(1-p) }{k_i } \right) \\
+g_i(p) =  r p \left(1 +  n(p) \frac{p + c_{12}(1-p) }{k_i } \right) \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+\alpha_1 &amp;amp;=  f_1(p) \\ 
+\alpha_2 &amp;amp;= \frac{ g_1(p) }{K_0 n(p) } \\
+\beta_1 &amp;amp;= n f_1(p) + n f_2(1-p)  \\
+\beta_2 &amp;amp;= n*\frac{g_1(p)+g_2(1-p)}{K_0 } \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+\frac{\mathrm{d}}{\mathrm{d}t} \sigma_p &amp;amp;= 2 \partial_p \alpha_1(p,n) \sigma_p  +2\partial_n\alpha_1(p,n) \langle p n \rangle +  \alpha_2(p,n) \\
+\frac{\mathrm{d}}{\mathrm{d}t} \sigma_n&amp;amp;= 2 \partial_n \beta_1(p,n) \sigma_n  +2\partial_p\beta_1(p,n) \langle p n \rangle +  \beta_2(p,n) \\
+\frac{\mathrm{d}}{\mathrm{d}t} \langle p n \rangle &amp;amp;= \partial_n \alpha_1(p,n) \sigma_n  +\partial_p \alpha_1 \langle pn \rangle + \partial_p\beta_1 (p,n) \sigma_p + \partial_n \beta_1(p,n) \langle p n \rangle\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+\partial_p \alpha_1 &amp;amp;= 
+\\ \partial_n \alpha_1 &amp;amp;=
+\\ \partial_p \beta_1 &amp;amp;= 
+\\ \partial_n \beta_1 &amp;amp;=\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Branching Times</title>
+	 <link href="/2009/07/28/branching-times.html"/>
+   <updated>2009-07-28T00:00:00+00:00</updated>
+   <id>/07/28/branching-times</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;editorial note&lt;/strong&gt;: These notes pre-date the formal start of my online laboratory notebook, &lt;a href=&quot;http://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html&quot;&gt;Feb 2 2010: The Lab Notebook Goes Open&lt;/a&gt; and were adapted from a LaTeX document in which I kept notes on this topic during my summer at &lt;a href=&quot;http://www.iiasa.ac.at/&quot;&gt;IIASA&lt;/a&gt;. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.&lt;/p&gt;
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Our calculation of the time until branching occurs consists of the following approach. The first requirement for branching to occur is the existence of two mutually invasible populations separated by an adaptive minimum, that is &lt;span class=&quot;math&quot;&gt;\(s(y,x) &amp;gt;0\)&lt;/span&gt;, &lt;span class=&quot;math&quot;&gt;\(s(x,y)&amp;gt;0\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\partial^2_y s(y,x)&amp;gt;0\)&lt;/span&gt;. The minimum (curvature condition) is provided by a singular point of the branching type, which also assures us that there will be some pairs &lt;span class=&quot;math&quot;&gt;\((y,x)\)&lt;/span&gt; near each other &lt;span class=&quot;math&quot;&gt;\(|y-x| \sim o(\sigma_{\mu})\)&lt;/span&gt;. These points define a coexistence region in the pairwise invasibility plot, which we denote &lt;span class=&quot;math&quot;&gt;\(P_2\)&lt;/span&gt;. A mutant enters this region by “jumping the gap” from the line &lt;span class=&quot;math&quot;&gt;\(y=x\)&lt;/span&gt; into the coexistence region. This gap diminishes in width as the resident trait &lt;span class=&quot;math&quot;&gt;\(x\)&lt;/span&gt; nears the branching point, where the gap vanishes all together. This criterion can be evaluated directly at regular intervals throughout the simulation.&lt;/p&gt;
+&lt;p&gt;Most often this condition will arise only transiently - a single mutant satisifying the conditions but soon lost to drift. Hence our second requirement must be that the mutant successfully entering the coexistence region then proceeds to survive drift. Defining this second condition rigorously is less straight-forward. For large populations, the probability of survival may be well approximated by the Galton-Watson branching process. In theory, this probability can be converted into an expected waiting time in a straight-forward manner. In simulation, this is insufficent, as we want to identify the actual waiting time we need more than a probability - we need to indentify which populations actually survive. If selection is strong, we may hope to identify which populations have effectively survived drift by establishing some low-density threshold at which we declare the population successful. Of course, this introduces a discrepancy in the definition of waiting time, as the theory calculates the time until a successful mutant occurs, while the simulation lags behind by the time required to go from one individual to the threshold size.&lt;/p&gt;
+&lt;p&gt;If selection is strong, we can set this threshold quite low, and more importantly, the time to reach the threshold will be quite small compared to the time spent waiting for the mutation, and theory and simulation should match reasonably well. This latter observation is particularly convenient in that our calculation shouldn’t depend much on the choice of threshold, as once the mutant establishes several clones the probability of survival quickly asymptotes to unity. If selection is weak, we are not so fortunate. Even relatively large mutant populations may be at substantial risk to extinction by drift, and this extinction probability will depend quite strongly on the particular choice of threshold. As selection becomes nearly neutral, no threshold may exist that can guarentee the persistence of the mutant.&lt;/p&gt;
+&lt;p&gt;In each case, the persistence of the resident must also be considered, as it is also protected by a selection coefficient when rare which may be weaker than that of the mutant (depending on whether the mutant has occurred closer to or farther from the branching point). If only weakly protected, it too can be lost to drift. For the moment, let us consider only the case of strong selection, where a small, arbitrary threshold can reasonably guarentee the success of branching. Later we will want to quantify the meaning of strong, relative to the influence of drift. For now, it suffices that such a notion exists, and we need only focus on the first two steps - a mutant occurs and survives drift with probability given by its selective coefficent, to have a reasonable approximation of the waiting time between simulation and experiment.&lt;/p&gt;
+&lt;p&gt;The loss of a mutant in the coexistence region even after invading a significant fraction of the population does not preclude branching. The population may continue to approach the branching point where such mutations are more common (do they have stronger selection too?) Even in the purely neutral case, the dimorphism may persist long enough for a new mutant to arise. This allows the populations to take another mutational steps apart, where selection may be strong enough to protect the dimorphism. The ability for larger populations to be able to survive drift long enough for this to occur may allow them to branch in face of weak selection where a smaller population would fail.&lt;/p&gt;
+&lt;p&gt;(A resource kernel that is similar in width to the competition kernel but very wide compared to the mutational step size may approach the branching region only by drift - fixing weakly deleterious mutations. )&lt;/p&gt;
+&lt;h1 id=&quot;calculation&quot;&gt;Calculation&lt;/h1&gt;
+&lt;p&gt;The probability of such a mutant occurring in our monomorphic population of trait &lt;span class=&quot;math&quot;&gt;\(x\)&lt;/span&gt; is given by the probability that any mutant occurs (given by the population size, approximately &lt;span class=&quot;math&quot;&gt;\(K(x)\)&lt;/span&gt; at equilibrium, times the birth rate &lt;span class=&quot;math&quot;&gt;\(b(x)\)&lt;/span&gt; times the mutation rate &lt;span class=&quot;math&quot;&gt;\(\mu\)&lt;/span&gt;) times the probability that the mutation lies on the opposite side of the coexistence boundary, which we denote as &lt;span class=&quot;math&quot;&gt;\(\phi(x)\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\psi(x)\)&lt;/span&gt;, which is &lt;span class=&quot;math&quot;&gt;\(\phi(x)\)&lt;/span&gt; reflected across the line &lt;span class=&quot;math&quot;&gt;\(y=x\)&lt;/span&gt;. This depends on the mutational kernel, &lt;span class=&quot;math&quot;&gt;\(M(y,x)\)&lt;/span&gt; which gives the probability that a mutant arising from a resident population of trait &lt;span class=&quot;math&quot;&gt;\(x\)&lt;/span&gt; bears trait &lt;span class=&quot;math&quot;&gt;\(y\)&lt;/span&gt; that falls withing the coexistance region as follows:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\int_{-\infty}^{\phi(x)} M(y,x) \mathrm{d}y + \int_{\psi(x)}^{\infty} M(y,x) \mathrm{d}y\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Without loss of generality let us assume that the singular strategy &lt;span class=&quot;math&quot;&gt;\(x^* = 0\)&lt;/span&gt; and that we start from some trait value &lt;span class=&quot;math&quot;&gt;\(x_0 &amp;gt; x^*\)&lt;/span&gt;. Additionally, let us we assume &lt;span class=&quot;math&quot;&gt;\(M(y,x)\)&lt;/span&gt; is Gaussian in &lt;span class=&quot;math&quot;&gt;\(y-x\)&lt;/span&gt; with mean 0 and variance &lt;span class=&quot;math&quot;&gt;\(\sigma_{\mu}^2\)&lt;/span&gt;. However, we do not wish to consider all such mutants &lt;span class=&quot;math&quot;&gt;\(y\)&lt;/span&gt;, but only those that survive. We multiply the probability of a mutant having trait &lt;span class=&quot;math&quot;&gt;\(y\)&lt;/span&gt;, &lt;span class=&quot;math&quot;&gt;\(M(y,x)\)&lt;/span&gt;, times the probability that is survives drift. This probability we quote from the Galton-Watson branching process, &lt;span class=&quot;math&quot;&gt;\(1-\tfrac{d(y,x)}{b(y,x)}\)&lt;/span&gt;. Taking as our model the individual birth &lt;span class=&quot;math&quot;&gt;\(b\)&lt;/span&gt; and death &lt;span class=&quot;math&quot;&gt;\(d\)&lt;/span&gt; rates to be:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+b(y,x) &amp;amp;= r\\
+d(y,x) &amp;amp;= r\frac{C(y,x)K(x)}{K(y)}\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where &lt;span class=&quot;math&quot;&gt;\(K\)&lt;/span&gt; is a Gaussian kernel with mean &lt;span class=&quot;math&quot;&gt;\(x^*\)&lt;/span&gt;, &lt;span class=&quot;math&quot;&gt;\(K(x^*) = K_0\)&lt;/span&gt; and variance &lt;span class=&quot;math&quot;&gt;\(\sigma^2_k\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(C(y,x)\)&lt;/span&gt; a Gaussian kernel in &lt;span class=&quot;math&quot;&gt;\(y-x\)&lt;/span&gt; with mean &lt;span class=&quot;math&quot;&gt;\(0\)&lt;/span&gt;, &lt;span class=&quot;math&quot;&gt;\(C(0) =1\)&lt;/span&gt; and variance &lt;span class=&quot;math&quot;&gt;\(\sigma^2_c\)&lt;/span&gt;. Using this choice of model, the probability of surviving branching is&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[1-\frac{C(y,x)K(x)}{K(y)} := S(y,x)
+\label{S}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;which we denote as &lt;span class=&quot;math&quot;&gt;\(S(y,x)\)&lt;/span&gt; as indicated. Hence we modify our integral to consider all mutants &lt;span class=&quot;math&quot;&gt;\(y &amp;lt; x^*\)&lt;/span&gt; which occur with probability &lt;span class=&quot;math&quot;&gt;\(M(y,x)\)&lt;/span&gt; and then survive with probability &lt;span class=&quot;math&quot;&gt;\(S(y,x)\)&lt;/span&gt;, and write down the rate &lt;span class=&quot;math&quot;&gt;\(P(x)\)&lt;/span&gt; at which a mutant which leads to branching occurs from our monomorphic population with trait &lt;span class=&quot;math&quot;&gt;\(x\)&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[P(x) := r \mu K(x)\left( \int_{-\infty}^{\phi(x)} M(y,x) S(y,x) \mathrm{d}y + \int_{\psi(x)}^{\infty} M(y,x) S(y,x) \mathrm{d}y  \right)
+\label{MSerf}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Though a little cumbersome, this can be written in nearly closed form (using the error function). For our particular model &lt;span class=&quot;math&quot;&gt;\(s(y,x)\)&lt;/span&gt;, we can write the boundaries &lt;span class=&quot;math&quot;&gt;\(\phi(x)\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(\psi(x)\)&lt;/span&gt; as&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{aligned}
+\phi(x) = x\frac{\frac{\sigma_k^2}{\sigma_c^2}+1}{\frac{\sigma_k^2}{\sigma_c^2}-1} \nonumber \\
+\psi(x) = x\frac{\frac{\sigma_k^2}{\sigma_c^2}-1}{\frac{\sigma_k^2}{\sigma_c^2}+1}
+\label{phipsi}\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Then, given a starting condition &lt;span class=&quot;math&quot;&gt;\(x_0\)&lt;/span&gt;, we can determine the expected trait &lt;span class=&quot;math&quot;&gt;\(x\)&lt;/span&gt; at time &lt;span class=&quot;math&quot;&gt;\(t\)&lt;/span&gt; of a monomorphic resident population by integrating the canonical equation,&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\frac{\mathrm{d}x}{\mathrm{d}t} = \frac{1}{2} \mu \sigma_{mu}^2 N^*(x) \partial_y s(y,x)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;which for our model is&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\frac{\mathrm{d}x}{\mathrm{d}t} = \frac{-x}{2\sigma_k^2} r \mu \sigma_{\mu}^2 K(x)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;While no closed form solution exists for &lt;span class=&quot;math&quot;&gt;\(x(t)\)&lt;/span&gt; in this case, if we assume &lt;span class=&quot;math&quot;&gt;\(x_0 \ll \sigma_k\)&lt;/span&gt; then to good approximation we can view &lt;span class=&quot;math&quot;&gt;\(K(x)\)&lt;/span&gt; to be constant over the interval and take our path to be:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[x(t) = x_0 \exp\left( -r \mu \sigma_{\mu}^2 K_0 t/\sigma_k^2\right)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Using this mean path, we can write down an approximation for the rate of a branching mutant occurring as a function of time, &lt;span class=&quot;math&quot;&gt;\(P(x(t))\)&lt;/span&gt;. Using this time dependent rate, the probability of not branching after time &lt;span class=&quot;math&quot;&gt;\(T\)&lt;/span&gt; is simply &lt;span class=&quot;math&quot;&gt;\(\exp\left( - \int_0^T P(t)\mathrm{d}t \right)\)&lt;/span&gt;. One minus this is the probability branching by time &lt;span class=&quot;math&quot;&gt;\(T\)&lt;/span&gt;; i.e. the cumulative density function, hence the probability density function for the waiting time is:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\Pi(T) = P(x(T)) \exp\left( -\int_0^T P(x(t)) \right)
+\label{pdf}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;and the expected time until branching is &lt;span class=&quot;math&quot;&gt;\(\int_0^{\infty} T \Pi(T) \mathrm{d}T\)&lt;/span&gt;. This is our first analytic approximation.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm4.staticflickr.com/3668/9624772024_ccb8ba0fb9_o.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm6.staticflickr.com/5535/9624772196_d3fab3e33b_o.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm8.staticflickr.com/7403/9624772374_7e297716ab_o.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[\begin{gathered}
+P(x) = \frac{1}{2} \left(1+ {Erf}\left[\frac{x}{\sqrt{2} \sqrt{\sigma_{\mu}^2}}\right]\right)-\\
+\Biggl(e^{\frac{\sigma_{\mu}^2  {\sigma_{c}^2} x^2}{2  {\sigma_{k}^2} ( {\sigma_{c}^2}  {\sigma_{k}^2}+\sigma_{\mu}^2 (- {\sigma_{c}^2}+ {\sigma_{k}^2}))}}  {\sigma_{c}^2} \Biggl(\sqrt{\frac{ {\sigma_{k}^2} ( {\sigma_{c}^2}  {\sigma_{k}^2}+\sigma_{\mu}^2 (- {\sigma_{c}^2}+ {\sigma_{k}^2})) x^2}{\sigma_{\mu}^2  {\sigma_{c}^2}}}+\\
+\sqrt{\frac{1}{\sigma_{\mu}^2}+\frac{1}{ {\sigma_{c}^2}}-\frac{1}{ {\sigma_{k}^2}}}  {\sigma_{k}^2} x  {Erf}\left[\frac{\sqrt{-\frac{(\sigma_{\mu}^2+ {\sigma_{c}^2})^2  {\sigma_{k}^2} x^2}{\sigma_{\mu}^2  {\sigma_{c}^2} (\sigma_{\mu}^2 ( {\sigma_{c}^2}- {\sigma_{k}^2})- {\sigma_{c}^2}  {\sigma_{k}^2})}}}{\sqrt{2}}\right]\Biggr)\Biggr)/\left(2 ( {\sigma_{c}^2}  {\sigma_{k}^2}+\sigma_{\mu}^2 (- {\sigma_{c}^2}+ {\sigma_{k}^2})) \sqrt{\frac{x^2}{\sigma_{\mu}^2}}\right)\end{gathered}\]&lt;/span&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 

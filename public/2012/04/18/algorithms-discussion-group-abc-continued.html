@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Algorithms Discussion Group: algorithms Continued</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="algorithms" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Algorithms Discussion Group: algorithms Continued" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2011-04-18 14:11:24 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/04/18/algorithms-discussion-group-abc-continued.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Algorithms Discussion Group: algorithms Continued" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2011-04-18 14:11:24 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/04/18/algorithms-discussion-group-abc-continued.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2011-04-18 14:11:24 +0000"/>
+<meta name="citation_title" content="Algorithms Discussion Group: algorithms Continued"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Algorithms Discussion Group: algorithms Continued</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Our little informal ABC group met again today to continue our discussion of ABC methods from <a href="http://www.carlboettiger.info/archives/1397">last week</a>. The updated code is included in the gist below. ((Nick asked about gists – they are code boxes provided by Github that are easy to embed into blogs, etc. They provide automatic syntax highlighting and version management. For instance, I just opened last week’s gist and started editing during today’s session – when I save it I get a new version ID, so last week’s post still points to last week’s code, but it doesn’t create a second copy, so you can tell if you have the right version. Click on the gist id at the bottom and you can see the revisions.))</p>
+<h2 id="the-posterior-distribution-from-the-regression">The posterior distribution from the regression</h2>
+<p>The regression is used to determine the posterior distribution of the parameter. We want to move each the observed values down along a line parallel to the regression line until they are at a point at the observed summary statistic. We do this as</p>
+<p><span class="math">\[\theta_i^* = \theta_i - b(S(X_i) - S(X_0)) \]</span></p>
+<p>where <em>b</em> is the slope of the regression, <em>S(X</em>i)_ is the summary stat on each of the simulated data in the regression, and $ S(X_0) $ is the summary statistic of the observed data. The distribution of these $ <em>i^* $ is the posterior distribution of theta. (see Figure 1 of (Csilléry </em>et. al._ 2010)).</p>
+<p>[gist id=914487]</p>
+<figure>
+<img src="http://farm6.staticflickr.com/5070/5632508759_0e1c988444_o.png" />
+</figure>
+<h2 id="comparing-models">Comparing models</h2>
+<p>We consider the alternative model that the data comes from the gamma distribution, rather than the normal distribution, in the example above. We’d like to compare the models by Bayes factors. ((We are just using the single summary statistic, the mean, in both cases. This should be a sufficient statistic to estimate the mean of the normal, the mean of the gamma model is the product of the rate parameter and the shape parameter.))</p>
+<p>The Bayes Factor is the ratio of the probability of the data under model 1 vs the probability of the data under model 2, which we get by integrating out (marginalizing over) the possible parameter values of the model:</p>
+<p><span class="math">\[\frac{P(X|M_1)}{P(X|M_2)} = \frac{ \int P(X|\theta_1) P(\theta_1) d\theta_1 }{ \int P(X|\theta_2) P(\theta_2) d\theta_2} \]</span></p>
+<p>We don’t know the likelihood, $ P(X | <em>1) <span class="math">\(, etc, but argued that by Bayes Theorem we could replace it with the posterior we just calculated, using \)</span> P(X | </em>1) P(<em>1)$ with $ P(</em>1 | X)P(X)$. Then <em>P(X)</em> <del>cancels out of top and bottom, </del>and we’re left with</p>
+<p><span class="math">\[\frac{P(X|M_1)}{P(X|M_2)} = \frac{ \int P(\theta_1 | X)  d\theta_1 }{ \int P(\theta_2 | X) d\theta_2} \]</span></p>
+<p>Is this correct?  What should these integrals be normalized by?  Guess we better check our references.</p>
+<h3 id="correction-2-may-2011">CORRECTION: (2 May 2011)</h3>
+<p><em>P(X)</em> is model dependent, lost in my sloppy notation.  Rather than showing all models are equal (ratio of integral of posteriors above is unity) we have</p>
+<p><span class="math">\[\frac{P(X|M_1)}{P(X|M_2)} = \frac{ \int P(\theta_1 | X)P(X|M_1)  d\theta_1 }{ \int P(\theta_2 | X) P(X|M_2) d\theta_2} \]</span></p>
+<p>Which is simply not useful, as it recovers our original expression (Factor out the <em>P(X)</em> terms and the posteriors just integrate away.   Instead, we are just left with the regular integrals to compute, probably by MCMC. Knowing the posterior distributions doesn’t seem to help in the computation of the Bayes Factors.  Worth seeing other work on computation of Bayes factors, such as why we end up with Harmonic means, stepping stone approach, etc etc.</p>
+<h2 id="next-time">Next time</h2>
+<ul>
+<li><p>Verify/finish the model comparison between normal and gamma</p></li>
+<li><p>Multi-parameter inference</p></li>
+<li><p>Family-of-models comparisons?</p></li>
+<li><p>Maybe take a look at efficiency improvements such as in (Wegmann <em>et. al.</em> 2009)</p></li>
+<li><p>Get ready for our next algorithm (MCMC, HMM, EM).  We discussed ABC-MCMC, so might want to consider (Marjoram, 2003) and its criticisms in (Wegmann <em>et. al.</em> 2009).  Re HMM, again may be natural to build from the ABC, see C. Robert’s <a href="http://xianblog.wordpress.com/2011/04/19/abc-convergence-for-hmms/">post</a>, and a recent <a href="http://arxiv.org/abs/1103.5399">paper</a> on the arxiv.</p></li>
+<li><p>Try implementing automatic estimates for summary statistics? see <a href="http://arxiv.org/abs/1004.1112">paper</a>, via <a href="http://xianblog.wordpress.com/2011/04/18/semi-automatic-abc-revised/">C. Robert’s blog</a>.</p></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><p>Csilléry K, Blum M, Gaggiotti O and François O (2010). “Approximate Bayesian Computation (Abc) in Practice.” <em>Trends in Ecology &amp; Evolution</em>, <strong>25</strong>. ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2010.04.001">http://dx.doi.org/10.1016/j.tree.2010.04.001</a>.</p></li>
+<li><p>Wegmann D, Leuenberger C and Excoffier L (2009). “Efficient Approximate Bayesian Computation Coupled With Markov Chain Monte Carlo Without Likelihood.” <em>Genetics</em>, <strong>182</strong>. ISSN 0016-6731, <a href="http://dx.doi.org/10.1534/genetics.109.102509">http://dx.doi.org/10.1534/genetics.109.102509</a>.</p></li>
+<li><p>Marjoram P (2003). “Markov Chain Monte Carlo Without Likelihoods.” <em>Proceedings of The National Academy of Sciences</em>, <strong>100</strong>. ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.0306899100">http://dx.doi.org/10.1073/pnas.0306899100</a>.</p></li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2011-04-18 14:11:24 +0000" 
+    property="dc:created">18 Apr 2011</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/04/17/treepar-changing-rates-of-evolution.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/04/18/thursday-submitting-warning-signals-manuscript.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2011-04-18-algorithms-discussion-group-abc-continued.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#computation">computation</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#algorithms">#algorithms</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/806d678bcb3a8f3d4d0612d8281804b4543d16de/_posts/2011-04-18-algorithms-discussion-group-abc-continued.md"> 806d678bcb3a8f3d4d0612d8281804b4543d16de</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Algorithms Discussion Group: algorithms Continued
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2011-04-18
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/04/18/algorithms-discussion-group-abc-continued.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

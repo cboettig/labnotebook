@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Reflections on the Mozilla Science Code Review Pilot</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="blog" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Reflections on the Mozilla Science Code Review Pilot" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2013-09-25 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/09/25/mozilla-software-review.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Reflections on the Mozilla Science Code Review Pilot" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2013-09-25 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/09/25/mozilla-software-review.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2013-09-25 00:00:00 +0000"/>
+<meta name="citation_title" content="Reflections on the Mozilla Science Code Review Pilot"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Reflections on the Mozilla Science Code Review Pilot</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>I was recently interviewed a <em>Nature</em> senior reporter <a href="http://twitter.com/erica_check">Erika Check Hayden</a> on the subject of the scientific <a href="http://kaythaney.com/2013/08/08/experiment-exploring-code-review-for-science/">code review project</a> being conducted by <a href="https://wiki.mozilla.org/ScienceLab">Mozilla Science Lab</a>. The piece appears in this week’s issue, <a href="http://doi.org/10.1038/501472a" title="Mozilla plan seeks to debug scientific code">Hayden 2013</a>. <a href="http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html">My blog post</a> sharing my own approach to code review is mentioned at the beginning of the article, though it is rather Roger Peng’s comments at the end that have stirred <a href="https://twitter.com/Erika_Check/status/382911015358181376/photo/1">some interesting discussion</a>.</p>
+<p>Roger raises two concerns. First, that increased scrutiny will discourage researchers from sharing code, (which, right or wrong, remains a voluntary choice in most journals):</p>
+<blockquote>
+<p>One worry I have is that, with reviews like this, scientists will be even more discouraged from publishing their code</p>
+</blockquote>
+<p>and second, that code review does not focus on what matters mosts:</p>
+<blockquote>
+<p>We need to get more code out there, not improve how it looks</p>
+</blockquote>
+<p>(Erika provides a bit more context to Roger’s comments below).</p>
+<blockquote class="twitter-tweet"><p>
+<a href="https://twitter.com/ctitusbrown"><span class="citation" data-cites="ctitusbrown">@ctitusbrown</span></a> <a href="https://twitter.com/cboettig"><span class="citation" data-cites="cboettig">@cboettig</span></a> <a href="https://twitter.com/kaythaney"><span class="citation" data-cites="kaythaney">@kaythaney</span></a> <a href="https://twitter.com/nickbarnes"><span class="citation" data-cites="nickbarnes">@nickbarnes</span></a> see whole <a href="https://twitter.com/simplystats"><span class="citation" data-cites="simplystats">@simplystats</span></a> quote on prof. code review discouraging sharing <a href="http://t.co/pNQWT9Safz">pic.twitter.com/pNQWT9Safz</a>
+</p>
+— Erika Check Hayden (<span class="citation" data-cites="Erika_Check">@Erika_Check</span>) <a href="https://twitter.com/Erika_Check/statuses/382911015358181376">September 25, 2013</a>
+</blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>The <em>Nature</em> News piece thus nails a central tension in the community between promoting higher standards for code (A position exemplified in an earlier <em>Nature</em> column titled <a href="http://doi.org/10.1038/467775a" title="Merali 2010, Nature">“Computational Science … Error: Why scientific programming does not compute”</a>, and more recently in <em>Science</em> by <a href="http://doi.org/10.1126/science.1231535" title="Joppa et al. 2013, &#39;Troubling Trends in Scientific Software Use&#39;">Joppa <em>et al.</em> 2013</a>, which explicitly calls for peer review of scientific software) vs promoting more widespread sharing of software (as exemplified by Nick Barnes piece in the same issue, <a href="http://doi.org/10.1038/467753a" title="Barnes 2010, Nature">“Publish your computer code: it is good enough”</a>.</p>
+<p>The arguments made in each of the perspectives are excellent, and should be required reading for anyone interested in the subject. In addition to the shorter comment by Barnes, I also recommend the more recent <em>Nature</em> perspective, <a href="http://doi.org/10.1038/nature10836" title="Ince et al. 2012, Nature">The Case for Open Computer Programs</a>, which lays out the argument and modest practical recommendations (that have largely been ignored as far as I can tell) just brilliantly. In particular, I think they nail the issue of why describing the algorithm or providing pseudo-code is not a satisfactory description of the method.</p>
+<p>However, I also think the tension between review and sharing is somewhat artificial. While each of these positions emphasizes the need to share source-code, the call for code review by Merali, Joppa et al (or in my own blog post mentioned earlier), focus on <em>scientific software</em> aimed at reuse by others. The concerns voiced in Roger Peng’s comments and echoed by Nick Barnes focus on another class of code entirely – code associated with a particular research publication that would primarily serve only to document and support those results, rather than be readily adapted to other uses.</p>
+<blockquote class="twitter-tweet"><p>
+<a href="https://twitter.com/cboettig"><span class="citation" data-cites="cboettig">@cboettig</span></a> <a href="https://twitter.com/ctitusbrown"><span class="citation" data-cites="ctitusbrown">@ctitusbrown</span></a> <a href="https://twitter.com/kaythaney"><span class="citation" data-cites="kaythaney">@kaythaney</span></a> but far more important to get code out than to get it “right”, IYSWIM.
+</p>
+— Nick Barnes (<span class="citation" data-cites="nickbarnes">@nickbarnes</span>) <a href="https://twitter.com/nickbarnes/statuses/382746748135174144">September 25, 2013</a>
+</blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+<h3 id="classes-of-code-snippets-vs-software">Classes of Code: Snippets vs Software</h3>
+<p>For me, the crux of these concerns lies in the difference between “software papers”<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> and papers which merely use code in some element of the methodology. The Mozilla study focused exclusively on code appearing in the full-text of publications in PLoS Computational Biology. Though I am pleased to see the Science Lab tackle the issue of software review and bring the expertise of their professional software developers to bear on scientific code, this is perhaps not the kind of code I would have chosen to focus on (something I shared with the team early on in seeing the announcement).</p>
+<p>Without knowing which papers are included it is of course difficult to say to much. But knowing that the code appears in the full text of the papers themselves, we can assume that it is not a complete software package intended for reuse by other researchers. Using code within the body of a manuscript implies the intent to communicate methodology more concisely and precisely than might be done in prose; in much the same manner that we use equations in place of prose. This is an important development in scientific communication, but is also rather distinct from the use of code in other contexts, in which the code itself is meant to be read primarily by machines. It is code that is already intended to help <em>explain</em>.</p>
+<p>Code included in appendices to scientific papers is meant rather to <em>document</em> exactly what has been done, in a manner that assists replication, and may require considerable effort to decipher exactly what is being done. Instead, it merely supports the more readable but less precise description and potentially the pseudo-code that would appear in the body text.</p>
+<p>Code intended for reuse as research software (in software papers) is another class entirely. Ostensibly, the user never needs to see the code itself, but only interact with the user interface or end-user functions (API) provided. Code that is written clearly and concisely still has value – helping identify bugs and facilitating future researcher-developers extending the software, but most of it’s functionality can be accessed and assessed without looking at the source. I think it is in this kind of review that we as a researcher-developer community could learn the most from the Mozilla software engineering experts.</p>
+<p>I believe the most important focus of code review is in scientific software rather than in code snippets. And in reviewing software, I think all of the most important elements do not actually involve reading the source code at all (as I discuss in my <a href="http://carlboettiger.info/2013/07/09/reviewing-software-revisited.html">revised position on reviewing software papers</a>), but rather in establishing that the software behaves as expected and follows software development practices that make it more sustainable, such as hosting in a software repository, version control, or example input and output.</p>
+<h3 id="code-vanity">Code vanity?</h3>
+<p>Roger’s second comment appears more dismissive of code review than I think it actually is:</p>
+<blockquote>
+<p>“We need to get more code out there, not improve how it looks.”</p>
+</blockquote>
+<blockquote class="twitter-tweet"><p>
+<a href="https://twitter.com/kaythaney"><span class="citation" data-cites="kaythaney">@kaythaney</span></a> <a href="https://twitter.com/ctitusbrown"><span class="citation" data-cites="ctitusbrown">@ctitusbrown</span></a> yup, ‘pretty’ is dismissive terminology, though possibly short-hand for ‘human-readable’ not just ‘machine-readable’
+</p>
+— Carl Boettiger (<span class="citation" data-cites="cboettig">@cboettig</span>) <a href="https://twitter.com/cboettig/statuses/382905327013728256">September 25, 2013</a>
+</blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Most modern languages include <a href="http://en.wikipedia.org/wiki/Syntactic_sugar">syntactic sugar</a>: ways of expressing commands that are more easily interpretable to human readers. For instance, in C, <code>a[i]</code> is syntactic sugar for <code>*(a+i)</code>. Higher-level languages are in some ways all sugar around existing lower-level libraries.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> Like good mathematical notation or good prose, this is not just about being ‘pretty’, but being more effective in communicating with humans. Certainly this is something we can improve upon as researchers, but it is perhaps not the best starting point.</p>
+<h3 id="share-first-fix-later">Share first, fix later</h3>
+<p>If code review should apply to all levels of code or be reserved for scientific software may still be an open question. What we should be able to agree on is in the publishing of code in the first place:</p>
+<blockquote class="twitter-tweet"><p>
+<a href="https://twitter.com/cboettig"><span class="citation" data-cites="cboettig">@cboettig</span></a> <a href="https://twitter.com/kaythaney"><span class="citation" data-cites="kaythaney">@kaythaney</span></a> <a href="https://twitter.com/nickbarnes"><span class="citation" data-cites="nickbarnes">@nickbarnes</span></a> I think code sharing should be mandatory <em>shrug</em>. It's part of the methods. I reject papers w/o it.
+</p>
+— Titus Brown (<span class="citation" data-cites="ctitusbrown">@ctitusbrown</span>) <a href="https://twitter.com/ctitusbrown/statuses/382903924253929472">September 25, 2013</a>
+</blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>It continues to surprise me how few journals require code deposition. <em>Science</em> explicitly <a href="http://doi.org/10.1126/science.1203354">adopted a new policy in 2011</a> stating</p>
+<blockquote>
+<p><em>Science</em> is extending our data access requirement listed above to include computer codes involved in the creation or analysis of data</p>
+</blockquote>
+<p>which asks that the data be placed in a appropriate permanent repository or otherwise placed in the supplementary materials (see <a href="http://www.sciencemag.org/site/feature/contribinfo/prep/gen_info.xhtml#dataavail">information for authors</a>).</p>
+<p>Yet I have not seen code provided for any analysis I have read in Science since 2011. Either we have a very different understanding of what it means to use computer codes in the analysis of data or <em>Science</em> grossly neglects its own policy.<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> Not to pick on them of course, few other journals have explicitly adopted such a policy.</p>
+<blockquote class="twitter-tweet"><p>
+.<a href="https://twitter.com/cboettig"><span class="citation" data-cites="cboettig">@cboettig</span></a> <a href="https://twitter.com/kaythaney"><span class="citation" data-cites="kaythaney">@kaythaney</span></a> <a href="https://twitter.com/nickbarnes"><span class="citation" data-cites="nickbarnes">@nickbarnes</span></a> As one of my grad students said to me, “I don't understand why ‘must share code’ is a radical opinion.”
+</p>
+— Titus Brown (<span class="citation" data-cites="ctitusbrown">@ctitusbrown</span>) <a href="https://twitter.com/ctitusbrown/statuses/382904483102982145">September 25, 2013</a>
+</blockquote>
+
+
+<p>Nick Barnes suggests that this alone may be enough to improve code quality:</p>
+<blockquote class="twitter-tweet"><p>
+<a href="https://twitter.com/cboettig"><span class="citation" data-cites="cboettig">@cboettig</span></a> <a href="https://twitter.com/ctitusbrown"><span class="citation" data-cites="ctitusbrown">@ctitusbrown</span></a> <a href="https://twitter.com/kaythaney"><span class="citation" data-cites="kaythaney">@kaythaney</span></a> require sharing. Pride will then rapidly lead to review and other improvement techniques.
+</p>
+— Nick Barnes (<span class="citation" data-cites="nickbarnes">@nickbarnes</span>) <a href="https://twitter.com/nickbarnes/statuses/382755320143282176">September 25, 2013</a>
+</blockquote>
+
+<p>Certainly it will help, though not enough if the state of open source scientific software is any indication (Nick does acknowledge a rather geological notion of ‘rapid’). Smaller codes used in particular analyses will certainly feel this pressure more, as they will be easier to scrutinize.</p>
+<h3 id="so-what-might-we-learn-from-the-mozilla-code-review">So what might we learn from the Mozilla Code review?</h3>
+<p>Focusing on code appearing in-line in papers certainly addresses a different beast than large scientific software packages intended for reuse. As Roger observed, we will likely learn that scientists aren’t software engineers. We may learn how to use code to communicate more effectively. We may learn some lessons that apply for larger codebases involved in scientific software, but I think there the problem are often outside of the individual lines of code themselves and arise from other development practices.</p>
+<p>Still, learning how to do code review at all would be an invaluable start. As the discussion on my own post on the subject made clear, we researchers have no training in this practice. The Mozilla study would give the first taste. I only hope they turn there attention next to larger scientific software that lives outside of the publications themselves and is intended at re-purposing and reuse. Meanwhile, I also hope journals will become more serious about recognizing code as methods, as they have started to do with data.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>which I define as papers primarily aimed at promoting the reuse of a particular codebase and providing an indexed citation target to credit the work.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>It is frequently argued that ideal code should be ‘self-documenting’, with syntax so precise that no other explanation of the function is necessary. While I think this is an admirable ideal, it should never be a substitute for actually providing prose documentation as well. I find we too easily decieve ourselves as to just how self-documenting our own code really is (it’s all so obvious at the time, right?).<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>From my reading it appears that <em>Science</em> requirements are intentionally too vague on this issue, stating: “All computer codes involved in the creation or analysis of data must also be available to any reader of Science.” It is unclear if ‘available on request’ is considered appropriate for code, though it is explicitly not acceptable for data: “we have therefore required authors to enter into an archiving agreement, in which the author commits to archive the data on an institutional Web site, with a copy of the data held at Science”, and the editorial makes it clear that “the data access requirement … includes computer codes”. Meanwhile all studies involving ‘requests for data’ have shown a return rate of substantially less than a 100% (usually less than 20%, e.g. <a href="http://doi.org/10.1371/journal.pbio.1001636">this recent study</a>). If that was a viable option we could just publish abstracts and have papers available on request too. If you need to know who wants your data, why not do the same for papers?<a href="#fnref3">↩</a></p></li>
+</ol>
+</section>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2013-09-25 00:00:00 +0000" 
+    property="dc:created">25 Sep 2013</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/09/23/notes.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/09/30/regime-vs-state.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2013-09-25-mozilla-software-review.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#blog">#blog</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/4d8bc3536276ce1a87613ab56a6757cf4b395085/_posts/2013-09-25-mozilla-software-review.md"> 4d8bc3536276ce1a87613ab56a6757cf4b395085</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Reflections on the Mozilla Science Code Review Pilot
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2013-09-25
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/09/25/mozilla-software-review.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

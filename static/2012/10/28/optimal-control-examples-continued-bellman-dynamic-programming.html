@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Optimal Control examples continued: Bellman,  Dynamic Programming</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="pdg-control, warning-signals" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Optimal Control examples continued: Bellman,  Dynamic Programming" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2011-10-28 23:23:12 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/10/28/optimal-control-examples-continued-bellman-dynamic-programming.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Optimal Control examples continued: Bellman,  Dynamic Programming" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2011-10-28 23:23:12 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/10/28/optimal-control-examples-continued-bellman-dynamic-programming.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2011-10-28 23:23:12 +0000"/>
+<meta name="citation_title" content="Optimal Control examples continued: Bellman,  Dynamic Programming"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Optimal Control examples continued: Bellman,  Dynamic Programming</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h3 id="discrete-time-state-equation">Discrete-time state equation</h3>
+<p>Discrete-time solution appears to be all about <strong>dynamic programming</strong></p>
+<p>and a chance for me to remember that I’m out of practice writing recursive functions. It’s just that in thinking about the problem, you start from the end, with the trivial subcase, and keep adding the layers. But the recursive function kinda starts at the beginning, and that trivial case is the exit condition. R doesn’t seem very efficient with these recursive functions, so this might become a C sub-routine eventually.</p>
+<h4 id="problem-setup">Problem setup</h4>
+<p>We consider some discrete-time state equation for (fish stock, <span class="math">\(x\)</span>) under some control parameter (harvest, <span class="math">\(h\)</span>):</p>
+<p><span class="math">\[ x_{t+1} = f(x_t, h) \]</span></p>
+<p>We again have utility function, <span class="math">\(\pi(h)\)</span> for diminishing returns on fish harvest. Discrete time means we maximize over the discrete discounting rate <span class="math">\(\beta\)</span> and sum over intervals:</p>
+<p><span class="math">\[ \max_{h_t} \sum_{t=0}^T \beta^t \pi(h) \]</span></p>
+<p>subject to the state equation above and some boundary conditions <span class="math">\(x_0 = X_0, \qquad x_T = X_T\)</span>. First-order conditions are:</p>
+<p><span class="math">\[ U&#39;(h_t) = \beta U&#39;(h_{t+1}) F&#39;(x_{t+1} ) \forall t \]</span> and solution will use a dynamic programming approach of the following recursion</p>
+<p><span class="math">\[ V(x_t) = \max_h \left( U(h) + \beta V(x_{t+1} ) \right) \]</span></p>
+<p>Which substituting in the state equation gives us:</p>
+<p><span class="math">\[ V(x_t) = \max_h \left( U(h) + \beta V( F(x_t)) \right) \]</span> Let’s assume a discrete Ricker-style model: <span class="math">\[ x_{t+1} = f(x,h) = x \exp \left( \alpha \left(1-\frac{x}{K}\right) \left( \frac{x-C}{K} \right) \right) - h x \]</span></p>
+<p>The Ricker-style formulation in analogy to our continuous time <a href="http://www.carlboettiger.info/archives/3001">problem</a>, Alan suggests we actually consider the case by Myers et al., (Myers <em>et. al.</em> 1995)</p>
+<p><span class="math">\[N_{t+1} = \frac{r N_t^{\alpha}}{1+\frac{N_t^{\alpha}}{K} } \]</span></p>
+<p>Trivial case of no cost at boundary, harvests everything.<br /><img src="http://farm7.staticflickr.com/6046/6303190675_b1151d0931_o.png" /></p>
+<h3 id="a-simpler-case">A simpler case</h3>
+<p>Fish remaining are whatever wasn’t harvested yet: <span class="math">\[ x_{t+1} = x_t - h_t \]</span></p>
+<p>Cost/profit of harvesting: Profit <span class="math">\(p(t)\)</span> per fish (possibly varies with year), but cost gets harder <span class="math">\(c h^2\)</span>, <span class="math">\(c &lt;&lt; p(t)\)</span>, <span class="math">\[ U(h) = p h - c h^2 \]</span></p>
+<p>The algorithm can be specified by recursion,</p>
+<pre class="sourceCode R"><code class="sourceCode r">
+phi &lt;-<span class="st"> </span>function(x) <span class="dv">300</span>
+
+J &lt;-<span class="st"> </span>function(t,x){
+  if(t &lt;<span class="st"> </span>T)
+    out &lt;-<span class="st"> </span><span class="kw">U</span>(t,x, <span class="kw">h_star</span>(t,x)) +<span class="st"> </span>beta*<span class="kw">J</span>(t<span class="dv">+1</span>, <span class="kw">f</span>(t,x, <span class="kw">h_star</span>(t,x)))
+  else 
+    out &lt;-<span class="st"> </span><span class="kw">phi</span>(x)
+  out
+}
+ 
+h_star &lt;-<span class="st"> </span>function(t,x){
+    func &lt;-<span class="st"> </span>function(h) <span class="kw">U</span>(t, x, h) +<span class="st"> </span>beta*<span class="kw">J</span>(t<span class="dv">+1</span>, <span class="kw">f</span>(t,x,h))
+<span class="co">#    optimize(f=func, interval=c(0,1))[[1]]</span>
+    h &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">1000</span>,<span class="dt">length=</span><span class="dv">500</span>)
+    cost &lt;-<span class="st"> </span><span class="kw">sapply</span>(h, func)
+    i &lt;-<span class="st"> </span><span class="kw">which.max</span>(cost)
+    h[i]
+}</code></pre>
+<p>See <a href="https://github.com/cboettig/pdg_control/blob/2fedf60ae61dafb21badaf05f1a97c213d59b1d1/R/discrete_optimal_control.R">full code</a>.</p>
+<figure>
+<img src="http://farm7.staticflickr.com/6043/6306213989_bf88df311d_o.png" />
+</figure>
+<p>but this is terribly inefficient.</p>
+<p>A simple dynamic programming reference <a href="http://frank.mtsu.edu/~berc/working/Zietz-DP-1.pdf">here</a>.</p>
+<h3 id="stochastic-optimal-control">Stochastic Optimal Control</h3>
+<p>Looks like this needs a dynamic programming approach. A us<a href="http://userpage.fu-berlin.de/~mtoussai/08-optimal-control/kappen-handout.pdf">eful reference.</a></p>
+<h3 id="higher-dimensional-state-equations">Higher-dimensional state equations</h3>
+<p>Can these lead to oscillating solutions in as the number of state equations increases? Depends on nature of constraints? Inequalities?</p>
+<h3 id="steps-check-list">Steps check list</h3>
+<ol type="1">
+<li><p>Simple boundary-value problem solution by collocation. <a href="http://www.carlboettiger.info/archives/3001">Example</a>.</p></li>
+<li><p>Chebychev polynomial collocation</p></li>
+<li><p>Harvest vs fishing effort as control variable.</p></li>
+<li><p>Solution under inequality bounds</p></li>
+<li><p>Discrete-time state equations</p></li>
+<li><p>Stochastic Control</p></li>
+<li><p>Parrotfish 3 dimensional system, Horan 2 dimensional system.  See (Mumby <em>et. al.</em> 2007), (Blackwood <em>et. al.</em> 2010) (Horan <em>et. al.</em> 2011)</p></li>
+<li><p>Uncertainty</p></li>
+</ol>
+<h3 id="section"></h3>
+<h2 id="references">References</h2>
+<ul>
+<li><p>Myers R, Barrowman N, Hutchings J and Rosenberg A (1995). “Population Dynamics of Exploited Fish Stocks at Low Population Levels.” <em>Science</em>, <strong>269</strong>. ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.269.5227.1106">http://dx.doi.org/10.1126/science.269.5227.1106</a>.</p></li>
+<li><p>Mumby P, Hastings A and Edwards H (2007). “Thresholds And The Resilience of Caribbean Coral Reefs.” <em>Nature</em>, <strong>450</strong>. ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature06252">http://dx.doi.org/10.1038/nature06252</a>.</p></li>
+<li><p>Blackwood J, Hastings A and Mumby P (2010). “The Effect of Fishing on Hysteresis in Caribbean Coral Reefs.” <em>Theoretical Ecology</em>, <strong>5</strong>. ISSN 1874-1738, <a href="http://dx.doi.org/10.1007/s12080-010-0102-0">http://dx.doi.org/10.1007/s12080-010-0102-0</a>.</p></li>
+<li><p>Horan R, Fenichel E, Drury K and Lodge D (2011). “Managing Ecological Thresholds in Coupled Environmental-Human Systems.” <em>Proceedings of The National Academy of Sciences</em>, <strong>108</strong>. ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.1005431108">http://dx.doi.org/10.1073/pnas.1005431108</a>.</p></li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2011-10-28 23:23:12 +0000" 
+    property="dc:created">28 Oct 2011</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/10/27/optimal-control-next-steps.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/10/31/monday-openfisheries-ggplot.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2011-10-28-optimal-control-examples-continued-bellman-dynamic-programming.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#pdg-control">#pdg-control</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#warning-signals">#warning-signals</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/dbb400936cc5bebbbfa5193f4db11ff4149eee67/_posts/2011-10-28-optimal-control-examples-continued-bellman-dynamic-programming.md"> dbb400936cc5bebbbfa5193f4db11ff4149eee67</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Optimal Control examples continued: Bellman,  Dynamic Programming
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2011-10-28
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/10/28/optimal-control-examples-continued-bellman-dynamic-programming.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Fun Standardizing Non Standard Evaluation</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="rfishbase, ropensci, R" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Fun Standardizing Non Standard Evaluation" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2015-02-06 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/02/06/fun-standardizing-non-standard-evaluation.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Fun Standardizing Non Standard Evaluation" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2015-02-06 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/02/06/fun-standardizing-non-standard-evaluation.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2015-02-06 00:00:00 +0000"/>
+<meta name="citation_title" content="Fun Standardizing Non Standard Evaluation"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="http://www.carlboettiger.info/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Fun Standardizing Non Standard Evaluation</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Using <code>dplyr</code> calls on the back-end of the <code>rfishbase</code> re-write means working around the non-standard evaluation (NSE), as described in the <a href=""><code>dplyr</code> vignette</a>.</p>
+<p>Grab the data I was using for this:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)
+downloader::<span class="kw">download</span>(<span class="st">&quot;https://github.com/cboettig/2015/raw/fc0d9185659e7976927d0ec91981912537ac6018/assets/data/2015-02-06-taxa.csv&quot;</span>, <span class="st">&quot;taxa.csv&quot;</span>)
+all_taxa &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;taxa.csv&quot;</span>)</code></pre>
+<p>Consider a simple NSE <code>dplyr</code> call:</p>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">filter</span>(all_taxa, Family ==<span class="st"> &#39;Scaridae&#39;</span>)</code></pre>
+<p>The best SE version of this just needs to use the formula expression, <code>~</code>, the <code>_</code> SE version of the function and it’s <code>.dots</code> argument:</p>
+<pre class="sourceCode r"><code class="sourceCode r">.dots &lt;-<span class="st"> </span><span class="kw">list</span>(~Family ==<span class="st"> &#39;Scaridae&#39;</span>)
+x1 &lt;-<span class="st"> </span><span class="kw">filter_</span>(all_taxa, <span class="dt">.dots=</span>.dots)
+
+<span class="kw">identical</span>(x, x1)</code></pre>
+<pre><code>[1] TRUE</code></pre>
+<p>This lets us treat the arguments (e.g. values of the factor on which we filter) as variables:</p>
+<pre class="sourceCode r"><code class="sourceCode r">family &lt;-<span class="st"> &#39;Scaridae&#39;</span>
+.dots &lt;-<span class="st"> </span><span class="kw">list</span>(~Family ==<span class="st"> </span>family)
+x2 &lt;-<span class="st"> </span><span class="kw">filter_</span>(all_taxa, <span class="dt">.dots=</span>.dots)
+<span class="kw">identical</span>(x, x2)</code></pre>
+<pre><code>[1] TRUE</code></pre>
+<p>If we want both the key and value to vary, we need to get pretty fancy to subvert the non-standard evaluation:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(lazyeval)
+family &lt;-<span class="st"> &#39;Scaridae&#39;</span>
+field &lt;-<span class="st"> &#39;Family&#39;</span>
+.dots &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">interp</span>(~y ==<span class="st"> </span>x, 
+                     <span class="dt">.values =</span> <span class="kw">list</span>(<span class="dt">y =</span> <span class="kw">as.name</span>(field), <span class="dt">x =</span> family)))
+x3 &lt;-<span class="st"> </span><span class="kw">filter_</span>(all_taxa, <span class="dt">.dots=</span>.dots)
+<span class="kw">identical</span>(x, x3)</code></pre>
+<pre><code>[1] TRUE</code></pre>
+<p>At bit more fun to wrap this into a function where we take arbitrary number of arguments as name-value pairs:</p>
+<pre class="sourceCode r"><code class="sourceCode r">query &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">Family =</span> <span class="st">&#39;Scaridae&#39;</span>, <span class="dt">SpecCode =</span> <span class="dv">5537</span>)
+dots &lt;-<span class="st"> </span><span class="kw">lapply</span>(<span class="kw">names</span>(query), function(level){
+    value &lt;-<span class="st"> </span>query[[level]]
+    <span class="kw">interp</span>(~y ==<span class="st"> </span>x, 
+                <span class="dt">.values =</span> <span class="kw">list</span>(<span class="dt">y =</span> <span class="kw">as.name</span>(level), <span class="dt">x =</span> value))
+  })
+  
+x3 &lt;-<span class="st">  </span><span class="kw">filter_</span>(all_taxa, <span class="dt">.dots =</span> dots) </code></pre>
+<hr />
+<h2 id="more-fun-standardizing-nse">More fun standardizing NSE</h2>
+<p>The previous examples show only applications to <code>filter_()</code>. While the general idea is the same, this pattern doesn’t translate directly for other functions, such as <code>mutate_</code>. Here’s some common patterns I’ve adopted when using <code>mutate_()</code>. First consider the familiar NSE useage:</p>
+<pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">mutate</span>(mtcars, <span class="dt">displ_l =</span> disp /<span class="st"> </span><span class="fl">61.0237</span>)
+<span class="kw">head</span>(df)</code></pre>
+<pre><code>   mpg cyl disp  hp drat    wt  qsec vs am gear carb  displ_l
+1 21.0   6  160 110 3.90 2.620 16.46  0  1    4    4 2.621932
+2 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4 2.621932
+3 22.8   4  108  93 3.85 2.320 18.61  1  1    4    1 1.769804
+4 21.4   6  258 110 3.08 3.215 19.44  1  0    3    1 4.227866
+5 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2 5.899347
+6 18.1   6  225 105 2.76 3.460 20.22  1  0    3    1 3.687092</code></pre>
+<p>Again we use <code>list(interp(</code> pattern, but note that we specify the name for our new column using <code>setNames</code> (naming the elements of the list).</p>
+<pre class="sourceCode r"><code class="sourceCode r">dots &lt;-<span class="st"> </span><span class="kw">setNames</span>(<span class="kw">list</span>(lazyeval::<span class="kw">interp</span>(~x /<span class="st"> </span>y, <span class="dt">x =</span> <span class="kw">quote</span>(disp), <span class="dt">y=</span><span class="fl">61.0237</span>)), <span class="st">&quot;displ_l&quot;</span>)
+df2 &lt;-<span class="st"> </span><span class="kw">mutate_</span>(mtcars, <span class="dt">.dots =</span> dots)
+<span class="kw">identical</span>(df, df2)</code></pre>
+<pre><code>[1] TRUE</code></pre>
+<p>Of course the use <code>y</code> could be skipped for a more direct value if that was not a variable.</p>
+<h2 id="more-dplyr-patterns">More <code>dplyr</code> patterns</h2>
+<p>Also thought I would scribble down some other common <code>dplyr</code> patterns I find myself re-using.</p>
+<ul>
+<li>applying a function that returns a <code>data.frame</code> to each element of a <code>list</code> and coercing the combined output to a <code>data.frame</code>:</li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r">mylist %&gt;%<span class="st"> </span><span class="kw">lapply</span>(myfun) %&gt;%<span class="st"> </span>dplyr::<span class="kw">bind_rows</span>() </code></pre>
+<p>To place this deeper in the <code>hadleyverse</code>, <code>purrr::map</code> could be dropped in for <code>lapply</code> in the above example.</p>
+<ul>
+<li>Another common pattern for me is <code>expand.grid() %&gt;% group_by() %&gt;% do()</code>, Here’s a <a href="https://github.com/cboettig/multiple_uncertainty/blob/3f42aa4623f40cee70d5a9d52a8cce73617248a5/inst/scripts/table.Rmd">recent example of mine</a></li>
+</ul>
+<p>Also includes an example of how to define <code>group_by_all()</code> since that is usually the grouping I need from an <code>expand.grid()</code> call (that is, I want to apply over all combinations of some parameter settings, etc)</p>
+<p>Something I hope is not a common pattern but one I struggled with for a bit: making recursive calls of the above pattern for nested lists. This code in RNeXML illustrates my solution, which required both <a href="https://github.com/ropensci/RNeXML/blob/b596839e3a1fc53e74b46fd935d91dca59a9da98/R/get_metadata.R#L50-L59">function recursion and function closure</a>.</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      
+<aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2015-02-06 00:00:00 +0000" 
+    property="dc:created">06 Feb 2015</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2015/02/03/dockerizing-fishbase-api.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2015/02/12/dai-model.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2015/commits/master/_posts/_posts/2015-02-06-fun-standardizing-non-standard-evaluation.Rmd"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2015/categories.html#computation">computation</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#rfishbase">#rfishbase</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#ropensci">#ropensci</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#R">#R</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2015/commit/8495df27d7c348c47e21e5ef65462e413011f53e/_posts/_posts/2015-02-06-fun-standardizing-non-standard-evaluation.Rmd"> 8495df27d7c348c47e21e5ef65462e413011f53e</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Fun Standardizing Non Standard Evaluation
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2015-02-06
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/02/06/fun-standardizing-non-standard-evaluation.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

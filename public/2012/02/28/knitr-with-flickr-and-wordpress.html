@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Knitr with flickr and wordpress</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Knitr with flickr and wordpress" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2012-02-28 14:59:21 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/02/28/knitr-with-flickr-and-wordpress.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Knitr with flickr and wordpress" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2012-02-28 14:59:21 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/02/28/knitr-with-flickr-and-wordpress.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2012-02-28 14:59:21 +0000"/>
+<meta name="citation_title" content="Knitr with flickr and wordpress"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Knitr with flickr and wordpress</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>It’s amazing how nice it is to work with well-developed software. It took me about 20 minutes to extend Yuhui’s interface to allow me to upload images through flickr instead of imgur, and embed them into a wordpress blog using the shortcode from the flickr gallery plugin.</p>
+<p>To do this, I just modified the hook used by the markdown format. First, I define a quick R function that uploads to flickr and returns the flickr identifier number. For the moment this is just calling<a href="http://search.cpan.org/~cpb/Flickr-Upload-1.32/flickr_upload">a command-line flickr uploader</a>, though it should be straight-forward to replace this with something like <a href="http://www.omegahat.org/Rflickr/">Rflickr</a>.</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+flickr &lt;-<span class="st"> </span>function(file, 
+    <span class="dt">tags =</span> <span class="st">&quot;&quot;</span>, <span class="dt">description =</span> <span class="st">&quot;&quot;</span>, 
+    <span class="dt">public =</span> <span class="ot">TRUE</span>) {
+    out &lt;-<span class="st"> </span><span class="kw">system</span>(<span class="kw">paste</span>(<span class="st">&quot;flickr_upload --tag=</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, 
+        tags, <span class="st">&quot; </span><span class="ch">\&quot;</span><span class="st"> --description=</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, 
+        description, <span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, 
+        <span class="st">&quot; --public &quot;</span>, <span class="kw">as.integer</span>(public), 
+        file), <span class="dt">intern =</span> <span class="ot">TRUE</span>)
+    <span class="kw">gsub</span>(<span class="st">&quot;.*ids=(</span><span class="ch">\\</span><span class="st">d+)&quot;</span>, 
+        <span class="st">&quot;</span><span class="ch">\\</span><span class="st">1&quot;</span>, out[<span class="dv">3</span>])
+}</code></pre>
+<p>Once we have such an uploading function, it’s super simple to wrap into knitr. I let my function be triggered by the same “upload” option that Yuhui introduced for imgur, but instead call the flickr function above,</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+.flickr.url =<span class="st"> </span>function(x) {
+    file =<span class="st"> </span><span class="kw">paste</span>(x, <span class="dt">collapse =</span> <span class="st">&quot;.&quot;</span>)
+    if (opts_knit$<span class="kw">get</span>(<span class="st">&quot;upload&quot;</span>)) {
+        <span class="kw">flickr</span>(file)
+    } else file
+}</code></pre>
+<p>Lastly I define the function hook to run the upload and return the shortcode:</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+hook_plot_flickr =<span class="st"> </span>function(x, 
+    options) {
+    <span class="kw">sprintf</span>(<span class="st">&quot;[flickr]%s[/flickr]&quot;</span>, 
+        <span class="kw">.flickr.url</span>(x))
+}</code></pre>
+<p>I can then define a wordpress rendering environment by mapping the hooks to my choices.</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+render_wordpress &lt;-<span class="st"> </span>function() {
+    <span class="kw">render_gfm</span>()
+    <span class="kw">options</span>(<span class="dt">width =</span> <span class="dv">30</span>)
+    opts_knit$<span class="kw">set</span>(<span class="dt">upload =</span> <span class="ot">TRUE</span>)
+    output =<span class="st"> </span>function(x, 
+        options) <span class="kw">paste</span>(<span class="st">&quot;[ code]</span><span class="ch">\n</span><span class="st">&quot;</span>, 
+        x, <span class="st">&quot;[ /code]</span><span class="ch">\n</span><span class="st">&quot;</span>, 
+        <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)
+    warning =<span class="st"> </span>function(x, 
+        options) <span class="kw">paste</span>(<span class="st">&quot;[ code]</span><span class="ch">\n</span><span class="st">&quot;</span>, 
+        x, <span class="st">&quot;[ /code]</span><span class="ch">\n</span><span class="st">&quot;</span>, 
+        <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)
+    message =<span class="st"> </span>function(x, 
+        options) <span class="kw">paste</span>(<span class="st">&quot;[ code]</span><span class="ch">\n</span><span class="st">&quot;</span>, 
+        x, <span class="st">&quot;[ /code]</span><span class="ch">\n</span><span class="st">&quot;</span>, 
+        <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)
+    inline =<span class="st"> </span>function(x, 
+        options) <span class="kw">paste</span>(<span class="st">&quot;&lt;pre&gt;&quot;</span>, 
+        x, <span class="st">&quot;&lt;/pre&gt;&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)
+    error =<span class="st"> </span>function(x, 
+        options) <span class="kw">paste</span>(<span class="st">&quot;[ code]</span><span class="ch">\n</span><span class="st">&quot;</span>, 
+        x, <span class="st">&quot;[ /code]</span><span class="ch">\n</span><span class="st">&quot;</span>, 
+        <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)
+    source =<span class="st"> </span>function(x, 
+        options) <span class="kw">paste</span>(<span class="st">&quot;[ code lang=&#39;r&#39;]</span><span class="ch">\n</span><span class="st">&quot;</span>, 
+        x, <span class="st">&quot;[ /code]</span><span class="ch">\n</span><span class="st">&quot;</span>, 
+        <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)
+    knit_hooks$<span class="kw">set</span>(<span class="dt">output =</span> output, 
+        <span class="dt">warning =</span> warning, 
+        <span class="dt">message =</span> message, 
+        <span class="dt">inline =</span> inline, 
+        <span class="dt">error =</span> error, 
+        <span class="dt">source =</span> source, 
+        <span class="dt">plot =</span> hook_plot_flickr)
+}</code></pre>
+<p>Note that the rendering sets a custom 30 character width that fits my theme better. Now simply adding the call to render_wordpress in the header of my documents will render this in wordpress format. If you’re reading this on wordpress, it was already in the header. Any figures will embed as flickr shortcode:</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+<span class="kw">library</span>(ggplot2)
+<span class="kw">qplot</span>(hp, mpg, 
+    <span class="dt">data =</span> mtcars) +<span class="st"> </span><span class="kw">geom_smooth</span>()</code></pre>
+<figure>
+<img src="http://farm8.staticflickr.com/7184/6793394960_94c5a5b017_o.png" />
+</figure>
+<p>It would be nicer to have built this around flickR, and provide the urls so that the image can be used without the wordpress flickr shortcode. But for now, the real point is that it’s intuitive to extend knitr to this very customized format, specific to my platform, my plugins, and my shortcodes, with minimal effort. All thanks to Yuhui’s very nice implementation of knitr.</p>
+<h3 id="addendum">Addendum</h3>
+<p>If we’d rather upload the images to wordpress itself (seems sensible), this is also straight forward thanks to Duncan’s RWordPress package on <a href="http://www.omegahat.org/">Omegahat</a>. Writing the hooks would look like this:</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+.wordpress.url =<span class="st"> </span>function(x) {
+  <span class="kw">require</span>(RWordPress)
+  file =<span class="st"> </span><span class="kw">paste</span>(x, <span class="dt">collapse =</span> <span class="st">&#39;.&#39;</span>)
+  if (opts_knit$<span class="kw">get</span>(<span class="st">&#39;upload&#39;</span>)) {
+            <span class="kw">fileUpload</span>(file)$url
+      } else file
+}</code></pre>
+<p>Note that RWordPress will look for the login credentials defined in “options”, i.e. put something like this in your .Rprofile.</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+<span class="kw">options</span>(<span class="dt">WordPressLogin =</span> <span class="kw">c</span>(<span class="dt">userid =</span> <span class="st">&quot;password&quot;</span>),
+    <span class="dt">WordPressURL =</span> <span class="st">&quot;http://www.yourdomain.com/xmlrpc.php&quot;</span>)</code></pre>
+<p>We then just define a hook based on the hook_plot_html that uses the Wordpress URL.</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+.hook_plot_wordpress =<span class="st"> </span>function(x, options) {
+a =<span class="st"> </span>options$fig.align
+  <span class="kw">sprintf</span>(<span class="st">&#39;&lt;img src=&quot;%s&quot; class=&quot;plot&quot; %s/&gt;</span><span class="ch">\n</span><span class="st">&#39;</span>, <span class="kw">.wordpress.url</span>(x),
+          switch(a,
+                 <span class="dt">default =</span> <span class="st">&#39;&#39;</span>,
+                 <span class="dt">left =</span> <span class="st">&#39;style=&quot;float: left&quot;&#39;</span>,
+                 <span class="dt">right =</span> <span class="st">&#39;style=&quot;float: right&quot;&#39;</span>,
+                 <span class="dt">center =</span> <span class="st">&#39;style=&quot;margin: auto; display: block&quot;&#39;</span>))
+}</code></pre>
+<p>Put this hook in the render function instead/or as an option, and we’re good to go.</p>
+<h3 id="addendum-ii">Addendum II</h3>
+<p>knitr now supports additional uploading protocols out of the box. For instance, uploading to wordpress just requires a call to knitr options specifying the upload function:</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+opts_knit$<span class="kw">set</span>(<span class="dt">upload.fun =</span> function(file){
+   <span class="kw">library</span>(RWordPress) 
+   <span class="kw">uploadFile</span>(file)$url
+  })</code></pre>
+<p>We could likewise specify the flickr function there, etc. Note that I don’t need to worry about the “paste” or “else” conditions either, that’s all handled automatically now. Just specify an upload function and we’re good to go.</p>
+<p>Minor you (I) might think the one-line namespace call could be used instead of loading the library:</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+RWordPress::<span class="kw">uploadFile</span>(file)$url</code></pre>
+<p>but it appears you’d be wrong.</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2012-02-28 14:59:21 +0000" 
+    property="dc:created">28 Feb 2012</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/02/27/using-knitr-and-rwordpress-to-publish-results-directly-from-r-6.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/02/28/warning-signals-in-fish-collapse.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2012-02-28-knitr-with-flickr-and-wordpress.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/dbb400936cc5bebbbfa5193f4db11ff4149eee67/_posts/2012-02-28-knitr-with-flickr-and-wordpress.md"> dbb400936cc5bebbbfa5193f4db11ff4149eee67</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Knitr with flickr and wordpress
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2012-02-28
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/02/28/knitr-with-flickr-and-wordpress.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

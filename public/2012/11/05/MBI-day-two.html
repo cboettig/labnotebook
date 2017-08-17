@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Mbi Day Two</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="conference, pdg-control, ropensci" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Mbi Day Two" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2013-11-05 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/11/05/MBI-day-two.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Mbi Day Two" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2013-11-05 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/11/05/MBI-day-two.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2013-11-05 00:00:00 +0000"/>
+<meta name="citation_title" content="Mbi Day Two"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Mbi Day Two</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h2 id="mbi-workshop">MBI Workshop</h2>
+<h4 id="paul-armsworth">Paul Armsworth</h4>
+<p>Very nice example of control in creating a market for ecosystem services for landowners. Key feature is that multiple land-owners respond by adjusting their prices, and so payments can be divided into fraction going into subsidy and fraction going into conservation. When one land-owner controls land that is particularly good cost per conservation accomplished, they also stand to gain largest value.</p>
+<p>Also looked at auction mechanism and impact of cooperation among landowners to create hold outs.</p>
+<h4 id="hugh-possingham">Hugh Possingham</h4>
+<p>Hot spot assignment. Marxan and success while ignoring dynamics. {to what extent is data substitute for dynamics}</p>
+<p>Dynamics (but no heterogeneity)</p>
+<h4 id="bill-fagan">Bill Fagan</h4>
+<p>Linking individual movements to population dynamics. Home range vs migration vs nomadic motion.</p>
+<h4 id="afternoon-breakout">Afternoon breakout</h4>
+<p>Looking at role of institutions and tractability of implementation problems. Interesting observation from Lou in the long-tail effect of certain individuals in explaining heterogeneity in implementation success.</p>
+<hr />
+<h3 id="pdg-control">PDG Control</h3>
+<p>Working on table following <a href="https://github.com/cboettig/pdg_control/issues/41">issue #41</a></p>
+<p>Based on <a href="https://github.com/cboettig/pdg_control/blob/5c18c1108dd7502a54bb39c1750d9be74c974ba0/inst/examples/policycosts/errors_table.Rmd">errors_table.Rmd</a>, plot from <a href="https://github.com/cboettig/pdg_control/blob/49b3faf7cd4430aa8ba18cb5a36862b5d07f1e0f/inst/examples/policycosts/plot_table.Rmd">plot_table.Rmd</a></p>
+<p>shows the effect of greater noise actually reducing the impact of being wrong (either by ignoring adjustment costs that exist or assuming adjustment costs that don’t exist). Bigger induced reduction in NPV (higher cost) naturally decreases value.</p>
+<p>Functional form doesn’t matter when assuming costs that don’t exist, since these are calibrated to be equivalent by selecting the coefficients in order to have equal reduction in NPV. Obviously functional form does matter when ignoring penalties that do exist, and it seems that ignoring L2 penalties is most damaging, ignoring L1 penalties the least damaging?</p>
+<figure>
+<img src="http://farm8.staticflickr.com/7371/10693106325_9cb0c2c8bb_o.png" alt="plot of chunk unnamed-chunk-1" /><figcaption>plot of chunk unnamed-chunk-1</figcaption>
+</figure>
+<TABLE border=1>
+<TR> <TH>  </TH> <TH> 
+penalty_fn
+</TH> <TH> 
+ignore_cost
+</TH> <TH> 
+ignore_fraction
+</TH> <TH> 
+assume_cost
+</TH> <TH> 
+assume_fraction
+</TH> <TH> 
+sigma_g
+</TH> <TH> 
+reduction
+</TH>  </TR>
+  <TR> <TD align="right"> 
+1
+</TD> <TD> 
+L1
+</TD> <TD align="right"> 
+14536.09
+</TD> <TD align="right"> 
+1.00
+</TD> <TD align="right"> 
+16857.61
+</TD> <TD align="right"> 
+1.00
+</TD> <TD align="right"> 
+0.05
+</TD> <TD align="right"> 
+0.10
+</TD> </TR>
+    <TR> <TD align="right"> 
+2
+</TD> <TD> 
+L2
+</TD> <TD align="right"> 
+11020.10
+</TD> <TD align="right"> 
+0.76
+</TD> <TD align="right"> 
+15538.44
+</TD> <TD align="right"> 
+0.92
+</TD> <TD align="right"> 
+0.05
+</TD> <TD align="right"> 
+0.10
+</TD> </TR>
+      <TR> <TD align="right"> 
+3
+</TD> <TD> 
+fixed
+</TD> <TD align="right"> 
+13584.97
+</TD> <TD align="right"> 
+0.92
+</TD> <TD align="right"> 
+17582.78
+</TD> <TD align="right"> 
+1.05
+</TD> <TD align="right"> 
+0.05
+</TD> <TD align="right"> 
+0.10
+</TD> </TR>
+        <TR> <TD align="right"> 
+4
+</TD> <TD> 
+L1
+</TD> <TD align="right"> 
+9273.66
+</TD> <TD align="right"> 
+1.09
+</TD> <TD align="right"> 
+17561.81
+</TD> <TD align="right"> 
+1.04
+</TD> <TD align="right"> 
+0.05
+</TD> <TD align="right"> 
+0.20
+</TD> </TR>
+          <TR> <TD align="right"> 
+5
+</TD> <TD> 
+L2
+</TD> <TD align="right"> 
+11020.10
+</TD> <TD align="right"> 
+0.76
+</TD> <TD align="right"> 
+15538.44
+</TD> <TD align="right"> 
+0.92
+</TD> <TD align="right"> 
+0.05
+</TD> <TD align="right"> 
+0.20
+</TD> </TR>
+            <TR> <TD align="right"> 
+6
+</TD> <TD> 
+fixed
+</TD> <TD align="right"> 
+8332.45
+</TD> <TD align="right"> 
+0.84
+</TD> <TD align="right"> 
+17401.82
+</TD> <TD align="right"> 
+1.03
+</TD> <TD align="right"> 
+0.05
+</TD> <TD align="right"> 
+0.20
+</TD> </TR>
+              <TR> <TD align="right"> 
+7
+</TD> <TD> 
+L1
+</TD> <TD align="right"> 
+-641.78
+</TD> <TD align="right"> 
+0.21
+</TD> <TD align="right"> 
+15451.25
+</TD> <TD align="right"> 
+0.92
+</TD> <TD align="right"> 
+0.05
+</TD> <TD align="right"> 
+0.30
+</TD> </TR>
+                <TR> <TD align="right"> 
+8
+</TD> <TD> 
+L2
+</TD> <TD align="right"> 
+-272586.11
+</TD> <TD align="right"> 
+-24.90
+</TD> <TD align="right"> 
+11567.12
+</TD> <TD align="right"> 
+0.69
+</TD> <TD align="right"> 
+0.05
+</TD> <TD align="right"> 
+0.30
+</TD> </TR>
+                  <TR> <TD align="right"> 
+9
+</TD> <TD> 
+fixed
+</TD> <TD align="right"> 
+-1213.01
+</TD> <TD align="right"> 
+-0.46
+</TD> <TD align="right"> 
+15519.95
+</TD> <TD align="right"> 
+0.92
+</TD> <TD align="right"> 
+0.05
+</TD> <TD align="right"> 
+0.30
+</TD> </TR>
+                    <TR> <TD align="right"> 
+10
+</TD> <TD> 
+L1
+</TD> <TD align="right"> 
+18281.97
+</TD> <TD align="right"> 
+1.01
+</TD> <TD align="right"> 
+20973.56
+</TD> <TD align="right"> 
+0.99
+</TD> <TD align="right"> 
+0.20
+</TD> <TD align="right"> 
+0.10
+</TD> </TR>
+                      <TR> <TD align="right"> 
+11
+</TD> <TD> 
+L2
+</TD> <TD align="right"> 
+12462.51
+</TD> <TD align="right"> 
+0.72
+</TD> <TD align="right"> 
+19392.85
+</TD> <TD align="right"> 
+0.91
+</TD> <TD align="right"> 
+0.20
+</TD> <TD align="right"> 
+0.10
+</TD> </TR>
+                        <TR> <TD align="right"> 
+12
+</TD> <TD> 
+fixed
+</TD> <TD align="right"> 
+16691.94
+</TD> <TD align="right"> 
+1.03
+</TD> <TD align="right"> 
+20143.80
+</TD> <TD align="right"> 
+0.95
+</TD> <TD align="right"> 
+0.20
+</TD> <TD align="right"> 
+0.10
+</TD> </TR>
+                          <TR> <TD align="right"> 
+13
+</TD> <TD> 
+L1
+</TD> <TD align="right"> 
+12788.95
+</TD> <TD align="right"> 
+0.96
+</TD> <TD align="right"> 
+20663.21
+</TD> <TD align="right"> 
+0.97
+</TD> <TD align="right"> 
+0.20
+</TD> <TD align="right"> 
+0.20
+</TD> </TR>
+                            <TR> <TD align="right"> 
+14
+</TD> <TD> 
+L2
+</TD> <TD align="right"> 
+12462.51
+</TD> <TD align="right"> 
+0.72
+</TD> <TD align="right"> 
+19392.85
+</TD> <TD align="right"> 
+0.91
+</TD> <TD align="right"> 
+0.20
+</TD> <TD align="right"> 
+0.20
+</TD> </TR>
+                              <TR> <TD align="right"> 
+15
+</TD> <TD> 
+fixed
+</TD> <TD align="right"> 
+12399.01
+</TD> <TD align="right"> 
+0.88
+</TD> <TD align="right"> 
+21289.21
+</TD> <TD align="right"> 
+1.00
+</TD> <TD align="right"> 
+0.20
+</TD> <TD align="right"> 
+0.20
+</TD> </TR>
+                                <TR> <TD align="right"> 
+16
+</TD> <TD> 
+L1
+</TD> <TD align="right"> 
+9099.48
+</TD> <TD align="right"> 
+0.73
+</TD> <TD align="right"> 
+19999.07
+</TD> <TD align="right"> 
+0.94
+</TD> <TD align="right"> 
+0.20
+</TD> <TD align="right"> 
+0.30
+</TD> </TR>
+                                  <TR> <TD align="right"> 
+17
+</TD> <TD> 
+L2
+</TD> <TD align="right"> 
+-6337.76
+</TD> <TD align="right"> 
+-0.39
+</TD> <TD align="right"> 
+17765.33
+</TD> <TD align="right"> 
+0.83
+</TD> <TD align="right"> 
+0.20
+</TD> <TD align="right"> 
+0.30
+</TD> </TR>
+                                    <TR> <TD align="right"> 
+18
+</TD> <TD> 
+fixed
+</TD> <TD align="right"> 
+7399.01
+</TD> <TD align="right"> 
+0.62
+</TD> <TD align="right"> 
+21969.84
+</TD> <TD align="right"> 
+1.03
+</TD> <TD align="right"> 
+0.20
+</TD> <TD align="right"> 
+0.30
+</TD> </TR>
+                                      <TR> <TD align="right"> 
+19
+</TD> <TD> 
+L1
+</TD> <TD align="right"> 
+30227.43
+</TD> <TD align="right"> 
+1.07
+</TD> <TD align="right"> 
+31377.07
+</TD> <TD align="right"> 
+0.94
+</TD> <TD align="right"> 
+0.50
+</TD> <TD align="right"> 
+0.10
+</TD> </TR>
+                                        <TR> <TD align="right"> 
+20
+</TD> <TD> 
+L2
+</TD> <TD align="right"> 
+33472.18
+</TD> <TD align="right"> 
+1.00
+</TD> <TD align="right"> 
+33472.18
+</TD> <TD align="right"> 
+1.00
+</TD> <TD align="right"> 
+0.50
+</TD> <TD align="right"> 
+0.10
+</TD> </TR>
+                                          <TR> <TD align="right"> 
+21
+</TD> <TD> 
+fixed
+</TD> <TD align="right"> 
+28926.73
+</TD> <TD align="right"> 
+1.09
+</TD> <TD align="right"> 
+30500.85
+</TD> <TD align="right"> 
+0.91
+</TD> <TD align="right"> 
+0.50
+</TD> <TD align="right"> 
+0.10
+</TD> </TR>
+                                            <TR> <TD align="right"> 
+22
+</TD> <TD> 
+L1
+</TD> <TD align="right"> 
+24157.93
+</TD> <TD align="right"> 
+1.10
+</TD> <TD align="right"> 
+31767.92
+</TD> <TD align="right"> 
+0.95
+</TD> <TD align="right"> 
+0.50
+</TD> <TD align="right"> 
+0.20
+</TD> </TR>
+                                              <TR> <TD align="right"> 
+23
+</TD> <TD> 
+L2
+</TD> <TD align="right"> 
+19091.31
+</TD> <TD align="right"> 
+0.93
+</TD> <TD align="right"> 
+29225.46
+</TD> <TD align="right"> 
+0.87
+</TD> <TD align="right"> 
+0.50
+</TD> <TD align="right"> 
+0.20
+</TD> </TR>
+                                                <TR> <TD align="right"> 
+24
+</TD> <TD> 
+fixed
+</TD> <TD align="right"> 
+23573.19
+</TD> <TD align="right"> 
+1.02
+</TD> <TD align="right"> 
+30069.80
+</TD> <TD align="right"> 
+0.90
+</TD> <TD align="right"> 
+0.50
+</TD> <TD align="right"> 
+0.20
+</TD> </TR>
+                                                  <TR> <TD align="right"> 
+25
+</TD> <TD> 
+L1
+</TD> <TD align="right"> 
+21086.12
+</TD> <TD align="right"> 
+1.12
+</TD> <TD align="right"> 
+32035.93
+</TD> <TD align="right"> 
+0.96
+</TD> <TD align="right"> 
+0.50
+</TD> <TD align="right"> 
+0.30
+</TD> </TR>
+                                                    <TR> <TD align="right"> 
+26
+</TD> <TD> 
+L2
+</TD> <TD align="right"> 
+19091.31
+</TD> <TD align="right"> 
+0.93
+</TD> <TD align="right"> 
+29225.46
+</TD> <TD align="right"> 
+0.87
+</TD> <TD align="right"> 
+0.50
+</TD> <TD align="right"> 
+0.30
+</TD> </TR>
+                                                      <TR> <TD align="right"> 
+27
+</TD> <TD> 
+fixed
+</TD> <TD align="right"> 
+17209.56
+</TD> <TD align="right"> 
+0.85
+</TD> <TD align="right"> 
+32946.24
+</TD> <TD align="right"> 
+0.98
+</TD> <TD align="right"> 
+0.50
+</TD> <TD align="right"> 
+0.30
+</TD> </TR>
+                                                         </TABLE>
+
+
+<hr />
+<h2 id="ropensci-ecoinformatics">rOpenSci / ecoinformatics</h2>
+<ul>
+<li>Exploring strategies for addressing certificate authentication workflow.<br /></li>
+<li>Plans to merge <code>dataone</code> and <code>rdataone</code>, shedding the current <code>rJava</code> dependency and dealing with existing vs new namespacing <a href="https://github.com/ropensci/rdataone/issues/1">#1</a></li>
+</ul>
+<h2 id="phylogenetics">phylogenetics</h2>
+<ul>
+<li>Some discussion of <span class="showtooltip" title="Quintero I, Wiens J and Harmon L (2013). &#39;Rates of Projected Climate Change Dramatically Exceed Past Rates of Climatic Niche Evolution Among Vertebrate Species.&#39; Ecology Letters, 16, pp. 1095-1103. ."><a href="http://dx.doi.org/10.1111/ele.12144">Quintero et al. (2013)</a></span></li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2013-11-05 00:00:00 +0000" 
+    property="dc:created">05 Nov 2013</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/11/04/MBI-notes.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/11/06/MBI-day-three.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2013-11-05-MBI-day-two.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#conference">#conference</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#pdg-control">#pdg-control</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#ropensci">#ropensci</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/40735ecbdaa95c78ccdd75ced01a4bc486f1c753/_posts/2013-11-05-MBI-day-two.md"> 40735ecbdaa95c78ccdd75ced01a4bc486f1c753</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Mbi Day Two
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2013-11-05
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/11/05/MBI-day-two.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

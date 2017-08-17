@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Self Destroy Droplet On Completion</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Self Destroy Droplet On Completion" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2014-12-07 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/12/07/self-destroy-droplet-on-completion.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Self Destroy Droplet On Completion" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2014-12-07 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/12/07/self-destroy-droplet-on-completion.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2014-12-07 00:00:00 +0000"/>
+<meta name="citation_title" content="Self Destroy Droplet On Completion"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Self Destroy Droplet On Completion</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Scott’s analogsea package provides a great way to script commands for cloud instances on the digitalocean platform. for instance, we can use analogsea to automatically start an instance of the desired size, submit a computationally intensive task, and then terminate the instance when the task completes successfully. This last step is particularly convenient since it makes it easier to use a very powerful (and thus expensive) instance for a short time, knowing it will terminate and avoid extra charges while idle.</p>
+<p>To avoid first having to install the necessary software environment on the newly created digitalocean instance, we will simply pull a docker image that has already been provisioned. This is particularly useful in both keeping what we information we need to send to the cloud machine consise (no need to list all dependencies) and fast (particularly in the case of installing any packages from source, such as R packages from CRAN. Thee complete installation process to generate the image we use here can take over an hour itself).</p>
+<p>The analogsea package provides nice functions for working with docker as well, as we will illustrate here.</p>
+<p>First, we can define a custom little function that will pull a given Github repo, run the script specified, and push the results back up.</p>
+<pre class="sourceCode r"><code class="sourceCode r">task &lt;-<span class="st"> </span>function(REPO, PATH, SCRIPT, <span class="dt">USER =</span> <span class="kw">Sys.getenv</span>(<span class="st">&quot;USER&quot;</span>), 
+                 <span class="dt">GH_TOKEN =</span> <span class="kw">Sys.getenv</span>(<span class="st">&quot;GH_TOKEN&quot;</span>), 
+                 <span class="dt">EMAIL =</span> <span class="kw">paste0</span>(USER, <span class="st">&quot;@&quot;</span>, USER, <span class="st">&quot;.com&quot;</span>),
+                 <span class="dt">IMG =</span> <span class="st">&quot;rocker/hadleyverse&quot;</span>){
+  <span class="kw">paste</span>(
+  <span class="kw">paste0</span>(<span class="st">&quot;-it &quot;</span>, IMG, <span class="st">&quot; bash -c </span><span class="ch">\&quot;</span><span class="st">&quot;</span>, <span class="st">&quot;git config --global user.name &quot;</span>, USER),
+  <span class="kw">paste0</span>(<span class="st">&quot;git config --global user.email &quot;</span>, EMAIL),
+  <span class="kw">paste0</span>(<span class="st">&quot;git clone &quot;</span>, <span class="st">&quot;https://&quot;</span>, USER, <span class="st">&quot;:&quot;</span>, GH_TOKEN, <span class="st">&quot;@github.com/&quot;</span>, USER, <span class="st">&quot;/&quot;</span>, REPO, <span class="st">&quot;.git&quot;</span>),
+  <span class="kw">paste0</span>(<span class="st">&quot;cd &quot;</span>, REPO),
+  <span class="kw">paste0</span>(<span class="st">&quot;cd &quot;</span>, PATH),
+  <span class="kw">paste0</span>(<span class="st">&quot;Rscript &quot;</span>, SCRIPT),
+  <span class="st">&quot;git add -A&quot;</span>,
+  <span class="st">&quot;git commit -a -m &#39;runs from droplet&#39;&quot;</span>,
+  <span class="st">&quot;git push origin master&quot;</span>,
+  <span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">&quot;</span>,
+  <span class="dt">sep=</span><span class="st">&quot;; &quot;</span>)
+}</code></pre>
+<p>This could probably be made a bit more elegant, but the idea is simple. Note that we will clone over https, assuming a Github authentication token is available in the environment (e.g. in <code>.Rprofile</code>) as <code>GH_TOKEN</code>.</p>
+<p>To use this function to run the script <code>knit.R</code> in the <code>inst/examples</code> directory of my <code>template</code> repo, I do:</p>
+<pre class="sourceCode r"><code class="sourceCode r">tsk &lt;-<span class="st"> </span><span class="kw">task</span>(<span class="st">&quot;template&quot;</span>, <span class="st">&quot;inst/examples&quot;</span>, <span class="st">&quot;knit.R&quot;</span>, <span class="dt">IMG=</span><span class="st">&quot;cboettig/strata&quot;</span>)</code></pre>
+<p>which returns the commands we’ll need to run as a string. In this case I have set a custom docker image <code>cboettig/strata</code> that contains my standard development environment in use on my laptop, strata.</p>
+<p>If we have Docker installed on the local system, we can verify this script works locally first:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system</span>(<span class="kw">paste</span>(<span class="st">&quot;docker run --rm&quot;</span>, tsk))</code></pre>
+<p>Now we’re ready for the analogsea part to submit this job to a digitalocean machine which it will create and destroy on the fly. Note that this assumes we have a digitalocean account and have saved a personal authentication token to our environment as <code>DO_PAT</code> (otherwise analogsea will simply prompt us to autheticate manually in the browser). This also requires we have an ssh key added to our account already (at least at this time).</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(analogsea)
+<span class="kw">docklet_create</span>(<span class="dt">size=</span><span class="st">&#39;512mb&#39;</span>) %&gt;%
+<span class="st">  </span><span class="kw">docklet_run</span>(tsk) %&gt;%
+<span class="st">  </span><span class="kw">droplet_delete</span>()</code></pre>
+<p>analogsea will first create the droplet of the desired size (analogsea refers to digitalocean droplets which have Docker software installed as “docklets”), then run our command and destroy the droplet.</p>
+<p>Note that the functions will only continue to the next step if the previous is successful. Consequently, if the script fails for some reason, the instance will perist and we can attempt to debug if we so choose. If we want the instance to be destroyed whether the script succeeds or fails, we can simply drop the last <code>%&gt;%</code> pipe and the destroy command will still run. (Otherwise some error handling would be reuired aroun the <code>docklet_run</code> code tomake sure it continues.</p>
+<p>Sometimes the droplet login will fail due to having had a previous digitalocean instance with the same ip (causing ssh to warn that the host identity has changed) or to allow the token to be approved. In this case, it may help to create the the droplet in a separate step, ssh into the ip returned vy <code>droplets()</code> manually outside of R, and then return to R to launch the task:</p>
+<pre class="sourceCode r"><code class="sourceCode r">d &lt;-<span class="st"> </span><span class="kw">droplets</span>()
+d[[<span class="dv">2</span>]] %&gt;%<span class="st">  </span>
+<span class="st">  </span><span class="kw">docklet_run</span>(tsk) %&gt;%
+<span class="st">  </span><span class="kw">droplet_delete</span>()</code></pre>
+<p>This assumes our desired droplet is the second in the list (hence <code>d[[2]]</code>).</p>
+<p>Of course our R instance needs to persist long enough for the job to complete, so we need to be sure to run this from a machine that will itslef remain up, such as a desktop or even another server.</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2014-12-07 00:00:00 +0000" 
+    property="dc:created">07 Dec 2014</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/12/04/lsn-nimble.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/12/11/rrhack-notes.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2014-12-07-self-destroy-droplet-on-completion.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#computation">computation</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/23e87948cb060ac457ebb2c954690caee0901f93/_posts/2014-12-07-self-destroy-droplet-on-completion.md"> 23e87948cb060ac457ebb2c954690caee0901f93</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Self Destroy Droplet On Completion
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2014-12-07
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/12/07/self-destroy-droplet-on-completion.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Wrong picture, wrong model: why warning signals don't look like rare events</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="warning-signals" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Wrong picture, wrong model: why warning signals don't look like rare events" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2010-10-25 23:24:45 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/10/25/wrong-picture-wrong-model-why-warning-signals-dont-look-like-rare-events.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Wrong picture, wrong model: why warning signals don't look like rare events" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2010-10-25 23:24:45 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/10/25/wrong-picture-wrong-model-why-warning-signals-dont-look-like-rare-events.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2010-10-25 23:24:45 +0000"/>
+<meta name="citation_title" content="Wrong picture, wrong model: why warning signals don't look like rare events"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Wrong picture, wrong model: why warning signals don't look like rare events</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Detecting a warning signal of collapse isn’t about detecting that a system is non-stationary, but more specifically, that the system is about to do something sudden.  The classic saddle-node bifurcation example results in a picture like this:</p>
+<figure>
+<img src="http://farm2.staticflickr.com/1184/5103819890_b5a04908ae_o.png" />
+</figure>
+<p>A visible steady decrease interrupted by a sudden jump.  The goal is to distinguish this from the case of a steady decrease that involves no loss of stability – such as would be created by continually lowering the carrying capacity of logistic-model system at a linear rate.  As one involves a loss of stability and the other does not, the warning signal that attempts to measure the eigenvalue (equivalent to r in the standard logistic formulation) may enable one to distinguish between these two possibilities.  The picture that seems so often described is one of no change in mean, followed by a sudden jump.  Such a pattern can be produced in a bistable system simply by waiting long enough – as addressed through the theory of large deviations.  Such a case may instead result from loss of stability, even without the mean changing.  To explore this, I’ve constructed an example explicitly to avoid the mean changing but still show a change in stability before the bifurcation:</p>
+<p><span class="math">\[ d(x) = a \left( \hat x - K \right) + e K \]</span></p>
+<p>and</p>
+<p><span class="math">\[ b(x) = \frac{e K x^p}{x^p+h^p} \]</span></p>
+<p>with $ a $ as the bifurcation parameter:</p>
+<figure>
+<img src="http://farm2.static.flickr.com/1432/5115931711_c9c1142a7e_o.gif" />
+</figure>
+<p>The red line is the death rate, blue the birth rate, and black the difference.  (Code is the first figure in this <a href="http://github.com/cboettig/structured-populations/blob/54dbdb578f5a91e2796ce2c097f4abeca8719d30/demos/saddle_analytics.R">version of saddle_analytics .R</a>).  Such cases may have a rather simpler analysis, since changes in the equilibrium size can be ignored, but are less general and hence less common than the cases that may include changes in expected value of the state.</p>
+<p>Of course one can also imagine examples where most of the change will occur pretty much without warning, i.e. if the growth rate function looks like:</p>
+<figure>
+<img src="http://farm2.staticflickr.com/1327/5116083962_6c1334dd21_o.jpg" />
+</figure>
+<p>Then the unstable point moves a great deal closer but no stability is lost until right before the bifurcation, hence there is very little warning.  In either case, there is a tendency to attempt to correct for any trend.  The general idea of this is quite valid – the loss of stability should appear in the variance, while the trend could have other causes (so could an increase in variance, but leaving that aside), so we do need to handle this correctly.  However, this overlooks the crucial second observation:</p>
+<h3 id="noise-dependence-on-mean">Noise dependence on mean</h3>
+<p>In general, the noise magnitude scales with the system state, as either <span class="math">\(\propto \sqrt{X_t} d W_t\)</span> (in our demographic examples) or linearly. (environmental noise)   The decreasing state can obscure the increasing variance due to loss of stability.  Methods which simply subtract out a trend will fail to reflect this phenomenon.  At least for ecological systems where the state is a population abundance driven by a birth-death process, the assumption of no dependence,</p>
+<p><span class="math">\[ dX_t = \alpha (\theta - X_t) dt + \sigma dW_t \]</span></p>
+<p>is unjustified.  This should not impact the actual estimate of the correlation time (autocorrelation rate or width of the Lorentzian from the power transform), but does impact the variance.</p>
+<h3 id="reflections-in-an-example">Reflections in an example</h3>
+<p>Example coming: consider the isotope data in the climate change shifts, showing several jumps and among the examples considered in Dakos et al.  2008:</p>
+<figure>
+<img src="http://openwetware.org/images/e/ec/DeuteriumCore.png" alt="http://openwetware.org/images/e/ec/DeuteriumCore.png" /><figcaption>http://openwetware.org/images/e/ec/DeuteriumCore.png</figcaption>
+</figure>
+<p>See other data sets, listed in<a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Stochastic_Population_Dynamics/2010/04/02">earlier lab notebook entry (still on OWW</a>).</p>
+<p>http://www.flickr.com/photos/cboettig/5115516967/in/photostream/</p>
+<h3 id="comments-on-ons">Comments on ONS</h3>
+<p>Images today are all included from flickr stream, embedded with Flickr Gallery plugin with the exception of the gif. As viewing animated gifs requires access to the original image, this prompted me to upgrade to Flickr Pro. Will be interesting to explore what can be done without limits, meanwhile the animated gif is a bit annoying. Today’s live feed reflects some of explorations on R animations in gifs and otherwise, see <a href="http://www.delicious.com/cboettig/animation">my bookmarks in delicious</a>.</p>
+<p>Recent posts have adopted the WP LaTeX plugin for equations.  Seems to work better than a few other plug-ins I tried (strange positioning etc), but open to suggestions on quick load times, machine readable equations, proper appearance.</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2010-10-25 23:24:45 +0000" 
+    property="dc:created">25 Oct 2010</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2010/10/21/warning-signals-2.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2010/10/26/correcting-for-the-mean-dynamics.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2010/commits/master/_posts/2010-10-25-wrong-picture-wrong-model-why-warning-signals-dont-look-like-rare-events.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2010/categories.html#open-science">open-science</a>
+    , 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2010/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2010/tags.html#warning-signals">#warning-signals</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2010/commit/ff29234b6fed31e0891f4590b98d3c526a217d22/_posts/2010-10-25-wrong-picture-wrong-model-why-warning-signals-dont-look-like-rare-events.md"> ff29234b6fed31e0891f4590b98d3c526a217d22</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Wrong picture, wrong model: why warning signals don't look like rare events
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2010-10-25
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/10/25/wrong-picture-wrong-model-why-warning-signals-dont-look-like-rare-events.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

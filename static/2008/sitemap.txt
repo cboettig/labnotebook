@@ -1,0 +1,12 @@
+ 
+http://www.carlboettiger.info/2008/R.xml  
+http://www.carlboettiger.info/2008/atom.xml  
+http://www.carlboettiger.info/2008/blog.xml  
+http://www.carlboettiger.info/2008/categories.html  
+http://www.carlboettiger.info/2008/index.html  
+http://www.carlboettiger.info/2008/lab-notebook.html  
+http://www.carlboettiger.info/2008/sitemap.txt  
+http://www.carlboettiger.info/2008/tags.html 
+
+ 
+http://www.carlboettiger.info/2008/06/09/PopBio-Core-Review-Notes.html 

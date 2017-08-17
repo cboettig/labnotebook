@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Lab Notebook - </title>
+  <link href="//.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2016-01-03T22:28:13+00:00</updated>
+  <id>http://www.carlboettiger.info/</id>
+  <author>
+    <name>Carl Boettiger</name>
+    <email>cboettig@gmail.com</email>
+  </author>
+
+   
+ <entry>
+   <title>Fun Standardizing Non Standard Evaluation</title>
+   <link href="http://www.carlboettiger.info/2015/02/06/fun-standardizing-non-standard-evaluation.html"/>
+<updated>2015-02-06T00:00:00+00:00</updated>
+   <id>/02/06/fun-standardizing-non-standard-evaluation</id>
+   <content type="html">&lt;p&gt;Using &lt;code&gt;dplyr&lt;/code&gt; calls on the back-end of the &lt;code&gt;rfishbase&lt;/code&gt; re-write means working around the non-standard evaluation (NSE), as described in the &lt;a href=&quot;&quot;&gt;&lt;code&gt;dplyr&lt;/code&gt; vignette&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Grab the data I was using for this:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;library&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;dplyr&amp;quot;&lt;/span&gt;)
+downloader::&lt;span class=&quot;kw&quot;&gt;download&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;https://github.com/cboettig/2015/raw/fc0d9185659e7976927d0ec91981912537ac6018/assets/data/2015-02-06-taxa.csv&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;taxa.csv&amp;quot;&lt;/span&gt;)
+all_taxa &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;read.csv&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;taxa.csv&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Consider a simple NSE &lt;code&gt;dplyr&lt;/code&gt; call:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;x &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;filter&lt;/span&gt;(all_taxa, Family ==&lt;span class=&quot;st&quot;&gt; &amp;#39;Scaridae&amp;#39;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The best SE version of this just needs to use the formula expression, &lt;code&gt;~&lt;/code&gt;, the &lt;code&gt;_&lt;/code&gt; SE version of the function and it’s &lt;code&gt;.dots&lt;/code&gt; argument:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;.dots &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;list&lt;/span&gt;(~Family ==&lt;span class=&quot;st&quot;&gt; &amp;#39;Scaridae&amp;#39;&lt;/span&gt;)
+x1 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;filter_&lt;/span&gt;(all_taxa, &lt;span class=&quot;dt&quot;&gt;.dots=&lt;/span&gt;.dots)
+
+&lt;span class=&quot;kw&quot;&gt;identical&lt;/span&gt;(x, x1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This lets us treat the arguments (e.g. values of the factor on which we filter) as variables:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;family &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;#39;Scaridae&amp;#39;&lt;/span&gt;
+.dots &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;list&lt;/span&gt;(~Family ==&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;family)
+x2 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;filter_&lt;/span&gt;(all_taxa, &lt;span class=&quot;dt&quot;&gt;.dots=&lt;/span&gt;.dots)
+&lt;span class=&quot;kw&quot;&gt;identical&lt;/span&gt;(x, x2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If we want both the key and value to vary, we need to get pretty fancy to subvert the non-standard evaluation:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;library&lt;/span&gt;(lazyeval)
+family &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;#39;Scaridae&amp;#39;&lt;/span&gt;
+field &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;#39;Family&amp;#39;&lt;/span&gt;
+.dots &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;list&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;interp&lt;/span&gt;(~y ==&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;x, 
+                     &lt;span class=&quot;dt&quot;&gt;.values =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;list&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;y =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;as.name&lt;/span&gt;(field), &lt;span class=&quot;dt&quot;&gt;x =&lt;/span&gt; family)))
+x3 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;filter_&lt;/span&gt;(all_taxa, &lt;span class=&quot;dt&quot;&gt;.dots=&lt;/span&gt;.dots)
+&lt;span class=&quot;kw&quot;&gt;identical&lt;/span&gt;(x, x3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At bit more fun to wrap this into a function where we take arbitrary number of arguments as name-value pairs:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;query &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;list&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;Family =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;#39;Scaridae&amp;#39;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;SpecCode =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;5537&lt;/span&gt;)
+dots &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;lapply&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;names&lt;/span&gt;(query), function(level){
+    value &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;query[[level]]
+    &lt;span class=&quot;kw&quot;&gt;interp&lt;/span&gt;(~y ==&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;x, 
+                &lt;span class=&quot;dt&quot;&gt;.values =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;list&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;y =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;as.name&lt;/span&gt;(level), &lt;span class=&quot;dt&quot;&gt;x =&lt;/span&gt; value))
+  })
+  
+x3 &amp;lt;-&lt;span class=&quot;st&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;filter_&lt;/span&gt;(all_taxa, &lt;span class=&quot;dt&quot;&gt;.dots =&lt;/span&gt; dots) &lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;more-fun-standardizing-nse&quot;&gt;More fun standardizing NSE&lt;/h2&gt;
+&lt;p&gt;The previous examples show only applications to &lt;code&gt;filter_()&lt;/code&gt;. While the general idea is the same, this pattern doesn’t translate directly for other functions, such as &lt;code&gt;mutate_&lt;/code&gt;. Here’s some common patterns I’ve adopted when using &lt;code&gt;mutate_()&lt;/code&gt;. First consider the familiar NSE useage:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;df &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;mutate&lt;/span&gt;(mtcars, &lt;span class=&quot;dt&quot;&gt;displ_l =&lt;/span&gt; disp /&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;fl&quot;&gt;61.0237&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;head&lt;/span&gt;(df)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;   mpg cyl disp  hp drat    wt  qsec vs am gear carb  displ_l
+1 21.0   6  160 110 3.90 2.620 16.46  0  1    4    4 2.621932
+2 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4 2.621932
+3 22.8   4  108  93 3.85 2.320 18.61  1  1    4    1 1.769804
+4 21.4   6  258 110 3.08 3.215 19.44  1  0    3    1 4.227866
+5 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2 5.899347
+6 18.1   6  225 105 2.76 3.460 20.22  1  0    3    1 3.687092&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again we use &lt;code&gt;list(interp(&lt;/code&gt; pattern, but note that we specify the name for our new column using &lt;code&gt;setNames&lt;/code&gt; (naming the elements of the list).&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;dots &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;setNames&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;list&lt;/span&gt;(lazyeval::&lt;span class=&quot;kw&quot;&gt;interp&lt;/span&gt;(~x /&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;y, &lt;span class=&quot;dt&quot;&gt;x =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;quote&lt;/span&gt;(disp), &lt;span class=&quot;dt&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;fl&quot;&gt;61.0237&lt;/span&gt;)), &lt;span class=&quot;st&quot;&gt;&amp;quot;displ_l&amp;quot;&lt;/span&gt;)
+df2 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;mutate_&lt;/span&gt;(mtcars, &lt;span class=&quot;dt&quot;&gt;.dots =&lt;/span&gt; dots)
+&lt;span class=&quot;kw&quot;&gt;identical&lt;/span&gt;(df, df2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Of course the use &lt;code&gt;y&lt;/code&gt; could be skipped for a more direct value if that was not a variable.&lt;/p&gt;
+&lt;h2 id=&quot;more-dplyr-patterns&quot;&gt;More &lt;code&gt;dplyr&lt;/code&gt; patterns&lt;/h2&gt;
+&lt;p&gt;Also thought I would scribble down some other common &lt;code&gt;dplyr&lt;/code&gt; patterns I find myself re-using.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;applying a function that returns a &lt;code&gt;data.frame&lt;/code&gt; to each element of a &lt;code&gt;list&lt;/code&gt; and coercing the combined output to a &lt;code&gt;data.frame&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;mylist %&amp;gt;%&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;lapply&lt;/span&gt;(myfun) %&amp;gt;%&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;dplyr::&lt;span class=&quot;kw&quot;&gt;bind_rows&lt;/span&gt;() &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To place this deeper in the &lt;code&gt;hadleyverse&lt;/code&gt;, &lt;code&gt;purrr::map&lt;/code&gt; could be dropped in for &lt;code&gt;lapply&lt;/code&gt; in the above example.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Another common pattern for me is &lt;code&gt;expand.grid() %&amp;gt;% group_by() %&amp;gt;% do()&lt;/code&gt;, Here’s a &lt;a href=&quot;https://github.com/cboettig/multiple_uncertainty/blob/3f42aa4623f40cee70d5a9d52a8cce73617248a5/inst/scripts/table.Rmd&quot;&gt;recent example of mine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Also includes an example of how to define &lt;code&gt;group_by_all()&lt;/code&gt; since that is usually the grouping I need from an &lt;code&gt;expand.grid()&lt;/code&gt; call (that is, I want to apply over all combinations of some parameter settings, etc)&lt;/p&gt;
+&lt;p&gt;Something I hope is not a common pattern but one I struggled with for a bit: making recursive calls of the above pattern for nested lists. This code in RNeXML illustrates my solution, which required both &lt;a href=&quot;https://github.com/ropensci/RNeXML/blob/b596839e3a1fc53e74b46fd935d91dca59a9da98/R/get_metadata.R#L50-L59&quot;&gt;function recursion and function closure&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+
+
+</feed>

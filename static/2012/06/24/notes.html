@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Notes</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="ropensci, eml, reading, code-tricks" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Notes" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2013-06-24 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/06/24/notes.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Notes" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2013-06-24 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/06/24/notes.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2013-06-24 00:00:00 +0000"/>
+<meta name="citation_title" content="Notes"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Notes</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h2 id="exploring-xml-schema-in-r">Exploring XML Schema in R</h2>
+<p>I danced around the room after reading these lines in the excellent <a href="http://www.springer.com/statistics/computational+statistics/book/978-1-4614-7899-7">XML and Web Technologies for Data Sciences with R</a> book:</p>
+<blockquote>
+<p>We can generate S4 class definitions corresponding to the data structures that are represented in the XML document. We can programmatically generate R code that will map an XML document adhering to this schema to corresponding R data structures. Similarly, we can automate the creation of code to serialize, or write, an R object of a particular type to a suitable XML format corresponding to the schema</p>
+</blockquote>
+<p>Wow. Automatically turn EML objects into R objects and vice versa! Generate a NeXML parser for R automatically. The world is your oyster now!</p>
+<h2 id="diving-in">Diving in</h2>
+<p>Using <code>install_github(&quot;XMLSchema&quot;, &quot;omegahat&quot;)</code>.</p>
+<p>Trouble so far.</p>
+<h3 id="eml">EML</h3>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">readSchema</span>(<span class="st">&quot;eml.xsd&quot;</span>)</code></pre>
+<p>From Duncan:</p>
+<blockquote>
+<p>As I suspected from just the description of the problem, there is a recursive circularity in the schema files - eml-documentation.xsd imports eml-text.xsd which imports eml-documentation.xsd. I’ll try to find some time to handle this.</p>
+</blockquote>
+<p>Staying tuned…</p>
+<h3 id="nexml">NexML</h3>
+<p>This is a schema for phylogenetic trees. Being able to use this schema would be a big improvement over the current approach of our treebase package, which queries a vertically integrated database that is far less expressive then the NeXML schema.</p>
+<p>I tried this schema, but cannot download the file for some reason:</p>
+<pre class="sourceCode r"><code class="sourceCode r">nex &lt;-<span class="st"> </span><span class="kw">readSchema</span>(<span class="st">&quot;http://www.nexml.org/2009/nexml.xsd&quot;</span>)
+failed to load HTTP resource
+Error:<span class="st"> </span><span class="dv">1</span>:<span class="st"> </span>failed to load HTTP resource
+&gt;<span class="st"> </span></code></pre>
+<p>I download a copy from here and set its xsd/ directory as my working directory:</p>
+<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>nex &lt;-<span class="st"> </span><span class="kw">readSchema</span>(<span class="st">&quot;nexml.xsd&quot;</span>)
+Error:<span class="st"> </span>XML content does not seem to be XML:<span class="st"> &#39;./continuous.xsd&#39;</span></code></pre>
+<p>because the path should be <code>characters/continuous.xsd</code>. Not sure why I’m not managing to navigate the paths correctly here.</p>
+<h3 id="kml-example-from-book">KML example from book</h3>
+<p>I cannot load the KML schema directly from the website:</p>
+<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>kx =<span class="st"> &quot;https://developers.google.com/kml/schema/kml21.xsd&quot;</span>
+&gt;<span class="st"> </span>kml =<span class="st"> </span><span class="kw">readSchema</span>(kx)
+Error:<span class="st"> </span>XML content does not seem to be XML:<span class="st"> &#39;https://developers.google.com/kml/schema/kml21.xsd&#39;</span></code></pre>
+<p>Likewise,</p>
+<pre class="sourceCode r"><code class="sourceCode r">kml =<span class="st"> </span><span class="kw">readSchema</span>( <span class="st">&quot;http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd&quot;</span>)
+failed to load HTTP resource
+Error:<span class="st"> </span><span class="dv">1</span>:<span class="st"> </span>failed to load HTTP resource</code></pre>
+<p>fails, though the other example works</p>
+<pre class="sourceCode r"><code class="sourceCode r">pmml =<span class="st"> </span><span class="kw">readSchema</span>(<span class="st">&quot;http://www.dmg.org/v4-1/pmml-4-1.xsd&quot;</span>)</code></pre>
+<p>If I wget the xsd and save it locally first, then I can readSchema on the local file. If I have <code>options(error = recover)</code> set, then</p>
+<pre class="sourceCode r"><code class="sourceCode r"> <span class="kw">defineClasses</span>(kml)</code></pre>
+<p>gets me deep into the debugger. If I run it with <code>options(error=NULL)</code>, then I get warnings:</p>
+<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">defineClasses</span>(kml)
+<span class="kw">character</span>(<span class="dv">0</span>)
+Warning messages:
+<span class="dv">1</span>:<span class="st"> </span><span class="kw">In</span> (function (className, baseType, <span class="dt">where =</span> <span class="kw">globalenv</span>())  :
+<span class="st">  </span>http:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.Object is an existing class
+<span class="dv">2</span>:<span class="st"> </span><span class="kw">In</span> (function (className, baseType, <span class="dt">where =</span> <span class="kw">globalenv</span>())  :
+<span class="st">  </span>http:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.Feature is an existing class
+<span class="dv">3</span>:<span class="st"> </span><span class="kw">In</span> (function (className, baseType, <span class="dt">where =</span> <span class="kw">globalenv</span>())  :
+<span class="st">  </span>http:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.LookAt is an existing class
+<span class="dv">4</span>:<span class="st"> </span><span class="kw">In</span> (function (className, baseType, <span class="dt">where =</span> <span class="kw">globalenv</span>())  :
+<span class="st">  </span>http:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.Geometry is an existing class
+<span class="dv">5</span>:<span class="st"> </span><span class="kw">In</span> (function (className, baseType, <span class="dt">where =</span> <span class="kw">globalenv</span>())  :
+<span class="st">  </span>http:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.StyleSelector is an existing class
+<span class="dv">6</span>:<span class="st"> </span><span class="kw">In</span> (function (className, baseType, <span class="dt">where =</span> <span class="kw">globalenv</span>())  :
+<span class="st">  </span>http:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.TimePrimitive is an existing class
+&gt;<span class="st"> </span></code></pre>
+<p>I load an minimal <a href="http://en.wikipedia.org/wiki/Keyhole_Markup_Language">example file</a> and try fromXML, but hit an error:</p>
+<pre><code>&gt; doc &lt;- xmlParse(&quot;kmlexample.xml&quot;)
+&gt; fromXML(doc)
+Error in UseMethod(&quot;xmlAttrs&quot;, node) : 
+  no applicable method for &#39;xmlAttrs&#39; applied to an object of class &quot;c(&#39;XMLInternalDocument&#39;, &#39;XMLAbstractDocument&#39;)&quot;</code></pre>
+<p>Stay tuned for more from Duncan on getting this rolling..</p>
+<h3 id="reading">Reading</h3>
+<ul>
+<li><p>Early warning signals in multivariate dynamics: <code>r citet(&quot;http://arxiv.org/abs/1306.3465&quot;, &quot;discusses&quot;)</code>. Population size grows as approaches collapse, multidemensional data needed to detect slowing down (eigenvalue estimates from multidimensional autoregressive model)</p></li>
+<li><p>Little grants are more bang for the buck than big grants: <code>r citet(&quot;10.1371/journal.pone.0065263&quot;, &quot;discusses&quot;)</code></p></li>
+</ul>
+<h3 id="code-tricks">Code tricks</h3>
+<p>From Egan, on getting a useful version of rvm on Ubuntu 12.04 (lets me install <code>bundle install</code> on the lab-notebook gemfile so I can deploy from <code>zero.ucdavis</code>, etc.)</p>
+<blockquote>
+<p>RVM has to be installed locally because the packaged version is broken. Before installation, the following packages need to be installed globally (unless you have root access in which case the installer will take care of them):</p>
+</blockquote>
+<pre><code>    bison
+    libyaml-dev
+    libgdbm-dev
+    gawk
+    sqlite</code></pre>
+<blockquote>
+<p>To install RVM, run:</p>
+</blockquote>
+<pre><code>    \curl -L https://get.rvm.io | bash -s stable --ruby --autolibs=enable --auto-dotfiles</code></pre>
+<blockquote>
+<p>which takes a while because it downloads and builds a lot. The installer takes care of the configuration automatically and all you need to do after installation is log into a fresh shell to source the required functions and environment.</p>
+</blockquote>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2013-06-24 00:00:00 +0000" 
+    property="dc:created">24 Jun 2013</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/06/23/notes-on-leveraging-the-ecological-markup-language.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/06/26/starting-an-EML-package-for-R.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2013-06-24-notes.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#ropensci">#ropensci</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#eml">#eml</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#reading">#reading</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#code-tricks">#code-tricks</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/e4a6f06ba2ea54379ee5a839c69fe859dade9553/_posts/2013-06-24-notes.md"> e4a6f06ba2ea54379ee5a839c69fe859dade9553</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Notes
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2013-06-24
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/06/24/notes.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

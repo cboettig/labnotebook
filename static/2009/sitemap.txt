@@ -1,0 +1,15 @@
+ 
+http://www.carlboettiger.info/2009/R.xml  
+http://www.carlboettiger.info/2009/atom.xml  
+http://www.carlboettiger.info/2009/blog.xml  
+http://www.carlboettiger.info/2009/categories.html  
+http://www.carlboettiger.info/2009/index.html  
+http://www.carlboettiger.info/2009/lab-notebook.html  
+http://www.carlboettiger.info/2009/sitemap.txt  
+http://www.carlboettiger.info/2009/tags.html 
+
+ 
+http://www.carlboettiger.info/2009/08/25/stochastic-methods.html  
+http://www.carlboettiger.info/2009/08/25/drift-effects.html  
+http://www.carlboettiger.info/2009/08/25/diffusion-solution.html  
+http://www.carlboettiger.info/2009/07/28/branching-times.html 

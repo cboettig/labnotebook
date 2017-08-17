@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Migrating Oww Posts To Jekyll</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="notebook-technology, Jekyll, code-tricks" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Migrating Oww Posts To Jekyll" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2012-09-27 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/09/27/Migrating-OWW-posts-to-Jekyll.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Migrating Oww Posts To Jekyll" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2012-09-27 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/09/27/Migrating-OWW-posts-to-Jekyll.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2012-09-27 00:00:00 +0000"/>
+<meta name="citation_title" content="Migrating Oww Posts To Jekyll"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Migrating Oww Posts To Jekyll</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>This Open Lab Notebook started on a public MediaWiki-based site, <a href="http://openwetware.org">OpenWetWare</a> (OWW), which was created with the ambitious vision of having a single wiki for biological sciences (or at least, synthetic microbiology, since such the wiki grew out of a collection of such labs). Users could have their own pages that served as a personal website or lab group site, contribute pages on specific protocols, host course websites, and most interestingly, were encouraged to create open lab notebooks using specially designed templates for the purpose. From January through October of 2010, I kept all my notes in two separate OWW notebooks: one for entries on my <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Comparative_Phylogenetics">Comparative Phylogenetics</a> research, and a seperate one for entries in <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Stochastic_Population_Dynamics">Stochastic Population Dynamics</a>. Each notebook had a cover page and then entries by day, linked by the calendar box on the cover page. This was a neat idea an excellent introduction into the world of open lab notebooks.</p>
+<p>In September of 2010 I began to leave the OpenWetWare platform to start my own lab notebook based on a privately hosted copy Wordpress. The benefits of being on a shared community platform were minimized by the relatively small number of active users mostly belonging to a different field. Downtime on the site and a lack of any easy way to access my content off-line or back up content also made me increasingly nervous, while the difficulty in adding additional tools or functionality (such as RSS feeds to new entries, personal tags, improved search) collectively spurred my decision to move to Wordpress. At the time I had knew of no easy way to migrate my OWW posts, so I allowed them to remain where they were while I continued further notes in my newly minted Wordpress installation.</p>
+<p>In April of 2012 I began to experiment with the static-blogging engine, Jekyll. My adoption of markdown, facilitated by my discovery of pandoc and the advent of <code>knitr</code>, together with my complete submersion into a Github-based workflow led me to first consider Jekyll. Wordpress was slow and heavy, both for creating entries in the online editor (though I did start pushing markdown-based entries to Wordpress through it’s API and the associated R package). Though Jekyll has a slightly steeper learning curve to start, once you have the basics down complicated things aren’t any harder than easy ones, whereas on Wordpress the basics are trivial but complex customization becomes a full-time web-developer challenge. In Jekyll, it was rather easy to migrate all my old entries from the previous platforms onto the new one.</p>
+<p>In the <a href="http://www.carlboettiger.info/2012/09/19/migrating-from-wordpress-to-jekyll.html">previous post</a> I describe exporting my Wordpress-based entries using a python script from Thomas Frossman. To export my OpenWetWare entries I relied on the rather excellent MediaWiki API. While I began by grabbing the content of each post in MediaWiki syntax, I soon realized it was easier to grab the content already parsed as HTML (using a different API call) and then parse the HTML into markdown using Pandoc. (Pandoc’s developmental version does have experimental support for reading MediaWiki syntax now). I then added a few substitutions to standardize my tags and categories. Here’s my R call to the MediaWiki API (see <a href="https://github.com/cboettig/sandbox/blob/1efa80e913006051083544275f6af9b5ab9ccb0a/wiki_get.R">wiki_get.R</a>):</p>
+<pre class="sourceCode r"><code class="sourceCode r">wiki_parse &lt;-<span class="st"> </span>function(page, baseurl, <span class="dt">format=</span><span class="st">&quot;json&quot;</span>, ...){
+  <span class="kw">require</span>(httr)
+  action =<span class="st"> &quot;parse&quot;</span>
+  addr &lt;-<span class="st"> </span><span class="kw">paste</span>(baseurl, <span class="st">&quot;/api.php?format=&quot;</span>, format, <span class="st">&quot;&amp;action=&quot;</span>, action, <span class="st">&quot;&amp;page=&quot;</span>, page, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)
+  config &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">add_headers</span>(<span class="st">&quot;User-Agent&quot;</span> =<span class="st"> &quot;rwiki&quot;</span>), ...)
+  out &lt;-<span class="st"> </span><span class="kw">GET</span>(addr, <span class="dt">config=</span>config)
+  <span class="kw">parsed_content</span>(out)
+}</code></pre>
+<p>I create a few helper functions for parsing the html into markdown, and also extracting and adding the metadata into Jekyll’s YAML headers (see <a href="https://github.com/cboettig/sandbox/blob/1efa80e913006051083544275f6af9b5ab9ccb0a/export_oww.R">export_oww.R</a>)</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(httr)
+<span class="kw">require</span>(gsubfn)
+
+oww_to_md &lt;-<span class="st"> </span>function(pages, <span class="dt">user=</span><span class="st">&quot;Carl_Boettiger&quot;</span>,  <span class="dt">baseurl =</span> <span class="st">&quot;http://openwetware.org&quot;</span>){
+  <span class="co"># Store filenames (with dates) and categories for each page, for reference later</span>
+  filenames &lt;-<span class="st"> </span><span class="kw">get_filenames</span>(pages)
+  categories &lt;-<span class="st"> </span><span class="kw">get_categories</span>(pages)
+  ## Use the API function to extract the content
+  parsed &lt;-<span class="st"> </span><span class="kw">export_oww</span>(pages, user, baseurl)
+  ## Add the baseurl back into all the links
+  htmls &lt;-<span class="st"> </span><span class="kw">add_baseurl</span>(parsed)
+  ## Create YAML header text
+  headers &lt;-<span class="st"> </span><span class="kw">add_header_txt</span>(parsed, categories)
+  ## Use pandoc to convert the html to markdown
+  mds &lt;-<span class="st"> </span><span class="kw">html_to_md</span>(htmls, filenames) 
+  ## Delete the OWW header info we don&#39;t want in the markdown
+  mds &lt;-<span class="st"> </span><span class="kw">clean_md</span>(mds)
+  ## Stick headers onto markdown files and name them according to filenames
+  <span class="kw">write_mds</span>(mds, headers, filenames) 
+}
+
+get_filenames &lt;-<span class="st"> </span>function(pages){
+  <span class="kw">lapply</span>(pages, function(p){
+    p &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot; &quot;</span>, <span class="st">&quot;_&quot;</span>, p)
+    filename &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;/&quot;</span>, <span class="st">&quot;-&quot;</span>, p)
+    filename &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;(.*)-(</span><span class="ch">\\</span><span class="st">d+-</span><span class="ch">\\</span><span class="st">d+-</span><span class="ch">\\</span><span class="st">d+)&quot;</span>, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">2-</span><span class="ch">\\</span><span class="st">1&quot;</span>, filename)
+  })
+}
+
+<span class="co">#&#39; Take a list of page titles to a user&#39;s OWW notebooks and export them as Jekyll markdown entries.  </span>
+get_categories &lt;-<span class="st"> </span>function(pages){
+  <span class="kw">lapply</span>(pages, function(p){
+    p &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;_&quot;</span>, <span class="st">&quot; &quot;</span>, p)
+    filename &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;/&quot;</span>, <span class="st">&quot;-&quot;</span>, p)
+    category &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;(.*)-(</span><span class="ch">\\</span><span class="st">d+-</span><span class="ch">\\</span><span class="st">d+-</span><span class="ch">\\</span><span class="st">d+)&quot;</span>, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">1&quot;</span>, filename)
+  })
+}
+
+
+<span class="co">#&#39; Take a list of page titles to a user&#39;s OWW notebooks and export them as Jekyll markdown entries.  </span>
+export_oww &lt;-<span class="st"> </span>function(pages, <span class="dt">user=</span><span class="st">&quot;Carl_Boettiger&quot;</span>,  <span class="dt">baseurl=</span>  <span class="st">&quot;http://openwetware.org&quot;</span>){
+  <span class="kw">lapply</span>(pages, function(p){
+    p &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot; &quot;</span>, <span class="st">&quot;_&quot;</span>, p)
+    page &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;User:&quot;</span>, user, <span class="st">&quot;/Notebook/&quot;</span>, p, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)
+    out &lt;-<span class="st"> </span><span class="kw">wiki_parse</span>(page, <span class="dt">baseurl=</span>baseurl)
+  })
+}
+
+add_baseurl &lt;-<span class="st"> </span>function(parsed,  <span class="dt">baseurl =</span> <span class="st">&quot;http://openwetware.org&quot;</span>){
+  <span class="kw">lapply</span>(parsed, function(out){
+    html &lt;-<span class="st"> </span>out$parse$text[[<span class="dv">1</span>]]
+    html &lt;-<span class="st"> </span><span class="kw">gsubfn</span>(<span class="st">&quot;src=</span><span class="ch">\&quot;</span><span class="st">/images/&quot;</span>, <span class="kw">paste</span>(<span class="st">&quot;src=</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, 
+                   baseurl,<span class="st">&quot;/images/&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>), html)
+    html &lt;-<span class="st"> </span><span class="kw">gsubfn</span>(<span class="st">&quot;href=</span><span class="ch">\&quot;</span><span class="st">/wiki/&quot;</span>, <span class="kw">paste</span>(<span class="st">&quot;src=</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, 
+                   baseurl,<span class="st">&quot;/wiki/&quot;</span>, 
+                    <span class="dt">sep=</span><span class="st">&quot;&quot;</span>), html)
+  })
+}
+
+add_header_txt &lt;-<span class="st"> </span>function(parsed, mycategories){
+  <span class="kw">sapply</span>(<span class="dv">1</span>:<span class="kw">length</span>(parsed), function(i){
+    out &lt;-<span class="st"> </span>parsed[[i]]
+    category &lt;-<span class="st"> </span>mycategories[[i]]
+    if(<span class="kw">length</span>(out$parse$categories)&gt;<span class="dv">0</span>){
+      categories &lt;-<span class="st"> </span><span class="kw">sapply</span>(out$parse$categories, function(x) x$<span class="st">`</span><span class="dt">*</span><span class="st">`</span>)
+      <span class="kw">gsub</span>(<span class="st">&quot;_&quot;</span>, <span class="st">&quot; &quot;</span>, categories)
+      ## Standarize some of my tags, called &quot;categories&quot; on OWW
+      tags &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;tags: &quot;</span>, <span class="st">&quot;[&quot;</span>, 
+                          <span class="kw">paste0</span>(categories, <span class="dt">collapse =</span> <span class="st">&quot;, &quot;</span>),
+                          <span class="st">&quot;]&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)  
+    } else {
+      tags &lt;-<span class="st"> &quot;&quot;</span>
+    }
+    
+    header &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;---&quot;</span>, 
+                <span class="st">&quot;layout: post&quot;</span>,
+                tags, 
+                <span class="kw">paste</span>(<span class="st">&quot;categories: &quot;</span>, category),
+                <span class="st">&quot;---</span><span class="ch">\n\n</span><span class="st">&quot;</span>)
+  })
+}
+
+
+html_to_md &lt;-<span class="st"> </span>function(htmls, filenames){
+  <span class="kw">lapply</span>(<span class="dv">1</span>:<span class="kw">length</span>(htmls), function(html){
+    <span class="kw">writeLines</span>(htmls[[i]], <span class="kw">paste</span>(filenames[i], <span class="st">&quot;.html&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>))
+    md &lt;-<span class="st"> </span><span class="kw">system</span>(<span class="kw">paste</span>(<span class="st">&quot;pandoc &quot;</span>, filenames[i], <span class="st">&quot;.html -w markdown&quot;</span>, 
+                       <span class="dt">sep=</span><span class="st">&quot;&quot;</span>), <span class="dt">intern=</span><span class="ot">TRUE</span>)
+  })
+}
+
+
+clean_md &lt;-<span class="st"> </span>function(mds){
+  <span class="kw">lapply</span>(mds, function(md){
+    ## Remove OWW header
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;!</span><span class="ch">\\</span><span class="st">[image</span><span class="ch">\\</span><span class="st">]</span><span class="ch">\\</span><span class="st">(http://openwetware.org/images/f/f8/Owwnotebook_icon.png</span><span class="ch">\\</span><span class="st">)&quot;</span>, <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;!</span><span class="ch">\\</span><span class="st">[image</span><span class="ch">\\</span><span class="st">]</span><span class="ch">\\</span><span class="st">(http://openwetware.org/images/9/94/Report.png</span><span class="ch">\\</span><span class="st">)&quot;</span>,  <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;Main project&quot;</span>, <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;page</span><span class="ch">\\\\</span><span class="st">&quot;</span>, <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;!</span><span class="ch">\\</span><span class="st">[image</span><span class="ch">\\</span><span class="st">]</span><span class="ch">\\</span><span class="st">(http://openwetware.org/images/c/c3/Resultset_previous.png</span><span class="ch">\\</span><span class="st">)&quot;</span>,  <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;Previous$&quot;</span>,  <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;^entry Next$&quot;</span>, <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;!</span><span class="ch">\\</span><span class="st">[image</span><span class="ch">\\</span><span class="st">]</span><span class="ch">\\</span><span class="st">(http://openwetware.org/images/5/5c/Resultset_next.png</span><span class="ch">\\</span><span class="st">)&quot;</span>, <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;^entry$&quot;</span>, <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;^Stochastic Population Dynamics&quot;</span>, <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;^Comparative Phylogenetics$&quot;</span>, <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;^Teaching$&quot;</span>, <span class="st">&quot;&quot;</span>, md)
+  })
+}
+
+
+
+write_md &lt;-<span class="st"> </span>function(mds, headers, filenames){
+  <span class="kw">lapply</span>(<span class="dv">1</span>:<span class="kw">length</span>(mds), function(i){
+    <span class="kw">writeLines</span>(<span class="kw">c</span>(headers[[i]], mds[[i]]), <span class="kw">paste</span>(filenames[i], <span class="st">&quot;.markdown&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)) 
+  })
+}</code></pre>
+<p>If or when I change platform again, it should be even easier. With all my posts in markdown, I can easily move them into an ebook or pdf using Pandoc (currently requires stripping the YAML headers first, though it would be great if Pandoc eventually supported metadata headers in YAML). Github renders the markdown of each post automatically, so the content of most posts can be read directly from the Github repository, <a href="https://github.com/cboettig/labnotebook/tree/master/_posts">cboettig/labnotebook</a>.</p>
+<h2 id="misc-tricks">Misc tricks</h2>
+<p>The unix <code>rename</code> utility comes in handy:</p>
+<pre><code>rename &#39;s/Comparative_Phylogenetics/Comparative-Phylogenetics-Notebook-(from-OWW)/&#39; *Comparative_Phylogenetics.markdown
+rename &#39;s/Stochastic_Population_Dynamics/Stochastic-Population-Dynamics-Notebook-(from-OWW)/&#39; *Stochastic_Population_Dynamics.markdown</code></pre>
+<p>And a vim mapping to flip through 100s of source files quickly:</p>
+<pre><code>:map &lt;F2&gt; :N&lt;CR&gt;
+:map &lt;F3&gt; :n&lt;CR&gt;</code></pre>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2012-09-27 00:00:00 +0000" 
+    property="dc:created">27 Sep 2012</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/09/19/prosecutors-fallacy.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/09/28/Welcome-to-my-lab-notebook.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2012-09-27-Migrating-OWW-posts-to-Jekyll.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#notebook-technology">#notebook-technology</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#Jekyll">#Jekyll</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#code-tricks">#code-tricks</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/f8c23ad24786fee24f8b7f0d1fb799527381ca7d/_posts/2012-09-27-Migrating-OWW-posts-to-Jekyll.md"> f8c23ad24786fee24f8b7f0d1fb799527381ca7d</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Migrating Oww Posts To Jekyll
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2012-09-27
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/09/27/Migrating-OWW-posts-to-Jekyll.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

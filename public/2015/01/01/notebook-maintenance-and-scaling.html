@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Notebook Maintenance And Scaling</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="blog" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Notebook Maintenance And Scaling" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2015-01-01 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/01/01/notebook-maintenance-and-scaling.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Notebook Maintenance And Scaling" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2015-01-01 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/01/01/notebook-maintenance-and-scaling.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2015-01-01 00:00:00 +0000"/>
+<meta name="citation_title" content="Notebook Maintenance And Scaling"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="http://www.carlboettiger.info/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Notebook Maintenance And Scaling</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Electronic notebooks may not run out of pages like a paper notebook, but with five years of entries (963 posts, with a repository size approaching half a gigabyte), together with various files, layouts, experimentation and version history, some thought must be given to scale. Two closely related considerations add to this further: dynamic builds with <code>knitr</code> from <code>.Rmd</code> versions and hosting image files directly in the notebook repository rather than uploading to an external site (previously flickr or on the gh-pages of other project repositories). This has several advantages (more on that later) but in the immediate term it makes building the repository potentially slower (though knitr’s caching helps) and increases the repository size more rapidly (even with text-based <code>svg</code> images).</p>
+<p>The current Jekyll system keeps all posts in a single repository and rebuilds the HTML files for each every time. This is already showing some strains: for instance, for some reason the git hashes when generating the site automatically on Travis cease updating for older posts, though this problem doesn’t occur when building locally. Overall, the Jekyll platform is rather snappy so this isn’t an unmanageable size, but is sufficient to demonstrate that the approach isn’t able to scale indefinitely either.</p>
+<p>So, as with the paper notebook whose pages are filled, it’s time to crack open a new binding and shelve the old notebooks – somewhere handy to be sure, but no longer one voluminous tome on the desk.</p>
+<figure>
+<img src="/2015/assets/figures/posts/2015-01-01/notebooks-shelf.jpg" />
+</figure>
+<h2 id="a-multi-repository-approach">A multi-repository approach</h2>
+<p>To address this, I’m am trying out breaking the notebook over multiple repositories: using a new repository for each year’s worth of entries, and an additional repository to provide the basic pages (<code>home</code>, <code>teaching</code>, <code>vita</code>, etc. from the navbar) along with the assets used by all the other sites (css, fonts, javascript, etc). This avoids rebuilding the posts of notebooks from all previous years every time the Jekyll site is compiled, keeping the repositories smaller, the site more modular and more easy to scale.</p>
+<p>This raises some challenges such as keeping the layout and appearance consistent without maintaining copies of layout files across multiple repositories; managing URLs and paths across different repositories, and aggregating metadata (posts, tags, categories).</p>
+<h2 id="repos-paths-and-urls-for-the-multi-notebook">Repos, Paths, and URLs for the multi-notebook</h2>
+<p>Even with the source files (such as <code>.md</code> entries, templates, etc.) in different repositories it would be simple enough to combine the generated HTML files from each repository into a single output directory serving the site (on Github or elsewhere). However, GitHub’s <code>gh-pages</code> provide an elegantly more modular way to do this already. GitHub uses the URL of the user’s repository (the repo named <code>username.github.io</code>, which also serves as the site URL unless a different domain is specified using a CNAME file) as the root domain for all other <code>gh-pages</code> branches on the Github repo.</p>
+<p>Thus, I have created repositories named <code>2015</code>, <code>2014</code>, etc, which will serve the notebooks for the corresponding year from their own <code>gh-pages</code> branch. Moving my <code>www.carlboettiger.info</code> (the use of a subdomain such as <code>www</code> is required in order to benefit from Github’s CDN, though if it is omitted the domain provider will add it) from my <code>labnotebook</code> repo to my <code>cboettig.github.io</code> repository means that the annual repositories now have base URLs such as <code>www.carlboettiger.info/2015</code>, <code>www.carlboettiger.info/2014</code>. Adjusting the <code>_config.yml</code> to omit <code>/year:</code> from the permalink, since it is already in the base URL, is all that is needed to ensure that the posts of all my old URLs will still resolve to the same pages. Excellent.</p>
+<p>Dealing with the site pages is more tricky than dealing with the posts. Pages come in two variates: some, like <code>index.html</code>, <code>research.html</code>, <code>vita.html</code>, contain only content that is independent of whatever is in the notebook pages and thus can live quite happily in the <code>cboettig.github.io</code> repository. Others, like <code>tags.html</code>, <code>categories.html</code>, <code>archive.html</code>, <code>lab-notebook.html</code>, <code>atom.xml</code> and other tag-specific RSS feeds are dynamically generated by Jekyll using the metadata of the posts, and thus need to live in the individual notebook repositories instead.</p>
+<p>This instead of just having the page: <a href="http://carlboettiger.info/tags">carlboettiger.info/tags</a>, each year begins a new notebook with it’s own tags, categories, etc: <a href="http://carlboettiger.info/2014/tags">carlboettiger.info/2014/tags</a>, <a href="http://carlboettiger.info/2013/tags">carlboettiger.info/2013/tags</a>. For tags, categories,it makes some sense to have this information aggregated by year, avoiding the clutter of too many or too stale tags or categories (though perhaps something is lost by not being able to see this in aggregate across all years, at least not without some effort). Likewise for the list of posts by date (previously at <code>archive.html</code>, now just turned into <code>index.html</code>) is produced for each annual notebook, such that <a href="http://carlboettiger.info/2014">carlboettiger.info/2014</a> resolves a reverse-chronological list of posts for that year alone.</p>
+<p>I must then address what to do about the original URLs such as <a href="http://carlboettiger.info/tags">carlboettiger.info/tags</a>. Using a Jekyll liquid filter it is easy to define automatic redirects for <code>/tags.html</code> and <code>/categories.html</code> that will forward to the current year’s tag’s and categories, though perhaps an aggregated view would be preferable. For <a href="http://carlboettiger.info/archive">carlboettiger.info/archive</a> I have provided manual links to the index of each annual notebook rather than a redirect to the index of only the most current notebook. Likewise for one of my most popular pages, <a href="http://carlboettiger.info/lab-notebook">carlboettiger.info/lab-notebook</a>, I have retained the automated feeds from Github, Twitter, and Mendeley, but replaced the previews of the most recent posts with the less aesthetic link to the notebook by year. Meanwhile, I have provided each notebook with it’s own nine-panel preview page such as <a href="http://carlboettiger.info/2014/lab-notebook">carlboettiger.info/2014/lab-notebook</a>, which has the preview but not the network feeds (Perhaps it would be better to move this to the index page). In this way, the social feeds can be updated merely by updating the <code>cboettig.github.io</code> repo (since these are rendered as static text rather than javascript, written using the relevant API at the time the site is built.)</p>
+<p>A more tricky case is that of the atom feeds. It doesn’t really make sense to subscribe to a <code>carlboettiger.info/2015/blog.xml</code> feed that will be inactive in a year. Using HTML redirects in a <code>.xml</code> file doesn’t make too much sense, so I will try the RSS-flavor redirect:</p>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;newLocation&gt;</span>
+http://www.carlboettiger.info/2015/blog.xml
+<span class="kw">&lt;/newLocation&gt;</span></code></pre>
+<p>though this seems less than ideal.</p>
+<h2 id="automated-deploy">Automated deploy</h2>
+<p>As I use the <code>jeykll-pandoc</code> gem to have pandoc render the markdown, along with a few other custom plugins, I cannot take advantage of Github’s automated build for Jekyll and have instead relied on the trick of having Travis-CI build and deploy the site. Adding automated knitr building to the mix will make this too heavy for travis, even for more modular notebooks. Instead, I am relying on local building, together with automated builds from my own server running a Drone CI instance. More on this in a separate post.</p>
+<h2 id="site-assets-templates">Site assets, templates</h2>
+<p>Individual notebook repositories are thus much more light-weight. All css assets are in the root <code>cboettig.github.io</code> repository or already provided by external CDNs (such as the FontAwesome icons or MathJax, and Bootstrap javascript). However, it is necessary that both all annual notebook repositories and the base repo have the Jekyll <code>_layouts</code> and <code>_includes</code> files required to template and build the pages. This is unfortunate, since it means maintaining multiple copies of the same file, but I haven’t figured out an easy way around it.</p>
+<h2 id="pruning-history">Pruning history</h2>
+<p>In breaking <code>labnotebook</code> into component repos by year, I only want to preserve the history of that year, thus keeping the repositories small. This is particularly important for the root repo, <code>cboettig.github.io</code>, since it will remain active.</p>
+<ul>
+<li>edit <code>_config.yml</code> to remove <code>/:year</code> from <code>_config.yml</code> (the repository name will automatically be used as part of the URL)</li>
+<li>delete all posts from different years (preferable to just wait until deleting their history, which will remove the files as well), e.g. for 2014:</li>
+</ul>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="ot">files=</span><span class="kw">`echo</span> <span class="dt">{_posts/2008-*,_posts/2009-*,_posts/2010-*,_posts/2011-*,_posts/2012-*,_posts/2013-*}</span><span class="kw">`</span>
+<span class="kw">git</span> filter-branch --index-filter <span class="st">&quot;git rm -rf --cached --ignore-unmatch </span><span class="ot">$files</span><span class="st">&quot;</span> HEAD</code></pre>
+<p>and remove the temporary backups immediately so that repository actually shrinks in size:</p>
+<pre><code>git update-ref -d refs/original/refs/heads/master
+git reflog expire --expire=now --all
+git gc --prune=now</code></pre>
+<p>This is more important in the root repository, since this will remain active. If the annual notebook entry repositories have some extra stuff in their <code>.git</code> history it isn’t such an issue since they no longer need to grow or be moved around as much. (See this <a href="http://stackoverflow.com/questions/2100907">SO on rewriting git history</a>.)</p>
+<h2 id="my-progress-notes-during-the-remapping">My progress notes during the remapping:</h2>
+<ul>
+<li><p>[x] delete the CNAME file.</p></li>
+<li><p>[x] delete all the relatively static pages files that will be hosted directly from <code>cboettig.github.io</code> (<code>index.html</code>, <code>research.md</code>, etc., but not dynamically created <code>tags.html</code> etc).</p></li>
+<li><p>[x] adjust <code>repo:</code> in <code>_config.yml</code> to match the repository year. This will automatically fix the sha and history links in the sidebar.</p></li>
+<li><p>[x] Other tweaks to the sidebar: <code>site.repo</code> liquid must be added to categories, tags, next, and previous links.</p></li>
+<li><p>[x] Automated deploy for active and root repositories.</p></li>
+<li><p>[x] Plan for <code>labnotebook</code> repo. History is preserved, but issues, github stars, etc. Use as template for the new years?</p></li>
+<li><p>[x] Activate! Remove CNAME from <code>labnotebook</code> repo, add <code>www</code> CNAME to <code>cboettig.github.io</code>. Consider removing <code>gh-pages</code> branch of lab-notebook?</p></li>
+<li><p>[x] Fix / workaround for the root atom feeds.</p></li>
+<li><p>[x] Syncing assets, layout, and deploy scripts? Perhaps it is best to allow these to diverge and newer notebooks to look different than older ones?</p></li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      
+<aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2015-01-01 00:00:00 +0000" 
+    property="dc:created">01 Jan 2015</time></p>
+   
+
+ <br />
+
+  
+  
+  <a class="btn btn-default" rel="next" href='/2015/01/04/lsn-model-comparisons.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2015/commits/master/_posts/_posts/2015-01-01-notebook-maintenance-and-scaling.Rmd"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2015/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#blog">#blog</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2015/commit/846d02103bf29bda3ff3bd602e1466efd07b8857/_posts/_posts/2015-01-01-notebook-maintenance-and-scaling.Rmd"> 846d02103bf29bda3ff3bd602e1466efd07b8857</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Notebook Maintenance And Scaling
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2015-01-01
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/01/01/notebook-maintenance-and-scaling.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

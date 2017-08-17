@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Plos Data Sharing Policy Reflections</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="blog" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Plos Data Sharing Policy Reflections" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2014-05-30 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/05/30/PLoS-data-sharing-policy-reflections.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Plos Data Sharing Policy Reflections" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2014-05-30 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/05/30/PLoS-data-sharing-policy-reflections.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2014-05-30 00:00:00 +0000"/>
+<meta name="citation_title" content="Plos Data Sharing Policy Reflections"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Plos Data Sharing Policy Reflections</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>PLOS has posted an <a href="http://blogs.plos.org/biologue/2014/05/30/plos-data-policy-update/">excellent update</a> reflecting on their experiences a few months in to their new data sharing policy, which requires authors to include a statement of where the data can be obtained rather than providing it upon request. They do a rather excellent job of highlighting common concerns and offering well justified and explained replies where appropriate.</p>
+<p>At the end of the piece they pose several excellent questions, which I reflect on here (mostly as a way of figuring out my own thoughts on these issues).</p>
+<hr />
+<ul>
+<li><strong>When should an author choose Supplementary Files vs a repository vs figures and tables?</strong></li>
+</ul>
+<p>To me, repositories should always be the default. Academic repositories provide robust permanent archiving (such as <a href="http://clockss.org">CLOCKSS</a> backup), independent DOIs to content, often tracking of use metrics, enhanced discoverability, clear and appropriate licenses, richer metadata, as well as frequently providing things like API access and easy-to-use interfaces. They are the Silicon Valley of publishing innovation today.</p>
+<p>Today I think it is much more likely that some material is not appropriate for a ‘journal supplement’ rather than not being able to find an appropriate repository (enough are free, subject agnostic and accept almost any file types). In my opinion the primary challenge is for publishers to tightly integrate the repository contents with their own website, something that the repositories themselves can support with good APIs and embedding tools (many do, PLOS’s coordination with figshare for individual figures being a great example).</p>
+<p>I’m not clear on “vs figures and tables”, as this seems like a content question of “What” should be archived rather than “Where” (unless it is referring to separately archiving the figures and tables of the main text, which sounds like a great idea to me).</p>
+<ul>
+<li><strong>Should software/code be treated any differently from ‘data’? How should materials-sharing differ?</strong></li>
+</ul>
+<p>At the highest level I think it is possible to see software as a ‘type’ of data. Like other data, it is in need of appropriate licensing, a management plan, documentation/metadata, and conforming to appropriate standards and placed in appropriate repositories. Of course what is meant by “appropriate” differs, but that is also true between other types of data. The same motivations for requiring data sharing (understanding and replicating the work, facilitating future work, increasing impact) apply.</p>
+<p>I think we as a scientific community (or rather, many loosely federated communities) are still working out just how best to share scientific code and the unique challenges that it raises. Traditional scientific data repositories are well ahead in establishing best practices for other data, but are rapidly working out approaches to code. The <a href="http://openresearchsoftware.metajnl.com/about/editorialPolicies">guidelines</a> from the Journal of Open Research Software from the UK Software Sustainability Institute are a great example. (I’ve written on this topic before, such as <a href="http://www.carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html">what I look for in software papers</a> and on the topic of the <a href="www.carlboettiger.info/2013/09/25/mozilla-software-review.html">Mozilla Science Code review pilot</a></p>
+<p>I’m not informed enough to speak to sharing of non-digital material.</p>
+<ul>
+<li><strong>What does peer review of data mean, and should reviewers and editors be paying more attention to data than they did previously, now that they can do so?</strong></li>
+</ul>
+<p>In as much as we are satisfied with the current definition of peer review for journal articles I think this is a false dichotomy. Landmark papers, at least in my field, five or six decades ago (e.g. about as old as the current peer review system) frequently contained all the data in the paper (papers were longer and data was smaller). Somehow the data outgrew the paper and it just became okay to omit it, just as methods have gotten more complex and papers today frequently gloss over methodological details. The problem, then, is not one of type but one of scale: how do you review data when it takes up more than half a page of printed text.</p>
+<p>The problem of scale is of course not limited to data. Papers frequently have many more authors than reviewers, often representing disparate and highly specialized expertise over possibly years of work, depend upon more than 100 citations and be accompanied by as many pages of supplemental material. To the extent that we’re satisfied with how reviewers and editors have coped with these trends, we can hope for the same for data.</p>
+<p>Meanwhile, data transparency and data reuse may be more effective safe guards. Yes, errors in the data may cause trouble before they can be brought to light, just like bugs in software. But in this way they do eventually come to light, and that is somewhat less worrying if we view data the way we currently build publications (e.g. as fundamental building blocks of research) and publications as we currently view data (e.g. as a means to an ends, illustrated in the idea that it is okay to have mistakes in the data as long as they don’t change the conclusions). Jonathan Eisen has some <a href="http://www.slideshare.net/phylogenomics/jonathan-eisen-talk-on-open-science-at-bosc2012-ismb" title="see slide 13">excellent</a> <a href="https://www.youtube.com/watch?v=oWZzUe3Kxeo">examples</a> in which openly sharing the data led to rapid discovery and correction of errors that might have been difficult to detect otherwise.</p>
+<ul>
+<li><strong>And getting at the reason why we encourage data sharing: how much data, metadata, and explanation is necessary for replication?</strong></li>
+</ul>
+<p>I agree that the “What” question is a crux issue, and one we are still figuring out by community. There are really two issues here: what data to include, and what metadata (which to me includes any explanation or other documentation of the data) to provide for whatever data is included.</p>
+<p>On appropriate metadata, we’ll never have a one-size-fits-all answer, but I think the key is to at least uphold current community best-practices (best != mode), whatever they may be. Parts of this are easy: scholarly archives everywhere include basic <a href="http://en.wikipedia.org/wiki/Dublin_Core">Dublin Core Elements</a> metadata like title, author, date, subject and unique identifier, and most data repositories will attach this information in a machine-readable metadata format with minimal burden on the author (e.g. <a href="http://datadryad.org">Dryad</a>, or to lesser extent, <a href="http://figshare.org">figshare</a>). Many fields already have well-established and tested standards for data documentation, such as the [Ecological Metadata Langauge], which helps ecologists document things like column names and units in an appropriate and consistent way without constraining how the data is collected or structured.</p>
+<p>What data we include in the first place is more challenging, particularly as there is no good definition of ‘raw data’ (one person’s raw data being another person’s highly processed data). I think a useful minimum might be to provide any data shown in a figure or used in a statistical test that appears in the paper.</p>
+<p>Journal policies can help most in each of these cases by pointing authors to the policies of repositories and to subject-specific publications on these best practices.</p>
+<ul>
+<li><strong>A crucial issue that is much wider than PLOS is how to cite data and give academic credit for data reuse, to encourage researchers to make data sharing part of their everyday routine.</strong></li>
+</ul>
+<p>Again I agree that credit for data reuse is an important and largely cultural issue. Certainly editors can play there part as they already do in encouraging authors to cite the corresponding papers on the methods used, etc.</p>
+<p>I think the cultural challenge is much greater for the “long tail” content than it is for the most impactful data. I think most of the top-cited papers over the last two decades have been methods papers (or are cited for the use of a method that has become the standard of a field; often as software). As with any citation, there’s a positive feedback as more people are aware of it. I suspect that the papers announcing the first full genomes of commonly studied organisms (essentially data papers, though published by the most exclusive journals) did not lack citations. For data (or methods for that matter) that do not anticipate that level of reuse, the concern of appropriate credit is more real. Even if a researcher can assume they will be cited by future reuse of their data, they may not feel that sufficient compensation if it means one less paper to their name.</p>
+<p>Unfortunately I think these are not issues unique to data publication but germane to academic credit in general. Citations, journal names, and so forth are not meaningless metrics, but very noisy ones. I think it is too easy to fool ourselves by looking only at cases where statistical averages are large enough to see the signal – datasets like the human genome and algorithms like BLAST we know are impactful, and the citation record bears this out. Really well cited papers or well-cited journals tend to coincide with our notions of impact, so it is easy to overestimate the fidelity of citation statistics when the sample size is much smaller. Besides, academic work is a high-dimensional creature not easily reduced to a few scalar metrics. <!--(I think that is why, at least in the US, we tend
+to place more trust in the opinions of people over current metrics.)--></p>
+<ul>
+<li><strong>And for long-term preservation, we must ask who funds the costs of data sharing? What file formats should be acceptable and what will happen in the future with data in obsolete file formats? Is there likely to be universal agreement on how long researchers should store data, given the different current requirements of institutions and funders?</strong></li>
+</ul>
+<p>I think these are questions for the scientific data repositories and the fields they serve, rather than the journals, and for the most part they are handling them well.</p>
+<p>Repositories like <a href="http://datadryad.org">Dryad</a> have clear pricing schemes closely integrated with other publication costs, and standing at least an order of magnitude less than most journal publication fees look like a bargain. (Not so if you publish in subscription journals I hear you say. Well, I would not be surprised if we start seeing such repositories negotiate institutional subscriptions to cover the costs of their authors).</p>
+<p>I think the question of data formats is closely tied to that of metadata, as they are all topics of best-practices in archiving. Many scientific data repositories have usually put a lot of thought into these issues and also weigh them against the needs and ease-of-use of the communities they serve. Journal data archiving policies can play their part by encouraging best practices by pointing authors to repository guidelines as well as published articles from their community (such as the <a href="http://library.queensu.ca/ojs/index.php/IEE/article/view/4608">Nine Simple Ways</a> paper by White et al.)</p>
+<p>I feel the almost rhetorical question about ‘universal agreement’ is unnecessarily pessimistic. I suspect that much of the variance in recommendations for the duration a researcher should archive their own work predates the widespread emergence of data repositories, which have vastly simplified the issue from when it was left up to each individual lab. Do we ask this question of the scientific literature? No, largely because many major journals have already provided robust long term archiving with <a href="http://clockss.org">CLOCKSS</a>/LOCKSS backup agreements. Likewise scientific data repositories seem to have settled for indefinite archiving. It seems both reasonable and practical that data archiving can be held to the same standard as the journal article itself. (Sure there are lots of challenging issues to be worked out here, the key is only to leave it in the hands of those already leading the way and not re-invent the wheel).</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2014-05-30 00:00:00 +0000" 
+    property="dc:created">30 May 2014</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/05/28/notes.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/06/04/is-statistical-software-harmful.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2014-05-30-PLoS-data-sharing-policy-reflections.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#blog">#blog</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/1d2caa15a7c2fe3fe1402f064f5fceb4f99452d5/_posts/2014-05-30-PLoS-data-sharing-policy-reflections.md"> 1d2caa15a7c2fe3fe1402f064f5fceb4f99452d5</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Plos Data Sharing Policy Reflections
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2014-05-30
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/05/30/PLoS-data-sharing-policy-reflections.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

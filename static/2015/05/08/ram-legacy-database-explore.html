@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Ram Legacy Database Explore</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Ram Legacy Database Explore" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2015-05-08 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/05/08/ram-legacy-database-explore.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Ram Legacy Database Explore" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2015-05-08 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/05/08/ram-legacy-database-explore.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2015-05-08 00:00:00 +0000"/>
+<meta name="citation_title" content="Ram Legacy Database Explore"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="http://www.carlboettiger.info/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Ram Legacy Database Explore</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h2 id="accessing-the-database">Accessing the database</h2>
+<p>Connect to the database (connection info is <a href="http://ramlegacy.marinebiodiversity.ca/ram-legacy-stock-assessment-database/accessing-the-live-database">public</a>), works fine:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;RPostgreSQL&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;tidyr&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">mydb &lt;-<span class="st"> </span><span class="kw">src_postgres</span>(<span class="dt">dbname =</span> <span class="st">&quot;srdb&quot;</span>, 
+                     <span class="dt">host=</span><span class="st">&quot;nautilus-vm.mathstat.dal.ca&quot;</span>, 
+                     <span class="dt">user =</span> <span class="st">&quot;srdbuser&quot;</span>, 
+                     <span class="dt">password =</span>  <span class="st">&quot;srd6us3r!&quot;</span>, 
+                     <span class="dt">port =</span> <span class="dv">5432</span>)
+mydb</code></pre>
+<pre><code>src:  postgres 8.4.10 [srdbuser@nautilus-vm.mathstat.dal.ca:5432/srdb]
+tbls: area, assessment, assessmethod, assessor, biometrics,
+  bioparams, brptots, fishbasesaupcodes, geometry_columns, lmerefs,
+  lmes, lmetostocks, management, mostrecent, recorder, referencedoc,
+  reference_point_units_view, reference_point_values_view, risfields,
+  risfieldvalues, spatial_ref_sys, stock, taxonomy, timeseries,
+  timeseries_units_view, timeseries_values_view, tsmetrics,
+  tsrelative_explicit_view</code></pre>
+<p>However, the expected mechanism for accessing a complete table seems to fail:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tbl</span>(mydb, <span class="st">&quot;stock&quot;</span>)</code></pre>
+<pre><code>Error in postgresqlExecStatement(conn, statement, ...): RS-DBI driver: (could not Retrieve the result : ERROR:  relation &quot;stock&quot; does not exist
+LINE 1: SELECT * FROM &quot;stock&quot; WHERE 0=1
+                      ^
+)</code></pre>
+<p>Filed as a bug report in <a href="https://github.com/rstats-db/RPostgres/issues/32">RPostgres/#32</a>.</p>
+<p>Meanwhile, direct sql queries work (note we need the full table address, e.g. <code>dbname.tablename</code>.)</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.stock&quot;</span>))</code></pre>
+<pre><code>Source: postgres 8.4.10 [srdbuser@nautilus-vm.mathstat.dal.ca:5432/srdb]
+From: &lt;derived table&gt; [?? x 8]
+
+      stockid    tsn scientificname   commonname
+1        COD1 164712   Gadus morhua Atlantic cod
+2    COD2J3KL 164712   Gadus morhua Atlantic cod
+3  COD2J3KLIS 164712   Gadus morhua Atlantic cod
+4       COD3M 164712   Gadus morhua Atlantic cod
+5      COD3NO 164712   Gadus morhua Atlantic cod
+6      COD3Ps 164712   Gadus morhua Atlantic cod
+7   COD3Pn4RS 164712   Gadus morhua Atlantic cod
+8       COD4T 164712   Gadus morhua Atlantic cod
+9     COD4VsW 164712   Gadus morhua Atlantic cod
+10    COD4TVn 164712   Gadus morhua Atlantic cod
+..        ...    ...            ...          ...
+Variables not shown: areaid (chr), stocklong (chr), inmyersdb (int),
+  myersstockid (chr)</code></pre>
+<p>Since these tables easily fit into memory, it is generally faster to just import them into R rather than leaving <code>dplyr</code> to just work with them remotely. The <code>dplyr::collect()</code> function does this. So we create local copies of each table of interest like so:</p>
+<pre class="sourceCode r"><code class="sourceCode r">timeseries &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.timeseries&quot;</span>)))
+values &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.timeseries_values_view&quot;</span>)))
+
+units &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.timeseries_units_view&quot;</span>)))
+assessment &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.assessment&quot;</span>)))
+area &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.area&quot;</span>)))
+stock &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.stock&quot;</span>)))
+method &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.assessmethod&quot;</span>)))
+assessor &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.assessor&quot;</span>)))
+management  &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.management&quot;</span>)))
+taxonomy &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.taxonomy&quot;</span>)))
+
+lmerefs &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.lmerefs&quot;</span>)))
+lmestock &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.lmetostocks&quot;</span>)))
+
+
+biometrics  &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.biometrics&quot;</span>)))
+bioparams &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.bioparams&quot;</span>)))
+
+tsmetrics &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.tsmetrics&quot;</span>)))</code></pre>
+<p>Many of the tables contain observations of variables that describe each given assessment (<code>assessid</code>), including the species <code>stock</code> assessed, <code>area</code> assessed, the method used, and so forth. Since these all follow the same schema of a row being a unique stock assessment and a column being an attribute of that assessment, it makes sense to combine this into a single metadata table. (Especially as these datasets fit so easily into memory anyway.)</p>
+<pre class="sourceCode r"><code class="sourceCode r">meta &lt;-<span class="st"> </span>assessment %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">rename</span>(<span class="dt">methodshort =</span> assessmethod) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">left_join</span>(method) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">left_join</span>(stock) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">left_join</span>(area) %&gt;%
+<span class="st">  </span><span class="kw">left_join</span>(units) %&gt;%
+<span class="st">  </span><span class="kw">left_join</span>(assessor) %&gt;%
+<span class="st">  </span><span class="kw">left_join</span>(management) %&gt;%
+<span class="st">  </span><span class="kw">left_join</span>(taxonomy) </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">all_areas &lt;-<span class="st"> </span>stock %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(stockid, areaid) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">left_join</span>(area) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">right_join</span>(lmestock) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">left_join</span>(lmerefs)
+
+<span class="kw">sapply</span>(all_areas, function(x) <span class="kw">length</span>(<span class="kw">levels</span>(<span class="kw">factor</span>(x))))</code></pre>
+<pre><code>           stockid             areaid            country 
+               391                174                 10 
+          areatype           areacode           areaname 
+                24                167                167 
+ alternateareaname         lme_number stocktolmerelation 
+                 5                 34                  5 
+          lme_name 
+                34 </code></pre>
+<ul>
+<li><code>bioparams</code>: Fixed parameter values of a study.</li>
+<li><code>biometrics</code>: definitions of said parameters.</li>
+</ul>
+<p>The column is called <code>biounique</code> in <code>biometrics</code> table but <code>bioid</code> in <code>bioparams</code> table, so we fix that:</p>
+<pre class="sourceCode r"><code class="sourceCode r">parameters &lt;-<span class="st"> </span>biometrics %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">rename</span>(<span class="dt">bioid =</span> biounique) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">left_join</span>(bioparams) </code></pre>
+<ul>
+<li><code>tsmetrics</code> defines the factor levels and the units used in <code>timeseries</code> <code>tsid</code> column.</li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r">tsmetrics &lt;-<span class="st"> </span>tsmetrics %&gt;%<span class="st"> </span><span class="kw">rename</span>(<span class="dt">tsid =</span> tsunique)</code></pre>
+<p>For example, we can see what measurements are available</p>
+<pre class="sourceCode r"><code class="sourceCode r">ids &lt;-<span class="st"> </span>timeseries %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid ==<span class="st"> &quot;NWFSC-COWCODSCAL-1900-2007-BRANCH&quot;</span>) %&gt;%
+<span class="st">  </span><span class="kw">distinct</span>(tsid) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(tsid)
+ids</code></pre>
+<pre><code>Source: local data frame [7 x 1]
+
+      tsid
+1   SSB-MT
+2    R-E03
+3   F-1/yr
+4    TB-MT
+5    TC-MT
+6    TL-MT
+7 STB1+-MT</code></pre>
+<p>Looking up these ids in the <code>tsmetrics</code> table tells us what these seven time series are:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">inner_join</span>(ids, tsmetrics) %&gt;%<span class="st"> </span><span class="kw">select</span>(tsshort, tslong, tsunitsshort, tsunitslong)</code></pre>
+<pre><code>Source: local data frame [7 x 4]
+
+  tsshort
+1     SSB
+2       R
+3       F
+4      TB
+5      TC
+6      TL
+7   STB1+
+Variables not shown: tslong (chr), tsunitsshort (chr), tsunitslong
+  (chr)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">cowcod &lt;-<span class="st"> </span>timeseries %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid ==<span class="st"> &quot;NWFSC-COWCODSCAL-1900-2007-BRANCH&quot;</span>) %&gt;%
+<span class="st">  </span><span class="kw">left_join</span>(tsmetrics) %&gt;%
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(tsyear, tsvalue, <span class="dt">col=</span>tsid)) +<span class="st"> </span><span class="kw">geom_line</span>() 
+cowcod</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-05-08-ram-legacy-database-explore/unnamed-chunk-12-1.png" />
+</figure>
+<pre class="sourceCode r"><code class="sourceCode r">cowcod +<span class="st"> </span><span class="kw">scale_y_log10</span>()</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-05-08-ram-legacy-database-explore/unnamed-chunk-13-1.png" />
+</figure>
+<p>(Note TC (total catch) and TL (total landings) are equivalent in this context, implying neglible discards.)</p>
+<p>Unfortunately, there is a lot of heterogeneity in the metrics measured by each assessment: <code>tsmetrics</code> defines 151 units, (though only 93 appear in timeseries)</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">length</span>(<span class="kw">unique</span>(tsmetrics$tsid))</code></pre>
+<pre><code>[1] 151</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">length</span>(<span class="kw">table</span>(timeseries$tsid))</code></pre>
+<pre><code>[1] 93</code></pre>
+<p>Most are variations differing only by units, as we see from the most commonly used metrics:</p>
+<pre class="sourceCode r"><code class="sourceCode r">unit_occurs &lt;-<span class="st"> </span>
+timeseries %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(tsid) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">distinct</span>(assessid) %&gt;%
+<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">occurs =</span> <span class="kw">n</span>()) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">left_join</span>(tsmetrics) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(occurs)) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(tsid, tslong, tsunitsshort, occurs)
+unit_occurs</code></pre>
+<pre><code>Source: local data frame [93 x 4]
+
+                      tsid
+1                    TB-MT
+2                   SSB-MT
+3                    R-E03
+4                    TC-MT
+5                    TL-MT
+6                    F-1/T
+7                   F-1/yr
+8                 ER-ratio
+9  Yield-SSB-dimensionless
+10                 YEAR-yr
+..                     ...
+Variables not shown: tslong (chr), tsunitsshort (chr), occurs (int)</code></pre>
+<p>These are all variations of the same several variables, but measured in different units. For instance, we see many series use a catch to biomass ratio (ER) instead of a fishing mortality.</p>
+<pre class="sourceCode r"><code class="sourceCode r">unit_occurs %&gt;%<span class="st"> </span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;^SSB&quot;</span>, tsid))</code></pre>
+<pre><code>Source: local data frame [12 x 4]
+
+                tsid
+1             SSB-MT
+2        SSB-E03eggs
+3      SSB-STDDEV-MT
+4           SSB-1-MT
+5           SSB-2-MT
+6       SSB-relative
+7            SSB-E03
+8      SSB-E06larvae
+9           SSB-3-MT
+10          SSB-4-MT
+11     SSB-E03pertow
+12 SSB-FemaleGonadMT
+Variables not shown: tslong (chr), tsunitsshort (chr), occurs (int)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">unit_occurs %&gt;%<span class="st"> </span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;^R&quot;</span>, tsid))</code></pre>
+<pre><code>Source: local data frame [7 x 4]
+
+        tsid
+1      R-E03
+2    R-1-E03
+3    R-2-E03
+4       R-MT
+5 R-relative
+6    R-3-E03
+7    R-4-E03
+Variables not shown: tslong (chr), tsunitsshort (chr), occurs (int)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">unit_occurs %&gt;%<span class="st"> </span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;^TC&quot;</span>, tsid))</code></pre>
+<pre><code>Source: local data frame [7 x 4]
+
+      tsid
+1    TC-MT
+2   TC-E03
+3   TC-E00
+4 TC-1-E03
+5  TC-1-MT
+6  TC-2-MT
+7 TC-2-E03
+Variables not shown: tslong (chr), tsunitsshort (chr), occurs (int)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">unit_occurs %&gt;%<span class="st"> </span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;^TL&quot;</span>, tsid))</code></pre>
+<pre><code>Source: local data frame [5 x 4]
+
+     tsid
+1   TL-MT
+2 TL-1-MT
+3 TL-2-MT
+4 TL-3-MT
+5  TL-E00
+Variables not shown: tslong (chr), tsunitsshort (chr), occurs (int)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">unit_occurs %&gt;%<span class="st"> </span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;^CPUE&quot;</span>, tsid))</code></pre>
+<pre><code>Source: local data frame [10 x 4]
+
+                   tsid
+1         CPUE-kgpertow
+2       CPUEstand-1-C/E
+3       CPUEstand-2-C/E
+4         CPUEstand-C/E
+5           CPUEraw-C/E
+6       CPUEstand-3-C/E
+7       CPUEstand-4-C/E
+8  CPUEsmooth-E00pertow
+9       CPUEstand-5-C/E
+10      CPUEstand-6-C/E
+Variables not shown: tslong (chr), tsunitsshort (chr), occurs (int)</code></pre>
+<p>The <code>values</code> table appears to be derived from the <code>timeseries</code> table, presumably standardizing on consistent metrics(?)</p>
+<pre class="sourceCode r"><code class="sourceCode r">values</code></pre>
+<pre><code>Source: local data frame [16,308 x 9]
+
+                        assessid tsyear pt_avail       ssb       r
+1  ADFG-HERRPWS-1980-2006-COLLIE   1980        5  48270.35  414070
+2  ADFG-HERRPWS-1980-2006-COLLIE   1981        5  51090.88  335200
+3  ADFG-HERRPWS-1980-2006-COLLIE   1982        5  47402.54  112300
+4  ADFG-HERRPWS-1980-2006-COLLIE   1983        5  56449.01  103740
+5  ADFG-HERRPWS-1980-2006-COLLIE   1984        5  64461.28 1062360
+6  ADFG-HERRPWS-1980-2006-COLLIE   1985        5  79124.61   99630
+7  ADFG-HERRPWS-1980-2006-COLLIE   1986        5  65601.06   74880
+8  ADFG-HERRPWS-1980-2006-COLLIE   1987        5  70646.42   84820
+9  ADFG-HERRPWS-1980-2006-COLLIE   1988        5  93508.20 1006440
+10 ADFG-HERRPWS-1980-2006-COLLIE   1989        5 105135.41  119970
+..                           ...    ...      ...       ...     ...
+Variables not shown: total (dbl), f (dbl), cpue (dbl), catch_landings
+  (dbl)</code></pre>
+<p>We can see this by transforming our example:</p>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span>timeseries %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid ==<span class="st"> &quot;NWFSC-COWCODSCAL-1900-2007-BRANCH&quot;</span>) %&gt;%
+<span class="st">  </span><span class="kw">spread</span>(tsid, tsvalue) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">rename</span>(<span class="dt">ssb=</span><span class="st">`</span><span class="dt">SSB-MT</span><span class="st">`</span>, <span class="dt">r =</span> <span class="st">`</span><span class="dt">R-E03</span><span class="st">`</span>, <span class="dt">total =</span> <span class="st">`</span><span class="dt">TB-MT</span><span class="st">`</span>, <span class="dt">f =</span> <span class="st">`</span><span class="dt">F-1/yr</span><span class="st">`</span>, <span class="dt">catch_landings =</span> <span class="st">`</span><span class="dt">TL-MT</span><span class="st">`</span>) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(assessid, tsyear, ssb, r, total, f, catch_landings)</code></pre>
+<p>which is indeed identical to corresponding assessment in the <code>values</code> table</p>
+<pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span>values %&gt;%<span class="st"> </span><span class="kw">filter</span>(assessid ==<span class="st"> &quot;NWFSC-COWCODSCAL-1900-2007-BRANCH&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(-pt_avail, -cpue)
+<span class="kw">identical</span>(x,y)</code></pre>
+<pre><code>[1] TRUE</code></pre>
+<p>So what happens when the units differ?</p>
+<pre class="sourceCode r"><code class="sourceCode r">timeseries %&gt;%<span class="st"> </span><span class="kw">filter</span>(tsid==<span class="st">&quot;SSB-E03eggs&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">distinct</span>(<span class="st">&quot;assessid&quot;</span>)</code></pre>
+<pre><code>Source: local data frame [1 x 5]
+
+                               assessid        tsid tsyear  tsvalue
+1 TAFI-TASGIANTCRABTAS-1990-2007-JENSEN SSB-E03eggs   1998 188.9256
+Variables not shown: &quot;assessid&quot; (chr)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span>timeseries %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid ==<span class="st"> &quot;TAFI-TASGIANTCRABTAS-1990-2007-JENSEN&quot;</span>) %&gt;%
+<span class="st">  </span><span class="kw">spread</span>(tsid, tsvalue) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(<span class="dt">ssb=</span><span class="st">`</span><span class="dt">SSB-E03eggs</span><span class="st">`</span>)
+
+y &lt;-<span class="st"> </span>values %&gt;%<span class="st"> </span><span class="kw">filter</span>(assessid ==<span class="st"> &quot;TAFI-TASGIANTCRABTAS-1990-2007-JENSEN&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(ssb)
+<span class="kw">identical</span>(x,y)</code></pre>
+<pre><code>[1] TRUE</code></pre>
+<p>No transformation has been done, hence the units of the <code>values</code> columns vary depending on the assessment id. Nonetheless it is quite useful to have the metrics split into their corresponding 5 types rather than as 93 unique subtypes. As long as we are not comparing magnitudes across different assessments directly though, this should not be an issue.</p>
+<hr />
+<p>It would probably be useful to reconstruct the code to generate the <code>values</code> table from the timeseries table directly. One might hope that the mappings between <code>tsid</code> values and the five column headings in the <code>values</code> table would be defined in the database, e.g. in perhaps the <code>tscategory</code> column of <code>tsmetrics</code>:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">unique</span>(tsmetrics$tscategory)</code></pre>
+<pre><code>[1] &quot;FISHING MORTALITY&quot;                                                            
+[2] &quot;TOTAL BIOMASS&quot;                                                                
+[3] &quot;TIME UNITS&quot;                                                                   
+[4] &quot;SPAWNING STOCK BIOMASS or CPUE&quot;                                               
+[5] &quot;RECRUITS (NOTE: RECRUITS ARE OFFSET IN TIME SERIES BY THE AGE OF RECRUITMENT)&quot;
+[6] &quot;CATCH or LANDINGS&quot;                                                            
+[7] &quot;OTHER TIME SERIES DATA&quot;                                                       </code></pre>
+<p>but alas this does not quite appear to be the case (e.g. CPUE and SSB are a single category.) Some combination of this information and splitting on the <code>tsid</code> strings would probably suffice.</p>
+<hr />
+<pre class="sourceCode r"><code class="sourceCode r">ts &lt;-<span class="st"> </span>meta %&gt;%<span class="st"> </span><span class="kw">select</span>(assessid, commonname) %&gt;%<span class="st"> </span><span class="kw">right_join</span>(values)</code></pre>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      
+<aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2015-05-08 00:00:00 +0000" 
+    property="dc:created">08 May 2015</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2015/04/28/rfishbase-notes.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2015/05/13/GP-compare.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2015/commits/master/_posts/_posts/2015-05-08-ram-legacy-database-explore.Rmd"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2015/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2015/commit/64f468ab2e5ab281b788a582d3318ff805397eef/_posts/_posts/2015-05-08-ram-legacy-database-explore.Rmd"> 64f468ab2e5ab281b788a582d3318ff805397eef</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Ram Legacy Database Explore
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2015-05-08
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/05/08/ram-legacy-database-explore.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

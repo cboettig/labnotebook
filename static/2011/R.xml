@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Lab Notebook - R</title>
+ <link href="/2011/R.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2015-02-25T23:07:55+00:00</updated>
+ <id>http://www.carlboettiger.info</id>
+ <author>
+   <name>Carl Boettiger</name>
+   <email>cboettig@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Treebase Package On Cran</title>
+	 <link href="/2011/10/25/treebase-package-on-cran.html"/>
+   <updated>2011-10-25T19:06:38+00:00</updated>
+   <id>/10/25/treebase-package-on-cran</id>
+   <content type="html">&lt;p&gt;My treebase package is now up on the &lt;a href=&quot;http://cran.r-project.org/web/packages/treebase/&quot;&gt;CRAN repository&lt;/a&gt;. (Source code is up, the binaries should appear soon). Here’s a few introductory examples to illustrate some of the functionality of the package. Thanks in part to new data deposition requirements at journals such as Evolution, Am Nat, and Sys Bio, and data management plan requirements from NSF, I hope the package will become increasingly useful for teaching by replicating results and for meta-analyses that can be automatically updated as the repository grows. Please contact me with any bugs or requests (or post in the &lt;a href=&quot;https://github.com/cboettig/treeBASE/issues?sort=created&amp;amp;direction=desc&amp;amp;state=open&quot;&gt;issue tracker&lt;/a&gt;).&lt;/p&gt;
+&lt;h2 id=&quot;basic-tree-and-metadata-queries&quot;&gt;Basic tree and metadata queries&lt;/h2&gt;
+&lt;p&gt;Downloading trees by different queries: by author, taxa, &amp;amp; study. More options are described in the help file.&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+both &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Ronquist or Hulesenbeck&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;by=&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;))
+dolphins &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;#39;&amp;quot;Delphinus&amp;quot;&amp;#39;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;by=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;taxon&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;max_trees=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;5&lt;/span&gt;)
+studies &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;2377&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;by=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;id.study&amp;quot;&lt;/span&gt;)
+Near &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Near&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;branch_lengths=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can query the metadata record directly. For instance, plot the growth of Treebase submissions by publication date&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+all &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_metadata&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;by=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;all&amp;quot;&lt;/span&gt;)
+dates &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(all, function(x) &lt;span class=&quot;kw&quot;&gt;as.numeric&lt;/span&gt;(x$date))
+&lt;span class=&quot;kw&quot;&gt;hist&lt;/span&gt;(dates, &lt;span class=&quot;dt&quot;&gt;main=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;TreeBase growth&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;xlab=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;Year&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(This query could also take a date range).&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm7.staticflickr.com/6221/6280258573_0c01c06c91_o.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;How do the weekly’s do on submissions to Treebase? We construct this in a way that gives us back the indices of the matches, so we can then grab those trees directly. Run the scripts yourself to see if they’ve changed!&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+nature &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(all, function(x) &lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;grep&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Nature&amp;quot;&lt;/span&gt;, x$publisher))&amp;gt;&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;)
+science &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(all, function(x) &lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;grep&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;^Science$&amp;quot;&lt;/span&gt;, x$publisher))&amp;gt;&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;)
+&amp;gt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sum&lt;/span&gt;(nature)
+[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;] &lt;span class=&quot;dv&quot;&gt;14&lt;/span&gt;
+&amp;gt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sum&lt;/span&gt;(science)
+[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;] &lt;span class=&quot;dv&quot;&gt;14&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now get me all of those treebase trees that have appeared in Nature.&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+s &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;get_study&lt;/span&gt;( all[nature] )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which authors have the most submissions?&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+authors &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(all, function(x){
+  index &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;grep&lt;/span&gt;( &lt;span class=&quot;st&quot;&gt;&amp;quot;creator&amp;quot;&lt;/span&gt;, &lt;span class=&quot;kw&quot;&gt;names&lt;/span&gt;(x))
+  x[index]
+  })
+a &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;as.factor&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;unlist&lt;/span&gt;(authors))
+&amp;gt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;head&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;summary&lt;/span&gt;(a))
+        Crous, Pedro W.   Wingfield, Michael J. Groenewald, Johannes Z.
+                     &lt;span class=&quot;dv&quot;&gt;88&lt;/span&gt;                      &lt;span class=&quot;dv&quot;&gt;68&lt;/span&gt;                      &lt;span class=&quot;dv&quot;&gt;58&lt;/span&gt;
+   Donoghue, Michael J.       Takamatsu, Susumu    Wingfield, Brenda D.
+                     &lt;span class=&quot;dv&quot;&gt;39&lt;/span&gt;                      &lt;span class=&quot;dv&quot;&gt;36&lt;/span&gt;                      &lt;span class=&quot;dv&quot;&gt;35&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;replicating-results&quot;&gt;Replicating results&lt;/h2&gt;
+&lt;p&gt;A nice paper by Derryberry et al. appeared in Evolution recently on diversification in ovenbirds and woodcreepers (Derryberry &lt;em&gt;et. al.&lt;/em&gt; 2011). The article mentions that the tree is on Treebase, so let’s see if we can replicate their diversification rate analysis:&lt;/p&gt;
+&lt;p&gt;Let’s grab the trees by that author and make sure we have the right one:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(treebase)
+&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Derryberry&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;)[[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;]] -&amp;gt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;tree
+&lt;span class=&quot;kw&quot;&gt;metadata&lt;/span&gt;(tree$S.id)
+&lt;span class=&quot;kw&quot;&gt;plot&lt;/span&gt;(tree)&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm7.staticflickr.com/6117/6280770968_483816528a_o.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;(click to zoom - go to all sizes-&amp;gt;original size)&lt;/p&gt;
+&lt;p&gt;They fit a variety of diversification rate models avialable in the laser package, which they compare by aic.&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(laser)
+tt &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;branching.times&lt;/span&gt;(tree)
+models &amp;lt;-&lt;span class=&quot;st&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;list&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;pb =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;pureBirth&lt;/span&gt;(tt),
+                &lt;span class=&quot;dt&quot;&gt;bdfit =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;bd&lt;/span&gt;(tt),
+                &lt;span class=&quot;dt&quot;&gt;y2r =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;yule2rate&lt;/span&gt;(tt), &lt;span class=&quot;co&quot;&gt;# yule model with single shift pt&lt;/span&gt;
+                &lt;span class=&quot;dt&quot;&gt;ddl =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;DDL&lt;/span&gt;(tt), &lt;span class=&quot;co&quot;&gt;# linear, diversity-dependent&lt;/span&gt;
+                &lt;span class=&quot;dt&quot;&gt;ddx =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;DDX&lt;/span&gt;(tt), &lt;span class=&quot;co&quot;&gt;#exponential diversity-dendent&lt;/span&gt;
+                &lt;span class=&quot;dt&quot;&gt;sv =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;fitSPVAR&lt;/span&gt;(tt), &lt;span class=&quot;co&quot;&gt;# vary speciation in time&lt;/span&gt;
+                &lt;span class=&quot;dt&quot;&gt;ev =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;fitEXVAR&lt;/span&gt;(tt), &lt;span class=&quot;co&quot;&gt;# vary extinction in time&lt;/span&gt;
+                &lt;span class=&quot;dt&quot;&gt;bv =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;fitBOTHVAR&lt;/span&gt;(tt)&lt;span class=&quot;co&quot;&gt;# vary both&lt;/span&gt;
+                )
+aics &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(models, function(x) x$aic)
+&lt;span class=&quot;co&quot;&gt;# show the winning model&lt;/span&gt;
+models[&lt;span class=&quot;kw&quot;&gt;which.min&lt;/span&gt;(aics)]
+&amp;gt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;models[&lt;span class=&quot;kw&quot;&gt;which.min&lt;/span&gt;(aics)]
+$y2r
+          LH      st1        r1         r2       aic
+&lt;span class=&quot;dv&quot;&gt;276&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;505.0685&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;1.171871&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;0.1426537&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;0.05372305&lt;/span&gt; -&lt;span class=&quot;fl&quot;&gt;1004.137&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Yup, their result agrees with our analysis. Using the extensive toolset for diversification rates in R, we could now rather easily check if these results hold up in newer methods such as TreePar, etc.&lt;/p&gt;
+&lt;h2 id=&quot;meta-analysis&quot;&gt;Meta-Analysis&lt;/h2&gt;
+&lt;p&gt;Of course one of the more interesting challenges of having an automated interface is the ability to perform meta-analyses across the set of available phylogenies in treebase. As a simple proof-of-principle, let’s check all the phylogenies in treebase to see if they fit a birth-death model or yule model better.&lt;/p&gt;
+&lt;p&gt;We’ll create two simple functions to help with this analysis. While these can be provided by the treebase package, I’ve included them here to illustrate that the real flexibility comes from being able to create custom functions. ((These are primarily illustrative; I hope users and developers will create their own. In a proper analysis we would want a few additional checks.))&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+timetree &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;function(tree){
+    check.na &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;sum&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;is.na&lt;/span&gt;(tree$edge.length))&amp;gt;&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;)
+    if(&lt;span class=&quot;kw&quot;&gt;is&lt;/span&gt;(check.na, &lt;span class=&quot;st&quot;&gt;&amp;quot;try-error&amp;quot;&lt;/span&gt;) |&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;check.na)
+      &lt;span class=&quot;ot&quot;&gt;NULL&lt;/span&gt;
+    else
+    &lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;( &lt;span class=&quot;kw&quot;&gt;chronoMPL&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;multi2di&lt;/span&gt;(tree)) )
+}
+drop_errors &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;function(tr){
+  tt &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;tr[!&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(tr, is.null)]
+  tt &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;tt[!&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(tt, function(x) &lt;span class=&quot;kw&quot;&gt;is&lt;/span&gt;(x, &lt;span class=&quot;st&quot;&gt;&amp;quot;try-error&amp;quot;&lt;/span&gt;))]
+  &lt;span class=&quot;kw&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;dropped&amp;quot;&lt;/span&gt;, &lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(tr)-&lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(tt), &lt;span class=&quot;st&quot;&gt;&amp;quot;trees&amp;quot;&lt;/span&gt;))
+  tt
+}
+&lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(laser)
+pick_branching_model &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;function(tree){
+  m1 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;pureBirth&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;branching.times&lt;/span&gt;(tree)))
+  m2 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;bd&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;branching.times&lt;/span&gt;(tree)))
+  &lt;span class=&quot;kw&quot;&gt;as.logical&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;(m2$aic &amp;lt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;m1$aic))
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Return only treebase trees that have branch lengths. This has to download every tree in treebase, so this will take a while. Good thing we don’t have to do that by hand.&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+all &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Consensus&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;type.tree&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;branch_lengths=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;)
+tt &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;drop_errors&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(all, timetree))
+is_yule &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(tt, pick_branching_model)
+&lt;span class=&quot;kw&quot;&gt;table&lt;/span&gt;(is_yule)&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Derryberry E, Claramunt S, Derryberry G, Chesser R, Cracraft J, Aleixo A, Pérez-Emán J, Remsen Jr. J and Brumfield R (2011). “Lineage Diversification And Morphological Evolution in A Large-Scale Continental Radiation: The Neotropical Ovenbirds And Woodcreepers (Aves: Furnariidae).” &lt;em&gt;Evolution&lt;/em&gt;, &lt;strong&gt;65&lt;/strong&gt;. &lt;a href=&quot;http://dx.doi.org/10.1111/j.1558-5646.2011.01374.x&quot;&gt;http://dx.doi.org/10.1111/j.1558-5646.2011.01374.x&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Showcasing the latest phylogenetic methods: AUTEUR</title>
+	 <link href="/2011/07/20/showcasing-the-latest-phylogenetic-methods-auteur.html"/>
+   <updated>2011-07-20T15:07:14+00:00</updated>
+   <id>/07/20/showcasing-the-latest-phylogenetic-methods-auteur</id>
+   <content type="html">&lt;p&gt;While high-speed fish feeding videos may be the signature of the lab, dig a bit deeper and you’ll find a wealth of comparative phylogenetic methods sneaking in.  It’s a natural union – expert functional morphology is the key to good comparative methods, just as phylogenies hold the key to untangling the evolutionary origins of that morphology.  The lab’s own former graduate, &lt;a href=&quot;http://www.brianomeara.info/&quot;&gt;Brian O’Meara&lt;/a&gt;, made a revolutionary step forward in the land of phylogenetic methods when he unveiled &lt;em&gt;Brownie&lt;/em&gt; in 2006, allowing researchers to identify major shifts in trait diversification rates across the tree.  This work spurred not only a flood of empirical applications but also methodological innovations, such as Liam’s &lt;a href=&quot;http://phytools.blogspot.com/2011/07/more-robust-version-of-brownielite.html&quot;&gt;brownie-lite&lt;/a&gt;, and today’s focus: &lt;a href=&quot;http://public.wsu.edu/~storfer/eastman/pages/index.html&quot;&gt;Jon Eastman&lt;/a&gt; &lt;em&gt;et al.&lt;/em&gt;’s auteur package.&lt;/p&gt;
+&lt;p&gt;Auteur, short for “Accommodating uncertainty in trait evolution using R,” is the grown-up Bayesian RJMCMC version of that original idea in &lt;em&gt;Brownie&lt;/em&gt;.  Diversification rates can change along the phylogenetic tree – only this time, you don’t have to specify where those changes could have occurred, or how many there may have been – auteur simply tries them all.&lt;/p&gt;
+&lt;p&gt;If you want the details, definitely go &lt;a href=&quot;http://doi.wiley.com/10.1111/j.1558-5646.2011.01401.x&quot;&gt;read the paper&lt;/a&gt; – it’s all there, clear and thorough.  Meanwhile, what we really want to do, is take it out for a test drive.&lt;/p&gt;
+&lt;p&gt;The package isn’t up on CRAN yet, so you can grab the development version from Jon’s &lt;a href=&quot;https://github.com/eastman/auteur&quot;&gt;github&lt;/a&gt; page, or &lt;a href=&quot;https://github.com/downloads/eastman/auteur/auteur_0.11.0612.tar.gz&quot;&gt;click here&lt;/a&gt;.  Put that package in a working directory and fire up R in that directory.  Let’s go for a spin.&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;span class=&quot;kw&quot;&gt;install.packages&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;auteur_0.11.0612.tar.gz&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;repos=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;NULL&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;library&lt;/span&gt;(auteur)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Great, the package installed and loaded successfully. Looks like Jon’s put all 73 functions into the NAMESPACE, but it’s not hard to guess which one looks like the right one to start with.  rjmcmc.bm.  Yeah, that looks good.  It has a nice help file, with – praise the fish – example code.  Looks like we’re gonna run a simulation, where we know the answer, and see how it does:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+
+     #############
+     ## generate tree
+     n=&lt;span class=&quot;dv&quot;&gt;24&lt;/span&gt;
+     while(&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;) {
+             phy=&lt;span class=&quot;kw&quot;&gt;prunelastsplit&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;birthdeath.tree&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;b=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;dt&quot;&gt;d=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;dt&quot;&gt;taxa.stop=&lt;/span&gt;n&lt;span class=&quot;dv&quot;&gt;+1&lt;/span&gt;))
+             phy$tip.label=&lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;sp&amp;quot;&lt;/span&gt;,&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;:n,&lt;span class=&quot;dt&quot;&gt;sep=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;)
+             rphy=&lt;span class=&quot;kw&quot;&gt;reorder&lt;/span&gt;(phy,&lt;span class=&quot;st&quot;&gt;&amp;quot;pruningwise&amp;quot;&lt;/span&gt;)
+
+             &lt;span class=&quot;co&quot;&gt;# find an internal edge&lt;/span&gt;
+             anc=&lt;span class=&quot;kw&quot;&gt;get.desc.of.node&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;Ntip&lt;/span&gt;(phy)+&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;,phy)
+             branches=phy$edge[,&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;]
+             branches=branches[branches&amp;gt;&lt;span class=&quot;kw&quot;&gt;Ntip&lt;/span&gt;(phy) &amp;amp;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;branches!=anc]
+             branch=branches[&lt;span class=&quot;kw&quot;&gt;sample&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(branches),&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;)]
+             desc=&lt;span class=&quot;kw&quot;&gt;get.descendants.of.node&lt;/span&gt;(branch,phy)
+             if(&lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(desc)&amp;gt;=&lt;span class=&quot;dv&quot;&gt;4&lt;/span&gt;) break()
+     }
+     rphy=phy
+     rphy$edge.length[&lt;span class=&quot;kw&quot;&gt;match&lt;/span&gt;(desc,phy$edge[,&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;])]=phy$edge.length[&lt;span class=&quot;kw&quot;&gt;match&lt;/span&gt;(desc,phy$edge[,&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;])]*&lt;span class=&quot;dv&quot;&gt;64&lt;/span&gt;
+
+     e=&lt;span class=&quot;kw&quot;&gt;numeric&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;nrow&lt;/span&gt;(phy$edge))
+     e[&lt;span class=&quot;kw&quot;&gt;match&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(branch,desc),phy$edge[,&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;])]=&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;
+     cols=&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;,&lt;span class=&quot;st&quot;&gt;&amp;quot;gray&amp;quot;&lt;/span&gt;)
+     &lt;span class=&quot;kw&quot;&gt;dev.new&lt;/span&gt;()
+     &lt;span class=&quot;kw&quot;&gt;plot&lt;/span&gt;(phy,&lt;span class=&quot;dt&quot;&gt;edge.col=&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;ifelse&lt;/span&gt;(e==&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;,cols[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;],cols[&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;]), &lt;span class=&quot;dt&quot;&gt;edge.width=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;)
+     &lt;span class=&quot;kw&quot;&gt;mtext&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;expected pattern of rates&amp;quot;&lt;/span&gt;)
+
+     #############
+     ## simulate data on the &amp;#39;rate-shifted&amp;#39; tree
+     dat=&lt;span class=&quot;kw&quot;&gt;rTraitCont&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;phy=&lt;/span&gt;rphy, &lt;span class=&quot;dt&quot;&gt;model=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;BM&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;sigma=&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sqrt&lt;/span&gt;(&lt;span class=&quot;fl&quot;&gt;0.1&lt;/span&gt;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That creates this beautiful example (sorry, no random generator seed, you’re results may vary but that’s ok) tree:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://farm7.static.flickr.com/6123/5952070152_e7761d597c.jpg&quot; /&gt; Okay, so that’s the target, showing where the shift occurred.  Note the last line got us some data on this tree.  We’re ready to run the software.  It looks super easy:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+## run two short reversible-jump Markov chains
+ r=&lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;sample&lt;/span&gt;(letters,&lt;span class=&quot;dv&quot;&gt;9&lt;/span&gt;,&lt;span class=&quot;dt&quot;&gt;replace=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;),&lt;span class=&quot;dt&quot;&gt;collapse=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;)
+ &lt;span class=&quot;kw&quot;&gt;lapply&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;, function(x) &lt;span class=&quot;kw&quot;&gt;rjmcmc.bm&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;phy=&lt;/span&gt;phy, &lt;span class=&quot;dt&quot;&gt;dat=&lt;/span&gt;dat, &lt;span class=&quot;dt&quot;&gt;ngen=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;10000&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;sample.freq=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;10&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;prob.mergesplit=&lt;/span&gt;&lt;span class=&quot;fl&quot;&gt;0.1&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;simplestart=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;prop.width=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;fileBase=&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(r,x,&lt;span class=&quot;dt&quot;&gt;sep=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The data is going in as “phy” and “dat”, just as expected.  We won’t worry about the optional parameters that follow for the moment.  Note that because we use lapply to run multiple chains, it would be super easy to run this on multiple processors.&lt;/p&gt;
+&lt;p&gt;Note that Jon’s creating a bunch of directories to store parameters, etc.  This can be important for MCMC methods where chains get too cumbersome to handle in memory.  Enough technical rambling, let’s merge and load those files in now, and plot what we got:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;span class=&quot;co&quot;&gt;# collect directories&lt;/span&gt;
+dirs=&lt;span class=&quot;kw&quot;&gt;dir&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;./&amp;quot;&lt;/span&gt;,&lt;span class=&quot;dt&quot;&gt;pattern=&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;BM&amp;quot;&lt;/span&gt;,r,&lt;span class=&quot;dt&quot;&gt;sep=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;))
+&lt;span class=&quot;kw&quot;&gt;pool.rjmcmcsamples&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;base.dirs=&lt;/span&gt;dirs, &lt;span class=&quot;dt&quot;&gt;lab=&lt;/span&gt;r)
+
+## view contents of .rda
+&lt;span class=&quot;kw&quot;&gt;load&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(r,&lt;span class=&quot;st&quot;&gt;&amp;quot;combined.rjmcmc&amp;quot;&lt;/span&gt;,&lt;span class=&quot;dt&quot;&gt;sep=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;),&lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(r,&lt;span class=&quot;st&quot;&gt;&amp;quot;posteriorsamples.rda&amp;quot;&lt;/span&gt;,&lt;span class=&quot;dt&quot;&gt;sep=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;),&lt;span class=&quot;dt&quot;&gt;sep=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;/&amp;quot;&lt;/span&gt;))
+&lt;span class=&quot;kw&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;head&lt;/span&gt;(posteriorsamples$rates))
+&lt;span class=&quot;kw&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;head&lt;/span&gt;(posteriorsamples$rate.shifts))
+
+## plot Markov sampled rates
+&lt;span class=&quot;kw&quot;&gt;dev.new&lt;/span&gt;()
+&lt;span class=&quot;kw&quot;&gt;shifts.plot&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;phy=&lt;/span&gt;phy, &lt;span class=&quot;dt&quot;&gt;base.dir=&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(r,&lt;span class=&quot;st&quot;&gt;&amp;quot;combined.rjmcmc&amp;quot;&lt;/span&gt;,&lt;span class=&quot;dt&quot;&gt;sep=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;.&amp;quot;&lt;/span&gt;), &lt;span class=&quot;dt&quot;&gt;burnin=&lt;/span&gt;&lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;legend=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;edge.width=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;)
+
+&lt;span class=&quot;co&quot;&gt;# clean-up: unlink those directories&lt;/span&gt;
+ &lt;span class=&quot;kw&quot;&gt;unlink&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;dir&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;pattern=&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(r)),&lt;span class=&quot;dt&quot;&gt;recursive=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm7.static.flickr.com/6001/5952112488_91867e7f3a.jpg&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Not only is that a beautiful plot, but it’s nailed the shift in species 12-16.  How’d your example do?&lt;/p&gt;
+&lt;p&gt;Auteur comes with three beautiful large data sets described in the paper.  Check them out, but expect longer run times than our simple example!&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+
+&lt;span class=&quot;kw&quot;&gt;data&lt;/span&gt;(chelonia)
+&lt;span class=&quot;co&quot;&gt;# take a look at this data&lt;/span&gt;
+&amp;gt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;chelonia
+$phy
+Phylogenetic tree with &lt;span class=&quot;dv&quot;&gt;226&lt;/span&gt; tips and &lt;span class=&quot;dv&quot;&gt;225&lt;/span&gt; internal nodes.
+
+Tip labels:
+Elseya_latisternum, Chelodina_longicollis, Phrynops_gibbus, Acanthochelys_radiolata, Acanthochelys_macrocephala, Acanthochelys_pallidipectoris, ...
+
+Rooted; includes branch lengths.
+
+$dat
+Pelomedusa_subrufa                   Pelusios_williamsi
+&lt;span class=&quot;fl&quot;&gt;2.995732&lt;/span&gt;                             &lt;span class=&quot;fl&quot;&gt;3.218876&lt;/span&gt;
+...
+dat &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;chelonia$dat
+phy &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;chelonia$phy
+## ready to run as above
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.R-bloggers.com&quot;&gt;&lt;img src=&quot;http://a1.twimg.com/profile_images/1344218056/RblogLogo_bigger.png&quot; alt=&quot;R-bloggers.com&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks Jon and the rest of the Harmon Lab for a fantastic package. This is really just a tip of the iceberg, but should help get you started. See the paper for a good example of posterior analyses requisite after running any kind of MCMC, or stay tuned for a later post.&lt;/p&gt;
+&lt;p&gt;(cross-posted from &lt;a href=&quot;http://fishlab.ucdavis.edu/?p=303&quot;&gt;my entry on the Wainwright lab blog&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.researchblogging.org&quot;&gt;&lt;img src=&quot;http://www.researchblogging.org/public/citation_icons/rb2_large_gray.png&quot; alt=&quot;ResearchBlogging.org&quot; /&gt;&lt;/a&gt; Eastman, J., Alfaro, M., Joyce, P., Hipp, A., &amp;amp; Harmon, L. (2011). A NOVEL COMPARATIVE METHOD FOR IDENTIFYING SHIFTS IN THE RATE OF CHARACTER EVOLUTION ON TREES Evolution DOI: &lt;a href=&quot;http://dx.doi.org/10.1111/j.1558-5646.2011.01401.x&quot;&gt;10.1111/j.1558-5646.2011.01401.x&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>TreeBASE in R: a first tutorial</title>
+	 <link href="/2011/05/16/treebase-in-r-a-first-tutorial.html"/>
+   <updated>2011-05-16T19:46:54+00:00</updated>
+   <id>/05/16/treebase-in-r-a-first-tutorial</id>
+   <content type="html">&lt;p&gt;My TreeBASE R package is essentially functional now.  Here’s a quick tutorial on the kinds of things it can do.  Grab the &lt;a href=&quot;https://github.com/cboettig/treeBASE/archives/master&quot;&gt;treebase package here&lt;/a&gt;, install and load the library into R.&lt;/p&gt;
+&lt;p&gt;TreeBASE provides two APIs to query the database, one which searches by the metadata associated with different publications (called &lt;a href=&quot;http://sourceforge.net/apps/mediawiki/treebase/index.php?title=OAI-PMH&quot;&gt;OAI-PMH&lt;/a&gt;), and another which queries the phylogenies directly (called &lt;a href=&quot;http://sourceforge.net/apps/mediawiki/treebase/index.php?title=API&quot;&gt;Phylo-ws&lt;/a&gt;).  They have somewhat redundant functions, but for our purposes the second one returns the actual data, while the first returns metadata.  A few examples will best illustrate how this all works.  We start with some queries of the metadata directly without downloading any trees.&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;p&gt;Trees can be downloaded with search_treebase(), using a variety of search conditions provided by Phylo-ws API.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Metadata can be searched by date using search_metadata.  Just Download all metadata for finer queries.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Metadata for a study can be grabbed using the study id.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A few examples will better illustrate how this all works.&lt;/p&gt;
+&lt;h2 id=&quot;metadata-queries&quot;&gt;Metadata queries&lt;/h2&gt;
+&lt;p&gt;How has TreeBASE grown since it’s inception?  Let’s grab the metadata for all entries and histogram by publication year:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+
+all &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_metadata&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;by=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;all&amp;quot;&lt;/span&gt;)
+dates &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(all, function(x) &lt;span class=&quot;kw&quot;&gt;as.numeric&lt;/span&gt;(x$date))
+&lt;span class=&quot;kw&quot;&gt;hist&lt;/span&gt;(dates, &lt;span class=&quot;dt&quot;&gt;main=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;TreeBase growth&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;xlab=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;Year&amp;quot;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm3.staticflickr.com/2676/5711820192_95ab0fc731_o.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;What journals have submitted the most studies to treebase?&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+
+journals &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(all, function(x) x$publisher)
+J &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;tail&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;sort&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;table&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;as.factor&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;unlist&lt;/span&gt;(journals)))),&lt;span class=&quot;dv&quot;&gt;5&lt;/span&gt;)
+b &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;barplot&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;as.numeric&lt;/span&gt;(J))
+&lt;span class=&quot;kw&quot;&gt;text&lt;/span&gt;(b, &lt;span class=&quot;kw&quot;&gt;names&lt;/span&gt;(J), &lt;span class=&quot;dt&quot;&gt;srt=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;70&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;pos=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;xpd=&lt;/span&gt;T)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm6.staticflickr.com/5125/5728023288_1737290073_o.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;How many have been submitted from &lt;em&gt;Nature&lt;/em&gt;? &lt;em&gt;Science&lt;/em&gt;?&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+
+nature &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(all, function(x) &lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;grep&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Nature&amp;quot;&lt;/span&gt;, x$publisher))&amp;gt;&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;)
+science &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(all, function(x) &lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;grep&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;^Science$&amp;quot;&lt;/span&gt;, x$publisher))&amp;gt;&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;)
+
+&lt;span class=&quot;kw&quot;&gt;sum&lt;/span&gt;(nature)
+
+&amp;gt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;11&lt;/span&gt;
+
+&lt;span class=&quot;kw&quot;&gt;sum&lt;/span&gt;(science)
+
+&amp;gt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;8&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which studies were those?  Can I have those trees please?&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+
+s &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;get_study_id&lt;/span&gt;( all[nature] )
+
+nature_trees &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(s, function(x) &lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(x, &lt;span class=&quot;st&quot;&gt;&amp;quot;id.study&amp;quot;&lt;/span&gt;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Other details associated with the study are certainly also available.  Since we downloaded all metadata we have this stored already.  Any tree downloaded stores the TreeBASE study id in $S.id, ((and the unique tree id in $Tr.id)) which we can use to look up the metadata again.&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+
+&lt;span class=&quot;kw&quot;&gt;plot&lt;/span&gt;(nature_trees[[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;]][[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;]]) &lt;span class=&quot;co&quot;&gt;#plot first tree in the first study in the set&lt;/span&gt;
+
+all[nature][&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;] &lt;span class=&quot;co&quot;&gt;# Pull metadata from complete list&lt;/span&gt;
+
+&lt;span class=&quot;co&quot;&gt;# Or look up again using the study id:&lt;/span&gt;
+
+&lt;span class=&quot;kw&quot;&gt;metadata&lt;/span&gt;(nature_trees[[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;]][[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;]]$S.id)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;importing-phylogenies&quot;&gt;Importing Phylogenies&lt;/h2&gt;
+&lt;p&gt;We can query for phylogenies directly on an array of search criteria, such as study authors, taxa included, number of taxa, number of characters in the trait matrix, etc, as illustrated by the following examples.  A few queries that aren’t built into the API (i.e. does the tree have branch lengths) are accomplished by filtering after downloading the tree, which is slower.&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+
+## We&amp;#39;ll often use max_trees in the example so that they run quickly,
+&lt;span class=&quot;co&quot;&gt;# notice the quotes for species.&lt;/span&gt;
+dolphins &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;#39;&amp;quot;Delphinus&amp;quot;&amp;#39;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;by=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;taxon&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;max_trees=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;5&lt;/span&gt;)
+## can do exact matches
+humans &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;#39;&amp;quot;Homo sapiens&amp;quot;&amp;#39;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;by=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;taxon&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;exact_match=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;max_trees=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;10&lt;/span&gt;)
+&lt;span class=&quot;co&quot;&gt;# all trees with 5 taxa&lt;/span&gt;
+five &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;by=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;ntax&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;max_trees =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;10&lt;/span&gt;)
+&lt;span class=&quot;co&quot;&gt;# These are different, a tree id isn&amp;#39;t a Study id.  we report both&lt;/span&gt;
+studies &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;2377&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;by=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;id.study&amp;quot;&lt;/span&gt;)
+tree &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;2377&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;by=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;id.tree&amp;quot;&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;TreeID&amp;quot;&lt;/span&gt; =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;tree$Tr.id, &lt;span class=&quot;st&quot;&gt;&amp;quot;StudyID&amp;quot;&lt;/span&gt; =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;tree$S.id)
+&lt;span class=&quot;co&quot;&gt;# Only results wiht branch lengths&lt;/span&gt;
+&lt;span class=&quot;co&quot;&gt;# Has to grab all the trees first, then toss out ones without branch_lengths&lt;/span&gt;
+Near &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Near&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;branch_lengths=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(Near)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These queries can be combined with metadata searches&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+
+#### Metadata examples ###
+&lt;span class=&quot;co&quot;&gt;# Use the OAI-PMH api to check out the metadata from the study in which tree is published:&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;metadata&lt;/span&gt;(Near[[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;]]$S.id)
+&lt;span class=&quot;co&quot;&gt;# or manualy give a sudy id&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;metadata&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;2377&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;combining-metadata-and-phylogeny-queries&quot;&gt;Combining metadata and phylogeny queries&lt;/h2&gt;
+&lt;p&gt;Metadata queries can optionally return only those studies added to TreeBASE before or after a given date:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+
+&lt;span class=&quot;co&quot;&gt;# Use that to get all trees &amp;quot;published&amp;quot; after 2010&lt;/span&gt;
+&lt;span class=&quot;co&quot;&gt;# publication date is only a year&lt;/span&gt;
+post2010 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(dates, function(x) &lt;span class=&quot;dv&quot;&gt;2010&lt;/span&gt; &amp;lt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;as.numeric&lt;/span&gt;(x))
+s &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;get_study_id&lt;/span&gt;( all[post2010] )
+out &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;lapply&lt;/span&gt;(s, function(x) &lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(x, &lt;span class=&quot;st&quot;&gt;&amp;quot;id.study&amp;quot;&lt;/span&gt;))
+&lt;span class=&quot;co&quot;&gt;# Grab the trees entered since 2011: (some studies will have multiple trees)&lt;/span&gt;
+&lt;span class=&quot;co&quot;&gt;#can compare dates with as.Date(&amp;quot;2001-01-01&amp;quot;, &amp;quot;%y-%m-%d) &amp;lt; as.Date ...&lt;/span&gt;
+m &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_metadata&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;2011-05-05&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;by=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;from&amp;quot;&lt;/span&gt;)
+s &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;get_study_id&lt;/span&gt;(m)
+out &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;lapply&lt;/span&gt;(s, function(x) &lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(x, &lt;span class=&quot;st&quot;&gt;&amp;quot;id.study&amp;quot;&lt;/span&gt;))&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;a-simple-meta-analysis&quot;&gt;A simple meta-analysis&lt;/h2&gt;
+&lt;p&gt;Of course, this capacity is most powerful not to merely get some summary statistics of the database, but repeat analyses of given studies or perform meta-analyses.  Most comparative phylogenetics methods require ultrametric trees.&lt;/p&gt;
+&lt;p&gt;We can assemble a simple pipeline to perform the meta-analysis across all existing studies of whether phylogenies tend to fit a pure-birth or a birth-death model more frequently:&lt;/p&gt;
+&lt;p&gt;As a proof-of-principle, we can create a pipeline that will estimate chronograms for all trees containing branchlengths in treebase.&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+
+timetree &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;function(tree){
+check.na &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;sum&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;is.na&lt;/span&gt;(tree$edge.length))&amp;gt;&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;)
+if(&lt;span class=&quot;kw&quot;&gt;is&lt;/span&gt;(check.na, &lt;span class=&quot;st&quot;&gt;&amp;quot;try-error&amp;quot;&lt;/span&gt;) |&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;check.na)
+&lt;span class=&quot;ot&quot;&gt;NULL&lt;/span&gt;
+else
+&lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;( &lt;span class=&quot;kw&quot;&gt;chronoMPL&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;multi2di&lt;/span&gt;(tree)) )
+}
+drop_errors &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;function(trees){
+## apply to a list of trees created with timetree to drop errors
+tt &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;tt[!&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(trees, is.null)]
+tt &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;tt[!&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(tt, function(x) &lt;span class=&quot;kw&quot;&gt;is&lt;/span&gt;(x, &lt;span class=&quot;st&quot;&gt;&amp;quot;try-error&amp;quot;&lt;/span&gt;))]
+&lt;span class=&quot;kw&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;dropped&amp;quot;&lt;/span&gt;, &lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(trees)-&lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(tt), &lt;span class=&quot;st&quot;&gt;&amp;quot;trees&amp;quot;&lt;/span&gt;))
+tt
+
+}
+
+&lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(laser)
+pick_branching_model &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;function(tree){
+ m1 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;pureBirth&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;branching.times&lt;/span&gt;(tree)))
+ m2 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;bd&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;branching.times&lt;/span&gt;(tree)))
+ &lt;span class=&quot;kw&quot;&gt;as.logical&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;(m2$aic &amp;lt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;m1$aic))
+}
+
+&lt;span class=&quot;co&quot;&gt;# Return all treebase trees that have branch lengths&lt;/span&gt;
+&lt;span class=&quot;co&quot;&gt;# This has to download every tree in treebase, so not superfast...&lt;/span&gt;
+all &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;search_treebase&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Consensus&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;type.tree&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;branch_lengths=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;)
+tt &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;drop_errors&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(all, timetree))
+is_yule &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(tt, pick_branching_model)
+&lt;span class=&quot;kw&quot;&gt;table&lt;/span&gt;(is_yule)&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;replicating-individual-studies&quot;&gt;Replicating individual studies&lt;/h2&gt;
+&lt;p&gt;Replicating individual studies is a bit more challenging, mostly do to the quality of available data.  For instance, here is a nice recent study (Rowe &lt;em&gt;et. al.&lt;/em&gt; 2011) that has nicely time calibrated chronograms (from BEAST, Figure 4) and species trees (using BEST, Figure 3), but it seems only the&lt;a href=&quot;http://purl.org/phylo/treebase/dev/phylows/study/find?query=tb.identifier.study=10869&amp;amp;format=rss1&amp;amp;recordSchema=tree&quot;&gt;Mr. Bayes tree in Figure 2 is given in TreeBASE.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Further, replicating the study would require other data than the phylogenetic tree.  In the future we might hope that this data would appear on Dryad.  Dryad’s web-based search frustratingly does not seem to allow a simple query by doi or treebase id, and a query by title returns a long list of &lt;a href=&quot;http://datadryad.org/discover?&amp;amp;query=Recent+and+Rapid+Speciation+with+Limited+Morphological+Disparity+in+the+Genus+Rattus.&amp;amp;fq=dc.title%3ARecent+and+Rapid+Speciation+with+Limited+Morphological+Disparity+in+the+Genus+Rattus.&amp;amp;filtertype=*&amp;amp;filter=&amp;amp;rpp=10&amp;amp;sort_by=score&amp;amp;order=DESC&amp;amp;location=l2&quot;&gt;things that aren’t this paper&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Mendeley API (through my &lt;a href=&quot;https://github.com/cboettig/RMendeley&quot;&gt;RMendeley&lt;/a&gt; package) does a bit better at pulling out some metadata, but not much.  Querying by the doi we can’t find the paper, but the pmid works:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+
+&lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(RMendeley)
+
+&lt;span class=&quot;kw&quot;&gt;details&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;21239388&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;pmid&amp;quot;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://datadryad.org/handle/10255/dryad.1705&quot;&gt;Some Dryad papers&lt;/a&gt;have phylogenies, and the data deposition includes the BEAST xml files necessary to reproduce the phylogenies, but not, it seems, the phylogenies themselves.  It would be great to have some good examples of papers with data up on both TreeBASE and Dryad. Further, a pipeline that could regenerate the trees from the alignments might be interesting.&lt;/p&gt;
+&lt;p&gt;RaXML for inferring branch lengths: A quick solution for trees that have only topologies would be to infer branch lengths conditional on the topology from the character matrix.  TreeBASE does not include this with the nexus file containing the tree, and would require a separate query to pull the character matrix.  This is handled in the read.nexus.data command.&lt;/p&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Rowe K, Aplin K, Baverstock P and Moritz C (2011). “Recent And Rapid Speciation With Limited Morphological Disparity in The Genus Rattus.” &lt;em&gt;Systematic Biology&lt;/em&gt;, &lt;strong&gt;60&lt;/strong&gt;. ISSN 1063-5157, &lt;a href=&quot;http://dx.doi.org/10.1093/sysbio/syq092&quot;&gt;http://dx.doi.org/10.1093/sysbio/syq092&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

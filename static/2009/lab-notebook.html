@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Lab Notebook</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Lab Notebook" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="http://www.carlboettiger.info/2009/lab-notebook.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Lab Notebook" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/2009/lab-notebook.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content=""/>
+<meta name="citation_title" content="Lab Notebook"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  class="active" >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Lab Notebook</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row postpreview">
+  <div class="col-md-11 col-md-offset-1">
+    <div class="row">
+			<h4> <a href="/2009/atom.xml"
+              onClick="recordOutboundLink(this,
+              'Outbound Links', 'RSS'); return false;"
+              style="color: inherit;"
+              ><i class="icon-rss" ></i> Entries</a></h4>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2009//08/25/stochastic-methods.html">Stochastic Methods</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 25 Aug 2009</p>
+
+<article>
+<div class="excerpt">
+<p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="http://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
+<h1 id="extinction-probabilities">Extinction Probabilities</h1>
+<p>Gardiner (1985).</p>
+<p>We consider single-step birth death models for the majority of this work. Though they will become multidimensional in later parts of the work, as we deal with multiple species or explicit environmental changes, for the time being we will focus on the one-dimensional bith-death process. The Markov process is defined over positive integers, <span class="math">\(n \in \mathbb{Z}^+\)</span>, and will sometimes be assumed to be bounded above by some integer <span class="math">\(N\)</span>. The process is determined by two state-dependent rates, <span class="math">\(b(n)\)</span> and <span class="math">\(d(n)\)</span>, as depicted here:</p>
+<figure>
+<img src="http://farm4.staticflickr.com/3723/9624787798_6899d87bc1_o.png" />
+</figure>
+<p>The process is specified by the Master equation:</p>
+<p><span class="math">\[\frac{\partial P(n,t)}{\partial t} = b(n-1)P(n-1,t)+d(n+1)P(n+1) - \left( b(n) + d(n)  \right) P(n)
+\label{mastereq}\]</span></p>
+<p>and approximated by the method of Kurtz (1971) or van Kampen’s linear nois expansion as:</p>
+<p><span class="math">\[\frac{\partial P(\tilde n,t)}{\partial t} = - \underbrace{\frac{\partial \left( b(\tilde n)-d(\tilde n) \right)}{\partial \tilde n}}_{A(\tilde n) } \frac{\partial}{\partial \tilde n} \tilde n  P(\tilde n,t)+ \underbrace{\frac{b(\tilde n)+ d(\tilde n)}{2} }_{B(\tilde n)/2} \frac{\partial^2}{\partial \tilde n^2} P(\tilde n)
+\label{forward}\]</span></p>
+<p>Note that <span class="math">\(n\to \tilde n\)</span> where <span class="math">\(\tilde n \in \mathbb{R}\)</span> has become a continuous value in the limit of large system size. The coefficients <span class="math">\(A(x)\)</span> and <span class="math">\(B(x)\)</span> are the jump moments <span class="math">\(\partial_x \alpha_{1,0}(x)\)</span> and <span class="math">\(\alpha_{2,0}(x)\)</span> in the van Kampen expansion. This expression is known as the forward Kolmogrov equation. Its solution is a Guassian, with mean and variance given respectively by</p>
+<p><span class="math">\[\begin{aligned}
+\frac{\mathrm{d}x }{\mathrm{d}t} &amp;= b(x)-d(x) \nonumber \\
+\frac{\mathrm{d}\sigma^2}{\mathrm{d}t} &amp;= A(x) \sigma^2 + B(x)
+\label{moments}\end{aligned}\]</span></p>
+<p>Related to  is the backward Kolmogrov equation which we use for first-passage time problems:</p>
+<p><span class="math">\[\frac{\partial P(\tilde n,t)}{\partial t} = A(\tilde n) \frac{\partial}{\partial \tilde n}  P(\tilde n,t)+ \tfrac{1}{2}  B(\tilde n)\frac{\partial^2}{\partial \tilde n^2} P(\tilde n)
+\label{backward}\]</span></p>
+<p>From this we have the first passage time starting at <span class="math">\(x\)</span> across an absorbing boundary <span class="math">\(a &lt; b\)</span> given <span class="math">\(b\)</span> is reflecting:</p>
+<p><span class="math">\[T(x) = 2 \int^x_a \frac{\mathrm{d}y}{\psi(y)} \int_y^b \frac{\psi(z) }{B(z)} \mathrm{d}z
+\label{firstpassage}\]</span></p>
+<p>where we define the integrating factor</p>
+<p><span class="math">\[\exp\left( \int_a^y \mathrm{d}x \left[ \frac{2 A(x)}{B(x)} \right] \right)
+\label{integrating factor}\]</span></p>
+<p>It is useful to work these results out for some familiar models.</p>
+<h3 id="levins-model">Levins Model</h3>
+<p>We first consider the Levins model:</p>
+<p><span class="math">\[\begin{aligned}
+b(n) &amp;= c n \left( 1 - n/K \right) \nonumber \\
+d(n) &amp;= e n
+\label{levins}\end{aligned}\]</span></p>
+<p><span class="math">\(K\)</span> is the number of patches, and also the convenient measure of system size. In the limit of large <span class="math">\(K\)</span>, <span class="math">\(\tilde n = \tfrac{n}{K}\)</span> represents the fraction of occupied patches, and we have the coeffients:</p>
+<p><span class="math">\[\begin{aligned}
+&amp; A(\tilde n) = c(1-2 \tilde n)-e \\
+&amp; B(\tilde n) = c \tilde n (1 - \tilde n) + e \tilde n\end{aligned}\]</span></p>
+<p>By way of  we have the equilibrium mean and variance:</p>
+<p><span class="math">\[\begin{aligned}
+&amp; \langle \tilde n \rangle = 1-\frac{e}{c} \\
+&amp; \langle (\tilde n - \langle \tilde n \rangle )^2 \rangle = \frac{e}{c}\end{aligned}\]</span></p>
+<h3 id="logistic-model">Logistic Model</h3>
+<p>A closely related model is the logistic with the following interpretation:</p>
+<p><span class="math">\[\begin{aligned}
+&amp; b(n) = r n \\
+&amp; d(n) = \frac{r n^2}{K}\end{aligned}\]</span></p>
+<p>Which has mean and variance both equal to <span class="math">\(K\)</span>, and coefficents:</p>
+<p><span class="math">\[\begin{aligned}
+&amp; A(x) = r  - \frac{2 r x}{K} \\
+&amp; B(x) = rx + \frac{rx^2}{K}\end{aligned}\]</span></p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2009//08/25/stochastic-methods.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2009//08/25/drift-effects.html">Drift Effects</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 25 Aug 2009</p>
+
+<article>
+<div class="excerpt">
+<p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="http://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
+<hr />
+<p>We wish to establish the fate of a population into which a rare mutant is introduced near a branching point. Far from the branching point, we had only one concern - will the mutant survive? Near the branching point, we now have two concerns - the fate of the mutant and the fate of the original resident. For branching to proceed, both must persist. The traditional framework of density-independent diffusion theory is insuffient to handle this case. We must consider both resident and mutant populations, with abundances <span class="math">\(N_1\)</span> and <span class="math">\(N_2\)</span> respectively. Under a series of approximations, we can again write this case as a one dimensional equation in the frequency of the mutant, <span class="math">\(p\)</span>; however, this time the equation will necessarily be nonlinear to have an additional intermediate stable state <span class="math">\(0&lt;p&lt;1\)</span> in addition to the boundaries <span class="math">\(p=0\)</span> and <span class="math">\(p=1\)</span>. We briefly review the necessary approximations as an understanding of them is essential to develop the proper picture.</p>
+<p>While the argument could be expressed in greater generality of generic birth and death rates, working with our particular example is instructive. For a dimorphic population, the master equations governing the probability distributions are:</p>
+<p><span class="math">\[\begin{aligned}
+\frac{\mathrm{d}}{\mathrm{d}t} P(N_1,t) &amp;= (\mathbb{E}_1 - 1) r N_1 \frac{N_1 + C(x_1, x_2) N_2}{K(x_1) }P(N_1) + (\mathbb{E}_1^{-1} - 1)r N_1 P(N_1) \nonumber \\
+\frac{\mathrm{d}}{\mathrm{d}t} P(N_2,t) &amp;= (\mathbb{E}_2 - 1) r N_2 \frac{N_2 + C(x_2, x_1) N_1}{K(x_2) }P(N_2) + (\mathbb{E}_2^{-1} - 1)r N_2 P(N_2),
+\label{mastereq}\end{aligned}\]</span></p>
+<p>where <span class="math">\(E_i^k\)</span> is the step operator taking <span class="math">\(f(N_i) \to f(N_{i+k})\)</span>. We apply van Kampen’s expansion of the master equation to linear order in the system size <span class="math">\(K_0\)</span>, the carrying capacity at the singular strategy. While several other options are possible, it is important to note that this approximation, which gives rise to a diffusion equation, is <em>not</em> based on the assumption of a large <em>population</em> size, but a large <em>system</em> size. Confusing the two is common in the literature. For instance, if the system size is an area, then the transformed variable that obeys the diffusion equation is the density of individuals (a naturally continuous quantity), not the number of individuals, and the approximation becomes better when larger areas are considered, not larger numbers in the same area (which just means a higher density). Having stated this, we take <span class="math">\(n_i = N_i/K_0\)</span> and apply the expansion to recover the following stochastic differential equation (Itô expression)</p>
+<p><span class="math">\[\begin{aligned}
+\mathrm{d}n_1 = r n_1 \left(1 -  \frac{n_1 + C(x_1, x_2) n_2}{K(x_1) } \right) \mathrm{d}t + \frac{1}{\sqrt{K_o} } \sqrt{r n_1 \left(1 +  \frac{n_1 + C(x_1, x_2) n_2}{K(x_1) } \right) } \mathrm{d}W_1
+\label{sde}\end{aligned}\]</span></p>
+<p>and <span class="math">\(n_2\)</span> similarly. This approximation is rigorously justified in the limit <span class="math">\(K_0 \to \infty\)</span>. The next approximation is only heuristically justified at the moment, changing variables into <span class="math">\(p = n_1/(n_1+n_2)\)</span>. The approximation makes two assumptions which are not strictly valid but justifable under the right conditions. The first is that the total population size is a constant, <span class="math">\(n_1 + n_2 = n\)</span>. Even at stationary state, this is not valid as the populations fluctuate according to , but these fluctuations become negligible for large <span class="math">\(K_0\)</span>. However, the system is only near stationary state when <span class="math">\(p\)</span> is at it’s equilibrium value - it is not valid for all <span class="math">\(p\)</span>. This is more problematic, as the resulting SDE will depend only on <span class="math">\(k_1\)</span> and not <span class="math">\(k_2\)</span>. Only when <span class="math">\(k_1 = k_2\)</span> is this equation valid for any value of <span class="math">\(p\)</span>. If mutational steps are small this will be approximately true. As we will see, smaller mutational steps will require larger populations and/or tighter competition kernels for branching to occur at all. Simplying notation by <span class="math">\(C(x_1, x_2) = C_{1,2}\)</span> and <span class="math">\(K(X_i) = k_i\)</span>, this gives us the one-dimensional nonlinear SDE in the frequency <span class="math">\(p\)</span>:</p>
+<p><span class="math">\[\begin{aligned}
+\mathrm{d}p = r p \left(1 -  n \frac{p + c_{1,2}(1-p) }{k_1 } \right) \mathrm{d}t + \frac{1}{\sqrt{K_o n} } \sqrt{r p \left(1 +  n\frac{p + c_{1,2} (1-p) }{k_1 } \right) } \mathrm{d}W_1\end{aligned}\]</span></p>
+<p>The extinction probability <span class="math">\(u(p,t)\)</span> for this expression is given by the Backwards equation for the generator,</p>
+<p><span class="math">\[\frac{\mathrm{d}}{\mathrm{d}t} u(p,t) = r p \left(1 -  n \frac{p + c_{12}(1-p) }{k_1 } \right) \partial_p u(p,t) + \frac{1}{2K_o n } r p \left(1 +  n\frac{p + c_{12} (1-p) }{k_1 } \right) \partial_p^2 u(p,t) 
+\label{u}\]</span></p>
+<p>with the boundary conditions <span class="math">\(u(0) = 1\)</span> and <span class="math">\(u(1) = 1\)</span> being absorbing.</p>
+<p>After some rearrangement we can rewrite this as</p>
+<p><span class="math">\[\begin{gathered}
+\frac{\mathrm{d}}{\mathrm{d}t} u(p,t) = \left( rp \left( 1-\frac{n c_{12}}{k_1} \right) - \frac{r n}{k_1} p^2 (1 - c_{12} )\right)  \partial_p u(p,t) \\
++ \left( rp \left(1+\frac{n c_{12}}{k_1}\right)  + \frac{r n }{k_1} p^2 (1 - c_{12} ) \right) \frac{\partial_p^2 u(p,t)}{2K_0 n}\end{gathered}\]</span></p>
+<p>Note then for <span class="math">\(p\)</span> small we can neglect the terms quadratic in <span class="math">\(p\)</span> and we are left with the backwards equation from the density independent case,</p>
+<p><span class="math">\[\frac{\mathrm{d}}{\mathrm{d}t} u(p,t) =  rp \left( 1-\frac{n c_{12}}{k_1} \right)   \partial_p u(p,t) + rp \left(1+\frac{n c_{12}}{k_1}\right)   \frac{\partial_p^2 u(p,t)}{2K_0 n}\]</span></p>
+<p>Setting equal to zero we have a simple ordinary differential equation for the stationary extinction probability:</p>
+<p><span class="math">\[\begin{aligned}
+u &amp;= 1 - e^{-2sp K_0 n} \\
+s &amp;= \frac{r\left( 1-\frac{n c_{12}}{k_1} \right) }{ r\left(1+\frac{n c_{12}}{k_1}\right)} \end{aligned}\]</span></p>
+<p>and particularly for a frequency <span class="math">\(p\)</span> corresponding to a single individual, a frequency of <span class="math">\(p=1/(N_1+N_2) =(1/K_0)/(n_1+n_2) = 1/(K_0 n)\)</span>, this reduces to</p>
+<p><span class="math">\[u = 1-e^{-2s}\]</span></p>
+<p>Assuming $ rp ( 1- ) 0$, the time-dependent solution is:</p>
+<p><span class="math">\[\begin{aligned}
+u &amp;= 1-e^{-p \psi(t) } \\
+\psi(t) &amp;= \frac{2 s K_0 n}{1-e^{ r\left( 1-\frac{n c_{12}}{k_1} \right) t } }
+\label{timedep}\end{aligned}\]</span></p>
+<p>This tells us nothing about the survival of the resident. In most applications of this approach, it is assumed the resident quickly goes extinct once <span class="math">\(p \sim o(1)\)</span>. If we consider the asymptotic behavior of the nonlinear PDE, Eq. , we find not suprisingly that the asymptotic behavior is sure absorbtion at one boundary or the other. The asymptotic behavior needn’t concern us; as we really want to know how the expected lifetime of this dimporphic state compares with the rate at which mutants are entering this population. To do so we need the time dependent solution to the nonlinear equation .</p>
+<p>This poses some trouble in choosing <span class="math">\(p = 1/(nK_0)\)</span> as the initial mutant frequency. In the linear case, this always canceled perfectly with the noise term, <span class="math">\(nK_0\)</span>, leaving a fixation probability that did not depend on the population size (system size), given that it was large enough to justify the linear noise approximation in the first place. This is no longer the case. Larger populations result in the mutant frequency <span class="math">\(p\)</span> being much smaller. While the noise also decreases, we do not observe the perfect balance of the linear system. While an analytic, time-dependent solution for <span class="math">\(u\)</span> in this case is not possible, numerical solutions illustrate the much smaller populations having significantly higher survival probability, due to the higher value of <span class="math">\(p\)</span> from which they start given a single mutation.</p>
+<p>This seems unreasonable. A smaller population should be more suseptible to the accidental loss of a set of coexisting types, as observed in the simulations. I am unclear as to the explanation.</p>
+<figure>
+<img src="http://farm4.staticflickr.com/3726/9621550031_05054cdb02_o.png" />
+</figure>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2009//08/25/drift-effects.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2009//08/25/diffusion-solution.html">Diffusion Solution</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 25 Aug 2009</p>
+
+<article>
+<div class="excerpt">
+<p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="http://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
+<hr />
+<p><span class="math">\[\begin{aligned}
+\mathrm{d}n_1 = r n_1 \left(1 -  \frac{n_1 + C(x_1, x_2) n_2}{K(x_1) } \right) \mathrm{d}t + \frac{1}{\sqrt{K_o} } \sqrt{r n_1 \left(1 +  \frac{n_1 + C(x_1, x_2) n_2}{K(x_1) } \right) } \mathrm{d}W_1\end{aligned}\]</span></p>
+<p><span class="math">\[\begin{aligned}
+p &amp;= \frac{n_1}{n}, \quad q = 1-p = \frac{n_2}{n} \quad n = n_1 + n_2 \\
+\mathrm{d}p &amp;= \frac{\mathrm{d}n_1}{n}, \quad \mathrm{d}q = \frac{\mathrm{d}n_2}{n} \\
+\mathrm{d}n &amp;= \mathrm{d}n_1 + \mathrm{d}n_2 = n (\mathrm{d}p + \mathrm{d}q) \end{aligned}\]</span></p>
+<p><span class="math">\[\begin{aligned}
+\mathrm{d}p(p,n) = \alpha_1(p,n) \mathrm{d}t + \sqrt{ \alpha_2(p,n) } \mathrm{d}W_p \\
+\mathrm{d}n(p,n) = \beta_1(p,n) \mathrm{d}t +  \sqrt{ \beta_2(p,n) } \mathrm{d}W_n\end{aligned}\]</span></p>
+<p><span class="math">\[\begin{aligned}
+f_i(p) =  r p \left(1 -  n(p) \frac{p + c_{12}(1-p) }{k_i } \right) \\
+g_i(p) =  r p \left(1 +  n(p) \frac{p + c_{12}(1-p) }{k_i } \right) \end{aligned}\]</span></p>
+<p><span class="math">\[\begin{aligned}
+\alpha_1 &amp;=  f_1(p) \\ 
+\alpha_2 &amp;= \frac{ g_1(p) }{K_0 n(p) } \\
+\beta_1 &amp;= n f_1(p) + n f_2(1-p)  \\
+\beta_2 &amp;= n*\frac{g_1(p)+g_2(1-p)}{K_0 } \end{aligned}\]</span></p>
+<p><span class="math">\[\begin{aligned}
+\frac{\mathrm{d}}{\mathrm{d}t} \sigma_p &amp;= 2 \partial_p \alpha_1(p,n) \sigma_p  +2\partial_n\alpha_1(p,n) \langle p n \rangle +  \alpha_2(p,n) \\
+\frac{\mathrm{d}}{\mathrm{d}t} \sigma_n&amp;= 2 \partial_n \beta_1(p,n) \sigma_n  +2\partial_p\beta_1(p,n) \langle p n \rangle +  \beta_2(p,n) \\
+\frac{\mathrm{d}}{\mathrm{d}t} \langle p n \rangle &amp;= \partial_n \alpha_1(p,n) \sigma_n  +\partial_p \alpha_1 \langle pn \rangle + \partial_p\beta_1 (p,n) \sigma_p + \partial_n \beta_1(p,n) \langle p n \rangle\end{aligned}\]</span></p>
+<p><span class="math">\[\begin{aligned}
+\partial_p \alpha_1 &amp;= 
+\\ \partial_n \alpha_1 &amp;=
+\\ \partial_p \beta_1 &amp;= 
+\\ \partial_n \beta_1 &amp;=\end{aligned}\]</span></p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2009//08/25/diffusion-solution.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+    </div>
+
+    <div class="row">
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2009//07/28/branching-times.html">Branching Times</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 28 Jul 2009</p>
+
+<article>
+<div class="excerpt">
+<p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="http://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
+<h1 id="introduction">Introduction</h1>
+<p>Our calculation of the time until branching occurs consists of the following approach. The first requirement for branching to occur is the existence of two mutually invasible populations separated by an adaptive minimum, that is <span class="math">\(s(y,x) &gt;0\)</span>, <span class="math">\(s(x,y)&gt;0\)</span> and <span class="math">\(\partial^2_y s(y,x)&gt;0\)</span>. The minimum (curvature condition) is provided by a singular point of the branching type, which also assures us that there will be some pairs <span class="math">\((y,x)\)</span> near each other <span class="math">\(|y-x| \sim o(\sigma_{\mu})\)</span>. These points define a coexistence region in the pairwise invasibility plot, which we denote <span class="math">\(P_2\)</span>. A mutant enters this region by “jumping the gap” from the line <span class="math">\(y=x\)</span> into the coexistence region. This gap diminishes in width as the resident trait <span class="math">\(x\)</span> nears the branching point, where the gap vanishes all together. This criterion can be evaluated directly at regular intervals throughout the simulation.</p>
+<p>Most often this condition will arise only transiently - a single mutant satisifying the conditions but soon lost to drift. Hence our second requirement must be that the mutant successfully entering the coexistence region then proceeds to survive drift. Defining this second condition rigorously is less straight-forward. For large populations, the probability of survival may be well approximated by the Galton-Watson branching process. In theory, this probability can be converted into an expected waiting time in a straight-forward manner. In simulation, this is insufficent, as we want to identify the actual waiting time we need more than a probability - we need to indentify which populations actually survive. If selection is strong, we may hope to identify which populations have effectively survived drift by establishing some low-density threshold at which we declare the population successful. Of course, this introduces a discrepancy in the definition of waiting time, as the theory calculates the time until a successful mutant occurs, while the simulation lags behind by the time required to go from one individual to the threshold size.</p>
+<p>If selection is strong, we can set this threshold quite low, and more importantly, the time to reach the threshold will be quite small compared to the time spent waiting for the mutation, and theory and simulation should match reasonably well. This latter observation is particularly convenient in that our calculation shouldn’t depend much on the choice of threshold, as once the mutant establishes several clones the probability of survival quickly asymptotes to unity. If selection is weak, we are not so fortunate. Even relatively large mutant populations may be at substantial risk to extinction by drift, and this extinction probability will depend quite strongly on the particular choice of threshold. As selection becomes nearly neutral, no threshold may exist that can guarentee the persistence of the mutant.</p>
+<p>In each case, the persistence of the resident must also be considered, as it is also protected by a selection coefficient when rare which may be weaker than that of the mutant (depending on whether the mutant has occurred closer to or farther from the branching point). If only weakly protected, it too can be lost to drift. For the moment, let us consider only the case of strong selection, where a small, arbitrary threshold can reasonably guarentee the success of branching. Later we will want to quantify the meaning of strong, relative to the influence of drift. For now, it suffices that such a notion exists, and we need only focus on the first two steps - a mutant occurs and survives drift with probability given by its selective coefficent, to have a reasonable approximation of the waiting time between simulation and experiment.</p>
+<p>The loss of a mutant in the coexistence region even after invading a significant fraction of the population does not preclude branching. The population may continue to approach the branching point where such mutations are more common (do they have stronger selection too?) Even in the purely neutral case, the dimorphism may persist long enough for a new mutant to arise. This allows the populations to take another mutational steps apart, where selection may be strong enough to protect the dimorphism. The ability for larger populations to be able to survive drift long enough for this to occur may allow them to branch in face of weak selection where a smaller population would fail.</p>
+<p>(A resource kernel that is similar in width to the competition kernel but very wide compared to the mutational step size may approach the branching region only by drift - fixing weakly deleterious mutations. )</p>
+<h1 id="calculation">Calculation</h1>
+<p>The probability of such a mutant occurring in our monomorphic population of trait <span class="math">\(x\)</span> is given by the probability that any mutant occurs (given by the population size, approximately <span class="math">\(K(x)\)</span> at equilibrium, times the birth rate <span class="math">\(b(x)\)</span> times the mutation rate <span class="math">\(\mu\)</span>) times the probability that the mutation lies on the opposite side of the coexistence boundary, which we denote as <span class="math">\(\phi(x)\)</span> and <span class="math">\(\psi(x)\)</span>, which is <span class="math">\(\phi(x)\)</span> reflected across the line <span class="math">\(y=x\)</span>. This depends on the mutational kernel, <span class="math">\(M(y,x)\)</span> which gives the probability that a mutant arising from a resident population of trait <span class="math">\(x\)</span> bears trait <span class="math">\(y\)</span> that falls withing the coexistance region as follows:</p>
+<p><span class="math">\[\int_{-\infty}^{\phi(x)} M(y,x) \mathrm{d}y + \int_{\psi(x)}^{\infty} M(y,x) \mathrm{d}y\]</span></p>
+<p>Without loss of generality let us assume that the singular strategy <span class="math">\(x^* = 0\)</span> and that we start from some trait value <span class="math">\(x_0 &gt; x^*\)</span>. Additionally, let us we assume <span class="math">\(M(y,x)\)</span> is Gaussian in <span class="math">\(y-x\)</span> with mean 0 and variance <span class="math">\(\sigma_{\mu}^2\)</span>. However, we do not wish to consider all such mutants <span class="math">\(y\)</span>, but only those that survive. We multiply the probability of a mutant having trait <span class="math">\(y\)</span>, <span class="math">\(M(y,x)\)</span>, times the probability that is survives drift. This probability we quote from the Galton-Watson branching process, <span class="math">\(1-\tfrac{d(y,x)}{b(y,x)}\)</span>. Taking as our model the individual birth <span class="math">\(b\)</span> and death <span class="math">\(d\)</span> rates to be:</p>
+<p><span class="math">\[\begin{aligned}
+b(y,x) &amp;= r\\
+d(y,x) &amp;= r\frac{C(y,x)K(x)}{K(y)}\end{aligned}\]</span></p>
+<p>where <span class="math">\(K\)</span> is a Gaussian kernel with mean <span class="math">\(x^*\)</span>, <span class="math">\(K(x^*) = K_0\)</span> and variance <span class="math">\(\sigma^2_k\)</span> and <span class="math">\(C(y,x)\)</span> a Gaussian kernel in <span class="math">\(y-x\)</span> with mean <span class="math">\(0\)</span>, <span class="math">\(C(0) =1\)</span> and variance <span class="math">\(\sigma^2_c\)</span>. Using this choice of model, the probability of surviving branching is</p>
+<p><span class="math">\[1-\frac{C(y,x)K(x)}{K(y)} := S(y,x)
+\label{S}\]</span></p>
+<p>which we denote as <span class="math">\(S(y,x)\)</span> as indicated. Hence we modify our integral to consider all mutants <span class="math">\(y &lt; x^*\)</span> which occur with probability <span class="math">\(M(y,x)\)</span> and then survive with probability <span class="math">\(S(y,x)\)</span>, and write down the rate <span class="math">\(P(x)\)</span> at which a mutant which leads to branching occurs from our monomorphic population with trait <span class="math">\(x\)</span>:</p>
+<p><span class="math">\[P(x) := r \mu K(x)\left( \int_{-\infty}^{\phi(x)} M(y,x) S(y,x) \mathrm{d}y + \int_{\psi(x)}^{\infty} M(y,x) S(y,x) \mathrm{d}y  \right)
+\label{MSerf}\]</span></p>
+<p>Though a little cumbersome, this can be written in nearly closed form (using the error function). For our particular model <span class="math">\(s(y,x)\)</span>, we can write the boundaries <span class="math">\(\phi(x)\)</span> and <span class="math">\(\psi(x)\)</span> as</p>
+<p><span class="math">\[\begin{aligned}
+\phi(x) = x\frac{\frac{\sigma_k^2}{\sigma_c^2}+1}{\frac{\sigma_k^2}{\sigma_c^2}-1} \nonumber \\
+\psi(x) = x\frac{\frac{\sigma_k^2}{\sigma_c^2}-1}{\frac{\sigma_k^2}{\sigma_c^2}+1}
+\label{phipsi}\end{aligned}\]</span></p>
+<p>Then, given a starting condition <span class="math">\(x_0\)</span>, we can determine the expected trait <span class="math">\(x\)</span> at time <span class="math">\(t\)</span> of a monomorphic resident population by integrating the canonical equation,</p>
+<p><span class="math">\[\frac{\mathrm{d}x}{\mathrm{d}t} = \frac{1}{2} \mu \sigma_{mu}^2 N^*(x) \partial_y s(y,x)\]</span></p>
+<p>which for our model is</p>
+<p><span class="math">\[\frac{\mathrm{d}x}{\mathrm{d}t} = \frac{-x}{2\sigma_k^2} r \mu \sigma_{\mu}^2 K(x)\]</span></p>
+<p>While no closed form solution exists for <span class="math">\(x(t)\)</span> in this case, if we assume <span class="math">\(x_0 \ll \sigma_k\)</span> then to good approximation we can view <span class="math">\(K(x)\)</span> to be constant over the interval and take our path to be:</p>
+<p><span class="math">\[x(t) = x_0 \exp\left( -r \mu \sigma_{\mu}^2 K_0 t/\sigma_k^2\right)\]</span></p>
+<p>Using this mean path, we can write down an approximation for the rate of a branching mutant occurring as a function of time, <span class="math">\(P(x(t))\)</span>. Using this time dependent rate, the probability of not branching after time <span class="math">\(T\)</span> is simply <span class="math">\(\exp\left( - \int_0^T P(t)\mathrm{d}t \right)\)</span>. One minus this is the probability branching by time <span class="math">\(T\)</span>; i.e. the cumulative density function, hence the probability density function for the waiting time is:</p>
+<p><span class="math">\[\Pi(T) = P(x(T)) \exp\left( -\int_0^T P(x(t)) \right)
+\label{pdf}\]</span></p>
+<p>and the expected time until branching is <span class="math">\(\int_0^{\infty} T \Pi(T) \mathrm{d}T\)</span>. This is our first analytic approximation.</p>
+<figure>
+<img src="http://farm4.staticflickr.com/3668/9624772024_ccb8ba0fb9_o.png" />
+</figure>
+<figure>
+<img src="http://farm6.staticflickr.com/5535/9624772196_d3fab3e33b_o.png" />
+</figure>
+<figure>
+<img src="http://farm8.staticflickr.com/7403/9624772374_7e297716ab_o.png" />
+</figure>
+<p><span class="math">\[\begin{gathered}
+P(x) = \frac{1}{2} \left(1+ {Erf}\left[\frac{x}{\sqrt{2} \sqrt{\sigma_{\mu}^2}}\right]\right)-\\
+\Biggl(e^{\frac{\sigma_{\mu}^2  {\sigma_{c}^2} x^2}{2  {\sigma_{k}^2} ( {\sigma_{c}^2}  {\sigma_{k}^2}+\sigma_{\mu}^2 (- {\sigma_{c}^2}+ {\sigma_{k}^2}))}}  {\sigma_{c}^2} \Biggl(\sqrt{\frac{ {\sigma_{k}^2} ( {\sigma_{c}^2}  {\sigma_{k}^2}+\sigma_{\mu}^2 (- {\sigma_{c}^2}+ {\sigma_{k}^2})) x^2}{\sigma_{\mu}^2  {\sigma_{c}^2}}}+\\
+\sqrt{\frac{1}{\sigma_{\mu}^2}+\frac{1}{ {\sigma_{c}^2}}-\frac{1}{ {\sigma_{k}^2}}}  {\sigma_{k}^2} x  {Erf}\left[\frac{\sqrt{-\frac{(\sigma_{\mu}^2+ {\sigma_{c}^2})^2  {\sigma_{k}^2} x^2}{\sigma_{\mu}^2  {\sigma_{c}^2} (\sigma_{\mu}^2 ( {\sigma_{c}^2}- {\sigma_{k}^2})- {\sigma_{c}^2}  {\sigma_{k}^2})}}}{\sqrt{2}}\right]\Biggr)\Biggr)/\left(2 ( {\sigma_{c}^2}  {\sigma_{k}^2}+\sigma_{\mu}^2 (- {\sigma_{c}^2}+ {\sigma_{k}^2})) \sqrt{\frac{x^2}{\sigma_{\mu}^2}}\right)\end{gathered}\]</span></p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2009//07/28/branching-times.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+    </div>
+
+    <div class="row">
+      
+    </div>
+
+  </div>
+</div> <!--end row -->
+
+<div class="row socialicons">
+  <div class="col-md-11 col-md-offset-1">
+		<p> <a href="/2009/index.html"><i class="icon-calendar"></i> All entries by date</a></p> 
+      <p> <a href="/2009/categories.html"><i class="icon-list"></i> All entries by category</a> </p>
+      <p> <a href="/2009/tags.html"><i class="icon-tags"></i> All entries by tag</a> </p>
+  </div> <!--end col-md-9 -->
+</div> <!--end row -->
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Lab Notebook
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/lab-notebook.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

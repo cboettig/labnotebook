@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Server Security Basics</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="digitalocean, docker" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Server Security Basics" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2014-09-08 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/09/08/server-security-basics.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Server Security Basics" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2014-09-08 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/09/08/server-security-basics.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2014-09-08 00:00:00 +0000"/>
+<meta name="citation_title" content="Server Security Basics"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Server Security Basics</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h2 id="security-configuration">Security configuration</h2>
+<p>We set up SSH key-only login on non-standard port, with root login forbidden. We then set up <code>ufw</code> firewall, <code>fail2ban</code>, and <code>tripwire</code>.</p>
+<ol type="1">
+<li>Configure an <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2">SSH key login</a>. Next, <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-12-04">Create a user, add to sudoers, and then disable root login.</a>. Edits <code>/etc/ssh/sshd_config</code>:</li>
+</ol>
+<ul>
+<li>Disabling root logins. (We’ll need to add ourselves to sudo first: (<code>adduser</code>, edit <code>/etc/sudoers</code>)</li>
+<li>Change ssh port from default to something else.</li>
+<li>Whitelist user login ids</li>
+</ul>
+<p>Additionally, let’s be sure to disable password authentication: Add <code>PasswordAuthentication no</code> to <code>/etc/ssh/sshd_config</code>. (editing PermitRootLogin only doesn’t do this).</p>
+<p>Locally add an entry in <code>~/.ssh/config</code> to alias the host and port to avoid having to remember these numbers for login. Run <code>ssh-copy-id &lt;droplet-ip&gt;</code> to enable key-based login for the user.</p>
+<ol start="2" type="1">
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server">Install and configure</a> <code>ufw</code> firewall. As we’re not using the default <code>ssh</code> port, we need to explicitly tell <code>ufw</code> which ssh port to allow.</li>
+</ol>
+<pre><code>sudo ufw allow &lt;PORT&gt;/tcp</code></pre>
+<p>(The <code>/tcp</code> part is optional, saying only allow <code>tcp</code> protocol over that port, not other protocols.)</p>
+<p>We must also tell ufw to <a href="http://docs.docker.com/installation/ubuntulinux/#docker-and-ufw">allow Docker</a>: In <code>/etc/default/ufw</code> change <code>DEFAULT_FORWARD_POLICY</code> to ACCEPT, then:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> ufw reload
+<span class="kw">sudo</span> ufw allow 2375/tcp</code></pre>
+<p>and similarly allow any ports we export for our various services (Gitlab, Drone, etc).</p>
+<ol start="3" type="1">
+<li><p><a href="https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-12-04">Install and configure</a> <code>fail2ban</code>. Prevents brute force password attacks. Be sure to assign the config to match chosen ssh port.</p></li>
+<li><p><a href="https://www.digitalocean.com/community/tutorials/how-to-use-tripwire-to-detect-server-intrusions-on-an-ubuntu-vps">Install and configure</a> <code>tripwire</code> (intrusion detection).</p></li>
+<li><p>Update software:</p></li>
+</ol>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get -q update <span class="kw">&amp;&amp;</span> <span class="kw">sudo</span> apt-get -qy dist-upgrade</code></pre>
+<p>and then also update tripwire log:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> tripwire --check --interactive</code></pre>
+<p>Note: Clearly all these steps need to be running on the server itself, not merely in a container image deployed on server so that they are securing access to the actual host.</p>
+<h2 id="additional-configuration">Additional configuration</h2>
+<p>While we’re doing things, add user to the docker group for convenience: <code>sudo addgroup cboettig docker</code></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-12-04">Enable swap</a> on a small instance. Here we set up 1GB of swap (setting swap at twice the available RAM is the recommended rule-of-thumb, though makes less sense once RAM is large)</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> fallocate -l 1G /swapfile
+<span class="kw">sudo</span> chmod 600 /swapfile
+<span class="kw">sudo</span> mkswap /swapfile
+<span class="kw">sudo</span> swapon /swapfile</code></pre>
+<p>To make this persistant on reboot edit <code>/etc/fstab</code>:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> echo <span class="st">&quot;/swapfile       none    swap    sw      0       0&quot;</span> <span class="kw">&gt;&gt;</span> /etc/fstab</code></pre>
+<p>For better performance, we might tweak swappiness to 10 (default is 60 out of 100, where 0 is never swap and 1 is swap frequently):</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">echo</span> 10 <span class="kw">|</span> <span class="kw">sudo</span> tee /proc/sys/vm/swappiness
+<span class="kw">echo</span> vm.swappiness = 10 <span class="kw">|</span> <span class="kw">sudo</span> tee -a /etc/sysctl.conf</code></pre>
+<p>Set ownership</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> chown root:root /swapfile
+<span class="kw">sudo</span> chmod 0600 /swapfile</code></pre>
+<h2 id="server-modules">Server modules</h2>
+<p>Running different services as their own docker containers offers serveral advantages:</p>
+<ul>
+<li><p>Containers often make it easier to install and deploy existing services, since the necessary configuration is scripted in the Dockerfile and we can often find Dockerfiles already made on <a href="http://hub.docker.com">Docker Hub</a> for common services. This note illustrates several examples.</p></li>
+<li><p>Containers may provide an added level of stability, since they run largely in isolation from each other.</p></li>
+<li><p>Containers can be <a href="http://stackoverflow.com/questions/16084741/how-do-i-set-resources-allocated-to-a-container-using-docker">resource limited</a>, e.g.</p></li>
+</ul>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">docker</span> run -it -m 100m -c 100 ubuntu /bin/bash</code></pre>
+<p>would provide the container with 100 MB of RAM and 100 “shares” of CPU (acts kind of like a niceness, where the default share of a container is 1024. On multicore machines you can also pass <code>--cpuset &quot;0&quot;</code> or <code>--cpuset &quot;0,1&quot;</code> etc, which is a list of which cpus (numbered 0 to n-1, as in <code>/proc/cpuinfo</code>) the container is permitted to use.</p>
+<p>As noted in the link, restricting disk space is more tricky, though might become easier down the road.</p>
+<h3 id="ssh-server">ssh server:</h3>
+<p>Permit users to ssh directly into a container rather than access the server itself. Despite its simplicity, I found this a bit tricky to set up correctly, particularly in managing users.</p>
+<p>Here’s the basic Dockerfile for an image we’ll call <code>ssh</code>. This creates a user given by the environmental variable. A few tricks:</p>
+<ul>
+<li>We use <code>adduser</code> instead of <code>useradd</code> so that we get the home directory for the user created and granted the correct permissions automaticalliy. We need the <code>--gecos</code> information so that we’re not prompted to enter the user’s full name etc. We use <code>--disabled-password</code> rather than set a password here.</li>
+<li>Login is still possible through ssh key (as well as through nsenter on the host machine). We go ahead and add the ssh key now, though this could be done after the container is running by using nsenter.</li>
+<li>In this dockerfile, we’ve added the user to <code>sudo</code>ers group for root access on the container (installing software, etc). This won’t be active until the user has a password.</li>
+</ul>
+<pre><code>FROM     ubuntu:14.04
+ENV USER cboettig
+RUN apt-get update &amp;&amp; apt-get install -y openssh-server
+RUN mkdir /var/run/sshd
+RUN adduser --disabled-password --gecos &quot;&quot; $USER
+RUN adduser $USER sudo
+ADD authorized_keys /home/$USER/.ssh/authorized_keys
+RUN chown $USER /home/$USER/.ssh/authorized_keys
+EXPOSE 22
+CMD    [&quot;/usr/sbin/sshd&quot;, &quot;-D&quot;]</code></pre>
+<p>When building the image, note that a copy of <code>authorized_keys</code> (contains the contents of the <code>id_rda.pub</code> public key) file must be found in the same directory as the Dockerfile so that it can be added to the image.</p>
+<p>Start the ssh server on port 2200:</p>
+<pre><code>docker run -d -p 2200:22 --name=&quot;ssh&quot; ssh</code></pre>
+<p>Add to the firewall permissions</p>
+<pre><code>sudo ufw add 2200/tcp</code></pre>
+<p>From here I can now ssh in from the computer housing the private key pair to the public key that is added to the image here. However, that user doesn’t have root access since we haven’t provided a password.</p>
+<p>Use <code>nsenter</code> to enter the instance:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">docker</span> run -v /usr/local/bin:/target jpetazzo/nsenter
+<span class="kw">nsenter</span> -m -u -n -i -p -t <span class="kw">`docker</span> inspect --format <span class="st">&#39;&#39;</span> ssh<span class="kw">`</span> /bin/bash</code></pre>
+<p>Create a password for the user to enable root access:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">echo</span> <span class="st">&#39;$USER:&lt;password&gt;&#39;</span> <span class="kw">|</span> <span class="kw">chpasswd</span></code></pre>
+<p>We can create other users and add them to sudoers or not as desired, e.g. add interactively using:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">useradd</span> <span class="kw">&lt;</span>username<span class="kw">&gt;</span></code></pre>
+<p>users can later change their passwords once they log in.</p>
+<h2 id="restoring-containers-when-restarting">Restoring containers when restarting</h2>
+<p>A certain times we need to power cycle the server (e.g. after certain software updates), using the <code>sudo reboot now</code> command or the DigitalOcean console. Any running containers will be automatically stopped. Once the machine is back up and we log back in, these containers can be brought back up with <code>docker restart &lt;container_id&gt;</code> (or <code>&lt;container_name&gt;</code>), and then everything is back to normal.</p>
+<p>Note that while we can stop and restart a container, it seems we cannot simply save a container (e.g. with <code>docker commit</code> or <code>docker save</code> and re-run it and expect the server functionality to be restored after the container is destroyed (e.g. by <code>docker rm -f</code>). (See previous notes 2014-09-05) for an illustration of this problem. This occurs because the container image does not include the volume where it writes its data, and that volume address is generated uniquely each time a container is run.</p>
+<p>Consequently, a different (probably more traditional) approach is needed to backup the configuration of a server such as Gitlab or Drone-CI even when running in a container. Will explore this later.</p>
+<p>Meanwhile, remember remove unneeded containers with</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">docker</span> rm <span class="ot">$(</span><span class="kw">docker</span> ps -a <span class="kw">|</span> <span class="kw">grep</span> Exited <span class="kw">|</span> <span class="kw">awk</span> <span class="st">&#39;{print $1}&#39;</span><span class="ot">)</span></code></pre>
+<p>and not with <code>-f</code> (destroying running containers!)</p>
+<h2 id="key-security">Key security</h2>
+<p>We can largely avoid needing a private ssh key for the server, though may use https authentication to let us use git (rather than, say, rsync) to develop and save changes made remotely (say, through RStudio server).</p>
+<h3 id="backing-up-keys">Backing up keys</h3>
+<p>Probably unnecessary to have a backup of the ssh private RSA key, as we can access the DigitalOcean Server or Github through the web consoles and add a new public key and replace our private key.</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2014-09-08 00:00:00 +0000" 
+    property="dc:created">08 Sep 2014</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/09/05/thoughts-on-Harte-interview.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/09/09/server-backups.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2014-09-08-server-security-basics.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#computing">computing</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#digitalocean">#digitalocean</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#docker">#docker</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/4ed1307836a8a71987a9a7fb84d95fe13f2a96fa/_posts/2014-09-08-server-security-basics.md"> 4ed1307836a8a71987a9a7fb84d95fe13f2a96fa</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Server Security Basics
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2014-09-08
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/09/08/server-security-basics.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

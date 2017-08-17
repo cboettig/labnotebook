@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Gp Compare</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="gp, nimble" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Gp Compare" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2015-05-13 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/05/13/gp-compare.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Gp Compare" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2015-05-13 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/05/13/gp-compare.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2015-05-13 00:00:00 +0000"/>
+<meta name="citation_title" content="Gp Compare"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="http://www.carlboettiger.info/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Gp Compare</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Original go at nimble gp model, but this requires rather manual manipulation of parameter posteriors to get the GP posteriors.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;MASS&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;mcmc&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;nimble&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;tidyr&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;nonparametricbayes&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;pdgControl&quot;</span>)</code></pre>
+<h2 id="sample-data">sample data</h2>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">1234</span>)
+Tobs &lt;-<span class="st"> </span><span class="dv">40</span>
+f &lt;-<span class="st"> </span>RickerAllee
+sigma_g &lt;-<span class="st"> </span><span class="fl">0.05</span>
+z_g &lt;-<span class="st"> </span>function() <span class="kw">rlnorm</span>(<span class="dv">1</span>, <span class="dv">0</span>, sigma_g)
+p &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">5</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">x_grid &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">15</span>, <span class="dt">length=</span><span class="dv">50</span>)
+h_grid &lt;-<span class="st"> </span>x_grid
+profit &lt;-<span class="st"> </span>function(x,h) <span class="kw">pmin</span>(x, h)
+delta &lt;-<span class="st"> </span><span class="fl">0.01</span>
+OptTime &lt;-<span class="st"> </span><span class="dv">50</span>  <span class="co"># stationarity with unstable models is tricky thing</span>
+xT &lt;-<span class="st"> </span><span class="dv">0</span>    <span class="co"># terminal condition</span>
+x0 &lt;-<span class="st"> </span><span class="dv">10</span>   <span class="co"># simulation under policy starts from</span>
+MaxT &lt;-<span class="st"> </span><span class="dv">1000</span> <span class="co"># timeout for value iteration convergence</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">numeric</span>(Tobs)
+x[<span class="dv">1</span>] &lt;-<span class="st"> </span><span class="fl">5.5</span>
+nz &lt;-<span class="st"> </span><span class="dv">1</span>
+for(t in <span class="dv">1</span>:(Tobs<span class="dv">-1</span>))
+  x[t<span class="dv">+1</span>] =<span class="st"> </span><span class="kw">z_g</span>() *<span class="st"> </span><span class="kw">f</span>(x[t], <span class="dt">h=</span><span class="dv">0</span>, <span class="dt">p=</span>p)
+obs &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">0</span>,nz), 
+                        <span class="kw">pmax</span>(<span class="kw">rep</span>(<span class="dv">0</span>,Tobs<span class="dv">-1</span>), x[<span class="dv">1</span>:(Tobs<span class="dv">-1</span>)])), 
+                  <span class="dt">y =</span> <span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">0</span>,nz), 
+                        x[<span class="dv">2</span>:Tobs]))
+<span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">time =</span> <span class="dv">1</span>:Tobs, <span class="dt">x=</span>x), <span class="kw">aes</span>(time,x)) +<span class="st"> </span><span class="kw">geom_line</span>()</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-05-13-GP-compare/unnamed-chunk-4-1.png" />
+</figure>
+<h2 id="gp-model">GP Model</h2>
+<pre class="sourceCode r"><code class="sourceCode r">code &lt;-<span class="st"> </span><span class="kw">nimbleCode</span>({
+
+   l ~<span class="st"> </span><span class="kw">dgamma</span>(<span class="dv">10</span>, <span class="dv">1</span>) 
+   sigma.n ~<span class="st"> </span><span class="kw">dunif</span>(<span class="dv">0</span>, <span class="fl">1e5</span>)
+   sigma.k  ~<span class="st"> </span><span class="kw">dunif</span>(<span class="dv">0</span>, <span class="fl">1e5</span>)
+   Sigma[<span class="dv">1</span>:N, <span class="dv">1</span>:N] &lt;-<span class="st"> </span>sigma.k ^<span class="st"> </span><span class="dv">2</span> *<span class="st"> </span><span class="kw">exp</span>(-<span class="fl">0.5</span> *<span class="st"> </span>diff[<span class="dv">1</span>:N, <span class="dv">1</span>:N] /<span class="st"> </span>l ^<span class="st"> </span><span class="dv">2</span>) +<span class="st"> </span>
+<span class="st">                      </span>sigma.n ^<span class="st"> </span><span class="dv">2</span> *<span class="st"> </span>I[<span class="dv">1</span>:N, <span class="dv">1</span>:N]
+   y[<span class="dv">1</span>:N] ~<span class="st"> </span><span class="kw">dmnorm</span>(Mu[<span class="dv">1</span>:N], <span class="dt">cov =</span> Sigma[<span class="dv">1</span>:N, <span class="dv">1</span>:N])  
+
+})</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">N &lt;-<span class="st"> </span><span class="kw">length</span>(obs$x)
+diff &lt;-<span class="st"> </span><span class="kw">outer</span>(obs$x, obs$x, function(xi, xj) (xi-xj)^<span class="dv">2</span>)
+constants =<span class="st"> </span><span class="kw">list</span>(<span class="dt">N =</span> N, <span class="dt">x =</span> obs$x, <span class="dt">Mu =</span> <span class="kw">rep</span>(<span class="dv">0</span>,N), <span class="dt">diff =</span> diff, <span class="dt">I =</span> <span class="kw">diag</span>(<span class="dv">1</span>,N))
+inits &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">l =</span> <span class="dv">1</span>, <span class="dt">sigma.n =</span> <span class="dv">10</span>, <span class="dt">sigma.k =</span> <span class="dv">1</span>)
+data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">y =</span> obs$y)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">Rmodel &lt;-<span class="st"> </span><span class="kw">nimbleModel</span>(<span class="dt">code =</span> code, <span class="dt">constants =</span> constants, <span class="dt">data =</span> data, <span class="dt">inits =</span> inits)</code></pre>
+<p>Define our mcmc procedure in Nimble</p>
+<pre class="sourceCode r"><code class="sourceCode r">Cmodel &lt;-<span class="st"> </span><span class="kw">compileNimble</span>(Rmodel)
+mcmcspec &lt;-<span class="st"> </span><span class="kw">configureMCMC</span>(Rmodel, <span class="dt">print=</span><span class="ot">FALSE</span>)
+Rmcmc &lt;-<span class="st"> </span><span class="kw">buildMCMC</span>(mcmcspec)
+Cmcmc &lt;-<span class="st"> </span><span class="kw">compileNimble</span>(Rmcmc, <span class="dt">project =</span> Rmodel)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+Cmcmc$<span class="kw">run</span>(<span class="fl">1e6</span>)
+)</code></pre>
+<pre><code>   user  system elapsed 
+226.792   0.456 227.077 </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">samples &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">as.matrix</span>(Cmcmc$mvSamples))
+df &lt;-<span class="st"> </span><span class="kw">gather</span>(samples)</code></pre>
+<h4 id="posteriors">Posteriors</h4>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(df) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(value)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(~key, <span class="dt">scale=</span><span class="st">&#39;free&#39;</span>) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">scale_x_log10</span>()</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-05-13-GP-compare/unnamed-chunk-11-1.png" />
+</figure>
+<h2 id="calculating-transition-probabilities">Calculating transition probabilities</h2>
+<p>Several ways we might go about this.</p>
+<p>Technically all policies could be updated in response to new information, though this requires repeating the estimation process, or at least a Bayesian updating step (e.g. passive learning). Typically these steps are separated into estimating the policy and then implementing the policy separately, so we will focus on this case.</p>
+<p>The transition probability is conditional</p>
+<pre class="sourceCode r"><code class="sourceCode r">## Should be able to extract this from nimble...
+predict &lt;-<span class="st"> </span>
+function (posteriors, obs, x_predict) {
+    out &lt;-<span class="st"> </span><span class="kw">lapply</span>(<span class="kw">data.frame</span>(<span class="kw">t</span>(posteriors)), 
+      function(sample) {
+      
+        l &lt;-<span class="st"> </span>sample[<span class="dv">1</span>]
+        sigma.k &lt;-<span class="st"> </span>sample[<span class="dv">2</span>]
+        sigma.n &lt;-<span class="st"> </span>sample[<span class="dv">3</span>]
+       
+        
+        SE &lt;-<span class="st"> </span>function (Xi, Xj, l) sigma.k *<span class="st"> </span><span class="kw">exp</span>(-<span class="st"> </span><span class="fl">0.5</span> *<span class="st"> </span>(Xi -<span class="st"> </span>Xj) ^<span class="st"> </span><span class="dv">2</span> /<span class="st"> </span>l ^<span class="st"> </span><span class="dv">2</span>)
+        cov &lt;-<span class="st"> </span>function(X, Y) <span class="kw">outer</span>(X, Y, SE, l)
+            
+        cov_xx_inv &lt;-<span class="st"> </span><span class="kw">solve</span>(<span class="kw">cov</span>(obs$x, obs$x) +<span class="st"> </span>sigma.n^<span class="dv">2</span> *<span class="st"> </span><span class="kw">diag</span>(<span class="dv">1</span>, <span class="kw">length</span>(obs$x)))
+        Ef &lt;-<span class="st"> </span><span class="kw">cov</span>(x_predict, obs$x) %*%<span class="st"> </span>cov_xx_inv %*%<span class="st"> </span>obs$y
+        Cf &lt;-<span class="st"> </span><span class="kw">cov</span>(x_predict, x_predict) -<span class="st"> </span><span class="kw">cov</span>(x_predict, obs$x) %*%<span class="st"> </span>
+<span class="st">            </span>cov_xx_inv %*%<span class="st"> </span><span class="kw">cov</span>(obs$x, x_predict)
+        <span class="kw">list</span>(<span class="dt">Ef =</span> Ef, <span class="dt">Cf =</span> Cf, <span class="dt">Vf =</span> <span class="kw">diag</span>(Cf))
+    })
+    Ef_posterior &lt;-<span class="st"> </span><span class="kw">sapply</span>(out, <span class="st">`</span><span class="dt">[[</span><span class="st">`</span>, <span class="st">&quot;Ef&quot;</span>)
+    Cf_posterior &lt;-<span class="st"> </span><span class="kw">sapply</span>(out, <span class="st">`</span><span class="dt">[[</span><span class="st">`</span>, <span class="st">&quot;Cf&quot;</span>)
+    Vf_posterior &lt;-<span class="st"> </span><span class="kw">sapply</span>(out, <span class="st">`</span><span class="dt">[[</span><span class="st">`</span>, <span class="st">&quot;Vf&quot;</span>)
+    E_Ef &lt;-<span class="st"> </span><span class="kw">rowMeans</span>(Ef_posterior)
+    E_Cf &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">apply</span>(Cf_posterior, <span class="dv">1</span>, sum)/<span class="kw">dim</span>(Cf_posterior)[<span class="dv">2</span>], 
+        <span class="dt">ncol =</span> <span class="kw">sqrt</span>(<span class="kw">dim</span>(Cf_posterior)[<span class="dv">1</span>]))
+    E_Vf &lt;-<span class="st"> </span><span class="kw">diag</span>(E_Cf)
+    Cf_posterior &lt;-<span class="st"> </span><span class="kw">lapply</span>(out, <span class="st">`</span><span class="dt">[[</span><span class="st">`</span>, <span class="st">&quot;Cf&quot;</span>)
+    <span class="kw">list</span>(<span class="dt">Ef_posterior =</span> Ef_posterior, <span class="dt">Vf_posterior =</span> Vf_posterior, 
+        <span class="dt">Cf_posterior =</span> Cf_posterior, <span class="dt">E_Ef =</span> E_Ef, <span class="dt">E_Cf =</span> E_Cf, 
+        <span class="dt">E_Vf =</span> E_Vf)
+}
+
+gp_posterior &lt;-<span class="st"> </span><span class="kw">predict</span>(<span class="kw">sample_n</span>(samples, <span class="dv">100</span>), obs, x_grid)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">matrices_gp &lt;-<span class="st"> </span><span class="kw">gp_transition_matrix</span>(gp_posterior$Ef_posterior, gp_posterior$Vf_posterior, x_grid, h_grid) 
+opt_gp &lt;-<span class="st"> </span><span class="kw">value_iteration</span>(matrices_gp, x_grid, h_grid, MaxT, xT, profit, delta, reward)</code></pre>
+<pre><code>Error: object &#39;reward&#39; not found</code></pre>
+<hr />
+<h2 id="comparison">Comparison</h2>
+<pre class="sourceCode r"><code class="sourceCode r">s2.p &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">5</span>)  
+d.p =<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">1</span>/<span class="fl">0.1</span>)
+gp &lt;-<span class="st"> </span><span class="kw">gp_mcmc</span>(obs$x, <span class="dt">y=</span>obs$y, <span class="dt">n=</span><span class="fl">1e5</span>, <span class="dt">s2.p =</span> s2.p, <span class="dt">d.p =</span> d.p)
+gp_dat &lt;-<span class="st"> </span><span class="kw">gp_predict</span>(gp, x_grid, <span class="dt">burnin=</span><span class="fl">1e4</span>, <span class="dt">thin=</span><span class="dv">300</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">matrices_gp &lt;-<span class="st"> </span><span class="kw">gp_transition_matrix</span>(gp_dat$Ef_posterior, gp_dat$Vf_posterior, x_grid, h_grid) 
+opt_gp &lt;-<span class="st"> </span><span class="kw">value_iteration</span>(matrices_gp, x_grid, h_grid, MaxT, xT, profit, delta)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">matrices_true &lt;-<span class="st"> </span><span class="kw">f_transition_matrix</span>(f, p, x_grid, h_grid, sigma_g)
+opt_true &lt;-<span class="st"> </span><span class="kw">value_iteration</span>(matrices_true, x_grid, h_grid, <span class="dt">OptTime=</span>MaxT, xT, profit, delta)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">policy &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">GP =</span> opt_gp$D, <span class="dt">exact =</span> opt_true$D)
+sets &lt;-<span class="st"> </span><span class="kw">expand.grid</span>(<span class="dt">reps =</span> <span class="dv">1</span>:<span class="dv">100</span>, <span class="dt">model =</span> <span class="kw">c</span>(<span class="st">&quot;exact&quot;</span>, <span class="st">&quot;GP&quot;</span>)) %&gt;%<span class="st"> </span><span class="kw">group_by</span>(reps, model)
+
+sim_fn &lt;-<span class="st"> </span>function(df){
+  <span class="kw">set.seed</span>(df$reps)
+  <span class="kw">ForwardSimulate</span>(f, p, x_grid, h_grid, x0, 
+                  <span class="dt">D =</span> policy[[<span class="kw">as.character</span>(df$model)]], 
+                  z_g, <span class="dt">profit=</span>profit, <span class="dt">OptTime =</span> OptTime)
+  
+}
+sims &lt;-<span class="st"> </span>sets %&gt;%<span class="st"> </span><span class="kw">do</span>(<span class="kw">sim_fn</span>(.))</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">colorkey &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;#000000&quot;</span>, <span class="st">&quot;#E69F00&quot;</span>, <span class="st">&quot;#56B4E9&quot;</span>, <span class="st">&quot;#009E73&quot;</span>, 
+               <span class="st">&quot;#F0E442&quot;</span>, <span class="st">&quot;#0072B2&quot;</span>, <span class="st">&quot;#D55E00&quot;</span>, <span class="st">&quot;#CC79A7&quot;</span>)
+<span class="kw">ggplot</span>(sims) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(time, fishstock, <span class="dt">group=</span><span class="kw">interaction</span>(reps,model), <span class="dt">col=</span>model), <span class="dt">alpha=</span>.<span class="dv">1</span>) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(~model) +
+<span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey, <span class="dt">guide=</span><span class="ot">FALSE</span>)</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-05-13-GP-compare/unnamed-chunk-16-1.png" />
+</figure>
+<pre class="sourceCode r"><code class="sourceCode r">policies_plot &lt;-<span class="st"> </span>function(policy){
+  policy_df &lt;-<span class="st"> </span>
+<span class="st">    </span><span class="kw">data.frame</span>(<span class="dt">model =</span> <span class="kw">c</span>(<span class="st">&quot;GP&quot;</span>, <span class="st">&quot;exact&quot;</span>))  %&gt;%<span class="st"> </span>
+<span class="st">    </span><span class="kw">group_by</span>(model) %&gt;%<span class="st"> </span>
+<span class="st">    </span><span class="kw">do</span>(<span class="kw">data.frame</span>(<span class="dt">stock =</span> x_grid, 
+                  <span class="dt">escapement =</span> x_grid -<span class="st"> </span>h_grid[policy[[<span class="kw">as.character</span>(.$model)]]]))
+
+  <span class="kw">ggplot</span>(policy_df, <span class="kw">aes</span>(stock, escapement, <span class="dt">color=</span>model)) +
+<span class="st">    </span><span class="kw">geom_line</span>() +<span class="st"> </span>
+<span class="st">    </span><span class="kw">facet_wrap</span>(~model) +
+<span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;stock size, x(t)&quot;</span>) +<span class="st"> </span>
+<span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;escapement, S(t)&quot;</span>)  +
+<span class="st">    </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey, <span class="dt">guide=</span><span class="ot">FALSE</span>)
+}
+
+<span class="kw">policies_plot</span>(policy)</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-05-13-GP-compare/unnamed-chunk-17-1.png" />
+</figure>
+<pre class="sourceCode r"><code class="sourceCode r">sims %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">net_profit =</span> <span class="kw">sum</span>(profit)) -&gt;<span class="st"> </span>sims</code></pre>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      
+<aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2015-05-13 00:00:00 +0000" 
+    property="dc:created">13 May 2015</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2015/05/08/ram-legacy-database-explore.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2015/05/15/diagrammer.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2015/commits/master/_posts/_posts/2015-05-13-GP-compare.Rmd"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2015/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#gp">#gp</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#nimble">#nimble</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2015/commit/fccfdc7ba71992d33e1a9e41bd44d9ec69faaabc/_posts/_posts/2015-05-13-GP-compare.Rmd"> fccfdc7ba71992d33e1a9e41bd44d9ec69faaabc</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Gp Compare
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2015-05-13
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/05/13/gp-compare.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

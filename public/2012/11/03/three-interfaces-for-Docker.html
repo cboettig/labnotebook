@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Three Interfaces For Docker</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="docker, blog" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Three Interfaces For Docker" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2014-11-03 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/11/03/three-interfaces-for-Docker.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Three Interfaces For Docker" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2014-11-03 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/11/03/three-interfaces-for-Docker.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2014-11-03 00:00:00 +0000"/>
+<meta name="citation_title" content="Three Interfaces For Docker"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Three Interfaces For Docker</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Here I outline three broad, different strategies for incorporating Docker into a user’s workflow, particularly from the perspective of an instructor getting a group of students up and running in a containerized environment, but also in the context of more generic collaborations. The options require progressively more setup and result in a progressively more ‘native’ feel to running Docker. My emphasis is on running Dockerized R applications and RStudio, though much the same thing can be accomplished with iPython notebooks and many other web apps.</p>
+<p>Of course the great strength of Docker is the relative ease with which one can move between these three strategies while using the identical container, maintaining a consistent computational environment in each case.</p>
+<h2 id="web-hosted-docker">Web-hosted Docker</h2>
+<p>In this approach, RStudio-server is deployed on a web server and accessed through the browser. The use of Docker containers makes it easier for an instructor to deploy a consistent environment quickly with the desired software pre-installed and pre-configured.</p>
+<h3 id="advantages">Advantages:</h3>
+<ul>
+<li>A user just needs a web browser and the URL of the server.</li>
+<li>No need to install any local software.</li>
+<li>No need to download big files.</li>
+<li>Should work with any device that supports a modern browser, including most tablets.</li>
+<li>Convenient to temporarily scale computation onto a larger system.</li>
+</ul>
+<h3 id="disadvantages">Disadvantages:</h3>
+<ul>
+<li>requires a network connection (at all times)</li>
+<li>requires access to a server with sufficient computational power for the task.</li>
+<li>Someone has to manage user &amp; network security (as with any web server).</li>
+<li>Need additional mechanisms for moving files on and off the server, such as git.</li>
+<li>No native interfaces available, must manage files, edit text etc. through the RStudio IDE</li>
+</ul>
+<h3 id="setup">Setup:</h3>
+<p>A Docker container running RStudio can be deployed with a single command, see <a href="https://github.com/rocker-org/rocker/wiki/Using-the-RStudio-image">rocker wiki instructions on RStudio</a> for details. The instructor or team-member responsible for the setup would simply need to install docker on server. If multiple students will be accessing a single RStudio-server instance, it must be configured for multiple users. Alternately multiple containers can be run on different ports of the same server. (See wiki).</p>
+<p>Hint: Users can also take advantage of the new R package <a href="https://github.com/sckott/analogsea">analogsea</a> to quickly launch and manage an RStudio Server instance on the Digital Ocean cloud platform. <code>analogsea</code> can also facilitate transfers of code and other files onto and off of the server.</p>
+<h2 id="self-hosted-docker">Self-hosted Docker</h2>
+<p>In this approach, the user installs docker (via <code>boot2docker</code>, if necessary) on their local machine, but still interacts with the container using the same web-based interface (e.g. <code>rstudio-server</code>, <code>ipython-notebook</code>) that one would use in the cloud-hosted model.</p>
+<h3 id="advantages-1">Advantages:</h3>
+<ul>
+<li>No need for a network connection (at least once the container image is downloaded / transfered)</li>
+<li>No need to have a server available (with the associated cost and security overhead)</li>
+</ul>
+<h3 id="disadvantages-1">Disadvantages:</h3>
+<ul>
+<li>More initial setup: install <code>docker</code> locally, or install <code>boot2docker</code> for Mac/Windows users.</li>
+<li>Need to use <code>git</code> or <code>docker copy</code> to move files from the container to the host or vice versa.</li>
+</ul>
+<p>Hint: Users might also check out the R package <a href="https://github.com/wch/harbor">harbor</a> for interacting with Docker locally from R.</p>
+<h3 id="setup-1">Setup:</h3>
+<p>Setup is much the same as on a remote server, though there is no need to set custom usernames or passwords since the instance will be accessible only to local users. See <a href="https://github.com/rocker-org/rocker/wiki/Using-the-RStudio-image">rocker wiki instructions on RStudio</a> for details.</p>
+<h2 id="integrated-docker">Integrated Docker</h2>
+<p>This approach is the same as the self-hosted approach, except that we link shared volumes with the host. At minimum this makes it easier to move files on and off the container without learning git.</p>
+<p>An intriguing advantage of this approach is that it does not restrict the user to the RStudio IDE as a way of editing text, managing files and versions, etc. Most users do not rely exclusively on RStudio for these tasks, and may find that restriction limiting. The integrated approach may be more suited for experienced users who are set in their ways and do not need a pixel-identical work environment of RStudio useful for following directions in a classroom. In the integrated approach, a user can continue to rely on whatever their preferred native tools are, while ensuring that code execution occurs (invisibly) on a Dockerized container.</p>
+<h3 id="advantages-2">Advantages</h3>
+<ul>
+<li>Can use native OS tools (text editors, file browsers, version control front ends, etc) for all interactions</li>
+<li>No network required (once image is downloaded / transfered).</li>
+<li>No servers required</li>
+</ul>
+<h3 id="disadvantages-2">Disadvantages</h3>
+<ul>
+<li>Additional setup beyond self-hosting: mapping shared volumes, managing user permissions.</li>
+<li>Potentially less well suited for classroom use, which may benefit from everyone using the identical RStudio interface rather than a range of different text editors, etc. (Of course one can still share volumes while using RStudio as the IDE).</li>
+<li>Cannot open external windows (e.g. if running R in terminal instead of RStudio, the container running R cannot open an X11 window to display plots. Instead, a user must do something like <code>ggsave()</code> after plotting interactively to view the resulting graphic in the native file browser. (This is more tedious in base graphics that need <code>dev.off()</code> etc.). Of course this is not an issue when using RStudio with linked volumes.</li>
+</ul>
+<h3 id="setup-2">Setup</h3>
+<p>The key here is simply to link the working directory on the host to the file system on the container. That way any changes made to the host copy using the host OS tools are immediately available to the container, and vice versa. Setup requires a bit more effort on Windows at this time, though is natively supported for Mac in Docker 1.3. Some care may also be necessary not to change the permissions of the file. See details in the <a href="https://github.com/rocker-org/rocker/wiki/Shared-files-with-host-machine">rocker wiki on shared files</a></p>
+<h4 id="aliases">aliases</h4>
+<p>The most aggressive form of the integrated approach is to literally alias common commands like <code>R</code> or <code>rstudio</code> as the corresponding docker calls in <code>.bashrc</code>, e.g.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">alias</span> R=<span class="st">&#39;docker run --rm -it --user docker -v $(pwd):/home/docker/`basename $PWD` -w /home/docker/`basename $PWD` rocker/hadleyverse R&#39;</span></code></pre>
+<p>makes the command <code>R</code> launch an instance of the <code>rocker/hadleyverse</code> container sharing the current working directory. Clearly different containers could be substituted in place of <code>rocker/hadleyverse</code>, including custom extensions. This helps ensure that R is always run in the portable, Dockerized environment. Other than the lack of X11 display for plots, this works and feels identical to an interactive R terminal session.</p>
+<h4 id="other-tweaks">Other tweaks</h4>
+<p>Mac/Windows users might also want to customize <code>boot2docker</code>’s resources to make more of the host computer’s memory and processors available to Docker.</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2014-11-03 00:00:00 +0000" 
+    property="dc:created">03 Nov 2014</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/10/28/jekyll-free.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/11/05/notes.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2014-11-03-three-interfaces-for-Docker.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#computation">computation</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#docker">#docker</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#blog">#blog</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/1fc9a66f4aad50e9dd88fd1ef73652620fc934d2/_posts/2014-11-03-three-interfaces-for-Docker.md"> 1fc9a66f4aad50e9dd88fd1ef73652620fc934d2</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Three Interfaces For Docker
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2014-11-03
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/11/03/three-interfaces-for-Docker.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

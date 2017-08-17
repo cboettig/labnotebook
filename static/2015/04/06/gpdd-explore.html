@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Gpdd Explore</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="gpdd" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Gpdd Explore" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2015-04-06 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/04/06/gpdd-explore.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Gpdd Explore" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2015-04-06 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/04/06/gpdd-explore.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2015-04-06 00:00:00 +0000"/>
+<meta name="citation_title" content="Gpdd Explore"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="http://www.carlboettiger.info/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Gpdd Explore</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h3 id="setup">setup</h3>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;tidyr&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;rgpdd&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;FKF&quot;</span>)</code></pre>
+<p>Working through <a href="http://doi.org/10.1111/j.1461-0248.2011.01702.x">10.1111/j.1461-0248.2011.01702.x</a> provides a nice way to play around with the GPDD data and Kalman filtering. More interested in exploring the data and methods than in just replicating the results, which are important but also rather intuitive and thus I expect rather robust – as we add (observational) uncertainty, or indeed, any additional parameters that must be ended, we should expect to have less power to pin down a particular parameter associated with density dependence, as the paper illustrates rather nicely.</p>
+<hr />
+<h2 id="data-preparation">Data preparation</h2>
+<blockquote>
+<p>627 time series with population indices obtained from the GPDD (NERC Centre for Population Biology 1999). Data sets were filtered out from the database by removing harvest and non-index based data, data sampled at non-annual intervals and time series taking less than 15 unique values.</p>
+</blockquote>
+<p>Excluding time-series shorter than a minimum length is intuitive. Excluding harvest data makes some sense, as these aren’t scientific samples; in particular, they do not necessarily reflect a uniform sampling effort over time. Not quite clear why one would exclude non-annual intervals. Not really clear what “non-index based data” even means. Note that this 2012 paper still cites the original 1999 version instead of the 2010 version, which adds 123 datasets (for a total of 5,156).</p>
+<p>Anyway, we can roughly infer what these filters mean in terms of the columns and values defined in the “MAIN” table of the GPDD, as described in the <a href="http://www3.imperial.ac.uk/cpb/databases/gpdd">GPDD User Manual</a>. <code>dplyr</code> makes it quick to implement these filters in R:</p>
+<pre class="sourceCode r"><code class="sourceCode r">gpdd_main %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(SamplingProtocol ==<span class="st"> &quot;Count&quot;</span>,
+         SourceDimension %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Count&quot;</span>, <span class="st">&quot;Index&quot;</span>), 
+         SamplingFrequency ==<span class="st"> &quot;1&quot;</span>,
+         DatasetLength &gt;=<span class="st"> </span><span class="dv">15</span>) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(MainID) %&gt;%
+<span class="st">  </span><span class="kw">arrange</span>(MainID) -&gt;
+filtered</code></pre>
+<p>Note that we might imagine different selection criteria, looking a bit more closely at the relevant fields.</p>
+<hr />
+<p>Unfortunately these don’t quite align with the paper, even allowing for the 123 additional datasets. Most obviously, we have 1749 matches instead of 627. Not only have we somehow grabbed more datasets than expected, but the Knape et al list includes quite a few datasets that do not meet these criteria:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">source</span>(<span class="st">&quot;http://ropensci.github.io/rgpdd/data/knape.R&quot;</span>)
+gpdd_main %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(MainID %in%<span class="st"> </span>knape_ids) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(MainID, SamplingProtocol, SourceDimension, SamplingFrequency, DatasetLength)  %&gt;%
+<span class="st">  </span><span class="kw">arrange</span>(MainID) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">as.tbl</span>() -&gt;<span class="st"> </span>knape_data
+
+<span class="kw">tail</span>(<span class="kw">sort</span>(<span class="kw">table</span>(knape_data$SourceDimension)))</code></pre>
+<pre><code>
+Count (estimated)        Mean Count             Index 
+                5                 8                15 
+          Density Transformed Count             Count 
+               20               110               459 </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tail</span>(<span class="kw">sort</span>(<span class="kw">table</span>(knape_data$SamplingProtocol)))</code></pre>
+<pre><code>
+    Count (millions)              Harvest              Unknown 
+                   1                    1                    1 
+  Index of abundance Index of territories                Count 
+                   2                    6                  616 </code></pre>
+<p>Those summaries show data with attributes we excluded, including Harvest as a sampling protocol. We see over 100 such data sets:</p>
+<pre class="sourceCode r"><code class="sourceCode r">gpdd_main %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(MainID %in%<span class="st"> </span>knape_ids) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(SamplingProtocol ==<span class="st"> &quot;Count&quot;</span>,
+         SourceDimension %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Count&quot;</span>, <span class="st">&quot;Index&quot;</span>), 
+         SamplingFrequency ==<span class="st"> &quot;1&quot;</span>,
+         DatasetLength &gt;=<span class="st"> </span><span class="dv">15</span>) %&gt;%<span class="st"> </span><span class="kw">dim</span>()</code></pre>
+<pre><code>[1] 468  25</code></pre>
+<p>The reason for this discrepancy isn’t clear, but we can proceed with our filtered data instead.</p>
+<hr />
+<p>Selecting the time-series identified by our filter, we also add a column for <span class="math">\(\log(N)\)</span> population:</p>
+<pre class="sourceCode r"><code class="sourceCode r">gpdd_data %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(MainID %in%<span class="st"> </span>filtered$MainID) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(MainID, Population, SampleYear) %&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">logN =</span> <span class="kw">log</span>(Population)) -&gt;
+df</code></pre>
+<p>Interestingly there are no missing data reported:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">sapply</span>(df$Population, is.na))</code></pre>
+<pre><code>[1] 0</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">df %&gt;%<span class="st"> </span><span class="kw">filter</span>(Population &lt;<span class="st"> </span><span class="dv">0</span>) <span class="co"># -9999 is elsewhere used for missing data</span></code></pre>
+<pre><code>Source: local data frame [0 x 4]
+Groups: MainID
+
+Variables not shown: MainID (int), Population (dbl), SampleYear
+  (int), logN (dbl)</code></pre>
+<p>but some population values are equal to 0, creating some <code>-Inf</code> terms in our log data, which will create trouble in fitting the models. The authors don’t say how they handled this case. We will manually set them to the smallest value observed:</p>
+<pre class="sourceCode r"><code class="sourceCode r">i &lt;-<span class="st"> </span><span class="kw">which</span>(df$logN ==<span class="st"> </span>-<span class="ot">Inf</span>)
+df$logN[i] &lt;-<span class="st"> </span><span class="kw">min</span>(df$logN[-i])-<span class="dv">1</span></code></pre>
+<h2 id="gompertz-model">Gompertz model</h2>
+<blockquote>
+<p>We use the stochastic Gompertz population model to analyse the strength of density dependence in the data.The model is defined through</p>
+</blockquote>
+<p><span class="math">\[N_{t+1} = N_t \exp(a - b \log N_t + \epsilon_t)\]</span></p>
+<blockquote>
+<p>where <span class="math">\(N_t\)</span> is population density or size in year <span class="math">\(t\)</span>, <span class="math">\(a\)</span> is an intercept, <span class="math">\(b\)</span> is a measure of the strength of density dependence and <span class="math">\(\eta\)</span> is normally distributed process error with mean zero and standard deviation <span class="math">\(\tau\)</span>. By log transforming the population abundance and putting <span class="math">\(x_t = \log N_t\)</span> this simplifies to</p>
+</blockquote>
+<p><span class="math">\[x_{t+1} = a + c x_t + \epsilon_t\]</span></p>
+<blockquote>
+<p>where <span class="math">\(c = 1 - b\)</span> is the lag 1 autocorrelation of the log transformed population abundance when the process is stationary.</p>
+</blockquote>
+<p>and uncertainty in measurements, <span class="math">\(y_t\)</span> are simply normal random variates around <span class="math">\(x_t\)</span>:</p>
+<p><span class="math">\[y_t = x_t + \eta_t \]</span></p>
+<p>where <span class="math">\(\eta_t \sim N(0,\sigma^2)\)</span></p>
+<h2 id="kalman-filtering">Kalman Filtering</h2>
+<p>Since the model is linear we can compute the likelihood directly by means of a Kalman filter. There are various ways of going about this, and the paper provides some general details:</p>
+<blockquote>
+<p>The Kalman filter was initiated by assuming a wide prior distribution on the initial state centred around the first observation, <span class="math">\(x_1 \sim N( y_1, 10)\)</span>. For each model and data set the numerical maximisation (using the BFGS algorithm implemented in the optim function) was repeated for 50 random starting values to ensure that we found the global optimum</p>
+</blockquote>
+<p>Some useful detail here, but still a bit vague for our purposes, or are things we might have done differently.</p>
+<ul>
+<li><p>Doesn’t state which Kalman filter (their are a few algorithms and several packages, but the differences seem quite small: <a href="http://www.jstatsoft.org/v39/i02">this JSS paper</a> has a good overview.)</p></li>
+<li><p>Not clear that we wouldn’t want to scale the prior variance by the data sample, e.g. <code>var(y)</code>, but since we’re on a log scale <code>10</code> is indeed pretty wide.</p></li>
+<li><p><code>BFGS</code> doesn’t seem as robust as some alternatives; (e.g. gives a rather different result than Nelder-Meade or <code>StructTS()</code> model on the classic Nile data set example from the FKF package).</p></li>
+<li><p>Also challenging are the “50 random starting values”, which does not tell us from what distribution they were drawn. Too wide a distribution will start to include values for which the likelihood cannot be evaluated, while too narrow serves little purpose. –Moreover it is unclear if this is really preferable to simply using fewer starting points and a more robust algorithm. For simplicity, we’ll ignore this and just choose justifiable starting conditions.– we’ll add this as well.</p></li>
+</ul>
+<blockquote>
+<p>Four variants of the model defined by (1) and (2) were fitted to each data set; a full model with both uncertainty about population abundance and density dependence denoted by SSG (state space Gompertz), a model with uncertainty about population abundance, but no density dependence (c fixed to one) denoted SSRW (state space random walk), a model with density dependence, but no uncertainty about population abundance (r2 fixed to zero) denoted G (Gompertz) and a model with neither uncertainty about population abundance nor density dependence (c fixed to one and r2 fixed to zero) denoted RW (random walk)</p>
+</blockquote>
+<p>This is both clear and straight forward, we define each of the models as described. Note that we define the models here in the notation of FKF:</p>
+<p>State transition equation:</p>
+<p><span class="math">\[\alpha_{t+1} = d_t + T_t \alpha_t + H_t \eta_t\]</span></p>
+<p>Observation:</p>
+<p><span class="math">\[y_t = c_t + Z_t \alpha_t + G_t \eta_t\]</span></p>
+<p>Which has the following correspondence with to the Gompertz model given before:</p>
+<p><span class="math">\[\begin{align*}
+c &amp;\to&amp; T_t \\
+a &amp;\to&amp; d_t \\
+\sigma^2 &amp;\to&amp; G_t&#39;G_t \\
+\tau^2 &amp;\to&amp; H_t&#39;H_t 
+\end{align*}\]</span></p>
+<p>So here we define these models in R code just as described above. Using the <code>FKF</code> package we define each model by an optimization routine that returns the parameters that maximize the likelihood for the given model.</p>
+<pre class="sourceCode r"><code class="sourceCode r">fit_ssg &lt;-<span class="st"> </span>function(y, 
+                    <span class="dt">init =</span> <span class="kw">c</span>(<span class="dt">dt =</span> <span class="kw">mean</span>(y), <span class="dt">Tt =</span> <span class="dv">1</span>, 
+                             <span class="dt">HHt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y)/<span class="dv">2</span>), <span class="dt">GGt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y)/<span class="dv">2</span>)),
+                    ...){
+    o &lt;-<span class="st"> </span><span class="kw">optim</span>(init,
+                 <span class="dt">fn =</span>  function(par, ...)
+                   -<span class="kw">fkf</span>(<span class="dt">dt =</span> <span class="kw">matrix</span>(par[<span class="dv">1</span>]),
+                        <span class="dt">Tt =</span> <span class="kw">matrix</span>(par[<span class="dv">2</span>]),
+                        <span class="dt">HHt =</span> <span class="kw">matrix</span>(<span class="kw">exp</span>(par[<span class="dv">3</span>])), 
+                        <span class="dt">GGt =</span> <span class="kw">matrix</span>(<span class="kw">exp</span>(par[<span class="dv">4</span>])), 
+                        ...)$logLik,   
+                 <span class="dt">a0 =</span> y[<span class="dv">1</span>], 
+                 <span class="dt">P0 =</span> <span class="kw">matrix</span>(<span class="dv">10</span>), 
+                 <span class="dt">ct =</span> <span class="kw">matrix</span>(<span class="dv">0</span>),
+                 <span class="dt">Zt =</span> <span class="kw">matrix</span>(<span class="dv">1</span>), 
+                 <span class="dt">yt =</span> <span class="kw">rbind</span>(y), 
+                 <span class="dt">check.input =</span> <span class="ot">FALSE</span>, 
+                 ...)
+  o$par[[<span class="st">&quot;HHt&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">exp</span>(o$par[[<span class="st">&quot;HHt&quot;</span>]])
+  o$par[[<span class="st">&quot;GGt&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">exp</span>(o$par[[<span class="st">&quot;GGt&quot;</span>]])
+  <span class="kw">c</span>(o, <span class="kw">list</span>(<span class="dt">a0 =</span> y[<span class="dv">1</span>], <span class="dt">n =</span> <span class="kw">length</span>(y)))
+}
+
+fit_ssrw &lt;-<span class="st"> </span>function(y, 
+                     <span class="dt">init =</span> <span class="kw">c</span>(<span class="dt">dt=</span><span class="kw">mean</span>(y), <span class="dt">HHt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y)/<span class="dv">2</span>), 
+                              <span class="dt">GGt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y)/<span class="dv">2</span>)), 
+                     ...){
+    o &lt;-<span class="st"> </span><span class="kw">optim</span>(init,
+                 <span class="dt">fn =</span>  function(par, ...)
+                   -<span class="kw">fkf</span>(<span class="dt">dt =</span> <span class="kw">matrix</span>(par[<span class="dv">1</span>]), <span class="dt">HHt =</span> <span class="kw">matrix</span>(<span class="kw">exp</span>(par[<span class="dv">2</span>])), 
+                        <span class="dt">GGt =</span> <span class="kw">matrix</span>(<span class="kw">exp</span>(par[<span class="dv">3</span>])), ...)$logLik,   
+                 <span class="dt">a0 =</span> y[<span class="dv">1</span>], <span class="dt">P0 =</span> <span class="kw">matrix</span>(<span class="dv">10</span>), <span class="dt">ct =</span> <span class="kw">matrix</span>(<span class="dv">0</span>), <span class="dt">Tt =</span> <span class="kw">matrix</span>(<span class="dv">1</span>),
+                 <span class="dt">Zt =</span> <span class="kw">matrix</span>(<span class="dv">1</span>), <span class="dt">yt =</span> <span class="kw">rbind</span>(y), <span class="dt">check.input =</span> <span class="ot">FALSE</span>, ...)
+  o$par[[<span class="st">&quot;HHt&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">exp</span>(o$par[[<span class="st">&quot;HHt&quot;</span>]])
+  o$par[[<span class="st">&quot;GGt&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">exp</span>(o$par[[<span class="st">&quot;GGt&quot;</span>]])
+  <span class="kw">c</span>(o, <span class="kw">list</span>(<span class="dt">a0 =</span> y[<span class="dv">1</span>], <span class="dt">n =</span> <span class="kw">length</span>(y)))
+}
+
+fit_g &lt;-<span class="st"> </span>function(y, <span class="dt">init =</span> <span class="kw">c</span>(<span class="dt">dt =</span> <span class="kw">mean</span>(y), <span class="dt">Tt=</span><span class="dv">1</span>, <span class="dt">HHt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y))), ...){
+  o &lt;-<span class="st"> </span><span class="kw">optim</span>(init,
+                 <span class="dt">fn =</span>  function(par, ...)
+                   -<span class="kw">fkf</span>(<span class="dt">dt =</span> <span class="kw">matrix</span>(par[<span class="dv">1</span>]), <span class="dt">Tt =</span> <span class="kw">matrix</span>(par[<span class="dv">2</span>]), 
+                        <span class="dt">HHt =</span> <span class="kw">matrix</span>(<span class="kw">exp</span>(par[<span class="dv">3</span>])), ...)$logLik,   
+                 <span class="dt">a0 =</span> y[<span class="dv">1</span>], <span class="dt">P0 =</span> <span class="kw">matrix</span>(<span class="dv">10</span>), <span class="dt">ct =</span> <span class="kw">matrix</span>(<span class="dv">0</span>), <span class="dt">GGt =</span> <span class="kw">matrix</span>(<span class="dv">0</span>),
+                 <span class="dt">Zt =</span> <span class="kw">matrix</span>(<span class="dv">1</span>), <span class="dt">yt =</span> <span class="kw">rbind</span>(y), <span class="dt">check.input =</span> <span class="ot">FALSE</span>, ...)
+  o$par[[<span class="st">&quot;HHt&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">exp</span>(o$par[[<span class="st">&quot;HHt&quot;</span>]])  
+  <span class="kw">c</span>(o, <span class="kw">list</span>(<span class="dt">a0 =</span> y[<span class="dv">1</span>], <span class="dt">n =</span> <span class="kw">length</span>(y)))
+}
+
+fit_rw &lt;-<span class="st"> </span>function(y, <span class="dt">init =</span> <span class="kw">c</span>(<span class="dt">dt=</span><span class="kw">mean</span>(y), <span class="dt">HHt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y))), ...){
+ o &lt;-<span class="st">  </span><span class="kw">optim</span>(init, 
+                 <span class="dt">fn =</span>  function(par, ...)
+                   -<span class="kw">fkf</span>(<span class="dt">dt =</span> <span class="kw">matrix</span>(par[<span class="dv">1</span>]), 
+                        <span class="dt">HHt =</span> <span class="kw">matrix</span>(<span class="kw">exp</span>(par[<span class="dv">2</span>])), ...)$logLik,   
+                 <span class="dt">a0 =</span> y[<span class="dv">1</span>], <span class="dt">P0 =</span> <span class="kw">matrix</span>(<span class="dv">10</span>), <span class="dt">ct =</span> <span class="kw">matrix</span>(<span class="dv">0</span>),
+                 <span class="dt">Tt =</span> <span class="kw">matrix</span>(<span class="dv">1</span>), <span class="dt">GGt =</span> <span class="kw">matrix</span>(<span class="dv">0</span>), <span class="dt">Zt =</span> <span class="kw">matrix</span>(<span class="dv">1</span>),
+                 <span class="dt">yt =</span> <span class="kw">rbind</span>(y), <span class="dt">check.input =</span> <span class="ot">FALSE</span>, ...)
+  o$par[[<span class="st">&quot;HHt&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">exp</span>(o$par[[<span class="st">&quot;HHt&quot;</span>]])
+  <span class="kw">c</span>(o, <span class="kw">list</span>(<span class="dt">a0 =</span> y[<span class="dv">1</span>], <span class="dt">n =</span> <span class="kw">length</span>(y)))
+}</code></pre>
+<p>Note that <code>fkf</code> will return finite (even “optimal”) log likelihoods for negative values of <code>HHt</code> and <code>GGt</code>, so we have log-transformed these parameters. Using <code>L-BFGS-B</code> with a <code>0</code> lower bound still causes <code>optim</code> to error with non-finite log-likelihoods. It isn’t clear how the authors dealt with this constraint, though <code>log</code>-transform trick has advantages and drawbacks.</p>
+<p>Once we have defined the optimization routines to fit each model, we can define a summary function that runs each model on a given data set and collects the results into a <code>data.frame</code>. This could be made a bit more general and elegant as discussed later. We will also define this function such that it will fit each model <span class="math">\(N = 50\)</span> times and take the best fit, as the authors suggest for having a better chance of finding the global optimum. (We’ll look at the variation in MLE estimates in these models as footnote as well).</p>
+<pre class="sourceCode r"><code class="sourceCode r">robust_fit &lt;-<span class="st"> </span>function(<span class="dt">model =</span> <span class="kw">c</span>(<span class="st">&quot;ssg&quot;</span>, <span class="st">&quot;ssrw&quot;</span>, <span class="st">&quot;g&quot;</span>, <span class="st">&quot;rw&quot;</span>), y, <span class="dt">N =</span> <span class="dv">50</span>, <span class="dt">all =</span> <span class="ot">FALSE</span>, ...){
+  
+  ## Set the model and the mean initial condition
+  m &lt;-<span class="st"> </span>switch(model,
+              <span class="dt">ssg =</span> <span class="kw">list</span>(<span class="dt">fit =</span> fit_ssg, 
+                         <span class="dt">init =</span> <span class="kw">c</span>(<span class="dt">dt =</span> <span class="kw">mean</span>(y), <span class="dt">Tt =</span> <span class="dv">1</span>, 
+                                 <span class="dt">HHt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y)/<span class="dv">2</span>), <span class="dt">GGt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y)/<span class="dv">2</span>))),
+              <span class="dt">ssrw =</span> <span class="kw">list</span>(<span class="dt">fit =</span> fit_ssrw, 
+                          <span class="dt">init =</span> <span class="kw">c</span>(<span class="dt">dt =</span> <span class="kw">mean</span>(y), <span class="dt">HHt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y)/<span class="dv">2</span>), 
+                                   <span class="dt">GGt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y)/<span class="dv">2</span>))),
+              <span class="dt">g =</span> <span class="kw">list</span>(<span class="dt">fit =</span> fit_g, 
+                       <span class="dt">init =</span> <span class="kw">c</span>(<span class="dt">dt =</span> <span class="kw">mean</span>(y), <span class="dt">Tt =</span> <span class="dv">1</span>, <span class="dt">HHt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y)/<span class="dv">2</span>))),
+              <span class="dt">rw =</span> <span class="kw">list</span>(<span class="dt">fit =</span> fit_rw, 
+                        <span class="dt">init =</span> <span class="kw">c</span>(<span class="dt">dt =</span> <span class="kw">mean</span>(y), <span class="dt">HHt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y)/<span class="dv">2</span>))))  
+  
+  
+  ## Create the inital conditions
+  inits &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">sapply</span>(m$init, 
+                      function(m) <span class="kw">rnorm</span>(N, m, <span class="kw">sqrt</span>(<span class="kw">abs</span>(m)) ) ))
+  
+  ## Attempt the requested fit or return NAs
+  f &lt;-<span class="st"> </span>function(init){
+    o &lt;-<span class="st"> </span><span class="kw">tryCatch</span>(
+      m$<span class="kw">fit</span>(y, <span class="dt">init =</span> init), 
+      <span class="dt">error =</span> function(e) <span class="kw">list</span>(<span class="dt">par =</span> <span class="kw">c</span>(<span class="dt">dt =</span> <span class="ot">NA</span>, <span class="dt">Tt=</span><span class="ot">NA</span>, <span class="dt">HHt =</span> <span class="ot">NA</span>, <span class="dt">GGt=</span> <span class="ot">NA</span>),
+                               <span class="dt">value=</span><span class="ot">NA</span>, <span class="dt">convergence=</span><span class="dv">1</span>, <span class="dt">n=</span><span class="kw">length</span>(y), <span class="dt">a0=</span>y[<span class="dv">1</span>]))
+    <span class="kw">data.frame</span>(<span class="kw">t</span>(<span class="kw">c</span>(o$par, <span class="dt">mloglik =</span> o$value, <span class="dt">converge =</span>
+                   <span class="kw">as.numeric</span>(o$convergence), <span class="dt">n=</span>o$n, <span class="dt">a0=</span>o$a0)))
+  }
+  
+  ## Apply the function to each initial condition, 
+  inits %&gt;%<span class="st"> </span><span class="kw">rowwise</span>() %&gt;%<span class="st"> </span><span class="kw">do</span>(<span class="kw">f</span>(.)) -&gt;<span class="st"> </span>output
+  
+  if(!all) ## drop unconverged, and select only the best scoring run
+    output %&gt;%<span class="st"> </span><span class="kw">filter</span>(converge ==<span class="st"> </span><span class="dv">0</span>) %&gt;%<span class="st"> </span><span class="kw">slice</span>(<span class="kw">which.min</span>(mloglik)) -&gt;<span class="st"> </span>output
+  
+  output
+}</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">kalman &lt;-<span class="st"> </span>function(df, ...){
+  y &lt;-<span class="st"> </span>df$logN
+  ssg &lt;-<span class="st"> </span><span class="kw">robust_fit</span>(<span class="st">&quot;ssg&quot;</span>, y, ...) 
+  ssrw &lt;-<span class="st"> </span><span class="kw">robust_fit</span>(<span class="st">&quot;ssrw&quot;</span>, y, ...) 
+  g &lt;-<span class="st"> </span><span class="kw">robust_fit</span>(<span class="st">&quot;g&quot;</span>, y, ...) 
+  rw &lt;-<span class="st"> </span><span class="kw">robust_fit</span>(<span class="st">&quot;rw&quot;</span>, y, ...)
+  <span class="kw">options</span>(<span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>)
+  <span class="kw">rbind</span>(<span class="kw">data.frame</span>(<span class="dt">model =</span><span class="st">&quot;ssg&quot;</span>, <span class="kw">gather</span>(ssg, parameter, value)),
+        <span class="kw">data.frame</span>(<span class="dt">model =</span> <span class="st">&quot;ssrw&quot;</span>, <span class="kw">gather</span>(ssrw, parameter, value)),
+        <span class="kw">data.frame</span>(<span class="dt">model =</span> <span class="st">&quot;g&quot;</span>, <span class="kw">gather</span>(g, parameter, value)),
+        <span class="kw">data.frame</span>(<span class="dt">model =</span> <span class="st">&quot;rw&quot;</span>, <span class="kw">gather</span>(rw, parameter, value)))
+                              
+}</code></pre>
+<p>Having defined a function that takes and returns a <code>data.frame</code>, <code>dplyr::do</code> gives us a consise syntax to apply this by group (recall <code>df</code> is already <code>group_by(MainID)</code>.) As the authors note, the robust fitting procedure is computationally intensive, though easily parallelized.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+df %&gt;%<span class="st"> </span><span class="kw">do</span>(<span class="kw">kalman</span>(., <span class="dt">method =</span> <span class="st">&quot;BFGS&quot;</span>)) -&gt;<span class="st"> </span>fits
+)</code></pre>
+<pre><code>     user    system   elapsed 
+11652.039   278.562 11956.545 </code></pre>
+<hr />
+<p>Unfortunately <code>dplyr</code> does not as yet directly support parallelization (despite the documentation of <code>dplyr::init_cluster()</code> describing parallel <code>dplyr::do()</code> use, this feature is not actually implemented yet). Most parallelization packages for R wrap around <code>apply</code> functions, and thus are not trivially adapted to the <code>dplyr</code> grammar. If many cores are available it may still be faster to devolve the <code>group_by()</code> <code>data.frame</code> into a list of data frames and then apply in parallel; e.g.:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># not run</span>
+<span class="kw">library</span>(parallel)
+<span class="kw">options</span>(<span class="dt">mc.cores =</span> <span class="kw">detectCores</span>())
+
+## turn grouped data.frame to a list of data.frames by MainID
+list_data &lt;-<span class="st"> </span><span class="kw">mclapply</span>(<span class="kw">unique</span>(df$MainID), function(id) <span class="kw">filter_</span>(df, <span class="dt">.dots =</span> ~MainID==id))
+
+## Actually do the fitting in parallel
+fits_list &lt;-<span class="st"> </span><span class="kw">mclapply</span>(list_data, kalman, <span class="dt">method=</span><span class="st">&quot;BFGS&quot;</span>)
+
+## reshape outputs back to a data.frame
+fits &lt;-<span class="st"> </span>reshape2::<span class="kw">melt</span>(fits_list, <span class="dt">id=</span><span class="kw">names</span>(fits_list[[<span class="dv">1</span>]])) %&gt;%<span class="st"> </span><span class="kw">rename</span>(<span class="dt">MainID =</span> L1) %&gt;%<span class="st"> </span><span class="kw">as_data_frame</span>()</code></pre>
+<hr />
+<p>We now have a nice table of parameter estimates and likelihoods by model for each data set:</p>
+<pre class="sourceCode r"><code class="sourceCode r">fits</code></pre>
+<pre><code>Source: local data frame [45,727 x 4]
+Groups: MainID
+
+   MainID model parameter         value
+1       3   ssg        dt  3.466916e+00
+2       3   ssg        Tt -1.334051e-01
+3       3   ssg       HHt  6.394019e-02
+4       3   ssg       GGt  1.765346e-01
+5       3   ssg   mloglik  2.050357e+01
+6       3   ssg  converge  0.000000e+00
+7       3   ssg         n  2.700000e+01
+8       3   ssg        a0  2.484907e+00
+9       3  ssrw        dt  7.431723e-04
+10      3  ssrw       HHt  3.562612e-09
+..    ...   ...       ...           ...</code></pre>
+<p>and here is our version then of Figure 1b, comparing the estimate of the density-dependence coefficent with and without the uncertainty in observations:</p>
+<pre class="sourceCode r"><code class="sourceCode r">fits %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(model %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ssg&quot;</span>, <span class="st">&quot;g&quot;</span>), parameter ==<span class="st"> &quot;Tt&quot;</span>) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(model, value, MainID) %&gt;%
+<span class="st">  </span><span class="kw">spread</span>(model, value) %&gt;%
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(g, ssg)) +
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_abline</span>(<span class="dt">intercept =</span> <span class="dv">0</span>, <span class="dt">slope =</span> <span class="dv">1</span>) +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;c estimates&quot;</span>)</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-04-06-gpdd-explore/figure1b-1.png" />
+</figure>
+<p>Likewise we can compute a version of Figure 1a; which calculates the absolute value of the difference between the estimates of density-dependence with and without the uncertainty, and then plots how frequently we observe a difference larger than a given amount in the data. (The paper finds around 20% having a difference larger than 0.5)</p>
+<pre class="sourceCode r"><code class="sourceCode r">fits %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(model %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ssg&quot;</span>, <span class="st">&quot;g&quot;</span>), parameter ==<span class="st"> &quot;Tt&quot;</span>) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(model, value, MainID) %&gt;%
+<span class="st">  </span><span class="kw">spread</span>(model, value) %&gt;%
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">difference =</span> <span class="kw">abs</span>(g-ssg)) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(difference) -&gt;<span class="st"> </span>diffs
+  
+s &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dt">length=</span><span class="dv">100</span>)
+difference &lt;-<span class="st"> </span><span class="kw">sapply</span>(s, function(s_i) <span class="kw">mean</span>(diffs$difference &gt;<span class="st"> </span>s_i))
+<span class="kw">qplot</span>(s, difference) +<span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Difference bewteen estimates&quot;</span>) +<span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;Proportion of data sets&quot;</span>)</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-04-06-gpdd-explore/figure1a-1.png" />
+</figure>
+<pre class="sourceCode r"><code class="sourceCode r">fits %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(model %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ssg&quot;</span>, <span class="st">&quot;ssrw&quot;</span>), parameter ==<span class="st"> &quot;GGt&quot;</span>) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(model, value, MainID) %&gt;%
+<span class="st">  </span><span class="kw">spread</span>(model, value) %&gt;%
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(ssg, ssrw)) +
+<span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_abline</span>(<span class="dt">intercept=</span><span class="dv">0</span>, <span class="dt">slope=</span><span class="dv">1</span>) +<span class="st"> </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;sigma^2 (obs error)&quot;</span>)</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-04-06-gpdd-explore/unnamed-chunk-12-1.png" />
+</figure>
+<hr />
+<h2 id="aside-further-exploring-numerical-issues">Aside: further exploring numerical issues</h2>
+<p>Numerical optimization can be tricky, particularly in this unsupervised manner. The robust (multiple) fitting strategy goes some ways to addressing this; though ideally one would at least show that the resulting estimates change little if N is increased further.</p>
+<pre class="sourceCode r"><code class="sourceCode r">df %&gt;%<span class="st"> </span><span class="kw">filter</span>(MainID==<span class="dv">5</span>) %&gt;%
+<span class="st">  </span><span class="kw">do</span>(<span class="kw">robust_fit</span>(<span class="st">&quot;ssg&quot;</span>,  <span class="dt">y=</span>.$logN, <span class="dt">all=</span><span class="ot">TRUE</span>)) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(dt, Tt, HHt, GGt, mloglik) %&gt;%
+<span class="st">  </span>tidyr::<span class="kw">gather</span>(parameter, value, -MainID) -&gt;<span class="st"> </span>all
+
+<span class="kw">ggplot</span>(all) +<span class="st"> </span><span class="kw">geom_histogram</span>(<span class="kw">aes</span>(value)) +<span class="st"> </span><span class="kw">facet_wrap</span>(~parameter, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-04-06-gpdd-explore/unnamed-chunk-13-1.png" />
+</figure>
+<pre class="sourceCode r"><code class="sourceCode r">df %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(MainID==<span class="dv">1998</span>) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">do</span>(<span class="kw">robust_fit</span>(<span class="st">&quot;ssg&quot;</span>,  <span class="dt">y=</span>.$logN, <span class="dt">all=</span><span class="ot">TRUE</span>)) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(dt, Tt, HHt, GGt, mloglik) %&gt;%<span class="st"> </span>
+<span class="st">  </span>tidyr::<span class="kw">gather</span>(parameter, value, -MainID) -&gt;<span class="st"> </span>all
+
+<span class="kw">ggplot</span>(all) +<span class="st"> </span><span class="kw">geom_histogram</span>(<span class="kw">aes</span>(value)) +<span class="st"> </span><span class="kw">facet_wrap</span>(~parameter, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-04-06-gpdd-explore/unnamed-chunk-14-1.png" />
+</figure>
+<p>Also compare also to the classic example used in most Kalman filter packages, the Nile river flows time series:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">robust_fit</span>(<span class="st">&quot;ssg&quot;</span>,  <span class="dt">y=</span>Nile, <span class="dt">all=</span><span class="ot">TRUE</span>) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(dt, Tt, HHt, GGt, mloglik) %&gt;%
+<span class="st">  </span>tidyr::<span class="kw">gather</span>(parameter, value) -&gt;<span class="st"> </span>all
+<span class="kw">ggplot</span>(all) +<span class="st"> </span><span class="kw">geom_histogram</span>(<span class="kw">aes</span>(value)) +<span class="st"> </span><span class="kw">facet_wrap</span>(~parameter, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-04-06-gpdd-explore/unnamed-chunk-15-1.png" />
+</figure>
+<hr />
+<h2 id="side-note-on-coding-strategy">Side note on coding strategy</h2>
+<p><code>dplyr</code> makes the data filtering steps fast, consise, and clear. Dealing with model outputs here is actually far less straight forward than cleaning the raw data. For instance, I have collected the output of each model fit into it’s own row. The models have different numbers of parameters, so I must add the fixed parameters to avoid rows of different length; but clearly this does not generalize to the case where the different models can have arbitrarily different parameters.</p>
+<p><a href="https://github.com/dgrtwo">David Robinson</a> has done an excellent job in starting to tackle this thorny problem in a package called <code>broom</code> with much the same elegance and care that Hadley has done with <code>dplyr</code>. David argues very persuasively that it makes more sense to summarize parameter estimates from each model fit in two columns - a column for parameter names and a column for values. He has now added support for <code>optim()</code> output to the <code>broom::tidy()</code> function, which does just that.</p>
+<p>This doesn’t translate immediately to my use case here, since I need to keep track of the likelihood and convergence which are not captured by <code>broom::tidy()</code>. As these are scalar valued outputs of the model fit, instead of a vector like parameters, they are extracted and summarized in <code>broom::glance()</code> as a single row. An easy generalization would just be to <code>cbind</code> the outputs of <code>glance()</code> and <code>tidy()</code>; though David argues for a different approach in which we defer any manipulation of model output. Instead, he suggests an <code>expand.grid</code> over the names of the groups (models and datasets):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># not run</span>
+
+<span class="kw">expand.grid</span>(<span class="dt">model =</span> <span class="kw">names</span>(models),
+            <span class="dt">dataset =</span> <span class="kw">names</span>(datasets)) %&gt;%
+<span class="st">    </span><span class="kw">group_by</span>(model, dataset) %&gt;%
+<span class="st">    </span><span class="kw">do</span>(<span class="dt">o =</span> <span class="kw">optim_func</span>(.$model, .$dataset)) -&gt;<span class="st"> </span>david</code></pre>
+<p>Where <code>optim_func</code> uses the name of the model and name of the dataset to apply <code>optim()</code>, rather than passing the data explicitly. We can then use <code>glance</code> and <code>tidy</code> on the resulting output, though we would need to <code>inner_join</code> the results instead of <code>cbind</code>. This is indeed an elegant, more generic approach. Still, neither of us much like the need to defer the tidy step to the complex object at the end.</p>
+<p>Here, I have ended up adopting the column-wise parameter, value, approach, though for a reason not just related to elegance. My <code>robust_fit()</code> error-handling seems to end up very occassionally with some kind of race conditions<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> that cause some of the sub-models to report an NA for one of their fixed parameters, instead of ommitting the parameter entirely. When adding the fixed value back in to keep rows of a uniform length, this meant I might get some rows with a duplicated column, such as a <code>GGt</code> column with value <code>NA</code> and another, appended column with the fixed value <code>0</code> in the <code>g</code> or <code>rw</code> models. The columnwise structure avoids this and prevents the code execution from failing.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>I could only ever reproduce this by re-running large batch jobs – isolating the examples where error occurred and re-running had no effect, hence my worry about some race conditions between the error reporting. However, the stochastic initial conditions might also contribute to this, as I didn’t standardize seed over the parallelization; though in priciple any unusual initial conditions should only generate fit failures that are already handled in the error handling.<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      
+<aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2015-04-06 00:00:00 +0000" 
+    property="dc:created">06 Apr 2015</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2015/03/26/ropensci-unconf-teaching-session.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2015/04/09/gpdd-and-kalman-exploration-continued.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2015/commits/master/_posts/_posts/2015-04-06-gpdd-explore.Rmd"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2015/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#gpdd">#gpdd</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2015/commit/602ccbd872b55277d44b4d1214fe38a15af6b36a/_posts/_posts/2015-04-06-gpdd-explore.Rmd"> 602ccbd872b55277d44b4d1214fe38a15af6b36a</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Gpdd Explore
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2015-04-06
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/04/06/gpdd-explore.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Learning Jekyll</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="notebook-technology, Jekyll" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Learning Jekyll" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2012-12-30 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/12/30/learning-jekyll.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Learning Jekyll" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2012-12-30 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/12/30/learning-jekyll.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2012-12-30 00:00:00 +0000"/>
+<meta name="citation_title" content="Learning Jekyll"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Learning Jekyll</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h1 id="some-quick-thoughts-on-learning-jekyll">Some quick thoughts on learning Jekyll</h1>
+<p>After recieving a few queries on how to get started with Jekyll I thought I’d jot down my own opinions here. Of course there is already rather good documentation for the software and plenty of blogs providing tutorials. While no doubt more than adequate, I have more opinions on how to get started actually <em>learning</em> what’s going on than I could easily fit into a tweet, and also a couple favorite links to references so I thought I’d jot down my reply in long form here.</p>
+<h2 id="brief-background">Brief Background</h2>
+<p><a href="https://github.com/mojombo/jekyll">Jekyll</a> is a fantastic and popular static blogging platform, written in Ruby by a Github founder, <a href="http://tom.preston-werner.com/">Tom Preston-Werner</a>, which powers this site (at least currently). Similar static website generators exist for Python (<a href="https://github.com/hyde/hyde">Hyde</a>) Haskell (<a href="https://github.com/jgm/yst">yst</a>), and probably others, but Jekyll is quite widespread.</p>
+<p>With the (unofficial) slogan of the bloging platform for hackers, Jekyll is aimed at folks who don’t mind a little coding. If you’re looking for a polished, user-friendly product where a huge community of developers has written most imaginable extensions, check out Wordpress.org. If you want something where you can easily get into the guts and customize everything, Jekyll may be the best game in town. Compared to a dynamic site, a static site is much more lightweight, which translates into faster, more stable, and less expensive. What’s not to like?</p>
+<h2 id="where-to-start">Where to start?</h2>
+<p>A couple pre-configured Jekyll setups have emerged to reduce the learning curve, most notably <a href="https://github.com/imathis/octopress">Octopress</a> and <a href="https://github.com/plusjade/jekyll-bootstrap">Jekyll Bootstrap</a>. In my opinion, in an attempt to make things easier through tricks such as automated Ruby makefiles (Rakefiles) I think these projects have actually made Jekyll appear much more complicated than it really is, as evidenced by the number of talented programmers running Octopress with the identical configuration. They may get you started faster, but their use of advanced techniques to provide more functionality out-of-the-box makes for a tougher learning curve.</p>
+<p>See the Jekyll-Bootstrap’s <a href="http://jekyllbootstrap.com/lessons/jekyll-introduction.html">introduction</a> to Jekyll for a nice explanation of how Jekyll is laid out. Understand the basic YAML headers, and the role of the <code>_layout</code>, <code>_includes</code> and <code>_posts</code> directories, and you’ve mastered the basics. Or read on below for my take on getting started.</p>
+<h2 id="running-jekyll">Running Jekyll</h2>
+<p>For a basic site hosted on Github, one never actually has to run Jekyll locally – just push the site to a gh-pages branch of a Github repository, or to the master branch of a repository named <code>username.github.com</code> for a personal website, and Jekyll will be run by the server. Jekyll is frequently run locally instead, allowing the user to copy the static website it generates to any (static) web server (see Hosting options, below). Simply install Jekyll following the directions on its <a href="https://github.com/mojombo/jekyll">homepage README</a>.[^1]</p>
+<h2 id="my-rough-guide-to-learn-by-doing">My rough guide to learn-by-doing</h2>
+<p>I believe the best way to start with Jekyll is start with a really bare-bones site. You add features as you need them, making maintenance easy.</p>
+<p>Start with an empty repository. Create a markdown file, say, <code>index.md</code>. Write whatever you want in standard markdown, just stick a <a href="http://en.wikipedia.org/wiki/YAML">YAML</a> header on the top. Stick what? From your standardized testing days, think something like <code>markdown:html :: yaml:xml</code>. Three <code>-</code> on their own line to start, three <code>-</code> on another line to close define the block of YAML data, whose mere existence is enough to get Jekyll to pay attention to that file. Here we specify any metadata we want.</p>
+<pre><code>    ---
+    layout: default
+    ---
+
+    # My site title
+
+    some text
+</code></pre>
+<p>And voilà, we have a functional Jekyll site. The basic thing to remember is that everything else is gravy, to be mastered as you have a need for it. The advanced features can be super helpful once you know them, but in the beginning they may just get in the way of understanding what’s actually going on.</p>
+<h3 id="getting-deeper-jekyll-site-file-structure">Getting deeper: Jekyll site file structure</h3>
+<p>Directories that are functional for Jekyll but do not appear in the generated website start with an underscore <code>_</code>.</p>
+<ul>
+<li><p>Root directory. You don’t need any of the standard directories for a barebones site. As we saw above, any markdown file with YAML header matter in the root directory will be parsed. Don’t like markdown? We could write these files in html (with .html extension) instead. Jekyll will parse them as long as they have some YAML header matter, allowing us to still use things like page templates and other tricks from Liquid code described below.</p></li>
+<li><p><code>_posts</code> Your posts live here. They should be titled in <code>YYYY-MM-DD-post-title.md</code> format, which will allow Jekyll to automatically figure out the post date and title, while also keeping the posts neatly organized in this directory. (The title and the publication date, optionally including time can alternatively be given in the YAML header matter if you don’t like this convention. See below).</p></li>
+<li><p><code>_layout</code> For a completely barebones site, you don’t need this directory. Here you can provide files defining the basic HTML layout, or template, for each of the pages in your website. If your familiar with HTML, you can go ahead and set up a page as you like, and then add the single line of Liquid code in the body to pull in the HTML generated by parsing the markdown files. The mimimal layout file might look something like this (see an HTML tutorial for details):</p></li>
+</ul>
+<pre class="sourceCode html"><code class="sourceCode html"><span class="er">&lt;</span>!doctype html&gt;
+<span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">en</span><span class="kw">&gt;</span>
+<span class="kw">&lt;head&gt;</span>
+<span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">utf-8</span><span class="kw">&gt;</span>
+<span class="kw">&lt;title&gt;</span> {{ page.title }} <span class="kw">&lt;/title&gt;</span>
+<span class="kw">&lt;/head&gt;</span>
+<span class="kw">&lt;body&gt;</span>
+
+{{ page.content }}
+
+<span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre>
+<p>where the double braces and words <code>page.title</code> and <code>page.content</code> are Liquid code that will tell Jekyll to insert the title and content of the page in the appropriate spot. To use a layout, save this file in <code>_layout</code> with the desired layout name, e.g. <code>plainlayout</code>, and then it can be applied to any page (markdown or html file in the root directory) or post by adding <code>layout: plainlayout</code> to the YAML header of that file. This provides a super convenient way to create page templates for a static site.</p>
+<ul>
+<li><code>_includes</code> Often one might have several layouts corresponding to different kinds of pages on your site. To avoid copy-pasting the parts of the layout that stay the same (perhaps all have the same header matter pointing to your CSS files and analytics tracker), you can just place these snippets inside the <code>_includes</code> directory with their own filenames. For instance, we could move the header text to a file called <code>header</code> in that directory with the contents:</li>
+</ul>
+<pre class="sourceCode html"><code class="sourceCode html"><span class="er">&lt;</span>!doctype html&gt;
+<span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">en</span><span class="kw">&gt;</span>
+<span class="kw">&lt;head&gt;</span>
+<span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">utf-8</span><span class="kw">&gt;</span>
+<span class="kw">&lt;title&gt;</span> {{ page.title }} <span class="kw">&lt;/title&gt;</span>
+<span class="kw">&lt;/head&gt;</span></code></pre>
+<p>To automatically reuse a snippet of HTML code in any file on your site (a layout file or other), we need to learn one more Liquid command. This one goes between brace-percent symbols, and uses the command <code>include</code>, followed by the filename, like so:</p>
+<pre><code>{% include header %}
+&lt;body&gt;
+{{ page.content }}
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>The above example provides a shorter layout file, which pulls in the header snippet. If you have only one layout, this is of course pointless, but the more you add to and change your site, the more useful the ability to reuse a single HTML chunk with just a line of code becomes.</p>
+<h3 id="configuration">Configuration</h3>
+<ul>
+<li><strong>YAML</strong> and the <code>_config.yml</code> file. Recall that YAML is the very human-readable data structure, whose syntax is explained quite throughly on <a href="http://en.wikipedia.org/wiki/YAML">it’s wikipedia page</a>. One glance at an example reveals almost all you need to know about the syntax, such as:</li>
+</ul>
+<pre><code>
+---
+layout: post
+category: ecology
+tags: 
+  - howto
+  - jekyll
+modified: 2013-01-07
+---</code></pre>
+<p>Lists can be done in a variety of ways, comma-s</p>
+<p>One of the Jekyll beginner’s mysteries is knowing just what words/metadata/variables are already available in Jekyll and how to add those that are not. <a href="https://github.com/mojombo/jekyll/wiki/Template-Data">A list appears on the Jekyll Wiki</a>. Note that the syntax uses the ruby structure, so <code>page.title</code> and <code>page.date</code> are both part of the page. We can create any custom variable by adding it to that page’s yaml header. For instance, <code>modified</code> is not defined anywhere in Jekyll’s default Template Data, but none-the-less we can access this modification date in this page’s <code>layout</code> or the page itself using {{ page.modified }} liquid tag.</p>
+<p>Metadata belonging to the site as a whole, rather than a particular page, is specified in the <code>_config.yml</code> file, along with a few options telling Jekyll how to parse the site. Again, the <a href="https://github.com/mojombo/jekyll/wiki/Configuration">Jekyll wiki has a great overview</a>. As the extension implies, this entire file is in YAML. If we want to create new global variables, such as our twitter account, we can just add them to the YAML like so:</p>
+<pre><code>author:
+  twitter: cboettig
+  github: cboettig</code></pre>
+<p>(note the indentation for hierarchy) and now my twitter username is available through the liquid command <code>site.author.twitter</code>. Again, it’s just another trick to insert some text, just like <code>_layout</code> and <code>_includes</code>. Only use can prove how helpful this can be.</p>
+<p><strong>Markdown parser hell</strong>. A lot of Jekyll adopters are already familar with Github and it’s flavor of markdown with such features as fenced codeblocks, thus it comes as real suprise to run into advice explaining how code blocks need to be wrapped in the never-heard-of “Liquid” syntax <code>{% highlight %}</code>. Ignore this nonsense. How your markdown is parsed depends on what flavor of markdown you use, and there is a special level of hell for anyone inventing a new flavor (<a href="http://www.codinghorror.com/blog/2012/10/the-future-of-markdown.html">Atwood 2012</a>). Fortunately Github’s Tom Preston-Werner finally gave up the perfect irony that Github’s flavor was not one of the built-in Jekyll parsers (though being a hacker system, this could be added manually), and you can now get that behavior by setting your chosen parser to be <code>redcarpet</code> with the convenient extensions [^2]</p>
+<pre><code>markdown: redcarpet
+redcarpet:
+  extensions: [&quot;no_intra_emphasis&quot;, &quot;fenced_code_blocks&quot;, &quot;autolink&quot;, &quot;tables&quot;, &quot;with_toc_data&quot;]</code></pre>
+<h2 id="more-advanced-tricks">More advanced tricks</h2>
+<p><strong>Liquid</strong> Your next stop should really be to read <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Liquid for Designers</a>. Liquid is the glue that specifies all the rules needed to assemble your site, and is quite simple. Understand how Liquid works and you’ve mastered Jekyll. Jekyll provides <a href="https://github.com/mojombo/jekyll/wiki/Liquid-Extensions">some additional Liquid functions</a> common for blogs.</p>
+<p>Your next stop is to get some really nice customizable CSS scaffolding to control the layout for your site. While there’s a huge number of free CSS themes available, this isn’t 2002, so head on over to <a href="http://twitter.github.com/bootstrap">Twitter-Bootstrap</a> (a project originally created by some of the programmers at Twitter, now evolved to it’s own community). The CSS-based grid layout and some very nice JQuery Javascripts tools can make your site as pretty and as interactive as you can imagine. Like Octopress, prebuilt CSS can lead to all sites looking the same. Check out themes for Bootstrap, and the excellent set of icons by <a href="http://fortawesome.github.com/Font-Awesome/">FontAwesome</a>.</p>
+<p>Your final step is where the hacking really begins. Now and again you imagine something you just can’t do with these tools. Your only recourse is to <del>ask on <a href="http://stackoverflow.com">Stackoverflow</a> for someone to do it for you</del> learn a bit of Ruby. Anything you can write in Ruby you can add to Jekyll as a “plugin”, by defining a Liquid extension for a Ruby function. Ruby is clearly a favorite language of web-developers thanks to its dynamic-site implementation Ruby-on-Rails and a vibrant Github community, so there’s a wealth of useful tools, including an implementation to most APIs you might care to interact with (Github, Twitter, various Google APIs, are among the ones I’m using).</p>
+<h2 id="hosting-options">Hosting options</h2>
+<p>Because Jekyll generates a static site, it can be hosted almost anywhere for nothing or next to nothing in costs. The primary question to consider is your choice of domain name. If you wish to host your site from university domain name, just copy the contents of <code>_site</code> into your <code>public_html</code> or similarly named directory on the web server.</p>
+<p>While having a university affiliated domain can appear more official and help with discoverability, buying your own domain name as your permanent Internet home may be a more reliable long-term solution. Once you’ve purchased a domain name from a provider, a static site can be hosted at your own domain name for next to nothing on <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/WebsiteHosting.html">Amazon S3</a>, or for literally nothing <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">through Github</a>.</p>
+<p>[1]: Details on installing and running ruby gems for Jekyll will vary by operating system, so I won’t bother with more details here. Some further background for linux based platforms at least appears in my <a href="http://www.carlboettiger.info/README.html">site’s info file</a>.</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2012-12-30 00:00:00 +0000" 
+    property="dc:created">30 Dec 2012</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/12/27/notes.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+    </p>
+    
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2012-12-30-learning-jekyll.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#notebook-technology">#notebook-technology</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#Jekyll">#Jekyll</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/f8c23ad24786fee24f8b7f0d1fb799527381ca7d/_posts/2012-12-30-learning-jekyll.md"> f8c23ad24786fee24f8b7f0d1fb799527381ca7d</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Learning Jekyll
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2012-12-30
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/12/30/learning-jekyll.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

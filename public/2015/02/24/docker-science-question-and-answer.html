@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Question-and-Answer-post on my use of Docker in research</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="docker, blog" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Question-and-Answer-post on my use of Docker in research" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2015-02-24 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/02/24/docker-science-question-and-answer.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Question-and-Answer-post on my use of Docker in research" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2015-02-24 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/02/24/docker-science-question-and-answer.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2015-02-24 00:00:00 +0000"/>
+<meta name="citation_title" content="Question-and-Answer-post on my use of Docker in research"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="http://www.carlboettiger.info/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Question-and-Answer-post on my use of Docker in research</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>I received an interesting email from an academic computing unit regarding the use of Docker in my research:</p>
+<blockquote>
+<p>We’ve been reading, listing, and prototyping best practices for building base images, achieving image composition, addressing interoperability, and standardizing on common APIs. When I read your paper, I thought you might have some opinions on the subject.</p>
+</blockquote>
+<blockquote>
+<p>Would you be willing to share your experiences using Docker for research with our team? It doesn’t have to be a formal presentation. In fact, we generally prefer interactive conversations over slides, abstracts, etc. I appreciate that you must be terribly busy with your postdoc fellowship and rOpenScience responsibilities. If you’re not able to speak, perhaps you can answer a few questions about your use of Docker.</p>
+</blockquote>
+<p>Here are some quick answers in reply; though like the questions themselves my replies are on the technical end and don’t give a useful overview of how I’m actually using Docker. Maybe that’s a subject for another post some time.</p>
+<ol type="1">
+<li>Are you currently still using Docker for your research? If so, how are you integrating that into your more demanding computational needs?</li>
+</ol>
+<p>Yes. Docker helps me quickly provision and deploy a temporary compute environment on a cloud server with resources appropriate to the computation. This model much more accurately reflects the nature of computational research in a discipline such as ecology than does the standard HPC cluster model. My research typically involves many different tasks that can be easily separated and do not need the specialized architecture of a supercomputer, but do rely on a wide range of existing software tools and frequently also rely on internet connectivity for accessing certain data resources, etc. Because Docker makes it very easy for me to deploy customized software environments locally and on cloud computing resources, it facilitates my process of testing, scaling and distributing tasks to the appropriate computational resources quickly, while also increasing the portability &amp; reproducibility of my work by colleagues who can benefit from the prebuilt environment provided by the container.</p>
+<ol start="2" type="1">
+<li>How/do you make use of data containers?</li>
+</ol>
+<p>I rarely make use of data containers. I find they, and container orchestration more generally, are very well suited for deploying a service app (such as an API), but are less natural for composing scientific research environments which requires orchestrating volumes instead of tcp links. For instance, at present, there is no interface in <code>--volumes-from</code> to mount the shared volume at a different mount point in the different container. Thus one cannot just link libraries from different containers with a <code>-v /usr/lib</code> or <code>-v /usr/bin</code>, as this would clobber the existing libraries.</p>
+<p>Also, it’s rather a nuisance that on the current Debian/Ubuntu kernels at least, <code>docker rm</code> does not fully clean up space from data containers (though we now have <code>docker rm -v</code>)</p>
+<ol start="3" type="1">
+<li>What are you using to run your containers in production?</li>
+</ol>
+<p>Production is a diverse notion in scientific research – from a software perspective scientific work is almost 100% development and 0% production. For containers running public, always-on services, I tend to run from a dedicated, appropriately resourced cloud server such as Digital Ocean. I don’t write such services very often (though we have been doing this to deploy public APIs for data recently), so this is the closest I get to ‘production’. I run my development environment and all my research code out of containers as well, both locally and on various cloud servers.</p>
+<p>In all cases, I tend to run containers using the Docker CLI. I’ve found fig places larger resource requirements to run the same set of containers – so much so that it will fail to start on a machine that can run the containers fine from CLI or Fleet. fig also feels immature; it does not provide anything close to parity with the Docker CLI options.</p>
+<p>Further, while I find orchestration a powerful concept that is well suited for certain use-cases (our recent API uses five containers), for many academic research uses I find that orchestration is both unnecessary and a barrier to use. Orchestration works really well for professionally designed, web native, open source stack: our recent API deployment uses Redis, MySQL, NGINX, Sinatra, Unicorn, Logstash, ElasticSearch and Kibana – services that are all readily composed from official Docker containers into an existing application. Most scientific work looks nothing like this – the common elements tend to be shared libraries that are not well adapted to the same abstraction into separate services.</p>
+<ol start="4" type="1">
+<li>How are you sharing them aside from the Docker Hub?</li>
+</ol>
+<p>Primarily through making the Dockerfiles available on Github. This makes it easy for others to build the images locally, and also fork and modify the Dockerfile directly. I maintain a private Docker registry as well but rarely have need for it.</p>
+<ol start="5" type="1">
+<li>Do you have practical experience and advice about achieving real portability with Docker across hosting environments (ie. stick with X as an OS, use a sidekick and data container for data backups and snapshotting, etc)?</li>
+</ol>
+<p>Overall this hasn’t been much of an issue. Sharing volumes with the host machine on hosts that require virtualization/boot2docker was an early problem, though this has been much better since Docker 1.3. In a similar vein, getting <code>boot2docker</code> running on older hardware can be problematic. And of course docker isn’t really compatible with 32 bit machines.</p>
+<p>After spending some time with CoreOS, I tend to use Ubuntu machines when running in the cloud: ‘highly available’ isn’t much of a priority in the research context, where few things are at a scale where hardware failure is an issue. I found CoreOS worked poorly on individual machines or cluster sizes that might shrink below 2; while the new OS model was a barrier to entry for myself and for collaborators. I suspect this situation will improve dramatically as these tools gain polish and abstraction that requires less manual tooling for common patterns (I find that ambassador containers, sidekick containers, etc place too many OS-level tasks on the shoulders of the user). Of course there is a large ecosystem of solutions in this space, which also needs time to harden into standards.</p>
+<p>Perhaps my comments re: CLI vs fig in Q3 are also relevant here?</p>
+<ol start="6" type="1">
+<li>Have the computational requirements of your research codes outgrown a physical node?</li>
+</ol>
+<p>Not at the present. I’ve run prior work on clusters on a campus and at the DOE’s Carver machine at NERSC, though at this time I can almost always meet computational needs with the larger single instances of a service like EC2 or DigitalOcean. Much more often I have the need to run many different codes (sometimes related things that could be parallelized in a single command but are better off distributed, but much more often unrelated tasks) at the same time. Being able to deploy these in isolated, pre-provisioned environments on one or multiple machines using Docker has thus been a huge gain in both my efficiency and realized computational performance. If any particular task becomes too intensive, Docker makes it very easy to move over to a new cloud instance with more resources that will not interfere with other tasks.</p>
+<ol start="7" type="1">
+<li>Do you have a workflow for versioning and releasing images comparable to GitFlow?</li>
+</ol>
+<p>Nope, though maybe this would be a good idea. I work almost exclusively with automated builds and hardly ever use <code>docker commit</code>. Though the Dockerfiles themselves are versioned, obviously the software that is installed between different automated builds can differ substantially, and there is in general no way to recover an earlier build. Using a <code>docker commit</code> workflow instead would provide this more versioned history and greater stability of the precise binaries installed, but also feels more like a black box as the whole thing cannot then be reproduced from scratch.</p>
+<ol start="8" type="1">
+<li>Do you version your Dockerfile/image/source code separately?</li>
+</ol>
+<p>I version all my Dockerfiles with git. I version my images as needed but more rarely, and in a way that reflects the version of the predominant software they install (e.g. r-base:3.1.2).</p>
+<ol start="9" type="1">
+<li>Do you prefer using the entrypoint or command to run your containers by default?</li>
+</ol>
+<p>I prefer command (<code>CMD</code>), as it is more semantic, easier to alter the default and can take longer strings (no need for a flag).</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      
+<aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2015-02-24 00:00:00 +0000" 
+    property="dc:created">24 Feb 2015</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2015/02/12/dai-model.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2015/02/24/nimble-on-dai-model.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2015/commits/master/_posts/_posts/2015-02-24-docker-science-question-and-answer.Rmd"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2015/categories.html#computing">computing</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#docker">#docker</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#blog">#blog</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2015/commit/d145d2234734be699aa084ac07e3fddab8f25489/_posts/_posts/2015-02-24-docker-science-question-and-answer.Rmd"> d145d2234734be699aa084ac07e3fddab8f25489</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Question-and-Answer-post on my use of Docker in research
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2015-02-24
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/02/24/docker-science-question-and-answer.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

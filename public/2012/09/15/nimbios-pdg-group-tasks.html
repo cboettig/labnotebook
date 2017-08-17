@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>pdg-control PDG group, Tasks</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="pdg-control, pdg-control" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="pdg-control PDG group, Tasks" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2011-09-15 08:59:36 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/09/15/nimbios-pdg-group-tasks.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="pdg-control PDG group, Tasks" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2011-09-15 08:59:36 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/09/15/nimbios-pdg-group-tasks.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2011-09-15 08:59:36 +0000"/>
+<meta name="citation_title" content="pdg-control PDG group, Tasks"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">pdg-control PDG group, Tasks</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h2 id="tools">Tools</h2>
+<ul>
+<li><p>Sharing: Dropbox (Team account? 350 gigs/12 users $1670/yr)</p></li>
+<li><p>Common language for training development: Matlab</p></li>
+<li><p>Remote collaboration: GoToMeeting? Evo?</p></li>
+<li><p>Code collaboration GitHub?</p></li>
+</ul>
+<h2 id="training-problem-i">Training problem I</h2>
+<h3 id="a-state-vars-control-vars">1a) State vars &gt; Control vars:</h3>
+<p>Can give solutions with chattering (periodic, possibly jumping between boundaries.)</p>
+<p>Short-term priorities:</p>
+<ol type="1">
+<li>shared numerics.  <strong>Jim</strong> looks at collocation problem: how do they perform on periodic controls on the infinite time?  (If they can’t work, we go to finite time.)</li>
+</ol>
+<p>Need a way to be able to run each-other’s numerics and get same result.</p>
+<ol start="2" type="1">
+<li>Literature exercise: Gather cases of chattering.  When it occurs is the objective linear or nonlinear? interior periodic or on boundary?  discrete or cts time?  Where are constraints relative to interior solution (i.e. are they outside the domain?)  Do they check second order sufficiency conditions for optimality? Theorem-like results?  <strong>Paul with stick</strong>, anyone who has seen this.</li>
+</ol>
+<p><strong>Deadline: Oct 31st Conference call.  Drop box. </strong></p>
+<ol start="3" type="1">
+<li>Select an example in which to explore this.  Have simple form:</li>
+</ol>
+<p><span class="math">\[ \dot x = F(x,y, h) \]</span></p>
+<p><span class="math">\[ \dot y = G(x,y) \]</span></p>
+<p>(could be discrete time instead.)  Predator-prey?  Age-structure?</p>
+<ol start="4" type="1">
+<li>Domain where controllability issues arise:</li>
+</ol>
+<ol type="a">
+<li>Put y on fast time scale (see Kellner et al. Kellner <em>et. al.</em> 2011)</li>
+</ol>
+<p>slow down y (numerically.  Perturbation theory)</p>
+<ol start="2" type="a">
+<li>Introduce a second control $ x = G(x,y, h_2) $</li>
+</ol>
+<p>Constraint $ || h_2 || &lt; $</p>
+<ol start="5" type="1">
+<li>Convexity statement by subbing in equilibrium solns and periodic.</li>
+</ol>
+<p><strong>Dan, Carl, Alan, Paul.</strong></p>
+<h3 id="b-adjustment-costs">1b) Adjustment costs</h3>
+<p>Refs: Everyone should read: Reed 79, Ludwig</p>
+<p>Emperics - Paul/Jim long grass</p>
+<p><span class="math">\[ x_t = f(x_t -h_t) \epsilon_t \]</span></p>
+<p><span class="math">\[ J = \mathbb{E} \left( \sum h_t -c(h_t, h_{t-1} ) \right)\]</span></p>
+<p>Where the velocity penalties/Regularization take one of these forms:</p>
+<ol type="1">
+<li><p>$ c(h)^2 $  Smoothing</p></li>
+<li><p>$ c(h) $ Smoothing</p></li>
+<li><p>$ c(<em>{h</em>t h_t-1} ) $  Transaction fee (i.e. Dan’s toy version)</p></li>
+<li><p>$ c_1 <em>{h</em>t&gt; h_{t-1}} $</p></li>
+<li><p>traditional econ penalties $ ch_t^2 <span class="math">\(, \)</span> p(h_t)h_t $</p></li>
+</ol>
+<p>Mechanistic motivation - <strong>Jim</strong></p>
+<p>Jobs: analytical – approach path/ deterministic Led by: <strong>Dan</strong>, with <strong>Jake, Paul</strong></p>
+<p>Numerics: <strong>Michael </strong>stochastic dynamic programming.  (see Sethi 2005, JEEM (Sethi <em>et. al.</em> 2005)).</p>
+<p><strong>Deadline: October 31st. Dan’s analytics, Michael’s numeric model. </strong></p>
+<p><strong>Frank</strong>: MPC exploration of numeric model.</p>
+<h2 id="training-problem-ii">Training Problem II</h2>
+<p>2.0 One-dimensional Myers et al. <span class="math">\[ N_t+1 = \frac{r N_t^{\alpha}}{1+\frac{N_t^{\alpha}}{K} }\]</span> $ &gt; 1 $ gets allee effect.</p>
+<p><span class="math">\(N_0 \)</span> unknown. Cost of gathering information, profit from fishing.</p>
+<p>Steps:</p>
+<p>Constant strategy, single-step information gathering.</p>
+<p>Information over time. Strategy varies.  Harvest control or effort control? Uncertain information from harvest? (Maybe go back to more classical framework here).</p>
+<p><strong>Carl B, Carl T, Jake, Alan, Michael</strong></p>
+<p>Literature review: <strong>Jake, Marie-Josee, Alan</strong></p>
+<p>Deadline: October 31st</p>
+<p>2.0.1 Coral-algal-parrotfish</p>
+<p>2.0.2 Commercial fishery sampling problem</p>
+<p><strong>Alan wields stick.</strong></p>
+<h2 id="training-problem-iii">Training Problem III</h2>
+<ol type="1">
+<li><p>Run the spawning model on NIMBioS cluster. <strong>Claire</strong></p></li>
+<li><p>Spawning time as a single point optimization</p></li>
+<li><p>Larval behavior during path.</p></li>
+</ol>
+<p>Lit review: control model before the spawning?</p>
+<p>Model predictive control?</p>
+<p><strong>Megan wields stick. </strong></p>
+<p>How tightly controlled is aggregation?  Let dispersion be open-loop.  Reverse engineer spawning controller.  Reverse active control.</p>
+<p>Cluster scaling options: NIMBioS, Kraken, XSEDE.</p>
+<p>Further skills</p>
+<p>efficient stochastic dynamic programming (SDP).</p>
+<p>Frank’s people.  Jim’s people.</p>
+<p>TREE review? boxes and glossary.</p>
+<p>Engineering control/model choice for control/timescales</p>
+<p>Summary:</p>
+<p>Participant Tasks</p>
+<p><strong>Paul Armsworth</strong>*</p>
+<p> Carry Stick for Prob. 1. Analytic for 1b.</p>
+<p>Michael Bode</p>
+<p>Lead numerics for 1b.  Prob 2.</p>
+<p>Carl Boettiger</p>
+<p>Lead Problem 2 coding.</p>
+<p><strong>Megan Donahue</strong>*</p>
+<p>Stick for Problem 3</p>
+<p>Frank Doyle</p>
+<p>MPC for problem 1b</p>
+<p>Dan Ryan</p>
+<p>Analytic 1b.</p>
+<p>Marie-Josee Fortin</p>
+<p>Literature for Prob 2.</p>
+<p><strong>Alan Hastings</strong>*</p>
+<p>Stick for Problem 2</p>
+<p>Jacob LaRiviere</p>
+<p>support analytic 1b, numeric 2</p>
+<p>Claire Paris</p>
+<p>Simulation on cluster</p>
+<p>Jim Sanchirico</p>
+<p>Numerics for 1a.  Mechanistic motivation 1b.  Share code. Recruit student</p>
+<p><strong>Carl Toews</strong>*</p>
+<p>Prob 2</p>
+<p>*Group organizers</p>
+<h2 id="references">References</h2>
+<ul>
+<li><p>Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005). “Fishery Management Under Multiple Uncertainty.” <em>Journal of Environmental Economics And Management</em>, <strong>50</strong>. ISSN 00950696, <a href="http://dx.doi.org/10.1016/j.jeem.2004.11.005">http://dx.doi.org/10.1016/j.jeem.2004.11.005</a>.</p></li>
+<li><p>Optimizing For Multiple Species And Multiple Values: Tradeoffs Inherent in Ecosystem-Based Fisheries Management, Julie B. Kellner, James N. Sanchirico, Alan Hastings, Peter J. Mumby, (2011) <em>Conservation Letters</em>, <strong>4</strong> <a href="http://dx.doi.org/10.1111/j.1755-263X.2010.00132.x">10.1111/j.1755-263X.2010.00132.x</a></p></li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2011-09-15 08:59:36 +0000" 
+    property="dc:created">15 Sep 2011</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/09/14/training-problem-ii.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/09/15/nimbios-pdg-control-thursday.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2011-09-15-nimbios-pdg-group-tasks.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#pdg-control">#pdg-control</a>
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#pdg-control">#pdg-control</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/002d23f14b967dcf75c875f59861cd83b46471e6/_posts/2011-09-15-nimbios-pdg-group-tasks.md"> 002d23f14b967dcf75c875f59861cd83b46471e6</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=pdg-control PDG group, Tasks
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2011-09-15
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/09/15/nimbios-pdg-group-tasks.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

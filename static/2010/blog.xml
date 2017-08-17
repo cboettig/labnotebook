@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Lab Notebook - blog</title>
+ <link href="/2010/blog.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2015-02-25T23:07:52+00:00</updated>
+ <id>http://www.carlboettiger.info/2010</id>
+ <author>
+   <name>Carl Boettiger</name>
+   <email>cboettig@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Thoughts on the New Policies for Data Archiving at NSF and in Common Journals</title>
+	 <link href="/2010/12/03/nsf-and-journal-data-archiving.html"/>
+   <updated>2010-12-03T19:08:53+00:00</updated>
+   <id>/12/03/nsf-and-journal-data-archiving</id>
+   <content type="html">&lt;p&gt;This post is a work in progress, a scratch pad for me to start assembling what I’ve been learning about and resources pertaining to the new policies emerging from NSF and journals relevant to ecology and evolution.  Hoping to highlight not only the policies, but the issues, opportunities, and concerns around them.&lt;/p&gt;
+&lt;p&gt;I am hoping to help organize a workshop to discuss these issues in my department this Winter.  The Davis Open Science group, is planning a series of these workshops, hoping to work with departments, the libraries and the UC Davis Office of Research and its &lt;a href=&quot;http://www.research.ucdavis.edu/home.cfm?id=OVC,10,1622,2065&quot;&gt;Responsible Conduct of Research&lt;/a&gt; program (in compliance with NIH/NSF ethics requirements), as well as resident faculty and editors.  Suggestions on what you would like to see in such a workshop much appreciated.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Association of Research Libraries has just released a &lt;a href=&quot;http://www.arl.org/rtl/eresearch/escien/nsf/index.shtml&quot;&gt;nice guide on the new polices&lt;/a&gt; as well.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;what-are-the-new-nsf-policies&quot;&gt;What are the new NSF policies?&lt;/h2&gt;
+&lt;p&gt;Each discipline has (or will have, &lt;a href=&quot;http://researchremix.wordpress.com/2010/11/15/nsf-where&quot;&gt;see notes and refs  by Heather Piwowar&lt;/a&gt; it’s own guidelines, but the basic gist is perhaps best summarized in excerpt from &lt;a href=&quot;http://www.nsf.gov/pubs/policydocs/pappguide/nsf11001/gpg_2.jsp#dmp&quot;&gt;this NSF statement&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;This supplement should describe how the proposal will conform to NSF policy on the dissemination and sharing of research results (see AAG Chapter VI.D.4 ), and may include:&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;p&gt;The types of data, samples, physical collections, software, curriculum materials, and other materials to be produced in the course of the project;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;the standards to be used for data and metadata format and content (where existing standards are absent or deemed inadequate, this should be documented along with any proposed solutions or remedies);&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;policies for access and sharing including provisions for appropriate protection of privacy, confidentiality, security, intellectual property, or other rights or requirements;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;policies and provisions for re-use, re-distribution, and the production of derivatives; and&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;plans for archiving data, samples, and other research products, and for preservation of access to them.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Data management requirements and plans specific to the Directorate, Office, Division, Program, or other NSF unit, relevant to a proposal are available at: &lt;a href=&quot;http://www.nsf.gov/bfa/dias/policy/dmp.jsp&quot; class=&quot;uri&quot;&gt;http://www.nsf.gov/bfa/dias/policy/dmp.jsp&lt;/a&gt;. If guidance specific to the program is not available, then the requirements established in this section apply. [….] The Data Management Plan will be reviewed as an integral part of the proposal, coming under Intellectual Merit or Broader Impacts or both, as appropriate for the scientific community of relevance.&lt;/p&gt;
+&lt;h2 id=&quot;what-are-the-new-requirements-being-set-by-journals&quot;&gt;What are the new requirements being set by journals?&lt;/h2&gt;
+&lt;p&gt;The American Naturalist&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This journal requires, as a condition for publication, that data supporting the results in the paper should be archived in an appropriate public archive, such as GenBank, TreeBASE, Dryad, or the Knowledge Network for Biocomplexity. Data are important products of the scientific enterprise, and they should be preserved and usable for decades in the future. Authors may elect to have the data publicly available at time of publication, or, if the technology of the archive allows, may opt to embargo access to the data for a period up to a year after publication. Exceptions may be granted at the discretion of the editor, especially for sensitive information such as human subject data or the location of endangered species.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Whitlock, M.C. et al. &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/20073990&quot;&gt;Data archiving&lt;/a&gt;. The American Naturalist 175, 145-6(2010).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Evolution&lt;/em&gt; has a similar policy, outlined in:&lt;/p&gt;
+&lt;p&gt;Fairbairn, D.J. &lt;a href=&quot;http://doi.wiley.com/10.1111/j.1558-5646.2010.01182.x&quot;&gt;the Advent of Mandatory Data Archiving&lt;/a&gt;. Evolution (2010) (preprint)&lt;/p&gt;
+&lt;p&gt;Journals with policy in place (links and editions coming)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;The American Naturalist&lt;/strong&gt; (see Whitlock, 2010; above)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Evolution&lt;/strong&gt; (see Fairbarin, 2010; above)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Journal of Evolutionary Biology&lt;/strong&gt; (as mentioned in Whitlock)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Molecular Ecology&lt;/strong&gt; (as mentioned in Whitlock)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Heredity&lt;/strong&gt; (as mentioned in Whitlock)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ESA journals: &lt;strong&gt;Ecology&lt;/strong&gt;, &lt;strong&gt;Ecological&lt;/strong&gt; &lt;strong&gt;Monographs&lt;/strong&gt;, &lt;strong&gt;Ecological&lt;/strong&gt; &lt;strong&gt;Applications&lt;/strong&gt;, and ** Frontiers**.  Currently have a position in Dryad board and a soft data deposition requirement.  Also maintains the Ecological Archive. (pers. comm.)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;what-are-the-available-archives&quot;&gt;What are the available archives?&lt;/h2&gt;
+&lt;p&gt;There’s a variety of potential archives.  Identifying the best archive for the type of data involved may be complicated.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://esapubs.org/archive/default.htm&quot;&gt;ESA’s Ecological Archive&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://datadryad.org/&quot;&gt;Dryad&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.treebase.org/treebase-web/home.html&quot;&gt;TreeBASE&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.ncbi.nlm.nih.gov/genbank/&quot;&gt;GenBank&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://knb.ecoinformatics.org/index.jsp&quot;&gt;Knowledge Network for Biocomplexity&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;funding-models-concerns&quot;&gt;Funding Models &amp;amp; Concerns&lt;/h2&gt;
+&lt;p&gt;Cost is a key concern: good archiving takes resources, and does little good if repositories aren’t maintained or persistent.  While the repositories are supported by their own grants (for the moment), it seems the repositories will generally charge the  journals where the publication accompanying the data will be submitted.  The journals may in turn charge the authors, who will have to write these costs into their NSF grants?&lt;/p&gt;
+&lt;p&gt;Like the policies themselves, these details are still being actively worked out [ref] Todd Vision, associate director of informatics at NESCENT which oversees the Dryad project currently, discusses this in &lt;a href=&quot;http://ff.im/uGFbn&quot;&gt;this FF forum&lt;/a&gt;.  [/ref].&lt;/p&gt;
+&lt;p&gt;Good references on funding models include these papers by Beagerie and others:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://bit.ly/fPX0Nm&quot;&gt;Dryad cost model potential&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.jisc.ac.uk/media/documents/publications/keepingresearchdatasafe0408.pdf&quot;&gt;a cost model for universities in the UK&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;why-archive-whats-the-added-value-of-repositories&quot;&gt;Why Archive?  What’s the added value of Repositories?&lt;/h2&gt;
+&lt;p&gt;Dryad has a good explanation of &lt;a href=&quot;http://blog.datadryad.org/2010/12/02/what-happens-after-you-submit-your-data-to-dryad/&quot;&gt;what happens when data is deposited&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The need for data archiving in ecology and evolutionary biology has been persuasively argued in articles in a variety of our journals for some time.    See:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Moore, A.J. et al. &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/20149022&quot;&gt;The need for archiving data in evolutionary biology.&lt;/a&gt;Journal of evolutionary biology 23, 659-60(2010).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Piwowar, H. a, Day, R.S. &amp;amp; Fridsma, D.B. &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/17375194&quot;&gt;Sharing detailed research data is associated with increased citation rate&lt;/a&gt;. PloS one 2, e308(2007).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;impact-of-sharing-and-citing-data&quot;&gt;Impact of Sharing and Citing Data&lt;/h2&gt;
+&lt;p&gt;In addition to funding, primary concerns involve how data will be shared and cited.  Done well, researchers are appropriately accredited and rewarded when there data is re-used, making research faster, supported by larger data sets, more reproducible, and carrying a broader impact.  A set of articles highlights many of these issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;﻿﻿﻿Thorisson, G.A. &lt;a href=&quot;http://dx.doi.org/10.1038/nbt1109-984b&quot;&gt;Accreditation and attribution in data sharing&lt;/a&gt;. Nature Biotechnology 27, 984-985(2009).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sieber, J.E. &amp;amp; Trumbo, B.E. &lt;a href=&quot;http://www.springerlink.com/index/10.1007/BF02628694&quot;&gt;(Not) giving credit where credit is due: Citation of data sets&lt;/a&gt;. Science and Engineering Ethics 1, 11-20(1995).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Stodden, V. &lt;a href=&quot;http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=4720221&quot;&gt;The Legal Framework for Reproducible Scientific Research: Licensing and Copyright&lt;/a&gt;. Computing in Science &amp;amp; Engineering 11, 35-40(2009).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Gleditsch, N.P. &amp;amp; Strand, H. &lt;a href=&quot;http://www.prio.no/Research-and-Publications/Publication/?oid=55406&quot;&gt;Posting your data: will you be scooped or will you be famous?&lt;/a&gt;International Studies Perspectives 4, 89-97(2003).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;﻿Vision, T.J. &lt;a href=&quot;http://caliber.ucpress.net/doi/abs/10.1525/bio.2010.60.5.2&quot;&gt;Open Data and the Social Contract of Scientific Publishing&lt;/a&gt;. BioScience 60, 330-331(2010).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;﻿Costello, M.J. &lt;a href=&quot;http://caliber.ucpress.net/doi/abs/10.1525/bio.2009.59.5.9&quot;&gt;Motivating Online Publication of Data.&lt;/a&gt; BioScience 59, 418-427(2009).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Data citation is closely tied to the discussion of data licenses, such as CC licenses that allow conditional reuse, vs content in the public domain that can be used unconditionally. It seems data is not generally viewed by the law as a creative work but as fact, and thus not under the jurisdiction of intellectual property and copyright licenses. Acknowledging this, repositories such as Dryad identify data as Creative Commons zero, which is essentially an intentional decision to put data into the public domain. See &lt;a href=&quot;http://friendfeed.com/opensci-info/3dfde7f6/where-do-you-point-to-for-explanation-of-why-data&quot;&gt;more discussion&lt;/a&gt; of when this applies and when data can be cc-by, etc, and &lt;a href=&quot;http://sciencecommons.org/weblog/archives/2009/11/19/remembering-babel-open-data-sharing-integration/&quot;&gt;Wilbanks’ explanation&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;following-the-developments-sources&quot;&gt;Following the Developments; Sources&lt;/h2&gt;
+&lt;p&gt;The Data Citation collection on Mendeley provides an actively maintained collection of articles discussing practices for depositing, citing, incentives, and tools for data management and publication.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.mendeley.com/groups/544621/data-citation/&quot;&gt;Visit the group list&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.mendeley.com/groups/544621/data-citation/feed/rss&quot;&gt;Follow the RSS&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Discussion continues on a few FF forum threads have helped assemble this information:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://friendfeed.com/science-2-0/8b143647/who-pays-for-archiving-costs-to-comply-with-new&quot;&gt;1&lt;/a&gt; &lt;a href=&quot;http://friendfeed.com/science-2-0/98efbfa5/where-best-place-to-start-learn-about-new-nsf&quot;&gt;2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;EDIT&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Dryad maintains an &lt;a href=&quot;http://datadryad.org/pages/jdap&quot;&gt;excellent list&lt;/a&gt; of the growing number of Ecology and Evolution partner journals that mandate archiving &lt;em&gt; &lt;/em&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>
