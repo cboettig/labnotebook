@@ -38,8 +38,8 @@ enableGitInfo = true
     keybase = "cboettig"
     email =  "cboettig@gmail.com"
     custom_css = ["cboettig.css"]
-    repo = "cboettig.github.io"
-    branch = "source"
+    repo = "labnotebook"
+    branch = "master"
     math = true
 
     date_format = "Mon, Jan 2, 2006"
