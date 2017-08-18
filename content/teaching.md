@@ -34,4 +34,8 @@ students in ecological, environmental or social science programs._
 enrolled in UC Berkeley's [Foundations of Data Science](http://data8.org)
 course (DS-8/Stat-94/CS-94).*
 
+### UGIS-192: Independent Undergraduate Reseach, via [URAP](http://urap.berkeley.edu)
+
+- Offered: *Every Semester*
+- Current available projects: <http://urapprojects.berkeley.edu/projects/detail.php?id_list=Env0730>
 
