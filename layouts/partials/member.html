@@ -1,0 +1,27 @@
+<div  class="col-md-4"
+ prefix="schema: http://schema.org/ foaf: http://xmlns.com/foaf/0.1" 
+ typeof="foaf:Person schema:Person" 
+ about="{{.homepage}}"
+ style="font-size:20px; text-align:center;">
+
+<p><img property="foaf:depiction" src="{{ "/img/" | relURL }}{{.photo}}" alt="Photo of {{.name.first}}"/></p>
+<p>
+<a property="foaf:homepage schema:url" 
+  href="{{.homepage}}"><span
+  property="foaf:name"><span 
+  property="foaf:givenName">{{.name.first}}</span> <span
+  property="foaf:familyName">{{.name.last}}</span></span></a></p>
+<p><span property="schema:jobTitle">{{.title}}</span></p>
+<p class="socialicons">
+<a href="mailto:{{.email}}" title="email"><i class="fa fa-envelope"></i></a>
+{{ with .twitter }}<a rel="foaf:account" href="https://twitter.com/{{.}}" title="Twitter"><i class="fa fa-twitter"></i></a>{{ end }}
+{{ with .impactstory }}<a rel="foaf:account" href="{{.}}" title="ImpactStory"><i class="ai ai-impactstory"></i></a>{{ end }}
+{{ with .linkedin }}<a rel="foaf:account" href="{{.}}" title="LinkedIn"><i class="fa fa-linkedin"></i></a>{{ end }}
+{{ with .researchgate }}<a rel="foaf:account" href="{{.}}" title="ResearchGate"><i class="ai ai-researchgate"></i></a>{{ end }}
+{{ with .github }}<a rel="foaf:account" href="https://github.com/{{.}}" title="GitHub"><i class="fa fa-github"></i></a>{{ end }}
+{{ with .orcid }}<a rel="http://purl.org/spar/datacite/orcid" href="https://orcid.org/{{.}}" title="ORCID ID"><i class="ai ai-orcid"></i></a>{{ end }}
+{{ with .cv }}<a rel="foaf:publications" href="{{.}}" title="Publications"><i class="fa fa-file-text"></i></a>{{ end }}
+{{ with .googlescholar }}<a rel="foaf:publications" href="{{.}}" title="Publications"><i class="ai ai-google-scholar"></i></a>{{ end }}</p>
+</div>
+
+

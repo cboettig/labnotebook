@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Lab Notebook</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Lab Notebook" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/lab-notebook.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Lab Notebook" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/lab-notebook.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content=""/>
+<meta name="citation_title" content="Lab Notebook"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  class="active" >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Lab Notebook</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row postpreview">
+  <div class="col-md-11 col-md-offset-1">
+    <div class="row">
+			<h4> <a href="/2010/atom.xml"
+              onClick="recordOutboundLink(this,
+              'Outbound Links', 'RSS'); return false;"
+              style="color: inherit;"
+              ><i class="icon-rss" ></i> Entries</a></h4>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2010//12/31/comparative-phylogenetics-is-the-data-informative.html">Comparative evolution: Is the data informative?</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 31 Dec 2010</p>
+
+<article>
+<div class="excerpt">
+<p>Working on my SICB talk, going a little further into the example of fitting the lambda model on the Anoles data to illustrate the ways in which we may lack sufficient data for the question.</p>
+<ol type="1">
+<li><p>The dataset may not contain adequate signal of the parameter / phenomenon in question</p></li>
+<li><p>The dataset may not be adequately large</p></li>
+</ol>
+<p>Anoles data set (23 taxa):</p>
+<figure>
+<img src="http://farm6.staticflickr.com/5244/5309932027_a43349ff6a_o.png" />
+</figure>
+<p>This first image shows the distribution of lambda values estimated from many datasets all simulated under a lambda = 0.6.  (Replotted from earlier entry)</p>
+<figure>
+<img src="http://farm6.staticflickr.com/5086/5310521188_dc5b23cf56_o.png" />
+</figure>
+<p>A larger (simulated &gt; 300 taxa) tree has can infer lambda with somewhat greater accuracy, though still rather sizable variance. (reran this simulation from earlier entry code that didn’t store the .Rdat file)</p>
+<figure>
+<img src="http://farm6.staticflickr.com/5045/5310150538_6a1b4fa16c_o.png" />
+</figure>
+<p>How informative the data are depends on the question.  Using the original 23 taxa tree we find it is plenty big enough to reliably recover the estimate of sigma, even though many of those estimates come from models that have rather mismatched lambda.  This suggests that sigma is nearly a sufficient statistic, while lambda is not.  That it can fit even when lambda is mismatched further suggests that the tree itself isn’t informing that estimate much – simply matching the variance in the data is most important.  This apparent lack of phylogenetic signal, however, says everything about how small the tree is, not how well or not well Brownian motion fits the data.</p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2010//12/31/comparative-phylogenetics-is-the-data-informative.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2010//12/30/stochastic-limits-to-evolutionary-branching.html">Stochastic limits to evolutionary branching</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 30 Dec 2010</p>
+
+<article>
+<div class="excerpt">
+<p>My last post was a bit pessimistic, sometimes I can still miss the forest for the trees.  Hidden in those figures, the main point has been staring me in the face.  So let’s try this again.</p>
+<p>Stochastic limits to evolutionary branching is the story of two dueling timescales.  The first timescale is that of the evolutionary process: the frequency of steps (mutation rate, $ $) and the size of the steps (mutation kernel standard deviation $ _{}$), on top of which we add the selection gradient, created by the ecology. The second timescale is that of ecological coexistence, which in low noise situations should be much longer, and hence irrelevant.</p>
+<p>While the approach to the branching point depends on the width of the resource kernel and is independent of the competition kernel.  At the branching point, how much narrower the competition kernel is compared to the resource kernel (in units of the mutational step size) determines how stable the coexistence of the early dimorphism is – the second timescale.  In most adaptive dynamics simulations this second timescale is irrelevant, being much longer than the former timescale, at least by assumption.  However, this need not be the case.</p>
+<p>When this timescale (influenced by most parameters: population size, mutation size relative to competition kernel; resource kernel matters more weakly[ref] should add the equations for approximating the coexistence time to illustrate this[/ref])  becomes on the same order as the evolutionary timescale of waiting until the next mutation (determined by the mutation rate and population size) suddenly it impacts the waiting time until branching.</p>
+<p>This can be characterized by the number of times a dimorphism establishes but then fails.  Similarly, weak coexistence impacts the number of times the dimorphism survives long enough for the mutation to arrive and establish, only to again collapse.</p>
+<figure>
+<img src="http://farm6.staticflickr.com/5244/5303963185_198812d83d_o.png" />
+</figure>
+<figure>
+<img src="http://farm6.staticflickr.com/5042/5304557466_ffa94d5ce1_o.png" />
+</figure>
+<p>Figures illustrate outside the regime where coexistence times matter, where dimorphism never collapses after establishing.  In harsher parameter regime, the dimorphism collapses hundreds of times before enough mutations can accumulate in rapid succession (or a rare large mutation occurs) to create a dimorphism of substantially different traits so as to coexist.</p>
+<p>Respective codes for each figure to show parameter values:</p>
+<pre><code> all[[2]] &lt;- ensemble_sim(rep=rep, sigma_mu = 0.05, mu = 1e-3, sigma_c2 = .1, sigma_k2 = 1, ko = 500, xo = 0.1, threshold = 30)
+ all[[3]] &lt;- ensemble_sim(rep=rep, sigma_mu = 0.03, mu = 5e-4, sigma_c2 = .3, sigma_k2 = 1, ko = 500, xo = 0.1, threshold = 30)</code></pre>
+<p>(<a href="https://github.com/cboettig/AdaptiveDynamics/commit/e85f36cd1bdafb998468ec7ceb74c72e4c73876d#diff-0">full code</a>).</p>
+<p>In the first example, a mutation at least two standard deviations out (prob &lt;5%) from the expected value is sufficient to get a standard deviation away from the competition kernel (i.e.  60% competition).  Step-size limited mutations should have very similar failures for the first and second plots, using lots of little steps each with high failure rate.  Mutation-rate limited processes use one big jump, and show a high disparity between the failures in the first case and failures in the second.</p>
+<figure>
+<img src="http://farm6.staticflickr.com/5241/5306903526_94d5ee93a5_o.png" />
+</figure>
+<p>Figures like the above show that when coexistence is hard (sigma_c  approaches sigma_k = 1) failure rates can be very high.  As the rates are very similar, this case appears to be clearly step-size limited, proceeding through many mutations with low probability of success of coexisting.</p>
+<p>(<a href="https://github.com/cboettig/AdaptiveDynamics/commit/2b25473689f6b4e9ba739a4373a3e457da9589c0">code &amp; data</a>)</p>
+<h2 id="further-exploration-illustrating-this-second-mode-mutation-limited">Further Exploration: Illustrating this second mode (mutation-limited)</h2>
+<p>Trying some examples now to see if I can create mutation-rate limited example by running the above at sigma_mu=.5 rather than .3 when varying mutation rate over 1e-4 to 1e-3.</p>
+<figure>
+<img src="http://farm6.staticflickr.com/5127/5309279143_425ca848da_o.png" />
+</figure>
+<figure>
+<img src="http://farm6.staticflickr.com/5207/5309867078_17fe14c0db_o.png" />
+</figure>
+<p>The low mutation rates appear to time out instead (time until phase, left figure).  The higher mutations actually show slightly fewer attempts after establishment, but not a strong signal.  Trying now with larger mutation steps.</p>
+<figure>
+<img src="http://farm6.staticflickr.com/5041/5310364434_dc2f8b9ecd_o.png" />
+</figure>
+<p>Still shows no indication of rate limited mutation.</p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2010//12/30/stochastic-limits-to-evolutionary-branching.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2010//12/30/open-notebook-science-abstract.html">Open Notebook Science Abstract</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 30 Dec 2010</p>
+
+<article>
+<div class="excerpt">
+<p>In addition to my primary research categories, I make some entries in my lab notebook  to document and reflect on my experiment in open notebook science.  This includes my notes on tools I try out for open and collaborative science, including uses of social media, cloud computing, and scientific databases and repositories.</p>
+<p>This serves as a cover-page for the open science entries in my notebook, displaying the most recent entries, articles, figures and code through rss feeds.</p>
+<h2 id="recent-notebook-entries"><a href="http://www.carlboettiger.info/archives/category/ons-thoughts">Recent Notebook Entries</a></h2>
+<p>[rssinpage rssfeed=‘http://www.carlboettiger.info/archives/category/ons-thoughts/feed’ rssformat=‘x: Y’ rssitems=“10” rssdateformat=‘j F Y’ rsstimezone=‘America/Los_Angeles’]</p>
+<p><a href="http://openwetware.org/wiki/Category:ONS">Entries from before 20-Oct-2010</a></p>
+<h2 id="recently-added-articles"><a href="http://www.mendeley.com/groups/530031/future-of-science/">Recently Added Articles</a></h2>
+<p>I maintain a collection of literature on articles that discuss the future of science, peer review, open access, open data, web tools and science 2.0 ideas on Mendeley called “Future of Science,” whose rss feed appears below.</p>
+<p>[rssinpage rssfeed=‘http://www.mendeley.com/groups/530031/future-of-science/feed/rss’ rssformat=‘x: Y’ rssitems=“5” rssdateformat=‘j F Y’ rsstimezone=‘America/Los_Angeles’]</p>
+<h2 id="recent-figures"><a href="http://www.flickr.com/photos/cboettig/tags/ons/">Recent Figures</a></h2>
+<p>[flickr-gallery mode=“tag” tags=“ons” <code>tag_mode=&quot;all&quot;</code>]</p>
+<h2 id="code-updates"><a href="https://github.com/cboettig/socialR">Code Updates</a></h2>
+<p>I’m developing an R package called “socialR”, which I use to interact with my notebook, github code library, flickr image database and twitter  notification system from within R.  These are the updates from the commit log, <a href="http://www.carlboettiger.info/archives/565">see this entry</a>for details.</p>
+<p>[cetsEmbedRSS id=https://github.com/cboettig/socialR/commits/master.atom itemcount=5 itemauthor=0 itemdate=1 itemcontent=0]</p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2010//12/30/open-notebook-science-abstract.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+    </div>
+
+    <div class="row">
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2010//12/30/parameter-exploration-in-adaptive-dynamics-branching.html">Parameter exploration in adaptive dynamics branching</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 30 Dec 2010</p>
+
+<article>
+<div class="excerpt">
+<p>Ran a series of simulations overnight to explore aspects of time-to-branching at different phases of the branching process.  Still using only 16 replicates per data point, though increased maximum time for a run another order of magnitude to avoid timing out runs influencing the dataset for the slow-rate parameters.  Still seems to suggest a regime beyond which branching becomes completely improbable.  Not clear that the transition is a sharp as the Arrhenius approximation might suggest.</p>
+<p>[flickr-gallery mode=“tag” tags=“2010dec30slideshow”]</p>
+<p>(<a href="https://github.com/cboettig/AdaptiveDynamics/commit/20124cd7ce45f26f0cd40ad4896ea5358d655c63#diff-1">code</a>)</p>
+<p>(<a href="https://github.com/cboettig/AdaptiveDynamics/blob/2b25473689f6b4e9ba739a4373a3e457da9589c0/demos/waiting_times.Rdat">data</a>)</p>
+<p>[flickr-gallery mode=“tag” tags=“adaptivedynamics”]</p>
+<p>I have found the interpretation of the larger scale simulations exploring the impact of the various parameters upon the branching times in different phases somewhat less clear than I had hoped.</p>
+<p>The analytical approximation gives the suggestion of a sharp transition between a regime where branching is “easy”, where the expected coexistence times are longer than the expected waiting time to the next mutation, and “hard”, where they are shorter. The mathematics reduce to an expression similar to the Arrhenius law, where there is a sharp transition between the probability of being in one state to being in the other depending on the noise level.</p>
+<p>I have been trying to get explore this through the simulations and figuring out the best way to visually represent this. I have been using the contour plots you suggested to illustrate the coexistence times on the PIP, which is quite nice. Unfortunately the analytic approximations don’t seem to agree quantitatively outside a somewhat limited parameter range, more limited than I expected.</p>
+<p>I have also been exploring the time required to reach each of our four phases of the branching process as a function of the various parameters. In this I hoped to see the sharp transition predicted by the approximation, but figuring out the best way to both explore and visualize this through the parameter space. Hard to distinguish this from simply getting exponentially longer.</p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2010//12/30/parameter-exploration-in-adaptive-dynamics-branching.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2010//12/29/adaptive-dynamics-simulations.html">adaptive-dynamics Simulations</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 29 Dec 2010</p>
+
+<article>
+<div class="excerpt">
+<p>Setting up some adaptive dynamics simulations to complete the parameter-space search.  Currently the demo library contains two files, providing the coexistence-only tests and the full evolutionary simulation.  This picks up from Aug 30/Sept 1 on coexistence times and <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Comparative_Phylogenetics/2010/08/12">Aug 12/13 entries</a>on waiting times until branching (while still on OWW).</p>
+<h2 id="coexistence-times">coexistence times</h2>
+<p>coexist_times.R creates contour plots of the coexistence time under demographic noise expected at a particular position of the pairwise invasibility plot (PIP).  I also attempt to calculate these using an analytic approximation derived through the Arrhenius law trick to the SDE approximation.</p>
+<p>ensemble_coexistence() runs just the coexistence simulation from</p>
+<p>coexist_analytics() attempts to create the same graph analytically.</p>
+<p>Unfortunately the analytic approximation seems insufficient:</p>
+<p>[flickr-gallery mode =“tag” tags=“contour_analytics_vs_simulation”]</p>
+<h2 id="phases-of-the-branching-process">Phases of the branching Process</h2>
+<p>ensemble_sim() runs the full simulation with mutations.  Returns an ad_ensemble object with three elements: $data, $pars, and $reps.  $data is a list element for each replicate.  For each replicate, it records 4 time-points:</p>
+<ol type="1">
+<li><p>First time two coexisting branches are established</p></li>
+<li><p>Last (most recent) time two coexisting branches were established</p></li>
+<li><p>Time to finish phase 2: (satisfies invade_pair() test: trimorphic, third type can coexist (positive invasion), is above threshold and two coexisting types already stored in pair</p></li>
+<li><p>Time to Finish line (a threshold separation): traits separated by more than critical threshold</p></li>
+</ol>
+<p>For each of these it returns the trait values of the identified coexisting dimorphism as well (x,y).  This x,y data is plotted for all replicates in four butterfly plots (for each time interval) by plot_butterfly.  Time data is coded in the shading. (just call plot_butterfly on the ad_ensemble object).</p>
+<p>In addition to these four (t, x, y) triplets, each replicate reports two counts:</p>
+<ol type="1">
+<li><p>Number of times the dimporphism is lost in phase 2</p></li>
+<li><p>Number of times the dimorphism is lost in phase 1</p></li>
+</ol>
+<p>These are histogrammed by plot_failures(object).  Finally, plot_waitingtimes(object) just histograms the distribution of waiting times  across replicates for each of the four phases outlined above.  Figures from today’s version of <a href="https://github.com/cboettig/AdaptiveDynamics/blob/6af69eec9e7b8087d0ed5b52d8af8cdbfa008d40/demos/waiting_times.R">waiting_times.R</a></p>
+<p>[flickr-gallery mode=“tag” tags=“waiting_times”]</p>
+<h2 id="illustrating-key-phenomena">Illustrating Key Phenomena</h2>
+<p>The motivation for these two lines of investigation go back to simulations from <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Comparative_Phylogenetics/2010/05/04">May 3-4 entries</a> which begin to show distinction between different mechanisms of branching.  The hint comes between processes that appear limited by phase 1 an those limited by phase 2.  This can be illustrated by the time required or the number of attempts necessary (failure rate histograms).</p>
+<p>Running simulation sets now varying the range of sigma_mu, sigma_c2, and mu to illustrate the sharpness of the transitions between noise-limited and not limited branching dynamics, and how the difference in times and attempts between phases changes with these parameters.  i.e.</p>
+<figure>
+<img src="http://farm6.staticflickr.com/5202/5304975278_6840299016_o.png" />
+</figure>
+<h3 id="computing-notes">Computing Notes:</h3>
+<p>Setup AdaptiveDynamics repository on zero.  An outdated rsa_id key in /.ssh was causing me not to be able to commit from</p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2010//12/29/adaptive-dynamics-simulations.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2010//12/24/doe-renewal-and-a-year-in-review.html">DoE renewal and a year in review</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 24 Dec 2010</p>
+
+<article>
+<div class="excerpt">
+<p>This time of year I have to file my renewal for my DOE Fellowship, including a statement of accomplishments and a summary of the computational aspects of my work.  Seemed like a good idea to jot these down in my notebook as well:</p>
+<h3 id="synopsis-of-accomplishments-over-the-year">synopsis of accomplishments over the year:</h3>
+<p>In January I passed my qualifying exam, advancing to candidacy where my dissertation remains my only requirement.  In March I attended the phylogenetics workshop in Bodega Bay, an internationally known week-long training program.  I also attended the CSGF conference in June, and gave talks at both the Evolution conference and the integrative phylogenetics conference, iEvoBio, in July, both key events in my field.</p>
+<p>From the beginning of June until the start of September, I stepped outside my research in phylogenetic models to focus on stochastic population dynamics.  While the details of this project are described in my practicum evaluation, the mathematical and computational tools I learned in the process have found surprisingly apt applications in my phylogenetics research, where they have helped me solve a key problem in my thesis.  Since this breakthrough, I have been focused on writing up two manuscripts which have been made possible by this step forward.</p>
+<p>As my computational needs surpass what is readily available through my lab servers, I have learned to leverage Amazon’s cloud computing for rapid deployment of large-scale simulations and analyses. Overall, this has been a productive year, translating what I’ve learned in my POS classes into practical research experience and making some important steps in my thesis.  I look forward to the next year of synthesizing and writing up these results and continuing to build on the methods and tools I’ve learned and developed.</p>
+<h4 id="describe-concisely-what-you-regard-as-the-most-interesting-and-innovative-aspects-of-your-current-research-with-special-emphasis-on-computational-science.">describe concisely what you regard as the most interesting and innovative aspects of your current research, with special emphasis on computational science.</h4>
+<p>My research combines the recent explosion of data available through gene sequencing and subsequent readily available phylogenetic information with the power of high-performance computational approaches to “replay the tape” of evolution to better understand the origins and maintenance of biodiversity.</p>
+<p>Genetic data paved the way to phylogenetic inference, the mapping of ancestor-descendant relationships between the species living today.  These phylogenies become my periscope into the past.  In the absence of fossils, I can simulate different evolutionary models of selection on various traits retracing the phylogenetic tree to discover which models are most consistent with the patterns in species we observe today. By running the stochastic simulation repeatedly, I can create not only one possible outcome, but the parameter space of all possible outcomes and their associated probabilities.  This planet has run the experiment of evolution only once, but using this computationally intensive approach I can run that process over and over again under different assumptions, allowing me to explore evolutionary questions that can be answered no other way.</p>
+<hr />
+<h3 id="my-own-reflections-and-list">My own reflections and list</h3>
+<p>Hmm, the research summary with computational emphasis is kinda vague, but aiming for a non-specialist audience.  Hard to differentiate between the aspects that really leverage HPC and those that can be adequately run at the desktop level.  Is that really the best statement of my accomplishments?  I might try a different format for myself:</p>
+<ul>
+<li><p>Formulated and explored implications of my phylogenetic Monte Carlo approach.  Formulated throughout the Spring quarter, been writing and rewriting the manuscript most of this past Fall.</p></li>
+<li><p>Derived and implemented the heterogeneous alpha/sigma model (in a few busy days and a long train ride in July, waiting to write up after PMC is done)</p></li>
+<li><p>Used said model and phylogenetic Monte Carlo to demonstrate clear release-of-constraint in the Labrid data</p></li>
+<li><p>Exploring better early warning signal models and detection methods.  Settled on linearized models of the canonical form of two bifurcation types, identifying warning signals directly by a similar Monte Carlo test to the phylogenetics example.</p></li>
+<li><p>Explored stochastic population dynamics in structured populations via the ELPA tribolium model.  Negative feedbacks mean no large-amplification demographic noise, but cycles do break down the linear noise approximation.  (a few weeks in May and June)</p></li>
+<li><p>Rebuilt the Adaptive Dynamics code to illustrate how time to branching and coexistence times vary in parameter space (auto-generation of the butterfly plots, mostly two weeks in April)</p></li>
+<li><p>Began my open lab notebook (starting in January on OWW, migrated to Wordpress in Sept), public code hosting (initially google code, moved to github in March), Mendeley database (Oct ’09), Flickr only this Oct, and social media for science (Twitter only since July, though have used FF since the beginning of the year).</p></li>
+<li><p>Started AWS/cloud computing.  Still coding in C but using R more, parallelization in R’s snowfall.</p></li>
+</ul>
+<p>In this spirit, Mendeley provides some easy data on what I’ve been reading:</p>
+<figure>
+<img src="http://farm6.staticflickr.com/5286/5287843580_481f529fc1_o.png" />
+</figure>
+<p>Interesting if not too surprising that my most popular authors are all advisors of mine, except Losos.  (Also it’s really obvious where I twice deleted my Mendeley database and needed their help support to recover my data… in only a few days).</p>
+<p>.</p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2010//12/24/doe-renewal-and-a-year-in-review.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+    </div>
+
+    <div class="row">
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2010//12/23/writing-cloud-computing-and-scio11.html">Writing, Cloud Computing, and #scio11</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 23 Dec 2010</p>
+
+<article>
+<div class="excerpt">
+<p>Working on a few things in today’s lab notebook entry.  Some more notes on exploring cloud computing tools, sketching out some ideas for my #scio11 science online panel discussion on open notebook science, and otherwise working on my phylogenetics mansucript.</p>
+<h3 id="cloud-computing">Cloud Computing</h3>
+<p>An interesting package was <a href="https://stat.ethz.ch/pipermail/r-sig-hpc/2010-December/000877.html">announced over the r-sig-hpc</a> list today, creating an arbitrarily large Hadoop cluster out of Amazon EC2 instances directly from the R command line. JD Long has been very responsive to my naive questions on setting it up, so I was able to quickly activate an Elastic Map Reduce account via Amazon Web Services and run the example code. It installs an instance of R on each cluster at the time of launch, so it takes a moment to initialize and I’m not sure if it can handle calls in the parallel code that call other libraries (unless perhaps these are explicitly loaded in the parallel function?) The code essentially provides a parallel (elastic map reduce) version of lapply, running the instances on different machines (EC2 instances) and then sewing the answers back together.</p>
+<p>As the interface is delightfully simple, could possibly be useful even to run single amazon instances. Simply set credentials, initialize a cluster of specified size and instance type, and then call the parallel lapply:</p>
+<pre><code>setCredentials(&quot;yourKey&quot;, &quot;yourSecretKey&quot;, setEnvironmentVariables=TRUE)
+myCluster &lt;- createCluster(numInstances=5)
+emrlapply(...)</code></pre>
+<p>Look forward to learning more about the package, EMR, and testing it out. Code available through <a href="http://code.google.com/p/segue/">Google code hosting</a>.</p>
+<h3 id="science-online-2011">Science Online 2011</h3>
+<p>Getting ready for Science Online Conference. Finalizing room share with Mark Hahnel and touching base with Jean-Claude Bradley and Tony Williams about our panel on Open Notebook Science. Jean-Claude describes that we’ll have a short introduction before launching into the panel discussion. His introduction will focus on how and why they can convert ONS data to web services (like ChemSpider, which Tony represents). Provide a nice parallel to what I’m trying to do integrating this notebook into web services. Using this notebook space to brainstorm a bit what I can contribute/would like to cover in the session.</p>
+<p>Think my intro will try to highlight these three things:</p>
+<ul>
+<li>Open Notebook Science for Theorists</li>
+</ul>
+<p>As theorists, it should be easier for us to keep electronic lab notebooks than for empiricists. We can blithely ignore all those discussions about having a laptops or ipads to write at the bench or gloves-on or gloves-off keyboards. We have a machine within easy reach. Most of the computational work is done on the computer already, where software solutions can track progress and changes automatically. and yet… it isn’t.</p>
+<p>Perhaps the primary problem is that we’re not taught to keep lab notebooks in the first place. It might help if students in the sciences were taught software development practices like version managing, but we’re not. Capturing the abstract parts of theory is even harder. I don’t really know what the workflow of other theorists in my field looks like, even for people I work with closely. I guess that’s part of my desire to create an open notebook.</p>
+<ul>
+<li>Open Notebook Science from the perspective of a student</li>
+</ul>
+<p>I started practicing open notebook science as a third year graduate student without input for or against the idea from my advisor or anyone else at my institution. I suppose there are a variety of stages or positions from which someone might first start an open lab notebook, and a variety of ways to do it. Each face a rather different set of challenges, and perhaps I can offer something of the student perspective.</p>
+<ul>
+<li>Integration of web services relevant to theory and computing</li>
+</ul>
+<p>Integrating databases such as flickr/github/mendeley, now also Amazon web services; hopefully the databases like dryad eventually.  I’m interested to learn about the more mature models of integrating with external databases and how to make the most of this.</p>
+<ul>
+<li>The social dimension</li>
+</ul>
+<p>I’ve described my efforts as a “social lab notebook.” That’s a little ambitious for something that no one else reads, let alone comments. But it’s a design principle of sorts.  I’m interested in how to do this effectively, and what potential it has to make better, faster, and farther reaching science.</p>
+<h3 id="writing">Writing</h3>
+<p>Also continuing my phylogenetics writing today, working on explaining the models.  (current version of <a href="https://github.com/cboettig/Comparative-Phylogenetics/commit/53df70adad4e5c39e3a6caa7ed5684c6c036d32e#diff-0">manuscript .tex file</a> in github Phylogenetics repository).</p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2010//12/23/writing-cloud-computing-and-scio11.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2010//12/20/sun-visualizing-my-coding-over-the-past-year.html">Sun: Visualizing my coding over the past year</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 20 Dec 2010</p>
+
+<article>
+<div class="excerpt">
+<p>Not really working today, as holidays approach, but came across the Gource toolkit for creating video visualization from git development (inspired by the <a href="http://vimeo.com/17919684">Mendeley’s example</a>). So in the spirit of year-in-review reflections, here’s my development from the past year (just for the phylogenetic statistics work).</p>
+<p>Quality is a little too poor to read file names, more entertaining than practical. Other user icons appear in December corresponding with my move to running the code from Amazon cloud. The lower cluster includes the demos directory, the upper the R code, so gives some indication of extensions to methods vs testing applications. Captures my bursty code development, though perhaps not as well as the <a href="https://github.com/cboettig/Comparative-Phylogenetics/graphs/impact">github graphs</a>.</p>
+<h5 id="notes-for-making-the-video">Notes for making the video</h5>
+<p>A couple steps. First just running gource (in ubuntu universe repositories) on the repository directory launches the video, used gtk-recordMyDesktop to capture the film (no luck with piping to ffmpeg). Then truncated, changed format, uploaded to youtube. Truncation and format conversion are simple bash commands:</p>
+<pre><code># Shorten film 
+ ffmpeg -sameq -ss 0 -t 900 -i testvideo.ogv gource.ogv
+# convert to avi
+ mencoder gource.ogv -nosound -ovc xvid -xvidencopts pass=1 -o gource.avi</code></pre>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2010//12/20/sun-visualizing-my-coding-over-the-past-year.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+        <div class="col-md-3">
+          <header><h4><a href="/2010//12/16/thurs-writing-section-on-comparing-to-aic.html">Thurs: writing section on comparing to AIC</a></h4></header>
+<p><span></span></p>
+<p style="font-style:italic"> 16 Dec 2010</p>
+
+<article>
+<div class="excerpt">
+<p>Phylogenetics writing still continues.</p>
+<p>AIC Error rates</p>
+<figure>
+<img src="http://farm6.staticflickr.com/5285/5268276442_c11b2e35ee_o.png" />
+</figure>
+<p>Choosing by  having &lt; 5% probability of rejecting the simpler model when it is true.</p>
+<figure>
+<img src="http://farm6.staticflickr.com/5241/5267683944_357ccec396_o.png" />
+</figure>
+<p>Choosing the equal-likelihood division:</p>
+ 
+<!-- not that raw_content depends on custom generator, 
+     see _plugins/jekyll-labnotebook-plugins/raw_content --> 
+</article> 
+<p> <a href="/2010//12/16/thurs-writing-section-on-comparing-to-aic.html"> <em>Read more</em></a> </p>
+<br />
+<br />
+
+
+        </div>
+      
+    </div>
+
+  </div>
+</div> <!--end row -->
+
+<div class="row socialicons">
+  <div class="col-md-11 col-md-offset-1">
+		<p> <a href="/2010/index.html"><i class="icon-calendar"></i> All entries by date</a></p> 
+      <p> <a href="/2010/categories.html"><i class="icon-list"></i> All entries by category</a> </p>
+      <p> <a href="/2010/tags.html"><i class="icon-tags"></i> All entries by tag</a> </p>
+  </div> <!--end col-md-9 -->
+</div> <!--end row -->
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Lab Notebook
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/lab-notebook.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

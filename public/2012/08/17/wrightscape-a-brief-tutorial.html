@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Wrightscape: a brief tutorial</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Wrightscape: a brief tutorial" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2011-08-17 14:15:59 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/08/17/wrightscape-a-brief-tutorial.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Wrightscape: a brief tutorial" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2011-08-17 14:15:59 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/08/17/wrightscape-a-brief-tutorial.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2011-08-17 14:15:59 +0000"/>
+<meta name="citation_title" content="Wrightscape: a brief tutorial"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Wrightscape: a brief tutorial</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>While the <a href="https://github.com/cboettig/wrightscape">wrightscape package</a> is still in active development, I realize the code base doesn’t contain any introductory examples.  So as a first tutorial, here’s a short walk-through of the package. We begin by loading the package and a few useful additional packages:</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+<span class="kw">require</span>(wrightscape<span class="er">}</span> <span class="co"># My package for this analysis</span>
+<span class="kw">require</span>(auteur) <span class="co"># for the data only</span>
+<span class="kw">require</span>(maticce) <span class="co"># to create paintings</span></code></pre>
+<p>We’ll load a data set of 233 taxa of primates with their body sizes(REDDING <em>et. al.</em> 2010), kindly provided by Eastman et al.(Eastman <em>et. al.</em> 2011) in <a href="http://www.carlboettiger.info/archives/2337">the Auteur package</a>. We format this data-set using a wrightscape function, which converts both the tree and the data into the ouch format from the ape/geiger format. (Eventually the conversion step will be automated)</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+<span class="kw">data</span>(primates)
+monkey &lt;-<span class="st"> </span><span class="kw">format_data</span>(primates$phy, primates$dat)</code></pre>
+<p>We just have to create the “painting” indicating which regimes can be treated separately, as in ouch. We do this using several handy functions from the<a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Comparative_Phylogenetics/2010/04/18">maticce package</a>. Selecting the common ancestor two arbitrarily chosen species from different families of New World monkeys should do the trick to identify the New World clade, Platyrrhini.</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+
+## Paint the tree with a transition at New World monkeys
+new_world_ancestor &lt;-<span class="st"> </span><span class="kw">mrcaOUCH</span>(<span class="kw">c</span>(<span class="st">&quot;Ateles_belzebuth&quot;</span>,
+                                 <span class="st">&quot;Leontopithecus_caissara&quot;</span>), 
+                               monkey$tree)
+new_world &lt;-<span class="st"> </span><span class="kw">paintBranches</span>(new_world_ancestor, monkey$tree,
+                            <span class="kw">c</span>(<span class="st">&quot;OldWorld&quot;</span>, <span class="st">&quot;NewWorld&quot;</span>))
+</code></pre>
+<figure>
+<img src="http://farm7.staticflickr.com/6073/6053510239_a267fea02f_o.png" />
+</figure>
+<p>This clade showed a substantially lower rate of body-size evolution in Eastman et al’s RJMCMC analysis under a Brownian model(Eastman <em>et. al.</em> 2011). Now we will test whether that is due to greater stabilizing selection or a greater diversification rate. With the painting and the data, we are ready to construct these wrightscape models.</p>
+<p>Wrighstcape <a href="http://www.carlboettiger.info/archives/2027">uses a general model formulation</a>, of which many common models, such as used by ouch, brownie, and others are subclasses. We can construct these subclasses by fixing certain parameters using the model_spec parameter.</p>
+<p>This specifies which parameters out of alpha, theta, and sigma are independently estimated on each regime, kept global across regimes, or, in the case of alpha, fixed to zero (to give purely Brownian behavior). i.e. ouch model is equivalent to: list(alpha=“global”, sigma=“global”, theta=“indep”), while the brownie model is equivalent to list(alpha=“fixed”, sigma=“indep”, theta=“global”).</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+
+#####  Estimate the models by maximum likelihood, as in OUCH #####
+alphas &lt;-<span class="st"> </span><span class="kw">multiTypeOU</span>(<span class="dt">data=</span>monkey$data, <span class="dt">tree=</span>monkey$tree,
+                      <span class="dt">regimes=</span>new_world,<span class="dt">model_spec =</span> 
+                      <span class="kw">list</span>(<span class="dt">alpha=</span><span class="st">&quot;indep&quot;</span>,<span class="dt">sigma=</span><span class="st">&quot;global&quot;</span>, 
+                      <span class="dt">theta=</span><span class="st">&quot;global&quot;</span>), <span class="dt">Xo=</span><span class="ot">NULL</span>, <span class="dt">alpha =</span> .<span class="dv">1</span>, 
+                      <span class="dt">sigma =</span> <span class="dv">40</span>, <span class="dt">theta=</span><span class="ot">NULL</span>, <span class="dt">method =</span><span class="st">&quot;SANN&quot;</span>, 
+                      <span class="dt">control =</span> <span class="kw">list</span>(<span class="dt">maxit=</span><span class="dv">100000</span>,<span class="dt">temp=</span><span class="dv">50</span>,<span class="dt">tmax=</span><span class="dv">20</span>))
+
+sigmas &lt;-<span class="st"> </span><span class="kw">multiTypeOU</span>(<span class="dt">data=</span>monkey$data, <span class="dt">tree=</span>monkey$tree, 
+                      <span class="dt">regimes=</span>new_world, <span class="dt">model_spec=</span> 
+                      <span class="kw">list</span>(<span class="dt">alpha=</span><span class="st">&quot;fixed&quot;</span>, <span class="dt">sigma=</span><span class="st">&quot;indep&quot;</span>, 
+                      <span class="dt">theta=</span><span class="st">&quot;global&quot;</span>), <span class="dt">Xo=</span><span class="ot">NULL</span>, <span class="dt">alpha =</span> .<span class="dv">1</span>,
+                      <span class="dt">sigma =</span> <span class="dv">40</span>, <span class="dt">theta=</span><span class="ot">NULL</span>, <span class="dt">method =</span><span class="st">&quot;SANN&quot;</span>,
+                      <span class="dt">control=</span><span class="kw">list</span>(<span class="dt">maxit=</span><span class="dv">100000</span>,<span class="dt">temp=</span><span class="dv">50</span>,<span class="dt">tmax=</span><span class="dv">20</span>))</code></pre>
+<p>Starting parameter estimates are given or left to NULL. “method” refers to the optimization, using parameters given in control. We’ll use simulated annealing to get a robust result.</p>
+<p>The code above estimates a novel model, where only the strength of selection, $ $, has changed in across branches in the OU model:</p>
+<p><span class="math">\[ dX = \alpha_i ( \theta - X) dt + \sigma dB_t \]</span></p>
+<p>While the second example runs a Brownian motion model that differs across regimes:</p>
+<p><span class="math">\[ dX = \sigma_i dB_t \]</span></p>
+<p>Once these have run, we can do a simple comparison by likelihood:</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+alphas$loglik -<span class="st"> </span>sigmas$loglik</code></pre>
+<p>To know if this is significant, we would do best to compare the models by PMC (my other package, with upcoming paper):</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+alphas_v_sigmas &lt;-<span class="st"> </span><span class="kw">montecarlotest</span>(alphas, sigmas, <span class="dt">cpu=</span><span class="dv">16</span>, <span class="dt">nboot=</span><span class="dv">200</span>)
+<span class="kw">plot</span>(alphas_v_sigmas)</code></pre>
+<p>We could instead estimate the posterior distributions by MCMC:</p>
+<pre class="sourceCode r"><code class="sourceCode r">
+          <span class="kw">phylo_mcmc</span>(monkey$data, monkey$tree, new_world, 
+                     <span class="dt">MaxTime=</span><span class="fl">1e5</span>, <span class="dt">alpha=</span>.<span class="dv">1</span>, <span class="dt">sigma=</span>.<span class="dv">1</span>, 
+                     <span class="dt">theta=</span><span class="ot">NULL</span>, <span class="dt">Xo=</span><span class="ot">NULL</span>, <span class="dt">model_spec=</span>
+                     <span class="kw">list</span>(<span class="dt">alpha=</span><span class="st">&quot;indep&quot;</span>, <span class="dt">sigma=</span><span class="st">&quot;global&quot;</span>,<span class="dt">theta=</span><span class="st">&quot;global&quot;</span>),
+                     <span class="dt">stepsizes=</span><span class="fl">0.05</span>)</code></pre>
+<p>Of course we would do well to parallelize this call over some large number of nodes to get appropriate mixing.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><p>REDDING D, DeWOLFF C and MOOERS A (2010). “Evolutionary Distinctiveness, Threat Status, And Ecological Oddity in Primates.” <em>Conservation Biology</em>, <strong>24</strong>. <a href="http://dx.doi.org/10.1111/j.1523-1739.2010.01532.x">http://dx.doi.org/10.1111/j.1523-1739.2010.01532.x</a>.</p></li>
+<li><p>Eastman J, Alfaro M, Joyce P, Hipp A and Harmon L (2011). “A Novel Comparative Method For Identifying Shifts in The Rate of Character Evolution on Trees.” <em>Evolution</em>, <strong>65</strong>. <a href="http://dx.doi.org/10.1111/j.1558-5646.2011.01401.x">http://dx.doi.org/10.1111/j.1558-5646.2011.01401.x</a>.</p></li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2011-08-17 14:15:59 +0000" 
+    property="dc:created">17 Aug 2011</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/08/16/tuesday-7.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/08/17/wednesday-migrating-codes-into-mpi.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2011-08-17-wrightscape-a-brief-tutorial.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#evolution">evolution</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/dbb400936cc5bebbbfa5193f4db11ff4149eee67/_posts/2011-08-17-wrightscape-a-brief-tutorial.md"> dbb400936cc5bebbbfa5193f4db11ff4149eee67</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Wrightscape: a brief tutorial
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2011-08-17
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/08/17/wrightscape-a-brief-tutorial.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

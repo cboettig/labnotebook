@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Lab Notebook - R</title>
+ <link href="/2014/R.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2015-02-25T23:05:31+00:00</updated>
+ <id>http://www.carlboettiger.info</id>
+ <author>
+   <name>Carl Boettiger</name>
+   <email>cboettig@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>An appropriate amount of fun with docker?</title>
+	 <link href="/2014/08/08/an-appropriate-amount-of-fun-with-docker.html"/>
+   <updated>2014-08-08T00:00:00+00:00</updated>
+   <id>/08/08/an-appropriate-amount-of-fun-with-docker</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;An update on my exploration with Docker. Title courtesy of &lt;a href=&quot;https://twitter.com/DistribEcology/status/497523435371638784&quot;&gt;Ted&lt;/a&gt;, with my hopes that this really does move us in a direction where we can spend less time thinking about the tools and computational environments. Not there yet though&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I’ve gotten RStudio Server working in the &lt;a href=&quot;https://github.com/ropensci/docker-ubuntu-r/blob/master/add-r-ropensci/Dockerfile&quot;&gt;ropensci-docker&lt;/a&gt; image (Issues/pull requests welcome!).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run -d -p 8787:8787 cboettig/ropensci-docker&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;will make an RStudio server instance available to you in your browser at localhost:8787. (Change the first number after the -p to have a different address). You can log in with username:pw rstudio:rstudio and have fun.&lt;/p&gt;
+&lt;p&gt;One thing I like about this is the ease with which I can now get an RStudio server up and running in the cloud (e.g. I took this for sail on DigitalOcean.com today). This means in few minutes and 1 penny you have a URL that you and any collaborators could use to interact with R using the familiar RStudio interface, already provisioned with your data and dependencies in place.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;For me this is a pretty key development. It replaces a lot of command-line only interaction with probably the most familiar R environment out there, online or off. For more widespread use or teaching this probably needs to get simpler still. I’m still skeptical that this will make it out beyond the crazies, but I’m less skeptical than I was when starting this out.&lt;/p&gt;
+&lt;p&gt;The ropensci-docker image could no doubt be more modular (and better documented). I’d be curious to hear if anyone has had success or problems running docker on windows / mac platforms. Issues or pull requests on the repo would be welcome! https://github.com/ropensci/docker-ubuntu-r/blob/master/add-r-ropensci/Dockerfile (maybe the repo needs to be renamed from it’s original fork now too…)&lt;/p&gt;
+&lt;p&gt;Rich et al highlighted several “remaining challenges” in their original post. Here’s my take on where those stand in the Docker framework, though I’d welcome other impressions:&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;dependencies could still be missed by incompletely documentation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I think this one is largely addressed, at least assuming a user loads the Docker image. I’m still concerned that later builds of the docker image could simply break the build (though earlier images may still be available). Does anyone know how to roll back to earlier images in docker?&lt;/p&gt;
+&lt;ol start=&quot;2&quot; type=&quot;1&quot;&gt;
+&lt;li&gt;The set of scripts for managing reproducibility are at least as complex as the analysis itself&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I think a lot of that size is due to the lack of an R image for Travis and the need to install many common tools from scratch. Because docker is both modular and easily shared via docker hub, it’s much easier to write a really small script that builds on existing images, (as I show in cboettig/rnexml)&lt;/p&gt;
+&lt;ol start=&quot;3&quot; type=&quot;1&quot;&gt;
+&lt;li&gt;Travis.org CI constraints: public/open github repository with analyses that run in under 50 minutes.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Docker has two advantages and also some weaknesses here: (1) it should be easy to run locally, while accomplishing much of the same thing as running on travis (though clearly that’s not as nice as running automatically &amp;amp; in the cloud on every push). (2) It’s easier to take advantage of caching – for instance, cboettig/rnexml provides the knitr cache files in the image so that a user can start exploring without waiting for all the data to download and code to run.&lt;/p&gt;
+&lt;p&gt;It seems that Travis CI doesn’t currently support docker since the linux kernel they use is too old. (Presumably they’ll update one day. Anyone try Shippable CI? (which supports docker))&lt;/p&gt;
+&lt;ol start=&quot;4&quot; type=&quot;1&quot;&gt;
+&lt;li&gt;The learning curve is still prohibitive&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I think that’s still true. But what surprised me is that I’m not sure that it’s gotten any worse by adding docker than it was to begin with using Travis CI. Because the approach can be used both locally and for scaling up in the cloud, I think it offers some more immediate payoffs to users than learning a Github+CI approach does. (Notably it doesn’t require any git just to deploy something ‘reproducible’, though of course it works nicely with git.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Is statistical software harmful?</title>
+	 <link href="/2014/06/04/is-statistical-software-harmful.html"/>
+   <updated>2014-06-04T00:00:00+00:00</updated>
+   <id>/06/04/is-statistical-software-harmful</id>
+   <content type="html">&lt;p&gt;Ben Bolker has an excellent post on this complex issue over &lt;a href=&quot;http://dynamicecology.wordpress.com/2014/06/04/guest-post-is-statistical-software-harmful&quot;&gt;at Dynamic Ecology&lt;/a&gt;, which got me thinking about writing my own thoughts on the topic in reply.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Google recently announced that it will be making it’s own self-driving cars, rather than modifying those of others. &lt;a href=&quot;http://www.automotive.com/news/1405-google-envisions-self-driving-cars-with-no-steering-wheel/&quot;&gt;Cars that won’t have steering wheels and pedals&lt;/a&gt;. Just a button that says “stop.” What does this tell us about the future of user-friendly complex statistical software?&lt;/p&gt;
+&lt;p&gt;Ben quotes prominent statisticians voicing fears that echo common concerns about self-driving cars:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Andrew Gelman attributes to Brad Efron the idea that “recommending that scientists use Bayes’ theorem is like giving the neighbourhood kids the key to your F-16″.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I think it is particularly interesting and instructive that the quote Gelman attributes to Efron is about a mathematical theorem rather than about software (e.g. Bayes Theorem, not WinBUGS). Even relatively simple statistical concepts like &lt;span class=&quot;math&quot;&gt;\(p\)&lt;/span&gt; values can cause plenty of confusion, statistical package or no. The concerns are not unique to software, so the solutions cannot come through limiting access to software.&lt;/p&gt;
+&lt;p&gt;I am very wary of the suggestion that we should address concerns of appropriate application by raising barriers to access. Those arguments have been made about knowledge of all forms, from access to publications, to raw data, to things as basic as education and democratic voting.&lt;/p&gt;
+&lt;p&gt;There are many good reasons for not creating a statistical software implementation of a new method, but I argue here that fear of misuse just is not one of them.&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;em&gt;The barriers created by not having a convenient software implementation are not an appropriate filter to keep out people who can miss-interpret or miss-use the software. As you know, a fundamentally different skillset is required to program a published algorithm (say, MCMC), than to correctly interpret the statistical consequences.&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We must be wary of a different kind of statistical machismo, in which we use the ability to implement a method by one’s self as a proxy for interpreting it correctly.&lt;/p&gt;
+&lt;p&gt;1a) One immediate corollary of (1) is that: &lt;em&gt;Like it or not, someone is going to build a method that is “easy to use”, e.g. remove the programming barriers.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;1b) The second corollary is that: &lt;em&gt;individuals with excellent understanding of the proper interpretation / statistics will frequently make mistakes in the computational implementation.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Both mistakes will happen. And both are much more formidable problems in the complex methodology of today than when computer was a job description.&lt;/p&gt;
+&lt;p&gt;So, what do we do? I think we should abandon the &lt;a href=&quot;http://www.r-bloggers.com/what-is-correctness-for-statistical-software/&quot;&gt;false dichotomy between “usability” and “correctness.”&lt;/a&gt;. Just because software that is easy to use is easy to misuse, does not imply that decreasing usability increases correctness. I think that is a dangerous fallacy.&lt;/p&gt;
+&lt;p&gt;A software implementation should aim first to remove the programming barriers rather than statistical knowledge barriers. Best practices such as modularity and documentation should make it easy for users and developers to understand and build upon it. I agree with Ben that software error messages are poor teachers. I agree that a tool cannot be foolproof, no tool ever has been.&lt;/p&gt;
+&lt;p&gt;Someone does not misuse a piece of software merely because they do not understand it. Misuse comes from mistakenly thinking you understand it. The premise that most researchers will use something they do not understand just because it is easy to use is distasteful.&lt;/p&gt;
+&lt;p&gt;Kevin Slavin gives &lt;a href=&quot;http://www.ted.com/talks/kevin_slavin_how_algorithms_shape_our_world&quot;&gt;a fantastic Ted talk&lt;/a&gt; on the ubiquitous role of algorithms in today’s world. His conclusion is neither one of panacea or doom, but rather that we seek to understand and characterize them, learn their strengths and weaknesses like a naturalist studies a new species.&lt;/p&gt;
+&lt;p&gt;More widespread adoption of software such as BUGS &amp;amp; relatives has indeed increased the amount of misuse and false conclusions. But it has also dramatically increased awareness of issues ranging from computational aspects peculiar to particular implementations to general understanding and discourse about Bayesian methods. Like Kevin, I don’t think we can escape the algorithms, but I do think we can learn to understand and live with them.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Deep challenges to dynamic documentation in daily workflows</title>
+	 <link href="/2014/05/05/knitr-workflow-challenges.html"/>
+   <updated>2014-05-05T00:00:00+00:00</updated>
+   <id>/05/05/knitr-workflow-challenges</id>
+   <content type="html">&lt;p&gt;We often discuss dynamic documents such as &lt;code&gt;Sweave&lt;/code&gt; and &lt;code&gt;knitr&lt;/code&gt; in reference to final products such as publications or software package vignettes. In this case, all the elements involved are already fixed: external functions, code, text, and so forth. The dynamic documentation engine is really just a tool to combine them (knit them together). Using dynamic documentation on a day-to-day basis on ongoing research presents a compelling opportunity but a rather more complex challenge as well. The code base grows, some of it gets turned into external custom functions where it continues to change. One analysis script branches into multiple that vary this or that. The text and figures are likewise subject to the same revision as the code, expanding and contracting, or being removed or shunted off into an appendix.&lt;/p&gt;
+&lt;p&gt;Structuring a dynamic document when all the parts are morphing and moving is one of the major opportunities for the dynamic approach, but also the most challenging. Here I describe some of those challenges along with various tricks I have adopted to deal with them, mostly in hopes that someone with a better strategy might be inspired to fill me in.&lt;/p&gt;
+&lt;h2 id=&quot;the-old-way&quot;&gt;The old way&lt;/h2&gt;
+&lt;p&gt;For a while now I have been using the &lt;a href=&quot;http://yihui.name/knitr&quot;&gt;knitr&lt;/a&gt; dynamic documentation/reproducible research software for my project workflow. Most discussion of dynamic documentation focuses on ‘finished’ products such as journal articles or reports. Over the past year, I have found the dynamic documentation framework to be particularly useful as I develop ideas, and remarkably more challenging to then integrate into a final paper in a way that really takes advantage of its features. I explain both in some detail here.&lt;/p&gt;
+&lt;p&gt;My former workflow followed a pattern no doubt familiar to many:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bash away in an R terminal, paste useful bits into an R script…&lt;/li&gt;
+&lt;li&gt;Write manuscript separately, pasting in figures, tables, and in-line values returned from R.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This doesn’t leave much of a record of what I did or why, which is particularly frustrating when some discussion reminds me of an earlier idea.&lt;/p&gt;
+&lt;h2 id=&quot;dynamic-docs-.rmd-files&quot;&gt;Dynamic docs: &lt;code&gt;.Rmd&lt;/code&gt; files&lt;/h2&gt;
+&lt;p&gt;When I begin a new project, I now start off writing a &lt;code&gt;.Rmd&lt;/code&gt; file, intermixing notes to myself and code chunks. Chunks break up the code into conceptual elements, markdown gives me a more expressive way to write notes than comment lines do. Output figures, tables, and in-line values inserted. So far so good. I version manage this creature in git/Github. Great, now I have a trackable history of what is going on, and all is well:&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;p&gt;Document my thinking and code as I go along on a single file scratch-pad&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Version-stamped history of what I put in and what I got out on each step of the way&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Rich markup with equations, figures, tables, embedded.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Caching of script chunks, allowing me to tweak and rerun an analysis without having to execute the whole script. While we can of course duplicate that behavior with careful save and load commands in a script, in knitr this comes for free.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;limitations-to-.rmd-alone&quot;&gt;Limitations to .Rmd alone&lt;/h2&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;p&gt;As I go along, the &lt;code&gt;.Rmd&lt;/code&gt; files starts getting too big and cluttered to easily follow the big picture of what I’m trying to do.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Before long, my investigation branches. Having followed one &lt;code&gt;.Rmd&lt;/code&gt; script to some interesting results, I start a new &lt;code&gt;.Rmd&lt;/code&gt; script representing a new line of investigation. This new direction will nevertheless want to re-use large amounts of code from the first file.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;a-solution-the-r-package-research-compendium-approach&quot;&gt;A solution? The R package “research compendium” approach&lt;/h2&gt;
+&lt;p&gt;I start abstracting tasks performed in chunks into functions, so I can re-use these things elsewhere, loop over them, and document them carefully somewhere I can reference that won’t be in the way of what I’m thinking. I start to move these functions into &lt;code&gt;R/&lt;/code&gt; directory of an R package structure, documenting with &lt;code&gt;Roxygen&lt;/code&gt;. I write unit tests for these functions (in &lt;code&gt;inst/tests&lt;/code&gt;) to have quick tests to check their sanity without running my big scripts (recent habit). The package structure helps me:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reuse the same code between two analyses without copy-paste or getting our of sync&lt;/li&gt;
+&lt;li&gt;Document complicated algorithms outside of my working scripts&lt;/li&gt;
+&lt;li&gt;Test complicated algorithms outside of my working scripts (&lt;code&gt;devtools::check&lt;/code&gt; and/or unit tests)&lt;/li&gt;
+&lt;li&gt;Manage dependencies on other packages (DESCRIPTION, NAMESPACE), including other projects of mine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This runs into trouble in several ways.&lt;/p&gt;
+&lt;h2 id=&quot;problem-1-reuse-of-code-chunks&quot;&gt;Problem 1: Reuse of code chunks&lt;/h2&gt;
+&lt;p&gt;What to do with code I want to reuse across blocks but do not want to write as a function, document, or test?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Perhaps this category of problem doesn’t exist, except in my laziness.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This situation arises all the time, usually through the following mechanism: almost any script performs several steps that are best represented as chunks calling different functions, such as &lt;code&gt;load_data&lt;/code&gt;, &lt;code&gt;set_fixed_parameters&lt;/code&gt;, &lt;code&gt;fit_model&lt;/code&gt;, &lt;code&gt;plot_fits&lt;/code&gt;, etc. I then want to re-run almost the same script, but with a slightly different configuration (such as a different data set or extra iterations in the fixed parameters). For just a few such cases, it doesn’t make sense to write these into a single function,&lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; instead, I copy this script to a new file and make the changes there.&lt;/p&gt;
+&lt;p&gt;This is great until I want to change something in about the way both scripts behave that cannot be handled just by changing the &lt;code&gt;R/&lt;/code&gt; functions they share. Plotting options are a good example of this (I tend to avoid wrapping &lt;code&gt;ggplot&lt;/code&gt; calls as separate functions, as it seems to obfuscate what is otherwise a rather semantic and widely recognized, if sometimes verbose, function call).&lt;/p&gt;
+&lt;p&gt;I have explored using &lt;code&gt;knitr&lt;/code&gt;’s support for external chunk inclusion, which allows me to maintain a single R script with all commonly used chunks, and then import these chunks into multiple &lt;code&gt;.Rmd&lt;/code&gt; files. An example of this can be seen in my &lt;code&gt;nonparametric-bayes&lt;/code&gt; repo, where several files (in the same directory) draw most of their code from &lt;a href=&quot;https://github.com/cboettig/nonparametric-bayes/blob/9232dfd814c40e3c48c5a837be110a870d8639da/inst/examples/BUGS/external-chunks.R&quot;&gt;external-chunks.R&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;problem-2-package-level-reproducibility&quot;&gt;Problem 2: package-level reproducibility&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Minor/relatively easy to fix.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Separate files can frustrate reproducibility of a given commit. As I change the functions in &lt;code&gt;R/&lt;/code&gt;, the &lt;code&gt;.Rmd&lt;/code&gt; file can give different results despite being unchanged. (Or fail to reflect changes because it is caching chunks and does not recognize the function definitions have changed underneath it). Git provides a solution to this: since the &lt;code&gt;.Rmd&lt;/code&gt; file lives in the same git repository (&lt;code&gt;inst/examples&lt;/code&gt;) as the package, I can make sure the whole repository matches the hash of the &lt;code&gt;.Rmd&lt;/code&gt; file: &lt;code&gt;install_github(&amp;quot;packagename&amp;quot;, &amp;quot;cboettig&amp;quot;, &amp;quot;hash&amp;quot;)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This solution is not fail-safe: the installed version, the potentially uncommitted (but possibly installed) version of the R functions in the working directory, and the R functions present at the commit of the &lt;code&gt;.Rmd&lt;/code&gt; file (and thus matching the hash) could all be different. If we commit and install before every &lt;code&gt;knit&lt;/code&gt;, we can avoid these potential errors (at the cost of some computational overhead), restoring reproducibility to the chain.&lt;/p&gt;
+&lt;h2 id=&quot;problem-3-synthesizing-results-into-a-manuscript&quot;&gt;Problem 3: Synthesizing results into a manuscript&lt;/h2&gt;
+&lt;p&gt;In some ways this is the easiest part, since the code-base is relatively static and it is just a matter of selecting which results and figures to include and what code is necessary to generate it. A few organizational challenges remain:&lt;/p&gt;
+&lt;p&gt;While we generally want &lt;code&gt;knitr&lt;/code&gt; code chunks for the figures and tables that will appear, we usually aren’t interested in displaying much, if any, of the actual code in the document text (unlike the examples until this point, where this was a major advantage of the knitr approach). In principle, this is as simple as setting &lt;code&gt;echo=FALSE&lt;/code&gt; in the global chunk options. In practice, it means there is little benefit to having the chunks interwoven in the document. What I tend to want is having all the chunks run at the beginning, such that any variables or results can easily be added (and their appearance tweaked by editing the code) as figure chunks or in-line expressions. The only purpose of maintaining chunks instead of a simple script is the piecewise caching of chunk dependencies which can help debugging.&lt;/p&gt;
+&lt;p&gt;Since displaying the code is suppressed, we are then left with the somewhat ironic challenge of how best to present code as a supplement. One option is simply to point to the source &lt;code&gt;.Rmd&lt;/code&gt;, another is to use the &lt;code&gt;tangle()&lt;/code&gt; option to extract all the code as a separate &lt;code&gt;.R&lt;/code&gt; file. In either case, the user must also identify the correct version of the R package itself for the external &lt;code&gt;R/&lt;/code&gt; functions.&lt;/p&gt;
+&lt;h2 id=&quot;problem-4-branching-into-other-projects&quot;&gt;Problem 4: Branching into other projects&lt;/h2&gt;
+&lt;p&gt;Things get most complicated when projects begin to branch into other projects. In an ideal world this is simple: a new idea can be explored on a new branch of the version control system and merged back in when necessary, and an entirely new project can be built as a new R package in a different repo that depends on the existing project. After several examples of each, I have learned that it is not so simple. Despite the nice tools, I’ve learned I still need to be careful in managing my workflows in order to leave behind material that is understandable, reproducible, and reflects clear provenance. So far, I’ve learned this the hard way. I use this last section of the post to reflect on two of my own examples, as writing this helps me work through what I should have done differently.&lt;/p&gt;
+&lt;h3 id=&quot;example-warning-signals-project&quot;&gt;example: warning-signals project&lt;/h3&gt;
+&lt;p&gt;For instance, my work on early warning signals dates back to the start of my &lt;a href=&quot;http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Stochastic_Population_Dynamics/2010/02/09&quot;&gt;open notebook on openwetware&lt;/a&gt;, when my code lived on a Google code page which seems to have disappeared. (At the time it was part of my ‘stochastic population dynamics’ project). When I moved to Github, this project got it’s own repository, &lt;a href=&quot;https://github.com/cboettig/warningsignals&quot;&gt;warningsignals&lt;/a&gt;, though after a major re-factorization of the code I moved to a new repository, &lt;a href=&quot;https://github.com/cboettig/earlywarning&quot;&gt;earlywarning&lt;/a&gt;. Okay, so far that was due to me not really knowing what I was doing.&lt;/p&gt;
+&lt;p&gt;My first paper on this topic was based on the master branch of that repository, which still contains the code required. When one of the R dependencies was moved from CRAN I was able to update the codebase to reflect the replacement package (see issue &lt;a href=&quot;https://github.com/cboettig/earlywarning/issues/10&quot;&gt;#10&lt;/a&gt;). Even before that paper appeared I started exploring other issues on different &lt;a href=&quot;https://github.com/cboettig/earlywarning/network&quot;&gt;branches&lt;/a&gt;, with the &lt;code&gt;prosecutor&lt;/code&gt; branch eventually becoming it’s own paper, and then it’s &lt;a href=&quot;https://github.com/cboettig/prosecutors-fallacy/&quot;&gt;own repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That paper sparked a comment letter in response to it, and the analysis involved in my reply piece was just developed on the same master branch of the prosecutor-fallacy repository. This leaves me with a total of three repositories across four branches, with one repo that corresponds more-or-less directly to a paper, one to two papers, and one to no papers.&lt;/p&gt;
+&lt;p&gt;All four branches have diverged and unmerge-able code. Despite sharing and reusing functions across these projects, I often found it better to simply change the function on the new branch or new repo as I desired for the new work. These changes could not be easily merged back as they broke the original function calls of the earlier work.&lt;/p&gt;
+&lt;p&gt;Hindsight being 20-20, it would have been preferable that I had maintained one repository, perhaps developed each paper on a different branch and clearly tagged the commit corresponding to the submission of each publication. Ideally these could be merged back where possible to a master branch. Tagged commits provide a more natural solution than unmerged branches to deal with changes to the package that would break methods from earlier publications.&lt;/p&gt;
+&lt;h3 id=&quot;example-optimal-control-projects&quot;&gt;example: optimal control projects&lt;/h3&gt;
+&lt;p&gt;A different line of research began through a NIMBioS working group called “Pretty Darn Good Control”, beginning it’s digital life in my &lt;a href=&quot;https://github.com/cboettig/pdg_control&quot;&gt;pdg_control&lt;/a&gt; repository. Working in different break-out groups as well as further investigation on my own soon created several different projects. Some of these have continue running towards publication, others terminating in dead ends, and still others becoming completely separate lines of work. Later work I have done in optimal control, such &lt;a href=&quot;https://github.com/cboettig/nonparametric-bayes&quot;&gt;nonparametric-bayes&lt;/a&gt; and &lt;a href=&quot;https://github.com/cboettig/multiple_uncertainty&quot;&gt;multiple_uncertainty&lt;/a&gt; depend on this package for certain basic functions, though both also contain their own diverged versions of functions that first appeared in &lt;a href=&quot;https://github.com/cboettig/pdg_control&quot;&gt;pdg_control&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Because the topics are rather different and the shared code footprint is quite small, separate repositories probably makes more sense here. Still, managing the code dependencies in separate repositories requires extra care, as checking out the right version of the focal repository does not guarantee that one will also have the right version of the [pdg_control] repository. Ideally I should note the hash of [pdg_control] on which I depend, and preferably install that package at that hash (easy enough thanks to &lt;code&gt;devtools&lt;/code&gt;), since depending on a separate project that is also still changing can be troublesome. Alternatively it might make more sense to just duplicate the original code and remove this potentially frail dependency. After all, documenting the provenance need not rely on the dependency, and it is more natural to think of these separate repos as divergent forks.&lt;/p&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;If I have a lot of different configurations, it may make sense to wrap up all these steps into a single function that takes input data and/or parameters as it’s argument and outputs a data frame with the results and inputs.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

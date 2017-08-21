@@ -1,0 +1,82 @@
+---
+date: 2017-05-17T21:57:15Z
+title: "json-ld framing strategy"
+---
+
+
+Parsing very nested JSON documents can be a pain.  Here are some notes on co-opting the strategy of "Framing" used in JSON-LD.  (Note that unlike the basic operations of `compaction` and `expansion`, the JSON-LD framing algorithm actually is essentially independent of the `@context` and any linked data concepts.
+
+Here's a toy example of some nested JSON.  Very nested structures are usually the source of issues for me, even with `purrr`, because often I want to pull data found at various different levels of nesting into a single row for the data.frame I care about.   
+
+
+```{r}
+library("jsonlite")
+library("jsonld")
+library("magrittr")
+```
+
+```{r}
+json <-'{
+      "@id": "http://example.org/library",
+      "@type": "ex:Library",
+      "ex:contains": {
+        "@id": "http://example.org/library/the-republic",
+        "@type": "ex:Book",
+        "ex:contains": {
+          "@id": "http://example.org/library/the-republic#introduction",
+          "@type": "ex:Chapter",
+          "dc:description": "An introductory chapter on The Republic.",
+          "dc:title": "The Introduction"
+        },
+        "dc:creator": "Plato",
+        "dc:title": "The Republic"
+      }
+    }
+  '
+```
+
+The default behavior of `jsonlite:flatten` does not return a data frame here:
+
+```{r}
+df <-fromJSON(json, flatten = TRUE)
+class(df)
+```
+
+Note that `df` is  still a (rather cumbersome!) list.  This is particularly annoying because the type/structure is unpredictable (depends on how much a nesting a given element might have), so hard to program around, so we usually wind  not flattening the data (but having to iterate over some often ugly nesting).  
+
+## A JSON-LD framing solution 
+
+Let's imagine I just want to pull out book titles from the middle of that nested structure.  Here's a frame for that:
+
+```{r}
+frame <-
+'{
+  "@explicit": "true",
+  "@type": "ex:Book",
+  "dc:title": {}
+}'
+jsonld_frame(json, frame) %>% fromJSON()
+```
+
+
+
+
+How about a data frame with the title and creator for all objects, regardless of nesting depth:
+
+```{r}
+frame <-
+'{
+  "@explicit": "true",
+  "@id": {},
+  "dc:title": {"@default": "NA"},
+  "dc:creator": {"@default": "NA"}
+}'
+
+jsonld_frame(json, frame) %>% fromJSON()
+```
+
+
+
+This strategy is also very effective when you either don't know exactly how the data is structured, or the data structure changes either over time or across different records provided by the data provider (e.g. when some entries may have more nested content than other entries of the same type).
+
+More details on the syntax used in specifying a frame can be found in the [offical documentation](http://json-ld.org/spec/latest/json-ld-framing/).  

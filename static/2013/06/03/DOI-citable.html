@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>DOI != citable</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="notebook-technology, blog" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="DOI != citable" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2013-06-03 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/06/03/DOI-citable.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="DOI != citable" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2013-06-03 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/06/03/DOI-citable.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2013-06-03 00:00:00 +0000"/>
+<meta name="citation_title" content="DOI != citable"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">DOI != citable</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>I feel I see this kind of comment almost daily:</p>
+<blockquote class="twitter-tweet" data-partner="tweetdeck">
+<p>
+Is there a way to obtain DOI for a <a href="https://twitter.com/github"><span class="citation" data-cites="github">@github</span></a> repository? (for citing <a href="https://twitter.com/search?q=%23opensource&amp;src=hash">#opensource</a> software packages, similar to <a href="https://twitter.com/figshare"><span class="citation" data-cites="figshare">@figshare</span></a> objects) <a href="https://twitter.com/search?q=%23git&amp;src=hash">#git</a>
+</p>
+— Ahmed Moustafa (<span class="citation" data-cites="AhmedMoustafa">@AhmedMoustafa</span>) <a href="https://twitter.com/AhmedMoustafa/statuses/339727912896954369">May 29, 2013</a>
+</blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Again and again, researchers suggest that DOI to makes something “citable”. And this <a href="https://twitter.com/cboettig/status/337986074624282624">frustrates me</a>.</p>
+<p>Don’t get me wrong. I love DOIs, and I love CrossRef. And I bang on the table when I have some old journal article that doesn’t yet have a DOI. I use DOIs every day in many ways. I use CrossRef’s APIs all the time to draw in metadata for citations in my notebook (through my <a href="http://github.com/cboettig/knitcitations">knitcitations</a> package), and to import metadata into my reference manager, Mendeley. I’ve written my own implementations in R and ruby, and keep an eye on their exciting new tools on the <a href="https://github.com/crossref">Crossref Github page</a>. I wrote to bibsonomy when I realized they were not using the CrossRef API to look up metadata by DOIs, and they have now implemented this feature. I use DOIs to look up papers I’ve come across, and to share content I am reading. (Crossref’s <a href="http://shortdoi.org/">DOI shortener</a> is great for this). I even use DOI-based links to <a href="http://carlboettiger.info/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html">embed semantic information</a> into links and citations of articles.</p>
+<p>But I still have no idea what researchers mean when they suggest that this makes something <em>citable</em>.</p>
+<h3 id="some-background-on-dois">Some background on DOIs</h3>
+<p>At its heart, a DOI is a very simple concept. It is a “permanent identifier”. All this means is that is is really just a URL redirect. Type http://dx.doi.org/mnn into any browser and get redirected to where the article actually lives. Why does that make it permanent? Because if the journal decides to change their URL structure, the DOI’s redirect can just be mapped to the new address and voila, it still works. That is, a DOI is simply a tool to fight <a href="https://en.wikipedia.org/wiki/Link_rot">link-rot</a>.</p>
+<p>So you might ask, why does the ability to remap the address have anything to do with being “permanent?” It doesn’t, really. The permanence comes not so much from the technology as from the social contract that goes with it. As CrossRef’s <a href="http://blogs.plos.org/mfenner/2009/02/17/interview_with_geoffrey_bilder/">Geoffery Bilder eloquently explains</a>, a publisher can only receive DOIs if they promise to keep these redirects up-to-date. A publisher who fails to maintain this responsibility would presumably lose their right to receive DOIs. A brilliant, simple, social incentive.</p>
+<p>This still does not guarantee permanence – e.g. what would happen to the content if the publisher disappears. That problem is not addressed by the DOI technology itself, but by a robust backup archiving solution, such as <a href="http://clockss.org">CLOCKSS</a>, which provides a geo-politically distributed network of backup copies for many journals. Again the social contract comes into play – presumably CrossRef would not provide a publisher with DOIs if they did not have such a robust archival solution in place.</p>
+<p>So far we have seen two crucial functions of the DOI – as a permanent identifier that can be used to reach the content despite link rot, and as an incentive to maintain good archival backups of the content and the links to it.</p>
+<h3 id="what-do-we-mean-by-citations-anyway">What do we mean by citations, anyway?</h3>
+<p>So what does this have to do with being citable? Obviously these are nice properties to have for things we cite – but they are by no means a requirement. (As <a href="https://twitter.com/noamross/status/337987521243918337">Noam Ross observes</a>, try finding a permanent identifier for “Personal Communication”). Books, reports, and other grey literature frequently appear in citations, as do links to websites. MLA even has guidelines on the proper format to <a href="http://www.mla.org/style/handbook_faq/cite_a_tweet">cite a tweet</a> (which, incidentally, come closer to having a permanent identifier and an archival strategy than most other things in this list). So what do we mean by citable anyway?</p>
+<p>But what about the reference list? While a publisher may be just fine including some link to your software, is it really cited if it isn’t in the reference list? Journals restrict what appears in the reference list because these references are indexed by the infamous citation counters like Thompson-Reuters. (A frequent complaint is that many journals do not similarly index citations appearing in the reference list of the supplementary materials, making it difficult or impossible to give appropriate attribution to large numbers of data providers, for instance). Does having a DOI address this problem?</p>
+<h4 id="citation-counts-in-dois">Citation counts in DOIs</h4>
+<p>Counting citations depends on who is counting them. The most well-known is Thompson-Reuters, which has their own process for deciding what gets counted (based on publisher), so no guarantee there. Meanwhile Google Scholar counts anything meeting it’s <a href="http://carlboettiger.info/2012/11/23/citing-lab-notebook-entries.html">indexing requirements &amp; arbitrary selection</a>. I have recently learned that CrossRef just launched it’s own <a href="https://github.com/articlemetrics/alm/wiki/Crossref">internal citation counting</a>, which is available from the CrossRef metadata (totals only for the public, publishers can resolve which articles did the citing…). However, most proposals to make some alternative research product “citable” by giving it a DOI use DataCite DOIs (e.g. fig<strong>share</strong>, PeerJ Preprints), which lag behind in this feature. Moving the control of citation data beyond the grasp of particular publishing companies like TR is undoubtedly an important step forward. The <a href="http://www.jisc.ac.uk/whatwedo/programmes/inf11/jiscexpo/jiscopencitation.aspx">Open Citation Project</a> is a more comprehensive, if very young, move in this direct. (Hat tip to Martin Fenner for explaining CrossRef citations to me).</p>
+<h3 id="additional-metadata">Additional Metadata</h3>
+<p>In addition to resolving links, DOI providers also serve a rich collection of metadata about the publication that can be <a href="http://www.crosscite.org/cn/">queried by DOI</a> or by <a href="https://github.com/CrossRef/cr-search">other elements</a> like author and title. Rich semantic formats and disambiguation of author names by connections to ORCID IDs are among the many advantages of this. Because many of these tools are publicly accessible by through their APIs, it is easy for other developers to build services upon them.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>While DOI providers have done an excellent job in ensuring persistent URLs, archived content, and valuable metadata, these things are largely the product of the social contract between publisher and the DOI provider. It is not possible for an author or organization to simply “get DOIs” for all their content. But it is not the only way to provide these features, either. While I understand the value in providing a simple and reliable way to encapsulate each of these concepts as “has a DOI,” it also appears to put these features beyond the reach of individual researchers. If issues of persistent URLs, archived content, and rich metadata tools are always reduced to “has a DOI,” publishers become the only path to achieve these ends. On the contrary, a rich collection of tools is available to researchers.</p>
+<p>So what do we mean when we say a DOI makes something ‘citable?’ If this is shorthand for the properties we would want in something citable: persistent identifier, archival content, machine-readable metadata, than we should start to recognize other things that share these features. Further innovation requires valuing the features the DOI provides, not simply a “brand name” researchers recognize.</p>
+<h2 id="alternative-tools">Alternative tools</h2>
+<p>In a <a href="http://purl.org/cboettig/2013/05/31/notebook-features-digital-archiving">recent post</a> in a series on technical features of my open notebook, I discuss some of the tools available to address these challenges. In particular:</p>
+<ul>
+<li>The use of <a href="http://en.wikipedia.org/wiki/Persistent_uniform_resource_locator">PURLs</a> for persistent identifiers</li>
+<li>Git for archival redundancy</li>
+<li><a href="http://greycite.knowledgeblog.org">Greycite</a> for metadata extraction</li>
+</ul>
+<p>Of course, if you ever need a DOI for a research product, there is always <a href="http://figshare.com">figshare</a>.</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2013-06-03 00:00:00 +0000" 
+    property="dc:created">03 Jun 2013</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2013/06/03/ADMB-basic-example.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2013/06/04/analytic-marginalizing-for-posteriors.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2013/commits/master/_posts/2013-06-03-DOI-citable.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2013/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2013/tags.html#notebook-technology">#notebook-technology</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2013/tags.html#blog">#blog</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2013/commit/09cca808b6470ec385e8078959c76d9d2a3fd0b5/_posts/2013-06-03-DOI-citable.md"> 09cca808b6470ec385e8078959c76d9d2a3fd0b5</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=DOI != citable
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2013-06-03
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/06/03/DOI-citable.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

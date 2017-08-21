@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Jekyll vs Wordpress</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="notebook-technology, Jekyll" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Jekyll vs Wordpress" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2012-05-01 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/05/01/Jekyll-vs-Wordpress.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Jekyll vs Wordpress" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2012-05-01 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/05/01/Jekyll-vs-Wordpress.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2012-05-01 00:00:00 +0000"/>
+<meta name="citation_title" content="Jekyll vs Wordpress"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Jekyll vs Wordpress</h1>
+        <h2>which is the better platform for an open lab notebook?</h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>I am now trying out a <a href="https://github.com/mojombo/jekyll">Jekyll-based platform</a> rather than a Wordpress based for my website and lab notebook. Don’t worry, the Wordpress site still remains where it was with links intact, I’ve simply remapped the homepage. For now this is an experiment, we’ll see how it goes.</p>
+<h1 id="why-switch">Why switch?</h1>
+<h2 id="speed">Speed</h2>
+<p>Wordpress was great, meeting most of my needs for a customizable site that I couldn’t really accomplish in my first online notebook on <a href="http://openwetware.org">OpenWetWare</a>. Unfortunately, despite caching and a variety of other optimization steps, Wordpress remains very demanding of computational power, and consequently both expensive and unstable to traffic bursts. Relying on Wordpress.com would avoid this, but loses some of the customization and flexibility – particularly plugins for <a href="http://mathjax.org">MathJax</a> and <a href="http://wordpress.org/extend/plugins/kcite/">kcite</a>, as well as anything needing a script. The <a href="http://en.support.wordpress.com/com-vs-org/">Wordpress.com vs Wordpress.org</a> page sums up the trade-offs between these options very well. Jekyll, on the other hand, is light as a feather. All the content is static, like in the early days of the web, rather than served on the fly through dynamic databases. This means that the site can load instantly even from a low-power server. A lot has been written about the advantages of static sites, which seem to be on the rise these days, so I won’t add much more here.</p>
+<h2 id="markdown">Markdown</h2>
+<p>Markdown syntax has become my Lingua Franca of day-to-day work, thanks to tools such as knitr and pandoc. It allows me to have files in a single format that are maximimally mobile, displaying well on Github, converting into LaTeX or MS Word manuscripts, and even running as R code. It doesn’t force me to work in a source format that is surrounded by markup code which makes things hard to read without rendering them, such as LaTeX or HTML, which frees me to focus on content. The common format means that I can take some R script I write and surround it with meaningful comments, math, etc, which can be easily shared on Github and later adapted into a manuscript without worrying about formats. (I’ve written about this <a href="http://www.carlboettiger.info/archives/4325">workflow here</a> and adapting it to <a href="http://www.carlboettiger.info/archives/4419">manuscripts here</a>). Now this works seemlessly on my website as well, instead of needing custom shortcode for Wordpress syntax highlighting, etc. For instance, here’s a <a href="http://www.carlboettiger.info/ecology/2012/04/30/Sethi.html">recent code script</a> I just dropped into my <code>_posts</code> directory and added the yaml header.</p>
+<h2 id="reservations">Reservations</h2>
+<p>My greatest reservation in this shift comes from the vibrant user and developer community on Wordpress (Wordpress powers an estimated 14% of the top 1 million websites) including a <a href="https://groups.google.com/forum/#!forum/wordpress-for-scientists">Wordpress-for-Scientists group</a>. This means that almost anything you want has already been done. A downside is the need to know PHP and Wordpress-specific implementation to do anything the community hasn’t already provided. Thanks to Github and it’s appeal as a “hacker’s blog,” Jekyll has a powerful and growing community of it’s own. It’s not a content management system (CMS), and unlike Wordpress will doubtfully ever become one – but several tools are now coming online to make Jekyll more accessible, such as <a href="http://octopress.org/">octopress</a>, <a href="http://jekyllbootstrap.com/">jekyllbootstrap</a> and <a href="http://ruhoh.com/">ruhoh</a>. These provide some good examples of how to do the more tricky dynamic things like generating an atom feed or a list of posts by tag. These also get away from having to generate custom CSS and HTML. However, with rich CSS options such as twitter-bootstrap available, I’ve found I actually prefer writing my own HTML templates for pages and posts.</p>
+<p>The other downside of a Jekyll based blog is that it may be a less effective platform to convince others to try out a lab notebook. The emphasis on Github and the somewhat convoluted dependencies on Ruby surely make Jekyll a bit intimidating to new users.</p>
+<h1 id="some-remaining-concerns-in-switching">Some remaining concerns in switching</h1>
+<ul>
+<li><em>Wordpress can generate rss feeds for any category or tag on the fly</em>. Looks like this is now <a href="https://github.com/pattex/jekyll-tagging">possible in Jekyll</a>.</li>
+<li><em>Wordpress can toggle password and privacy control for each post</em>. On a independently hosted site, this could be done with an <code>.htaccess</code> file and independent hosting (pointless if the source is hosted on github). I known several partially open lab notebooks would have a problem with this. I use privacy controls occasionally when a collaborator may have reservations, and always for requested editorial reviews. Such things can remain on my Wordpress site or off-line entirely.</li>
+<li>Due in part to heavy use of plugins with short-code, migrating my existing posts out of Wordpress and into a static site seems pretty much impossible. Presumably this should be doable at the front end HTML, if not from the database, but my attempts have been unsuccessful. For now, old content will continue to live on my Wordpress site.</li>
+</ul>
+<h1 id="my-basic-requirements-for-an-electronic-notebook">My basic requirements for an electronic notebook</h1>
+<p>Leaving Wordpress, I have a few basic requirments for a notebook system. Fortunately it is pretty easy to enjoy all these features in Jekyll.</p>
+<ul>
+<li><strong>Dynamic posts</strong>: Works out of the box</li>
+<li><strong>RSS feed</strong>: just create an appropriate <a href="https://github.com/cboettig/labnotebook/blob/master/atom.xml">atom.xml file</a> with a bit of Jekyll Liquid code.</li>
+<li><strong>Comments</strong>: paste Disqus code into <a href="https://github.com/cboettig/labnotebook/blob/master/_layouts/default.html">html template</a></li>
+<li><strong>Categories &amp; tags</strong>: built-in through Jekyll’s YAML frontmatter</li>
+<li><strong>Search</strong>: Google search or Tipue</li>
+<li><strong>MathJax equations (and numbering)</strong>: <a href="https://github.com/cboettig/labnotebook/blob/master/_layouts/default.html">Just add the javascript call to the html template</a></li>
+<li><strong>Dynamic citations</strong>: Pandoc or my knitcitations tool, for now.</li>
+<li><strong>Syntax highlighting</strong>: use Github notation with Redcarpet2</li>
+<li><strong>Writing posts in markdown</strong>: native</li>
+<li><strong>Version control</strong>: <a href="https://github.com/cboettig/labnotebook/">on Github</a></li>
+<li><strong>Visitor statistics</strong>: <a href="https://github.com/cboettig/labnotebook/blob/master/_layouts/default.html">Google analytics in layout</a></li>
+<li><strong>embeddable content (twitter streams, feeds, etc.)</strong> : add scripts to html templates</li>
+<li><strong>customization of appearance</strong> <a href="http://twitter.github.com/bootstrap">twitter bootstrap</a> for the css and javascript + html templates</li>
+<li><strong>ease of use</strong>: Such as the ability to move around markdown documents and html layouts, and to customize things appearance without PHP.</li>
+</ul>
+<h1 id="jekyll-configuration-notes">Jekyll Configuration Notes</h1>
+<p>Probably the only annoying step in setting up a Jekyll blog is getting the right versions of Ruby running. Strictly speaking, this is unnecessary for sites hosted on Github, which will run Jekyll automatically. I host on my Dreamhost VPS, for which it is easiest just to compile locally using Jekyll and push on the output HTML files, created in <code>_site</code>, to the server.</p>
+<ul>
+<li>Getting <a href="http://askubuntu.com/questions/91693/how-do-you-uninstall-ruby-1-8-7-and-install-ruby-1-9-2">out of 1.8.7 and into 1.9.2</a></li>
+<li>Redcarpet isn’t the default interpreter, but works better. However, <a href="http://stackoverflow.com/questions/8395347/gollum-wiki-undefined-method-new-for-redcarpetmodule">it’s latest version has issues</a>.</li>
+<li>I find it better to use the Redcarpet2, <a href="https://github.com/nono/Jekyll-plugins">and a plugin</a> that lets one use Github-flavored markdown code blocks instead of the silly liquid highlight tags (markdown should be markdown after all). Unfortunately this prevents Github’s Jekyll from building the site at the moment, which doesn’t yet support Redcarpet2.</li>
+<li><a href="http://stackoverflow.com/questions/255170/markdown-and-image-alignment">image alignment in markdown</a></li>
+<li><a href="http://code.lancepollard.com/jquery-disqus-plugin">markdown in diqus</a></li>
+<li>HTML layouts can import chunks from separate files given in <code>_include</code> directory using a bit of liquid code. See <a href="https://github.com/spo11/kismetik-jekyll">an example</a>. Perfect for creating layouts out of different combinations of elements.</li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2012-05-01 00:00:00 +0000" 
+    property="dc:created">01 May 2012</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/04/30/Sethi.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/05/02/stochastic-policy-costs.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2012-05-01-Jekyll-vs-Wordpress.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#notebook-technology">#notebook-technology</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#Jekyll">#Jekyll</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/f8c23ad24786fee24f8b7f0d1fb799527381ca7d/_posts/2012-05-01-Jekyll-vs-Wordpress.md"> f8c23ad24786fee24f8b7f0d1fb799527381ca7d</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Jekyll vs Wordpress
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2012-05-01
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/05/01/Jekyll-vs-Wordpress.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

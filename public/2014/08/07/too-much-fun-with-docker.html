@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Too Much Fun With Docker</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="blog" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Too Much Fun With Docker" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2014-08-07 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/08/07/too-much-fun-with-docker.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Too Much Fun With Docker" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2014-08-07 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/08/07/too-much-fun-with-docker.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2014-08-07 00:00:00 +0000"/>
+<meta name="citation_title" content="Too Much Fun With Docker"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Too Much Fun With Docker</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p><strong>NOTE:</strong> This post was originally drafted as a set of questions to the revived <a href="https://groups.google.com/forum/#!forum/ropensci-discuss">ropensci-discuss list</a>, hopefully readers might join the discussion from there.</p>
+<p>Been thinking about Docker and the discussion about reproducible research in the comments of Rich et al’s recent post on the <a href="ropensci.org/blog/2014/06/09/reproducibility/">rOpenSci blog</a> where quite a few of people mentioned the potential for Docker as a way to facilitate this.</p>
+<p>I’ve only just started playing around with Docker, and though I’m quite impressed, I’m still rather skeptical that non-crazies would ever use it productively. Nevertheless, I’ve worked up some Dockerfiles to explore how one might use this approach to transparently document and manage a computational environment, and I was hoping to get some feedback from all of you.</p>
+<p>For those of you who are already much more familiar with Docker than me (or are looking for an excuse to explore!), I’d love to get your feedback on some of the particulars. For everyone, I’d be curious what you think about the general concept.</p>
+<p>So far I’ve created a <a href="https://github.com/ropensci/docker-ubuntu-r/blob/master/add-r-ropensci/Dockerfile">dockerfile</a> and <a href="https://registry.hub.docker.com/u/cboettig/ropensci-docker/">image</a></p>
+<p>If you have docker up and running, perhaps you can give it a test drive:</p>
+<pre><code>docker run -it cboettig/ropensci-docker /bin/bash</code></pre>
+<p>You should find R installed with some common packages. This image builds on Dirk Eddelbuettel’s R docker images and serves as a starting point to test individual R packages or projects.</p>
+<p>For instance, my RNeXML manuscript draft is a bit more of a bear then usual to run, since it needs <code>rJava</code> (requires external libs), <code>Sxslt</code> (only available on Omegahat and requires extra libs) and latest <code>phytools</code> (a tar.gz file from Liam’s website), along with the usual mess of pandoc/latex environment to compile the manuscript itself. By building on ropensci-docker, we need a <a href="https://github.com/ropensci/RNeXML/tree/master/manuscripts/Dockerfile">pretty minimal docker file</a> to compile this environment:</p>
+<p>You can test drive it (<a href="https://registry.hub.docker.com/u/cboettig/rnexml">docker image here</a>):</p>
+<pre><code>docker run -it cboettig/rnexml /bin/bash</code></pre>
+<p>Once in bash, launch R and run <code>rmarkdown::render(&quot;manuscript.Rmd&quot;)</code>. This will recompile the manuscript from cache and leave you to interactively explore any of the R code shown.</p>
+<h2 id="advantages-goals">Advantages / Goals</h2>
+<p>Being able to download a pre-compiled image means a user can run the code without dependency hell (often not as much an R problem as it is in Python, but nevertheless one that I hit frequently, particularly as my projects age), and also without altering their personal R environment. Third (in principle) this makes it easy to run the code on a cloud server, scaling the computing resources appropriately.</p>
+<p>I think the real acid test for this is not merely that it recreates the results, but that others can build and extend on the work (with fewer rather than more barriers than usual). I believe most of that has nothing to do with this whole software image thing – providing the methods you use as general-purpose functions in an R package, or publishing the raw (&amp; processed) data to Dryad with good documentation will always make work more modular and easier to re-use than cracking open someone’s virtual machine. But that is really a separate issue.</p>
+<p>In this context, we look for an easy way to package up whatever a researcher or group is already doing into something portable and extensible. So, is this really portable and extensible?</p>
+<h2 id="concerns">Concerns:</h2>
+<ol type="1">
+<li><p>This presupposes someone can run docker on their OS – and from the command line at that. Perhaps that’s the biggest barrier to entry right now, (though given docker’s virulent popularity, maybe something smart people with big money might soon solve).</p></li>
+<li><p>The only way to interact with thing is through a bash shell running on the container. An RStudio server might be much nicer, but I haven’t been able to get that running. <em>Anyone know how to run RStudio server from docker?</em></p></li>
+</ol>
+<p>(I tried &amp; <a href="https://github.com/mingfang/docker-druid/issues/2">failed</a>)</p>
+<ol start="3" type="1">
+<li>I don’t see how users can move local files on and off the docker container. In some ways this is a great virtue – forcing all code to use fully resolved paths like pulling data from Dryad instead of their hard-drive, and pushing results to a (possibly private) online site to view them. But obviously a barrier to entry. <em>Is there a better way to do this?</em></li>
+</ol>
+<h2 id="alternative-strategies">Alternative strategies</h2>
+<ol type="1">
+<li><p>Docker is just one of many ways to do this (particularly if you’re not concerned about maximum performance speed), and quite probably not the easiest. Our friends at Berkeley D-Lab opted for a GUI-driven virtual machine instead, built with Packer and run in Virtualbox, after their experience proved that students were much more comfortable with the mouse-driven installation and a pixel-identical environment to the instructor’s (see their excellent <a href="https://berkeley.app.box.com/s/w424gdjot3tgksidyyfl">paper</a> on this).</p></li>
+<li><p>Will/should researchers be willing to work and develop in virtual environments? In some cases, the virtual environment can be closely coupled to the native one – you use your own editors etc to do all the writing, and then execute in the virtual environment (seems this is easier in docker/vagrant approach than in the BCE.</p></li>
+</ol>
+<!--
+
+I would like a way for a collaborator who knows a little R to be able to open my .Rmd manuscript on his/her own computer, edit some parameters, recompile and view the pdf. RStudio w/ rmarkdown has gone a long way to making that happen.
+-->
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2014-08-07 00:00:00 +0000" 
+    property="dc:created">07 Aug 2014</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2014/08/06/notes.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2014/08/08/an-appropriate-amount-of-fun-with-docker.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2014/commits/master/_posts/2014-08-07-too-much-fun-with-docker.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2014/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2014/tags.html#blog">#blog</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2014/commit/57bcb3ec216245eaf89989462fe7f09b860a63f9/_posts/2014-08-07-too-much-fun-with-docker.md"> 57bcb3ec216245eaf89989462fe7f09b860a63f9</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Too Much Fun With Docker
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2014-08-07
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/08/07/too-much-fun-with-docker.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

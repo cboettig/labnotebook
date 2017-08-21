@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Admb Basic Example</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="nonparametric-bayes" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Admb Basic Example" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2013-06-03 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/06/03/ADMB-basic-example.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Admb Basic Example" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2013-06-03 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/06/03/ADMB-basic-example.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2013-06-03 00:00:00 +0000"/>
+<meta name="citation_title" content="Admb Basic Example"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Admb Basic Example</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>After a few <a href="https://github.com/cboettig/nonparametric-bayes/commits/b4576cfc0b5a0c87701348976875c8657f0fd048/inst/examples/admb-example.md">iterations</a> I have a working minimal example (below). Hoping that ADMB is a bit more robust than vanilla <code>optim</code> out of R as I loop over data sets for the sensitivity analysis (<a href="https://github.com/cboettig/nonparametric-bayes/issues/32">#32</a>). Does not seem to hold in simple example here, not sure why.</p>
+<ul>
+<li>These notes correspond to script <a href="https://github.com/cboettig/nonparametric-bayes/blob/84a1025854987ef659b4ef17e172933d72547f6d/inst/examples/admb-example.md">84a102/admb-example.md</a></li>
+</ul>
+<h1 id="learning-admb">Learning ADMB</h1>
+<p>Plotting and knitr options, (can generally be ignored)</p>
+<h3 id="model-and-parameters">Model and parameters</h3>
+<pre class="sourceCode r"><code class="sourceCode r">f &lt;-<span class="st"> </span>function(x,h,p)  x *<span class="st"> </span><span class="kw">exp</span>(p[<span class="dv">1</span>] *<span class="st"> </span>(<span class="dv">1</span> -<span class="st"> </span>x /<span class="st"> </span>p[<span class="dv">2</span>]) *<span class="st"> </span>(x -<span class="st"> </span>p[<span class="dv">3</span>]) /<span class="st"> </span>p[<span class="dv">2</span>] ) 
+p &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">5</span>)
+K &lt;-<span class="st"> </span><span class="dv">10</span>  <span class="co"># approx, a li&#39;l&#39; less</span>
+Xo &lt;-<span class="st"> </span><span class="dv">6</span> <span class="co"># approx, a li&#39;l&#39; less</span></code></pre>
+<p>Various parameters defining noise dynamics, grid, and policy costs.</p>
+<pre class="sourceCode r"><code class="sourceCode r">sigma_g &lt;-<span class="st"> </span><span class="fl">0.1</span>
+z_g &lt;-<span class="st"> </span>function() <span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>, sigma_g)
+x_grid &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="fl">1.5</span> *<span class="st"> </span>K, <span class="dt">length=</span><span class="dv">50</span>)
+Tobs &lt;-<span class="st"> </span><span class="dv">40</span>
+<span class="kw">set.seed</span>(<span class="dv">123</span>)</code></pre>
+<h3 id="sample-data">Sample Data</h3>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">numeric</span>(Tobs)
+x[<span class="dv">1</span>] &lt;-<span class="st"> </span>Xo
+for(t in <span class="dv">1</span>:(Tobs<span class="dv">-1</span>))
+  x[t<span class="dv">+1</span>] =<span class="st"> </span><span class="kw">z_g</span>() *<span class="st"> </span><span class="kw">f</span>(x[t], <span class="dt">h=</span><span class="dv">0</span>, <span class="dt">p=</span>p)
+<span class="kw">qplot</span>(<span class="dv">1</span>:Tobs, x)</code></pre>
+<figure>
+<img src="http://farm3.staticflickr.com/2807/8956942302_0d7d47ea49_o.png" alt="plot of chunk obs" /><figcaption>plot of chunk obs</figcaption>
+</figure>
+<h2 id="maximum-likelihood-by-hand">Maximum Likelihood “by hand”</h2>
+<pre class="sourceCode r"><code class="sourceCode r">STABLIZE =<span class="st"> </span><span class="fl">1e-10</span>
+n =<span class="st"> </span><span class="kw">length</span>(x)
+mloglik &lt;-<span class="st"> </span>function(pars){ 
+  r =<span class="st"> </span>pars[<span class="dv">1</span>]; k =<span class="st"> </span>pars[<span class="dv">2</span>]; c =<span class="st"> </span>pars[<span class="dv">3</span>]; s =<span class="st"> </span>pars[<span class="dv">4</span>];
+  mu =<span class="st"> </span>(x+STABLIZE) *<span class="st"> </span><span class="kw">exp</span>( r *<span class="st"> </span>(<span class="dv">1</span> -<span class="st"> </span>x /<span class="st"> </span>(k+STABLIZE)) *<span class="st"> </span>(x -<span class="st"> </span>c) /<span class="st"> </span>(k +<span class="st"> </span>STABLIZE));
+  mu =<span class="st"> </span><span class="kw">pmin</span>(<span class="fl">1e100</span>, mu) <span class="co"># avoid infinite values </span>
+  f =<span class="st"> </span><span class="fl">0.5</span> *<span class="st"> </span>n *<span class="st"> </span><span class="kw">log</span>(<span class="dv">2</span> *<span class="st"> </span>pi) +<span class="st"> </span>n *<span class="st"> </span><span class="kw">log</span>(s +<span class="st"> </span>STABLIZE) +<span class="st"> </span><span class="fl">0.5</span> *<span class="st"> </span><span class="kw">sum</span>(x -<span class="st"> </span>mu +<span class="st"> </span>STABLIZE)^<span class="dv">2</span>/<span class="st"> </span>(s +<span class="st"> </span>STABLIZE)^<span class="dv">2</span>;
+
+  f
+  }</code></pre>
+<p>Starting from the true values we mostly just shrink the noise parameter:</p>
+<pre class="sourceCode r"><code class="sourceCode r">init &lt;-<span class="st"> </span><span class="kw">c</span>(p, sigma_g)
+<span class="kw">mloglik</span>(init) <span class="co">#true minus loglik</span></code></pre>
+<pre><code>[1] -35.72</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">o &lt;-<span class="st"> </span><span class="kw">optim</span>(init, mloglik, <span class="dt">method=</span><span class="st">&quot;L&quot;</span>, <span class="dt">lower=</span><span class="fl">1e-5</span>, <span class="dt">upper=</span><span class="fl">1e5</span>)
+o$value</code></pre>
+<pre><code>[1] -247.6</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">o$par</code></pre>
+<pre><code>[1] 0.9967297 9.9813554 5.1742699 0.0008183</code></pre>
+<p>While starting from arbitrary values we still find the optim.</p>
+<pre class="sourceCode r"><code class="sourceCode r">init &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)  
+init &lt;-<span class="st"> </span><span class="kw">c</span>(p, sigma_g)
+<span class="kw">mloglik</span>(init) <span class="co">#true minus loglik</span></code></pre>
+<pre><code>[1] -35.72</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">o &lt;-<span class="st"> </span><span class="kw">optim</span>(init, mloglik, <span class="dt">method=</span><span class="st">&quot;L&quot;</span>, <span class="dt">lower=</span><span class="fl">1e-5</span>, <span class="dt">upper=</span><span class="fl">1e5</span>)
+o$value</code></pre>
+<pre><code>[1] -247.6</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">o$par</code></pre>
+<pre><code>[1] 0.9967297 9.9813554 5.1742699 0.0008183</code></pre>
+<p>Okay, now lets try admb. We use R2admb which is just a convenient way to write our data and parameters into an admb file.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install_github(&quot;R2admb&quot;, &quot;bbolker&quot;, subdir=&quot;R2admb&quot;) # dev version</span>
+<span class="kw">library</span>(R2admb)</code></pre>
+<h2 id="admb-definition">ADMB definition</h2>
+<p>We still need to define the model using ADMB notation in the procedure section. This is mostly like R or C++, with the exception of special functions like <code>square</code> in place of <code>^2</code>, <code>norm2</code> for the sum of squares, and <code>elem_prod</code> istead of <code>*</code> for the element-wise product of two arrays. The constant <code>pi</code> is given as <code>M_PI</code>, as typical of C/C++ libraries. Where these other functions are defined I’m not sure, but some useful guides to <a href="http://fish.washington.edu/research/MPAM/resources/ADMB_Minte-Vera.pdf">ADMB vector/matrix operations</a> or an (undefined) list of <a href="http://www.admb-project.org/developers/contribute-documentation/functions/keywords.txt/view">keywords</a>…</p>
+<p>The equivalent model</p>
+<pre class="sourceCode r"><code class="sourceCode r">model &lt;-<span class="st"> </span>
+<span class="kw">paste</span>(<span class="st">&quot;</span>
+<span class="st">PARAMETER_SECTION</span>
+<span class="st">  vector mu(1,n) // per capita mort prob</span>
+<span class="st">      </span>
+<span class="st">PROCEDURE_SECTION</span>
+<span class="st">  mu = log(x) + r * elem_prod((1 - x / k), (x - c) / k);</span>
+<span class="st">  f = 0.5 * n * log(2 * M_PI) + n * log(s) + 0.5 * norm2(x - exp(mu)) / square(s);</span>
+<span class="st">&quot;</span>)
+<span class="kw">writeLines</span>(model, <span class="st">&quot;model.tpl&quot;</span>)</code></pre>
+<p>Without explicit handling of the overflow errors, ADMB does not give us reliable estimates with arbitrary starting conditions</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setup_admb</span>(<span class="st">&quot;/var/admb&quot;</span>)</code></pre>
+<pre><code>[1] &quot;/var/admb&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">
+df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x=</span>x)
+params &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">r =</span> <span class="dv">1</span>, <span class="dt">k =</span> <span class="dv">1</span>, <span class="dt">c =</span> <span class="dv">1</span>, <span class="dt">s =</span> <span class="dv">1</span>) ## starting parameters
+bounds &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">r =</span> <span class="kw">c</span>(<span class="fl">1e-10</span>, <span class="fl">1e3</span>), <span class="dt">k=</span><span class="kw">c</span>(<span class="fl">1e-10</span>, <span class="fl">1e3</span>), <span class="dt">c=</span><span class="kw">c</span>(<span class="fl">1e-10</span>, <span class="fl">1e3</span>), <span class="dt">s =</span> <span class="kw">c</span>(<span class="fl">1e-5</span>,<span class="fl">1e3</span>)) ## bounds
+dat &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">list</span>(<span class="dt">n =</span> <span class="kw">nrow</span>(df)), df)
+m1 &lt;-<span class="st"> </span><span class="kw">do_admb</span>(<span class="st">&quot;model&quot;</span>,
+              <span class="dt">data =</span> dat,
+              <span class="dt">params =</span> params,
+              <span class="dt">bounds =</span> bounds,
+              <span class="dt">run.opts =</span> <span class="kw">run.control</span>(<span class="dt">checkparam=</span><span class="st">&quot;write&quot;</span>,
+                                     <span class="dt">checkdata=</span><span class="st">&quot;write&quot;</span>, <span class="dt">clean=</span><span class="ot">FALSE</span>))
+m1</code></pre>
+<pre><code>Model file: model_gen 
+Negative log-likelihood: 146.5 
+Coefficients:
+     r      k      c      s 
+0.9992 1.0023 1.0004 9.4369 </code></pre>
+<p>But does fine with good starting values. Hmm.. thought that was supposed to be the other way around…</p>
+<pre class="sourceCode r"><code class="sourceCode r">params &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">r =</span> <span class="dv">1</span>, <span class="dt">k =</span> <span class="dv">10</span>, <span class="dt">c =</span> <span class="dv">5</span>, <span class="dt">s =</span> .<span class="dv">1</span>) ## starting parameters
+
+m1 &lt;-<span class="st"> </span><span class="kw">do_admb</span>(<span class="st">&quot;model&quot;</span>,
+              <span class="dt">data =</span> dat,
+              <span class="dt">params =</span> params,
+              <span class="dt">bounds =</span> bounds,
+              <span class="dt">run.opts =</span> <span class="kw">run.control</span>(<span class="dt">checkparam=</span><span class="st">&quot;write&quot;</span>,
+                                     <span class="dt">checkdata=</span><span class="st">&quot;write&quot;</span>))</code></pre>
+<pre><code>Warning: running command &#39;./model_gen &gt; model_gen.out&#39; had status 1</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">m1</code></pre>
+<pre><code>Model file: model_gen 
+Negative log-likelihood: -423.8 
+Coefficients:
+        r         k         c         s 
+2.025e-10 9.498e+00 1.051e+01 1.000e-05 </code></pre>
+<p>Which finds a better optim (though substantailly overfit in reality)</p>
+<p>Hans suggests adding an error term in the function definitions rather than in limiting the bounds or log transforming the variables:</p>
+<blockquote>
+<p>The most common plase where this goes wrong is 1/0, log(0), sqrt(0), pow(0,1) etc. Your suggestion is OK, but usually I prefer to put in log(1e-10+my_expression), sqrt(1e-10+my_expression), pow(1e-10+my_expression,1)</p>
+</blockquote>
+<h2 id="misc">Misc</h2>
+<ul>
+<li><p>Finished off posts regarding DOIs and digital archiving. A shorter version appears in my answer to <a href="http://opendata.stackexchange.com/questions/694/preservation-of-blog-posts-articles-and-essays/719#719">opendata.stackexchange</a> on blog archiving.</p></li>
+<li><p>Interesting discussion on using PURL redirects with SHA hash to link to repositories. For instance, the commit matching our arXiv submission of the ews-review paper is found at <a href="http://purl.org/cboettig/ews-review/33dfb58e24ceb5861dad7cf756cffe2c5d66a655">cboettig/ews-review/33dfb58e24ceb5861dad7cf756cffe2c5d66a655</a>. If the hash shown in the PURL doesn’t match the one at the repository then we know something has gone wrong, since it is impossible to change the contents without changing the hash. This gives us a version-stable identifier that can always be remapped to this commit, even if Github should disappear. Of course nothing guarentees that the PURL maintainer / package author does this updating, but in principle the system is more robust than simply linking to Github.</p></li>
+<li><p>In other news, I should add some <a href="https://github.com/cboettig/labnotebook/issues/94">automatic link checking, #94</a> to the notebook.</p></li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2013-06-03 00:00:00 +0000" 
+    property="dc:created">03 Jun 2013</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/05/31/notebook-features-digital-archiving.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/06/03/DOI-citable.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2013-06-03-ADMB-basic-example.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#nonparametric-bayes">#nonparametric-bayes</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/7102d0ebb3523b47f350800fb99b84e475eafd47/_posts/2013-06-03-ADMB-basic-example.md"> 7102d0ebb3523b47f350800fb99b84e475eafd47</a></small></p>
+    
+  <br/>
+  
+     <script src="/assets/js/toggleR.js"></script>
+     <button class="btn btn-default" type="button" onclick="toggle_R();">Hide/Show Source</button>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Admb Basic Example
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2013-06-03
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/06/03/ADMB-basic-example.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

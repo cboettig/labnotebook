@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Docker Machine Notes</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="docker" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Docker Machine Notes" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2015-03-24 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/03/24/docker-machine-notes.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Docker Machine Notes" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2015-03-24 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/03/24/docker-machine-notes.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2015-03-24 00:00:00 +0000"/>
+<meta name="citation_title" content="Docker Machine Notes"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="http://www.carlboettiger.info/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Docker Machine Notes</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Docker recently released <code>docker-machine</code> to make managing multiple remote machines locally easier. Docker distributes binaries of <code>docker-machine</code> for most major architectures ready-to-go, potentially making it easier to get started on Windows and Mac as well.</p>
+<p>Set credentials in environmental variables so we don’t have to pass them on the command line each time:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">DIGITALOCEAN_ACCESS_TOKEN</span> = XXX</code></pre>
+<p>and create the docker-machine:</p>
+<pre><code>docker-machine create --driver digitalocean --digitalocean-size &quot;1gb&quot; server-name</code></pre>
+<p>where <code>server-name</code> is any name you want to give your server and <code>DO_PAT</code> is your access token (say, saved as an environmental variable). Here we launch a 1GB instance, the default is 512MB on digitalocean. Many other providers work just as well (including virtualbox). You need to set your terminal to use the active <code>docker-machine</code> for all <code>docker</code> commands, instead of the local <code>docker</code> installation:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">eval</span> <span class="st">&quot;</span><span class="ot">$(</span><span class="kw">docker-machine</span> env server-name<span class="ot">)</span><span class="st">&quot;</span></code></pre>
+<p>sets three environmental variables that point your <code>docker</code> commands to the new remote machine, <code>server-name</code>. Wow. We can now launch any service of interest:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">docker</span> run -d -p 8787:8787 -e PASSWORD=something rocker/hadleyverse</code></pre>
+<p>and it will run on the server. Get the IP address of the active machine with <code>docker-machine ip</code>, e.g. open the server in the browser (from a Ubuntu-based client)</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">xdg-open</span> http://<span class="kw">`docker-machine</span> ip<span class="kw">`</span>:8787</code></pre>
+<p>When we’re finished with the instance, we can destroy the machine so we will no longer be billed, using the same syntax as we would for a container:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">docker-machine</span> rm -f server-name</code></pre>
+<p>If we have a locally installed docker instance, we may also want to unset the environmental variables set by machine:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">unset</span> <span class="ot">DOCKER_TLS_VERIFY</span>
+<span class="kw">unset</span> <span class="ot">DOCKER_CERT_PATH</span>
+<span class="kw">unset</span> <span class="ot">DOCKER_HOST</span></code></pre>
+<p>You can see a list of active machines with <code>docker-machine ls</code> and switch between machines with <code>docker-machine env</code> as shown above.</p>
+<p>Spawning a new machine adds a bit more overhead than launching a container on an existing local or remote server instance, but not much; and is easily scripted. Of course the latency is higher too: the start-up time for the DO instance takes two minutes, and pulling a sizable image onto DO machine takes another two minutes or so. <code>docker-machine</code> actually prints the start-up time in seconds as it brings up the machine, in case you want to compare between services.</p>
+<h2 id="docker-compose">Docker Compose</h2>
+<p>Docker compose is just fig, which is just a yaml config file / wrapper for (some of) the <code>docker run</code> command-line options. As with <code>docker-machine</code>, this simplicity is definitely a strength. Rather intuitively, <code>docker-machine</code> respects <code>docker-compose</code>, in that after setting the environmental variables as described above, <code>docker-compose up</code> runs on the remote machine, just like <code>docker run</code> does.</p>
+<hr />
+<h2 id="docker-swarm">Docker swarm</h2>
+<p>Docker swarm is rather analogous to CoreOS; it’s essential feature being a discovery service that allows the cluster to form. Swarm is mostly easily set up using docker-machine, though in my googling most tutorials fail to mention this. The <a href="https://docs.docker.com/machine/#using-docker-machine-with-docker-swarm">official docker-machine docs</a> are probably the best reference on this.</p>
+<p>Docker swarm provides rather limited functionality so far. A nice <a href="http://blog.docker.com/2015/02/scaling-docker-with-swarm/">docker blog post on swarm</a> In particular, it doesn’t yet support two key features found in CoreOS scheduling: fault-tolerant scheduling; which can move a container to another host if a machine goes down; nor does it yet support Master election; so the swarm breaks if the master goes down.</p>
+<p>It currently provides only relatively obvious scheduling – a bin-packing algorithm if you put constraints on resources a container can use, affinities to make sure <code>--link</code>, <code>--volumes-from</code> and other such containers end up on the same instance. Instances can be annotated with labels that can be used as constraints, such as <code>storage=ssd</code>, though it’s <a href="https://github.com/docker/machine/issues/1002">not clear</a> how to add these from docker-machine. As long as swarm does not support fault-tolerant scheduling and master election though, these features are not as essential. Dynamically moving a container when a machine has failed means that no human is around to consider what resources the swarm has and where to schedule the container. But for merely adding a new container to an existing swarm, it’s not particularly hard for a human to look at the existing resources and just pick manually where to stick the container without the help of swarm’s algorithms.</p>
+<p>Swarm doesn’t really understand docker-compose yet either, in that compose is essentially written as a single-host tool.</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      
+<aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2015-03-24 00:00:00 +0000" 
+    property="dc:created">24 Mar 2015</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2015/03/09/simpler-nimble-dai-model.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2015/03/26/ropensci-unconf-teaching-session.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2015/commits/master/_posts/_posts/2015-03-24-docker-machine-notes.Rmd"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2015/categories.html#computing">computing</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#docker">#docker</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2015/commit/b35ddda4405e51f6e9e2e3bfa3d2218f4e824436/_posts/_posts/2015-03-24-docker-machine-notes.Rmd"> b35ddda4405e51f6e9e2e3bfa3d2218f4e824436</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Docker Machine Notes
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2015-03-24
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/03/24/docker-machine-notes.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

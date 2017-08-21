@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Lab Notebook - R</title>
+ <link href="/2009/R.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2015-02-10T20:38:50+00:00</updated>
+ <id>http://www.carlboettiger.info</id>
+ <author>
+   <name>Carl Boettiger</name>
+   <email>cboettig@gmail.com</email>
+ </author>
+
+ 
+ 
+</feed>

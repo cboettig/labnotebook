@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Lab Notebook - blog</title>
+ <link href="/2011/blog.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2015-02-25T23:07:55+00:00</updated>
+ <id>http://www.carlboettiger.info/2011</id>
+ <author>
+   <name>Carl Boettiger</name>
+   <email>cboettig@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>How google views me: by search terms or citation counts?</title>
+	 <link href="/2011/09/09/how-google-views-me-by-search-terms-or-citation-counts.html"/>
+   <updated>2011-09-09T09:55:39+00:00</updated>
+   <id>/09/09/how-google-views-me-by-search-terms-or-citation-counts</id>
+   <content type="html">&lt;p&gt;How Google search views me: here’s a word cloud of search terms reaching my site in August.  Word cloud produced with R: click-through for link to source-code. Uses the rather convenient tm package for text-mining functions in R. Note that this shows the frequency of individual words used in searches, rather than the whole search term.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm7.staticflickr.com/6073/6128330822_c3f089a3da_o.png&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Code:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(tm)
+&lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(wordcloud)
+&lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(RColorBrewer)
+
+carl &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;read.csv&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;searchterms.csv&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;colClasses=&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;character&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;numeric&amp;quot;&lt;/span&gt;))
+
+words &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;character&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;sum&lt;/span&gt;(carl[[&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;]]))
+m &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;
+for(i in &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(carl[[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;]])){
+  n &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;carl[[&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;]][i]
+  x &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;carl[[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;]][i]
+  words[m:(m+(n&lt;span class=&quot;dv&quot;&gt;-1&lt;/span&gt;))] &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;rep&lt;/span&gt;(x, n)
+  m &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;m+n
+}
+
+ carl &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;Corpus&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;DataframeSource&lt;/span&gt;(carl))
+ carl &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;tm_map&lt;/span&gt;(carl, removePunctuation)
+ carl &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;tm_map&lt;/span&gt;(carl, tolower)
+
+ carl.tdm &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;TermDocumentMatrix&lt;/span&gt;(carl)
+ carl.m &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;as.matrix&lt;/span&gt;(carl.tdm)
+ carl.v &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sort&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;rowSums&lt;/span&gt;(carl.m), &lt;span class=&quot;dt&quot;&gt;decreasing=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;)
+ carl.d &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;data.frame&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;word=&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;names&lt;/span&gt;(carl.v), &lt;span class=&quot;dt&quot;&gt;freq=&lt;/span&gt;carl.v)
+
+pal2 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;brewer.pal&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;8&lt;/span&gt;,&lt;span class=&quot;st&quot;&gt;&amp;quot;Dark2&amp;quot;&lt;/span&gt;)
+
+&lt;span class=&quot;kw&quot;&gt;png&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;wordcloud.png&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;800&lt;/span&gt;,&lt;span class=&quot;dt&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;800&lt;/span&gt;) 
+&lt;span class=&quot;co&quot;&gt;#larger canvas doesn&amp;#39;t increase plot size&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;wordcloud&lt;/span&gt;(carl.d$word,carl.d$freq, &lt;span class=&quot;dt&quot;&gt;scale=&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;8&lt;/span&gt;,.&lt;span class=&quot;dv&quot;&gt;4&lt;/span&gt;),&lt;span class=&quot;dt&quot;&gt;min.freq=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;,
+&lt;span class=&quot;dt&quot;&gt;max.words=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;Inf&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;random.order=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;FALSE&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;rot.per=&lt;/span&gt;.&lt;span class=&quot;dv&quot;&gt;15&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;colors=&lt;/span&gt;pal2)
+&lt;span class=&quot;kw&quot;&gt;dev.off&lt;/span&gt;()
+
+&lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(socialR)
+&lt;span class=&quot;kw&quot;&gt;upload&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;wordcloud.png&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;script=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;wordcloud.R&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here’s another way that Google views me: results from the &lt;a href=&quot;http://code.google.com/p/citations-gadget/&quot;&gt;Google citation gadget&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Citations for “Carl Boettiger”: &lt;strong&gt;77&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Cited Publications: &lt;strong&gt;18&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;H-Index: &lt;strong&gt;5&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hmm… I think the wordcloud approach might be more accurate… Perhaps no one needed reminding not to trust these kinds of tools, despite the predilection to believe anything quantitative (See the real story on my CV tab (pdf). The other lesson might be that alternative forms of publishing are likely to get picked up by some of these algorithms. Many of the &lt;a href=&quot;http://scholar.google.com/scholar?start=0&amp;amp;q=author:%22Carl+Boettiger%22&amp;amp;hl=en&amp;amp;lr=lang_en&amp;amp;as_sdt=0,5&quot;&gt;items&lt;/a&gt; that come up are talks I’ve deposited on Nature Precedings, and a few are even just notebook posts. Interesting that there’s a growing number of services designed to help scientists strengthen their review dossier using these tools.&lt;/p&gt;
+&lt;p&gt;Does this mean that alternative publishing (&lt;em&gt;i.e.&lt;/em&gt; conference slides, prepints, notebook posts) is a good way to trick the metrics? That people won’t trust the numbers of bloggers, etc, assuming they are inflated? Or that these kinds of communication methods may gain acceptance as part of the scientific discourse?&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Citation tools & Future of Publishing</title>
+	 <link href="/2011/02/16/citation-tools-future-of-publishing.html"/>
+   <updated>2011-02-16T23:04:50+00:00</updated>
+   <id>/02/16/citation-tools-future-of-publishing</id>
+   <content type="html">&lt;p&gt;There has been a lot of rapid development in scientific tools based on a Wordpress platform recently, perhaps spurred in part by the recent &lt;a href=&quot;https://sites.google.com/site/beyondthepdf/&quot;&gt;Beyond-the-PDF&lt;/a&gt; and &lt;a href=&quot;http://blogs.plos.org/mfenner/2011/01/11/having-fun-with-citations-at-scienceonline2011/&quot;&gt;sessions in Science Online&lt;/a&gt; conferences.  A new &lt;a href=&quot;https://groups.google.com/forum/#!forum/wordpress-for-scientists&quot;&gt;discussion group&lt;/a&gt; has emerged around these tools, &lt;a href=&quot;http://blogs.plos.org/mfenner/2011/02/04/discussing-wordpress-for-scientists/&quot;&gt;as described by Martin Fenner&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I have been exploring better tools for citation management within my lab notebook. Recently I have been using the &lt;a href=&quot;http://wordpress.org/extend/plugins/papercite/&quot;&gt;papercite plugin&lt;/a&gt;to add citations from my BibTeX files, which are generated from Mendeley, as I &lt;a href=&quot;http://www.carlboettiger.info/archives/570&quot;&gt;described earlier&lt;/a&gt;.  This has a few performance issues on server load and memory, and a somewhat limited format/appearance options, but more importantly lacks some of the features of being developed in these other citation packages.&lt;/p&gt;
+&lt;p&gt;To begin, see Martin’s very compelling piece on  &lt;a href=&quot;http://blogs.plos.org/mfenner/2010/12/11/citations-are-links-so-where-is-the-problem/&quot;&gt;citations are links&lt;/a&gt;.  Certainly a link (&lt;em&gt;i.e.&lt;/em&gt;, to the pdf article) can be  _part _of a citation, but there’s a lot that can be done once we start thinking of the citation itself as a link.  Wordpress has a nice interface to handle and organize links, which until now has mostly puzzled me as a overdeveloped blogroll.  The &lt;a href=&quot;http://wordpress.org/extend/plugins/bibtex-importer/&quot;&gt;Import BibTeX&lt;/a&gt; plugin can read my bibliography files and transform each citation into a link in the Wordpress interface, attaching categories corresponding to the source type and to tags I add, (such as to which Mendeley collection the article belongs).  Then the &lt;a href=&quot;http://wordpress.org/extend/plugins/link-to-link/&quot;&gt;Link to Link&lt;/a&gt; plugin makes it easy to search and insert these references into my posts.  Currently this can’t be done using the bibtex keys, which is a minor bother.&lt;/p&gt;
+&lt;p&gt;Here’s where things start to get more interesting.  The links can embed machine-readable semantic information that adds meta-data to the citation, such as if the citation provides background, methods, supports or disagrees with a claim being made.  This can be made visible to the user, but more interestingly this can also be tracked by a computer, which allows for the generation of much more detailed citation statistics.  A standard Citation Typing Ontology has been developed and described by David Shotton[cite source=‘doi’]10.1186/2041-1480-1-S1-S6[/cite] and &lt;a href=&quot;http://blogs.plos.org/mfenner/2011/02/14/how-to-use-citation-typing-ontology-cito-in-your-blog-posts/&quot;&gt;CiTO is now implemented&lt;/a&gt;in Link to Link code.  While Link to Link seems to have the 10 most common citation types, the ontology provides many more, as listed in the  &lt;a href=&quot;http://imageweb.zoo.ox.ac.uk/pub/2009/citobase/cito-20091124-1.4/cito-content/owldoc/&quot;&gt;CiTO types&lt;/a&gt; documentation.&lt;/p&gt;
+&lt;p&gt;Finally, the automatic bibliographic information is displayed by the &lt;a href=&quot;http://wordpress.org/extend/plugins/kcite/&quot;&gt;Kcite&lt;/a&gt; plugin, currently using the DOI or PMID, which integrates with the Link to Link code.  Having installed both plugins and checked the configuration boxes in link to link which allow it to use the kcite shortcode and CiTO syntax, I’m able to highlight some text, select the citation through the search box opened by clicking the Link to Link icon and have it automatically insert the Kcite shortcode using the DOI:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[cite source=&amp;#39;doi&amp;#39; rel=cito:cites]10.1186/2041-1480-1-S1-S6[/cite]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At the moment this doesn’t quite work as it seems the rel=cito text disrupts the kcite intepretation of the shortcode.  Without this it renders correctly.&lt;/p&gt;
+&lt;p&gt;Note that in general Link to Link with CiTO works with anything with a URL, and will still embed the CiTO information in the link if no DOI is available, just not add the kcite bibliography.&lt;/p&gt;
+&lt;p&gt;Also not sure why the kcite bibliography includes the link to the json format, seems it shouldn’t display this.  Still active discussion on the mailing list on these topics, and it’s been quite impressive to see how fast development has been moving on these so far.&lt;/p&gt;
+&lt;h3 id=&quot;things-id-like-to-see&quot;&gt;THings I’d like to see&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;How to expose/search CiTO meta-data.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;kcite option for citing by (Author,year) footnote text, not just by number, like so [1].&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Basic fixes: Kcite currently errors with the rel=cito:cites text.  Should at least ignore that text until support is built in for CiTO.  Apparently link2link should be rendering this with quotes: rel=cito:‘cites’.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;toggle json display.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;why-store-citations-in-a-link-library-in-wordpress&quot;&gt;Why store Citations in a link library in Wordpress?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Link2Link requires uploading Bibtex file to add the reference to wordpress link library.  Mendeley automatically generates the bibliography – would be great if this could be automatically placed online (i.e. by dropbox) and read in by Wordpress rather than having to manually update.  Having to import bibtex every time I add a new article, and then search for the added article via link2link, is rather inefficient.  Can merely grab the doi from Mendeley and insert with kcite.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The most obvious advantage of having the references in the Wordpress link library is the ability for link2link to search them and grab the DOI, though searching Mendeley for the DOI is just as easy.  So why else would this be useful?  A few thoughts:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The link library allows for adding semantic markup to the link, though currently Wordpress  does this only for &lt;a href=&quot;http://codex.wordpress.org/Defining_Relationships_with_XFN&quot;&gt;XFN&lt;/a&gt; (XHTML Friends Network), designed to describe people.  Having CiTO directly in the link editor beside XFN would be nice, though not particularly more functional.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Potential to use blogroll functions of wordpress to display the library listed in the links, though in general Mendeley groups seem a much more powerful way to do this.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Data Mangement on UC3 Merritt Repository</title>
+	 <link href="/2011/02/16/data-mangement-on-uc3-merritt-repository.html"/>
+   <updated>2011-02-16T19:06:11+00:00</updated>
+   <id>/02/16/data-mangement-on-uc3-merritt-repository</id>
+   <content type="html">&lt;p&gt;I’ve been trying to learn a little more about the potential for data management solutions through the &lt;a href=&quot;http://www.cdlib.org/services/uc3/merritt/index.html&quot;&gt;UC3 Merritt repository&lt;/a&gt;, and decide how this compares to commercial alternatives such as Amazon S3, Picasa/Flickr (obviously for images only), and field-specific and publication specific repositories such as Dryad.  Merritt email support have been very helpful in answering my questions and concerns.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Persistence&lt;/strong&gt;:  of the data itself, of the  URLs &amp;amp; object identifiers, of access to the data?  Not surprisingly they have standard redundancy backup procedures for archival standards in place.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Object identifiers&lt;/strong&gt;:  UC3 also provides DOIs for objects which can be purchased independently of archiving in the Merritt repository and are indexed in Web of Science.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cost and pricing structure&lt;/strong&gt;: $1040/Tb/year, prorated for how much storage you actually use.  No charge for upload/download, unlike S3.  &lt;a href=&quot;http://www.cdlib.org/services/uc3/ezid/index.html&quot;&gt;EZID&lt;/a&gt; for DOIs are separate charge:  Annual charge unlimited number of DOIs: $75/user, $375/group, or $1,125 for whole university&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;The Good:&lt;/strong&gt; An institutional repository seems like a safer bet than an Internet business, even if it’s as large as Amazon or Google.  After all, the UC’s have been around a lot longer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Not-So-Good&lt;/strong&gt;: The big concern for me here is that this is guaranteed (both for IDs and for data itself) only as long as you are (or someone else is) paying the annual fee.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Other Concerns:&lt;/strong&gt; Can I automate script to upload, download, and embed data?  The wealth of tools available for Flickr or Github through the user-extensible API makes it very easy to integrate these repositories into my workflow.  I am still unclear how easy this would be with the UC3 archiving services.&lt;/p&gt;
+&lt;p&gt;Still promising: The staff recognize these challenges, particularly in their contrast to the standard short-term grant-based funding model of science and in working with the research institutions for support covering these costs.  Further, it seems the details aren’t set in stone yet, but are an evolving part of the system:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It’s a tough question for which we don’t have a comprehensive answer at the moment. Our fee model does not match up well with the funding model of grant projects–our costs are ongoing, our accounting rules prohibit us from carrying funds across fiscal years, yet our customers may have funding for only a limited time period.  We want to partner with organizations committed to the long-term preservation of their digital content. We would work with our partners to find new organizational homes if their commitment changed, due to changes in funding and priorities. This isn’t really an answer, other than to say that we view the relationship as a partnership, and we want to help our partners succeed in their goals for long-term preservation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;–Merritt helpdesk.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>The Future of Data: Plans for a UC Davis workshop</title>
+	 <link href="/2011/02/01/the-future-of-data-preparing-researchers-to-face-new-funding-and-publishing-policies.html"/>
+   <updated>2011-02-01T09:40:59+00:00</updated>
+   <id>/02/01/the-future-of-data-preparing-researchers-to-face-new-funding-and-publishing-policies</id>
+   <content type="html">&lt;p&gt;I have been working with several of the faculty of UC Davis to prepare a workshop for our department to (1) help make our researchers &lt;strong&gt;aware&lt;/strong&gt; of the new requirements for NSF proposals and journal submissions with regard to data archiving, (2) To explore what &lt;strong&gt;new opportunities&lt;/strong&gt; this creates and what &lt;strong&gt;tools&lt;/strong&gt; exist that will help our researchers take maximum advantage of it, and (3) to engage our research community in the discussion of &lt;strong&gt;future standards&lt;/strong&gt; for sharing, standardizing, rewarding and funding the archiving of data.&lt;/p&gt;
+&lt;p&gt;I’m very pleased that we have an excellent panel of supportive faculty:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://strong.ucdavis.edu/&quot;&gt;Don Strong&lt;/a&gt;, Editor-in-Chief of &lt;strong&gt;Ecology&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.des.ucdavis.edu/faculty/holyoak/&quot;&gt;Marcel Holyoak&lt;/a&gt;, Editor-in-Chief, &lt;strong&gt;Ecology Letters&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://phylogenomics.blogspot.com&quot;&gt;Jonathan Eisen,&lt;/a&gt; Editor-in-Chief, &lt;strong&gt;PLoS Biology&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://two.ucdavis.edu/~me/&quot;&gt;Alan Hastings&lt;/a&gt;, founding Editor-in-Chief, &lt;strong&gt;Theoretical Ecology&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.des.ucdavis.edu/FacultyInfo.aspx?ID_Number=83&quot;&gt;Robert Hijmans&lt;/a&gt;, Asst Professor of Environmental Science &amp;amp; Policy and expert in software infrastructure for reproducible research.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cdlib.org/cdlinfo/2010/05/19/patricia-cruse-digital-preservation-pioneer/&quot;&gt;Trisha Cruse&lt;/a&gt; Director of UC Curation Center at the University of California Digital Library&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We are currently working out the format of the workshop.  The current draft consists of three 1.5hr sessions, progressing through the three main goals above in an interactive format.&lt;/p&gt;
+&lt;h3 id=&quot;why-archive&quot;&gt;1) Why Archive?&lt;/h3&gt;
+&lt;h5 id=&quot;weds-march-2nd-230-4p-lsa-1022&quot;&gt;(Weds March 2nd 2:30-4p, LSA 1022)&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;New &lt;a href=&quot;http://www.cdlib.org/services/uc3/datamanagement/funding.html&quot;&gt;requirements from funders&lt;/a&gt; and publishers.&lt;/li&gt;
+&lt;li&gt;Recommended practice: What’s ideal, what’s acceptable, what isn’t?&lt;/li&gt;
+&lt;li&gt;Types/levels of archiving.  Why repositories?&lt;/li&gt;
+&lt;li&gt;Funding data repositories.&lt;/li&gt;
+&lt;li&gt;Access embargoes.  Citing data/getting credit.&lt;/li&gt;
+&lt;li&gt;Panel Q&amp;amp;A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;leveraging-data-archives-logistics&quot;&gt;2) Leveraging data archives: logistics&lt;/h3&gt;
+&lt;h5 id=&quot;thurs-march-3nd-230-4p-pes-3001&quot;&gt;(Thurs March 3nd 2:30-4p, PES 3001)&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;The major repositories.&lt;/li&gt;
+&lt;li&gt;Discovering data.&lt;/li&gt;
+&lt;li&gt;Citing data.  Metadata, DOIs, formats, persistent data&lt;/li&gt;
+&lt;li&gt;Sharing/archiving code?&lt;/li&gt;
+&lt;li&gt;Linked data, ontologies &amp;amp; Semantic web.&lt;/li&gt;
+&lt;li&gt;Tools for reproducible research.&lt;/li&gt;
+&lt;li&gt;Panel Q&amp;amp;A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;looking-ahead-new-scale-new-science&quot;&gt;3) Looking ahead: new scale, new science?&lt;/h3&gt;
+&lt;h5 id=&quot;fri-march-4nd-230-4p-pes-3001&quot;&gt;(Fri March 4nd 2:30-4p, PES 3001)&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Challenges and Opportunities (&lt;em&gt;i.e.&lt;/em&gt; &lt;a href=&quot;http://www.sciencemag.org/content/331/6018/692.short&quot;&gt;&lt;em&gt;Science&lt;/em&gt; issue&lt;/a&gt;,&lt;a href=&quot;http://www.sciencemag.org/content/331/6018/703.short&quot;&gt;&lt;em&gt;Science&lt;/em&gt; re: Ecology&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Integrated databases, standards for data&lt;/li&gt;
+&lt;li&gt;Dryad “publication model” vs DataONE model, etc&lt;/li&gt;
+&lt;li&gt;Reproducible research&lt;/li&gt;
+&lt;li&gt;UC3’s “data publication” concept?&lt;/li&gt;
+&lt;li&gt;Future of credit: Will you be scooped or will you be famous?&lt;/li&gt;
+&lt;li&gt;What roll we can/should have in shaping future standards, expectations &amp;amp; requirements&lt;/li&gt;
+&lt;li&gt;Panel Q&amp;amp;A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+&lt;p&gt;See the recent discussion of these issues in &lt;a href=&quot;http://www.sciencemag.org/cgi/doi/10.1126/science.331.6018.692&quot;&gt;Science&lt;/a&gt;, &lt;a href=&quot;http://www.nature.com/doifinder/10.1038/nj7333-295a&quot;&gt;Nature&lt;/a&gt;, &lt;a href=&quot;http://linkinghub.elsevier.com/retrieve/pii/S0169534710002697&quot;&gt;TREE&lt;/a&gt;, &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/20073990&quot;&gt;Am Nat&lt;/a&gt;, and elsewhere.   I have started assembling a list of resources in my December notes: _&lt;a href=&quot;http://www.carlboettiger.info/archives/502&quot;&gt;Thoughts on the New Policies for Data Archiving at NSF and in Common Journals&lt;/a&gt;. _In addition, there’s more detail available on the &lt;a href=&quot;https://www.nescent.org/wg_dryad/Main_Page&quot;&gt;Dryad Wiki&lt;/a&gt; and from Dryad here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.datadryad.org/depositing&quot;&gt;Depositing Data&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.datadryad.org/using&quot;&gt;Using Data&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.datadryad.org/partners&quot;&gt;Dryad Partners (Publishers)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.datadryad.org/jdap&quot;&gt;Archiving Policy&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some great information also available from UC3:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cdlib.org/services/uc3/datamanagement&quot;&gt;UC3 Data Management Guidelines.&lt;/a&gt; In addition to summarizing the requirements, UC3 is also developing a “TurboTax” tool for data management:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the next month or so we are going to roll out a rule based tool that will ask the researcher a series of questions based on the funding organization that are applying to and will generate a Data Management Plan.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://merritt.cdlib.org/&quot;&gt;Merritt Repository services&lt;/a&gt;,  launched in late summer 2010.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.cdlib.org/services/uc3/ezid/&quot;&gt;EZID Identifier services&lt;/a&gt;:   obtain and manage long-term identifiers (DOI, ARK) for their digital content.  Can assign identifiers to anything: scientific datasets, technical reports, audio files, digital photographs, and non-digital objects as well.  This spring the objects with DOIs  will appear in Web of Science. (Annual charge unlimited number of DOIs: $75/user, $375/group, or $1,125 for whole university)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Consultation services: Individual consultation, also more workshops  on data citation, data sharing, and data rights this Fall.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We have been actively thinking about data and building services that support the management, preservation, and publication of data.  We are just about to embark on a project that will create an Excel add-in that will make it easy to archive, share, and publish data embedded in Excel.  We are also actively involved in the DataONE project.  We recently presented &lt;a href=&quot;http://www.cdlib.org/services/uc3/docs/dax.pdf&quot;&gt;a paper&lt;/a&gt; at the Beyond the PDF workshop at UCSD that outlines some of our ideas surrounding data publication.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;your-input&quot;&gt;Your Input?&lt;/h2&gt;
+&lt;p&gt;What would you like to see?  Structure, organization, topics?&lt;/p&gt;
+&lt;p&gt;[iframe http://friendfeed.com/science-2-0/e68945dc/i-m-planning-workshop-at-ucdavis-on-future-of?embed=1 480 400]&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Reflections from #scio11: Saturday's Open Science Track</title>
+	 <link href="/2011/01/15/reflections-from-scio11-saturdays-open-science-track.html"/>
+   <updated>2011-01-15T23:12:45+00:00</updated>
+   <id>/01/15/reflections-from-scio11-saturdays-open-science-track</id>
+   <content type="html">&lt;p&gt;Have just returned from the amazing and energetic science online 2011 conference, where I will now, like the rest of the attendees, turn to catching up on sleep, following new online acquaintances, struggling not to append #scio11 to everything I write, and composing that nearly obligatory post-event blog entry we all use like a glass of water after a party; with the hope in may help me metabolize the experience.&lt;/p&gt;
+&lt;p&gt;Never mind that I don’t actually blog. I just have this lab notebook, normally filled with equations, graphs and code. But it is recordings of my research experience, even if it is written only for me most of the time, so let’s just call this part of research and forgive the conversational tone. Meanwhile I will use the excuse to write more at length for myself the notes I wish to remember than would be seemly in writing in a blog with an audience.  In the spirit of this resembling my daily notebook and also in actually finishing this post, here are my notes and thoughts on Saturday’s amazing blur. &lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;saturday&quot;&gt;Saturday&lt;/h3&gt;
+&lt;p&gt;I began the day in Kay’s (@&lt;a href=&quot;http://twitter.com/#!/kaythaney&quot;&gt;kaythaney&lt;/a&gt;) Digital Toolbox session, room C, where I would return for each of my sessions that day. It was one of the live-streamed rooms, so all the following sessions should have &lt;a href=&quot;http://scienceonline2011.com/watch-2/&quot;&gt;archived recordings&lt;/a&gt;.  The sessions that followed sequentially in this room fit together like a perfectly flowing conversation, as if each one responding to the former and anticipating the next.  Just further evidence that Bora (&lt;span class=&quot;citation&quot; data-cites=&quot;Boraz&quot;&gt;[@Boraz]&lt;/span&gt;(http://twitter.com/#!/boraz)) and Anton (&lt;span class=&quot;citation&quot; data-cites=&quot;mistersugar&quot;&gt;[@mistersugar]&lt;/span&gt;(http://twitter.com/#!/mistersugar)) must come from magic lamps.&lt;/p&gt;
+&lt;p&gt;Next up brought one of my existing luminaries, &lt;a href=&quot;http://twitter.com/#!/skoch3&quot;&gt;Steve Koch&lt;/a&gt;),&lt;a href=&quot;#fn2&quot; class=&quot;footnoteRef&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, with  &lt;a href=&quot;http://libraryadventures.com/&quot;&gt;Kiyomi Deards&lt;/a&gt; and &lt;a href=&quot;http://cloud.lib.wfu.edu/blog/pd/&quot;&gt;Molly Keener&lt;/a&gt; to the panel on data discover-ability and archiving in Open Notebook Science. The session erupted in lively debate on the relative merits of commercial hosting solutions which may offer great discoverability and ease of use until they suddenly go the way of Del.icio.us, or institutional repositories, which are long lived but often unintegrated even amongst themselves. The good-spirited solutions all pointed to doing both and trying to make each better.&lt;/p&gt;
+&lt;p&gt;Not that we wouldn’t also question that optimism too, for the next session asked us: “What’s keeping us from open science?” Covering many things, at the heart of this session was the crux of lacking incentives. The promise of altmetrics loomed large, but &lt;a href=&quot;http://friendfeed.com/stevekoch/a0823501/scio11-good-question-from-carl-should-emphasis&quot;&gt;I wondered&lt;/a&gt; if we needed to do focus more on making impact with open science than merely measuring it. For instance, we can surely try to measure the impact of open notebooks and science tweets, but tools for better discovery, standardization, or more semantic open content may go much father to having unmistakable impact.&lt;/p&gt;
+&lt;p&gt;The schedule indicates &lt;a href=&quot;#fn3&quot; class=&quot;footnoteRef&quot; id=&quot;fnref3&quot;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; that lunch happened next. though he whirling discussions left me with lots of ideas and names than memories of food or thoughts to my own upcoming panel. But no matter, I would be sitting with the heroes Jean-Claude Bradley (&lt;span class=&quot;citation&quot; data-cites=&quot;jcbradley&quot;&gt;@jcbradley&lt;/span&gt;) and Anthony Williams (&lt;span class=&quot;citation&quot; data-cites=&quot;ChemConnector&quot;&gt;@ChemConnector&lt;/span&gt;), so why worry?&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://m.friendfeed-media.com/a9192c4f24f3b1cc96c306e48bad1c498cab0c23&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Our session on Open Notebook Science quickly gave us reason to worry when the projector which had done fine thus far suddenly refused to work. Nevermind, we all work with technology too frequently to be unfamiliar with its failure - we would do without. If you were there and you’re wondering what you missed, here are my slides.  See &lt;a href=&quot;http://usefulchem.blogspot.com/2011/01/science-online-2011-thoughts.html&quot;&gt;Jean-Claude’s post&lt;/a&gt; for more on our session.&lt;/p&gt;
+&lt;iframe src=&quot;http://www.slideshare.net/slideshow/embed_code/6606229&quot; width=&quot;427&quot; height=&quot;356&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px&quot; allowfullscreen webkitallowfullscreen mozallowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;div style=&quot;margin-bottom:5px&quot;&gt;
+&lt;strong&gt; &lt;a href=&quot;http://www.slideshare.net/cboettig/scioslides&quot; title=&quot;Scioslides&quot; target=&quot;_blank&quot;&gt;Scioslides&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&quot;http://www.slideshare.net/cboettig&quot; target=&quot;_blank&quot;&gt;Carl Boettiger&lt;/a&gt;&lt;/strong&gt;
+&lt;/div&gt;
+&lt;p&gt;I described the tools I use to make my notebook more automated and complete and discussed my vision of a social lab notebook.  In face of the observation that many open database efforts face the tragedy of commons effect (many researchers may use the resources but few contribute) I discussed some of the many immediate benefits the practice has had for me.  I must say what an immense treat it is to be able to finish a session and see the immediate feedback and reactions it has generated through the online streams.&lt;/p&gt;
+&lt;p&gt;The video recording of our session has now been posted:&lt;/p&gt;
+&lt;iframe src=&quot;http://player.vimeo.com/video/20100632&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;
+&lt;a href=&quot;http://vimeo.com/20100632&quot;&gt;Open Notebook Science: Pushing Data from Bench to Web Service&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user2419982&quot;&gt;Smartley-Dunn&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;See the &lt;a href=&quot;http://scienceonline2011.com/watch-2/&quot;&gt;recordings of the other sessions&lt;/a&gt; as well.&lt;/p&gt;
+&lt;p&gt;Having broached the idea of &lt;a href=&quot;http://altmetrics.org/manifesto/&quot;&gt;altmetrics&lt;/a&gt; on several occasions already, our next session dove into the details of how we might construct these, what they might measure, and how they would be received. Or as it was more concisely and provocatively phrased by Paul Groth (&lt;span class=&quot;citation&quot; data-cites=&quot;pgroth&quot;&gt;[@pgroth]&lt;/span&gt;(http://twitter.com/#!/pgroth)):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Would you list the number of twitter followers you have on your CV?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The last session dived further into tackling and improving the most common metric: citations. From citations that map to specific parts of articles to ones measuring the sentiment (supports/refutes) or even anticipating the social-cultural context of citations, the potential here is amazing. Jason Hoyt’s (&lt;span class=&quot;citation&quot; data-cites=&quot;jasonHoyt&quot;&gt;[@jasonHoyt]&lt;/span&gt;(http://twitter.com/#!/jasonhoyt)) 140 characters may have captured this session best:&lt;img src=&quot;http://m.friendfeed-media.com/f22753e4ef38225cbad94b61e22a9e5fdb701f23&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;if I do my job right, no one will care about publishing in Nature, Science or Cell…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Indicating that better article discovery and citation tracking through tools such as Mendeley would make the impact factor obsolete.&lt;/p&gt;
+&lt;p&gt;The evening banquet featured many highlights, including seeing one of my fellow graduate students in the video competition, the very moving story of Meg Lowman’s (&lt;span class=&quot;citation&quot; data-cites=&quot;canopymeg&quot;&gt;[@canopymeg]&lt;/span&gt;(http://twitter.com/#!/canopymeg)) work researching and inspiring rain-forest conservation, laughing tears at Brian Marlow’s (&lt;span class=&quot;citation&quot; data-cites=&quot;sciencecomedian&quot;&gt;[@sciencecomedian]&lt;/span&gt;(http://twitter.com/#!/sciencecomedian)) humorist routine, and talks deep into the night about &lt;a href=&quot;http://drexel-coas-elearning.blogspot.com/&quot;&gt;innovated ideas in open education&lt;/a&gt; with JC and then the future of publishing with Jason, Mark and Tony (&lt;span class=&quot;citation&quot; data-cites=&quot;jasonPriem&quot;&gt;[@jasonPriem]&lt;/span&gt;(http://twitter.com/#!/jasonpriem), &lt;span class=&quot;citation&quot; data-cites=&quot;science3point0&quot;&gt;[@science3point0]&lt;/span&gt;(http://twitter.com/#!/science3point0), and &lt;span class=&quot;citation&quot; data-cites=&quot;ChemConnector&quot;&gt;[@ChemConnector]&lt;/span&gt;(http://twitter.com/#!/ChemConnector)).&lt;/p&gt;
+&lt;p&gt;Many other great discussions throughout the day on and off line that I cannot begin to capture here.  But after all, they are just beginning.&lt;/p&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;Note this was written up on Jan 17 upon returning to reality with enough time to write, but published under the event date for notebook consistency. Touched up for the Jekyll notebook 2013-07-09, see history in sidebar.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;pronounced cook, I learned, and all of a sudden understood the &lt;a href=&quot;http://openwetware.org/wiki/User:Skoch3&quot;&gt;chef’s hat symbol&lt;/a&gt; for their lab that has puzzled me for a year!&lt;a href=&quot;#fnref2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn3&quot;&gt;&lt;p&gt;Also, the schedule lists the full topics and presenters for these sessions, for which reason I should  &lt;a href=&quot;http://scio11.wikispaces.com/Program&quot;&gt;work in a link  to it somewhere.&lt;/a&gt;&lt;a href=&quot;#fnref3&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

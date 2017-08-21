@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Gpdd And Kalman Exploration Continued</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="gpdd" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Gpdd And Kalman Exploration Continued" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2015-04-09 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/04/09/gpdd-and-kalman-exploration-continued.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Gpdd And Kalman Exploration Continued" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2015-04-09 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/04/09/gpdd-and-kalman-exploration-continued.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2015-04-09 00:00:00 +0000"/>
+<meta name="citation_title" content="Gpdd And Kalman Exploration Continued"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="http://www.carlboettiger.info/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Gpdd And Kalman Exploration Continued</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Load libraries and data as before</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;tidyr&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;knitcitations&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;rgpdd&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;FKF&quot;</span>)</code></pre>
+<h2 id="parallel-version-of-dplyrdo">Parallel version of <code>dplyr::do</code></h2>
+<pre class="sourceCode r"><code class="sourceCode r">do_parallel &lt;-<span class="st"> </span>function(df, f, ...){
+
+  <span class="co"># supports only one group for now</span>
+
+  <span class="kw">require</span>(<span class="st">&quot;parallel&quot;</span>)
+  <span class="kw">require</span>(<span class="st">&quot;lazyeval&quot;</span>)
+  <span class="kw">require</span>(<span class="st">&quot;reshape2&quot;</span>)
+  <span class="kw">options</span>(<span class="dt">mc.cores =</span> <span class="kw">detectCores</span>())
+
+  grps &lt;-<span class="st"> </span><span class="kw">groups</span>(df)
+  ids &lt;-<span class="st"> </span><span class="kw">sapply</span>(grps, function(i) <span class="kw">unique</span>(df[[<span class="kw">as.character</span>(i)]]))
+  <span class="kw">names</span>(ids) &lt;-<span class="st"> </span><span class="kw">as.character</span>(ids)
+  ## turn grouped data.frame to a list of data.frames by MainID
+  list_data &lt;-<span class="st"> </span><span class="kw">lapply</span>(ids, 
+                      function(id){ 
+                        .dots &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">interp</span>(~y ==<span class="st"> </span>x, <span class="dt">.values =</span> <span class="kw">list</span>(<span class="dt">y =</span> grps[[<span class="dv">1</span>]], <span class="dt">x =</span> id)))
+                        <span class="kw">filter_</span>(df, <span class="dt">.dots =</span> .dots)
+                      })
+
+  ## Actually do the fitting in parallel
+  list_out &lt;-<span class="st"> </span><span class="kw">mclapply</span>(list_data, f, ...)
+
+  ## reshape outputs back to a data.frame
+  <span class="kw">melt</span>(list_out, <span class="dt">id=</span><span class="kw">names</span>(list_out[[<span class="dv">1</span>]])) %&gt;%<span class="st"> </span>
+<span class="st">    </span><span class="kw">rename_</span>(<span class="dt">.dots =</span> <span class="kw">setNames</span>(<span class="kw">list</span>(<span class="st">&quot;L1&quot;</span>), <span class="kw">as.character</span>(grps[[<span class="dv">1</span>]])) ) %&gt;%
+<span class="st">              </span><span class="kw">as_data_frame</span>()
+}</code></pre>
+<h2 id="prepare-data">Prepare data</h2>
+<p>Prepare data, as before: we filter on the stated criteria</p>
+<pre class="sourceCode r"><code class="sourceCode r">gpdd_main %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(SamplingProtocol ==<span class="st"> &quot;Count&quot;</span>,
+         SourceDimension %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Count&quot;</span>, <span class="st">&quot;Index&quot;</span>), 
+         SamplingFrequency ==<span class="st"> &quot;1&quot;</span>,
+         DatasetLength &gt;=<span class="st"> </span><span class="dv">15</span>) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(MainID) %&gt;%
+<span class="st">  </span><span class="kw">arrange</span>(MainID) -&gt;
+filtered</code></pre>
+<p>and select data matching this filter. We add a column for the log of the population size and group by data ID:</p>
+<pre class="sourceCode r"><code class="sourceCode r">gpdd_data %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(MainID %in%<span class="st"> </span>filtered$MainID) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(MainID, Population, SampleYear) %&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">logN =</span> <span class="kw">log</span>(Population)) -&gt;
+df</code></pre>
+<p>Lastly, we replace <code>-Inf</code> (introduced from <code>log(0)</code> terms) with smallest finite values observed. (arbitrary, authors do not specify how these values are handled.)</p>
+<pre class="sourceCode r"><code class="sourceCode r">i &lt;-<span class="st"> </span><span class="kw">which</span>(df$logN ==<span class="st"> </span>-<span class="ot">Inf</span>)
+df$logN[i] &lt;-<span class="st"> </span><span class="kw">min</span>(df$logN[-i])-<span class="dv">1</span></code></pre>
+<p>We may test on a subset of the data first:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#not run</span>
+some &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">unique</span>(df$MainID), <span class="dv">10</span>)
+df %&gt;%<span class="st"> </span><span class="kw">filter</span>(MainID %in%<span class="st"> </span>some) -&gt;<span class="st"> </span>df</code></pre>
+<h2 id="import-function-definitions">Import function definitions</h2>
+<p>We import our previous model definitions:</p>
+<pre class="sourceCode r"><code class="sourceCode r">downloader::<span class="kw">download</span>(<span class="st">&quot;https://github.com/ropensci/rgpdd/raw/master/inst/scripts/knape-de-valpine.R&quot;</span>, <span class="st">&quot;knape-de-valpine.R&quot;</span>)
+<span class="kw">source</span>(<span class="st">&quot;knape-de-valpine.R&quot;</span>)
+<span class="kw">unlink</span>(<span class="st">&quot;knape-de-valpine.R&quot;</span>)</code></pre>
+<h2 id="simulating">Simulating</h2>
+<p>FKF package doesn’t bother to define a simulation method, so we can simply define one directly from the state equations. Though a C implementation would be preferrable, fitting will always be much more rate-limiting. (We will also ignore the multi-variate definition for simplicity here).</p>
+<pre class="sourceCode r"><code class="sourceCode r">use &lt;-<span class="st"> </span>function(x, default){
+  if(<span class="kw">is.null</span>(x))
+    default
+  else
+    x
+}
+
+sim_fkf &lt;-<span class="st"> </span>function(fit){
+  n &lt;-<span class="st"> </span>fit[[<span class="st">&quot;n&quot;</span>]]
+  dt &lt;-<span class="st"> </span>fit[[<span class="st">&quot;dt&quot;</span>]]
+  HHt &lt;-<span class="st"> </span>fit[[<span class="st">&quot;HHt&quot;</span>]]
+  Tt &lt;-<span class="st"> </span><span class="kw">use</span>(fit[[<span class="st">&quot;Tt&quot;</span>]], <span class="dv">1</span>)
+  GGt &lt;-<span class="st"> </span><span class="kw">use</span>(fit[[<span class="st">&quot;GGt&quot;</span>]], <span class="dv">0</span>)
+  a0 &lt;-<span class="st"> </span>fit[[<span class="st">&quot;a0&quot;</span>]]
+  ct &lt;-<span class="st"> </span><span class="dv">0</span>
+  Zt &lt;-<span class="st"> </span><span class="dv">1</span>
+  
+  a &lt;-<span class="st"> </span><span class="kw">numeric</span>(n)
+  y &lt;-<span class="st"> </span><span class="kw">numeric</span>(n)
+  eta &lt;-<span class="st"> </span><span class="kw">rnorm</span>(n, dt, <span class="kw">sqrt</span>(HHt))
+  epsilon &lt;-<span class="st"> </span><span class="kw">rnorm</span>(n, ct, <span class="kw">sqrt</span>(GGt))
+  a[<span class="dv">1</span>] &lt;-<span class="st"> </span>a0
+    for(t in <span class="dv">1</span>:(n<span class="dv">-1</span>)){
+      a[t<span class="dv">+1</span>] &lt;-<span class="st"> </span>Tt *<span class="st"> </span>a[t] +<span class="st"> </span>eta[t]
+      y[t] &lt;-<span class="st"> </span>Zt *<span class="st"> </span>a[t] +<span class="st"> </span>epsilon[t]
+    }
+        y[n] &lt;-<span class="st"> </span>Zt *<span class="st"> </span>a[n] +<span class="st"> </span>epsilon[n]
+  y
+}</code></pre>
+<p>The study also creates simulated datasets based on the real data but explicitly making the assumption of either density independence (DI) or density dependence (DD). For each dataset, a density-independent simulated dataset is created by simulating under the SSRW model that was fit. The density-dependent model is created by explicitly fixing the density dependent parameter (<span class="math">\(c\)</span> in the language of the paper, <code>Tt</code> in FKF notation) to 0.8 and estimating the other parameters of this modified SSG model. We can define this model analgously to the others, only this time fixing <code>Tt = 0.8</code>:</p>
+<pre class="sourceCode r"><code class="sourceCode r">fit_dd &lt;-<span class="st"> </span>function(y, 
+                   <span class="dt">init =</span> <span class="kw">c</span>(<span class="dt">dt =</span> <span class="kw">mean</span>(y), <span class="dt">HHt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y)/<span class="dv">2</span>), <span class="dt">GGt =</span> <span class="kw">log</span>(<span class="kw">var</span>(y)/<span class="dv">2</span>)),
+                   ...){
+    
+    o &lt;-<span class="st"> </span><span class="kw">optim</span>(init,
+                 <span class="dt">fn =</span>  function(par, ...)
+                   -<span class="kw">fkf</span>(<span class="dt">dt =</span> <span class="kw">matrix</span>(par[<span class="dv">1</span>]), <span class="dt">HHt =</span> <span class="kw">matrix</span>(<span class="kw">exp</span>(par[<span class="dv">2</span>])), 
+                        <span class="dt">GGt =</span> <span class="kw">matrix</span>(<span class="kw">exp</span>(par[<span class="dv">3</span>])), ...)$logLik,
+                 <span class="dt">Tt =</span> <span class="kw">matrix</span>(<span class="fl">0.8</span>), <span class="dt">a0 =</span> y[<span class="dv">1</span>], <span class="dt">P0 =</span> <span class="kw">matrix</span>(<span class="dv">10</span>), 
+                 <span class="dt">ct =</span> <span class="kw">matrix</span>(<span class="dv">0</span>), <span class="dt">Zt =</span> <span class="kw">matrix</span>(<span class="dv">1</span>), <span class="dt">yt =</span> <span class="kw">rbind</span>(y), 
+                 <span class="dt">check.input =</span> <span class="ot">FALSE</span>, ...)
+  o$par[[<span class="st">&quot;HHt&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">exp</span>(o$par[[<span class="st">&quot;HHt&quot;</span>]])
+  o$par[[<span class="st">&quot;GGt&quot;</span>]] &lt;-<span class="st"> </span><span class="kw">exp</span>(o$par[[<span class="st">&quot;GGt&quot;</span>]])
+  <span class="kw">c</span>(o, <span class="kw">list</span>(<span class="dt">a0 =</span> y[<span class="dv">1</span>], <span class="dt">n =</span> <span class="kw">length</span>(y)))
+   
+}</code></pre>
+<p>The script adds a method for this to <code>robust_fit()</code> as well; though given the computational cost it is not clear if a robust fit is actually used in generating the data.</p>
+<pre class="sourceCode r"><code class="sourceCode r">sim_di &lt;-<span class="st"> </span>function(df) <span class="kw">data.frame</span>(<span class="dt">logN =</span> <span class="kw">sim_fkf</span>(<span class="kw">robust_fit</span>(<span class="st">&quot;ssrw&quot;</span>, df$logN, <span class="dt">N =</span> <span class="dv">3</span>)))
+sim_dd &lt;-<span class="st"> </span>function(df) <span class="kw">data.frame</span>(<span class="dt">logN =</span> <span class="kw">sim_fkf</span>(<span class="kw">robust_fit</span>(<span class="st">&quot;dd&quot;</span>, df$logN, <span class="dt">N =</span> <span class="dv">3</span>)))</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+df %&gt;%<span class="st"> </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span><span class="kw">do_parallel</span>(sim_di) -&gt;<span class="st"> </span>DI
+)</code></pre>
+<pre><code>   user  system elapsed 
+123.079   7.039   8.836 </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+  df %&gt;%<span class="st"> </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span><span class="kw">do_parallel</span>(sim_dd) -&gt;<span class="st"> </span>DD
+)</code></pre>
+<pre><code>   user  system elapsed 
+120.578   5.209   8.023 </code></pre>
+<p>We can then use these two collections of datasets just as before:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+  DD %&gt;%<span class="st"> </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span><span class="kw">do_parallel</span>(kalman, <span class="dt">method =</span> <span class="st">&quot;BFGS&quot;</span>) -&gt;<span class="st"> </span>DD_fits
+)</code></pre>
+<pre><code>    user   system  elapsed 
+9218.572  248.985  324.883 </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+  DI %&gt;%<span class="st"> </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span><span class="kw">do_parallel</span>(kalman, <span class="dt">method =</span> <span class="st">&quot;BFGS&quot;</span>) -&gt;<span class="st"> </span>DI_fits
+)</code></pre>
+<pre><code>    user   system  elapsed 
+8074.330  230.513  280.989 </code></pre>
+<p>and from before:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+df %&gt;%<span class="st"> </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span><span class="kw">do_parallel</span>(kalman, <span class="dt">method =</span> <span class="st">&quot;BFGS&quot;</span>) -&gt;<span class="st"> </span>fits
+)</code></pre>
+<pre><code>    user   system  elapsed 
+7761.519  201.922  256.863 </code></pre>
+<h4 id="figure-2">Figure 2</h4>
+<p>From these simulations and corresponding parameter estimates of the density-dependent parameter, we can create our version of Figure 2:</p>
+<pre class="sourceCode r"><code class="sourceCode r">order &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;real&quot;</span>, <span class="st">&quot;independent&quot;</span>, <span class="st">&quot;dependent&quot;</span>)
+
+combined &lt;-<span class="st"> </span><span class="kw">rbind</span>(
+  DD_fits %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(model %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ssg&quot;</span>, <span class="st">&quot;g&quot;</span>), parameter ==<span class="st"> &quot;Tt&quot;</span>) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(model, value, MainID) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">type =</span> <span class="kw">factor</span>(<span class="st">&quot;dependent&quot;</span>, <span class="dt">levels=</span>order)),
+  
+  DI_fits %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(model %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ssg&quot;</span>, <span class="st">&quot;g&quot;</span>), parameter ==<span class="st"> &quot;Tt&quot;</span>) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(model, value, MainID) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">type =</span> <span class="kw">factor</span>(<span class="st">&quot;independent&quot;</span>, <span class="dt">levels=</span>order)),
+  
+  fits %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(model %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ssg&quot;</span>, <span class="st">&quot;g&quot;</span>), parameter ==<span class="st"> &quot;Tt&quot;</span>) %&gt;%
+<span class="st">  </span><span class="kw">select</span>(model, value, MainID) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">type =</span> <span class="kw">factor</span>(<span class="st">&quot;real&quot;</span>, <span class="dt">levels=</span>order))) %&gt;%
+<span class="st">  </span>
+<span class="st">  </span><span class="kw">ungroup</span>() %&gt;%<span class="st"> </span>
+<span class="st">  </span>
+<span class="st">  </span><span class="kw">transmute</span>(<span class="dt">uncertainty =</span> 
+              plyr::<span class="kw">revalue</span>(model, 
+                            <span class="kw">c</span>(<span class="dt">ssg =</span> <span class="st">&quot;accounting for uncertainty&quot;</span>,
+                              <span class="dt">g =</span> <span class="st">&quot;ignoring uncertainty&quot;</span>)),
+            type, value, MainID)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(combined) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="kw">aes</span>(value), <span class="dt">binwidth=</span><span class="fl">0.2</span>) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_grid</span>(uncertainty ~<span class="st"> </span>type) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="kw">aes</span>(<span class="dt">xintercept =</span> <span class="kw">mean</span>(value)), <span class="dt">lwd=</span>.<span class="dv">5</span>) +
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="kw">aes</span>(<span class="dt">xintercept =</span> <span class="kw">median</span>(value)), <span class="dt">lwd=</span>.<span class="dv">5</span>, <span class="dt">col=</span><span class="st">&quot;grey&quot;</span>) +
+<span class="st">  </span><span class="kw">xlim</span>(<span class="kw">c</span>(-<span class="fl">1.1</span>,<span class="fl">1.1</span>)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;c value&quot;</span>) +
+<span class="st">  </span><span class="kw">theme_bw</span>(<span class="dv">16</span>)</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-04-09-gpdd-and-kalman-exploration-continued/Figure2-1.png" />
+</figure>
+<hr />
+<h2 id="bootstrapping">Bootstrapping</h2>
+<p>With fitting and simulating functions in place, defining the bootstrap is straight forward. We define these separately for the state-space Gompertz (ssg; i.e. the model with both density dependence and observational errors) and the Gompertz (g; density dependence, no observational error). We compare in each case to the simulations of the corresponding model without density dependence.</p>
+<pre class="sourceCode r"><code class="sourceCode r">bootstrap &lt;-<span class="st"> </span>function(df, <span class="dt">null_model =</span> <span class="st">&quot;ssrw&quot;</span>, <span class="dt">test_model =</span> <span class="st">&quot;ssg&quot;</span>, <span class="dt">N=</span><span class="dv">100</span>){
+  y &lt;-<span class="st"> </span>df$logN
+  
+  ssg &lt;-<span class="st"> </span><span class="kw">robust_fit</span>(test_model, y)
+  ssrw &lt;-<span class="st"> </span><span class="kw">robust_fit</span>(null_model, y)
+  sims &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">t</span>(<span class="kw">replicate</span>(N, <span class="kw">sim_fkf</span>(ssrw))))
+  
+  <span class="co"># We use a relaxed version of robust_fit, with N=3</span>
+  sims %&gt;%<span class="st"> </span><span class="kw">rowwise</span>() %&gt;%<span class="st"> </span><span class="kw">do</span>(<span class="kw">robust_fit</span>(null_model, <span class="dt">y =</span> <span class="kw">as.numeric</span>(.), <span class="dt">N =</span> <span class="dv">3</span>)) %&gt;%<span class="st"> </span><span class="kw">select</span>(mloglik) -&gt;<span class="st"> </span>null
+  
+  <span class="co"># compute p value of observed LR statistic relative to null distribution</span>
+  lr &lt;-<span class="st"> </span><span class="dv">2</span> *<span class="st"> </span>(ssrw$mloglik -<span class="st"> </span>ssg$mloglik)
+  null_dist &lt;-<span class="st"> </span><span class="dv">2</span> *<span class="st"> </span>(null$mloglik -<span class="st"> </span>ssg$mloglik) 
+  <span class="kw">data.frame</span>(<span class="dt">p =</span> <span class="kw">sum</span>(null_dist &lt;<span class="st"> </span>lr)/N)
+}</code></pre>
+<p>With these functions defined, we can perform the actual analysis.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+  df %&gt;%<span class="st"> </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span><span class="kw">do_parallel</span>(bootstrap, <span class="st">&quot;ssrw&quot;</span>, <span class="st">&quot;ssg&quot;</span>) -&gt;<span class="st"> </span>ssg_p_values
+  )</code></pre>
+<pre><code>     user    system   elapsed 
+18552.515   509.365   630.503 </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+  df %&gt;%<span class="st"> </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span><span class="kw">do_parallel</span>(bootstrap, <span class="st">&quot;rw&quot;</span>, <span class="st">&quot;g&quot;</span>) -&gt;<span class="st"> </span>g_p_values
+  )</code></pre>
+<pre><code>    user   system  elapsed 
+7958.974  215.100  259.174 </code></pre>
+<p>We can also do the bootstrapping for the simulated data:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+ DD %&gt;%<span class="st"> </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span><span class="kw">do_parallel</span>(bootstrap, <span class="st">&quot;ssrw&quot;</span>, <span class="st">&quot;ssg&quot;</span>) -&gt;<span class="st"> </span>dd_ssg_p_values
+)</code></pre>
+<pre><code>     user    system   elapsed 
+20739.616   533.335   704.335 </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+ DD %&gt;%<span class="st"> </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span><span class="kw">do_parallel</span>(bootstrap, <span class="st">&quot;rw&quot;</span>, <span class="st">&quot;g&quot;</span>) -&gt;<span class="st"> </span>dd_g_p_values
+)</code></pre>
+<pre><code>    user   system  elapsed 
+9970.254  285.473  332.748 </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+ DI %&gt;%<span class="st"> </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span><span class="kw">do_parallel</span>(bootstrap, <span class="st">&quot;ssrw&quot;</span>, <span class="st">&quot;ssg&quot;</span>) -&gt;<span class="st"> </span>di_ssg_p_values
+)</code></pre>
+<pre><code>     user    system   elapsed 
+18631.331   479.485   622.542 </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+  DI %&gt;%<span class="st"> </span><span class="kw">group_by</span>(MainID) %&gt;%<span class="st"> </span><span class="kw">do_parallel</span>(bootstrap, <span class="st">&quot;rw&quot;</span>, <span class="st">&quot;g&quot;</span>) -&gt;<span class="st"> </span>di_g_p_values
+)</code></pre>
+<pre><code>    user   system  elapsed 
+8021.423  227.704  264.113 </code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">P &lt;-<span class="st"> </span><span class="kw">rbind</span>(
+  ssg_p_values %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">data =</span> <span class="st">&quot;real&quot;</span>, <span class="dt">model =</span> <span class="st">&quot;ssg&quot;</span>),
+  g_p_values %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">data =</span> <span class="st">&quot;real&quot;</span>, <span class="dt">model =</span> <span class="st">&quot;g&quot;</span>),
+  di_ssg_p_values %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">data =</span> <span class="st">&quot;DI&quot;</span>, <span class="dt">model =</span> <span class="st">&quot;ssg&quot;</span>),
+  di_g_p_values %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">data =</span> <span class="st">&quot;DI&quot;</span>, <span class="dt">model =</span> <span class="st">&quot;g&quot;</span>),
+  dd_g_p_values %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">data =</span> <span class="st">&quot;DD&quot;</span>, <span class="dt">model =</span> <span class="st">&quot;g&quot;</span>),
+  dd_ssg_p_values %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">data =</span> <span class="st">&quot;DD&quot;</span>, <span class="dt">model =</span> <span class="st">&quot;ssg&quot;</span>))
+
+
+<span class="kw">ggplot</span>(P) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="kw">aes</span>(p)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_grid</span>(model ~<span class="st"> </span>data) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">theme_bw</span>(<span class="dv">16</span>)</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-04-09-gpdd-and-kalman-exploration-continued/Figure3-1.png" />
+</figure>
+<hr />
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      
+<aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2015-04-09 00:00:00 +0000" 
+    property="dc:created">09 Apr 2015</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2015/04/06/gpdd-explore.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2015/04/10/data-science-regional-hubs.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2015/commits/master/_posts/_posts/2015-04-09-gpdd-and-kalman-exploration-continued.Rmd"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2015/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#gpdd">#gpdd</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2015/commit/79147f001a709a2eaad1a537fc5a65ccda98f882/_posts/_posts/2015-04-09-gpdd-and-kalman-exploration-continued.Rmd"> 79147f001a709a2eaad1a537fc5a65ccda98f882</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Gpdd And Kalman Exploration Continued
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2015-04-09
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/04/09/gpdd-and-kalman-exploration-continued.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

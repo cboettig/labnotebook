@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Extending ape::phylo class to NeXML:</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="R, code-tricks, rnexml, ropensci" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Extending ape::phylo class to NeXML:" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2013-10-07 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/10/07/nexml-phylo-class-extension.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Extending ape::phylo class to NeXML:" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2013-10-07 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/10/07/nexml-phylo-class-extension.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2013-10-07 00:00:00 +0000"/>
+<meta name="citation_title" content="Extending ape::phylo class to NeXML:"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Extending ape::phylo class to NeXML:</h1>
+        <h2>Promoting an S3 class into S4 while maintaining existing methods</h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>While working on the <a href="https://github.com/ropensci/RNeXML">RNeXML</a> package, I have recently I have been puzzling over extending S3 objects to share some of the nice properties of S4 objects and methods while continuing to function with the potentially huge library of functions written to work with them. <a href="http://stackoverflow.com/questions/17976217/make-s4-object-act-as-an-s3-class">SO:</a></p>
+<p>To illustrate this issue, consider the S3 class <code>phylo</code> provided by the <code>ape</code> package and used by most of the 30+ packages that reverse depend or reverse import <code>ape</code>. Despite this popularity, the S3 class has quite a few shortcomings (including inconsistent definition in ordering of it’s components, see the phylobase paper). To address these concerns, a hackathon consisting of many of the leading developers in this field created the <code>phylobase</code> package with <code>S4</code> definitions of <code>phylo</code> objects that extend the class to handle additional types of data and address various other concerns that have arisen. Unfortunately, as far as I can tell, adoption of the new format has been lacking. In my mind, the greatest limitation of the new format is the lack of compatibility with existing methods build on the S3 type.</p>
+<p>I never understood why phylobase did not do this. To illustrate the problem, let us load an S3 <code>phylo</code> object and then coerce it into the <code>phylobase</code> S4 type:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(phylobase)
+<span class="kw">library</span>(ape)
+<span class="kw">data</span>(bird.orders)
+bird.orders4 &lt;-<span class="st"> </span><span class="kw">as</span>(bird.orders, <span class="st">&quot;phylo4&quot;</span>) <span class="co"># make ape::phylo tree into phylobase::phylo4 S4 class</span></code></pre>
+<p>The S4 class has explicitly defined it’s own plotting method, so:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(bird.orders4) </code></pre>
+<figure>
+<img src="http://farm8.staticflickr.com/7460/10145618405_f4b1a81df8_o.png" />
+</figure>
+<p>However, the original S3 plotting method fails:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot.phylo</span>(bird.orders4) </code></pre>
+<pre><code>Error: $ operator not defined for this S4 class</code></pre>
+<p>More interesting functions, many of which may not have even existed when <code>phylobase</code> was written, operate only on the S3 class:</p>
+<pre class="sourceCode r"><code class="sourceCode r"> S &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">47</span>, <span class="dv">69</span>, <span class="dv">214</span>, <span class="dv">161</span>, <span class="dv">17</span>, <span class="dv">355</span>, <span class="dv">51</span>, <span class="dv">56</span>, <span class="dv">10</span>, <span class="dv">39</span>, <span class="dv">152</span>,
+             <span class="dv">6</span>, <span class="dv">143</span>, <span class="dv">358</span>, <span class="dv">103</span>, <span class="dv">319</span>, <span class="dv">23</span>, <span class="dv">291</span>, <span class="dv">313</span>, <span class="dv">196</span>, <span class="dv">1027</span>, <span class="dv">5712</span>)
+<span class="kw">bd.ext</span>(bird.orders4, S)   <span class="co"># Fails </span></code></pre>
+<pre><code>Error: object &quot;phy&quot; is not of class &quot;phylo&quot;</code></pre>
+<p>While we can work around this with explicit coercion, this requirement is rather crude and breaks existing code users may already rely upon:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bd.ext</span>(<span class="kw">as</span>(bird.orders4, <span class="st">&quot;phylo&quot;</span>), S)   <span class="co"># Works only after coercion </span></code></pre>
+<pre><code>
+Extended Version of the Birth-Death Models to
+    Estimate Speciation and Extinction Rates
+
+    Data: phylogenetic: as(bird.orders4, &quot;phylo&quot;) 
+             taxonomic: S 
+        Number of tips: 23 
+              Deviance: 290.2 
+        Log-likelihood: -145.1 
+   Parameter estimates:
+      d / b = 2.315e-08   StdErr = 0.1542 
+      b - d = 0.2765   StdErr = 0.009578 
+   (b: speciation rate, d: extinction rate)</code></pre>
+<p>It appears this problem can be solved using <code>setOldClass</code>. I’ve defined an the class <code>phyloS4</code> which inherits all methods for the S3 <code>phylo</code> class without having to explicitly declare those methods. In this way, we have the benefits of an S4 class while maintaining compatibility with all developers who only write functions based on the S3 class. (as long as functions don’t stupidly check the string identity <code>class(obj) == &quot;phylo&quot;</code>, instead of using the proper class check <code>is(obj, &quot;phylo&quot;)</code> – looking at you <code>ape::skyline</code> and friends….)</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setClass</span>(<span class="st">&quot;phyloS4&quot;</span>, 
+         <span class="kw">representation</span>(<span class="dt">edge =</span> <span class="st">&quot;matrix&quot;</span>,
+                        <span class="dt">Nnode =</span> <span class="st">&quot;integer&quot;</span>,
+                        <span class="dt">tip.label =</span> <span class="st">&quot;character&quot;</span>,
+                        <span class="dt">edge.length =</span> <span class="st">&quot;numeric&quot;</span>))
+<span class="kw">setOldClass</span>(<span class="st">&quot;phylo&quot;</span>, <span class="dt">S4Class=</span><span class="st">&quot;phyloS4&quot;</span>)
+<span class="kw">selectMethod</span>(<span class="st">&quot;show&quot;</span>, <span class="st">&quot;phylo&quot;</span>)
+<span class="kw">removeClass</span>(<span class="st">&quot;phyloS4&quot;</span>)</code></pre>
+<p><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<p>Now consider using our S4 version, rather than the phylobase S4 version:</p>
+<pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">new</span>(<span class="st">&quot;phylo&quot;</span>, bird.orders)
+<span class="kw">is</span>(a, <span class="st">&quot;phylo&quot;</span>)</code></pre>
+<pre><code>[1] TRUE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bd.ext</span>(a, S)   </code></pre>
+<pre><code>
+Extended Version of the Birth-Death Models to
+    Estimate Speciation and Extinction Rates
+
+    Data: phylogenetic: a 
+             taxonomic: S 
+        Number of tips: 23 
+              Deviance: 290.2 
+        Log-likelihood: -145.1 
+   Parameter estimates:
+      d / b = 2.315e-08   StdErr = 0.1542 
+      b - d = 0.2765   StdErr = 0.009578 
+   (b: speciation rate, d: extinction rate)</code></pre>
+<p>Class, <code>show</code>, and <code>plot</code>, and additional (<code>bd.ext</code>) methods from the S3 class just work. Now we want to extend the class to contain additional metadata (in my case, the <code>nexml</code> information):</p>
+<p>I can then build a new class, <code>nexmlTree</code> by extending this class. Again my new class acts like an S3 <code>phylo</code> in any such functions, but adds a representation containing all the nexml data. This approach doesn’t minimize memory footprint, but usually that is not a concern for R users (otherwise coercion is always an option).</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(RNeXML)
+<span class="kw">setClass</span>(<span class="st">&quot;nexmlTree&quot;</span>, <span class="kw">representation</span>(<span class="dt">nexml =</span> <span class="st">&quot;nexml&quot;</span>), <span class="dt">contains=</span><span class="st">&quot;phylo&quot;</span>)
+<span class="kw">setMethod</span>(<span class="st">&quot;show&quot;</span>, <span class="st">&quot;nexmlTree&quot;</span>, function(object) <span class="kw">print.phylo</span>(object))</code></pre>
+<pre><code>[1] &quot;show&quot;</code></pre>
+<p>Again, we check a few methods:</p>
+<pre class="sourceCode r"><code class="sourceCode r"> b &lt;-<span class="st"> </span><span class="kw">new</span>(<span class="st">&quot;nexmlTree&quot;</span>, bird.orders, <span class="dt">nexml =</span> <span class="kw">as</span>(bird.orders, <span class="st">&quot;nexml&quot;</span>))
+<span class="kw">is</span>(b, <span class="st">&quot;phylo&quot;</span>)</code></pre>
+<pre><code>[1] TRUE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bd.ext</span>(b, S)   </code></pre>
+<pre><code>
+Extended Version of the Birth-Death Models to
+    Estimate Speciation and Extinction Rates
+
+    Data: phylogenetic: b 
+             taxonomic: S 
+        Number of tips: 23 
+              Deviance: 290.2 
+        Log-likelihood: -145.1 
+   Parameter estimates:
+      d / b = 2.315e-08   StdErr = 0.1542 
+      b - d = 0.2765   StdErr = 0.009578 
+   (b: speciation rate, d: extinction rate)</code></pre>
+<p>This provides the additional metadata while leaving us with an object that works with all existing functions.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>I’m not quite sure why this required the <code>show</code> method to be defined such that we wouldn’t get the S4 show method instead. As a default show method seems to be the only method automatically defined for the new class, I gather it is the only one we have to overwrite in preference for the <code>print.phylo()</code> method.<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2013-10-07 00:00:00 +0000" 
+    property="dc:created">07 Oct 2013</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/09/30/regime-vs-state.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/10/08/notes.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2013-10-07-nexml-phylo-class-extension.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#evolution">evolution</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#R">#R</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#code-tricks">#code-tricks</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#rnexml">#rnexml</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#ropensci">#ropensci</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/5ad8392fdb70ab6fa9c01bfdd832fb85965c17df/_posts/2013-10-07-nexml-phylo-class-extension.md"> 5ad8392fdb70ab6fa9c01bfdd832fb85965c17df</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Extending ape::phylo class to NeXML:
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2013-10-07
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/10/07/nexml-phylo-class-extension.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

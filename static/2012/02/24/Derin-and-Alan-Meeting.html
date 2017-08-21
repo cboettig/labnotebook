@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Derin And Alan Meeting</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="warning-signals" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Derin And Alan Meeting" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2010-02-24 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/02/24/Derin-and-Alan-Meeting.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Derin And Alan Meeting" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2010-02-24 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/02/24/Derin-and-Alan-Meeting.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2010-02-24 00:00:00 +0000"/>
+<meta name="citation_title" content="Derin And Alan Meeting"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Derin And Alan Meeting</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>1-2pm</p>
+<ul>
+<li>Discussion of reasons early warning signals fail</li>
+</ul>
+<ol type="1">
+<li>Insufficient signal-to-noise ratio for early warning</li>
+<li>Ensemble vs time average – satisfying ergodicity assumption?</li>
+<li>Role of bifurcation type. existing literature focuses mostly on 1D saddle node.</li>
+<li>Role of chaos (certainly frustrates warning signals, but not required).</li>
+</ol>
+<ul>
+<li>How general are warning signals? Normal forms of bifurcations. Fitting a good model vs. general warning signals. Problem of extrapolation.</li>
+<li>Classification scheme of warning signals – TREE paper(?)</li>
+<li>Mean First passage time from potential</li>
+</ul>
+<h2 id="analytic-calculations-continued">Analytic calculations continued</h2>
+<h3 id="expected-variance-across-ensembles">Expected Variance across Ensembles</h3>
+<p>The expected variance across ensembles can be calculated from the Fokker-Planck Equation derived from the linear noise approximation. This should agree with the variance computed over a time window when the system has reached stationarity. I do these calculations and compare:</p>
+<p>Equilibrium population size solves</p>
+<p><span class="math">\[ e n - a = \frac{e K n^2}{n^2+h^2}\]</span></p>
+<p>Equilibrium variance should be given by</p>
+<p><span class="math">\[ \hat \sigma^2 = \frac{d(\hat n)}{b&#39;(\hat n)-d&#39;(\hat n)} =
+\frac{e \hat n - a}{ 2 e K \hat n (1 - \frac{\hat n}{\hat n^2 +
+h^2}) - e} \]</span></p>
+<h3 id="time-averaging-from-simulation-doesnt-match-analytic-prediction">Time averaging from simulation doesn’t match analytic prediction!</h3>
+<p>The analytic solution to <span class="math">\(\hat n\)</span> is the general solution to a cubic so not very pretty, but easy to calculate numerically in order to give the variance estimate; using the values below I confirm that ODE solver and analytic solution above agree $ ^2 = 1352$, which is <em>only about half that computed over the time window (approx 2360)!</em> Parameter values and solutions from analytics are:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">e</td>
+<td style="text-align: left;">0.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">K</td>
+<td style="text-align: left;">1000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">h</td>
+<td style="text-align: left;">200</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">a</td>
+<td style="text-align: left;">160</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">n</td>
+<td style="text-align: left;">570.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math">\(\hat \sigma^2\)</span></td>
+<td style="text-align: left;">1352</td>
+</tr>
+</tbody>
+</table>
+<h3 id="test-of-higher-order-corrections">Test of higher order corrections</h3>
+<p>I try the higher order correction to the mean dynamics (accounts for inflation effect of the variance):</p>
+<p> E(n) = <em>1(n) +  ^2 </em>1’’(n)</p>
+<p>Though not surprisingly, the effect is negligible. In this case the average is slightly higher (572.5) and variance slightly lower (1349), so the curvature at equilibrium must be positive (in contrast to the deflation example with logistic or Levins model). Perhaps this is a consequence of the ergodicity assumption failing; I’ll check against simply computing ensemble variance rather than the (mean-over-ensembles) time-averaged variance.</p>
+<h3 id="ensemble-averaging-simulation-does-match-theory-though-time-averaging-doesnt">Ensemble averaging simulation does match theory, though time averaging doesn’t</h3>
+<ul>
+<li>Okay, variance computed over ensembles only matches the theory (averaging over all time over an ensemble of 1000 I’m getting 1362 ensemble variance, while the time averaged (over a sampletime of 100, sample interval of .1, and max time 500) variance averaged over ensembles comes out a steady 2339. So much for ergodicity? <strong>Note:</strong> these conditions should match the code found in subversion revision 25.</li>
+</ul>
+<h2 id="reflections-on-warning-signals-literature">Reflections on Warning Signals literature</h2>
+<ul>
+<li><p>Created a separate <a href="http://www.mendeley.com/collections/1374711/EarlyWarningSigns/" title="http://www.mendeley.com/collections/1374711/EarlyWarningSigns/">Mendeley collection</a> for literature on Early Warning Signals, still very underpopulated. Note that my Mendeley library wasn’t available online for a couple days due to some stupid syncing mistakes I made, but the Mendeley support team was fantastic in getting things back in working order (Let’s just say I may be responsible for the release of 0.9.6.1). Note that one can subscribe to this collection as an <a href="http://www.mendeley.com/collections/rss/1374711/" title="http://www.mendeley.com/collections/rss/1374711/">rss feed</a>.</p></li>
+<li><p>I’m bothered to see the phrase “tipping point” used synonymously with bifurcation – they invoke very different ideas. A tipping point such as the maximum angle you can push a canoe before it flips is not a bifurcation, it is a perturbation to the state directly large enough to push it over the seperatrix, and directly related to the first passage time problem in the stochastic models. The bifurcations under consideration are changes in a parameter, not the state of interest, which destroys a stable point. Phase transitions are examples, though often lacking hysteresis.</p></li>
+<li><p>Another annoying quality is the lack of distinguishing bifurcation from rare event. If alternate stable states are present, what is the probability we would simply jump into them by chance?</p></li>
+<li><p>Detrending before fitting AR(1) model to data is also unjustified. Trends influence variance as well!</p></li>
+<li><p>Taking a sliding window size equal to half the size of the available time series is arbitrary and unjustified, as it is neither the most promising way to detect the trend nor should the window size choice depend on such things as knowing the time the crash occurs.</p></li>
+</ul>
+<h3 id="current-library">Current Library</h3>
+<p>(Also a chance to test Mendeley library embedding)</p>
+<hr />
+<p><a href="http://www.mendeley.com">Research</a> collected using Mendeley</p>
+<h2 id="subversion-log">Subversion Log</h2>
+<p>r25 | cboettig | 2010-02-25 00:12:09 -0800 (Thu, 25 Feb 2010) | 1 line</p>
+<p>made samplefreq into a double instead of size_t, still co-opting the autocorrelations, seems to show successfully a different ensemble vs time-averaged variance</p>
+<hr />
+<p>r24 | cboettig | 2010-02-24 23:46:07 -0800 (Wed, 24 Feb 2010) | 2 lines</p>
+<p>co-opted the autoregressive data for the moment to explore direct ensemble mean and variance (without any time-averaging)</p>
+<hr />
+<p>r23 | cboettig | 2010-02-24 21:53:12 -0800 (Wed, 24 Feb 2010) | 2 lines</p>
+<p>ode integrator seems to accurately compute mean and variance dynamics, though the time-averaged variance doesn’t seem to agree with the analytic ensemble variance; will have to compute that directly from simulation to compare. Runge-Kutta solver on adaptive mesh seems significantly slower than my simple Euler scheme; particularly with the (nearly irrelevant) higher order correction to the mean dynamics.</p>
+<hr />
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2010-02-24 00:00:00 +0000" 
+    property="dc:created">24 Feb 2010</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/02/23/Comparing-to-Analytic-Dynamics.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/02/25/The-Ergodicity-Question--Time-averaging-vs-Ensemble-averaging.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2010-02-24-Derin-and-Alan-Meeting.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#warning-signals">#warning-signals</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/ad82edc44a8cdd05a2983cbf8fc3bc1a7226732b/_posts/2010-02-24-Derin-and-Alan-Meeting.md"> ad82edc44a8cdd05a2983cbf8fc3bc1a7226732b</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Derin And Alan Meeting
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2010-02-24
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/02/24/Derin-and-Alan-Meeting.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

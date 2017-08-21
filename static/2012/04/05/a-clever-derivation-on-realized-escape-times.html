@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>A Clever Derivation On Realized Escape Times</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="derivation, prosecutor, warning-signals, adaptive-dynamics" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="A Clever Derivation On Realized Escape Times" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2013-04-05 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/04/05/a-clever-derivation-on-realized-escape-times.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="A Clever Derivation On Realized Escape Times" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2013-04-05 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/04/05/a-clever-derivation-on-realized-escape-times.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2013-04-05 00:00:00 +0000"/>
+<meta name="citation_title" content="A Clever Derivation On Realized Escape Times"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">A Clever Derivation On Realized Escape Times</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>I have often observed (e.g. <span class="showtooltip" title="Boettiger C and Hastings A (2012). Early Warning Signals And The
+Prosecutor&#39;S Fallacy. _Proceedings of The Royal Society B:
+Biological Sciences_, *279*, pp. 4734-4739. ISSN 0962-8452, 
+http://dx.doi.org/10.1098/rspb.2012.2085."><a href="http://dx.doi.org/10.1098/rspb.2012.2085" rel="http://purl.org/spar/cito/citesAsEvidence" >Boettiger &amp; Hastings (2012)</a></span> ) that if purely stochastic transitions out of a potential well happen, then they happen fast (dispite the fact that waiting time for them to happen is very long). Yesterday Marc mentioned an interesting proof of this from Don Ludwig, who was able to show that the waiting time to reach a large deviation in a time <span class="math">\(t\)</span>, given that it reaches it at all, is of the same order as the return time from the large deviation to the equilibrium, <span class="math">\(\log(L/\sigma)\)</span>. That’s an absolutely fascinating conclusion, indeed a bit stronger than even I had expected (the waiting time until an escape is observed rather different! – of order <span class="math">\(\exp(L^2/\sigma^2)\)</span>.</p>
+<p>Don’s derivation is repeated in pages 302-311 Marc’s “Theoretical Biologist’s Toolbox,” rather delightfully too (e.g. the “Kumura Maneuver”, or sidenotes such as “it is also kind of fun to do a web search with key words ‘Dawson’s Integral’”). <span class="showtooltip" title="Lande R (1985). Expected time for random genetic drift of a
+population between stable phenotypic states. 
+http://www.pnas.org/content/82/22/7641.abstract [Online.
+last-accessed: 2013-04-08 19:58:49]. 
+http://www.pnas.org/content/82/22/7641.abstract."><a href="http://www.pnas.org/content/82/22/7641.abstract" rel="http://purl.org/spar/cito/citesForInformation" >Lande (1985)</a></span> provides a somewhat different derivation of the same result.</p>
+<h2 id="return-time">Return time</h2>
+<p>The return time calculation is straight forward. Consider our OU model</p>
+<p><span class="math">\[dX = - X dt + \sigma dB_t\]</span></p>
+<p>We ask for the return time into a neighborhood <span class="math">\(\sigma\)</span> of the origin, starting at <span class="math">\(X_0 = L\)</span> distant from the origin. The deterministic solution</p>
+<p><span class="math">\[ \tfrac{dx}{dt} = - x \]</span></p>
+<p>implies <span class="math">\(x_t = L (1 - e^{-t}) \)</span>, so setting <span class="math">\(x_t = \sigma_t\)</span> and solving for <span class="math">\(t\)</span>, we find that <span class="math">\(x_t\)</span> is within <span class="math">\(\sigma\)</span> of <span class="math">\(t\)</span> in time <span class="math">\(\log{L} - \log{\sigma}\)</span>, or <span class="math">\(\log{L/\sigma}\)</span>, as claimed.</p>
+<h2 id="waiting-time">Waiting time</h2>
+<p>The time we must wait before any trajectory can reach a given boundary is a classic hitting-time problem for the OU process that can be solved in several ways. Any of these basically start from PDE that must be satisfied for the hitting time (e.g. see Crispin Gardner, Stochastic Methods) for the OU process at stationary state (<span class="math">\(T_t = 0\)</span>),</p>
+<p><span class="math">\[ \tfrac{\sigma^2}{2} T_{xx} - x T_x = -1 \]</span></p>
+<p>With the appropriate boundary conditions <span class="math">\(T(L) = T(-L) = 0\)</span>. A little integration (see Dynkin’s formula) shows this scales as <span class="math">\(\exp(L^2/\sigma^2)\)</span> (Compare to the Brownian walk that doesn’t have to escape any pull, which escapes at rate <span class="math">\(L^2/\sigma^2\)</span>.</p>
+<h2 id="exit-time">Exit time</h2>
+<p>Most trajectories will thus return many times to the origin (stable point) before finally escaping. But if we focus just on the part of the trajectory from some value near the origin, that eventually escapes without ever crossing the origin again,</p>
+<p><span class="math">\[u_t(x,t) dt = Pr\left(\textrm{exit from }(0; L]\textrm{in the interval } (t, t + dt) \textrm{without having crossed} 0 | X(0) = x\right)\]</span></p>
+<p>We are interested in comparing the average time taken by trajectories exiting by time <span class="math">\(t\)</span> relative to the probability of exiting at all (i.e. as <span class="math">\(t \to \infty\)</span>),</p>
+<p><span class="math">\[ T_c(x) = \frac{\int^{\infty}_0 t u_t(x,t) dt }{\lim_{t \to \infty} u(x,t) }\]</span></p>
+<p>From here we set up the classic hitting time solution for the OU for the <em>time-dependent</em> PDE,</p>
+<p><span class="math">\[u_t = \frac{\sigma^2}{2} u_{xx} = x u_x \]</span></p>
+<p>and with initial condition <span class="math">\(u(x,t=0) = 0\)</span>, <span class="math">\(u(0,t) = 0\)</span>, and <span class="math">\(u(L, t) = 1\)</span>. A bit of effort and an approximation to Dawson’s integral for <span class="math">\(L \gg x\)</span> leads Don to bound the mean time to exit,</p>
+<p><span class="math">\[T_c(x) &lt; \frac{1}{\sigma} \log\left(\frac{L}{\sigma}\right)\]</span></p>
+<p>as claimed.</p>
+<h2 id="results-from-marcs-other-suggestion">Results from Marc’s other suggestion</h2>
+<p>Marc also suggested exploring this by directly comparing steps left and right. A related way to measure the relative number of steps in the positive direction relative to the negative direction is Kendall’s tau rank correlation coefficient, which also looks at the number of increases relative to the number of decreases.</p>
+<p>I’ve computed this statistic for my sample trajectories and plotted as a histogram here. The negative skew shows the tendancy to decrease (which is the direction of the deviation I selected – smaller population sizes)</p>
+<figure>
+<img src="http://farm9.staticflickr.com/8263/8621413072_3597b335fe_o.png" />
+</figure>
+<p>I’ve also computed the ratio of steps up to steps down and histogrammed that: like the above, it shows more steps down than up, though not as dramatic as I might think by any means. Have to think about the role of the step size between observations in formulating this perhaps.</p>
+<figure>
+<img src="http://farm9.staticflickr.com/8113/8621413020_5d779e8b1f_o.png" />
+</figure>
+<p>For the sake of completeness:</p>
+<ul>
+<li><a href="https://github.com/cboettig/earlywarning/blob/8418a20cabf24786b54acc51eb508e9dbf3d1b37/inst/examples/trajectories.csv">data for the trajectories is here</a></li>
+<li><a href="https://github.com/cboettig/earlywarning/blob/8418a20cabf24786b54acc51eb508e9dbf3d1b37/inst/examples/beer.md">code for the analysis is here</a></li>
+</ul>
+<p>I may try and add a demonstration of Ludwig’s result above when I get some more free time to fiddle; will just need to add some additional simulations of return trajectories.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>C. Boettiger, A. Hastings, (2012) Early Warning Signals And The Prosecutor’S Fallacy. <em>Proceedings of The Royal Society B: Biological Sciences</em> <strong>279</strong> 4734-4739 <a href="http://dx.doi.org/10.1098/rspb.2012.2085">10.1098/rspb.2012.2085</a></li>
+<li>R Lande, (1985) Expected time for random genetic drift of a population between stable phenotypic states. <em>Proceedings of the National Academy of Sciences</em> <a href="http://www.pnas.org/content/82/22/7641.abstract">http://www.pnas.org/content/82/22/7641.abstract</a></li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2013-04-05 00:00:00 +0000" 
+    property="dc:created">05 Apr 2013</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/04/04/notebook-parsing.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/04/10/fun-and-not-so-fun-with-bibliographic-APIs.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2013-04-05-a-clever-derivation-on-realized-escape-times.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#derivation">#derivation</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#prosecutor">#prosecutor</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#warning-signals">#warning-signals</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#adaptive-dynamics">#adaptive-dynamics</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/1d2caa15a7c2fe3fe1402f064f5fceb4f99452d5/_posts/2013-04-05-a-clever-derivation-on-realized-escape-times.md"> 1d2caa15a7c2fe3fe1402f064f5fceb4f99452d5</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=A Clever Derivation On Realized Escape Times
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2013-04-05
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/04/05/a-clever-derivation-on-realized-escape-times.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

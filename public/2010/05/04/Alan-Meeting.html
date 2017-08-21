@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Alan Meeting</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="warning-signals, tribolium" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Alan Meeting" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2010-05-04 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/05/04/Alan-Meeting.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Alan Meeting" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2010-05-04 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/05/04/Alan-Meeting.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2010-05-04 00:00:00 +0000"/>
+<meta name="citation_title" content="Alan Meeting"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Alan Meeting</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <ul>
+<li>Goals next week: Bob &amp; Brian beetle data: what an analysis would be with complete stochastic description.</li>
+<li>Compare models with different</li>
+</ul>
+<p>Full model: Parameter list from current code:</p>
+<pre class="de1"><code> /* Biological Parameters.  eggs and pupa can get canibalized */
+    double b = 5;                                                   /* Birth rate (per day) */
+    double u_egg = 0, u_larva = 0.001, u_pupa = 0, u_adult = 0.003; /* Mortality rate (per day) */
+    double a_egg = 3.8, a_larva = 3.8+16.4, a_pupa = 3.8+16.4+5.0;    /* age at which each stage matures, in days */
+    double cannibal_larva_eggs = 0.01, cannibal_adults_pupa = 0.004, cannibal_adults_eggs = 0.01; /* cannibalism of x on y, per day */
+    double a_larva_asym = 3.8+8.0;                                  /* age after which larval size asymptotes */</code></pre>
+<ul>
+<li>Add <strong>individual heterogeneity</strong> in egg and larva maturation age and in cannibalism of larva on eggs.</li>
+</ul>
+<h3 id="outline-manuscript-draft">Outline / manuscript draft</h3>
+<ul>
+<li><a href="http://docs.google.com/Doc?docid=0AR6sK_1tc7DZZGdmYnQyZzVfOTI5ams5NnRjMw&amp;hl=en" title="http://docs.google.com/Doc?docid=0AR6sK_1tc7DZZGdmYnQyZzVfOTI5ams5NnRjMw&amp;hl=en">Working copy</a></li>
+</ul>
+<hr />
+<h3 id="likelihood-inference-for-time-series">Likelihood inference for time series</h3>
+<ul>
+<li>All based on step-ahead predictions, from Markov property. Compare to deterministic skeleton’s minimization of sum of squares on step-ahead predictions (i.e. assumes normal deviates).</li>
+</ul>
+<p><br /> See the monographs:</p>
+<ul>
+<li>Iacus, S. M. (2008). Simulation and Inference for Stochastic Differential Equations With R Examples. New York: Springer.</li>
+<li>Prakasa Rao, B.L.S. (1999) Statistical Inferences for Diffusion Type Processes, Oxford University Press, New York.</li>
+</ul>
+<p>Exploring existing implementations of likelihood methods on SDEs through the R sde package accompanying the Iacus text.</p>
+<ul>
+<li>Many nice methods for SDEs, general case is harder.</li>
+</ul>
+<h4 id="conditions">Conditions</h4>
+<ul>
+<li><em>Large sample scheme</em> Time interval gets longer with <em>n</em>, while Δ is fixed time-step. Requires the additional assumptions of stationarity and/or ergodicity</li>
+<li><em>High-frequency scheme</em>: Δ shrinks as n increases, fixed window, need not assume ergodic.</li>
+<li><em>Rapidly increasing design</em>: hybrid combination with prescribed rate of mesh increase <em>k</em></li>
+</ul>
+<h4 id="underlying-model">Underlying model</h4>
+<p><em>d<strong>X<em><sub><em>t</em></sub> = </em>b<em>(</em>X<em><sub><em>t</em></sub>,θ)</em>d</strong>t</em> + σ(<em>X</em><sub><em>t</em></sub>,θ)*d**W*<sub><em>t</em></sub></p>
+<h4 id="exact-likelihood-conditions">Exact Likelihood conditions</h4>
+<ul>
+<li>Linear growth assumption:</li>
+</ul>
+<figure>
+<img src="http://openwetware.org/images/math/f/0/f/f0fa18eefeb2fe80bd3f95ed6c6074a4.png" alt="\exists \quad K \quad :: \quad \forall \quad x" /><figcaption>\exists \quad K \quad :: \quad \forall \quad x</figcaption>
+</figure>
+<figure>
+<img src="http://openwetware.org/images/math/2/2/8/228467066aa1ebca79a987e2b36fecb4.png" alt="|b(x,\theta)| + |\sigma(x,\theta)| \leq K(1+|x|)" /><figcaption>|b(x,\theta)| + |\sigma(x,\theta)| \leq K(1+|x|)</figcaption>
+</figure>
+<ul>
+<li>Global Lipshitz assumption:</li>
+</ul>
+<p><em>b</em>(<em>x</em>,θ) − <em>b</em>(<em>y</em>,θ) | + σ(<em>x</em>,θ) − σ(<em>y</em>,θ) &lt; <em>K</em> | <em>x</em> − <em>y</em> |</p>
+<ul>
+<li><p>Positive diffusion coefficient</p></li>
+<li><p>Bounded moments</p></li>
+<li><p>Smooth coefficients (will use up to 3 times differentiable)</p></li>
+</ul>
+<p>Convergence of diffusion part estimator usually <img src="http://openwetware.org/images/math/3/3/f/33f89d8758a725273b6b80612bb65276.png" alt="\sqrt n" />, with <img src="http://openwetware.org/images/math/4/3/2/432462b0b23ad64c9a1b29f761adb36f.png" alt="n \Delta_n^3 \to 0" /></p>
+<h4 id="numerical-methods">Numerical methods</h4>
+<ul>
+<li>Exact likelihood inference (conditional density of process must be known)</li>
+<li>Euler approximation: discretization can assume linearity over small Δt</li>
+<li>Elerian method (Milstein scheme)</li>
+<li>Kessler (higher order Ito/Taylor expansion)</li>
+<li>Simulated likelihood (approximate cdf with subdivisions in timestep over which Euler is accurate).</li>
+<li>Hermite polynomial expansion of likelihood.</li>
+</ul>
+<p><br /> #### Steps</p>
+<ol type="1">
+<li>Evaluate the conditional density function</li>
+<li>Evaluate the likelihood function (will be used as single step predictor)</li>
+<li>maximum likelihood estimation</li>
+</ol>
+<h2 id="code-updates">Code updates</h2>
+<ul>
+<li>Swapped out my original linked list library for a more intelligent one. Not sure why pointer pointers are so useful but valgrind is happy.</li>
+<li>beetle simulator now creates step-ahead realizations.</li>
+<li>Considerations: replicates in C or R? would be better if R preserved the openmp code, but can always use parallel R to loop over timesteps and benefit from compiled speed on replicates.</li>
+<li>Kernel density estimation for assigning probabilities? Probably reserve at R level at the moment.</li>
+</ul>
+<p><br /> Misc Reading &amp; Notes ——————–</p>
+<p><br /></p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2010-05-04 00:00:00 +0000" 
+    property="dc:created">04 May 2010</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2010/05/04/Adaptive-Dynamics.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2010/05/05/Primates.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2010/commits/master/_posts/2010-05-04-Alan-Meeting.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2010/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2010/tags.html#warning-signals">#warning-signals</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2010/tags.html#tribolium">#tribolium</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2010/commit/426e481635965b4d170de9e6d222a115af06662d/_posts/2010-05-04-Alan-Meeting.md"> 426e481635965b4d170de9e6d222a115af06662d</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Alan Meeting
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2010-05-04
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/05/04/Alan-Meeting.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

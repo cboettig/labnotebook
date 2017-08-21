@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Tgp Mcmc For Gaussian Processes</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="nonparametric-bayes" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Tgp Mcmc For Gaussian Processes" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2012-12-04 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/12/04/tgp-mcmc-for-gaussian-processes.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Tgp Mcmc For Gaussian Processes" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2012-12-04 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/12/04/tgp-mcmc-for-gaussian-processes.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2012-12-04 00:00:00 +0000"/>
+<meta name="citation_title" content="Tgp Mcmc For Gaussian Processes"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Tgp Mcmc For Gaussian Processes</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Exploring implementation through <code>tgp</code> package MCMC routine and background reading (manual, vignettes, thesis).</p>
+<p>Example call:</p>
+<pre class="sourceCode r"><code class="sourceCode r">gp &lt;-<span class="st"> </span><span class="kw">bgp</span>(<span class="dt">X=</span>X, <span class="dt">XX=</span>XX, <span class="dt">Z=</span>Z, <span class="dt">meanfn=</span><span class="st">&quot;constant&quot;</span>, <span class="dt">bprior=</span><span class="st">&quot;b0&quot;</span>, <span class="dt">BTE=</span><span class="kw">c</span>(<span class="dv">1000</span>,<span class="dv">6000</span>,<span class="dv">2</span>), <span class="dt">m0r1=</span><span class="ot">TRUE</span>, <span class="dt">verb=</span><span class="dv">4</span>, <span class="dt">corr=</span><span class="st">&quot;exp&quot;</span>, <span class="dt">trace=</span><span class="ot">TRUE</span>, <span class="dt">s2.p=</span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">10</span>), <span class="dt">tau2.p=</span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">10</span>), <span class="dt">s2.lam=</span><span class="st">&quot;fixed&quot;</span>, <span class="dt">tau2.lam=</span><span class="st">&quot;fixed&quot;</span>)</code></pre>
+<p>Verbose return:</p>
+<pre><code>n=39, d=1, nn=101
+BTE=(1000,6000,2), R=1, linburn=0
+RNG state RK using rk_seed
+preds: data krige
+T[alpha,beta,nmin,smin,bmax]=[0,0,10,1,1]
+mean function: constant
+beta prior: b0 hierarchical
+s2[a0,g0]=[5,10]
+s2 prior fixed
+tau2[a0,g0]=[5,10]
+tau2 prior fixed
+corr prior: isotropic power
+nug[a,b][0,1]=[1,1],[1,1]
+nug prior fixed
+gamlin=[0,0.2,0.7]
+d[a,b][0,1]=[1,20],[10,10]
+d prior fixed</code></pre>
+<p>The parameters in this run are constant across the trace points (because hyperparameters are fixed).</p>
+<ul>
+<li><code>X</code> is the observed X values (or matrix of appropriate dimension)</li>
+<li><code>XX</code> the desired predicted grid. (will also predict on X)</li>
+<li><code>Z</code> is observed Y values (or matrix of appropriate dimension)</li>
+<li><code>m0r1</code> means scale data to mean zero and unit range</li>
+<li><code>bprior</code> is the prior distribution, defaulting to <code>bfalt</code>. <code>b0</code> is a Gaussian. This prior is for the Gaussian process and is not to be confused with the hyperpriors describing the distribution of various parameters.</li>
+<li><code>BTE</code> Burn-in B steps, Terminate after T steps, sample Every E steps.</li>
+<li><code>verb</code> Very verbose output</li>
+<li>Other options (for adaptive/query learning, etc, igored for now. Focus on priors).<br /></li>
+<li><p>The priors for the hyperparameters are given by <code>s2.p</code>, <code>tau.p</code> etc (both are Inverse Gammas). Their parameters can vary hiearchically in general, but we hold them fixed, <code>s2.lam = 'fixed'</code>, etc.)</p></li>
+<li><p><code>s2</code> is <span class="math">\(\sigma^2\)</span> in Gramacy and <span class="math">\(\tau\)</span> in Rassmussen and Williams, is the scale of the noise. Comes from an inverse gamma prior. Set by inverse-gamma parameters <code>a0</code> and <code>g0</code>.</p></li>
+<li><p><code>tau2</code> Also comes from an inverse gamma prior. It is also set by inverse-gamma parameters <code>a0</code> and <code>g0</code>.</p></li>
+</ul>
+<p><span class="math">\[Z | \beta, \sigma^2, K \sim N_n(\mathbf{F} \beta, \sigma^2 \mathbf{K}) \]</span> <span class="math">\[ \beta | \sigma^2, \tau^2, \mathbf{W}, \beta_0 ~ N_m(\beta_0, \sigma^2 \tau^2 \mathbf{W} )  \]</span> <span class="math">\[\beta_0 | N_m(\mathbf{\mu}, \mathbf{B})\]</span></p>
+<ul>
+<li><p>We keep the heirachical priors fixed in the <code>tau.lm</code>, <code>s2.lm</code>, etc. <code>nug</code> fixed by default. Note this results in the the priors from which these are sampled are fixed: e.g. <code>gp$trace$hier$s2.a0</code>, <code>gp$trace$hier$s2.g0</code></p></li>
+<li><p><code>nug.p</code> This is the “nugget,” the measurement error. Comes from a mixture of gamma prior parameter (initial values) for the nugget parameter <code>c(a1,g1,a2,g2)</code> where <code>g1</code> and <code>g2</code> are scale (<code>1/rate</code>) parameters. <em>Default reduces to simple exponential prior.</em> Specifying <code>nug.p = 0</code> fixes the nugget parameter to the “starting” value in <code>gd[1]</code>, i.e., it is excluded from the MCMC</p></li>
+<li><code>index</code> is the sampling point (from <code>BTE</code>, we see we sample starting at step 1000 and ending at step 6000, recording every 2 steps, so there are <span class="math">\((T-B)/E = 2500\)</span> index points).<br /></li>
+<li><code>lambda</code> possibly a mixing parameter in the importance sampler temperature??</li>
+<li><code>beta0</code> No mention in the manual</li>
+<li><code>d</code> The parameter for priors using the hierachical exponential distribution for the parameters <code>a1</code>, <code>a2</code>, <code>g1</code>, <code>g2</code>.<br /></li>
+<li><p><code>b</code> ??</p></li>
+<li><p>Where are the hyperparameters for the correlation function (e.g. the length-scale for the Gaussian??)</p></li>
+</ul>
+<h3 id="traces">Traces</h3>
+<pre class="sourceCode r"><code class="sourceCode r">pars &lt;-<span class="st"> </span><span class="kw">melt</span>(gp$trace$XX[[<span class="dv">1</span>]], <span class="dt">id =</span> <span class="st">&quot;index&quot;</span>)
+<span class="kw">ggplot</span>(pars, <span class="kw">aes</span>(index, value)) +<span class="st"> </span><span class="kw">geom_line</span>() +<span class="st"> </span><span class="kw">facet_wrap</span>(~variable, <span class="dt">scales=</span><span class="st">&quot;free_y&quot;</span>)</code></pre>
+<figure>
+<img src="/2012/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5" /><figcaption>plot of chunk unnamed-chunk-5</figcaption>
+</figure>
+<p>It is possible to calculate summary statistics and check out the distribution of these fellows.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(gp$trace$XX[[<span class="dv">1</span>]][,<span class="st">&quot;nug&quot;</span>])</code></pre>
+<pre><code>[1] 0.009755</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(pars, <span class="kw">aes</span>(value)) +<span class="st"> </span><span class="kw">geom_histogram</span>() +<span class="st"> </span><span class="kw">facet_wrap</span>(~variable, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)</code></pre>
+<figure>
+<img src="/2012/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6" /><figcaption>plot of chunk unnamed-chunk-6</figcaption>
+</figure>
+<h2 id="extracting-the-estimated-process">Extracting the estimated process</h2>
+<p>(The <strong>MAP</strong>, maximum a posteriori expected mean and variance).</p>
+<p>Extract the posterior Gaussian process mean and the <span class="math">\(\pm 2\)</span> standard deviations over the predicted grid from the fit:</p>
+<pre class="sourceCode r"><code class="sourceCode r">V &lt;-<span class="st"> </span>gp$ZZ.ks2
+dat &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x   =</span> gp$XX[[<span class="dv">1</span>]], 
+                 <span class="dt">y    =</span> gp$ZZ.km, 
+                 <span class="dt">ymin =</span> gp$ZZ.km -<span class="st"> </span><span class="fl">1.96</span> *<span class="st"> </span><span class="kw">sqrt</span>(gp$ZZ.ks2), 
+                 <span class="dt">ymax =</span> gp$ZZ.km +<span class="st"> </span><span class="fl">1.96</span> *<span class="st"> </span><span class="kw">sqrt</span>(gp$ZZ.ks2))</code></pre>
+<p>Plot the posterior Gaussian Process:</p>
+<pre class="sourceCode r"><code class="sourceCode r">  p1 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(dat) +
+<span class="st">    </span><span class="kw">geom_ribbon</span>(<span class="kw">aes</span>(<span class="dt">x=</span>x,<span class="dt">y=</span>y, <span class="dt">ymin=</span>ymin, <span class="dt">ymax=</span>ymax), <span class="dt">fill=</span><span class="st">&quot;grey80&quot;</span>) +<span class="st"> </span><span class="co"># Var</span>
+<span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>x,<span class="dt">y=</span>y), <span class="dt">size=</span><span class="dv">1</span>) +<span class="st"> </span><span class="co">#MEAN</span>
+<span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">data=</span>gp$obs,<span class="kw">aes</span>(<span class="dt">x=</span>x,<span class="dt">y=</span>y)) +<span class="st"> </span>
+<span class="st">    </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="kw">paste</span>(<span class="st">&quot;llik =&quot;</span>, <span class="kw">prettyNum</span>(gp$llik)))
+  if(!<span class="kw">is.null</span>(true))
+    p1 &lt;-<span class="st"> </span>p1 +<span class="st"> </span><span class="kw">geom_line</span>(<span class="dt">data =</span> true, <span class="kw">aes</span>(x, y), <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">lty =</span> <span class="dv">2</span>) 
+p1 +<span class="st"> </span>theme_notebook</code></pre>
+<figure>
+<img src="/2012/assets/figures/2012-12-04-046b509f8d-gp-plot.png" alt="plot of chunk gp-plot" /><figcaption>plot of chunk gp-plot</figcaption>
+</figure>
+<p>Find the actual optimum policy from the true parametric model</p>
+<pre class="sourceCode r"><code class="sourceCode r">x_grid &lt;-<span class="st"> </span>dat$x
+h_grid &lt;-<span class="st"> </span>x_grid
+matrices_true &lt;-<span class="st"> </span><span class="kw">f_transition_matrix</span>(f, p, x_grid, h_grid)
+opt_true &lt;-<span class="st"> </span><span class="kw">find_dp_optim</span>(matrices_true, x_grid, h_grid, <span class="dv">20</span>, <span class="dv">0</span>, profit, <span class="dt">delta=</span>.<span class="dv">01</span>)</code></pre>
+<p>Estimate a policy from the Gaussian Process:</p>
+<pre class="sourceCode r"><code class="sourceCode r">rownorm &lt;-<span class="st"> </span>function(M) <span class="kw">t</span>(<span class="kw">apply</span>(M, <span class="dv">1</span>, function(x) x/<span class="kw">sum</span>(x)))
+matrices_gp &lt;-<span class="st"> </span><span class="kw">lapply</span>(h_grid, function(h){
+    S &lt;-<span class="st"> </span>dat$y -<span class="st"> </span>h
+    F_ &lt;-<span class="st"> </span><span class="kw">t</span>(<span class="kw">sapply</span>(<span class="dv">1</span>:<span class="kw">length</span>(S), function(i){
+      if(S[i]&gt;<span class="dv">0</span>) {
+        out &lt;-<span class="st"> </span><span class="kw">dlnorm</span>(x_grid/S[i], <span class="dv">0</span>, V[i])
+      } else {
+        out &lt;-<span class="st"> </span><span class="kw">numeric</span>(<span class="kw">length</span>(x_grid))
+        out[<span class="dv">1</span>] &lt;-<span class="st"> </span><span class="dv">1</span>
+        out
+      }
+    }))
+    F_ &lt;-<span class="st"> </span><span class="kw">rownorm</span>(F_)
+  })
+opt_gp &lt;-<span class="st"> </span><span class="kw">find_dp_optim</span>(matrices_gp, x_grid, h_grid, <span class="dv">20</span>, <span class="dv">0</span>, profit, <span class="dt">delta=</span>.<span class="dv">01</span>)</code></pre>
+<p>and plot</p>
+<pre class="sourceCode r"><code class="sourceCode r">policies &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="kw">data.frame</span>(<span class="dt">stock=</span>x_grid, <span class="dt">GP =</span> x_grid[opt_gp$D[,<span class="dv">1</span>]], <span class="dt">Exact =</span> x_grid[opt_true$D[,<span class="dv">1</span>]]), <span class="dt">id=</span><span class="st">&quot;stock&quot;</span>)
+policy_plot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(policies, <span class="kw">aes</span>(stock, stock -<span class="st"> </span>value, <span class="dt">color=</span>variable)) +
+<span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;stock size&quot;</span>) +<span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;escapement&quot;</span>) 
+policy_plot +<span class="st"> </span>theme_notebook</code></pre>
+<figure>
+<img src="/2012/assets/figures/2012-12-04-046b509f8d-policy_plot.png" alt="plot of chunk policy_plot" /><figcaption>plot of chunk policy_plot</figcaption>
+</figure>
+<p>We can see what happens when we attempt to manage a stock using this:</p>
+<pre class="sourceCode r"><code class="sourceCode r">z_g &lt;-<span class="st"> </span>function() <span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>, sigma_g)
+<span class="kw">set.seed</span>(<span class="dv">1</span>)
+sim_gp &lt;-<span class="st"> </span><span class="kw">ForwardSimulate</span>(f, p, x_grid, h_grid, K, opt_gp$D, z_g, <span class="dt">profit=</span>profit)
+<span class="kw">set.seed</span>(<span class="dv">1</span>)
+sim_true &lt;-<span class="st"> </span><span class="kw">ForwardSimulate</span>(f, p, x_grid, h_grid, K, opt_true$D, z_g, <span class="dt">profit=</span>profit)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">time =</span> sim_gp$time, <span class="dt">stock_gp =</span> sim_gp$fishstock, <span class="dt">stock_true =</span> sim_true$fishstock, <span class="dt">harvest_gp =</span> sim_gp$harvest, <span class="dt">havest_true =</span> sim_true$harvest)
+df &lt;-<span class="st"> </span><span class="kw">melt</span>(df, <span class="dt">id=</span><span class="st">&quot;time&quot;</span>)
+simplot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(df) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(time,value, <span class="dt">color=</span>variable))
+simplot +<span class="st"> </span>theme_notebook</code></pre>
+<figure>
+<img src="/2012/assets/figures/2012-12-04-046b509f8d-simplot.png" alt="plot of chunk simplot" /><figcaption>plot of chunk simplot</figcaption>
+</figure>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2012-12-04 00:00:00 +0000" 
+    property="dc:created">04 Dec 2012</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/12/03/Figures-3-and-4-for-policycosts.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/12/05/notes.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2012-12-04-tgp-mcmc-for-gaussian-processes.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#nonparametric-bayes">#nonparametric-bayes</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/82c8cce4e4d61b962584a0473bb444c47ed78204/_posts/2012-12-04-tgp-mcmc-for-gaussian-processes.md"> 82c8cce4e4d61b962584a0473bb444c47ed78204</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Tgp Mcmc For Gaussian Processes
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2012-12-04
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/12/04/tgp-mcmc-for-gaussian-processes.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Real World Challenges In Reproducible Research Code</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Real World Challenges In Reproducible Research Code" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2014-02-18 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/02/18/real-world-challenges-in-reproducible-research-code.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Real World Challenges In Reproducible Research Code" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2014-02-18 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/02/18/real-world-challenges-in-reproducible-research-code.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2014-02-18 00:00:00 +0000"/>
+<meta name="citation_title" content="Real World Challenges In Reproducible Research Code"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Real World Challenges In Reproducible Research Code</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <blockquote>
+<p><strong>Editorial Note:</strong> Scratchpad in replying to issues raised by the NESCent reproducibility exercise that included my prosecutor’s fallacy paper. See more developed version of this disucssion in the package issues log:</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/cboettig/prosecutors-fallacy/pull/1">#1</a></li>
+<li><a href="https://github.com/cboettig/prosecutors-fallacy/issues/2">#2</a></li>
+<li><a href="https://github.com/cboettig/prosecutors-fallacy/pull/3">#3</a></li>
+</ul>
+<hr />
+<p><span class="citation" data-cites="hlapp">@hlapp</span> Thanks for the bug reports; I think there are quite a few good illustrations of the challenges in sharing code here go beyond <a href="">“Publish your code, it’s good enough”</a>, despite the importance of that message. If you haven’t seen it, you might be interested in joining the thread SWC started on that topic.</p>
+<p>I should probably flush these out into further issues, but (not surprisingly) the problems go deeper than these issues.</p>
+<ul>
+<li><p>the <code>odesolve</code> package has since been removed from CRAN, as it is obsoleted by the deSolve package (see <a href="http://cran.r-project.org/web/packages/odesolve/index.html">page</a>). Unfortunately, the function API changes slightly in the lsoda function in deSolve, so this fix requires (a little easy) manual intervention.</p></li>
+<li><p>As I think you figured out, this package / paper grew out of my earlier work on the <a href="https://github.com/cboettig/earlywarning">earlywarning</a> package, and at the beginning was a branch of that package. I’ve fixed the deSolve issue in earlywarning, but forgot to do so here. I made it a separate package once it was clear this line of investigation led to a completely different paper.</p></li>
+<li>This package should depend on <code>earlywarning</code> package, not duplicate it.</li>
+<li><p>This creates an added challenge in versioning, since when all the functions are together, it is sufficient to go back to the SHA at the time of publication to get the functions in their original form, while leaving them into a separate package we would have to capture two SHAs. R’s dependency mechanisms don’t handle this as well, particularly when relying on github.</p></li>
+<li><p>Presumably it would depend on the version of <code>earlywarning</code> in the master branch, which should ideally maintain a backwards-compatible API and have tests to catch when it doesn’t</p></li>
+<li><p>I should be better at tagging the SHA at the time of publication, and possibly relying on branches to distinguish different versions.</p></li>
+<li><p>For instance, I started exploring further directions such as <code>bayeswarning.R</code> on the <code>prosecutor</code> branch of the <code>earlywarning</code> package. The DESCRIPTION file was never recompiled on that branch, hence the install error in #1 . (The install also gives a further warning since <code>devtools</code> has since changed the argument from <code>branch</code> to <code>ref</code>, since it now supports giving an arbitrary SHA instead of just a branch name). The <code>bayeswarning.R</code> functions should have never been added to that branch (hey, it was just the branch that was currently active and I was exploring quickly), and should now be deleted, as they represent a different exploration. I’m happy to see I actually did create a branch for that. <a href="https://github.com/cboettig/earlywarning/tree/bayesian/R" class="uri">https://github.com/cboettig/earlywarning/tree/bayesian/R</a></p></li>
+</ul>
+<p>Obviously there is a desire to maintain the original code base used in the paper, as well as to provide downstream updates, but a simple version SHA is not be sufficient. (I could also be better at tagging the SHA at time of publication, etc).</p>
+<p>I’m not sure the best way to reflect that provenance, but it introduces challenges either way.</p>
+<ul>
+<li><p>While there are example scripts with example outputs a plenty, there’s no actual unit tests in either <code>earlywarning</code> or <code>prosectors-fallacy</code>.</p></li>
+<li><p>I doubt either <code>earlywarning</code> or <code>prosectors-fallacy</code> pass <code>R CMD check</code>, the basic requirement for a CRAN package, at this time.</p></li>
+<li><p>travis integration could clearly help, though the burden of keeping every bit of software one has ever written up-to-date when dependencies change as fast and as dramatically as they do in R (CRAN makes no requirements not to break your API when updating a package, and asserting a particular version of a package dependency, instead of &gt;=, is not</p></li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2014-02-18 00:00:00 +0000" 
+    property="dc:created">18 Feb 2014</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2014/02/14/notes.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2014/02/19/CRAN-and-package-dependencies.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2014/commits/master/_posts/2014-02-18-real-world-challenges-in-reproducible-research-code.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2014/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2014/commit/f11aa91121030fc263873fe0094934ef01d8aa97/_posts/2014-02-18-real-world-challenges-in-reproducible-research-code.md"> f11aa91121030fc263873fe0094934ef01d8aa97</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Real World Challenges In Reproducible Research Code
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2014-02-18
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/02/18/real-world-challenges-in-reproducible-research-code.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

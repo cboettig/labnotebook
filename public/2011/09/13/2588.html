@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>pdg-control pdg-control, Tuesday</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="pdg-control, pdg-control, warning-signals" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="pdg-control pdg-control, Tuesday" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2011-09-13 09:00:38 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/09/13/2588.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="pdg-control pdg-control, Tuesday" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2011-09-13 09:00:38 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/09/13/2588.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2011-09-13 09:00:38 +0000"/>
+<meta name="citation_title" content="pdg-control pdg-control, Tuesday"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">pdg-control pdg-control, Tuesday</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Tuesday, August 13 8:00 Coffee &amp; Breakfast at NIMBioS 8:45 Outline for Day 2 (Donahue/Armsworth)</p>
+<h3 id="adaptive-control-jake">Adaptive Control, Jake</h3>
+<p>Introduced by he two-armed bandit problem, Rothchild i = 1,2. $ T_i $ is the number of trials, $ N_i $ are numbers of successes.</p>
+<p>Define <span class="math">\[ \rho_i = \frac{1}{1+T_i}, \mu_i = \frac{N_i}{1+T_i} \]</span></p>
+<p>If i is played $ p_i $ becomes</p>
+<p><span class="math">\[ \frac{p_i}{1+p_i} = \frac{1}{T+2} \]</span></p>
+<p>If i is played and successful $ _i $ becomes</p>
+<p><span class="math">\[ s(\mu_i) = \frac{\mu_i + p_i}{p_i+1} = \frac{N_i + 1 }{T_i + 2}\]</span></p>
+<p>whereas failure is</p>
+<p><span class="math">\[ s(\mu_i) = \frac{\mu_i}{p_i+1} = \frac{N_i + 1 }{T_i + 2}\]</span></p>
+<p><span class="math">\[ \lim_{T_i \to \infty} \frac{N_i}{T_i+1} = \tau_i \]</span>, the true probability.</p>
+<p>Depends on prior information and luck. Costly to pull on uncertain machine.</p>
+<hr />
+<p>Consider fisheries example where <span class="math">\[ x = F(x) - h \]</span> <span class="math">\[ F(x) = x^{\alpha} \epsilon |_{\epsilon ~ N(0, \sigma^2} \]</span></p>
+<p><span class="math">\[ \ln F(x) = \alpha ln(x) + ln(\epsilon) =: y \]</span> $ $ must be estimated.</p>
+<p>Frequentist:</p>
+<p><span class="math">\[ \hat \alpha = \frac{\ln x&#39; \ln F(x)}{\ln X&#39; \ln x} \]</span></p>
+<p>Bayesian: <span class="math">\[ P(\alpha) N( \alpha_0, \sigma_{\alpha^2}) \]</span></p>
+<p><span class="math">\[ f(\alpha | y ) \sim \exp\left( \tfrac{1}{2} (y-\alpha \ln(x) )&#39; (y- \alpha \ln(x) \right) \exp \left( -\frac{1}{2} \frac{(\alpha - \alpha_0)^2}{\sigma_{\alpha}^2}\right) \]</span></p>
+<p>Myopic igonre additional variation in harvest to identify $ $. More variation means better estimated $ $</p>
+<p>Michael raises two issues: applying this information elsewhere. If environment is changing, learning current condition is less valuable. (can’t I learn the change rate?)</p>
+<p>Adaptive management experiment in corals.</p>
+<h3 id="pdg-control-approaches-from-engineering-discussion-carl-toews">9:00 pdg-control: Approaches from Engineering &amp; Discussion (Carl Toews)</h3>
+<p>An adaptive talk on techniques.</p>
+<p>How do we quantify the volatility of a control law? (function space choice) How do we measure the distance between models? Between controls? Change an objective function to yield a better control law (regularization in inverse problems)</p>
+<h4 id="modeling-inverse-problems">Modeling, Inverse Problems</h4>
+<p><span class="math">\[ M : X \to Y \]</span> Forward: predicting observations from parameters. Inverse: parameters from observation. Existence, uniqueness, stability. <span class="math">\[ M = \pmatrix{ 1 &amp; 0 \\ 0 &amp; \epsilon } \]</span> Not unique if $ = 0 $</p>
+<p>So: Cost functional: $ J(x) := ||M(x) = y_0|| $ Regularization: $  J(x) := ||M(x) = y_0|| + ||x ||  $ Optimize: $  x_0 = _{xX} J(x)  $</p>
+<p>Regularization means solving a suboptimal model. Fudge factor. Trade-off due to inverting an unstable operator vs error due to the objective function.</p>
+<p>Singular value decomposition regularization example:</p>
+<p>Linear regime <a href="http://en.wikipedia.org/wiki/Kalman_filter">Kalman</a> filter exact solution. (e.g. uncertainty in stock size, based on harvest).</p>
+<p>True state evolves according to: $ x_{k+1} = g(x_k, v_k) $ But the observation is some function of that: $ y_{k} = h(x_k, n_k) $</p>
+<p>Paul: Nonlinearity can be ignored by engineers, because they can intervene frequently. If you’re doing management, forced to do policy control, you cannot intervene frequently enough to be linear. (e.g., $g(x_k, v_k $ is nonlinear.</p>
+<p>Alan, Frank: quite easy for $ h(x_k, n_k) $ to be nonlinear as well, such as x being the density and y being only the moments.</p>
+<h4 id="estimation">Estimation</h4>
+<h4 id="filtering">Filtering</h4>
+<p><a href="http://en.wikipedia.org/wiki/Model_predictive_control">Model predictive control</a>:</p>
+<ol type="1">
+<li><p>Read control, disturbance, output variable</p></li>
+<li><p>Estimate state (e.g. Kalman Filter)</p></li>
+<li><p>Remove ill condition (regularization)</p></li>
+<li><p>Local steady-sate optimization (Linear or quadratic program)</p></li>
+<li><p>Dynamic optimization (Dynamic programming)</p></li>
+<li><p>outputs control variable</p></li>
+</ol>
+<h2 id="training-problem-ii-problem-formulation">Training Problem II problem formulation</h2>
+<p>How does decreasing uncertainty improve outcomes?  Expected value of perfect information?</p>
+<p>Model uncertainty vs parameter uncertainty.</p>
+<ol type="1">
+<li><p>Adaptive management approach to coral-algae location of phase shift. vs Passive adaptive management/MPC.</p></li>
+<li><p>Nonlinearity in observation error</p></li>
+</ol>
+<p>H inverse.  dockside landings don’t include discard/bycatch.  age &amp; space from total biomass.</p>
+<ol start="3" type="1">
+<li>Optimal sampling rates and intervention rate (rel to system timescale).  Compared to 3 yr rule on stock assessment.</li>
+</ol>
+<p>Jim’s staged approach: Overall optimal.  Conditional on fishermen sampling. compare difference.</p>
+<ol start="4" type="1">
+<li>Spatial signal of declines: most efficient fishing.</li>
+</ol>
+<p><a href="http://en.wikipedia.org/wiki/Dual_control_theory">Dual control</a>  = active adaptive management.</p>
+<del>
+10:00 Break into Training Problem Groups
+</del>
+<del>
+TASK: Formalize Question. What is the biological problem? What is the control problem? Is
+</del>
+<del>
+there expertise you are missing? What resources do you need?
+</del>
+<del>
+11:30 Report back to full group
+</del>
+<p>12:00 Lunch at NIMBioS</p>
+<h2 id="training-problem-iii-summary">Training problem III summary</h2>
+<p>Claire reviews dispersal problem in larva on Caribbean reefs.</p>
+<p>Discussion of focal questions:</p>
+<ul>
+<li><p>Unique aspects of life history problems</p></li>
+<li><p>Metamorphosis timing, energy (optimal stopping time)</p></li>
+<li><p>spawning trends and synchrony.  Synchronous settlement.</p></li>
+</ul>
+<p>Work backwards from advanced problem.</p>
+<p>Extreme value vs. mean</p>
+<p>1:00 Training Problem Groups (shuffle expertise as needed) TASK: Model formulation &amp; What do you need for Wednesday? 3:15 Break 3:30 NIMBioS Seminar by Alan Hastings 6:00 Dinner at the Armsworth’s</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2011-09-13 09:00:38 +0000" 
+    property="dc:created">13 Sep 2011</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2011/09/12/pretty-darn-good-control-working-group.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2011/09/14/nimbios-pdg-control-wednesday.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2011/commits/master/_posts/2011-09-13-2588.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2011/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2011/tags.html#pdg-control">#pdg-control</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2011/tags.html#pdg-control">#pdg-control</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2011/tags.html#warning-signals">#warning-signals</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2011/commit/834278e30b5497997c77eeac3b147dcf853ae301/_posts/2011-09-13-2588.md"> 834278e30b5497997c77eeac3b147dcf853ae301</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=pdg-control pdg-control, Tuesday
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2011-09-13
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/09/13/2588.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

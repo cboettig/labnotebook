@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>nonparametric-bayes: framing the issues for the manuscript</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="nonparametric-bayes, warning-signals, reading" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="nonparametric-bayes: framing the issues for the manuscript" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2013-04-11 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/04/11/nonparametric-bayes-framing-the-issues.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="nonparametric-bayes: framing the issues for the manuscript" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2013-04-11 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/04/11/nonparametric-bayes-framing-the-issues.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2013-04-11 00:00:00 +0000"/>
+<meta name="citation_title" content="nonparametric-bayes: framing the issues for the manuscript"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">nonparametric-bayes: framing the issues for the manuscript</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h2 id="marc-meeting-nonparametric-bayes-manuscript">Marc meeting: nonparametric-bayes manuscript</h2>
+<p>Very good meeting today going over some big picture considerations in the presentation of the nonparametric-bayes manuscript with Marc. (Also see new entries in issues log on nonparametric-bayes.) Make it clear that we are making a point rather than providing a tool. Focus on the tipping point context rather than the general management context.</p>
+<ul>
+<li>Comparison against a parametric Bayesian model (<a href="https://github.com/cboettig/nonparametric-bayes/issues/40">40</a>)</li>
+<li>Comparison against an active learning parametric model facing a tipping point (<a href="https://github.com/cboettig/nonparametric-bayes/issues/41">41</a>)</li>
+</ul>
+<h2 id="parametric-bayesian-model">Parametric Bayesian model</h2>
+<p>Drafting parametric Bayesian case for comparison, following Marc’s suggestion. So far, <a href="https://github.com/cboettig/nonparametric-bayes/commit/795bf96ed92a708b44978610da7db3b49ebb4dce">code as implemented in BUGS</a></p>
+<h2 id="more-on-the-exit-time-problem">More on the exit time problem</h2>
+<ul>
+<li>Alan pointed me to earlier work of <span class="showtooltip" title="Schuss Z and Matkowsky B (1979). The Exit Problem: A New Approach
+to Diffusion Across Potential Barriers. _Siam Journal on Applied
+Mathematics_, *36*, pp. 604-623. ISSN 0036-1399, 
+http://dx.doi.org/10.1137/0136043."><a href="http://dx.doi.org/10.1137/0136043" rel="http://purl.org/spar/cito/discusses" >Schuss &amp; Matkowsky (1979)</a></span><br /></li>
+<li>Also, an electronic version of Don Ludwig’s article: <span class="showtooltip" title="Donald Ludwig, (1981). Escape from Domains of Attraction for Systems Perturbed by Noise, Nonlinear Phenomena in Physics and Biology."><a href="http://link.springer.com/chapter/10.1007/978-1-4684-4106-2_14" rel="http://purl.org/spar/cito/usesMethodFrom" >Ludwig (1981)</a></span></li>
+</ul>
+<h2 id="warning-signals-reading">Warning signals Reading</h2>
+<ul>
+<li><p>Alan pointed out <span class="showtooltip" title="Boerlijst M, Oudman T, de Roos A and Solé R (2013). Catastrophic
+Collapse Can Occur Without Early Warning: Examples of Silent
+Catastrophes in Structured Ecological Models. _Plos One_, *8*,
+pp. e62033-. 
+http://dx.doi.org/10.1371/journal.pone.0062033."><a href="http://dx.doi.org/10.1371/journal.pone.0062033" rel="http://purl.org/spar/cito/reviews" >Boerlijst <em>et. al.</em> (2013)</a></span> on warning signals in PLoS ONE today. A very nice piece! It’s quite useful how it show that the early warning signal can appear in unmonitored variables (e.g. juvenile dynamics) or in variables without adequate noise to provide a signal. Kind of funny that they pitch it as a counterexample to the conjecture that early warning signals are universal, since even Scheffer has avoided that word, and it’s not really a counterexample given the caveat of some process noise and complete observability of the system people have so far assumed (while your work with Derin is a more conclusive counter-example by going beyond fold bifurcations)… Anyway, good examples. We need a better understanding of warning signals in this multi-dimensional context at large.</p></li>
+<li><p>Recently Noam pointed out <span class="showtooltip" title="Streeter R and Dugmore A (2013). Anticipating Land Surface
+Change. _Proceedings of The National Academy of Sciences_, *110*,
+pp. 5779-5784. ISSN 0027-8424, 
+http://dx.doi.org/10.1073/pnas.1220161110."><a href="http://dx.doi.org/10.1073/pnas.1220161110" rel="http://purl.org/spar/cito/discusses" >Streeter &amp; Dugmore (2013)</a></span> , which looks like a nice spatial warning signal example (with the classic patterns, rather than the <span class="showtooltip" title="Bel G, Hagberg A and Meron E (2012). Gradual Regime Shifts in
+Spatially Extended Ecosystems. _Theoretical Ecology_, *5*, pp.
+591-604. ISSN 1874-1738, 
+http://dx.doi.org/10.1007/s12080-011-0149-6."><a href="http://dx.doi.org/10.1007/s12080-011-0149-6" rel="http://purl.org/spar/cito/containsAssertionFrom" >Bel <em>et. al.</em> (2012)</a></span> pattern), but haven’t had time for a closer read yet.</p></li>
+</ul>
+<h2 id="other-reading">Other reading</h2>
+<ul>
+<li><p>Trying to get a hold of <span class="showtooltip" title="Ludwig D and Walters C (1981). Measurement Errors And Uncertainty
+in Parameter Estimates For Stock And Recruitment. _Canadian
+Journal of Fisheries And Aquatic Sciences_, *38*, pp. 711-720.
+ISSN 0706-652X,  http://dx.doi.org/10.1139/f81-094."><a href="http://dx.doi.org/10.1139/f81-094" rel="http://purl.org/spar/cito/discusses" >Ludwig &amp; Walters (1981)</a></span> as well. A tough day for reading with the UCSC subscription access down due to “power outages”</p></li>
+<li><p>Interesting preprint on advice for data reuse, <span class="showtooltip" title="White EP, Baldridge E, Brym ZT, Locey KJ, McGlinn DJ and Supp SR
+(2013). Nine simple ways to make it easier to (re)use your data.
+ https://peerj.com/preprints/7 [Online. last-accessed:
+2013-04-15 21:19:41].  http://peerj.com/preprints/7."><a href="http://peerj.com/preprints/7" rel="http://purl.org/spar/cito/discusses" >White <em>et. al.</em> (2013)</a></span></p></li>
+</ul>
+<h3 id="misc-and-code-tricks">Misc and code-tricks</h3>
+<ul>
+<li><p>My knitr scripts are not executing in parallel with snow/snowfall packages(?) Parallelizes fine when run chunk by chunk. (e.g. <a href="https://github.com/cboettig/earlywarning/blob/8bf907c21f8eb0f69f6995a94d21ab0eac6e214a/inst/examples/example.Rmd">example with snowfall</a>). Knitr runs parallel fine with <code>multicore</code>. Weird.</p></li>
+<li><p>An interesting puzzle on knitr list today: wrangling crazy ascii tables in <code>Hmisc::summary.function</code>. A good solution would just rewrite the class’s <code>print</code> method to be a table object (e.g. compatible with <code>xtable</code> and <code>pander::pandoc_table</code>), but instead we can hack the ascii, adjusting the options that are passed to <code>print.char.matrix</code>:</p></li>
+<li><p>Created a <a href="http://purl.org">PURL</a> persistent identifier for the notebook <a href="http://purl.org/globalecology/lab-notebook">purl.org/globalecology/lab-notebook</a>. Existing public top level domain. Waiting for approval for my own top-level domain (cboettig).</p></li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(Hmisc)
+df =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Age =</span> <span class="kw">round</span>(<span class="kw">rnorm</span>(<span class="dv">100</span>, <span class="dv">50</span>,<span class="dv">15</span>)), <span class="dt">Sex =</span> <span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;M&quot;</span>, <span class="st">&quot;W&quot;</span>)))
+out &lt;-<span class="st"> </span><span class="kw">summary.formula</span>( ~<span class="st"> </span>Age +<span class="st"> </span>Sex, <span class="dt">data =</span> df, <span class="dt">method =</span> <span class="st">&quot;reverse&quot;</span>)
+<span class="kw">print</span>(out, <span class="dt">hsep=</span> <span class="st">&#39;|&#39;</span>, <span class="dt">csep=</span><span class="st">&#39;|&#39;</span>, <span class="dt">vsep=</span><span class="st">&#39;-&#39;</span>, <span class="dt">left.border=</span><span class="ot">FALSE</span>, <span class="dt">top.border=</span><span class="ot">FALSE</span>)</code></pre>
+<h2 id="references">References</h2>
+<ul>
+<li>Golan Bel, Aric Hagberg, Ehud Meron, (2012) Gradual Regime Shifts in Spatially Extended Ecosystems. <em>Theoretical Ecology</em> <strong>5</strong> 591-604 <a href="http://dx.doi.org/10.1007/s12080-011-0149-6">10.1007/s12080-011-0149-6</a></li>
+<li>Maarten C. Boerlijst, Thomas Oudman, André M. de Roos, Ricard V. Solé, (2013) Catastrophic Collapse Can Occur Without Early Warning: Examples of Silent Catastrophes in Structured Ecological Models. <em>Plos One</em> <strong>8</strong> e62033-NA <a href="http://dx.doi.org/10.1371/journal.pone.0062033">10.1371/journal.pone.0062033</a></li>
+<li>Donald Ludwig, Carl J. Walters, (1981) Measurement Errors And Uncertainty in Parameter Estimates For Stock And Recruitment. <em>Canadian Journal of Fisheries And Aquatic Sciences</em> <strong>38</strong> 711-720 <a href="http://dx.doi.org/10.1139/f81-094">10.1139/f81-094</a></li>
+<li>Zeev Schuss, Bernard J. Matkowsky, (1979) The Exit Problem: A New Approach to Diffusion Across Potential Barriers. <em>Siam Journal on Applied Mathematics</em> <strong>36</strong> 604-623 <a href="http://dx.doi.org/10.1137/0136043">10.1137/0136043</a></li>
+<li>R. Streeter, A. J. Dugmore, (2013) Anticipating Land Surface Change. <em>Proceedings of The National Academy of Sciences</em> <strong>110</strong> 5779-5784 <a href="http://dx.doi.org/10.1073/pnas.1220161110">10.1073/pnas.1220161110</a></li>
+<li>Ethan White, Elita Baldridge, Zachary Brym, Kenneth Locey, Daniel McGlinn, Sarah Supp, (2013) Nine simple ways to make it easier to (re)use your data. <em>PeerJ PrePrints</em> <a href="http://peerj.com/preprints/7">http://peerj.com/preprints/7</a></li>
+<li>Donald Ludwig, (1981). Escape from Domains of Attraction for Systems Perturbed by Noise, Nonlinear Phenomena in Physics and Biology.</li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2013-04-11 00:00:00 +0000" 
+    property="dc:created">11 Apr 2013</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/04/10/fun-and-not-so-fun-with-bibliographic-APIs.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/04/11/tutorial-on-likelihood-and-roc-methods-for-early-warning-signals.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2013-04-11-nonparametric-bayes-framing-the-issues.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#nonparametric-bayes">#nonparametric-bayes</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#warning-signals">#warning-signals</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#reading">#reading</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/d2479db555627b3eec9fccdfa27774fb2c3deaca/_posts/2013-04-11-nonparametric-bayes-framing-the-issues.md"> d2479db555627b3eec9fccdfa27774fb2c3deaca</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=nonparametric-bayes: framing the issues for the manuscript
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2013-04-11
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/04/11/nonparametric-bayes-framing-the-issues.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

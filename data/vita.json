@@ -1,0 +1,1041 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "@id": "https://orcid.org/0000-0002-1642-628X",
+  "givenName": "Carl",
+  "familyName": "Boettiger",
+  "title": "Assistant Professor",
+  "email": "cboettig@berkeley.edu",
+  "url": "http://carlboettiger.info",
+  "image": "http://www.carlboettiger.info/img/carl.png",
+  "worksFor": {
+    "@id": "https://berkeley.edu", 
+    "@type": "Organization",
+    "name": "University of California, Berkeley"
+  }, 
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ESPM Department, University of California, 130 Mulford Hall #3114",
+    "addressLocality": "Berkeley",
+    "addressRegion": "CA",
+    "postalCode": "94720-3114",
+    "addressCountry": "USA"
+  },
+  "sameAs": ["https://github.com/cboettig", "https://twitter.com/cboettig", "https://plus.google.com/+CarlBoettiger", "https://www.linkedin.com/in/cboettig/", "https://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ"],
+  "alumniOf": [{
+    "@id": "https://princeton.edu",
+    "@type": "Organization",
+    "name": "Princeton University"
+  }, {
+    "@id": "https://ucdavis.edu",
+    "@type": "Organization",
+    "name": "University of California, Davis"
+  }],
+  "award": [
+    "Volterra Award (Best student talk, ESA Theory Section)",
+    "Sigma Xi",
+    "Allen G. Shenstone Prize in Physics, Princeton University",
+    "The Class of 1870 Old English Prize, Princeton University",
+    "Kusaka Memorial Prize in Physics, Princeton University"
+    ],
+  
+  "funder": [{
+    "@id": "https://doi.org/10.13039/100007028",
+    "@type": "Organization",
+    "name": "Helmsley Charitable Trust"
+    },
+    {
+      "@id": "https://doi.org/10.13039/100007523",
+      "name": "Division of Advanced Cyberinfrastructure",
+      "isPartOf": {
+        "@id": "https://doi.org/10.13039/100000083",
+        "@type": "Organization",
+        "name": "Directorate for Computer and Information Science and Engineering",
+        "isPartOf": {
+          "@id": "https://doi.org/10.13039/100000001",
+          "@type": "Organization",
+          "name": "National Science Foundation"
+        }
+      }
+    },
+    {
+      "@id": "https://doi.org/10.13039/100000076",
+      "name": "Directorate for Biological Sciences",
+      "isPartOf": {
+        "@id": "https://doi.org/10.13039/100000001",
+        "@type": "Organization",
+        "name": "National Science Foundation"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://doi.org/10.13039/100000015",
+      "name": "Department of Energy"
+    },
+    {
+    "@type": "Organization",  
+    "@id": "https://doi.org/10.13039/100000879",
+    "name": "Alfred P Sloan Foundation"
+    },
+    {
+    "@type": "Organization",
+    "@id": "https://doi.org/10.13039/100000209",
+    "name": "National Academy of Sciences"
+    }],
+
+    
+    
+  "@reverse": { 
+  
+    "awardee": [
+      {
+        "@type": "Grant",
+        "name": "The rOpenSci Project",
+        "startDate": "2015-11-01",
+        "endDate": "2018-10-31",
+        "funder": "https://doi.org/10.13039/100007028",
+        "amount": { "@type": "MonetaryAmount", "value": "2900000", "currency":  "USD" }
+      },
+      {
+        "@type": "Grant",
+        "name": "The CodeMeta Project",
+        "startDate": "2015-10-01",
+        "endDate": "2017-09-30",
+        "funder": "https://doi.org/10.13039/100007523",
+        "amount": { "@type": "MonetaryAmount", "value": "165782", "currency":  "USD" },
+        "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758",
+        "identifier": "#ACI-1549758",
+        "proposal": "https://dx.doi.org/10.6084/m9.figshare.2055972"
+      },
+      {
+        "@type": "Grant",
+        "name": "The rOpenSci Project, Phase II funding",
+        "startDate": "2014-06-10",
+        "endDate": "2015-06-10",
+        "funder": "https://doi.org/10.13039/100000879",
+        "amount": { "@type": "MonetaryAmount", "value": "300000", "currency": "USD"},
+        "url": "https://ropensci.org/blog/blog/2014/06/10/new-sloan-award"
+      },
+      {
+        "@type": "Grant",
+        "name": "NSF Biology Post-doc",
+        "startDate": "2013-07-01",
+        "endDate": "2015-06-30",
+        "funder": "https://doi.org/10.13039/100000076",
+        "amount": { "@type": "MonetaryAmount", "value": "138000", "currency": "USD"},
+        "url": [ "http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm", 
+                 "http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697", 
+                 "http://doi.org/10.6084/m9.figshare.652970"
+                ],
+        "identifier": "#DBI-1306697"
+      }, 
+      { 
+        "@type": "Grant",
+        "name": "The rOpenSci Project, seed funding",
+        "startDate": "2013-06-12",
+        "endDate": "2014-06-12",
+        "funder": "https://doi.org/10.13039/100000879",
+        "amount": { "@type": "MonetaryAmount", "value": "180000", "currency": "USD"},
+        "url": "https://ropensci.org/blog/2013/06/12/sloan/"
+      }, 
+      {
+        "@type": "Grant",
+        "name": "IIASA YSSP fellowship" ,
+        "startDate": "2009-06-01",
+        "endDate": "2009-09-01",
+        "funder": "https://doi.org/10.13039/100000209",
+        "amount": { "@type": "MonetaryAmount", "value": "8000", "currency": "USD"},
+        "identifier": "OISE-0738129",
+        "url": "http://doi.org/10.6084/m9.figshare.678310"
+      }, 
+      {
+        "@type": "Grant",
+        "name": "Computational Science Graduate Fellowship",
+        "startDate": "2008-09-01",
+        "endDate": "2012-09-01",
+        "funder": "https://doi.org/10.13039/100000015",
+        "identifier": "#DE-FG02-97ER25308",
+        "amount": { "@type": "MonetaryAmount", "value": "149000", "currency": "USD"},
+        "proposal": "https://dx.doi.org/10.6084/m9.figshare.2010246"
+      }],  
+      
+    
+    "member": [{
+      "@type": "Organization", 
+      "name": "NCEAS Scientific Advisory Board",
+      "isPartOf": "https://nceas.ucsb.edu"
+      },
+      {
+        "@type": "Organization",
+        "name": "rOpenSci Leadership Team",
+        "isPartOf": "http://ropensci.org"
+      },
+      {
+        "@type": "Organization",
+        "name": "Jetstream NSF Cloud Computing Stakeholder Advisory Board"
+      },
+      {
+        "@type": "Organization",
+        "name": "Berkeley Research Computing Advisory Committee",
+        "location": "UC Berkeley"
+      }],
+    "founder": {
+      "@type": "Organization",
+      "@id": "http://ropensci.org",
+      "name": "The rOpenSci Project",
+      "url": "http://ropensci.org"
+    },  
+  
+  
+  
+  
+    "author": [{
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1093/biosci/bix025",
+      "name": "Skills and Knowledge for Data-Intensive Environmental Research",
+      "dateCreated": "2017-3-15",
+      "datePublished": "2017-05-03",
+      "isPartOf": {
+        "@type": ["Periodical", "PublicationVolume"],
+        "name": "BioScience",
+        "publisher": "Oxford University Press (OUP)"
+      },
+      "author": [
+        {
+          "givenName": "Stephanie E.",
+          "familyName": "Hampton"
+        },
+        {
+          "givenName": "Matthew B.",
+          "familyName": "Jones"
+        },
+        {
+          "givenName": "Leah A.",
+          "familyName": "Wasser"
+        },
+        {
+          "givenName": "Mark P.",
+          "familyName": "Schildhauer"
+        },
+        {
+          "givenName": "Sarah R.",
+          "familyName": "Supp"
+        },
+        {
+          "givenName": "Julien",
+          "familyName": "Brun"
+        },
+        {
+          "givenName": "Rebecca R.",
+          "familyName": "Hernandez"
+        },
+        {
+          "givenName": "Carl",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "Scott L.",
+          "familyName": "Collins"
+        },
+        {
+          "givenName": "Louis J.",
+          "familyName": "Gross"
+        },
+        {
+          "givenName": "Denny S.",
+          "familyName": "Fernández"
+        },
+        {
+          "givenName": "Amber",
+          "familyName": "Budden"
+        },
+        {
+          "givenName": "Ethan P.",
+          "familyName": "White"
+        },
+        {
+          "givenName": "Tracy K.",
+          "familyName": "Teal"
+        },
+        {
+          "givenName": "Stephanie G.",
+          "familyName": "Labou"
+        },
+        {
+          "givenName": "Juliann E.",
+          "familyName": "Aukema"
+        }
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1002/ece3.2314",
+      "name": "After the games are over: life-history trade-offs drive dispersal attenuation following range expansion",
+      "dateCreated": "2016-8-19",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "18",
+        "datePublished": "2016-9",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "6",
+          "name": "Ecology and Evolution",
+          "publisher": "Wiley-Blackwell"
+        }
+      },
+      "author": [
+        {
+          "givenName": "T. Alex",
+          "familyName": "Perkins"
+        },
+        {
+          "givenName": "Carl",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "Benjamin L.",
+          "familyName": "Phillips"
+        }
+      ],
+      "pagination": "6425-6434",
+      "license": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+    },
+    {
+   
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1890/15-0236",
+      "name": "Optimal management of a stochastically varying population when policy adjustment is costly",
+      "dateCreated": "2016-5-6",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "3",
+        "datePublished": "2016-4",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "26",
+          "name": "Ecological Applications",
+          "publisher": "Wiley-Blackwell"
+        }
+      },
+      "author": [
+        {
+          "givenName": "Carl",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "Michael",
+          "familyName": "Bode"
+        },
+        {
+          "givenName": "James N.",
+          "familyName": "Sanchirico"
+        },
+        {
+          "givenName": "Jacob",
+          "familyName": "LaRiviere"
+        },
+        {
+          "givenName": "Alan",
+          "familyName": "Hastings"
+        },
+        {
+          "givenName": "Paul R.",
+          "familyName": "Armsworth"
+        }
+      ],
+      "pagination": "808-817",
+      "license": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5334/jors.bu",
+      "name": "Building Software, Building Community: Lessons from the rOpenSci Project",
+      "dateCreated": "2015-11-16",
+        "datePublished": "2015-11-16",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "3",
+          "name": "Journal of Open Research Software",
+          "publisher": "Ubiquity Press, Ltd."
+      },
+      "author": ["Carl Boettiger", "Scott Chamberlain", "Ted Hart", "Karthik Ram"]
+    },
+    {
+   
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1111/2041-210x.12469",
+      "name": "RNeXML: a package for reading and writing richly annotated phylogenetic, character and trait data inr",
+      "dateCreated": "2015-9-3",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "3",
+        "datePublished": "2016-3",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "7",
+          "name": "Methods in Ecology and Evolution",
+          "publisher": "Wiley-Blackwell"
+        }
+      },
+      "author": [
+        {
+          "givenName": "Carl",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "Scott",
+          "familyName": "Chamberlain"
+        },
+        {
+          "givenName": "Rutger",
+          "familyName": "Vos"
+        },
+        {
+          "givenName": "Hilmar",
+          "familyName": "Lapp"
+        }
+      ],
+      "pagination": "352-357",
+      "license": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1145/2723872.2723882",
+      "name": "An introduction to Docker for reproducible research",
+      "dateCreated": "2015-1-28",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "1",
+        "datePublished": "2015-1-20",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "49",
+          "name": "ACM SIGOPS Operating Systems Review",
+          "publisher": "Association for Computing Machinery (ACM)"
+        }
+      },
+      "author": [
+        {
+          "givenName": "Carl",
+          "familyName": "Boettiger"
+        }
+      ],
+      "pagination": "71-79",
+      "license": "http://www.acm.org/publications/policies/copyright_policy#Background"
+    },
+    {
+   
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1098/rspb.2014.1631",
+      "name": "Avoiding tipping points in fisheries management through Gaussian process dynamic programming",
+      "dateCreated": "2015-1-7",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "1801",
+        "datePublished": "2015-1-7",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "282",
+          "name": "Proceedings of the Royal Society B: Biological Sciences",
+          "publisher": "The Royal Society"
+        }
+      },
+      "author": [
+        {
+          "givenName": "C.",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "M.",
+          "familyName": "Mangel"
+        },
+        {
+          "givenName": "S.",
+          "familyName": "Munch"
+        }
+      ],
+      "pagination": "20141631-20141631"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1098/rspb.2013.1372",
+      "name": "No early warning signals for stochastic transitions: insights from large deviation theory",
+      "dateCreated": "2013-7-10",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "1766",
+        "datePublished": "2013-7-10",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "280",
+          "name": "Proceedings of the Royal Society B: Biological Sciences",
+          "publisher": "The Royal Society"
+        }
+      },
+      "author": [
+        {
+          "givenName": "C.",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "A.",
+          "familyName": "Hastings"
+        }
+      ],
+      "pagination": "20131372-20131372"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1007/s12080-013-0192-6",
+      "name": "Early warning signals: the charted and uncharted territories",
+      "dateCreated": "2013-6-20",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "3",
+        "datePublished": "2013-8",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "6",
+          "name": "Theoretical Ecology",
+          "publisher": "Springer Nature"
+        }
+      },
+      "author": [
+        {
+          "givenName": "Carl",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "Noam",
+          "familyName": "Ross"
+        },
+        {
+          "givenName": "Alan",
+          "familyName": "Hastings"
+        }
+      ],
+      "pagination": "255-264"
+    },
+    {
+   
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1038/493157a",
+      "name": "Tipping points: from patterns to predictions",
+      "dateCreated": "2013-01-08",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "7431",
+        "datePublished": "2013-1-9",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "493",
+          "name": "Nature",
+          "publisher": "Springer Nature"
+        }
+      },
+      "author":  [
+        {
+          "givenName": "C.",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "A.",
+          "familyName": "Hastings"
+        }
+      ],
+      "pagination": "157–158"
+    },
+    {
+   
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1098/rspb.2012.2085",
+      "name": "Early warning signals and the prosecutor's fallacy",
+      "dateCreated": "2012-10-10",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "1748",
+        "datePublished": "2012-12-7",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "279",
+          "name": "Proceedings of the Royal Society B: Biological Sciences",
+          "publisher": "The Royal Society"
+        }
+      },
+      "author": [
+        {
+          "givenName": "C.",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "A.",
+          "familyName": "Hastings"
+        }
+      ],
+      "pagination": "4734-4739",
+      "license": {}
+    },
+    {
+   
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1111/j.1095-8649.2012.03464.x",
+      "name": "rfishbase: exploring, manipulating and visualizing FishBase data from R",
+      "dateCreated": "2012-11-6",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "6",
+        "datePublished": "2012-11",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "81",
+          "name": "Journal of Fish Biology",
+          "publisher": "Wiley-Blackwell"
+        }
+      },
+      "author": [
+        {
+          "givenName": "C.",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "D. T.",
+          "familyName": "Lang"
+        },
+        {
+          "givenName": "P. C.",
+          "familyName": "Wainwright"
+        }
+      ],
+      "pagination": "2030-2039",
+      "license": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+    },
+    {
+   
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1111/j.2041-210x.2012.00247.x",
+      "name": "Treebase: an R package for discovery, access and manipulation of online phylogenies",
+      "dateCreated": "2012-10-11",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "6",
+        "datePublished": "2012-12",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "3",
+          "name": "Methods in Ecology and Evolution",
+          "publisher": "Wiley-Blackwell"
+        }
+      },
+      "author": [
+        {
+          "givenName": "Carl",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "Duncan",
+          "familyName": "Temple Lang"
+        }
+      ],
+      "pagination": "1060-1066",
+      "license": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+    },
+    {
+   
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1098/rsif.2012.0125",
+      "name": "Quantifying limits to detection of early warning for critical transitions",
+      "dateCreated": "2012-5-16",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "75",
+        "datePublished": "2012-10-7",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "9",
+          "name": "Journal of The Royal Society Interface",
+          "publisher": "The Royal Society"
+        }
+      },
+      "author": [
+        {
+          "givenName": "C.",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "A.",
+          "familyName": "Hastings"
+        }
+      ],
+      "pagination": "2527-2539"
+    },
+    {
+   
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1111/j.1558-5646.2012.01619.x",
+      "name": "MODELING STABILIZING SELECTION: EXPANDING THE ORNSTEIN-UHLENBECK MODEL OF ADAPTIVE EVOLUTION",
+      "dateCreated": "2012-3-13",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "8",
+        "datePublished": "2012-8",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "66",
+          "name": "Evolution",
+          "publisher": "Wiley-Blackwell"
+        }
+      },
+      "author": [
+        {
+          "givenName": "Jeremy M.",
+          "familyName": "Beaulieu"
+        },
+        {
+          "givenName": "Dwueng-Chwuan",
+          "familyName": "Jhwueng"
+        },
+        {
+          "givenName": "Carl",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "Brian C.",
+          "familyName": "O’Meara"
+        }
+      ],
+      "pagination": "2369-2383",
+      "license": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+    },
+    {
+   
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1111/j.1558-5646.2011.01574.x",
+      "name": "IS YOUR PHYLOGENY INFORMATIVE? MEASURING THE POWER OF COMPARATIVE METHODS",
+      "dateCreated": "2012-2-19",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "7",
+        "datePublished": "2012-7",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "66",
+          "name": "Evolution",
+          "publisher": "Wiley-Blackwell"
+        }
+      },
+      "author": [
+        {
+          "givenName": "Carl",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "Graham",
+          "familyName": "Coop"
+        },
+        {
+          "givenName": "Peter",
+          "familyName": "Ralph"
+        }
+      ],
+      "pagination": "2240-2251",
+      "license": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+    },
+    {
+   
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1016/j.tpb.2009.10.003",
+      "name": "Fluctuation domains in adaptive evolution",
+      "dateCreated": "2009-10-19",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "1",
+        "datePublished": "2010-2",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "77",
+          "name": "Theoretical Population Biology",
+          "publisher": "Elsevier BV"
+        }
+      },
+      "author": [
+        {
+          "givenName": "Carl",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "Jonathan",
+          "familyName": "Dushoff"
+        },
+        {
+          "givenName": "Joshua S.",
+          "familyName": "Weitz"
+        }
+      ],
+      "pagination": "6-13",
+      "license": "http://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+   
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1086/508600",
+      "name": "The Shape, Multiplicity, and Evolution of Superclusters in ΛCDM Cosmology",
+      "dateCreated": "2006-11-27",
+      "isPartOf": {
+        "@type": "PublicationIssue",
+        "issueNumber": "2",
+        "datePublished": "2006-12",
+        "isPartOf": {
+          "@type": ["Periodical", "PublicationVolume"],
+          "volumeNumber": "652",
+          "name": "The Astrophysical Journal",
+          "publisher": "IOP Publishing"
+        }
+      },
+      "author": [
+        {
+          "givenName": "James J.",
+          "familyName": "Wray"
+        },
+        {
+          "givenName": "Neta A.",
+          "familyName": "Bahcall"
+        },
+        {
+          "givenName": "Paul",
+          "familyName": "Bode"
+        },
+        {
+          "givenName": "Carl",
+          "familyName": "Boettiger"
+        },
+        {
+          "givenName": "Philip F.",
+          "familyName": "Hopkins"
+        }
+      ],
+      "pagination": "907-916"
+    },
+    
+    
+    {
+      "@type": "Thesis",
+      "inSupportOf": "AB Degree, Princeton Physics Department",
+      "name": "Clonal Interference Models in Population Genetics",
+      "datePublished": "2006",
+      "@id": "https://doi.org/10.6084/m9.figshare.678305",
+      "author": ["David Huse"]
+    },
+    {
+      "@type": "Thesis",
+      "inSupportOf": "AB Degree, Princeton Physics Department",
+      "name": "Adaptive Dynamics: Branching Phenomena and the Canonical Equation",
+      "datePublished": "2006",
+      "@id": "https://doi.org/10.6084/m9.figshare.678306",
+      "author": ["Joshua Weitz", "Simon Levin"]
+    },
+    {
+      "@type": "Thesis",
+      "inSupportOf": "AB Degree, Princeton Physics Department",
+      "name": "Ensemble Behavior from Individual Dynamics in Multispecies Forest Populations.",
+      "datePublished": "2007",
+      "@id": "https://doi.org/10.6084/m9.figshare.678304",
+      "author": ["Stephen Pacala", "David Huse"]
+    },
+    {
+      "@type": "Thesis",
+      "inSupportOf": "PhD Degree, Population Biology, University of California, Davis",
+      "name": "Adaptive Dynamics: Branching Phenomena and the Canonical Equation",
+      "datePublished": "2012",
+      "@id": "https://doi.org/10.6084/m9.figshare.97218"
+    }],
+
+
+
+    "attendee": [{
+      "@type": ["Event", "InvitedTalk"],
+      "url": "http://ecows.oc.ntu.edu.tw/itnlws/",
+      "name": "Empirical Dynamical Modeling and Forecasting in Nonlinear Systems",
+      "location": {"@type": "Place", "name": "NTU, Taiwan"},
+      "startDate": "2015"
+    },
+    {
+      "@type": ["Event", "InvitedTalk"],
+      "startDate": "2014",
+      "name": "Berkeley Initiative for Global Change Biology",
+      "location": "Berkeley, CA"
+    },
+    {
+      "@type": ["Event", "InvitedTalk"],
+      "startDate": "2014",
+      "name": "DIMACS Global Change Biology",
+      "location": "Berkeley, CA",
+      "url": "http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html"
+    },{
+      "@type": ["Event", "InvitedTalk"],
+      "startDate": "2014",
+      "name": "Zoology Seminar, University of Wisconsin",
+      "location": "Madison, WI"
+    },
+    {
+      "@type": ["Event", "InvitedTalk"],
+      "startDate": "2014",
+      "name": "Berkeley Initiative for Global Change Biology",
+      "location": "Berkeley, CA"
+    },
+    {
+      "@type": ["Event", "InvitedTalk"],
+      "startDate": "2013",
+      "name": "Sustainable Management of Living Natural Resources",
+      "location": "Columbus, OH"
+    },
+    {
+      "@type": ["Event", "InvitedTalk"],
+      "startDate": "2013",
+      "name": "Woods Hole Oceanographic Institute Seminar Speaker",
+      "location": "Woods Hole, MA"
+    },
+    {
+      "@type": ["Event", "InvitedTalk"],
+      "startDate": "2013",
+      "name": "UC Davis Dept of Environmental Resources and Economics Seminar Speaker",
+      "location": "Davis, CA"
+    },
+     {
+      "@type": ["Event", "InvitedTalk"],
+      "startDate": "2012",
+      "name": "Society of Systematic Biology Symposium invited speaker, Evolution Conference",
+      "location": "Ottawa, CAN"
+    }],
+  
+    
+    "organizer": [
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "Codemeta Workshop",
+        "startDate": "2016-04-15",
+        "endDate": "2016-04-17",
+        "location": "Portland, OR",
+        "sponsor": "#nsf",
+        "subEvent": {
+          "@type": "Event",
+          "name": "Force16 Codemeta Workshop"
+        }
+      }],
+      
+    "participant":   [
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "rOpenSci Unconference",
+        "location": "San Francisco, CA",
+        "startDate": "2016",
+        "url": "http://unconf16.ropensci.org"
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "Moore-Sloan Data Science Environments: Second Annual Data Science Summit",
+        "startDate": "2015-10",
+        "location": "Seattle, WA"
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "Data Intensive Training Workshop",
+        "startDate": "2015-08",
+        "location": "NCEAS, Santa Barbara, CA",
+        "url": "https://github.com/NCEAS/ds-workshop-2015"
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "NSF Big Data Hubs Design Charette, Western Region",
+        "startDate": "2015-06",
+        "location": "Salt Lake City, Utah",
+        "url": "http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm"
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "rOpenSci Unconf",
+        "startDate": "2015-03-26",
+        "endDate": "2015-03-27",
+        "location": "San Fransisco, CA",
+        "url": "http://unconf.ropensci.org/"
+      },
+      {
+       "@type": ["Event", "Workshop"],
+        "name": "Pretty Darn Good Control Working group",
+        "startDate": "2015",
+        "location": "NIMBIOS, Knoxville TN",
+        "url": "http://www.nimbios.org/workinggroups/WG_PDG"
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "rOpenSci Unconf",
+        "startDate": "2014-03-30",
+        "endDate": "2014-04-01",
+        "location": "San Fransisco, CA",
+        "url": "http://ropensci.org/blog/2014/05/14/ropenhack/"  
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "Reproducible Science: Curriculum & Workflow",
+        "startDate": "2014-12-08",
+        "location": "NESCent, Durham, NC",
+        "url": "https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014"  
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "WSSSPE 2.0: Workshop on Sustainable Software for Science: Practice and Experiences",
+        "startDate": "2014-11-16",
+        "location": "New Orleans, LA",
+        "url": "http://wssspe.researchcomputing.org.uk/wssspe2"
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "Workflows Working Group",
+        "startDate": "2014",
+        "location": "NCEAS, Santa Barbara, CA"
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "Sustainable Management of Living Natural Resources",
+        "startDate": "2013",
+        "location": "MBI Columbus, OH",
+        "url": "http://www.mbi.ohio-state.edu/2013/ws3description.html"
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "Academic software & workforce development, ISEES",
+        "startDate": "2013-08",
+        "location": "Oakland, CA",
+        "url": "http://isees.nceas.ucsb.edu"
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "Software Lifecycle, ISEES",
+        "startDate": "2013",
+        "location": "Santa Barbara, CA",
+        "url": "http://isees.nceas.ucsb.edu"
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "Pretty Darn Good Control Working group",
+        "startDate": "2012-03-13",
+        "endDate": "2012-03-15",
+        "location": "NIMBIOS, Knoxville, TN",
+        "url": "http://www.nimbios.org/workinggroups/WG_PDG"
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "Pretty Darn Good Control Working group",
+        "startDate": "2011-09-12",
+        "endDate": "2011-09-15",
+        "location": "NIMBIOS, Knoxville, TN",
+        "url": "http://www.nimbios.org/workinggroups/WG_PDG"
+      },
+      {
+        "@type": ["Event", "Workshop"],
+        "name": "Stochastic spatial modeling in population dynamics",
+        "startDate": "2008",
+        "location": "Palo Alto, CA",
+        "url": "http://www.aimath.org/WWN/populationmodel/"
+      }]
+    }
+}  

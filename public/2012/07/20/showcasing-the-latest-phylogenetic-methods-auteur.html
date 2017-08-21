@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Showcasing the latest phylogenetic methods: AUTEUR</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="R, research-blogging" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Showcasing the latest phylogenetic methods: AUTEUR" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2011-07-20 15:07:14 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/07/20/showcasing-the-latest-phylogenetic-methods-auteur.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Showcasing the latest phylogenetic methods: AUTEUR" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2011-07-20 15:07:14 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/07/20/showcasing-the-latest-phylogenetic-methods-auteur.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2011-07-20 15:07:14 +0000"/>
+<meta name="citation_title" content="Showcasing the latest phylogenetic methods: AUTEUR"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Showcasing the latest phylogenetic methods: AUTEUR</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>While high-speed fish feeding videos may be the signature of the lab, dig a bit deeper and you’ll find a wealth of comparative phylogenetic methods sneaking in.  It’s a natural union – expert functional morphology is the key to good comparative methods, just as phylogenies hold the key to untangling the evolutionary origins of that morphology.  The lab’s own former graduate, <a href="http://www.brianomeara.info/">Brian O’Meara</a>, made a revolutionary step forward in the land of phylogenetic methods when he unveiled <em>Brownie</em> in 2006, allowing researchers to identify major shifts in trait diversification rates across the tree.  This work spurred not only a flood of empirical applications but also methodological innovations, such as Liam’s <a href="http://phytools.blogspot.com/2011/07/more-robust-version-of-brownielite.html">brownie-lite</a>, and today’s focus: <a href="http://public.wsu.edu/~storfer/eastman/pages/index.html">Jon Eastman</a> <em>et al.</em>’s auteur package.</p>
+<p>Auteur, short for “Accommodating uncertainty in trait evolution using R,” is the grown-up Bayesian RJMCMC version of that original idea in <em>Brownie</em>.  Diversification rates can change along the phylogenetic tree – only this time, you don’t have to specify where those changes could have occurred, or how many there may have been – auteur simply tries them all.</p>
+<p>If you want the details, definitely go <a href="http://doi.wiley.com/10.1111/j.1558-5646.2011.01401.x">read the paper</a> – it’s all there, clear and thorough.  Meanwhile, what we really want to do, is take it out for a test drive.</p>
+<p>The package isn’t up on CRAN yet, so you can grab the development version from Jon’s <a href="https://github.com/eastman/auteur">github</a> page, or <a href="https://github.com/downloads/eastman/auteur/auteur_0.11.0612.tar.gz">click here</a>.  Put that package in a working directory and fire up R in that directory.  Let’s go for a spin.</p>
+<pre class="sourceCode R"><code class="sourceCode r">
+<span class="kw">install.packages</span>(<span class="st">&quot;auteur_0.11.0612.tar.gz&quot;</span>, <span class="dt">repos=</span><span class="ot">NULL</span>)
+<span class="kw">library</span>(auteur)
+</code></pre>
+<p>Great, the package installed and loaded successfully. Looks like Jon’s put all 73 functions into the NAMESPACE, but it’s not hard to guess which one looks like the right one to start with.  rjmcmc.bm.  Yeah, that looks good.  It has a nice help file, with – praise the fish – example code.  Looks like we’re gonna run a simulation, where we know the answer, and see how it does:</p>
+<pre class="sourceCode R"><code class="sourceCode r">
+
+     #############
+     ## generate tree
+     n=<span class="dv">24</span>
+     while(<span class="dv">1</span>) {
+             phy=<span class="kw">prunelastsplit</span>(<span class="kw">birthdeath.tree</span>(<span class="dt">b=</span><span class="dv">1</span>,<span class="dt">d=</span><span class="dv">0</span>,<span class="dt">taxa.stop=</span>n<span class="dv">+1</span>))
+             phy$tip.label=<span class="kw">paste</span>(<span class="st">&quot;sp&quot;</span>,<span class="dv">1</span>:n,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)
+             rphy=<span class="kw">reorder</span>(phy,<span class="st">&quot;pruningwise&quot;</span>)
+
+             <span class="co"># find an internal edge</span>
+             anc=<span class="kw">get.desc.of.node</span>(<span class="kw">Ntip</span>(phy)+<span class="dv">1</span>,phy)
+             branches=phy$edge[,<span class="dv">2</span>]
+             branches=branches[branches&gt;<span class="kw">Ntip</span>(phy) &amp;<span class="st"> </span>branches!=anc]
+             branch=branches[<span class="kw">sample</span>(<span class="dv">1</span>:<span class="kw">length</span>(branches),<span class="dv">1</span>)]
+             desc=<span class="kw">get.descendants.of.node</span>(branch,phy)
+             if(<span class="kw">length</span>(desc)&gt;=<span class="dv">4</span>) break()
+     }
+     rphy=phy
+     rphy$edge.length[<span class="kw">match</span>(desc,phy$edge[,<span class="dv">2</span>])]=phy$edge.length[<span class="kw">match</span>(desc,phy$edge[,<span class="dv">2</span>])]*<span class="dv">64</span>
+
+     e=<span class="kw">numeric</span>(<span class="kw">nrow</span>(phy$edge))
+     e[<span class="kw">match</span>(<span class="kw">c</span>(branch,desc),phy$edge[,<span class="dv">2</span>])]=<span class="dv">1</span>
+     cols=<span class="kw">c</span>(<span class="st">&quot;red&quot;</span>,<span class="st">&quot;gray&quot;</span>)
+     <span class="kw">dev.new</span>()
+     <span class="kw">plot</span>(phy,<span class="dt">edge.col=</span><span class="kw">ifelse</span>(e==<span class="dv">1</span>,cols[<span class="dv">1</span>],cols[<span class="dv">2</span>]), <span class="dt">edge.width=</span><span class="dv">2</span>)
+     <span class="kw">mtext</span>(<span class="st">&quot;expected pattern of rates&quot;</span>)
+
+     #############
+     ## simulate data on the &#39;rate-shifted&#39; tree
+     dat=<span class="kw">rTraitCont</span>(<span class="dt">phy=</span>rphy, <span class="dt">model=</span><span class="st">&quot;BM&quot;</span>, <span class="dt">sigma=</span><span class="kw">sqrt</span>(<span class="fl">0.1</span>))
+</code></pre>
+<p>That creates this beautiful example (sorry, no random generator seed, you’re results may vary but that’s ok) tree:</p>
+<p><img src="http://farm7.static.flickr.com/6123/5952070152_e7761d597c.jpg" /> Okay, so that’s the target, showing where the shift occurred.  Note the last line got us some data on this tree.  We’re ready to run the software.  It looks super easy:</p>
+<pre class="sourceCode R"><code class="sourceCode r">
+## run two short reversible-jump Markov chains
+ r=<span class="kw">paste</span>(<span class="kw">sample</span>(letters,<span class="dv">9</span>,<span class="dt">replace=</span><span class="ot">TRUE</span>),<span class="dt">collapse=</span><span class="st">&quot;&quot;</span>)
+ <span class="kw">lapply</span>(<span class="dv">1</span>:<span class="dv">2</span>, function(x) <span class="kw">rjmcmc.bm</span>(<span class="dt">phy=</span>phy, <span class="dt">dat=</span>dat, <span class="dt">ngen=</span><span class="dv">10000</span>, <span class="dt">sample.freq=</span><span class="dv">10</span>, <span class="dt">prob.mergesplit=</span><span class="fl">0.1</span>, <span class="dt">simplestart=</span><span class="ot">TRUE</span>, <span class="dt">prop.width=</span><span class="dv">1</span>, <span class="dt">fileBase=</span><span class="kw">paste</span>(r,x,<span class="dt">sep=</span><span class="st">&quot;.&quot;</span>)))</code></pre>
+<p>The data is going in as “phy” and “dat”, just as expected.  We won’t worry about the optional parameters that follow for the moment.  Note that because we use lapply to run multiple chains, it would be super easy to run this on multiple processors.</p>
+<p>Note that Jon’s creating a bunch of directories to store parameters, etc.  This can be important for MCMC methods where chains get too cumbersome to handle in memory.  Enough technical rambling, let’s merge and load those files in now, and plot what we got:</p>
+<pre class="sourceCode R"><code class="sourceCode r">
+<span class="co"># collect directories</span>
+dirs=<span class="kw">dir</span>(<span class="st">&quot;./&quot;</span>,<span class="dt">pattern=</span><span class="kw">paste</span>(<span class="st">&quot;BM&quot;</span>,r,<span class="dt">sep=</span><span class="st">&quot;.&quot;</span>))
+<span class="kw">pool.rjmcmcsamples</span>(<span class="dt">base.dirs=</span>dirs, <span class="dt">lab=</span>r)
+
+## view contents of .rda
+<span class="kw">load</span>(<span class="kw">paste</span>(<span class="kw">paste</span>(r,<span class="st">&quot;combined.rjmcmc&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;.&quot;</span>),<span class="kw">paste</span>(r,<span class="st">&quot;posteriorsamples.rda&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;.&quot;</span>),<span class="dt">sep=</span><span class="st">&quot;/&quot;</span>))
+<span class="kw">print</span>(<span class="kw">head</span>(posteriorsamples$rates))
+<span class="kw">print</span>(<span class="kw">head</span>(posteriorsamples$rate.shifts))
+
+## plot Markov sampled rates
+<span class="kw">dev.new</span>()
+<span class="kw">shifts.plot</span>(<span class="dt">phy=</span>phy, <span class="dt">base.dir=</span><span class="kw">paste</span>(r,<span class="st">&quot;combined.rjmcmc&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;.&quot;</span>), <span class="dt">burnin=</span><span class="fl">0.5</span>, <span class="dt">legend=</span><span class="ot">TRUE</span>, <span class="dt">edge.width=</span><span class="dv">2</span>)
+
+<span class="co"># clean-up: unlink those directories</span>
+ <span class="kw">unlink</span>(<span class="kw">dir</span>(<span class="dt">pattern=</span><span class="kw">paste</span>(r)),<span class="dt">recursive=</span><span class="ot">TRUE</span>)</code></pre>
+<figure>
+<img src="http://farm7.static.flickr.com/6001/5952112488_91867e7f3a.jpg" />
+</figure>
+<p>Not only is that a beautiful plot, but it’s nailed the shift in species 12-16.  How’d your example do?</p>
+<p>Auteur comes with three beautiful large data sets described in the paper.  Check them out, but expect longer run times than our simple example!</p>
+<pre class="sourceCode R"><code class="sourceCode r">
+
+<span class="kw">data</span>(chelonia)
+<span class="co"># take a look at this data</span>
+&gt;<span class="st"> </span>chelonia
+$phy
+Phylogenetic tree with <span class="dv">226</span> tips and <span class="dv">225</span> internal nodes.
+
+Tip labels:
+Elseya_latisternum, Chelodina_longicollis, Phrynops_gibbus, Acanthochelys_radiolata, Acanthochelys_macrocephala, Acanthochelys_pallidipectoris, ...
+
+Rooted; includes branch lengths.
+
+$dat
+Pelomedusa_subrufa                   Pelusios_williamsi
+<span class="fl">2.995732</span>                             <span class="fl">3.218876</span>
+...
+dat &lt;-<span class="st"> </span>chelonia$dat
+phy &lt;-<span class="st"> </span>chelonia$phy
+## ready to run as above
+</code></pre>
+<p><a href="http://www.R-bloggers.com"><img src="http://a1.twimg.com/profile_images/1344218056/RblogLogo_bigger.png" alt="R-bloggers.com" /></a></p>
+<p>Thanks Jon and the rest of the Harmon Lab for a fantastic package. This is really just a tip of the iceberg, but should help get you started. See the paper for a good example of posterior analyses requisite after running any kind of MCMC, or stay tuned for a later post.</p>
+<p>(cross-posted from <a href="http://fishlab.ucdavis.edu/?p=303">my entry on the Wainwright lab blog</a>.)</p>
+<p><a href="http://www.researchblogging.org"><img src="http://www.researchblogging.org/public/citation_icons/rb2_large_gray.png" alt="ResearchBlogging.org" /></a> Eastman, J., Alfaro, M., Joyce, P., Hipp, A., &amp; Harmon, L. (2011). A NOVEL COMPARATIVE METHOD FOR IDENTIFYING SHIFTS IN THE RATE OF CHARACTER EVOLUTION ON TREES Evolution DOI: <a href="http://dx.doi.org/10.1111/j.1558-5646.2011.01401.x">10.1111/j.1558-5646.2011.01401.x</a></p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2011-07-20 15:07:14 +0000" 
+    property="dc:created">20 Jul 2011</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/07/17/sunday-warning-signals.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/07/24/csgf-2010-computing-practices-survey-summary.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2011-07-20-showcasing-the-latest-phylogenetic-methods-auteur.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#evolution">evolution</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#R">#R</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#research-blogging">#research-blogging</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/dbb400936cc5bebbbfa5193f4db11ff4149eee67/_posts/2011-07-20-showcasing-the-latest-phylogenetic-methods-auteur.md"> dbb400936cc5bebbbfa5193f4db11ff4149eee67</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Showcasing the latest phylogenetic methods: AUTEUR
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2011-07-20
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/07/20/showcasing-the-latest-phylogenetic-methods-auteur.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Correcting for the mean dynamics</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="warning-signals" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Correcting for the mean dynamics" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2010-10-26 16:46:24 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/10/26/correcting-for-the-mean-dynamics.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Correcting for the mean dynamics" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2010-10-26 16:46:24 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/10/26/correcting-for-the-mean-dynamics.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2010-10-26 16:46:24 +0000"/>
+<meta name="citation_title" content="Correcting for the mean dynamics"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Correcting for the mean dynamics</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Yesterday I began to address concerns of different models that have different mean dynamics, and how this influences the warning signals. This poses several kinds of issues.</p>
+<ul>
+<li><p>First, if the mean is changing, the model fitting must be appropriate to this – either by fitting this rate of change or correcting for it.</p></li>
+<li><p>Second, the variance is expected to scale with the mean, and scale differently under different noise models (particularly environmental vs. demographic).  Hence information about the mean cannot simply be discarded (i.e. by subtracting out a regression fit).</p></li>
+<li><p>Third, certain dynamics need not give much warning, even though they consist of saddle-node bifurcations.  By changing the curvature of the rate model we can examples with more and less advanced warning.  In some cases the change can happen fast enough that noise forces the system over the edge without warning.</p></li>
+</ul>
+<p>With changing mean:</p>
+<embed src="http://www.carlboettiger.info/assets/files/bifur.swf" width=300 height=300>
+<p>With “constant” mean:</p>
+<embed src="http://www.carlboettiger.info/assets/files/bifur_mean_const.swf" width=300 height=300>
+<p>Note that the mean changes quite suddenly at the end, though the loss of stability is more pronounced much earlier on.  (Images are is now sfw-flash objects instead of gif loops so can be paused, etc by right click. Hosted locally in this site’s media library as flickr stream doesn’t support flash.)</p>
+<p><a href="http://github.com/cboettig/structured-populations/blob/39a295ae0e3bde82af6800f8cf87f61f74726979/demos/saddle_analytics.R">Code archive for these figures;</a> uses the animation package and SWF tools to create the flash images.  Multiple root finding (a problem in the numerical examples earlier which used nlm) supported now by rootSolve package.</p>
+<h3 id="so-what-does-this-mean">So what does this mean?</h3>
+<p>Ignoring mean rate of change will be misleading, but a linear approximation to the rate of change doesn’t capture the second model well right near the switch point. Over most of the parameter range this can be ignored, with the rate estimated as essentially flat for this model. It is the corrections to the variance due to changes in the expected value that are more challenging. It is in this example that estimating the return rate, critical slowing down, will be more promising. The explicit analytics might help us further here:</p>
+<p>Starting from the expansion of the master equation and taking the linear noise approximation, we can express the dynamics in Ito form:</p>
+<p><span class="math">\[ dX_t = \left[ b(X_t)-d(X_t) \right] dt + \sqrt{\frac{b(X_t) + d(X_t)}{N}}dW_t \]</span></p>
+<p>Around the equilibrium <span class="math">\(\hat x\)</span> we have variance</p>
+<p><span class="math">\[ \frac{b(\hat x) + d(\hat x)}{2 N  \left[\ partial_x b(x) - d(x)\right]_{x = \hat x}} \]</span></p>
+<p>Defining: <span class="math">\[ \alpha(\hat x) =  \partial_x  \left[b(x) - d(x)\right]_{x = \hat x} \]</span></p>
+<p><span class="math">\[ \sigma^2(\hat x) = \frac{b(\hat x) + d(\hat x)}{N} \]</span></p>
+<p>and can write the correlation function: <span class="math">\[ \langle\langle X_0 X_t \rangle \rangle = \sigma^2(\hat x) e^{-\alpha(\hat x) t} \]</span></p>
+<p>It is precisely this <span class="math">\(\alpha(\hat x)\)</span> that we wish to estimate. Now it changes due to changes in <span class="math">\(\hat x\)</span> as well as changes in the bifurcation parameter, <span class="math">\(a\)</span>, which of course also influences <span class="math">\(\hat x\)</span> directly. So we want to rewrite this as a function of the bifurcation parameter alone:</p>
+<p><span class="math">\[ \partial_x  \left[b(x,a) - d(x,a)\right]_{x = \hat x(a)} =: f(a) \]</span></p>
+<p>A little tired of LaTeX writing, I  approximate <span class="math">\(\alpha(a)|_{\hat x}\)</span>,  the slope at equilibrium as a function of the bifurcation parameter. Going astray: <a href="http://www.flickr.com/photos/cboettig/5118738314">calculation here</a>, <a href="http://farm2.static.flickr.com/1419/5118172479_aaf1a2d5a1_m.jpg">results graphed here</a>, upshot is assuming saturation doesn’t capture the bifurcation.  Applying that approximation earlier to the derivative expression gives a slope of <span class="math">\(-e\)</span>, no <span class="math">\(a\)</span> dependence at saturation anyway.</p>
+<h4 id="numerical-solution">Numerical Solution</h4>
+<p>Foregoing a complete analytic treatment, we can solve for function numerically to get the picture. For the first model with the steady changing mean, we see the mean, the eigenvalue <span class="math">\(\alpha\)</span>, demographic noise term <span class="math">\(\sigma^2\)</span>, and total variance: <img src="http://farm2.staticflickr.com/1178/5119205688_e05388859a_o.png" /></p>
+<p>And for the second model (note smaller values of a now lead to the bifurcation): <img src="http://farm2.staticflickr.com/1220/5118603695_df7a11b494_o.png" /></p>
+<p>(<a href="http://github.com/cboettig/structured-populations/blob/a3ba76f81e72e972e2c5fa6e0cf87da5e15de80c/demos/saddle_analytics.R">see code for these graphs</a>, also has the updated code for flash animated bifurcations). Hard to justify good fits to a model form of <span class="math">\[ dX_t = \alpha(a, X_t) (\theta(a, X_t) - X_t)dt + \sigma(a, X_t) dW_t \]</span></p>
+<p>where the parameters are linear functions in time or in a (changing linearly with time). So, what’s the power spectrum of the time-dependent function</p>
+<p><span class="math">\[\langle\langle X_0 X_t \rangle \rangle = \sigma^2(\hat x) e^{-\alpha(\hat x, t) t} \]</span></p>
+<p>where <span class="math">\(\alpha(\hat x, t)\)</span> is a function of <span class="math">\(a\)</span> as given by the graphs above and <span class="math">\(a\)</span> changes linearly at some rate? Is it to this that we must compare fits under models of changing and non-changing <span class="math">\(a\)</span>?</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2010-10-26 16:46:24 +0000" 
+    property="dc:created">26 Oct 2010</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2010/10/25/wrong-picture-wrong-model-why-warning-signals-dont-look-like-rare-events.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2010/10/27/warning-signals-where-are-we-now.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2010/commits/master/_posts/2010-10-26-correcting-for-the-mean-dynamics.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2010/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2010/tags.html#warning-signals">#warning-signals</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2010/commit/6f1a0b4b42b04d94cb00ff455b7c567d926ba771/_posts/2010-10-26-correcting-for-the-mean-dynamics.md"> 6f1a0b4b42b04d94cb00ff455b7c567d926ba771</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Correcting for the mean dynamics
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2010-10-26
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/10/26/correcting-for-the-mean-dynamics.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

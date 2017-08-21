@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Lab Notebook</title>
+ <link href="/2008/atom.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2015-02-10T20:38:16+00:00</updated>
+ <id>http://www.carlboettiger.info/2008</id>
+ <author>
+   <name>Carl Boettiger</name>
+   <email>cboettig@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Popbio Core Review Notes</title>
+	 <link href="/2008/06/09/PopBio-Core-Review-Notes.html"/>
+   <updated>2008-06-09T00:00:00+00:00</updated>
+   <id>/06/09/PopBio-Core-Review-Notes</id>
+   <content type="html">&lt;p&gt;Embedded versions of my summary sheets for the Population Biology graduate group core course, organized by faculty member’s section.&lt;/p&gt;
+&lt;h3 id=&quot;schreiber-single-species-population-dynamics&quot;&gt;Schreiber: Single species population dynamics&lt;/h3&gt;
+&lt;embed src=&quot;2008/assets/files/pbg-core-notes/Schreiber2.pdf&quot; width=700 height=500&gt;
+&lt;h3 id=&quot;schoener-multispecies-population-dynamics&quot;&gt;Schoener: multispecies population dynamics&lt;/h3&gt;
+&lt;embed src=&quot;2008/assets/files/pbg-core-notes/Schoener2.pdf&quot; width=700 height=500&gt;
+&lt;h3 id=&quot;stachowicz-community-ecology&quot;&gt;Stachowicz: Community ecology&lt;/h3&gt;
+&lt;embed src=&quot;2008/assets/files/pbg-core-notes/Stachowicz2.pdf&quot; width=700 height=500&gt;
+&lt;h3 id=&quot;sih-animal-behavior&quot;&gt;Sih: Animal behavior&lt;/h3&gt;
+&lt;embed src=&quot;2008/assets/files/pbg-core-notes/SihReview2.pdf&quot; width=700 height=500&gt;
+&lt;h3 id=&quot;turelli-population-genetics-and-speciation&quot;&gt;Turelli: Population genetics and speciation&lt;/h3&gt;
+&lt;embed src=&quot;2008/assets/files/pbg-core-notes/TurelliReview2.pdf&quot; width=700 height=500&gt;
+&lt;h3 id=&quot;wainwright-macroevolution-and-comparative-phylogenetics&quot;&gt;Wainwright: macroevolution and comparative phylogenetics&lt;/h3&gt;
+&lt;embed src=&quot;2008/assets/files/pbg-core-notes/Wainwright.pdf&quot; width=700 height=500&gt;
+</content>
+ </entry>
+ 
+ 

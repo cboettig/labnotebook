@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    {{ with .Title }}<h1>{{ . }}</h1> {{ end }}
+      
+    {{ .Content }}
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      {{ partial "sidebar.html" . }}
+    </div>
+  </div>
+</div>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    {{ partial "disqus.html" . }}
+  </div>
+</section>
+
+{{ end }}
+ 

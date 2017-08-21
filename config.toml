@@ -1,0 +1,61 @@
+relativeurls = true
+languageCode = "en-us"
+title = "Boettiger Group"
+googleAnalytics = "UA-18401403-1"
+disqusShortname = "cboettig"
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+publishDir = "public"
+enableGitInfo = true
+
+[permalinks]
+    lab-notebook = "/:year/:month/:day/:slug/"
+
+[[menu.main]]
+    name = "Home"
+    url = "/index.html"
+    weight = 1
+[[menu.main]]
+    name = "Members"
+    url = "/members"
+    weight = 2
+[[menu.main]]
+    name = "Publications"
+    url = "/vita"
+    weight = 3
+[[menu.main]]
+    name = "Teaching"
+    url = "/teaching"
+    weight = 4
+[[menu.main]]
+    name = "Lab Notebook"
+    url = "/lab-notebook"
+    weight = 5
+
+[params]
+    name =  "Carl Boettiger"
+    twitter =  "cboettig"
+    github =  "cboettig"
+    keybase = "cboettig"
+    email =  "cboettig@gmail.com"
+    custom_css = ["cboettig.css"]
+    repo = "labnotebook"
+    branch = "master"
+    math = true
+
+    date_format = "Mon, Jan 2, 2006"
+    description = "A website built through Hugo and blogdown."
+
+    # options for highlight.js (version, additional languages, and theme)
+    highlightjsVersion = "9.10.0"
+    highlightCDN = "//cdn.bootcss.com"
+    highlightjsLang = ["r", "yaml"]
+    highlightjsTheme = "github"
+
+    [params.logo]
+    url = "logo.png"
+    width = 50
+    height = 50
+    alt = "Logo"
+
+    
+

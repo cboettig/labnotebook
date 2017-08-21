@@ -1,0 +1,42 @@
+---
+title: Migrating to Hugo and blogdown
+author: Carl Boettiger
+date: '2017-04-19'
+categories: [R]
+tags: [R, blog, open-science]
+---
+
+After OpenWetWare (2010), Wordpress (2010 - 2012) and Jekyll (2012 - 2017), I move platforms once again: now to Hugo.  Why the move? As usual, this site remains a way for me to explore new technologies, but the cutting edge is by no means the allure which leads me to migrate.  Rather, I find myself ever trying to move towards simpler platforms, what's easier to maintain, free to host, easier to replicate, and what makes best use of the most widely available and well-maintained existing software and avoids unncessary custom hacks.  Nevertheless I still want the clean content model of a static website generator with reasonable control over content and structure.  
+
+For a while Jekyll fit this reasonably well.  Designed as the hacker's platform, it was easy to customize and extend, but thanks to its association with GitHub, mainstream enough to be widely recognized and support a great deal of additional functionality.  Martin Fenner maintains a nice pandoc extension for markdown, and Yihui's `servr` package provided a basic mechanism for maintaining `.Rmd` posts.  Some straight forward if somewhat cumbersome configuration on [circleci.com](https://circleci.com) (at the time, travis did not support custom Docker use, and circle has always had a simpler model for managing secure credentials and debugging runs) could support automatic deployment, R builds and all. Yet Jekyll has always been a bit cumbersome about versioning, and my poorly hacked extensions in Ruby (pulling in RSS feeds, twitter, and git hashes for instance) were also showing their age.  
+
+Meanwhile at RStudio, Yihui has a fully-fledged incarnation of an R blog engine, [blogdown](https://github.com/rstudio/blogdown) built around the go-based static site generate [Hugo](https://hugodocs.info).  True to the hype, Hugo is much faster to compile (even though using it's built-in git module to get git hash and commit info slows it down a bit), though the speed hardly compelling by itself.  More usefully, becuase Go is a compiled language, Hugo can be distributed as a platform-specific binary for Linux, Mac or Windows machines.  This does mean a less extensible platform than Jekyll's huge network of plugins, but the base system is pretty feature rich and well maintained. The `blogdown` package includes a handy function for installing the latest Hugo version for your platform directly from R. Hugo has proven popular, if not as well known as Jekyll -- and I hope RStudio's endorsement and integration with `blogdown` will help make it familiar if not something of a standard for the R community.
+
+### Compared to Jekyll
+
+Hugo's design is very similar to Jekyll, though it uses the Go templating system instead of ruby/liquid.  The syntax and functionality of both are quite similar, though not identical.  Go templates have a relative notion of "context," which can be powerful but also a bit confusing.  To me, the biggest nusiance in migrating is the relative lack of base/nested layouts.  Jekyll makes it stupidly easy to have a `_layouts/default.html` and then define `_layouts/page.html` and `_layouts/post.html` based on the same template.  Hugo has a notion of `_includes` (called `partials`), but no automatic nesting of layouts.  (A somewhat recent and seemingly unitilized option in Hugo does allow a user to define special base layouts explicitly).
+
+Hugo does not (currently) support pandoc markdown, relying instead on Go's markdown parser, `blackfriday`.  `blackfriday` supports the basic extensions found on GitHub (tables, checkboxes), but differing flavors of markdown have always been a nuciance and R's standardization around pandoc has been welcome.
+
+
+### Regarding automated builds
+
+One selling point of Jekyll has always been the integration with GitHub, which supports automated builds of the site.  Of course the introduction of any plugins, let alone the Rmd files, breaks this model, requiring the considerably less streamlined setup for continuous-integration-based builds (e.g. via Travis or circleci).  In practice, I don't think this matters that much.  For one, it's almost always desirable to preview changes locally before posting them anyway, at which point one can commit this locally built version.  While the somewhat clumsy dependencies of Jekyll and potentially slow build made having to wait for a local build for any small change rather annoying, Hugo's speed and tighter R integration effectively solve that.  There are still those occassional times when it would be nice to just fix some text or data file from GitHub's editor on the run, rather than build the site locally, but by in large I think a local build model is simpler and so far have not added the automated deploy from circle back.  
+
+### GitHub deploy / hosting
+
+GitHub's recent option to host sites from a `docs/` directory on the `master` branh instead of a `gh-pages` branch has generally simplified the deployment for static sites, though this model doesn't apply to user/org level repos like `cboettig.github.io`, which never used a `gh-pages` branch but treat `master` as the static site and keep source on some other branch, e.g. `source` in my case.  These repos are no longer necessary to have a GitHub-hosted site, but they are the only way to have a single CNAME used across all repositories of the user/org.  Since I still have old notebooks in repos like `2015` which I want deployed at `www.carlboettiger.info/2015` (instead of something like `2015.carlboettiger.info`), I need this shared CNAME.  To keep a streamlined deploy, I keep two copies of my repository `cboettig.github.io` checked out, with one on the master branch renamed as `carlboettiger.info` and my `config.toml` pointing to it, `../carlboettiger.info`.  That way I can build from the copy on the `source` branch and just push the resulting files on the master branch.  
+
+
+
+### R code
+
+
+Just for fun, I'll make this post as an `.Rmd` file to illustrate running R code: 
+
+```{r}
+sessionInfo()
+```
+
+Note that `blogdown` relies on a simple `make`-like caching rule to avoid recompiling the R code unless the Rmd file has a newer timestamp than the output html version, making it practical to maintain a large site with non-trivial R posts.     
+

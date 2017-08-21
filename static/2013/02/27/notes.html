@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Notes</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="reading, seminar" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Notes" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2013-02-27 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/02/27/notes.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Notes" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2013-02-27 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/02/27/notes.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2013-02-27 00:00:00 +0000"/>
+<meta name="citation_title" content="Notes"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Notes</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <h3 id="reviewing">Reviewing</h3>
+<p>arg, reviewing. so much time.</p>
+<h3 id="seminar">Seminar</h3>
+<p><a href="http://katericherson.wordpress.com/">Kate Richerson</a> gave a fanstastic presentation to mega group yesterday showing her integration of behavior and dispersal in krill dynamics. She derives the krill’s behavioral movement patterns through a stochastic dynamic programming solution rather than just dictate it to the dispersal model directly.</p>
+<h3 id="reading">Reading</h3>
+<p>.</p>
+<ul>
+<li>Provicative stuff in PNAS <span class="showtooltip" title="Perretti C, Munch S and Sugihara G (2013). Model-Free Forecasting
+Outperforms The Correct Mechanistic Model For Simulated And
+Experimental Data. _Proceedings of The National Academy of
+Sciences_. ISSN 0027-8424, 
+http://dx.doi.org/10.1073/pnas.1216076110."><a href="http://dx.doi.org/10.1073/pnas.1216076110">Perretti <em>et. al.</em> (2013)</a></span>. It would be nice to see the comparison against the generating model.  The forecasting errors of the fully Bayesian inference using the correct model shouldn’t necessary be small, but they should be just as big as the Bayesian model expects them to be (e.g. over replicates, the Bayesian forecast error reflects the widths of the posteriors (modulo some statement about priors)).</li>
+</ul>
+<p>My worry with any approach doing better than the expected error is that it does so by generating biased estimation – e.g. something in the forecasting method, rather than in the data, happens to be biased towards the ‘right answer’.  In this example I don’t think that is the case.</p>
+<p>We already know that the modes of the posteriors don’t recover the correct model parameters of the generating model from an MCMC of such a complex model with limited data (though perhaps it is good to remind folks of this!), so it is not surprising that a heuristic approach can outperform this in cases.  </p>
+<p>It certainly is good to wrestle with these examples in any case.  Steve’s one of my post-doc advisors now so no doubt I’m biased.  Noam also pointed out this earlier article in Ecology <span class="showtooltip" title="Perretti C, Sugihara G and Munch S (2012). Nonparametric
+Forecasting Outperforms Parametric Methods For A Simulated
+Multi-Species System. _Ecology_. ISSN 0012-9658, 
+http://dx.doi.org/10.1890/12-0904.1."><a href="http://dx.doi.org/10.1890/12-0904.1">Perretti <em>et. al.</em> (2012)</a></span>.</p>
+<ul>
+<li>In seminar, Marc mentioned the great paper by <span class="showtooltip" title="Wiedenmann J, Cresswell K, Goldbogen J, Potvin J and Mangel M
+(2011). Exploring The Effects of Reductions in Krill Biomass in
+The Southern Ocean on Blue Whales Using A State-Dependent Foraging
+Model. _Ecological Modelling_, *222*. ISSN 03043800, 
+http://dx.doi.org/10.1016/j.ecolmodel.2011.07.013."><a href="http://dx.doi.org/10.1016/j.ecolmodel.2011.07.013" rel="http://purl.org/spar/cito/discusses" >Wiedenmann <em>et. al.</em> (2011)</a></span> that uses the comparison of the optimal foraging strategy evolved by whales in their evolutionary environment to how that strategy performs today (similar spirit to the kinds of comparisons I am interested in with #multiple-uncertainty project.</li>
+</ul>
+<p>Reading an old Schaffer paper <span class="showtooltip" title="Schaffer W (1984). Stretching And Folding in Lynx Fur Returns:
+Evidence For A Strange Attractor in Nature? _The American
+Naturalist_, *124*. ISSN 0003-0147, 
+http://dx.doi.org/10.1086/284318."><a href="http://dx.doi.org/10.1086/284318" rel="http://purl.org/spar/cito/discusses" >Schaffer (1984)</a></span>.</p>
+<ul>
+<li><p>Though <em>Nature</em> says the National Academy of Sciences needs an overhaul to stay relevant. Probably true but they still do some excellent reports that could deserve more eyes, like this on model fitting (<span class="showtooltip" title="(????). Assessing the Reliability of Complex Models: Mathematical
+and Statistical Foundations of Verification, Validation, and
+Uncertainty Quantification. 
+http://www.nap.edu/catalog.php?record_id=13395 [Online.
+last-accessed: 2013-02-28 18:23:05]. 
+http://www.nap.edu/catalog.php?record_id=13395."><a href="http://www.nap.edu/catalog.php?record_id=13395" rel="http://purl.org/spar/cito/discusses" ></a></span>). We could do more VVUQ in ecology and evolution, and the value of presenting benchmark examples of this in simple (trivial) cases cannot be overstated, e.g. Fig 5.2.1.</p></li>
+<li><p>GP methods in Biometrika <span class="showtooltip" title="Banerjee A, Dunson D and Tokdar S (2012). Efficient Gaussian
+Process Regression For Large Datasets. _Biometrika_, *100*. ISSN
+0006-3444,  http://dx.doi.org/10.1093/biomet/ass068."><a href="http://dx.doi.org/10.1093/biomet/ass068" rel="http://purl.org/spar/cito/discusses" >Banerjee <em>et. al.</em> (2012)</a></span></p></li>
+<li><p>Luminaries of evolution forecast the future of the field, with an eye towards data and semantics in <span class="showtooltip" title="Losos J, Arnold S, Bejerano G, Brodie E, Hibbett D, Hoekstra H,
+Mindell D, Monteiro A, Moritz C, Orr H, Petrov D, Renner S,
+Ricklefs R, Soltis P and Turner T (2013). Evolutionary Biology
+For The 21st Century. _Plos Biology_, *11*. 
+http://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1371/journal.pbio.1001466" rel="http://purl.org/spar/cito/discusses" >Losos <em>et. al.</em> (2013)</a></span></p></li>
+</ul>
+<h3 id="misc">Misc</h3>
+<ul>
+<li>wrote a quick CSL format for knitcitations. (Generate inline citations using the copy function in Mendeley library. A bit silly since normally that would already generate the entire bibliographic citation.)</li>
+<li>Should really make a CSL format for Mendeley to paste in a HTML citation (with full metadata in tooltip). Might then use an existing format to copy-paste bib info at end.</li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bibliography</span>()</code></pre>
+<ul>
+<li>A. Banerjee, D. B. Dunson, S. T. Tokdar, (2012) Efficient Gaussian Process Regression For Large Datasets. <em>Biometrika</em> <strong>100</strong> <a href="http://dx.doi.org/10.1093/biomet/ass068">10.1093/biomet/ass068</a></li>
+<li>Jonathan B. Losos, Stevan J. Arnold, Gill Bejerano, E. D. Brodie, David Hibbett, Hopi E. Hoekstra, David P. Mindell, Antónia Monteiro, Craig Moritz, H. Allen Orr, Dmitri A. Petrov, Susanne S. Renner, Robert E. Ricklefs, Pamela S. Soltis, Thomas L. Turner, (2013) Evolutionary Biology For The 21st Century. <em>Plos Biology</em> <strong>11</strong> <a href="http://dx.doi.org/10.1371/journal.pbio.1001466">10.1371/journal.pbio.1001466</a></li>
+<li>Charles Thomas Perretti, George Sugihara, Stephan B. Munch, (2012) Nonparametric Forecasting Outperforms Parametric Methods For A Simulated Multi-Species System. <em>Ecology</em> <a href="http://dx.doi.org/10.1890/12-0904.1">10.1890/12-0904.1</a></li>
+<li>C. T. Perretti, S. B. Munch, G. Sugihara, (2013) Model-Free Forecasting Outperforms The Correct Mechanistic Model For Simulated And Experimental Data. <em>Proceedings of The National Academy of Sciences</em> <a href="http://dx.doi.org/10.1073/pnas.1216076110">10.1073/pnas.1216076110</a></li>
+<li>William M. Schaffer, (1984) Stretching And Folding in Lynx Fur Returns: Evidence For A Strange Attractor in Nature?. <em>The American Naturalist</em> <strong>124</strong> <a href="http://dx.doi.org/10.1086/284318">10.1086/284318</a></li>
+<li>John Wiedenmann, Katherine A. Cresswell, Jeremy Goldbogen, Jean Potvin, Marc Mangel, (2011) Exploring The Effects of Reductions in Krill Biomass in The Southern Ocean on Blue Whales Using A State-Dependent Foraging Model. <em>Ecological Modelling</em> <strong>222</strong> <a href="http://dx.doi.org/10.1016/j.ecolmodel.2011.07.013">10.1016/j.ecolmodel.2011.07.013</a></li>
+<li>Assessing the Reliability of Complex Models: Mathematical and Statistical Foundations of Verification, Validation, and Uncertainty Quantification. <a href="http://www.nap.edu/catalog.php?record_id=13395" class="uri">http://www.nap.edu/catalog.php?record_id=13395</a></li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2013-02-27 00:00:00 +0000" 
+    property="dc:created">27 Feb 2013</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2013/02/28/notes.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2013/commits/master/_posts/2013-02-27-notes.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2013/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2013/tags.html#reading">#reading</a>, 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2013/tags.html#seminar">#seminar</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2013/commit/6ab89d33eeff13286ab4ad614e6800d535567f5a/_posts/2013-02-27-notes.md"> 6ab89d33eeff13286ab4ad614e6800d535567f5a</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Notes
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2013-02-27
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/02/27/notes.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

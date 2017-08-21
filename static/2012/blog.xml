@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Lab Notebook - blog</title>
+ <link href="/2012/blog.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2015-02-25T21:45:20+00:00</updated>
+ <id>http://www.carlboettiger.info/2012</id>
+ <author>
+   <name>Carl Boettiger</name>
+   <email>cboettig@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Github Issues Tracker: The Perfect Research Todo List</title>
+	 <link href="/2012/12/06/github-issues-tracker:-the-perfect-research-todo-list.html"/>
+   <updated>2012-12-06T00:00:00+00:00</updated>
+   <id>/12/06/github-issues-tracker:-the-perfect-research-todo-list</id>
+   <content type="html">&lt;p&gt;Github issues tracker has increasingly become my research to-do list. Far beyond bugs and features of the code associated with the project, the issues sign-post different directions for investigation and the progress I’ve made in each. Tags serve to group issues related to a common sub-project (as in my &lt;a href=&quot;https://github.com/cboettig/pdg_control/issues&quot;&gt;pdg-control&lt;/a&gt;) repo or priotize tasks (as in my &lt;a href=&quot;https://github.com/cboettig/nonparametric-bayes/issues&quot;&gt;nonparametric-bayes&lt;/a&gt; repo.&lt;/p&gt;
+&lt;p&gt;Issues not only have title and tags, but support a comment thread for progress and discussion of the issue. Thanks to github-flavored-markdown, issues can reference each other simply by number, and can be updated or closed automatically by mentioning the issue number in a commit.&lt;/p&gt;
+&lt;p&gt;Issues can also be grouped into shared deadlines, or milestones; a feature I haven’t fully exploited (but see our &lt;a href=&quot;https://github.com/cboettig/ews-review/issues/milestones&quot;&gt;ews-review&lt;/a&gt; paper). In any collaborative project the issues can be assigned to different people, (though currently this requires they have a Github account).&lt;/p&gt;
+&lt;p&gt;A consequence of this workflow is a conveniently numbered, color-coded and cross-linked collection of steps involved in a given research project. This tends to be a higher-level overview than the individual commit log, particularly as I often use commits to track multiple runs with different parameters, or move code across to different supercomputers that do the actual runs.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;http://farm9.staticflickr.com/8490/8250376085_09f734c6f1.jpg&quot; alt=&quot;Example from closed issues on pdg-control&quot; /&gt;&lt;figcaption&gt;Example from closed issues on &lt;a href=&quot;https://github.com/cboettig/pdg_control/issues?labels=&amp;amp;milestone=&amp;amp;page=1&amp;amp;state=closed&quot;&gt;&lt;code&gt;pdg-control&lt;/code&gt;&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;I am still figuring out the right level or “resolution” on which to create and track issues.&lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; On one extreme, almost every commit could be seen as resolving an issue. The ideal use for me is probably nearer the other extreme, where individual issues are rather big-picture, and may be referenced by many commits. Perhaps the right way to think about it is that the questions addressed by resolving an issue are on the level of &lt;em&gt;what is interesting to others&lt;/em&gt;, while changes in individual commits are more for me. Hopefully I get better at finding this relevant level.&lt;/p&gt;
+&lt;p&gt;Another nice feature of issues is that they can be closed when a particular line of investigation hits a dead-end, or stalls, or when the problem is resolved. Unlike the resulting paper from an investigation which essentially summarizes the issues that were closed successfully, the issues tracker also reveals the dead-ends, as well as those issues that were not closed a time of publication (but perhaps left to “further research”). Hopefully I will have some decent examples of this in the repositories accompanying my next papers.&lt;/p&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;Unlike issues, commits do not have a native tag structure (so-called “tags” mark important events in the commit history rather than grouping common commits). So at least this would group commits by the tag of the associated issue.&lt;a href=&quot;#fnref1&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Citing Lab Notebook Entries</title>
+	 <link href="/2012/11/23/citing-lab-notebook-entries.html"/>
+   <updated>2012-11-23T00:00:00+00:00</updated>
+   <id>/11/23/citing-lab-notebook-entries</id>
+   <content type="html">&lt;p&gt;C. Titus Brown has an excellent &lt;a href=&quot;http://ivory.idyll.org/blog/posting-blog-entries-to-figshare.html&quot;&gt;post&lt;/a&gt; discussing his exploration into the merits and technicalities cross-posting his blog posts to figshare. The &lt;a href=&quot;https://github.com/ropensci/rfigshare&quot;&gt;&lt;code&gt;rfigshare&lt;/code&gt; package&lt;/a&gt; written by &lt;a href=&quot;http://emhart.github.com/&quot;&gt;Ted Hart&lt;/a&gt; and myself can do just this, once we puzzled out some of the same challenges (Notes to Titus: though the documentation doesn’t mention it, you can get a programmatic list of available categories from &lt;a href=&quot;http://api.figshare.com/v1/categories&quot; class=&quot;uri&quot;&gt;http://api.figshare.com/v1/categories&lt;/a&gt;. Figshare can also take code as a fileset or dataset, and may soon add a type for it. The coolest thing about figshare is perhaps the way they add types in response to how they see users using the service).&lt;/p&gt;
+&lt;p&gt;The real discussion, though, is not about &lt;em&gt;how&lt;/em&gt;, but &lt;em&gt;why&lt;/em&gt;? Currently figshare doesn’t render the html or markdown/restructured-text source (other than as plain text), so it’s not a great place to &lt;em&gt;read&lt;/em&gt; the posts. This may change in the near future as well, but the primary motivation for doing this seems to be on the ability to get an honest-to-goodness DOI for your entry. So why a DOI?&lt;/p&gt;
+&lt;p&gt;The answer most often put forward is that “a DOI facilitates citing a paper in the formal literature.” I think that’s not entirely accurate. For one, the formal literature has no trouble citing things that do not have a DOI. Perhaps the answer is meant to mean track citations to my content, &lt;em&gt;e.g.&lt;/em&gt; for statistical/impact purposes. This may be closer to the mark, but it still needs work. What counts depends on whose doing the counting. Anyone browsing the citation counts of a work through different mediums has surely encountered Thompson-Reuters has very specific criteria to be included, so I don’t believe they are tracking citations to anything with a DOI. Nor, I think is Scopus. Perhaps the target is Google then?&lt;/p&gt;
+&lt;p&gt;If you want Google Scholar to count the number of citations to your blog post, I have good news for you. You do not need a DOI and cross-posting to figshare. You just need to follow the &lt;a href=&quot;http://scholar.google.com/intl/en/scholar/inclusion.html#indexing&quot;&gt;metadata requirements&lt;/a&gt; as outlined by Google Scholar itself. This will help Google Scholar identify your blog post as a academic object, and add it to your profile. Anything indexed by Google scholar that cites your blog post will count as a reference. The basics are really simple. Have metadata such as:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode html&quot;&gt;&lt;code class=&quot;sourceCode html&quot;&gt;&lt;span class=&quot;kw&quot;&gt;&amp;lt;meta&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; name=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;resource_type&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; content=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;Lab Notebook&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;&amp;lt;meta&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; name=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;citation_journal_title&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; content=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;Lab Notebook&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;&amp;lt;meta&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; name=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;citation_publication_date&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; content=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;2012-11-23 00:00:00 +0000&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;&amp;lt;meta&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; name=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;citation_date&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; content=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;2012-11-23 00:00:00 +0000&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;&amp;lt;meta&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; name=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;citation_author&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; content=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;Carl Boettiger&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;&amp;lt;meta&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; name=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;citation_title&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; content=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;Citing Lab Notebook Entries&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Just replace &lt;code&gt;Lab Notebook&lt;/code&gt; etc. with the correct values for your site. The example above will do so automatically if you use Jekyll using information specified in the YAML header. It seems the entry also needs a section called either “References” or “Bibliography” followed by a list of references. Not sure what format Google Scholar will do best at disambiguating. (Note that what I refer to as “Google Scholar” metadata looks like it was originally the convention adopted by HireWire Press.)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.russet.org.uk&quot;&gt;Phil Lord&lt;/a&gt; and colleagues have written the fantastic API called &lt;a href=&quot;http://knowledgeblog.org/greycite&quot;&gt;greycite&lt;/a&gt; [Lord 2012], which can be used to generate citation data from any website that has semantic markup (including HTML5 semantics, also Dublin Core or OpenGraph ontologies and Google Scholar metadata). The API can return citations formatted in bibtex or JSON. Try it out at &lt;a href=&quot;http://greycite.knowledgeblog.org&quot;&gt;greycite.knowledgeblog.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now there is another reason to use DOIs and figshare, which is, I think, entirely independent – archival preservation (decoupled journal, anyone?). DOIs are potentially more permanent than URLs (though I’ll leave that debate to the experts). Figshare content is backed up by &lt;a href=&quot;http://clockss.org/&quot;&gt;CLOCKSS&lt;/a&gt;. Forever is a long time, but this certainly sounds like a better archiving strategy. Figshare should be providing the necessary Google Scholar metadata on each object now. My current practice has been to archive my notebook in annual chunks on figshare (posting entries individually feels fragmented and cluttered to me), and rely on the more native web solution of HTML metadata to allow my entries to “citable”. Perhaps this is not ideal, but for the short term, the content is discoverable and citable via Google Scholar, which points to my address. If my site vanishes from the web, one might hope that an academic search for my lab notebook might recover the content from the archived version.&lt;/p&gt;
+&lt;h2 id=&quot;edit-thoughts-examples-and-disclaimer&quot;&gt;Edit: thoughts, examples and disclaimer&lt;/h2&gt;
+&lt;p&gt;I stumbled across Google’s indexing of some of my lab notebook entries somewhat by accident. For instance, one of my &lt;a href=&quot;http://www.carlboettiger.info/2011/10/28/optimal-control-examples-continued-bellman-dynamic-programming.html&quot;&gt;entries&lt;/a&gt; on optimal control in which I had listed some references started turning up &lt;a href=&quot;http://scholar.google.com/citations?view_op=view_citation&amp;amp;hl=en&amp;amp;user=zj2rRtEAAAAJ&amp;amp;citation_for_view=zj2rRtEAAAAJ:4TOpqqG69KYC&quot;&gt;in Google Scholar&lt;/a&gt; Being able to engage in a scholarly exchange through blogs that can cite and be cited by the formal literature certainly sounds like an important step forward in generating new publishing models. Of course it is also obvious that the procedure I have outlined could be trivially exploited for some rather blatant gaming of Google Scholar’s citation statistics. This post certainly is not an endorsement of gaming such statistics. If nothing else, perhaps this once again underscores the weakness of reliance on metrics of quantity when trying to infer quality. Will we ever let go of that fallacy?&lt;/p&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;Titus Brown (2012) Posting blog entries to figshare, Living in an Ivory Basement. http://ivory.idyll.org/blog/posting-blog-entries-to-figshare.html&lt;/li&gt;
+&lt;li&gt;Phillip Lord (2012) Greycite. Knowledge Blog. http://knowledgeblog.org/greycite&lt;/li&gt;
+&lt;li&gt;Carl Boettiger (2011) Optimal Control examples continued: Bellman, Dynamic Programming, Lab Notebook http://www.carlboettiger.info/2011/10/28/optimal-control-examples-continued-bellman-dynamic-programming.html&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Semantic Lab Notebook</title>
+	 <link href="/2012/10/14/semantic-lab-notebook.html"/>
+   <updated>2012-10-14T00:00:00+00:00</updated>
+   <id>/10/14/semantic-lab-notebook</id>
+   <content type="html">&lt;p&gt;As the lab notebook grows, to make the maximum use of content it would be particularly useful to maximize the ability for a computer to understand the content, allowing us to identify, manipulate, and connect data using scripts and software. This is the concept of &lt;em&gt;linked data&lt;/em&gt;, or a &lt;em&gt;semantic notebook&lt;/em&gt;. I have explored this this idea before in the context of a &lt;a href=&quot;2011/05/08/building-a-semantic-notebook.html&quot;&gt;wordpress-based platform&lt;/a&gt;, but now that Jekyll has let me strip away some of the abstraction of Wordpress it seems a good time to revisit this idea.&lt;/p&gt;
+&lt;h2 id=&quot;semantics-in-html5&quot;&gt;Semantics in HTML5&lt;/h2&gt;
+&lt;p&gt;Already the notebook is written in HTML5, which has considerable semantic structure compared to it’s predecessors. HTML5 introduces the structural elements&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;header&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;aside&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;footer&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;that intuitively define the organization of an page, setting off the important content from the window-dressing. HTML5 also defines inline elements &lt;code&gt;&amp;lt;time&amp;gt;&lt;/code&gt; (see the links in Caveats), and &lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;, and the existing tags for metadata, which let us specify &lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt;, and basic &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; tags for metadata such as author, &lt;code&gt;&amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;Author Name&amp;quot;&amp;gt;&lt;/code&gt;, encoding, description, and keywords. Links &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; use the &lt;code&gt;rel&lt;/code&gt; attribute to describe the link target. Though one can write anything at all in this text, HTML5 defines a small vocabulary with recognized meaning, some old, some new, such as &lt;code&gt;&amp;lt;a rel=&amp;quot;tag&amp;quot;&lt;/code&gt;, &lt;code&gt;rel=&amp;quot;license&amp;quot;&lt;/code&gt; as well as the older &lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;style.css&amp;quot;&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;a rel=&amp;quot;nofollow&amp;quot;&lt;/code&gt;. &lt;a href=&quot;http://diveintohtml5.info/semantics.html&quot;&gt;Here is a great overview of the semantics in HTML5&lt;/a&gt;, with a bit more about the available . To expand our vocabulary beyond these elements, however, we will need more tools.&lt;/p&gt;
+&lt;h2 id=&quot;linked-data&quot;&gt;Linked Data&lt;/h2&gt;
+&lt;p&gt;W3C confusingly provides two standards for formally defining semantic content using an external vocabulary or ontology. The first is microdata, introduced as a simpler alternative to the second, RDFa, an HTML-adaptation of the RDF XML standard (originally developed for the now-defunct XHTML 2.0).&lt;/p&gt;
+&lt;h3 id=&quot;microdata&quot;&gt;Microdata&lt;/h3&gt;
+&lt;p&gt;Microdata introduces new attributes into HTML tags like &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;. The first of these is &lt;code&gt;itemtype&lt;/code&gt;, which points to an external resource such as schema.org to define the vocabulary. To have this vocabulary apply to child elements, we just add the attribute &lt;code&gt;itemscope&lt;/code&gt;. Then we can set the value of attribute &lt;code&gt;itemprop&lt;/code&gt; in this or following elements to give it semantically defined meaning, such as&lt;/p&gt;
+&lt;pre class=&quot;sourceCode html&quot;&gt;&lt;code class=&quot;sourceCode html&quot;&gt;&lt;span class=&quot;kw&quot;&gt;&amp;lt;div&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; itemscope itemtype=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;http://data-vocabulary.org/Person&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;kw&quot;&gt;&amp;lt;h1&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; itemprop=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;&amp;gt;&lt;/span&gt;Carl Boettiger&lt;span class=&quot;kw&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;kw&quot;&gt;&amp;lt;a&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; itemprop=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; href=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;http://www.carlboettiger.info&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;&amp;gt;&lt;/span&gt;http://carlboettiger.info&lt;span class=&quot;kw&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;kw&quot;&gt;&amp;lt;img&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; itemprop=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;photo&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; src=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;https://en.gravatar.com/userimage/12904315/7edea703b826fbbe07f2ae4d95b8416b.jpg?16&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;where the terms such as &lt;code&gt;name&lt;/code&gt; and &lt;code&gt;url&lt;/code&gt; have precise meanings attached to “Person”, as specified at the “http://data-vocabulary.org/Address”. This ability to point to an external vocabulary is really the key concept of linked data. In the spirit of HTML5, microdata is much simpler than RDFa, but also more limited. &lt;a href=&quot;http://manu.sporny.org/2011/uber-comparison-rdfa-md-uf/&quot;&gt;Here is an excellent comparison&lt;/a&gt;, but for our purposes we will use RDFa as it is more common in academic use and will more seamlessly allow us to use academic ontologies. (While microdata has a clear mapping to RDF, it is not clear that any ontology that can be expressed in RDF can also be expressed in microdata).&lt;/p&gt;
+&lt;h3 id=&quot;rdfa&quot;&gt;RDFa&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.w3.org/TR/xhtml-rdfa-primer/&quot;&gt;RDFa&lt;/a&gt; can be written in a very similar manner. The &lt;code&gt;itemprop&lt;/code&gt; attribute is replaced by the &lt;code&gt;property&lt;/code&gt; attribute, and &lt;code&gt;vocab&lt;/code&gt; replaces &lt;code&gt;itemtype&lt;/code&gt; and automatically implies &lt;code&gt;itemscope&lt;/code&gt; to child nodes.&lt;/p&gt;
+&lt;pre class=&quot;sourceCode html&quot;&gt;&lt;code class=&quot;sourceCode html&quot;&gt;&lt;span class=&quot;kw&quot;&gt;&amp;lt;div&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; vocab=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;http://xmlns.com/foaf/0.1/&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; typeof=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;Person&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;kw&quot;&gt;&amp;lt;h1&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; property=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;&amp;gt;&lt;/span&gt;Carl Boettiger&lt;span class=&quot;kw&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;kw&quot;&gt;&amp;lt;a&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; property=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;homepage&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; href=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;http://www.carlboettiger.info&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;&amp;gt;&lt;/span&gt;http://carlboettiger.info&lt;span class=&quot;kw&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;kw&quot;&gt;&amp;lt;img&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; property=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;depiction&amp;quot;&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt; src=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;https://en.gravatar.com/userimage/12904315/7edea703b826fbbe07f2ae4d95b8416b.jpg?16&amp;quot;&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;/&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;kw&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We could have used only the &lt;code&gt;property&lt;/code&gt; attribute along with the complete URI to the term definition instead of this structure. &lt;code&gt;typeof&lt;/code&gt; indicates that the child elements are all of the same type (in this case, all belong to the same “Person”). If we were omitting &lt;code&gt;vocab&lt;/code&gt; and writing out all URIs, we would have had &lt;code&gt;&amp;lt;div typeof=&amp;quot;http://xmlns.com/foaf/0.1/Person&amp;quot;&amp;gt;&lt;/code&gt; as well. In RDFa, we also have the &lt;code&gt;resource&lt;/code&gt; attribute, which allows us to specify a URI for the element being described. This could be a relative or absolute URL. If the object is a link, using &lt;code&gt;resource&lt;/code&gt; is not necessary, and the property is taken to describe the URL given in &lt;code&gt;href&lt;/code&gt; or &lt;code&gt;src&lt;/code&gt; rather than the anchor text.&lt;/p&gt;
+&lt;p&gt;Two older options lie at either extreme: the most basic is the older technique of &lt;a href=&quot;http://microformats.org/wiki/html5&quot;&gt;microformatting&lt;/a&gt;, basically relying on standard &lt;code&gt;class&lt;/code&gt; and &lt;code&gt;rel&lt;/code&gt; attributes to convey semantic information. Simple and without new attributes, but probably too limited for our purposes so we won’t concern ourselves with it further. The other venerable approach is serve the page as XHTML, which renders in the browser in much the same way but can be parsed by a machine as XML, with all the power and extensibility that presents. Unlike earlier HTML standards, HTML5 is already valid XML (already “serialized”), so the same page can be served in either format (earlier specs were SGML, standardized general markup languages, of which XML is just a subset). To allow parsing of the HTML5 pages as either type (see &lt;a href=&quot;http://en.wikipedia.org/wiki/Polyglot_markup&quot;&gt;polyglot&lt;/a&gt;), we need only add the language and namespace to the opening &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; tag,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;html lang=&amp;quot;en&amp;quot; xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xml:lang=&amp;quot;en&amp;quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;caveats&quot;&gt;Caveats&lt;/h3&gt;
+&lt;p&gt;An essential caveat is that these are all new approaches which may not render well in legacy browsers, particularly Windows Internet Explorer. Some of these, like recognizing and styling the HTML5 semantic elements in IE, can be addressed in CSS, for which Twitter Bootstrap does a decent job. Another caveat The HTML5 spec has not been finalized, and some things are still in flux, as the &lt;a href=&quot;http://html5doctor.com/time-and-data-element/&quot;&gt;removal&lt;/a&gt; and &lt;a href=&quot;http://www.brucelawson.co.uk/2012/best-of-time/&quot;&gt;reinstatement&lt;/a&gt; of the &lt;code&gt;&amp;lt;time&amp;gt;&lt;/code&gt; element illustrates.&lt;/p&gt;
+&lt;h3 id=&quot;useful-tools-for-checking-implementation&quot;&gt;Useful tools for checking implementation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://validator.w3.org/nu&quot;&gt;W3C HTML5 Validator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.google.com/webmasters/tools/richsnippets&quot;&gt;Google rich snippets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://sparql.captsolo.net/browser/browser.py?url=http://www.w3.org/2007/08/pyRdfa/extract?uri=http://www.carlboettiger.info&quot;&gt;RDF extraction tool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;scholarly-semantic-markup-for-the-notebook&quot;&gt;Scholarly Semantic Markup for the Notebook&lt;/h1&gt;
+&lt;p&gt;Now that we’ve familiarized ourselves with the options, it’s time to see what semantic content we can implement.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+&lt;th style=&quot;text-align: left;&quot;&gt;Content/Data&lt;/th&gt;
+&lt;th style=&quot;text-align: left;&quot;&gt;Example types&lt;/th&gt;
+&lt;th style=&quot;text-align: left;&quot;&gt;Links to Potential vocabularies&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;Page structure&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;code&gt;&amp;lt;header&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;a href=&quot;http://diveintohtml5.info/semantics.html&quot;&gt;HTML5&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;Post metadata&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;keywords, timestamps&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;a href=&quot;http://schema.org/BlogPosting&quot;&gt;Schema.org microdata&lt;/a&gt; or &lt;a href=&quot;http://purl.org/terms/dc&quot;&gt;Dublin Core&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;Author metadata&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;Name, contact, networks,&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;a href=&quot;http://xmlns.com/foaf/0.1/&quot;&gt;FOAF&lt;/a&gt;, &lt;a href=&quot;http://purl.org/terms/dc&quot;&gt;Dublin Core&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;interests, publications)&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;Licenses&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;CC0&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;a href=&quot;http://creativecommons.org/ns&quot;&gt;CreativeCommons&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;Citations&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;bib info, reason for citing&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;a href=&quot;http://purl.org/spar/cito&quot;&gt;CiTO&lt;/a&gt;, &lt;a href=&quot;http://purl.org/spar/biro&quot;&gt;BiRO&lt;/a&gt;,&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;a href=&quot;http://purl.org/ontologies/bibo&quot;&gt;bibo&lt;/a&gt;, &lt;a href=&quot;http://purl.org/terms/dc&quot;&gt;Dublin Core&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;Taxonomic data&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;species names&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;a href=&quot;http://rs.tdwg.org/dwc/terms/index.htm&quot;&gt;Darwin Core&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;Ecological data&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;measurements, units, etc&lt;/td&gt;
+&lt;td style=&quot;text-align: left;&quot;&gt;&lt;del&gt;&lt;a href=&quot;http://knb.ecoinformatics.org/software/eml/&quot;&gt;EML&lt;/a&gt;&lt;/del&gt; &lt;a href=&quot;http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl&quot;&gt;OBOE&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;In another entry I will try and highlight where and what semantic content I have added (work in progress), with examples of each vocabulary. The first four types are relatively static content that can be easily woven into the Jekyll template files. Using Jekyll &amp;amp; Liquid to pull in template information from the &lt;code&gt;_config.yaml&lt;/code&gt; should help avoid repetitive entry and make updating the linked data easier. The last three are entry-specific content, and will be more challenging. I hope to add semantic support to &lt;a href=&quot;https://github.com/cboettig/knitcitations&quot;&gt;knitcitations&lt;/a&gt;, including the option for CiTO types, which should make entry of citation data quick and easy (&lt;a href=&quot;http://stackoverflow.com/questions/12867586&quot;&gt;SO question illustrating semantic citation&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The last two are much richer, specific vocabularies. For the moment, it might be best to use these to give more precise meaning to tags, which are already used as metadata on posts. This would allow posts to be still created in simple markdown without the burden of adding in lines of RDFa and cluttering the markup. Meanwhile full datasets provided in EML are likely to live as separate files, rather than as a random table in the middle of a notebook entry.&lt;/p&gt;
+&lt;p&gt;As always, feedback, corrections or suggestions are appreciated!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Welcome to my Lab Notebook - Reloaded</title>
+	 <link href="/2012/09/28/Welcome-to-my-lab-notebook.html"/>
+   <updated>2012-09-28T00:00:00+00:00</updated>
+   <id>/09/28/Welcome-to-my-lab-notebook</id>
+   <content type="html">&lt;p&gt;Welcome to my lab notebook, version 3.0. My &lt;a href=&quot;http://openwetware.org/wiki/User:Carl_Boettiger/Notebook&quot;&gt;original open lab notebooks&lt;/a&gt; began on the wiki platform &lt;a href=&quot;http://openwetware.org&quot;&gt;OpenWetWare&lt;/a&gt;, moved to a personally hosted Wordpress platform, and now run on a Jekyll-powered platform (&lt;a href=&quot;http://www.carlboettiger.info/README.html&quot;&gt;site-config&lt;/a&gt;), but the basic idea remains the same. For completeness, earlier entries from both platforms have been migrated here. Quoting from &lt;a href=&quot;http://www.carlboettiger.info/archives/211&quot;&gt;my original introduction&lt;/a&gt; to the Wordpress notebook:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2&gt;Disclaimer: Not a Blog&lt;/h2&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/twid/3013680713/in/faves-cboettig/&quot;&gt;&lt;img src=&quot;http://farm4.staticflickr.com/3053/3013680713_cfcebbd403_t.jpg&quot; alt=&quot;floatright&quot; /&gt;&lt;/a&gt; Welcome to my open lab notebook. This is the active, permanent record of my scientific research, standing in place of the traditional paper bound lab notebook. The notebook is primarily a tool for me to &lt;em&gt;do&lt;/em&gt; science, not communicate it. I write my entries with the hope that they are intelligible to my future self; and maybe my collaborators and experts in my field. Only the occasional entry will be written for a more general audience. […] In these pages you will find not only thoughts and ideas, but references to the literature I read, the codes or manuscripts I write, derivations I scribble and graphs I create and mistakes I make. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;why-an-open-notebook-is-it-working&quot;&gt;Why an open notebook? Is it working?&lt;/h2&gt;
+&lt;p&gt;My original introduction to the notebook from November 2010 dodged this question by suggesting the exercise was merely an experiment to see if any of the purported benefits or supposed risks were well-founded. Nearly three years in, can I draw any conclusions from this open notebook experiment?&lt;/p&gt;
+&lt;p&gt;In that time, the notebook has seen six projects go from conception to &lt;a href=&quot;http://www.carlboettiger.info/vita.html&quot;&gt;publication&lt;/a&gt;, and a seventh founder on a null result (see &lt;a href=&quot;http://carlboettiger.info/tags.html#tribolium&quot;&gt;#tribolium&lt;/a&gt;). Several more projects continue to unfold. I have often worked on several projects simultaneously, and some projects branch off while others merge, making it difficult to capture all the posts associated with a single paper into a single tag or category. Of course not all ideas make it into the paper, but they remain captured in the notebook. I often return to my earlier posts for my own reference, and frequently pass links to particular entries to collaborators or other colleagues. On occasion I have pointed reviewers of my papers to certain entries discussing why we did &lt;code&gt;y&lt;/code&gt; instead of &lt;code&gt;x&lt;/code&gt;, and so forth. Both close colleagues and researchers I’ve never met have emailed me to follow up on something they had read in my notebook. This evidence suggests that the practice of open notebook science can faciliate both the performance and dissemination of research while remaining compatible and even synergistic with academic publishing.&lt;/p&gt;
+&lt;p&gt;I am both proud and nervous to know of a half dozen other researchers who have credited me for inspiring them to adopt open or partially open lab notebooks online. I am particularly grateful for the examples, interactions, and ideas from established practitioners of open notebook science in other fields. My collaborators have been largely been somewhere between favorable and agnostic towards the idea, with the occasional request for delayed or off-line notes. More often gaps arise from my own lapses in writing (or at least being intelligible), though the automated records from Github in particular, as well as Flickr (image log), Mendeley (reading log), and Twitter and the like help make up for some of the gaps.&lt;/p&gt;
+&lt;p&gt;&lt;!-- Liam Revell, Scott Chamberlain, Alistair Boettiger, Noam Ross, Nick Fabina, Lee Worden, Mario Pineda-Krch--&gt;&lt;/p&gt;
+&lt;h2 id=&quot;the-integrated-notebook-becomes-the-knitted-notebook&quot;&gt;The Integrated Notebook becomes the Knitted Notebook&lt;/h2&gt;
+&lt;p&gt;In creating my wordpress lab notebook, &lt;a href=&quot;http://www.carlboettiger.info/archives/211&quot;&gt;I put forward the idea of an “Integrated Lab Notebook”&lt;/a&gt;, a somewhat convoluted scheme in which I would describe my ideas and analyses in Wordpress posts, embed figures from Flickr, and link them to code on Github. &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;Knitr&lt;/a&gt; simplified all that. I can now write code, analysis, figures, equations, citations, etc, into a single &lt;code&gt;Rmarkdown&lt;/code&gt; format and track it’s evolution through git version control. The &lt;code&gt;knitr&lt;/code&gt; markdown format goes smoothly on Github, the lab notebook, and even into generating pdf or word documents for publication, never seperating the code from the results. For details, see “&lt;a href=&quot;http://www.carlboettiger.info/2012/04/07/writing-reproducibly-in-the-open-with-knitr.html&quot;&gt;writing reproducibly in the open with knitr&lt;/a&gt;.”&lt;/p&gt;
+&lt;h2 id=&quot;navigating-the-open-notebook&quot;&gt;Navigating the Open Notebook&lt;/h2&gt;
+&lt;p&gt;You can page through the notebook chronologically just like any paper notebook using the “Next” and “Previous” buttons on the sidebar. The notebook also leverages all of the standard features of a blog:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the ability to search,&lt;/li&gt;
+&lt;li&gt;browse the archives &lt;a href=&quot;http://www.carlboettiger.info/archives.html&quot;&gt;by date&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;browse by &lt;a href=&quot;http://www.carlboettiger.info/tags.html&quot;&gt;tag&lt;/a&gt; or&lt;/li&gt;
+&lt;li&gt;browse by &lt;a href=&quot;http://www.carlboettiger.info/categories.html&quot;&gt;category&lt;/a&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;follow the &lt;a href=&quot;http://www.carlboettiger.info/atom.xml&quot;&gt;RSS feed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;add and share comments in Disqus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I use categories as the electronic equivalent of separate paper notebooks, dividing out my ecological research projects, evolutionary research topics, my teaching notebook, and a few others. As such, each entry is (usually) made into exactly one category. I use tags for more flexible topics, usually refecting particular projects or methods, and entries can have zero or multiple tags.&lt;/p&gt;
+&lt;p&gt;It can be difficult to get the big picture of a project by merely flipping through entries. The chronological flow of a notebook is a poor fit to the very nonlinear nature of research. Reproducing particular results frequently requires additional information (also data and software) that are not part of the daily entries. Github repositories have been the perfect answer to these challenges.&lt;/p&gt;
+&lt;h2 id=&quot;the-real-notebook-is-github&quot;&gt;(The real notebook is Github)&lt;/h2&gt;
+&lt;p&gt;My Github repositories offer a kind of inverted version of the lab notebook, grouped by project (tag) rather than chronology. Each of my research projects is now is given it’s own public Github repository. I work primarily in R because it is widely used by ecologists and statisicians, and has a strong emphasis on reproducible research. The “R package” structure turns out to be brilliantly designed for research projects, which specifies particular files for essential metadata (title, description, authors, software dependencies, etc), data, documentation, and source code (see &lt;a href=&quot;http://www.carlboettiger.info/2012/05/06/research-workflow.html&quot;&gt;my workflow&lt;/a&gt; for details). Rather than have each analysis described in full in my notebook, they live as seperate &lt;code&gt;knitr&lt;/code&gt; markdown files in the &lt;a href=&quot;https://github.com/cboettig/pdg_control/tree/master/inst/examples&quot;&gt;&lt;code&gt;inst/examples&lt;/code&gt;&lt;/a&gt; directory of the R package, where their &lt;a href=&quot;https://github.com/cboettig/pdg_control/commits/master/inst/examples&quot;&gt;history&lt;/a&gt; can be browsed on Github, complete with their commit logs. Long or frequently used blocks of code are written into functions with proper documentation in the package source-code directory &lt;code&gt;/R&lt;/code&gt;, keeping the analysis files cleaner and consistent.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/cboettig/pdg_control/issues?state=closed&quot;&gt;issues tracker&lt;/a&gt; connected to each Github repository provides a rich TO DO list for the project. Progress on any issue often takes the form of subsequent commits of a particular analysis file, and that commit log can automatically be appended to the issue.&lt;/p&gt;
+&lt;h2 id=&quot;the-social-lab-notebook&quot;&gt;The social lab notebook&lt;/h2&gt;
+&lt;p&gt;When scripting analyses or writing papers, pretty much everything can be captured on Github. I have recently added a short &lt;a href=&quot;https://github.com/cboettig/jekyll-labnotebook-plugins&quot;&gt;script&lt;/a&gt; to Jekyll which will pull the relevant commit logs into that day’s post automatically. Other activities fit less neatly into this mold (reading, math, notes from seminars and conferences), so these things get traditional notebook entries. I’m exploring automated integration for other activities, such as pulling my current reading from Mendeley or my recent discussions from Twitter into the notebook as well. For now, feed for each of these appear at the top of my &lt;a href=&quot;http://www.carlboettiger.info/lab-notebook.html&quot;&gt;notebook homepage&lt;/a&gt;, with links to the associated sites.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Migrating From Wordpress To Jekyll</title>
+	 <link href="/2012/09/19/migrating-from-wordpress-to-jekyll.html"/>
+   <updated>2012-09-19T00:00:00+00:00</updated>
+   <id>/09/19/migrating-from-wordpress-to-jekyll</id>
+   <content type="html">&lt;p&gt;Thanks to a recent bugfix in the &lt;a href=&quot;https://github.com/thomasf/exitwp&quot;&gt;exitwp&lt;/a&gt; scripts I was able to export all my Wordpress entries. The script pulls the entries from the Wordpress database and formats them in markdown, along with extracting all metadata such as timestamp, tags, categories, publication status, and Wordpress id number, which are all embedded as YAML header information.&lt;/p&gt;
+&lt;h3 id=&quot;why-migrate-the-old-entries&quot;&gt;Why migrate the old entries?&lt;/h3&gt;
+&lt;p&gt;When I moved to the Jekyll notebook, I left the Wordpress site standing with all its existing content and simply remapped the home pages. While it was nice to have the Wordpress system as a fall back while I got used to Jekyll, it meant that I couldn’t benefit from the faster and lighter nature of Jekyll while much of my traffic occurred on the Wordpress pages. I was running a dedicated virtual private server for the Wordpress hosting, and still the site wasn’t very responsive. To get an idea, try “flipping through the pages” of the new Jekyll notebook using the “next” and “previous” post buttons. The new pages load immediately, making it easy to flip through looking for some word or image I can’t find with tags or searches. Flipping through pages is the time-honored way of interacting with paper notebooks, so I’m glad that the new system is responsive enough to imitate this well.&lt;/p&gt;
+&lt;h3 id=&quot;converting-shortcodes-from-wordpress-plugins&quot;&gt;Converting shortcodes from Wordpress Plugins&lt;/h3&gt;
+&lt;p&gt;Migrating files using &lt;code&gt;exitwp&lt;/code&gt; is a relatively seamless affair. Unfortunately, my Wordpress posts make rather heavy use of plugins, which work through shortcodes that still appear in the converted files, such as &lt;code&gt;[flickr]&lt;/code&gt;, &lt;code&gt;[latex]&lt;/code&gt;, &lt;code&gt;[code lang=&amp;quot;r&amp;quot;]&lt;/code&gt;, and &lt;code&gt;[cite]&lt;/code&gt;, for image embedding, equation embedding, syntax highlighting, and citations by DOI, respectively. While a suite of Jekyll plugins exist for each of these tasks, I’d like my regular posts to be pure markdown (other than the YAML header), making it easy to migrate or reuse the content in the future in different platforms. Here is the &lt;a href=&quot;https://github.com/cboettig/sandbox/blob/c489da83ca7a78345b7981be4de5933ae7d63ac0/shortcodes.R&quot;&gt;R script I used for converting my shortcodes&lt;/a&gt;, as described below.&lt;/p&gt;
+&lt;h4 id=&quot;syntax-highlighting-short-codes&quot;&gt;Syntax Highlighting short-codes&lt;/h4&gt;
+&lt;p&gt;For instance, several markdown extension languages including, Github-flavored markdown, already allow for syntax-highlighting with fenced code blocks. I wrote a short script to replace all (most) of the shortcodes in use on my Wordpress site. (Over the years, I’d actually used a variety of different syntax highlighting plugins, making it necessary to match a variety of different shortcodes). Other than matching a lot of patterns, this was pretty straight forward.&lt;/p&gt;
+&lt;h4 id=&quot;flickr-images&quot;&gt;flickr images&lt;/h4&gt;
+&lt;p&gt;My workflow pushes all the images and graphs I create to flickr when the script runs. (I could also automatically push the images to Wordpress, or simply to my own site, but started using flickr pretty early on for this. The SOAP API is excellent, as is the Rflickr R package) Images were embedded into my Wordpress site using the shortcode and image ID number. To generate stand-alone markdown, I wanted tp replace all the image codes with the flickr URLs to the images, which is a trivial task with the API and Rflickr.&lt;/p&gt;
+&lt;h4 id=&quot;latexmathjax-equations&quot;&gt;LaTeX/Mathjax Equations&lt;/h4&gt;
+&lt;p&gt;Again I had used a variety of shortcodes for latex plugins before discovering MathJax, so I had to handle a variety of syntaxes here. Previously I’ve tried to write equations in a manner compatible with the redcarpet markdown parser that powers Github-Flavored Markdown (see the &lt;a href=&quot;https://github.com/nono/Jekyll-plugins&quot;&gt;corresponding Jekyll plugin&lt;/a&gt;), e.g. surrounding equations with &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; blocks to avoid the parser mangling them. Instead, I’ve found it easier now to switch to pandoc for my markdown parser (and &lt;a href=&quot;https://github.com/dsanson/jekyll-pandoc-plugin&quot;&gt;corresponding Jekyll Plugin&lt;/a&gt;). Pandoc uses the basic TeX &lt;code&gt;$&lt;/code&gt; and &lt;code&gt;$$&lt;/code&gt; for inline and display equations, rendering it into the MathJax (and modern LaTeX standard) &lt;code&gt;\(&lt;/code&gt; and &lt;code&gt;\[&lt;/code&gt; on conversion. Being pandoc-compatible is quite nice, making it easy to create an e-book, epub, or latex-based pdf of my notebook. I hate having to use a markdown syntax that isn’t compatible with most other extended markdown parsers, but with so many different, inconsistent parsers this cannot be easily avoided. Regardless, replacing the various shortcodes to the Pandoc syntax is just a simple regexpr step.&lt;/p&gt;
+&lt;h4 id=&quot;citations&quot;&gt;Citations&lt;/h4&gt;
+&lt;p&gt;Many of my posts relied on kcite to generate bibliographies for the post using DOIs. A short call to my &lt;a href=&quot;http://www.carlboettiger.info/2012/05/30/knitcitations.html&quot;&gt;knitcitations&lt;/a&gt; package allowed me to generate the parenthetical citations and bibliographies instead. In principle this step could be run at the time I compile the site with Jekyll. Pages would be valid &lt;code&gt;.Rmd&lt;/code&gt;, needing knitr as “markdown” interpreter. This is an intriguing way to go, but probably too complicated for the moment. Running additional R code would be nice, but could slow the time needed to build the site, even with knitr’s caching. Meanwhile, converted pages simply have the citations already processed and the bibliography added in as HTML at the end of the post.&lt;/p&gt;
+&lt;h3 id=&quot;url-redirects&quot;&gt;URL Redirects&lt;/h3&gt;
+&lt;p&gt;My Jekyll site uses the SEO recommended structure of year/month/day/page-title for URLs, while my Wordpress site used simple random id numbers. To ensure that links to the old Wordpress pages resolve to the newly migrated pages, I added a little Jekyll plugin, &lt;a href=&quot;https://github.com/cboettig/labnotebook/blob/master/_plugins/redirects.rb&quot;&gt;redirects.rb&lt;/a&gt;. One of the elegant things about Jekyll is the ability to create such plugins that do this just the way you would image doing so – creating auxiliary pages at each of the redirect URLs with a simple redirect command. To install, place &lt;code&gt;redirects.rb&lt;/code&gt; in &lt;code&gt;_plugins&lt;/code&gt;, &lt;code&gt;redirects.html&lt;/code&gt; in &lt;code&gt;_layouts&lt;/code&gt;, and in &lt;code&gt;_config.yml&lt;/code&gt; add the line &lt;code&gt;redirects: yes&lt;/code&gt; (see &lt;a href=&quot;https://github.com/cboettig/labnotebook&quot;&gt;site source&lt;/a&gt;).&lt;/p&gt;
+&lt;h3 id=&quot;comments&quot;&gt;Comments&lt;/h3&gt;
+&lt;p&gt;I am using Disqus as the comment engine for entries. Since URLs change in the above step and I do not provide a unique disqus code to each page, I am attempting to migrate comments using the &lt;a href=&quot;http://help.disqus.com/customer/portal/articles/286778-using-the-migration-tools&quot;&gt;Disqus “migrate threads” tool&lt;/a&gt;, which simply takes a csv file listing old and new urls in consecutive columns. Will have to wait and see if this works.&lt;/p&gt;
+&lt;h3 id=&quot;private-entries&quot;&gt;Private entries&lt;/h3&gt;
+&lt;p&gt;Several entries on the Wordpress site were marked private, and only visible after administrative login. Most of these entries are actually solicited journal reviews of various manuscripts which I cannot make public. &lt;code&gt;exitwp&lt;/code&gt; marks these posts as &lt;code&gt;published: false&lt;/code&gt; in the metadata, so it is easy to remove them from the Jekyll source site. They can be managed in a separate Github-excluded directory (so that they cannot be seen on the website source pages on Github either) that can be &lt;code&gt;.htaccess&lt;/code&gt; password protected.&lt;/p&gt;
+&lt;h3 id=&quot;categories-and-tags&quot;&gt;Categories and Tags&lt;/h3&gt;
+&lt;p&gt;Categories and tags are handled automatically in the conversion. One of the greatest things about having all the content on a common system is the ability to share a common tag-pool.&lt;/p&gt;
+&lt;h3 id=&quot;rss&quot;&gt;RSS&lt;/h3&gt;
+&lt;p&gt;If you follow the notebook through RSS feeds, all the migrated posts will be showing up as new unread entries, as the atom feed dates entries by when they appear, not the stated post date. My apologies!&lt;/p&gt;
+&lt;h3 id=&quot;rough-edges&quot;&gt;Rough edges&lt;/h3&gt;
+&lt;p&gt;A couple posts have rare shortcodes which are probably easier to correct by hand. My apologies for any rough edges resulting from the conversion (or the exchange of markdown parsers). Hopefully I’ll get these ironed out in the near future, but feel free to leave a comment on the page or the issues tracker on any such errors.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Esa Changes Arxiv Policy Following Community Comments</title>
+	 <link href="/2012/09/05/ESA-changes-ArXiv-policy-following-community-comments.html"/>
+   <updated>2012-09-05T00:00:00+00:00</updated>
+   <id>/09/05/ESA-changes-ArXiv-policy-following-community-comments</id>
+   <content type="html">&lt;p&gt;Earlier today, Scott Collins, the president of the Ecological Society of America has &lt;a href=&quot;https://twitter.com/ESA_Prez2013/status/243335363693797376&quot;&gt;announced&lt;/a&gt; that the society will now accept articles that have previously been posted on preprint servers. This comes on the heels of a growing discussion in our community. Ethan White has a good summary over on &lt;a href=&quot;http://jabberwocky.weecology.org/2012/09/05/esa-journals-will-now-allow-papers-with-preprints/&quot;&gt;Jabberwocky Ecology&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Many voices have joined the discussion over the past month, and it is exciting and vindicating to see the Society engage and discuss these questions. With this announcement out, I thought I might share my original letter. Here’s the text of an email I sent on August 1st to Don Strong, editor-in-chief of Ecology and a friend to open science known for his bottom-up view that ecologists should show their publication preferences by their actions. Don kindly forwarded this email to other members of the board.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dear Don,&lt;/p&gt;
+&lt;p&gt;Perhaps you have already seen the perspective appearing in Nature this week, “&lt;a href=&quot;http://www.nature.com/news/geneticists-eye-the-potential-of-arxiv-1.11091&quot;&gt;Geneticists eye the potential of Arxiv&lt;/a&gt;.” I must say it is particularly saddening to see the Ecological Society of America being singled out in the discussion as a professional society that opposes pre-prints, particularly given that ESA is not beholden to corporate publishers, and in the face a rising swell of interest in pre-print server capacity, as evidenced by the Nature article (which quotes our own Graham Coop), the emergence of an NCEAS working group to bring about a preprint server, and the extensive online discussions about ESA’s stance against pre-prints which was no doubt responsible for bringing ESA into the negative limelight of this perspective.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;a href=&quot;http://jabberwocky.weecology.org/2012/07/18/esa-journals-do-not-allow-papers-with-preprints/&quot;&gt;discussion launched by Professor Ethan White&lt;/a&gt; on his blog suggests that ESA has in fact only recently removed a clause in the policies explicitly permitting the use of the arXiv. Meanwhile members of the &lt;a href=&quot;http://www.nceas.ucsb.edu/projects/12651&quot;&gt;NCEAS working group&lt;/a&gt; had considered approaching ESA to partner in their efforts to bring about a preprint server and culture, hoping to take advantage of the agility ESA has as a respected and independent society publisher. Ecology as a field has been a leading example of pushing for innovative and open publishing practices such as mandatory data archiving, and ESA has led this front for decades with innovations such as Ecological Archives and more recent Ecosphere. It shames me to see our society and our field painted as a backwater of regressive policies in such prominent magazines when even journals such as Nature, Science, &amp;amp; PNAS permit and encourage the use of preprint servers such as the arXiv. I would hate to see our most innovative research migrate away from the Society at a time when ESA could be leading our field through this academic publishing transition that is now discussed broadly in the NY Times, Guardian, Economist, &amp;amp; USA Today. This is a chance for the Ecological Society to both lead and flourish.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I hope that these issues can be discussed in some fashion with the input of our community at the annual meeting in Portland. The British Ecological Society already plans to use the meeting to discuss a digital future of their journals, surely ESA will be doing as much at it’s own meeting, formally or informally?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Thank you for your time and consideration. Please let me know if there is anything I can do to help.&lt;/p&gt;
+&lt;p&gt;Cheers,&lt;/p&gt;
+&lt;p&gt;Carl&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>knitr, github, and a new phase for the lab notebook</title>
+	 <link href="/2012/03/21/knitr-github-and-a-new-phase-for-the-lab-notebook.html"/>
+   <updated>2012-03-21T12:13:42+00:00</updated>
+   <id>/03/21/knitr-github-and-a-new-phase-for-the-lab-notebook</id>
+   <content type="html">&lt;p&gt;I have recently modified the basic workflow of my lab notebook since discovering &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;knitr&lt;/a&gt;. Before, I would write code files which I could track on &lt;a href=&quot;https://github.com&quot;&gt;github&lt;/a&gt;, push figures created by the code to flickr, and then write a notebook entry on wordpress describing what I was doing. I’d embed each figure I wanted into the entry, and each figure got an automatic link to github for the script that created it (which usually worked, though it didn’t say where in the script the command came from, and it required manually specifying the script name).&lt;/p&gt;
+&lt;p&gt;Because knitr allows me to write a single file containing code and formatted text, and will automatically display the code and embed the images, I can avoid that more convoluted workflow and just write.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://farm8.staticflickr.com/7256/7003687571_09f79cfc15_o.png&quot; /&gt;](https://github.com/cboettig/pdg_control/blob/master/inst/examples)&lt;/p&gt;
+&lt;p&gt;What makes this so excellent is that knitr allows me to write in markdown, and github automatically displays nicely formatted markdown instead of raw script when you visit the page. So whereas before I would keep a bunch of working &lt;a href=&quot;https://github.com/cboettig/pdg_control/tree/master/demo&quot;&gt;R scripts&lt;/a&gt; in &lt;code&gt;projectname/demo&lt;/code&gt; I now keep a bunch of &lt;a href=&quot;https://github.com/cboettig/pdg_control/tree/master/inst/examples&quot;&gt;markdown scripts&lt;/a&gt; in &lt;code&gt;inst/examples&lt;/code&gt;, ((since I’m using the R package for projects and demo/ doesn’t want non-R scripts)).&lt;/p&gt;
+&lt;p&gt;The great thing about this is that I can just click on each script and see nicely rendered text, links, code, and figures right on github.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://farm7.staticflickr.com/6217/7003679683_d9f472efd6_o.png&quot; alt=&quot;example entry&quot; /&gt;](https://github.com/cboettig/pdg_control/blob/master/inst/examples/Reed.md)&lt;/p&gt;
+&lt;p&gt;While I can push this same markdown script to wordpress and have it be rendered in my notebook, I think maintaining these examples on github is preferable. Note that every script-name appears twice, once with and once without the &lt;code&gt;_knit_&lt;/code&gt; extension. The &lt;code&gt;_knit_&lt;/code&gt; extension indicates the file I ran to create the output (the code is in html comments so you can only see them in raw form). Because all the code is displayed in the output file (unless I call knitr options to surpress this), there’s really no need to view the &lt;code&gt;_knit_&lt;/code&gt; file to reproduce the example, everything is in one place in the output &lt;code&gt;.md&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;These files benefit from the github managed version history, just clicking the history button gives a list of all the former versions, with code and results right there.&lt;/p&gt;
+&lt;p&gt;While I could update a post in the notebook in the same way, the version control of this wordpress notebook is more crude, and more importantly, the blog-format is designed for a linear flow, whereas in a given day I might update each of these example scripts. This seems like a much more natural workflow then having consecutive entries in the notebook with updated versions of the analysis the day before, and more natural than going back and changing a previous notebook entry.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://farm8.staticflickr.com/7094/7003692801_d14a23855e_o.png&quot; /&gt;](https://github.com/cboettig/pdg_control/commits/master/inst/examples/model_uncertainty.md)&lt;/p&gt;
+&lt;p&gt;Github can also gives nice snapshot of what’s changed, along with the commit notes for each project, for each day. Now that I can display figures and formatted text on github, as well as code, what role does the Wordpress notebook play? I think this wordpress notebook can resume is proper role as a lab notebook, containing reflections and synthesis on what I’ve done, rather than the more comprehensive copies of each analysis and each figure. Because it’s the internet, I can link to each of the analyses of that day using version-stable links from github, or links that always give the most recent version. This requires additional effort, but it’s a reflection I should be doing anyway. We’ll see how it goes. Meanwhile, welcome to the open lab notebook v2.0.&lt;/p&gt;
+&lt;h2 id=&quot;a-few-more-details&quot;&gt;A few more details&lt;/h2&gt;
+&lt;h5 id=&quot;longer-code-r-functions&quot;&gt;Longer code &amp;amp; R functions&lt;/h5&gt;
+&lt;p&gt;When I write code longer than a few lines, I try to make it a function, or collection of functions, and include basic Roxygen-style documentation with it so I don’t have to read the code to remember how to use it. These functions naturally live in the &lt;code&gt;R/&lt;/code&gt; directory of the project. The project’s R package can be installed, and all these functions are then available. Each of my example scripts calls functions belonging to the package, but those functions change less regularly. To fully reproduce the example, it would be necessary to grab a copy of the R package from the same commit-version as the script. In practice, most of the time any version of the package R functions could be used.&lt;/p&gt;
+&lt;h5 id=&quot;github-wiki&quot;&gt;Github wiki&lt;/h5&gt;
+&lt;p&gt;Github has wiki pages which I could use instead of putting my entries in &lt;code&gt;inst/example&lt;/code&gt;, since both render markdown (the wiki will additionally render mathjax math, all be it as a png). However, the wiki is aimed at online editing, and exists as a separate repository, so just keeping the markdown files in the project directory is simpler.&lt;/p&gt;
+&lt;h5 id=&quot;images&quot;&gt;Images&lt;/h5&gt;
+&lt;p&gt;Github doesn’t actually host the images. In fact, my images are still being pushed to flickr, and you can see them there. Knitr is handling this automatically as the figures are created, keeping track of the links so they can be included in the output markdown. Knitr can do this with imgur out of the box, and I’ve also written a wrapper to let it push the images to a wordpress site. Doesn’t really matter where they are stored, they can always be viewed on Github.&lt;/p&gt;
+&lt;h5 id=&quot;heavy-computing&quot;&gt;Heavy computing&lt;/h5&gt;
+&lt;p&gt;I’ve found that the knitted markdown examples make the most sense for fast-running examples. Despite excellent caching support, I’ve found it best to run really long-running examples as external R scripts, and then save and import this data. Such scripts are often being run on a cluster that can’t push images to the internet anyway.&lt;/p&gt;
+&lt;h5 id=&quot;power-of-openness&quot;&gt;Power of openness?&lt;/h5&gt;
+&lt;p&gt;It occurs to me that this system would be harder but not impossible, in a closed environment. I could upload the figures to flickr with private status. The links are hashes, so cannot be guessed. If the output were then hosted on a secure site (running a markdown renderer, such as Jekyll), instead of github, these links would still work to display the images. Then one could give selected access to those pages. But the open solution works out of the box.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Citing R packages</title>
+	 <link href="/2012/03/20/citing-r-packages.html"/>
+   <updated>2012-03-20T10:02:09+00:00</updated>
+   <id>/03/20/citing-r-packages</id>
+   <content type="html">&lt;p&gt;I’m not always careful in citing all the R packages I use. R actually has some rather nice built-in mechanisms to support this, so I really have no excuse. Here’s some quick examples:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;span class=&quot;kw&quot;&gt;citation&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;ouch&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;To cite the ouch package in publications
+use:
+
+  Aaron A. King and Marguerite A. Butler
+  (2009), ouch: Ornstein-Uhlenbeck models
+  for phylogenetic comparative hypotheses (R
+  package),
+  http://ouch.r-forge.r-project.org
+
+  Butler, M. A. and King, A. A. (2004)
+  Phylogenetic comparative analysis: a
+  modeling approach for adaptive evolution
+  Am. Nat. 164:683--695
+
+As ouch is continually evolving, you may
+want to cite its version number. Find it
+with &amp;#39;help(package=ouch)&amp;#39;.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Can I have that in bibtex format please?&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;span class=&quot;kw&quot;&gt;toBibtex&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;citation&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;ouch&amp;quot;&lt;/span&gt;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;@Manual{,
+  title = {ouch: Ornstein-Uhlenbeck models for phylogenetic comparative hypotheses},
+  author = {Aaron A. King and Marguerite A. Butler},
+  year = {2009},
+  url = {http://ouch.r-forge.r-project.org},
+}
+@Article{,
+  author = {Marguerite A. Butler and Aaron A. King},
+  title = {Phylogenetic comparative analysis: a modeling approach for adaptive evolution},
+  journal = {American Naturalist},
+  year = {2004},
+  volume = {164},
+  pages = {683--695},
+  url = {http://www.journals.uchicago.edu/AN/journal/issues/v164n6/40201/40201.html},
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that this package provides the citation information for both the package and the associated journal article simultaneously, and R has successfully identified the formats as ‘Manual’ and ‘Article’ respectively.&lt;/p&gt;
+&lt;p&gt;After running your code, consider creating a custom bibtex file containing the citation information for all the packages you have just used. (The file can be imported into most citation managers, if LaTeX isn’t your thing).&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;span class=&quot;kw&quot;&gt;sink&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;test.bib&amp;quot;&lt;/span&gt;)
+out &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;sapply&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;names&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;sessionInfo&lt;/span&gt;()$otherPkgs), 
+    function(x) &lt;span class=&quot;kw&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;citation&lt;/span&gt;(x), &lt;span class=&quot;dt&quot;&gt;style =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Bibtex&amp;quot;&lt;/span&gt;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also simply generate the list of loaded package in LaTeX format, which could be automatically included.&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;span class=&quot;kw&quot;&gt;toLatex&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;sessionInfo&lt;/span&gt;(), &lt;span class=&quot;dt&quot;&gt;locale =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;FALSE&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;for-package-authors&quot;&gt;For package authors&lt;/h3&gt;
+&lt;p&gt;R will attempt to automatically construct the citation information for the package automatically from the description file, so it is not strictly necessary to do anything to your package to create it. Note that R has recently adopted a new syntax to specify the authors, which is a bit more precise. Instead of using Authors: in the DESCRPTION, we use:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Authors@R: c(person(&amp;quot;Carl&amp;quot;, &amp;quot;Boettiger&amp;quot;, role = c(&amp;quot;aut&amp;quot;, &amp;quot;cre&amp;quot;), email = &amp;quot;cboettig@gmail.com&amp;quot;), 
+  person(&amp;quot;Duncan&amp;quot;, &amp;quot;Temple Lang&amp;quot;, role = &amp;quot;aut&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This defines the roles (author, creator, etc, see &lt;code&gt;?person&lt;/code&gt; for details), and ‘creator’ takes the place of the &lt;code&gt;Maintainer:&lt;/code&gt; designation, and requires an email address. If you wish to add an additional publication as part of the citation information (such as the example from &lt;code&gt;ouch&lt;/code&gt; above, you can specify this in the CITATION file. For the example this looks like:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;span class=&quot;kw&quot;&gt;citHeader&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;To cite the ouch package in publications use:&amp;quot;&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;citEntry&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;entry =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Article&amp;quot;&lt;/span&gt;, 
+    &lt;span class=&quot;dt&quot;&gt;author =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;personList&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;as.person&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Marguerite A. Butler&amp;quot;&lt;/span&gt;), 
+        &lt;span class=&quot;kw&quot;&gt;as.person&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Aaron A. King&amp;quot;&lt;/span&gt;)), &lt;span class=&quot;dt&quot;&gt;title =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Phylogenetic comparative analysis: a modeling approach for adaptive evolution&amp;quot;&lt;/span&gt;, 
+    &lt;span class=&quot;dt&quot;&gt;journal =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;American Naturalist&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;year =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;2004&lt;/span&gt;, 
+    &lt;span class=&quot;dt&quot;&gt;volume =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;164&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;pages =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;683--695&amp;quot;&lt;/span&gt;, 
+    &lt;span class=&quot;dt&quot;&gt;url =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;http://www.journals.uchicago.edu/AN/journal/issues/v164n6/40201/40201.html&amp;quot;&lt;/span&gt;, 
+    &lt;span class=&quot;dt&quot;&gt;textVersion =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;Butler, M. A. and King, A. A. (2004)&amp;quot;&lt;/span&gt;, 
+        &lt;span class=&quot;st&quot;&gt;&amp;quot;Phylogenetic comparative analysis: a modeling approach for adaptive evolution&amp;quot;&lt;/span&gt;, 
+        &lt;span class=&quot;st&quot;&gt;&amp;quot;Am. Nat. 164:683--695&amp;quot;&lt;/span&gt;))
+&lt;span class=&quot;kw&quot;&gt;citFooter&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;As ouch is continually evolving, you may want to cite its version number. Find it with &amp;#39;help(package=ouch)&amp;#39;.&amp;quot;&lt;/span&gt;)
+
+[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;] &lt;span class=&quot;st&quot;&gt;&amp;quot;As ouch is continually evolving, you may want to cite its version number. Find it with &amp;#39;help(package=ouch)&amp;#39;.&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;attr&lt;/span&gt;(,&lt;span class=&quot;st&quot;&gt;&amp;quot;class&amp;quot;&lt;/span&gt;)
+[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;] &lt;span class=&quot;st&quot;&gt;&amp;quot;citationFooter&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(It seems like there should be a simple way to generate this automatically from the bibtex format, but I haven’t discovered it.)&lt;/p&gt;
+&lt;h3 id=&quot;r-as-a-citation-tool&quot;&gt;R as a citation tool&lt;/h3&gt;
+&lt;p&gt;I wrote an R function for the Crossref API in our rplos package. We should probably be formatting the output as an R bibentry, taking advantage of R’s understanding of citation structure. Then I could work automatic citation look-up into my posts using inline knitr calls, such as:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;span class=&quot;kw&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;crossref&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;10.1038/44766&amp;quot;&lt;/span&gt;), &lt;span class=&quot;dt&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An alternate mechanism could read in a local bibtex file and drop in the correct entry in the desired format.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Journey to freedom - a code's tale of open source license migration</title>
+	 <link href="/2012/01/31/journey-to-freedom-a-codes-tale-of-open-source-license-migration.html"/>
+   <updated>2012-01-31T17:58:08+00:00</updated>
+   <id>/01/31/journey-to-freedom-a-codes-tale-of-open-source-license-migration</id>
+   <content type="html">&lt;p&gt;My software wants to be free. It wants to be seen and used and loved by as many people as possible. When first it heard of open source licenses, it set sail to join the company of great software in the promised land, but finding true freedom has been a tortured journey.&lt;/p&gt;
+&lt;h3 id=&quot;in-the-clutches-of-the-gpl&quot;&gt;In the clutches of the GPL&lt;/h3&gt;
+&lt;p&gt;Created and defended by the &lt;a href=&quot;http://www.fsf.org/&quot;&gt;Free Software Foundation&lt;/a&gt; and used by such venerable institutions as the Linux Kernel, the gcc compiler, and the R statistical environment, the &lt;a href=&quot;http://en.wikipedia.org/wiki/GNU_General_Public_License&quot;&gt;GNU’s General Public License&lt;/a&gt; seemed like a gold standard to call home. Many of my codes quickly migrated to this beacon of light, while others, already making use of other GPL licensed software, seemed compelled to follow by it’s viral share-alike clauses. But my code wasn’t free. It couldn’t play nicely with users from the pantheon of other open source licenses, upsetting free software developers and university tech transfer offices alike. It was scorned by open science advocates and repositories. And when it wanted to leave and migrate to a more free and permissive license, it felt trapped.&lt;/p&gt;
+&lt;p&gt;By now the software was written as an R package (combining C source code and R functions), depended on several R packages, and even compiled against the &lt;a href=&quot;http://www.gnu.org/software/gsl/&quot;&gt;GSL C library&lt;/a&gt;, all GPL licensed software. Surely it was stuck?&lt;/p&gt;
+&lt;p&gt;Only after close examination did the package realize that it could escape. It’s not a derivative work. It’s not distributing the other R packages or R itself. That software have to be installed separately – it is only &lt;strong&gt;dynamically linked&lt;/strong&gt; ((called at runtime, not compiled into the binary libraries of my package)) to my package. The case is less obvious for the dependency of the C library on the GSL code, since this must be compiled to run. If the C functions provided by the GSL are compiled statically, they are pulled from their source and crammed into the binary next to my own code – making a derivative work that doesn’t need the GSL libraries installed separately to run. Fortunately that is not the case, these functions are also dynamically linked, and my code is free to migrate.&lt;/p&gt;
+&lt;h3 id=&quot;bsd-still-incompatible&quot;&gt;BSD: still incompatible?&lt;/h3&gt;
+&lt;p&gt;Fleeing the convoluted and tortured shore of GPL, my code happily reached the land of &lt;a href=&quot;http://en.wikipedia.org/wiki/BSD_licenses&quot;&gt;BSD&lt;/a&gt;. In it’s forth iteration as FreeBSD, with only two simple clauses, it seemed anything was possible. The only thing it does require are that the license always be distributed with the source code or binaries of the software. This makes it difficult to apply to repositories that also archive data – facts about the world owned under anyone’s copyright – and other non-code material such as documentation that may be found in an R package or an academic data repository. For this reason, the Dryad repository objects to that little clause of redistributing the FreeBSD license, and insists on public domain declaration provided by the &lt;a href=&quot;http://creativecommons.org/publicdomain/zero/1.0&quot;&gt;CC0&lt;/a&gt; license.&lt;/p&gt;
+&lt;h3 id=&quot;cc0-free-at-last&quot;&gt;CC0, free at last?&lt;/h3&gt;
+&lt;p&gt;Ah, so we arrive at the public domain, or as &lt;a href=&quot;http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt&quot;&gt;close as I can legally get&lt;/a&gt;. While this seems to be the ultimate freedom my code has long sought, it finds itself rather lonely on these foreign shores. The Open Source Initiative doesn’t yet recognize it, which means it doesn’t meet the “open source license” requirements of academic journals like &lt;a href=&quot;http://www.ploscompbiol.org/static/guidelines.action&quot;&gt;PLoS Computational Biology&lt;/a&gt; or academic conferences like &lt;a href=&quot;http://www.open-bio.org/wiki/BOSC_2012&quot;&gt;Bioinformatics Open Source Conference&lt;/a&gt; or iEvoBio. It has not yet been used for R packages on the CRAN repository (see below), and would require using R’s custom license file mechanism rather than a simple LICENSE: CC0 line in the package meta-data. It does get a mention for being GPL compatible by the FSF ((i.e. you can redistribute it under the GPL)), but the license that isn’t a license needs more support. Following their guidelines, I’ve written the Open Software Initiative hoping it will gain that recognition.&lt;/p&gt;
+&lt;h2 id=&quot;will-osi-adopt-cc0&quot;&gt;Will OSI adopt CC0?&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hello,&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I would like to submit the Creative Commons zero license for consideration.  I am new to this list, forgive me if it has already been considered. I understand that this license &lt;a href=&quot;http://www.gnu.org/licenses/license-list.html#CC0&quot;&gt;has been considered&lt;/a&gt; GPL compatible by the FSF with this &lt;a href=&quot;http://wiki.creativecommons.org/CC0_FAQ#May_I_apply_CC0_to_computer_software.3F_If_so.2C_is_there_a_recommended_implementation.3F&quot;&gt;recommended format&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Submission type: Approval License Name: Creative Commons Zero, CC0 Category: Licenses that are popular and widely used or with strong communities The &lt;a href=&quot;http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt&quot;&gt;legal code as plain text&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The scientific community is increasingly embracing this option as the most open and compatible license.  It is required by scientific data repositories (that also archive scientific software, with cite-able DOIs) such as &lt;a href=&quot;http://datadryad.org/depositing#whycc0&quot;&gt;Dryad&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I feel it is important that this license achieve recognition by the Open Source initiative, as certain scientific journals &amp;amp; conferences permit only OSI recognized licenses, (e.g. PLoS Computational Biology &lt;a href=&quot;http://www.ploscompbiol.org/static/guidelines.action&quot;&gt;requirements&lt;/a&gt; or Bioinformatics open source conference &lt;a href=&quot;http://www.open-bio.org/wiki/BOSC_2012&quot;&gt;requirements&lt;/a&gt;).&lt;/p&gt;
+&lt;h2 id=&quot;licensing-in-r&quot;&gt;Licensing in R&lt;/h2&gt;
+&lt;p&gt;R uses a simple but powerful license format in the DESCRIPTION files of all packages, which contain the essential meta-data for the package. Common FOSS licenses are recognized automatically (including version numbers or version inequalities). Since CC0 doesn’t (yet) make this list, we can use a custom license file where we provide the full plaintext CC0 license in the file LICENSE and write “file LICENSE” in the DESCRIPTION (&lt;a href=&quot;https://github.com/cboettig/fluctuationDomains&quot;&gt;my example&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;We can also see the frequency with which various licenses are used on the R repository, CRAN, with a few lines of code:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+p =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;available.packages&lt;/span&gt;(contrib.
+&lt;span class=&quot;kw&quot;&gt;url&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;http://cran.r-project.org&amp;quot;&lt;/span&gt;), &lt;span class=&quot;dt&quot;&gt;type =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;source&amp;quot;&lt;/span&gt;)
+&lt;span class=&quot;kw&quot;&gt;sort&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;table&lt;/span&gt;(p[, &lt;span class=&quot;st&quot;&gt;&amp;quot;License&amp;quot;&lt;/span&gt;]))&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Are open lab notebooks considered prior publication?</title>
+	 <link href="/2012/01/16/are-open-lab-notebooks-considered-prior-publication.html"/>
+   <updated>2012-01-16T10:47:17+00:00</updated>
+   <id>/01/16/are-open-lab-notebooks-considered-prior-publication</id>
+   <content type="html">&lt;p&gt;This question invariably comes up at some point in any discussion of open notebook science.  This concern is usually voiced in reference to the high-visibility magazines, which many scientists seem to assume will have very restrictive conditions.  A quick read of their policies shows otherwise.  Here are the links to pre-publication policies of major journals, with my short summaries &amp;amp; comments.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.nature.com/authors/policies/confidentiality.html&quot;&gt;Nature&lt;/a&gt; - Go right ahead. Explicit protection clause for open/collaborative blogs/wikis.  Just don’t talk to the press – guess that could include tweeting.  Also &lt;em&gt;Nature&lt;/em&gt; would like to see those links when you submit.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.pnas.org/content/96/8/4215.full&quot;&gt;PNAS&lt;/a&gt; - Nope, not prior publication here either. In fact, PNAS has one of the most liberal stances on prepublication which is well worth reading.  Even summaries of the work in the media encouraged – they only remind authors not to forget to publish!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.sciencemag.org/site/feature/contribinfo/faq/index.xhtml#prioronline_faq&quot;&gt;Science&lt;/a&gt; - The policy listed there sounds more conservative (phrases like “most cases” and “contact the editors” don’t inspire confidence).  Luckily, actually contacting the editors does: Deputy editor Brooks Hanson writes to me:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We allow posting on not-for-profit pre-print archives, so posting on &lt;a href=&quot;http://arxiv.org/&quot;&gt;arxiv.org&lt;/a&gt; is fine at any time.  we ask that if you post before acceptance that you do not indicate that the paper is submitted to Science.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As to lab notebooks, it would probably depend on what was in the “notebook” but if it were just notes or thoughts, it would probably not be a great concern.&lt;/p&gt;
+&lt;h2 id=&quot;approximating-policies&quot;&gt;Approximating policies?&lt;/h2&gt;
+&lt;p&gt;Many discipline-specific journals don’t state their policy on this as clearly in their advise to authors.  Of course writing to the editors is the best way to get clarification, but I think their are reasonable proxies to guess what’s okay and what’s not.&lt;/p&gt;
+&lt;p&gt;Posting on preprint servers in advance of submission is probably a greater threat to the journal’s exclusive control of the content than the less-digestible and less accessible (decentralized) posting of an open notebook, and as it’s a more widespread practice it may be a good signal to look for.  F1000 also &lt;a href=&quot;http://posters.f1000.com/journalresponses&quot;&gt;compiled a list&lt;/a&gt; of journals that would consider archiving a poster as prepublication, which could be used as another proxy – if they are okay with posters, notebooks are probably in the clear. The &lt;a href=&quot;http://www.sherpa.ac.uk/romeo/issn/0036-8075/&quot;&gt;Sherpa/Romeo&lt;/a&gt; project provides links to the pre-publication policies of many journals.  Its database also identifies which journals allow what level of public archiving.  Search for your favorite journals there.  To the extent that “Yellow” refers “at the time of submission,” rather than post-publication, one might assume that publisher wouldn’t much object to an open notebook.  Of course, I’d love clarification.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RoMEO Colour&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Archiving policy&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.sherpa.ac.uk/romeo/browse.php?colour=green&amp;amp;la=en&amp;amp;fIDnum=%7C&amp;amp;mode=simple&quot;&gt;Green&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Can archive pre-print &lt;em&gt;and&lt;/em&gt; post-print or publisher’s version/PDF&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.sherpa.ac.uk/romeo/browse.php?colour=blue&amp;amp;la=en&amp;amp;fIDnum=%7C&amp;amp;mode=simple&quot;&gt;Blue&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Can archive post-print (ie final draft post-refereeing) or publisher’s version/PDF&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.sherpa.ac.uk/romeo/browse.php?colour=yellow&amp;amp;la=en&amp;amp;fIDnum=%7C&amp;amp;mode=simple&quot;&gt;Yellow&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Can archive pre-print (ie pre-refereeing)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.sherpa.ac.uk/romeo/browse.php?colour=white&amp;amp;la=en&amp;amp;fIDnum=%7C&amp;amp;mode=simple&quot;&gt;White&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Archiving not formally supported&lt;/p&gt;
+&lt;p&gt;For instance, looks like the Royal Society journals are okay too. They receive a Green status, &lt;a href=&quot;http://rsif.royalsocietypublishing.org/site/misc/preparing-articles.xhtml#question7&quot;&gt;permits&lt;/a&gt; pre-review author’s copy on preprint servers.  Published copy uses Creative Commons Attribution (cc-by) &lt;a href=&quot;http://royalsocietypublishing.org/site/authors/licence.xhtml&quot;&gt;licensing&lt;/a&gt;. Their duplicate publishing &lt;a href=&quot;http://royalsocietypublishing.org/site/authors/policy.xhtml&quot;&gt;statement&lt;/a&gt; makes no reference to archives, only other publishers.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

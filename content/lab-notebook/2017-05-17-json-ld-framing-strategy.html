@@ -1,0 +1,70 @@
+---
+date: 2017-05-17T21:57:15Z
+title: "json-ld framing strategy"
+---
+
+
+
+<p>Parsing very nested JSON documents can be a pain. Here are some notes on co-opting the strategy of “Framing” used in JSON-LD. (Note that unlike the basic operations of <code>compaction</code> and <code>expansion</code>, the JSON-LD framing algorithm actually is essentially independent of the <code>@context</code> and any linked data concepts.</p>
+<p>Here’s a toy example of some nested JSON. Very nested structures are usually the source of issues for me, even with <code>purrr</code>, because often I want to pull data found at various different levels of nesting into a single row for the data.frame I care about.</p>
+<pre class="r"><code>library(&quot;jsonlite&quot;)</code></pre>
+<pre><code>## Loading required package: methods</code></pre>
+<pre class="r"><code>library(&quot;jsonld&quot;)
+library(&quot;magrittr&quot;)</code></pre>
+<pre class="r"><code>json &lt;-&#39;{
+      &quot;@id&quot;: &quot;http://example.org/library&quot;,
+      &quot;@type&quot;: &quot;ex:Library&quot;,
+      &quot;ex:contains&quot;: {
+        &quot;@id&quot;: &quot;http://example.org/library/the-republic&quot;,
+        &quot;@type&quot;: &quot;ex:Book&quot;,
+        &quot;ex:contains&quot;: {
+          &quot;@id&quot;: &quot;http://example.org/library/the-republic#introduction&quot;,
+          &quot;@type&quot;: &quot;ex:Chapter&quot;,
+          &quot;dc:description&quot;: &quot;An introductory chapter on The Republic.&quot;,
+          &quot;dc:title&quot;: &quot;The Introduction&quot;
+        },
+        &quot;dc:creator&quot;: &quot;Plato&quot;,
+        &quot;dc:title&quot;: &quot;The Republic&quot;
+      }
+    }
+  &#39;</code></pre>
+<p>The default behavior of <code>jsonlite:flatten</code> does not return a data frame here:</p>
+<pre class="r"><code>df &lt;-fromJSON(json, flatten = TRUE)
+class(df)</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<p>Note that <code>df</code> is still a (rather cumbersome!) list. This is particularly annoying because the type/structure is unpredictable (depends on how much a nesting a given element might have), so hard to program around, so we usually wind not flattening the data (but having to iterate over some often ugly nesting).</p>
+<div id="a-json-ld-framing-solution" class="section level2">
+<h2>A JSON-LD framing solution</h2>
+<p>Let’s imagine I just want to pull out book titles from the middle of that nested structure. Here’s a frame for that:</p>
+<pre class="r"><code>frame &lt;-
+&#39;{
+  &quot;@explicit&quot;: &quot;true&quot;,
+  &quot;@type&quot;: &quot;ex:Book&quot;,
+  &quot;dc:title&quot;: {}
+}&#39;
+jsonld_frame(json, frame) %&gt;% fromJSON()</code></pre>
+<pre><code>## $`@graph`
+##                                       @id   @type     dc:title
+## 1 http://example.org/library/the-republic ex:Book The Republic</code></pre>
+<p>How about a data frame with the title and creator for all objects, regardless of nesting depth:</p>
+<pre class="r"><code>frame &lt;-
+&#39;{
+  &quot;@explicit&quot;: &quot;true&quot;,
+  &quot;@id&quot;: {},
+  &quot;dc:title&quot;: {&quot;@default&quot;: &quot;NA&quot;},
+  &quot;dc:creator&quot;: {&quot;@default&quot;: &quot;NA&quot;}
+}&#39;
+
+jsonld_frame(json, frame) %&gt;% fromJSON()</code></pre>
+<pre><code>## $`@graph`
+##                                                    @id      @type
+## 1                           http://example.org/library ex:Library
+## 2              http://example.org/library/the-republic    ex:Book
+## 3 http://example.org/library/the-republic#introduction ex:Chapter
+##   dc:creator         dc:title
+## 1         NA               NA
+## 2      Plato     The Republic
+## 3         NA The Introduction</code></pre>
+<p>This strategy is also very effective when you either don’t know exactly how the data is structured, or the data structure changes either over time or across different records provided by the data provider (e.g. when some entries may have more nested content than other entries of the same type).</p>
+<p>More details on the syntax used in specifying a frame can be found in the <a href="http://json-ld.org/spec/latest/json-ld-framing/">offical documentation</a>.</p>
+</div>

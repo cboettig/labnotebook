@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/cboettig
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.carlboettiger.info
+  * I am cboettig (https://keybase.io/cboettig) on keybase.
+  * I have a public key ASAz0gxbUzsHhf-cDSJjzISTtSHg7sKqQnmgegw0x6Sv0wo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012033d20c5b533b0785ff9c0d2263cc8493b521e0eec2aa4279a07a0c34c7a4afd30a",
+            "host": "keybase.io",
+            "kid": "012033d20c5b533b0785ff9c0d2263cc8493b521e0eec2aa4279a07a0c34c7a4afd30a",
+            "uid": "bfebab3b9b4aa13314acb424af50c219",
+            "username": "cboettig"
+        },
+        "merkle_root": {
+            "ctime": 1498848023,
+            "hash": "61f1e5ee5e0c4faa8b74811896f9b4ec129780b051b1653f10f3361774a3215d64f4eab1d5cd628f96b825c2cb4cfd33593f8da9492cf4815c04a2584d41780b",
+            "hash_meta": "188488ef7fca16fc179e1ee3acb70e3438ab9958b4145eb9ddca68e22da89579",
+            "seqno": 1203629
+        },
+        "service": {
+            "hostname": "www.carlboettiger.info",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.24"
+    },
+    "ctime": 1498848069,
+    "expire_in": 504576000,
+    "prev": "425a364262d5677a12391147719580a10d4d1c7a5eb257e0f7a782c9051919e5",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgM9IMW1M7B4X/nA0iY8yEk7Uh4O7CqkJ5oHoMNMekr9MKp3BheWxvYWTFA017ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzNkMjBjNWI1MzNiMDc4NWZmOWMwZDIyNjNjYzg0OTNiNTIxZTBlZWMyYWE0Mjc5YTA3YTBjMzRjN2E0YWZkMzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzNkMjBjNWI1MzNiMDc4NWZmOWMwZDIyNjNjYzg0OTNiNTIxZTBlZWMyYWE0Mjc5YTA3YTBjMzRjN2E0YWZkMzBhIiwidWlkIjoiYmZlYmFiM2I5YjRhYTEzMzE0YWNiNDI0YWY1MGMyMTkiLCJ1c2VybmFtZSI6ImNib2V0dGlnIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDk4ODQ4MDIzLCJoYXNoIjoiNjFmMWU1ZWU1ZTBjNGZhYThiNzQ4MTE4OTZmOWI0ZWMxMjk3ODBiMDUxYjE2NTNmMTBmMzM2MTc3NGEzMjE1ZDY0ZjRlYWIxZDVjZDYyOGY5NmI4MjVjMmNiNGNmZDMzNTkzZjhkYTk0OTJjZjQ4MTVjMDRhMjU4NGQ0MTc4MGIiLCJoYXNoX21ldGEiOiIxODg0ODhlZjdmY2ExNmZjMTc5ZTFlZTNhY2I3MGUzNDM4YWI5OTU4YjQxNDVlYjlkZGNhNjhlMjJkYTg5NTc5Iiwic2Vxbm8iOjEyMDM2Mjl9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoid3d3LmNhcmxib2V0dGlnZXIuaW5mbyIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMjQifSwiY3RpbWUiOjE0OTg4NDgwNjksImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiNDI1YTM2NDI2MmQ1Njc3YTEyMzkxMTQ3NzE5NTgwYTEwZDRkMWM3YTVlYjI1N2UwZjdhNzgyYzkwNTE5MTllNSIsInNlcW5vIjo1LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQHsGrPn8xV6v1r28kmCqiDqzYNZELnI28XFIdHhJbvnK6DRxC1D47OXOVndq0FBIn0IFcDHjT/+RjuMYRDuu/Qmoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCCE+PAHjQioSE/gEFOSUsL9SXrzeM5CJZfstYvn1JaLnaN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/cboettig
+
+==================================================================

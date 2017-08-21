@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Empirical Demonstration Of That Clever Derivation</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="derivation" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Empirical Demonstration Of That Clever Derivation" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2013-04-24 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/04/24/empirical-demonstration-of-that-clever-derivation.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Empirical Demonstration Of That Clever Derivation" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2013-04-24 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/04/24/empirical-demonstration-of-that-clever-derivation.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2013-04-24 00:00:00 +0000"/>
+<meta name="citation_title" content="Empirical Demonstration Of That Clever Derivation"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Empirical Demonstration Of That Clever Derivation</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Another unexpected gem from keeping an online notebook: Empirical evidence for the expected escape time problem! Getting to that in a moment….</p>
+<p>After Marc pointed out to me that there is a clever analytic demonstration to back my claims about realized exit times being fast (posted earlier in my notebook under the title, <a href="http://carlboettiger.info/2013/04/05/a-clever-derivation-on-realized-escape-times.html">a clever derivation of realized escape times</a>, I’ve enjoyed a bit of a tangent in understanding this result that has long since been worked out by mathematicians but appears to be periodically rediscovered in ecological and evolutionary work in the most delightful ways.</p>
+<p>For instance, <span class="showtooltip" data-html="true" title="Lande R (1985). “Expected time for random genetic drift of a population between stable phenotypic states.” ."><a href="http://www.pnas.org/content/82/22/7641.short" rel="http://purl.org/spar/cito/citesAsEvidence" >Lande (1985)</a></span> shows how this result can explain a pattern of punctuated equilibrium, such as sudden rapid jumps such as illustrated below in a simulation example from <a href="http://www.amazon.com/Perturbations-Dynamical-Grundlehren-mathematischen-Wissenschaften/dp/0387983627" rel="http://purl.org/spar/cito/citesAsAuthority" >Freidlin <em>et. al.</em> (1998)</a>, need not result from some external process but are in fact the most likely trajectories to be seen in a purely stochastic transition.</p>
+<figure>
+<img src="http://farm9.staticflickr.com/8258/8684251521_124e51b5d3_o.png" alt="from Mangel 2006, Theoretical Biologist’s toolbox" /><figcaption>from Mangel 2006, Theoretical Biologist’s toolbox</figcaption>
+</figure>
+<p>Ludwig (1975) considered this result in a more ecological context, addressing a variety of questions about persistence and coexistence that are naturally represented as hitting time problems as well. Note that the this result is interesting precisely in its contrast from the more familiar hitting time problems in that we focus on the time the realized trajectory actually takes to exit, rather than the waiting time until that exit occurs (e.g. the frequency of the transtions shown in the figure above).</p>
+<p>These examples appear to be rediscoveries of particular cases that result more generally from the large deviation theory of Fiedlin and Wentzell, which states that the most likely path can be found by minimizing a variation equation (Hamiltonian, analgous to the minimizing action along paths in classical mechanics or the optimization under constraint of Jacobi-Bellman). For a system of discrete steps (e.g. births and deaths) in one dimension this is particularly trivial: the most likely path is the monotonic one (this should be easy to see by considering the likelihood of <span class="math">\(N\)</span> death events occuring in sequence vs that of <span class="math">\(N-1\)</span> death events interrupted by 1 birth and followed by 2 deaths.)</p>
+<h2 id="empirical-demonstrations">Empirical demonstrations?</h2>
+<p>Then an email to me earlier this week pointed out that perhaps an example of the phenomenon I discussed there had been demonstrated in <span class="showtooltip" data-html="true" title="Drake J and Griffen B (2009). “Speed of Expansion And Extinction in Experimental Populations.” Ecology Letters, 12, pp. 772–778. ISSN 1461023X."><a href="http://dx.doi.org/10.1111/j.1461-0248.2009.01325.x" rel="http://purl.org/spar/cito/citesAsEvidence" >Drake &amp; Griffen (2009)</a></span> :</p>
+<blockquote>
+<p>A testable, counter-intuitive prediction of stochastic population theory is that, on average, for any interior interval of the domain of biologically attainable population sizes, the expected duration of increase equals the expected duration of decline. Here we report the first empirical tests of this hypothesis.</p>
+</blockquote>
+<p>I do feel that this is an overstatement of the stochastic theory as I understand it – these times should only scale in a similar way, but can differ by an arbitrary coefficient. Indeed it is often the goal of the deviation theory analysis to determine this coefficent, see <span class="showtooltip" data-html="true" title="Faure M and Schreiber SJ (2011). “Quasi-Stationary distributions for Randomly perturbed dynamical systems.” ."><a href="http://arxiv.org/abs/1101.3420" rel="http://purl.org/spar/cito/citesAsAuthority" >Faure &amp; Schreiber (2011)</a></span> . The authors seem quite concerned that theory they refer to applies to continuously valued diffusion processes alone, whereas I’m quite certain the more general results of the deviation theory hold just as well in discrete systems. (Perhaps this explains why they do not confirm this prediction in some subset of the data). Nevertheless, the context is the same as we consider – comparing the return time to a stable point from some small population size with the time required to decline from that point to a small size, as clearly indicated in Figure 1 of the manuscript.</p>
+<p>Commendably, the authors make the data and code available (as an R script and .Rdata file). (According to the manuscript, this data is at <a href="http://dragonfly.ecology.uga.edu/drakelab/data.html" class="uri">http://dragonfly.ecology.uga.edu/drakelab/data.html</a>, but in an example of link rot and the risk of independent archiving the lab prefers daphnia to dragonfly, and the data can now be found: <a href="http://daphnia.ecology.uga.edu/drakelab/datapage.html" class="uri">http://daphnia.ecology.uga.edu/drakelab/datapage.html</a>). These data draw on work from earlier experiments that provide some of the nicest sources of time series leading up to stochastic extinctions. Unfortunately it appears that only the duration of growth and extinction times for the replicates are shown in the data provided for this paper, I don’t see the actual timeseries themselves (which would be interesting to look at more closely).</p>
+<h2 id="references">References</h2>
+<ul>
+<li>John M. Drake, Blaine D. Griffen, (2009) Speed of Expansion And Extinction in Experimental Populations. <em>Ecology Letters</em> <strong>12</strong> 772-778 <a href="http://dx.doi.org/10.1111/j.1461-0248.2009.01325.x">10.1111/j.1461-0248.2009.01325.x</a></li>
+<li>Mark Freidlin, Alexander Wentzell, (1998) {Random Perturbations of Dynamical Systems (Grundlehren der mathematischen Wissenschaften)}. 429-NA <a href="http://www.amazon.com/Perturbations-Dynamical-Grundlehren-mathematischen-Wissenschaften/dp/0387983627" class="uri">http://www.amazon.com/Perturbations-Dynamical-Grundlehren-mathematischen-Wissenschaften/dp/0387983627</a></li>
+<li>R Lande, (1985) Expected time for random genetic drift of a population between stable phenotypic states. <em>Proceedings of the National Academy of Sciences</em> <a href="http://www.pnas.org/content/82/22/7641.short" class="uri">http://www.pnas.org/content/82/22/7641.short</a></li>
+<li>Mathieu Faure, Sebastian Schreiber, (2011) Quasi-Stationary distributions for Randomly perturbed dynamical systems. <em>arXiv.org</em> <a href="http://arxiv.org/abs/1101.3420" class="uri">http://arxiv.org/abs/1101.3420</a></li>
+</ul>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2013-04-24 00:00:00 +0000" 
+    property="dc:created">24 Apr 2013</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2013/04/23/we-need-more-object-oriented-design-in-comparative-methods.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2013/04/25/notes.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2013/commits/master/_posts/2013-04-24-empirical-demonstration-of-that-clever-derivation.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2013/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2013/tags.html#derivation">#derivation</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2013/commit/576848b1450a59e66e671732a95aa982aacdff0e/_posts/2013-04-24-empirical-demonstration-of-that-clever-derivation.md"> 576848b1450a59e66e671732a95aa982aacdff0e</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Empirical Demonstration Of That Clever Derivation
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2013-04-24
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/04/24/empirical-demonstration-of-that-clever-derivation.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

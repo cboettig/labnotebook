@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Further exploration of RAM Legacy Stock Assessment data</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="ram-fisheries" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Further exploration of RAM Legacy Stock Assessment data" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2015-06-18 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/06/18/ram-explore.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Further exploration of RAM Legacy Stock Assessment data" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2015-06-18 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/06/18/ram-explore.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2015-06-18 00:00:00 +0000"/>
+<meta name="citation_title" content="Further exploration of RAM Legacy Stock Assessment data"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="http://www.carlboettiger.info/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Further exploration of RAM Legacy Stock Assessment data</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">suppressPackageStartupMessages</span>({
+<span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;RPostgreSQL&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;devtools&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)
+})
+
+## Perform this in data_raw to keep package dependencies minimal
+mydb &lt;-<span class="st"> </span><span class="kw">src_postgres</span>(<span class="dt">dbname =</span> <span class="st">&quot;srdb&quot;</span>, 
+                     <span class="dt">host=</span><span class="st">&quot;nautilus-vm.mathstat.dal.ca&quot;</span>, 
+                     <span class="dt">user =</span> <span class="st">&quot;srdbuser&quot;</span>, 
+                     <span class="dt">password =</span>  <span class="st">&quot;srd6us3r!&quot;</span>, 
+                     <span class="dt">port =</span> <span class="dv">5432</span>)
+
+timeseries &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.timeseries&quot;</span>)))
+values &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.timeseries_values_view&quot;</span>)))
+units &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.timeseries_units_view&quot;</span>)))
+assessment &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.assessment&quot;</span>)))
+area &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.area&quot;</span>)))
+stock &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.stock&quot;</span>)))
+method &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.assessmethod&quot;</span>)))
+assessor &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.assessor&quot;</span>)))
+management  &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.management&quot;</span>)))
+taxonomy &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.taxonomy&quot;</span>)))
+lmerefs &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.lmerefs&quot;</span>)))
+lmestock &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.lmetostocks&quot;</span>)))
+biometrics  &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.biometrics&quot;</span>)))
+bioparams &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.bioparams&quot;</span>)))
+tsmetrics &lt;-<span class="st"> </span><span class="kw">collect</span>(<span class="kw">tbl</span>(mydb, <span class="kw">sql</span>(<span class="st">&quot;SELECT * FROM srdb.tsmetrics&quot;</span>)))</code></pre>
+<h2 id="north-atlantic-cod-data">North Atlantic Cod data</h2>
+<p>Select North Atlantic Cod, <em>Gadus morhua</em>:</p>
+<pre class="sourceCode r"><code class="sourceCode r">cod_ids &lt;-
+<span class="st">  </span>assessment %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">left_join</span>(stock) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(scientificname==<span class="st">&quot;Gadus morhua&quot;</span>) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(assessid) %&gt;%
+<span class="st">  </span><span class="kw">unlist</span>() %&gt;%<span class="st"> </span><span class="kw">unname</span>() <span class="co"># we need a char string, not a data.frame</span></code></pre>
+<p>(Note we could have selected on the <code>tsn==164712</code> to be less ambiguous but also less semantic, or on <code>commonname==&quot;Atlantic cod&quot;</code> to be more reader friendly but even more ambiguous. Fortunately the common and scientific names are well aligned with the <code>tsn</code> ids in this case and we get the same set of 22 stock assessments.)</p>
+<p>Before we can combine across these, we must verify that each assessment measures the quantities of interest using the same units, or otherwise correct those that do not:</p>
+<pre class="sourceCode r"><code class="sourceCode r">units %&gt;%<span class="st"> </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>cod_ids) %&gt;%<span class="st"> </span><span class="kw">select</span>(assessid, catch_landings_unit) %&gt;%<span class="st"> </span><span class="kw">group_by</span>(catch_landings_unit) %&gt;%<span class="st"> </span><span class="kw">summarise</span>(<span class="kw">length</span>(catch_landings_unit))</code></pre>
+<pre><code>Source: local data frame [1 x 2]
+
+  catch_landings_unit length(catch_landings_unit)
+1                  MT                          21</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">units %&gt;%<span class="st"> </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>cod_ids) %&gt;%<span class="st"> </span><span class="kw">select</span>(assessid, total_unit) %&gt;%<span class="st"> </span><span class="kw">group_by</span>(total_unit) %&gt;%<span class="st"> </span><span class="kw">summarise</span>(<span class="kw">length</span>(total_unit))</code></pre>
+<pre><code>Source: local data frame [3 x 2]
+
+  total_unit length(total_unit)
+1        E03                  1
+2         MT                 18
+3         NA                  2</code></pre>
+<p>All catches are in metric tons, so no concern there.</p>
+<p>Landing data we can plot immediately:</p>
+<pre class="sourceCode r"><code class="sourceCode r">values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>cod_ids) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(tsyear) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">catch =</span> <span class="kw">sum</span>(catch_landings, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)) %&gt;%<span class="st"> </span>## all units are metric tons
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(tsyear, catch)) +<span class="st"> </span><span class="kw">geom_line</span>() +<span class="st"> </span>
+<span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Catch/Landings (MT)&quot;</span>) +<span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;Year&quot;</span>)</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-4-1.png" />
+</figure>
+<p>Note that missing data is removed, such that any assessment without catch data is treated as zero catch. This could be the case (maybe not all assessments correspond to unique catch zones.) We also assume catch reported in one assessment is not also reported in a different assement (e.g. no double-counting). Lastly, we must bear in mind that this is catch/landings data, which may include bycatch, underreporting, etc.</p>
+<hr />
+<h2 id="handling-unit-conversions">Handling unit conversions</h2>
+<p>The units for <code>total</code> are more problematic. The <code>NA</code> simply indicates stocks that do not have the an estimate for <code>total</code>, but we also see one assessment has totals in <code>E03</code> (thousands) instead of metric tons.</p>
+<hr />
+<p><em>Sidebar</em> how do we know for sure that <code>E03</code> is abundance counts in thousands of fish?</p>
+<p>The database does not provide metadata for these unit definitions directly. the <code>values</code> data and its associated <code>units</code> metadata are actually derived tables from the raw <code>timeseries</code> table and the associated <code>tsmetrics</code> unit metadata, so we would have to dive in there to confirm this interpretation of <code>E03</code> in this case.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># tidy up the tsmetrics table:</span>
+unit_defs &lt;-<span class="st"> </span>tsmetrics %&gt;%<span class="st"> </span><span class="kw">rename</span>(<span class="dt">tsid =</span> tsunique) %&gt;%<span class="st"> </span><span class="kw">select</span>(tsid, tslong, tsunitslong) 
+
+<span class="co"># Find the assessid of the cod stock assessment that measures total in units of E03</span>
+who &lt;-<span class="st"> </span>units %&gt;%<span class="st"> </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>cod_ids) %&gt;%<span class="st"> </span><span class="kw">select</span>(assessid, total_unit) %&gt;%<span class="st"> </span><span class="kw">filter</span>(total_unit==<span class="st">&quot;E03&quot;</span>)
+
+<span class="co"># Find that assessid in the timeseries table, where units are written in different notation</span>
+ts_who &lt;-<span class="st"> </span>timeseries %&gt;%<span class="st"> </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>who$assessid) %&gt;%<span class="st"> </span><span class="kw">select</span>(assessid, tsid) %&gt;%<span class="st">  </span><span class="kw">distinct</span>(tsid)
+
+<span class="co"># Join the tables to see the definitions</span>
+<span class="kw">left_join</span>(ts_who, unit_defs)</code></pre>
+<pre><code>Source: local data frame [5 x 4]
+
+                      assessid   tsid
+1 NAFO-SC-COD3M-1959-2008-BAUM SSB-MT
+2 NAFO-SC-COD3M-1959-2008-BAUM TN-E03
+3 NAFO-SC-COD3M-1959-2008-BAUM  R-E03
+4 NAFO-SC-COD3M-1959-2008-BAUM  F-1/T
+5 NAFO-SC-COD3M-1959-2008-BAUM  TC-MT
+Variables not shown: tslong (chr), tsunitslong (chr)</code></pre>
+<p>and we can confirm <code>E03</code> is in this case <code>TN-E03</code> (total number, in thousands).</p>
+<hr />
+<p>Converting this to metric tons will require an average weight for cod. FishBase gives us a maximum weight (in grams):</p>
+<pre class="sourceCode r"><code class="sourceCode r">rfishbase::<span class="kw">species</span>(<span class="st">&quot;Gadus morhua&quot;</span>, <span class="dt">fields=</span><span class="st">&quot;Weight&quot;</span>)</code></pre>
+<pre><code>Error in loadNamespace(name): there is no package called &#39;rfishbase&#39;</code></pre>
+<p>Wikipedia says the average is 5-12 kilograms, so let’s take 8.5 Kg for sake of argument. Clearly a more programmatic and more accurate solution is needed here.</p>
+<p><em>Sidenote</em> the database has some very limited data on biometrics by assessment, including some assessments that record a maximum (but not an average) weight (sometimes pulled from FishBase anyway). Even pooling across all Atlantic Cod assessments we can’t find even a maximum weight.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Find the unit code for max weight</span>
+biometrics %&gt;%<span class="st"> </span><span class="kw">filter</span>(biolong ==<span class="st"> &quot;Maximum weight&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(biounique) %&gt;%<span class="st"> </span><span class="kw">unlist</span>() %&gt;%<span class="st"> </span><span class="kw">unname</span>() -&gt;<span class="st"> </span>max_weight
+<span class="co"># show the unit code:</span>
+max_weight</code></pre>
+<pre><code>[1] &quot;MAX-WGT-g&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Look up all max weight values for illustration: (not filtering on cod_ids since there are no hits)</span>
+bioparams %&gt;%<span class="st"> </span><span class="kw">filter</span>(bioid %in%<span class="st"> </span>max_weight)</code></pre>
+<pre><code>Source: local data frame [17 x 5]
+
+                                  assessid     bioid  biovalue
+1      INIDEP-ARGANCHOSARG-1992-2007-Parma MAX-WGT-g        51
+2      INIDEP-ARGANCHONARG-1989-2007-Parma MAX-WGT-g        48
+3       INIDEP-ARGHAKESARG-1985-2008-Parma MAX-WGT-g   5300.00
+4       INIDEP-ARGHAKENARG-1985-2007-Parma MAX-WGT-g   5900.00
+5  INIDEP-PATGRENADIERSARG-1983-2006-Parma MAX-WGT-g      2940
+6            ICCAT-ALBANATL-1929-2005-WORM MAX-WGT-g     60000
+7         ICCAT-ATBTUNAEATL-1969-2007-WORM MAX-WGT-g    684000
+8         ICCAT-ATBTUNAWATL-1969-2007-WORM MAX-WGT-g    684000
+9   AFSC-SABLEFEBSAIGA-1956-2008-MELNYCHUK MAX-WGT-g      6200
+10           IPHC-PHALNPAC-1988-2009-Parma MAX-WGT-g available
+11     AFSC-REYEROCKBSAI-1974-2009-STANTON MAX-WGT-g      2047
+12            NEFSC-ATHAL5YZ-1800-2007-COL MAX-WGT-g    337000
+13     NEFSC-SCUPNWATLC-1960-2007-TERCEIRO MAX-WGT-g      3000
+14     NEFSC-MONKGOMNGB-1964-2006-RICHARDS MAX-WGT-g    337000
+15      NEFSC-SURFMATLC-1965-2008-JACOBSON MAX-WGT-g      600+
+16   CSERG-ANCHOVYKILKACS-1991-2007-JENSEN MAX-WGT-g      18.4
+17        ASMFC-PANDALGOM-1960-2009-IDOINE MAX-WGT-g        23
+Variables not shown: bioyear (chr), bionotes (chr)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">e03_to_MT &lt;-<span class="st"> </span><span class="fl">7.5</span> *<span class="st"> </span><span class="fl">1e-3</span>
+
+tmpA &lt;-<span class="st"> </span>
+<span class="st">  </span>values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>who$assessid) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">total_mt =</span> total *<span class="st"> </span>e03_to_MT)
+
+everyone_else &lt;-<span class="st"> </span>cod_ids[!(cod_ids %in%<span class="st"> </span>who$assessid)]
+tmpB &lt;-
+<span class="st">  </span>values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>everyone_else) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">total_mt =</span> total)
+
+std_values &lt;-<span class="st"> </span><span class="kw">bind_rows</span>(tmpA,tmpB)</code></pre>
+<p>(Not sure if there is a more consise way to change the values in a given column for a subset of the rows). Well, perhaps it would be simpler to treat non-standard units as missing data, but at least this illustrates a mechanism for handling the conversion.</p>
+<pre class="sourceCode r"><code class="sourceCode r">biomass &lt;-
+<span class="st">  </span>std_values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>cod_ids) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(tsyear) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">biomass =</span> <span class="kw">sum</span>(total_mt, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)) %&gt;%<span class="st"> </span>## WARNING -- should check units!
+<span class="st">  </span><span class="kw">filter</span>(biomass &gt;<span class="st"> </span><span class="dv">0</span>) 
+
+biomass_dropped &lt;-
+<span class="st">  </span>values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>everyone_else) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(tsyear) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">biomass =</span> <span class="kw">sum</span>(total, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)) %&gt;%<span class="st"> </span>## WARNING -- should check units!
+<span class="st">  </span><span class="kw">filter</span>(biomass &gt;<span class="st"> </span><span class="dv">0</span>) 
+
+biomass_wrong &lt;-
+<span class="st">  </span>values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>cod_ids) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(tsyear) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">biomass =</span> <span class="kw">sum</span>(total, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)) %&gt;%<span class="st"> </span>## WARNING -- should check units!
+<span class="st">  </span><span class="kw">filter</span>(biomass &gt;<span class="st"> </span><span class="dv">0</span>) 
+
+<span class="kw">ggplot</span>(biomass, <span class="kw">aes</span>(tsyear, biomass)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_line</span>() +
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>biomass_wrong, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">lty=</span><span class="dv">2</span>) +
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>biomass_dropped, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">lty=</span><span class="dv">2</span>) +
+<span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Biomass (MT)&quot;</span>) +<span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;Year&quot;</span>)
+  
+<span class="co"># they may look identical but they aren&#39;t:</span>
+<span class="kw">identical</span>(biomass_dropped$biomass, biomass$biomass)</code></pre>
+<pre><code>[1] FALSE</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-9-1.png" />
+</figure>
+<p>In this case, the contribution is negligible (red vs black). Even failing to convert units (blue) makes a hardly visible difference, though in general the difference could have been quite large.</p>
+<pre class="sourceCode r"><code class="sourceCode r">values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>cod_ids, total &gt;<span class="st"> </span><span class="dv">0</span>) %&gt;%
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(tsyear, total, <span class="dt">color=</span>assessid)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_line</span>() +
+<span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Biomass (MT)&quot;</span>) +<span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;Year&quot;</span>)</code></pre>
+<figure>
+<img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-10-1.png" />
+</figure>
+<hr />
+<h2 id="stock-recruitment-time-series">Stock-recruitment &amp; time-series</h2>
+<pre class="sourceCode r"><code class="sourceCode r">values %&gt;%<span class="st"> </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>cod_ids[[<span class="dv">1</span>]]) %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(ssb, r)) +<span class="st"> </span><span class="kw">geom_point</span>()
+values %&gt;%<span class="st"> </span><span class="kw">filter</span>(assessid==<span class="st">&quot;AFWG-CODNEAR-1943-2006-MINTO&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(ssb, r)) +<span class="st"> </span><span class="kw">geom_point</span>()
+
+values %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>cod_ids) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(!<span class="kw">is.na</span>(r), !<span class="kw">is.na</span>(ssb)) %&gt;%
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(ssb, r)) +
+<span class="st">    </span><span class="kw">geom_point</span>() +
+<span class="st">    </span><span class="kw">facet_wrap</span>(~assessid, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)
+
+
+values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>cod_ids) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(!<span class="kw">is.na</span>(total)) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(tsyear, total)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(tsyear, ssb), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>) +
+<span class="st">    </span><span class="kw">geom_line</span>() +<span class="st"> </span>
+<span class="st">    </span><span class="kw">facet_wrap</span>(~assessid, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)</code></pre>
+<p><img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-11-1.png" /> <img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-11-2.png" /> <img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-11-3.png" /> <img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-11-4.png" /></p>
+<p>Note that the spawning stock biomass, red, can often be significantly less than the total stock (black).</p>
+<pre class="sourceCode r"><code class="sourceCode r">herring &lt;-
+<span class="st">  </span>assessment %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">left_join</span>(stock) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(commonname==<span class="st">&quot;Herring&quot;</span>) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(assessid) %&gt;%
+<span class="st">  </span><span class="kw">unlist</span>() %&gt;%<span class="st"> </span><span class="kw">unname</span>() <span class="co"># we need a char string, not a data.frame</span>
+
+values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>herring) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(!<span class="kw">is.na</span>(r), !<span class="kw">is.na</span>(ssb)) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(ssb, r)) +<span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_point</span>() +<span class="st"> </span>
+<span class="st">    </span><span class="kw">facet_wrap</span>(~assessid, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)
+
+values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>herring) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(!<span class="kw">is.na</span>(total)) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(tsyear, total)) +<span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_line</span>() +<span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(tsyear, ssb), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>) +
+<span class="st">    </span><span class="kw">facet_wrap</span>(~assessid, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)</code></pre>
+<p><img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-12-1.png" /> <img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-12-2.png" /></p>
+<pre class="sourceCode r"><code class="sourceCode r">anchovy &lt;-
+<span class="st">  </span>assessment %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">left_join</span>(stock) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(commonname==<span class="st">&quot;Anchovy&quot;</span>) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(assessid) %&gt;%
+<span class="st">  </span><span class="kw">unlist</span>() %&gt;%<span class="st"> </span><span class="kw">unname</span>() <span class="co"># we need a char string, not a data.frame</span>
+
+values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>anchovy) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(!<span class="kw">is.na</span>(r), !<span class="kw">is.na</span>(ssb)) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(ssb, r)) +<span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_point</span>() +<span class="st"> </span>
+<span class="st">    </span><span class="kw">facet_wrap</span>(~assessid, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)
+
+values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>anchovy) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(!<span class="kw">is.na</span>(total)) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(tsyear, total)) +<span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_line</span>() +<span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(tsyear, ssb), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>) +
+<span class="st">    </span><span class="kw">facet_wrap</span>(~assessid, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)</code></pre>
+<p><img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-13-1.png" /> <img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-13-2.png" /></p>
+<pre class="sourceCode r"><code class="sourceCode r">bluefin &lt;-
+<span class="st">  </span>assessment %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">left_join</span>(stock) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(commonname==<span class="st">&quot;Atlantic bluefin tuna&quot;</span>) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(assessid) %&gt;%
+<span class="st">  </span><span class="kw">unlist</span>() %&gt;%<span class="st"> </span><span class="kw">unname</span>() <span class="co"># we need a char string, not a data.frame</span>
+
+values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>bluefin) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(!<span class="kw">is.na</span>(r), !<span class="kw">is.na</span>(ssb)) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(ssb, r)) +<span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_point</span>() +<span class="st"> </span>
+<span class="st">    </span><span class="kw">facet_wrap</span>(~assessid, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)
+
+
+values %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(assessid %in%<span class="st"> </span>bluefin) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(!<span class="kw">is.na</span>(total)) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(tsyear, total)) +<span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_line</span>() +<span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(tsyear, ssb), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>) +
+<span class="st">    </span><span class="kw">facet_wrap</span>(~assessid, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)</code></pre>
+<p><img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-14-1.png" /> <img src="/2015/assets/figures/posts/2015-06-18-RAM-explore/unnamed-chunk-14-2.png" /></p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      
+<aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2015-06-18 00:00:00 +0000" 
+    property="dc:created">18 Jun 2015</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2015/06/16/daniel-gp-example.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2015/06/19/gp-nimble-v2.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2015/commits/master/_posts/_posts/2015-06-18-RAM-explore.Rmd"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2015/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#ram-fisheries">#ram-fisheries</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2015/commit/fccfdc7ba71992d33e1a9e41bd44d9ec69faaabc/_posts/_posts/2015-06-18-RAM-explore.Rmd"> fccfdc7ba71992d33e1a9e41bd44d9ec69faaabc</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Further exploration of RAM Legacy Stock Assessment data
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2015-06-18
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/06/18/ram-explore.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

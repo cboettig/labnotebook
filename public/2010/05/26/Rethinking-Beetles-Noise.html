@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Rethinking Beetles Noise</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="tribolium" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Rethinking Beetles Noise" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2010-05-26 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/05/26/Rethinking-Beetles-Noise.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Rethinking Beetles Noise" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2010-05-26 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/05/26/Rethinking-Beetles-Noise.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2010-05-26 00:00:00 +0000"/>
+<meta name="citation_title" content="Rethinking Beetles Noise"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Rethinking Beetles Noise</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <ul>
+<li>Noise in the larval class is damped by <img src="http://openwetware.org/images/math/d/0/8/d084393ee59f54a76685ec96a58d5713.png" alt="\partial_L f_L" /> and grows proportional to its intrinsic variation and the contribution of other classes through their derivatives of <em>f</em><sub><em>L</em></sub>, that is, <img src="http://openwetware.org/images/math/0/8/c/08c6845f4c466dddff7c0cf1d0c9bdd9.png" alt="\partial_E f_l" /> as well as the sum of its intrinsic rates (essentially whichever is larger). Taking <em>E</em> dynamics to be fast we might reduce to a continous time LPA model:</li>
+</ul>
+<figure>
+<img src="http://openwetware.org/images/math/8/8/6/8868897b28c0269a662476f8cdaba956.png" alt="\begin{align} &amp; \dot L = a_e \frac{bA - c_{ea} A - c_{el} L}{a_e + \mu_e} - a_l - \mu_l \\ &amp; \dot P = a_l L - \mu_p P - a_p P \\ &amp; \dot A = a_p P - \mu_a A \end{align}" /><figcaption>\begin{align} &amp; \dot L = a_e \frac{bA - c_{ea} A - c_{el} L}{a_e + \mu_e} - a_l - \mu_l \\ &amp; \dot P = a_l L - \mu_p P - a_p P \\ &amp; \dot A = a_p P - \mu_a A \end{align}</figcaption>
+</figure>
+<p>and the larval fluctuations are essentially:</p>
+<figure>
+<img src="http://openwetware.org/images/math/0/b/2/0b28c653e98e1add40660bcfa8397dfa.png" alt="\begin{align} \sigma^2_L &amp;= \frac{\nu + \beta_L}{2 \partial_L f_L} \\ \nu &amp;= \frac{ 2(\partial_A f_L)^2 \sigma_A^2 }{\partial_L f_L + \partial_A f_A} \\ \partial_A L &amp;= \frac{a_e (b - c_{ea} ) }{a_e + \mu_e} \end{align}" /><figcaption>\begin{align} \sigma^2_L &amp;= \frac{\nu + \beta_L}{2 \partial_L f_L} \\ \nu &amp;= \frac{ 2(\partial_A f_L)^2 \sigma_A^2 }{\partial_L f_L + \partial_A f_A} \\ \partial_A L &amp;= \frac{a_e (b - c_{ea} ) }{a_e + \mu_e} \end{align}</figcaption>
+</figure>
+<p>where β<sub><em>i</em></sub> is the intrinsic noise of the age class. Hence a class <em>i</em> which propagates large noise to another class <em>j</em> has a large <img src="http://openwetware.org/images/math/7/b/e/7be2b5af5d2cc89a7191b64172d0111a.png" alt="\partial_i f_j" />. If this term is a linear transition λ<em>X</em><sub><em>i</em></sub>, then the same term appears in <em>f</em><sub><em>i</em></sub> and hence damps the noise <img src="http://openwetware.org/images/math/8/5/8/858533c45c5df12a7e743e031638f296.png" alt="\sigma_i^2" /> and cancels out. Hence noise must propagate into a class through nonlinear transition rates OR through an asymmetry in the transition (i.e. the c_1, c_2 large noise example in the generalized crowley).</p>
+<p><br /> Compare to noise in Eggs:</p>
+<figure>
+<img src="http://openwetware.org/images/math/c/b/4/cb43757c3eeb52669b9771261087ddd2.png" alt="\sigma^2_E = \frac{ \frac{ (\sigma_L^2 c_{el} +\sigma_A^2 c_{ea} )E^2 }{\mu_A + \mu_L + a_L}+ \beta_E/2}{\mu_E + c_{ea} A + c_{el} L + a_e}" /><figcaption>\sigma^2_E = \frac{ \frac{ (\sigma_L^2 c_{el} +\sigma_A^2 c_{ea} )E^2 }{\mu_A + \mu_L + a_L}+ \beta_E/2}{\mu_E + c_{ea} A + c_{el} L + a_e}</figcaption>
+</figure>
+<p><br /> Adding age delay to beetle dynamics ———————————–</p>
+<p>Current formulation has used exponential waiting times between stages. By subdividing the classes (increasing the system dimension size) and creating single jump within-state transitions, these become gamma-distributed waiting times. Adding ten steps to each phase and a little parameter fiddling introduces sustained oscillations. (<a href="http://github.com/cboettig/structured-populations/blob/a03864e0e22ae210f784f51988e9eb1812005177/R/gamma_beetles.R" title="http://github.com/cboettig/structured-populations/blob/a03864e0e22ae210f784f51988e9eb1812005177/R/gamma_beetles.R">Version-stable code</a>).</p>
+<p><br /> <img src="http://openwetware.org/images/e/e1/Age_delay.png" alt="image" /></p>
+<p><br /> beetle_pars &lt;- c(b=5, ue= 0, ul = 0.001, up = 0.00001, ua = 0.01, ae = 1.3, al = .1, ap = 1.5, cle = .2, cap = .1, cae = 5, V=100)</p>
+<p>Xo[1] = 100</p>
+<ul>
+<li>Implementation still needs trouble-shooting, variance dynamics don’t seem to be being computed correctly. <strong>done</strong></li>
+<li>Adult class doesn’t need multiple stages. <strong>done</strong></li>
+<li>Code should allow for a general k classes rather than a fixed 10 classes. <strong>done</strong></li>
+</ul>
+<p>and now we have noise in oscillatory, gamma-waiting model:</p>
+<figure>
+<img src="http://openwetware.org/images/d/d2/Oscillate_noise.png" alt="image" /><figcaption>image</figcaption>
+</figure>
+<ul>
+<li>parameters as before, see <a href="http://github.com/cboettig/structured-populations/blob/0af18d6f4b63ef63ced376f0c73cec16b83c66b5/R/gamma_beetles.R" title="http://github.com/cboettig/structured-populations/blob/0af18d6f4b63ef63ced376f0c73cec16b83c66b5/R/gamma_beetles.R">version-stable code</a>.</li>
+</ul>
+<p><br /> Misc / Code notes —————–</p>
+<ul>
+<li><p>R-evolution parallelizes the variance dynamics calculation (perhaps the matrix multiplication step?) and is probably responsible for the openmp parallelization working.</p></li>
+<li><a href="http://arxiv.org/abs/1005.2718#" title="http://arxiv.org/abs/1005.2718#">article</a> on cloud computing vs grid. reminds me to include questions on cloud computing in the CSGF survey.</li>
+<li><p>Should also take a closer read of the recent: Kendall BE, Wittmann ME. A stochastic model for annual reproductive success. The American naturalist. 2010;175(4):461-8. Available at: <a href="http://www.ncbi.nlm.nih.gov/pubmed/20163244" class="uri" title="http://www.ncbi.nlm.nih.gov/pubmed/20163244">http://www.ncbi.nlm.nih.gov/pubmed/20163244</a>.</p></li>
+</ul>
+<p><br /><br /></p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2010-05-26 00:00:00 +0000" 
+    property="dc:created">26 May 2010</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2010/05/25/Bug-fixed.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2010/05/27/Summary-of-Structured-Population-noise-so-far.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2010/commits/master/_posts/2010-05-26-Rethinking-Beetles-Noise.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2010/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2010/tags.html#tribolium">#tribolium</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2010/commit/426e481635965b4d170de9e6d222a115af06662d/_posts/2010-05-26-Rethinking-Beetles-Noise.md"> 426e481635965b4d170de9e6d222a115af06662d</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Rethinking Beetles Noise
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2010-05-26
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/05/26/Rethinking-Beetles-Noise.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

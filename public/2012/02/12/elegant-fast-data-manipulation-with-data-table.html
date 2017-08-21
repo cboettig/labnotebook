@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Elegant & fast data manipulation with data.table</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="R" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Elegant & fast data manipulation with data.table" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2012-02-12 13:39:03 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/02/12/elegant-fast-data-manipulation-with-data-table.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Elegant & fast data manipulation with data.table" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2012-02-12 13:39:03 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/02/12/elegant-fast-data-manipulation-with-data-table.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2012-02-12 13:39:03 +0000"/>
+<meta name="citation_title" content="Elegant & fast data manipulation with data.table"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Elegant & fast data manipulation with data.table</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>Just learned about the R <a href="http://cran.r-project.org/web/packages/data.table/index.html">data.table package</a> (ht <span class="citation" data-cites="recology_">@recology_</span>) makes R data frames into ultra-fast, SQL-like objects.</p>
+<p>One thing we get is some very nice and powerful syntax. Consider some simple data of replicate time series:</p>
+<pre class="sourceCode r"><code class="sourceCode r">time &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">1</span>:<span class="dv">10</span>, <span class="dv">10</span>)
+replicate &lt;-<span class="st"> </span><span class="kw">sort</span>(time)
+value &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">100</span>)
+df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(replicate, time, value)</code></pre>
+<p>To apply a function to each set of replicates, instead of</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(<span class="dv">1</span>:<span class="kw">max</span>(df$replicate), function(i) 
+  <span class="kw">mean</span>( df[df$replicate ==<span class="st"> </span>i,]$value) 
+)</code></pre>
+<p>We can use</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(data.table)
+dt &lt;-<span class="st"> </span><span class="kw">data.table</span>(df)
+dt[, <span class="kw">mean</span>(value), by=<span class="st">&quot;replicate&quot;</span>]</code></pre>
+<p>Note that we could have passed multiple arguments to the function, <code>f(time, value)</code>, or functions of the arguments, <code>mean(value*time)</code>, etc. While this can be much faster data-frames to begin with (see below), when the function is much more computationally intensive than “mean”, it might be sensible to parallelize this command instead:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(snowfall)
+<span class="kw">sfInit</span>(<span class="dt">par=</span>T, <span class="dt">cpu=</span><span class="dv">4</span>)
+<span class="kw">sfSapply</span>(<span class="dv">1</span>:<span class="dv">10</span>, function(i)
+  <span class="kw">mean</span> (dt[replicate==i, value] )
+)</code></pre>
+<p>Note that we could have given the second argument as a list if we needed multiple columns, i.e. <code>list(time, value)</code>. For a provocative example, consider this example comparing the two. Let’s create a very big data frame, and also make it a data table:</p>
+<pre class="sourceCode r"><code class="sourceCode r">grpsize =<span class="st"> </span><span class="kw">ceiling</span>(<span class="fl">1e7</span>/<span class="dv">26</span>^<span class="dv">2</span>) 
+DF &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x=</span><span class="kw">rep</span>(<span class="kw">factor</span>(LETTERS), <span class="dt">each =</span> <span class="dv">26</span> *<span class="st"> </span>grpsize), 
+                 <span class="dt">y=</span><span class="kw">rep</span>(<span class="kw">factor</span>(letters), <span class="dt">each =</span> grpsize), 
+                 <span class="dt">v=</span><span class="kw">runif</span>(grpsize *<span class="st"> </span><span class="dv">26</span> ^<span class="st"> </span><span class="dv">2</span>))
+DT &lt;-<span class="st"> </span><span class="kw">data.table</span>(DF)</code></pre>
+<p>This table has three columns, each capital letter of the alphabet (fist column) paired with each lower-case letter in column B. Let’s imagine we want all the cases that have a capital “R” and lowercase “f”. Well, in classic R we might do:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>( 
+  DF[DF$x==<span class="st">&quot;R&quot;</span> &amp;<span class="st"> </span>DF$y==<span class="st">&quot;f&quot;</span>, ]
+)
+user  system elapsed 
+  <span class="fl">2.796</span>   <span class="fl">0.500</span>   <span class="fl">3.313</span> </code></pre>
+<p>We could do the same command with DF, and it would do the same “Vector Search”, which is slow (order N). we can get order log(N) scaling though with join option of data.table. We first have to set x and y as “keys”.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setkey</span>(DT, x, y)
+<span class="kw">system.time</span>(
+  DT[<span class="kw">J</span>(<span class="st">&quot;R&quot;</span>, <span class="st">&quot;h&quot;</span>)]
+)
+   user  system elapsed 
+  <span class="fl">0.012</span>   <span class="fl">0.000</span>   <span class="fl">0.014</span> </code></pre>
+<p>A speed-up of 233 times! Certainly better than splitting up the analysis over 100s of processors. <strong>Brilliant</strong>.</p>
+<h2 id="relationship-of-commands-to-sql">Relationship of commands to SQL</h2>
+<p>The FAQ vignette provides a nice line-by-line comparison of SQL commands to data.table commands:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">data.table</th>
+<th style="text-align: left;">SQL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>i</code></td>
+<td style="text-align: left;">where</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>j</code></td>
+<td style="text-align: left;">select</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>:=</code></td>
+<td style="text-align: left;">update</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>by</code></td>
+<td style="text-align: left;">group by</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>i</code></td>
+<td style="text-align: left;">order by (in compound syntax)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>i</code></td>
+<td style="text-align: left;">having (in compound syntax)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>nomatch=NA</code></td>
+<td style="text-align: left;">outer join</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>nomatch=0</code></td>
+<td style="text-align: left;">inner join</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>mult=&quot;first&quot;</code></td>
+<td style="text-align: left;">N/A because SQL is inherently unordered</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>roll=TRUE</code></td>
+<td style="text-align: left;">N/A because SQL is inherently unordered</td>
+</tr>
+</tbody>
+</table>
+<p>The general form is : <code>DT[where,select|update,group by][having][order by][ ]...[ ]</code>. A key advantage of column vectors in R is that they are ordered, unlike SQL.</p>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2012-02-12 13:39:03 +0000" 
+    property="dc:created">12 Feb 2012</time></p>
+  
+  <p><small> modified: <time 
+            datetime="2012-12-03" 
+            property="dc:modified">2012-12-03</time></small></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/02/10/thursday-writing-some-latexdiff-notes.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/02/12/saturday-projects-reading-markdown-plugins.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2012-02-12-elegant-fast-data-manipulation-with-data-table.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#computation">computation</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#R">#R</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/dbb400936cc5bebbbfa5193f4db11ff4149eee67/_posts/2012-02-12-elegant-fast-data-manipulation-with-data-table.md"> dbb400936cc5bebbbfa5193f4db11ff4149eee67</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Elegant & fast data manipulation with data.table
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2012-02-12
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/02/12/elegant-fast-data-manipulation-with-data-table.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-1">
+      {{ with .Title }}<h1>{{ . }}</h1> {{ end }}  
+
+        <div class="row">
+        {{ range $.Site.Data.members }}
+          {{ range . }}
+            {{ partial "member.html" . }}
+          {{ end }}
+        {{ end }}
+        </div>
+
+
+
+        <div class="row">
+        <hr />
+          <h2 id="undergrads">Undergraduate Researchers</h2>
+          <ul>
+          <li>Brian Thorsen</li>
+          <li>Shea Conlon</li>
+          <li>Anna Liu</li>
+          <li>Simon Greenhill</li>
+          </ul>
+          <hr />
+          
+          <h2 id="joining">Interested in Joining?</h2>
+          <p>I'm always interested in talking with perspective undergraduate, graduate, or post-doctoral researchers. Please <a href="http://carlboettiger.info">contact me</a> with a brief email explaining your background and interests if you are interested in joining the group.</p>
+          <p>Undergraduates interested in independent work may wish to participate through UC Berkeley's <a href="http://nature.berkeley.edu/site2/spur/">SPUR</a> or <a href="http://research.berkeley.edu/urap/">URAP</a> programs, or through a senior thesis project.</p>
+          <p>Perspective graduate students in quantitative and computational ecology and environmental sciences should apply through the <a href="http://ourenvironment.berkeley.edu/graduate-programs/admissions/">ESPM Department Graduate Admissions</a> before Dec 1st. You may also wish to consider applying for an <a href="http://www.nsfgrfp.org/">NSF pre-doctoral fellowship</a>, the <a href="https://www.krellinst.org/csgf/">computational sciences graduate fellowship</a>, <a href="http://ndseg.asee.org/">NDSEG fellowship</a> or <a href="http://www.epa.gov/ncer/fellow/">EPA Star fellowship</a>.</p>
+          <p>Perspective post-doctoral scholars should consider applying for the <a href="http://millerinstitute.berkeley.edu/page.php?nav=11">Miller fellowship</a>, the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503622">NSF's Biology post-doctoral fellowships</a>, McDonnell Foundation's <a href="https://www.jsmf.org/apply/fellowship/">complex systems post-doctoral fellowship</a> or the <a href="http://conbio.org/mini-sites/smith-fellows/apply/proposal-guidelines">Smith Fellows</a> in conservation research.</p>
+
+        </div>
+
+      </div>
+    </div>
+</article>
+
+{{ end }}
+ 

@@ -1,0 +1,15 @@
+general:
+  branches:
+    only: 
+      - master
+
+machine:
+  services:
+    - docker
+
+test:
+  override:
+    - docker create --name cache -v /root cboettig/2015-cache && docker run --volumes-from cache -e GH_TOKEN=$GH_TOKEN -v $(pwd):/data -w /data cboettig/2015 _build/build.sh
+
+# Note: This doesn't update the cache itself, to help avoid caching any errors
+# Run _build/local.sh to update the cache

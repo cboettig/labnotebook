@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Prior Distributions For Tgp Mcmc</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="nonparametric-bayes" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Prior Distributions For Tgp Mcmc" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2012-12-10 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/12/10/prior-distributions-for-tgp-mcmc.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Prior Distributions For Tgp Mcmc" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2012-12-10 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/12/10/prior-distributions-for-tgp-mcmc.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2012-12-10 00:00:00 +0000"/>
+<meta name="citation_title" content="Prior Distributions For Tgp Mcmc"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Prior Distributions For Tgp Mcmc</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>I am trying to understand the interface for tgp method, but much of it is not well documented (yes, despite reading through the package R manual, two nice vignettes, and a the PhD Thesis describing it.)</p>
+<p>Just to get some consistent notation down: consider the case of a Gaussian process with a Gaussian/radial basis function kernel, parameterized as:</p>
+<p><span class="math">\[K(X, X&#39;) = \sigma^2 e^{\frac{(X-X&#39;)^2}{d}}\]</span></p>
+<p>And observations from <span class="math">\(Z = f(X) + \varepsilon\)</span>, for which we seek to approximate <span class="math">\(f\)</span> as a (multivariate) Gaussian process, <span class="math">\(Z | X ~ N(\mu, C)\)</span>. The covariance matrix <span class="math">\(C\)</span> is given by our kernel <span class="math">\(K\)</span>, conditioned on our observations; the mean <span class="math">\(\mu\)</span> is given by a constant or linear model, likewise conditioned on our observations. If the multivariate normal of observed and predicted points is,</p>
+<p><span class="math">\[\begin{align}\begin{pmatrix} y_{\textrm{obs}} \ y_{\textrm{pred}} \end{pmatrix} \sim \mathcal{N}\left( \mathbf{0}, \begin{bmatrix} cov(X_o,X_o) &amp; cov(X_o, X_p) \ cov(X_p,X_o) &amp; cov(X_p, X_p) \end{bmatrix} \right)\end{align}\]</span></p>
+<p>the conditional probability is</p>
+<p><span class="math">\[x|y \sim \mathcal{N}(E,C)\]</span> <span class="math">\[E = \operatorname{cov}(X_p, X_o) (\operatorname{cov}(X_o,X_o) + \varepsilon \mathbb{I}) ^{-1} y\]</span> <span class="math">\[C= \operatorname{cov}(X_p, X_p) - \operatorname{cov}(X_p, X_o) (\operatorname{cov}(X_o,X_o)+ \varepsilon \mathbb{I} )^{-1} \operatorname{cov}(X_o, X_p)\]</span></p>
+<p>Our hyperparameters are <span class="math">\(d\)</span>, <span class="math">\(\sigma^2\)</span>, and <span class="math">\(\varepsilon\)</span>, for which we need priors. We’ll use the inverse gamma,</p>
+<p><span class="math">\[P(x; a, g) = \frac{g^a}{\Gamma(a)} x^{-a - 1}\exp\left(-\frac{g}{x}\right)\]</span></p>
+<p>The distribution arises as the marginal posterior distribution for the unknown variance of a normal distribution if an uninformative prior is used; and as a useful conjugate prior if a less uninformative prior is preferred. However, it is common among Bayesians to consider an alternative parametrization of the normal distribution in terms of the precision, defined as the reciprocal of the variance, which allows the gamma distribution to be used directly as a conjugate prior.</p>
+<ul>
+<li><p><span class="math">\(X\)</span> is <code>X</code>, <span class="math">\(Z\)</span> is <code>Z</code></p></li>
+<li><p><span class="math">\(\sigma^2\)</span> is the parameter <code>s2</code> in the <code>tgp</code> package, coming from inverse gamma prior with parameters <span class="math">\(a = a_0\)</span> and <span class="math">\(g = g_0\)</span>, which are set by <code>s2.p = c(a_0, g_0)</code>. Optionally, <span class="math">\(a_0\)</span> and <span class="math">\(g_0\)</span> can be taken from an exponential prior <span class="math">\(\lambda e^{-\lambda x}\)</span>, in which the value of <span class="math">\(\lambda\)</span> is given by <code>s2.lam = c(lambda_a, lambda_g)</code>. Setting <code>s2.lam = &quot;fixed&quot;</code> “turns off” the use of a hyperprior.</p></li>
+<li><p><span class="math">\(d\)</span> I believe is <code>d</code>, which Grammarcy calls the range parameter (other terms include the “lengthscale”). I am not sure what either <code>d</code> or <code>s2</code> correspond to if the covariance function <code>corr</code> is something other than the radial basis function. I’m also not clear how to set the correlation function to a strictly Gaussian covariance – <code>corr</code> is set to the <code>exp</code> family, which leaves the power as a parameter <code>p_0</code>:</p></li>
+</ul>
+<p><span class="math">\[K(X, X&#39;) =  e^{\frac{-(X-X&#39;)^p_0}{d}}\]</span></p>
+<p>(from equation 4 in the Vignette (1)). The parameter <code>p_0</code> is fixed at <code>2</code>, and not treated as a hyperparameter.</p>
+<p>The length-scale comes from a hyperparameter that is the sum (mixture) of two Gamma distributions, with prior parameter <code>c(a1,g1,a2,g2)</code> where <code>g1</code> and <code>g2</code> are scale (1/rate) parameters. As before, these parameters <code>c(a1, g1, a2, g2)</code> can be drawn from an exponential distribution hyperprior whose <span class="math">\(\lambda\)</span> values are given by <code>d.lam</code>, or turned off.</p>
+<ul>
+<li><p><span class="math">\(\varepsilon\)</span> is <code>nug</code>. It seems to have same shape prior as <span class="math">\(d\)</span>, specified by <code>c(a1,g1,a2,g2)</code>, and optional hyperprior as well. Additionally it can be fixed to a constant by setting <code>nug.p = 0</code> and specifying the staring value as <code>gd[1]</code>.</p></li>
+<li><p>The mean is not fixed at zero but is instead a linear model, we need hyperparameters for it as well. The key parameter there is the slope <span class="math">\(\beta\)</span>. The functional form for it’s prior is specified as <code>bprior</code>, which takes values <code>bflat</code>, <code>b0</code>, <code>bmzt</code>, or <code>bmznot</code>. A sensible choice is as a Gaussian <code>b0</code>, as shown in Equation 1 of the vignette</p></li>
+</ul>
+<p><span class="math">\[
+\begin{align} 
+Z | \beta, \sigma^2, K &amp;\sim N_n(\mathbf{F} \beta, \sigma^2 \mathbf{K}) \\
+\beta | \sigma^2, \tau^2, \mathbf{W}, \beta_0 &amp;\sim N_m(\beta_0, \sigma^2 \tau^2 \mathbf{W} )  \\
+\beta_0 &amp;\sim N_m(\mathbf{\mu}, \mathbf{B})
+\end{align}
+\]</span></p>
+<h2 id="example-comparison">Example comparison</h2>
+<p>Say, given some observed data pairs <span class="math">\(x,y\)</span> and predictions desired on a grid <span class="math">\(X\)</span>,</p>
+<pre class="sourceCode r"><code class="sourceCode r">X =<span class="st"> </span><span class="kw">seq</span>(-<span class="dv">5</span>, <span class="dv">5</span>, <span class="dt">length=</span><span class="dv">50</span>)
+x =<span class="st"> </span><span class="kw">c</span>(-<span class="dv">4</span>, -<span class="dv">3</span>, -<span class="dv">1</span>,  <span class="dv">0</span>,  <span class="dv">2</span>)
+y =<span class="st"> </span><span class="kw">c</span>(-<span class="dv">2</span>,  <span class="dv">0</span>,  <span class="dv">1</span>,  <span class="dv">2</span>, -<span class="dv">1</span>)</code></pre>
+<p>Manually I could just do:</p>
+<pre class="sourceCode r"><code class="sourceCode r">d =<span class="st"> </span>.<span class="dv">5</span>; epsilon =<span class="st"> </span>.<span class="dv">1</span>; sigma =<span class="st"> </span><span class="dv">1</span>; <span class="co">#fixed hyperparamaters</span>
+SE &lt;-<span class="st"> </span>function(Xi,Xj, d) sigma *<span class="st"> </span><span class="kw">exp</span>(-<span class="fl">0.5</span> *<span class="st"> </span>(Xi -<span class="st"> </span>Xj) ^<span class="st"> </span><span class="dv">2</span> /<span class="st"> </span>d ^<span class="st"> </span><span class="dv">2</span>)
+cov &lt;-<span class="st"> </span>function(X, Y) <span class="kw">outer</span>(X, Y, SE, d) 
+cov_xx_inv &lt;-<span class="st"> </span><span class="kw">solve</span>(<span class="kw">cov</span>(x, x) +<span class="st"> </span>epsilon *<span class="st"> </span><span class="kw">diag</span>(<span class="dv">1</span>, <span class="kw">length</span>(x)))
+Ef &lt;-<span class="st"> </span><span class="kw">cov</span>(X, x) %*%<span class="st"> </span>cov_xx_inv %*%<span class="st"> </span>y
+Cf &lt;-<span class="st"> </span><span class="kw">cov</span>(X, X) -<span class="st"> </span><span class="kw">cov</span>(X, x)  %*%<span class="st"> </span>cov_xx_inv %*%<span class="st"> </span><span class="kw">cov</span>(x, X)</code></pre>
+<p>And <code>Ef</code> and <code>Cf</code> are the estimated (krieging) mean and covariance.</p>
+<h2 id="priors">Priors</h2>
+<p>Note: it appears that the mixed gammas for <code>d</code> and <code>nug</code> actually treat the second argument, <code>g1</code> and <code>g2</code>, as the rate instead of the scale, so I invert the desired scale:</p>
+<pre class="sourceCode r"><code class="sourceCode r">s2.p &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">50</span>,<span class="dv">50</span>)
+tau2.p &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">20</span>,<span class="dv">1</span>)
+d.p =<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">1</span>/<span class="fl">0.01</span>, <span class="dv">10</span>, <span class="dv">1</span>/<span class="fl">0.01</span>)
+nug.p =<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">1</span>/<span class="fl">0.01</span>, <span class="dv">10</span>, <span class="dv">1</span>/<span class="fl">0.01</span>)</code></pre>
+<p>Define as curves and plot the priors:</p>
+<pre class="sourceCode r"><code class="sourceCode r">s2_prior &lt;-<span class="st"> </span>function(x) <span class="kw">dinvgamma</span>(x, s2.p[<span class="dv">1</span>], s2.p[<span class="dv">2</span>])
+tau2_prior &lt;-<span class="st"> </span>function(x) <span class="kw">dinvgamma</span>(x, tau2.p[<span class="dv">1</span>], tau2.p[<span class="dv">2</span>])
+d_prior &lt;-<span class="st"> </span>function(x) <span class="kw">dgamma</span>(x, d.p[<span class="dv">1</span>], <span class="dt">scale =</span> d.p[<span class="dv">2</span>]) +<span class="st"> </span><span class="kw">dgamma</span>(x, d.p[<span class="dv">3</span>], <span class="dt">scale =</span> d.p[<span class="dv">4</span>])
+nug_prior &lt;-<span class="st"> </span>function(x) <span class="kw">dgamma</span>(x, nug.p[<span class="dv">1</span>], <span class="dt">scale =</span> nug.p[<span class="dv">2</span>]) +<span class="st"> </span><span class="kw">dgamma</span>(x, nug.p[<span class="dv">3</span>], <span class="dt">scale =</span> nug.p[<span class="dv">4</span>])
+beta0_prior &lt;-<span class="st"> </span>function(x, tau) <span class="kw">dnorm</span>(x, <span class="dv">0</span>, tau)
+
+xx &lt;-<span class="st"> </span><span class="kw">seq</span>(.<span class="dv">0001</span>, <span class="dv">5</span>, <span class="dt">length.out=</span><span class="dv">100</span>)
+priors &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> xx, <span class="dt">s2 =</span> <span class="kw">s2_prior</span>(xx), <span class="dt">tau2 =</span> <span class="kw">tau2_prior</span>(xx), <span class="dt">beta0 =</span> <span class="kw">beta0_prior</span>(xx, <span class="dv">1</span>), <span class="dt">nug =</span> <span class="kw">nug_prior</span>(xx), <span class="dt">d =</span> <span class="kw">d_prior</span>(xx))
+priors &lt;-<span class="st"> </span><span class="kw">melt</span>(priors, <span class="dt">id=</span><span class="st">&quot;x&quot;</span>)
+<span class="kw">ggplot</span>(priors) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(x, value)) +<span class="st"> </span><span class="kw">facet_wrap</span>(~variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>)</code></pre>
+<figure>
+<img src="/2012/assets/figures/2012-12-10-9b2d792442-unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5" /><figcaption>plot of chunk unnamed-chunk-5</figcaption>
+</figure>
+<pre class="sourceCode r"><code class="sourceCode r">gp &lt;-<span class="st"> </span><span class="kw">bgp</span>(<span class="dt">X=</span>x, <span class="dt">XX=</span>X, <span class="dt">Z=</span>y, <span class="dt">verb=</span><span class="dv">0</span>,
+          <span class="dt">meanfn=</span><span class="st">&quot;constant&quot;</span>, <span class="dt">bprior=</span><span class="st">&quot;b0&quot;</span>, <span class="dt">BTE=</span><span class="kw">c</span>(<span class="dv">2000</span>,<span class="dv">6000</span>,<span class="dv">2</span>), <span class="dt">m0r1=</span><span class="ot">FALSE</span>, 
+          <span class="dt">corr=</span><span class="st">&quot;exp&quot;</span>, <span class="dt">trace=</span><span class="ot">TRUE</span>, <span class="dt">beta =</span> <span class="dv">0</span>,
+          <span class="dt">s2.p =</span> s2.p, <span class="dt">d.p =</span> d.p, <span class="dt">nug.p =</span> nug.p,
+          <span class="dt">s2.lam =</span> <span class="st">&quot;fixed&quot;</span>, <span class="dt">d.lam =</span> <span class="st">&quot;fixed&quot;</span>, <span class="dt">nug.lam =</span> <span class="st">&quot;fixed&quot;</span>, 
+          <span class="dt">tau2.lam =</span> <span class="st">&quot;fixed&quot;</span>, <span class="dt">tau2.p =</span> tau2.p)</code></pre>
+<p>Extract the posterior Gaussian process mean and the <span class="math">\(\pm 2\)</span> standard deviations over the predicted grid from the fit:</p>
+<pre class="sourceCode r"><code class="sourceCode r">V &lt;-<span class="st"> </span>gp$ZZ.ks2
+tgp_dat &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x   =</span> gp$XX[[<span class="dv">1</span>]], 
+                  <span class="dt">y   =</span> gp$ZZ.km, 
+                 <span class="dt">ymin =</span> gp$ZZ.km -<span class="st"> </span><span class="fl">1.96</span> *<span class="st"> </span><span class="kw">sqrt</span>(gp$ZZ.ks2), 
+                 <span class="dt">ymax =</span> gp$ZZ.km +<span class="st"> </span><span class="fl">1.96</span> *<span class="st"> </span><span class="kw">sqrt</span>(gp$ZZ.ks2))</code></pre>
+<p>and likewise for our manual data:</p>
+<pre class="sourceCode r"><code class="sourceCode r">manual_dat &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> X, 
+                         <span class="dt">y =</span> Ef, 
+                         <span class="dt">ymin =</span> (Ef -<span class="st"> </span><span class="fl">1.96</span> *<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">diag</span>(Cf))), 
+                         <span class="dt">ymax =</span> (Ef +<span class="st"> </span><span class="fl">1.96</span> *<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">diag</span>(Cf))))</code></pre>
+<p>Compare the GP posteriors:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(tgp_dat) +
+<span class="st">    </span><span class="kw">geom_ribbon</span>(<span class="kw">aes</span>(x, y, <span class="dt">ymin =</span> ymin, <span class="dt">ymax =</span> ymax), <span class="dt">fill=</span><span class="st">&quot;red&quot;</span>, <span class="dt">alpha =</span> .<span class="dv">1</span>) +<span class="st"> </span><span class="co"># Var</span>
+<span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(x, y), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>) +<span class="st"> </span><span class="co"># mean</span>
+<span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">data =</span> <span class="kw">data.frame</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y), <span class="kw">aes</span>(x, y)) +<span class="st"> </span><span class="co"># raw data</span>
+<span class="st">    </span><span class="kw">geom_ribbon</span>(<span class="dt">dat =</span> manual_dat, <span class="kw">aes</span>(x, y, <span class="dt">ymin =</span> ymin, <span class="dt">ymax =</span> ymax), <span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">alpha =</span> .<span class="dv">1</span>) +<span class="st"> </span><span class="co"># Var</span>
+<span class="st">    </span><span class="kw">geom_line</span>(<span class="dt">dat =</span> manual_dat, <span class="kw">aes</span>(x, y), <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)  +<span class="st"> </span><span class="co">#MEAN    </span>
+<span class="st">    </span><span class="kw">theme_bw</span>() +<span class="st"> </span><span class="kw">theme</span>(<span class="dt">plot.background =</span> <span class="kw">element_rect</span>(<span class="dt">fill =</span> <span class="st">&quot;transparent&quot;</span>,<span class="dt">colour =</span> <span class="ot">NA</span>))</code></pre>
+<figure>
+<img src="/2012/assets/figures/2012-12-10-9b2d792442-gp-plot.png" alt="plot of chunk gp-plot" /><figcaption>plot of chunk gp-plot</figcaption>
+</figure>
+<h2 id="posteriors-of-hyperparameters">Posteriors of hyperparameters</h2>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(reshape2)
+hyperparameters &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;index&quot;</span>, <span class="st">&quot;s2&quot;</span>, <span class="st">&quot;tau2&quot;</span>, <span class="st">&quot;beta0&quot;</span>, <span class="st">&quot;nug&quot;</span>, <span class="st">&quot;d&quot;</span>, <span class="st">&quot;ldetK&quot;</span>)
+posteriors &lt;-<span class="st"> </span><span class="kw">melt</span>(gp$trace$XX[[<span class="dv">1</span>]][,hyperparameters], <span class="dt">id=</span><span class="st">&quot;index&quot;</span>)
+<span class="kw">ggplot</span>(posteriors) +<span class="st"> </span><span class="kw">geom_histogram</span>(<span class="kw">aes</span>(value)) +<span class="st"> </span><span class="kw">facet_wrap</span>(~variable, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)</code></pre>
+<figure>
+<img src="/2012/assets/figures/2012-12-10-9b2d792442-unnamed-chunk-9.png" alt="plot of chunk unnamed-chunk-9" /><figcaption>plot of chunk unnamed-chunk-9</figcaption>
+</figure>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      <aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2012-12-10 00:00:00 +0000" 
+    property="dc:created">10 Dec 2012</time></p>
+  
+  <p><small> modified: <time 
+            datetime="2012-12-12" 
+            property="dc:modified">2012-12-12</time></small></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2012/12/06/github-issues-tracker:-the-perfect-research-todo-list.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+  <a class="btn btn-default" rel="next" href='/2012/12/11/nonparametric-bayes-notes.html'>next <i class="icon-chevron-right"></i></a></p>
+  
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2012/commits/master/_posts/2012-12-10-prior-distributions-for-tgp-mcmc.md"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2012/categories.html#ecology">ecology</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2012/tags.html#nonparametric-bayes">#nonparametric-bayes</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/82c8cce4e4d61b962584a0473bb444c47ed78204/_posts/2012-12-10-prior-distributions-for-tgp-mcmc.md"> 82c8cce4e4d61b962584a0473bb444c47ed78204</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Prior Distributions For Tgp Mcmc
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2012-12-10
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/12/10/prior-distributions-for-tgp-mcmc.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

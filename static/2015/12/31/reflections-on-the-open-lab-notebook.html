@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <title>Reflecting on five years of the open lab notebook</title>
+  <meta name="author" content="Carl Boettiger" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- HTML5 metadata -->
+<meta name="keywords" content="blog" />
+<meta name="description" content="" />
+<!-- RDFa Metadata (in DublinCore) -->
+<meta property="dc:title" content="Reflecting on five years of the open lab notebook" />
+<meta property="dc:creator" content="Carl Boettiger" />
+<meta property="dc:date" content="2015-12-31 00:00:00 +0000" />
+<meta property="dc:format" content="text/html" />
+<meta property="dc:language" content="en" />
+<meta property="dc:identifier" content="/12/31/reflections-on-the-open-lab-notebook.html" />
+<meta property="dc:rights" content="CC0" />
+<meta property="dc:source" content="Lab Notebook" />
+<meta property="dc:subject" content="Ecology" /> 
+<meta property="dc:type" content="website" /> 
+<!-- RDFa Metadata (in OpenGraph) -->
+<meta property="og:title" content="Reflecting on five years of the open lab notebook" />
+<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="http://ogp.me/ns/article#published_time" content="2015-12-31 00:00:00 +0000" />
+<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
+<meta property="og:url" content="http://www.carlboettiger.info/12/31/reflections-on-the-open-lab-notebook.html" />
+<meta property="og:type" content="website" /> 
+<!-- Google Scholar Metadata -->
+<!--
+<meta name="citation_author" content="Carl Boettiger"/>
+<meta name="citation_date" content="2015-12-31 00:00:00 +0000"/>
+<meta name="citation_title" content="Reflecting on five years of the open lab notebook"/>
+<meta name="citation_journal_title" content="Lab Notebook"/>
+-->
+<!--NOTE: see also the COinS Metadata in span element in footer -->
+
+
+
+
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/academicons.css" />
+  <!-- Help the browser identify the RSS feed automatically -->
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="http://www.carlboettiger.info/blog.xml" />
+</head>
+
+
+  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+    <!-- Navbar  ================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/README.html"><i class="icon-info-sign"></i></a>
+    </div>
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+          <li  >
+          <a href="/index.html">Home</a></li>
+          <li  >
+          <a href="/vita.html">Vita</a></li>
+          <li  >
+          <a href="/research.html">Research</a></li>
+          <li  >
+          <a href="/teaching.html">Teaching</a></li>
+          <li  >
+          <a href="/community.html">Community</a></li>
+          <li  >
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+
+      <!-- Search site using Google's index -->
+        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+          <div class="form-group">
+            <input type="hidden" name="q" value="site:carlboettiger.info" />
+            <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
+          </div>
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+       </form>
+
+    </div><!--/.nav-collapse -->
+  </div> <!-- /container -->
+</nav>
+
+
+
+    <div class="container"> <!-- Responsive grid layout, doesn't jump to full-width --> 
+      <header>
+        <h1 class="entry-title">Reflecting on five years of the open lab notebook</h1>
+        <h2></h2>
+      </header>
+
+      <div class="row">
+  <div class="col-md-7 col-md-offset-1">
+    <article>
+    <p>I have been keeping an open lab notebook now since <a href="http://www.carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">February of 2010</a> <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. Those years have seen 271, 301, 164, 136, 86 and 44 posts, respectively. The notebook started on <a href="http://openwetware.org/wiki/Lab_Notebook">OpenWetWare</a>, with code on (now defunct) Google Code (using svn!). <a href="http://www.carlboettiger.info/2010/10/21/spatial-warning-signals-power-etc.html">By October</a> of that year I had moved to a Wordpress.org platform running on DreamHost, with code moving to GitHub earlier that year. Wordpress meant my own domain name, control of layout and plugins, better mobile support, and perhaps most importantly, avoided the occasional day-long down-times I had seen on OpenWetWare. By the end of 2010 I had also cobbled together <a href="http://www.carlboettiger.info/2010/12/11/socialr-an-r-package-to-track-the-status-of-computations-with-social-network-tools.html">a system</a> in which my scripts committed themselves to GitHub and automatically posted figures the generated to <a href="https://www.flickr.com/photos/cboettig">flickr</a> that included the Git hash. <a href="https://cran.r-project.org/web/packages/knitr/index.html">Knitr</a> was first released to CRAN in January of 2012, and by March I announced a <a href="http://www.carlboettiger.info/2012/03/21/knitr-github-and-a-new-phase-for-the-lab-notebook.html">new phase</a> for my lab notebook focused on notes written with knitr markdown living on GitHub. For the first time, part of the daily research narrative lived not directly in the lab notebook itself (thus the decline in total notebook posts starting that year). Most of my posts in the first two years are much more journal like; reflecting on what I have been working on or reading earlier that day, describing some equation or graph, or muddling over a sticking point. Some of this remained in the notebook, particularly for work unconnected to code (thoughts on some literature, mathematical derivations, etc), but more migrated to knitr documents outside of the notebook. While knitr brought the code, results, and discussion elements closer together, it also often meant I was writing with less distance from the results, and so the text shifted towards more technical and less reflective content. Notebook entries became more brief and bullet pointed, though also punctuated by an increasing frequency of notebook entries that really were blog posts, aimed at an audience and sometimes drawing lengthy comment sections, primarily on topics related to open science and research workflow.</p>
+<p>In May of 2012, I then shifted platforms again, this time <a href="http://www.carlboettiger.info/2012/05/01/Jekyll-vs-Wordpress.html">moving to Jekyll</a>, primarily for reasons of performance and cost (as detailed in that post). I have always experimented heavily with different features and technology connected to the lab notebook, and Jekyll also opened new possibilities. Meanwhile, it fit nicely into the git/markdown-centric workflow I had already adapted. This made it easy to turn knitr outputs into notebook entries, though I waffled back on forth on whether it was more natural to post such material in the relevant project repository in GitHub or directly into the notebook. The notebook remained the home for work not (yet) connected to a project, and for blog posts, and occasionally cross-posted material on a particular project, often capturing a key result. Meanwhile more of my other work became open – in particular, I began writing my manuscripts in public GitHub project repositories from the start, and also making greater use of GitHub issues in projects. The end of 2012 also saw me leave graduate school and begin a post-doc, luckily with advisers that were equally neutral to my open notebook habit.</p>
+<p>The start of 2015 saw the next significant evolution in platform. Though still based on Jekyll, I first I broke up what had been growing into one rather large <code>labnotebook</code> repo on GitHub into separate repos by year. This left me with a more lightweight repository and freed me to experiment with infrastructure without breaking all my old posts. I <a href="http://www.carlboettiger.info/2015/01/01/notebook-maintenance-and-scaling.html">began writing</a> all posts directly in knitr’s <code>.Rmd</code> format, allowing the code to be run automatically when the site was published, rather than executing it locally and copying over a <code>.md</code> file into the notebook. That this was possible is thanks to my adoption of Docker (making the myriad dependencies portable), Continuous integration platforms that could run the code (using the Docker container) and automatically push the compiled site, and <code>servr</code>, another Yihui Xie R package that facilitates knitr+jekyll integration. Some entries involved particularly heavy computation, including a few that required several hours on a large Amazon EC2 machine to complete. <code>knitr</code>’s caching feature made it easy to snapshot these caches (which I did in a somewhat convoluted way with another docker container) so that the whole site could still be rebuilt on a public CI service (primarily circle-ci) within the 50 minute permitted window. The Docker+knitr+CI combination brought reproducible to a new level, though still not perfectly automated, since changing dependencies can still have some effect, particularly since I allow the container to be rebuilt from Dockerfile rather than committed as a binary image. I’ve been pleased that this system has worked remarkably well the entire year, though I’m frequently nervous that some piece of its increasingly complex architecture will break. Moreover, the complicated re-running of all the R code was increasingly redundant as most of my work continued to happen in GitHub repositories which had largely adopted their own system of continuous integration and unit testing (for basic functions and final results, if not for individual notebook posts).</p>
+<p>More and more, GitHub, knitr, and other such tools have allowed me to actually perform my research openly, not just discuss it in an open notebook. Perhaps ironically, this means less and less content in the ‘lab notebook’ itself (as I <a href="http://www.carlboettiger.info/2012/09/28/Welcome-to-my-lab-notebook.html">wrote in 2012</a>, ‘the real notebook is on GitHub’). Interestingly, this has the side effect of making the ‘lab notebook’ much less visible. Living on my website, my open notebook has been hard to miss; a visitor could easily page through the entries to see what I had done recently without any of the familiarity it requires to navigate to the same material on GitHub. The idea that this was a scientist’s <em>notebook</em>, a concept both immediately familiar and yet so rarely public, perhaps gave it an out-sized significance to having the same material scattered around GitHub (some under my account and other work in various GitHub Organization accounts), where openness was already the norm. It attracted the attention of <a href="http://www.carlboettiger.info/vita#media-interviews">reporters</a> and, I’m told, my faculty search committee. So while I think <em>I</em> have benefited from this visibility, for the science it is perhaps much the same.</p>
+<p>Halfway though 2015 also saw a different kind of change to my notebook as I transitioned from a post-doc to a faculty position. Just as my homepage (now maintained in its own GitHub repo, though still appearing in the same theme as my notebook) shifted from being “me” to being “my research group,” part of my time also shifted from “my research” to mentoring the research of others. While I continue to believe in transparency in scientific process and results, I have also appreciated that as a graduate student open science was something I was allowed to choose for myself. I want those I mentor to make their own choices as well. Thus we have begun projects with students primarily in private GitHub repositories (now hosted on <a href="https://github.com/boettiger-lab">github.com/boettiger-lab</a>).</p>
+<p>So what does this mean for 2016 and the future of my open lab notebook? I suspect it will continue in its role as occasional blog and communication tool, where it’s greater visibility has a practical use, while becoming simpler technically, with the day-to-day of research (&amp; teaching, etc) activity confined to their own repositories.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>though some material going back to <a href="http://www.carlboettiger.info/2000/lab-notebook">2009</a> and <a href="http://www.carlboettiger.info/2008/lab-notebook">2008</a> was posted later.<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
+
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="sidebar">
+      
+<aside prefix="og:http://ogp.me/ns/article#">
+  <p> <i class="icon-calendar"></i>
+    <time datetime="2015-12-31 00:00:00 +0000" 
+    property="dc:created">31 Dec 2015</time></p>
+   
+
+ <br />
+
+  
+	<p><a class="btn btn-default" rel="prev" href='/2015/12/17/docker-workflows.html'><i class="icon-chevron-left"></i> prev</a>
+  
+  
+    </p>
+    
+
+  <br />
+
+  <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
+            return false;" 
+          class="btn btn-default" 
+          href="https://github.com/cboettig/2015/commits/master/_posts/_posts/2015-12-31-reflections-on-the-open-lab-notebook.Rmd"><i class="icon-time"></i> history</a></p>
+
+  <br />
+
+  <p><i class="icon-list"></i> Posted in 
+     
+      <a rel="dc:subject" class="category" 
+         href="/2015/categories.html#open-science">open-science</a>
+    
+    </p>
+
+  <p> <i class="icon-tag"></i> tags: 
+    
+    <!-- http://schema.org/BlogPosting/keywords -->
+    <a rel="og:tag" class="tag" 
+			href="/2015/tags.html#blog">#blog</a>
+    </p>
+
+  <br/>
+
+  
+
+  <br/>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2015/commit/7e975a9660fe667a86d7f7c19424e3b23f42ce99/_posts/_posts/2015-12-31-reflections-on-the-open-lab-notebook.Rmd"> 7e975a9660fe667a86d7f7c19424e3b23f42ce99</a></small></p>
+    
+  <br/>
+  
+
+</aside>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Disqus Comments -->
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; // required: replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+
+
+
+
+      <footer class="footer">
+
+<!--************** FOAF information to social networks ***************************** -->
+  <div class="row">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+      <p>
+          <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
+
+          <a rel="foaf:account" href="https://twitter.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Twitter'); 
+             return false;"><span class="showtooltip" title="follow me on twitter (reading, discussing)"><i class="fa fa-twitter"></i></span></a> 
+
+          <a rel="foaf:account" href="https://github.com/cboettig" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Github'); 
+             return false;"><span class="showtooltip" title="follow me on Github (code, research)"><i class="fa fa-github"></i></span></a>
+      <!--
+          <a rel="foaf:account" href="https://plus.google.com/" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
+             return false;"><i class="fa fa-google-plus"></i></a>
+
+          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+             onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
+             return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
+
+           citations on google-scholar
+
+           stackoverflow
+      -->
+      <a rel="foaf:weblog" type="application/atom+xml" href="/blog.xml"  
+         class="showtooltip" title="RSS feeds for my blog-style entries. See the feed on my lab notebook (/atom.xml) to follow all entries instead." 
+         onclick="recordOutboundLink(this, 'Outbound Links', 'RSS'); 
+         return false;"><i class="fa fa-rss"></i></a>
+       </p>
+    </div>
+
+    
+    <!--**************** End social links **************************** -->
+
+
+    <div class="col-md-4 col-md-offset-1 col-xs-4">
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+    </div>
+
+
+    <div class="col-md-3 col-md-offset-1 col-xs-4">
+      <p>
+      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      </p>
+    </div>
+  </div>
+
+
+  
+<!-- COinS metadata (for citation managers like Zotero etc), goes in body text -->
+  <span
+      class="Z3988" 
+      title="ctx_ver=Z39.88-2004
+      &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
+      &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
+      &amp;rft.title=Reflecting on five years of the open lab notebook
+      &amp;rft.creator=Carl Boettiger
+      &amp;rft.date=2015-12-31
+      &amp;rft.language=EN
+      &amp;rft.rights=CC0
+      &amp;rft_id=http://www.carlboettiger.info/12/31/reflections-on-the-open-lab-notebook.html">
+  </span>
+
+
+</footer>
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- JQuery, used on a few pages (still?) -->
+    <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Equations using MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
+    <!-- Twitter Bootstrap Javascript -->
+    <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+    
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18401403-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+  </script>
+
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-18401403-1");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
+   

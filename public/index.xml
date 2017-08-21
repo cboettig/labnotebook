@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Boettiger Group, UC Berkeley on Boettiger Group</title>
+    <link>/</link>
+    <description>Recent content in Boettiger Group, UC Berkeley on Boettiger Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Aug 2017 21:47:56 -0700</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using travis-ci in research compendia and student repos</title>
+      <link>/2017/05/17/using-travis-ci-in-research-compendia-and-student-repos/</link>
+      <pubDate>Wed, 17 May 2017 22:00:15 +0000</pubDate>
+      
+      <guid>/2017/05/17/using-travis-ci-in-research-compendia-and-student-repos/</guid>
+      <description>In general I’m a big believer in the R package mechanism as a convenient way to package and distribute a reproducible compendium of code, data, notebooks and manuscripts. However, it’s often overkill, particularly since passing basic continuous integration checks (e.g. via devtools::use_travis()) means running a relatively strict R CMD check that will worry about things such as documentation norms and details that aren’t always appropriate.
+What I most want is an easy way to confirm that any .</description>
+    </item>
+    
+    <item>
+      <title>json-ld framing strategy</title>
+      <link>/2017/05/17/json-ld-framing-strategy/</link>
+      <pubDate>Wed, 17 May 2017 21:57:15 +0000</pubDate>
+      
+      <guid>/2017/05/17/json-ld-framing-strategy/</guid>
+      <description>Parsing very nested JSON documents can be a pain. Here are some notes on co-opting the strategy of “Framing” used in JSON-LD. (Note that unlike the basic operations of compaction and expansion, the JSON-LD framing algorithm actually is essentially independent of the @context and any linked data concepts.
+Here’s a toy example of some nested JSON. Very nested structures are usually the source of issues for me, even with purrr, because often I want to pull data found at various different levels of nesting into a single row for the data.</description>
+    </item>
+    
+    <item>
+      <title>New rocker releases</title>
+      <link>/2017/04/27/new-rocker-releases/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/27/new-rocker-releases/</guid>
+      <description>R 3.4.0 and devel tags are now available in the Rocker versioned stack, and latest has been updated to 3.4.0.
+This means you can now run something like:
+docker run -d -p 8787:8787 rocker/tidyverse:devel to test out a recent version1 of R devel in RStudio with the tidyverse packages already installed. Note that the packages are not themselves devel versions (e.g. from GitHub) but are instead the latest versions from CRAN, just as in the latest tag.</description>
+    </item>
+    
+    <item>
+      <title>Migrating to Hugo and blogdown</title>
+      <link>/2017/04/19/migrating-to-hugo-and-blogdown/</link>
+      <pubDate>Wed, 19 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/19/migrating-to-hugo-and-blogdown/</guid>
+      <description>After OpenWetWare (2010), Wordpress (2010 - 2012) and Jekyll (2012 - 2017), I move platforms once again: now to Hugo. Why the move? As usual, this site remains a way for me to explore new technologies, but the cutting edge is by no means the allure which leads me to migrate. Rather, I find myself ever trying to move towards simpler platforms, what’s easier to maintain, free to host, easier to replicate, and what makes best use of the most widely available and well-maintained existing software and avoids unncessary custom hacks.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/slides/ds421/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/slides/ds421/</guid>
+      <description>Data Science Grand Challenges    Data Science Grand Challenges Carl Boettiger
+ Data Science Grand ChallengesData Science Grand Challenges  Inference vs prediction Dealing with assumptions Quantifying uncertainty Reproducibility Keeping the Science in Data Science Keeping the Scientists in data science: Career questions  Inference vs prediction Prediction:
+Inference vs Prediction Inference vs Prediction  Breiman (2001) The two cultures Clark et al (2001) Ecological Forecasting: the Emerging Imperitive  Dealing with assumptions  Keeping assumptions in focus during analysis Communicating assumptions to audience Testing assumptions  Quantifying uncertainty  formal uncertainty vs acutal uncertainty uncertainty with respect to assumptions communicating uncertainty  Reproducibility  Data Science vs Open Science  Keeping the Science in Data Science Keeping the Scientist in Data Science Academic career paths for data scientists?</description>
+    </item>
+    
+    <item>
+      <title>Community</title>
+      <link>/community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/community/</guid>
+      <description>Experiential Education I believe in experiential education and fostering an appreciation for the natural world in and outside of the classroom. I help organize and lead wilderness trips for disadvantaged children in Sacramento through Inner City Outings. I used to guide rock climbing, snow camping, and backpacking trips for college students and the general public through Davis Outdoor Adventures and Shasta Mountain Guides. I was introduced to outdoor leadership and education through Princeton&amp;rsquo;s orientation program, Outdoor Action, where I lead trips and trained leaders in both technical skills and group dynamics (see my Outdoor Guide C.</description>
+    </item>
+    
+    <item>
+      <title>Members</title>
+      <link>/members/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/members/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networks</title>
+      <link>/networks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/networks/</guid>
+      <description>Below are a few links to my more commonly used social network profiles and Internet habitats, along with a few comments. I am pretty consistently found under the user handle cboettig on social networks, though no guarantees.
+Actively Using    &amp;ndash; The web-based home of my research. Star, watch, or fork a project you&amp;rsquo;re interested in.   &amp;ndash; My primary social network, which is why it gets a contact link in my footer.</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>/teaching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/teaching/</guid>
+      <description>ESPM-157: Data Science &amp;amp; Global Change Ecology  Next offered: Fall 2017 Course website: https://espm-157.carlboettiger.info  This is an upper-division undergraduate course designed to introduce CNR majors to the fundamentals of data science, while also introducing students majoring in Data Science or related fields to key issues in global change ecology.
+ESPM-288: Reproducible and Collaborative Data Science  Last offered: Spring 2017 (As ESPM-290) Next offered: Spring 2018 Course website: https://espm-288.</description>
+    </item>
+    
+    <item>
+      <title>Vita</title>
+      <link>/vita/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/vita/</guid>
+      <description>employment  2015-current Assistant Professor, Department of Environmental Science, Policy and Management, University of California, Berkeley.
+ 2013-2015 NSF Post-doctoral Scholar in the Department of Applied Mathematics and Statistics, University of California, Santa Cruz. Mentors: Marc Mangel, Stephan Munch
+  education  2012 Ph.D Population Biology, University of California, Davis. Mentor: Alan Hastings
+ 2007 A.B in Physics, Princeton University, with honors and certificates in biophysics and applied and computational mathematics.</description>
+    </item>
+    
+  </channel>
+</rss>
