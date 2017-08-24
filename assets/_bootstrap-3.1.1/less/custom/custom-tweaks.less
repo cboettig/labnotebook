@@ -1,0 +1,175 @@
+/* My additional customizations to the Twitter Bootstrap CSS */
+
+/* Icons 
+---------------------------------*/
+.socialicons {
+  color: @emphasis; 
+}
+.socialicons a {
+  color: @bodytext; 
+}
+
+h3.notebook-category {
+  line-height: 15px;
+}
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+  margin-top: 45px;
+  padding: 35px 0 36px;
+  border-top: 1px solid @backgroundHighlights;
+  font-size: 13px;
+}
+.footer p {
+  margin-bottom: 0;
+  color: @bodytext;
+}
+
+/* highlight (shrink fontsize for code)
+-------------------------------------------------- */
+.highlight code {
+  font-size: 13px;
+}
+.highlight code {
+  font-size: 13px;
+}
+
+
+/* Project-credits */
+
+.borderleft {
+  border-left: 2px solid @backgroundHighlights;
+  padding: 0px 8px;
+
+}
+
+/* Sidebar
+-------------------------------------------------- */
+.sidebar {
+  margin-left: 45px;
+  padding: 35px 35px 36px;
+  border-left: 1px solid @backgroundHighlights;
+  font-size: 13px;
+}
+.sidebar p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.sidebar h4 a {
+  color: @headingsColor;
+  font-weight: bold;
+}
+
+/* Notebook feeds
+-------------------------------------------- */
+
+.feed {
+  padding: 35px 35px 36px;
+  font-size: 11px;
+}
+.feed p {
+  margin-bottom: 0;
+  font-size: 11px;
+}
+
+.feed h4 a {
+  color: @headingsColor;
+  font-weight: bold;
+}
+
+/* excerpt 
+-----------------------------------------------------*/
+div.excerpt 
+{
+  height:200px;
+  overflow:hidden;
+}
+
+div.scroll
+{ 
+  height: 110%;
+  overflow:scroll;
+  width:110%;
+}
+
+.excerpt h1, .excerpt h2, .excerpt h3, .excerpt h4, .excerpt h5, .excerpt h6 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+
+
+/* postpreview
+-------------------------------------------------- */
+.postpreview {
+  text-align: justify;
+}
+
+/* CV styling 
+----------------------------------------------------*/
+
+.cv {
+font-size: 13px;
+line-height: 18px;
+text-align: justify;         
+}
+.cv ul { 
+margin-left: 0;
+margin-bottom: 30px;
+list-style: none;
+}
+.cv ol { 
+margin-left: 0;
+margin-bottom: 30px;
+list-style-type: decimal;
+}
+.cv li {
+margin-bottom: 10px;
+}
+.cv strong {
+font-weight: bolder;
+}
+
+
+
+/* Make markdown with floatright in the alt-text into a nice text-wrapped image 
+--------------------------------------------------------------------------------*/
+
+img[alt=floatright] { 
+  float:right;
+  margin: 10px 10px; 
+}
+
+/* Misc
+-------------------------------------------------- */
+
+img {
+  max-width: 100%;
+}
+
+
+/* Body and structure
+-------------------------------------------------- */
+body {
+  position: relative;
+  background-image: url(../img/grid-18px-masked.png);
+  background-repeat: repeat-x;
+  background-position: 0 40px;
+}
+
+
+
+/* Definition lists
+------------------------------------------- */
+.dl-horizontal dt{
+  text-align: left;
+  width: auto;
+  padding-right: 1em;
+}
+
+.dl-horizontal dd{
+  margin-left: 100px;
+}

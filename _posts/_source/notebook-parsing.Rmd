@@ -1,0 +1,132 @@
+---
+layout: post
+published: false
+title: Notebook Features: parsing linked data in the semantic notebook
+category: open-science
+tags: 
+- notebook-technology
+- semantics
+- blog
+
+---
+
+
+In a [post a while back](/2011/05/08/building-a-semantic-notebook.html) I originally put forward the idea of a semantic lab notebook.  Semantics, or linked data, are among the most powerful concepts to emerge in online science for scholarly data organization and communication.  I have slowly been adding and exploring new ways to introduce semantic concepts into the notebook, which I have documented along the way under my [#semantics](http://www.carlboettiger.info/tags.html#semantics) tag. In this post, rather than discuss how to generate the semantic data, I try to focus on some of the things we can *do* with it.  This really just scratches the surface of possibilities, but should at least illustrate the general idea. 
+
+
+We will start with some very simple examples exploiting the semantics inherent in HTML5.  We can then work up to richer examples that rely on XML-based parsing.  The richest potential of the semantic notebook lies in leveraging the RDFa content, whose terms are defined as ontologies over which a machine can apply reasoning and formal logic against other web content (see, e.g. `r citet("10.1109/MIS.2006.62", "obtainsBackgroundFrom")` for further unformation).  Though we show how to extract the and parse the RDF here, exploiting the RDF in the last example must wait to a later post.  
+
+
+```{r, include=FALSE}
+opts_chunk$set(comment=NA, warning=FALSE, message=FALSE)
+opts_knit$set(upload.fun = socialR::flickr.url)
+```
+
+## Parsing semantic HTML
+
+Our first set of examples will address parsing the semantic HTML directly.  For background on how these elements are added to the notebook, see [this entry](/2012/10/14/semantic-lab-notebook.html).  We will use R with it's excellent collection of web, XML parsing, and text-mining tools to take advantage of the semantic structure.  First we load the required packages,
+
+
+```{r}
+library(RCurl)
+library(XML)
+library(tm)
+library(wordcloud)
+library(RColorBrewer)
+```
+
+We can get a list of pages to download from the sitemap
+
+```{r}
+pagelist <- readLines("http://carlboettiger.info/sitemap.txt")
+pagelist <- pagelist[grep("/201\\d/", pagelist)]  # drop non-posts)
+pages <- lapply(pagelist, getURLContent, followlocation=TRUE)
+```
+
+Or, if an archive is available locally, (e.g. from figshare cache), we can read the files in directly.  
+
+
+```{r}
+pages <- system("ls ~/Documents/labnotebook/_site/2***/*/*/*.html", intern=TRUE)
+```
+
+We parse each of the pages as HTML so that we can manipulate them with XML tools
+
+
+```{r}
+html <- lapply(pages, htmlParse)
+```
+
+For instance, we can easily get the content of all entries:
+
+```{r}
+text <- sapply(html, xpathSApply, "//article", xmlValue) 
+```
+
+We can also extract metadata based on the semantic markup.  
+
+```{r}
+titles <- sapply(html, xpathSApply, "//title", xmlValue)
+categories <- sapply(html, xpathSApply, "//node()[@class='category']", xmlValue)
+tags <- sapply(html, xpathSApply, "//node()[@class='tag']", xmlValue)
+```
+
+R makes it easy to summarize this data, e.g. by generating a table of the number of entries in each category, or a wordcloud of the tags.  
+
+```{r}
+table(unlist(categories))
+wordcloud(Corpus(VectorSource(tags)))
+```
+
+### Extracting citations
+
+Citation information can be encoded 
+
+We can perform more direct text mining as well. For instance, we extract all DOIs found in the text: 
+
+```{r}
+doi_pattern = "\\b(10[.][0-9]{4,}(?:[.][0-9]+)*/(?:(?![\"&\'<>])\\S)+)\\b"
+require(gsubfn)
+dois <- strapply(text, doi_pattern, perl=TRUE)    #text[-462]
+head(sort(table(unlist(dois))))
+```
+
+Or generate a wordcloud of the full text 
+
+```{r}
+
+carl <- Corpus(VectorSource(text))
+carl <- tm_map(carl, removePunctuation)
+carl <- tm_map(carl, tolower)
+carl <- tm_map(carl, function(x) removeWords(x, stopwords()))       
+
+carl.tdm <- TermDocumentMatrix(carl)
+carl.m <- as.matrix(carl.tdm)
+carl.v <- sort(rowSums(carl.m), decreasing=TRUE)
+carl.d <- data.frame(word=names(carl.v), freq=carl.v)
+
+
+wordcloud(carl.d$word,carl.d$freq, scale=c(8,.4),min.freq=3,
+          max.words=100, random.order=FALSE, rot.per=.15, 
+          colors = brewer.pal(8,"Dark2"))
+```
+
+## RDFa parsing
+
+RDF triples are the mainstay of semantic, linked data.  Unlike the more text-mining oriented examples above, data in this format follows a strict and universal standard which allows a machine to identify meaning rather precisely.  Critically, this allows one to automatically link data appearing in the notebook to data elsewhere on the web without the ambiguities of natural language that for instance, might confuse the animal jaguar with the car.  
+
+
+RDFa is a way of adding these precise statements to HTML, again see the [earlier entry](/2012/10/14/semantic-lab-notebook.html) on how this is done.  The technically inclined will note that the namespaces of the RDFa itself are not accessible in the XML parsing we used above, since they do not correspond to nodes or attributes, but appear only in the values of attributes.  Fortunately, there are many excellent tools to extract this RDFa data, turning it into the XML formatted RDF triples we need.  e can perform this using the [Any23](http://any23.org) API
+
+```{r}
+download.file(paste("http://any23.org/rdfxml", "http://carlboettiger.info", sep="/"), "temp.xml")
+doc <- xmlParse("temp.xml")
+```
+
+Which creates a beautiful RDF XML file of all linked data found in the entry.   
+
+```{r, comment=NA}
+doc
+```
+
+We can now explore this data using the XML tools illustrated above.  The rigidity of the XML rather than HTML parsing and the use of namespaces gives us greater precision.  

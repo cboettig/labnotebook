@@ -1,0 +1,54 @@
+
+title: Lab Notebook 
+tagline: Theoretical ecology and evolution
+author:
+  name: Carl Boettiger
+  givenName: Carl
+  familyName: Boettiger
+  twitter: cboettig
+  github: cboettig
+  mendeley: carl-boettiger
+  email: cboettig@gmail.com
+url: http://www.carlboettiger.info
+
+destination: ../_site 
+username: cboettig
+repo: labnotebook
+
+gems:
+  - jekyll-pandoc
+
+## Markdown Parser 
+markdown: pandoc
+markdown_ext:  markdown,mkdown,mkdn,mkd,md,Rmd,rmd
+pandoc:
+  extensions: 
+    - smart
+    - mathjax
+#    - template: 'assets/datauri_template.html'   # Use with 'self-contained' to avoid header text in body
+#    - self-contained                             # Archive images in posts as URIs.  Very slow, for archiving only.  
+#    - mathml                                     # Use mathml for equations (Archival, HTML5/XML valid syntax)
+
+
+permalink: /:year/:month/:day/:title.html
+redirects: yes     ## A flag to turn on the redirects plugin
+pageviews: no    ## toggle on sidebar pageviews 
+twitter_api: yes
+analytics: UA-18401403-1 ## Google Analytics key (in _includes/analytics.html)
+
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - .travis.yml
+  - _posts/source/
+  - assets/_bootstrap-3.1.1
+  - _garb.yml
+  - _twitter.yml
+  - DESCRIPTION
+
+knitr:
+  dev: svg
+
+

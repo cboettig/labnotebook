@@ -1,0 +1,30 @@
+---
+layout: nil
+title : Atom Feed
+redirects: [feed, wordpress/feed]
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>{{ site.title }}</title>
+ <link href="{{ site.production_url }}/atom.xml" rel="self"/>
+ <link href="{{ site.production_url }}"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>{{ site.url }}</id>
+ <author>
+   <name>{{ site.author.name }}</name>
+ </author>
+ <rights>CC0</rights>
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="{{ site.production_url }}{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>{{ site.url }}{{ post.id }}</id>
+   {% for category in post.categories %} 
+   <category term="{{ site.baseurl }}/categories.html#{{ category | cgi_escape }}" label="{{ category }}"/>
+   {% endfor %}
+   <content type="html">{{ post.content | codecogs | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+</feed>

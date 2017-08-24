@@ -1,0 +1,18 @@
+---
+layout: page
+title: Archive 
+exclude_from_search: true
+---
+
+
+<h4>({{ site.posts | size }} entries) <a href="{{ site.url }}/atom.xml"><img src="/assets/img/icon-rss.png" alt="feed"></a></h4>
+<div class="postpreview">
+  {% for post in site.posts %}
+  <div class="span6"> 
+    <p> <a href="{{ post.url }}">{{ post.title }}</a> 
+    <span style="text-align:right; font-style:italic"> {{ post.date | date_to_string }}</span></p>
+  </div> 
+  {% endfor %}
+</div>
+<ul>
+
