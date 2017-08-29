@@ -4,38 +4,38 @@
   
   <url>
     <loc>/2017/05/17/using-travis-ci-in-research-compendia-and-student-repos/</loc>
-    <lastmod>2017-05-17T22:40:18+00:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
     <loc>/2017/05/17/json-ld-framing-strategy/</loc>
-    <lastmod>2017-05-17T22:40:18+00:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
     <loc>/2017/04/27/new-rocker-releases/</loc>
-    <lastmod>2017-04-30T13:45:59-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
     <loc>/2017/04/19/migrating-to-hugo-and-blogdown/</loc>
-    <lastmod>2017-05-21T03:51:05+00:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
     <loc>/slides/ds421/</loc>
-    <lastmod>2017-04-30T13:45:59-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/blog/</loc>
-    <lastmod>2017-05-21T03:51:05+00:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-08-16T21:47:56-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
@@ -45,68 +45,73 @@
   
   <url>
     <loc>/community/</loc>
-    <lastmod>2017-08-16T22:13:14-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/docker/</loc>
-    <lastmod>2017-04-30T13:45:59-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/lab-notebook/</loc>
-    <lastmod>2017-08-16T22:22:43-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
     <loc>/members/</loc>
-    <lastmod>2017-08-16T21:47:56-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
     <loc>/networks/</loc>
-    <lastmod>2017-04-18T14:06:59-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/open-science/</loc>
-    <lastmod>2017-04-30T13:45:59-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2017-04-30T13:45:59-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2017-04-30T13:45:59-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/slides/</loc>
-    <lastmod>2017-04-30T13:45:59-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2017-05-21T03:51:05+00:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/teaching/</loc>
-    <lastmod>2017-08-16T21:47:56-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
     <loc>/vita/</loc>
-    <lastmod>2017-08-16T21:47:56-07:00</lastmod>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cloud/</loc>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
 </urlset>

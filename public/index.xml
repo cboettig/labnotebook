@@ -6,7 +6,7 @@
     <description>Recent content in Boettiger Group, UC Berkeley on Boettiger Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Aug 2017 21:47:56 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 20 Aug 2017 17:26:14 -0700</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -110,6 +110,15 @@ ESPM-288: Reproducible and Collaborative Data Science  Last offered: Spring 2017
  2013-2015 NSF Post-doctoral Scholar in the Department of Applied Mathematics and Statistics, University of California, Santa Cruz. Mentors: Marc Mangel, Stephan Munch
   education  2012 Ph.D Population Biology, University of California, Davis. Mentor: Alan Hastings
  2007 A.B in Physics, Princeton University, with honors and certificates in biophysics and applied and computational mathematics.</description>
+    </item>
+    
+    <item>
+      <title>cloud.md</title>
+      <link>/cloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cloud/</guid>
+      <description> Jetstream TACC OpenStack Jetstream IU OpenStack Chameleon TACC OpenStack  </description>
     </item>
     
   </channel>
