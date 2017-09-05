@@ -174,6 +174,10 @@ title: Vita
    #DE-FG02-97ER25308, *149,000 USD*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2010246))
 
 
+# book chapters
+
+- _Carl Boettiger_ (2017). A Reproducible R Notebook Using Docker. In J. Kitzes, D. Turek, & F. Deniz (Eds.), The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences (1st ed., pp. 109–117). Oakland, CA: UC Press. Retrieved from https://www.ucpress.edu/book.php?isbn=9780520294752
+
 # invited talks
 
 ## 2015
@@ -195,6 +199,12 @@ title: Vita
 - SSB Symposium speaker, Evolution Conference, Ottawa, CAN.
 
 # invited workshops
+
+## 2017
+
+- [Imagining Tomorrow's University](http://www.ncsa.illinois.edu/Conferences/ImagineU/participants.html) Chicago, Il.
+- [rOpenSci unconference](http://unconf17.ropensci.org), Los Angeles, CA
+- [Prov-a-thon: Practical Tools for Reproducible Science](https://dataoneorg.github.io/provathon-2017/), Tamaya, New Mexico
 
 ## 2016
 
@@ -245,13 +255,16 @@ title: Vita
 
 ## campus
 
-- UC Berkeley, Berkeley Research Computing Advisory Committee
+- 2017 - current. UC Berkeley Data Science Degree proposal Comittee
+- 2015 - current. UC Berkeley, Berkeley Research Computing Advisory Committee
 
 ## reviewer for: 
 
-<!--
-- *2016* Bioscience
--->
+
+- *2017* National Science Foundation, Nature Climate Change, Nature Ecology & Evolution,
+  Proceedings of the Royal Society B, rOpenSci Onboarding.
+
+- *2016* Bioscience, National Science Foundation
 
 - **2015** Proceedings of the National Academy of Sciences, Journal
   of Statistical Software, Bioinformatics, Chapman & Hall, Ecology Letters,
@@ -288,6 +301,7 @@ title: Vita
 
 # selected software
 
+-   Carl Boettiger, Dirk Eddelbuettel. The Rocker Project.
 -   Carl Boettiger, Scott Chamberlain, Rutger Vos and Hilmar
     Lapp. (2015) RNeXML: a package for reading and writing richly annotated
     phylogenetic, character, and trait data in R. On [software](https://cran.rstudio.com/web/packages/RNeXML/) 
@@ -297,8 +311,6 @@ title: Vita
     rfigshare: Programmatic access to the figshare data repository.
     On [software](http://cran.r-project.org/web/packages/rfigshare/).
 -   Carl Boettiger (2012). pmc: Phylogenetic Monte Carlo. On [software](https://cran.rstudio.com/web/packages/pmc/).
--   Carl Boettiger & Duncan Temple Lang (2011). treebase: An R interface
-    to TreeBASE. On [software](http://cran.r-project.org/web/packages/treebase/).
 -   Carl Boettiger (2011). rfishbase: Programmatic access to FishBase.
     On [software](http://cran.r-project.org/web/packages/rfishbase/).
 
