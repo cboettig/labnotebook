@@ -6,25 +6,10 @@
     <description>Recent content in Lab Notebook on Boettiger Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Aug 2017 17:26:14 -0700</lastBuildDate>
     
 	<atom:link href="/lab-notebook/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title></title>
-      <link>/2017/08/31/</link>
-      <pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/2017/08/31/</guid>
-      <description>Misc thoughts/questions from plenary:
- Identical provenance can create very different things. (e.g. hash/identifier/timestamp to the ‘input’ or ‘output’.
- Very different provenance paths can create same results. So when is provenance telling us about fundamental vs arbitrary choices?
- fundamental provenance vs arbitrary provenance. make, remake etc as provenance
-  Rice’s Theorem: all-trivial semantic properties of prgorams are undecidable
-prospective provenence: YesWorkflow: Roxygen-style input on data.
-Can we do something with this provenance?</description>
-    </item>
     
     <item>
       <title>Using travis-ci in research compendia and student repos</title>
