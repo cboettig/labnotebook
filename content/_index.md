@@ -23,7 +23,7 @@ optimal control theory must be adapted both to take advantage of all
 available data while also dealing with its imperfections. My approach
 blends ecological theory with the synthesis of heterogeneous data and
 the development of software -- a combination now recognized as data
-science
+science.
 
 I am co-founder of the [rOpenSci project](https://ropensci.org), a senior fellow at
 [BIDS](http://bids.berkeley.edu), and a science adviser to
