@@ -202,9 +202,9 @@ title: Vita
 
 ## 2017
 
-- [Imagining Tomorrow's University](http://www.ncsa.illinois.edu/Conferences/ImagineU/participants.html) Chicago, Il.
+- [Imagining Tomorrow's University](http://www.ncsa.illinois.edu/Conferences/ImagineU/participants.html) Chicago, IL.
 - [rOpenSci unconference](http://unconf17.ropensci.org), Los Angeles, CA
-- [Prov-a-thon: Practical Tools for Reproducible Science](https://dataoneorg.github.io/provathon-2017/), Tamaya, New Mexico
+- [Prov-a-thon: Practical Tools for Reproducible Science](https://dataoneorg.github.io/provathon-2017/), Tamaya, NM.
 
 ## 2016
 
