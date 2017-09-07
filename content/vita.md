@@ -261,10 +261,10 @@ title: Vita
 ## reviewer for: 
 
 
-- *2017* National Science Foundation, Nature Climate Change, Nature Ecology & Evolution,
+- **2017** National Science Foundation, Nature Climate Change, Nature Ecology & Evolution,
   Proceedings of the Royal Society B, rOpenSci Onboarding.
 
-- *2016* Bioscience, National Science Foundation
+- **2016** Bioscience, National Science Foundation
 
 - **2015** Proceedings of the National Academy of Sciences, Journal
   of Statistical Software, Bioinformatics, Chapman & Hall, Ecology Letters,
@@ -299,23 +299,13 @@ title: Vita
 - Student member for the CPB program review. 2010
 -->
 
-# selected software
+# selected software projects
 
--   Carl Boettiger, Dirk Eddelbuettel. The Rocker Project.
--   Carl Boettiger, Scott Chamberlain, Rutger Vos and Hilmar
-    Lapp. (2015) RNeXML: a package for reading and writing richly annotated
-    phylogenetic, character, and trait data in R. On [software](https://cran.rstudio.com/web/packages/RNeXML/) 
--   Carl Boettiger (2013). knitcitations: Dynamic citations for dynamic
-    documents. On [software](http://cran.r-project.org/web/packages/knitcitations/).
--   Carl Boettiger, Scott Chamberlain, Karthik Ram, Edmund Hart (2013).
-    rfigshare: Programmatic access to the figshare data repository.
-    On [software](http://cran.r-project.org/web/packages/rfigshare/).
--   Carl Boettiger (2012). pmc: Phylogenetic Monte Carlo. On [software](https://cran.rstudio.com/web/packages/pmc/).
--   Carl Boettiger (2011). rfishbase: Programmatic access to FishBase.
-    On [software](http://cran.r-project.org/web/packages/rfishbase/).
+-   2012 - current: The rOpenSci Project, co-founder. <https://ropensci.org>
+-   2014 - current: Carl Boettiger, Dirk Eddelbuettel. The Rocker Project: Docker images for the R environment. <https://rocker-project.org>
+-   2015 - current: Carl Boettiger, Matt Jones, et al. The CodeMeta Project: Software Metadata Exchange <https://codemeta.github.io>
 
-
-I am also a founding member of the [rOpenSci project](http://ropensci.org). My software impact is also measured relative to other academics by [depsy.org](http://depsy.org/person/329935)
+My software impact is also measured relative to other academics by [depsy.org](http://depsy.org/person/329935)
 
 
 # theses
