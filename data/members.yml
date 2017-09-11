@@ -41,11 +41,23 @@ members:
     title: "Postdoctoral Fellow"
     homepage: "http://www.allisonbarner.com/"
     twitter: "algaebarnacle"
-    cv: "http://www.allisonbarner.com/publications.html"
+    googlescholar: "https://scholar.google.com/citations?user=EWydlnsAAAAJ&hl=en"
     orcid: "0000-0001-9909-5713"
     email: "allisonkbarner@gmail.com"
     photo: "allie.png"
     github: "abarner"
+  - dan:
+    name:
+      first: "Dan"
+      last: "Sholler"
+    title: "rOpenSci Postdoc"
+    googlescholar: "https://scholar.google.com/citations?user=fHVPc94AAAAJ&hl=en&oi=ao"
+    orcid: "0000-0003-2517-4317"
+    twitter: "DanSholler"
+    github: "dsholler"
+    photo: "dan.png"
+    homepage: "http://danielsholler.wordpress.com/"
+    email: "sholler.daniel@gmail.com"
   - you:
     name:
       first: "Your"
