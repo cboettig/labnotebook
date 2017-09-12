@@ -1,9 +1,12 @@
 FROM rocker/geospatial:latest
 MAINTAINER Carl Boettiger cboettig@ropensci.org 
 
+ENV PATH=/usr/lib/ccache:$PATH
+
 ## Install additional R package dependencies ###
 RUN apt-get update && \
   apt-get -y install --no-install-recommends \
+  ccache \
   libgpgme11-dev \
   liblapack-dev \
   librdf0-dev \
