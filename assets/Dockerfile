@@ -15,6 +15,7 @@ RUN apt-get update && \
   libfftw3-dev \
   libxslt-dev && \
   install2.r --error \
+    printr \
     FKF \
     MDPtoolbox \
     seewave \
