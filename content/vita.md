@@ -2,6 +2,7 @@
 type: page
 layout: vita
 title: Vita
+nomath: true
 ---
 
 # employment
