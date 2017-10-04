@@ -28,6 +28,10 @@ title: Vita
 
 # publications
 
+19. Ben Marwick, __Carl Boettiger__, Lincoln Mullen (2017). Packaging data analytical work
+    reproducibly using R (and friends). _The American Statistician_. 
+    [doi:10.1080/00031305.2017.1375986](https://doi.org/10.1080/00031305.2017.1375986).
+    ([oa](https://doi.org/10.7287/peerj.preprints.3192v1))
 
 18. Hampton, Jones, Wasser, Schuldhauer, Supp, Brun, Herandez, __Boettiger__, Collins,
     Gross, Fernandez, Budden, White, Teal, Labou & Aukema. (2017) Skills and Knowledge
