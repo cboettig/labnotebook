@@ -1,4 +1,4 @@
-FROM rocker/geospatial:latest
+FROM rocker/geospatial:3.4.2
 MAINTAINER Carl Boettiger cboettig@ropensci.org 
 
 ENV PATH=/usr/lib/ccache:$PATH
@@ -7,6 +7,7 @@ ENV PATH=/usr/lib/ccache:$PATH
 RUN apt-get update && \
   apt-get -y install --no-install-recommends \
   ccache \
+  fonts-roboto \
   libgpgme11-dev \
   liblapack-dev \
   librdf0-dev \
@@ -21,8 +22,11 @@ RUN apt-get update && \
     seewave \
     nimble \
     jsonld \
-    jsonvalidate && \
-  R -e "remotes::install_github(c('rstudio/blogdown', 'hadley/pkgdown'), upgrade = FALSE)" && \
+    jsonvalidate \
+    extrafontdb \
+    blogdown \
+    pkgdown && \
+  R -e "remotes::install_github(c('hrbrmstr/hrbrthemes'), upgrade = FALSE)" && \
   echo '\n options(blogdown.hugo.dir = "/usr/local/lib/")' >> /usr/local/lib/R/etc/Rprofile.site && \
   R -e "blogdown::install_hugo()" && \
   git config --system user.name 'Carl Boettiger' && \
