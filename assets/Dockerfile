@@ -9,12 +9,7 @@ RUN apt-get update && \
   ccache \
   fonts-roboto \
   libgpgme11-dev \
-  liblapack-dev \
-  librdf0-dev \
-  librsvg2-dev \
   libsndfile1-dev \
-  libfftw3-dev \
-  libxslt-dev && \
   install2.r --error \
     printr \
     FKF \
@@ -24,9 +19,8 @@ RUN apt-get update && \
     jsonld \
     jsonvalidate \
     extrafontdb \
-    blogdown \
-    pkgdown && \
-  R -e "remotes::install_github(c('hrbrmstr/hrbrthemes'), upgrade = FALSE)" && \
+    blogdown && \
+  R -e "remotes::install_github(c('hadley/pkgdown', 'hrbrmstr/hrbrthemes'), upgrade = FALSE)" && \
   echo '\n options(blogdown.hugo.dir = "/usr/local/lib/")' >> /usr/local/lib/R/etc/Rprofile.site && \
   R -e "blogdown::install_hugo()" && \
   git config --system user.name 'Carl Boettiger' && \

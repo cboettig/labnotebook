@@ -267,7 +267,7 @@ nomath: true
 
 
 - **2017** National Science Foundation, Nature Climate Change, Nature Ecology & Evolution,
-  Proceedings of the Royal Society B, rOpenSci Onboarding.
+  Proceedings of the Royal Society B, rOpenSci Onboarding, Theoretical Ecology
 
 - **2016** Bioscience, National Science Foundation
 
