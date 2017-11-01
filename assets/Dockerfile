@@ -1,7 +1,8 @@
 FROM rocker/geospatial:3.4.2
 MAINTAINER Carl Boettiger cboettig@ropensci.org 
 
-ENV PATH=/usr/lib/ccache:$PATH
+## selects ccache compilers (once ccache is installed). NB this increases image size!
+#ENV PATH=/usr/lib/ccache:$PATH
 
 ## Install additional R package dependencies ###
 RUN apt-get update && \
@@ -18,13 +19,18 @@ RUN apt-get update && \
     nimble \
     jsonld \
     jsonvalidate \
-    extrafontdb \
+    hrbrthemes \
+    Cairo \
     blogdown && \
   R -e "remotes::install_github(c('hadley/pkgdown', 'hrbrmstr/hrbrthemes'), upgrade = FALSE)" && \
+  ## roboto font config for hrbrthemes:
+  R -e "hrbrthemes::import_roboto_condensed(); d <- read.csv(extrafont:::fonttable_file(), stringsAsFactors = FALSE); d[grepl("Light", d$FontName), ]$FamilyName <- 'Roboto Condensed Light'; write.csv(d, extrafont:::fonttable_file(), row.names = FALSE)" && \
+  ## Install hugo via blogdown
   echo '\n options(blogdown.hugo.dir = "/usr/local/lib/")' >> /usr/local/lib/R/etc/Rprofile.site && \
   R -e "blogdown::install_hugo()" && \
+  installGithub.r boettiger-lab/pomdpplus boettiger-lab/mdplearning && \
+  ## preconfigure me as the git user
   git config --system user.name 'Carl Boettiger' && \
-  git config --system user.email 'cboettig@gmail.com' && \
-  installGithub.r boettiger-lab/pomdpplus boettiger-lab/mdplearning
+  git config --system user.email 'cboettig@gmail.com'
 
 
