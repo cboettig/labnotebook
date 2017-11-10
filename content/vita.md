@@ -53,17 +53,18 @@ nomath: true
    costly. _Ecological Applications_ 26 (3) 808-817. [doi:10.1890/15-0236](http://dx.doi.org/10.1890/15-0236).
    ([oa](http://arxiv.org/pdf/1507.07037v1.pdf), [code](https://github.com/cboettig/pdg_control))
 
-15. __Carl Boettiger__,  Scott Chamberlain, Edmund Hart, Karthik Ram. (2015) 
-   Building Software, Building Community: Lessons from the rOpenSci Project.
-   _Journal of Open Research Software_ 3: e8, [doi:10.5334/jors.bu](http://dx.doi.org/10.5334/jors.bu).
-
-14. __Carl Boettiger__, Scott Chamberlain, Rutger Vos and Hilmar
-   Lapp. (2015) RNeXML: a package for reading and writing richly annotated
+15. __Carl Boettiger__, Scott Chamberlain, Rutger Vos and Hilmar
+   Lapp. (2016) RNeXML: a package for reading and writing richly annotated
    phylogenetic, character, and trait data in R. Methods in Ecology and Evolution. 
    [doi:10.1111/2041-210X.12469](http://dx.doi.org/10.1111/2041-210X.12469). 
    ([oa](http://arxiv.org/abs/1506.02722),
    [code](https://github.com/ropensci/RNeXML),
    [software](http://cran.rstudio.com/web/packages/RNeXML))
+
+14. __Carl Boettiger__,  Scott Chamberlain, Edmund Hart, Karthik Ram. (2015) 
+   Building Software, Building Community: Lessons from the rOpenSci Project.
+   _Journal of Open Research Software_ 3: e8,
+   [doi:10.5334/jors.bu](http://dx.doi.org/10.5334/jors.bu).
 
 13. __Carl Boettiger__. (2015) An introduction to Docker for reproducible
    research. ACM SIGOPS Operating Systems Review, Special Issue on Repeatability
