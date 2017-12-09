@@ -126,14 +126,6 @@ jsonld::jsonld_from_rdf(readr::read_file("ex.nquads"))  %>%
 
 
 ```{r}
-schema_context <-
-'{
-"name": "schema:name",
-"date": "schema:datePublished",
-"creator": "schema:author",
-"volume": "schema:volumeNumber",
-"issue": "schema:issueNumber"
-}'
 
 frame <- 
 '{
@@ -147,8 +139,8 @@ frame <-
 
     "startingPage": "prism:startingPage",
     "endingPage": "prism:endingPage",
-    "doi": "prism:doi", 
-    "issn": "prism:issn",
+    "bibo:doi": "prism:doi", 
+    "bibo:issn": "prism:issn",
 
     "issn": "bibo:issn",
     "doi": "bibo:doi",
@@ -172,20 +164,15 @@ frame <-
     "sameAs": "owl:sameAs",
     "date": {"@id": "http://purl.org/dc/terms/date", "@type": "http://www.w3.org/2001/XMLSchema#date"}
 },
-
-  "@type": {"@default": "ScholarlyArticle"},
+  "@embed": "@always",
   "title": {},
   "date": "2012-5-16",
+  "pageStart": {},
+  "pageEnd": {},
   "isPartOf": {
-    "@type": {"@default": "PublicationIssue"},
-    "issue": {},
-    "date": {},
-    "isPartOf": {
-    "@type": {"@default": ["Periodical", "PublicationVolume"]},
-      "volume": {},
-      "title": {},
-      "publisher": {}
-    }
+    "@type": "Journal",
+    "title": {},
+    "issn": {}
   },
   "creator": [
           {
@@ -193,16 +180,60 @@ frame <-
             "familyName": {},
             "@explicit": true
           }],
-  "startPage": {},
-  "endPage": {}
+  "@explicit": true
 }'
 
-jsonld_expand(frame)
+testme <- jsonld_expand(frame)
+```
+
+Note that the RDF has different semantic models than schema.org: for instance, `volume` is a property of the scholarly article (well, it's untyped in the RDF, but it's a property of the object described by the article DOI), while in schema.org, `volumeNumber` is a property of a `Periodical` (or `PublicationVolume`), which `hasPart`s made up of `PublicationIssue` objects, themselves `hasPart`s made up of `ScholarlyArticle`s.  The whole purpose of JSON-LD functions are to respect semantics, therefore there is no way we can use JSON-LD operations to alter these semantics.  For instance, if we use `@explict: true` in our frame, we lose these terms.
+
+```{r}
+jsonld::jsonld_from_rdf(readr::read_file("ex.nquads"))  %>% 
+  jsonld_frame(frame) %>% 
+  fromJSON(simplifyVector = FALSE) %>% getElement("@graph") %>% yaml::as.yaml() %>% cat()
+```
+
+As long as we aren't changing the object structures though, we can change the vocabulary.  This is really also something of a hack: we compact the original data, and then just chop off the `@context` and provide our own `@context` that gives schema.org definitions to the terms.  
+
+JSON-LD is commonly used to change key names, but this assumes that both contexts can be defined relative to the same URIs.  e.g. we can say that in the context of Dublin Core,  implicitly `"title": "http://schema.org/name",
+or explicitly: `"https://purl.org/dc/title": "http://schema.org/name"`.
+
+Perhaps this ought instead to be done with an ontological operation and the assertion of `sameAs` and similar relationships.  Perhaps that would also permit moving between these different levels?  
+
+
+Note that items with specific types must be declared as such to match types expected in schema.org. Others can be captured as schema.org terms just by setting the default `@vocab`.  
+
+```{r}
+## fixme use full URIs on LHS too.  
+schema_context <-
+'{
+"@vocab": "http://schema.org/",
+"schema": "http://schema.org/",
+"title": "schema:name",
+"date": {"@id": "schema:datePublished", "@type": "schema:Date"},
+"creator": "schema:author",
+"volume": "schema:volumeNumber",
+"issue": "schema:issueNumber",
+"doi": {"@id": "schema:identifier", "@type": "@id" },
+"issn": {"@id": "schema:identifier", "@type": "@id" },
+"prism:issn": {"@id": "schema:identifier", "@type": "@id" },
+"sameAs": {"@id": "schema:sameAs", "@type": "@id" },
+"prism:doi": "schema:identifier"
+
+}'
 ```
 
 ```{r}
 jsonld::jsonld_from_rdf(readr::read_file("ex.nquads"))  %>% 
-  jsonld_expand() %>%
-  jsonld_frame(frame) 
+  jsonld_frame(frame) %>% 
+  fromJSON(simplifyVector = FALSE) -> X
+
+X[["@context"]] <- fromJSON(schema_context)
+
+toJSON(X, auto_unbox = TRUE, pretty = TRUE) %>%
+  jsonld_compact("http://schema.org")
 ```
+
+This isn't bad, but is still not a perfect match to the schema.org model.  
 
