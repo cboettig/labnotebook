@@ -1,0 +1,58 @@
+---
+title: "Untitled"
+author: "Carl Boettiger"
+date: "12/8/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(jsonld)
+library(jsonlite)
+library(jqr)
+library(magrittr)
+```
+
+
+
+## Pure JSON
+
+```{r}
+vita <- readr::read_file("../../static/js/vita.json")
+
+jq(vita, '."@reverse".author[]  | 
+   { year: .dateCreated, 
+     author: .author[] | [.givenName, .familyName]  | join(" ")
+   }') %>% combine() %>% fromJSON()
+```
+
+
+### 
+
+```{r}
+frame <-
+'{
+"@context": "http://schema.org",
+"@type": "ScholarlyArticle",
+"author": {
+  "@type": "Person",
+  "givenName": {},
+  "familyName": {},
+  "@explicit": true
+},
+"dateCreated": {},
+"@explicit": true
+}'
+
+
+vita <- jsonld::jsonld_frame("../../static/js/vita.json", frame)
+```
+
+
+```{r}
+as.character(vita) %>% 
+  jq('."@graph"[] | { 
+     year: .dateCreated, 
+     author: .author[] | [.givenName, .familyName] | join(" ")    
+     }') %>% combine() %>% fromJSON()
+```
+

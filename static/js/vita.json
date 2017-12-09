@@ -240,6 +240,7 @@
           "familyName": "Hernandez"
         },
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
@@ -309,6 +310,7 @@
           "familyName": "Perkins"
         },
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
@@ -341,6 +343,7 @@
       },
       "author": [
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
@@ -386,7 +389,28 @@
           "name": "Journal of Open Research Software",
           "publisher": "Ubiquity Press, Ltd."
       },
-      "author": ["Carl Boettiger", "Scott Chamberlain", "Ted Hart", "Karthik Ram"]
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
+          "@type": "Person",
+          "givenName": "Carl",
+          "familyName": "Boettiger"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Scott",
+          "familyName": "Chamberlain"
+        },
+        {
+          "@type": "Person",
+          "givenName": "Ted",
+          "familyName": "Harte"
+        }, 
+        {
+           "@type": "Person",
+          "givenName": "Karthik",
+          "familyName": "Ram"
+        }]
     },
     {
    
@@ -407,6 +431,7 @@
       },
       "author": [
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
@@ -448,6 +473,7 @@
       },
       "author": [
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
@@ -475,8 +501,8 @@
       },
       "author": [
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
-          "givenName": "C.",
           "familyName": "Boettiger"
         },
         {
@@ -510,8 +536,8 @@
       },
       "author": [
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
-          "givenName": "C.",
           "familyName": "Boettiger"
         },
         {
@@ -540,6 +566,7 @@
       },
       "author": [
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
@@ -576,8 +603,8 @@
       },
       "author":  [
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
-          "givenName": "C.",
           "familyName": "Boettiger"
         },
         {
@@ -607,8 +634,8 @@
       },
       "author": [
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
-          "givenName": "C.",
           "familyName": "Boettiger"
         },
         {
@@ -639,8 +666,8 @@
       },
       "author": [
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
-          "givenName": "C.",
           "familyName": "Boettiger"
         },
         {
@@ -676,6 +703,7 @@
       },
       "author": [
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
@@ -708,9 +736,8 @@
       },
       "author": [
         {
-          "@type": "Person",
-          "givenName": "C.",
-          "familyName": "Boettiger"
+          "@id": "https://orcid.org/0000-0002-1642-628X",
+          "@type": "Person"
         },
         {
           "@type": "Person",
@@ -749,9 +776,7 @@
           "familyName": "Jhwueng"
         },
         {
-          "@type": "Person",
-          "givenName": "Carl",
-          "familyName": "Boettiger"
+          "@id": "https://orcid.org/0000-0002-1642-628X"
         },
         {
           "@type": "Person",
@@ -781,6 +806,7 @@
       },
       "author": [
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
@@ -818,6 +844,7 @@
       },
       "author": [
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
@@ -870,6 +897,7 @@
           "familyName": "Bode"
         },
         {
+          "@id": "https://orcid.org/0000-0002-1642-628X",
           "@type": "Person",
           "givenName": "Carl",
           "familyName": "Boettiger"
