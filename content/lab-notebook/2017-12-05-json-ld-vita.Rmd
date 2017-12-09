@@ -26,7 +26,9 @@ jq(vita, '."@reverse".author[]  |
 ```
 
 
-### 
+### With JSON-LD
+
+By first constructing a frame, we can get back a subset of the data we are interested in.  This is not as powerful as a graph query, but still has aspects of schema-on-read.  
 
 ```{r}
 frame <-
@@ -54,5 +56,153 @@ as.character(vita) %>%
      year: .dateCreated, 
      author: .author[] | [.givenName, .familyName] | join(" ")    
      }') %>% combine() %>% fromJSON()
+```
+
+
+```{r}
+library("httr")
+library("xml2")
+doi <- "http://dx.doi.org/10.1002/ece3.2314"
+csl <-
+  httr::content(
+    httr::GET(doi, httr::add_headers(Accept="application/rdf+xml")),
+    as = "parsed", type = "application/xml")
+xml2::write_xml(csl, "ex.xml")
+
+library(rdflib)
+rdf_parse("ex.xml", "rdfxml") %>% rdf_serialize("ex.nquads", "nquads")
+```
+
+
+
+
+
+```{r}
+context <- 
+'{
+    "prism": "http://prismstandard.org/namespaces/basic/2.1/",
+    "dc": "http://purl.org/dc/terms/",
+    "bibo": "http://purl.org/ontology/bibo/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+
+    "startingPage": "prism:startingPage",
+    "endingPage": "prism:endingPage",
+    "doi": "prism:doi", 
+    "issn": "prism:issn",
+
+    "issn": "bibo:issn",
+    "doi": "bibo:doi",
+
+    "Journal": "bibo:Journal",
+    "pageStart": "bibo:pageStart",
+    "pageEnd": "bibo:pageEnd",
+    "volume": "bibo:volume",
+
+    "creator": "dc:creator",
+    "identifier": "dc:identifier",
+    "isPartOf": "dc:isPartOf",
+    "publisher": "dc:publisher",
+    "title": "dc:title",
+
+    "familyName": "foaf:familyName",
+    "givenName": "foaf:givenName",
+    "name": "foaf:name",
+    "Person": "foaf:Person",
+
+    "sameAs": "owl:sameAs",
+    "date": {"@id": "http://purl.org/dc/terms/date", "@type": "http://www.w3.org/2001/XMLSchema#date"}
+}
+'
+
+```
+
+
+```{r}
+jsonld::jsonld_from_rdf(readr::read_file("ex.nquads"))  %>% 
+  jsonld_compact(context) 
+```
+
+
+
+```{r}
+schema_context <-
+'{
+"name": "schema:name",
+"date": "schema:datePublished",
+"creator": "schema:author",
+"volume": "schema:volumeNumber",
+"issue": "schema:issueNumber"
+}'
+
+frame <- 
+'{
+
+"@context": {
+    "prism": "http://prismstandard.org/namespaces/basic/2.1/",
+    "dc": "http://purl.org/dc/terms/",
+    "bibo": "http://purl.org/ontology/bibo/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+
+    "startingPage": "prism:startingPage",
+    "endingPage": "prism:endingPage",
+    "doi": "prism:doi", 
+    "issn": "prism:issn",
+
+    "issn": "bibo:issn",
+    "doi": "bibo:doi",
+
+    "Journal": "bibo:Journal",
+    "pageStart": "bibo:pageStart",
+    "pageEnd": "bibo:pageEnd",
+    "volume": "bibo:volume",
+
+    "creator": "dc:creator",
+    "identifier": "dc:identifier",
+    "isPartOf": "dc:isPartOf",
+    "publisher": "dc:publisher",
+    "title": "dc:title",
+
+    "familyName": "foaf:familyName",
+    "givenName": "foaf:givenName",
+    "name": "foaf:name",
+    "Person": "foaf:Person",
+
+    "sameAs": "owl:sameAs",
+    "date": {"@id": "http://purl.org/dc/terms/date", "@type": "http://www.w3.org/2001/XMLSchema#date"}
+},
+
+  "@type": {"@default": "ScholarlyArticle"},
+  "title": {},
+  "date": "2012-5-16",
+  "isPartOf": {
+    "@type": {"@default": "PublicationIssue"},
+    "issue": {},
+    "date": {},
+    "isPartOf": {
+    "@type": {"@default": ["Periodical", "PublicationVolume"]},
+      "volume": {},
+      "title": {},
+      "publisher": {}
+    }
+  },
+  "creator": [
+          {
+            "givenName": {},
+            "familyName": {},
+            "@explicit": true
+          }],
+  "startPage": {},
+  "endPage": {}
+}'
+
+jsonld_expand(frame)
+```
+
+```{r}
+jsonld::jsonld_from_rdf(readr::read_file("ex.nquads"))  %>% 
+  jsonld_expand() %>%
+  jsonld_frame(frame) 
 ```
 
