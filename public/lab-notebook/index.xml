@@ -6,10 +6,19 @@
     <description>Recent content in Lab Notebook on Boettiger Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Aug 2017 17:26:14 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 09 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/lab-notebook/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JSON-LD Vita exploration</title>
+      <link>/2017/12/09/json-ld-vita-exploration/</link>
+      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/09/json-ld-vita-exploration/</guid>
+      <description>Pure JSON vita &amp;lt;- readr::read_file(&amp;quot;../../static/js/vita.json&amp;quot;) jq(vita, &amp;#39;.&amp;quot;@reverse&amp;quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&amp;quot; &amp;quot;) }&amp;#39;) %&amp;gt;% combine() %&amp;gt;% fromJSON() ## year author ## 1 &amp;lt;NA&amp;gt; Getz ## 2 &amp;lt;NA&amp;gt; Marshall ## 3 &amp;lt;NA&amp;gt; Carlson ## 4 &amp;lt;NA&amp;gt; Giuggioli ## 5 &amp;lt;NA&amp;gt; Ryan ## 6 &amp;lt;NA&amp;gt; Romañach ## 7 &amp;lt;NA&amp;gt; Boettiger ## 8 &amp;lt;NA&amp;gt; Chamberlain ## 9 &amp;lt;NA&amp;gt; Larsen ## 10 &amp;lt;NA&amp;gt; D&amp;#39;Odorico ## 11 &amp;lt;NA&amp;gt; O&amp;#39;Sullivan ## 12 2017-3-15 Stephanie E.</description>
+    </item>
     
     <item>
       <title>Using travis-ci in research compendia and student repos</title>
