@@ -193,7 +193,6 @@
     "author": [
       {
         "@type": "ScholarlyArticle",
-        "@id": "#",
         "name": "Making ecological models adequate",
         "dateCreated": "2017-12-09",
         "isPartOf":{
@@ -207,57 +206,57 @@
         "author": [
           {
             "@type": "Person",
-            "@givenName": "Wayne M.",
+            "givenName": "Wayne M.",
             "familyName": "Getz"
           },
           {
             "@type": "Person",
-            "@givenName": "Charles R.",
+            "givenName": "Charles R.",
             "familyName": "Marshall"
           },
           {
             "@type": "Person",
-            "@givenName": "Colin J.",
+            "givenName": "Colin J.",
             "familyName": "Carlson"
           },
           {
             "@type": "Person",
-            "@givenName": "Luca",
+            "givenName": "Luca",
             "familyName": "Giuggioli"
           },
           {
             "@type": "Person",
-            "@givenName": "Sadie J.",
+            "givenName": "Sadie J.",
             "familyName": "Ryan"
           },
           {
             "@type": "Person",
-            "@givenName": "Stephanie S.",
+            "givenName": "Stephanie S.",
             "familyName": "Romañach"
           },
           {
             "@type": "Person",
-            "@givenName": "Carl",
+            "givenName": "Carl",
             "familyName": "Boettiger"
           },
           {
             "@type": "Person",
-            "@givenName": "Samuel D.",
+            "givenName": "Samuel D.",
             "familyName": "Chamberlain"
           },
           {
             "@type": "Person",
-            "@givenName": "Laurel",
+            "givenName": "Laurel",
             "familyName": "Larsen"
           },
           {
             "@type": "Person",
-            "@givenName": "Paolo",
+            "givenName": "Paolo",
             "familyName": "D'Odorico"
           },
           {
             "@type": "Person",
-            "@givenName": "David",
+            "givenName": "David",
             "familyName": "O'Sullivan"
           }]
       },
@@ -265,7 +264,7 @@
         "@type": "ScholarlyArticle",
         "@id": "https://doi.org/10.1093/biosci/bix025",
         "name": "Skills and Knowledge for Data-Intensive Environmental Research",
-        "dateCreated": "2017-3-15",
+        "dateCreated": "2017-03-15",
         "isPartOf":{
           "@type": "PublicationIssue",
           "datePublished": "2017-05-03",
