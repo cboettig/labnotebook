@@ -137,7 +137,9 @@
     <article>
     <h1>JSON-LD Vita exploration</h1> 
       
-    <div id="pure-json" class="section level2">
+    <div id="using-json-queries-jq" class="section level1">
+<h1>Using JSON Queries (JQ)</h1>
+<div id="pure-json" class="section level2">
 <h2>Pure JSON</h2>
 <pre class="r"><code>vita &lt;- readr::read_file(&quot;../../static/js/vita.json&quot;)
 
@@ -145,88 +147,334 @@ jq(vita, &#39;.&quot;@reverse&quot;.author[]  |
    { year: .dateCreated, 
      author: .author[] | [.givenName, .familyName]  | join(&quot; &quot;)
    }&#39;) %&gt;% combine() %&gt;% fromJSON()</code></pre>
-<pre><code>##          year                author
-## 1        &lt;NA&gt;                  Getz
-## 2        &lt;NA&gt;              Marshall
-## 3        &lt;NA&gt;               Carlson
-## 4        &lt;NA&gt;             Giuggioli
-## 5        &lt;NA&gt;                  Ryan
-## 6        &lt;NA&gt;              Romañach
-## 7        &lt;NA&gt;             Boettiger
-## 8        &lt;NA&gt;           Chamberlain
-## 9        &lt;NA&gt;                Larsen
-## 10       &lt;NA&gt;             D&#39;Odorico
-## 11       &lt;NA&gt;            O&#39;Sullivan
-## 12  2017-3-15  Stephanie E. Hampton
-## 13  2017-3-15      Matthew B. Jones
-## 14  2017-3-15        Leah A. Wasser
-## 15  2017-3-15   Mark P. Schildhauer
-## 16  2017-3-15         Sarah R. Supp
-## 17  2017-3-15           Julien Brun
-## 18  2017-3-15  Rebecca R. Hernandez
-## 19  2017-3-15        Carl Boettiger
-## 20  2017-3-15      Scott L. Collins
-## 21  2017-3-15        Louis J. Gross
-## 22  2017-3-15    Denny S. Fernández
-## 23  2017-3-15          Amber Budden
-## 24  2017-3-15        Ethan P. White
-## 25  2017-3-15         Tracy K. Teal
-## 26  2017-3-15    Stephanie G. Labou
-## 27  2017-3-15     Juliann E. Aukema
-## 28  2016-8-19       T. Alex Perkins
-## 29  2016-8-19        Carl Boettiger
-## 30  2016-8-19  Benjamin L. Phillips
-## 31   2016-5-6        Carl Boettiger
-## 32   2016-5-6          Michael Bode
-## 33   2016-5-6   James N. Sanchirico
-## 34   2016-5-6       Jacob LaRiviere
-## 35   2016-5-6         Alan Hastings
-## 36   2016-5-6     Paul R. Armsworth
-## 37 2015-11-16        Carl Boettiger
-## 38 2015-11-16     Scott Chamberlain
-## 39 2015-11-16             Ted Harte
-## 40 2015-11-16           Karthik Ram
-## 41   2015-9-3        Carl Boettiger
-## 42   2015-9-3     Scott Chamberlain
-## 43   2015-9-3            Rutger Vos
-## 44   2015-9-3           Hilmar Lapp
-## 45  2015-1-28        Carl Boettiger
-## 46   2015-1-7             Boettiger
-## 47   2015-1-7             M. Mangel
-## 48   2015-1-7              S. Munch
-## 49  2013-7-10             Boettiger
-## 50  2013-7-10         Alan Hastings
-## 51  2013-6-20        Carl Boettiger
-## 52  2013-6-20             Noam Ross
-## 53  2013-6-20         Alan Hastings
-## 54 2013-01-08             Boettiger
-## 55 2013-01-08         Alan Hastings
-## 56 2012-10-10             Boettiger
-## 57 2012-10-10         Alan Hastings
-## 58  2012-11-6             Boettiger
-## 59  2012-11-6            D. T. Lang
-## 60  2012-11-6      P. C. Wainwright
-## 61 2012-10-11        Carl Boettiger
-## 62 2012-10-11    Duncan Temple Lang
-## 63  2012-5-16                      
-## 64  2012-5-16         Alan Hastings
-## 65  2012-3-13    Jeremy M. Beaulieu
-## 66  2012-3-13 Dwueng-Chwuan Jhwueng
-## 67  2012-3-13                      
-## 68  2012-3-13      Brian C. O’Meara
-## 69  2012-2-19        Carl Boettiger
-## 70  2012-2-19           Graham Coop
-## 71  2012-2-19           Peter Ralph
-## 72 2009-10-19        Carl Boettiger
-## 73 2009-10-19      Jonathan Dushoff
-## 74 2009-10-19       Joshua S. Weitz
-## 75 2006-11-27         James J. Wray
-## 76 2006-11-27       Neta A. Bahcall
-## 77 2006-11-27             Paul Bode
-## 78 2006-11-27        Carl Boettiger
-## 79 2006-11-27     Philip F. Hopkins</code></pre>
-<div id="with-json-ld" class="section level3">
-<h3>With JSON-LD</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="left">author</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2017-12-09</td>
+<td align="left">Getz</td>
+</tr>
+<tr class="even">
+<td align="left">2017-12-09</td>
+<td align="left">Marshall</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-12-09</td>
+<td align="left">Carlson</td>
+</tr>
+<tr class="even">
+<td align="left">2017-12-09</td>
+<td align="left">Giuggioli</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-12-09</td>
+<td align="left">Ryan</td>
+</tr>
+<tr class="even">
+<td align="left">2017-12-09</td>
+<td align="left">Romañach</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-12-09</td>
+<td align="left">Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2017-12-09</td>
+<td align="left">Chamberlain</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-12-09</td>
+<td align="left">Larsen</td>
+</tr>
+<tr class="even">
+<td align="left">2017-12-09</td>
+<td align="left">D’Odorico</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-12-09</td>
+<td align="left">O’Sullivan</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Stephanie E. Hampton</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Matthew B. Jones</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Leah A. Wasser</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Mark P. Schildhauer</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Sarah R. Supp</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Julien Brun</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Rebecca R. Hernandez</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Scott L. Collins</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Louis J. Gross</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Denny S. Fernández</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Amber Budden</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Ethan P. White</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Tracy K. Teal</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Stephanie G. Labou</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Juliann E. Aukema</td>
+</tr>
+<tr class="even">
+<td align="left">2016-8-19</td>
+<td align="left">T. Alex Perkins</td>
+</tr>
+<tr class="odd">
+<td align="left">2016-8-19</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2016-8-19</td>
+<td align="left">Benjamin L. Phillips</td>
+</tr>
+<tr class="odd">
+<td align="left">2016-5-6</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2016-5-6</td>
+<td align="left">Michael Bode</td>
+</tr>
+<tr class="odd">
+<td align="left">2016-5-6</td>
+<td align="left">James N. Sanchirico</td>
+</tr>
+<tr class="even">
+<td align="left">2016-5-6</td>
+<td align="left">Jacob LaRiviere</td>
+</tr>
+<tr class="odd">
+<td align="left">2016-5-6</td>
+<td align="left">Alan Hastings</td>
+</tr>
+<tr class="even">
+<td align="left">2016-5-6</td>
+<td align="left">Paul R. Armsworth</td>
+</tr>
+<tr class="odd">
+<td align="left">2015-11-16</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2015-11-16</td>
+<td align="left">Scott Chamberlain</td>
+</tr>
+<tr class="odd">
+<td align="left">2015-11-16</td>
+<td align="left">Ted Harte</td>
+</tr>
+<tr class="even">
+<td align="left">2015-11-16</td>
+<td align="left">Karthik Ram</td>
+</tr>
+<tr class="odd">
+<td align="left">2015-9-3</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2015-9-3</td>
+<td align="left">Scott Chamberlain</td>
+</tr>
+<tr class="odd">
+<td align="left">2015-9-3</td>
+<td align="left">Rutger Vos</td>
+</tr>
+<tr class="even">
+<td align="left">2015-9-3</td>
+<td align="left">Hilmar Lapp</td>
+</tr>
+<tr class="odd">
+<td align="left">2015-1-28</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2015-1-7</td>
+<td align="left">Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2015-1-7</td>
+<td align="left">M. Mangel</td>
+</tr>
+<tr class="even">
+<td align="left">2015-1-7</td>
+<td align="left">S. Munch</td>
+</tr>
+<tr class="odd">
+<td align="left">2013-7-10</td>
+<td align="left">Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2013-7-10</td>
+<td align="left">Alan Hastings</td>
+</tr>
+<tr class="odd">
+<td align="left">2013-6-20</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2013-6-20</td>
+<td align="left">Noam Ross</td>
+</tr>
+<tr class="odd">
+<td align="left">2013-6-20</td>
+<td align="left">Alan Hastings</td>
+</tr>
+<tr class="even">
+<td align="left">2013-01-08</td>
+<td align="left">Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2013-01-08</td>
+<td align="left">Alan Hastings</td>
+</tr>
+<tr class="even">
+<td align="left">2012-10-10</td>
+<td align="left">Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-10-10</td>
+<td align="left">Alan Hastings</td>
+</tr>
+<tr class="even">
+<td align="left">2012-11-6</td>
+<td align="left">Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-11-6</td>
+<td align="left">D. T. Lang</td>
+</tr>
+<tr class="even">
+<td align="left">2012-11-6</td>
+<td align="left">P. C. Wainwright</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-10-11</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2012-10-11</td>
+<td align="left">Duncan Temple Lang</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-5-16</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">2012-5-16</td>
+<td align="left">Alan Hastings</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-3-13</td>
+<td align="left">Jeremy M. Beaulieu</td>
+</tr>
+<tr class="even">
+<td align="left">2012-3-13</td>
+<td align="left">Dwueng-Chwuan Jhwueng</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-3-13</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">2012-3-13</td>
+<td align="left">Brian C. O’Meara</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-2-19</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2012-2-19</td>
+<td align="left">Graham Coop</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-2-19</td>
+<td align="left">Peter Ralph</td>
+</tr>
+<tr class="even">
+<td align="left">2009-10-19</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2009-10-19</td>
+<td align="left">Jonathan Dushoff</td>
+</tr>
+<tr class="even">
+<td align="left">2009-10-19</td>
+<td align="left">Joshua S. Weitz</td>
+</tr>
+<tr class="odd">
+<td align="left">2006-11-27</td>
+<td align="left">James J. Wray</td>
+</tr>
+<tr class="even">
+<td align="left">2006-11-27</td>
+<td align="left">Neta A. Bahcall</td>
+</tr>
+<tr class="odd">
+<td align="left">2006-11-27</td>
+<td align="left">Paul Bode</td>
+</tr>
+<tr class="even">
+<td align="left">2006-11-27</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2006-11-27</td>
+<td align="left">Philip F. Hopkins</td>
+</tr>
+</tbody>
+</table>
+<div id="with-json-ld-frame" class="section level3">
+<h3>With JSON-LD frame</h3>
 <p>By first constructing a frame, we can get back a subset of the data we are interested in. This is not as powerful as a graph query, but still has aspects of schema-on-read.</p>
 <pre class="r"><code>frame &lt;-
 &#39;{
@@ -249,378 +497,415 @@ vita &lt;- jsonld::jsonld_frame(&quot;../../static/js/vita.json&quot;, frame)</c
      year: .dateCreated, 
      author: .author[] | [.givenName, .familyName] | join(&quot; &quot;)    
      }&#39;) %&gt;% combine() %&gt;% fromJSON()</code></pre>
-<pre><code>##          year                author
-## 1        &lt;NA&gt;                  Getz
-## 2        &lt;NA&gt;              Marshall
-## 3        &lt;NA&gt;               Carlson
-## 4        &lt;NA&gt;             Giuggioli
-## 5        &lt;NA&gt;                  Ryan
-## 6        &lt;NA&gt;              Romañach
-## 7        &lt;NA&gt;             Boettiger
-## 8        &lt;NA&gt;           Chamberlain
-## 9        &lt;NA&gt;                Larsen
-## 10       &lt;NA&gt;             D&#39;Odorico
-## 11       &lt;NA&gt;            O&#39;Sullivan
-## 12       &lt;NA&gt;        Carl Boettiger
-## 13  2016-8-19       T. Alex Perkins
-## 14  2016-8-19        Carl Boettiger
-## 15  2016-8-19  Benjamin L. Phillips
-## 16  2013-6-20        Carl Boettiger
-## 17  2013-6-20             Noam Ross
-## 18  2013-6-20         Alan Hastings
-## 19 2009-10-19        Carl Boettiger
-## 20 2009-10-19      Jonathan Dushoff
-## 21 2009-10-19       Joshua S. Weitz
-## 22 2013-01-08        Carl Boettiger
-## 23 2013-01-08         Alan Hastings
-## 24 2006-11-27         James J. Wray
-## 25 2006-11-27       Neta A. Bahcall
-## 26 2006-11-27             Paul Bode
-## 27 2006-11-27        Carl Boettiger
-## 28 2006-11-27     Philip F. Hopkins
-## 29  2017-3-15  Stephanie E. Hampton
-## 30  2017-3-15      Matthew B. Jones
-## 31  2017-3-15        Leah A. Wasser
-## 32  2017-3-15   Mark P. Schildhauer
-## 33  2017-3-15         Sarah R. Supp
-## 34  2017-3-15           Julien Brun
-## 35  2017-3-15  Rebecca R. Hernandez
-## 36  2017-3-15        Carl Boettiger
-## 37  2017-3-15      Scott L. Collins
-## 38  2017-3-15        Louis J. Gross
-## 39  2017-3-15    Denny S. Fernández
-## 40  2017-3-15          Amber Budden
-## 41  2017-3-15        Ethan P. White
-## 42  2017-3-15         Tracy K. Teal
-## 43  2017-3-15    Stephanie G. Labou
-## 44  2017-3-15     Juliann E. Aukema
-## 45  2012-5-16        Carl Boettiger
-## 46  2012-5-16         Alan Hastings
-## 47 2012-10-10        Carl Boettiger
-## 48 2012-10-10         Alan Hastings
-## 49  2013-7-10        Carl Boettiger
-## 50  2013-7-10         Alan Hastings
-## 51   2015-1-7        Carl Boettiger
-## 52   2015-1-7             M. Mangel
-## 53   2015-1-7              S. Munch
-## 54   2015-9-3        Carl Boettiger
-## 55   2015-9-3     Scott Chamberlain
-## 56   2015-9-3            Rutger Vos
-## 57   2015-9-3           Hilmar Lapp
-## 58  2012-11-6        Carl Boettiger
-## 59  2012-11-6            D. T. Lang
-## 60  2012-11-6      P. C. Wainwright
-## 61  2012-2-19        Carl Boettiger
-## 62  2012-2-19           Graham Coop
-## 63  2012-2-19           Peter Ralph
-## 64  2012-3-13    Jeremy M. Beaulieu
-## 65  2012-3-13 Dwueng-Chwuan Jhwueng
-## 66  2012-3-13        Carl Boettiger
-## 67  2012-3-13      Brian C. O’Meara
-## 68 2012-10-11        Carl Boettiger
-## 69 2012-10-11    Duncan Temple Lang</code></pre>
-<pre class="r"><code>library(&quot;httr&quot;)
-library(&quot;xml2&quot;)
-doi &lt;- &quot;http://dx.doi.org/10.1002/ece3.2314&quot;
-csl &lt;-
-  httr::content(
-    httr::GET(doi, httr::add_headers(Accept=&quot;application/rdf+xml&quot;)),
-    as = &quot;parsed&quot;, type = &quot;application/xml&quot;)</code></pre>
-<pre><code>## No encoding supplied: defaulting to UTF-8.</code></pre>
-<pre class="r"><code>xml2::write_xml(csl, &quot;ex.xml&quot;)
-
-library(rdflib)
-rdf_parse(&quot;ex.xml&quot;, &quot;rdfxml&quot;) %&gt;% rdf_serialize(&quot;ex.nquads&quot;, &quot;nquads&quot;)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="left">author</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2017-12-09</td>
+<td align="left">Getz</td>
+</tr>
+<tr class="even">
+<td align="left">2017-12-09</td>
+<td align="left">Marshall</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-12-09</td>
+<td align="left">Carlson</td>
+</tr>
+<tr class="even">
+<td align="left">2017-12-09</td>
+<td align="left">Giuggioli</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-12-09</td>
+<td align="left">Ryan</td>
+</tr>
+<tr class="even">
+<td align="left">2017-12-09</td>
+<td align="left">Romañach</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-12-09</td>
+<td align="left">Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2017-12-09</td>
+<td align="left">Chamberlain</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-12-09</td>
+<td align="left">Larsen</td>
+</tr>
+<tr class="even">
+<td align="left">2017-12-09</td>
+<td align="left">D’Odorico</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-12-09</td>
+<td align="left">O’Sullivan</td>
+</tr>
+<tr class="even">
+<td align="left">2017-12-09</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2016-8-19</td>
+<td align="left">T. Alex Perkins</td>
+</tr>
+<tr class="even">
+<td align="left">2016-8-19</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2016-8-19</td>
+<td align="left">Benjamin L. Phillips</td>
+</tr>
+<tr class="even">
+<td align="left">2013-6-20</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2013-6-20</td>
+<td align="left">Noam Ross</td>
+</tr>
+<tr class="even">
+<td align="left">2013-6-20</td>
+<td align="left">Alan Hastings</td>
+</tr>
+<tr class="odd">
+<td align="left">2009-10-19</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2009-10-19</td>
+<td align="left">Jonathan Dushoff</td>
+</tr>
+<tr class="odd">
+<td align="left">2009-10-19</td>
+<td align="left">Joshua S. Weitz</td>
+</tr>
+<tr class="even">
+<td align="left">2013-01-08</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2013-01-08</td>
+<td align="left">Alan Hastings</td>
+</tr>
+<tr class="even">
+<td align="left">2006-11-27</td>
+<td align="left">James J. Wray</td>
+</tr>
+<tr class="odd">
+<td align="left">2006-11-27</td>
+<td align="left">Neta A. Bahcall</td>
+</tr>
+<tr class="even">
+<td align="left">2006-11-27</td>
+<td align="left">Paul Bode</td>
+</tr>
+<tr class="odd">
+<td align="left">2006-11-27</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2006-11-27</td>
+<td align="left">Philip F. Hopkins</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Stephanie E. Hampton</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Matthew B. Jones</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Leah A. Wasser</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Mark P. Schildhauer</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Sarah R. Supp</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Julien Brun</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Rebecca R. Hernandez</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Scott L. Collins</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Louis J. Gross</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Denny S. Fernández</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Amber Budden</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Ethan P. White</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Tracy K. Teal</td>
+</tr>
+<tr class="odd">
+<td align="left">2017-3-15</td>
+<td align="left">Stephanie G. Labou</td>
+</tr>
+<tr class="even">
+<td align="left">2017-3-15</td>
+<td align="left">Juliann E. Aukema</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-5-16</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2012-5-16</td>
+<td align="left">Alan Hastings</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-10-10</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2012-10-10</td>
+<td align="left">Alan Hastings</td>
+</tr>
+<tr class="odd">
+<td align="left">2013-7-10</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2013-7-10</td>
+<td align="left">Alan Hastings</td>
+</tr>
+<tr class="odd">
+<td align="left">2015-1-7</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2015-1-7</td>
+<td align="left">M. Mangel</td>
+</tr>
+<tr class="odd">
+<td align="left">2015-1-7</td>
+<td align="left">S. Munch</td>
+</tr>
+<tr class="even">
+<td align="left">2015-9-3</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2015-9-3</td>
+<td align="left">Scott Chamberlain</td>
+</tr>
+<tr class="even">
+<td align="left">2015-9-3</td>
+<td align="left">Rutger Vos</td>
+</tr>
+<tr class="odd">
+<td align="left">2015-9-3</td>
+<td align="left">Hilmar Lapp</td>
+</tr>
+<tr class="even">
+<td align="left">2012-11-6</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-11-6</td>
+<td align="left">D. T. Lang</td>
+</tr>
+<tr class="even">
+<td align="left">2012-11-6</td>
+<td align="left">P. C. Wainwright</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-2-19</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="even">
+<td align="left">2012-2-19</td>
+<td align="left">Graham Coop</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-2-19</td>
+<td align="left">Peter Ralph</td>
+</tr>
+<tr class="even">
+<td align="left">2012-3-13</td>
+<td align="left">Jeremy M. Beaulieu</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-3-13</td>
+<td align="left">Dwueng-Chwuan Jhwueng</td>
+</tr>
+<tr class="even">
+<td align="left">2012-3-13</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-3-13</td>
+<td align="left">Brian C. O’Meara</td>
+</tr>
+<tr class="even">
+<td align="left">2012-10-11</td>
+<td align="left">Carl Boettiger</td>
+</tr>
+<tr class="odd">
+<td align="left">2012-10-11</td>
+<td align="left">Duncan Temple Lang</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="sparql-and-rdf" class="section level1">
+<h1>SPARQL and RDF</h1>
+<p>A simple example</p>
+<pre class="r"><code>&quot;http://dx.doi.org/10.1002/ece3.2314&quot; %&gt;%
+  httr::GET(httr::add_headers(Accept=&quot;application/rdf+xml&quot;)) %&gt;%
+  httr::content(as = &quot;parsed&quot;, type = &quot;application/xml&quot;) %&gt;%
+  xml2::write_xml(&quot;ex.xml&quot;)</code></pre>
+<p>Our <code>rdflib</code> functions perform the simple task of parsing this <code>rdfxml</code> file into R (as a <code>redland</code> <code>rdf</code> class object) and then writing it back out in <code>jsonld</code> serialization:</p>
+<pre class="r"><code>rdf_parse(&quot;ex.xml&quot;, &quot;rdfxml&quot;) %&gt;% 
+  rdf_serialize(&quot;ex.json&quot;, &quot;jsonld&quot;)</code></pre>
+<p>and we now have JSON file. We can clean this file up a bit by replacing the long URIs with short prefixes by “compacting” the file into a specific JSON-LD context. FOAF, OWL, and Dublin Core are all recognized by schema.org, so we need not declare them at all here. PRISM and BIBO ontologies are not, so we simply declare them as additional prefixes:</p>
 <pre class="r"><code>context &lt;- 
-&#39;{
+&#39;{ &quot;@context&quot;: [
+    &quot;http://schema.org&quot;,
+  {
+    &quot;prism&quot;: &quot;http://prismstandard.org/namespaces/basic/2.1/&quot;,
+    &quot;bibo&quot;: &quot;http://purl.org/ontology/bibo/&quot;
+  }]
+}&#39;
+json &lt;- jsonld_compact(&quot;ex.json&quot;, context)</code></pre>
+<div id="switching-contexts-and-framing" class="section level2">
+<h2>Switching contexts and framing</h2>
+<pre class="r"><code>context &lt;- 
+ &#39;{
     &quot;prism&quot;: &quot;http://prismstandard.org/namespaces/basic/2.1/&quot;,
     &quot;dc&quot;: &quot;http://purl.org/dc/terms/&quot;,
     &quot;bibo&quot;: &quot;http://purl.org/ontology/bibo/&quot;,
     &quot;foaf&quot;: &quot;http://xmlns.com/foaf/0.1/&quot;,
     &quot;owl&quot;: &quot;http://www.w3.org/2002/07/owl#&quot;,
+    &quot;schema&quot;: &quot;http://schema.org/&quot;,
 
-    &quot;startingPage&quot;: &quot;prism:startingPage&quot;,
-    &quot;endingPage&quot;: &quot;prism:endingPage&quot;,
-    &quot;doi&quot;: &quot;prism:doi&quot;, 
-    &quot;issn&quot;: &quot;prism:issn&quot;,
+    &quot;schema:pageStart&quot;: &quot;prism:startingPage&quot;, 
+    &quot;schema:pageEnd&quot;: &quot;prism:endingPage&quot;,
+    &quot;schema:volumeNumber&quot;: &quot;prism:volume&quot;,
+    &quot;schema:identifier&quot;: {&quot;@id&quot;: &quot;prism:issn&quot;, &quot;@type&quot;: &quot;@id&quot;},
 
-    &quot;issn&quot;: &quot;bibo:issn&quot;,
-    &quot;doi&quot;: &quot;bibo:doi&quot;,
+    &quot;schema:Periodical&quot;: &quot;bibo:Journal&quot;,
 
-    &quot;Journal&quot;: &quot;bibo:Journal&quot;,
-    &quot;pageStart&quot;: &quot;bibo:pageStart&quot;,
-    &quot;pageEnd&quot;: &quot;bibo:pageEnd&quot;,
-    &quot;volume&quot;: &quot;bibo:volume&quot;,
+    &quot;schema:author&quot;: &quot;dc:creator&quot;,
+    &quot;schema:isPartOf&quot;: &quot;dc:isPartOf&quot;,
+    &quot;schema:publisher&quot;: &quot;dc:publisher&quot;,
+    &quot;schema:name&quot;: &quot;dc:title&quot;,
 
-    &quot;creator&quot;: &quot;dc:creator&quot;,
-    &quot;identifier&quot;: &quot;dc:identifier&quot;,
-    &quot;isPartOf&quot;: &quot;dc:isPartOf&quot;,
-    &quot;publisher&quot;: &quot;dc:publisher&quot;,
-    &quot;title&quot;: &quot;dc:title&quot;,
+    &quot;schema:familyName&quot;: &quot;foaf:familyName&quot;,
+    &quot;schema:givenName&quot;: &quot;foaf:givenName&quot;,
+    &quot;schema:Person&quot;: &quot;foaf:Person&quot;,
 
-    &quot;familyName&quot;: &quot;foaf:familyName&quot;,
-    &quot;givenName&quot;: &quot;foaf:givenName&quot;,
-    &quot;name&quot;: &quot;foaf:name&quot;,
-    &quot;Person&quot;: &quot;foaf:Person&quot;,
+    &quot;schema:sameAs&quot;: {&quot;@id&quot;: &quot;owl:sameAs&quot;, &quot;@type&quot;: &quot;@id&quot;},
+    &quot;schema:Date&quot;: &quot;xsd:date&quot;,
+    &quot;schema:datePublished&quot;: {&quot;@id&quot;: &quot;http://purl.org/dc/terms/date&quot;, &quot;@type&quot;: &quot;schema:Date&quot;}
+}&#39;</code></pre>
+<p>Compact raw JSON into this context</p>
+<pre class="r"><code>jsonld_compact(&quot;ex.json&quot;, context) %&gt;% 
+  fromJSON(simplifyVector = FALSE) -&gt; X</code></pre>
+<p>Now replace that context with schema.org context, a bit of a hack</p>
+<pre class="r"><code>X[[&quot;@context&quot;]] &lt;- &quot;http://schema.org&quot;
+X %&gt;% 
+  toJSON(auto_unbox = TRUE, pretty = TRUE) %&gt;% 
+  jsonld_compact(&quot;http://schema.org&quot;) -&gt; Y</code></pre>
+<p>Now frame our desired results to explicitly include only the elements we request, giving the graph in the desired tree structure:</p>
+<pre class="r"><code>frame &lt;- 
+&#39;{&quot;@context&quot;: &quot;http://schema.org&quot;,
+ &quot;@graph&quot;: {
+   &quot;id&quot;: {},
+   &quot;name&quot;: {},
+   &quot;pageStart&quot;: {},
+    &quot;pageEnd&quot;: {},
+    &quot;isPartOf&quot;: {
+      &quot;name&quot;: {},
+      &quot;identifier&quot;: {},
+      &quot;@explicit&quot;: true
+    },
+    &quot;author&quot;: [
+            {
+              &quot;givenName&quot;: {},
+              &quot;familyName&quot;: {},
+              &quot;@explicit&quot;: true
+            }],
+   &quot;@explicit&quot;: true
+ }
+}&#39;
 
-    &quot;sameAs&quot;: &quot;owl:sameAs&quot;,
-    &quot;date&quot;: {&quot;@id&quot;: &quot;http://purl.org/dc/terms/date&quot;, &quot;@type&quot;: &quot;http://www.w3.org/2001/XMLSchema#date&quot;}
-}
-&#39;</code></pre>
-<pre class="r"><code>jsonld::jsonld_from_rdf(readr::read_file(&quot;ex.nquads&quot;))  %&gt;% 
-  jsonld_compact(context) </code></pre>
+jsonld_frame(Y, frame)</code></pre>
 <pre><code>## {
-##   &quot;@context&quot;: {
-##     &quot;prism&quot;: &quot;http://prismstandard.org/namespaces/basic/2.1/&quot;,
-##     &quot;dc&quot;: &quot;http://purl.org/dc/terms/&quot;,
-##     &quot;bibo&quot;: &quot;http://purl.org/ontology/bibo/&quot;,
-##     &quot;foaf&quot;: &quot;http://xmlns.com/foaf/0.1/&quot;,
-##     &quot;owl&quot;: &quot;http://www.w3.org/2002/07/owl#&quot;,
-##     &quot;startingPage&quot;: &quot;prism:startingPage&quot;,
-##     &quot;endingPage&quot;: &quot;prism:endingPage&quot;,
-##     &quot;doi&quot;: &quot;bibo:doi&quot;,
-##     &quot;issn&quot;: &quot;bibo:issn&quot;,
-##     &quot;Journal&quot;: &quot;bibo:Journal&quot;,
-##     &quot;pageStart&quot;: &quot;bibo:pageStart&quot;,
-##     &quot;pageEnd&quot;: &quot;bibo:pageEnd&quot;,
-##     &quot;volume&quot;: &quot;bibo:volume&quot;,
-##     &quot;creator&quot;: &quot;dc:creator&quot;,
-##     &quot;identifier&quot;: &quot;dc:identifier&quot;,
-##     &quot;isPartOf&quot;: &quot;dc:isPartOf&quot;,
-##     &quot;publisher&quot;: &quot;dc:publisher&quot;,
-##     &quot;title&quot;: &quot;dc:title&quot;,
-##     &quot;familyName&quot;: &quot;foaf:familyName&quot;,
-##     &quot;givenName&quot;: &quot;foaf:givenName&quot;,
-##     &quot;name&quot;: &quot;foaf:name&quot;,
-##     &quot;Person&quot;: &quot;foaf:Person&quot;,
-##     &quot;sameAs&quot;: &quot;owl:sameAs&quot;,
-##     &quot;date&quot;: {
-##       &quot;@id&quot;: &quot;http://purl.org/dc/terms/date&quot;,
-##       &quot;@type&quot;: &quot;http://www.w3.org/2001/XMLSchema#date&quot;
-##     }
-##   },
+##   &quot;@context&quot;: &quot;http://schema.org&quot;,
 ##   &quot;@graph&quot;: [
 ##     {
-##       &quot;@id&quot;: &quot;http://dx.doi.org/10.1002/ece3.2314&quot;,
-##       &quot;prism:doi&quot;: &quot;10.1002/ece3.2314&quot;,
-##       &quot;endingPage&quot;: &quot;6434&quot;,
-##       &quot;startingPage&quot;: &quot;6425&quot;,
-##       &quot;prism:volume&quot;: &quot;6&quot;,
-##       &quot;creator&quot;: [
+##       &quot;id&quot;: &quot;http://dx.doi.org/10.1002/ece3.2314&quot;,
+##       &quot;author&quot;: [
 ##         {
-##           &quot;@id&quot;: &quot;http://id.crossref.org/contributor/carl-boettiger-2etprmps2zm1a&quot;
+##           &quot;id&quot;: &quot;http://id.crossref.org/contributor/carl-boettiger-2etprmps2zm1a&quot;,
+##           &quot;type&quot;: &quot;Person&quot;,
+##           &quot;familyName&quot;: &quot;Boettiger&quot;,
+##           &quot;givenName&quot;: &quot;Carl&quot;
 ##         },
 ##         {
-##           &quot;@id&quot;: &quot;http://id.crossref.org/contributor/t-alex-perkins-2etprmps2zm1a&quot;
+##           &quot;id&quot;: &quot;http://id.crossref.org/contributor/t-alex-perkins-2etprmps2zm1a&quot;,
+##           &quot;type&quot;: &quot;Person&quot;,
+##           &quot;familyName&quot;: &quot;Perkins&quot;,
+##           &quot;givenName&quot;: &quot;T. Alex&quot;
 ##         },
 ##         {
-##           &quot;@id&quot;: &quot;http://id.crossref.org/contributor/benjamin-l-phillips-2etprmps2zm1a&quot;
+##           &quot;id&quot;: &quot;http://id.crossref.org/contributor/benjamin-l-phillips-2etprmps2zm1a&quot;,
+##           &quot;type&quot;: &quot;Person&quot;,
+##           &quot;familyName&quot;: &quot;Phillips&quot;,
+##           &quot;givenName&quot;: &quot;Benjamin L.&quot;
 ##         }
 ##       ],
-##       &quot;date&quot;: &quot;2016-08-18&quot;,
-##       &quot;identifier&quot;: &quot;10.1002/ece3.2314&quot;,
-##       &quot;isPartOf&quot;: {
-##         &quot;@id&quot;: &quot;http://id.crossref.org/issn/2045-7758&quot;
-##       },
-##       &quot;publisher&quot;: &quot;Wiley-Blackwell&quot;,
-##       &quot;title&quot;: &quot;After the games are over: life-history trade-offs drive dispersal attenuation following range expansion&quot;,
-##       &quot;doi&quot;: &quot;10.1002/ece3.2314&quot;,
+##       &quot;isPartOf&quot;: null,
+##       &quot;name&quot;: &quot;After the games are over: life-history trade-offs drive dispersal attenuation following range expansion&quot;,
 ##       &quot;pageEnd&quot;: &quot;6434&quot;,
-##       &quot;pageStart&quot;: &quot;6425&quot;,
-##       &quot;volume&quot;: &quot;6&quot;,
-##       &quot;sameAs&quot;: [
-##         {
-##           &quot;@id&quot;: &quot;doi:10.1002/ece3.2314&quot;
-##         },
-##         {
-##           &quot;@id&quot;: &quot;info:doi/10.1002/ece3.2314&quot;
-##         }
-##       ]
-##     },
-##     {
-##       &quot;@id&quot;: &quot;http://id.crossref.org/contributor/benjamin-l-phillips-2etprmps2zm1a&quot;,
-##       &quot;@type&quot;: &quot;Person&quot;,
-##       &quot;familyName&quot;: &quot;Phillips&quot;,
-##       &quot;givenName&quot;: &quot;Benjamin L.&quot;,
-##       &quot;name&quot;: &quot;Benjamin L. Phillips&quot;
-##     },
-##     {
-##       &quot;@id&quot;: &quot;http://id.crossref.org/contributor/carl-boettiger-2etprmps2zm1a&quot;,
-##       &quot;@type&quot;: &quot;Person&quot;,
-##       &quot;familyName&quot;: &quot;Boettiger&quot;,
-##       &quot;givenName&quot;: &quot;Carl&quot;,
-##       &quot;name&quot;: &quot;Carl Boettiger&quot;
-##     },
-##     {
-##       &quot;@id&quot;: &quot;http://id.crossref.org/contributor/t-alex-perkins-2etprmps2zm1a&quot;,
-##       &quot;@type&quot;: &quot;Person&quot;,
-##       &quot;familyName&quot;: &quot;Perkins&quot;,
-##       &quot;givenName&quot;: &quot;T. Alex&quot;,
-##       &quot;name&quot;: &quot;T. Alex Perkins&quot;
-##     },
-##     {
-##       &quot;@id&quot;: &quot;http://id.crossref.org/issn/2045-7758&quot;,
-##       &quot;@type&quot;: &quot;Journal&quot;,
-##       &quot;prism:issn&quot;: &quot;2045-7758&quot;,
-##       &quot;title&quot;: &quot;Ecology and Evolution&quot;,
-##       &quot;issn&quot;: &quot;2045-7758&quot;,
-##       &quot;sameAs&quot;: &quot;urn:issn:2045-7758&quot;
+##       &quot;pageStart&quot;: &quot;6425&quot;
 ##     }
 ##   ]
 ## }</code></pre>
-<pre class="r"><code>frame &lt;- 
-&#39;{
-
-&quot;@context&quot;: {
-    &quot;prism&quot;: &quot;http://prismstandard.org/namespaces/basic/2.1/&quot;,
-    &quot;dc&quot;: &quot;http://purl.org/dc/terms/&quot;,
-    &quot;bibo&quot;: &quot;http://purl.org/ontology/bibo/&quot;,
-    &quot;foaf&quot;: &quot;http://xmlns.com/foaf/0.1/&quot;,
-    &quot;owl&quot;: &quot;http://www.w3.org/2002/07/owl#&quot;,
-
-    &quot;startingPage&quot;: &quot;prism:startingPage&quot;,
-    &quot;endingPage&quot;: &quot;prism:endingPage&quot;,
-    &quot;bibo:doi&quot;: &quot;prism:doi&quot;, 
-    &quot;bibo:issn&quot;: &quot;prism:issn&quot;,
-
-    &quot;issn&quot;: &quot;bibo:issn&quot;,
-    &quot;doi&quot;: &quot;bibo:doi&quot;,
-
-    &quot;Journal&quot;: &quot;bibo:Journal&quot;,
-    &quot;pageStart&quot;: &quot;bibo:pageStart&quot;,
-    &quot;pageEnd&quot;: &quot;bibo:pageEnd&quot;,
-    &quot;volume&quot;: &quot;bibo:volume&quot;,
-
-    &quot;creator&quot;: &quot;dc:creator&quot;,
-    &quot;identifier&quot;: &quot;dc:identifier&quot;,
-    &quot;isPartOf&quot;: &quot;dc:isPartOf&quot;,
-    &quot;publisher&quot;: &quot;dc:publisher&quot;,
-    &quot;title&quot;: &quot;dc:title&quot;,
-
-    &quot;familyName&quot;: &quot;foaf:familyName&quot;,
-    &quot;givenName&quot;: &quot;foaf:givenName&quot;,
-    &quot;name&quot;: &quot;foaf:name&quot;,
-    &quot;Person&quot;: &quot;foaf:Person&quot;,
-
-    &quot;sameAs&quot;: &quot;owl:sameAs&quot;,
-    &quot;date&quot;: {&quot;@id&quot;: &quot;http://purl.org/dc/terms/date&quot;, &quot;@type&quot;: &quot;http://www.w3.org/2001/XMLSchema#date&quot;}
-},
-  &quot;@embed&quot;: &quot;@always&quot;,
-  &quot;title&quot;: {},
-  &quot;date&quot;: &quot;2012-5-16&quot;,
-  &quot;pageStart&quot;: {},
-  &quot;pageEnd&quot;: {},
-  &quot;isPartOf&quot;: {
-    &quot;@type&quot;: &quot;Journal&quot;,
-    &quot;title&quot;: {},
-    &quot;issn&quot;: {}
-  },
-  &quot;creator&quot;: [
-          {
-            &quot;givenName&quot;: {},
-            &quot;familyName&quot;: {},
-            &quot;@explicit&quot;: true
-          }],
-  &quot;@explicit&quot;: true
-}&#39;
-
-testme &lt;- jsonld_expand(frame)</code></pre>
-<p>Note that the RDF has different semantic models than schema.org: for instance, <code>volume</code> is a property of the scholarly article (well, it’s untyped in the RDF, but it’s a property of the object described by the article DOI), while in schema.org, <code>volumeNumber</code> is a property of a <code>Periodical</code> (or <code>PublicationVolume</code>), which <code>hasPart</code>s made up of <code>PublicationIssue</code> objects, themselves <code>hasPart</code>s made up of <code>ScholarlyArticle</code>s. The whole purpose of JSON-LD functions are to respect semantics, therefore there is no way we can use JSON-LD operations to alter these semantics. For instance, if we use <code>@explict: true</code> in our frame, we lose these terms.</p>
-<pre class="r"><code>jsonld::jsonld_from_rdf(readr::read_file(&quot;ex.nquads&quot;))  %&gt;% 
-  jsonld_frame(frame) %&gt;% 
-  fromJSON(simplifyVector = FALSE) %&gt;% getElement(&quot;@graph&quot;) %&gt;% yaml::as.yaml() %&gt;% cat()</code></pre>
-<pre><code>## - &#39;@id&#39;: http://dx.doi.org/10.1002/ece3.2314
-##   creator:
-##   - &#39;@id&#39;: http://id.crossref.org/contributor/carl-boettiger-2etprmps2zm1a
-##     &#39;@type&#39;: Person
-##     familyName: Boettiger
-##     givenName: Carl
-##   - &#39;@id&#39;: http://id.crossref.org/contributor/t-alex-perkins-2etprmps2zm1a
-##     &#39;@type&#39;: Person
-##     familyName: Perkins
-##     givenName: T. Alex
-##   - &#39;@id&#39;: http://id.crossref.org/contributor/benjamin-l-phillips-2etprmps2zm1a
-##     &#39;@type&#39;: Person
-##     familyName: Phillips
-##     givenName: Benjamin L.
-##   date: &#39;2016-08-18&#39;
-##   isPartOf:
-##     &#39;@id&#39;: http://id.crossref.org/issn/2045-7758
-##     &#39;@type&#39;: Journal
-##     issn: 2045-7758
-##     title: Ecology and Evolution
-##     http://purl.org/ontology/bibo/issn: 2045-7758
-##     sameAs: urn:issn:2045-7758
-##   title: &#39;After the games are over: life-history trade-offs drive dispersal attenuation
-##     following range expansion&#39;
-##   pageEnd: &#39;6434&#39;
-##   pageStart: &#39;6425&#39;</code></pre>
+<p>Note that the RDF has different semantic models than schema.org: for instance, <code>volume</code> is a property of the scholarly article (well, it’s untyped in the RDF, but it’s a property of the object described by the article DOI), while in schema.org, <code>volumeNumber</code> is a property of a <code>Periodical</code> (or <code>PublicationVolume</code>), which <code>hasPart</code>s made up of <code>PublicationIssue</code> objects, themselves <code>hasPart</code>s made up of <code>ScholarlyArticle</code>s. The whole purpose of JSON-LD functions are to respect semantics, therefore there is no way we can use JSON-LD operations to alter these semantics.</p>
 <p>As long as we aren’t changing the object structures though, we can change the vocabulary. This is really also something of a hack: we compact the original data, and then just chop off the <code>@context</code> and provide our own <code>@context</code> that gives schema.org definitions to the terms.</p>
 <p>JSON-LD is commonly used to change key names, but this assumes that both contexts can be defined relative to the same URIs. e.g. we can say that in the context of Dublin Core, implicitly <code>&quot;title&quot;: &quot;http://schema.org/name&quot;, or explicitly:</code>“<a href="https://purl.org/dc/title" class="uri">https://purl.org/dc/title</a>”: “<a href="http://schema.org/name" class="uri">http://schema.org/name</a>”`.</p>
 <p>Perhaps this ought instead to be done with an ontological operation and the assertion of <code>sameAs</code> and similar relationships. Perhaps that would also permit moving between these different levels?</p>
 <p>Note that items with specific types must be declared as such to match types expected in schema.org. Others can be captured as schema.org terms just by setting the default <code>@vocab</code>.</p>
-<pre class="r"><code>## fixme use full URIs on LHS too.  
-schema_context &lt;-
-&#39;{
-&quot;@vocab&quot;: &quot;http://schema.org/&quot;,
-&quot;schema&quot;: &quot;http://schema.org/&quot;,
-&quot;title&quot;: &quot;schema:name&quot;,
-&quot;date&quot;: {&quot;@id&quot;: &quot;schema:datePublished&quot;, &quot;@type&quot;: &quot;schema:Date&quot;},
-&quot;creator&quot;: &quot;schema:author&quot;,
-&quot;volume&quot;: &quot;schema:volumeNumber&quot;,
-&quot;issue&quot;: &quot;schema:issueNumber&quot;,
-&quot;doi&quot;: {&quot;@id&quot;: &quot;schema:identifier&quot;, &quot;@type&quot;: &quot;@id&quot; },
-&quot;issn&quot;: {&quot;@id&quot;: &quot;schema:identifier&quot;, &quot;@type&quot;: &quot;@id&quot; },
-&quot;prism:issn&quot;: {&quot;@id&quot;: &quot;schema:identifier&quot;, &quot;@type&quot;: &quot;@id&quot; },
-&quot;sameAs&quot;: {&quot;@id&quot;: &quot;schema:sameAs&quot;, &quot;@type&quot;: &quot;@id&quot; },
-&quot;prism:doi&quot;: &quot;schema:identifier&quot;
-
-}&#39;</code></pre>
-<pre class="r"><code>jsonld::jsonld_from_rdf(readr::read_file(&quot;ex.nquads&quot;))  %&gt;% 
-  jsonld_frame(frame) %&gt;% 
-  fromJSON(simplifyVector = FALSE) -&gt; X
-
-X[[&quot;@context&quot;]] &lt;- fromJSON(schema_context)
-
-toJSON(X, auto_unbox = TRUE, pretty = TRUE) %&gt;%
-  jsonld_compact(&quot;http://schema.org&quot;)</code></pre>
-<pre><code>## {
-##   &quot;@context&quot;: &quot;http://schema.org&quot;,
-##   &quot;id&quot;: &quot;http://dx.doi.org/10.1002/ece3.2314&quot;,
-##   &quot;author&quot;: [
-##     {
-##       &quot;id&quot;: &quot;http://id.crossref.org/contributor/carl-boettiger-2etprmps2zm1a&quot;,
-##       &quot;type&quot;: &quot;Person&quot;,
-##       &quot;familyName&quot;: &quot;Boettiger&quot;,
-##       &quot;givenName&quot;: &quot;Carl&quot;
-##     },
-##     {
-##       &quot;id&quot;: &quot;http://id.crossref.org/contributor/t-alex-perkins-2etprmps2zm1a&quot;,
-##       &quot;type&quot;: &quot;Person&quot;,
-##       &quot;familyName&quot;: &quot;Perkins&quot;,
-##       &quot;givenName&quot;: &quot;T. Alex&quot;
-##     },
-##     {
-##       &quot;id&quot;: &quot;http://id.crossref.org/contributor/benjamin-l-phillips-2etprmps2zm1a&quot;,
-##       &quot;type&quot;: &quot;Person&quot;,
-##       &quot;familyName&quot;: &quot;Phillips&quot;,
-##       &quot;givenName&quot;: &quot;Benjamin L.&quot;
-##     }
-##   ],
-##   &quot;datePublished&quot;: &quot;2016-08-18&quot;,
-##   &quot;isPartOf&quot;: {
-##     &quot;id&quot;: &quot;http://id.crossref.org/issn/2045-7758&quot;,
-##     &quot;type&quot;: &quot;Journal&quot;,
-##     &quot;http://purl.org/ontology/bibo/issn&quot;: &quot;2045-7758&quot;,
-##     &quot;identifier&quot;: &quot;2045-7758&quot;,
-##     &quot;name&quot;: &quot;Ecology and Evolution&quot;,
-##     &quot;sameAs&quot;: &quot;urn:issn:2045-7758&quot;
-##   },
-##   &quot;name&quot;: &quot;After the games are over: life-history trade-offs drive dispersal attenuation following range expansion&quot;,
-##   &quot;pageEnd&quot;: &quot;6434&quot;,
-##   &quot;pageStart&quot;: &quot;6425&quot;
-## }</code></pre>
-<p>This isn’t bad, but is still not a perfect match to the schema.org model.</p>
 </div>
 </div>
 
@@ -696,7 +981,7 @@ toJSON(X, auto_unbox = TRUE, pretty = TRUE) %&gt;%
   <p> <a class="btn btn-default" 
          href='https://github.com/cboettig/labnotebook/commits/master/content/lab-notebook/2017-12-05-json-ld-vita.Rmd'><i class="fa fa-clock-o"></i> History</a></p>
 
-  <p> <i class="fa fa-barcode"></i> SHA: <a href="https://github.com/cboettig/labnotebook/blob//content/lab-notebook/2017-12-05-json-ld-vita.html"></a></p> 
+  <p> <i class="fa fa-barcode"></i> SHA: <a href="https://github.com/cboettig/labnotebook/blob/f32e0216aa82b05523c96d77f50cafc672c780e5/content/lab-notebook/2017-12-05-json-ld-vita.html">f32e0216a</a></p> 
 
 
 </aside>

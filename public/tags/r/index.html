@@ -148,7 +148,7 @@
       <h4><a href="../../2017/12/09/json-ld-vita-exploration/">Sat, Dec 9, 2017</a></h4>
       <h4><a href="../../2017/12/09/json-ld-vita-exploration/">JSON-LD Vita exploration</a></h4>
       <div class="article-style">
-        Pure JSON vita &lt;- readr::read_file(&quot;../../static/js/vita.json&quot;) jq(vita, &#39;.&quot;@reverse&quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&quot; &quot;) }&#39;) %&gt;% combine() %&gt;% fromJSON() ## year author ## 1 &lt;NA&gt; Getz ## 2 &lt;NA&gt; Marshall ## 3 &lt;NA&gt; Carlson ## 4 &lt;NA&gt; Giuggioli ## 5 &lt;NA&gt; Ryan ## 6 &lt;NA&gt; Romañach ## 7 &lt;NA&gt; Boettiger ## 8 &lt;NA&gt; Chamberlain ## 9 &lt;NA&gt; Larsen ## 10 &lt;NA&gt; D&#39;Odorico ## 11 &lt;NA&gt; O&#39;Sullivan ## 12 2017-3-15 Stephanie E.
+        Using JSON Queries (JQ) Pure JSON vita &lt;- readr::read_file(&quot;../../static/js/vita.json&quot;) jq(vita, &#39;.&quot;@reverse&quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&quot; &quot;) }&#39;) %&gt;% combine() %&gt;% fromJSON()   year author    2017-12-09 Getz  2017-12-09 Marshall  2017-12-09 Carlson  2017-12-09 Giuggioli  2017-12-09 Ryan  2017-12-09 Romañach  2017-12-09 Boettiger  2017-12-09 Chamberlain  2017-12-09 Larsen  2017-12-09 D’Odorico  2017-12-09 O’Sullivan  2017-3-15 Stephanie E.
       </div>
     </div>
     
