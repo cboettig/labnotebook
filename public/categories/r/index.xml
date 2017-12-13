@@ -6,10 +6,20 @@
     <description>Recent content in R on Boettiger Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Data Rectangling with jq</title>
+      <link>/2017/12/11/data-rectangling-with-jq/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/11/data-rectangling-with-jq/</guid>
+      <description>“Data rectangling”: the process of turning highly nested data structures (e.g. JSON, XML) into a tabular format.
+ Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community. Recording or slides of Jenny’s talk on the subject give a much better intro to the idea and working with this in R, particularly through the purrr package.</description>
+    </item>
     
     <item>
       <title>JSON-LD Vita exploration</title>
