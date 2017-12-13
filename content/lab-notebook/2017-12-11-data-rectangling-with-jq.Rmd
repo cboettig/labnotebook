@@ -1,0 +1,76 @@
+---
+title: Data Rectangling with jq
+author: Carl Boettiger
+date: '2017-12-11'
+categories: [R]
+tags: [R, json]
+---
+
+
+> "Data rectangling": the process of turning highly nested data structures (e.g. JSON, XML) into a tabular format.
+
+
+Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community.  [Recording](https://speakerdeck.com/jennybc/data-rectangling) or [slides](https://speakerdeck.com/jennybc/data-rectangling) of Jenny's talk on the subject give a much better intro to the idea and working with this in R, particularly through the `purrr` package.  
+
+As nice as `purrr` is for the task, I've recently found that the [`jqr` package](https://github.com/ropensci/jqr) from [Scott Chamberlain](https://scottchamberlain.info/) and co can be a much easier way to go about rectangling your JSON.  Here's a quick comparison based on an example from the [lesson](https://dcl-2017-04.github.io/curriculum/rectangling.html) Hadley Jenny have on Data Rectangling.
+
+```{r include=FALSE}
+library(knitr)
+library(DT)
+knit_print.data.frame <- function(x, ...) {
+  knitr::knit_print(DT::datatable(x), ...)
+}
+```
+
+
+```{r message=FALSE}
+#devtools::install_github("jennybc/repurrrsive")
+library(jsonlite)
+library(tidyverse)
+library(repurrrsive)
+library(jqr)
+```
+
+
+
+
+## Using purrr
+
+
+```{r results='asis'}
+gh_flat <- gh_repos %>% flatten()  # abandon nested structure and hope we didn't need it
+
+gh_tibble <- tibble(
+  name =     gh_flat %>% map_chr("name"),
+  issues =   gh_flat %>% map_int("open_issues_count"),
+  wiki =     gh_flat %>% map_lgl("has_wiki"),
+  homepage = gh_flat %>% map_chr("homepage", .default = ""),
+  owner =    gh_flat %>% map_chr(c("owner", "login"))
+)
+
+gh_tibble
+```
+
+Note we need to be explicit about missing value defaults and types.
+
+
+## Using jqr
+
+Note that we can simply exploit the object typing already encoded in the data (`int`, `lgl`,`chr`)
+
+```{r results="asis", message=FALSE}
+f <- system.file("extdata/gh_repos.json", package="repurrrsive")
+
+read_file(f) %>% 
+ jq('.[][] | { 
+    name: .name, 
+    issues: .open_issues_count,
+    wiki: .has_wiki,
+    homepage: .homepage,
+    owner: .owner.login
+    } ') %>% 
+  jqr::combine() %>% # single json file
+  fromJSON() 
+```
+
+This example only touches the surface of the `jq` syntax.  The [jq manual](https://stedolan.github.io/jq/manual/) provides a nice overview of this intuitive syntax.  `jq` can also perform a wide range of data processing on the elements: including conditionals, comparisons, regular expressions, math, and so forth.  While these are great, most R users will want to learn just enough `jq` syntax to get back a nice data rectangle, and then `dplyr` can take over.  
