@@ -23,11 +23,6 @@ RUN apt-get update && \
     Cairo \
     blogdown && \
   R -e "remotes::install_github(c('hadley/pkgdown','hrbrmstr/hrbrthemes'),upgrade = FALSE)" \
-  ## roboto font config for hrbrthemes:
-  R -e "library(hrbrthemes); suppressWarnings(hrbrthemes::import_roboto_condensed()); \
-    d <-read.csv(extrafont:::fonttable_file(), stringsAsFactors = FALSE); \
-    d[grepl('Light', d$FontName), ]$FamilyName <- 'Roboto Condensed Light'; \
-    write.csv(d, extrafont:::fonttable_file(), row.names = FALSE)" && \
   ## Install hugo via blogdown
   echo '\n options(blogdown.hugo.dir = "/usr/local/lib/")' >> /usr/local/lib/R/etc/Rprofile.site && \
   R -e "blogdown::install_hugo()" && \
