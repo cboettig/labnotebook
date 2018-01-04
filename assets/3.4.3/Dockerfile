@@ -22,7 +22,7 @@ RUN apt-get update && \
     hrbrthemes \
     Cairo \
     blogdown && \
-  R -e "remotes::install_github(c('hadley/pkgdown','hrbrmstr/hrbrthemes'),upgrade = FALSE)" \
+  R -e "remotes::install_github(c('hadley/pkgdown','hrbrmstr/hrbrthemes'),upgrade = FALSE)" && \
   ## Install hugo via blogdown
   echo '\n options(blogdown.hugo.dir = "/usr/local/lib/")' >> /usr/local/lib/R/etc/Rprofile.site && \
   R -e "blogdown::install_hugo()" && \
