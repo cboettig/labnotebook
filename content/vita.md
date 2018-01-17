@@ -29,6 +29,18 @@ nomath: true
 
 # publications
 
+22. __Carl Boettiger__, Dirk Eddelbuettel (2018). An Introduction to Rocker: 
+    Docker Containers for R. _The R Journal_. 
+    <https://journal.r-project.org/archive/2017/RJ-2017-065/index.html>.
+
+21. __Carl Boettiger__ (2017). Generating Codemeta Metadata for R Packages.  
+    _The Journal of Open Source Software_ 2 (19), 454, 
+    [doi:10.21105/joss.00454](https://10.21105/joss.00454)
+
+20. Getz, Marshall, Carlson, Giuggioli, Ryan, Romañach,  __Boettiger__, Chamberlain, Larsen, 
+    D'Odorico, O'Sullivan, D. (2017). Making ecological models adequate. _Ecology Letters_.  
+    [doi:10.1111/ele.12893](https://doi.org/10.1111/ele.12893)
+
 19. Ben Marwick, __Carl Boettiger__, Lincoln Mullen (2017). Packaging data analytical work
     reproducibly using R (and friends). _The American Statistician_. 
     [doi:10.1080/00031305.2017.1375986](https://doi.org/10.1080/00031305.2017.1375986).
@@ -158,6 +170,10 @@ nomath: true
 
 # grants
 
+- Managing ecosystems under extreme uncertainty. (2016-03 - 2018-09) NSF XSEDE TG-DEB160003.   NSF Estimated value *16,690 USD*
+
+- Reproducible and Collaborative Data Science. NSF XSEDE TG-DEB160021.  NSF Estimated value *20,028 USD*
+
 - The rOpenSci Project (2015-2018, Co-PI). Helmsley Trust *2,900,000 USD*.
 
 - The Codemeta project (2015). National Science Foundation
@@ -186,6 +202,10 @@ nomath: true
 
 # invited talks
 
+## 2017
+
+- [CROSS Symposium Speaker](https://cross.ucsc.edu/cross-events/research-symposium/2017-symposium/) UC Santa Cruz.
+
 ## 2015
 
 - [Empirical Dynamical Modeling and Forecasting in Nonlinear Systems](http://ecows.oc.ntu.edu.tw/itnlws/), NTU, Taiwan.
@@ -211,6 +231,7 @@ nomath: true
 - [Imagining Tomorrow's University](http://www.ncsa.illinois.edu/Conferences/ImagineU/participants.html) Chicago, IL.
 - [rOpenSci unconference](http://unconf17.ropensci.org), Los Angeles, CA
 - [Prov-a-thon: Practical Tools for Reproducible Science](https://dataoneorg.github.io/provathon-2017/), Tamaya, NM.
+- [NSF Translational Data Science Workshop](https://bids.berkeley.edu/events/translational-data-science-workshop), Berkeley Institute for Data Science, Berkeley, CA.
 
 ## 2016
 
@@ -268,7 +289,8 @@ nomath: true
 
 
 - **2017** National Science Foundation, Nature Climate Change, Nature Ecology & Evolution,
-  Proceedings of the Royal Society B, rOpenSci Onboarding, Theoretical Ecology
+  Proceedings of the Royal Society B, rOpenSci Onboarding, Theoretical Ecology, Bull Math Bio,
+  Oikos, NERSC, Ecology Letters
 
 - **2016** Bioscience, National Science Foundation
 
