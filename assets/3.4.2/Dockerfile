@@ -19,10 +19,11 @@ RUN apt-get update && \
     nimble \
     jsonld \
     jsonvalidate \
+    ggthemes \
     hrbrthemes \
     Cairo \
     blogdown && \
-  R -e "remotes::install_github(c('hadley/pkgdown','hrbrmstr/hrbrthemes'),upgrade = FALSE)" \
+  R -e "remotes::install_github('hadley/pkgdown@33673a985029e05a42a3211fc6e8d68814a32caf',upgrade = FALSE)" \
   ## roboto font config for hrbrthemes:
   R -e "library(hrbrthemes); suppressWarnings(hrbrthemes::import_roboto_condensed()); \
     d <-read.csv(extrafont:::fonttable_file(), stringsAsFactors = FALSE); \
@@ -31,7 +32,10 @@ RUN apt-get update && \
   ## Install hugo via blogdown
   echo '\n options(blogdown.hugo.dir = "/usr/local/lib/")' >> /usr/local/lib/R/etc/Rprofile.site && \
   R -e "blogdown::install_hugo()" && \
-  installGithub.r boettiger-lab/pomdpplus boettiger-lab/mdplearning && \
+  installGithub.r \
+    boettiger-lab/sarsop@0.4.0 \
+    boettiger-lab/pomdpplus@0.2.0 \
+    boettiger-lab/mdplearning@0.1.0 && \
   ## preconfigure me as the git user
   git config --system user.name 'Carl Boettiger' && \
   git config --system user.email 'cboettig@gmail.com'
