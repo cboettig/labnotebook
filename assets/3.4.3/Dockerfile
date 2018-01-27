@@ -19,6 +19,7 @@ RUN apt-get update && \
     nimble \
     jsonld \
     jsonvalidate \
+    ggthemes \
     hrbrthemes \
     Cairo \
     blogdown && \

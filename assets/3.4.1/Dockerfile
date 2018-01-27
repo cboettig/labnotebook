@@ -18,7 +18,7 @@ RUN apt-get update && \
     nimble \
     jsonld \
     jsonvalidate && \
-  R -e "remotes::install_github(c('rstudio/blogdown', 'hadley/pkgdown'), upgrade = FALSE)" && \
+  R -e "remotes::install_github(c('rstudio/blogdown@v0.1', 'hadley/pkgdown@c8726f9242b2b67f572c16422c83cdc8160c7628'), upgrade = FALSE)" && \
   echo '\n options(blogdown.hugo.dir = "/usr/local/lib/")' >> /usr/local/lib/R/etc/Rprofile.site && \
   R -e "blogdown::install_hugo()" && \
   git config --system user.name 'Carl Boettiger' && \
