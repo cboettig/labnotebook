@@ -49,13 +49,16 @@
   </url>
   
   <url>
+    <loc>/calendar/</loc>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/community/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
@@ -78,17 +81,15 @@
   
   <url>
     <loc>/lab-notebook/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
+    <lastmod>2017-12-13T12:40:30-08:00</lastmod>
   </url>
   
   <url>
     <loc>/members/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
     <loc>/networks/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
@@ -98,13 +99,13 @@
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
+    <loc>/categories/r/</loc>
     <lastmod>2017-12-13T12:40:30-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
+    <loc>/tags/r/</loc>
     <lastmod>2017-12-13T12:40:30-08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -123,17 +124,14 @@
   
   <url>
     <loc>/teaching/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
   <url>
     <loc>/vita/</loc>
-    <lastmod>2017-11-10T10:35:50-08:00</lastmod>
   </url>
   
   <url>
     <loc>/cloud/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url>
   
 </urlset>
