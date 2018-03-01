@@ -13,6 +13,7 @@ RUN apt-get update && \
   libsndfile1-dev \
   pdftk && \
   install2.r --error \
+    redland \
     printr \
     FKF \
     MDPtoolbox \
