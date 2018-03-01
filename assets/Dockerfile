@@ -10,7 +10,8 @@ RUN apt-get update && \
   ccache \
   fonts-roboto \
   libgpgme11-dev \
-  libsndfile1-dev && \
+  libsndfile1-dev \
+  pdftk && \
   install2.r --error \
     printr \
     FKF \
