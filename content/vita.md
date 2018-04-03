@@ -35,7 +35,7 @@ nomath: true
 
 21. __Carl Boettiger__ (2017). Generating Codemeta Metadata for R Packages.  
     _The Journal of Open Source Software_ 2 (19), 454, 
-    [doi:10.21105/joss.00454](https://10.21105/joss.00454)
+    [doi:10.21105/joss.00454](https://doi.org/10.21105/joss.00454)
 
 20. Getz, Marshall, Carlson, Giuggioli, Ryan, Romañach,  __Boettiger__, Chamberlain, Larsen, 
     D'Odorico, O'Sullivan, D. (2017). Making ecological models adequate. _Ecology Letters_.  
