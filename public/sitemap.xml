@@ -4,12 +4,12 @@
   
   <url>
     <loc>/2017/12/11/data-rectangling-with-jq/</loc>
-    <lastmod>2017-12-13T12:40:30-08:00</lastmod>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
   </url>
   
   <url>
     <loc>/2017/12/09/json-ld-vita-exploration/</loc>
-    <lastmod>2017-12-11T11:44:58-08:00</lastmod>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
   </url>
   
   <url>
@@ -19,17 +19,17 @@
   
   <url>
     <loc>/2017/05/17/json-ld-framing-strategy/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
   </url>
   
   <url>
     <loc>/2017/04/27/new-rocker-releases/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
   </url>
   
   <url>
     <loc>/2017/04/19/migrating-to-hugo-and-blogdown/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
   </url>
   
   <url>
@@ -39,7 +39,7 @@
   
   <url>
     <loc>/tags/blog/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -65,19 +65,19 @@
   
   <url>
     <loc>/tags/docker/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/json/</loc>
-    <lastmod>2017-12-13T12:40:30-08:00</lastmod>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/json-ld/</loc>
-    <lastmod>2017-12-11T11:44:58-08:00</lastmod>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -98,19 +98,19 @@
   
   <url>
     <loc>/tags/open-science/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2017-12-13T12:40:30-08:00</lastmod>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2017-12-13T12:40:30-08:00</lastmod>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -122,7 +122,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
+    <lastmod>2018-05-30T12:17:49-07:00</lastmod>
     <priority>0</priority>
   </url>
   
