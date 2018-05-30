@@ -139,9 +139,8 @@
       
     <p>Parsing very nested JSON documents can be a pain. Here are some notes on co-opting the strategy of “Framing” used in JSON-LD. (Note that unlike the basic operations of <code>compaction</code> and <code>expansion</code>, the JSON-LD framing algorithm actually is essentially independent of the <code>@context</code> and any linked data concepts.</p>
 <p>Here’s a toy example of some nested JSON. Very nested structures are usually the source of issues for me, even with <code>purrr</code>, because often I want to pull data found at various different levels of nesting into a single row for the data.frame I care about.</p>
-<pre class="r"><code>library(&quot;jsonlite&quot;)</code></pre>
-<pre><code>## Loading required package: methods</code></pre>
-<pre class="r"><code>library(&quot;jsonld&quot;)
+<pre class="r"><code>library(&quot;jsonlite&quot;)
+library(&quot;jsonld&quot;)
 library(&quot;magrittr&quot;)</code></pre>
 <pre class="r"><code>json &lt;-&#39;{
       &quot;@id&quot;: &quot;http://example.org/library&quot;,
@@ -190,13 +189,11 @@ jsonld_frame(json, frame) %&gt;% fromJSON()</code></pre>
 jsonld_frame(json, frame) %&gt;% fromJSON()</code></pre>
 <pre><code>## $`@graph`
 ##                                                    @id      @type
-## 1                           http://example.org/library ex:Library
-## 2              http://example.org/library/the-republic    ex:Book
-## 3 http://example.org/library/the-republic#introduction ex:Chapter
+## 1              http://example.org/library/the-republic    ex:Book
+## 2 http://example.org/library/the-republic#introduction ex:Chapter
 ##   dc:creator         dc:title
-## 1         NA               NA
-## 2      Plato     The Republic
-## 3         NA The Introduction</code></pre>
+## 1      Plato     The Republic
+## 2         NA The Introduction</code></pre>
 <p>This strategy is also very effective when you either don’t know exactly how the data is structured, or the data structure changes either over time or across different records provided by the data provider (e.g. when some entries may have more nested content than other entries of the same type).</p>
 <p>More details on the syntax used in specifying a frame can be found in the <a href="http://json-ld.org/spec/latest/json-ld-framing/">offical documentation</a>.</p>
 </div>

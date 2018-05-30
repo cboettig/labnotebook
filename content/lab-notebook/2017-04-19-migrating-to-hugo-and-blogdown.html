@@ -28,29 +28,25 @@ tags: [R, blog, open-science]
 <h3>R code</h3>
 <p>Just for fun, I’ll make this post as an <code>.Rmd</code> file to illustrate running R code:</p>
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>## R version 3.4.0 (2017-04-21)
-## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Debian GNU/Linux 8 (jessie)
+<pre><code>## R version 3.5.0 (2018-04-23)
+## Platform: x86_64-apple-darwin15.6.0 (64-bit)
+## Running under: macOS High Sierra 10.13.4
 ## 
 ## Matrix products: default
-## BLAS/LAPACK: /usr/lib/libopenblasp-r0.2.12.so
+## BLAS: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRblas.0.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
 ## 
 ## locale:
-##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
-##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
-##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=C             
-##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
-##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 ## 
 ## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  base     
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] compiler_3.4.0  backports_1.0.5 bookdown_0.3.21 magrittr_1.5   
-##  [5] rprojroot_1.2   tools_3.4.0     htmltools_0.3.5 yaml_2.1.14    
-##  [9] Rcpp_0.12.10    stringi_1.1.5   rmarkdown_1.4   blogdown_0.0.40
-## [13] knitr_1.16.2    methods_3.4.0   stringr_1.2.0   digest_0.6.12  
-## [17] evaluate_0.10</code></pre>
+##  [1] compiler_3.5.0  backports_1.1.2 bookdown_0.7    magrittr_1.5   
+##  [5] rprojroot_1.3-2 tools_3.5.0     htmltools_0.3.6 yaml_2.1.19    
+##  [9] Rcpp_0.12.17    stringi_1.2.2   rmarkdown_1.9   blogdown_0.6   
+## [13] knitr_1.20      stringr_1.3.1   digest_0.6.15   xfun_0.1       
+## [17] evaluate_0.10.1</code></pre>
 <p>Note that <code>blogdown</code> relies on a simple <code>make</code>-like caching rule to avoid recompiling the R code unless the Rmd file has a newer timestamp than the output html version, making it practical to maintain a large site with non-trivial R posts.</p>
 </div>

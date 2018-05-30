@@ -18,7 +18,8 @@
       
       <guid>/2017/12/11/data-rectangling-with-jq/</guid>
       <description>“Data rectangling”: the process of turning highly nested data structures (e.g. JSON, XML) into a tabular format.
- Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community. Recording or slides of Jenny’s talk on the subject give a much better intro to the idea and working with this in R, particularly through the purrr package.</description>
+ Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community. Recording or slides of Jenny’s talk on the subject give a much better intro to the idea and working with this in R, particularly through the purrr package.
+As nice as purrr is for the task, I’ve recently found that the jqr package from Scott Chamberlain and co can be a much easier way to go about rectangling your JSON.</description>
     </item>
     
     <item>
@@ -27,7 +28,7 @@
       <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/12/09/json-ld-vita-exploration/</guid>
-      <description>Using JSON Queries (JQ) Pure JSON vita &amp;lt;- readr::read_file(&amp;quot;../../static/js/vita.json&amp;quot;) jq(vita, &amp;#39;.&amp;quot;@reverse&amp;quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&amp;quot; &amp;quot;) }&amp;#39;) %&amp;gt;% combine() %&amp;gt;% fromJSON()   year author    2017-12-09 Getz  2017-12-09 Marshall  2017-12-09 Carlson  2017-12-09 Giuggioli  2017-12-09 Ryan  2017-12-09 Romañach  2017-12-09 Boettiger  2017-12-09 Chamberlain  2017-12-09 Larsen  2017-12-09 D’Odorico  2017-12-09 O’Sullivan  2017-3-15 Stephanie E.</description>
+      <description>Using JSON Queries (JQ) Pure JSON vita &amp;lt;- readr::read_file(&amp;quot;../../static/js/vita.json&amp;quot;) jq(vita, &amp;#39;.&amp;quot;@reverse&amp;quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&amp;quot; &amp;quot;) }&amp;#39;) %&amp;gt;% combine() %&amp;gt;% fromJSON()   year author    2017-12-09 Wayne M. Getz  2017-12-09 Charles R. Marshall  2017-12-09 Colin J. Carlson  2017-12-09 Luca Giuggioli  2017-12-09 Sadie J. Ryan  2017-12-09 Stephanie S. Romañach  2017-12-09 Carl Boettiger  2017-12-09 Samuel D.</description>
     </item>
     
     <item>

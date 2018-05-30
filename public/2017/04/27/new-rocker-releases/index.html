@@ -140,11 +140,11 @@
     <p>R <code>3.4.0</code> and <code>devel</code> tags are now available in the Rocker versioned stack, and <code>latest</code> has been updated to <code>3.4.0</code>.</p>
 <p>This means you can now run something like:</p>
 <pre><code>docker run -d -p 8787:8787 rocker/tidyverse:devel</code></pre>
-<p>to test out a recent version<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> of R devel in RStudio with the <code>tidyverse</code> packages already installed. Note that the packages are not themselves devel versions (e.g. from GitHub) but are instead the latest versions from CRAN, just as in the <code>latest</code> tag. Only the base R system is on <code>devel</code>. This can be handy for testing packages prior to CRAN release.</p>
+<p>to test out a recent version<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> of R devel in RStudio with the <code>tidyverse</code> packages already installed. Note that the packages are not themselves devel versions (e.g. from GitHub) but are instead the latest versions from CRAN, just as in the <code>latest</code> tag. Only the base R system is on <code>devel</code>. This can be handy for testing packages prior to CRAN release.</p>
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p><code>devel</code> tags should now be triggered nightly by a tag-specific curl POST from cron for each image. Since this requires we remove the simple ‘repository linking’ in Docker hub to avoid the whole stack rebuilding all tags, this requires a second set of cron calls to see that the rest of the stack is also updated regularly. These calls are currently scheduled to rebuild all tags on the first day of the month. A bit more engineering, but at least the crontab should not require regular updating with new releases, since <code>devel</code> tag is always <code>devel</code>. We’ll see how well this part works.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p><code>devel</code> tags should now be triggered nightly by a tag-specific curl POST from cron for each image. Since this requires we remove the simple ‘repository linking’ in Docker hub to avoid the whole stack rebuilding all tags, this requires a second set of cron calls to see that the rest of the stack is also updated regularly. These calls are currently scheduled to rebuild all tags on the first day of the month. A bit more engineering, but at least the crontab should not require regular updating with new releases, since <code>devel</code> tag is always <code>devel</code>. We’ll see how well this part works.<a href="#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 
