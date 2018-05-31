@@ -4,7 +4,7 @@ title: Teaching
 
 ### ESPM-157: [Data Science & Global Change Ecology](https://espm-157.carlboettiger.info/) 
 
-- Next offered: **Fall 2017**
+- Next offered: **Fall Semester**
 - Course website: <https://espm-157.carlboettiger.info>
 
 _This is an upper-division undergraduate course designed to introduce CNR majors to the fundamentals
@@ -13,8 +13,7 @@ in global change ecology._
 
 ### ESPM-288: [Reproducible and Collaborative Data Science](https://espm-288.carlboettiger.info)
 
-- Last offered: **Spring 2017** (As ESPM-290)
-- Next offered: **Spring 2018** 
+- Next offered: **Spring Semester** 
 - Course website: <https://espm-288.carlboettiger.info>
 
 _This is a graduate-level course aimed at students enrolled in UC Berkeley
