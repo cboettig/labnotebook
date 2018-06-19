@@ -35,6 +35,7 @@ RUN apt-get update && \
   ## Install hugo via blogdown
   echo '\n options(blogdown.hugo.dir = "/usr/local/lib/")' >> /usr/local/lib/R/etc/Rprofile.site && \
   R -e "blogdown::install_hugo()" && \
+  installGithub.r \
     cran/FKF@0.1.3 \
     boettiger-lab/sarsop@0.4.0 \
     boettiger-lab/pomdpplus@0.2.0 \
