@@ -1,4 +1,4 @@
-FROM rocker/geospatial
+FROM rocker/geospatial:3.5.0
 MAINTAINER Carl Boettiger cboettig@ropensci.org
 
 ## selects ccache compilers (once ccache is installed). NB this increases image size!
