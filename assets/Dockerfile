@@ -31,6 +31,8 @@ RUN apt-get update && \
     usethis \
     fs \
     pkgdown \
+	pryr \
+	profvis \
     greta && \
   ## Install hugo via blogdown
   echo '\n options(blogdown.hugo.dir = "/usr/local/lib/")' >> /usr/local/lib/R/etc/Rprofile.site && \
