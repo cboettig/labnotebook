@@ -3,6 +3,7 @@ type: page
 layout: vita
 title: Vita
 nomath: true
+aliases: "/publications"
 ---
 
 # employment
@@ -79,7 +80,7 @@ nomath: true
 
 15. __Carl Boettiger__, Scott Chamberlain, Rutger Vos and Hilmar
    Lapp. (2016) RNeXML: a package for reading and writing richly annotated
-   phylogenetic, character, and trait data in R. Methods in Ecology and Evolution. 
+   phylogenetic, character, and trait data in R. _Methods in Ecology and Evolution_. 
    [doi:10.1111/2041-210X.12469](http://dx.doi.org/10.1111/2041-210X.12469). 
    ([oa](http://arxiv.org/abs/1506.02722),
    [code](https://github.com/ropensci/RNeXML),
@@ -306,9 +307,10 @@ nomath: true
 
 ## campus
 
-- 2018 ESPM Remote Sensing Faculty Search Committee member & Equity Liason.
-- 2017 - current. UC Berkeley Data Science Degree proposal Comittee
-- 2015 - current. UC Berkeley, Berkeley Research Computing Advisory Committee
+- 2018 ESPM Remote Sensing Faculty Search, committee member & equity liason
+- 2018 - current. Governance Committee for Data Science Programs
+- 2017 - 2018.  Data Science Degree Proposal Comittee
+- 2015 - current. Berkeley Research Computing Advisory Committee
 
 ## reviewer for: 
 
