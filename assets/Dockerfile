@@ -2,7 +2,7 @@ FROM rocker/geospatial
 MAINTAINER Carl Boettiger cboettig@ropensci.org
 
 ## selects ccache compilers (once ccache is installed). NB this increases image size!
-#ENV PATH=/usr/lib/ccache:$PATH
+ENV PATH=/usr/lib/ccache:$PATH
 
 ## Install additional R package dependencies ###
 RUN apt-get update && \
@@ -31,9 +31,10 @@ RUN apt-get update && \
     usethis \
     fs \
     pkgdown \
-	pryr \
-	profvis \
-    greta && \
+	  pryr \
+	  profvis \
+    greta \ 
+    clustermq && \
   ## Install hugo via blogdown
   echo '\n options(blogdown.hugo.dir = "/usr/local/lib/")' >> /usr/local/lib/R/etc/Rprofile.site && \
   R -e "blogdown::install_hugo()" && \
