@@ -12,6 +12,7 @@ RUN apt-get update && \
   libgpgme11-dev \
   libsndfile1-dev \
   librdf-storage-virtuoso \
+  libzmq3-dev \
   virtuoso-server \
   awscli \
   pdftk && \
