@@ -183,7 +183,7 @@ aliases: "/publications"
 
 # grants
 
-- [Hellman Fellows Award](https://vpf.berkeley.edu/hellman-fellows-fund) (2018). *37,600 USD*
+- [Hellman Fellows Award](https://vpf.berkeley.edu/hellman-fellows-fund) (2018) The Hellman Foundation. *37,600 USD*
 
 - [Berkeley Collegium Award for Excellence in Undergraduate Education.](http://collegium.berkeley.edu/) (2018-2019) *16,867.50 USD*
 
@@ -215,44 +215,22 @@ aliases: "/publications"
 
 # book chapters
 
-- _Carl Boettiger_ (2017). A Reproducible R Notebook Using Docker. In J. Kitzes, D. Turek, & F. Deniz (Eds.), The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences (1st ed., pp. 109–117). Oakland, CA: UC Press. Retrieved from https://www.ucpress.edu/book.php?isbn=9780520294752
+- _Carl Boettiger_ (2017). A Reproducible R Notebook Using Docker. In J. Kitzes, D. Turek, & F. Deniz (Eds.), The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences (1st ed., pp. 109–117). Oakland, CA: UC Press. <https://www.ucpress.edu/book.php?isbn=9780520294752>
 
-# invited talks
 
-**2017**
-
-- [CROSS Symposium Speaker](https://cross.ucsc.edu/cross-events/research-symposium/2017-symposium/) UC Santa Cruz.
-
-**2015**
-
-- [Empirical Dynamical Modeling and Forecasting in Nonlinear Systems](http://ecows.oc.ntu.edu.tw/itnlws/), NTU, Taiwan.
-
-**2014**
-
--  Berkeley Initiative for Global Change Biology (student organized), UC Berkeley, CA. 
--  [DIMACS](http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html) Global Change, Berkeley CA.
--  Zoology Seminar, University of Wisconsin, Madison, WI. 
--  ESPM Seminar, UC Berkeley, CA.
-
-**2013 & prior**
-
-- MBI speaker, [Sustainable Management of Living Natural Resources](http://www.mbi.ohio-state.edu/2013/ws3description.html), Columbus, OH.
-- WHOI Seminar speaker, Woods Hole, MA.
-- UC Davis Dept of Environmental Resources and Economics; Davis, CA.
-- SSB Symposium speaker, Evolution Conference, Ottawa, CAN.
-
-# invited & organized workshops
+# invited talks & workshops
 
 **2018**
 
 - [NSF SI2 PIs Meeting](https://si2-pi-community.github.io/2018-meeting/), Washington, DC
 - [rOpenSci unconference](http://unconf18.ropensci.org), Seattle, WA
-- [Faculty Learning Program Fellows](https://teaching.berkeley.edu/programs/transforming-stem-teaching-faculty-learning-program/become-flp-faculty-fellow) Berkeley, CA
+- [Faculty Learning Program Fellows Workshop](https://teaching.berkeley.edu/programs/transforming-stem-teaching-faculty-learning-program/become-flp-faculty-fellow) Berkeley, CA
 - [GraphXD](https://graphxd.github.io/workshop/2018.html), Berkeley, CA
 - [Digital Data in Biodiversity](https://www.idigbio.org/wiki/index.php/Digital_Data_in_Biodiversity_Research_Conference,_Berkeley) UC Berkeley. (co-organizer)
 
 **2017**
 
+- [CROSS Symposium Speaker](https://cross.ucsc.edu/cross-events/research-symposium/2017-symposium/) UC Santa Cruz.
 - [Imagining Tomorrow's University](http://www.ncsa.illinois.edu/Conferences/ImagineU/participants.html) Chicago, IL.
 - [rOpenSci unconference](http://unconf17.ropensci.org), Los Angeles, CA
 - [Prov-a-thon: Practical Tools for Reproducible Science](https://dataoneorg.github.io/provathon-2017/), Tamaya, NM.
@@ -266,6 +244,7 @@ aliases: "/publications"
 
 **2015**
 
+- Invited Speaker, [Empirical Dynamical Modeling and Forecasting in Nonlinear Systems](http://ecows.oc.ntu.edu.tw/itnlws/), NTU, Taiwan.
 - Moore-Sloan Data Science Environments: Second Annual Data Science Summit
 - [Data Intensive Training Workshop](https://github.com/NCEAS/ds-workshop-2015), NCEAS, Santa Barbara, CA
 - [NSF Big Data Hubs](http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm) Design Charette, Western Region.
@@ -274,18 +253,26 @@ aliases: "/publications"
 
 **2014**
 
+-  Invited speaker, Berkeley Initiative for Global Change Biology Workshop (student organized), UC Berkeley, CA. 
+-  Invited speaker, [DIMACS](http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html) Global Change, Berkeley CA.
+-  Invited speaker, Zoology Seminar, University of Wisconsin, Madison, WI. 
+-  Invited speaker, ESPM Seminar, UC Berkeley, CA.
 - [rOpenSci unconference](http://ropensci.org/blog/2014/05/14/ropenhack/), San Francisco CA.
-- [Reproducible Science: Curriculum & Workflow](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014), NESCent, Durham, NC. 
-- [WSSSPE 2.0](http://wssspe.researchcomputing.org.uk/wssspe2/). New Orleans, LA.
+- [Reproducible Science: Curriculum & Workflow Workshop](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014), NESCent, Durham, NC. 
+- [WSSSPE 2.0 Meeting](http://wssspe.researchcomputing.org.uk/wssspe2/). New Orleans, LA.
 - Workflows Working Group, NCEAS, Santa Barbara,  CA.
 
 **2013 & prior**
 
-- [Sustainable Management of Living Natural Resources](http://www.mbi.ohio-state.edu/2013/ws3description.html), MBI Columbus, OH.
-- Academic software & workforce development, [ISEES](http://isees.nceas.ucsb.edu). Oakland, CA.
-- Software Lifecycle, [ISEES](http://isees.nceas.ucsb.edu), Santa Barbara, CA.
+- invited speaker, MBI, [Sustainable Management of Living Natural Resources](http://www.mbi.ohio-state.edu/2013/ws3description.html), Columbus, OH.
+- invited seminar speaker, WHOI, Woods Hole, MA.
+- invited seminar speaker, UC Davis Dept of Environmental Resources and Economics; Davis, CA.
+- invited speaker, SSB Symposium, Evolution Conference, Ottawa, CAN.
+- [Sustainable Management of Living Natural Resources Workshop](http://www.mbi.ohio-state.edu/2013/ws3description.html), MBI Columbus, OH.
+- Academic software & workforce development Workshop, [ISEES](http://isees.nceas.ucsb.edu). Oakland, CA.
+- Software Lifecycle Workshop, [ISEES](http://isees.nceas.ucsb.edu), Santa Barbara, CA.
 - [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville, TN
-- [Stochastic spatial modeling in population dynamics](http://www.aimath.org/WWN/populationmodel/), AIM, Palo Alto, CA.
+- [Stochastic spatial modeling in population dynamics Workshop](http://www.aimath.org/WWN/populationmodel/), AIM, Palo Alto, CA.
 
 
 # awards
@@ -299,27 +286,28 @@ aliases: "/publications"
 
 # service
 
-## national 
-
-- NCEAS Scientific Advisory Board
-- rOpenSci Leadership team
-- Jestream NSF cloud computing Stakeholder Advisory Board
-
 ## campus
 
-- 2018 ESPM Remote Sensing Faculty Search, committee member & equity liason
 - 2018 - current. Governance Committee for Data Science Programs
-- 2017 - 2018.  Data Science Degree Proposal Comittee
+- 2017 - 2018. ESPM Remote Sensing Faculty Search, committee member & equity liaison
+- 2017 - 2018. ad hoc Data Science Degree Proposal Committee
 - 2015 - current. Berkeley Research Computing Advisory Committee
 
+## extra-campus 
+
+- NCEAS [Scientific Advisory Board](https://www.nceas.ucsb.edu/content/nceas-science-advisers)
+- rOpenSci [Leadership Team](https://ropensci.org/about/#team)
+- Jetstream Cloud Computing [Stakeholder Advisory Board](https://jetstream-cloud.org/about/advisory-board.php), XSEDE. 
+
+<!--
 ## reviewer for: 
 
 - **2018** Bull. Mathematical Biology, Oikos, Ecology Letters, CiSE, Theoretical Ecology,
-  Methods in Ecology & Evolution, CJFAS, NERSC.
+  Methods in Ecology & Evolution, CJFAS, NERSC, Conservation Biology, PNAS,
 
-- **2017** National Science Foundation, Nature Climate Change, Nature Ecology & Evolution,
+- **2017** NSF, Nature Climate Change, Nature Ecology & Evolution,
   Proceedings of the Royal Society B, rOpenSci Onboarding, Theoretical Ecology, Bull Math Bio,
-  Oikos, NERSC, Ecology Letters
+  Oikos, NERSC, Ecology Letters.
 
 - **2016** Bioscience, National Science Foundation
 
@@ -347,6 +335,8 @@ aliases: "/publications"
 
 - **2010 & prior** Theoretical Ecology, Journal of Mathematical
   Biology, Ecological Modelling, Ecology
+-->
+
 
 <!--
 ## Prior service
