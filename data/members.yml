@@ -11,19 +11,6 @@ members:
     googlescholar: "https://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ"
     email: "cboettig@gmail.com"
     photo: "carl.png"
-  - milad:
-    name:
-      first: "Milad" 
-      last: "Memarzadeh"
-    title: "Postdoctoral Researcher"
-    homepage: "http://www.miladmemarzadeh.com/"
-    researchgate: "https://www.researchgate.net/profile/Milad_Memarzadeh" 
-    github: "miladm12"
-    twitter: "miladmemarzadeh"
-    orcid: "0000-0001-7672-6033"
-    email: "memarzadeh.milad@gmail.com"
-    googlescholar: "https://scholar.google.com/citations?user=c28AlioAAAAJ"
-    photo: "milad.png"
   - kari:
     name:
       first: "Kari" 
@@ -59,6 +46,17 @@ members:
     photo: "dan.png"
     homepage: "http://danielsholler.wordpress.com/"
     email: "sholler.daniel@gmail.com"
+  - millie:
+    name:
+      first: "Millie" 
+      last: "Chapman"
+    title: "Graduate Student"
+    homepage: "#"
+    github: "milliechapman"
+    twitter: "milliec92"
+    orcid: "0000-0002-1377-1539"
+    email: "mchapman@berkeley.edu"
+    photo: "millie.png"    
   - you:
     name:
       first: "Your"

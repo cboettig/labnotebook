@@ -5,7 +5,7 @@
 
     <div class="row">
       <div class="col-md-8 col-md-offset-1">
-      {{ with .Title }}<h1>{{ . }}</h1> {{ end }}  
+      {{ with .Title }}<h1 id="current">{{ . }}</h1> {{ end }}  
 
         <div class="row">
         {{ range $.Site.Data.members }}
@@ -15,12 +15,25 @@
         {{ end }}
         </div>
 
+        <h2 id="alumni">Alumni</h2>
+        <div class="row">
+        {{ range $.Site.Data.alumni }}
+          {{ range . }}
+            {{ partial "member.html" . }}
+          {{ end }}
+        {{ end }}
+        </div>
 
 
         <div class="row">
         <hr />
           <h2 id="undergrads">Undergraduate Researchers</h2>
           <ul>
+          <li>Zihao (Alex) Li</li>  
+          <li>Katie Rice</li> 
+          <li>Christopher Fan</li>
+          <li>Grace Li</li>
+          <li>Siwei (Steven) Ye</li>
           <li>Brian Thorsen</li>
           <li>Shea Conlon</li>
           <li>Anna Liu</li>
