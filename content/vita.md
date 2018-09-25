@@ -30,6 +30,11 @@ aliases: "/publications"
 
 # publications
 
+25. __Carl Boettiger__, (2018). Managing Larger Data on a GitHub Repository. 
+    Journal of Open Source Software, 3(29), 971,
+    [doi:10.21105/joss.00971](https://doi.org/10.21105/joss.00971). 
+    ([software](https://doi.org/10.5281/zenodo.1432525)).
+
 24. Milad Memarzadeh, __Carl Boettiger__ (2018). Adaptive management of ecological systems 
     under partial observability. _Biological Conservation_. 224, 9-15. 
     [doi:10.1016/j.biocon.2018.05.009](https://doi.org/10.1016/j.biocon.2018.05.009). 
@@ -183,36 +188,37 @@ aliases: "/publications"
 
 # grants
 
+- The Influence of Conflicting Policies and Supply-Chain Pressures on Farmers' Decisions and Tradeoffs with Respect to Biodiversity, Profitability, and Sustainability.  Timothy Bowles (PI), Alastair Iles, Claire Kremen, Carl Boettiger. (2018-2022).  **National Science Foundation** [#CNH-1824871
+](https://nsf.gov/awardsearch/showAward?AWD_ID=1824871) $1,301,737
 
 - Detecting Change in Global Biodiversity through Large Scale Network Analysis. (2018-2020) Berkeley Institute for Data Science, $67,000
 
-- [Hellman Fellows Award](https://vpf.berkeley.edu/hellman-fellows-fund) (2018-2020) The Hellman Foundation. $37,600
+- [Hellman Fellows Award](https://vpf.berkeley.edu/hellman-fellows-fund) (2018-2020) **The Hellman Foundation**. $37,600
 
 - [Berkeley Collegium Award for Excellence in Undergraduate Education.](http://collegium.berkeley.edu/) (2018-2019) $16,867.50
 
-- Managing ecosystems under extreme uncertainty. (2016-03 - 2018-09) NSF XSEDE TG-DEB160003.   NSF Estimated value of computing resources: $16,690
+- Managing ecosystems under extreme uncertainty. (2016-03 - 2019-09) NSF **XSEDE** TG-DEB160003. NSF Estimated value of computing resources: $34,558
 
-- Reproducible and Collaborative Data Science. NSF XSEDE TG-DEB160021.  NSF Estimated value of computing resources: $20,028
+- Reproducible and Collaborative Data Science. NSF **XSEDE** TG-DEB160021.  NSF Estimated value of computing resources: $20,028
 
-- The rOpenSci Project (2015-2018, Co-PI). Helmsley Charitable Trust, award 2016PG-BRI004. $2,900,000
+- The rOpenSci Project (2015-2018, Co-PI). **Helmsley Charitable Trust**, award 2016PG-BRI004. $2,900,000
 
-- The Codemeta project (2015). National Science Foundation
+- The Codemeta project (2015). **National Science Foundation**
    [#ACI-1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
    *165,782 USD*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2055972))
 
-- The rOpenSci Project, Phase II funding (2014, Co-PI). Alfred P. Sloan Foundation $300,000
+- The rOpenSci Project, Phase II funding (2014, Co-PI). **Alfred P. Sloan Foundation** $300,000
 
-- [NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013-2015). National Science Foundation
+- [NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013-2015). **National Science Foundation**
    [#DBI-1306697](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697),
    $138,000 ([proposal](http://doi.org/10.6084/m9.figshare.652970))
 
-- The rOpenSci Project Phase I funding (2013, Co-PI). Alfred P. Sloan Foundation $180,000
+- The rOpenSci Project Phase I funding (2013, Co-PI). **Alfred P. Sloan Foundation** $180,000
 
-- IIASA YSSP fellowship (2009). National
-   Academy of Sciences, OISE-0738129,
+- IIASA YSSP fellowship (2009). **National Academy of Sciences**, OISE-0738129,
    $8,000. ([proposal](http://doi.org/10.6084/m9.figshare.678310))
 
-- Computational Science Graduate Fellowship (2008). Department of Energy,
+- Computational Science Graduate Fellowship (2008). **United States Department of Energy**,
    #DE-FG02-97ER25308, $149,000. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2010246))
 
 
