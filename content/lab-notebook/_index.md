@@ -10,12 +10,12 @@ title: Lab Notebook
 
 <h3><i class="fa fa-calendar"></i> Earlier Notebooks</h3>
     <ul class="list-unstyled">
-      <li><a href="http://www.carlboettiger.info/2015/lab-notebook">2015 Notebook</a></li>
-      <li><a href="http://www.carlboettiger.info/2014/lab-notebook">2014 Notebook</a></li>
-      <li><a href="http://www.carlboettiger.info/2013/lab-notebook">2013 Notebook</a></li>
-      <li><a href="http://www.carlboettiger.info/2012/lab-notebook">2012 Notebook</a></li>
-      <li><a href="http://www.carlboettiger.info/2011/lab-notebook">2011 Notebook</a></li>
-      <li><a href="http://www.carlboettiger.info/2010/lab-notebook">2010 Notebook</a></li>
-      <li><a href="http://www.carlboettiger.info/2009/lab-notebook">2009 Notebook</a></li>
-      <li><a href="http://www.carlboettiger.info/2008/lab-notebook">2008 Notebook</a></li>
+      <li><a href="/2015/lab-notebook.html">2015 Notebook</a></li>
+      <li><a href="/2014/lab-notebook.html">2014 Notebook</a></li>
+      <li><a href="/2013/lab-notebook.html">2013 Notebook</a></li>
+      <li><a href="/2012/lab-notebook.html">2012 Notebook</a></li>
+      <li><a href="/2011/lab-notebook.html">2011 Notebook</a></li>
+      <li><a href="/2010/lab-notebook.html">2010 Notebook</a></li>
+      <li><a href="/2009/lab-notebook.html">2009 Notebook</a></li>
+      <li><a href="/2008/lab-notebook.html">2008 Notebook</a></li>
     </ul>
