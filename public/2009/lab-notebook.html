@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Lab Notebook</title>
   <meta name="author" content="Carl Boettiger" />
@@ -14,19 +14,19 @@
 <meta property="dc:date" content="" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
-<meta property="dc:identifier" content="http://www.carlboettiger.info/2009/lab-notebook.html" />
+<meta property="dc:identifier" content="https://www.carlboettiger.info/2009/lab-notebook.html" />
 <meta property="dc:rights" content="CC0" />
 <meta property="dc:source" content="Lab Notebook" />
 <meta property="dc:subject" content="Ecology" /> 
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Lab Notebook" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/2009/lab-notebook.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/2009/lab-notebook.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -119,12 +119,12 @@
 
 <article>
 <div class="excerpt">
-<p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="http://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
+<p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="https://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
 <h1 id="extinction-probabilities">Extinction Probabilities</h1>
 <p>Gardiner (1985).</p>
 <p>We consider single-step birth death models for the majority of this work. Though they will become multidimensional in later parts of the work, as we deal with multiple species or explicit environmental changes, for the time being we will focus on the one-dimensional bith-death process. The Markov process is defined over positive integers, <span class="math">\(n \in \mathbb{Z}^+\)</span>, and will sometimes be assumed to be bounded above by some integer <span class="math">\(N\)</span>. The process is determined by two state-dependent rates, <span class="math">\(b(n)\)</span> and <span class="math">\(d(n)\)</span>, as depicted here:</p>
 <figure>
-<img src="http://farm4.staticflickr.com/3723/9624787798_6899d87bc1_o.png" />
+<img src="https://farm4.staticflickr.com/3723/9624787798_6899d87bc1_o.png" />
 </figure>
 <p>The process is specified by the Master equation:</p>
 <p><span class="math">\[\frac{\partial P(n,t)}{\partial t} = b(n-1)P(n-1,t)+d(n+1)P(n+1) - \left( b(n) + d(n)  \right) P(n)
@@ -188,7 +188,7 @@ d(n) &amp;= e n
 
 <article>
 <div class="excerpt">
-<p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="http://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
+<p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="https://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
 <hr />
 <p>We wish to establish the fate of a population into which a rare mutant is introduced near a branching point. Far from the branching point, we had only one concern - will the mutant survive? Near the branching point, we now have two concerns - the fate of the mutant and the fate of the original resident. For branching to proceed, both must persist. The traditional framework of density-independent diffusion theory is insuffient to handle this case. We must consider both resident and mutant populations, with abundances <span class="math">\(N_1\)</span> and <span class="math">\(N_2\)</span> respectively. Under a series of approximations, we can again write this case as a one dimensional equation in the frequency of the mutant, <span class="math">\(p\)</span>; however, this time the equation will necessarily be nonlinear to have an additional intermediate stable state <span class="math">\(0&lt;p&lt;1\)</span> in addition to the boundaries <span class="math">\(p=0\)</span> and <span class="math">\(p=1\)</span>. We briefly review the necessary approximations as an understanding of them is essential to develop the proper picture.</p>
 <p>While the argument could be expressed in greater generality of generic birth and death rates, working with our particular example is instructive. For a dimorphic population, the master equations governing the probability distributions are:</p>
@@ -228,7 +228,7 @@ u &amp;= 1-e^{-p \psi(t) } \\
 <p>This poses some trouble in choosing <span class="math">\(p = 1/(nK_0)\)</span> as the initial mutant frequency. In the linear case, this always canceled perfectly with the noise term, <span class="math">\(nK_0\)</span>, leaving a fixation probability that did not depend on the population size (system size), given that it was large enough to justify the linear noise approximation in the first place. This is no longer the case. Larger populations result in the mutant frequency <span class="math">\(p\)</span> being much smaller. While the noise also decreases, we do not observe the perfect balance of the linear system. While an analytic, time-dependent solution for <span class="math">\(u\)</span> in this case is not possible, numerical solutions illustrate the much smaller populations having significantly higher survival probability, due to the higher value of <span class="math">\(p\)</span> from which they start given a single mutation.</p>
 <p>This seems unreasonable. A smaller population should be more suseptible to the accidental loss of a set of coexisting types, as observed in the simulations. I am unclear as to the explanation.</p>
 <figure>
-<img src="http://farm4.staticflickr.com/3726/9621550031_05054cdb02_o.png" />
+<img src="https://farm4.staticflickr.com/3726/9621550031_05054cdb02_o.png" />
 </figure>
  
 <!-- not that raw_content depends on custom generator, 
@@ -248,7 +248,7 @@ u &amp;= 1-e^{-p \psi(t) } \\
 
 <article>
 <div class="excerpt">
-<p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="http://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
+<p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="https://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
 <hr />
 <p><span class="math">\[\begin{aligned}
 \mathrm{d}n_1 = r n_1 \left(1 -  \frac{n_1 + C(x_1, x_2) n_2}{K(x_1) } \right) \mathrm{d}t + \frac{1}{\sqrt{K_o} } \sqrt{r n_1 \left(1 +  \frac{n_1 + C(x_1, x_2) n_2}{K(x_1) } \right) } \mathrm{d}W_1\end{aligned}\]</span></p>
@@ -298,7 +298,7 @@ g_i(p) =  r p \left(1 +  n(p) \frac{p + c_{12}(1-p) }{k_i } \right) \end{aligned
 
 <article>
 <div class="excerpt">
-<p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="http://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
+<p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="https://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
 <h1 id="introduction">Introduction</h1>
 <p>Our calculation of the time until branching occurs consists of the following approach. The first requirement for branching to occur is the existence of two mutually invasible populations separated by an adaptive minimum, that is <span class="math">\(s(y,x) &gt;0\)</span>, <span class="math">\(s(x,y)&gt;0\)</span> and <span class="math">\(\partial^2_y s(y,x)&gt;0\)</span>. The minimum (curvature condition) is provided by a singular point of the branching type, which also assures us that there will be some pairs <span class="math">\((y,x)\)</span> near each other <span class="math">\(|y-x| \sim o(\sigma_{\mu})\)</span>. These points define a coexistence region in the pairwise invasibility plot, which we denote <span class="math">\(P_2\)</span>. A mutant enters this region by “jumping the gap” from the line <span class="math">\(y=x\)</span> into the coexistence region. This gap diminishes in width as the resident trait <span class="math">\(x\)</span> nears the branching point, where the gap vanishes all together. This criterion can be evaluated directly at regular intervals throughout the simulation.</p>
 <p>Most often this condition will arise only transiently - a single mutant satisifying the conditions but soon lost to drift. Hence our second requirement must be that the mutant successfully entering the coexistence region then proceeds to survive drift. Defining this second condition rigorously is less straight-forward. For large populations, the probability of survival may be well approximated by the Galton-Watson branching process. In theory, this probability can be converted into an expected waiting time in a straight-forward manner. In simulation, this is insufficent, as we want to identify the actual waiting time we need more than a probability - we need to indentify which populations actually survive. If selection is strong, we may hope to identify which populations have effectively survived drift by establishing some low-density threshold at which we declare the population successful. Of course, this introduces a discrepancy in the definition of waiting time, as the theory calculates the time until a successful mutant occurs, while the simulation lags behind by the time required to go from one individual to the threshold size.</p>
@@ -335,13 +335,13 @@ d(y,x) &amp;= r\frac{C(y,x)K(x)}{K(y)}\end{aligned}\]</span></p>
 \label{pdf}\]</span></p>
 <p>and the expected time until branching is <span class="math">\(\int_0^{\infty} T \Pi(T) \mathrm{d}T\)</span>. This is our first analytic approximation.</p>
 <figure>
-<img src="http://farm4.staticflickr.com/3668/9624772024_ccb8ba0fb9_o.png" />
+<img src="https://farm4.staticflickr.com/3668/9624772024_ccb8ba0fb9_o.png" />
 </figure>
 <figure>
-<img src="http://farm6.staticflickr.com/5535/9624772196_d3fab3e33b_o.png" />
+<img src="https://farm6.staticflickr.com/5535/9624772196_d3fab3e33b_o.png" />
 </figure>
 <figure>
-<img src="http://farm8.staticflickr.com/7403/9624772374_7e297716ab_o.png" />
+<img src="https://farm8.staticflickr.com/7403/9624772374_7e297716ab_o.png" />
 </figure>
 <p><span class="math">\[\begin{gathered}
 P(x) = \frac{1}{2} \left(1+ {Erf}\left[\frac{x}{\sqrt{2} \sqrt{\sigma_{\mu}^2}}\right]\right)-\\
@@ -382,7 +382,7 @@ P(x) = \frac{1}{2} \left(1+ {Erf}\left[\frac{x}{\sqrt{2} \sqrt{\sigma_{\mu}^2}}\
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -398,7 +398,7 @@ P(x) = \frac{1}{2} \left(1+ {Erf}\left[\frac{x}{\sqrt{2} \sqrt{\sigma_{\mu}^2}}\
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -418,13 +418,13 @@ P(x) = \frac{1}{2} \left(1+ {Erf}\left[\frac{x}{\sqrt{2} \sqrt{\sigma_{\mu}^2}}\
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -442,7 +442,7 @@ P(x) = \frac{1}{2} \left(1+ {Erf}\left[\frac{x}{\sqrt{2} \sqrt{\sigma_{\mu}^2}}\
       &amp;rft.date=
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/lab-notebook.html">
+      &amp;rft_id=https://www.carlboettiger.info/lab-notebook.html">
   </span>
 
 
@@ -459,7 +459,7 @@ P(x) = \frac{1}{2} \left(1+ {Erf}\left[\frac{x}{\sqrt{2} \sqrt{\sigma_{\mu}^2}}\
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -474,7 +474,7 @@ P(x) = \frac{1}{2} \left(1+ {Erf}\left[\frac{x}{\sqrt{2} \sqrt{\sigma_{\mu}^2}}\
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

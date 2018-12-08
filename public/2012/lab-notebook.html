@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Lab Notebook</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Lab Notebook" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/lab-notebook.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/lab-notebook.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -122,16 +122,16 @@
 <h1 id="some-quick-thoughts-on-learning-jekyll">Some quick thoughts on learning Jekyll</h1>
 <p>After recieving a few queries on how to get started with Jekyll I thought I’d jot down my own opinions here. Of course there is already rather good documentation for the software and plenty of blogs providing tutorials. While no doubt more than adequate, I have more opinions on how to get started actually <em>learning</em> what’s going on than I could easily fit into a tweet, and also a couple favorite links to references so I thought I’d jot down my reply in long form here.</p>
 <h2 id="brief-background">Brief Background</h2>
-<p><a href="https://github.com/mojombo/jekyll">Jekyll</a> is a fantastic and popular static blogging platform, written in Ruby by a Github founder, <a href="http://tom.preston-werner.com/">Tom Preston-Werner</a>, which powers this site (at least currently). Similar static website generators exist for Python (<a href="https://github.com/hyde/hyde">Hyde</a>) Haskell (<a href="https://github.com/jgm/yst">yst</a>), and probably others, but Jekyll is quite widespread.</p>
+<p><a href="https://github.com/mojombo/jekyll">Jekyll</a> is a fantastic and popular static blogging platform, written in Ruby by a Github founder, <a href="https://tom.preston-werner.com/">Tom Preston-Werner</a>, which powers this site (at least currently). Similar static website generators exist for Python (<a href="https://github.com/hyde/hyde">Hyde</a>) Haskell (<a href="https://github.com/jgm/yst">yst</a>), and probably others, but Jekyll is quite widespread.</p>
 <p>With the (unofficial) slogan of the bloging platform for hackers, Jekyll is aimed at folks who don’t mind a little coding. If you’re looking for a polished, user-friendly product where a huge community of developers has written most imaginable extensions, check out Wordpress.org. If you want something where you can easily get into the guts and customize everything, Jekyll may be the best game in town. Compared to a dynamic site, a static site is much more lightweight, which translates into faster, more stable, and less expensive. What’s not to like?</p>
 <h2 id="where-to-start">Where to start?</h2>
 <p>A couple pre-configured Jekyll setups have emerged to reduce the learning curve, most notably <a href="https://github.com/imathis/octopress">Octopress</a> and <a href="https://github.com/plusjade/jekyll-bootstrap">Jekyll Bootstrap</a>. In my opinion, in an attempt to make things easier through tricks such as automated Ruby makefiles (Rakefiles) I think these projects have actually made Jekyll appear much more complicated than it really is, as evidenced by the number of talented programmers running Octopress with the identical configuration. They may get you started faster, but their use of advanced techniques to provide more functionality out-of-the-box makes for a tougher learning curve.</p>
-<p>See the Jekyll-Bootstrap’s <a href="http://jekyllbootstrap.com/lessons/jekyll-introduction.html">introduction</a> to Jekyll for a nice explanation of how Jekyll is laid out. Understand the basic YAML headers, and the role of the <code>_layout</code>, <code>_includes</code> and <code>_posts</code> directories, and you’ve mastered the basics. Or read on below for my take on getting started.</p>
+<p>See the Jekyll-Bootstrap’s <a href="https://jekyllbootstrap.com/lessons/jekyll-introduction.html">introduction</a> to Jekyll for a nice explanation of how Jekyll is laid out. Understand the basic YAML headers, and the role of the <code>_layout</code>, <code>_includes</code> and <code>_posts</code> directories, and you’ve mastered the basics. Or read on below for my take on getting started.</p>
 <h2 id="running-jekyll">Running Jekyll</h2>
 <p>For a basic site hosted on Github, one never actually has to run Jekyll locally – just push the site to a gh-pages branch of a Github repository, or to the master branch of a repository named <code>username.github.com</code> for a personal website, and Jekyll will be run by the server. Jekyll is frequently run locally instead, allowing the user to copy the static website it generates to any (static) web server (see Hosting options, below). Simply install Jekyll following the directions on its <a href="https://github.com/mojombo/jekyll">homepage README</a>.[^1]</p>
 <h2 id="my-rough-guide-to-learn-by-doing">My rough guide to learn-by-doing</h2>
 <p>I believe the best way to start with Jekyll is start with a really bare-bones site. You add features as you need them, making maintenance easy.</p>
-<p>Start with an empty repository. Create a markdown file, say, <code>index.md</code>. Write whatever you want in standard markdown, just stick a <a href="http://en.wikipedia.org/wiki/YAML">YAML</a> header on the top. Stick what? From your standardized testing days, think something like <code>markdown:html :: yaml:xml</code>. Three <code>-</code> on their own line to start, three <code>-</code> on another line to close define the block of YAML data, whose mere existence is enough to get Jekyll to pay attention to that file. Here we specify any metadata we want.</p>
+<p>Start with an empty repository. Create a markdown file, say, <code>index.md</code>. Write whatever you want in standard markdown, just stick a <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> header on the top. Stick what? From your standardized testing days, think something like <code>markdown:html :: yaml:xml</code>. Three <code>-</code> on their own line to start, three <code>-</code> on another line to close define the block of YAML data, whose mere existence is enough to get Jekyll to pay attention to that file. Here we specify any metadata we want.</p>
 <pre><code>    ---
     layout: default
     ---
@@ -179,7 +179,7 @@
 <p>The above example provides a shorter layout file, which pulls in the header snippet. If you have only one layout, this is of course pointless, but the more you add to and change your site, the more useful the ability to reuse a single HTML chunk with just a line of code becomes.</p>
 <h3 id="configuration">Configuration</h3>
 <ul>
-<li><strong>YAML</strong> and the <code>_config.yml</code> file. Recall that YAML is the very human-readable data structure, whose syntax is explained quite throughly on <a href="http://en.wikipedia.org/wiki/YAML">it’s wikipedia page</a>. One glance at an example reveals almost all you need to know about the syntax, such as:</li>
+<li><strong>YAML</strong> and the <code>_config.yml</code> file. Recall that YAML is the very human-readable data structure, whose syntax is explained quite throughly on <a href="https://en.wikipedia.org/wiki/YAML">it’s wikipedia page</a>. One glance at an example reveals almost all you need to know about the syntax, such as:</li>
 </ul>
 <pre><code>
 ---
@@ -197,18 +197,18 @@ modified: 2013-01-07
   twitter: cboettig
   github: cboettig</code></pre>
 <p>(note the indentation for hierarchy) and now my twitter username is available through the liquid command <code>site.author.twitter</code>. Again, it’s just another trick to insert some text, just like <code>_layout</code> and <code>_includes</code>. Only use can prove how helpful this can be.</p>
-<p><strong>Markdown parser hell</strong>. A lot of Jekyll adopters are already familar with Github and it’s flavor of markdown with such features as fenced codeblocks, thus it comes as real suprise to run into advice explaining how code blocks need to be wrapped in the never-heard-of “Liquid” syntax <code>{% highlight %}</code>. Ignore this nonsense. How your markdown is parsed depends on what flavor of markdown you use, and there is a special level of hell for anyone inventing a new flavor (<a href="http://www.codinghorror.com/blog/2012/10/the-future-of-markdown.html">Atwood 2012</a>). Fortunately Github’s Tom Preston-Werner finally gave up the perfect irony that Github’s flavor was not one of the built-in Jekyll parsers (though being a hacker system, this could be added manually), and you can now get that behavior by setting your chosen parser to be <code>redcarpet</code> with the convenient extensions [^2]</p>
+<p><strong>Markdown parser hell</strong>. A lot of Jekyll adopters are already familar with Github and it’s flavor of markdown with such features as fenced codeblocks, thus it comes as real suprise to run into advice explaining how code blocks need to be wrapped in the never-heard-of “Liquid” syntax <code>{% highlight %}</code>. Ignore this nonsense. How your markdown is parsed depends on what flavor of markdown you use, and there is a special level of hell for anyone inventing a new flavor (<a href="https://www.codinghorror.com/blog/2012/10/the-future-of-markdown.html">Atwood 2012</a>). Fortunately Github’s Tom Preston-Werner finally gave up the perfect irony that Github’s flavor was not one of the built-in Jekyll parsers (though being a hacker system, this could be added manually), and you can now get that behavior by setting your chosen parser to be <code>redcarpet</code> with the convenient extensions [^2]</p>
 <pre><code>markdown: redcarpet
 redcarpet:
   extensions: [&quot;no_intra_emphasis&quot;, &quot;fenced_code_blocks&quot;, &quot;autolink&quot;, &quot;tables&quot;, &quot;with_toc_data&quot;]</code></pre>
 <h2 id="more-advanced-tricks">More advanced tricks</h2>
 <p><strong>Liquid</strong> Your next stop should really be to read <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Liquid for Designers</a>. Liquid is the glue that specifies all the rules needed to assemble your site, and is quite simple. Understand how Liquid works and you’ve mastered Jekyll. Jekyll provides <a href="https://github.com/mojombo/jekyll/wiki/Liquid-Extensions">some additional Liquid functions</a> common for blogs.</p>
-<p>Your next stop is to get some really nice customizable CSS scaffolding to control the layout for your site. While there’s a huge number of free CSS themes available, this isn’t 2002, so head on over to <a href="http://twitter.github.com/bootstrap">Twitter-Bootstrap</a> (a project originally created by some of the programmers at Twitter, now evolved to it’s own community). The CSS-based grid layout and some very nice JQuery Javascripts tools can make your site as pretty and as interactive as you can imagine. Like Octopress, prebuilt CSS can lead to all sites looking the same. Check out themes for Bootstrap, and the excellent set of icons by <a href="http://fortawesome.github.com/Font-Awesome/">FontAwesome</a>.</p>
-<p>Your final step is where the hacking really begins. Now and again you imagine something you just can’t do with these tools. Your only recourse is to <del>ask on <a href="http://stackoverflow.com">Stackoverflow</a> for someone to do it for you</del> learn a bit of Ruby. Anything you can write in Ruby you can add to Jekyll as a “plugin”, by defining a Liquid extension for a Ruby function. Ruby is clearly a favorite language of web-developers thanks to its dynamic-site implementation Ruby-on-Rails and a vibrant Github community, so there’s a wealth of useful tools, including an implementation to most APIs you might care to interact with (Github, Twitter, various Google APIs, are among the ones I’m using).</p>
+<p>Your next stop is to get some really nice customizable CSS scaffolding to control the layout for your site. While there’s a huge number of free CSS themes available, this isn’t 2002, so head on over to <a href="https://twitter.github.com/bootstrap">Twitter-Bootstrap</a> (a project originally created by some of the programmers at Twitter, now evolved to it’s own community). The CSS-based grid layout and some very nice JQuery Javascripts tools can make your site as pretty and as interactive as you can imagine. Like Octopress, prebuilt CSS can lead to all sites looking the same. Check out themes for Bootstrap, and the excellent set of icons by <a href="http://fortawesome.github.com/Font-Awesome/">FontAwesome</a>.</p>
+<p>Your final step is where the hacking really begins. Now and again you imagine something you just can’t do with these tools. Your only recourse is to <del>ask on <a href="https://stackoverflow.com">Stackoverflow</a> for someone to do it for you</del> learn a bit of Ruby. Anything you can write in Ruby you can add to Jekyll as a “plugin”, by defining a Liquid extension for a Ruby function. Ruby is clearly a favorite language of web-developers thanks to its dynamic-site implementation Ruby-on-Rails and a vibrant Github community, so there’s a wealth of useful tools, including an implementation to most APIs you might care to interact with (Github, Twitter, various Google APIs, are among the ones I’m using).</p>
 <h2 id="hosting-options">Hosting options</h2>
 <p>Because Jekyll generates a static site, it can be hosted almost anywhere for nothing or next to nothing in costs. The primary question to consider is your choice of domain name. If you wish to host your site from university domain name, just copy the contents of <code>_site</code> into your <code>public_html</code> or similarly named directory on the web server.</p>
-<p>While having a university affiliated domain can appear more official and help with discoverability, buying your own domain name as your permanent Internet home may be a more reliable long-term solution. Once you’ve purchased a domain name from a provider, a static site can be hosted at your own domain name for next to nothing on <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/WebsiteHosting.html">Amazon S3</a>, or for literally nothing <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">through Github</a>.</p>
-<p>[1]: Details on installing and running ruby gems for Jekyll will vary by operating system, so I won’t bother with more details here. Some further background for linux based platforms at least appears in my <a href="http://www.carlboettiger.info/README.html">site’s info file</a>.</p>
+<p>While having a university affiliated domain can appear more official and help with discoverability, buying your own domain name as your permanent Internet home may be a more reliable long-term solution. Once you’ve purchased a domain name from a provider, a static site can be hosted at your own domain name for next to nothing on <a href="https://docs.amazonwebservices.com/AmazonS3/latest/dev/WebsiteHosting.html">Amazon S3</a>, or for literally nothing <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">through Github</a>.</p>
+<p>[1]: Details on installing and running ruby gems for Jekyll will vary by operating system, so I won’t bother with more details here. Some further background for linux based platforms at least appears in my <a href="https://www.carlboettiger.info/README.html">site’s info file</a>.</p>
  
 <!-- not that raw_content depends on custom generator, 
      see _plugins/jekyll-labnotebook-plugins/raw_content --> 
@@ -310,19 +310,19 @@ redcarpet:
 <h2 id="time-nonparametric-bayes">80% Time: nonparametric-bayes</h2>
 <p>The bulk of my time has been spent becoming familiar with the literature on Gaussian Processes and their numerical implementation. I have written my own Gaussian process code from scratch to convince myself of my understanding of the methodology, and explored some of the related numerical issues addressing computational speed and stability.</p>
 <p>I then developed an algorithm for applying the Gaussian process inference of the state dynamics to stochastic dynamic programming methods for determining an optimal harvesting policy. I have compared the performance of the Gaussian-process inferred model to the optimal solution (given the exact underlying model) and to solutions based on estimated parametric models (both matching and not matching the underlying structure). This analysis shows the benefit of the nonparametric approach in better accounting for structural uncertainty in the underlying dynamics.</p>
-<p>Steve and I have just started to look into the potential for state shifts and warning signals there-of in the ENSO / Pacific decadal oscillation. I obtained 2 appropriate datasets and have run a very preliminary <a href="http://www.carlboettiger.info/2012/12/17/random_ews_example.html">analysis</a>.</p>
+<p>Steve and I have just started to look into the potential for state shifts and warning signals there-of in the ENSO / Pacific decadal oscillation. I obtained 2 appropriate datasets and have run a very preliminary <a href="https://www.carlboettiger.info/2012/12/17/random_ews_example.html">analysis</a>.</p>
 <h2 id="time-independent-projects">20% Time: Independent projects</h2>
 <ol type="1">
 <li><strong>pdg-control Working group paper.</strong> Updated analysis for Figures 3 and 4. Updated draft. Conference call for feedback from working group participants. (<a href="https://github.com/cboettig/pdg_control/blob/master/inst/doc/policycosts/policycosts.tex">Current draft</a>)</li>
 <li>Wrote <strong>comment</strong> piece on Early Warning Signals for <em>Nature</em>.<br /></li>
 <li>Working on EWS review paper for Theoretical Ecology with Noam Ross. (<a href="https://github.com/cboettig/ews-review">Current draft</a>)</li>
-<li>Working on analysis optimal policies under multiple uncertainties (with Jim Sanchirico, Mike Springborn). <a href="http://www.carlboettiger.info/tags.html#multiple-uncertainty">#multiple-uncertainty</a> tag in notebook; currently analyses are part of <a href="https://github.com/cboettig/pdg_control/tree/master/inst/examples">pdg-control</a> repository.<br /></li>
+<li>Working on analysis optimal policies under multiple uncertainties (with Jim Sanchirico, Mike Springborn). <a href="https://www.carlboettiger.info/tags.html#multiple-uncertainty">#multiple-uncertainty</a> tag in notebook; currently analyses are part of <a href="https://github.com/cboettig/pdg_control/tree/master/inst/examples">pdg-control</a> repository.<br /></li>
 <li>Finished and submitted NSF post-doc application</li>
 </ol>
 <h3 id="other-academic-activities">Other academic activities</h3>
 <ul>
 <li>Wrote requested reviews for <em>Conservation Letters</em>, <em>Ecology Letters</em>, <em>Proceedings of the Royal Society B</em>. Declined to review for <em>Systematic Biology</em>.<br /></li>
-<li>Presented my <a href="http://dx.doi.org/10.6084/m9.figshare.97500">exit seminar</a> in the UC Davis Center for Population Biology Colloquia series.</li>
+<li>Presented my <a href="https://dx.doi.org/10.6084/m9.figshare.97500">exit seminar</a> in the UC Davis Center for Population Biology Colloquia series.</li>
 <li>Interviewed for the <em>Nature</em> column <em>Turning Point</em>.</li>
 <li>Invited and attended the PLoS alt-metrics workshop and hackathon</li>
 <li>Ran two sessions on version management, dynamic/reproducible papers, and building academic websites for the Mangel group.<br /></li>
@@ -512,8 +512,8 @@ redcarpet:
 <article>
 <div class="excerpt">
 <h1 id="enso-ews">ENSO EWS</h1>
-<p>Let’s just see what happens with the <a href="http://www.esrl.noaa.gov/psd/enso/mei/">MEI data</a> for PDO:</p>
-<pre class="sourceCode r"><code class="sourceCode r">dat &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;http://www.carlboettiger.info/assets/data/mei.csv&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)</code></pre>
+<p>Let’s just see what happens with the <a href="https://www.esrl.noaa.gov/psd/enso/mei/">MEI data</a> for PDO:</p>
+<pre class="sourceCode r"><code class="sourceCode r">dat &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;https://www.carlboettiger.info/assets/data/mei.csv&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)</code></pre>
 <!-- html table generated in R 2.15.2 by xtable 1.7-0 package -->
 <!-- Mon Dec 17 15:31:58 2012 -->
 <p>For the moment let’s ignore annual structure and just collapse this into timeseries sampled bimonthly.</p>
@@ -530,7 +530,7 @@ a &lt;-<span class="st"> </span><span class="kw">generic_ews</span>(Z, <span cla
 </figure>
 <p>How about the data from MacDonald (2005)</p>
 <p><a href="ftp://ftp.ncdc.noaa.gov/pub/data/paleo/treering/reconstructions/pdo-macdonald2005.txt">original data link</a></p>
-<pre class="sourceCode r"><code class="sourceCode r">dat &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;http://www.carlboettiger.info/assets/data/pdo-macdonald2005.csv&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">dat &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;https://www.carlboettiger.info/assets/data/pdo-macdonald2005.csv&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">png</span>(<span class="st">&quot;macdonald2005.png&quot;</span>)
 <span class="kw">require</span>(earlywarnings)
 a &lt;-<span class="st"> </span><span class="kw">generic_ews</span>(dat, <span class="dt">detrending=</span><span class="st">&quot;gaussian&quot;</span>)
@@ -659,16 +659,16 @@ a &lt;-<span class="st"> </span><span class="kw">generic_ews</span>(dat, <span c
 <li>Other examples?</li>
 </ul>
 <h2 id="mcmc">MCMC</h2>
-<p>Examples of controlling priors, resulting posteriors. <a href="http://www.carlboettiger.info/2012/12/10/prior-distributions-for-tgp-mcmc.html">See yesterday’s notes for details</a></p>
+<p>Examples of controlling priors, resulting posteriors. <a href="https://www.carlboettiger.info/2012/12/10/prior-distributions-for-tgp-mcmc.html">See yesterday’s notes for details</a></p>
 <h2 id="additional-r-software-support">additional R software support</h2>
-<p>Have been focusing recently on the MCMC implementation for treed Gaussian Processes, provided in the <a href="http://cran.r-project.org/web/packages/tgp"><code>tgp</code></a> package.</p>
-<p>Lots of various implementations of Gaussian Proccesses in R in <a href="http://cran.r-project.org/web/views/Spatial.html">geospatial stats packages</a> (e.g. Kriging implementations) including some the offer fully heirachical Bayesian approaches with a variety of twists:</p>
+<p>Have been focusing recently on the MCMC implementation for treed Gaussian Processes, provided in the <a href="https://cran.r-project.org/web/packages/tgp"><code>tgp</code></a> package.</p>
+<p>Lots of various implementations of Gaussian Proccesses in R in <a href="https://cran.r-project.org/web/views/Spatial.html">geospatial stats packages</a> (e.g. Kriging implementations) including some the offer fully heirachical Bayesian approaches with a variety of twists:</p>
 <ul>
-<li><a href="http://cran.r-project.org/web/packages/psgp/index.html"><code>psgp</code></a> Projected Spatial Gaussian Process (psgp) methods, Implements projected sparse Gaussian process kriging for the intamap package</li>
-<li><a href="http://cran.r-project.org/web/packages/gstat/"><code>gstat</code></a></li>
-<li><a href="http://cran.r-project.org/web/packages/geoR/"><code>geoR</code></a></li>
-<li><a href="http://cran.r-project.org/web/packages/spBayes/index.html"><code>spBayes</code></a> spBayes fits univariate and multivariate spatial models with Markov chain Monte Carlo (MCMC).</li>
-<li><a href="http://cran.r-project.org/web/packages/ramps/index.html"><code>ramps</code></a> Bayesian geostatistical modeling of Gaussian processes using a reparameterized and marginalized posterior sampling (RAMPS) algorithm designed to lower autocorrelation in MCMC samples. Package performance is tuned for large spatial datasets.</li>
+<li><a href="https://cran.r-project.org/web/packages/psgp/index.html"><code>psgp</code></a> Projected Spatial Gaussian Process (psgp) methods, Implements projected sparse Gaussian process kriging for the intamap package</li>
+<li><a href="https://cran.r-project.org/web/packages/gstat/"><code>gstat</code></a></li>
+<li><a href="https://cran.r-project.org/web/packages/geoR/"><code>geoR</code></a></li>
+<li><a href="https://cran.r-project.org/web/packages/spBayes/index.html"><code>spBayes</code></a> spBayes fits univariate and multivariate spatial models with Markov chain Monte Carlo (MCMC).</li>
+<li><a href="https://cran.r-project.org/web/packages/ramps/index.html"><code>ramps</code></a> Bayesian geostatistical modeling of Gaussian processes using a reparameterized and marginalized posterior sampling (RAMPS) algorithm designed to lower autocorrelation in MCMC samples. Package performance is tuned for large spatial datasets.</li>
 </ul>
 <h2 id="from-the-commit-log">From the commit log…</h2>
 <ul>
@@ -709,7 +709,7 @@ a &lt;-<span class="st"> </span><span class="kw">generic_ews</span>(dat, <span c
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -725,7 +725,7 @@ a &lt;-<span class="st"> </span><span class="kw">generic_ews</span>(dat, <span c
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -745,13 +745,13 @@ a &lt;-<span class="st"> </span><span class="kw">generic_ews</span>(dat, <span c
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -769,7 +769,7 @@ a &lt;-<span class="st"> </span><span class="kw">generic_ews</span>(dat, <span c
       &amp;rft.date=
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/lab-notebook.html">
+      &amp;rft_id=https://www.carlboettiger.info/lab-notebook.html">
   </span>
 
 
@@ -786,7 +786,7 @@ a &lt;-<span class="st"> </span><span class="kw">generic_ews</span>(dat, <span c
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -801,7 +801,7 @@ a &lt;-<span class="st"> </span><span class="kw">generic_ews</span>(dat, <span c
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

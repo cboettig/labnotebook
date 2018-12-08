@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Lab Notebook</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Lab Notebook" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/lab-notebook.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/lab-notebook.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -205,14 +205,14 @@ $$\frac{1}{(T-1)\sqrt{2 \pi}^{T-2} } \frac{\tfrac{1}{2}^{T/2} \left( \sum M_t^2 
 <div class="excerpt">
 <h2 id="rnexml">RNeXML</h2>
 <h3 id="character-metadata">Character metadata</h3>
-<p>EML provides a nice illustration of the kind of metadata we would want to typically accompany character trait data; at minimum, at the <a href="http://knb.ecoinformatics.org/software/eml/eml-2.1.1/eml-attribute">attribute</a> level.</p>
+<p>EML provides a nice illustration of the kind of metadata we would want to typically accompany character trait data; at minimum, at the <a href="https://knb.ecoinformatics.org/software/eml/eml-2.1.1/eml-attribute">attribute</a> level.</p>
 <p>Some of this is already there – we know if states are continuous or discrete, what possible states they can take on, and can add labels to state nodes to define what the symbols mean (however, perhaps an additional <code>meta</code> annotation node would be preferred). We don’t have a way to specify the units of a continuous trait, or longer definitions of the traits themselves, etc.</p>
 <p>Obviously this is a hard problem, particularly in building any semantic reasoning around these traits. I gather that the phenoscape project is tackling this, but I’m not really up to speed on that. Long-term it would be nice to allow users to read and write trait metadata from R even without a working knowledge of the ontologies.</p>
 <p>One idea I’m pondering is if we might be able to generate an EML metadata file the NeXML. The most trivial and straight forward approach is simply to use EML vocabularly itself in the metadata.</p>
 <h3 id="software-to-integrate-into-nexml-long-term">Software to integrate into NeXML (long-term)</h3>
 <ul>
-<li>Visualization: automatically generate the appropriate HTML+javascript page to render tree with <a href="http://www.jsphylosvg.com">jsPhyloSVG</a>/<a href="http://www.phylotouch.com/">phylotouch</a> (<a href="http://www.phylotouch.com/tm7/#">example</a>)</li>
-<li>Support for phenoscape onotlogy tools, e.g. see data as generated by <a href="http://phenoscape.org/wiki/Phenex">phenex</a></li>
+<li>Visualization: automatically generate the appropriate HTML+javascript page to render tree with <a href="https://www.jsphylosvg.com">jsPhyloSVG</a>/<a href="http://www.phylotouch.com/">phylotouch</a> (<a href="http://www.phylotouch.com/tm7/#">example</a>)</li>
+<li>Support for phenoscape onotlogy tools, e.g. see data as generated by <a href="https://phenoscape.org/wiki/Phenex">phenex</a></li>
 <li><a href="https://www.nescent.org/wg/evoinfo/index.php?title=PhyloWS">PhyloWS</a> Generate a REST web service based on NeXML library(?)</li>
 </ul>
 <h3 id="issues">Issues</h3>
@@ -240,7 +240,7 @@ $$\frac{1}{(T-1)\sqrt{2 \pi}^{T-2} } \frac{\tfrac{1}{2}^{T/2} \left( \sum M_t^2 
 <h3 id="rnexml">RNeXML</h3>
 <ul>
 <li>Feedback from Rutger, need to add <code>about</code> attributes so that RDFa abstraction references the right level of the DOM (issue <a href="https://github.com/ropensci/RNeXML/issues/35">#35</a>).<br /></li>
-<li>Looking for strategy for distilling RDF from RDFa in R, see <a href="http://stackoverflow.com/questions/20026540/distill-rdfa-into-rdf-xml-in-r">my question on SO</a>. Hopefully don’t have to wrap some C library myself…</li>
+<li>Looking for strategy for distilling RDF from RDFa in R, see <a href="https://stackoverflow.com/questions/20026540/distill-rdfa-into-rdf-xml-in-r">my question on SO</a>. Hopefully don’t have to wrap some C library myself…</li>
 </ul>
 <h3 id="nonparametric-bayes">nonparametric-bayes</h3>
 <p>Writing writing.</p>
@@ -250,14 +250,14 @@ $$\frac{1}{(T-1)\sqrt{2 \pi}^{T-2} } \frac{\tfrac{1}{2}^{T/2} \left( \sum M_t^2 
 <li><p>Extended discussion. Adjustments to figures. See commit log /diffs for details.</p></li>
 </ul>
 <h2 id="reading">Reading</h2>
-<p><span class="showtooltip" title="Mace G (2013). &#39;Global Change: Ecology Must Evolve.&#39; Nature, 503, pp. 191-192. ISSN 0028-0836."><a href="http://dx.doi.org/10.1038/503191a">Mace (2013)</a></span> , e.g.</p>
+<p><span class="showtooltip" title="Mace G (2013). &#39;Global Change: Ecology Must Evolve.&#39; Nature, 503, pp. 191-192. ISSN 0028-0836."><a href="https://dx.doi.org/10.1038/503191a">Mace (2013)</a></span> , e.g.</p>
 <blockquote>
 <p>a new kind of ecology is needed that is predicated on scaling up efforts, data sharing and collaboration</p>
 </blockquote>
 <p>hear hear.</p>
 <ul>
 <li><p>PNAS with a somewhat confused take on error rates, suggesting a revised threshold p-value…</p></li>
-<li><p>AmNat <a href="http://w3.biosci.utexas.edu/amnatasilomar/files/AsilomarMeetingProgramNov172013.pdf">Asilomar schedule</a> (pdf) is up.</p></li>
+<li><p>AmNat <a href="https://w3.biosci.utexas.edu/amnatasilomar/files/AsilomarMeetingProgramNov172013.pdf">Asilomar schedule</a> (pdf) is up.</p></li>
 </ul>
  
 <!-- not that raw_content depends on custom generator, 
@@ -291,19 +291,19 @@ meta &lt;-<span class="st"> </span><span class="kw">get_metadata</span>(birds) <
 ##                                             dc:date 
 ##                                        &quot;2013-11-17&quot; 
 ##                                          cc:license 
-## &quot;http://creativecommons.org/publicdomain/zero/1.0/&quot;</code></pre>
+## &quot;https://creativecommons.org/publicdomain/zero/1.0/&quot;</code></pre>
 <p>Which we can subset by name, e.g. <code>meta[&quot;dc:date&quot;]</code>. This is probably simplest to most R users; though exactly what the namespace prefix means may be unclear if they haven’t worked with namespaces before. (The user can always print a summary of the namespaces and prefixes in the nexml file using <code>birds@namespaces</code>).</p>
 <p>This approach is simple, albeit a bit limited.</p>
 <h3 id="xpath-queries">XPath queries</h3>
 <p>For instance, the R user has a much more natural and powerful way to handle these issues of prefixes and namespaces using either the XML or rrdf libraries. For instance, if we extract meta nodes into RDF-XML, we could handle the queries like so:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">xpathSApply</span>(meta, <span class="st">&quot;//dc:title&quot;</span>, xmlValue)</code></pre>
 <p>which uses the namespace prefix defined in the nexml; or</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">xpathSApply</span>(meta, <span class="st">&quot;//x:title&quot;</span>, xmlValue, <span class="dt">namespaces=</span><span class="kw">c</span>(<span class="dt">x =</span> <span class="st">&quot;http://purl.org/dc/elements/1.1/&quot;</span>))</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">xpathSApply</span>(meta, <span class="st">&quot;//x:title&quot;</span>, xmlValue, <span class="dt">namespaces=</span><span class="kw">c</span>(<span class="dt">x =</span> <span class="st">&quot;https://purl.org/dc/elements/1.1/&quot;</span>))</code></pre>
 <p>defining the custom prefix <code>x</code> to the URI</p>
 <h3 id="sparql-queries">Sparql queries</h3>
 <p>Pretty exciting that qe can make arbitrary SPARQL queries of the metadata as well.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(rrdf)
-<span class="kw">sparql.rdf</span>(ex, <span class="st">&quot;SELECT ?title WHERE { ?x &lt;http://purl.org/dc/elements/1.1/title&gt; ?title })</span></code></pre>
+<span class="kw">sparql.rdf</span>(ex, <span class="st">&quot;SELECT ?title WHERE { ?x &lt;https://purl.org/dc/elements/1.1/title&gt; ?title })</span></code></pre>
 <p>Obviously the XPath or SPARQL queries are more expressive / powerful than drawing out the metadata from the S4 structure directly. On the other hand, because both of these approaches use just the distilled metadata, the original connection between metadata elements and the structure of the XML tree is lost unless stated explicitly. An in-between solution is to use XPath on the nexml XML instead, though I think we cannot make use of the namespaces in that case, since they appear in attribute values rather than structure.</p>
 <p>Anyway, it’s nice to have these options in R, particularly for more complex queries where we might want to make some use of the ontology as well. On the other hand, simple presentation of basic metadata is probably necessary for most users.</p>
 <p>Would be nice to illustrate with a query that required some logical deduction from the ontology.</p>
@@ -333,7 +333,7 @@ meta &lt;-<span class="st"> </span><span class="kw">get_metadata</span>(birds) <
 <p>I’m not generally active on it - my impression is that the open science community is mostly skeptical about ResearchGate and any other “Social Network” for scientists, largely on the grounds that “we already use the same social networks everyone else uses.” Some object on more philosophical grounds (profit, Mendeley, etc), but heck I publish in Elsevier/Springer/Wiley so I won’t preach. That’s perhaps a US/elite institution centric view though; it seems more popular with a more international audience where things like basic access to pdfs may be more of an issue. I present no data to back any if that up.</p>
 <p>Personally, it hasn’t added any value for me, in contrast to the value I get from interacting with other researchers on Github, G+ or Twitter. Still, as RG recently got $35 million from Bill Gates, they might actually build something useful. Certainly traditional publishers have left plenty of room for innovation in the space of sharing data, networking, etc. So I have a profile there to wait and see, next to a disclaimer that says “please see my website for updated information.”</p>
 <p>However, I was actually impressed by ResearchGate this morning. While I thought I had successfully blocked most of their email notifications, one this morning had successfully found the full text of a recent paper of mine (albeit a few months after it had appeared). Instead of asking me to upload something, RG was able to obtain the full text from the publisher (Springer). On so doing, it also asks me if I would like to “follow” several of the researchers I cited who are also on ResearchGate.</p>
-<p>Why is that impressive? Mendeley, for all it’s much more natural fit into most researcher’s workflows, never automatically discovers papers I publish. If I want them in my Mendeley profile, I have to add them manually. Manually maintaining profiles across different networks is so entirely a waste of time and the antithesis of a linked data web where I have already made this information machine readable that I find it the most annoying feature by far in any of these sites. Here, ResearchGate is actually doing the intelligent thing, whether by connecting my RG identity to my ORCID ID, or something more heuristic. (Google Scholar automatically adds things to my profile, but in a far less selective algorithm that can be easily gamed, see <a href="http://doi.org/10.1002/asi.23056">10.1002/asi.23056</a>).</p>
+<p>Why is that impressive? Mendeley, for all it’s much more natural fit into most researcher’s workflows, never automatically discovers papers I publish. If I want them in my Mendeley profile, I have to add them manually. Manually maintaining profiles across different networks is so entirely a waste of time and the antithesis of a linked data web where I have already made this information machine readable that I find it the most annoying feature by far in any of these sites. Here, ResearchGate is actually doing the intelligent thing, whether by connecting my RG identity to my ORCID ID, or something more heuristic. (Google Scholar automatically adds things to my profile, but in a far less selective algorithm that can be easily gamed, see <a href="https://doi.org/10.1002/asi.23056">10.1002/asi.23056</a>).</p>
 <p>By obtaining the full-text directly from the publisher, they show the considerable advantage of a well-funded network. Presumably this indicates that access was negotiated directly with the publisher, who agrees and even facilitates me sharing the full-text of my otherwise paywalled article on my RG profile. That’s a non-trivial contribution towards open access: Contrast this to Mendeley’s more murky policy which encourages me to provide full text access through my user profile but places the legal responsibility directly on me to confirm that this permissible, or an organization like ORCID which despite (because of?) it’s more non-profit and utilitarian values does not have permission to distribute my paywalled pdfs on my profile. (Sure, my papers on arXiv already, but that isn’t the point).</p>
 <p>Likewise, using the citation data against the RG data on which researchers have profiles shows a vaguely intelligent use of data other platforms mostly ignore (providing useful suggestions using some understanding of the academic process rather than mindless application of some friend-of-a-friend network algorithm).</p>
 <p>(The fact that RG pings unfortunate souls who might have signed up once but have no desire to see my “Activity” on RG is one of it’s potentially effective marketing but more pernicious decisions. Use does not necessarily imply trust).</p>
@@ -387,10 +387,10 @@ meta &lt;-<span class="st"> </span><span class="kw">get_metadata</span>(birds) <
 
 <article>
 <div class="excerpt">
-<p>Just my draft copy of a <a href="http://dynamicecology.wordpress.com/2013/11/25/do-we-need-a-culture-of-data-science-in-academia-guest-post/">Guest blog post</a> I wrote for Dynamic Ecology.</p>
+<p>Just my draft copy of a <a href="https://dynamicecology.wordpress.com/2013/11/25/do-we-need-a-culture-of-data-science-in-academia-guest-post/">Guest blog post</a> I wrote for Dynamic Ecology.</p>
 <hr />
-<p>On Tuesday the <a href="http://www.nitrd.gov/nitrdgroups/index.php?title=Data_to_Knowledge_to_Action">Whitehouse Office of Science and Technology Policy</a> announced the creation of a $37.8 million dollar initiative to promote a “Data Science Culture” in academic institutions, funded by the <a href="http://www.moore.org/newsroom/press-releases/2013/11/12/%20bold_new_partnership_launches_to_harness_potential_of_data_scientists_and_big_data">Gordon and Betty Moore Foundation</a>, <a href="http://www.sloan.org/fileadmin/media/files/press_releases/datascience.pdf">Alfred P. Sloan Foundation</a>, and hosted in centers at the universities UC Berkeley, University of Washington, and New York University. Sadly, these announcements give little description of just what such a center would do, beyond repeating the usual the hype of “Big Data.”</p>
-<p>Fernando Perez, a research scientist at UC Berkeley closely involved with the process, paints a rather more provocative picture in his own perspective on <a href="http://blog.fperez.org/2013/11/an-ambitious-experiment-in-data-science.html">what this initiative might mean by a “Data Science Culture.”</a> Rather than motivating the need for such a Center merely by expressing terabytes in scientific notation, Perez focuses on something not mentioned in the press releases. In his view, the objective of such a center stems from the observation that:</p>
+<p>On Tuesday the <a href="https://www.nitrd.gov/nitrdgroups/index.php?title=Data_to_Knowledge_to_Action">Whitehouse Office of Science and Technology Policy</a> announced the creation of a $37.8 million dollar initiative to promote a “Data Science Culture” in academic institutions, funded by the <a href="http://www.moore.org/newsroom/press-releases/2013/11/12/%20bold_new_partnership_launches_to_harness_potential_of_data_scientists_and_big_data">Gordon and Betty Moore Foundation</a>, <a href="http://www.sloan.org/fileadmin/media/files/press_releases/datascience.pdf">Alfred P. Sloan Foundation</a>, and hosted in centers at the universities UC Berkeley, University of Washington, and New York University. Sadly, these announcements give little description of just what such a center would do, beyond repeating the usual the hype of “Big Data.”</p>
+<p>Fernando Perez, a research scientist at UC Berkeley closely involved with the process, paints a rather more provocative picture in his own perspective on <a href="https://blog.fperez.org/2013/11/an-ambitious-experiment-in-data-science.html">what this initiative might mean by a “Data Science Culture.”</a> Rather than motivating the need for such a Center merely by expressing terabytes in scientific notation, Perez focuses on something not mentioned in the press releases. In his view, the objective of such a center stems from the observation that:</p>
 <blockquote>
 <p>the incentive mechanisms of academic research are at sharp odds with the rising need for highly collaborative interdisciplinary research, where computation and data are first-class citizens</p>
 </blockquote>
@@ -409,20 +409,20 @@ meta &lt;-<span class="st"> </span><span class="kw">get_metadata</span>(birds) <
 </ul>
 </blockquote>
 <p>Well that’s a different tune than the usual big data hype<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. While it is easy to find anecdotes that support each of these charges, it is more difficult to assess just how rare or pervasive they really are. Though these are not new complaints among ecologists, the solutions (or at least antidotes) proposed in a Data Science Culture given a rather different emphasis. At first glance, the Data Science Culture sounds like the more familiar call for an interdisciplinary culture, emphasizing that the world would be a better place if only domain scientists learned more mathematics, statistics and computer science. It is not.</p>
-<h5 id="the-problem-part-1-statistical-machismo">the problem, part 1: <a href="http://dynamicecology.wordpress.com/2012/09/11/statistical-machismo/">statistical machismo</a>?</h5>
-<p>As to whether ecologists choose methods to match their pants, we have at least some data beyond anecdote. A survey earlier this year by Joppa et al. <a href="http://doi.org/10.1126/science.1231535">(2013) <em>Science</em></a>) has indeed shown that most ecologists select methods software guided primarily by concerns of fashion (in other words, whatever everybody else uses). The recent expansion of readily available statistical software has greatly increased the number of shirts on the rack. Titles in <em>Ecology</em> reflect the trend of rising complexity in ecological models, such as <a href="http://doi.org/10.1890/10-1124.1">Living Dangerously with big fancy models</a> and <a href="http://doi.org/10.1890/10-0052.1">Are exercises like this a good use of anybody’s time?</a>). Because software enables researchers to make use of methods without the statistical knowledge of how to implement them from the ground up, many echo the position so memorably <a href="http://press.princeton.edu/titles/8348.html">articulated by Jim Clark</a> that we “handing guns to children.” This belittling position usually leads to a call for improved education and training in mathematical and statistical underpinnings (see each of the 9 articles in another <a href="http://doi.org/10.1890/08-1402.1"><em>Ecology</em> Forum</a> on this topic), or the occassional wistful longing for a simpler time.</p>
+<h5 id="the-problem-part-1-statistical-machismo">the problem, part 1: <a href="https://dynamicecology.wordpress.com/2012/09/11/statistical-machismo/">statistical machismo</a>?</h5>
+<p>As to whether ecologists choose methods to match their pants, we have at least some data beyond anecdote. A survey earlier this year by Joppa et al. <a href="https://doi.org/10.1126/science.1231535">(2013) <em>Science</em></a>) has indeed shown that most ecologists select methods software guided primarily by concerns of fashion (in other words, whatever everybody else uses). The recent expansion of readily available statistical software has greatly increased the number of shirts on the rack. Titles in <em>Ecology</em> reflect the trend of rising complexity in ecological models, such as <a href="http://doi.org/10.1890/10-1124.1">Living Dangerously with big fancy models</a> and <a href="http://doi.org/10.1890/10-0052.1">Are exercises like this a good use of anybody’s time?</a>). Because software enables researchers to make use of methods without the statistical knowledge of how to implement them from the ground up, many echo the position so memorably <a href="http://press.princeton.edu/titles/8348.html">articulated by Jim Clark</a> that we “handing guns to children.” This belittling position usually leads to a call for improved education and training in mathematical and statistical underpinnings (see each of the 9 articles in another <a href="http://doi.org/10.1890/08-1402.1"><em>Ecology</em> Forum</a> on this topic), or the occassional wistful longing for a simpler time.</p>
 <h5 id="the-solution-part-1-data-publication">the solution, part 1: data publication?</h5>
 <p>What is most interesting to me in Perez’s perspective on the Data Science Institute in an emphasis on changing <em>incentives</em> more than changing <em>educational</em> practices. Perez characterizes the fundamental objective of the initiative as a <em>cultural shift in which</em></p>
 <blockquote>
 <p>“The creation of usable, robust computational tools, and the work of data acquisition and analysis must be treated as equal partners to methodological advances or domain-specific results”</p>
 </blockquote>
-<p>While this does not tackle the problem of misuse or misinterpretation of statistical methodology head-on, I believe it is a rather thought-provoking approach to mitigate the consequences of mistakes or limiting assumptions. By atomizing the traditional publication into such component parts: data, text, and software implementation, it becomes easier to recognize each for it’s own contributions. A brilliantly executed experimental manipulation need not live or die on some minor flaw in a routine statistical analysis when the data is a product in its own right. Programmatic access to raw data and computational libraries of statistical tools could make it easy to repeat or alter the methods chosen by the original authors, allowing the consequences of these mistakes to be both understood and corrected. In the current system in which access to the raw data is rare, statistical mistakes can be difficult to detect and even harder to remedy. This in turn places a high premium on the selection of appropriate statistical methods, while putting little selective pressure on the details of the data management or implementation of those methods. Allowing the data to stand by itself places a higher premium on careful collection and annotation of data (e.g. the adoption of metadata standards). To the extent that misapplication of statistical and modeling approaches could place a substantial error rate on the literature (<a href="http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble?fsrc=scn/tw_ec/trouble_at_the_lab">Economist</a>, <a href="http://doi.org/10.1371/journal.pmed.0020124">Ioannidis 2005</a>), independent data publication might be an intriguing antidote.</p>
+<p>While this does not tackle the problem of misuse or misinterpretation of statistical methodology head-on, I believe it is a rather thought-provoking approach to mitigate the consequences of mistakes or limiting assumptions. By atomizing the traditional publication into such component parts: data, text, and software implementation, it becomes easier to recognize each for it’s own contributions. A brilliantly executed experimental manipulation need not live or die on some minor flaw in a routine statistical analysis when the data is a product in its own right. Programmatic access to raw data and computational libraries of statistical tools could make it easy to repeat or alter the methods chosen by the original authors, allowing the consequences of these mistakes to be both understood and corrected. In the current system in which access to the raw data is rare, statistical mistakes can be difficult to detect and even harder to remedy. This in turn places a high premium on the selection of appropriate statistical methods, while putting little selective pressure on the details of the data management or implementation of those methods. Allowing the data to stand by itself places a higher premium on careful collection and annotation of data (e.g. the adoption of metadata standards). To the extent that misapplication of statistical and modeling approaches could place a substantial error rate on the literature (<a href="https://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble?fsrc=scn/tw_ec/trouble_at_the_lab">Economist</a>, <a href="http://doi.org/10.1371/journal.pmed.0020124">Ioannidis 2005</a>), independent data publication might be an intriguing antidote.</p>
 <!--
 Data scales in a way that publications do not, even (or rather, especially) within a particular sub-domain.  Given a single paper on a topic, it is much easier to read the conclusion than replicate it from the data.  Given 1000 papers on the topic vs having the underlying data in a standardized form, it becomes easier to replicate the analyses. Surely that would just lead to nonsense, given the idiosyncrasies of each different experiment that were never meant to be compared in that way?  Surely only by carefully reading not only each paper, but each supplement, can we really understand what was done well enough to replicate or re-analyze it?  Yet we cite papers as if they have demonstrated something in far more generality than all that.   
 
 -->
 <h5 id="the-problem-part-2-junk-software">the problem, part 2: junk software</h5>
-<p>As Perez is careful to point out, those implementing and publishing methods aren’t helping either. Unreliable, inextensible and opaque computational implementations act both as barriers to adoption and validation. Trouble with scientific software has been well recognized by the literature (e.g. <a href="http://doi.org/10.1038/467775a">Merali (2010), <em>Nature</em></a>, <a href="http://doi.org/10.1038/nature10836">Inces et al. (2012), <em>Nature</em></a>), the news (<a href="http://www.timeshighereducation.co.uk/news/save-your-work-give-software-engineers-a-career-track/2006431.article">Times Higher Education</a>) and funding agencies (<a href="http://www.nsf.gov/pubs/2013/nsf13525/nsf13525.htm">National Science Foundation</a>). While it is difficult to assess the frequency of software bugs that may really alter the results (though see Inces et al.), designs that will make software challenging or impossible to maintain, scale to larger tasks or extend as methods evolve are more readily apparent. Cultural challenges around software run as deep as they do around data. When Mozilla’s Science Lab <a href="http://doi.org/10.1038/501472a">undertook a review of code</a> associated with scientific publications, they took some criticism from other <a href="http://simplystatistics.org/2013/09/26/how-could-code-review-discourage-code-disclosure-reviewers-with-motivation/">advocates</a> of publishing code. I encountered this first hand in replies from authors, editors and reviewers on my own blog post <a href="http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html">suggesting we raise the bar</a> on the review of methodological implementations. Despite disagreement about where that bar should be, I think we all felt the community could benefit from clearer guidance or consensus on how to review papers in which the software implementation plays an essential part and contribution.</p>
+<p>As Perez is careful to point out, those implementing and publishing methods aren’t helping either. Unreliable, inextensible and opaque computational implementations act both as barriers to adoption and validation. Trouble with scientific software has been well recognized by the literature (e.g. <a href="https://doi.org/10.1038/467775a">Merali (2010), <em>Nature</em></a>, <a href="http://doi.org/10.1038/nature10836">Inces et al. (2012), <em>Nature</em></a>), the news (<a href="http://www.timeshighereducation.co.uk/news/save-your-work-give-software-engineers-a-career-track/2006431.article">Times Higher Education</a>) and funding agencies (<a href="http://www.nsf.gov/pubs/2013/nsf13525/nsf13525.htm">National Science Foundation</a>). While it is difficult to assess the frequency of software bugs that may really alter the results (though see Inces et al.), designs that will make software challenging or impossible to maintain, scale to larger tasks or extend as methods evolve are more readily apparent. Cultural challenges around software run as deep as they do around data. When Mozilla’s Science Lab <a href="http://doi.org/10.1038/501472a">undertook a review of code</a> associated with scientific publications, they took some criticism from other <a href="http://simplystatistics.org/2013/09/26/how-could-code-review-discourage-code-disclosure-reviewers-with-motivation/">advocates</a> of publishing code. I encountered this first hand in replies from authors, editors and reviewers on my own blog post <a href="http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html">suggesting we raise the bar</a> on the review of methodological implementations. Despite disagreement about where that bar should be, I think we all felt the community could benefit from clearer guidance or consensus on how to review papers in which the software implementation plays an essential part and contribution.</p>
 <h5 id="the-solution-part-2-software-publication">the solution, part 2: software publication?</h5>
 <p>As in the case of data, educational practices are the route usually suggested to address better programming practices, and no doubt these are important. Once again though, it is interesting to think how a higher incentive on such research products might also improve their quality, or at least facilitate distilling the good from the bad from the ugly, more easily. Yet in this case, I think there is a potential downside as well.</p>
 <h6 id="or-not">Or not?</h6>
@@ -439,7 +439,7 @@ In raising these questions, Perez brings the role of a Data Science Institute do
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Probably for reasons discussed <a href="http://dynamicecology.wordpress.com/2013/11/07/the-one-true-route-to-good-science-is/comment-page-1/#comment-20373">recently on Dynamic Ecology</a> about politicians and dirty laundry.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>Probably for reasons discussed <a href="https://dynamicecology.wordpress.com/2013/11/07/the-one-true-route-to-good-science-is/comment-page-1/#comment-20373">recently on Dynamic Ecology</a> about politicians and dirty laundry.<a href="#fnref1">↩</a></p></li>
 </ol>
 </section>
  
@@ -473,28 +473,28 @@ In raising these questions, Perez brings the role of a Data Science Institute do
 </ul>
 <h3 id="notes-from-some-discussions-today">Notes from some discussions today</h3>
 <ul>
-<li><p>Sandy Leibold mentions potential for exploring early warning signals in larch budmoth data: <span class="showtooltip" title="Esper J, Buntgen U, Frank D, Nievergelt D and Liebhold A (2007). &#39;1200 Years of Regular Outbreaks in Alpine Insects.&#39; Proceedings of The Royal Society B: Biological Sciences, 274, pp. 671-679. ISSN 0962-8452."><a href="http://dx.doi.org/10.1098/rspb.2006.0191">Esper et al. (2007)</a></span> , <code>r citet(&quot;10.1111/j.1469 -8137.2009.02825.x&quot;)</code>.</p></li>
-<li><p>Bill Fagan mentions paper with Eli Holmes on quasi-extinction forecasting <span class="showtooltip" title="Holmes E, Sabo J, Viscido S and Fagan W (2007). &#39;A Statistical Approach to Quasi-Extinction Forecasting.&#39; Ecology Letters, 10, pp. 1182-1198. ISSN 1461-023X."><a href="http://dx.doi.org/10.1111/j.1461-0248.2007.01105.x">Holmes et al. (2007)</a></span> and an analysis of the GPDD <span class="showtooltip" title="Fagan u, Meir u, Prendergast u, Folarin u and Karieva u (2001). &#39;Characterizing Population Vulnerability For 758 Species.&#39; Ecology Letters, 4, pp. 132-138. ISSN 1461-023X."><a href="http://dx.doi.org/10.1046/j.1461-0248.2001.00206.x">Fagan et al. (2001)</a></span> as potentially interesting applications for our Bayesian nonparametrics work.</p></li>
-<li><p>Matt Potts mentions DoD program in <a href="http://www.serdp.org/">Strategic Environmental Research and Development Program (SERDP)</a>. E.g. see the current call for <a href="http://www.serdp.org/content/download/22120/228239/version/2/file/FY15_RCSON-15-01_New+Conservation+Paradigms_Final.pdf">New Paradigms for Managing Species and Ecosystems in a Non-Stationary World (pdf)</a></p></li>
+<li><p>Sandy Leibold mentions potential for exploring early warning signals in larch budmoth data: <span class="showtooltip" title="Esper J, Buntgen U, Frank D, Nievergelt D and Liebhold A (2007). &#39;1200 Years of Regular Outbreaks in Alpine Insects.&#39; Proceedings of The Royal Society B: Biological Sciences, 274, pp. 671-679. ISSN 0962-8452."><a href="https://dx.doi.org/10.1098/rspb.2006.0191">Esper et al. (2007)</a></span> , <code>r citet(&quot;10.1111/j.1469 -8137.2009.02825.x&quot;)</code>.</p></li>
+<li><p>Bill Fagan mentions paper with Eli Holmes on quasi-extinction forecasting <span class="showtooltip" title="Holmes E, Sabo J, Viscido S and Fagan W (2007). &#39;A Statistical Approach to Quasi-Extinction Forecasting.&#39; Ecology Letters, 10, pp. 1182-1198. ISSN 1461-023X."><a href="https://dx.doi.org/10.1111/j.1461-0248.2007.01105.x">Holmes et al. (2007)</a></span> and an analysis of the GPDD <span class="showtooltip" title="Fagan u, Meir u, Prendergast u, Folarin u and Karieva u (2001). &#39;Characterizing Population Vulnerability For 758 Species.&#39; Ecology Letters, 4, pp. 132-138. ISSN 1461-023X."><a href="http://dx.doi.org/10.1046/j.1461-0248.2001.00206.x">Fagan et al. (2001)</a></span> as potentially interesting applications for our Bayesian nonparametrics work.</p></li>
+<li><p>Matt Potts mentions DoD program in <a href="https://www.serdp.org/">Strategic Environmental Research and Development Program (SERDP)</a>. E.g. see the current call for <a href="http://www.serdp.org/content/download/22120/228239/version/2/file/FY15_RCSON-15-01_New+Conservation+Paradigms_Final.pdf">New Paradigms for Managing Species and Ecosystems in a Non-Stationary World (pdf)</a></p></li>
 </ul>
 <h3 id="pdg-control">pdg-control</h3>
 <p>Trying to understand pattern of increasing ENPV with increasing stochasticity. Despite having the same optimal policy inferred under increasing stochasticity (i.e. still in Reed’s self-sustaining criterion, below <span class="math">\(\sigma_g\)</span> of 0.2 or so) the average over simulated replicates is higher. We don’t seem to obtain the theoretical ENPV, but something less, in either case. See code <a href="https://github.com/cboettig/pdg_control/blob/38bccb71b08f1bbd02b7a5ca55188a739eea5109/inst/examples/noise_effects.Rmd">noise_effects.md</a>.</p>
 <h3 id="ropensci">ropensci</h3>
-<p>Schema.org defines a vocabulary for <a href="http://schema.org/Dataset">datasets</a> (microdata/rdfa)</p>
+<p>Schema.org defines a vocabulary for <a href="https://schema.org/Dataset">datasets</a> (microdata/rdfa)</p>
 <p>Rutger gives a one-liner solution for tolweb to nexml using <a href="https://github.com/rvosa/bio-phylo">bio-phylo</a> perl library:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">perl</span> -MBio::Phylo::IO=parse -e <span class="st">&#39;print parse-&gt;to_xml&#39;</span> format tolweb as_project 1 url <span class="st">&#39;http://tolweb.org/onlinecontributors/app?service=external&amp;page=xml/TreeStructureService&amp;node_id=52643&#39;</span></code></pre>
-<p>Hmm, there’s a journal of <a href="http://www.sciencedirect.com/science/journal/15749541">Ecological Informatics</a>.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">perl</span> -MBio::Phylo::IO=parse -e <span class="st">&#39;print parse-&gt;to_xml&#39;</span> format tolweb as_project 1 url <span class="st">&#39;https://tolweb.org/onlinecontributors/app?service=external&amp;page=xml/TreeStructureService&amp;node_id=52643&#39;</span></code></pre>
+<p>Hmm, there’s a journal of <a href="https://www.sciencedirect.com/science/journal/15749541">Ecological Informatics</a>.</p>
 <h2 id="references">References</h2>
 <ul>
-<li>Rebecca S. Epanchin-Niell, Robert G. Haight, Ludek Berec, John M. Kean, Andrew M. Liebhold, Helen Regan, (2012) Optimal Surveillance And Eradication of Invasive Species in Heterogeneous Landscapes. <em>Ecology Letters</em> <strong>15</strong> 803-812 <a href="http://dx.doi.org/10.1111/j.1461-0248.2012.01800.x">10.1111/j.1461-0248.2012.01800.x</a></li>
-<li>Rebecca S. Epanchin-Niell, James E. Wilen, (2012) Optimal Spatial Control of Biological Invasions. <em>Journal of Environmental Economics And Management</em> <strong>63</strong> 260-270 <a href="http://dx.doi.org/10.1016/j.jeem.2011.10.003">10.1016/j.jeem.2011.10.003</a></li>
-<li>J. Esper, U. Buntgen, D. C Frank, D. Nievergelt, A. Liebhold, (2007) 1200 Years of Regular Outbreaks in Alpine Insects. <em>Proceedings of The Royal Society B: Biological Sciences</em> <strong>274</strong> 671-679 <a href="http://dx.doi.org/10.1098/rspb.2006.0191">10.1098/rspb.2006.0191</a></li>
-<li>unknown Fagan, unknown Meir, unknown Prendergast, unknown Folarin, unknown Karieva, (2001) Characterizing Population Vulnerability For 758 Species. <em>Ecology Letters</em> <strong>4</strong> 132-138 <a href="http://dx.doi.org/10.1046/j.1461-0248.2001.00206.x">10.1046/j.1461-0248.2001.00206.x</a></li>
-<li>A. R. Hall, A. D. Miller, H. C. Leggett, S. H. Roxburgh, A. Buckling, K. Shea, (2012) Diversity-Disturbance Relationships: Frequency And Intensity Interact. <em>Biology Letters</em> <strong>8</strong> 768-771 <a href="http://dx.doi.org/10.1098/rsbl.2012.0282">10.1098/rsbl.2012.0282</a></li>
-<li>Elizabeth Eli Holmes, John L. Sabo, Steven Vincent Viscido, William Fredric Fagan, (2007) A Statistical Approach to Quasi-Extinction Forecasting. <em>Ecology Letters</em> <strong>10</strong> 1182-1198 <a href="http://dx.doi.org/10.1111/j.1461-0248.2007.01105.x">10.1111/j.1461-0248.2007.01105.x</a></li>
-<li>Brian Leung, Nuria Roura-Pascual, Sven Bacher, Jaakko Heikkilä, Lluis Brotons, Mark A. Burgman, Katharina Dehnen-Schmutz, Franz Essl, Philip E. Hulme, David M. Richardson, Daniel Sol, Montserrat Vilà, Marcel Rejmanek, (2012) Teasing Apart Alien Species Risk Assessments: A Framework For Best Practices. <em>Ecology Letters</em> <strong>15</strong> 1475-1493 <a href="http://dx.doi.org/10.1111/ele.12003">10.1111/ele.12003</a></li>
-<li>A. D. Miller, S. H. Roxburgh, K. Shea, (2011) How Frequency And Intensity Shape Diversity-Disturbance Relationships. <em>Proceedings of The National Academy of Sciences</em> <strong>108</strong> 5643-5648 <a href="http://dx.doi.org/10.1073/pnas.1018594108">10.1073/pnas.1018594108</a></li>
-<li>Adam David Miller, Stephen H. Roxburgh, Katriona Shea, (2011) Timing of Disturbance Alters Competitive Outcomes And Mechanisms of Coexistence in an Annual Plant Model. <em>Theoretical Ecology</em> <strong>5</strong> 419-432 <a href="http://dx.doi.org/10.1007/s12080-011-0133-1">10.1007/s12080-011-0133-1</a></li>
+<li>Rebecca S. Epanchin-Niell, Robert G. Haight, Ludek Berec, John M. Kean, Andrew M. Liebhold, Helen Regan, (2012) Optimal Surveillance And Eradication of Invasive Species in Heterogeneous Landscapes. <em>Ecology Letters</em> <strong>15</strong> 803-812 <a href="https://dx.doi.org/10.1111/j.1461-0248.2012.01800.x">10.1111/j.1461-0248.2012.01800.x</a></li>
+<li>Rebecca S. Epanchin-Niell, James E. Wilen, (2012) Optimal Spatial Control of Biological Invasions. <em>Journal of Environmental Economics And Management</em> <strong>63</strong> 260-270 <a href="https://dx.doi.org/10.1016/j.jeem.2011.10.003">10.1016/j.jeem.2011.10.003</a></li>
+<li>J. Esper, U. Buntgen, D. C Frank, D. Nievergelt, A. Liebhold, (2007) 1200 Years of Regular Outbreaks in Alpine Insects. <em>Proceedings of The Royal Society B: Biological Sciences</em> <strong>274</strong> 671-679 <a href="https://dx.doi.org/10.1098/rspb.2006.0191">10.1098/rspb.2006.0191</a></li>
+<li>unknown Fagan, unknown Meir, unknown Prendergast, unknown Folarin, unknown Karieva, (2001) Characterizing Population Vulnerability For 758 Species. <em>Ecology Letters</em> <strong>4</strong> 132-138 <a href="https://dx.doi.org/10.1046/j.1461-0248.2001.00206.x">10.1046/j.1461-0248.2001.00206.x</a></li>
+<li>A. R. Hall, A. D. Miller, H. C. Leggett, S. H. Roxburgh, A. Buckling, K. Shea, (2012) Diversity-Disturbance Relationships: Frequency And Intensity Interact. <em>Biology Letters</em> <strong>8</strong> 768-771 <a href="https://dx.doi.org/10.1098/rsbl.2012.0282">10.1098/rsbl.2012.0282</a></li>
+<li>Elizabeth Eli Holmes, John L. Sabo, Steven Vincent Viscido, William Fredric Fagan, (2007) A Statistical Approach to Quasi-Extinction Forecasting. <em>Ecology Letters</em> <strong>10</strong> 1182-1198 <a href="https://dx.doi.org/10.1111/j.1461-0248.2007.01105.x">10.1111/j.1461-0248.2007.01105.x</a></li>
+<li>Brian Leung, Nuria Roura-Pascual, Sven Bacher, Jaakko Heikkilä, Lluis Brotons, Mark A. Burgman, Katharina Dehnen-Schmutz, Franz Essl, Philip E. Hulme, David M. Richardson, Daniel Sol, Montserrat Vilà, Marcel Rejmanek, (2012) Teasing Apart Alien Species Risk Assessments: A Framework For Best Practices. <em>Ecology Letters</em> <strong>15</strong> 1475-1493 <a href="https://dx.doi.org/10.1111/ele.12003">10.1111/ele.12003</a></li>
+<li>A. D. Miller, S. H. Roxburgh, K. Shea, (2011) How Frequency And Intensity Shape Diversity-Disturbance Relationships. <em>Proceedings of The National Academy of Sciences</em> <strong>108</strong> 5643-5648 <a href="https://dx.doi.org/10.1073/pnas.1018594108">10.1073/pnas.1018594108</a></li>
+<li>Adam David Miller, Stephen H. Roxburgh, Katriona Shea, (2011) Timing of Disturbance Alters Competitive Outcomes And Mechanisms of Coexistence in an Annual Plant Model. <em>Theoretical Ecology</em> <strong>5</strong> 419-432 <a href="https://dx.doi.org/10.1007/s12080-011-0133-1">10.1007/s12080-011-0133-1</a></li>
 </ul>
  
 <!-- not that raw_content depends on custom generator, 
@@ -584,7 +584,7 @@ Phylogenetic data is perhaps the most pervasive example across ecological and ev
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -600,7 +600,7 @@ Phylogenetic data is perhaps the most pervasive example across ecological and ev
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -620,13 +620,13 @@ Phylogenetic data is perhaps the most pervasive example across ecological and ev
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -644,7 +644,7 @@ Phylogenetic data is perhaps the most pervasive example across ecological and ev
       &amp;rft.date=
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/lab-notebook.html">
+      &amp;rft_id=https://www.carlboettiger.info/lab-notebook.html">
   </span>
 
 
@@ -661,7 +661,7 @@ Phylogenetic data is perhaps the most pervasive example across ecological and ev
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -676,7 +676,7 @@ Phylogenetic data is perhaps the most pervasive example across ecological and ev
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>
