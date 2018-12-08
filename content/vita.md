@@ -30,13 +30,19 @@ aliases: "/publications"
 
 # publications
 
-25. __Carl Boettiger__, (2018). Managing Larger Data on a GitHub Repository. 
+26. Karthik Ram, __Carl Boettiger__, Scott Chamberlain, Noam Ross,
+    Maelle Salmon, & Stephanie Butland. (2018). A Community of Practice
+    Around Peer-review for Long-term Research Software Sustainability. 
+    Computing in Science & Engineering, 9615(c), 1–1.
+    [doi:10.1109/MCSE.2018.2882753](https://doi.org/10.1109/MCSE.2018.2882753)
+
+25. __Carl Boettiger__, (2018). Managing Larger Data on a GitHub Repository.
     Journal of Open Source Software, 3(29), 971,
-    [doi:10.21105/joss.00971](https://doi.org/10.21105/joss.00971). 
+    [doi:10.21105/joss.00971](https://doi.org/10.21105/joss.00971).
     ([software](https://doi.org/10.5281/zenodo.1432525)).
 
 24. Milad Memarzadeh, __Carl Boettiger__ (2018). Adaptive management of ecological systems 
-    under partial observability. _Biological Conservation_. 224, 9-15. 
+    under partial observability. _Biological Conservation_. 224, 9-15.
     [doi:10.1016/j.biocon.2018.05.009](https://doi.org/10.1016/j.biocon.2018.05.009). 
     ([software](https://github.com/boettiger-lab/pomdpplus))
 
@@ -55,8 +61,9 @@ aliases: "/publications"
     _The Journal of Open Source Software_ 2 (19), 454, 
     [doi:10.21105/joss.00454](https://doi.org/10.21105/joss.00454)
 
-20. Getz, Marshall, Carlson, Giuggioli, Ryan, Romañach,  __Boettiger__, Chamberlain, Larsen, 
-    D'Odorico, O'Sullivan, D. (2017). Making ecological models adequate. _Ecology Letters_.  
+20. Getz, Marshall, Carlson, Giuggioli, Ryan, Romañach,  __Boettiger__,
+    Chamberlain, Larsen, D'Odorico, O'Sullivan, D. (2017). Making 
+    ecological models adequate. _Ecology Letters_.
     [doi:10.1111/ele.12893](https://doi.org/10.1111/ele.12893)
 
 19. Ben Marwick, __Carl Boettiger__, Lincoln Mullen (2017). Packaging data analytical work
