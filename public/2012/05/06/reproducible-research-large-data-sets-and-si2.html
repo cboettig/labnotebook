@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Reproducible Research, Large data sets, and SI2 </title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Reproducible Research, Large data sets, and SI2 " />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2011-05-06 19:24:03 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2011-05-06 19:24:03 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/05/06/reproducible-research-large-data-sets-and-si2.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/05/06/reproducible-research-large-data-sets-and-si2.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -106,13 +106,13 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>What follows are my notes from May 6th, 2011 expressing the ideas that would ultimately coalesce into the <a href="ropensci.org">rOpenSci</a> project.  Much of this was turned into an email to Duncan and Todd, whose feedback was invaluable in working through this, and several others. (The reference to SI2 refers to <a href="http://www.nsf.gov/pubs/2011/nsf11539/nsf11539.htm">an NSF call</a> from about that time, which also stimulated my thinking on this matter.) Since then I’ve learned quite a bit about these tools, with which I now feel quite comfortable. I stumbled across this private note in my notebook today, and figured it could take it’s place as part of my public notebook.</p>
+    <p>What follows are my notes from May 6th, 2011 expressing the ideas that would ultimately coalesce into the <a href="ropensci.org">rOpenSci</a> project.  Much of this was turned into an email to Duncan and Todd, whose feedback was invaluable in working through this, and several others. (The reference to SI2 refers to <a href="https://www.nsf.gov/pubs/2011/nsf11539/nsf11539.htm">an NSF call</a> from about that time, which also stimulated my thinking on this matter.) Since then I’ve learned quite a bit about these tools, with which I now feel quite comfortable. I stumbled across this private note in my notebook today, and figured it could take it’s place as part of my public notebook.</p>
 <h3 id="goals">Goals:</h3>
 <blockquote>
-<p>I’d love to know something about how to interface with common web-based APIs.  Somehow I feel that means knowing about OAuth, JSON, CURL, knowing what HTTP GET and PUT commands and millions of other things are.  I feel like there are some basic building blocks that if I knew, I could look at pages l<a href="http://apidocs.mendeley.com/home/public-resources/search-terms">ike this one,</a> and say, oh, I know how to implement that capability in R.  Unfortunately I still feel like a fish out of water without a clue where to start on most of this.  No one in my department or anyone else that I regularly interact with does this kind of stuff, with the possible exception of statcompsci, so I don’t know where to start.  I’m also a bit worried that actually implementing anything that could successfully be distributed to other users would require more than I’d be capable of, and I should figure out how to get a team of people involved.</p>
+<p>I’d love to know something about how to interface with common web-based APIs.  Somehow I feel that means knowing about OAuth, JSON, CURL, knowing what HTTP GET and PUT commands and millions of other things are.  I feel like there are some basic building blocks that if I knew, I could look at pages l<a href="https://apidocs.mendeley.com/home/public-resources/search-terms">ike this one,</a> and say, oh, I know how to implement that capability in R.  Unfortunately I still feel like a fish out of water without a clue where to start on most of this.  No one in my department or anyone else that I regularly interact with does this kind of stuff, with the possible exception of statcompsci, so I don’t know where to start.  I’m also a bit worried that actually implementing anything that could successfully be distributed to other users would require more than I’d be capable of, and I should figure out how to get a team of people involved.</p>
 </blockquote>
 <p>Why am I interested in this stuff anyway?  Two (related) reasons: I’m very interested in structuring scientific workflow around reproducible research, and I’m very interested in large data.  The two go hand in hand in many ways.</p>
-<p>I’m interested in large data applications (like this TreeBASE project) because my field has somehow managed to have some of the most progressive policies in data archiving and data sharing (through DataDryad, and DataONE, with <a href="http://carlboettiger.info/archives/502">mandatory archiving</a> in many of our journals) while simultaneously having the some of the least-well trained scientists to tackle them.  I organized a workshop around this stuff in my department, hardly anyone came but the <a href="http://carlboettiger.info/archives/1284">video archives</a> have been popular online…)</p>
+<p>I’m interested in large data applications (like this TreeBASE project) because my field has somehow managed to have some of the most progressive policies in data archiving and data sharing (through DataDryad, and DataONE, with <a href="https://carlboettiger.info/archives/502">mandatory archiving</a> in many of our journals) while simultaneously having the some of the least-well trained scientists to tackle them.  I organized a workshop around this stuff in my department, hardly anyone came but the <a href="http://carlboettiger.info/archives/1284">video archives</a> have been popular online…)</p>
 <p>About a year and a half ago, I began an experiment of keeping an open lab notebook (initially on a wiki, now with wordpress).  This brought me into interactions with an online community that is very interested in web-based tools for science, open science, data sharing, collaborative research, social media, etc., which has inspired me to learn more about how these tools could help me work with greater efficiency and greater impact.</p>
 <p>I’d really like to figure out what’s worth learning, what’s worth finding people who already know and collaborating, and how to do each.</p>
 <h4 id="si2-people-to-contact">SI2 people to contact?</h4>
@@ -129,7 +129,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2011-05-06 19:24:03 +0000" 
     property="dc:created">06 May 2011</time></p>
@@ -188,11 +188,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -205,7 +205,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -221,7 +221,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -241,13 +241,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -265,7 +265,7 @@
       &amp;rft.date=2011-05-06
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/05/06/reproducible-research-large-data-sets-and-si2.html">
+      &amp;rft_id=https://www.carlboettiger.info/05/06/reproducible-research-large-data-sets-and-si2.html">
   </span>
 
 
@@ -282,7 +282,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -297,7 +297,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Bodega Phylogenetics Workshop Day 1</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Bodega Phylogenetics Workshop Day 1" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2010-03-07 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2010-03-07 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/03/07/Bodega-Phylogenetics-Workshop-Day-1.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/03/07/Bodega-Phylogenetics-Workshop-Day-1.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>Lecture notes for the phyolgenetics workshop. These are taken in real time, so may contain errors. I’ll see if I keep this up throughout the course. See <a href="http://bodegaphylo.wikispot.org/2010_Workshop" title="http://bodegaphylo.wikispot.org/2010_Workshop">course website.</a></p>
+    <p>Lecture notes for the phyolgenetics workshop. These are taken in real time, so may contain errors. I’ll see if I keep this up throughout the course. See <a href="https://bodegaphylo.wikispot.org/2010_Workshop" title="http://bodegaphylo.wikispot.org/2010_Workshop">course website.</a></p>
 <h3 id="huelsenbeck">Huelsenbeck</h3>
 <p>9a-11a</p>
 <ul>
@@ -117,17 +117,17 @@
 </ul>
 <p>θ = prob of heads on a single toss of a coin, <em>X</em> is # of heads observed on <em>n</em> tosses. Choose a model: binomial:</p>
 <figure>
-<img src="http://openwetware.org/images/math/0/8/8/08814f7faf92d830f210e2d233344ecd.png" alt="p(x|\theta) = {n \choose{x}} \theta^x ( 1-\theta)^{n-x}" /><figcaption>p(x|\theta) = {n \choose{x}} \theta^x ( 1-\theta)^{n-x}</figcaption>
+<img src="https://openwetware.org/images/math/0/8/8/08814f7faf92d830f210e2d233344ecd.png" alt="p(x|\theta) = {n \choose{x}} \theta^x ( 1-\theta)^{n-x}" /><figcaption>p(x|\theta) = {n \choose{x}} \theta^x ( 1-\theta)^{n-x}</figcaption>
 </figure>
 <ul>
-<li>Maximize likelihood, find <img src="http://openwetware.org/images/math/d/9/3/d93b13daa45e31c971a3b81deedcbc22.png" alt="\hat \theta = \frac{x}{n}" /></li>
+<li>Maximize likelihood, find <img src="https://openwetware.org/images/math/d/9/3/d93b13daa45e31c971a3b81deedcbc22.png" alt="\hat \theta = \frac{x}{n}" /></li>
 <li>Bayesian</li>
 </ul>
 <figure>
-<img src="http://openwetware.org/images/math/8/1/0/810d3eb56ca4c96ecbe28c931a57bdc0.png" alt="p(\theta | x) = \frac{p(x|\theta)p(\theta)}{p(x)}" /><figcaption>p(\theta | x) = \frac{p(x|\theta)p(\theta)}{p(x)}</figcaption>
+<img src="https://openwetware.org/images/math/8/1/0/810d3eb56ca4c96ecbe28c931a57bdc0.png" alt="p(\theta | x) = \frac{p(x|\theta)p(\theta)}{p(x)}" /><figcaption>p(\theta | x) = \frac{p(x|\theta)p(\theta)}{p(x)}</figcaption>
 </figure>
 <p>likelihood times prior over marginal equals the posterior. The prior is the source of controversy, though mathematically required if you want a posterior probability.</p>
-<p>The marginal can be hard to solve. <img src="http://openwetware.org/images/math/c/2/e/c2ec8ba5b21c63d5aa3063012cd7ea2b.png" alt="\int_0^1 p(x|\theta) p(\theta) d\theta" /></p>
+<p>The marginal can be hard to solve. <img src="https://openwetware.org/images/math/c/2/e/c2ec8ba5b21c63d5aa3063012cd7ea2b.png" alt="\int_0^1 p(x|\theta) p(\theta) d\theta" /></p>
 <p>So Bayesians solved trivial problems or just estimated moments (mean, etc), until along came MCMC and they could do these integrals…</p>
 <p><strong>Phylogenetic Model</strong></p>
 <ul>
@@ -140,7 +140,7 @@
 </ul>
 <p>Calculate the <strong>probability of alignment given a tree?</strong></p>
 <ul>
-<li>(Lecture moves to <a href="http://bodegaphylo.wikispot.org/Bayesian_Phylogenetics_(Huelsenbeck)_2010" title="http://bodegaphylo.wikispot.org/Bayesian_Phylogenetics_(Huelsenbeck)_2010">slides</a>, will probably ve available on Bodega Wiki?)</li>
+<li>(Lecture moves to <a href="https://bodegaphylo.wikispot.org/Bayesian_Phylogenetics_(Huelsenbeck)_2010" title="http://bodegaphylo.wikispot.org/Bayesian_Phylogenetics_(Huelsenbeck)_2010">slides</a>, will probably ve available on Bodega Wiki?)</li>
 <li><p>Summing over all possible combinations literally is crazy. Felsenstein Pruning algorithm (sum-product algorithm from graphical models) makes this much faster (many of those trees are related).</p></li>
 <li><p>“This is the exponential distribution, it is the only distribution you’ll see/need in this course”</p></li>
 </ul>
@@ -153,7 +153,7 @@
 <ul>
 <li>Interesting hands-on activity to demonstrate Gillespie algorithm simulation.</li>
 </ul>
-<p><a href="http://en.wikipedia.org/wiki/Substitution_model" title="http://en.wikipedia.org/wiki/Substitution_model"><strong>Codon models</strong></a>.</p>
+<p><a href="https://en.wikipedia.org/wiki/Substitution_model" title="http://en.wikipedia.org/wiki/Substitution_model"><strong>Codon models</strong></a>.</p>
 <ul>
 <li>(Note, this wiki entry should be expanded).</li>
 <li>Sequence model, sparse matrices with arbitrary correlations. Approximate pruning via MCMC.</li>
@@ -187,7 +187,7 @@
 <ul>
 <li>Can’t calculate the marginal probability. Luckily, in ratio that normalizing constant cancels out: So we can find the ratio of posterior probabilities. This is where MCMC comes in.</li>
 </ul>
-<p><a href="http://bodegaphylo.wikispot.org/MrBayes_Tutorial_%28Brown%29?sendfile=true&amp;file=Brown_MrBayes_Lecture.pdf&amp;download=true" title="http://bodegaphylo.wikispot.org/MrBayes_Tutorial_%28Brown%29?sendfile=true&amp;file=Brown_MrBayes_Lecture.pdf&amp;download=true">See the slides</a></p>
+<p><a href="https://bodegaphylo.wikispot.org/MrBayes_Tutorial_%28Brown%29?sendfile=true&amp;file=Brown_MrBayes_Lecture.pdf&amp;download=true" title="http://bodegaphylo.wikispot.org/MrBayes_Tutorial_%28Brown%29?sendfile=true&amp;file=Brown_MrBayes_Lecture.pdf&amp;download=true">See the slides</a></p>
 <h3 id="rannala-divergence-times">Rannala, Divergence Times</h3>
 <ul>
 <li>Molecular clock and fossil dating</li>
@@ -195,7 +195,7 @@
 <li>Bayesian approaches to contain this uncertainty, given sequences times and fossil calibrations:</li>
 </ul>
 <figure>
-<img src="http://openwetware.org/images/math/e/2/d/e2df7c8faa415cdefa1b5bab5e8f7472.png" alt="f(\theta, t, u | X) = \frac{f(X|t,u,\theta)f(u|\theta) f(t| \theta) f(\theta) }{f(X)}" /><figcaption>f(\theta, t, u | X) = \frac{f(X|t,u,\theta)f(u|\theta) f(t| \theta) f(\theta) }{f(X)}</figcaption>
+<img src="https://openwetware.org/images/math/e/2/d/e2df7c8faa415cdefa1b5bab5e8f7472.png" alt="f(\theta, t, u | X) = \frac{f(X|t,u,\theta)f(u|\theta) f(t| \theta) f(\theta) }{f(X)}" /><figcaption>f(\theta, t, u | X) = \frac{f(X|t,u,\theta)f(u|\theta) f(t| \theta) f(\theta) }{f(X)}</figcaption>
 </figure>
 <p>substitution rate (clock) <em>u</em>, branch length <em>v</em>, age <em>t</em>.</p>
 <p>Prior for the divergence times. Priors from fossils. Dangers of hard bounds (will confidently predict the wrong answer).</p>
@@ -205,18 +205,18 @@
 </ul>
 <p><br /> ### Tom Near, Rocks for Gel Jocks</p>
 <p><strong>(a.k.a) BEAST tutorial</strong></p>
-<p><a href="http://bodegaphylo.wikispot.org/BEAST_Tutorial_(Near)" title="http://bodegaphylo.wikispot.org/BEAST_Tutorial_(Near)">slides</a></p>
+<p><a href="https://bodegaphylo.wikispot.org/BEAST_Tutorial_(Near)" title="http://bodegaphylo.wikispot.org/BEAST_Tutorial_(Near)">slides</a></p>
 <p><br /> Ideas/Topics ————</p>
 <ul>
 <li><strong>Reaching the developers</strong>
 <ul>
 <li>Help lists.</li>
-<li><a href="http://phylogenetics.uservoice.com/" title="http://phylogenetics.uservoice.com/">uservoice</a>.</li>
+<li><a href="https://phylogenetics.uservoice.com/" title="http://phylogenetics.uservoice.com/">uservoice</a>.</li>
 <li>stackoverflow for phylogenetics?</li>
 </ul></li>
-<li>Managing the literature: <a href="http://www.mendeley.com" title="http://www.mendeley.com">Mendeley</a>
+<li>Managing the literature: <a href="https://www.mendeley.com" title="http://www.mendeley.com">Mendeley</a>
 <ul>
-<li><a href="http://www.mendeley.com/research-papers/collections/1369391/PhylogeneticComparativeMethods/" title="http://www.mendeley.com/research-papers/collections/1369391/PhylogeneticComparativeMethods/">Phylogenetic Comparative Methods</a></li>
+<li><a href="https://www.mendeley.com/research-papers/collections/1369391/PhylogeneticComparativeMethods/" title="http://www.mendeley.com/research-papers/collections/1369391/PhylogeneticComparativeMethods/">Phylogenetic Comparative Methods</a></li>
 </ul></li>
 <li>Poll faculty for useful software,tools or tricks. Attempt a talk: <em>5 minutes, 5 tools to change your life.</em>
 <ul>
@@ -233,7 +233,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2010-03-07 00:00:00 +0000" 
     property="dc:created">07 Mar 2010</time></p>
@@ -292,11 +292,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -309,7 +309,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -325,7 +325,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -345,13 +345,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -369,7 +369,7 @@
       &amp;rft.date=2010-03-07
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/03/07/Bodega-Phylogenetics-Workshop-Day-1.html">
+      &amp;rft_id=https://www.carlboettiger.info/03/07/Bodega-Phylogenetics-Workshop-Day-1.html">
   </span>
 
 
@@ -386,7 +386,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -401,7 +401,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

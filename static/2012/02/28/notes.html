@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Notes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Notes" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2013-02-28 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2013-02-28 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/02/28/notes.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/02/28/notes.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -124,18 +124,18 @@
 <ul>
 <li>Finished review. I should stop signing reviews, then I could write more careless quick impressions.<br /></li>
 <li>discussed potential of a GSOC proposal for an R NEXML parser</li>
-<li>requested to consider presenting at <a href="http://isiconference2013.org/pgs/specsessions.php">ISI Conference</a> session on early warning.</li>
+<li>requested to consider presenting at <a href="https://isiconference2013.org/pgs/specsessions.php">ISI Conference</a> session on early warning.</li>
 </ul>
 <h2 id="some-reading-on-semantics">some reading on semantics</h2>
 <p>David Shotton and Tanya Gray have release a CiTO tool for adding semantic data to many major publication platforms, taking a clever approach to annotation that I’ve never considered – croudsourcing to readers (<span class="showtooltip" title="davidshotton (2013). CiTO Reference Annotation Tools. 
-http://semanticpublishing.wordpress.com/2013/02/26/cito-tools/
+https://semanticpublishing.wordpress.com/2013/02/26/cito-tools/
 [Online. last-accessed: 2013-02-26 15:32:11]. 
-http://semanticpublishing.wordpress.com/2013/02/26/cito-tools/."><a href="http://semanticpublishing.wordpress.com/2013/02/26/cito-tools/" rel="http://purl.org/spar/cito/discusses" >davidshotton, 2013</a></span>). The tool isn’t perfect but is very intuitive. The clever part is that all annotations the reader adds are collated in a database and cand be retrieved through their <a href="http://www.miidi.org/cito/api/">API</a>. Not sure if many readers will make use of this, but time will tell. Meanwhile authors or publishers might pay attention.</p>
+https://semanticpublishing.wordpress.com/2013/02/26/cito-tools/."><a href="http://semanticpublishing.wordpress.com/2013/02/26/cito-tools/" rel="http://purl.org/spar/cito/discusses" >davidshotton, 2013</a></span>). The tool isn’t perfect but is very intuitive. The clever part is that all annotations the reader adds are collated in a database and cand be retrieved through their <a href="http://www.miidi.org/cito/api/">API</a>. Not sure if many readers will make use of this, but time will tell. Meanwhile authors or publishers might pay attention.</p>
 <p>In that vein, David has also written a call of Ten Next Steps for publishers, (<span class="showtooltip" title="davidshotton (2013). Ten next steps for semantic authors and
 publishers. 
-http://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/
+https://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/
 [Online. last-accessed: 2013-02-28 22:40:01]. 
-http://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/."><a href="http://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/" rel="http://purl.org/spar/cito/discusses" >davidshotton, 2013b</a></span>). Some may be redundant, but certainly shows how publishers could go a lot further. If only there was more incentive for publishers to innovate like this instead of crafting clever and questionable strategies to boost impact factors.</p>
+https://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/."><a href="http://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/" rel="http://purl.org/spar/cito/discusses" >davidshotton, 2013b</a></span>). Some may be redundant, but certainly shows how publishers could go a lot further. If only there was more incentive for publishers to innovate like this instead of crafting clever and questionable strategies to boost impact factors.</p>
 <h2 id="reading">Reading</h2>
 <p>Very interesting paper on implementing/teaching nonlinear model inference to ecologists out today (<span class="showtooltip" title="Bolker B, Gardner B, Maunder M, Berg C, Brooks M, Comita L, Crone
 E, Cubaynes S, Davies T, de Valpine P, Ford J, Gimenez O, Kery M,
@@ -143,18 +143,18 @@ Kim E, Lennert-Cody C, Magnusson A, Martell S, Nash J, Nielsen A,
 Regetz J, Skaug H and Zipkin E (2013). Strategies For Fitting
 Nonlinear Ecological Models in R, ad Model Builder, And Bugs.
 _Methods in Ecology And Evolution_. 
-http://dx.doi.org/10.1111/2041-210X.12044."><a href="http://dx.doi.org/10.1111/2041-210X.12044" rel="http://purl.org/spar/cito/discusses" >Bolker <em>et. al.</em> 2013</a></span>), and the <a href="https://groups.nceas.ucsb.edu/non-linear-modeling/projects">code and data for each of the examples they discuss</a>. Lessons in the mansucript may be familiar to many, but should still be taught more widely in ecology. Should be useful for teaching this stuff in graduate courses too.</p>
+https://dx.doi.org/10.1111/2041-210X.12044."><a href="http://dx.doi.org/10.1111/2041-210X.12044" rel="http://purl.org/spar/cito/discusses" >Bolker <em>et. al.</em> 2013</a></span>), and the <a href="https://groups.nceas.ucsb.edu/non-linear-modeling/projects">code and data for each of the examples they discuss</a>. Lessons in the mansucript may be familiar to many, but should still be taught more widely in ecology. Should be useful for teaching this stuff in graduate courses too.</p>
 <ul>
-<li>Benjamin M. Bolker, Beth Gardner, Mark Maunder, Casper W. Berg, Mollie Brooks, Liza Comita, Elizabeth Crone, Sarah Cubaynes, Trevor Davies, Perry de Valpine, Jessica Ford, Olivier Gimenez, Marc Kery, Eun Jung Kim, Cleridy Lennert-Cody, Arni Magnusson, Steve Martell, John Nash, Anders Nielsen, Jim Regetz, Hans Skaug, Elise Zipkin, (2013) Strategies For Fitting Nonlinear Ecological Models in R, ad Model Builder, And Bugs. <em>Methods in Ecology And Evolution</em> <a href="http://dx.doi.org/10.1111/2041-210X.12044">10.1111/2041-210X.12044</a></li>
-<li>davidshotton, (2013) CiTO Reference Annotation Tools. <em>Semantic Publishing</em> <a href="http://semanticpublishing.wordpress.com/2013/02/26/cito-tools/">http://semanticpublishing.wordpress.com/2013/02/26/cito-tools/</a></li>
-<li>davidshotton, (2013) Ten next steps for semantic authors and publishers. <em>Semantic Publishing</em> <a href="http://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/">http://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/</a></li>
+<li>Benjamin M. Bolker, Beth Gardner, Mark Maunder, Casper W. Berg, Mollie Brooks, Liza Comita, Elizabeth Crone, Sarah Cubaynes, Trevor Davies, Perry de Valpine, Jessica Ford, Olivier Gimenez, Marc Kery, Eun Jung Kim, Cleridy Lennert-Cody, Arni Magnusson, Steve Martell, John Nash, Anders Nielsen, Jim Regetz, Hans Skaug, Elise Zipkin, (2013) Strategies For Fitting Nonlinear Ecological Models in R, ad Model Builder, And Bugs. <em>Methods in Ecology And Evolution</em> <a href="https://dx.doi.org/10.1111/2041-210X.12044">10.1111/2041-210X.12044</a></li>
+<li>davidshotton, (2013) CiTO Reference Annotation Tools. <em>Semantic Publishing</em> <a href="https://semanticpublishing.wordpress.com/2013/02/26/cito-tools/">http://semanticpublishing.wordpress.com/2013/02/26/cito-tools/</a></li>
+<li>davidshotton, (2013) Ten next steps for semantic authors and publishers. <em>Semantic Publishing</em> <a href="https://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/">http://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/</a></li>
 </ul>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2013-02-28 00:00:00 +0000" 
     property="dc:created">28 Feb 2013</time></p>
@@ -191,11 +191,11 @@ http://dx.doi.org/10.1111/2041-210X.12044."><a href="http://dx.doi.org/10.1111/2
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#semantics">#semantics</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#nonparametric-bayes">#nonparametric-bayes</a>
     </p>
@@ -225,11 +225,11 @@ http://dx.doi.org/10.1111/2041-210X.12044."><a href="http://dx.doi.org/10.1111/2
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -242,7 +242,7 @@ http://dx.doi.org/10.1111/2041-210X.12044."><a href="http://dx.doi.org/10.1111/2
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -258,7 +258,7 @@ http://dx.doi.org/10.1111/2041-210X.12044."><a href="http://dx.doi.org/10.1111/2
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -278,13 +278,13 @@ http://dx.doi.org/10.1111/2041-210X.12044."><a href="http://dx.doi.org/10.1111/2
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -302,7 +302,7 @@ http://dx.doi.org/10.1111/2041-210X.12044."><a href="http://dx.doi.org/10.1111/2
       &amp;rft.date=2013-02-28
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/02/28/notes.html">
+      &amp;rft_id=https://www.carlboettiger.info/02/28/notes.html">
   </span>
 
 
@@ -319,7 +319,7 @@ http://dx.doi.org/10.1111/2041-210X.12044."><a href="http://dx.doi.org/10.1111/2
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -334,7 +334,7 @@ http://dx.doi.org/10.1111/2041-210X.12044."><a href="http://dx.doi.org/10.1111/2
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Wednesday</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Wednesday" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2011-04-27 21:58:09 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2011-04-27 21:58:09 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/04/27/wednesday-4.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/04/27/wednesday-4.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -117,7 +117,7 @@
 kcachegrind callgrind.out.&lt;###&gt;</code></pre>
 <p>For profiling information</p>
 <figure>
-<img src="http://farm6.staticflickr.com/5063/5661945204_f60bfe6c64_o.png" />
+<img src="https://farm6.staticflickr.com/5063/5661945204_f60bfe6c64_o.png" />
 </figure>
 <p>Troubleshooting implementation of restricted-domain functions.  Cannot be wright_tree since they have to know their likelihood method.  Will need an indicator to their type. Some troubleshooting of the simulation method too: my pmc’s montecarlotest() is set up so that simulate() can return the data set directly that is passed to update() or return a list object with the dataset in $rep.1.  Up and running now.</p>
 <ul>
@@ -127,14 +127,14 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
 <li><p>Convergence checks should be added to plot/summary functions from montecarlotest() output</p></li>
 <li><p>Running 160 reps of (my) brownie() vs wright() (on left) and also of brownie() vs wrightscape() (on right) at nice 10 on zero.</p></li>
 </ul>
-<p><img src="http://farm6.staticflickr.com/5063/5662235611_503cb5522e_o.png" /> <img src="http://farm6.staticflickr.com/5189/5662211039_d8b525eb2a_o.png" /></p>
+<p><img src="https://farm6.staticflickr.com/5063/5662235611_503cb5522e_o.png" /> <img src="http://farm6.staticflickr.com/5189/5662211039_d8b525eb2a_o.png" /></p>
 <h2 id="data-processing">Data processing</h2>
 <p>Need regimes for intramandibular joint: <em>Chlorurus</em>, <em>Hipposcarus</em> common ancestor. Easily done with maticce package:</p>
 <pre><code>intramandibular &lt;- paintBranches(mrcaOUCH(c(&quot;Chlorurus_sordidus&quot;, &quot;Hipposcarus_longiceps&quot;), labrid$tree), labrid$tree, c(&quot;other&quot;,&quot;intramandibular&quot;))</code></pre>
 <p>Note that we need to look up and match species names exactly, otherwise instead of an error maticce assumes one of the species just isn’t in our tree and simply returns the root node.</p>
 <p>Implemented each as a two regime model and combined as a three-regime model.  combining requires arbitrarily assigning the branch between them so that it doesn’t become a separate node.</p>
 <figure>
-<img src="http://farm6.staticflickr.com/5104/5663194868_444e683067_o.png" />
+<img src="https://farm6.staticflickr.com/5104/5663194868_444e683067_o.png" />
 </figure>
 <h2 id="convergence-issues">Convergence Issues</h2>
 <p>Clear examples of convergence issues on Nelder Mead stemming from initial conditions.  For instance: even hansen routine can’t get the best optimum for two shifts (three regimes) when given the same starting points as it was for two regimes:</p>
@@ -147,7 +147,7 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
 &gt;   loglik(ou3) - loglik(ou2_phar)
 [1] 1.079799</code></pre>
 <p>Convergence is certainly a larger issue with more parameters. One way to address this is focusing on comparing subcases of the general form. A particularly interesting one is the <strong>Release of Constraint</strong>: global theta and sigma, regime-specific alpha. IMPLEMENTED</p>
-<p>Overall, best addressed by algorithmic methods for dealing with multiple peaks in the likelihood surface, such as simulated annealing or probably better, an EM algorithm ((Looking for packages to do this well, though may need a specific implementation. Will discuss in our Algorithms group in a few weeks Potentially take a closer look at <a href="http://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Clustering/Expectation_Maximization_%28EM%29">this tutorial</a> and <a href="http://rss.acs.unt.edu/Rdoc/library/mclust/html/em.html">em() in mclust</a> package.)). Given the computational effort of these approaches, probably worth starting on the fully Bayesian implementation too.</p>
+<p>Overall, best addressed by algorithmic methods for dealing with multiple peaks in the likelihood surface, such as simulated annealing or probably better, an EM algorithm ((Looking for packages to do this well, though may need a specific implementation. Will discuss in our Algorithms group in a few weeks Potentially take a closer look at <a href="https://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Clustering/Expectation_Maximization_%28EM%29">this tutorial</a> and <a href="http://rss.acs.unt.edu/Rdoc/library/mclust/html/em.html">em() in mclust</a> package.)). Given the computational effort of these approaches, probably worth starting on the fully Bayesian implementation too.</p>
 <p>Meanwhile, based on likelihoods alone, results seem promising, though needs some fiddling to test for convergence. For instance:</p>
 <pre><code>&gt; loglik(release_twoshifts)
 [1] 69.42358
@@ -162,15 +162,15 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
 <p>See <a href="https://github.com/cboettig/wrightscape/blob/ad3bd09f7d6b958c019f329415f6fcfdbf267367/demos/model_fits.R">code</a> for full example.</p>
 <h2 id="misc-r">Misc R</h2>
 <ul>
-<li><p>R with AWS EC2  &amp; Hadroop with <a href="http://www.stat.purdue.edu/~sguha/rhipe/">RHIPE</a> or <a href="http://code.google.com/p/segue/">Segue</a></p></li>
-<li><p>R gui interfaces with tcltk: <a href="http://ideas.repec.org/a/jss/jstsof/17i09.html">rpanel</a></p></li>
+<li><p>R with AWS EC2  &amp; Hadroop with <a href="https://www.stat.purdue.edu/~sguha/rhipe/">RHIPE</a> or <a href="http://code.google.com/p/segue/">Segue</a></p></li>
+<li><p>R gui interfaces with tcltk: <a href="https://ideas.repec.org/a/jss/jstsof/17i09.html">rpanel</a></p></li>
 </ul>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2011-04-27 21:58:09 +0000" 
     property="dc:created">27 Apr 2011</time></p>
@@ -229,11 +229,11 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -246,7 +246,7 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -262,7 +262,7 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -282,13 +282,13 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -306,7 +306,7 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
       &amp;rft.date=2011-04-27
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/04/27/wednesday-4.html">
+      &amp;rft_id=https://www.carlboettiger.info/04/27/wednesday-4.html">
   </span>
 
 
@@ -323,7 +323,7 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -338,7 +338,7 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

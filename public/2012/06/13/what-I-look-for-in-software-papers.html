@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>What I look for in 'Software Papers'</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="What I look for in 'Software Papers'" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2013-06-13 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2013-06-13 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/06/13/what-I-look-for-in-software-papers.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/06/13/what-I-look-for-in-software-papers.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -114,7 +114,7 @@
 <p>my review of a software paper is a review of the software</p>
 </blockquote>
 <p>I assume most other authors, reviewers and editors on this content share this implicit assumption, but I’d love to hear first hand from anyone else. For instance: as an editor, what would you do if your reviewers only commented on the paper directly and not on the software distributed?</p>
-<p>We are not really taught to review software, any more than we are taught to write it in the first place. Most journals offer little guidance on this (though see the Journal of Open Research Software <a href="http://openresearchsoftware.metajnl.com/peer-review/">guidelines for peer review of software</a>, all though they are still rather minimal.) In the absence of a culture on software reviewing, I thought I would lay out my own perspective with the hope of hearing feedback and push back from others. Perhaps through such dialogs we can develop clearer expectations for this rapidly expanding genre.</p>
+<p>We are not really taught to review software, any more than we are taught to write it in the first place. Most journals offer little guidance on this (though see the Journal of Open Research Software <a href="https://openresearchsoftware.metajnl.com/peer-review/">guidelines for peer review of software</a>, all though they are still rather minimal.) In the absence of a culture on software reviewing, I thought I would lay out my own perspective with the hope of hearing feedback and push back from others. Perhaps through such dialogs we can develop clearer expectations for this rapidly expanding genre.</p>
 <h2 id="reviewing-the-software-paper">Reviewing the software paper</h2>
 <p>I don’t include “to document” the software as a purpose, since none do so very comprehensively, and besides, documentation belongs in the software, not in a journal. “Publicize” usually includes some motivating examples that could convince many readers that the software does something useful for them without too much effort. As such, I expect the paper to:</p>
 <ul>
@@ -122,7 +122,7 @@
 </ul>
 <p>This is an intentionally low bar that I hope helps promote these kinds of contributions. Despite this, papers frequently fail the copy-paste test or the plain text explanations of the function calls. Come on people. Meanwhile, I try to focus the rest of my review on the software itself.</p>
 <h2 id="my-partial-list-of-criteria">My partial list of criteria</h2>
-<p>As I am almost always reviewing R packages, the software already meets some very basic standards required by submission to CRAN: dependencies and license stated, built-in documentation, passing some minimal automatic checks, etc. (See the <a href="http://cran.r-project.org/web/packages/policies.html">CRAN Policies</a> and the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">Writing R Extensions Manual</a> for details). This is great, as it clears the first few hurdles of installation, etc. without much fuss, but still provides a bar that is by itself unacceptably low for published scientific software. Here is a list of the things I see that most often frustrate me. This isn’t intended as a style-guide or a comprehensive list of best practices, just my own pet peeves. I have somewhat tongue-in-cheek labeled them by severity of the review I might give; which like any other use of these terms is more of a measure of how annoyed I am then anything else. Critiques and suggestions welcome.</p>
+<p>As I am almost always reviewing R packages, the software already meets some very basic standards required by submission to CRAN: dependencies and license stated, built-in documentation, passing some minimal automatic checks, etc. (See the <a href="https://cran.r-project.org/web/packages/policies.html">CRAN Policies</a> and the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">Writing R Extensions Manual</a> for details). This is great, as it clears the first few hurdles of installation, etc. without much fuss, but still provides a bar that is by itself unacceptably low for published scientific software. Here is a list of the things I see that most often frustrate me. This isn’t intended as a style-guide or a comprehensive list of best practices, just my own pet peeves. I have somewhat tongue-in-cheek labeled them by severity of the review I might give; which like any other use of these terms is more of a measure of how annoyed I am then anything else. Critiques and suggestions welcome.</p>
 <h3 id="edit">Edit:</h3>
 <p>The comments from other reviewers, authors, and editors have been fantastic, thank you all. I particularly appreciate the opportunity to have reviewing styles critiqued, something that does not happen in normal peer review.</p>
 <p>Just a note on my headings here. I do not see any of these things as “gatekeeping requirements” and have intentionally omitted the option of “<em>Reject</em>”. I would reject such a paper for methodological flaws, etc., but not for any of the reasons on my list below. The list is intended only to improve, not prevent, software publication.</p>
@@ -156,13 +156,13 @@
 <h3 id="development-site-and-bug-tracker">Development site and bug tracker</h3>
 <p>I would really like to see a link to the software development page, such as r-forge or Github. The primary asset in this context is pointing reviewers to an address with a bug tracking system where issues can be assigned ticket numbers and readers can transparently see if a package is being actively maintained. A reader who comes across the paper years later who has only an email address that may or may not work has little way to determine what the latest version of the code is, whether it is actively maintained, or whether earlier versions that may have been in used in previous publications suffered from any significant bugs.</p>
 <h3 id="cite-your-dependencies">Cite your dependencies!</h3>
-<p>We write software papers with the sometimes vain hope that they will be cited by users, so authors of such papers should at least follow these best practices themselves. R includes a native mechanism for providing citations to packages, <code>citation(packagename)</code>, including the information for any software paper published along with it. Be sure to add your own software papers to the <code>CITATION</code> file. More information can be found in my post on <a href="http://purl.org/cboettig/2012/03/20/citing-r-packages.html">Citing R packages</a>.</p>
+<p>We write software papers with the sometimes vain hope that they will be cited by users, so authors of such papers should at least follow these best practices themselves. R includes a native mechanism for providing citations to packages, <code>citation(packagename)</code>, including the information for any software paper published along with it. Be sure to add your own software papers to the <code>CITATION</code> file. More information can be found in my post on <a href="https://purl.org/cboettig/2012/03/20/citing-r-packages.html">Citing R packages</a>.</p>
 <h2 id="major-revisions">“Major Revisions”</h2>
 <p>These are other things that commonly frustrate me, but fall on a bit more of a continuum of style rather than gross oversights. As such I’m not sure that any one of these things would justify rejection.</p>
 <h3 id="functionalize-the-code">Functionalize the code</h3>
 <p>Style guides will tell you to keep functions short, not more than a screen or 20 lines. Breaking large functions into a series of smaller functions and documenting those smaller functions – even if they are only used internally – is a great help to a reviewer trying to understand what a function is supposed to do and also test that it does what it says. Anyone building the code base later (most often yourself) will appreciate the reusable modules.</p>
 <h3 id="stable-clean-and-complete-return-objects">Stable, clean, and complete return objects</h3>
-<p>An extension of providing optional arguments to functions is to also provide access to all of their return information. To extend the example from wrapping <code>optim</code>, this would involve returning the convergence information. Using object classes and helper functions for return objects helps keep code stable and lets users leverage existing code for similar objects, such as fitting or plotting routines. More discussion on this topic based on my own experiences in the post, <a href="http://carlboettiger.info/2013/04/23/we-need-more-object-oriented-design-in-comparative-methods.html#comment-878249659">we need more object oriented design in comparative methods</a></p>
+<p>An extension of providing optional arguments to functions is to also provide access to all of their return information. To extend the example from wrapping <code>optim</code>, this would involve returning the convergence information. Using object classes and helper functions for return objects helps keep code stable and lets users leverage existing code for similar objects, such as fitting or plotting routines. More discussion on this topic based on my own experiences in the post, <a href="https://carlboettiger.info/2013/04/23/we-need-more-object-oriented-design-in-comparative-methods.html#comment-878249659">we need more object oriented design in comparative methods</a></p>
 <h3 id="state-a-license">State a license</h3>
 <p>Because CRAN requires this through the DESCRIPTION file, R package authors rarely neglect this entirely. A sometimes misconception is that because R itself is primarily dual-licensed under GPL-2 and GPL-3 that R packages must use a GPL license due to the “viral” clause of the GPL. This clause only applies if you are modifying existing GPL functions directly and is not a requirement for R packages, which recognize a large array of licenses. My own recommendation for authors seeking to maximize the impact of their work is to use MIT, BSD (2 clause), or CC0 license for the package. CC0 has the advantage of being suitable for and data or documentation included, but authors should do there homework and decide what is best for them.</p>
 <h2 id="minor-revisions">“Minor Revisions”</h2>
@@ -176,7 +176,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2013-06-13 00:00:00 +0000" 
     property="dc:created">13 Jun 2013</time></p>
@@ -209,7 +209,7 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#blog">#blog</a>
     </p>
@@ -239,11 +239,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -256,7 +256,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -272,7 +272,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -292,13 +292,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -316,7 +316,7 @@
       &amp;rft.date=2013-06-13
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/06/13/what-I-look-for-in-software-papers.html">
+      &amp;rft_id=https://www.carlboettiger.info/06/13/what-I-look-for-in-software-papers.html">
   </span>
 
 
@@ -333,7 +333,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -348,7 +348,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

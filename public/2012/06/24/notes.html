@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Notes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Notes" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2013-06-24 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2013-06-24 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/06/24/notes.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/06/24/notes.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -107,7 +107,7 @@
   <div class="col-md-7 col-md-offset-1">
     <article>
     <h2 id="exploring-xml-schema-in-r">Exploring XML Schema in R</h2>
-<p>I danced around the room after reading these lines in the excellent <a href="http://www.springer.com/statistics/computational+statistics/book/978-1-4614-7899-7">XML and Web Technologies for Data Sciences with R</a> book:</p>
+<p>I danced around the room after reading these lines in the excellent <a href="https://www.springer.com/statistics/computational+statistics/book/978-1-4614-7899-7">XML and Web Technologies for Data Sciences with R</a> book:</p>
 <blockquote>
 <p>We can generate S4 class definitions corresponding to the data structures that are represented in the XML document. We can programmatically generate R code that will map an XML document adhering to this schema to corresponding R data structures. Similarly, we can automate the creation of code to serialize, or write, an R object of a particular type to a suitable XML format corresponding to the schema</p>
 </blockquote>
@@ -125,7 +125,7 @@
 <h3 id="nexml">NexML</h3>
 <p>This is a schema for phylogenetic trees. Being able to use this schema would be a big improvement over the current approach of our treebase package, which queries a vertically integrated database that is far less expressive then the NeXML schema.</p>
 <p>I tried this schema, but cannot download the file for some reason:</p>
-<pre class="sourceCode r"><code class="sourceCode r">nex &lt;-<span class="st"> </span><span class="kw">readSchema</span>(<span class="st">&quot;http://www.nexml.org/2009/nexml.xsd&quot;</span>)
+<pre class="sourceCode r"><code class="sourceCode r">nex &lt;-<span class="st"> </span><span class="kw">readSchema</span>(<span class="st">&quot;https://www.nexml.org/2009/nexml.xsd&quot;</span>)
 failed to load HTTP resource
 Error:<span class="st"> </span><span class="dv">1</span>:<span class="st"> </span>failed to load HTTP resource
 &gt;<span class="st"> </span></code></pre>
@@ -139,11 +139,11 @@ Error:<span class="st"> </span>XML content does not seem to be XML:<span class="
 &gt;<span class="st"> </span>kml =<span class="st"> </span><span class="kw">readSchema</span>(kx)
 Error:<span class="st"> </span>XML content does not seem to be XML:<span class="st"> &#39;https://developers.google.com/kml/schema/kml21.xsd&#39;</span></code></pre>
 <p>Likewise,</p>
-<pre class="sourceCode r"><code class="sourceCode r">kml =<span class="st"> </span><span class="kw">readSchema</span>( <span class="st">&quot;http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd&quot;</span>)
+<pre class="sourceCode r"><code class="sourceCode r">kml =<span class="st"> </span><span class="kw">readSchema</span>( <span class="st">&quot;https://schemas.opengis.net/kml/2.2.0/ogckml22.xsd&quot;</span>)
 failed to load HTTP resource
 Error:<span class="st"> </span><span class="dv">1</span>:<span class="st"> </span>failed to load HTTP resource</code></pre>
 <p>fails, though the other example works</p>
-<pre class="sourceCode r"><code class="sourceCode r">pmml =<span class="st"> </span><span class="kw">readSchema</span>(<span class="st">&quot;http://www.dmg.org/v4-1/pmml-4-1.xsd&quot;</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">pmml =<span class="st"> </span><span class="kw">readSchema</span>(<span class="st">&quot;https://www.dmg.org/v4-1/pmml-4-1.xsd&quot;</span>)</code></pre>
 <p>If I wget the xsd and save it locally first, then I can readSchema on the local file. If I have <code>options(error = recover)</code> set, then</p>
 <pre class="sourceCode r"><code class="sourceCode r"> <span class="kw">defineClasses</span>(kml)</code></pre>
 <p>gets me deep into the debugger. If I run it with <code>options(error=NULL)</code>, then I get warnings:</p>
@@ -151,19 +151,19 @@ Error:<span class="st"> </span><span class="dv">1</span>:<span class="st"> </spa
 <span class="kw">character</span>(<span class="dv">0</span>)
 Warning messages:
 <span class="dv">1</span>:<span class="st"> </span><span class="kw">In</span> (function (className, baseType, <span class="dt">where =</span> <span class="kw">globalenv</span>())  :
-<span class="st">  </span>http:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.Object is an existing class
+<span class="st">  </span>https:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.Object is an existing class
 <span class="dv">2</span>:<span class="st"> </span><span class="kw">In</span> (function (className, baseType, <span class="dt">where =</span> <span class="kw">globalenv</span>())  :
-<span class="st">  </span>http:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.Feature is an existing class
+<span class="st">  </span>https:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.Feature is an existing class
 <span class="dv">3</span>:<span class="st"> </span><span class="kw">In</span> (function (className, baseType, <span class="dt">where =</span> <span class="kw">globalenv</span>())  :
-<span class="st">  </span>http:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.LookAt is an existing class
+<span class="st">  </span>https:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.LookAt is an existing class
 <span class="dv">4</span>:<span class="st"> </span><span class="kw">In</span> (function (className, baseType, <span class="dt">where =</span> <span class="kw">globalenv</span>())  :
-<span class="st">  </span>http:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.Geometry is an existing class
+<span class="st">  </span>https:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.Geometry is an existing class
 <span class="dv">5</span>:<span class="st"> </span><span class="kw">In</span> (function (className, baseType, <span class="dt">where =</span> <span class="kw">globalenv</span>())  :
-<span class="st">  </span>http:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.StyleSelector is an existing class
+<span class="st">  </span>https:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.StyleSelector is an existing class
 <span class="dv">6</span>:<span class="st"> </span><span class="kw">In</span> (function (className, baseType, <span class="dt">where =</span> <span class="kw">globalenv</span>())  :
-<span class="st">  </span>http:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.TimePrimitive is an existing class
+<span class="st">  </span>https:<span class="er">//</span>earth.google.com/kml/<span class="fl">2.1</span>.TimePrimitive is an existing class
 &gt;<span class="st"> </span></code></pre>
-<p>I load an minimal <a href="http://en.wikipedia.org/wiki/Keyhole_Markup_Language">example file</a> and try fromXML, but hit an error:</p>
+<p>I load an minimal <a href="https://en.wikipedia.org/wiki/Keyhole_Markup_Language">example file</a> and try fromXML, but hit an error:</p>
 <pre><code>&gt; doc &lt;- xmlParse(&quot;kmlexample.xml&quot;)
 &gt; fromXML(doc)
 Error in UseMethod(&quot;xmlAttrs&quot;, node) : 
@@ -171,7 +171,7 @@ Error in UseMethod(&quot;xmlAttrs&quot;, node) :
 <p>Stay tuned for more from Duncan on getting this rolling..</p>
 <h3 id="reading">Reading</h3>
 <ul>
-<li><p>Early warning signals in multivariate dynamics: <code>r citet(&quot;http://arxiv.org/abs/1306.3465&quot;, &quot;discusses&quot;)</code>. Population size grows as approaches collapse, multidemensional data needed to detect slowing down (eigenvalue estimates from multidimensional autoregressive model)</p></li>
+<li><p>Early warning signals in multivariate dynamics: <code>r citet(&quot;https://arxiv.org/abs/1306.3465&quot;, &quot;discusses&quot;)</code>. Population size grows as approaches collapse, multidemensional data needed to detect slowing down (eigenvalue estimates from multidimensional autoregressive model)</p></li>
 <li><p>Little grants are more bang for the buck than big grants: <code>r citet(&quot;10.1371/journal.pone.0065263&quot;, &quot;discusses&quot;)</code></p></li>
 </ul>
 <h3 id="code-tricks">Code tricks</h3>
@@ -196,7 +196,7 @@ Error in UseMethod(&quot;xmlAttrs&quot;, node) :
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2013-06-24 00:00:00 +0000" 
     property="dc:created">24 Jun 2013</time></p>
@@ -229,19 +229,19 @@ Error in UseMethod(&quot;xmlAttrs&quot;, node) :
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#ropensci">#ropensci</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#eml">#eml</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#reading">#reading</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#code-tricks">#code-tricks</a>
     </p>
@@ -271,11 +271,11 @@ Error in UseMethod(&quot;xmlAttrs&quot;, node) :
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -288,7 +288,7 @@ Error in UseMethod(&quot;xmlAttrs&quot;, node) :
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -304,7 +304,7 @@ Error in UseMethod(&quot;xmlAttrs&quot;, node) :
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -324,13 +324,13 @@ Error in UseMethod(&quot;xmlAttrs&quot;, node) :
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -348,7 +348,7 @@ Error in UseMethod(&quot;xmlAttrs&quot;, node) :
       &amp;rft.date=2013-06-24
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/06/24/notes.html">
+      &amp;rft_id=https://www.carlboettiger.info/06/24/notes.html">
   </span>
 
 
@@ -365,7 +365,7 @@ Error in UseMethod(&quot;xmlAttrs&quot;, node) :
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -380,7 +380,7 @@ Error in UseMethod(&quot;xmlAttrs&quot;, node) :
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

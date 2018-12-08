@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Semantic Lab Notebook</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Semantic Lab Notebook" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2012-10-14 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2012-10-14 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/10/14/semantic-lab-notebook.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/10/14/semantic-lab-notebook.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -117,34 +117,34 @@
 <li><code>&lt;aside&gt;</code></li>
 <li><code>&lt;footer&gt;</code></li>
 </ul>
-<p>that intuitively define the organization of an page, setting off the important content from the window-dressing. HTML5 also defines inline elements <code>&lt;time&gt;</code> (see the links in Caveats), and <code>&lt;mark&gt;</code>, and the existing tags for metadata, which let us specify <code>&lt;title&gt;</code>, and basic <code>&lt;meta&gt;</code> tags for metadata such as author, <code>&lt;meta name=&quot;author&quot; content=&quot;Author Name&quot;&gt;</code>, encoding, description, and keywords. Links <code>&lt;link&gt;</code> and <code>&lt;a&gt;</code> use the <code>rel</code> attribute to describe the link target. Though one can write anything at all in this text, HTML5 defines a small vocabulary with recognized meaning, some old, some new, such as <code>&lt;a rel=&quot;tag&quot;</code>, <code>rel=&quot;license&quot;</code> as well as the older <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code> and <code>&lt;a rel=&quot;nofollow&quot;</code>. <a href="http://diveintohtml5.info/semantics.html">Here is a great overview of the semantics in HTML5</a>, with a bit more about the available . To expand our vocabulary beyond these elements, however, we will need more tools.</p>
+<p>that intuitively define the organization of an page, setting off the important content from the window-dressing. HTML5 also defines inline elements <code>&lt;time&gt;</code> (see the links in Caveats), and <code>&lt;mark&gt;</code>, and the existing tags for metadata, which let us specify <code>&lt;title&gt;</code>, and basic <code>&lt;meta&gt;</code> tags for metadata such as author, <code>&lt;meta name=&quot;author&quot; content=&quot;Author Name&quot;&gt;</code>, encoding, description, and keywords. Links <code>&lt;link&gt;</code> and <code>&lt;a&gt;</code> use the <code>rel</code> attribute to describe the link target. Though one can write anything at all in this text, HTML5 defines a small vocabulary with recognized meaning, some old, some new, such as <code>&lt;a rel=&quot;tag&quot;</code>, <code>rel=&quot;license&quot;</code> as well as the older <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code> and <code>&lt;a rel=&quot;nofollow&quot;</code>. <a href="https://diveintohtml5.info/semantics.html">Here is a great overview of the semantics in HTML5</a>, with a bit more about the available . To expand our vocabulary beyond these elements, however, we will need more tools.</p>
 <h2 id="linked-data">Linked Data</h2>
 <p>W3C confusingly provides two standards for formally defining semantic content using an external vocabulary or ontology. The first is microdata, introduced as a simpler alternative to the second, RDFa, an HTML-adaptation of the RDF XML standard (originally developed for the now-defunct XHTML 2.0).</p>
 <h3 id="microdata">Microdata</h3>
 <p>Microdata introduces new attributes into HTML tags like <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;h1&gt;</code>. The first of these is <code>itemtype</code>, which points to an external resource such as schema.org to define the vocabulary. To have this vocabulary apply to child elements, we just add the attribute <code>itemscope</code>. Then we can set the value of attribute <code>itemprop</code> in this or following elements to give it semantically defined meaning, such as</p>
-<pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> itemscope itemtype=</span><span class="st">&quot;http://data-vocabulary.org/Person&quot;</span><span class="kw">&gt;</span>
+<pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> itemscope itemtype=</span><span class="st">&quot;https://data-vocabulary.org/Person&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;h1</span><span class="ot"> itemprop=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span>Carl Boettiger<span class="kw">&lt;/h1&gt;</span>
-  <span class="kw">&lt;a</span><span class="ot"> itemprop=</span><span class="st">&quot;url&quot;</span><span class="ot"> href=</span><span class="st">&quot;http://www.carlboettiger.info&quot;</span><span class="kw">&gt;</span>http://carlboettiger.info<span class="kw">&lt;/a&gt;</span>
+  <span class="kw">&lt;a</span><span class="ot"> itemprop=</span><span class="st">&quot;url&quot;</span><span class="ot"> href=</span><span class="st">&quot;https://www.carlboettiger.info&quot;</span><span class="kw">&gt;</span>http://carlboettiger.info<span class="kw">&lt;/a&gt;</span>
   <span class="kw">&lt;img</span><span class="ot"> itemprop=</span><span class="st">&quot;photo&quot;</span><span class="ot"> src=</span><span class="st">&quot;https://en.gravatar.com/userimage/12904315/7edea703b826fbbe07f2ae4d95b8416b.jpg?16&quot;</span><span class="kw">/&gt;</span>
 <span class="kw">&lt;/div&gt;</span></code></pre>
-<p>where the terms such as <code>name</code> and <code>url</code> have precise meanings attached to “Person”, as specified at the “http://data-vocabulary.org/Address”. This ability to point to an external vocabulary is really the key concept of linked data. In the spirit of HTML5, microdata is much simpler than RDFa, but also more limited. <a href="http://manu.sporny.org/2011/uber-comparison-rdfa-md-uf/">Here is an excellent comparison</a>, but for our purposes we will use RDFa as it is more common in academic use and will more seamlessly allow us to use academic ontologies. (While microdata has a clear mapping to RDF, it is not clear that any ontology that can be expressed in RDF can also be expressed in microdata).</p>
+<p>where the terms such as <code>name</code> and <code>url</code> have precise meanings attached to “Person”, as specified at the “https://data-vocabulary.org/Address”. This ability to point to an external vocabulary is really the key concept of linked data. In the spirit of HTML5, microdata is much simpler than RDFa, but also more limited. <a href="http://manu.sporny.org/2011/uber-comparison-rdfa-md-uf/">Here is an excellent comparison</a>, but for our purposes we will use RDFa as it is more common in academic use and will more seamlessly allow us to use academic ontologies. (While microdata has a clear mapping to RDF, it is not clear that any ontology that can be expressed in RDF can also be expressed in microdata).</p>
 <h3 id="rdfa">RDFa</h3>
-<p><a href="http://www.w3.org/TR/xhtml-rdfa-primer/">RDFa</a> can be written in a very similar manner. The <code>itemprop</code> attribute is replaced by the <code>property</code> attribute, and <code>vocab</code> replaces <code>itemtype</code> and automatically implies <code>itemscope</code> to child nodes.</p>
-<pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> vocab=</span><span class="st">&quot;http://xmlns.com/foaf/0.1/&quot;</span><span class="ot"> typeof=</span><span class="st">&quot;Person&quot;</span><span class="kw">&gt;</span>
+<p><a href="https://www.w3.org/TR/xhtml-rdfa-primer/">RDFa</a> can be written in a very similar manner. The <code>itemprop</code> attribute is replaced by the <code>property</code> attribute, and <code>vocab</code> replaces <code>itemtype</code> and automatically implies <code>itemscope</code> to child nodes.</p>
+<pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> vocab=</span><span class="st">&quot;https://xmlns.com/foaf/0.1/&quot;</span><span class="ot"> typeof=</span><span class="st">&quot;Person&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;h1</span><span class="ot"> property=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span>Carl Boettiger<span class="kw">&lt;/h1&gt;</span>
-  <span class="kw">&lt;a</span><span class="ot"> property=</span><span class="st">&quot;homepage&quot;</span><span class="ot"> href=</span><span class="st">&quot;http://www.carlboettiger.info&quot;</span><span class="kw">&gt;</span>http://carlboettiger.info<span class="kw">&lt;/a&gt;</span>
+  <span class="kw">&lt;a</span><span class="ot"> property=</span><span class="st">&quot;homepage&quot;</span><span class="ot"> href=</span><span class="st">&quot;https://www.carlboettiger.info&quot;</span><span class="kw">&gt;</span>http://carlboettiger.info<span class="kw">&lt;/a&gt;</span>
   <span class="kw">&lt;img</span><span class="ot"> property=</span><span class="st">&quot;depiction&quot;</span><span class="ot"> src=</span><span class="st">&quot;https://en.gravatar.com/userimage/12904315/7edea703b826fbbe07f2ae4d95b8416b.jpg?16&quot;</span><span class="kw">/&gt;</span>
  <span class="kw">&lt;/div&gt;</span></code></pre>
-<p>We could have used only the <code>property</code> attribute along with the complete URI to the term definition instead of this structure. <code>typeof</code> indicates that the child elements are all of the same type (in this case, all belong to the same “Person”). If we were omitting <code>vocab</code> and writing out all URIs, we would have had <code>&lt;div typeof=&quot;http://xmlns.com/foaf/0.1/Person&quot;&gt;</code> as well. In RDFa, we also have the <code>resource</code> attribute, which allows us to specify a URI for the element being described. This could be a relative or absolute URL. If the object is a link, using <code>resource</code> is not necessary, and the property is taken to describe the URL given in <code>href</code> or <code>src</code> rather than the anchor text.</p>
-<p>Two older options lie at either extreme: the most basic is the older technique of <a href="http://microformats.org/wiki/html5">microformatting</a>, basically relying on standard <code>class</code> and <code>rel</code> attributes to convey semantic information. Simple and without new attributes, but probably too limited for our purposes so we won’t concern ourselves with it further. The other venerable approach is serve the page as XHTML, which renders in the browser in much the same way but can be parsed by a machine as XML, with all the power and extensibility that presents. Unlike earlier HTML standards, HTML5 is already valid XML (already “serialized”), so the same page can be served in either format (earlier specs were SGML, standardized general markup languages, of which XML is just a subset). To allow parsing of the HTML5 pages as either type (see <a href="http://en.wikipedia.org/wiki/Polyglot_markup">polyglot</a>), we need only add the language and namespace to the opening <code>&lt;html&gt;</code> tag,</p>
-<pre><code>&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;&gt;</code></pre>
+<p>We could have used only the <code>property</code> attribute along with the complete URI to the term definition instead of this structure. <code>typeof</code> indicates that the child elements are all of the same type (in this case, all belong to the same “Person”). If we were omitting <code>vocab</code> and writing out all URIs, we would have had <code>&lt;div typeof=&quot;https://xmlns.com/foaf/0.1/Person&quot;&gt;</code> as well. In RDFa, we also have the <code>resource</code> attribute, which allows us to specify a URI for the element being described. This could be a relative or absolute URL. If the object is a link, using <code>resource</code> is not necessary, and the property is taken to describe the URL given in <code>href</code> or <code>src</code> rather than the anchor text.</p>
+<p>Two older options lie at either extreme: the most basic is the older technique of <a href="https://microformats.org/wiki/html5">microformatting</a>, basically relying on standard <code>class</code> and <code>rel</code> attributes to convey semantic information. Simple and without new attributes, but probably too limited for our purposes so we won’t concern ourselves with it further. The other venerable approach is serve the page as XHTML, which renders in the browser in much the same way but can be parsed by a machine as XML, with all the power and extensibility that presents. Unlike earlier HTML standards, HTML5 is already valid XML (already “serialized”), so the same page can be served in either format (earlier specs were SGML, standardized general markup languages, of which XML is just a subset). To allow parsing of the HTML5 pages as either type (see <a href="http://en.wikipedia.org/wiki/Polyglot_markup">polyglot</a>), we need only add the language and namespace to the opening <code>&lt;html&gt;</code> tag,</p>
+<pre><code>&lt;html lang=&quot;en&quot; xmlns=&quot;https://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;&gt;</code></pre>
 <h3 id="caveats">Caveats</h3>
-<p>An essential caveat is that these are all new approaches which may not render well in legacy browsers, particularly Windows Internet Explorer. Some of these, like recognizing and styling the HTML5 semantic elements in IE, can be addressed in CSS, for which Twitter Bootstrap does a decent job. Another caveat The HTML5 spec has not been finalized, and some things are still in flux, as the <a href="http://html5doctor.com/time-and-data-element/">removal</a> and <a href="http://www.brucelawson.co.uk/2012/best-of-time/">reinstatement</a> of the <code>&lt;time&gt;</code> element illustrates.</p>
+<p>An essential caveat is that these are all new approaches which may not render well in legacy browsers, particularly Windows Internet Explorer. Some of these, like recognizing and styling the HTML5 semantic elements in IE, can be addressed in CSS, for which Twitter Bootstrap does a decent job. Another caveat The HTML5 spec has not been finalized, and some things are still in flux, as the <a href="https://html5doctor.com/time-and-data-element/">removal</a> and <a href="http://www.brucelawson.co.uk/2012/best-of-time/">reinstatement</a> of the <code>&lt;time&gt;</code> element illustrates.</p>
 <h3 id="useful-tools-for-checking-implementation">Useful tools for checking implementation</h3>
 <ul>
-<li><a href="http://validator.w3.org/nu">W3C HTML5 Validator</a></li>
-<li><a href="http://www.google.com/webmasters/tools/richsnippets">Google rich snippets</a></li>
-<li><a href="http://sparql.captsolo.net/browser/browser.py?url=http://www.w3.org/2007/08/pyRdfa/extract?uri=http://www.carlboettiger.info">RDF extraction tool</a></li>
+<li><a href="https://validator.w3.org/nu">W3C HTML5 Validator</a></li>
+<li><a href="https://www.google.com/webmasters/tools/richsnippets">Google rich snippets</a></li>
+<li><a href="https://sparql.captsolo.net/browser/browser.py?url=http://www.w3.org/2007/08/pyRdfa/extract?uri=http://www.carlboettiger.info">RDF extraction tool</a></li>
 </ul>
 <h1 id="scholarly-semantic-markup-for-the-notebook">Scholarly Semantic Markup for the Notebook</h1>
 <p>Now that we’ve familiarized ourselves with the options, it’s time to see what semantic content we can implement.</p>
@@ -160,17 +160,17 @@
 <tr class="odd">
 <td style="text-align: left;">Page structure</td>
 <td style="text-align: left;"><code>&lt;header&gt;</code></td>
-<td style="text-align: left;"><a href="http://diveintohtml5.info/semantics.html">HTML5</a></td>
+<td style="text-align: left;"><a href="https://diveintohtml5.info/semantics.html">HTML5</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Post metadata</td>
 <td style="text-align: left;">keywords, timestamps</td>
-<td style="text-align: left;"><a href="http://schema.org/BlogPosting">Schema.org microdata</a> or <a href="http://purl.org/terms/dc">Dublin Core</a></td>
+<td style="text-align: left;"><a href="https://schema.org/BlogPosting">Schema.org microdata</a> or <a href="http://purl.org/terms/dc">Dublin Core</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Author metadata</td>
 <td style="text-align: left;">Name, contact, networks,</td>
-<td style="text-align: left;"><a href="http://xmlns.com/foaf/0.1/">FOAF</a>, <a href="http://purl.org/terms/dc">Dublin Core</a></td>
+<td style="text-align: left;"><a href="https://xmlns.com/foaf/0.1/">FOAF</a>, <a href="http://purl.org/terms/dc">Dublin Core</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
@@ -180,31 +180,31 @@
 <tr class="odd">
 <td style="text-align: left;">Licenses</td>
 <td style="text-align: left;">CC0</td>
-<td style="text-align: left;"><a href="http://creativecommons.org/ns">CreativeCommons</a></td>
+<td style="text-align: left;"><a href="https://creativecommons.org/ns">CreativeCommons</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Citations</td>
 <td style="text-align: left;">bib info, reason for citing</td>
-<td style="text-align: left;"><a href="http://purl.org/spar/cito">CiTO</a>, <a href="http://purl.org/spar/biro">BiRO</a>,</td>
+<td style="text-align: left;"><a href="https://purl.org/spar/cito">CiTO</a>, <a href="http://purl.org/spar/biro">BiRO</a>,</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;"><a href="http://purl.org/ontologies/bibo">bibo</a>, <a href="http://purl.org/terms/dc">Dublin Core</a></td>
+<td style="text-align: left;"><a href="https://purl.org/ontologies/bibo">bibo</a>, <a href="http://purl.org/terms/dc">Dublin Core</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Taxonomic data</td>
 <td style="text-align: left;">species names</td>
-<td style="text-align: left;"><a href="http://rs.tdwg.org/dwc/terms/index.htm">Darwin Core</a></td>
+<td style="text-align: left;"><a href="https://rs.tdwg.org/dwc/terms/index.htm">Darwin Core</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Ecological data</td>
 <td style="text-align: left;">measurements, units, etc</td>
-<td style="text-align: left;"><del><a href="http://knb.ecoinformatics.org/software/eml/">EML</a></del> <a href="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl">OBOE</a></td>
+<td style="text-align: left;"><del><a href="https://knb.ecoinformatics.org/software/eml/">EML</a></del> <a href="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl">OBOE</a></td>
 </tr>
 </tbody>
 </table>
-<p>In another entry I will try and highlight where and what semantic content I have added (work in progress), with examples of each vocabulary. The first four types are relatively static content that can be easily woven into the Jekyll template files. Using Jekyll &amp; Liquid to pull in template information from the <code>_config.yaml</code> should help avoid repetitive entry and make updating the linked data easier. The last three are entry-specific content, and will be more challenging. I hope to add semantic support to <a href="https://github.com/cboettig/knitcitations">knitcitations</a>, including the option for CiTO types, which should make entry of citation data quick and easy (<a href="http://stackoverflow.com/questions/12867586">SO question illustrating semantic citation</a>).</p>
+<p>In another entry I will try and highlight where and what semantic content I have added (work in progress), with examples of each vocabulary. The first four types are relatively static content that can be easily woven into the Jekyll template files. Using Jekyll &amp; Liquid to pull in template information from the <code>_config.yaml</code> should help avoid repetitive entry and make updating the linked data easier. The last three are entry-specific content, and will be more challenging. I hope to add semantic support to <a href="https://github.com/cboettig/knitcitations">knitcitations</a>, including the option for CiTO types, which should make entry of citation data quick and easy (<a href="https://stackoverflow.com/questions/12867586">SO question illustrating semantic citation</a>).</p>
 <p>The last two are much richer, specific vocabularies. For the moment, it might be best to use these to give more precise meaning to tags, which are already used as metadata on posts. This would allow posts to be still created in simple markdown without the burden of adding in lines of RDFa and cluttering the markup. Meanwhile full datasets provided in EML are likely to live as separate files, rather than as a random table in the middle of a notebook entry.</p>
 <p>As always, feedback, corrections or suggestions are appreciated!</p>
 
@@ -212,7 +212,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2012-10-14 00:00:00 +0000" 
     property="dc:created">14 Oct 2012</time></p>
@@ -245,15 +245,15 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#semantics">#semantics</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#notebook-technology">#notebook-technology</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#blog">#blog</a>
     </p>
@@ -283,11 +283,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -300,7 +300,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -316,7 +316,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -336,13 +336,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -360,7 +360,7 @@
       &amp;rft.date=2012-10-14
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/10/14/semantic-lab-notebook.html">
+      &amp;rft_id=https://www.carlboettiger.info/10/14/semantic-lab-notebook.html">
   </span>
 
 
@@ -377,7 +377,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -392,7 +392,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Notes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Notes" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2012-10-19 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2012-10-19 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/10/19/notes.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/10/19/notes.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -109,29 +109,29 @@
     <h2 id="semantic-notebook-notes">Semantic Notebook notes</h2>
 <p><strong>Reading</strong></p>
 <ul>
-<li>Nice <a href="http://scholarlyhtml.org/faq/">collection of posts on scholarly html</a>, but too little mention of the serious linked data stuff coming out of biscol, ievobio/nescent, etc. In particular, Martin’s [history] (http://blogs.plos.org/mfenner/2011/03/19/a-very-brief-history-of-scholarly-html/) gives some nice perspective.<br /></li>
-<li>The war for schema. Which ontologies should we choose? (e.g. <a href="http://blogs.plos.org/mfenner/2011/06/07/schema-org-for-scholarly-html/">schema.org’s take</a></li>
+<li>Nice <a href="https://scholarlyhtml.org/faq/">collection of posts on scholarly html</a>, but too little mention of the serious linked data stuff coming out of biscol, ievobio/nescent, etc. In particular, Martin’s [history] (http://blogs.plos.org/mfenner/2011/03/19/a-very-brief-history-of-scholarly-html/) gives some nice perspective.<br /></li>
+<li>The war for schema. Which ontologies should we choose? (e.g. <a href="https://blogs.plos.org/mfenner/2011/06/07/schema-org-for-scholarly-html/">schema.org’s take</a></li>
 </ul>
 <p><strong>Puzzles</strong></p>
 <ul>
-<li>How do we <a href="http://stackoverflow.com/questions/12983766">mix ontologies</a></li>
-<li>How do we meet <a href="http://answers.semanticweb.com/questions/19200/satisfy-google-rich-snippets-person-standard-using-foaf">Google Rich Snippets requirements using FOAF?</a></li>
-<li>How do we <a href="http://answers.semanticweb.com/questions/19275/what-to-do-about-redundant-rdfa-or-machines-that-speak-only-one-language">avoid redundant vocabulary terms?</a></li>
+<li>How do we <a href="https://stackoverflow.com/questions/12983766">mix ontologies</a></li>
+<li>How do we meet <a href="https://answers.semanticweb.com/questions/19200/satisfy-google-rich-snippets-person-standard-using-foaf">Google Rich Snippets requirements using FOAF?</a></li>
+<li>How do we <a href="https://answers.semanticweb.com/questions/19275/what-to-do-about-redundant-rdfa-or-machines-that-speak-only-one-language">avoid redundant vocabulary terms?</a></li>
 </ul>
-<p>Basically we can do this using implicit reasoning (exploiting the logic of linked data), but we may prefer to be explict. <a href="http://vimeo.com/28667500">This video</a> does a nice job of explaining these concepts. Basically, if we do this right, we should be able to “dereference” an object away from a particular ontology.</p>
+<p>Basically we can do this using implicit reasoning (exploiting the logic of linked data), but we may prefer to be explict. <a href="https://vimeo.com/28667500">This video</a> does a nice job of explaining these concepts. Basically, if we do this right, we should be able to “dereference” an object away from a particular ontology.</p>
 <ul>
-<li>On <a href="http://manu.sporny.org/2011/false-choice/">the good &amp; the bad of schema.org and the role of search giants</a></li>
+<li>On <a href="https://manu.sporny.org/2011/false-choice/">the good &amp; the bad of schema.org and the role of search giants</a></li>
 </ul>
 <h3 id="resources">Resources</h3>
 <ul>
-<li><a href="http://getschema.org/rdfaliteextractor/about">rdfa extractor</a> (into RDF, JSON, n3). Also has validator, but doesn’t point to the <code>nu</code> variant for html5.</li>
-<li><a href="http://rdfa.info/play/">RDFa Play</a>. Wow, very nice.<br /></li>
-<li><a href="http://sameas.org">sameAs.org</a> - search onotologies for an existing term, identify identical terms in different ontologies, etc. Simply brilliant, what I’ve always wanted!</li>
+<li><a href="https://getschema.org/rdfaliteextractor/about">rdfa extractor</a> (into RDF, JSON, n3). Also has validator, but doesn’t point to the <code>nu</code> variant for html5.</li>
+<li><a href="https://rdfa.info/play/">RDFa Play</a>. Wow, very nice.<br /></li>
+<li><a href="https://sameas.org">sameAs.org</a> - search onotologies for an existing term, identify identical terms in different ontologies, etc. Simply brilliant, what I’ve always wanted!</li>
 <li>Still not clear on rdfa vs html5. Why in the world should <code>dc:title</code> be preferable to <code>&lt;title&gt;</code> ?</li>
 </ul>
 <h3 id="knitcitations-update-adding-formats-an-semantics.">knitcitations update: adding formats an semantics.</h3>
 <ul>
-<li>Looking at citeproc / <a href="http://citationstyles.org/">CSL</a> <a href="https://github.com/citation-style-language">github page</a>.<br /></li>
+<li>Looking at citeproc / <a href="https://citationstyles.org/">CSL</a> <a href="https://github.com/citation-style-language">github page</a>.<br /></li>
 <li>Raw citeproc is an XML stylesheet, XSLT, which can render XML into HTML (and much more). Possible other options are using something like citeproc-js or citeproc-ruby, or writing citeproc-R.<br /></li>
 <li>Not quite clear how to take a CSL and a set of references and generate HTML; aforementioned packages may address this.<br /></li>
 <li>For the moment, probably easier to convert R <code>bibitem</code> to display with RDFa with scholarlyhtml recommended ontology than to enter raw XML reference and format via citeproc. Should also support adding in the cito tags. With full addresses in property, should be able to avoid any need for namespace/header modifications.</li>
@@ -141,7 +141,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2012-10-19 00:00:00 +0000" 
     property="dc:created">19 Oct 2012</time></p>
@@ -174,7 +174,7 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#semantics">#semantics</a>
     </p>
@@ -204,11 +204,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -221,7 +221,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -237,7 +237,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -257,13 +257,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -281,7 +281,7 @@
       &amp;rft.date=2012-10-19
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/10/19/notes.html">
+      &amp;rft_id=https://www.carlboettiger.info/10/19/notes.html">
   </span>
 
 
@@ -298,7 +298,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -313,7 +313,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

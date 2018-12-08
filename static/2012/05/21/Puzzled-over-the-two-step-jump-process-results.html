@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Puzzled over the two-step jump process results</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Puzzled over the two-step jump process results" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2010-05-21 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2010-05-21 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/05/21/Puzzled-over-the-two-step-jump-process-results.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/05/21/Puzzled-over-the-two-step-jump-process-results.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -107,38 +107,38 @@
   <div class="col-md-7 col-md-offset-1">
     <article>
     <p>The variance dynamics are slightly different if the continuous time Markov process allows events to contain two steps (such as a transition of an individual from one age class to another, or one patch to another, etc) as well as one step birth/death) transitions. <em>V</em>τ~*i**j<em>~(</em>X* / <em>V</em>) to represent the rate of transitions from state <em>i</em> to state <em>j</em>. We change variables for our state space from the discrete count state variable <em>X</em> by dividing by the system size (volume) V, to obtain the continuous, mean-field approximation of the density <em>p = X/V.</em> Then:</p>
-<p><br /> <img src="http://openwetware.org/images/math/5/e/b/5eb413fd88e12c41c39cf48c811fc71a.png" alt="\begin{align} &amp; \frac{d}{dt} E(p) = b(p)-d(p) + \sum_{j \neq i} \tau_{ji}(p) - \tau_{ij}(p) =: f(p)\\ &amp; \frac{d}{dt} M = \textrm{diag}( b(p) + d(p) ) - T + Df(p) M + M Df(p)^T \end{align}" /></p>
-<p>where <em>T</em> is a symmetric matrix with off-diagonal elements <em>i,j</em> τ~<em>i<strong>j<em>~(</em>p<em>) + τ</em>j</strong>i</em>(<em>p</em>) and diagonal elements chosen so that rows sum to zero. This approximation is implemented in <a href="http://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R" title="http://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R">noise_approx.R</a></p>
+<p><br /> <img src="https://openwetware.org/images/math/5/e/b/5eb413fd88e12c41c39cf48c811fc71a.png" alt="\begin{align} &amp; \frac{d}{dt} E(p) = b(p)-d(p) + \sum_{j \neq i} \tau_{ji}(p) - \tau_{ij}(p) =: f(p)\\ &amp; \frac{d}{dt} M = \textrm{diag}( b(p) + d(p) ) - T + Df(p) M + M Df(p)^T \end{align}" /></p>
+<p>where <em>T</em> is a symmetric matrix with off-diagonal elements <em>i,j</em> τ~<em>i<strong>j<em>~(</em>p<em>) + τ</em>j</strong>i</em>(<em>p</em>) and diagonal elements chosen so that rows sum to zero. This approximation is implemented in <a href="https://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R" title="http://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R">noise_approx.R</a></p>
 <h3 id="example-crowley-model">Example: Crowley model</h3>
 <ul>
 <li><strong>Carl Boettiger 15:05, 25 May 2010 (EDT)</strong>: (some corrections to eqns)</li>
 </ul>
 <p>(Note this is the original Crowley model where the <em>c</em> coefficients are equal. In the original model this represented competition for space by overgrowth and hence would more naturally be expressed as a two step process).</p>
 <figure>
-<img src="http://openwetware.org/images/math/7/c/4/7c49b2c47e74e60537d6345e8b7a9c6a.png" alt="\begin{align} \dot x &amp;= b_1 x (K - x - y)/K - d_1 x + c x y/K \\ \dot y &amp;= b_2 y (K - x - y)/K - d_1 y - c x y/K \end{align}" /><figcaption>\begin{align} \dot x &amp;= b_1 x (K - x - y)/K - d_1 x + c x y/K \\ \dot y &amp;= b_2 y (K - x - y)/K - d_1 y - c x y/K \end{align}</figcaption>
+<img src="https://openwetware.org/images/math/7/c/4/7c49b2c47e74e60537d6345e8b7a9c6a.png" alt="\begin{align} \dot x &amp;= b_1 x (K - x - y)/K - d_1 x + c x y/K \\ \dot y &amp;= b_2 y (K - x - y)/K - d_1 y - c x y/K \end{align}" /><figcaption>\begin{align} \dot x &amp;= b_1 x (K - x - y)/K - d_1 x + c x y/K \\ \dot y &amp;= b_2 y (K - x - y)/K - d_1 y - c x y/K \end{align}</figcaption>
 </figure>
 <p>Interpreting the <em>cxy</em> terms as transitions rather than independent birth and death events results in the same mean-field dynamics but differing fluctuations. For instance, the covariance dynamics are:</p>
 <figure>
-<img src="http://openwetware.org/images/math/2/4/c/24c57b2b520fa2223fc7f059ade57d81.png" alt="\frac{d}{dt} \textrm{Cov}(x,y) = \left(b_1 (1-2x-y)-d_1 +c y + b_2(1-x-2y)-d_2 -c x \right)\textrm{Cov}(x,y) - (b_1 x +c x )\sigma_y^2 -(b_2 y -c y)\sigma_x^2 - cxy" /><figcaption>\frac{d}{dt} \textrm{Cov}(x,y) = \left(b_1 (1-2x-y)-d_1 +c y + b_2(1-x-2y)-d_2 -c x \right)\textrm{Cov}(x,y) - (b_1 x +c x )\sigma_y^2 -(b_2 y -c y)\sigma_x^2 - cxy</figcaption>
+<img src="https://openwetware.org/images/math/2/4/c/24c57b2b520fa2223fc7f059ade57d81.png" alt="\frac{d}{dt} \textrm{Cov}(x,y) = \left(b_1 (1-2x-y)-d_1 +c y + b_2(1-x-2y)-d_2 -c x \right)\textrm{Cov}(x,y) - (b_1 x +c x )\sigma_y^2 -(b_2 y -c y)\sigma_x^2 - cxy" /><figcaption>\frac{d}{dt} \textrm{Cov}(x,y) = \left(b_1 (1-2x-y)-d_1 +c y + b_2(1-x-2y)-d_2 -c x \right)\textrm{Cov}(x,y) - (b_1 x +c x )\sigma_y^2 -(b_2 y -c y)\sigma_x^2 - cxy</figcaption>
 </figure>
 <p>Whereas interpreted as single-step birth and death the <em>cxy</em> term at the end is absent.</p>
 <p>The variance dynamics are similarly altered.</p>
 <h4 id="numerical-implementation">Numerical implementation</h4>
-<p>This individual-based simulation is implemented in <a href="http://github.com/cboettig/structured-populations/blob/master/src/metapop.c" title="http://github.com/cboettig/structured-populations/blob/master/src/metapop.c">metapop.c</a> and callable from R interface from <a href="http://github.com/cboettig/structured-populations/blob/master/R/ind_based_models.R" title="http://github.com/cboettig/structured-populations/blob/master/R/ind_based_models.R">ind_based_models.R</a> as metapop_ibm(). The file <a href="http://github.com/cboettig/structured-populations/blob/master/R/metapop.R" title="http://github.com/cboettig/structured-populations/blob/master/R/metapop.R">metapop.R</a> specifies the dynamics of birth, death, transition matrix and the Jacobian so that linear_noise_approx() function from above can be used to calculate the moments. This file also runs the crolwey_ibm model (from crowley.c, interface in the ind_based.models.R) and the linear noise approximation to it from <a href="http://github.com/cboettig/structured-populations/blob/master/R/crowley.R" title="http://github.com/cboettig/structured-populations/blob/master/R/crowley.R">crowley.R</a> to compare how the two-step process changes the noise dynamics.</p>
+<p>This individual-based simulation is implemented in <a href="https://github.com/cboettig/structured-populations/blob/master/src/metapop.c" title="http://github.com/cboettig/structured-populations/blob/master/src/metapop.c">metapop.c</a> and callable from R interface from <a href="http://github.com/cboettig/structured-populations/blob/master/R/ind_based_models.R" title="http://github.com/cboettig/structured-populations/blob/master/R/ind_based_models.R">ind_based_models.R</a> as metapop_ibm(). The file <a href="http://github.com/cboettig/structured-populations/blob/master/R/metapop.R" title="http://github.com/cboettig/structured-populations/blob/master/R/metapop.R">metapop.R</a> specifies the dynamics of birth, death, transition matrix and the Jacobian so that linear_noise_approx() function from above can be used to calculate the moments. This file also runs the crolwey_ibm model (from crowley.c, interface in the ind_based.models.R) and the linear noise approximation to it from <a href="http://github.com/cboettig/structured-populations/blob/master/R/crowley.R" title="http://github.com/cboettig/structured-populations/blob/master/R/crowley.R">crowley.R</a> to compare how the two-step process changes the noise dynamics.</p>
 <p>This comparison can be run simply by loading the package and running metapop_example() function.</p>
 <p>For some reason the individual based-simulation of the two-step process seems to resemble that of the one-step process more, while the two-step linear noise approximation alternately underestimates (Fig 1) or overestimates (Fig 2) the variance. Looking for bugs in the implementation at the moment.</p>
 <ul>
 <li><strong>Carl Boettiger 21:43, 26 May 2010 (EDT)</strong>: Bug found, see corrected graphs on Tuesday’s (5/25) entry.</li>
 </ul>
 <figure>
-<img src="http://openwetware.org/images/thumb/8/84/Compare_noise.png/360px-Compare_noise.png" alt="Fig 1. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = c = .1" /><figcaption>Fig 1. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = c = .1</figcaption>
+<img src="https://openwetware.org/images/thumb/8/84/Compare_noise.png/360px-Compare_noise.png" alt="Fig 1. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = c = .1" /><figcaption>Fig 1. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = c = .1</figcaption>
 </figure>
 <figure>
 <img src="/skins/common/images/magnify-clip.png" alt="image" /><figcaption>image</figcaption>
 </figure>
 <p>Fig 1. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = c = .1</p>
 <figure>
-<img src="http://openwetware.org/images/thumb/f/f3/Compare_noise2.png/360px-Compare_noise2.png" alt="Fig. 2. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = .1, c = .15" /><figcaption>Fig. 2. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = .1, c = .15</figcaption>
+<img src="https://openwetware.org/images/thumb/f/f3/Compare_noise2.png/360px-Compare_noise2.png" alt="Fig. 2. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = .1, c = .15" /><figcaption>Fig. 2. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = .1, c = .15</figcaption>
 </figure>
 <figure>
 <img src="/skins/common/images/magnify-clip.png" alt="image" /><figcaption>image</figcaption>
@@ -150,7 +150,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2010-05-21 00:00:00 +0000" 
     property="dc:created">21 May 2010</time></p>
@@ -183,7 +183,7 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#tribolium">#tribolium</a>
     </p>
@@ -213,11 +213,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -230,7 +230,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -246,7 +246,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -266,13 +266,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -290,7 +290,7 @@
       &amp;rft.date=2010-05-21
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/05/21/Puzzled-over-the-two-step-jump-process-results.html">
+      &amp;rft_id=https://www.carlboettiger.info/05/21/Puzzled-over-the-two-step-jump-process-results.html">
   </span>
 
 
@@ -307,7 +307,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -322,7 +322,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Building a semantic notebook</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Building a semantic notebook" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2011-05-08 18:39:49 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2011-05-08 18:39:49 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/05/08/building-a-semantic-notebook.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/05/08/building-a-semantic-notebook.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -107,28 +107,28 @@
   <div class="col-md-7 col-md-offset-1">
     <article>
     <p>What would a semantic lab notebook look like?  What would be possible with such a structure, ideally?  What is already possible now?  There’s a lot that can be done with an electronic notebook that adds value over a paper notebook: browsing by categories and tags, embedding links, time-stamping entries, searching the full text, and having automated trackbacks or pingbacks when a post is mentioned in another post or appears elsewhere on the web. Despite these advantages, I think a lot more could be possible with a semantic notebook – where links can be identified with an ontology describing the relationship. I’ve found a couple current tools very promising, and would be interested in developing some of these much further.</p>
-<p>There’s been a lot written about the potential for linked data and a semantic web elsewhere <a rel="http://purl.org/spar/cito/discusses", resource="http://dx.doi.org/10.2200/S00334ED1V01Y201102WBE001">(Heath &amp; Bizer, 2011)</a>, here I outline what’s already possible and what I’d like to see in the context of a lab notebook. My notebook links three primary content sources: literature citations, graphs, and code; as I’ve <a href="http://www.carlboettiger.info/archives/211">described before</a>. A more semantic version could make the connections between these elements explicit and machine readable, opening the door to many more possibilities.</p>
+<p>There’s been a lot written about the potential for linked data and a semantic web elsewhere <a rel="https://purl.org/spar/cito/discusses", resource="http://dx.doi.org/10.2200/S00334ED1V01Y201102WBE001">(Heath &amp; Bizer, 2011)</a>, here I outline what’s already possible and what I’d like to see in the context of a lab notebook. My notebook links three primary content sources: literature citations, graphs, and code; as I’ve <a href="http://www.carlboettiger.info/archives/211">described before</a>. A more semantic version could make the connections between these elements explicit and machine readable, opening the door to many more possibilities.</p>
 <figure>
-<img src="http://www.carlboettiger.info/assets/files/mynotebook-300x123.png" />
+<img src="https://www.carlboettiger.info/assets/files/mynotebook-300x123.png" />
 </figure>
 <h3 id="citations">Citations:</h3>
 <h4 id="existing-capabilities">Existing capabilities</h4>
-<p>A lot of linked-data meta-data is already supported for citations, but a lot more could be possible. In my notebook, the citations are included by DOI whenever possible, using the <a href="http://wordpress.org/extend/plugins/kcite/">KCite</a> plugin (EDIT: now using my <a href="https://github.com/cboettig/knitcitations/iss">knitcitations</a> package). <a href="http://inkdroid.org/journal/2011/04/25/dois-as-linked-data/">DOI’s are linked data</a>. Further information can be added to any link using the CITO ontology. <a rel="http://purl.org/spar/cito/usesMethodIn", resource="http://dx.doi.org/10.1186/2041-1480-1-S1-S6">Shotton (2010)</a>. The link-to-link plugin, <a rel="http://prul.org/spar/cito/discusses" resource='http://wordpress.org/extend/plugins/link-to-link'>(Fenner 2011)</a>, can in addition to DOIs can add indicate the reason for the citation. <a href="http://wordpress.org/extend/plugins/link-to-link/installation/">Link-2-Link</a> adds the citation to the link library in Wordpress, and can import bibtex documents, though this tends not to be as convenient as citing directly from DOI when it is available. I’m not sure if <a href="http://wordpress.org/extend/plugins/kcite/">KCite</a> will include the cito relationship if it is written in without <a href="http://wordpress.org/extend/plugins/link-to-link/installation/">Link-2-Link</a>, as:</p>
+<p>A lot of linked-data meta-data is already supported for citations, but a lot more could be possible. In my notebook, the citations are included by DOI whenever possible, using the <a href="https://wordpress.org/extend/plugins/kcite/">KCite</a> plugin (EDIT: now using my <a href="https://github.com/cboettig/knitcitations/iss">knitcitations</a> package). <a href="http://inkdroid.org/journal/2011/04/25/dois-as-linked-data/">DOI’s are linked data</a>. Further information can be added to any link using the CITO ontology. <a rel="http://purl.org/spar/cito/usesMethodIn", resource="http://dx.doi.org/10.1186/2041-1480-1-S1-S6">Shotton (2010)</a>. The link-to-link plugin, <a rel="http://prul.org/spar/cito/discusses" resource='http://wordpress.org/extend/plugins/link-to-link'>(Fenner 2011)</a>, can in addition to DOIs can add indicate the reason for the citation. <a href="http://wordpress.org/extend/plugins/link-to-link/installation/">Link-2-Link</a> adds the citation to the link library in Wordpress, and can import bibtex documents, though this tends not to be as convenient as citing directly from DOI when it is available. I’m not sure if <a href="http://wordpress.org/extend/plugins/kcite/">KCite</a> will include the cito relationship if it is written in without <a href="http://wordpress.org/extend/plugins/link-to-link/installation/">Link-2-Link</a>, as:</p>
 <pre><code>[cite source=&#39;doi&#39; rel=&#39;cito:discusses&#39;]10.1186/2041-1480-1-S1-S6[/cite]</code></pre>
 <h4 id="desired-capabilities">Desired capabilities:</h4>
 <p>It would be nice to do a lot more though. First, it would be great to be able to browse this data efficiently. It would be great to parse the whole notebook to generate citation statistics, with the ability to identify such things as: which articles I most cite, what reasons I most cite for (from CiTO), links to posts where I disagree with an article, what authors I most cite ((more challenging since it involves looking up information not directly embedded into the post)), etc.</p>
-<p>Next, it would be great to be able to include more information in linked data format and pull in information available from other sources. Most of my citations are correspond to objects in my Mendeley library, where they have added tags, notes, date added to my library, categories, groups, as well as the full suite of further data and reader statistics exposed by Mendeley (such as illustrated in <a href="http://readermeter.org/">ReaderMeter</a> and <a href="http://dev.mendeley.com/">Mendeley API</a>).</p>
+<p>Next, it would be great to be able to include more information in linked data format and pull in information available from other sources. Most of my citations are correspond to objects in my Mendeley library, where they have added tags, notes, date added to my library, categories, groups, as well as the full suite of further data and reader statistics exposed by Mendeley (such as illustrated in <a href="https://readermeter.org/">ReaderMeter</a> and <a href="http://dev.mendeley.com/">Mendeley API</a>).</p>
 <h3 id="images-and-code">Images and Code:</h3>
 <h4 id="whats-already-possible">What’s already possible</h4>
-<p>Graphs (stored on Flickr) have a direct correspondence to the code that generated them (stored on Github).  This connection could be exposed through some semantic mark-up, identifying which code corresponds to which images and vice versa, as well as identifying such meta-data as when the code was committed or the image generated, author, tags, version, and relationship with other versions and codes. This meta-data already exists for the most part, but cannot be queried by a machine (give me older/newer versions of this code, or all results run from this code, etc). Both code and images have stable identifiers/urls. Within code, versions and dependencies are already handled explicitly, though not perhaps in a machine-readable way. Code is assigned to different repositories, images to different tags, both with timestamps for commits. These connections between code an results have been discussed by Gavish and Donoho in <a href="http://www.stanford.edu/~vcs/AAAS2011/">universal identifiers for computational results</a>, among others, but could be particularly powerful using semantic markup.</p>
+<p>Graphs (stored on Flickr) have a direct correspondence to the code that generated them (stored on Github).  This connection could be exposed through some semantic mark-up, identifying which code corresponds to which images and vice versa, as well as identifying such meta-data as when the code was committed or the image generated, author, tags, version, and relationship with other versions and codes. This meta-data already exists for the most part, but cannot be queried by a machine (give me older/newer versions of this code, or all results run from this code, etc). Both code and images have stable identifiers/urls. Within code, versions and dependencies are already handled explicitly, though not perhaps in a machine-readable way. Code is assigned to different repositories, images to different tags, both with timestamps for commits. These connections between code an results have been discussed by Gavish and Donoho in <a href="https://www.stanford.edu/~vcs/AAAS2011/">universal identifiers for computational results</a>, among others, but could be particularly powerful using semantic markup.</p>
 <h4 id="making-this-semantic">Making this semantic</h4>
-<p>The simplest goal would be to extract the information that these links refer to code or refer to images, presumably possible by domain information / plugin short code identification. Following these links then, some metadata is already exposed by Flickr or github in RDF. <a href="http://inspector.sindice.com/inspect?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fcboettig%2F5692100650&amp;content=#SIGMA">Flickr returns</a>the title, license, and identifiers. Github<a href="http://inspector.sindice.com/inspect?url=http%3A%2F%2Fgithub.com%2Fcboettig%2FComparative-Phylogenetics%2Fblob%2Ff75d2f79b0469112bf2635e321006e1079fa2c41%2Ftreebase%2FR%2Ftreebase.R&amp;content=">seems to return</a> only the title.  Ideally, having come across any graph in the notebook, one could obtain some identifier which would recover other instances where the image has appeared, identify the code that created it (with the code revision history) and pages that link to the code, as well as author information, license (software and image), platform information, etc.</p>
+<p>The simplest goal would be to extract the information that these links refer to code or refer to images, presumably possible by domain information / plugin short code identification. Following these links then, some metadata is already exposed by Flickr or github in RDF. <a href="https://inspector.sindice.com/inspect?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fcboettig%2F5692100650&amp;content=#SIGMA">Flickr returns</a>the title, license, and identifiers. Github<a href="http://inspector.sindice.com/inspect?url=http%3A%2F%2Fgithub.com%2Fcboettig%2FComparative-Phylogenetics%2Fblob%2Ff75d2f79b0469112bf2635e321006e1079fa2c41%2Ftreebase%2FR%2Ftreebase.R&amp;content=">seems to return</a> only the title.  Ideally, having come across any graph in the notebook, one could obtain some identifier which would recover other instances where the image has appeared, identify the code that created it (with the code revision history) and pages that link to the code, as well as author information, license (software and image), platform information, etc.</p>
 <h3 id="other-content">Other content</h3>
 <p>There’s a lot of other content that is not treated here. References to people are an obvious candidate for semantic content, though FOAF and XFN (built into Wordpress links) don’t seem to capture the notions of “adviser,” “labmate,” or “co-author,” etc. Pulling up all references to a particular person in the notebook might be useful.</p>
-<p>Markup for identifying data analyzed in a post would also be useful. Like articles, <a href="http://datacite.org/">data is more and more frequently being assigned a DOI</a>, so the goal is simply to couple the post id, graphs and code that analyze the data more tightly to this identifier. A different solution may be necessary for unpublished data, or for indicating the subset or combination of published data sets used.</p>
-<p>Aquiring DOIs for computational results and posts from the California Digital Library’s <a href="http://www.cdlib.org/services/uc3/ezid/index.html">EZID</a> would make richer meta-data tracking possible. This might be possible to implement for figures through FigShare as well.</p>
+<p>Markup for identifying data analyzed in a post would also be useful. Like articles, <a href="https://datacite.org/">data is more and more frequently being assigned a DOI</a>, so the goal is simply to couple the post id, graphs and code that analyze the data more tightly to this identifier. A different solution may be necessary for unpublished data, or for indicating the subset or combination of published data sets used.</p>
+<p>Aquiring DOIs for computational results and posts from the California Digital Library’s <a href="https://www.cdlib.org/services/uc3/ezid/index.html">EZID</a> would make richer meta-data tracking possible. This might be possible to implement for figures through FigShare as well.</p>
 <h3 id="other-wordpress-plugins">Other Wordpress Plugins</h3>
-<p>Basic meta-data about the post can be included through the Wordpress plugin <a href="http://dev.squarecows.com/projects/wp-rdfa/">wp-rdfa</a>, providing FOAF relationships for admin/editors/authors in the wordpress database and Dublin Core relationships to identify the authors and post title, but are quite limited. A variety of other Wordpress plugins  also provide semantic support, including  <a href="http://www.ontos.com/o_eng/index.php?cs=1">ontos feeder</a>, <a href="http://fgiasson.com/blog/index.php/2007/09/01/blogs-wordpress-zitgist-and-the-semantic-web/">zlinks</a>, <a href="http://wordpress.org/extend/plugins/wpmu-talis-triple-uploader/">WPMU-talis-triples-uploader</a> (<a href="http://www.talis.com">Talis</a>), but I’m not sure any provide the kind of  capacity I discuss above (most attempt to automatically link content from other web sources).  This semantic <a href="http://inspector.sindice.com/index.jsp">inspector tool</a> is quite useful, as well as a rich example of markup of a scientist’s page <a href="http://egonw.github.com/">from Egon</a>.</p>
+<p>Basic meta-data about the post can be included through the Wordpress plugin <a href="https://dev.squarecows.com/projects/wp-rdfa/">wp-rdfa</a>, providing FOAF relationships for admin/editors/authors in the wordpress database and Dublin Core relationships to identify the authors and post title, but are quite limited. A variety of other Wordpress plugins  also provide semantic support, including  <a href="http://www.ontos.com/o_eng/index.php?cs=1">ontos feeder</a>, <a href="http://fgiasson.com/blog/index.php/2007/09/01/blogs-wordpress-zitgist-and-the-semantic-web/">zlinks</a>, <a href="http://wordpress.org/extend/plugins/wpmu-talis-triple-uploader/">WPMU-talis-triples-uploader</a> (<a href="http://www.talis.com">Talis</a>), but I’m not sure any provide the kind of  capacity I discuss above (most attempt to automatically link content from other web sources).  This semantic <a href="http://inspector.sindice.com/index.jsp">inspector tool</a> is quite useful, as well as a rich example of markup of a scientist’s page <a href="http://egonw.github.com/">from Egon</a>.</p>
 <h3 id="feedback">Feedback?</h3>
 <p>I’m curious what others think about these possibility, what they’d like to see in a semantic notebook, and if anyone would be interested in helping further develop these tools, at least in a Wordpress context.</p>
 
@@ -136,7 +136,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2011-05-08 18:39:49 +0000" 
     property="dc:created">08 May 2011</time></p>
@@ -169,15 +169,15 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2011/tags.html#notebook-technology">#notebook-technology</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2011/tags.html#open-science">#open-science</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2011/tags.html#semantics">#semantics</a>
     </p>
@@ -207,11 +207,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -224,7 +224,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -240,7 +240,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -260,13 +260,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -284,7 +284,7 @@
       &amp;rft.date=2011-05-08
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/05/08/building-a-semantic-notebook.html">
+      &amp;rft_id=https://www.carlboettiger.info/05/08/building-a-semantic-notebook.html">
   </span>
 
 
@@ -301,7 +301,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -316,7 +316,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

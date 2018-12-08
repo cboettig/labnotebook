@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Reproducible research environments with Docker</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Reproducible research environments with Docker" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2014-08-25 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2014-08-25 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/08/25/reproducible-research-environments-with-Docker.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/08/25/reproducible-research-environments-with-Docker.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -125,9 +125,9 @@
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> docker run -d -p 8787:8787 cboettig/rstudio</code></pre>
 <p>(These commands will be slow on the first run since the image must be downloaded. Afterwards they should be pretty quick.)</p>
 <ul>
-<li>You can now reach your RStudio server at <code>http://&lt;system_ip_address&gt;:8787</code>. For Windows/Mac users, run <code>boot2docker ip</code> to get the value of <code>system_ip_address</code>. (This should be <code>http://92.168.59.103:8787</code> but may vary as it is set dynamically).</li>
+<li>You can now reach your RStudio server at <code>https://&lt;system_ip_address&gt;:8787</code>. For Windows/Mac users, run <code>boot2docker ip</code> to get the value of <code>system_ip_address</code>. (This should be <code>http://92.168.59.103:8787</code> but may vary as it is set dynamically).</li>
 </ul>
-<p>For Linux users, you can just use <code>http://localhost:8787</code>. For cloud instances, check your server’s public IP address, and append the port (<code>:8787</code>)..</p>
+<p>For Linux users, you can just use <code>https://localhost:8787</code>. For cloud instances, check your server’s public IP address, and append the port (<code>:8787</code>)..</p>
 <ul>
 <li>Login using the default rstudio:rstudio for user:pw, or configure particular users (see below).</li>
 </ul>
@@ -143,10 +143,10 @@
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">docker</span> run --rm -it -v <span class="ot">$(</span><span class="kw">pwd</span><span class="ot">)</span>:/home/rstudio/<span class="ot">$(</span><span class="kw">basename</span> <span class="st">&quot;</span><span class="ot">$PWD</span><span class="st">&quot;</span><span class="ot">)</span> cboettig/rstudio /usr/bin/R</code></pre>
 <p>Note that in this example we have launched an interactive R terminal, rather than an RStudio server. This linking would work just as well with RStudio-server. However, because we have linked the working directory to the container, we are now free to use all our favorite tools from our native operating system to edit and manage our files, rather than being confined to RStudio.</p>
 <p>Note that the volumes link (<code>-v</code>) is just taking the path to the directory on the host followed by the path where it should appear inside the container. We could specify these manually, but <code>$(pwd)</code> is just a convenient way to get the full path of the current working directory, and <code>$basename &quot;$PWD&quot;</code> a way to get just the name of that directory. So if working in <code>foo</code>, the directory <code>/path/to/foo</code> would be found at <code>/home/rstudio/foo</code> on the container. Here we’re using the default user, <code>rstudio</code>, but you would want to change that if specifying a different user name as shown in the previous example.</p>
-<p>Linking files on a Mac or PC requires an extra step. This links us to the <code>boot2docker</code> volume, but we still must link boot2docker virtual machine to the host OS. It seems like <code>boot2docker</code> may still be working on this issue. Meanwhile, it is straight-forward to do this linking by using <a href="http://vagrantup.com">vagrant</a> to launch boot2docker. I discuss this below.</p>
+<p>Linking files on a Mac or PC requires an extra step. This links us to the <code>boot2docker</code> volume, but we still must link boot2docker virtual machine to the host OS. It seems like <code>boot2docker</code> may still be working on this issue. Meanwhile, it is straight-forward to do this linking by using <a href="https://vagrantup.com">vagrant</a> to launch boot2docker. I discuss this below.</p>
 <ul>
 <li><p>Download and run an RStudio server instance: <code>sudo docker run -d -p 8787:8787 cboettig/rstudio</code></p></li>
-<li><p>You can now reach your RStudio server at <code>http://&lt;system_ip_address&gt;:8787</code>. For Windows/Mac users, run <code>boot2docker ip</code> to get the value of <code>system_ip_address</code>. (This should be <code>http://92.168.59.103:8787</code> but may vary as it is set dynamically). For linux users, you can just use <code>localhost</code>. For cloud instances, check your server’s public IP address.</p></li>
+<li><p>You can now reach your RStudio server at <code>https://&lt;system_ip_address&gt;:8787</code>. For Windows/Mac users, run <code>boot2docker ip</code> to get the value of <code>system_ip_address</code>. (This should be <code>http://92.168.59.103:8787</code> but may vary as it is set dynamically). For linux users, you can just use <code>localhost</code>. For cloud instances, check your server’s public IP address.</p></li>
 <li><p>login using the default <code>rstudio:rstudio</code> for <code>user:pw</code>, or configure particular users (see below).</p></li>
 </ul>
 <h2 id="rstudio-on-digital-ocean">RStudio on Digital Ocean</h2>
@@ -156,7 +156,7 @@
 <li>Scaling up a computation to a larger machine</li>
 <li>running RStudio from your ipad</li>
 </ul>
-<p>Because we use RStudio for this, we have both a completely secured connection and a familiar environment in which to interact with R. RStudio in the browser looks and feels identical to the desktop edition. Getting started with RStudio in the cloud is particularly easy using Docker and the DigitalOcean cloud provider. We can run RStudio in the <a href="https://www.digitalocean.com/pricing/">DigitalOcean cloud</a> for less than 1 cent an hour ($5 / month if run continuously). Creating an account and launching your first DigitalOcean droplet is dead easy. Head over to <a href="http://digitalocean.com">DigitalOcean.com</a> because they do a much better job of walking you through the few simple steps than I would. Create the cheapest droplet type to get started and ssh into your image once it is up and running, using the ip-address for your droplet and the password sent to you by email or an <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2">ssh key</a>.</p>
+<p>Because we use RStudio for this, we have both a completely secured connection and a familiar environment in which to interact with R. RStudio in the browser looks and feels identical to the desktop edition. Getting started with RStudio in the cloud is particularly easy using Docker and the DigitalOcean cloud provider. We can run RStudio in the <a href="https://www.digitalocean.com/pricing/">DigitalOcean cloud</a> for less than 1 cent an hour ($5 / month if run continuously). Creating an account and launching your first DigitalOcean droplet is dead easy. Head over to <a href="https://digitalocean.com">DigitalOcean.com</a> because they do a much better job of walking you through the few simple steps than I would. Create the cheapest droplet type to get started and ssh into your image once it is up and running, using the ip-address for your droplet and the password sent to you by email or an <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2">ssh key</a>.</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">ssh</span> root@ip-address</code></pre>
 <h3 id="enable-swapping-if-testing-on-the-smallest-image">Enable swapping if testing on the smallest image</h3>
 <p>The smallest Digital Ocean servers have only 512 MB of memory and no swap enabled. Adding swap lets the machine cache things it doesn’t need in active memory, which can be important for running things like <code>install.packages</code>. On larger droplets this probably is not so much of an issue. Here, we enable 1GB of swap. SSH into your cloud server (or use the shell DigitalOcean provides in the browser), and run:</p>
@@ -170,7 +170,7 @@
 <p>We’re now ready to launch RStudio using docker, just as we did locally above.</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">docker</span> run -e USER=your_username -e=PASSWORD a_secure_pw \
   <span class="kw">-d</span> -p 8787:8787 --name rstudio cboettig/rstudio</code></pre>
-<p>Note that we pass a custom username and secure password in using the <code>-e</code> arguments since our RStudio instance will be publically reachable by it’s ip. We’ve also given the container a name <code>rstudio</code> so we can easily refer to it later. We now go to <code>http://&lt;your-droplet-ip-address&gt;:8787</code> and login with these custom credentials and we’re ready to compute.</p>
+<p>Note that we pass a custom username and secure password in using the <code>-e</code> arguments since our RStudio instance will be publically reachable by it’s ip. We’ve also given the container a name <code>rstudio</code> so we can easily refer to it later. We now go to <code>https://&lt;your-droplet-ip-address&gt;:8787</code> and login with these custom credentials and we’re ready to compute.</p>
 <h3 id="saving-your-work">Saving your work</h3>
 <p>The best way to save your work is to commit your entire docker image. This will save all installed packages, active RStudio sessions, files, and everything else, even if we destroy the droplet later. This gives us the option of running our environment on a larger DigitalOcean image when the need arises, or running it locally using the <code>boot2docker</code> approach outlined above.</p>
 <p>From an ssh terminal into your droplet where you first ran docker, this command will save your container as an image called <code>user/rstudio</code> (use any name combination you like).</p>
@@ -192,7 +192,7 @@
 <p>You may want to first adjust the Vagrantfile to allocate more or less memory and CPU nodes to the virtual machine. Vagrant’s default is 512 MB and 1 CPU, though the file currently puts this at 2 CPUS and 1024 MB RAM.</p>
 <p>You can now connect to the RStudio server using some ssh port forwarding:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">ssh</span> -o <span class="st">&quot;ExitOnForwardFailure yes&quot;</span> -f -N -L 8787:localhost:8888 <span class="kw">&lt;</span>your.server<span class="kw">&gt;</span></code></pre>
-<p>The first number (8787) is the port we want things to appear on localhost, e.g. we can now connect by visiting http://localhost:8787. The second (8888) is the port we configured for the host machine with Vagrant.</p>
+<p>The first number (8787) is the port we want things to appear on localhost, e.g. we can now connect by visiting https://localhost:8787. The second (8888) is the port we configured for the host machine with Vagrant.</p>
 <p>Note that sometimes you need to tunnel through a head node to the compute node where you want R to be running, replacing <code>&lt;your.server&gt;</code> with:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">ssh</span> <span class="kw">&lt;</span>head.node.name<span class="kw">&gt;</span> nc -q0 <span class="kw">&lt;</span>compute.node.name<span class="kw">&gt;</span> 22</code></pre>
 
@@ -200,7 +200,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2014-08-25 00:00:00 +0000" 
     property="dc:created">25 Aug 2014</time></p>
@@ -233,15 +233,15 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#docker">#docker</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#ropensci">#ropensci</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#r">#r</a>
     </p>
@@ -271,11 +271,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -288,7 +288,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -304,7 +304,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -324,13 +324,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -348,7 +348,7 @@
       &amp;rft.date=2014-08-25
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/08/25/reproducible-research-environments-with-Docker.html">
+      &amp;rft_id=https://www.carlboettiger.info/08/25/reproducible-research-environments-with-Docker.html">
   </span>
 
 
@@ -365,7 +365,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -380,7 +380,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

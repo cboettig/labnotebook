@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>So, you're active on Research Gate?</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="So, you're active on Research Gate?" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2013-11-14 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2013-11-14 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/11/14/research-gate.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/11/14/research-gate.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -114,7 +114,7 @@
 <p>I’m not generally active on it - my impression is that the open science community is mostly skeptical about ResearchGate and any other “Social Network” for scientists, largely on the grounds that “we already use the same social networks everyone else uses.” Some object on more philosophical grounds (profit, Mendeley, etc), but heck I publish in Elsevier/Springer/Wiley so I won’t preach. That’s perhaps a US/elite institution centric view though; it seems more popular with a more international audience where things like basic access to pdfs may be more of an issue. I present no data to back any if that up.</p>
 <p>Personally, it hasn’t added any value for me, in contrast to the value I get from interacting with other researchers on Github, G+ or Twitter. Still, as RG recently got $35 million from Bill Gates, they might actually build something useful. Certainly traditional publishers have left plenty of room for innovation in the space of sharing data, networking, etc. So I have a profile there to wait and see, next to a disclaimer that says “please see my website for updated information.”</p>
 <p>However, I was actually impressed by ResearchGate this morning. While I thought I had successfully blocked most of their email notifications, one this morning had successfully found the full text of a recent paper of mine (albeit a few months after it had appeared). Instead of asking me to upload something, RG was able to obtain the full text from the publisher (Springer). On so doing, it also asks me if I would like to “follow” several of the researchers I cited who are also on ResearchGate.</p>
-<p>Why is that impressive? Mendeley, for all it’s much more natural fit into most researcher’s workflows, never automatically discovers papers I publish. If I want them in my Mendeley profile, I have to add them manually. Manually maintaining profiles across different networks is so entirely a waste of time and the antithesis of a linked data web where I have already made this information machine readable that I find it the most annoying feature by far in any of these sites. Here, ResearchGate is actually doing the intelligent thing, whether by connecting my RG identity to my ORCID ID, or something more heuristic. (Google Scholar automatically adds things to my profile, but in a far less selective algorithm that can be easily gamed, see <a href="http://doi.org/10.1002/asi.23056">10.1002/asi.23056</a>).</p>
+<p>Why is that impressive? Mendeley, for all it’s much more natural fit into most researcher’s workflows, never automatically discovers papers I publish. If I want them in my Mendeley profile, I have to add them manually. Manually maintaining profiles across different networks is so entirely a waste of time and the antithesis of a linked data web where I have already made this information machine readable that I find it the most annoying feature by far in any of these sites. Here, ResearchGate is actually doing the intelligent thing, whether by connecting my RG identity to my ORCID ID, or something more heuristic. (Google Scholar automatically adds things to my profile, but in a far less selective algorithm that can be easily gamed, see <a href="https://doi.org/10.1002/asi.23056">10.1002/asi.23056</a>).</p>
 <p>By obtaining the full-text directly from the publisher, they show the considerable advantage of a well-funded network. Presumably this indicates that access was negotiated directly with the publisher, who agrees and even facilitates me sharing the full-text of my otherwise paywalled article on my RG profile. That’s a non-trivial contribution towards open access: Contrast this to Mendeley’s more murky policy which encourages me to provide full text access through my user profile but places the legal responsibility directly on me to confirm that this permissible, or an organization like ORCID which despite (because of?) it’s more non-profit and utilitarian values does not have permission to distribute my paywalled pdfs on my profile. (Sure, my papers on arXiv already, but that isn’t the point).</p>
 <p>Likewise, using the citation data against the RG data on which researchers have profiles shows a vaguely intelligent use of data other platforms mostly ignore (providing useful suggestions using some understanding of the academic process rather than mindless application of some friend-of-a-friend network algorithm).</p>
 <p>(The fact that RG pings unfortunate souls who might have signed up once but have no desire to see my “Activity” on RG is one of it’s potentially effective marketing but more pernicious decisions. Use does not necessarily imply trust).</p>
@@ -123,7 +123,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2013-11-14 00:00:00 +0000" 
     property="dc:created">14 Nov 2013</time></p>
@@ -156,7 +156,7 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#blog">#blog</a>
     </p>
@@ -186,11 +186,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -203,7 +203,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -219,7 +219,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -239,13 +239,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -263,7 +263,7 @@
       &amp;rft.date=2013-11-14
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/11/14/research-gate.html">
+      &amp;rft_id=https://www.carlboettiger.info/11/14/research-gate.html">
   </span>
 
 
@@ -280,7 +280,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -295,7 +295,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>FishBASE from R: some XML parsing</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="FishBASE from R: some XML parsing" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2011-08-26 10:51:29 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2011-08-26 10:51:29 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/08/26/fishbase-from-r-some-xml-parsing.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/08/26/fishbase-from-r-some-xml-parsing.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -106,11 +106,11 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p><a href="http://fishlab.ucdavis.edu/?p=395">cross-posted</a> from Wainwright Lab blog, archiving in the notebook here. This early tutorial includes some background on XML parsing from R using XPath. See the later rfishbase <a href="http://www.carlboettiger.info/archives/2529">tutorial</a> for more functionality.</p>
-<p>In lab known for its quality data collection, high-speed video style, writing the weekly blog post can be a bit of a challenge for the local code monkey. That’s right, no videos today. But lucky for me, even this group can still make good use of publicly available data. Like the other day, when one of our newer graduate students wanted to do a certain degree of data-mining from information available from <a href="http://fishbase.org">FishBASE</a>. Now I’m sure there are plenty of reasons to grumble about it, but there’s quite an impressive bit of information available on FishBASE, most of it decently referenced if by no means comprehensive. And getting that kind of information quickly and easily is rapidly becoming a skill every researcher needs. So here’s a quick tutorial of the tools to do this.</p>
+    <p><a href="https://fishlab.ucdavis.edu/?p=395">cross-posted</a> from Wainwright Lab blog, archiving in the notebook here. This early tutorial includes some background on XML parsing from R using XPath. See the later rfishbase <a href="http://www.carlboettiger.info/archives/2529">tutorial</a> for more functionality.</p>
+<p>In lab known for its quality data collection, high-speed video style, writing the weekly blog post can be a bit of a challenge for the local code monkey. That’s right, no videos today. But lucky for me, even this group can still make good use of publicly available data. Like the other day, when one of our newer graduate students wanted to do a certain degree of data-mining from information available from <a href="https://fishbase.org">FishBASE</a>. Now I’m sure there are plenty of reasons to grumble about it, but there’s quite an impressive bit of information available on FishBASE, most of it decently referenced if by no means comprehensive. And getting that kind of information quickly and easily is rapidly becoming a skill every researcher needs. So here’s a quick tutorial of the tools to do this.</p>
 <p>Okay, so what are we talking about? Let’s start with an example fishbase page on Nile tilapia:</p>
 <figure>
-<img src="http://farm7.static.flickr.com/6076/6074984408_1692760c9c.jpg" />
+<img src="https://farm7.static.flickr.com/6076/6074984408_1692760c9c.jpg" />
 </figure>
 <p>Okay, so there’s a bunch of information we could start copying down, then go onto the next fish. Sounds pretty tedious for 30,000 species… Now we can get an html copy of this page, but that’s got all this messy formatting we’ll have to dispense with. Luckily, we scroll down a little farther and we see the magic words:</p>
 <blockquote>
@@ -118,19 +118,19 @@
 </blockquote>
 <p>The summary page takes us to just what we were looking for:</p>
 <figure>
-<img src="http://farm7.static.flickr.com/6086/6074984352_6f1f9075d5.jpg" />
+<img src="https://farm7.static.flickr.com/6086/6074984352_6f1f9075d5.jpg" />
 </figure>
 <p>To the human eye this might not look very useful, but to a computer, it’s just what we wanted. ((Well, not acutally. A RESTful interface to this data would be better, where we could query by the different categories, finding all fish of a certain family or diet, but we’ll manage just fine from here, just might be a bit slower)) It’s XML - eXtensible Mark-up Language: meaning it’s all the stuff on the previous page, marked up with all these helpful tags so that a computer can make sense of the document. ((Actually, not everything on the html page. Between the broken links, there’s tons of information like the life history tool, diet data references, etc that somehow haven’t made it into the XML summary sheet.))</p>
-<p>To process this, we’ll fire up our <a href="http://www.r-project.org">favorite language</a> and start scripting. To access the internet from R we’ll use a the command-line url browser, curl, available in the RCurl package. We’ll process XML with the XML package, so let’s load that too. Install these from CRAN if you don’t have them:</p>
+<p>To process this, we’ll fire up our <a href="https://www.r-project.org">favorite language</a> and start scripting. To access the internet from R we’ll use a the command-line url browser, curl, available in the RCurl package. We’ll process XML with the XML package, so let’s load that too. Install these from CRAN if you don’t have them:</p>
 <pre class="sourceCode r"><code class="sourceCode r">
 <span class="kw">require</span>(XML)
 <span class="kw">require</span>(RCurl)</code></pre>
-<p>Click on that XML link to the summary page, and note how the url is assembled: http://fishbase.sinica.edu.tw/maintenance/FB/showXML.php?identifier=FB-2&amp;ProviderDbase;=03</p>
+<p>Click on that XML link to the summary page, and note how the url is assembled: https://fishbase.sinica.edu.tw/maintenance/FB/showXML.php?identifier=FB-2&amp;ProviderDbase;=03</p>
 <p>The thing to note here is what followers the php?. There’s something called an identifier, which is set equal to the value FB-2. 2 is the id number of Nile tilapia. Change that to 3 (leave the rest the same) and you get African perch.</p>
 <p>We can grab the content of this page in R and parse the XML using these two packages:</p>
 <pre class="sourceCode r"><code class="sourceCode r">
 fish.id &lt;-<span class="st"> </span><span class="dv">2</span>
- url &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;http://fishbase.sinica.edu.tw/&quot;</span>,
+ url &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;https://fishbase.sinica.edu.tw/&quot;</span>,
                <span class="st">&quot;maintenance/FB/showXML.php?identifier=FB-&quot;</span>,
               fish.id, <span class="st">&quot;&amp;ProviderDbase=03&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)
   tt &lt;-<span class="st"> </span><span class="kw">getURLContent</span>(url, <span class="dt">followlocation=</span><span class="ot">TRUE</span>)
@@ -145,7 +145,7 @@ fish.id &lt;-<span class="st"> </span><span class="dv">2</span>
 <pre class="sourceCode r"><code class="sourceCode r">
   Family &lt;-<span class="st"> </span><span class="kw">xmlValue</span>(<span class="kw">getNodeSet</span>(doc, <span class="st">&quot;//dwc:Family&quot;</span>)[[<span class="dv">1</span>]]) 
   Family</code></pre>
-<p>There’s two commands combined in that line. getNodeSet() is the first, getting any nodes that have the name dwc:Family anywhere (the // means anywhere) in the document. The [[1]] indicates that we want the first node it finds (since there’s only one of these in the entire document). Specifying which node we want makes use of the<a href="http://www.w3schools.com/xpath/default.asp">xpath syntax</a>, a powerful way of navigating XML which we’ll use more later.</p>
+<p>There’s two commands combined in that line. getNodeSet() is the first, getting any nodes that have the name dwc:Family anywhere (the // means anywhere) in the document. The [[1]] indicates that we want the first node it finds (since there’s only one of these in the entire document). Specifying which node we want makes use of the<a href="https://www.w3schools.com/xpath/default.asp">xpath syntax</a>, a powerful way of navigating XML which we’ll use more later.</p>
 <p>The xmlValue command just extracts the contents of that node, now that we’ve found it. If we ask R for the value it got for Family, it says Cichlidae, just as expected.</p>
 <p>That was easy. We can do the same for Genus, Scientific Name, etc. As we go down the XML document, we see some of the information we want isn’t given a uniquely labeled node.<br />For instance, the information for size, habitat, and distribution are all under nodes called . Closer look shows these nodes are under “parent” nodes, all called . If we look at the other “child” nodes of these nodes, we see they also have a node called , like this:</p>
 <pre class="sourceCode xml"><code class="sourceCode xml">
@@ -161,7 +161,7 @@ fish.id &lt;-<span class="st"> </span><span class="dv">2</span>
 <span class="st">FB-Size-&quot;</span>, fish.id, <span class="st">&quot;&#39;]/..&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>))
 size &lt;-<span class="st"> </span><span class="kw">xmlValue</span>( size_node[[<span class="dv">1</span>]][[<span class="st">&quot;description&quot;</span>]] )</code></pre>
 <p>Okay, so that looks crazy complicated – guess we got in a bit deep. See that link to xpath above? That’s a wee tutorial that will explain most of what’s going on here. It’s pretty simple if you take it slow. Using these kind of tricks, we can extract just the information we need from the XML.</p>
-<p>Meanwhile, if you want the fast-track option, I’ve put this together in a little R package called <a href="https://github.com/cboettig/rfishbase">rfishbase</a>. The package has a function called fishbase() which extracts various bits of information using these calls. Once you get the hang of it you can modify it pretty easily. I do a little extra processing to get numbers from text using <a href="http://en.wikipedia.org/wiki/Regular_expression">Regular Expressions</a>, a sorta desperate but powerful option when everything isn’t nicely labeled XML.</p>
+<p>Meanwhile, if you want the fast-track option, I’ve put this together in a little R package called <a href="https://github.com/cboettig/rfishbase">rfishbase</a>. The package has a function called fishbase() which extracts various bits of information using these calls. Once you get the hang of it you can modify it pretty easily. I do a little extra processing to get numbers from text using <a href="https://en.wikipedia.org/wiki/Regular_expression">Regular Expressions</a>, a sorta desperate but powerful option when everything isn’t nicely labeled XML.</p>
 <p>Using this function we query a fish id number and get back the data in a nice R list, which we can happily manipulate. Here’s a quick demo:</p>
 <pre class="sourceCode r"><code class="sourceCode r">
 <span class="kw">require</span>(rfishbase)
@@ -192,14 +192,14 @@ yr &lt;-<span class="st"> </span><span class="kw">get.ages</span>(fish.data)
 <span class="co"># Plot data</span>
 <span class="kw">hist</span>(yr, <span class="dt">breaks=</span><span class="dv">40</span>, <span class="dt">main=</span><span class="st">&quot;Age Distribution&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;age (years)&quot;</span>); </code></pre>
 <p>Note we take a bit of care to avoid the missing values using try() function. Here’s the results:</p>
-<p><a href="http://farm7.static.flickr.com/6090/6074128436_9d3137acd7.jpg"><img src="http://farm7.static.flickr.com/6090/6074128436_9d3137acd7.jpg" /></a></p>
+<p><a href="https://farm7.static.flickr.com/6090/6074128436_9d3137acd7.jpg"><img src="http://farm7.static.flickr.com/6090/6074128436_9d3137acd7.jpg" /></a></p>
 <p>Kinda cool, isn’t it?</p>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2011-08-26 10:51:29 +0000" 
     property="dc:created">26 Aug 2011</time></p>
@@ -232,7 +232,7 @@ yr &lt;-<span class="st"> </span><span class="kw">get.ages</span>(fish.data)
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#ropensci">#ropensci</a>
     </p>
@@ -262,11 +262,11 @@ yr &lt;-<span class="st"> </span><span class="kw">get.ages</span>(fish.data)
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -279,7 +279,7 @@ yr &lt;-<span class="st"> </span><span class="kw">get.ages</span>(fish.data)
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -295,7 +295,7 @@ yr &lt;-<span class="st"> </span><span class="kw">get.ages</span>(fish.data)
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -315,13 +315,13 @@ yr &lt;-<span class="st"> </span><span class="kw">get.ages</span>(fish.data)
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -339,7 +339,7 @@ yr &lt;-<span class="st"> </span><span class="kw">get.ages</span>(fish.data)
       &amp;rft.date=2011-08-26
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/08/26/fishbase-from-r-some-xml-parsing.html">
+      &amp;rft_id=https://www.carlboettiger.info/08/26/fishbase-from-r-some-xml-parsing.html">
   </span>
 
 
@@ -356,7 +356,7 @@ yr &lt;-<span class="st"> </span><span class="kw">get.ages</span>(fish.data)
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -371,7 +371,7 @@ yr &lt;-<span class="st"> </span><span class="kw">get.ages</span>(fish.data)
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

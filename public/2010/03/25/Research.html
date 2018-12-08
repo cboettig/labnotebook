@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Research</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Research" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2010-03-25 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2010-03-25 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/03/25/Research.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/03/25/Research.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -111,13 +111,13 @@
 <li>Now have code to run partitioned models on the Anoles dataset, compare partitioned models to the paintings chosen by Butler and King. Preliminary figures below. Models with _s are partitioned by my algorithm, others are the the original ones from earlier.</li>
 </ul>
 <figure>
-<img src="http://openwetware.org/images/thumb/c/cb/Anoles_partition.png/300px-Anoles_partition.png" alt="image" /><figcaption>image</figcaption>
+<img src="https://openwetware.org/images/thumb/c/cb/Anoles_partition.png/300px-Anoles_partition.png" alt="image" /><figcaption>image</figcaption>
 </figure>
 <ul>
 <li>Also have examples with simulated data with a known number of partitions, to check the method. Tested with data produced at two peaks on the Labrid tree, the pattern seems similar to that of the Labrids – comparisons involving any model with more than 2 peaks produce LR ratios that become very unlikely in either pairwise comparison. Still needs further exploration. Preliminary figures:</li>
 </ul>
 <figure>
-<img src="http://openwetware.org/images/thumb/2/22/Simulated_LR.png/300px-Simulated_LR.png" alt="image" /><figcaption>image</figcaption>
+<img src="https://openwetware.org/images/thumb/2/22/Simulated_LR.png/300px-Simulated_LR.png" alt="image" /><figcaption>image</figcaption>
 </figure>
 <p><br /> ### Interpreting Results</p>
 <ul>
@@ -136,24 +136,24 @@
 </ul>
 <pre class="de1"><code>for i in *.pdf; do convert &quot;$i&quot; &quot;${i/.pdf}&quot;.png; done</code></pre>
 <ul>
-<li>see <a href="http://github.com/cboettig/Comparative-Phylogenetics/commits/master" title="http://github.com/cboettig/Comparative-Phylogenetics/commits/master">git log</a> for more details.</li>
+<li>see <a href="https://github.com/cboettig/Comparative-Phylogenetics/commits/master" title="http://github.com/cboettig/Comparative-Phylogenetics/commits/master">git log</a> for more details.</li>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
 <li><p>Google Summer of Code includes <a href="https://www.nescent.org/wg/phyloinformatics/index.php?title=Phyloinformatics_Summer_of_Code_2010#Mentors" title="https://www.nescent.org/wg/phyloinformatics/index.php?title=Phyloinformatics_Summer_of_Code_2010#Mentors">NesCent “phyloinformatics” research</a></p></li>
-<li><p><a href="http://www3.interscience.wiley.com/journal/123328987/abstract?CRETRY=1&amp;SRETRY=0" title="http://www3.interscience.wiley.com/journal/123328987/abstract?CRETRY=1&amp;SRETRY=0">obvious…</a></p></li>
-<li><p>still reading: <a href="http://blog.openwetware.org/scienceintheopen/2009/11/05/reflections-on-science-20-from-a-distance-part-i/" title="http://blog.openwetware.org/scienceintheopen/2009/11/05/reflections-on-science-20-from-a-distance-part-i/">open science</a>, <a href="http://blog.openwetware.org/scienceintheopen/2009/11/06/reflections-on-science-20-from-a-distance-part-ii/" title="http://blog.openwetware.org/scienceintheopen/2009/11/06/reflections-on-science-20-from-a-distance-part-ii/">part 2</a>, and also enjoyed this</p></li>
+<li><p><a href="https://www3.interscience.wiley.com/journal/123328987/abstract?CRETRY=1&amp;SRETRY=0" title="http://www3.interscience.wiley.com/journal/123328987/abstract?CRETRY=1&amp;SRETRY=0">obvious…</a></p></li>
+<li><p>still reading: <a href="https://blog.openwetware.org/scienceintheopen/2009/11/05/reflections-on-science-20-from-a-distance-part-i/" title="http://blog.openwetware.org/scienceintheopen/2009/11/05/reflections-on-science-20-from-a-distance-part-i/">open science</a>, <a href="http://blog.openwetware.org/scienceintheopen/2009/11/06/reflections-on-science-20-from-a-distance-part-ii/" title="http://blog.openwetware.org/scienceintheopen/2009/11/06/reflections-on-science-20-from-a-distance-part-ii/">part 2</a>, and also enjoyed this</p></li>
 </ul>
 <h3 id="csgf-conference-hpc-survey">CSGF Conference HPC Survey</h3>
 <ul>
 <li>Not directly phylogentics, but also working on today:</li>
-<li>I was contacted by Mary Ann 3 days ago on doing another survey of CSGF fellows. <a href="http://www.surveymonkey.com/s/VMTTFXS" title="http://www.surveymonkey.com/s/VMTTFXS">Last year’s survey</a> was pretty basic (<a href="http://www.surveymonkey.com/MySurvey_Responses.aspx?sm=SXNbpnWs3a%2blQnEwe%2bfNiKvBGCZEs/jdQhlVfunE9YI%3d" title="http://www.surveymonkey.com/MySurvey_Responses.aspx?sm=SXNbpnWs3a%2blQnEwe%2bfNiKvBGCZEs/jdQhlVfunE9YI%3d">results</a>). Also interested to explore alternatives to surveymonkey, though it did make things quite easy and Krell can probably get the subscription. Possibly Google forms?</li>
+<li>I was contacted by Mary Ann 3 days ago on doing another survey of CSGF fellows. <a href="https://www.surveymonkey.com/s/VMTTFXS" title="http://www.surveymonkey.com/s/VMTTFXS">Last year’s survey</a> was pretty basic (<a href="http://www.surveymonkey.com/MySurvey_Responses.aspx?sm=SXNbpnWs3a%2blQnEwe%2bfNiKvBGCZEs/jdQhlVfunE9YI%3d" title="http://www.surveymonkey.com/MySurvey_Responses.aspx?sm=SXNbpnWs3a%2blQnEwe%2bfNiKvBGCZEs/jdQhlVfunE9YI%3d">results</a>). Also interested to explore alternatives to surveymonkey, though it did make things quite easy and Krell can probably get the subscription. Possibly Google forms?</li>
 </ul>
 <p>Some goals I have for the survey:</p>
 <ol type="1">
 <li><strong>Who knows/uses what.</strong> Be able to see what languages, parallelization, and scale of computation fellows are computing on. The crucial goal for this year is to be able to break this down by subject area and by year in the fellowship.</li>
-<li><strong>Effective practices in computing.</strong> Hugely important but too rarely taught (in sciences anyway). Version control, debugging, visualization, etc. A great example of this stuff is to see the quiz on <a href="http://software-carpentry.org/intro.html" title="http://software-carpentry.org/intro.html">Software Carpentry</a>(scroll down to #5)</li>
-<li><a href="http://openwetware.org/wiki/Science_2.0/Brainstorming" title="http://openwetware.org/wiki/Science_2.0/Brainstorming"><strong>Science 2.0</strong></a> This goes a little further afield and might deserve its own session. Computers and the internet continue to change many aspects in the way we do science and it makes sense that CSGFs should be at the forefront. Large-scale online collaborations. The benefits and risks of science blogging. Standardized and publicly accessible data, source code, publications, and notebooks. Social networking for scientists. There’s a wealth of rapidly emerging tools in this area that I think we should all know about. Two quick examples: Mendeley for organizing our collections of scientific papers and stackoverflow.com for solving programming problems collaboratively.</li>
+<li><strong>Effective practices in computing.</strong> Hugely important but too rarely taught (in sciences anyway). Version control, debugging, visualization, etc. A great example of this stuff is to see the quiz on <a href="https://software-carpentry.org/intro.html" title="http://software-carpentry.org/intro.html">Software Carpentry</a>(scroll down to #5)</li>
+<li><a href="https://openwetware.org/wiki/Science_2.0/Brainstorming" title="http://openwetware.org/wiki/Science_2.0/Brainstorming"><strong>Science 2.0</strong></a> This goes a little further afield and might deserve its own session. Computers and the internet continue to change many aspects in the way we do science and it makes sense that CSGFs should be at the forefront. Large-scale online collaborations. The benefits and risks of science blogging. Standardized and publicly accessible data, source code, publications, and notebooks. Social networking for scientists. There’s a wealth of rapidly emerging tools in this area that I think we should all know about. Two quick examples: Mendeley for organizing our collections of scientific papers and stackoverflow.com for solving programming problems collaboratively.</li>
 </ol>
 <p><br /></p>
 
@@ -161,7 +161,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2010-03-25 00:00:00 +0000" 
     property="dc:created">25 Mar 2010</time></p>
@@ -194,11 +194,11 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2010/tags.html#code-tricks">#code-tricks</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2010/tags.html#pmc">#pmc</a>
     </p>
@@ -228,11 +228,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -245,7 +245,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -261,7 +261,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -281,13 +281,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -305,7 +305,7 @@
       &amp;rft.date=2010-03-25
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/03/25/Research.html">
+      &amp;rft_id=https://www.carlboettiger.info/03/25/Research.html">
   </span>
 
 
@@ -322,7 +322,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -337,7 +337,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Notes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Notes" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2013-09-19 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2013-09-19 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/09/19/notes.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/09/19/notes.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -113,12 +113,12 @@
 </ul>
 <h3 id="gpdd">gpdd</h3>
 <ul>
-<li><a href="http://www3.imperial.ac.uk/cpb/databases/gpdd">Global Popluation Dynamics Database</a> initiated package <a href="https://github.com/ropensci/rgpdd">rgpdd</a></li>
-<li>data extraction – No API, but does provide direct dump in the form of a Microsoft Access <code>mdb</code> database. For the moment I’m using mdbtools: <code>mdb-tables</code> and <code>mdb-extract</code> to convert to CSV and then reading those into R. <a href="http://cran.r-project.org/web/packages/RODBC/index.html">RODBC</a> package installs but cannot read the database directly for me. Since data will fit into working memory no real reason to support database calls from R? (avoids extra dependencies). <code>data.table</code> should speed internal computations.<br /></li>
-<li>data compression. Looks like raw data exceeds CRAN’s 5MB limit, but <code>zx</code> compressed binaries it will be less than <span class="math">\(&lt;0.4\)</span> MB. Compressing those from within R: <code>save(table_name, file=&quot;filename.rda&quot;, compress=&quot;xz&quot;)</code>. Looks like database is essentially static with updates every few years, see <a href="http://www3.imperial.ac.uk/cpb/databases/gpdd/updates">Updates page</a>. Together this makes a good case for distributing data directly in the package.</li>
+<li><a href="https://www3.imperial.ac.uk/cpb/databases/gpdd">Global Popluation Dynamics Database</a> initiated package <a href="https://github.com/ropensci/rgpdd">rgpdd</a></li>
+<li>data extraction – No API, but does provide direct dump in the form of a Microsoft Access <code>mdb</code> database. For the moment I’m using mdbtools: <code>mdb-tables</code> and <code>mdb-extract</code> to convert to CSV and then reading those into R. <a href="https://cran.r-project.org/web/packages/RODBC/index.html">RODBC</a> package installs but cannot read the database directly for me. Since data will fit into working memory no real reason to support database calls from R? (avoids extra dependencies). <code>data.table</code> should speed internal computations.<br /></li>
+<li>data compression. Looks like raw data exceeds CRAN’s 5MB limit, but <code>zx</code> compressed binaries it will be less than <span class="math">\(&lt;0.4\)</span> MB. Compressing those from within R: <code>save(table_name, file=&quot;filename.rda&quot;, compress=&quot;xz&quot;)</code>. Looks like database is essentially static with updates every few years, see <a href="https://www3.imperial.ac.uk/cpb/databases/gpdd/updates">Updates page</a>. Together this makes a good case for distributing data directly in the package.</li>
 </ul>
 <p>On distributing the data, note:</p>
-<p>“Not all of the data in GPDD is in the public domain; some are provided under licence from the BTO. We require permission before we can distribute some of the data sets. The data in these datasets have been removed from the DATA table in this online version of GPDD, but the metadata in the other tables has been left in place.” http://www3.imperial.ac.uk/cpb/databases/gpdd/structure</p>
+<p>“Not all of the data in GPDD is in the public domain; some are provided under licence from the BTO. We require permission before we can distribute some of the data sets. The data in these datasets have been removed from the DATA table in this online version of GPDD, but the metadata in the other tables has been left in place.” https://www3.imperial.ac.uk/cpb/databases/gpdd/structure</p>
 <p>Emailed database providers to confirm.</p>
 <h3 id="gpdd-related-reading">GPDD-related reading</h3>
 <ol type="1">
@@ -133,19 +133,19 @@
 </ul>
 <h3 id="interview-follow-up-links">Interview follow-up links</h3>
 <ul>
-<li><p>I mentioned my involvement started with <a href="http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html">this post</a>; the (somewhat long) comments are useful.</p></li>
-<li><p>I should have mentioned that recently attended a workshop where environmental scientists were thinking about how to approach these issues related to software and code through the creation of a <a href="http://isees.nceas.ucsb.edu">Software Sustainability Center</a>. (Of which code review could be one possible service it might provide).</p></li>
-<li><p>I might have mentioned that a few organizations are doing code review. Notably, the journal of open research, published by the new UK Software Sustainability Institute. They are one of the few organziations that have <a href="http://carlboettiger.info/2013/07/09/reviewing-software-revisited.html">code review guidelines</a></p></li>
-<li><p>Code review was recently <a href="http://dx.doi.org/10.1126/science.1231535">proposed</a> and <a href="http://dx.doi.org/10.1126/science.341.6143.236-b">disputed</a> in a Policy Forum piece in Science Magazine discussing these issues.</p></li>
-<li><p>This Times Higher Ed article recently highlighted the issues with Climate code: http://www.timeshighereducation.co.uk/news/save-your-work-give-software-engineers-a-career-track/2006431.article The Climate Code Foundation http://climatecode.org/ is doing excellent work to start addressing these issues.</p></li>
-<li><p>Of course several earlier articles in Nature have highlighted these issues, including the important tension between encouraging scientists to <a href="http://doi.org/10.1038/nature10836">share code even if it isn’t “pretty”</a>, vs <a href="http://doi.org/10.1038/467775a">improving the quality / readability of code</a>.</p></li>
+<li><p>I mentioned my involvement started with <a href="https://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html">this post</a>; the (somewhat long) comments are useful.</p></li>
+<li><p>I should have mentioned that recently attended a workshop where environmental scientists were thinking about how to approach these issues related to software and code through the creation of a <a href="https://isees.nceas.ucsb.edu">Software Sustainability Center</a>. (Of which code review could be one possible service it might provide).</p></li>
+<li><p>I might have mentioned that a few organizations are doing code review. Notably, the journal of open research, published by the new UK Software Sustainability Institute. They are one of the few organziations that have <a href="https://carlboettiger.info/2013/07/09/reviewing-software-revisited.html">code review guidelines</a></p></li>
+<li><p>Code review was recently <a href="https://dx.doi.org/10.1126/science.1231535">proposed</a> and <a href="http://dx.doi.org/10.1126/science.341.6143.236-b">disputed</a> in a Policy Forum piece in Science Magazine discussing these issues.</p></li>
+<li><p>This Times Higher Ed article recently highlighted the issues with Climate code: https://www.timeshighereducation.co.uk/news/save-your-work-give-software-engineers-a-career-track/2006431.article The Climate Code Foundation http://climatecode.org/ is doing excellent work to start addressing these issues.</p></li>
+<li><p>Of course several earlier articles in Nature have highlighted these issues, including the important tension between encouraging scientists to <a href="https://doi.org/10.1038/nature10836">share code even if it isn’t “pretty”</a>, vs <a href="http://doi.org/10.1038/467775a">improving the quality / readability of code</a>.</p></li>
 </ul>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2013-09-19 00:00:00 +0000" 
     property="dc:created">19 Sep 2013</time></p>
@@ -178,11 +178,11 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2013/tags.html#nonparametric-bayes">#nonparametric-bayes</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2013/tags.html#ropensci">#ropensci</a>
     </p>
@@ -212,11 +212,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -229,7 +229,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -245,7 +245,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -265,13 +265,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -289,7 +289,7 @@
       &amp;rft.date=2013-09-19
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/09/19/notes.html">
+      &amp;rft_id=https://www.carlboettiger.info/09/19/notes.html">
   </span>
 
 
@@ -306,7 +306,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -321,7 +321,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Warning Signals Literature: when stats are and aren't attempted</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Warning Signals Literature: when stats are and aren't attempted" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2011-06-01 15:10:56 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2011-06-01 15:10:56 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/06/01/warning-signals-literature-when-stats-are-and-arent-attempted.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/06/01/warning-signals-literature-when-stats-are-and-arent-attempted.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -120,16 +120,16 @@
 <li>Drake &amp; Griffen (Drake &amp; Griffen, 2010), No attempt to quantify the probability, hinges on visual comparison to control.  ((Actually use a variety of proxies, just no formal quantification of the probability this would be observed by chance.  On the individual time series (appendix): “any increase or local maximum in the statistic” is assumed a significant increase. Text defines exceeding the running average by 2 sigma as significant increase – asymptotically any data set becomes significant.))</li>
 <li>Subsequent theoretical work (Brock &amp; Carpenter, 2010), (Biggs <em>et. al.</em> 2009), (<span class="showtooltip" title="Carpenter S and Brock W (2010). Early Warnings of Regime Shifts in
 Spatial Dynamics Using The Discrete Fourier Transform. _Ecosphere_,
-*1*. ISSN 2150-8925,  http://dx.doi.org/10.1890/ES10-00016.1."><a href="http://dx.doi.org/10.1890/ES10-00016.1">Carpenter &amp; Brock, 2010</a></span>) doesn’t address this either.</li>
+*1*. ISSN 2150-8925,  https://dx.doi.org/10.1890/ES10-00016.1."><a href="http://dx.doi.org/10.1890/ES10-00016.1">Carpenter &amp; Brock, 2010</a></span>) doesn’t address this either.</li>
 <li>Observational system increases variance (fish stocks) (Hsieh <em>et. al.</em> 2006)</li>
 </ul>
 <h4 id="examples-attempting-statistical-significance-estimates">Examples attempting statistical significance estimates</h4>
 <ul>
-<li><p>Guttal &amp; Jayaprakash introduce a new summary stat (skew, happily added to the pantheon) (Guttal &amp; Jayaprakash, 2008).  A wonderful paper, does include real data (Sahara desertification), as well as model, and does statistical significance testing with real null and even finds it – not significant!  Uses a moving average window.  Data from Sandusky bay, Lake Erie, see the <a href="http://www.heidelberg.edu/academiclife/distinctive/ncwqr/data/data">SanduskyData</a>.</p></li>
+<li><p>Guttal &amp; Jayaprakash introduce a new summary stat (skew, happily added to the pantheon) (Guttal &amp; Jayaprakash, 2008).  A wonderful paper, does include real data (Sahara desertification), as well as model, and does statistical significance testing with real null and even finds it – not significant!  Uses a moving average window.  Data from Sandusky bay, Lake Erie, see the <a href="https://www.heidelberg.edu/academiclife/distinctive/ncwqr/data/data">SanduskyData</a>.</p></li>
 <li><p>Dakos et al. PNAS paper (Dakos <em>et. al.</em> 2008) and Dakos et. al. spatial correlation paper (Gandhi <em>et. al.</em> 1998) are one of few examples with statistical significance using Kendall’s correlation test, and at least in the appendix comparing it to a reasonable AR(1) null (under which the observed values of the statistic assume almost all values nearly uniformly and half of the examples loose statistical significance).</p></li>
 <li><p>Litzow et al.   [cite source=“pubmed”]18767612[/cite] uses method STARS from (<span class="showtooltip" title="Rodionov S (2004). A Sequential Algorithm For Testing Climate Regime
 Shifts. _Geophysical Research Letters_, *31*. ISSN 0094-8276, 
-http://dx.doi.org/10.1029/2004GL019448."><a href="http://dx.doi.org/10.1029/2004GL019448">Rodionov, 2004</a></span>).</p></li>
+https://dx.doi.org/10.1029/2004GL019448."><a href="http://dx.doi.org/10.1029/2004GL019448">Rodionov, 2004</a></span>).</p></li>
 <li><p>(Kéfi <em>et. al.</em> 2007) statistically significant deviation from power law in patch-size (sum of squares reduction test), but is not a generic warning signal.</p></li>
 </ul>
 <h4 id="other-commentary">Other commentary</h4>
@@ -147,31 +147,31 @@ http://dx.doi.org/10.1029/2004GL019448."><a href="http://dx.doi.org/10.1029/2004
 <p>Best examples are Dakos 2008, partic appendix, and Guttal Eco Let 2008.</p>
 <h2 id="references">References</h2>
 <ul>
-<li><p>Scheffer M, Bascompte J, Brock W, Brovkin V, Carpenter S, Dakos V, Held H, van Nes E, Rietkerk M and Sugihara G (2009). “Early-Warning Signals For Critical Transitions.” <em>Nature</em>, <strong>461</strong>. ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature08227">http://dx.doi.org/10.1038/nature08227</a>.</p></li>
-<li><p>Carpenter S and Brock W (2006). “Rising Variance: A Leading Indicator of Ecological Transition.” <em>Ecology Letters</em>, <strong>9</strong>. <a href="http://dx.doi.org/10.1111/j.1461-0248.2005.00877.x">http://dx.doi.org/10.1111/j.1461-0248.2005.00877.x</a>.</p></li>
-<li><p>van Nes E and Scheffer M (2007). “Slow Recovery From Perturbations as A Generic Indicator of A Nearby Catastrophic Shift.” <em>The American Naturalist</em>, <strong>169</strong>. ISSN 0003-0147, <a href="http://dx.doi.org/10.1086/516845">http://dx.doi.org/10.1086/516845</a>.</p></li>
-<li><p>Gandhi A, Levin S and Orszag S (1998). ““Critical Slowing Down” in Time-to-Extinction: an Example of Critical Phenomena in Ecology.” <em>Journal of Theoretical Biology</em>, <strong>192</strong>. ISSN 00225193, <a href="http://dx.doi.org/10.1006/jtbi.1998.0660">http://dx.doi.org/10.1006/jtbi.1998.0660</a>.</p></li>
-<li><p>Guttal V and Jayaprakash C (2008). “Spatial Variance And Spatial Skewness: Leading Indicators of Regime Shifts in Spatial Ecological Systems.” <em>Theoretical Ecology</em>, <strong>2</strong>. ISSN 1874-1738, <a href="http://dx.doi.org/10.1007/s12080-008-0033-1">http://dx.doi.org/10.1007/s12080-008-0033-1</a>.</p></li>
-<li><p>Carpenter S, Cole J, Pace M, Batt R, Brock W, Cline T, Coloso J, Hodgson J, Kitchell J, Seekell D, Smith L and Weidel B (2011). “Early Warnings of Regime Shifts: A Whole-Ecosystem Experiment.” <em>Science</em>, <strong>332</strong>. ISSN 0036-8075, <a href="http://dx.doi.org/10.1126/science.1203672">http://dx.doi.org/10.1126/science.1203672</a>.</p></li>
-<li><p>Drake J and Griffen B (2010). “Early Warning Signals of Extinction in Deteriorating Environments.” <em>Nature</em>, <strong>467</strong>. ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature09389">http://dx.doi.org/10.1038/nature09389</a>.</p></li>
-<li><p>Brock W and Carpenter S (2010). “Interacting Regime Shifts in Ecosystems: Implication For Early Warnings.” <em>Ecological Monographs</em>, <strong>80</strong>. ISSN 0012-9615, <a href="http://dx.doi.org/10.1890/09-1824.1">http://dx.doi.org/10.1890/09-1824.1</a>.</p></li>
-<li><p>Biggs R, Carpenter S and Brock W (2009). “Turning Back From The Brink: Detecting an Impending Regime Shift in Time to Avert it.” <em>Proceedings of The National Academy of Sciences</em>, <strong>106</strong>. ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.0811729106">http://dx.doi.org/10.1073/pnas.0811729106</a>.</p></li>
-<li><p>Hsieh C, Reiss C, Hunter J, Beddington J, May R and Sugihara G (2006). “Fishing Elevates Variability in The Abundance of Exploited Species.” <em>Nature</em>, <strong>443</strong>. ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature05232">http://dx.doi.org/10.1038/nature05232</a>.</p></li>
-<li><p>Guttal V and Jayaprakash C (2008). “Changing Skewness: an Early Warning Signal of Regime Shifts in Ecosystems.” <em>Ecology Letters</em>, <strong>11</strong>. ISSN 1461-023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2008.01160.x">http://dx.doi.org/10.1111/j.1461-0248.2008.01160.x</a>.</p></li>
-<li><p>Dakos V, Scheffer M, van Nes E, Brovkin V, Petoukhov V and Held H (2008). “Slowing Down as an Early Warning Signal For Abrupt Climate Change.” <em>Proceedings of The National Academy of Sciences</em>, <strong>105</strong>. ISSN 0027-8424, <a href="http://dx.doi.org/10.1073/pnas.0802430105">http://dx.doi.org/10.1073/pnas.0802430105</a>.</p></li>
-<li><p>Kéfi S, Rietkerk M, Alados C, Pueyo Y, Papanastasis V, ElAich A and de Ruiter P (2007). “Spatial Vegetation Patterns And Imminent Desertification in Mediterranean Arid Ecosystems.” <em>Nature</em>, <strong>449</strong>. ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/nature06111">http://dx.doi.org/10.1038/nature06111</a>.</p></li>
-<li><p>Scheffer M (2010). “Complex Systems: Foreseeing Tipping Points.” <em>Nature</em>, <strong>467</strong>. ISSN 0028-0836, <a href="http://dx.doi.org/10.1038/467411a">http://dx.doi.org/10.1038/467411a</a>.</p></li>
-<li><p>Lenton T, Myerscough R, Marsh R, Livina V, Price A and Cox S (2009). “Using Genie to Study A Tipping Point in The Climate System.” <em>Philosophical Transactions of The Royal Society A: Mathematical, Physical And Engineering Sciences</em>, <strong>367</strong>. ISSN 1364-503X, <a href="http://dx.doi.org/10.1098/rsta.2008.0171">http://dx.doi.org/10.1098/rsta.2008.0171</a>.</p></li>
-<li><p>Bailey R (2010). “Spatial And Temporal Signatures of Fragility And Threshold Proximity in Modelled Semi-Arid Vegetation.” <em>Proceedings of The Royal Society B: Biological Sciences</em>, <strong>278</strong>. ISSN 0962-8452, <a href="http://dx.doi.org/10.1098/rspb.2010.1750">http://dx.doi.org/10.1098/rspb.2010.1750</a>.</p></li>
-<li>S. R. Carpenter, W. A. Brock, (2010) Early Warnings of Regime Shifts in Spatial Dynamics Using The Discrete Fourier Transform. <em>Ecosphere</em> <strong>1</strong> <a href="http://dx.doi.org/10.1890/ES10-00016.1">10.1890/ES10-00016.1</a></li>
-<li><p>Sergei N. Rodionov, (2004) A Sequential Algorithm For Testing Climate Regime Shifts. <em>Geophysical Research Letters</em> <strong>31</strong> <a href="http://dx.doi.org/10.1029/2004GL019448">10.1029/2004GL019448</a></p></li>
+<li><p>Scheffer M, Bascompte J, Brock W, Brovkin V, Carpenter S, Dakos V, Held H, van Nes E, Rietkerk M and Sugihara G (2009). “Early-Warning Signals For Critical Transitions.” <em>Nature</em>, <strong>461</strong>. ISSN 0028-0836, <a href="https://dx.doi.org/10.1038/nature08227">http://dx.doi.org/10.1038/nature08227</a>.</p></li>
+<li><p>Carpenter S and Brock W (2006). “Rising Variance: A Leading Indicator of Ecological Transition.” <em>Ecology Letters</em>, <strong>9</strong>. <a href="https://dx.doi.org/10.1111/j.1461-0248.2005.00877.x">http://dx.doi.org/10.1111/j.1461-0248.2005.00877.x</a>.</p></li>
+<li><p>van Nes E and Scheffer M (2007). “Slow Recovery From Perturbations as A Generic Indicator of A Nearby Catastrophic Shift.” <em>The American Naturalist</em>, <strong>169</strong>. ISSN 0003-0147, <a href="https://dx.doi.org/10.1086/516845">http://dx.doi.org/10.1086/516845</a>.</p></li>
+<li><p>Gandhi A, Levin S and Orszag S (1998). ““Critical Slowing Down” in Time-to-Extinction: an Example of Critical Phenomena in Ecology.” <em>Journal of Theoretical Biology</em>, <strong>192</strong>. ISSN 00225193, <a href="https://dx.doi.org/10.1006/jtbi.1998.0660">http://dx.doi.org/10.1006/jtbi.1998.0660</a>.</p></li>
+<li><p>Guttal V and Jayaprakash C (2008). “Spatial Variance And Spatial Skewness: Leading Indicators of Regime Shifts in Spatial Ecological Systems.” <em>Theoretical Ecology</em>, <strong>2</strong>. ISSN 1874-1738, <a href="https://dx.doi.org/10.1007/s12080-008-0033-1">http://dx.doi.org/10.1007/s12080-008-0033-1</a>.</p></li>
+<li><p>Carpenter S, Cole J, Pace M, Batt R, Brock W, Cline T, Coloso J, Hodgson J, Kitchell J, Seekell D, Smith L and Weidel B (2011). “Early Warnings of Regime Shifts: A Whole-Ecosystem Experiment.” <em>Science</em>, <strong>332</strong>. ISSN 0036-8075, <a href="https://dx.doi.org/10.1126/science.1203672">http://dx.doi.org/10.1126/science.1203672</a>.</p></li>
+<li><p>Drake J and Griffen B (2010). “Early Warning Signals of Extinction in Deteriorating Environments.” <em>Nature</em>, <strong>467</strong>. ISSN 0028-0836, <a href="https://dx.doi.org/10.1038/nature09389">http://dx.doi.org/10.1038/nature09389</a>.</p></li>
+<li><p>Brock W and Carpenter S (2010). “Interacting Regime Shifts in Ecosystems: Implication For Early Warnings.” <em>Ecological Monographs</em>, <strong>80</strong>. ISSN 0012-9615, <a href="https://dx.doi.org/10.1890/09-1824.1">http://dx.doi.org/10.1890/09-1824.1</a>.</p></li>
+<li><p>Biggs R, Carpenter S and Brock W (2009). “Turning Back From The Brink: Detecting an Impending Regime Shift in Time to Avert it.” <em>Proceedings of The National Academy of Sciences</em>, <strong>106</strong>. ISSN 0027-8424, <a href="https://dx.doi.org/10.1073/pnas.0811729106">http://dx.doi.org/10.1073/pnas.0811729106</a>.</p></li>
+<li><p>Hsieh C, Reiss C, Hunter J, Beddington J, May R and Sugihara G (2006). “Fishing Elevates Variability in The Abundance of Exploited Species.” <em>Nature</em>, <strong>443</strong>. ISSN 0028-0836, <a href="https://dx.doi.org/10.1038/nature05232">http://dx.doi.org/10.1038/nature05232</a>.</p></li>
+<li><p>Guttal V and Jayaprakash C (2008). “Changing Skewness: an Early Warning Signal of Regime Shifts in Ecosystems.” <em>Ecology Letters</em>, <strong>11</strong>. ISSN 1461-023X, <a href="https://dx.doi.org/10.1111/j.1461-0248.2008.01160.x">http://dx.doi.org/10.1111/j.1461-0248.2008.01160.x</a>.</p></li>
+<li><p>Dakos V, Scheffer M, van Nes E, Brovkin V, Petoukhov V and Held H (2008). “Slowing Down as an Early Warning Signal For Abrupt Climate Change.” <em>Proceedings of The National Academy of Sciences</em>, <strong>105</strong>. ISSN 0027-8424, <a href="https://dx.doi.org/10.1073/pnas.0802430105">http://dx.doi.org/10.1073/pnas.0802430105</a>.</p></li>
+<li><p>Kéfi S, Rietkerk M, Alados C, Pueyo Y, Papanastasis V, ElAich A and de Ruiter P (2007). “Spatial Vegetation Patterns And Imminent Desertification in Mediterranean Arid Ecosystems.” <em>Nature</em>, <strong>449</strong>. ISSN 0028-0836, <a href="https://dx.doi.org/10.1038/nature06111">http://dx.doi.org/10.1038/nature06111</a>.</p></li>
+<li><p>Scheffer M (2010). “Complex Systems: Foreseeing Tipping Points.” <em>Nature</em>, <strong>467</strong>. ISSN 0028-0836, <a href="https://dx.doi.org/10.1038/467411a">http://dx.doi.org/10.1038/467411a</a>.</p></li>
+<li><p>Lenton T, Myerscough R, Marsh R, Livina V, Price A and Cox S (2009). “Using Genie to Study A Tipping Point in The Climate System.” <em>Philosophical Transactions of The Royal Society A: Mathematical, Physical And Engineering Sciences</em>, <strong>367</strong>. ISSN 1364-503X, <a href="https://dx.doi.org/10.1098/rsta.2008.0171">http://dx.doi.org/10.1098/rsta.2008.0171</a>.</p></li>
+<li><p>Bailey R (2010). “Spatial And Temporal Signatures of Fragility And Threshold Proximity in Modelled Semi-Arid Vegetation.” <em>Proceedings of The Royal Society B: Biological Sciences</em>, <strong>278</strong>. ISSN 0962-8452, <a href="https://dx.doi.org/10.1098/rspb.2010.1750">http://dx.doi.org/10.1098/rspb.2010.1750</a>.</p></li>
+<li>S. R. Carpenter, W. A. Brock, (2010) Early Warnings of Regime Shifts in Spatial Dynamics Using The Discrete Fourier Transform. <em>Ecosphere</em> <strong>1</strong> <a href="https://dx.doi.org/10.1890/ES10-00016.1">10.1890/ES10-00016.1</a></li>
+<li><p>Sergei N. Rodionov, (2004) A Sequential Algorithm For Testing Climate Regime Shifts. <em>Geophysical Research Letters</em> <strong>31</strong> <a href="https://dx.doi.org/10.1029/2004GL019448">10.1029/2004GL019448</a></p></li>
 </ul>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2011-06-01 15:10:56 +0000" 
     property="dc:created">01 Jun 2011</time></p>
@@ -204,11 +204,11 @@ http://dx.doi.org/10.1029/2004GL019448."><a href="http://dx.doi.org/10.1029/2004
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2011/tags.html#warning-signals">#warning-signals</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2011/tags.html#delayed-release">#delayed-release</a>
     </p>
@@ -238,11 +238,11 @@ http://dx.doi.org/10.1029/2004GL019448."><a href="http://dx.doi.org/10.1029/2004
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -255,7 +255,7 @@ http://dx.doi.org/10.1029/2004GL019448."><a href="http://dx.doi.org/10.1029/2004
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -271,7 +271,7 @@ http://dx.doi.org/10.1029/2004GL019448."><a href="http://dx.doi.org/10.1029/2004
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -291,13 +291,13 @@ http://dx.doi.org/10.1029/2004GL019448."><a href="http://dx.doi.org/10.1029/2004
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -315,7 +315,7 @@ http://dx.doi.org/10.1029/2004GL019448."><a href="http://dx.doi.org/10.1029/2004
       &amp;rft.date=2011-06-01
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/06/01/warning-signals-literature-when-stats-are-and-arent-attempted.html">
+      &amp;rft_id=https://www.carlboettiger.info/06/01/warning-signals-literature-when-stats-are-and-arent-attempted.html">
   </span>
 
 
@@ -332,7 +332,7 @@ http://dx.doi.org/10.1029/2004GL019448."><a href="http://dx.doi.org/10.1029/2004
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -347,7 +347,7 @@ http://dx.doi.org/10.1029/2004GL019448."><a href="http://dx.doi.org/10.1029/2004
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

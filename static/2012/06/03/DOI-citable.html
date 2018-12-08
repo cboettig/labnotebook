@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>DOI != citable</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="DOI != citable" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2013-06-03 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2013-06-03 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/06/03/DOI-citable.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/06/03/DOI-citable.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -115,37 +115,37 @@ Is there a way to obtain DOI for a <a href="https://twitter.com/github"><span cl
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>Again and again, researchers suggest that DOI to makes something “citable”. And this <a href="https://twitter.com/cboettig/status/337986074624282624">frustrates me</a>.</p>
-<p>Don’t get me wrong. I love DOIs, and I love CrossRef. And I bang on the table when I have some old journal article that doesn’t yet have a DOI. I use DOIs every day in many ways. I use CrossRef’s APIs all the time to draw in metadata for citations in my notebook (through my <a href="http://github.com/cboettig/knitcitations">knitcitations</a> package), and to import metadata into my reference manager, Mendeley. I’ve written my own implementations in R and ruby, and keep an eye on their exciting new tools on the <a href="https://github.com/crossref">Crossref Github page</a>. I wrote to bibsonomy when I realized they were not using the CrossRef API to look up metadata by DOIs, and they have now implemented this feature. I use DOIs to look up papers I’ve come across, and to share content I am reading. (Crossref’s <a href="http://shortdoi.org/">DOI shortener</a> is great for this). I even use DOI-based links to <a href="http://carlboettiger.info/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html">embed semantic information</a> into links and citations of articles.</p>
+<p>Don’t get me wrong. I love DOIs, and I love CrossRef. And I bang on the table when I have some old journal article that doesn’t yet have a DOI. I use DOIs every day in many ways. I use CrossRef’s APIs all the time to draw in metadata for citations in my notebook (through my <a href="https://github.com/cboettig/knitcitations">knitcitations</a> package), and to import metadata into my reference manager, Mendeley. I’ve written my own implementations in R and ruby, and keep an eye on their exciting new tools on the <a href="https://github.com/crossref">Crossref Github page</a>. I wrote to bibsonomy when I realized they were not using the CrossRef API to look up metadata by DOIs, and they have now implemented this feature. I use DOIs to look up papers I’ve come across, and to share content I am reading. (Crossref’s <a href="http://shortdoi.org/">DOI shortener</a> is great for this). I even use DOI-based links to <a href="http://carlboettiger.info/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html">embed semantic information</a> into links and citations of articles.</p>
 <p>But I still have no idea what researchers mean when they suggest that this makes something <em>citable</em>.</p>
 <h3 id="some-background-on-dois">Some background on DOIs</h3>
-<p>At its heart, a DOI is a very simple concept. It is a “permanent identifier”. All this means is that is is really just a URL redirect. Type http://dx.doi.org/mnn into any browser and get redirected to where the article actually lives. Why does that make it permanent? Because if the journal decides to change their URL structure, the DOI’s redirect can just be mapped to the new address and voila, it still works. That is, a DOI is simply a tool to fight <a href="https://en.wikipedia.org/wiki/Link_rot">link-rot</a>.</p>
-<p>So you might ask, why does the ability to remap the address have anything to do with being “permanent?” It doesn’t, really. The permanence comes not so much from the technology as from the social contract that goes with it. As CrossRef’s <a href="http://blogs.plos.org/mfenner/2009/02/17/interview_with_geoffrey_bilder/">Geoffery Bilder eloquently explains</a>, a publisher can only receive DOIs if they promise to keep these redirects up-to-date. A publisher who fails to maintain this responsibility would presumably lose their right to receive DOIs. A brilliant, simple, social incentive.</p>
-<p>This still does not guarantee permanence – e.g. what would happen to the content if the publisher disappears. That problem is not addressed by the DOI technology itself, but by a robust backup archiving solution, such as <a href="http://clockss.org">CLOCKSS</a>, which provides a geo-politically distributed network of backup copies for many journals. Again the social contract comes into play – presumably CrossRef would not provide a publisher with DOIs if they did not have such a robust archival solution in place.</p>
+<p>At its heart, a DOI is a very simple concept. It is a “permanent identifier”. All this means is that is is really just a URL redirect. Type https://dx.doi.org/mnn into any browser and get redirected to where the article actually lives. Why does that make it permanent? Because if the journal decides to change their URL structure, the DOI’s redirect can just be mapped to the new address and voila, it still works. That is, a DOI is simply a tool to fight <a href="https://en.wikipedia.org/wiki/Link_rot">link-rot</a>.</p>
+<p>So you might ask, why does the ability to remap the address have anything to do with being “permanent?” It doesn’t, really. The permanence comes not so much from the technology as from the social contract that goes with it. As CrossRef’s <a href="https://blogs.plos.org/mfenner/2009/02/17/interview_with_geoffrey_bilder/">Geoffery Bilder eloquently explains</a>, a publisher can only receive DOIs if they promise to keep these redirects up-to-date. A publisher who fails to maintain this responsibility would presumably lose their right to receive DOIs. A brilliant, simple, social incentive.</p>
+<p>This still does not guarantee permanence – e.g. what would happen to the content if the publisher disappears. That problem is not addressed by the DOI technology itself, but by a robust backup archiving solution, such as <a href="https://clockss.org">CLOCKSS</a>, which provides a geo-politically distributed network of backup copies for many journals. Again the social contract comes into play – presumably CrossRef would not provide a publisher with DOIs if they did not have such a robust archival solution in place.</p>
 <p>So far we have seen two crucial functions of the DOI – as a permanent identifier that can be used to reach the content despite link rot, and as an incentive to maintain good archival backups of the content and the links to it.</p>
 <h3 id="what-do-we-mean-by-citations-anyway">What do we mean by citations, anyway?</h3>
-<p>So what does this have to do with being citable? Obviously these are nice properties to have for things we cite – but they are by no means a requirement. (As <a href="https://twitter.com/noamross/status/337987521243918337">Noam Ross observes</a>, try finding a permanent identifier for “Personal Communication”). Books, reports, and other grey literature frequently appear in citations, as do links to websites. MLA even has guidelines on the proper format to <a href="http://www.mla.org/style/handbook_faq/cite_a_tweet">cite a tweet</a> (which, incidentally, come closer to having a permanent identifier and an archival strategy than most other things in this list). So what do we mean by citable anyway?</p>
+<p>So what does this have to do with being citable? Obviously these are nice properties to have for things we cite – but they are by no means a requirement. (As <a href="https://twitter.com/noamross/status/337987521243918337">Noam Ross observes</a>, try finding a permanent identifier for “Personal Communication”). Books, reports, and other grey literature frequently appear in citations, as do links to websites. MLA even has guidelines on the proper format to <a href="https://www.mla.org/style/handbook_faq/cite_a_tweet">cite a tweet</a> (which, incidentally, come closer to having a permanent identifier and an archival strategy than most other things in this list). So what do we mean by citable anyway?</p>
 <p>But what about the reference list? While a publisher may be just fine including some link to your software, is it really cited if it isn’t in the reference list? Journals restrict what appears in the reference list because these references are indexed by the infamous citation counters like Thompson-Reuters. (A frequent complaint is that many journals do not similarly index citations appearing in the reference list of the supplementary materials, making it difficult or impossible to give appropriate attribution to large numbers of data providers, for instance). Does having a DOI address this problem?</p>
 <h4 id="citation-counts-in-dois">Citation counts in DOIs</h4>
-<p>Counting citations depends on who is counting them. The most well-known is Thompson-Reuters, which has their own process for deciding what gets counted (based on publisher), so no guarantee there. Meanwhile Google Scholar counts anything meeting it’s <a href="http://carlboettiger.info/2012/11/23/citing-lab-notebook-entries.html">indexing requirements &amp; arbitrary selection</a>. I have recently learned that CrossRef just launched it’s own <a href="https://github.com/articlemetrics/alm/wiki/Crossref">internal citation counting</a>, which is available from the CrossRef metadata (totals only for the public, publishers can resolve which articles did the citing…). However, most proposals to make some alternative research product “citable” by giving it a DOI use DataCite DOIs (e.g. fig<strong>share</strong>, PeerJ Preprints), which lag behind in this feature. Moving the control of citation data beyond the grasp of particular publishing companies like TR is undoubtedly an important step forward. The <a href="http://www.jisc.ac.uk/whatwedo/programmes/inf11/jiscexpo/jiscopencitation.aspx">Open Citation Project</a> is a more comprehensive, if very young, move in this direct. (Hat tip to Martin Fenner for explaining CrossRef citations to me).</p>
+<p>Counting citations depends on who is counting them. The most well-known is Thompson-Reuters, which has their own process for deciding what gets counted (based on publisher), so no guarantee there. Meanwhile Google Scholar counts anything meeting it’s <a href="https://carlboettiger.info/2012/11/23/citing-lab-notebook-entries.html">indexing requirements &amp; arbitrary selection</a>. I have recently learned that CrossRef just launched it’s own <a href="https://github.com/articlemetrics/alm/wiki/Crossref">internal citation counting</a>, which is available from the CrossRef metadata (totals only for the public, publishers can resolve which articles did the citing…). However, most proposals to make some alternative research product “citable” by giving it a DOI use DataCite DOIs (e.g. fig<strong>share</strong>, PeerJ Preprints), which lag behind in this feature. Moving the control of citation data beyond the grasp of particular publishing companies like TR is undoubtedly an important step forward. The <a href="http://www.jisc.ac.uk/whatwedo/programmes/inf11/jiscexpo/jiscopencitation.aspx">Open Citation Project</a> is a more comprehensive, if very young, move in this direct. (Hat tip to Martin Fenner for explaining CrossRef citations to me).</p>
 <h3 id="additional-metadata">Additional Metadata</h3>
-<p>In addition to resolving links, DOI providers also serve a rich collection of metadata about the publication that can be <a href="http://www.crosscite.org/cn/">queried by DOI</a> or by <a href="https://github.com/CrossRef/cr-search">other elements</a> like author and title. Rich semantic formats and disambiguation of author names by connections to ORCID IDs are among the many advantages of this. Because many of these tools are publicly accessible by through their APIs, it is easy for other developers to build services upon them.</p>
+<p>In addition to resolving links, DOI providers also serve a rich collection of metadata about the publication that can be <a href="https://www.crosscite.org/cn/">queried by DOI</a> or by <a href="https://github.com/CrossRef/cr-search">other elements</a> like author and title. Rich semantic formats and disambiguation of author names by connections to ORCID IDs are among the many advantages of this. Because many of these tools are publicly accessible by through their APIs, it is easy for other developers to build services upon them.</p>
 <h2 id="conclusions">Conclusions</h2>
 <p>While DOI providers have done an excellent job in ensuring persistent URLs, archived content, and valuable metadata, these things are largely the product of the social contract between publisher and the DOI provider. It is not possible for an author or organization to simply “get DOIs” for all their content. But it is not the only way to provide these features, either. While I understand the value in providing a simple and reliable way to encapsulate each of these concepts as “has a DOI,” it also appears to put these features beyond the reach of individual researchers. If issues of persistent URLs, archived content, and rich metadata tools are always reduced to “has a DOI,” publishers become the only path to achieve these ends. On the contrary, a rich collection of tools is available to researchers.</p>
 <p>So what do we mean when we say a DOI makes something ‘citable?’ If this is shorthand for the properties we would want in something citable: persistent identifier, archival content, machine-readable metadata, than we should start to recognize other things that share these features. Further innovation requires valuing the features the DOI provides, not simply a “brand name” researchers recognize.</p>
 <h2 id="alternative-tools">Alternative tools</h2>
-<p>In a <a href="http://purl.org/cboettig/2013/05/31/notebook-features-digital-archiving">recent post</a> in a series on technical features of my open notebook, I discuss some of the tools available to address these challenges. In particular:</p>
+<p>In a <a href="https://purl.org/cboettig/2013/05/31/notebook-features-digital-archiving">recent post</a> in a series on technical features of my open notebook, I discuss some of the tools available to address these challenges. In particular:</p>
 <ul>
-<li>The use of <a href="http://en.wikipedia.org/wiki/Persistent_uniform_resource_locator">PURLs</a> for persistent identifiers</li>
+<li>The use of <a href="https://en.wikipedia.org/wiki/Persistent_uniform_resource_locator">PURLs</a> for persistent identifiers</li>
 <li>Git for archival redundancy</li>
-<li><a href="http://greycite.knowledgeblog.org">Greycite</a> for metadata extraction</li>
+<li><a href="https://greycite.knowledgeblog.org">Greycite</a> for metadata extraction</li>
 </ul>
-<p>Of course, if you ever need a DOI for a research product, there is always <a href="http://figshare.com">figshare</a>.</p>
+<p>Of course, if you ever need a DOI for a research product, there is always <a href="https://figshare.com">figshare</a>.</p>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2013-06-03 00:00:00 +0000" 
     property="dc:created">03 Jun 2013</time></p>
@@ -178,11 +178,11 @@ Is there a way to obtain DOI for a <a href="https://twitter.com/github"><span cl
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#notebook-technology">#notebook-technology</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#blog">#blog</a>
     </p>
@@ -212,11 +212,11 @@ Is there a way to obtain DOI for a <a href="https://twitter.com/github"><span cl
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -229,7 +229,7 @@ Is there a way to obtain DOI for a <a href="https://twitter.com/github"><span cl
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -245,7 +245,7 @@ Is there a way to obtain DOI for a <a href="https://twitter.com/github"><span cl
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -265,13 +265,13 @@ Is there a way to obtain DOI for a <a href="https://twitter.com/github"><span cl
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -289,7 +289,7 @@ Is there a way to obtain DOI for a <a href="https://twitter.com/github"><span cl
       &amp;rft.date=2013-06-03
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/06/03/DOI-citable.html">
+      &amp;rft_id=https://www.carlboettiger.info/06/03/DOI-citable.html">
   </span>
 
 
@@ -306,7 +306,7 @@ Is there a way to obtain DOI for a <a href="https://twitter.com/github"><span cl
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -321,7 +321,7 @@ Is there a way to obtain DOI for a <a href="https://twitter.com/github"><span cl
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

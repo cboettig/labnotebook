@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Response To Software Discovery Index Report</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Response To Software Discovery Index Report" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2014-10-08 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2014-10-08 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/10/08/response-to-software-discovery-index-report.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/10/08/response-to-software-discovery-index-report.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -48,7 +48,7 @@
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -84,7 +84,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -107,7 +107,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>The NIH has recently announced the <a href="http://softwarediscoveryindex.org/report">report</a> of a landmark meeting which presents a vision for a <em>Software Discovery Index</em> (SDI). The report is both timely and focused on the key issues of locating, citing, reusing software:</p>
+    <p>The NIH has recently announced the <a href="https://softwarediscoveryindex.org/report">report</a> of a landmark meeting which presents a vision for a <em>Software Discovery Index</em> (SDI). The report is both timely and focused on the key issues of locating, citing, reusing software:</p>
 <blockquote>
 <p>Software developers face challenges disseminating their software and measuring its adoption. Software users have difficulty identifying the most appropriate software for their work. Journal publishers lack a consistent way to handle software citations or to ensure reproducibility of published findings. Funding agencies struggle to make informed funding decisions about which software projects to support, while reviewers have a hard time understanding the relevancy and effectiveness of proposed software in the context of data management plans and proposed analysis.</p>
 </blockquote>
@@ -121,7 +121,7 @@
 <p>This proposal sounds very much like the CrossRef and DataCite infrastructure already in place for academic literature and data, respectively; and indeed this is an excellent model to follow. However, a key piece of that infrastructure is missing from the present proposal – the social contract between repository or publisher and the index itself.</p>
 <p>CrossRef provides unique identifiers for the academic literature (CrossRef DOIs), but it also defines specific metadata that describe that literature (as well as metrics of its use), and embed that information into a robust, query-able, machine-readable format. DataCite does the same for scientific data. These are exactly the features that the authors of the report seek to emulate.</p>
 <p>Just as CrossRef itself does not host academic papers but only the metadata records, the SDI does not propose to host software itself. This introduces a substantial challenge in <em>maintaining the link</em> between the metadata and the software itself. The authors have simply proposed that the metadata include “Links to the code repository.” If CrossRef or DataCite DOIs worked in this way, we would soon loose all ability to recover many of the papers or the data itself, and we would be left with only access to the metadata record and a broken link. DOIs were created explicitly to solve this problem, not through technology, but through a <em>social contract</em>.</p>
-<p>The scientific publishers who host the actual publications are responsible for ensuring that this link is always maintained when they change names, etc. Should the publisher go out of business, these links may be adjusted to point to a new home, such as <a href="http://clockss.org">CLOCKSS</a>. This guarantees that the DOI always resolves to the resource in question, regardless of where it moves. Should a publisher fail to maintain these links, CrossRef may refuse to provide the publisher any additional DOIs, cutting it off from this key index. This is the social contract. Data repositories work in exactly the same way, purchasing their DOIs from DataCite. (While financial transaction isn’t strictly necessary for the financial contract, it provides a clear business model for maintaining the key organization responsible for the index).</p>
+<p>The scientific publishers who host the actual publications are responsible for ensuring that this link is always maintained when they change names, etc. Should the publisher go out of business, these links may be adjusted to point to a new home, such as <a href="https://clockss.org">CLOCKSS</a>. This guarantees that the DOI always resolves to the resource in question, regardless of where it moves. Should a publisher fail to maintain these links, CrossRef may refuse to provide the publisher any additional DOIs, cutting it off from this key index. This is the social contract. Data repositories work in exactly the same way, purchasing their DOIs from DataCite. (While financial transaction isn’t strictly necessary for the financial contract, it provides a clear business model for maintaining the key organization responsible for the index).</p>
 <p>Without such a mechanism, links in the SDI would surely rot away, all the more rapidly in the fast-moving world of software. Without links to the software itself, the function of the index would be purely academic. Yet such a mechanism requires that the software repositories, not the individual software authors, would be willing to accept the same social contract, receiving (and possibly paying for) identifiers on the condition that they assume the responsibility of maintaining the links. It is unclear that the primary software repositories in use to day (Sourceforge, Github, Bitbucket, etc) would be willing to accept this.</p>
 <p>Data repositories already offer many of the compelling features of this proposal. Many data repositories accept a wide array of file formats including software packages, and would provide such software with a permanent unique identifier in the form of a DataCite DOI, as well as collecting much of the essential metadata listed in report’s Appendix 1, which would then already be accessible through the DataCite API in a nice machine-readable format. This strategy finds several aspects wanting.</p>
 <p>The primary barrier to using data repositories indexed by DataCite arises from the dynamic nature of software relative to data. Data repositories are designed to serve relatively static content with few versions. Software repositories, by contrast, are usually built upon explicit version control platforms such as Git or Subversion designed explicitly for handling continual changes, including branches and mergers, of software code. The report discusses the challenges of software versions as a reason for that citing a software paper as a proxy for citing software is not ideal: the citation to the paper does not convey what version was used. Rapid versioning creates other problems though, both in the number of identifiers that might be created (is each commit a new identifier?) and defining the relationship between different versions of the same software. Branches and merges exacerbate this problem. Existing approaches that provide the user a one-time way to import software from a software repository to a data repository such as those cited in the report (“One significant initiative is a collaboration between Mozilla, figshare, GitHub, and Zenodo”) do nothing to address this issues.</p>
@@ -155,7 +155,7 @@ C. IMPLEMENTATION ROADMAP
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2014-10-08 00:00:00 +0000" 
     property="dc:created">08 Oct 2014</time></p>
@@ -188,7 +188,7 @@ C. IMPLEMENTATION ROADMAP
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2014/tags.html#blog">#blog</a>
     </p>
@@ -218,11 +218,11 @@ C. IMPLEMENTATION ROADMAP
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -235,7 +235,7 @@ C. IMPLEMENTATION ROADMAP
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -251,7 +251,7 @@ C. IMPLEMENTATION ROADMAP
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -271,13 +271,13 @@ C. IMPLEMENTATION ROADMAP
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -295,7 +295,7 @@ C. IMPLEMENTATION ROADMAP
       &amp;rft.date=2014-10-08
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/10/08/response-to-software-discovery-index-report.html">
+      &amp;rft_id=https://www.carlboettiger.info/10/08/response-to-software-discovery-index-report.html">
   </span>
 
 
@@ -312,7 +312,7 @@ C. IMPLEMENTATION ROADMAP
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -327,7 +327,7 @@ C. IMPLEMENTATION ROADMAP
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

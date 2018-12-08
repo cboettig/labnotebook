@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Wrong picture, wrong model: why warning signals don't look like rare events</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Wrong picture, wrong model: why warning signals don't look like rare events" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2010-10-25 23:24:45 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2010-10-25 23:24:45 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/10/25/wrong-picture-wrong-model-why-warning-signals-dont-look-like-rare-events.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/10/25/wrong-picture-wrong-model-why-warning-signals-dont-look-like-rare-events.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -108,7 +108,7 @@
     <article>
     <p>Detecting a warning signal of collapse isn’t about detecting that a system is non-stationary, but more specifically, that the system is about to do something sudden.  The classic saddle-node bifurcation example results in a picture like this:</p>
 <figure>
-<img src="http://farm2.staticflickr.com/1184/5103819890_b5a04908ae_o.png" />
+<img src="https://farm2.staticflickr.com/1184/5103819890_b5a04908ae_o.png" />
 </figure>
 <p>A visible steady decrease interrupted by a sudden jump.  The goal is to distinguish this from the case of a steady decrease that involves no loss of stability – such as would be created by continually lowering the carrying capacity of logistic-model system at a linear rate.  As one involves a loss of stability and the other does not, the warning signal that attempts to measure the eigenvalue (equivalent to r in the standard logistic formulation) may enable one to distinguish between these two possibilities.  The picture that seems so often described is one of no change in mean, followed by a sudden jump.  Such a pattern can be produced in a bistable system simply by waiting long enough – as addressed through the theory of large deviations.  Such a case may instead result from loss of stability, even without the mean changing.  To explore this, I’ve constructed an example explicitly to avoid the mean changing but still show a change in stability before the bifurcation:</p>
 <p><span class="math">\[ d(x) = a \left( \hat x - K \right) + e K \]</span></p>
@@ -116,12 +116,12 @@
 <p><span class="math">\[ b(x) = \frac{e K x^p}{x^p+h^p} \]</span></p>
 <p>with $ a $ as the bifurcation parameter:</p>
 <figure>
-<img src="http://farm2.static.flickr.com/1432/5115931711_c9c1142a7e_o.gif" />
+<img src="https://farm2.static.flickr.com/1432/5115931711_c9c1142a7e_o.gif" />
 </figure>
-<p>The red line is the death rate, blue the birth rate, and black the difference.  (Code is the first figure in this <a href="http://github.com/cboettig/structured-populations/blob/54dbdb578f5a91e2796ce2c097f4abeca8719d30/demos/saddle_analytics.R">version of saddle_analytics .R</a>).  Such cases may have a rather simpler analysis, since changes in the equilibrium size can be ignored, but are less general and hence less common than the cases that may include changes in expected value of the state.</p>
+<p>The red line is the death rate, blue the birth rate, and black the difference.  (Code is the first figure in this <a href="https://github.com/cboettig/structured-populations/blob/54dbdb578f5a91e2796ce2c097f4abeca8719d30/demos/saddle_analytics.R">version of saddle_analytics .R</a>).  Such cases may have a rather simpler analysis, since changes in the equilibrium size can be ignored, but are less general and hence less common than the cases that may include changes in expected value of the state.</p>
 <p>Of course one can also imagine examples where most of the change will occur pretty much without warning, i.e. if the growth rate function looks like:</p>
 <figure>
-<img src="http://farm2.staticflickr.com/1327/5116083962_6c1334dd21_o.jpg" />
+<img src="https://farm2.staticflickr.com/1327/5116083962_6c1334dd21_o.jpg" />
 </figure>
 <p>Then the unstable point moves a great deal closer but no stability is lost until right before the bifurcation, hence there is very little warning.  In either case, there is a tendency to attempt to correct for any trend.  The general idea of this is quite valid – the loss of stability should appear in the variance, while the trend could have other causes (so could an increase in variance, but leaving that aside), so we do need to handle this correctly.  However, this overlooks the crucial second observation:</p>
 <h3 id="noise-dependence-on-mean">Noise dependence on mean</h3>
@@ -131,19 +131,19 @@
 <h3 id="reflections-in-an-example">Reflections in an example</h3>
 <p>Example coming: consider the isotope data in the climate change shifts, showing several jumps and among the examples considered in Dakos et al.  2008:</p>
 <figure>
-<img src="http://openwetware.org/images/e/ec/DeuteriumCore.png" alt="http://openwetware.org/images/e/ec/DeuteriumCore.png" /><figcaption>http://openwetware.org/images/e/ec/DeuteriumCore.png</figcaption>
+<img src="https://openwetware.org/images/e/ec/DeuteriumCore.png" alt="http://openwetware.org/images/e/ec/DeuteriumCore.png" /><figcaption>http://openwetware.org/images/e/ec/DeuteriumCore.png</figcaption>
 </figure>
-<p>See other data sets, listed in<a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Stochastic_Population_Dynamics/2010/04/02">earlier lab notebook entry (still on OWW</a>).</p>
-<p>http://www.flickr.com/photos/cboettig/5115516967/in/photostream/</p>
+<p>See other data sets, listed in<a href="https://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Stochastic_Population_Dynamics/2010/04/02">earlier lab notebook entry (still on OWW</a>).</p>
+<p>https://www.flickr.com/photos/cboettig/5115516967/in/photostream/</p>
 <h3 id="comments-on-ons">Comments on ONS</h3>
-<p>Images today are all included from flickr stream, embedded with Flickr Gallery plugin with the exception of the gif. As viewing animated gifs requires access to the original image, this prompted me to upgrade to Flickr Pro. Will be interesting to explore what can be done without limits, meanwhile the animated gif is a bit annoying. Today’s live feed reflects some of explorations on R animations in gifs and otherwise, see <a href="http://www.delicious.com/cboettig/animation">my bookmarks in delicious</a>.</p>
+<p>Images today are all included from flickr stream, embedded with Flickr Gallery plugin with the exception of the gif. As viewing animated gifs requires access to the original image, this prompted me to upgrade to Flickr Pro. Will be interesting to explore what can be done without limits, meanwhile the animated gif is a bit annoying. Today’s live feed reflects some of explorations on R animations in gifs and otherwise, see <a href="https://www.delicious.com/cboettig/animation">my bookmarks in delicious</a>.</p>
 <p>Recent posts have adopted the WP LaTeX plugin for equations.  Seems to work better than a few other plug-ins I tried (strange positioning etc), but open to suggestions on quick load times, machine readable equations, proper appearance.</p>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2010-10-25 23:24:45 +0000" 
     property="dc:created">25 Oct 2010</time></p>
@@ -180,7 +180,7 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2010/tags.html#warning-signals">#warning-signals</a>
     </p>
@@ -210,11 +210,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -227,7 +227,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -243,7 +243,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -263,13 +263,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -287,7 +287,7 @@
       &amp;rft.date=2010-10-25
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/10/25/wrong-picture-wrong-model-why-warning-signals-dont-look-like-rare-events.html">
+      &amp;rft_id=https://www.carlboettiger.info/10/25/wrong-picture-wrong-model-why-warning-signals-dont-look-like-rare-events.html">
   </span>
 
 
@@ -304,7 +304,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -319,7 +319,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

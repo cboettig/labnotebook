@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Integrating Github Project Repos Into The Notebook</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Integrating Github Project Repos Into The Notebook" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2014-05-07 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2014-05-07 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/05/07/integrating-github-project-repos-into-the-notebook.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/05/07/integrating-github-project-repos-into-the-notebook.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -106,25 +106,25 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>For a while now most of my active research is developed through <code>.Rmd</code> scripts connected to a particular project repository (something I discuss at length in <a href="http://www.carlboettiger.info/2014/05/05/knitr-workflow-challenges.html">deep challenges with knitr workflows</a>). In the <a href="http://www.carlboettiger.info/2014/05/06/steps-to-a-more-portable-workflow.html">previous post</a> I discuss creating a <code>template</code> package with a more transparent organization of files, such as moving manuscripts from <code>inst/doc/</code> to simply <code>manuscripts/</code>. This left these exploratory analysis scripts in <code>inst/examples</code> in a similarly unintuitive place. Though I like having these scripts as part of the repository (which keeps everything for a project in one place, as it were), like the manuscript they aren’t really part of the R package, particularly as I have gotten better at creating proper unit tests in place of just rerunning dynamic scripts occasionally.</p>
+    <p>For a while now most of my active research is developed through <code>.Rmd</code> scripts connected to a particular project repository (something I discuss at length in <a href="https://www.carlboettiger.info/2014/05/05/knitr-workflow-challenges.html">deep challenges with knitr workflows</a>). In the <a href="http://www.carlboettiger.info/2014/05/06/steps-to-a-more-portable-workflow.html">previous post</a> I discuss creating a <code>template</code> package with a more transparent organization of files, such as moving manuscripts from <code>inst/doc/</code> to simply <code>manuscripts/</code>. This left these exploratory analysis scripts in <code>inst/examples</code> in a similarly unintuitive place. Though I like having these scripts as part of the repository (which keeps everything for a project in one place, as it were), like the manuscript they aren’t really part of the R package, particularly as I have gotten better at creating proper unit tests in place of just rerunning dynamic scripts occasionally.</p>
 <p>I’ve also been nagged by the idea of having to always just link to these nice dynamic documents from my lab notebook. Sure Github renders the markdown so that it’s easy enough to see highlighted code and figures etc., but it still makes them seem rather external. Occasionally I would copy the complete <code>.md</code> file into a notebook post, but this divorced it of it’s original version history and associated <code>.Rmd</code> source.</p>
 <p>One option would be to move them all directly into my lab notebook, <code>.Rmd</code> files and all. This would integrate the scripts more nicely than Github’s own rendering, matching the URL and look and feel of my notebook. It would also allow for javascript elements such as MathJax equations, Google Analytics, and Disqus that are not possible when only linking to an <code>.md</code> file on Github.</p>
 <p>In the recent <a href="https://github.com/ropensci/docs">ropensci/docs</a> project we are exploring a way to have Jekyll automatically compile (potentially with caching) a site that uses <code>.Rmd</code> posts and deploy to Github all using <code>travis</code>, but we’re not quite finished and this is potentially fragile particularly with the hundreds of posts in this notebook. Besides this, the notebook structure is rather temporally oriented, (posts are chronological and reflected in my URL structure) while these scripts are largely project-oriented. (Consistent use of categories and tags would ameliorate this).</p>
 <h3 id="embedding-images-in-.rmd-outputs">Embedding images in <code>.Rmd</code> outputs</h3>
-<p>A persistent challenge has been how best to deal with images created by these scripts, some of which I may run many times. By default <code>knitr</code> creates <code>png</code> images, which as binary files are ill suited for committing to Github, and which could bloat a repository rather quickly. For a long while I have used custom hooks to push these images to <code>flickr</code>, (see <a href="http://flickr.com/cboettig">flickr.com/cboettig</a>), inserting the permanent flickr URL into the output markdown.</p>
-<p>Recently Martin Fenner convinced me that <code>svg</code> files would both render more nicely across a range of devices (being vector graphics), and could be easily committed to Github as they are text-based (XML) files, so that reproducing the same image in repeated runs wouldn’t take up any more space. We can then browse a nice version history of the any particular figure, and this also keeps all the output material together, making it easier to archive permanently (certainly nicer than my old archiving solution using data URIs.). Lastly, <code>svg</code> is both web native, being a standard namespace of HTML5, and potentially interactive, as the <a href="http://www.omegahat.org/SVGAnnotation/">SVGAnnotation</a> R package illustrates. So, lots of advantages in using <code>svg</code> graphics.</p>
+<p>A persistent challenge has been how best to deal with images created by these scripts, some of which I may run many times. By default <code>knitr</code> creates <code>png</code> images, which as binary files are ill suited for committing to Github, and which could bloat a repository rather quickly. For a long while I have used custom hooks to push these images to <code>flickr</code>, (see <a href="https://flickr.com/cboettig">flickr.com/cboettig</a>), inserting the permanent flickr URL into the output markdown.</p>
+<p>Recently Martin Fenner convinced me that <code>svg</code> files would both render more nicely across a range of devices (being vector graphics), and could be easily committed to Github as they are text-based (XML) files, so that reproducing the same image in repeated runs wouldn’t take up any more space. We can then browse a nice version history of the any particular figure, and this also keeps all the output material together, making it easier to archive permanently (certainly nicer than my old archiving solution using data URIs.). Lastly, <code>svg</code> is both web native, being a standard namespace of HTML5, and potentially interactive, as the <a href="https://www.omegahat.org/SVGAnnotation/">SVGAnnotation</a> R package illustrates. So, lots of advantages in using <code>svg</code> graphics.</p>
 <p>Using <code>svg</code> files also bring some unique challenges. Unlike when <code>png</code> files are added to Github, webpages cannot directly link them since Github enforces rendering them as text instead of an image through its choice of HTML header, for security reasons. This means the only way to link to an <code>svg</code> file on Github is to have that file on a <code>gh-pages</code> branch, where it can be rendered as a website. A distinct disadvantage of this approach is that while we can link to a specific version of any file on Github, we see only the most recent version rendered on the website created by a <code>gh-pages</code> branch.</p>
 <p>On the other hand, having the <code>svg</code> files on the <code>gh-pages</code> branch further keeps down the footprint of the project <code>master</code> branch. This leads rather naturally to the idea that the <code>.Rmd</code> files and their <code>.md</code> outputs should also appear on the <code>gh-pages</code> branch. This removes them from their awkward home in <code>inst/examples/</code>, and enables all the benefits of custom CSS, custom javascript, and custom URLs that we don’t have on Github’s rendering.</p>
 <p>To provide a consistent look and feel, I merely copied over the <code>_layouts</code> and <code>_includes</code> from my lab notebook, tweaking them slightly to use the assets already hosted there. I add custom domain name for the all my <code>gh-pages</code> as a sub-domain, <code>io.carlboettiger.info</code> <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, and now instead of having script output appear like so:</p>
 <p><a href="https://github.com/cboettig/nonparametric-bayes/blob/7dd8fc444cb9d20d839286eac8068b3099ea9b6a/inst/examples/gaussian-process-basics.md">nonparametric-bayes/inst/examples/gaussian-process-basics.md</a></p>
 <p>I have the same page rendered on my <code>io</code> sub-domain:</p>
-<p><a href="http://io.carlboettiger.info/nonparametric-bayes/gaussian-process-basics.html">io.carlboettiger.info/nonparametric-bayes/gaussian-process-basics.html</a></p>
+<p><a href="https://io.carlboettiger.info/nonparametric-bayes/gaussian-process-basics.html">io.carlboettiger.info/nonparametric-bayes/gaussian-process-basics.html</a></p>
 <p>with its mathjax, disqus, matching css, URL and nav elements.</p>
 <h2 id="landing-pages">Landing pages</h2>
 <p>An obvious extension of this approach is to grab a copy of the repository README and rename it <code>index.md</code> and add a yaml header such that it serves as a landing page for the repository. A few lines of Liquid code can then generate the links to the other output scripts, as in this example:</p>
-<p><a href="http://io.carlboettiger.info/nonparametric-bayes/">io.carlboettiger.info/nonparametric-bayes</a></p>
+<p><a href="https://io.carlboettiger.info/nonparametric-bayes/">io.carlboettiger.info/nonparametric-bayes</a></p>
 <h2 id="template">Template</h2>
-<p>I have added a <code>gh-pages</code> branch with this set up to my new <code>template</code> repository, with some more <a href="http://io.carlboettiger.info/template/README">basic documentation and examples</a>.</p>
+<p>I have added a <code>gh-pages</code> branch with this set up to my new <code>template</code> repository, with some more <a href="https://io.carlboettiger.info/template/README">basic documentation and examples</a>.</p>
 <section class="footnotes">
 <hr />
 <ol>
@@ -136,7 +136,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2014-05-07 00:00:00 +0000" 
     property="dc:created">07 May 2014</time></p>
@@ -169,15 +169,15 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#blog">#blog</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#reproducible-research">#reproducible-research</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#labnotebook">#labnotebook</a>
     </p>
@@ -207,11 +207,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -224,7 +224,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -240,7 +240,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -260,13 +260,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -284,7 +284,7 @@
       &amp;rft.date=2014-05-07
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/05/07/integrating-github-project-repos-into-the-notebook.html">
+      &amp;rft_id=https://www.carlboettiger.info/05/07/integrating-github-project-repos-into-the-notebook.html">
   </span>
 
 
@@ -301,7 +301,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -316,7 +316,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

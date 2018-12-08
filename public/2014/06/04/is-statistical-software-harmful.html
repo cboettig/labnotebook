@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Is statistical software harmful?</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Is statistical software harmful?" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2014-06-04 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2014-06-04 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/06/04/is-statistical-software-harmful.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/06/04/is-statistical-software-harmful.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -48,7 +48,7 @@
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -84,7 +84,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -107,9 +107,9 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>Ben Bolker has an excellent post on this complex issue over <a href="http://dynamicecology.wordpress.com/2014/06/04/guest-post-is-statistical-software-harmful">at Dynamic Ecology</a>, which got me thinking about writing my own thoughts on the topic in reply.</p>
+    <p>Ben Bolker has an excellent post on this complex issue over <a href="https://dynamicecology.wordpress.com/2014/06/04/guest-post-is-statistical-software-harmful">at Dynamic Ecology</a>, which got me thinking about writing my own thoughts on the topic in reply.</p>
 <hr />
-<p>Google recently announced that it will be making it’s own self-driving cars, rather than modifying those of others. <a href="http://www.automotive.com/news/1405-google-envisions-self-driving-cars-with-no-steering-wheel/">Cars that won’t have steering wheels and pedals</a>. Just a button that says “stop.” What does this tell us about the future of user-friendly complex statistical software?</p>
+<p>Google recently announced that it will be making it’s own self-driving cars, rather than modifying those of others. <a href="https://www.automotive.com/news/1405-google-envisions-self-driving-cars-with-no-steering-wheel/">Cars that won’t have steering wheels and pedals</a>. Just a button that says “stop.” What does this tell us about the future of user-friendly complex statistical software?</p>
 <p>Ben quotes prominent statisticians voicing fears that echo common concerns about self-driving cars:</p>
 <blockquote>
 <p>Andrew Gelman attributes to Brad Efron the idea that “recommending that scientists use Bayes’ theorem is like giving the neighbourhood kids the key to your F-16″.</p>
@@ -124,17 +124,17 @@
 <p>1a) One immediate corollary of (1) is that: <em>Like it or not, someone is going to build a method that is “easy to use”, e.g. remove the programming barriers.</em></p>
 <p>1b) The second corollary is that: <em>individuals with excellent understanding of the proper interpretation / statistics will frequently make mistakes in the computational implementation.</em></p>
 <p>Both mistakes will happen. And both are much more formidable problems in the complex methodology of today than when computer was a job description.</p>
-<p>So, what do we do? I think we should abandon the <a href="http://www.r-bloggers.com/what-is-correctness-for-statistical-software/">false dichotomy between “usability” and “correctness.”</a>. Just because software that is easy to use is easy to misuse, does not imply that decreasing usability increases correctness. I think that is a dangerous fallacy.</p>
+<p>So, what do we do? I think we should abandon the <a href="https://www.r-bloggers.com/what-is-correctness-for-statistical-software/">false dichotomy between “usability” and “correctness.”</a>. Just because software that is easy to use is easy to misuse, does not imply that decreasing usability increases correctness. I think that is a dangerous fallacy.</p>
 <p>A software implementation should aim first to remove the programming barriers rather than statistical knowledge barriers. Best practices such as modularity and documentation should make it easy for users and developers to understand and build upon it. I agree with Ben that software error messages are poor teachers. I agree that a tool cannot be foolproof, no tool ever has been.</p>
 <p>Someone does not misuse a piece of software merely because they do not understand it. Misuse comes from mistakenly thinking you understand it. The premise that most researchers will use something they do not understand just because it is easy to use is distasteful.</p>
-<p>Kevin Slavin gives <a href="http://www.ted.com/talks/kevin_slavin_how_algorithms_shape_our_world">a fantastic Ted talk</a> on the ubiquitous role of algorithms in today’s world. His conclusion is neither one of panacea or doom, but rather that we seek to understand and characterize them, learn their strengths and weaknesses like a naturalist studies a new species.</p>
+<p>Kevin Slavin gives <a href="https://www.ted.com/talks/kevin_slavin_how_algorithms_shape_our_world">a fantastic Ted talk</a> on the ubiquitous role of algorithms in today’s world. His conclusion is neither one of panacea or doom, but rather that we seek to understand and characterize them, learn their strengths and weaknesses like a naturalist studies a new species.</p>
 <p>More widespread adoption of software such as BUGS &amp; relatives has indeed increased the amount of misuse and false conclusions. But it has also dramatically increased awareness of issues ranging from computational aspects peculiar to particular implementations to general understanding and discourse about Bayesian methods. Like Kevin, I don’t think we can escape the algorithms, but I do think we can learn to understand and live with them.</p>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2014-06-04 00:00:00 +0000" 
     property="dc:created">04 Jun 2014</time></p>
@@ -167,11 +167,11 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2014/tags.html#blog">#blog</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2014/tags.html#R">#R</a>
     </p>
@@ -201,11 +201,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -218,7 +218,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -234,7 +234,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -254,13 +254,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -278,7 +278,7 @@
       &amp;rft.date=2014-06-04
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/06/04/is-statistical-software-harmful.html">
+      &amp;rft_id=https://www.carlboettiger.info/06/04/is-statistical-software-harmful.html">
   </span>
 
 
@@ -295,7 +295,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -310,7 +310,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

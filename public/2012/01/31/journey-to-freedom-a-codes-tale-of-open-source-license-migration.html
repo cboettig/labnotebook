@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Journey to freedom - a code's tale of open source license migration</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Journey to freedom - a code's tale of open source license migration" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2012-01-31 17:58:08 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2012-01-31 17:58:08 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/01/31/journey-to-freedom-a-codes-tale-of-open-source-license-migration.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/01/31/journey-to-freedom-a-codes-tale-of-open-source-license-migration.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -108,34 +108,34 @@
     <article>
     <p>My software wants to be free. It wants to be seen and used and loved by as many people as possible. When first it heard of open source licenses, it set sail to join the company of great software in the promised land, but finding true freedom has been a tortured journey.</p>
 <h3 id="in-the-clutches-of-the-gpl">In the clutches of the GPL</h3>
-<p>Created and defended by the <a href="http://www.fsf.org/">Free Software Foundation</a> and used by such venerable institutions as the Linux Kernel, the gcc compiler, and the R statistical environment, the <a href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU’s General Public License</a> seemed like a gold standard to call home. Many of my codes quickly migrated to this beacon of light, while others, already making use of other GPL licensed software, seemed compelled to follow by it’s viral share-alike clauses. But my code wasn’t free. It couldn’t play nicely with users from the pantheon of other open source licenses, upsetting free software developers and university tech transfer offices alike. It was scorned by open science advocates and repositories. And when it wanted to leave and migrate to a more free and permissive license, it felt trapped.</p>
-<p>By now the software was written as an R package (combining C source code and R functions), depended on several R packages, and even compiled against the <a href="http://www.gnu.org/software/gsl/">GSL C library</a>, all GPL licensed software. Surely it was stuck?</p>
+<p>Created and defended by the <a href="https://www.fsf.org/">Free Software Foundation</a> and used by such venerable institutions as the Linux Kernel, the gcc compiler, and the R statistical environment, the <a href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GNU’s General Public License</a> seemed like a gold standard to call home. Many of my codes quickly migrated to this beacon of light, while others, already making use of other GPL licensed software, seemed compelled to follow by it’s viral share-alike clauses. But my code wasn’t free. It couldn’t play nicely with users from the pantheon of other open source licenses, upsetting free software developers and university tech transfer offices alike. It was scorned by open science advocates and repositories. And when it wanted to leave and migrate to a more free and permissive license, it felt trapped.</p>
+<p>By now the software was written as an R package (combining C source code and R functions), depended on several R packages, and even compiled against the <a href="https://www.gnu.org/software/gsl/">GSL C library</a>, all GPL licensed software. Surely it was stuck?</p>
 <p>Only after close examination did the package realize that it could escape. It’s not a derivative work. It’s not distributing the other R packages or R itself. That software have to be installed separately – it is only <strong>dynamically linked</strong> ((called at runtime, not compiled into the binary libraries of my package)) to my package. The case is less obvious for the dependency of the C library on the GSL code, since this must be compiled to run. If the C functions provided by the GSL are compiled statically, they are pulled from their source and crammed into the binary next to my own code – making a derivative work that doesn’t need the GSL libraries installed separately to run. Fortunately that is not the case, these functions are also dynamically linked, and my code is free to migrate.</p>
 <h3 id="bsd-still-incompatible">BSD: still incompatible?</h3>
-<p>Fleeing the convoluted and tortured shore of GPL, my code happily reached the land of <a href="http://en.wikipedia.org/wiki/BSD_licenses">BSD</a>. In it’s forth iteration as FreeBSD, with only two simple clauses, it seemed anything was possible. The only thing it does require are that the license always be distributed with the source code or binaries of the software. This makes it difficult to apply to repositories that also archive data – facts about the world owned under anyone’s copyright – and other non-code material such as documentation that may be found in an R package or an academic data repository. For this reason, the Dryad repository objects to that little clause of redistributing the FreeBSD license, and insists on public domain declaration provided by the <a href="http://creativecommons.org/publicdomain/zero/1.0">CC0</a> license.</p>
+<p>Fleeing the convoluted and tortured shore of GPL, my code happily reached the land of <a href="https://en.wikipedia.org/wiki/BSD_licenses">BSD</a>. In it’s forth iteration as FreeBSD, with only two simple clauses, it seemed anything was possible. The only thing it does require are that the license always be distributed with the source code or binaries of the software. This makes it difficult to apply to repositories that also archive data – facts about the world owned under anyone’s copyright – and other non-code material such as documentation that may be found in an R package or an academic data repository. For this reason, the Dryad repository objects to that little clause of redistributing the FreeBSD license, and insists on public domain declaration provided by the <a href="http://creativecommons.org/publicdomain/zero/1.0">CC0</a> license.</p>
 <h3 id="cc0-free-at-last">CC0, free at last?</h3>
-<p>Ah, so we arrive at the public domain, or as <a href="http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt">close as I can legally get</a>. While this seems to be the ultimate freedom my code has long sought, it finds itself rather lonely on these foreign shores. The Open Source Initiative doesn’t yet recognize it, which means it doesn’t meet the “open source license” requirements of academic journals like <a href="http://www.ploscompbiol.org/static/guidelines.action">PLoS Computational Biology</a> or academic conferences like <a href="http://www.open-bio.org/wiki/BOSC_2012">Bioinformatics Open Source Conference</a> or iEvoBio. It has not yet been used for R packages on the CRAN repository (see below), and would require using R’s custom license file mechanism rather than a simple LICENSE: CC0 line in the package meta-data. It does get a mention for being GPL compatible by the FSF ((i.e. you can redistribute it under the GPL)), but the license that isn’t a license needs more support. Following their guidelines, I’ve written the Open Software Initiative hoping it will gain that recognition.</p>
+<p>Ah, so we arrive at the public domain, or as <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt">close as I can legally get</a>. While this seems to be the ultimate freedom my code has long sought, it finds itself rather lonely on these foreign shores. The Open Source Initiative doesn’t yet recognize it, which means it doesn’t meet the “open source license” requirements of academic journals like <a href="http://www.ploscompbiol.org/static/guidelines.action">PLoS Computational Biology</a> or academic conferences like <a href="http://www.open-bio.org/wiki/BOSC_2012">Bioinformatics Open Source Conference</a> or iEvoBio. It has not yet been used for R packages on the CRAN repository (see below), and would require using R’s custom license file mechanism rather than a simple LICENSE: CC0 line in the package meta-data. It does get a mention for being GPL compatible by the FSF ((i.e. you can redistribute it under the GPL)), but the license that isn’t a license needs more support. Following their guidelines, I’ve written the Open Software Initiative hoping it will gain that recognition.</p>
 <h2 id="will-osi-adopt-cc0">Will OSI adopt CC0?</h2>
 <blockquote>
 <p>Hello,</p>
 </blockquote>
-<p>I would like to submit the Creative Commons zero license for consideration.  I am new to this list, forgive me if it has already been considered. I understand that this license <a href="http://www.gnu.org/licenses/license-list.html#CC0">has been considered</a> GPL compatible by the FSF with this <a href="http://wiki.creativecommons.org/CC0_FAQ#May_I_apply_CC0_to_computer_software.3F_If_so.2C_is_there_a_recommended_implementation.3F">recommended format</a>.</p>
-<p>Submission type: Approval License Name: Creative Commons Zero, CC0 Category: Licenses that are popular and widely used or with strong communities The <a href="http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt">legal code as plain text</a>.</p>
-<p>The scientific community is increasingly embracing this option as the most open and compatible license.  It is required by scientific data repositories (that also archive scientific software, with cite-able DOIs) such as <a href="http://datadryad.org/depositing#whycc0">Dryad</a>.</p>
-<p>I feel it is important that this license achieve recognition by the Open Source initiative, as certain scientific journals &amp; conferences permit only OSI recognized licenses, (e.g. PLoS Computational Biology <a href="http://www.ploscompbiol.org/static/guidelines.action">requirements</a> or Bioinformatics open source conference <a href="http://www.open-bio.org/wiki/BOSC_2012">requirements</a>).</p>
+<p>I would like to submit the Creative Commons zero license for consideration.  I am new to this list, forgive me if it has already been considered. I understand that this license <a href="https://www.gnu.org/licenses/license-list.html#CC0">has been considered</a> GPL compatible by the FSF with this <a href="http://wiki.creativecommons.org/CC0_FAQ#May_I_apply_CC0_to_computer_software.3F_If_so.2C_is_there_a_recommended_implementation.3F">recommended format</a>.</p>
+<p>Submission type: Approval License Name: Creative Commons Zero, CC0 Category: Licenses that are popular and widely used or with strong communities The <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt">legal code as plain text</a>.</p>
+<p>The scientific community is increasingly embracing this option as the most open and compatible license.  It is required by scientific data repositories (that also archive scientific software, with cite-able DOIs) such as <a href="https://datadryad.org/depositing#whycc0">Dryad</a>.</p>
+<p>I feel it is important that this license achieve recognition by the Open Source initiative, as certain scientific journals &amp; conferences permit only OSI recognized licenses, (e.g. PLoS Computational Biology <a href="https://www.ploscompbiol.org/static/guidelines.action">requirements</a> or Bioinformatics open source conference <a href="http://www.open-bio.org/wiki/BOSC_2012">requirements</a>).</p>
 <h2 id="licensing-in-r">Licensing in R</h2>
 <p>R uses a simple but powerful license format in the DESCRIPTION files of all packages, which contain the essential meta-data for the package. Common FOSS licenses are recognized automatically (including version numbers or version inequalities). Since CC0 doesn’t (yet) make this list, we can use a custom license file where we provide the full plaintext CC0 license in the file LICENSE and write “file LICENSE” in the DESCRIPTION (<a href="https://github.com/cboettig/fluctuationDomains">my example</a>).</p>
 <p>We can also see the frequency with which various licenses are used on the R repository, CRAN, with a few lines of code:</p>
 <pre class="sourceCode r"><code class="sourceCode r">
 p =<span class="st"> </span><span class="kw">available.packages</span>(contrib.
-<span class="kw">url</span>(<span class="st">&quot;http://cran.r-project.org&quot;</span>), <span class="dt">type =</span> <span class="st">&quot;source&quot;</span>)
+<span class="kw">url</span>(<span class="st">&quot;https://cran.r-project.org&quot;</span>), <span class="dt">type =</span> <span class="st">&quot;source&quot;</span>)
 <span class="kw">sort</span>(<span class="kw">table</span>(p[, <span class="st">&quot;License&quot;</span>]))</code></pre>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2012-01-31 17:58:08 +0000" 
     property="dc:created">31 Jan 2012</time></p>
@@ -168,7 +168,7 @@ p =<span class="st"> </span><span class="kw">available.packages</span>(contrib.
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#blog">#blog</a>
     </p>
@@ -198,11 +198,11 @@ p =<span class="st"> </span><span class="kw">available.packages</span>(contrib.
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -215,7 +215,7 @@ p =<span class="st"> </span><span class="kw">available.packages</span>(contrib.
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -231,7 +231,7 @@ p =<span class="st"> </span><span class="kw">available.packages</span>(contrib.
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -251,13 +251,13 @@ p =<span class="st"> </span><span class="kw">available.packages</span>(contrib.
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -275,7 +275,7 @@ p =<span class="st"> </span><span class="kw">available.packages</span>(contrib.
       &amp;rft.date=2012-01-31
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/01/31/journey-to-freedom-a-codes-tale-of-open-source-license-migration.html">
+      &amp;rft_id=https://www.carlboettiger.info/01/31/journey-to-freedom-a-codes-tale-of-open-source-license-migration.html">
   </span>
 
 
@@ -292,7 +292,7 @@ p =<span class="st"> </span><span class="kw">available.packages</span>(contrib.
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -307,7 +307,7 @@ p =<span class="st"> </span><span class="kw">available.packages</span>(contrib.
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

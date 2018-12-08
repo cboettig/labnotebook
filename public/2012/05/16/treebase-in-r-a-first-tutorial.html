@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>TreeBASE in R: a first tutorial</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="TreeBASE in R: a first tutorial" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2011-05-16 19:46:54 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2011-05-16 19:46:54 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/05/16/treebase-in-r-a-first-tutorial.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/05/16/treebase-in-r-a-first-tutorial.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -107,7 +107,7 @@
   <div class="col-md-7 col-md-offset-1">
     <article>
     <p>My TreeBASE R package is essentially functional now.  Here’s a quick tutorial on the kinds of things it can do.  Grab the <a href="https://github.com/cboettig/treeBASE/archives/master">treebase package here</a>, install and load the library into R.</p>
-<p>TreeBASE provides two APIs to query the database, one which searches by the metadata associated with different publications (called <a href="http://sourceforge.net/apps/mediawiki/treebase/index.php?title=OAI-PMH">OAI-PMH</a>), and another which queries the phylogenies directly (called <a href="http://sourceforge.net/apps/mediawiki/treebase/index.php?title=API">Phylo-ws</a>).  They have somewhat redundant functions, but for our purposes the second one returns the actual data, while the first returns metadata.  A few examples will best illustrate how this all works.  We start with some queries of the metadata directly without downloading any trees.</p>
+<p>TreeBASE provides two APIs to query the database, one which searches by the metadata associated with different publications (called <a href="https://sourceforge.net/apps/mediawiki/treebase/index.php?title=OAI-PMH">OAI-PMH</a>), and another which queries the phylogenies directly (called <a href="http://sourceforge.net/apps/mediawiki/treebase/index.php?title=API">Phylo-ws</a>).  They have somewhat redundant functions, but for our purposes the second one returns the actual data, while the first returns metadata.  A few examples will best illustrate how this all works.  We start with some queries of the metadata directly without downloading any trees.</p>
 <ol type="1">
 <li><p>Trees can be downloaded with search_treebase(), using a variety of search conditions provided by Phylo-ws API.</p></li>
 <li><p>Metadata can be searched by date using search_metadata.  Just Download all metadata for finer queries.</p></li>
@@ -123,7 +123,7 @@ dates &lt;-<span class="st"> </span><span class="kw">sapply</span>(all, function
 <span class="kw">hist</span>(dates, <span class="dt">main=</span><span class="st">&quot;TreeBase growth&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Year&quot;</span>)
 </code></pre>
 <figure>
-<img src="http://farm3.staticflickr.com/2676/5711820192_95ab0fc731_o.png" />
+<img src="https://farm3.staticflickr.com/2676/5711820192_95ab0fc731_o.png" />
 </figure>
 <p>What journals have submitted the most studies to treebase?</p>
 <pre class="sourceCode r"><code class="sourceCode r">
@@ -134,7 +134,7 @@ b &lt;-<span class="st"> </span><span class="kw">barplot</span>(<span class="kw"
 <span class="kw">text</span>(b, <span class="kw">names</span>(J), <span class="dt">srt=</span><span class="dv">70</span>, <span class="dt">pos=</span><span class="dv">4</span>, <span class="dt">xpd=</span>T)
 </code></pre>
 <figure>
-<img src="http://farm6.staticflickr.com/5125/5728023288_1737290073_o.png" />
+<img src="https://farm6.staticflickr.com/5125/5728023288_1737290073_o.png" />
 </figure>
 <p>How many have been submitted from <em>Nature</em>? <em>Science</em>?</p>
 <pre class="sourceCode r"><code class="sourceCode r">
@@ -246,8 +246,8 @@ tt &lt;-<span class="st"> </span><span class="kw">drop_errors</span>(<span class
 is_yule &lt;-<span class="st"> </span><span class="kw">sapply</span>(tt, pick_branching_model)
 <span class="kw">table</span>(is_yule)</code></pre>
 <h2 id="replicating-individual-studies">Replicating individual studies</h2>
-<p>Replicating individual studies is a bit more challenging, mostly do to the quality of available data.  For instance, here is a nice recent study (Rowe <em>et. al.</em> 2011) that has nicely time calibrated chronograms (from BEAST, Figure 4) and species trees (using BEST, Figure 3), but it seems only the<a href="http://purl.org/phylo/treebase/dev/phylows/study/find?query=tb.identifier.study=10869&amp;format=rss1&amp;recordSchema=tree">Mr. Bayes tree in Figure 2 is given in TreeBASE.</a></p>
-<p>Further, replicating the study would require other data than the phylogenetic tree.  In the future we might hope that this data would appear on Dryad.  Dryad’s web-based search frustratingly does not seem to allow a simple query by doi or treebase id, and a query by title returns a long list of <a href="http://datadryad.org/discover?&amp;query=Recent+and+Rapid+Speciation+with+Limited+Morphological+Disparity+in+the+Genus+Rattus.&amp;fq=dc.title%3ARecent+and+Rapid+Speciation+with+Limited+Morphological+Disparity+in+the+Genus+Rattus.&amp;filtertype=*&amp;filter=&amp;rpp=10&amp;sort_by=score&amp;order=DESC&amp;location=l2">things that aren’t this paper</a>.</p>
+<p>Replicating individual studies is a bit more challenging, mostly do to the quality of available data.  For instance, here is a nice recent study (Rowe <em>et. al.</em> 2011) that has nicely time calibrated chronograms (from BEAST, Figure 4) and species trees (using BEST, Figure 3), but it seems only the<a href="https://purl.org/phylo/treebase/dev/phylows/study/find?query=tb.identifier.study=10869&amp;format=rss1&amp;recordSchema=tree">Mr. Bayes tree in Figure 2 is given in TreeBASE.</a></p>
+<p>Further, replicating the study would require other data than the phylogenetic tree.  In the future we might hope that this data would appear on Dryad.  Dryad’s web-based search frustratingly does not seem to allow a simple query by doi or treebase id, and a query by title returns a long list of <a href="https://datadryad.org/discover?&amp;query=Recent+and+Rapid+Speciation+with+Limited+Morphological+Disparity+in+the+Genus+Rattus.&amp;fq=dc.title%3ARecent+and+Rapid+Speciation+with+Limited+Morphological+Disparity+in+the+Genus+Rattus.&amp;filtertype=*&amp;filter=&amp;rpp=10&amp;sort_by=score&amp;order=DESC&amp;location=l2">things that aren’t this paper</a>.</p>
 <p>The Mendeley API (through my <a href="https://github.com/cboettig/RMendeley">RMendeley</a> package) does a bit better at pulling out some metadata, but not much.  Querying by the doi we can’t find the paper, but the pmid works:</p>
 <pre class="sourceCode r"><code class="sourceCode r">
 
@@ -255,18 +255,18 @@ is_yule &lt;-<span class="st"> </span><span class="kw">sapply</span>(tt, pick_br
 
 <span class="kw">details</span>(<span class="st">&quot;21239388&quot;</span>, <span class="st">&quot;pmid&quot;</span>)
 </code></pre>
-<p><a href="http://datadryad.org/handle/10255/dryad.1705">Some Dryad papers</a>have phylogenies, and the data deposition includes the BEAST xml files necessary to reproduce the phylogenies, but not, it seems, the phylogenies themselves.  It would be great to have some good examples of papers with data up on both TreeBASE and Dryad. Further, a pipeline that could regenerate the trees from the alignments might be interesting.</p>
+<p><a href="https://datadryad.org/handle/10255/dryad.1705">Some Dryad papers</a>have phylogenies, and the data deposition includes the BEAST xml files necessary to reproduce the phylogenies, but not, it seems, the phylogenies themselves.  It would be great to have some good examples of papers with data up on both TreeBASE and Dryad. Further, a pipeline that could regenerate the trees from the alignments might be interesting.</p>
 <p>RaXML for inferring branch lengths: A quick solution for trees that have only topologies would be to infer branch lengths conditional on the topology from the character matrix.  TreeBASE does not include this with the nexus file containing the tree, and would require a separate query to pull the character matrix.  This is handled in the read.nexus.data command.</p>
 <h2 id="references">References</h2>
 <ul>
-<li>Rowe K, Aplin K, Baverstock P and Moritz C (2011). “Recent And Rapid Speciation With Limited Morphological Disparity in The Genus Rattus.” <em>Systematic Biology</em>, <strong>60</strong>. ISSN 1063-5157, <a href="http://dx.doi.org/10.1093/sysbio/syq092">http://dx.doi.org/10.1093/sysbio/syq092</a>.</li>
+<li>Rowe K, Aplin K, Baverstock P and Moritz C (2011). “Recent And Rapid Speciation With Limited Morphological Disparity in The Genus Rattus.” <em>Systematic Biology</em>, <strong>60</strong>. ISSN 1063-5157, <a href="https://dx.doi.org/10.1093/sysbio/syq092">http://dx.doi.org/10.1093/sysbio/syq092</a>.</li>
 </ul>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2011-05-16 19:46:54 +0000" 
     property="dc:created">16 May 2011</time></p>
@@ -299,11 +299,11 @@ is_yule &lt;-<span class="st"> </span><span class="kw">sapply</span>(tt, pick_br
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#R">#R</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#ropensci">#ropensci</a>
     </p>
@@ -333,11 +333,11 @@ is_yule &lt;-<span class="st"> </span><span class="kw">sapply</span>(tt, pick_br
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -350,7 +350,7 @@ is_yule &lt;-<span class="st"> </span><span class="kw">sapply</span>(tt, pick_br
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -366,7 +366,7 @@ is_yule &lt;-<span class="st"> </span><span class="kw">sapply</span>(tt, pick_br
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -386,13 +386,13 @@ is_yule &lt;-<span class="st"> </span><span class="kw">sapply</span>(tt, pick_br
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -410,7 +410,7 @@ is_yule &lt;-<span class="st"> </span><span class="kw">sapply</span>(tt, pick_br
       &amp;rft.date=2011-05-16
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/05/16/treebase-in-r-a-first-tutorial.html">
+      &amp;rft_id=https://www.carlboettiger.info/05/16/treebase-in-r-a-first-tutorial.html">
   </span>
 
 
@@ -427,7 +427,7 @@ is_yule &lt;-<span class="st"> </span><span class="kw">sapply</span>(tt, pick_br
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -442,7 +442,7 @@ is_yule &lt;-<span class="st"> </span><span class="kw">sapply</span>(tt, pick_br
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

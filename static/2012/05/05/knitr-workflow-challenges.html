@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Deep challenges to dynamic documentation in daily workflows</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Deep challenges to dynamic documentation in daily workflows" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2014-05-05 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2014-05-05 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/05/05/knitr-workflow-challenges.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/05/05/knitr-workflow-challenges.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -109,7 +109,7 @@
     <p>We often discuss dynamic documents such as <code>Sweave</code> and <code>knitr</code> in reference to final products such as publications or software package vignettes. In this case, all the elements involved are already fixed: external functions, code, text, and so forth. The dynamic documentation engine is really just a tool to combine them (knit them together). Using dynamic documentation on a day-to-day basis on ongoing research presents a compelling opportunity but a rather more complex challenge as well. The code base grows, some of it gets turned into external custom functions where it continues to change. One analysis script branches into multiple that vary this or that. The text and figures are likewise subject to the same revision as the code, expanding and contracting, or being removed or shunted off into an appendix.</p>
 <p>Structuring a dynamic document when all the parts are morphing and moving is one of the major opportunities for the dynamic approach, but also the most challenging. Here I describe some of those challenges along with various tricks I have adopted to deal with them, mostly in hopes that someone with a better strategy might be inspired to fill me in.</p>
 <h2 id="the-old-way">The old way</h2>
-<p>For a while now I have been using the <a href="http://yihui.name/knitr">knitr</a> dynamic documentation/reproducible research software for my project workflow. Most discussion of dynamic documentation focuses on ‘finished’ products such as journal articles or reports. Over the past year, I have found the dynamic documentation framework to be particularly useful as I develop ideas, and remarkably more challenging to then integrate into a final paper in a way that really takes advantage of its features. I explain both in some detail here.</p>
+<p>For a while now I have been using the <a href="https://yihui.name/knitr">knitr</a> dynamic documentation/reproducible research software for my project workflow. Most discussion of dynamic documentation focuses on ‘finished’ products such as journal articles or reports. Over the past year, I have found the dynamic documentation framework to be particularly useful as I develop ideas, and remarkably more challenging to then integrate into a final paper in a way that really takes advantage of its features. I explain both in some detail here.</p>
 <p>My former workflow followed a pattern no doubt familiar to many:</p>
 <ul>
 <li>Bash away in an R terminal, paste useful bits into an R script…</li>
@@ -155,7 +155,7 @@
 <h2 id="problem-4-branching-into-other-projects">Problem 4: Branching into other projects</h2>
 <p>Things get most complicated when projects begin to branch into other projects. In an ideal world this is simple: a new idea can be explored on a new branch of the version control system and merged back in when necessary, and an entirely new project can be built as a new R package in a different repo that depends on the existing project. After several examples of each, I have learned that it is not so simple. Despite the nice tools, I’ve learned I still need to be careful in managing my workflows in order to leave behind material that is understandable, reproducible, and reflects clear provenance. So far, I’ve learned this the hard way. I use this last section of the post to reflect on two of my own examples, as writing this helps me work through what I should have done differently.</p>
 <h3 id="example-warning-signals-project">example: warning-signals project</h3>
-<p>For instance, my work on early warning signals dates back to the start of my <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Stochastic_Population_Dynamics/2010/02/09">open notebook on openwetware</a>, when my code lived on a Google code page which seems to have disappeared. (At the time it was part of my ‘stochastic population dynamics’ project). When I moved to Github, this project got it’s own repository, <a href="https://github.com/cboettig/warningsignals">warningsignals</a>, though after a major re-factorization of the code I moved to a new repository, <a href="https://github.com/cboettig/earlywarning">earlywarning</a>. Okay, so far that was due to me not really knowing what I was doing.</p>
+<p>For instance, my work on early warning signals dates back to the start of my <a href="https://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Stochastic_Population_Dynamics/2010/02/09">open notebook on openwetware</a>, when my code lived on a Google code page which seems to have disappeared. (At the time it was part of my ‘stochastic population dynamics’ project). When I moved to Github, this project got it’s own repository, <a href="https://github.com/cboettig/warningsignals">warningsignals</a>, though after a major re-factorization of the code I moved to a new repository, <a href="https://github.com/cboettig/earlywarning">earlywarning</a>. Okay, so far that was due to me not really knowing what I was doing.</p>
 <p>My first paper on this topic was based on the master branch of that repository, which still contains the code required. When one of the R dependencies was moved from CRAN I was able to update the codebase to reflect the replacement package (see issue <a href="https://github.com/cboettig/earlywarning/issues/10">#10</a>). Even before that paper appeared I started exploring other issues on different <a href="https://github.com/cboettig/earlywarning/network">branches</a>, with the <code>prosecutor</code> branch eventually becoming it’s own paper, and then it’s <a href="https://github.com/cboettig/prosecutors-fallacy/">own repository</a>.</p>
 <p>That paper sparked a comment letter in response to it, and the analysis involved in my reply piece was just developed on the same master branch of the prosecutor-fallacy repository. This leaves me with a total of three repositories across four branches, with one repo that corresponds more-or-less directly to a paper, one to two papers, and one to no papers.</p>
 <p>All four branches have diverged and unmerge-able code. Despite sharing and reusing functions across these projects, I often found it better to simply change the function on the new branch or new repo as I desired for the new work. These changes could not be easily merged back as they broke the original function calls of the earlier work.</p>
@@ -174,7 +174,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2014-05-05 00:00:00 +0000" 
     property="dc:created">05 May 2014</time></p>
@@ -207,19 +207,19 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#blog">#blog</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#open-science">#open-science</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#workflow">#workflow</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#R">#R</a>
     </p>
@@ -249,11 +249,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -266,7 +266,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -282,7 +282,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -302,13 +302,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -326,7 +326,7 @@
       &amp;rft.date=2014-05-05
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/05/05/knitr-workflow-challenges.html">
+      &amp;rft_id=https://www.carlboettiger.info/05/05/knitr-workflow-challenges.html">
   </span>
 
 
@@ -343,7 +343,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -358,7 +358,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

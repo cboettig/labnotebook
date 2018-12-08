@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Spatial Warning Signals, power, etc</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Spatial Warning Signals, power, etc" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2010-10-21 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2010-10-21 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/10/21/spatial-warning-signals-power-etc.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/10/21/spatial-warning-signals-power-etc.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -106,22 +106,22 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>Noam gave an interesting presentation in our lab today, prompted me to do a little experimentation.  Weakening stability across a set of coupled patches should result in increased autocorrelation.  Decided to test this with a little visualization with help of <a href="http://github.com/cboettig/structured-populations/blob/6f2393b74b60ddc090c18c617a1134ee313cd667/demos/noam.R">a quick R script</a>.  <img src="http://farm2.static.flickr.com/1069/5101483914_5ee14d6b3e_b.jpg" /></p>
+    <p>Noam gave an interesting presentation in our lab today, prompted me to do a little experimentation.  Weakening stability across a set of coupled patches should result in increased autocorrelation.  Decided to test this with a little visualization with help of <a href="https://github.com/cboettig/structured-populations/blob/6f2393b74b60ddc090c18c617a1134ee313cd667/demos/noam.R">a quick R script</a>.  <img src="http://farm2.static.flickr.com/1069/5101483914_5ee14d6b3e_b.jpg" /></p>
 <p>Time progresses across the x-axis, 1-D space (on S1) across the y-axis.  Each patch suffers a slow loss of stability, resulting in a clearly visible increase in autocorrelation.</p>
 <h3 id="power-in-warning-signals">Power in Warning Signals</h3>
-<p>Meanwhile, returning to my work with power in warning signals. Working on a more complete analytical description of the underlying saddle node bifurcation in the example to justify having the “true” underlying model. First, a quick script for the (larger) analytic equilibrium as a function of the bifurcation parameter. From this we can calculate the change in the eigenvalue at the equilibrium as we approach the bifurcation: (<a href="http://github.com/cboettig/structured-populations/blob/e1f910f752f8edcdb0220703b972a107e169fb87/demos/saddle_analytics.R">code here: saddle_analytics.R</a>)</p>
+<p>Meanwhile, returning to my work with power in warning signals. Working on a more complete analytical description of the underlying saddle node bifurcation in the example to justify having the “true” underlying model. First, a quick script for the (larger) analytic equilibrium as a function of the bifurcation parameter. From this we can calculate the change in the eigenvalue at the equilibrium as we approach the bifurcation: (<a href="https://github.com/cboettig/structured-populations/blob/e1f910f752f8edcdb0220703b972a107e169fb87/demos/saddle_analytics.R">code here: saddle_analytics.R</a>)</p>
 <figure>
-<img src="http://farm5.staticflickr.com/4089/5101650050_2cc9530a89_o.png" />
+<img src="https://farm5.staticflickr.com/4089/5101650050_2cc9530a89_o.png" />
 </figure>
 <p>Note that the eigenvalue lambda is evaluated at the fixed point in each case, and over sufficient range in the bifurcation parameter, the change is non-linear. The bifurcation seems to happen at about <span class="math">\(a=174\)</span>, corresponding to an equilibrium population of <span class="math">\(\hat x = 525\)</span>. lambda doesn’t depend on the bifurcation parameter <span class="math">\[a\]</span> except through the value of <span class="math">\(\hat x\)</span>; Unfortunately closed form expressions for <span class="math">\(\frac{e K x^2}{h^2+x^2}-e x - a = 0\)</span> aren’t particularly manageable. The jump in <span class="math">\(\hat x\)</span> which results in a jump in lambda is the result of the numerical minimizer starting to grab the other root – of course lambda should in fact pass smoothly through zero, triggering the bifurcation.</p>
 <h3 id="and-in-the-literature">and in the literature…</h3>
-<p>Just noticed an<a href="http://ff.im/-soIrK">intriguing paper by R. M. Bailey</a> on warning signals applied to a spatial simulation (cellular automata model). Appears to focus on classical indicators methods, without discussion of statistical inference or spatially based warning signals. Also, the bifurcation model is unclear to me, seems that some effects are rather related to changing the timescale (effectively the birth rate in this case?) of the model, not necessarily the stability. The need for non-dimensionalization strikes again. Finally, the question of perturbations into alternative stable states continues to be blended into discussions about critical slowing down and bifurcations. While the latter makes the former more likely, the rather different mechanisms by which each drives change seem conflated.</p>
+<p>Just noticed an<a href="https://ff.im/-soIrK">intriguing paper by R. M. Bailey</a> on warning signals applied to a spatial simulation (cellular automata model). Appears to focus on classical indicators methods, without discussion of statistical inference or spatially based warning signals. Also, the bifurcation model is unclear to me, seems that some effects are rather related to changing the timescale (effectively the birth rate in this case?) of the model, not necessarily the stability. The need for non-dimensionalization strikes again. Finally, the question of perturbations into alternative stable states continues to be blended into discussions about critical slowing down and bifurcations. While the latter makes the former more likely, the rather different mechanisms by which each drives change seem conflated.</p>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2010-10-21 00:00:00 +0000" 
     property="dc:created">21 Oct 2010</time></p>
@@ -154,7 +154,7 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#warning-signals">#warning-signals</a>
     </p>
@@ -184,11 +184,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -201,7 +201,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -217,7 +217,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -237,13 +237,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -261,7 +261,7 @@
       &amp;rft.date=2010-10-21
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/10/21/spatial-warning-signals-power-etc.html">
+      &amp;rft_id=https://www.carlboettiger.info/10/21/spatial-warning-signals-power-etc.html">
   </span>
 
 
@@ -278,7 +278,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -293,7 +293,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

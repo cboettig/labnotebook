@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Notes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Notes" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2013-05-14 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2013-05-14 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/05/14/notes.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/05/14/notes.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -142,7 +142,7 @@ cbPalette &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="s
 <span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(time, value, <span class="dt">col=</span>variable)) +
 <span class="st">    </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey) </code></pre>
 <figure>
-<img src="http://farm8.staticflickr.com/7294/8743766846_a5d6b20f15_o.png" />
+<img src="https://farm8.staticflickr.com/7294/8743766846_a5d6b20f15_o.png" />
 </figure>
 <h2 id="posterior-predictive-curves">Posterior predictive curves</h2>
 <p>This shows only the mean predictions. For the Bayesian cases, we can instead loop over the posteriors of the parameters (or samples from the GP posterior) to get the distribution of such curves in each case.</p>
@@ -178,14 +178,14 @@ df_post &lt;-<span class="st"> </span><span class="kw">step_ahead_posteriors</sp
 <span class="st">  </span><span class="kw">facet_wrap</span>(~variable) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey, <span class="dt">guide =</span> <span class="kw">guide_legend</span>(<span class="dt">override.aes =</span> <span class="kw">list</span>(<span class="dt">alpha =</span> <span class="dv">1</span>))) </code></pre>
 <figure>
-<img src="http://farm8.staticflickr.com/7290/8742650211_92d087672b_o.png" />
+<img src="https://farm8.staticflickr.com/7290/8742650211_92d087672b_o.png" />
 </figure>
 <p>alternately, try the plot without facets</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(df_post) +<span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(time, stock)) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(time, value, <span class="dt">col=</span>variable, <span class="dt">group=</span><span class="kw">interaction</span>(L1,variable)), <span class="dt">alpha=</span>.<span class="dv">1</span>) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey, <span class="dt">guide =</span> <span class="kw">guide_legend</span>(<span class="dt">override.aes =</span> <span class="kw">list</span>(<span class="dt">alpha =</span> <span class="dv">1</span>))) </code></pre>
 <figure>
-<img src="http://farm8.staticflickr.com/7284/8743767710_17a0bc6428_o.png" />
+<img src="https://farm8.staticflickr.com/7284/8743767710_17a0bc6428_o.png" />
 </figure>
 <h2 id="performance-on-data-outside-of-observations">Performance on data outside of observations</h2>
 <p>Of course it is hardly suprising that all models do reasonably well on the data on which they were trained. A crux of the problem is the model performance on data outside the observed range. (Though we might also wish to repeat the above plot on data in the observed range but a different sequence from the observed data).</p>
@@ -203,7 +203,7 @@ for(t in <span class="dv">1</span>:(Tobs<span class="dv">-1</span>))
 <span class="st">  </span><span class="kw">facet_wrap</span>(~variable) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey, <span class="dt">guide =</span> <span class="kw">guide_legend</span>(<span class="dt">override.aes =</span> <span class="kw">list</span>(<span class="dt">alpha =</span> <span class="dv">1</span>))) </code></pre>
 <figure>
-<img src="http://farm8.staticflickr.com/7282/8742650625_efd126ef62_o.png" />
+<img src="https://farm8.staticflickr.com/7282/8742650625_efd126ef62_o.png" />
 </figure>
 <p>Note that the GP is doing remarkably well even outside the observed range, though with greater uncertainty as well. Other models tend to be overly optimistic, often predicting an increase instead of a decline, hence the many trajectories that continually float above the data.</p>
 <h2 id="forecast-distributions">Forecast Distributions</h2>
@@ -253,7 +253,7 @@ i =<span class="st"> </span><span class="dv">15</span></code></pre>
 <span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free_y&quot;</span>, <span class="dt">ncol=</span><span class="dv">2</span>) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey) </code></pre>
 <figure>
-<img src="http://farm8.staticflickr.com/7283/8743768066_ae4cb1a63d_o.png" alt="plot of chunk unnamed-chunk-10" /><figcaption>plot of chunk unnamed-chunk-10</figcaption>
+<img src="https://farm8.staticflickr.com/7283/8743768066_ae4cb1a63d_o.png" alt="plot of chunk unnamed-chunk-10" /><figcaption>plot of chunk unnamed-chunk-10</figcaption>
 </figure>
 <p>We can compare to a better starting stock,</p>
 <pre class="sourceCode r"><code class="sourceCode r">i&lt;-<span class="dv">30</span></code></pre>
@@ -265,12 +265,12 @@ i =<span class="st"> </span><span class="dv">15</span></code></pre>
 <span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free_y&quot;</span>, <span class="dt">ncol=</span><span class="dv">2</span>) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey) </code></pre>
 <figure>
-<img src="http://farm8.staticflickr.com/7289/8743768174_106af587ce_o.png" />
+<img src="https://farm8.staticflickr.com/7289/8743768174_106af587ce_o.png" />
 </figure>
 <p>Note the greater uncertainty in both the positive and negative outcomes under the parametric Bayesian models (of correct and incorrect structure).</p>
 <h2 id="misc-reading">Misc reading</h2>
 <p>Apparently I am catching up on my C. Titus Brown reading… Achiving comments for my records &amp; to keep them in my local search index.</p>
-<p><a href="http://ivory.idyll.org/blog/blog-practicing-open-science.html">Titus Brown on if he really practices Open Science?</a></p>
+<p><a href="https://ivory.idyll.org/blog/blog-practicing-open-science.html">Titus Brown on if he really practices Open Science?</a></p>
 <p>Methinks:</p>
 <blockquote>
 <p>I think you undersell your Github practices regarding Open Science. While I agree entirely that anyone reading through your source-code to scoop you is incredibly unlikely; I imagine many researchers would still fear the practice of using a public, Google-indexed repository, particularly if they also practice reasonable literate programming documentation, provide test cases, and use issue tracking that could allow some close rival to scoop them.</p>
@@ -281,8 +281,8 @@ i =<span class="st"> </span><span class="dv">15</span></code></pre>
 <blockquote>
 <p>Meanwhile, I think suggesting that being open prematurely would “waste other people’s time, energy, and attention” is misleading and damaging here. Sure, I understand you mean that marketing unfinished results (blog, tweet, present at conferences) would do these things, but when the same reason is frequently given for not sharing data, code, etc this becomes very damaging. Some people may find it useful to blog/tweet/present unfinished work (with appropriate disclaimer) to get feedback, build audience, or for all the same reasons one would do so with published work, but to me that is really just a question of timing &amp; marketing, not a question of “openness”.</p>
 </blockquote>
-<p><a href="http://ivory.idyll.org/blog/research-software-reuse.html">On Research Software Reuse</a></p>
-<p><a href="http://ivory.idyll.org/blog/the-cost-of-open-science.html">On the Costs of Open Science</a>, which I refute:</p>
+<p><a href="https://ivory.idyll.org/blog/research-software-reuse.html">On Research Software Reuse</a></p>
+<p><a href="https://ivory.idyll.org/blog/the-cost-of-open-science.html">On the Costs of Open Science</a>, which I refute:</p>
 <blockquote>
 <p>Great post and important question. I certainly agree that it is all about incentives, but I think an important missing part of that discussion is in the timescales. Certainly there is a cost to not writing up the low-lying fruit following up on your work, but surely such exercises would take non-trivial time away from doing whatever (presumably more interesting) stuff you did instead. Perhaps the it is the benefits, not the costs, that are hidden:</p>
 </blockquote>
@@ -297,14 +297,14 @@ i =<span class="st"> </span><span class="dv">15</span></code></pre>
 </blockquote>
 <ul>
 <li><p><a href="https://gist.github.com/hadley/5576263">Partial implementation of R to Latex equation converter</a> from <span class="citation" data-cites="hadleywickam">@hadleywickam</span>.</p></li>
-<li><p>Ah ha! <a href="http://stackoverflow.com/questions/14041601/documenting-equations-with-deqn-and-roxygen">Documenting equations in ROxygen</a>. Guess one day I (or devtools) will move to Roxygen3.</p></li>
+<li><p>Ah ha! <a href="https://stackoverflow.com/questions/14041601/documenting-equations-with-deqn-and-roxygen">Documenting equations in ROxygen</a>. Guess one day I (or devtools) will move to Roxygen3.</p></li>
 </ul>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2013-05-14 00:00:00 +0000" 
     property="dc:created">14 May 2013</time></p>
@@ -337,7 +337,7 @@ i =<span class="st"> </span><span class="dv">15</span></code></pre>
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2013/tags.html#nonparametric-bayes">#nonparametric-bayes</a>
     </p>
@@ -370,11 +370,11 @@ i =<span class="st"> </span><span class="dv">15</span></code></pre>
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -387,7 +387,7 @@ i =<span class="st"> </span><span class="dv">15</span></code></pre>
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -403,7 +403,7 @@ i =<span class="st"> </span><span class="dv">15</span></code></pre>
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -423,13 +423,13 @@ i =<span class="st"> </span><span class="dv">15</span></code></pre>
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -447,7 +447,7 @@ i =<span class="st"> </span><span class="dv">15</span></code></pre>
       &amp;rft.date=2013-05-14
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/05/14/notes.html">
+      &amp;rft_id=https://www.carlboettiger.info/05/14/notes.html">
   </span>
 
 
@@ -464,7 +464,7 @@ i =<span class="st"> </span><span class="dv">15</span></code></pre>
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -479,7 +479,7 @@ i =<span class="st"> </span><span class="dv">15</span></code></pre>
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

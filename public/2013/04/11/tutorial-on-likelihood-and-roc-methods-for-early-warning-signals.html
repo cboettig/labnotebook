@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Tutorial On Likelihood And Roc Methods For Early Warning Signals</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Tutorial On Likelihood And Roc Methods For Early Warning Signals" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2013-04-11 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2013-04-11 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/04/11/tutorial-on-likelihood-and-roc-methods-for-early-warning-signals.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/04/11/tutorial-on-likelihood-and-roc-methods-for-early-warning-signals.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -109,7 +109,7 @@
     <p>In this tutorial we walk through how to use the likelihood-based approach of <span class="showtooltip" title="Boettiger C and Hastings A (2012). Quantifying Limits to
 Detection of Early Warning For Critical Transitions. _Journal of
 The Royal Society Interface_, *9*, pp. 2527-2539. ISSN 1742-5689,
- http://dx.doi.org/10.1098/rsif.2012.0125."><a href="http://dx.doi.org/10.1098/rsif.2012.0125" rel="http://purl.org/spar/cito/usesMethodFrom" >Boettiger &amp; Hastings (2012)</a></span> to provide an early warning signal for a critical transition, and how to generate ROC curves discussed in the same paper for comparing different early warning signals. Context and details about the methodology are presented in the paper; here we focus on using the methodology provided in the accompanying R package. All of the examples shown here can be reproduced by pasting the code provided into an R terminal. We will need the following libraries to run this example. If you don’t have them, they can be installed from CRAN using the <code>install.packages</code> function.</p>
+ https://dx.doi.org/10.1098/rsif.2012.0125."><a href="http://dx.doi.org/10.1098/rsif.2012.0125" rel="http://purl.org/spar/cito/usesMethodFrom" >Boettiger &amp; Hastings (2012)</a></span> to provide an early warning signal for a critical transition, and how to generate ROC curves discussed in the same paper for comparing different early warning signals. Context and details about the methodology are presented in the paper; here we focus on using the methodology provided in the accompanying R package. All of the examples shown here can be reproduced by pasting the code provided into an R terminal. We will need the following libraries to run this example. If you don’t have them, they can be installed from CRAN using the <code>install.packages</code> function.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 <span class="kw">library</span>(reshape2)
 <span class="kw">library</span>(multicore)
@@ -121,7 +121,7 @@ The Royal Society Interface_, *9*, pp. 2527-2539. ISSN 1742-5689,
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(<span class="st">&quot;ibms&quot;</span>)
 <span class="kw">plot</span>(ibm_critical, <span class="dt">type=</span><span class="st">&quot;b&quot;</span>)</code></pre>
 <figure>
-<img src="http://farm9.staticflickr.com/8261/8641108753_956f179a1d_o.png" />
+<img src="https://farm9.staticflickr.com/8261/8641108753_956f179a1d_o.png" />
 </figure>
 <p>Fit both models to the original data, record the observed likelihood ratio of the original data</p>
 <pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span><span class="kw">stability_model</span>(ibm_critical, <span class="st">&quot;OU&quot;</span>)
@@ -144,13 +144,13 @@ reps &lt;-<span class="st"> </span><span class="kw">mclapply</span>(<span class=
 <p>We use this data to generate the overlapping distributions shown in Boettiger &amp; Hastings, (2012),</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(lr) +<span class="st"> </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(value, <span class="dt">fill=</span>simulation), <span class="dt">alpha=</span><span class="fl">0.6</span>) +<span class="st"> </span><span class="kw">geom_vline</span>(<span class="kw">aes</span>(<span class="dt">xintercept=</span>observed))</code></pre>
 <figure>
-<img src="http://farm9.staticflickr.com/8245/8642325058_d70eaee962_o.png" />
+<img src="https://farm9.staticflickr.com/8245/8642325058_d70eaee962_o.png" />
 </figure>
 <p>A second helper function generates the ROC curve from the likelihood ratio data, providing an alternative way to visualize this overlap:</p>
 <pre class="sourceCode r"><code class="sourceCode r">roc &lt;-<span class="st"> </span><span class="kw">roc_data</span>(lr)
 <span class="kw">ggplot</span>(roc) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(False.positives, True.positives))</code></pre>
 <figure>
-<img src="http://farm9.staticflickr.com/8402/8641224925_83a045afbb_o.png" />
+<img src="https://farm9.staticflickr.com/8402/8641224925_83a045afbb_o.png" />
 </figure>
 <p>ROC curves are particularly useful in comparing the power of a variety of approaches. For instance, we can compare the performance of the likelihood-based signal shown above to the traditional approach of using a correlation coefficient to detect the increase in some summary statistic such as variance or autocorrelation. To obtain replicates, we will still simulate under the null (OU) and test (LSN) models estimated above, but instead of computing the likelihood of these data, we will estimate the commonly used rank correlation coefficient, Kendall’s tau, to quantify the increase in variance, autcorrelation, and skew observed in a moving window over the data.</p>
 <pre class="sourceCode r"><code class="sourceCode r">var &lt;-<span class="st"> </span><span class="kw">bootstrap_trend</span>(ibm_critical, window_var, <span class="dt">method=</span><span class="st">&quot;kendall&quot;</span>, <span class="dt">rep=</span><span class="dv">200</span>)
@@ -159,23 +159,23 @@ skew &lt;-<span class="st"> </span><span class="kw">bootstrap_trend</span>(ibm_c
 <p>These data are formatted like the likeihood ratio data above, only that the statistic is now Kendall’s tau.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(var) +<span class="st"> </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(value, <span class="dt">fill=</span>simulation), <span class="dt">alpha=</span><span class="fl">0.6</span>) +<span class="st"> </span><span class="kw">geom_vline</span>(<span class="kw">aes</span>(<span class="dt">xintercept=</span>observed))</code></pre>
 <figure>
-<img src="http://farm9.staticflickr.com/8265/8642341382_1d87080d5c_o.png" />
+<img src="https://farm9.staticflickr.com/8265/8642341382_1d87080d5c_o.png" />
 </figure>
 <p>We can combine the data for the ROC curves of each indicator to compare:</p>
 <pre class="sourceCode r"><code class="sourceCode r">indicators &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="kw">list</span>(<span class="dt">var =</span> <span class="kw">roc_data</span>(var), <span class="dt">acor =</span> <span class="kw">roc_data</span>(acor), <span class="dt">skew =</span> <span class="kw">roc_data</span>(skew), <span class="dt">lr =</span> roc), <span class="dt">id =</span> <span class="kw">c</span>(<span class="st">&quot;Threshold&quot;</span>, <span class="st">&quot;False.positives&quot;</span>, <span class="st">&quot;True.positives&quot;</span>))
 <span class="kw">ggplot</span>(indicators) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(False.positives, True.positives, <span class="dt">color=</span>L1)) </code></pre>
 <figure>
-<img src="http://farm9.staticflickr.com/8122/8641241253_4c3704523e_o.png" />
+<img src="https://farm9.staticflickr.com/8122/8641241253_4c3704523e_o.png" />
 </figure>
 <ul>
-<li>C. Boettiger, A. Hastings, (2012) Quantifying Limits to Detection of Early Warning For Critical Transitions. <em>Journal of The Royal Society Interface</em> <strong>9</strong> 2527-2539 <a href="http://dx.doi.org/10.1098/rsif.2012.0125">10.1098/rsif.2012.0125</a></li>
+<li>C. Boettiger, A. Hastings, (2012) Quantifying Limits to Detection of Early Warning For Critical Transitions. <em>Journal of The Royal Society Interface</em> <strong>9</strong> 2527-2539 <a href="https://dx.doi.org/10.1098/rsif.2012.0125">10.1098/rsif.2012.0125</a></li>
 </ul>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2013-04-11 00:00:00 +0000" 
     property="dc:created">11 Apr 2013</time></p>
@@ -208,7 +208,7 @@ skew &lt;-<span class="st"> </span><span class="kw">bootstrap_trend</span>(ibm_c
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2013/tags.html#warning-signals">#warning-signals</a>
     </p>
@@ -241,11 +241,11 @@ skew &lt;-<span class="st"> </span><span class="kw">bootstrap_trend</span>(ibm_c
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -258,7 +258,7 @@ skew &lt;-<span class="st"> </span><span class="kw">bootstrap_trend</span>(ibm_c
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -274,7 +274,7 @@ skew &lt;-<span class="st"> </span><span class="kw">bootstrap_trend</span>(ibm_c
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -294,13 +294,13 @@ skew &lt;-<span class="st"> </span><span class="kw">bootstrap_trend</span>(ibm_c
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -318,7 +318,7 @@ skew &lt;-<span class="st"> </span><span class="kw">bootstrap_trend</span>(ibm_c
       &amp;rft.date=2013-04-11
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/04/11/tutorial-on-likelihood-and-roc-methods-for-early-warning-signals.html">
+      &amp;rft_id=https://www.carlboettiger.info/04/11/tutorial-on-likelihood-and-roc-methods-for-early-warning-signals.html">
   </span>
 
 
@@ -335,7 +335,7 @@ skew &lt;-<span class="st"> </span><span class="kw">bootstrap_trend</span>(ibm_c
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -350,7 +350,7 @@ skew &lt;-<span class="st"> </span><span class="kw">bootstrap_trend</span>(ibm_c
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

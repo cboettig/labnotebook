@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Correcting for the mean dynamics</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Correcting for the mean dynamics" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2010-10-26 16:46:24 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2010-10-26 16:46:24 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/10/26/correcting-for-the-mean-dynamics.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/10/26/correcting-for-the-mean-dynamics.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -113,11 +113,11 @@
 <li><p>Third, certain dynamics need not give much warning, even though they consist of saddle-node bifurcations.  By changing the curvature of the rate model we can examples with more and less advanced warning.  In some cases the change can happen fast enough that noise forces the system over the edge without warning.</p></li>
 </ul>
 <p>With changing mean:</p>
-<embed src="http://www.carlboettiger.info/assets/files/bifur.swf" width=300 height=300>
+<embed src="https://www.carlboettiger.info/assets/files/bifur.swf" width=300 height=300>
 <p>With “constant” mean:</p>
-<embed src="http://www.carlboettiger.info/assets/files/bifur_mean_const.swf" width=300 height=300>
+<embed src="https://www.carlboettiger.info/assets/files/bifur_mean_const.swf" width=300 height=300>
 <p>Note that the mean changes quite suddenly at the end, though the loss of stability is more pronounced much earlier on.  (Images are is now sfw-flash objects instead of gif loops so can be paused, etc by right click. Hosted locally in this site’s media library as flickr stream doesn’t support flash.)</p>
-<p><a href="http://github.com/cboettig/structured-populations/blob/39a295ae0e3bde82af6800f8cf87f61f74726979/demos/saddle_analytics.R">Code archive for these figures;</a> uses the animation package and SWF tools to create the flash images.  Multiple root finding (a problem in the numerical examples earlier which used nlm) supported now by rootSolve package.</p>
+<p><a href="https://github.com/cboettig/structured-populations/blob/39a295ae0e3bde82af6800f8cf87f61f74726979/demos/saddle_analytics.R">Code archive for these figures;</a> uses the animation package and SWF tools to create the flash images.  Multiple root finding (a problem in the numerical examples earlier which used nlm) supported now by rootSolve package.</p>
 <h3 id="so-what-does-this-mean">So what does this mean?</h3>
 <p>Ignoring mean rate of change will be misleading, but a linear approximation to the rate of change doesn’t capture the second model well right near the switch point. Over most of the parameter range this can be ignored, with the rate estimated as essentially flat for this model. It is the corrections to the variance due to changes in the expected value that are more challenging. It is in this example that estimating the return rate, critical slowing down, will be more promising. The explicit analytics might help us further here:</p>
 <p>Starting from the expansion of the master equation and taking the linear noise approximation, we can express the dynamics in Ito form:</p>
@@ -129,11 +129,11 @@
 <p>and can write the correlation function: <span class="math">\[ \langle\langle X_0 X_t \rangle \rangle = \sigma^2(\hat x) e^{-\alpha(\hat x) t} \]</span></p>
 <p>It is precisely this <span class="math">\(\alpha(\hat x)\)</span> that we wish to estimate. Now it changes due to changes in <span class="math">\(\hat x\)</span> as well as changes in the bifurcation parameter, <span class="math">\(a\)</span>, which of course also influences <span class="math">\(\hat x\)</span> directly. So we want to rewrite this as a function of the bifurcation parameter alone:</p>
 <p><span class="math">\[ \partial_x  \left[b(x,a) - d(x,a)\right]_{x = \hat x(a)} =: f(a) \]</span></p>
-<p>A little tired of LaTeX writing, I  approximate <span class="math">\(\alpha(a)|_{\hat x}\)</span>,  the slope at equilibrium as a function of the bifurcation parameter. Going astray: <a href="http://www.flickr.com/photos/cboettig/5118738314">calculation here</a>, <a href="http://farm2.static.flickr.com/1419/5118172479_aaf1a2d5a1_m.jpg">results graphed here</a>, upshot is assuming saturation doesn’t capture the bifurcation.  Applying that approximation earlier to the derivative expression gives a slope of <span class="math">\(-e\)</span>, no <span class="math">\(a\)</span> dependence at saturation anyway.</p>
+<p>A little tired of LaTeX writing, I  approximate <span class="math">\(\alpha(a)|_{\hat x}\)</span>,  the slope at equilibrium as a function of the bifurcation parameter. Going astray: <a href="https://www.flickr.com/photos/cboettig/5118738314">calculation here</a>, <a href="http://farm2.static.flickr.com/1419/5118172479_aaf1a2d5a1_m.jpg">results graphed here</a>, upshot is assuming saturation doesn’t capture the bifurcation.  Applying that approximation earlier to the derivative expression gives a slope of <span class="math">\(-e\)</span>, no <span class="math">\(a\)</span> dependence at saturation anyway.</p>
 <h4 id="numerical-solution">Numerical Solution</h4>
-<p>Foregoing a complete analytic treatment, we can solve for function numerically to get the picture. For the first model with the steady changing mean, we see the mean, the eigenvalue <span class="math">\(\alpha\)</span>, demographic noise term <span class="math">\(\sigma^2\)</span>, and total variance: <img src="http://farm2.staticflickr.com/1178/5119205688_e05388859a_o.png" /></p>
-<p>And for the second model (note smaller values of a now lead to the bifurcation): <img src="http://farm2.staticflickr.com/1220/5118603695_df7a11b494_o.png" /></p>
-<p>(<a href="http://github.com/cboettig/structured-populations/blob/a3ba76f81e72e972e2c5fa6e0cf87da5e15de80c/demos/saddle_analytics.R">see code for these graphs</a>, also has the updated code for flash animated bifurcations). Hard to justify good fits to a model form of <span class="math">\[ dX_t = \alpha(a, X_t) (\theta(a, X_t) - X_t)dt + \sigma(a, X_t) dW_t \]</span></p>
+<p>Foregoing a complete analytic treatment, we can solve for function numerically to get the picture. For the first model with the steady changing mean, we see the mean, the eigenvalue <span class="math">\(\alpha\)</span>, demographic noise term <span class="math">\(\sigma^2\)</span>, and total variance: <img src="https://farm2.staticflickr.com/1178/5119205688_e05388859a_o.png" /></p>
+<p>And for the second model (note smaller values of a now lead to the bifurcation): <img src="https://farm2.staticflickr.com/1220/5118603695_df7a11b494_o.png" /></p>
+<p>(<a href="https://github.com/cboettig/structured-populations/blob/a3ba76f81e72e972e2c5fa6e0cf87da5e15de80c/demos/saddle_analytics.R">see code for these graphs</a>, also has the updated code for flash animated bifurcations). Hard to justify good fits to a model form of <span class="math">\[ dX_t = \alpha(a, X_t) (\theta(a, X_t) - X_t)dt + \sigma(a, X_t) dW_t \]</span></p>
 <p>where the parameters are linear functions in time or in a (changing linearly with time). So, what’s the power spectrum of the time-dependent function</p>
 <p><span class="math">\[\langle\langle X_0 X_t \rangle \rangle = \sigma^2(\hat x) e^{-\alpha(\hat x, t) t} \]</span></p>
 <p>where <span class="math">\(\alpha(\hat x, t)\)</span> is a function of <span class="math">\(a\)</span> as given by the graphs above and <span class="math">\(a\)</span> changes linearly at some rate? Is it to this that we must compare fits under models of changing and non-changing <span class="math">\(a\)</span>?</p>
@@ -142,7 +142,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2010-10-26 16:46:24 +0000" 
     property="dc:created">26 Oct 2010</time></p>
@@ -175,7 +175,7 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2010/tags.html#warning-signals">#warning-signals</a>
     </p>
@@ -205,11 +205,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -222,7 +222,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -238,7 +238,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -258,13 +258,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -282,7 +282,7 @@
       &amp;rft.date=2010-10-26
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/10/26/correcting-for-the-mean-dynamics.html">
+      &amp;rft_id=https://www.carlboettiger.info/10/26/correcting-for-the-mean-dynamics.html">
   </span>
 
 
@@ -299,7 +299,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -314,7 +314,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

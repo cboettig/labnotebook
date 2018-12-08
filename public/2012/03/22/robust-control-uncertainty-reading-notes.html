@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Robust control & uncertainty - reading notes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Robust control & uncertainty - reading notes" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2012-03-22 18:19:17 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2012-03-22 18:19:17 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/03/22/robust-control-uncertainty-reading-notes.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/03/22/robust-control-uncertainty-reading-notes.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -112,8 +112,8 @@
 <p>Their critique of decision theory focuses only on the fact that it requires probabilities of outcomes, which in practice won’t be known, or at least knowledge of possible states, in the case of maximin.  The first is critique is quite just, which is as they say, the reason for maximin approaches.  These probably founder more on their choice of objective function than their inability to enumerate possible states.  Surprisingly they make no mention of computational complexity, which is probably in practice the more common limitation.</p>
 <h3 id="info-gap-theory">Info Gap Theory</h3>
 <p>Reading (Regan <em>et. al.</em> 2005), sounds like a sensitivity analysis on the uncertainty parameter. Authors refer to this as “info-gap theory,” though it’s not particularly different.  (While sensitivity analysis would do this parametrically using, say, the width of the distribution about a parameter), this rather more crudely it seems, just varies the best-estimate value of the parameter until the decision changes.</p>
-<p>Whoops (reading more), apparently it’s a thing (i.e. gets it’s own <a href="http://en.wikipedia.org/wiki/Info-gap_decision_theory">wikipedia page</a>, also appearing in the literature without Dr. Ben-Haim, Nicholson &amp; Possingham, 2007 (Halpern <em>et. al.</em> 2006)) though this still seems to <a href="http://en.wikipedia.org/wiki/Info-gap_decision_theory#Alternatives">support</a> my characterization (the second author of the Eco Apps paper seems to be behind the term). Info-gap can also be framed as a Max Min approach.</p>
-<p>Whoops again, <a href="http://info-gap.moshe-online.com/">apparently it’s a controversy too</a>, (as mentioned in the Fischer piece). Nicholson &amp; Possingham, 2007 Gives a rather nice list of papers that in single-species analyses have found ranking of management options to be robust to uncertainty and others where it is not (hardly surprising, but nice to have concrete examples).  Takes a simple info-gap approach to the multi-species case.</p>
+<p>Whoops (reading more), apparently it’s a thing (i.e. gets it’s own <a href="https://en.wikipedia.org/wiki/Info-gap_decision_theory">wikipedia page</a>, also appearing in the literature without Dr. Ben-Haim, Nicholson &amp; Possingham, 2007 (Halpern <em>et. al.</em> 2006)) though this still seems to <a href="http://en.wikipedia.org/wiki/Info-gap_decision_theory#Alternatives">support</a> my characterization (the second author of the Eco Apps paper seems to be behind the term). Info-gap can also be framed as a Max Min approach.</p>
+<p>Whoops again, <a href="https://info-gap.moshe-online.com/">apparently it’s a controversy too</a>, (as mentioned in the Fischer piece). Nicholson &amp; Possingham, 2007 Gives a rather nice list of papers that in single-species analyses have found ranking of management options to be robust to uncertainty and others where it is not (hardly surprising, but nice to have concrete examples).  Takes a simple info-gap approach to the multi-species case.</p>
 <h3 id="more-rigorous-maximin-approaches">More rigorous maximin approaches</h3>
 <p>Bill Brock’s work in this area is particularly nice.  Cute proper technical example of model uncertainty in Hansen’s recursive max/min expected utility (Brock &amp; Xepapadeas, 2010).  Hansen’s treatment on these is dense (below), but not at all clear that this is what we want to be optimizing.  See mathematical economics treatment of model uncertainty &amp; misspecification in (Hansen &amp; Sargent, 2001), (Hansen <em>et. al.</em> 2006)</p>
 <p>Brock also has a beautiful simple paper pointing out how uncertainties lead to conflicting conclusions , such as the debate over the fisheries collapse.  (Biggs <em>et. al.</em> 2009) Also has a nice example in Peterson <em>et. al.</em> 2003 of an apparently optimally managed system collapsing.  Applies a passive adaptive management solution learning about a choice between two given models (with fixed parameters), one which describes the system around the eutrophic stable state, the other around the oligotrophic.Note the actual dynamics cannot be represented as a sum of these beliefs, so this approach is doomed and the result is hardly surprising mathematically, which kinda makes it all the more clever as an example.</p>
@@ -121,25 +121,25 @@
 <p>(Meir <em>et. al.</em> 2004) Which seems to give  rise to the Possingham position on giving only rules of thumb from decision theoretic models.  Comes the closest to implementation uncertainty, considering the case in which a policy cannot be implemented immediately as it is formed.  This is really a red herring – if implementation takes place over time, in principle that problem should be framed in the dynamic optimization.  The real bugbear here is not implementation uncertainty per se, but the fact that dynamic solutions (SDP) are not computationally feasible, so they test rules-of-thumb against the optimum for a small problem, in hopes that the extrapolation is valid.  The rules of thumb are “more effective” than a static solution; the optimal dynamic solution being unfeasible. It seems we’d be on firmer ground using small problems to provide counterexamples of when simple rules fail, than to use the lack of counterexample in a particular case as grounds for extrapolating.</p>
 <h2 id="references">References</h2>
 <ul>
-<li><p>Fischer J, Peterson G, Gardner T, Gordon L, Fazey I, Elmqvist T, Felton A, Folke C and Dovers S (2009). “Integrating Resilience Thinking And Optimisation For Conservation.” <em>Trends in Ecology &amp; Evolution</em>, <strong>24</strong>. ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2009.03.020">http://dx.doi.org/10.1016/j.tree.2009.03.020</a>.</p></li>
-<li><p>Polasky S, Carpenter S, Folke C and Keeler B (2011). “Decision-Making Under Great Uncertainty: Environmental Management in an Era of Global Change.” <em>Trends in Ecology &amp; Evolution</em>, <strong>26</strong>. ISSN 01695347, <a href="http://dx.doi.org/10.1016/j.tree.2011.04.007">http://dx.doi.org/10.1016/j.tree.2011.04.007</a>.</p></li>
-<li><p>Regan H, Ben-Haim Y, Langford B, Wilson W, Lundberg P, Andelman S and Burgman M (2005). “Robust Decision-Making Under Severe Uncertainty For Conservation Management.” <em>Ecological Applications</em>, <strong>15</strong>. ISSN 1051-0761, <a href="http://dx.doi.org/10.1890/03-5419">http://dx.doi.org/10.1890/03-5419</a>.</p></li>
-<li><p>Halpern B, Regan H, Possingham H and McCarthy M (2006). “Accounting For Uncertainty in Marine Reserve Design.” <em>Ecology Letters</em>, <strong>9</strong>. ISSN 1461-023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x">http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x</a>.</p></li>
-<li><p>Brock W and Xepapadeas A (2010). “Robust Control And Hot Spots in Dynamic Spatially Interconnected Systems.” <em>Ssrn Electronic Journal</em>. <a href="http://dx.doi.org/10.2139/ssrn.1736486">http://dx.doi.org/10.2139/ssrn.1736486</a>.</p></li>
-<li><p>Hansen L and Sargent T (2001). “Robust Control And Model Uncertainty.” <em>American Economic Review</em>, <strong>91</strong>. ISSN 0002-8282, <a href="http://dx.doi.org/10.1257/aer.91.2.60">http://dx.doi.org/10.1257/aer.91.2.60</a>.</p></li>
-<li><p>Hansen L, Sargent T, Turmuhambetova G and Williams N (2006). “Robust Control And Model Misspecification.” <em>Journal of Economic Theory</em>, <strong>128</strong>. ISSN 00220531, <a href="http://dx.doi.org/10.1016/j.jet.2004.12.006">http://dx.doi.org/10.1016/j.jet.2004.12.006</a>.</p></li>
-<li><p>Biggs R, Carpenter S and Brock W (2009). “Spurious Certainty: How Ignoring Measurement Error And Environmental Heterogeneity May Contribute to Environmental Controversies.” <em>Bioscience</em>, <strong>59</strong>. ISSN 0006-3568, <a href="http://dx.doi.org/10.1525/bio.2009.59.1.10">http://dx.doi.org/10.1525/bio.2009.59.1.10</a>.</p></li>
-<li><p>Brozović N and Schlenker W (2011). “Optimal Management of an Ecosystem With an Unknown Threshold.” <em>Ecological Economics</em>, <strong>70</strong>. ISSN 09218009, <a href="http://dx.doi.org/10.1016/j.ecolecon.2010.10.001">http://dx.doi.org/10.1016/j.ecolecon.2010.10.001</a>.</p></li>
-<li><p>Meir E, Andelman S and Possingham H (2004). “Does Conservation Planning Matter in A Dynamic And Uncertain World?” <em>Ecology Letters</em>, <strong>7</strong>. ISSN 1461-023X, <a href="http://dx.doi.org/10.1111/j.1461-0248.2004.00624.x">http://dx.doi.org/10.1111/j.1461-0248.2004.00624.x</a>.</p></li>
-<li>Making Conservation Decisions Under Uncertainty For The Persistence of Multiple Species, Emily Nicholson, Hugh P. Possingham, (2007) <em>Ecological Applications</em>, <strong>17</strong> <a href="http://dx.doi.org/10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2">10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2</a></li>
-<li><p>Uncertainty And The Management of Multistate Ecosystems: an Apparently Rational Route to Collapse, G. D. Peterson, S. R. Carpenter, W. A. Brock, (2003) <em>Ecology</em>, <strong>84</strong> <a href="http://dx.doi.org/10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2">10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2</a></p></li>
+<li><p>Fischer J, Peterson G, Gardner T, Gordon L, Fazey I, Elmqvist T, Felton A, Folke C and Dovers S (2009). “Integrating Resilience Thinking And Optimisation For Conservation.” <em>Trends in Ecology &amp; Evolution</em>, <strong>24</strong>. ISSN 01695347, <a href="https://dx.doi.org/10.1016/j.tree.2009.03.020">http://dx.doi.org/10.1016/j.tree.2009.03.020</a>.</p></li>
+<li><p>Polasky S, Carpenter S, Folke C and Keeler B (2011). “Decision-Making Under Great Uncertainty: Environmental Management in an Era of Global Change.” <em>Trends in Ecology &amp; Evolution</em>, <strong>26</strong>. ISSN 01695347, <a href="https://dx.doi.org/10.1016/j.tree.2011.04.007">http://dx.doi.org/10.1016/j.tree.2011.04.007</a>.</p></li>
+<li><p>Regan H, Ben-Haim Y, Langford B, Wilson W, Lundberg P, Andelman S and Burgman M (2005). “Robust Decision-Making Under Severe Uncertainty For Conservation Management.” <em>Ecological Applications</em>, <strong>15</strong>. ISSN 1051-0761, <a href="https://dx.doi.org/10.1890/03-5419">http://dx.doi.org/10.1890/03-5419</a>.</p></li>
+<li><p>Halpern B, Regan H, Possingham H and McCarthy M (2006). “Accounting For Uncertainty in Marine Reserve Design.” <em>Ecology Letters</em>, <strong>9</strong>. ISSN 1461-023X, <a href="https://dx.doi.org/10.1111/j.1461-0248.2005.00827.x">http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x</a>.</p></li>
+<li><p>Brock W and Xepapadeas A (2010). “Robust Control And Hot Spots in Dynamic Spatially Interconnected Systems.” <em>Ssrn Electronic Journal</em>. <a href="https://dx.doi.org/10.2139/ssrn.1736486">http://dx.doi.org/10.2139/ssrn.1736486</a>.</p></li>
+<li><p>Hansen L and Sargent T (2001). “Robust Control And Model Uncertainty.” <em>American Economic Review</em>, <strong>91</strong>. ISSN 0002-8282, <a href="https://dx.doi.org/10.1257/aer.91.2.60">http://dx.doi.org/10.1257/aer.91.2.60</a>.</p></li>
+<li><p>Hansen L, Sargent T, Turmuhambetova G and Williams N (2006). “Robust Control And Model Misspecification.” <em>Journal of Economic Theory</em>, <strong>128</strong>. ISSN 00220531, <a href="https://dx.doi.org/10.1016/j.jet.2004.12.006">http://dx.doi.org/10.1016/j.jet.2004.12.006</a>.</p></li>
+<li><p>Biggs R, Carpenter S and Brock W (2009). “Spurious Certainty: How Ignoring Measurement Error And Environmental Heterogeneity May Contribute to Environmental Controversies.” <em>Bioscience</em>, <strong>59</strong>. ISSN 0006-3568, <a href="https://dx.doi.org/10.1525/bio.2009.59.1.10">http://dx.doi.org/10.1525/bio.2009.59.1.10</a>.</p></li>
+<li><p>Brozović N and Schlenker W (2011). “Optimal Management of an Ecosystem With an Unknown Threshold.” <em>Ecological Economics</em>, <strong>70</strong>. ISSN 09218009, <a href="https://dx.doi.org/10.1016/j.ecolecon.2010.10.001">http://dx.doi.org/10.1016/j.ecolecon.2010.10.001</a>.</p></li>
+<li><p>Meir E, Andelman S and Possingham H (2004). “Does Conservation Planning Matter in A Dynamic And Uncertain World?” <em>Ecology Letters</em>, <strong>7</strong>. ISSN 1461-023X, <a href="https://dx.doi.org/10.1111/j.1461-0248.2004.00624.x">http://dx.doi.org/10.1111/j.1461-0248.2004.00624.x</a>.</p></li>
+<li>Making Conservation Decisions Under Uncertainty For The Persistence of Multiple Species, Emily Nicholson, Hugh P. Possingham, (2007) <em>Ecological Applications</em>, <strong>17</strong> <a href="https://dx.doi.org/10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2">10.1890/1051-0761(2007)017[0251:MCDUUF]2.0.CO;2</a></li>
+<li><p>Uncertainty And The Management of Multistate Ecosystems: an Apparently Rational Route to Collapse, G. D. Peterson, S. R. Carpenter, W. A. Brock, (2003) <em>Ecology</em>, <strong>84</strong> <a href="https://dx.doi.org/10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2">10.1890/0012-9658(2003)084[1403:UATMOM]2.0.CO;2</a></p></li>
 </ul>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2012-03-22 18:19:17 +0000" 
     property="dc:created">22 Mar 2012</time></p>
@@ -172,7 +172,7 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#reading">#reading</a>
     </p>
@@ -202,11 +202,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -219,7 +219,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -235,7 +235,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -255,13 +255,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -279,7 +279,7 @@
       &amp;rft.date=2012-03-22
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/03/22/robust-control-uncertainty-reading-notes.html">
+      &amp;rft_id=https://www.carlboettiger.info/03/22/robust-control-uncertainty-reading-notes.html">
   </span>
 
 
@@ -296,7 +296,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -311,7 +311,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

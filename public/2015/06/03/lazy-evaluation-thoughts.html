@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Lazy Evaluation Thoughts</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Lazy Evaluation Thoughts" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2015-06-03 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2015-06-03 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/06/03/lazy-evaluation-thoughts.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/06/03/lazy-evaluation-thoughts.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,15 +40,15 @@
 
 
 
-	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" type="text/css"/>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="http://www.carlboettiger.info/assets/css/academicons.css" />
+	<link rel="stylesheet" href="https://www.carlboettiger.info/assets/css/academicons.css" />
   <!-- Help the browser identify the RSS feed automatically -->
-  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="http://www.carlboettiger.info/blog.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="https://www.carlboettiger.info/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -84,7 +84,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -107,12 +107,12 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>This is just a draft of my reply to Gavin’s <a href="http://www.fromthebottomoftheheap.net/2015/06/03/my-aversion-to-pipes/">thought-provoking post</a> pushing back on pipes and NSE in R.</p>
+    <p>This is just a draft of my reply to Gavin’s <a href="https://www.fromthebottomoftheheap.net/2015/06/03/my-aversion-to-pipes/">thought-provoking post</a> pushing back on pipes and NSE in R.</p>
 <hr />
 <p>Gavin, really nice post and discussion here. I am still conflicted about some these issues myself.</p>
 <p>For me, the issues of NSE are somewhat separate and above my concern with pipes. I agree completely with your observation that intermediate assignment is easier to read than nested assignment, and not that much harder to read than a pipe chain. However I also agree with other commenters that not having to think about intermediate assignment variables is nice (e.g. I usually do something like replacing <code>the_data</code> with <code>tmp</code> or some such in each occurrence after the first in your example to make this more explicit). But for the most part I do not find the pipe syntax to be problematic in the same way that NSE is – indeed I can use the pipe operator with the SE versions of the same functions, or with any other SE R function.</p>
 <p>NSE to me is a whole different can of worms. It does make the syntax much more consise and more semantic, (even while it obfuscates what is a string, a numeric, or a variable). But this whole “don’t use it in programming” thing seems very impractical to me. When I first started R, I got the same advice – only it was for R itself – use it interactively, but for real programming write everything in C. Then maybe add some R wrappers on top. Um.. yeah, I actually did that for a few years… long ago. Most of the time I don’t even know if I’m programming or not. Sure, it’s easy to use the SE versions when working on some function you know will be part of an R package, but NSE has bitten me several times in various research scripts. Stupid things perhaps – where I have done things like changing a filter argument to a variable with the same name as a column (<code>filter(x == .5)</code> into a <code>filter(x == x)</code>) – but very difficult to debug since they do not throw errors.</p>
-<p>Nevertheless, both the performance and consise abstractions of common manipulation tasks make it hard to walk away from <code>dplyr</code> and friends. However, I find the syntax required to use the SE versions of the dplyr functions immensely cumbersome and opaque (e.g. http://www.carlboettiger.info/2015/02/06/fun-standardizing-non-standard-evaluation.html). Some of these can be written more concisely with a different SE syntax, but having 4 different ways to introduce a variable value, not all of which cover all the same cases, is even worse to me than just sticking with the most complex. No doubt I lack appreciation of the complexity here, but it seems like it should be possible to have a syntax that is nearly as consise as the NSE but where I can replace values with variables (e.g. <code>filter(&quot;Y&quot; == &quot;X&quot;)</code> to <code>filter(y == x)</code>) without needing something like</p>
+<p>Nevertheless, both the performance and consise abstractions of common manipulation tasks make it hard to walk away from <code>dplyr</code> and friends. However, I find the syntax required to use the SE versions of the dplyr functions immensely cumbersome and opaque (e.g. https://www.carlboettiger.info/2015/02/06/fun-standardizing-non-standard-evaluation.html). Some of these can be written more concisely with a different SE syntax, but having 4 different ways to introduce a variable value, not all of which cover all the same cases, is even worse to me than just sticking with the most complex. No doubt I lack appreciation of the complexity here, but it seems like it should be possible to have a syntax that is nearly as consise as the NSE but where I can replace values with variables (e.g. <code>filter(&quot;Y&quot; == &quot;X&quot;)</code> to <code>filter(y == x)</code>) without needing something like</p>
 <pre class="sourceCode r"><code class="sourceCode r">dots &lt;-<span class="st"> </span><span class="kw">lapply</span>(<span class="kw">names</span>(query), function(level){
 value &lt;-<span class="st"> </span>query[[level]]
 <span class="kw">interp</span>(~y ==<span class="st"> </span>x, 
@@ -125,7 +125,7 @@ value &lt;-<span class="st"> </span>query[[level]]
   <div class="col-md-4">
     <div class="sidebar">
       
-<aside prefix="og:http://ogp.me/ns/article#">
+<aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2015-06-03 00:00:00 +0000" 
     property="dc:created">03 Jun 2015</time></p>
@@ -154,7 +154,7 @@ value &lt;-<span class="st"> </span>query[[level]]
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2015/tags.html#comment">#comment</a>
     </p>
@@ -184,11 +184,11 @@ value &lt;-<span class="st"> </span>query[[level]]
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -201,7 +201,7 @@ value &lt;-<span class="st"> </span>query[[level]]
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -217,7 +217,7 @@ value &lt;-<span class="st"> </span>query[[level]]
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -237,13 +237,13 @@ value &lt;-<span class="st"> </span>query[[level]]
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -261,7 +261,7 @@ value &lt;-<span class="st"> </span>query[[level]]
       &amp;rft.date=2015-06-03
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/06/03/lazy-evaluation-thoughts.html">
+      &amp;rft_id=https://www.carlboettiger.info/06/03/lazy-evaluation-thoughts.html">
   </span>
 
 
@@ -278,7 +278,7 @@ value &lt;-<span class="st"> </span>query[[level]]
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -293,7 +293,7 @@ value &lt;-<span class="st"> </span>query[[level]]
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

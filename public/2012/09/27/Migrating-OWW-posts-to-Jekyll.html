@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Migrating Oww Posts To Jekyll</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Migrating Oww Posts To Jekyll" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2012-09-27 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2012-09-27 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/09/27/Migrating-OWW-posts-to-Jekyll.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/09/27/Migrating-OWW-posts-to-Jekyll.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -106,10 +106,10 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>This Open Lab Notebook started on a public MediaWiki-based site, <a href="http://openwetware.org">OpenWetWare</a> (OWW), which was created with the ambitious vision of having a single wiki for biological sciences (or at least, synthetic microbiology, since such the wiki grew out of a collection of such labs). Users could have their own pages that served as a personal website or lab group site, contribute pages on specific protocols, host course websites, and most interestingly, were encouraged to create open lab notebooks using specially designed templates for the purpose. From January through October of 2010, I kept all my notes in two separate OWW notebooks: one for entries on my <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Comparative_Phylogenetics">Comparative Phylogenetics</a> research, and a seperate one for entries in <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Stochastic_Population_Dynamics">Stochastic Population Dynamics</a>. Each notebook had a cover page and then entries by day, linked by the calendar box on the cover page. This was a neat idea an excellent introduction into the world of open lab notebooks.</p>
+    <p>This Open Lab Notebook started on a public MediaWiki-based site, <a href="https://openwetware.org">OpenWetWare</a> (OWW), which was created with the ambitious vision of having a single wiki for biological sciences (or at least, synthetic microbiology, since such the wiki grew out of a collection of such labs). Users could have their own pages that served as a personal website or lab group site, contribute pages on specific protocols, host course websites, and most interestingly, were encouraged to create open lab notebooks using specially designed templates for the purpose. From January through October of 2010, I kept all my notes in two separate OWW notebooks: one for entries on my <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Comparative_Phylogenetics">Comparative Phylogenetics</a> research, and a seperate one for entries in <a href="http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Stochastic_Population_Dynamics">Stochastic Population Dynamics</a>. Each notebook had a cover page and then entries by day, linked by the calendar box on the cover page. This was a neat idea an excellent introduction into the world of open lab notebooks.</p>
 <p>In September of 2010 I began to leave the OpenWetWare platform to start my own lab notebook based on a privately hosted copy Wordpress. The benefits of being on a shared community platform were minimized by the relatively small number of active users mostly belonging to a different field. Downtime on the site and a lack of any easy way to access my content off-line or back up content also made me increasingly nervous, while the difficulty in adding additional tools or functionality (such as RSS feeds to new entries, personal tags, improved search) collectively spurred my decision to move to Wordpress. At the time I had knew of no easy way to migrate my OWW posts, so I allowed them to remain where they were while I continued further notes in my newly minted Wordpress installation.</p>
 <p>In April of 2012 I began to experiment with the static-blogging engine, Jekyll. My adoption of markdown, facilitated by my discovery of pandoc and the advent of <code>knitr</code>, together with my complete submersion into a Github-based workflow led me to first consider Jekyll. Wordpress was slow and heavy, both for creating entries in the online editor (though I did start pushing markdown-based entries to Wordpress through it’s API and the associated R package). Though Jekyll has a slightly steeper learning curve to start, once you have the basics down complicated things aren’t any harder than easy ones, whereas on Wordpress the basics are trivial but complex customization becomes a full-time web-developer challenge. In Jekyll, it was rather easy to migrate all my old entries from the previous platforms onto the new one.</p>
-<p>In the <a href="http://www.carlboettiger.info/2012/09/19/migrating-from-wordpress-to-jekyll.html">previous post</a> I describe exporting my Wordpress-based entries using a python script from Thomas Frossman. To export my OpenWetWare entries I relied on the rather excellent MediaWiki API. While I began by grabbing the content of each post in MediaWiki syntax, I soon realized it was easier to grab the content already parsed as HTML (using a different API call) and then parse the HTML into markdown using Pandoc. (Pandoc’s developmental version does have experimental support for reading MediaWiki syntax now). I then added a few substitutions to standardize my tags and categories. Here’s my R call to the MediaWiki API (see <a href="https://github.com/cboettig/sandbox/blob/1efa80e913006051083544275f6af9b5ab9ccb0a/wiki_get.R">wiki_get.R</a>):</p>
+<p>In the <a href="https://www.carlboettiger.info/2012/09/19/migrating-from-wordpress-to-jekyll.html">previous post</a> I describe exporting my Wordpress-based entries using a python script from Thomas Frossman. To export my OpenWetWare entries I relied on the rather excellent MediaWiki API. While I began by grabbing the content of each post in MediaWiki syntax, I soon realized it was easier to grab the content already parsed as HTML (using a different API call) and then parse the HTML into markdown using Pandoc. (Pandoc’s developmental version does have experimental support for reading MediaWiki syntax now). I then added a few substitutions to standardize my tags and categories. Here’s my R call to the MediaWiki API (see <a href="https://github.com/cboettig/sandbox/blob/1efa80e913006051083544275f6af9b5ab9ccb0a/wiki_get.R">wiki_get.R</a>):</p>
 <pre class="sourceCode r"><code class="sourceCode r">wiki_parse &lt;-<span class="st"> </span>function(page, baseurl, <span class="dt">format=</span><span class="st">&quot;json&quot;</span>, ...){
   <span class="kw">require</span>(httr)
   action =<span class="st"> &quot;parse&quot;</span>
@@ -122,7 +122,7 @@
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(httr)
 <span class="kw">require</span>(gsubfn)
 
-oww_to_md &lt;-<span class="st"> </span>function(pages, <span class="dt">user=</span><span class="st">&quot;Carl_Boettiger&quot;</span>,  <span class="dt">baseurl =</span> <span class="st">&quot;http://openwetware.org&quot;</span>){
+oww_to_md &lt;-<span class="st"> </span>function(pages, <span class="dt">user=</span><span class="st">&quot;Carl_Boettiger&quot;</span>,  <span class="dt">baseurl =</span> <span class="st">&quot;https://openwetware.org&quot;</span>){
   <span class="co"># Store filenames (with dates) and categories for each page, for reference later</span>
   filenames &lt;-<span class="st"> </span><span class="kw">get_filenames</span>(pages)
   categories &lt;-<span class="st"> </span><span class="kw">get_categories</span>(pages)
@@ -159,7 +159,7 @@ get_categories &lt;-<span class="st"> </span>function(pages){
 
 
 <span class="co">#&#39; Take a list of page titles to a user&#39;s OWW notebooks and export them as Jekyll markdown entries.  </span>
-export_oww &lt;-<span class="st"> </span>function(pages, <span class="dt">user=</span><span class="st">&quot;Carl_Boettiger&quot;</span>,  <span class="dt">baseurl=</span>  <span class="st">&quot;http://openwetware.org&quot;</span>){
+export_oww &lt;-<span class="st"> </span>function(pages, <span class="dt">user=</span><span class="st">&quot;Carl_Boettiger&quot;</span>,  <span class="dt">baseurl=</span>  <span class="st">&quot;https://openwetware.org&quot;</span>){
   <span class="kw">lapply</span>(pages, function(p){
     p &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot; &quot;</span>, <span class="st">&quot;_&quot;</span>, p)
     page &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;User:&quot;</span>, user, <span class="st">&quot;/Notebook/&quot;</span>, p, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)
@@ -167,7 +167,7 @@ export_oww &lt;-<span class="st"> </span>function(pages, <span class="dt">user=<
   })
 }
 
-add_baseurl &lt;-<span class="st"> </span>function(parsed,  <span class="dt">baseurl =</span> <span class="st">&quot;http://openwetware.org&quot;</span>){
+add_baseurl &lt;-<span class="st"> </span>function(parsed,  <span class="dt">baseurl =</span> <span class="st">&quot;https://openwetware.org&quot;</span>){
   <span class="kw">lapply</span>(parsed, function(out){
     html &lt;-<span class="st"> </span>out$parse$text[[<span class="dv">1</span>]]
     html &lt;-<span class="st"> </span><span class="kw">gsubfn</span>(<span class="st">&quot;src=</span><span class="ch">\&quot;</span><span class="st">/images/&quot;</span>, <span class="kw">paste</span>(<span class="st">&quot;src=</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, 
@@ -214,14 +214,14 @@ html_to_md &lt;-<span class="st"> </span>function(htmls, filenames){
 clean_md &lt;-<span class="st"> </span>function(mds){
   <span class="kw">lapply</span>(mds, function(md){
     ## Remove OWW header
-    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;!</span><span class="ch">\\</span><span class="st">[image</span><span class="ch">\\</span><span class="st">]</span><span class="ch">\\</span><span class="st">(http://openwetware.org/images/f/f8/Owwnotebook_icon.png</span><span class="ch">\\</span><span class="st">)&quot;</span>, <span class="st">&quot;&quot;</span>, md)
-    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;!</span><span class="ch">\\</span><span class="st">[image</span><span class="ch">\\</span><span class="st">]</span><span class="ch">\\</span><span class="st">(http://openwetware.org/images/9/94/Report.png</span><span class="ch">\\</span><span class="st">)&quot;</span>,  <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;!</span><span class="ch">\\</span><span class="st">[image</span><span class="ch">\\</span><span class="st">]</span><span class="ch">\\</span><span class="st">(https://openwetware.org/images/f/f8/Owwnotebook_icon.png</span><span class="ch">\\</span><span class="st">)&quot;</span>, <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;!</span><span class="ch">\\</span><span class="st">[image</span><span class="ch">\\</span><span class="st">]</span><span class="ch">\\</span><span class="st">(https://openwetware.org/images/9/94/Report.png</span><span class="ch">\\</span><span class="st">)&quot;</span>,  <span class="st">&quot;&quot;</span>, md)
     md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;Main project&quot;</span>, <span class="st">&quot;&quot;</span>, md)
     md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;page</span><span class="ch">\\\\</span><span class="st">&quot;</span>, <span class="st">&quot;&quot;</span>, md)
-    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;!</span><span class="ch">\\</span><span class="st">[image</span><span class="ch">\\</span><span class="st">]</span><span class="ch">\\</span><span class="st">(http://openwetware.org/images/c/c3/Resultset_previous.png</span><span class="ch">\\</span><span class="st">)&quot;</span>,  <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;!</span><span class="ch">\\</span><span class="st">[image</span><span class="ch">\\</span><span class="st">]</span><span class="ch">\\</span><span class="st">(https://openwetware.org/images/c/c3/Resultset_previous.png</span><span class="ch">\\</span><span class="st">)&quot;</span>,  <span class="st">&quot;&quot;</span>, md)
     md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;Previous$&quot;</span>,  <span class="st">&quot;&quot;</span>, md)
     md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;^entry Next$&quot;</span>, <span class="st">&quot;&quot;</span>, md)
-    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;!</span><span class="ch">\\</span><span class="st">[image</span><span class="ch">\\</span><span class="st">]</span><span class="ch">\\</span><span class="st">(http://openwetware.org/images/5/5c/Resultset_next.png</span><span class="ch">\\</span><span class="st">)&quot;</span>, <span class="st">&quot;&quot;</span>, md)
+    md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;!</span><span class="ch">\\</span><span class="st">[image</span><span class="ch">\\</span><span class="st">]</span><span class="ch">\\</span><span class="st">(https://openwetware.org/images/5/5c/Resultset_next.png</span><span class="ch">\\</span><span class="st">)&quot;</span>, <span class="st">&quot;&quot;</span>, md)
     md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;^entry$&quot;</span>, <span class="st">&quot;&quot;</span>, md)
     md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;^Stochastic Population Dynamics&quot;</span>, <span class="st">&quot;&quot;</span>, md)
     md &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;^Comparative Phylogenetics$&quot;</span>, <span class="st">&quot;&quot;</span>, md)
@@ -249,7 +249,7 @@ rename &#39;s/Stochastic_Population_Dynamics/Stochastic-Population-Dynamics-Note
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2012-09-27 00:00:00 +0000" 
     property="dc:created">27 Sep 2012</time></p>
@@ -282,15 +282,15 @@ rename &#39;s/Stochastic_Population_Dynamics/Stochastic-Population-Dynamics-Note
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#notebook-technology">#notebook-technology</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#Jekyll">#Jekyll</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#code-tricks">#code-tricks</a>
     </p>
@@ -320,11 +320,11 @@ rename &#39;s/Stochastic_Population_Dynamics/Stochastic-Population-Dynamics-Note
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -337,7 +337,7 @@ rename &#39;s/Stochastic_Population_Dynamics/Stochastic-Population-Dynamics-Note
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -353,7 +353,7 @@ rename &#39;s/Stochastic_Population_Dynamics/Stochastic-Population-Dynamics-Note
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -373,13 +373,13 @@ rename &#39;s/Stochastic_Population_Dynamics/Stochastic-Population-Dynamics-Note
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -397,7 +397,7 @@ rename &#39;s/Stochastic_Population_Dynamics/Stochastic-Population-Dynamics-Note
       &amp;rft.date=2012-09-27
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/09/27/Migrating-OWW-posts-to-Jekyll.html">
+      &amp;rft_id=https://www.carlboettiger.info/09/27/Migrating-OWW-posts-to-Jekyll.html">
   </span>
 
 
@@ -414,7 +414,7 @@ rename &#39;s/Stochastic_Population_Dynamics/Stochastic-Population-Dynamics-Note
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -429,7 +429,7 @@ rename &#39;s/Stochastic_Population_Dynamics/Stochastic-Population-Dynamics-Note
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

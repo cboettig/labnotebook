@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Sensitivity Of Gp Comparisons In Further Examples</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Sensitivity Of Gp Comparisons In Further Examples" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2013-06-04 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2013-06-04 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/06/04/sensitivity-of-gp-comparisons-in-further-examples.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/06/04/sensitivity-of-gp-comparisons-in-further-examples.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -148,7 +148,7 @@ Tobs &lt;-<span class="st"> </span><span class="dv">40</span></code></pre>
 raw_plot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">time =</span> <span class="dv">1</span>:Tobs, <span class="dt">x=</span>x), <span class="kw">aes</span>(time,x)) +<span class="st"> </span><span class="kw">geom_line</span>()
 raw_plot</code></pre>
 <figure>
-<img src="http://farm8.staticflickr.com/7406/8954616307_5e7a9d3e27_o.png" alt="plot of chunk obs" /><figcaption>plot of chunk obs</figcaption>
+<img src="https://farm8.staticflickr.com/7406/8954616307_5e7a9d3e27_o.png" alt="plot of chunk obs" /><figcaption>plot of chunk obs</figcaption>
 </figure>
 <h2 id="maximum-likelihood">Maximum Likelihood</h2>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">12345</span>)
@@ -178,7 +178,7 @@ d.p =<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</spa
 gp_dat &lt;-<span class="st"> </span><span class="kw">gp_predict</span>(gp, x_grid, <span class="dt">burnin=</span><span class="fl">1e4</span>, <span class="dt">thin=</span><span class="dv">300</span>)</code></pre>
 <p>Show traces and posteriors against priors</p>
 <pre class="sourceCode r"><code class="sourceCode r">plots &lt;-<span class="st"> </span><span class="kw">summary_gp_mcmc</span>(gp, <span class="dt">burnin=</span><span class="fl">1e4</span>, <span class="dt">thin=</span><span class="dv">300</span>)</code></pre>
-<p><img src="figure/process-noise-only-gp_traces_densities1.png" alt="plot of chunk gp_traces_densities" /> <img src="http://farm4.staticflickr.com/3687/8954616527_4c7cefe499_o.png" alt="plot of chunk gp_traces_densities" /></p>
+<p><img src="figure/process-noise-only-gp_traces_densities1.png" alt="plot of chunk gp_traces_densities" /> <img src="https://farm4.staticflickr.com/3687/8954616527_4c7cefe499_o.png" alt="plot of chunk gp_traces_densities" /></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Summarize the GP model</span>
 tgp_dat &lt;-<span class="st"> </span>
 <span class="st">    </span><span class="kw">data.frame</span>(  <span class="dt">x =</span> x_grid, 
@@ -268,7 +268,7 @@ allen_posteriors &lt;-<span class="st"> </span><span class="kw">melt</span>(tmp,
 <span class="kw">ggplot</span>(allen_posteriors) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(index, value)) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>, <span class="dt">ncol=</span><span class="dv">1</span>)</code></pre>
 <figure>
-<img src="http://farm8.staticflickr.com/7432/8954617241_ee7c8ab2c6_o.png" alt="plot of chunk allen-traces" /><figcaption>plot of chunk allen-traces</figcaption>
+<img src="https://farm8.staticflickr.com/7432/8954617241_ee7c8ab2c6_o.png" alt="plot of chunk allen-traces" /><figcaption>plot of chunk allen-traces</figcaption>
 </figure>
 <pre class="sourceCode r"><code class="sourceCode r">allen_priors &lt;-<span class="st"> </span><span class="kw">ddply</span>(allen_posteriors, <span class="st">&quot;variable&quot;</span>, function(dd){
     grid &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="kw">min</span>(dd$value), <span class="kw">max</span>(dd$value), <span class="dt">length =</span> <span class="dv">100</span>) 
@@ -280,7 +280,7 @@ allen_posteriors &lt;-<span class="st"> </span><span class="kw">melt</span>(tmp,
 <span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>allen_priors, <span class="kw">aes</span>(<span class="dt">x=</span>value, <span class="dt">y=</span>density), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>, <span class="dt">ncol=</span><span class="dv">3</span>)</code></pre>
 <figure>
-<img src="http://farm9.staticflickr.com/8128/8954617519_134c3da154_o.png" alt="plot of chunk allen-posteriors" /><figcaption>plot of chunk allen-posteriors</figcaption>
+<img src="https://farm9.staticflickr.com/8128/8954617519_134c3da154_o.png" alt="plot of chunk allen-posteriors" /><figcaption>plot of chunk allen-posteriors</figcaption>
 </figure>
 <p>Reshape the posterior parameter distribution data, transform back into original space, and calculate the mean parameters and mean function</p>
 <pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span>allen_posteriors
@@ -403,7 +403,7 @@ ricker_posteriors &lt;-<span class="st"> </span><span class="kw">melt</span>(tmp
 <span class="kw">ggplot</span>(ricker_posteriors) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(index, value)) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>, <span class="dt">ncol=</span><span class="dv">1</span>)</code></pre>
 <figure>
-<img src="http://farm8.staticflickr.com/7354/8954617787_8743f7915f_o.png" alt="plot of chunk ricker-traces" /><figcaption>plot of chunk ricker-traces</figcaption>
+<img src="https://farm8.staticflickr.com/7354/8954617787_8743f7915f_o.png" alt="plot of chunk ricker-traces" /><figcaption>plot of chunk ricker-traces</figcaption>
 </figure>
 <pre class="sourceCode r"><code class="sourceCode r">ricker_priors &lt;-<span class="st"> </span><span class="kw">ddply</span>(ricker_posteriors, <span class="st">&quot;variable&quot;</span>, function(dd){
     grid &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="kw">min</span>(dd$value), <span class="kw">max</span>(dd$value), <span class="dt">length =</span> <span class="dv">100</span>) 
@@ -415,7 +415,7 @@ ricker_posteriors &lt;-<span class="st"> </span><span class="kw">melt</span>(tmp
 <span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>ricker_priors, <span class="kw">aes</span>(<span class="dt">x=</span>value, <span class="dt">y=</span>density), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>, <span class="dt">ncol=</span><span class="dv">2</span>)</code></pre>
 <figure>
-<img src="http://farm6.staticflickr.com/5326/8954618029_911b481fc8_o.png" alt="plot of chunk ricker-posteriors" /><figcaption>plot of chunk ricker-posteriors</figcaption>
+<img src="https://farm6.staticflickr.com/5326/8954618029_911b481fc8_o.png" alt="plot of chunk ricker-posteriors" /><figcaption>plot of chunk ricker-posteriors</figcaption>
 </figure>
 <p>Reshape posteriors data, transform back, calculate mode and corresponding function.</p>
 <pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span>ricker_posteriors
@@ -546,7 +546,7 @@ myers_posteriors &lt;-<span class="st"> </span><span class="kw">melt</span>(tmp,
 <span class="kw">ggplot</span>(myers_posteriors) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(index, value)) +
 <span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>, <span class="dt">ncol=</span><span class="dv">1</span>)</code></pre>
 <figure>
-<img src="http://farm9.staticflickr.com/8134/8955814112_feb5f6abb2_o.png" alt="plot of chunk myers-traces" /><figcaption>plot of chunk myers-traces</figcaption>
+<img src="https://farm9.staticflickr.com/8134/8955814112_feb5f6abb2_o.png" alt="plot of chunk myers-traces" /><figcaption>plot of chunk myers-traces</figcaption>
 </figure>
 <pre class="sourceCode r"><code class="sourceCode r">par_prior_curves &lt;-<span class="st"> </span><span class="kw">ddply</span>(myers_posteriors, <span class="st">&quot;variable&quot;</span>, function(dd){
     grid &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="kw">min</span>(dd$value), <span class="kw">max</span>(dd$value), <span class="dt">length =</span> <span class="dv">100</span>) 
@@ -558,7 +558,7 @@ myers_posteriors &lt;-<span class="st"> </span><span class="kw">melt</span>(tmp,
 <span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>par_prior_curves, <span class="kw">aes</span>(<span class="dt">x=</span>value, <span class="dt">y=</span>density), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">facet_wrap</span>(~<span class="st"> </span>variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>, <span class="dt">ncol=</span><span class="dv">3</span>)</code></pre>
 <figure>
-<img src="http://farm4.staticflickr.com/3772/8955814344_b654594c98_o.png" alt="plot of chunk myers-posteriors" /><figcaption>plot of chunk myers-posteriors</figcaption>
+<img src="https://farm4.staticflickr.com/3772/8955814344_b654594c98_o.png" alt="plot of chunk myers-posteriors" /><figcaption>plot of chunk myers-posteriors</figcaption>
 </figure>
 <pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span>myers_posteriors
 A$index &lt;-<span class="st"> </span>A$index +<span class="st"> </span>A$chain *<span class="st"> </span><span class="kw">max</span>(A$index) <span class="co"># Combine samples across chains by renumbering index </span>
@@ -610,7 +610,7 @@ colorkey=cbPalette
 <span class="st">    </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>cbPalette) 
 <span class="kw">print</span>(plot_gp)</code></pre>
 <figure>
-<img src="http://farm4.staticflickr.com/3820/8954618731_61ebc877be_o.png" alt="plot of chunk Figure1" /><figcaption>plot of chunk Figure1</figcaption>
+<img src="https://farm4.staticflickr.com/3820/8954618731_61ebc877be_o.png" alt="plot of chunk Figure1" /><figcaption>plot of chunk Figure1</figcaption>
 </figure>
 <h2 id="goodness-of-fit">Goodness of fit</h2>
 <p>This shows only the mean predictions. For the Bayesian cases, we can instead loop over the posteriors of the parameters (or samples from the GP posterior) to get the distribution of such curves in each case.</p>
@@ -642,7 +642,7 @@ df_post &lt;-<span class="st"> </span><span class="kw">step_ahead_posteriors</sp
 <span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(time, value, <span class="dt">col=</span>variable, <span class="dt">group=</span><span class="kw">interaction</span>(L1,variable)), <span class="dt">alpha=</span>.<span class="dv">1</span>) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey, <span class="dt">guide =</span> <span class="kw">guide_legend</span>(<span class="dt">override.aes =</span> <span class="kw">list</span>(<span class="dt">alpha =</span> <span class="dv">1</span>))) </code></pre>
 <figure>
-<img src="http://farm4.staticflickr.com/3792/8954618965_9b92db0892_o.png" alt="plot of chunk Figureb" /><figcaption>plot of chunk Figureb</figcaption>
+<img src="https://farm4.staticflickr.com/3792/8954618965_9b92db0892_o.png" alt="plot of chunk Figureb" /><figcaption>plot of chunk Figureb</figcaption>
 </figure>
 <h2 id="optimal-policies-by-value-iteration">Optimal policies by value iteration</h2>
 <p>Compute the optimal policy under each model using stochastic dynamic programming. We begin with the policy based on the GP model,</p>
@@ -682,7 +682,7 @@ colorkey=cbPalette
 <span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">lwd=</span><span class="fl">1.2</span>, <span class="dt">alpha=</span><span class="fl">0.8</span>) +<span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;stock size&quot;</span>) +<span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;escapement&quot;</span>)  +
 <span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey)</code></pre>
 <figure>
-<img src="http://farm8.staticflickr.com/7348/8954619233_e007f06eab_o.png" alt="plot of chunk Figure2" /><figcaption>plot of chunk Figure2</figcaption>
+<img src="https://farm8.staticflickr.com/7348/8954619233_e007f06eab_o.png" alt="plot of chunk Figure2" /><figcaption>plot of chunk Figure2</figcaption>
 </figure>
 <h2 id="simulate-100-realizations-managed-under-each-of-the-policies">Simulate 100 realizations managed under each of the policies</h2>
 <pre class="sourceCode r"><code class="sourceCode r">sims &lt;-<span class="st"> </span><span class="kw">lapply</span>(OPT, function(D){
@@ -701,7 +701,7 @@ dt$method =<span class="st"> </span><span class="kw">factor</span>(dt$method, <s
 <span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(time, fishstock, <span class="dt">group=</span><span class="kw">interaction</span>(reps,method), <span class="dt">color=</span>method), <span class="dt">alpha=</span>.<span class="dv">1</span>) +
 <span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey, <span class="dt">guide =</span> <span class="kw">guide_legend</span>(<span class="dt">override.aes =</span> <span class="kw">list</span>(<span class="dt">alpha =</span> <span class="dv">1</span>)))</code></pre>
 <figure>
-<img src="http://farm4.staticflickr.com/3808/8955815586_814e0c50d6_o.png" alt="plot of chunk Figure3" /><figcaption>plot of chunk Figure3</figcaption>
+<img src="https://farm4.staticflickr.com/3808/8955815586_814e0c50d6_o.png" alt="plot of chunk Figure3" /><figcaption>plot of chunk Figure3</figcaption>
 </figure>
 <pre class="sourceCode r"><code class="sourceCode r">Profit &lt;-<span class="st"> </span>dt[, <span class="kw">sum</span>(profit), by=<span class="kw">c</span>(<span class="st">&quot;reps&quot;</span>, <span class="st">&quot;method&quot;</span>)]
 Profit[, <span class="kw">mean</span>(V1), by=<span class="st">&quot;method&quot;</span>]</code></pre>
@@ -715,7 +715,7 @@ Profit[, <span class="kw">mean</span>(V1), by=<span class="st">&quot;method&quot
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(Profit, <span class="kw">aes</span>(V1)) +<span class="st"> </span><span class="kw">geom_histogram</span>() +<span class="st"> </span>
 <span class="st">  </span><span class="kw">facet_wrap</span>(~method, <span class="dt">scales =</span> <span class="st">&quot;free_y&quot;</span>) +<span class="st"> </span><span class="kw">guides</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>) +<span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;Total profit by replicate&quot;</span>)</code></pre>
 <figure>
-<img src="http://farm3.staticflickr.com/2881/8954620001_2722b7d9d9_o.png" alt="plot of chunk totalprofits" /><figcaption>plot of chunk totalprofits</figcaption>
+<img src="https://farm3.staticflickr.com/2881/8954620001_2722b7d9d9_o.png" alt="plot of chunk totalprofits" /><figcaption>plot of chunk totalprofits</figcaption>
 </figure>
 <pre class="sourceCode r"><code class="sourceCode r">allen_deviance &lt;-<span class="st"> </span><span class="kw">posterior.mode</span>(pardist[,<span class="st">&#39;deviance&#39;</span>])
 ricker_deviance &lt;-<span class="st"> </span><span class="kw">posterior.mode</span>(ricker_pardist[,<span class="st">&#39;deviance&#39;</span>])
@@ -731,7 +731,7 @@ mle_deviance &lt;-<span class="st"> </span><span class="dv">2</span>*<span class
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2013-06-04 00:00:00 +0000" 
     property="dc:created">04 Jun 2013</time></p>
@@ -764,7 +764,7 @@ mle_deviance &lt;-<span class="st"> </span><span class="dv">2</span>*<span class
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2013/tags.html#nonparametric-bayes">#nonparametric-bayes</a>
     </p>
@@ -797,11 +797,11 @@ mle_deviance &lt;-<span class="st"> </span><span class="dv">2</span>*<span class
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -814,7 +814,7 @@ mle_deviance &lt;-<span class="st"> </span><span class="dv">2</span>*<span class
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -830,7 +830,7 @@ mle_deviance &lt;-<span class="st"> </span><span class="dv">2</span>*<span class
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -850,13 +850,13 @@ mle_deviance &lt;-<span class="st"> </span><span class="dv">2</span>*<span class
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -874,7 +874,7 @@ mle_deviance &lt;-<span class="st"> </span><span class="dv">2</span>*<span class
       &amp;rft.date=2013-06-04
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/06/04/sensitivity-of-gp-comparisons-in-further-examples.html">
+      &amp;rft_id=https://www.carlboettiger.info/06/04/sensitivity-of-gp-comparisons-in-further-examples.html">
   </span>
 
 
@@ -891,7 +891,7 @@ mle_deviance &lt;-<span class="st"> </span><span class="dv">2</span>*<span class
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -906,7 +906,7 @@ mle_deviance &lt;-<span class="st"> </span><span class="dv">2</span>*<span class
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

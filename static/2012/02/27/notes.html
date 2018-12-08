@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Notes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Notes" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2013-02-27 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2013-02-27 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/02/27/notes.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/02/27/notes.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -109,7 +109,7 @@
     <h3 id="reviewing">Reviewing</h3>
 <p>arg, reviewing. so much time.</p>
 <h3 id="seminar">Seminar</h3>
-<p><a href="http://katericherson.wordpress.com/">Kate Richerson</a> gave a fanstastic presentation to mega group yesterday showing her integration of behavior and dispersal in krill dynamics. She derives the krill’s behavioral movement patterns through a stochastic dynamic programming solution rather than just dictate it to the dispersal model directly.</p>
+<p><a href="https://katericherson.wordpress.com/">Kate Richerson</a> gave a fanstastic presentation to mega group yesterday showing her integration of behavior and dispersal in krill dynamics. She derives the krill’s behavioral movement patterns through a stochastic dynamic programming solution rather than just dictate it to the dispersal model directly.</p>
 <h3 id="reading">Reading</h3>
 <p>.</p>
 <ul>
@@ -117,40 +117,40 @@
 Outperforms The Correct Mechanistic Model For Simulated And
 Experimental Data. _Proceedings of The National Academy of
 Sciences_. ISSN 0027-8424, 
-http://dx.doi.org/10.1073/pnas.1216076110."><a href="http://dx.doi.org/10.1073/pnas.1216076110">Perretti <em>et. al.</em> (2013)</a></span>. It would be nice to see the comparison against the generating model.  The forecasting errors of the fully Bayesian inference using the correct model shouldn’t necessary be small, but they should be just as big as the Bayesian model expects them to be (e.g. over replicates, the Bayesian forecast error reflects the widths of the posteriors (modulo some statement about priors)).</li>
+https://dx.doi.org/10.1073/pnas.1216076110."><a href="http://dx.doi.org/10.1073/pnas.1216076110">Perretti <em>et. al.</em> (2013)</a></span>. It would be nice to see the comparison against the generating model.  The forecasting errors of the fully Bayesian inference using the correct model shouldn’t necessary be small, but they should be just as big as the Bayesian model expects them to be (e.g. over replicates, the Bayesian forecast error reflects the widths of the posteriors (modulo some statement about priors)).</li>
 </ul>
 <p>My worry with any approach doing better than the expected error is that it does so by generating biased estimation – e.g. something in the forecasting method, rather than in the data, happens to be biased towards the ‘right answer’.  In this example I don’t think that is the case.</p>
 <p>We already know that the modes of the posteriors don’t recover the correct model parameters of the generating model from an MCMC of such a complex model with limited data (though perhaps it is good to remind folks of this!), so it is not surprising that a heuristic approach can outperform this in cases.  </p>
 <p>It certainly is good to wrestle with these examples in any case.  Steve’s one of my post-doc advisors now so no doubt I’m biased.  Noam also pointed out this earlier article in Ecology <span class="showtooltip" title="Perretti C, Sugihara G and Munch S (2012). Nonparametric
 Forecasting Outperforms Parametric Methods For A Simulated
 Multi-Species System. _Ecology_. ISSN 0012-9658, 
-http://dx.doi.org/10.1890/12-0904.1."><a href="http://dx.doi.org/10.1890/12-0904.1">Perretti <em>et. al.</em> (2012)</a></span>.</p>
+https://dx.doi.org/10.1890/12-0904.1."><a href="http://dx.doi.org/10.1890/12-0904.1">Perretti <em>et. al.</em> (2012)</a></span>.</p>
 <ul>
 <li>In seminar, Marc mentioned the great paper by <span class="showtooltip" title="Wiedenmann J, Cresswell K, Goldbogen J, Potvin J and Mangel M
 (2011). Exploring The Effects of Reductions in Krill Biomass in
 The Southern Ocean on Blue Whales Using A State-Dependent Foraging
 Model. _Ecological Modelling_, *222*. ISSN 03043800, 
-http://dx.doi.org/10.1016/j.ecolmodel.2011.07.013."><a href="http://dx.doi.org/10.1016/j.ecolmodel.2011.07.013" rel="http://purl.org/spar/cito/discusses" >Wiedenmann <em>et. al.</em> (2011)</a></span> that uses the comparison of the optimal foraging strategy evolved by whales in their evolutionary environment to how that strategy performs today (similar spirit to the kinds of comparisons I am interested in with #multiple-uncertainty project.</li>
+https://dx.doi.org/10.1016/j.ecolmodel.2011.07.013."><a href="http://dx.doi.org/10.1016/j.ecolmodel.2011.07.013" rel="http://purl.org/spar/cito/discusses" >Wiedenmann <em>et. al.</em> (2011)</a></span> that uses the comparison of the optimal foraging strategy evolved by whales in their evolutionary environment to how that strategy performs today (similar spirit to the kinds of comparisons I am interested in with #multiple-uncertainty project.</li>
 </ul>
 <p>Reading an old Schaffer paper <span class="showtooltip" title="Schaffer W (1984). Stretching And Folding in Lynx Fur Returns:
 Evidence For A Strange Attractor in Nature? _The American
 Naturalist_, *124*. ISSN 0003-0147, 
-http://dx.doi.org/10.1086/284318."><a href="http://dx.doi.org/10.1086/284318" rel="http://purl.org/spar/cito/discusses" >Schaffer (1984)</a></span>.</p>
+https://dx.doi.org/10.1086/284318."><a href="http://dx.doi.org/10.1086/284318" rel="http://purl.org/spar/cito/discusses" >Schaffer (1984)</a></span>.</p>
 <ul>
 <li><p>Though <em>Nature</em> says the National Academy of Sciences needs an overhaul to stay relevant. Probably true but they still do some excellent reports that could deserve more eyes, like this on model fitting (<span class="showtooltip" title="(????). Assessing the Reliability of Complex Models: Mathematical
 and Statistical Foundations of Verification, Validation, and
 Uncertainty Quantification. 
-http://www.nap.edu/catalog.php?record_id=13395 [Online.
+https://www.nap.edu/catalog.php?record_id=13395 [Online.
 last-accessed: 2013-02-28 18:23:05]. 
-http://www.nap.edu/catalog.php?record_id=13395."><a href="http://www.nap.edu/catalog.php?record_id=13395" rel="http://purl.org/spar/cito/discusses" ></a></span>). We could do more VVUQ in ecology and evolution, and the value of presenting benchmark examples of this in simple (trivial) cases cannot be overstated, e.g. Fig 5.2.1.</p></li>
+https://www.nap.edu/catalog.php?record_id=13395."><a href="http://www.nap.edu/catalog.php?record_id=13395" rel="http://purl.org/spar/cito/discusses" ></a></span>). We could do more VVUQ in ecology and evolution, and the value of presenting benchmark examples of this in simple (trivial) cases cannot be overstated, e.g. Fig 5.2.1.</p></li>
 <li><p>GP methods in Biometrika <span class="showtooltip" title="Banerjee A, Dunson D and Tokdar S (2012). Efficient Gaussian
 Process Regression For Large Datasets. _Biometrika_, *100*. ISSN
-0006-3444,  http://dx.doi.org/10.1093/biomet/ass068."><a href="http://dx.doi.org/10.1093/biomet/ass068" rel="http://purl.org/spar/cito/discusses" >Banerjee <em>et. al.</em> (2012)</a></span></p></li>
+0006-3444,  https://dx.doi.org/10.1093/biomet/ass068."><a href="http://dx.doi.org/10.1093/biomet/ass068" rel="http://purl.org/spar/cito/discusses" >Banerjee <em>et. al.</em> (2012)</a></span></p></li>
 <li><p>Luminaries of evolution forecast the future of the field, with an eye towards data and semantics in <span class="showtooltip" title="Losos J, Arnold S, Bejerano G, Brodie E, Hibbett D, Hoekstra H,
 Mindell D, Monteiro A, Moritz C, Orr H, Petrov D, Renner S,
 Ricklefs R, Soltis P and Turner T (2013). Evolutionary Biology
 For The 21st Century. _Plos Biology_, *11*. 
-http://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1371/journal.pbio.1001466" rel="http://purl.org/spar/cito/discusses" >Losos <em>et. al.</em> (2013)</a></span></p></li>
+https://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1371/journal.pbio.1001466" rel="http://purl.org/spar/cito/discusses" >Losos <em>et. al.</em> (2013)</a></span></p></li>
 </ul>
 <h3 id="misc">Misc</h3>
 <ul>
@@ -159,20 +159,20 @@ http://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1
 </ul>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bibliography</span>()</code></pre>
 <ul>
-<li>A. Banerjee, D. B. Dunson, S. T. Tokdar, (2012) Efficient Gaussian Process Regression For Large Datasets. <em>Biometrika</em> <strong>100</strong> <a href="http://dx.doi.org/10.1093/biomet/ass068">10.1093/biomet/ass068</a></li>
-<li>Jonathan B. Losos, Stevan J. Arnold, Gill Bejerano, E. D. Brodie, David Hibbett, Hopi E. Hoekstra, David P. Mindell, Antónia Monteiro, Craig Moritz, H. Allen Orr, Dmitri A. Petrov, Susanne S. Renner, Robert E. Ricklefs, Pamela S. Soltis, Thomas L. Turner, (2013) Evolutionary Biology For The 21st Century. <em>Plos Biology</em> <strong>11</strong> <a href="http://dx.doi.org/10.1371/journal.pbio.1001466">10.1371/journal.pbio.1001466</a></li>
-<li>Charles Thomas Perretti, George Sugihara, Stephan B. Munch, (2012) Nonparametric Forecasting Outperforms Parametric Methods For A Simulated Multi-Species System. <em>Ecology</em> <a href="http://dx.doi.org/10.1890/12-0904.1">10.1890/12-0904.1</a></li>
-<li>C. T. Perretti, S. B. Munch, G. Sugihara, (2013) Model-Free Forecasting Outperforms The Correct Mechanistic Model For Simulated And Experimental Data. <em>Proceedings of The National Academy of Sciences</em> <a href="http://dx.doi.org/10.1073/pnas.1216076110">10.1073/pnas.1216076110</a></li>
-<li>William M. Schaffer, (1984) Stretching And Folding in Lynx Fur Returns: Evidence For A Strange Attractor in Nature?. <em>The American Naturalist</em> <strong>124</strong> <a href="http://dx.doi.org/10.1086/284318">10.1086/284318</a></li>
-<li>John Wiedenmann, Katherine A. Cresswell, Jeremy Goldbogen, Jean Potvin, Marc Mangel, (2011) Exploring The Effects of Reductions in Krill Biomass in The Southern Ocean on Blue Whales Using A State-Dependent Foraging Model. <em>Ecological Modelling</em> <strong>222</strong> <a href="http://dx.doi.org/10.1016/j.ecolmodel.2011.07.013">10.1016/j.ecolmodel.2011.07.013</a></li>
-<li>Assessing the Reliability of Complex Models: Mathematical and Statistical Foundations of Verification, Validation, and Uncertainty Quantification. <a href="http://www.nap.edu/catalog.php?record_id=13395">http://www.nap.edu/catalog.php?record_id=13395</a></li>
+<li>A. Banerjee, D. B. Dunson, S. T. Tokdar, (2012) Efficient Gaussian Process Regression For Large Datasets. <em>Biometrika</em> <strong>100</strong> <a href="https://dx.doi.org/10.1093/biomet/ass068">10.1093/biomet/ass068</a></li>
+<li>Jonathan B. Losos, Stevan J. Arnold, Gill Bejerano, E. D. Brodie, David Hibbett, Hopi E. Hoekstra, David P. Mindell, Antónia Monteiro, Craig Moritz, H. Allen Orr, Dmitri A. Petrov, Susanne S. Renner, Robert E. Ricklefs, Pamela S. Soltis, Thomas L. Turner, (2013) Evolutionary Biology For The 21st Century. <em>Plos Biology</em> <strong>11</strong> <a href="https://dx.doi.org/10.1371/journal.pbio.1001466">10.1371/journal.pbio.1001466</a></li>
+<li>Charles Thomas Perretti, George Sugihara, Stephan B. Munch, (2012) Nonparametric Forecasting Outperforms Parametric Methods For A Simulated Multi-Species System. <em>Ecology</em> <a href="https://dx.doi.org/10.1890/12-0904.1">10.1890/12-0904.1</a></li>
+<li>C. T. Perretti, S. B. Munch, G. Sugihara, (2013) Model-Free Forecasting Outperforms The Correct Mechanistic Model For Simulated And Experimental Data. <em>Proceedings of The National Academy of Sciences</em> <a href="https://dx.doi.org/10.1073/pnas.1216076110">10.1073/pnas.1216076110</a></li>
+<li>William M. Schaffer, (1984) Stretching And Folding in Lynx Fur Returns: Evidence For A Strange Attractor in Nature?. <em>The American Naturalist</em> <strong>124</strong> <a href="https://dx.doi.org/10.1086/284318">10.1086/284318</a></li>
+<li>John Wiedenmann, Katherine A. Cresswell, Jeremy Goldbogen, Jean Potvin, Marc Mangel, (2011) Exploring The Effects of Reductions in Krill Biomass in The Southern Ocean on Blue Whales Using A State-Dependent Foraging Model. <em>Ecological Modelling</em> <strong>222</strong> <a href="https://dx.doi.org/10.1016/j.ecolmodel.2011.07.013">10.1016/j.ecolmodel.2011.07.013</a></li>
+<li>Assessing the Reliability of Complex Models: Mathematical and Statistical Foundations of Verification, Validation, and Uncertainty Quantification. <a href="https://www.nap.edu/catalog.php?record_id=13395">http://www.nap.edu/catalog.php?record_id=13395</a></li>
 </ul>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2013-02-27 00:00:00 +0000" 
     property="dc:created">27 Feb 2013</time></p>
@@ -205,11 +205,11 @@ http://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#reading">#reading</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#seminar">#seminar</a>
     </p>
@@ -239,11 +239,11 @@ http://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -256,7 +256,7 @@ http://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -272,7 +272,7 @@ http://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -292,13 +292,13 @@ http://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -316,7 +316,7 @@ http://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1
       &amp;rft.date=2013-02-27
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/02/27/notes.html">
+      &amp;rft_id=https://www.carlboettiger.info/02/27/notes.html">
   </span>
 
 
@@ -333,7 +333,7 @@ http://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -348,7 +348,7 @@ http://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

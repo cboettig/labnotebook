@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Questions</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Questions" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2010-06-10 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2010-06-10 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/06/10/Questions.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/06/10/Questions.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -108,36 +108,36 @@
     <article>
     <p>Current population dynamics model macroscopic equations:</p>
 <figure>
-<img src="http://openwetware.org/images/math/1/c/2/1c26a2c6740e377965fa6e85d41e3f33.png" alt="\begin{align} \dot E &amp;= f_E(E,L,A) = -\mu_e E - c_{le} E L - c_{ae} E A - a_e E + b A \\ \dot L &amp;= f_L(E, L) = -\mu_L L + a_e E - a_L L \\ \dot P &amp;= f_P(L,P) = -\mu_P P - a_p P + a_L L\\ \dot A &amp;= f_A(P,A) = -\mu_A A + a_p P \end{align}" /><figcaption>\begin{align} \dot E &amp;= f_E(E,L,A) = -\mu_e E - c_{le} E L - c_{ae} E A - a_e E + b A \\ \dot L &amp;= f_L(E, L) = -\mu_L L + a_e E - a_L L \\ \dot P &amp;= f_P(L,P) = -\mu_P P - a_p P + a_L L\\ \dot A &amp;= f_A(P,A) = -\mu_A A + a_p P \end{align}</figcaption>
+<img src="https://openwetware.org/images/math/1/c/2/1c26a2c6740e377965fa6e85d41e3f33.png" alt="\begin{align} \dot E &amp;= f_E(E,L,A) = -\mu_e E - c_{le} E L - c_{ae} E A - a_e E + b A \\ \dot L &amp;= f_L(E, L) = -\mu_L L + a_e E - a_L L \\ \dot P &amp;= f_P(L,P) = -\mu_P P - a_p P + a_L L\\ \dot A &amp;= f_A(P,A) = -\mu_A A + a_p P \end{align}" /><figcaption>\begin{align} \dot E &amp;= f_E(E,L,A) = -\mu_e E - c_{le} E L - c_{ae} E A - a_e E + b A \\ \dot L &amp;= f_L(E, L) = -\mu_L L + a_e E - a_L L \\ \dot P &amp;= f_P(L,P) = -\mu_P P - a_p P + a_L L\\ \dot A &amp;= f_A(P,A) = -\mu_A A + a_p P \end{align}</figcaption>
 </figure>
 <p>Interpreting μ terms as death events, b as birth, and the <em>a</em> terms as transitions between age classes gives a natural form for the master equation.</p>
 <h3 id="divergent-solutions-to-the-linear-noise-approximation">Divergent Solutions to the linear noise approximation?</h3>
 <p>Breaking the age classes into <em>k</em> subclasses makes waiting time within an age class gamma instead of exponential, which better matches observation. Also allows sustained oscillations. The numerical solution to the linear noise approximation shows divergent variance dynamics. Is this a numerical artifact?</p>
 <figure>
-<img src="http://openwetware.org/images/thumb/e/eb/Oscillate_noise2.png/500px-Oscillate_noise2.png" alt="Numerical solution to linear noise b=5, ue= 0, ul = 0.001, up = 0, ua = 0.01, ae = .13*k, al = .01*k, ap = .15*k, cle = .2, cap = .1, cae = 5, V=volume" /><figcaption>Numerical solution to linear noise b=5, ue= 0, ul = 0.001, up = 0, ua = 0.01, ae = .13*k, al = .01*k, ap = .15*k, cle = .2, cap = .1, cae = 5, V=volume</figcaption>
+<img src="https://openwetware.org/images/thumb/e/eb/Oscillate_noise2.png/500px-Oscillate_noise2.png" alt="Numerical solution to linear noise b=5, ue= 0, ul = 0.001, up = 0, ua = 0.01, ae = .13*k, al = .01*k, ap = .15*k, cle = .2, cap = .1, cae = 5, V=volume" /><figcaption>Numerical solution to linear noise b=5, ue= 0, ul = 0.001, up = 0, ua = 0.01, ae = .13*k, al = .01*k, ap = .15*k, cle = .2, cap = .1, cae = 5, V=volume</figcaption>
 </figure>
 <figure>
 <img src="/skins/common/images/magnify-clip.png" alt="image" /><figcaption>image</figcaption>
 </figure>
 <p><strong>Numerical solution to linear noise</strong> b=5, ue= 0, ul = 0.001, up = 0, ua = 0.01, ae = .13*k, al = .01*k, ap = .15*k, cle = .2, cap = .1, cae = 5, V=volume</p>
-<p><a href="http://github.com/cboettig/structured-populations/blob/0af18d6f4b63ef63ced376f0c73cec16b83c66b5/R/gamma_beetles.R" title="http://github.com/cboettig/structured-populations/blob/0af18d6f4b63ef63ced376f0c73cec16b83c66b5/R/gamma_beetles.R">version-stable code</a>.</p>
+<p><a href="https://github.com/cboettig/structured-populations/blob/0af18d6f4b63ef63ced376f0c73cec16b83c66b5/R/gamma_beetles.R" title="http://github.com/cboettig/structured-populations/blob/0af18d6f4b63ef63ced376f0c73cec16b83c66b5/R/gamma_beetles.R">version-stable code</a>.</p>
 <figure>
-<img src="http://openwetware.org/images/a/a9/Ibm_gamma.png" alt="individual base simulation with same parameters" /><figcaption>individual base simulation with same parameters</figcaption>
+<img src="https://openwetware.org/images/a/a9/Ibm_gamma.png" alt="individual base simulation with same parameters" /><figcaption>individual base simulation with same parameters</figcaption>
 </figure>
-<p><a href="http://github.com/cboettig/structured-populations/blob/c361d07025b038c3d435018b751a6858c71f89c7/R/ind_based_models.R" title="http://github.com/cboettig/structured-populations/blob/c361d07025b038c3d435018b751a6858c71f89c7/R/ind_based_models.R">Version-stable code</a></p>
+<p><a href="https://github.com/cboettig/structured-populations/blob/c361d07025b038c3d435018b751a6858c71f89c7/R/ind_based_models.R" title="http://github.com/cboettig/structured-populations/blob/c361d07025b038c3d435018b751a6858c71f89c7/R/ind_based_models.R">Version-stable code</a></p>
 <h3 id="differences-between-two-step-correlated-events-and-two-single-steps">Differences between two-step (correlated events) and two single steps</h3>
 <p>Can we distinguish between a process where an element leaves one population and enters another (i.e. a transitions from one age class to the next) and a model where death rate in one class is equal to the birth rate in another? The linear noise approximation for a two-step process obeys a different equation than the one-step:</p>
 <figure>
-<img src="http://openwetware.org/images/math/5/e/b/5eb413fd88e12c41c39cf48c811fc71a.png" alt="\begin{align} &amp; \frac{d}{dt} E(p) = b(p)-d(p) + \sum_{j \neq i} \tau_{ji}(p) - \tau_{ij}(p) =: f(p)\\ &amp; \frac{d}{dt} M = \textrm{diag}( b(p) + d(p) ) - T + Df(p) M + M Df(p)^T \end{align}" /><figcaption>\begin{align} &amp; \frac{d}{dt} E(p) = b(p)-d(p) + \sum_{j \neq i} \tau_{ji}(p) - \tau_{ij}(p) =: f(p)\\ &amp; \frac{d}{dt} M = \textrm{diag}( b(p) + d(p) ) - T + Df(p) M + M Df(p)^T \end{align}</figcaption>
+<img src="https://openwetware.org/images/math/5/e/b/5eb413fd88e12c41c39cf48c811fc71a.png" alt="\begin{align} &amp; \frac{d}{dt} E(p) = b(p)-d(p) + \sum_{j \neq i} \tau_{ji}(p) - \tau_{ij}(p) =: f(p)\\ &amp; \frac{d}{dt} M = \textrm{diag}( b(p) + d(p) ) - T + Df(p) M + M Df(p)^T \end{align}" /><figcaption>\begin{align} &amp; \frac{d}{dt} E(p) = b(p)-d(p) + \sum_{j \neq i} \tau_{ji}(p) - \tau_{ij}(p) =: f(p)\\ &amp; \frac{d}{dt} M = \textrm{diag}( b(p) + d(p) ) - T + Df(p) M + M Df(p)^T \end{align}</figcaption>
 </figure>
-<p>where <em>T</em> is a symmetric matrix with off-diagonal elements <em>i,j</em> τ~<em>i<strong>j<em>~(</em>p<em>) + τ</em>j</strong>i</em>(<em>p</em>) and diagonal elements chosen so that rows sum to zero. This approximation is implemented in <a href="http://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R" title="http://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R">noise_approx.R</a></p>
+<p>where <em>T</em> is a symmetric matrix with off-diagonal elements <em>i,j</em> τ~<em>i<strong>j<em>~(</em>p<em>) + τ</em>j</strong>i</em>(<em>p</em>) and diagonal elements chosen so that rows sum to zero. This approximation is implemented in <a href="https://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R" title="http://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R">noise_approx.R</a></p>
 <p>How different can this be from simply implementing all transitions as single-steps?</p>
 <p>So far the difference seems small in my examples:</p>
 <figure>
-<img src="http://openwetware.org/images/thumb/e/e8/Crowley_covariance.png/400px-Crowley_covariance.png" alt="hastings covarainces, b1 = 0, b2 = .6, d1 = d2 = .1, c1 = c2 =.5, K =1e4" /><figcaption>hastings covarainces, b1 = 0, b2 = .6, d1 = d2 = .1, c1 = c2 =.5, K =1e4</figcaption>
+<img src="https://openwetware.org/images/thumb/e/e8/Crowley_covariance.png/400px-Crowley_covariance.png" alt="hastings covarainces, b1 = 0, b2 = .6, d1 = d2 = .1, c1 = c2 =.5, K =1e4" /><figcaption>hastings covarainces, b1 = 0, b2 = .6, d1 = d2 = .1, c1 = c2 =.5, K =1e4</figcaption>
 </figure>
 <figure>
-<img src="http://openwetware.org/images/thumb/2/26/Fixed_2.png/400px-Fixed_2.png" alt="Comparison. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = c = .1" /><figcaption>Comparison. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = c = .1</figcaption>
+<img src="https://openwetware.org/images/thumb/2/26/Fixed_2.png/400px-Fixed_2.png" alt="Comparison. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = c = .1" /><figcaption>Comparison. Parameters: b_1 = .2, b_2 = .1, d_1 = d_2 = c = .1</figcaption>
 </figure>
 <figure>
 <img src="/skins/common/images/magnify-clip.png" alt="image" /><figcaption>image</figcaption>
@@ -149,7 +149,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2010-06-10 00:00:00 +0000" 
     property="dc:created">10 Jun 2010</time></p>
@@ -208,11 +208,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -225,7 +225,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -241,7 +241,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -261,13 +261,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -285,7 +285,7 @@
       &amp;rft.date=2010-06-10
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/06/10/Questions.html">
+      &amp;rft_id=https://www.carlboettiger.info/06/10/Questions.html">
   </span>
 
 
@@ -302,7 +302,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -317,7 +317,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Migrating From Wordpress To Jekyll</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Migrating From Wordpress To Jekyll" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2012-09-19 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2012-09-19 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/09/19/migrating-from-wordpress-to-jekyll.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/09/19/migrating-from-wordpress-to-jekyll.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -118,11 +118,11 @@
 <h4 id="latexmathjax-equations">LaTeX/Mathjax Equations</h4>
 <p>Again I had used a variety of shortcodes for latex plugins before discovering MathJax, so I had to handle a variety of syntaxes here. Previously I’ve tried to write equations in a manner compatible with the redcarpet markdown parser that powers Github-Flavored Markdown (see the <a href="https://github.com/nono/Jekyll-plugins">corresponding Jekyll plugin</a>), e.g. surrounding equations with <code>&lt;div&gt;</code> blocks to avoid the parser mangling them. Instead, I’ve found it easier now to switch to pandoc for my markdown parser (and <a href="https://github.com/dsanson/jekyll-pandoc-plugin">corresponding Jekyll Plugin</a>). Pandoc uses the basic TeX <code>$</code> and <code>$$</code> for inline and display equations, rendering it into the MathJax (and modern LaTeX standard) <code>\(</code> and <code>\[</code> on conversion. Being pandoc-compatible is quite nice, making it easy to create an e-book, epub, or latex-based pdf of my notebook. I hate having to use a markdown syntax that isn’t compatible with most other extended markdown parsers, but with so many different, inconsistent parsers this cannot be easily avoided. Regardless, replacing the various shortcodes to the Pandoc syntax is just a simple regexpr step.</p>
 <h4 id="citations">Citations</h4>
-<p>Many of my posts relied on kcite to generate bibliographies for the post using DOIs. A short call to my <a href="http://www.carlboettiger.info/2012/05/30/knitcitations.html">knitcitations</a> package allowed me to generate the parenthetical citations and bibliographies instead. In principle this step could be run at the time I compile the site with Jekyll. Pages would be valid <code>.Rmd</code>, needing knitr as “markdown” interpreter. This is an intriguing way to go, but probably too complicated for the moment. Running additional R code would be nice, but could slow the time needed to build the site, even with knitr’s caching. Meanwhile, converted pages simply have the citations already processed and the bibliography added in as HTML at the end of the post.</p>
+<p>Many of my posts relied on kcite to generate bibliographies for the post using DOIs. A short call to my <a href="https://www.carlboettiger.info/2012/05/30/knitcitations.html">knitcitations</a> package allowed me to generate the parenthetical citations and bibliographies instead. In principle this step could be run at the time I compile the site with Jekyll. Pages would be valid <code>.Rmd</code>, needing knitr as “markdown” interpreter. This is an intriguing way to go, but probably too complicated for the moment. Running additional R code would be nice, but could slow the time needed to build the site, even with knitr’s caching. Meanwhile, converted pages simply have the citations already processed and the bibliography added in as HTML at the end of the post.</p>
 <h3 id="url-redirects">URL Redirects</h3>
 <p>My Jekyll site uses the SEO recommended structure of year/month/day/page-title for URLs, while my Wordpress site used simple random id numbers. To ensure that links to the old Wordpress pages resolve to the newly migrated pages, I added a little Jekyll plugin, <a href="https://github.com/cboettig/labnotebook/blob/master/_plugins/redirects.rb">redirects.rb</a>. One of the elegant things about Jekyll is the ability to create such plugins that do this just the way you would image doing so – creating auxiliary pages at each of the redirect URLs with a simple redirect command. To install, place <code>redirects.rb</code> in <code>_plugins</code>, <code>redirects.html</code> in <code>_layouts</code>, and in <code>_config.yml</code> add the line <code>redirects: yes</code> (see <a href="https://github.com/cboettig/labnotebook">site source</a>).</p>
 <h3 id="comments">Comments</h3>
-<p>I am using Disqus as the comment engine for entries. Since URLs change in the above step and I do not provide a unique disqus code to each page, I am attempting to migrate comments using the <a href="http://help.disqus.com/customer/portal/articles/286778-using-the-migration-tools">Disqus “migrate threads” tool</a>, which simply takes a csv file listing old and new urls in consecutive columns. Will have to wait and see if this works.</p>
+<p>I am using Disqus as the comment engine for entries. Since URLs change in the above step and I do not provide a unique disqus code to each page, I am attempting to migrate comments using the <a href="https://help.disqus.com/customer/portal/articles/286778-using-the-migration-tools">Disqus “migrate threads” tool</a>, which simply takes a csv file listing old and new urls in consecutive columns. Will have to wait and see if this works.</p>
 <h3 id="private-entries">Private entries</h3>
 <p>Several entries on the Wordpress site were marked private, and only visible after administrative login. Most of these entries are actually solicited journal reviews of various manuscripts which I cannot make public. <code>exitwp</code> marks these posts as <code>published: false</code> in the metadata, so it is easy to remove them from the Jekyll source site. They can be managed in a separate Github-excluded directory (so that they cannot be seen on the website source pages on Github either) that can be <code>.htaccess</code> password protected.</p>
 <h3 id="categories-and-tags">Categories and Tags</h3>
@@ -136,7 +136,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2012-09-19 00:00:00 +0000" 
     property="dc:created">19 Sep 2012</time></p>
@@ -169,15 +169,15 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#notebook-technology">#notebook-technology</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#Jekyll">#Jekyll</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#blog">#blog</a>
     </p>
@@ -207,11 +207,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -224,7 +224,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -240,7 +240,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -260,13 +260,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -284,7 +284,7 @@
       &amp;rft.date=2012-09-19
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/09/19/migrating-from-wordpress-to-jekyll.html">
+      &amp;rft_id=https://www.carlboettiger.info/09/19/migrating-from-wordpress-to-jekyll.html">
   </span>
 
 
@@ -301,7 +301,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -316,7 +316,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Two questions</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Two questions" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2010-11-21 21:53:44 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2010-11-21 21:53:44 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/11/21/two-questions.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/11/21/two-questions.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -111,19 +111,19 @@
 <p>Should the Monte Carlo simulations use the maximum likelihood  test and null model estimated from the data (as in  McLachlan 1987, Goldman 1993, Huelsenbeck 1996) or draw from the distribution of model parameters for each simulation?</p>
 <p>Sometimes this estimate is very uncertain, which is only subtly displayed in the Monte Carlo comparison.  While the summary statistics don’t catch it, the graph shows a huge range of likelihood ratios produced when simulating under the test model.  Consider the figure below comparing the pure BM model to one with reduced phylogenetic signal (lambda model).  Some of the simulations correspond to cases where the MLE estimates a very distinctly different value of lambda (near zero, say), and the model is easy to tell from BM (equivalent to lambda=1).  This gives the high likelihood ratios seen on the far right.  However, other simulations are very hard to tell apart because they are estimating values of lambda that are very close to unity already.</p>
 <figure>
-<img src="http://farm6.staticflickr.com/5281/5191048330_4dcb0f36c5_o.png" />
+<img src="https://farm6.staticflickr.com/5281/5191048330_4dcb0f36c5_o.png" />
 </figure>
 <p>(<a href="https://github.com/cboettig/Comparative-Phylogenetics/commit/cb1161cd2c091aa0e037434ec03df14fc91e3360#diff-2">code</a>)</p>
 <p>The danger is this: that the MLE returns a value of lambda near unity, and the lack of power is attributed to the fact that the data appears nearly Brownian, when in fact considerable lack of power may remain on this data set even if the estimate were near zero.  It is in this kind of example that the  complete power curves are particularly crucial.  As an example, here’s the power curve on lambda for the anoles data:</p>
 <figure>
-<img src="http://farm5.staticflickr.com/4151/5197061110_d98d0e4ebe_o.png" />
+<img src="https://farm5.staticflickr.com/4151/5197061110_d98d0e4ebe_o.png" />
 </figure>
-<p>(<a href="https://github.com/cboettig/Comparative-Phylogenetics/commit/d0ec8f66fdeaa93b97590215d14825dc448396fd#diff-0">c0de</a>) The individual distribution at each point can be seen<a href="http://www.flickr.com/photos/cboettig/tags/powercurve4/">in this series:</a></p>
+<p>(<a href="https://github.com/cboettig/Comparative-Phylogenetics/commit/d0ec8f66fdeaa93b97590215d14825dc448396fd#diff-0">c0de</a>) The individual distribution at each point can be seen<a href="https://www.flickr.com/photos/cboettig/tags/powercurve4/">in this series:</a></p>
 <p>[flickr-gallery mode=“tag” tags=“powercurve4”]</p>
 <h3 id="question-2">question 2</h3>
 <p>Is the better model the one with the smallest type I error in rejecting the other (integrating under the tail away from the observed likelihood ratio) or the model under which the observed likelihood ratio is most probable?</p>
 <figure>
-<img src="http://farm5.staticflickr.com/4112/5195799728_97244df623_o.png" />
+<img src="https://farm5.staticflickr.com/4112/5195799728_97244df623_o.png" />
 </figure>
 <p>(<a href="https://github.com/cboettig/Comparative-Phylogenetics/commit/6d76ce8a000ededec08f6bf7459d48da02e1f545#diff-1">code</a>)</p>
 <p>The above example (OU.3 v OU.11, see near end of code file) doesn’t quite capture this, since the better p value rejects the null and the higher probability at the observed ratio corresponds to the test distribution, so the methods agree, just.  It’s not obvious which one makes the better argument.  It is easy to imagine in a borderline case such as this that it could have gone either way though, with the probability being slightly higher or the tail slightly longer.</p>
@@ -133,7 +133,7 @@
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2010-11-21 21:53:44 +0000" 
     property="dc:created">21 Nov 2010</time></p>
@@ -192,11 +192,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -209,7 +209,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -225,7 +225,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -245,13 +245,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -269,7 +269,7 @@
       &amp;rft.date=2010-11-21
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/11/21/two-questions.html">
+      &amp;rft_id=https://www.carlboettiger.info/11/21/two-questions.html">
   </span>
 
 
@@ -286,7 +286,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -301,7 +301,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>

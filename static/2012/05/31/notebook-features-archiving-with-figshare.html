@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: http://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Archiving the lab notebook on figshare</title>
   <meta name="author" content="Carl Boettiger" />
@@ -21,12 +21,12 @@
 <meta property="dc:type" content="website" /> 
 <!-- RDFa Metadata (in OpenGraph) -->
 <meta property="og:title" content="Archiving the lab notebook on figshare" />
-<meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2013-05-31 00:00:00 +0000" />
+<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
+<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
+<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
+<meta property="https://ogp.me/ns/article#published_time" content="2013-05-31 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="http://www.carlboettiger.info/05/31/notebook-features-archiving-with-figshare.html" />
+<meta property="og:url" content="https://www.carlboettiger.info/05/31/notebook-features-archiving-with-figshare.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
@@ -40,14 +40,14 @@
 
 
 
-	<link href="http://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://www.carlboettiger.info/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <!-- Help the browser identify the RSS feed automatically -->
   <link rel="alternate" type="application/rss+xml" title="Carl Boettiger's Lab Notebook" href="/blog.xml" />
 </head>
 
 
-  <body prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -83,7 +83,7 @@
         </ul>
 
       <!-- Search site using Google's index -->
-        <form class="navbar-form navbar-right" role="search" method="get" action="http://google.com/search">
+        <form class="navbar-form navbar-right" role="search" method="get" action="https://google.com/search">
           <div class="form-group">
             <input type="hidden" name="q" value="site:carlboettiger.info" />
             <input type="text" class="form-control search-query" name="q" placeholder="Search"/>
@@ -107,7 +107,7 @@
   <div class="col-md-7 col-md-offset-1">
     <article>
     <h2 id="robust-archiving-through-clockss">Robust archiving through CLOCKSS</h2>
-<p>One of the most comprehensive approaches I have come across so far uses fig<strong>share</strong>. This offers the most promising avenue for content preservation, but is weakest in managing the URIs and associating them with the original content. All fig<strong>share</strong> content is archived by <a href="http://clockss.org">CLOCKSS</a>, an international library cooperation providing redundant and geopolitically distributed backup of the archives around the world (and used by many academic journals, both subscription based &amp; open access). Should fig<strong>share</strong> vanish from the face of the planet, it will trigger the release of all of its content to resolve through the CLOCKSS servers, with the same appearance and resolving at the same URLs as the original figshare content. Presumably the DOIs provided to figshare content will also continue to resolve there.</p>
+<p>One of the most comprehensive approaches I have come across so far uses fig<strong>share</strong>. This offers the most promising avenue for content preservation, but is weakest in managing the URIs and associating them with the original content. All fig<strong>share</strong> content is archived by <a href="https://clockss.org">CLOCKSS</a>, an international library cooperation providing redundant and geopolitically distributed backup of the archives around the world (and used by many academic journals, both subscription based &amp; open access). Should fig<strong>share</strong> vanish from the face of the planet, it will trigger the release of all of its content to resolve through the CLOCKSS servers, with the same appearance and resolving at the same URLs as the original figshare content. Presumably the DOIs provided to figshare content will also continue to resolve there.</p>
 <h2 id="challenges">Challenges</h2>
 <p>It would certainly be preferable to have the notebook archived by CLOCKSS directly, since the association between the original online content at carlboettiger.info is lost in archiving the entries on figshare. More problematically, the content as archived on fig<strong>share</strong> is not recognized by search engines, etc., as a separate HTML pages to index, but merely as a bundle of attached text files. On the upside, the content becomes part of the global scientific datasets preserved and indexed by fig<strong>share</strong> with appropriate metadata, etc., increasing the chances for discovery through that venue. Also, fig<strong>share</strong> provides a convenient API that can help automate deposition.</p>
 <h3 id="what-content-what-format">What content? What format?</h3>
@@ -118,9 +118,9 @@
 <li>Archiving the HTML versions of pages alone</li>
 <li>Archiving the whole git repository, <code>_site</code> HTML included (?)</li>
 </ol>
-<p>I began by archiving the markdown files that I write to create each entry. These are plain-text files that can be easily read in any text editor, even if the conventions for rendering them as HTML are lost. Like HTML, figures are linked to external files, and are thus not captured by this solution. To work around this, I adopted the trick of using <a href="http://carlboettiger.info/2013/01/24/Data-URIs-for-image-archives.html">Data URIs</a> to embed images. This places a binary encoding of the image in the text itself, which can be rendered by almost any browser as the appropriate image. While this keeps the content together, the long data URI strings are rather out-of-place inside a plain text document. Further, the markdown loses all of the valuable semantics that are automatically added to each page when Jekyll renders them to HTML. As Phil Lord argues, if there’s any format that future archivists can read successfully – it will be HTML. Consequently I’ve settled on archiving the HTML versions of each notebook entry, with images embedded as Data URIs. Each HTML file contains rich metadata in the header, sidebar, and footer, that give more information about the content and its context in the notebook (relative path, categories and tags, timestamps and SHA hashes, etc). I have archived these entries in annual chunks following the year/month/day directory structure already employed on the site.</p>
+<p>I began by archiving the markdown files that I write to create each entry. These are plain-text files that can be easily read in any text editor, even if the conventions for rendering them as HTML are lost. Like HTML, figures are linked to external files, and are thus not captured by this solution. To work around this, I adopted the trick of using <a href="https://carlboettiger.info/2013/01/24/Data-URIs-for-image-archives.html">Data URIs</a> to embed images. This places a binary encoding of the image in the text itself, which can be rendered by almost any browser as the appropriate image. While this keeps the content together, the long data URI strings are rather out-of-place inside a plain text document. Further, the markdown loses all of the valuable semantics that are automatically added to each page when Jekyll renders them to HTML. As Phil Lord argues, if there’s any format that future archivists can read successfully – it will be HTML. Consequently I’ve settled on archiving the HTML versions of each notebook entry, with images embedded as Data URIs. Each HTML file contains rich metadata in the header, sidebar, and footer, that give more information about the content and its context in the notebook (relative path, categories and tags, timestamps and SHA hashes, etc). I have archived these entries in annual chunks following the year/month/day directory structure already employed on the site.</p>
 <h3 id="how-about-site-assets">How about site assets?</h3>
-<p>There is still additional external content used to render the site – CSS and javascript files – that are not captured in this approach. Though entries actually render <a href="http://stackoverflow.com/questions/14046738">just fine without the css</a>, it would certainly be possible to include this material in the archive (though some Javascript comes from external CDNs). This does make for a bit larger and more cluttered archive, and more to the point is a rather crude solution to a problem already solved by Internet archiving programs such as CLOCKSS or internetarchive.org.</p>
+<p>There is still additional external content used to render the site – CSS and javascript files – that are not captured in this approach. Though entries actually render <a href="https://stackoverflow.com/questions/14046738">just fine without the css</a>, it would certainly be possible to include this material in the archive (though some Javascript comes from external CDNs). This does make for a bit larger and more cluttered archive, and more to the point is a rather crude solution to a problem already solved by Internet archiving programs such as CLOCKSS or internetarchive.org.</p>
 <h3 id="versioning">Versioning?</h3>
 <p>Lastly there is the concern of preserving the version history of entries. Though fig<strong>share</strong> provides versioning of its content, this doesn’t capture finer resolution of individual page changes available through the Github repository. At the expense of creating an ever more cumbersome archival object, one could include the <code>.git</code> history, either for the HTML rendered version (which lives at <a href="https://github.com/cboettig/cboettig.github.com/">cboettig.github.com</a>) or the source files used to create it (<a href="https://github.com/cboettig/labnotebook">labnotebook</a>).</p>
 <h3 id="connecting-to-the-original-instances">Connecting to the original instances?</h3>
@@ -128,16 +128,16 @@
 <h2 id="links-to-the-archives">Links to the archives</h2>
 <p>Current and previous archives of my lab notebook can be found on figshare by year. Older versions of these archives have taken a different approach, including just archiving the markdown files. The links use the DOI and point to the most recent version. (At this time linking to explicit versions with FigShare’s DataCite DOI links doesn’t appear to be working)</p>
 <ul>
-<li><a href="http://dx.doi.org/10.6084/m9.figshare.96916">Lab Notebook, 2010</a></li>
-<li><a href="http://dx.doi.org/10.6084/m9.figshare.96919">Lab Notebook, 2011</a></li>
-<li><a href="http://dx.doi.org/10.6084/m9.figshare.106620">Lab Notebook, 2012</a></li>
+<li><a href="https://dx.doi.org/10.6084/m9.figshare.96916">Lab Notebook, 2010</a></li>
+<li><a href="https://dx.doi.org/10.6084/m9.figshare.96919">Lab Notebook, 2011</a></li>
+<li><a href="https://dx.doi.org/10.6084/m9.figshare.106620">Lab Notebook, 2012</a></li>
 </ul>
 
     </article>
   </div>
   <div class="col-md-4">
     <div class="sidebar">
-      <aside prefix="og:http://ogp.me/ns/article#">
+      <aside prefix="og:https://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
     <time datetime="2013-05-31 00:00:00 +0000" 
     property="dc:created">31 May 2013</time></p>
@@ -170,11 +170,11 @@
 
   <p> <i class="icon-tag"></i> tags: 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#notebook-technology">#notebook-technology</a>, 
     
-    <!-- http://schema.org/BlogPosting/keywords -->
+    <!-- https://schema.org/BlogPosting/keywords -->
     <a rel="og:tag" class="tag" 
 			href="/2012/tags.html#blog">#blog</a>
     </p>
@@ -204,11 +204,11 @@
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
       </div>
 
@@ -221,7 +221,7 @@
 
 <!--************** FOAF information to social networks ***************************** -->
   <div class="row">
-    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="http://www.carlboettiger.info#me">
+    <div class="col-md-3 col-xs-4 socialicons" style="font-size:20px" typeof="foaf:Person" about="https://www.carlboettiger.info#me">
       <p>
           <script type="text/javascript" src="/assets/js/obfuscate-email-link.js"></script> 
 
@@ -237,7 +237,7 @@
              onclick="recordOutboundLink(this, 'Outbound Links', 'GPlus'); 
              return false;"><i class="fa fa-google-plus"></i></a>
 
-          <a rel="foaf:account" href="http://www.mendeley.com/profiles/carl-boettiger" 
+          <a rel="foaf:account" href="https://www.mendeley.com/profiles/carl-boettiger" 
              onclick="recordOutboundLink(this, 'Outbound Links', 'Mendeley'); 
              return false;"><img src="/assets/img/icon-mendeley.png" /></a> 
 
@@ -257,13 +257,13 @@
 
 
     <div class="col-md-4 col-md-offset-1 col-xs-4">
-      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="http://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
+      <p><a onclick="recordOutboundLink(this, 'Outbound Links', 'ONS_claim'); return false;" href="https://onsclaims.wikispaces.com/"><img src="/assets/img/ons-aci2-icon.svg" alt="ONS" class="showtooltip" title="An Open Notebook Science (ONS) project claim: Entry provides all content (AC) immediately (I) or without significant delay.  See link for details"/></a></p>
     </div>
 
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="http://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
@@ -281,7 +281,7 @@
       &amp;rft.date=2013-05-31
       &amp;rft.language=EN
       &amp;rft.rights=CC0
-      &amp;rft_id=http://www.carlboettiger.info/05/31/notebook-features-archiving-with-figshare.html">
+      &amp;rft_id=https://www.carlboettiger.info/05/31/notebook-features-archiving-with-figshare.html">
   </span>
 
 
@@ -298,7 +298,7 @@
     <!-- <script type="text/javascript" src="/assets/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Equations using MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });       </script>
     <!-- Twitter Bootstrap Javascript -->
     <!--  <script src="/assets/js/bootstrap.min.js"></script> -->
@@ -313,7 +313,7 @@
           _gaq.push(['_trackPageview']);
           (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
   </script>
