@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Hugo 0.49.2" />
+  <meta name="generator" content="Hugo 0.53" />
   <meta name="author" content="Carl Boettiger">
   
 
@@ -137,7 +137,10 @@
     <article>
     <h1>Using travis-ci in research compendia and student repos</h1> 
       
-    <p>In general I’m a big believer in the R package mechanism as a convenient way to package and distribute a reproducible compendium of code, data, notebooks and manuscripts. However, it’s often overkill, particularly since passing basic continuous integration checks (e.g. via <code>devtools::use_travis()</code>) means running a relatively strict <code>R CMD check</code> that will worry about things such as documentation norms and details that aren’t always appropriate.</p>
+    
+
+
+<p>In general I’m a big believer in the R package mechanism as a convenient way to package and distribute a reproducible compendium of code, data, notebooks and manuscripts. However, it’s often overkill, particularly since passing basic continuous integration checks (e.g. via <code>devtools::use_travis()</code>) means running a relatively strict <code>R CMD check</code> that will worry about things such as documentation norms and details that aren’t always appropriate.</p>
 <p>What I most want is an easy way to confirm that any <code>.Rmd</code> notebooks in a repository can be successfully knit on an independent machine – i.e. that the compendium can access all the software / functions and data it needs. Sure, some additional checks might be necessary (though these are sometimes best formulated in possibly-hidden <code>.Rmd</code> chunks), but this would detect the main ills such as failing to load libraries or using user-specific absolute paths.</p>
 <p>A light-weight solution proposed in <a href="https://github.com/ropensci/unconf17/issues/5">this ropensci thread</a> inspired me to write this <a href="https://github.com/cboettig/compendium">mock-up compendium</a> which does just that, using a DESCRIPTION file to indicate dependencies and other metadata, and a <code>test.R</code> script called by <code>.travis.yml</code> to <code>rmarkdown::render</code> all the <code>.Rmds</code>:</p>
 <p>A minimal DESCRIPTION:</p>

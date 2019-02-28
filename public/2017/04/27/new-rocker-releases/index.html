@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Hugo 0.49.2" />
+  <meta name="generator" content="Hugo 0.53" />
   <meta name="author" content="Carl Boettiger">
   
 
@@ -137,7 +137,10 @@
     <article>
     <h1>New rocker releases</h1> 
       
-    <p>R <code>3.4.0</code> and <code>devel</code> tags are now available in the Rocker versioned stack, and <code>latest</code> has been updated to <code>3.4.0</code>.</p>
+    
+
+
+<p>R <code>3.4.0</code> and <code>devel</code> tags are now available in the Rocker versioned stack, and <code>latest</code> has been updated to <code>3.4.0</code>.</p>
 <p>This means you can now run something like:</p>
 <pre><code>docker run -d -p 8787:8787 rocker/tidyverse:devel</code></pre>
 <p>to test out a recent version<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> of R devel in RStudio with the <code>tidyverse</code> packages already installed. Note that the packages are not themselves devel versions (e.g. from GitHub) but are instead the latest versions from CRAN, just as in the <code>latest</code> tag. Only the base R system is on <code>devel</code>. This can be handy for testing packages prior to CRAN release.</p>

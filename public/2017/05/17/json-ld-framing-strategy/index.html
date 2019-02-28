@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Hugo 0.49.2" />
+  <meta name="generator" content="Hugo 0.53" />
   <meta name="author" content="Carl Boettiger">
   
 
@@ -137,7 +137,10 @@
     <article>
     <h1>json-ld framing strategy</h1> 
       
-    <p>Parsing very nested JSON documents can be a pain. Here are some notes on co-opting the strategy of “Framing” used in JSON-LD. (Note that unlike the basic operations of <code>compaction</code> and <code>expansion</code>, the JSON-LD framing algorithm actually is essentially independent of the <code>@context</code> and any linked data concepts.</p>
+    
+
+
+<p>Parsing very nested JSON documents can be a pain. Here are some notes on co-opting the strategy of “Framing” used in JSON-LD. (Note that unlike the basic operations of <code>compaction</code> and <code>expansion</code>, the JSON-LD framing algorithm actually is essentially independent of the <code>@context</code> and any linked data concepts.</p>
 <p>Here’s a toy example of some nested JSON. Very nested structures are usually the source of issues for me, even with <code>purrr</code>, because often I want to pull data found at various different levels of nesting into a single row for the data.frame I care about.</p>
 <pre class="r"><code>library(&quot;jsonlite&quot;)
 library(&quot;jsonld&quot;)

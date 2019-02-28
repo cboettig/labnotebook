@@ -30,6 +30,16 @@ aliases: "/publications"
 
 # publications
 
+28. __Carl Boettiger___, (2019). Ecological Metadata as Linked Data.
+    Journal of Open Source Software, 4(34), 1276, 
+    [doi:10.21105/joss.01276](https://doi.org/10.21105/joss.01276)
+    ([software](https://doi.org/10.5281/zenodo.1442890)).
+  
+27. Katz, Allen, Barba, Berg, Bik, __Boettiger__, et al. (2018).
+    The principles of tomorrow's university. F1000Research, 7:1926 
+    [doi:10.12688/f1000research.17425.1](https://doi.org/10.12688/f1000research.17425.1). 
+    (32 co-authors.)
+
 26. Karthik Ram, __Carl Boettiger__, Scott Chamberlain, Noam Ross,
     Maelle Salmon, & Stephanie Butland. (2018). A Community of Practice
     Around Peer-review for Long-term Research Software Sustainability. 
@@ -78,17 +88,18 @@ aliases: "/publications"
     ([oa](https://doi.org/10.1093/biosci/bix025))
 
 17. T Alex Perkins, __Carl Boettiger__, Benjamin L. Philips. (2016) After
-  the games are over: life-history trade-offs drive dispersal attenuation
-  following range expansion. _Ecology and Evolution_ 6 (18) 6425-6434. 
-  [doi:10.1002/ece3.2314](http://dx.doi.org/10.1002/ece3.2314).
-  ([oa](http://oadoi.org/10.1002/ece3.2314),
-  [code](https://github.com/TAlexPerkins/dispersal_tradeoffs))
+    the games are over: life-history trade-offs drive dispersal attenuation
+    following range expansion. _Ecology and Evolution_ 6 (18) 6425-6434. 
+    [doi:10.1002/ece3.2314](http://dx.doi.org/10.1002/ece3.2314).
+    ([oa](http://oadoi.org/10.1002/ece3.2314),
+    [code](https://github.com/TAlexPerkins/dispersal_tradeoffs))
 
 16. __Carl Boettiger__, Michael Bode, James N. Sanchirico, Jacob LaRiviere,
-   Alan Hastings, and Paul Robert Armsworth. (2016) Optimal management
-   of a stochastically varying population when policy adjustment is
-   costly. _Ecological Applications_ 26 (3) 808-817. [doi:10.1890/15-0236](http://dx.doi.org/10.1890/15-0236).
-   ([oa](http://arxiv.org/pdf/1507.07037v1.pdf), [code](https://github.com/cboettig/pdg_control))
+    Alan Hastings, and Paul Robert Armsworth. (2016) Optimal management
+    of a stochastically varying population when policy adjustment is
+    costly. _Ecological Applications_ 26 (3) 808-817.   
+    [doi:10.1890/15-0236](http://dx.doi.org/10.1890/15-0236).
+    ([oa](http://arxiv.org/pdf/1507.07037v1.pdf), [code](https://github.com/cboettig/pdg_control))
 
 15. __Carl Boettiger__, Scott Chamberlain, Rutger Vos and Hilmar
    Lapp. (2016) RNeXML: a package for reading and writing richly annotated
@@ -198,6 +209,8 @@ aliases: "/publications"
 - The Influence of Conflicting Policies and Supply-Chain Pressures on Farmers' Decisions and Tradeoffs with Respect to Biodiversity, Profitability, and Sustainability.  Timothy Bowles (PI), Alastair Iles, Claire Kremen, Carl Boettiger. (2018-2022).  **National Science Foundation** [#CNH-1824871
 ](https://nsf.gov/awardsearch/showAward?AWD_ID=1824871) $1,301,737
 
+- The rOpenSci Project (2019-2021, Co-PI). **Helmsley Charitable Trust**, award 2016PG-BRI004. $1,000,000
+
 - Detecting Change in Global Biodiversity through Large Scale Network Analysis. (2018-2020) Berkeley Institute for Data Science, $67,000
 
 - [Hellman Fellows Award](https://vpf.berkeley.edu/hellman-fellows-fund) (2018-2020) **The Hellman Foundation**. $37,600
@@ -208,7 +221,7 @@ aliases: "/publications"
 
 - Reproducible and Collaborative Data Science. NSF **XSEDE** TG-DEB160021.  NSF Estimated value of computing resources: $20,028
 
-- The rOpenSci Project (2015-2018, Co-PI). **Helmsley Charitable Trust**, award 2016PG-BRI004. $2,900,000
+- The rOpenSci Project (2015-2018, Co-PI). **Helmsley Charitable Trust**, award 2016PG-BRI004. $2,875,071
 
 - The Codemeta project (2015). **National Science Foundation**
    [#ACI-1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
