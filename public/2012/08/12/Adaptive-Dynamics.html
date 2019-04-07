@@ -142,13 +142,13 @@ for(i in 1:4){
     user   system  elapsed 
    2.700    0.440 4685.922</code></pre>
 <p>corresponds to a runtime of about 78 minutes, with most simulations running to maximum time. Results in run order shown</p>
-<p><img src="https://openwetware.org/images/thumb/c/c9/Failures_ens_1.png/400px-Failures_ens_1.png" alt="image" /> ::::: <img src="http://openwetware.org/images/thumb/6/63/Failures_ens_2.png/400px-Failures_ens_2.png" alt="image" /></p>
-<p><img src="https://openwetware.org/images/thumb/7/71/Failures_ens_3.png/400px-Failures_ens_3.png" alt="image" /> ::::: <img src="http://openwetware.org/images/thumb/7/7f/Failures_ens_4.png/400px-Failures_ens_4.png" alt="image" /></p>
-<p><img src="https://openwetware.org/images/thumb/b/bc/Butterfly_ens_1.png/400px-Butterfly_ens_1.png" alt="image" /> ::::: <img src="http://openwetware.org/images/thumb/7/75/Butterfly_ens_2.png/400px-Butterfly_ens_2.png" alt="image" /></p>
-<p><img src="https://openwetware.org/images/thumb/8/87/Butterfly_ens_3.png/400px-Butterfly_ens_3.png" alt="image" /> ::::: <img src="http://openwetware.org/images/thumb/1/1e/Butterfly_ens_4.png/400px-Butterfly_ens_4.png" alt="image" /></p>
+<p><img src="https://openwetware.org/images/thumb/c/c9/Failures_ens_1.png/400px-Failures_ens_1.png" alt="image" /> ::::: <img src="https://openwetware.org/images/thumb/6/63/Failures_ens_2.png/400px-Failures_ens_2.png" alt="image" /></p>
+<p><img src="https://openwetware.org/images/thumb/7/71/Failures_ens_3.png/400px-Failures_ens_3.png" alt="image" /> ::::: <img src="https://openwetware.org/images/thumb/7/7f/Failures_ens_4.png/400px-Failures_ens_4.png" alt="image" /></p>
+<p><img src="https://openwetware.org/images/thumb/b/bc/Butterfly_ens_1.png/400px-Butterfly_ens_1.png" alt="image" /> ::::: <img src="https://openwetware.org/images/thumb/7/75/Butterfly_ens_2.png/400px-Butterfly_ens_2.png" alt="image" /></p>
+<p><img src="https://openwetware.org/images/thumb/8/87/Butterfly_ens_3.png/400px-Butterfly_ens_3.png" alt="image" /> ::::: <img src="https://openwetware.org/images/thumb/1/1e/Butterfly_ens_4.png/400px-Butterfly_ens_4.png" alt="image" /></p>
 <p>Spikes at the end of waiting times indicate simulation termination before event occurs, from runs that never branched</p>
-<p><img src="https://openwetware.org/images/thumb/8/8b/Waitingtimes_ens_1.png/400px-Waitingtimes_ens_1.png" alt="image" /> ::::: <img src="http://openwetware.org/images/thumb/e/e4/Waitingtimes_ens_2.png/400px-Waitingtimes_ens_2.png" alt="image" /></p>
-<p><img src="https://openwetware.org/images/thumb/3/35/Waitingtimes_ens_3.png/400px-Waitingtimes_ens_3.png" alt="image" /> ::::: <img src="http://openwetware.org/images/thumb/6/69/Waitingtimes_ens_4.png/400px-Waitingtimes_ens_4.png" alt="image" /></p>
+<p><img src="https://openwetware.org/images/thumb/8/8b/Waitingtimes_ens_1.png/400px-Waitingtimes_ens_1.png" alt="image" /> ::::: <img src="https://openwetware.org/images/thumb/e/e4/Waitingtimes_ens_2.png/400px-Waitingtimes_ens_2.png" alt="image" /></p>
+<p><img src="https://openwetware.org/images/thumb/3/35/Waitingtimes_ens_3.png/400px-Waitingtimes_ens_3.png" alt="image" /> ::::: <img src="https://openwetware.org/images/thumb/6/69/Waitingtimes_ens_4.png/400px-Waitingtimes_ens_4.png" alt="image" /></p>
 <p>Trying to find parameters where more runs will finish in 5e5 max time.</p>
 <pre class="de1"><code>all[[1]] &lt;- ensemble_sim(rep=rep, sigma_mu = 0.05, mu = 5e-3, sigma_c2 = .8, sigma_k2 = 1, ko = 500, xo = 0.1, threshold = 30, cpu=cpu)
 all[[2]] &lt;- ensemble_sim(rep=rep, sigma_mu = 0.05, mu = 1e-3, sigma_c2 = .1, sigma_k2 = 1, ko = 500, xo = 0.1, threshold = 30, cpu=cpu)

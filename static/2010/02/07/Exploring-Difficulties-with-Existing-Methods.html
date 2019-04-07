@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Exploring Difficulties with Existing Methods</title>
   <meta name="author" content="Carl Boettiger" />
@@ -19,15 +18,6 @@
 <meta property="dc:source" content="Lab Notebook" />
 <meta property="dc:subject" content="Ecology" /> 
 <meta property="dc:type" content="website" /> 
-<!-- RDFa Metadata (in OpenGraph) -->
-<meta property="og:title" content="Exploring Difficulties with Existing Methods" />
-<meta property="og:author" content="https://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
-<meta property="https://ogp.me/ns/profile#first_name" content="Carl"/>
-<meta property="https://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="https://ogp.me/ns/article#published_time" content="2010-02-07 00:00:00 +0000" />
-<meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
-<meta property="og:url" content="https://www.carlboettiger.info/02/07/Exploring-Difficulties-with-Existing-Methods.html" />
-<meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
 <meta name="citation_author" content="Carl Boettiger"/>
@@ -110,7 +100,7 @@
 <li><p>Model choice plays an increasingly dominant role in comparative phylogenetics. The software OUCH of Butler and King (2004) is built around the model comparison framework and returns a variety of information criteria for choosing between different models fitted to the tree.</p></li>
 <li><p>I’ve written a short R script to explore how robust these inferences are, and the results are rather surprising. None of the inferences holds up to the classical P value standard of 95% probability of being right, and the inference can be wrong more often than it is right – a coin flip out-performs the model choice method based on these information criteria in certain cases. This provides good motivation for my proposed new methods and should also provide material for a note to Evolution.</p></li>
 </ul>
-<p><img src="https://openwetware.org/images/thumb/4/43/Aic_panels.png/400px-Aic_panels.png" alt="image" /> <img src="http://openwetware.org/images/thumb/8/8c/Sic_panels.png/400px-Sic_panels.png" alt="image" /></p>
+<p><img src="https://openwetware.org/images/thumb/4/43/Aic_panels.png/400px-Aic_panels.png" alt="image" /> <img src="https://openwetware.org/images/thumb/8/8c/Sic_panels.png/400px-Sic_panels.png" alt="image" /></p>
 <ul>
 <li><p>Histogram in the difference between AIC (or SIC) score of the model used to produce the data and the alternative model. Values falling to the left of the dotted line choose the model actually used to create the simulated data on the tree. In the first row, the data is created under the OU(LP) model and the model choice always selects OU(LP), without error. But when the data is created under BM (last row) the OU(1) and OU(LP) models often outperform the BM model. When the data is created under OU(1), middle row, the model inference chooses the other models most of the time. While stricter criteria of SIC make fewer errors relative to AIC when the data is created under the simpler BM model, SIC performs even worse when OU(1) generates the data.</p></li>
 <li><p>Uses the Anoles tree of the Northern Lesser Antilles and trait of log body size as in the example in OUCH and in Bulter and King paper.</p></li>
@@ -250,7 +240,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
