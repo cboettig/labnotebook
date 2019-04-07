@@ -123,10 +123,10 @@
 <ul>
 <li>Perhaps the <a href="https://github.com/cboettig/pdg_control/blob/c1481a071bed3496413328eb148b28138ccb0f55/inst/examples/model_uncertainty.md">most dramatic example I have so far</a> comes from a mistake in my model specification, whereby what I intended to be the correct model was actually a terribly optimistic model. The algorithm quickly realized that it would do best to chose what I had provided as the wrong model, which was actually closer to the truth than my faulty specified true model.</li>
 </ul>
-<p><img src="https://farm8.staticflickr.com/7102/7018850545_5562557904_o.png" alt="corrected" /> <img src="http://farm7.staticflickr.com/6113/6872744460_b1976cd8f6_o.png" alt="belief" /></p>
+<p><img src="https://farm8.staticflickr.com/7102/7018850545_5562557904_o.png" alt="corrected" /> <img src="https://farm7.staticflickr.com/6113/6872744460_b1976cd8f6_o.png" alt="belief" /></p>
 <p><span class="math">\[ S = \frac{\alpha S ^ {\delta}}{1 + S^{\delta}/K} \]</span> <span class="math">\[ 1 + S^\delta/K = \alpha S ^ {\delta-1} \]</span> <span class="math">\[ K - K \alpha S ^ {\delta-1} + S{^\delta} \]</span> for $ = 2 $ <span class="math">\[S = \frac{1}{2} \left( \alpha K \pm \sqrt{\alpha^2 K^2 - 4 K}\right) \]</span></p>
 <p>Cases where risk of collapse is real, learning is fast, but model uncertainty isn’t the challenge. Compare outcomes starting with <a href="https://github.com/cboettig/pdg_control/blob/d0cd7ca379dfc30e67363442189ab57adfa8058a/inst/examples/model_uncertainty.md">wrong</a> and <a href="https://github.com/cboettig/pdg_control/blob/ff049e1f623413e1438555aec63ddbe65dec6d8f/inst/examples/model_uncertainty.md">right</a> initial belief. Learning takes place in the first step, but many populations crash by chance anyhow.</p>
-<p><img src="https://farm8.staticflickr.com/7231/7019134197_76f3c00e80_m.jpg" alt="right assumption" /> <img src="http://farm8.staticflickr.com/7046/7019126361_c3a712b982_m.jpg" alt="wrong initial assumption" /></p>
+<p><img src="https://farm8.staticflickr.com/7231/7019134197_76f3c00e80_m.jpg" alt="right assumption" /> <img src="https://farm8.staticflickr.com/7046/7019126361_c3a712b982_m.jpg" alt="wrong initial assumption" /></p>
 
     </article>
   </div>

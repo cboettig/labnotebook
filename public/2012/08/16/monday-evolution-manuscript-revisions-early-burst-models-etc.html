@@ -115,10 +115,10 @@
 <p>The authors use AICc, and include a bootstrap analysis which suggests relatively robust model choice above 10 taxa. The reason for this is that the models being compared are not estimated from the data. The authors fix parameters for each of the three models, BM, OU, EB, and simulate 100 trait data sets (on each tree). On each, one tends to make the correct choice by AICc.</p>
 <p>In our approach, we <em>estimate</em> BM/OU/EB model parameters from the data, and simulate all replicates under that. Imagine a rich data set that is clearly from EB by any criteria. The estimated BM model for this data-set has a worse log-likelihood. Yet simulations from that estimated model can be very difficult to tell apart from the simulations of the EB model <em>that has been estimated from the same data</em>.</p>
 <p>Consequently we find in our approach that we cannot tell between data simulated under the specified EB model and the other models:</p>
-<p><img src="https://farm7.staticflickr.com/6193/6049627283_cbf468cc4e_o.png" /> <img src="http://farm7.staticflickr.com/6066/6050179134_de4b740944_o.png" /></p>
+<p><img src="https://farm7.staticflickr.com/6193/6049627283_cbf468cc4e_o.png" /> <img src="https://farm7.staticflickr.com/6066/6050179134_de4b740944_o.png" /></p>
 <h3 id="aicc">AICc</h3>
 <p>Also added AICc comparison along with AIC and BIC (calculated but the updated plot command). Of course as none of the criteria estimate any measure of uncertainty, it doesn’t do any better, just pushes the false positive and false negative errors around a bit:</p>
-<p><img src="https://farm7.staticflickr.com/6187/6046471361_9616dfdd4a_o.png" />  <img src="http://farm7.staticflickr.com/6183/6046471291_057f23129d_o.png" /></p>
+<p><img src="https://farm7.staticflickr.com/6187/6046471361_9616dfdd4a_o.png" />  <img src="https://farm7.staticflickr.com/6183/6046471291_057f23129d_o.png" /></p>
 <p>However, summary patterns are still going to be necessary, particularly for large meta-analyses such as the EB example. AUC of the ROC might be a promising thing to explore here.</p>
 <h3 id="wrightscape">wrightscape</h3>
 <p>Luke Mahler is trying out my wrightscape code (prerelease version, from github). Some trouble apparently in compiling from source, probably in getting RTools and GSL libraries to cooperate, luckily winbuilder builds me a quick binary successfully, now available on <a href="https://github.com/cboettig/pmc/downloads">github downloads</a>.</p>

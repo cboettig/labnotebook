@@ -257,7 +257,7 @@ obs &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class
                   <span class="dt">y =</span> <span class="kw">c</span>(-<span class="dv">2</span>,  <span class="dv">0</span>,  <span class="dv">1</span>,  <span class="dv">2</span>, -<span class="dv">1</span>))</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">gp &lt;-<span class="st"> </span><span class="kw">gp_mcmc</span>(obs$x, obs$y, <span class="dt">d.p =</span> <span class="kw">c</span>(<span class="dv">2</span>,.<span class="dv">5</span>), <span class="dt">s2.p =</span> <span class="kw">c</span>(<span class="dv">2</span>,.<span class="dv">5</span>))</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary_gp_mcmc</span>(gp)</code></pre>
-<p><img src="https://farm8.staticflickr.com/7285/8739390350_c4c06db5ab_o.png" alt="plot of chunk unnamed-chunk-6" /> <img src="http://farm8.staticflickr.com/7285/8739390438_50350c1a38_o.png" alt="plot of chunk unnamed-chunk-6" /></p>
+<p><img src="https://farm8.staticflickr.com/7285/8739390350_c4c06db5ab_o.png" alt="plot of chunk unnamed-chunk-6" /> <img src="https://farm8.staticflickr.com/7285/8739390438_50350c1a38_o.png" alt="plot of chunk unnamed-chunk-6" /></p>
 <pre class="sourceCode r"><code class="sourceCode r">gp_dat &lt;-<span class="st"> </span><span class="kw">gp_predict</span>(gp, x_predict)</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">tgp_dat &lt;-<span class="st"> </span>
 <span class="st">    </span><span class="kw">data.frame</span>(  <span class="dt">x =</span> x_predict, 

@@ -108,7 +108,7 @@
     <article>
     <p>Can I get a generic montecarlotest function working for both warningsignals and pmc?</p>
 <p>Needs to be able to handle S4 classes as well as S3 classes, or need to define the methods update, simulate, loglik and getParameters for any object that would use the method. i.e. these need to be defined in warningsignals for its functions and in wrightscape/pmc for its creatures. then the generic can be used. Implementing now… Completed. pmc and wrightscape now depend on my mcmcTools package, which now provides the montecarlotest() function. This function can be run piecewise as well using two new functions, compare_models(), and collect(). compare_models contains the abstract parallelization loop, which can be applied in any parallelization manner (including bash-script serial runs of the function) using any lapply formating. Results from separate runs can simply be concatenated and passed to collect(), which does some basic reformatting.</p>
-<p><img src="https://farm7.staticflickr.com/6197/6090938628_313358fec8_o.png" /> <img src="http://farm7.staticflickr.com/6085/6090932874_d2b3b20cd4_o.png" /></p>
+<p><img src="https://farm7.staticflickr.com/6197/6090938628_313358fec8_o.png" /> <img src="https://farm7.staticflickr.com/6085/6090932874_d2b3b20cd4_o.png" /></p>
 <p>Seems to be working: pmc example montecarlotest and compare_models() methods seem to show the comparable results.</p>
 <p>Exploring parallelization methods between snow, snowfall, and Rmpi. All working in preliminary examples on carver. All except the snowfall mpi mode work on farm, unfortunately. filed ticket.</p>
 <pre class="sourceCode r"><code class="sourceCode r">
