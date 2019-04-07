@@ -30,6 +30,15 @@ aliases: "/publications"
 
 # publications
 
+30. Milad Memarzadeh and __Carl Boettiger__ (2019). Resolving the Measurement
+    Uncertainty Paradox in Ecological Management. American Naturalist. 
+    [doi:10.1086/702704](https://doi.org/10.1086/702704)
+
+29. Dan Sholler, Karthik Ram, __Carl Boettiger__, Daniel S Katz, (2019). 
+    Enforcing public data archiving policies in academic publishing: A
+    study of ecology journals.  Big Data & Society 6(1) 1-18. 
+    [doi:10.1177/2053951719836258](https://doi.org/10.1177/2053951719836258)
+
 28. __Carl Boettiger___, (2019). Ecological Metadata as Linked Data.
     Journal of Open Source Software, 4(34), 1276, 
     [doi:10.21105/joss.01276](https://doi.org/10.21105/joss.01276)
