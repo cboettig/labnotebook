@@ -30,33 +30,33 @@ aliases: "/publications"
 
 # publications
 
-30. Milad Memarzadeh and __Carl Boettiger__ (2019). Resolving the Measurement
-    Uncertainty Paradox in Ecological Management. American Naturalist. 
+30. Milad Memarzadeh, __Carl Boettiger__ (2019). Resolving the Measurement
+    Uncertainty Paradox in Ecological Management. *American Naturalist*. 
     [doi:10.1086/702704](https://doi.org/10.1086/702704)
 
 29. Dan Sholler, Karthik Ram, __Carl Boettiger__, Daniel S Katz, (2019). 
     Enforcing public data archiving policies in academic publishing: A
-    study of ecology journals.  Big Data & Society 6(1) 1-18. 
+    study of ecology journals.  *Big Data & Society* 6(1) 1-18. 
     [doi:10.1177/2053951719836258](https://doi.org/10.1177/2053951719836258)
 
-28. __Carl Boettiger___, (2019). Ecological Metadata as Linked Data.
-    Journal of Open Source Software, 4(34), 1276, 
+28. __Carl Boettiger___ (2019). Ecological Metadata as Linked Data.
+    *Journal of Open Source Software*, 4(34), 1276, 
     [doi:10.21105/joss.01276](https://doi.org/10.21105/joss.01276)
     ([software](https://doi.org/10.5281/zenodo.1442890)).
   
 27. Katz, Allen, Barba, Berg, Bik, __Boettiger__, et al. (2018).
-    The principles of tomorrow's university. F1000Research, 7:1926 
+    The principles of tomorrow's university. *F1000Research*, 7:1926 
     [doi:10.12688/f1000research.17425.1](https://doi.org/10.12688/f1000research.17425.1). 
     (32 co-authors.)
 
 26. Karthik Ram, __Carl Boettiger__, Scott Chamberlain, Noam Ross,
-    Maelle Salmon, & Stephanie Butland. (2018). A Community of Practice
+    Maelle Salmon, & Stephanie Butland (2018). A Community of Practice
     Around Peer-review for Long-term Research Software Sustainability. 
-    Computing in Science & Engineering, 9615(c), 1–1.
+    _Computing in Science & Engineering_, 9615(c), 1–1.
     [doi:10.1109/MCSE.2018.2882753](https://doi.org/10.1109/MCSE.2018.2882753)
 
-25. __Carl Boettiger__, (2018). Managing Larger Data on a GitHub Repository.
-    Journal of Open Source Software, 3(29), 971,
+25. __Carl Boettiger__ (2018). Managing Larger Data on a GitHub Repository.
+    _Journal of Open Source Software_, 3(29), 971,
     [doi:10.21105/joss.00971](https://doi.org/10.21105/joss.00971).
     ([software](https://doi.org/10.5281/zenodo.1432525)).
 
@@ -81,7 +81,7 @@ aliases: "/publications"
     [doi:10.21105/joss.00454](https://doi.org/10.21105/joss.00454)
 
 20. Getz, Marshall, Carlson, Giuggioli, Ryan, Romañach,  __Boettiger__,
-    Chamberlain, Larsen, D'Odorico, O'Sullivan, D. (2017). Making 
+    Chamberlain, Larsen, D'Odorico, O'Sullivan (2017). Making 
     ecological models adequate. _Ecology Letters_.
     [doi:10.1111/ele.12893](https://doi.org/10.1111/ele.12893)
 
@@ -91,7 +91,7 @@ aliases: "/publications"
     ([oa](https://doi.org/10.7287/peerj.preprints.3192v1))
 
 18. Hampton, Jones, Wasser, Schuldhauer, Supp, Brun, Herandez, __Boettiger__, Collins,
-    Gross, Fernandez, Budden, White, Teal, Labou & Aukema. (2017) Skills and Knowledge
+    Gross, Fernandez, Budden, White, Teal, Labou, Aukema (2017). Skills and Knowledge
     for Data Intensive Research. _BioScience_.
     [doi:10.1093/biosci/bix025](https://doi.org/10.1093/biosci/bix025). 
     ([oa](https://doi.org/10.1093/biosci/bix025))
@@ -104,48 +104,47 @@ aliases: "/publications"
     [code](https://github.com/TAlexPerkins/dispersal_tradeoffs))
 
 16. __Carl Boettiger__, Michael Bode, James N. Sanchirico, Jacob LaRiviere,
-    Alan Hastings, and Paul Robert Armsworth. (2016) Optimal management
+    Alan Hastings, and Paul Robert Armsworth (2016). Optimal management
     of a stochastically varying population when policy adjustment is
     costly. _Ecological Applications_ 26 (3) 808-817.   
     [doi:10.1890/15-0236](http://dx.doi.org/10.1890/15-0236).
     ([oa](http://arxiv.org/pdf/1507.07037v1.pdf), [code](https://github.com/cboettig/pdg_control))
 
 15. __Carl Boettiger__, Scott Chamberlain, Rutger Vos and Hilmar
-   Lapp. (2016) RNeXML: a package for reading and writing richly annotated
+   Lapp (2016). RNeXML: a package for reading and writing richly annotated
    phylogenetic, character, and trait data in R. _Methods in Ecology and Evolution_. 
    [doi:10.1111/2041-210X.12469](http://dx.doi.org/10.1111/2041-210X.12469). 
    ([oa](http://arxiv.org/abs/1506.02722),
    [code](https://github.com/ropensci/RNeXML),
    [software](http://cran.rstudio.com/web/packages/RNeXML))
 
-14. __Carl Boettiger__,  Scott Chamberlain, Edmund Hart, Karthik Ram. (2015) 
+14. __Carl Boettiger__,  Scott Chamberlain, Edmund Hart, Karthik Ram (2015).
    Building Software, Building Community: Lessons from the rOpenSci Project.
    _Journal of Open Research Software_ 3: e8,
    [doi:10.5334/jors.bu](http://dx.doi.org/10.5334/jors.bu).
 
-13. __Carl Boettiger__. (2015) An introduction to Docker for reproducible
-   research. ACM SIGOPS Operating Systems Review, Special Issue on Repeatability
-   and Sharing of Experimental Artifacts. 49(1), 71-79. 
+13. __Carl Boettiger__ (2015). An introduction to Docker for reproducible
+   research. *ACM SIGOPS Operating Systems Review* 49(1), 71-79. 
    [doi:10.1145/2723872.2723882](http://dx.doi.org/10.1145/2723872.2723882).
    ([oa](http://arxiv.org/abs/1410.0846))
 
-12. __Carl Boettiger__, Marc Mangel, Stephan Munch. (2015)
+12. __Carl Boettiger__, Marc Mangel, Stephan Munch (2015).
 	 Avoiding tipping points in fisheries management through
-	 Gaussian process dynamic programming. _Proceedings of the Royal Society B_ 
+	 Gaussian process dynamic programming. _Proceedings of the Royal Society B_
 	 282(1801), 8–11.
 	 [doi:10.1098/rspb.2014.1631](http://dx.doi.org/10.1098/rspb.2014.1631).
 	 ([oa](http://arxiv.org/abs/1412.8081),
 	 [code](https://github.com/cboettig/nonparametric-bayes),
 	 [data](http://dx.doi.org/10.5061/dryad.mj226))
 
-11. __Carl Boettiger__, Alan Hastings. (2013) No early warning signals
+11. __Carl Boettiger__, Alan Hastings (2013). No early warning signals
    for stochastic transitions: insights from large deviation theory.
-	*Proceedings of the Royal Society B*. 
-	[doi:10.1098/rspb.2013.1372](http://dx.doi.org/10.1098/rspb.2013.1372). 
+	*Proceedings of the Royal Society B*.
+	[doi:10.1098/rspb.2013.1372](http://dx.doi.org/10.1098/rspb.2013.1372).
 	([oa](http://arxiv.org/abs/1307.4415),
 	[code](https://github.com/cboettig/prosecutors-fallacy))
 
-10. __Carl Boettiger__\*, Noam Ross\*, Alan Hastings. (2013) Early
+10. __Carl Boettiger__, Noam Ross, Alan Hastings (2013). Early
    warning signals: The charted and uncharted territories. *Theoretical
    Ecology* [doi:10.1007/s12080-013-0192-6](http://dx.doi.org/10.1007/s12080-013-0192-6).
    ([oa](http://arxiv.org/abs/1305.6700),
@@ -178,28 +177,28 @@ aliases: "/publications"
 	 [code](https://github.com/ropensci/treebase),
 	 [software](http://cran.at.r-project.org/web/packages/treebase/))
 
-5. __Carl Boettiger__ and Alan Hastings (2012). Quantifying Limits to
+5. __Carl Boettiger__, Alan Hastings (2012). Quantifying Limits to
 	 Detection of Early Warning for Critical Transitions, *Journal of the
 	 Royal Society: Interface* 9 (75) 2527-2539. 
 	 [doi:10.1098/rsif.2012.0125](http://dx.doi.org/10.1098/rsif.2012.0125).
 	 ([oa](http://arxiv.org/abs/1204.6231),
 	 [code](https://github.com/cboettig/earlywarning))
 
-4. Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, __Carl Boettiger__ and
+4. Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, __Carl Boettiger__,
 	 Brian O’Meara, (2012). Modeling Stabilizing Selection: Expanding the
 	 Ornstein-Uhlenbeck Model of Adaptive Evolution, *Evolution* 66 (8)
 	 2369-2383. [doi:10.1111/j.1558-5646.2012.01619.x](http://dx.doi.org/10.1111/j.1558-5646.2012.01619.x) 
 	 ([software](http://cran.r-project.org/web/packages/OUwie/index.html))
 
 
-3. __Carl Boettiger__, Graham Coop, Peter Ralph (2012) Is your
+3. __Carl Boettiger__, Graham Coop, Peter Ralph (2012). Is your
 	 phylogeny informative? Measuring the power of comparative methods,
 	 *Evolution* 66 (7) 2240-51. [doi:10.1111/j.1558-5646.2011.01574.x](http://dx.doi.org/10.1111/j.1558-5646.2011.01574.x), 
 	 ([oa](http://arxiv.org/abs/1110.4944),
 	 [code](https://github.com/cboettig/pmc),
 	 [data](http://datadryad.org/handle/10255/dryad.37645))
 
-2. __Carl Boettiger__, Jonathan Dushoff, Joshua S Weitz (2010)
+2. __Carl Boettiger__, Jonathan Dushoff, Joshua S Weitz (2010).
 	 Fluctuation domains in adaptive evolution, *Theoretical Population
 	 Biology* 77 (1) 6-13. 
 	 [doi:10.1016/j.tpb.2009.10.003](http://dx.doi.org/10.1016/j.tpb.2009.10.003). 
@@ -208,7 +207,7 @@ aliases: "/publications"
 	 [data](http://datadryad.org/handle/10255/dryad.37625))
 
 1. James J. Wray, Neta A. Bahcall, Paul Bode, __Carl Boettiger__,
-	 Phillip Hopkins. (2006) The Shape, Multiplicity, and Evolution of
+	 Phillip Hopkins (2006). The Shape, Multiplicity, and Evolution of
 	 Superclusters in Lambda-CDM Cosmology, *The Astrophysical Journal* 652 (2)
 	 907-916. [doi:10.1086/50860](http://dx.doi.org/10.1086/508600).
 	 ([oa](http://arxiv.org/abs/astro-ph/0603060))
@@ -234,7 +233,7 @@ aliases: "/publications"
 
 - The Codemeta project (2015). **National Science Foundation**
    [#ACI-1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
-   *165,782 USD*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2055972))
+   *$165,782*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2055972))
 
 - The rOpenSci Project, Phase II funding (2014, Co-PI). **Alfred P. Sloan Foundation** $300,000
 
