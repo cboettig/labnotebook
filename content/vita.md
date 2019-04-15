@@ -34,12 +34,12 @@ aliases: "/publications"
     Uncertainty Paradox in Ecological Management. *American Naturalist*. 
     [doi:10.1086/702704](https://doi.org/10.1086/702704)
 
-29. Dan Sholler, Karthik Ram, __Carl Boettiger__, Daniel S Katz, (2019). 
+29. Dan Sholler, Karthik Ram, __Carl Boettiger__, Daniel S Katz (2019). 
     Enforcing public data archiving policies in academic publishing: A
     study of ecology journals.  *Big Data & Society* 6(1) 1-18. 
     [doi:10.1177/2053951719836258](https://doi.org/10.1177/2053951719836258)
 
-28. __Carl Boettiger___ (2019). Ecological Metadata as Linked Data.
+28. __Carl Boettiger__ (2019). Ecological Metadata as Linked Data.
     *Journal of Open Source Software*, 4(34), 1276, 
     [doi:10.21105/joss.01276](https://doi.org/10.21105/joss.01276)
     ([software](https://doi.org/10.5281/zenodo.1442890)).
@@ -74,7 +74,7 @@ aliases: "/publications"
 
 22. __Carl Boettiger__, Dirk Eddelbuettel (2018). An Introduction to Rocker: 
     Docker Containers for R. _The R Journal_. 
-    <https://journal.r-project.org/archive/2017/RJ-2017-065/index.html>.
+    [doi:10.32614/RJ-2017-065](https://doi.org/10.32614/RJ-2017-065)
 
 21. __Carl Boettiger__ (2017). Generating Codemeta Metadata for R Packages.  
     _The Journal of Open Source Software_ 2 (19), 454, 
