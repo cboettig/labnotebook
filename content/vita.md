@@ -30,6 +30,11 @@ aliases: "/publications"
 
 # publications
 
+31. __Carl Boettiger__, Ryan Batt (2019). Bifurcation or state tipping:
+    assessing transition type in a model trophic cascade.
+    *Journal of Mathematical Biology*.
+    [doi:10.1007/s00285-019-01358-z](https://doi.org/10.1007/s00285-019-01358-z)
+
 30. Milad Memarzadeh, __Carl Boettiger__ (2019). Resolving the Measurement
     Uncertainty Paradox in Ecological Management. *American Naturalist*. 
     [doi:10.1086/702704](https://doi.org/10.1086/702704)
