@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Is your phylogeny informative?</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>Yesterday my paper (Boettiger <em>et. al.</em> 2012)  appeared in early view in Evolution (<a href="https://www.mendeley.com/download/public/98752/4485545655/9a209c7dd29980fd2e47c06eb8b2d1d7dd6f70d4/dl.pdf">author’s preprint</a>),As the open access copy doesn’t appear on pubmed for a while, you can access my author’s copy <a href="http://www.mendeley.com/download/public/98752/4485545655/9a209c7dd29980fd2e47c06eb8b2d1d7dd6f70d4/dl.pdf">here</a>. so I’d like to take this chance to share the back-story and highlight my own view on some of our findings, and the associated <a href="http://cran.r-project.org/web/packages/pmc/index.html">package on CRAN</a>.Just submitted, meanwhile, the code is always on <a href="https://github.com/cboettig/pmc">github</a>.</p>
+    <p>Yesterday my paper (Boettiger <em>et. al.</em> 2012)  appeared in early view in Evolution (<a href="https://www.mendeley.com/download/public/98752/4485545655/9a209c7dd29980fd2e47c06eb8b2d1d7dd6f70d4/dl.pdf">author’s preprint</a>),As the open access copy doesn’t appear on pubmed for a while, you can access my author’s copy <a href="https://www.mendeley.com/download/public/98752/4485545655/9a209c7dd29980fd2e47c06eb8b2d1d7dd6f70d4/dl.pdf">here</a>. so I’d like to take this chance to share the back-story and highlight my own view on some of our findings, and the associated <a href="https://cran.r-project.org/web/packages/pmc/index.html">package on CRAN</a>.Just submitted, meanwhile, the code is always on <a href="https://github.com/cboettig/pmc">github</a>.</p>
 <p>I didn’t set out to write this paper.  I set out to write a very different paper, introducing a new phylogenetic method for continuous traits that estimates changes in evolutionary constraint.  This adds _even more _parameters than already present in rich models multi-peak OU process, and I wanted to know if it could be justified – if there really was enough information to play the game we already had, before I went and made the situation even worse. Trying to find something rigorous enough to hang my hat on, I ended up writing this paper.</p>
 <h3 id="the-short-of-it">The short of it</h3>
 <p>There’s essentially three conclusions I draw from the paper.</p>
@@ -139,7 +139,7 @@
 <p>Many users don’t like going between ouch format and ape/phylo formats. The pmc package doesn’t care what you use, feel free to mix and match. In case the conversion tools are useful, I’ve provided functions to move your data and trees back and forth between those formats too.  See <em>format_data()</em> to data-frames and <em>convert()</em> to toggle between tree formats.</p>
 <h2 id="reproducible-research">Reproducible Research</h2>
 <p>The package is designed to make things easier.  It comes with a vignette (written in sweave) showing just what commands to run to replicate the results from the manuscript.</p>
-<p>This entire project has been documented in my open lab notebook from its <a href="https://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Comparative_Phylogenetics/2010/02/07">inception</a>. Posts prior to October 2010 can be found on my <a href="https://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Comparative_Phylogenetics/2010">OWW notebook</a>, the rest in my current <a href="http://www.carlboettiger.info/archives/category/phylogenetics">phylogenetics notebook</a> (here on wordpress). Of course this project is interwoven with many notes on related and more recent work.</p>
+<p>This entire project has been documented in my open lab notebook from its <a href="https://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Comparative_Phylogenetics/2010/02/07">inception</a>. Posts prior to October 2010 can be found on my <a href="https://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Comparative_Phylogenetics/2010">OWW notebook</a>, the rest in my current <a href="https://www.carlboettiger.info/archives/category/phylogenetics">phylogenetics notebook</a> (here on wordpress). Of course this project is interwoven with many notes on related and more recent work.</p>
 <h2 id="additional-methods-and-feedback">Additional methods and feedback</h2>
 <p>As we discuss in the paper, simulation and randomization-based methods have an established history in this field(Freckleton &amp; Harvey, 2006), (Harmon <em>et. al.</em> 2010). These are promising things to do, and we should do them more often, but I might make a few comments on these approaches.</p>
 <p>We are not getting a real power test when we simulate data produced from different models whose parameters have been arbitrarily assigned, rather than estimated on the same data, lest we overestimate the power. Of course we need to have a likelihood function to be able to estimate those parameters, which is not always available.</p>
@@ -147,11 +147,11 @@
 <p>Boettiger, C., Coop, G., &amp; Ralph, P. (2012). IS YOUR PHYLOGENY INFORMATIVE? MEASURING THE POWER OF COMPARATIVE METHODS Evolution DOI: <a href="https://dx.doi.org/10.1111/j.1558-5646.2012.01574.x">10.1111/j.1558-5646.2012.01574.x</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><p>Boettiger C, Coop G and Ralph P (2012). “is Your Phylogeny Informative? Measuring The Power of Comparative Methods.” <em>Evolution</em>. <a href="https://dx.doi.org/10.1111/j.1558-5646.2012.01574.x">http://dx.doi.org/10.1111/j.1558-5646.2012.01574.x</a>.</p></li>
-<li><p>Pagel M (1999). “Unknown.” <em>Nature</em>, <b>401</b>. ISSN 00280836, <a href="https://dx.doi.org/10.1038/44766">http://dx.doi.org/10.1038/44766</a>.</p></li>
-<li><p>Losos J (2011). “Seeing The Forest For The Trees: The Limitations of Phylogenies in Comparative Biology.” <em>The American Naturalist</em>, <b>177</b>. ISSN 00030147, <a href="https://dx.doi.org/10.1086/660020">http://dx.doi.org/10.1086/660020</a>.</p></li>
-<li><p>Freckleton R and Harvey P (2006). “Detecting Non-Brownian Trait Evolution in Adaptive Radiations.” <em>Plos Biology</em>, <b>4</b>. ISSN 1544-9173, <a href="https://dx.doi.org/10.1371/journal.pbio.0040373">http://dx.doi.org/10.1371/journal.pbio.0040373</a>.</p></li>
-<li><p>Harmon L, Losos J, Jonathan Davies T, Gillespie R, Gittleman J, Bryan Jennings W, Kozak K, McPeek M, Moreno-Roark F, Near T, Purvis A, Ricklefs R, Schluter D, Schulte II J, Seehausen O, Sidlauskas B, Torres-Carvajal O, Weir J and Mooers A (2010). “Early Bursts of Body Size And Shape Evolution Are Rare in Comparative Data.” <em>Evolution</em>. <a href="https://dx.doi.org/10.1111/j.1558-5646.2010.01025.x">http://dx.doi.org/10.1111/j.1558-5646.2010.01025.x</a>.</p></li>
+<li><p>Boettiger C, Coop G and Ralph P (2012). “is Your Phylogeny Informative? Measuring The Power of Comparative Methods.” <em>Evolution</em>. <a href="https://dx.doi.org/10.1111/j.1558-5646.2012.01574.x">https://dx.doi.org/10.1111/j.1558-5646.2012.01574.x</a>.</p></li>
+<li><p>Pagel M (1999). “Unknown.” <em>Nature</em>, <b>401</b>. ISSN 00280836, <a href="https://dx.doi.org/10.1038/44766">https://dx.doi.org/10.1038/44766</a>.</p></li>
+<li><p>Losos J (2011). “Seeing The Forest For The Trees: The Limitations of Phylogenies in Comparative Biology.” <em>The American Naturalist</em>, <b>177</b>. ISSN 00030147, <a href="https://dx.doi.org/10.1086/660020">https://dx.doi.org/10.1086/660020</a>.</p></li>
+<li><p>Freckleton R and Harvey P (2006). “Detecting Non-Brownian Trait Evolution in Adaptive Radiations.” <em>Plos Biology</em>, <b>4</b>. ISSN 1544-9173, <a href="https://dx.doi.org/10.1371/journal.pbio.0040373">https://dx.doi.org/10.1371/journal.pbio.0040373</a>.</p></li>
+<li><p>Harmon L, Losos J, Jonathan Davies T, Gillespie R, Gittleman J, Bryan Jennings W, Kozak K, McPeek M, Moreno-Roark F, Near T, Purvis A, Ricklefs R, Schluter D, Schulte II J, Seehausen O, Sidlauskas B, Torres-Carvajal O, Weir J and Mooers A (2010). “Early Bursts of Body Size And Shape Evolution Are Rare in Comparative Data.” <em>Evolution</em>. <a href="https://dx.doi.org/10.1111/j.1558-5646.2010.01025.x">https://dx.doi.org/10.1111/j.1558-5646.2010.01025.x</a>.</p></li>
 </ul>
 
     </article>
@@ -288,7 +288,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

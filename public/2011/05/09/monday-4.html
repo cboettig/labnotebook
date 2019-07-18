@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Monday: meetings, notebook</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -126,12 +126,12 @@
 <p>Notes from <a href="https://www.carlboettiger.info/archives/1632">Sunday</a></p>
 <p><a href="https://www.carlboettiger.info/archives/1660">TreeBASE updates and to-do</a>.</p>
 <h2 id="notebook-optimization">Notebook optimization</h2>
-<p>Checked profiling speed with https://gtmetrix.com/. Added <a href="http://wordpress.org/extend/plugins/wp-minify/">wp-minify</a> and started specifying sizes explicitly for images. Images from media library can be optimized for faster rendering using <a href="http://wordpress.org/extend/plugins/wp-smushit/">smushit</a>, though most of my images are embedded from flickr instead, not sure how performance compares. Have been using <a href="http://wordpress.org/extend/plugins/wp-super-cache/">wp super cache</a>, but updated to some of the recommended settings.</p>
-<p>Seems like further performance increases could best be accomplished with Content Delivery Network (CDN) option. Several plugins provide this. <a href="https://wordpress.org/extend/plugins/use-google-libraries/">Use-google-libraries</a> uses a couple public CDNs that google has made available for popular AJAX scripts such as jQuery. Super Cache works with the extension <a href="http://wordpress.org/extend/plugins/cdn-sync-tool/">CDN sync tool</a>, <a href="http://wordpress.org/extend/plugins/w3-total-cache">w3-total-cache</a> provides CDN option as well.</p>
+<p>Checked profiling speed with https://gtmetrix.com/. Added <a href="https://wordpress.org/extend/plugins/wp-minify/">wp-minify</a> and started specifying sizes explicitly for images. Images from media library can be optimized for faster rendering using <a href="https://wordpress.org/extend/plugins/wp-smushit/">smushit</a>, though most of my images are embedded from flickr instead, not sure how performance compares. Have been using <a href="https://wordpress.org/extend/plugins/wp-super-cache/">wp super cache</a>, but updated to some of the recommended settings.</p>
+<p>Seems like further performance increases could best be accomplished with Content Delivery Network (CDN) option. Several plugins provide this. <a href="https://wordpress.org/extend/plugins/use-google-libraries/">Use-google-libraries</a> uses a couple public CDNs that google has made available for popular AJAX scripts such as jQuery. Super Cache works with the extension <a href="https://wordpress.org/extend/plugins/cdn-sync-tool/">CDN sync tool</a>, <a href="https://wordpress.org/extend/plugins/w3-total-cache">w3-total-cache</a> provides CDN option as well.</p>
 <p>Sounds like CDN for mathjax could be particularly valuable. Some <a href="https://sites.google.com/site/mathjaxproject/design-documents/cdn-hosting-plan">description of this</a> from the mathjax folks, not clear if they are providing the actual CDN or just the code to set one up? Not clear how to implement this on wordpress, but seeing if the knowledge-blog folks have any ideas.</p>
 <h2 id="references">References</h2>
 <ul>
-<li>Ane C, Larget B, Baum D, Smith S and Rokas A (2006). “Bayesian Estimation of Concordance Among Gene Trees.” <em>Molecular Biology And Evolution</em>, <strong>24</strong>. ISSN 0737-4038, <a href="https://dx.doi.org/10.1093/molbev/msl170">http://dx.doi.org/10.1093/molbev/msl170</a>.</li>
+<li>Ane C, Larget B, Baum D, Smith S and Rokas A (2006). “Bayesian Estimation of Concordance Among Gene Trees.” <em>Molecular Biology And Evolution</em>, <strong>24</strong>. ISSN 0737-4038, <a href="https://dx.doi.org/10.1093/molbev/msl170">https://dx.doi.org/10.1093/molbev/msl170</a>.</li>
 </ul>
 
     </article>
@@ -264,7 +264,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Mbi Day Five Notes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -120,8 +120,8 @@
 <h3 id="notes-from-some-discussions-today">Notes from some discussions today</h3>
 <ul>
 <li><p>Sandy Leibold mentions potential for exploring early warning signals in larch budmoth data: <span class="showtooltip" title="Esper J, Buntgen U, Frank D, Nievergelt D and Liebhold A (2007). &#39;1200 Years of Regular Outbreaks in Alpine Insects.&#39; Proceedings of The Royal Society B: Biological Sciences, 274, pp. 671-679. ISSN 0962-8452."><a href="https://dx.doi.org/10.1098/rspb.2006.0191">Esper et al. (2007)</a></span> , <code>r citet(&quot;10.1111/j.1469 -8137.2009.02825.x&quot;)</code>.</p></li>
-<li><p>Bill Fagan mentions paper with Eli Holmes on quasi-extinction forecasting <span class="showtooltip" title="Holmes E, Sabo J, Viscido S and Fagan W (2007). &#39;A Statistical Approach to Quasi-Extinction Forecasting.&#39; Ecology Letters, 10, pp. 1182-1198. ISSN 1461-023X."><a href="https://dx.doi.org/10.1111/j.1461-0248.2007.01105.x">Holmes et al. (2007)</a></span> and an analysis of the GPDD <span class="showtooltip" title="Fagan u, Meir u, Prendergast u, Folarin u and Karieva u (2001). &#39;Characterizing Population Vulnerability For 758 Species.&#39; Ecology Letters, 4, pp. 132-138. ISSN 1461-023X."><a href="http://dx.doi.org/10.1046/j.1461-0248.2001.00206.x">Fagan et al. (2001)</a></span> as potentially interesting applications for our Bayesian nonparametrics work.</p></li>
-<li><p>Matt Potts mentions DoD program in <a href="https://www.serdp.org/">Strategic Environmental Research and Development Program (SERDP)</a>. E.g. see the current call for <a href="http://www.serdp.org/content/download/22120/228239/version/2/file/FY15_RCSON-15-01_New+Conservation+Paradigms_Final.pdf">New Paradigms for Managing Species and Ecosystems in a Non-Stationary World (pdf)</a></p></li>
+<li><p>Bill Fagan mentions paper with Eli Holmes on quasi-extinction forecasting <span class="showtooltip" title="Holmes E, Sabo J, Viscido S and Fagan W (2007). &#39;A Statistical Approach to Quasi-Extinction Forecasting.&#39; Ecology Letters, 10, pp. 1182-1198. ISSN 1461-023X."><a href="https://dx.doi.org/10.1111/j.1461-0248.2007.01105.x">Holmes et al. (2007)</a></span> and an analysis of the GPDD <span class="showtooltip" title="Fagan u, Meir u, Prendergast u, Folarin u and Karieva u (2001). &#39;Characterizing Population Vulnerability For 758 Species.&#39; Ecology Letters, 4, pp. 132-138. ISSN 1461-023X."><a href="https://dx.doi.org/10.1046/j.1461-0248.2001.00206.x">Fagan et al. (2001)</a></span> as potentially interesting applications for our Bayesian nonparametrics work.</p></li>
+<li><p>Matt Potts mentions DoD program in <a href="https://www.serdp.org/">Strategic Environmental Research and Development Program (SERDP)</a>. E.g. see the current call for <a href="https://www.serdp.org/content/download/22120/228239/version/2/file/FY15_RCSON-15-01_New+Conservation+Paradigms_Final.pdf">New Paradigms for Managing Species and Ecosystems in a Non-Stationary World (pdf)</a></p></li>
 </ul>
 <h3 id="pdg-control">pdg-control</h3>
 <p>Trying to understand pattern of increasing ENPV with increasing stochasticity. Despite having the same optimal policy inferred under increasing stochasticity (i.e. still in Reed’s self-sustaining criterion, below <span class="math">\(\sigma_g\)</span> of 0.2 or so) the average over simulated replicates is higher. We don’t seem to obtain the theoretical ENPV, but something less, in either case. See code <a href="https://github.com/cboettig/pdg_control/blob/38bccb71b08f1bbd02b7a5ca55188a739eea5109/inst/examples/noise_effects.Rmd">noise_effects.md</a>.</p>
@@ -273,7 +273,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

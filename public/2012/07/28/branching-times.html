@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Branching Times</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="https://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="http://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
+    <p><strong>editorial note</strong>: These notes pre-date the formal start of my online laboratory notebook, <a href="https://carlboettiger.info/2010/02/02/The-Lab-Notebook-Goes-Open-.html">Feb 2 2010: The Lab Notebook Goes Open</a> and were adapted from a LaTeX document in which I kept notes on this topic during my summer at <a href="https://www.iiasa.ac.at/">IIASA</a>. Lacking a proper notebook then, documents like this one were updated periodically and occassionally branched into new ones. The post date represents the last time the LaTeX document was edited in the course of that research.</p>
 <h1 id="introduction">Introduction</h1>
 <p>Our calculation of the time until branching occurs consists of the following approach. The first requirement for branching to occur is the existence of two mutually invasible populations separated by an adaptive minimum, that is <span class="math">\(s(y,x) &gt;0\)</span>, <span class="math">\(s(x,y)&gt;0\)</span> and <span class="math">\(\partial^2_y s(y,x)&gt;0\)</span>. The minimum (curvature condition) is provided by a singular point of the branching type, which also assures us that there will be some pairs <span class="math">\((y,x)\)</span> near each other <span class="math">\(|y-x| \sim o(\sigma_{\mu})\)</span>. These points define a coexistence region in the pairwise invasibility plot, which we denote <span class="math">\(P_2\)</span>. A mutant enters this region by “jumping the gap” from the line <span class="math">\(y=x\)</span> into the coexistence region. This gap diminishes in width as the resident trait <span class="math">\(x\)</span> nears the branching point, where the gap vanishes all together. This criterion can be evaluated directly at regular intervals throughout the simulation.</p>
 <p>Most often this condition will arise only transiently - a single mutant satisifying the conditions but soon lost to drift. Hence our second requirement must be that the mutant successfully entering the coexistence region then proceeds to survive drift. Defining this second condition rigorously is less straight-forward. For large populations, the probability of survival may be well approximated by the Galton-Watson branching process. In theory, this probability can be converted into an expected waiting time in a straight-forward manner. In simulation, this is insufficent, as we want to identify the actual waiting time we need more than a probability - we need to indentify which populations actually survive. If selection is strong, we may hope to identify which populations have effectively survived drift by establishing some low-density threshold at which we declare the population successful. Of course, this introduces a discrepancy in the definition of waiting time, as the theory calculates the time until a successful mutant occurs, while the simulation lags behind by the time required to go from one individual to the threshold size.</p>
@@ -282,7 +282,7 @@ P(x) = \frac{1}{2} \left(1+ {Erf}\left[\frac{x}{\sqrt{2} \sqrt{\sigma_{\mu}^2}}\
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

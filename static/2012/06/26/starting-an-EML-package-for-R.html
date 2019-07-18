@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Starting An Eml Package For R</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -110,7 +110,7 @@
 <h3 id="initial-goals">Initial goals</h3>
 <p>To start, I am aiming for a proof of principle case in which we can write an R <code>data.frame</code> into EML (<a href="https://github.com/ropensci/reml/issues/2">issue #2</a>), publish to a remote repository such as figshare (<a href="https://github.com/ropensci/reml/issues/3">issue #3</a>), and then read the data back in as the original R object types from the EML (<a href="https://github.com/ropensci/reml/issues/6">issue #6</a>). This will require specifying some generic metadata and basic column and unit metadata for the data frame. It would be good to get feedback on what way is most convenient to specify the required metadata in R.</p>
 <h3 id="integration-goals-issue-8">Integration goals (issue <a href="https://github.com/ropensci/reml/issues/8">#8</a>)</h3>
-<p>This is the <strong>holy grail</strong> of metadata infrastructure and ostensibly the primary purpose of EML, see <a href="https://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110031" title="The New Bioinformatics: Integrating Ecological Data from the Gene to the Biosphere in Annual Review of Ecology, Evolution, and Systematics">Jones et al 2006</a>. Despite that, integration is not actually possible without semantic definitions as well, see <a href="http://dx.doi.org/10.1016/j.tree.2011.11.016" title="Ecoinformatics: supporting ecology as a data-intensive science; in Trends in Ecology &amp; Evolution. doi: 10.1016/j.tree.2011.11.016">Michener &amp; Jones 2012</a>, from which we adapt this minimal example below.</p>
+<p>This is the <strong>holy grail</strong> of metadata infrastructure and ostensibly the primary purpose of EML, see <a href="https://dx.doi.org/10.1146/annurev.ecolsys.37.091305.110031" title="The New Bioinformatics: Integrating Ecological Data from the Gene to the Biosphere in Annual Review of Ecology, Evolution, and Systematics">Jones et al 2006</a>. Despite that, integration is not actually possible without semantic definitions as well, see <a href="https://dx.doi.org/10.1016/j.tree.2011.11.016" title="Ecoinformatics: supporting ecology as a data-intensive science; in Trends in Ecology &amp; Evolution. doi: 10.1016/j.tree.2011.11.016">Michener &amp; Jones 2012</a>, from which we adapt this minimal example below.</p>
 <p>This example provides minimal and sometimes missing semantics; which may make it unresolvable. A complete semantic solution is diagrammed in the figure from <a href="https://dx.doi.org/10.1016/j.tree.2011.11.016" title="Ecoinformatics: supporting ecology as a data-intensive science; in Trends in Ecology &amp; Evolution. doi: 10.1016/j.tree.2011.11.016">Michener &amp; Jones 2012</a>.</p>
 <h3 id="dataset-1">Dataset 1</h3>
 <pre class="sourceCode ruby"><code class="sourceCode ruby"> dat = data.frame(river=c(<span class="st">&quot;SAC&quot;</span>, <span class="st">&quot;SAC&quot;</span>, <span class="st">&quot;AM&quot;</span>), 
@@ -279,7 +279,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

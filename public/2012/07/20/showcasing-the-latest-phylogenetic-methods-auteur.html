@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Showcasing the latest phylogenetic methods: AUTEUR</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>While high-speed fish feeding videos may be the signature of the lab, dig a bit deeper and you’ll find a wealth of comparative phylogenetic methods sneaking in.  It’s a natural union – expert functional morphology is the key to good comparative methods, just as phylogenies hold the key to untangling the evolutionary origins of that morphology.  The lab’s own former graduate, <a href="https://www.brianomeara.info/">Brian O’Meara</a>, made a revolutionary step forward in the land of phylogenetic methods when he unveiled <em>Brownie</em> in 2006, allowing researchers to identify major shifts in trait diversification rates across the tree.  This work spurred not only a flood of empirical applications but also methodological innovations, such as Liam’s <a href="http://phytools.blogspot.com/2011/07/more-robust-version-of-brownielite.html">brownie-lite</a>, and today’s focus: <a href="http://public.wsu.edu/~storfer/eastman/pages/index.html">Jon Eastman</a> <em>et al.</em>’s auteur package.</p>
+    <p>While high-speed fish feeding videos may be the signature of the lab, dig a bit deeper and you’ll find a wealth of comparative phylogenetic methods sneaking in.  It’s a natural union – expert functional morphology is the key to good comparative methods, just as phylogenies hold the key to untangling the evolutionary origins of that morphology.  The lab’s own former graduate, <a href="https://www.brianomeara.info/">Brian O’Meara</a>, made a revolutionary step forward in the land of phylogenetic methods when he unveiled <em>Brownie</em> in 2006, allowing researchers to identify major shifts in trait diversification rates across the tree.  This work spurred not only a flood of empirical applications but also methodological innovations, such as Liam’s <a href="https://phytools.blogspot.com/2011/07/more-robust-version-of-brownielite.html">brownie-lite</a>, and today’s focus: <a href="https://public.wsu.edu/~storfer/eastman/pages/index.html">Jon Eastman</a> <em>et al.</em>’s auteur package.</p>
 <p>Auteur, short for “Accommodating uncertainty in trait evolution using R,” is the grown-up Bayesian RJMCMC version of that original idea in <em>Brownie</em>.  Diversification rates can change along the phylogenetic tree – only this time, you don’t have to specify where those changes could have occurred, or how many there may have been – auteur simply tries them all.</p>
 <p>If you want the details, definitely go <a href="https://doi.wiley.com/10.1111/j.1558-5646.2011.01401.x">read the paper</a> – it’s all there, clear and thorough.  Meanwhile, what we really want to do, is take it out for a test drive.</p>
 <p>The package isn’t up on CRAN yet, so you can grab the development version from Jon’s <a href="https://github.com/eastman/auteur">github</a> page, or <a href="https://github.com/downloads/eastman/auteur/auteur_0.11.0612.tar.gz">click here</a>.  Put that package in a working directory and fire up R in that directory.  Let’s go for a spin.</p>
@@ -200,7 +200,7 @@ phy &lt;-<span class="st"> </span>chelonia$phy
 <p><a href="https://www.R-bloggers.com"><img src="https://a1.twimg.com/profile_images/1344218056/RblogLogo_bigger.png" alt="R-bloggers.com" /></a></p>
 <p>Thanks Jon and the rest of the Harmon Lab for a fantastic package. This is really just a tip of the iceberg, but should help get you started. See the paper for a good example of posterior analyses requisite after running any kind of MCMC, or stay tuned for a later post.</p>
 <p>(cross-posted from <a href="https://fishlab.ucdavis.edu/?p=303">my entry on the Wainwright lab blog</a>.)</p>
-<p><a href="https://www.researchblogging.org"><img src="https://www.researchblogging.org/public/citation_icons/rb2_large_gray.png" alt="ResearchBlogging.org" /></a> Eastman, J., Alfaro, M., Joyce, P., Hipp, A., &amp; Harmon, L. (2011). A NOVEL COMPARATIVE METHOD FOR IDENTIFYING SHIFTS IN THE RATE OF CHARACTER EVOLUTION ON TREES Evolution DOI: <a href="http://dx.doi.org/10.1111/j.1558-5646.2011.01401.x">10.1111/j.1558-5646.2011.01401.x</a></p>
+<p><a href="https://www.researchblogging.org"><img src="https://www.researchblogging.org/public/citation_icons/rb2_large_gray.png" alt="ResearchBlogging.org" /></a> Eastman, J., Alfaro, M., Joyce, P., Hipp, A., &amp; Harmon, L. (2011). A NOVEL COMPARATIVE METHOD FOR IDENTIFYING SHIFTS IN THE RATE OF CHARACTER EVOLUTION ON TREES Evolution DOI: <a href="https://dx.doi.org/10.1111/j.1558-5646.2011.01401.x">10.1111/j.1558-5646.2011.01401.x</a></p>
 
     </article>
   </div>
@@ -332,7 +332,7 @@ phy &lt;-<span class="st"> </span>chelonia$phy
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

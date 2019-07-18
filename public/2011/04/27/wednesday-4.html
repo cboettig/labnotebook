@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Wednesday</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -147,7 +147,7 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
 &gt;   loglik(ou3) - loglik(ou2_phar)
 [1] 1.079799</code></pre>
 <p>Convergence is certainly a larger issue with more parameters. One way to address this is focusing on comparing subcases of the general form. A particularly interesting one is the <strong>Release of Constraint</strong>: global theta and sigma, regime-specific alpha. IMPLEMENTED</p>
-<p>Overall, best addressed by algorithmic methods for dealing with multiple peaks in the likelihood surface, such as simulated annealing or probably better, an EM algorithm ((Looking for packages to do this well, though may need a specific implementation. Will discuss in our Algorithms group in a few weeks Potentially take a closer look at <a href="https://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Clustering/Expectation_Maximization_%28EM%29">this tutorial</a> and <a href="http://rss.acs.unt.edu/Rdoc/library/mclust/html/em.html">em() in mclust</a> package.)). Given the computational effort of these approaches, probably worth starting on the fully Bayesian implementation too.</p>
+<p>Overall, best addressed by algorithmic methods for dealing with multiple peaks in the likelihood surface, such as simulated annealing or probably better, an EM algorithm ((Looking for packages to do this well, though may need a specific implementation. Will discuss in our Algorithms group in a few weeks Potentially take a closer look at <a href="https://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Clustering/Expectation_Maximization_%28EM%29">this tutorial</a> and <a href="https://rss.acs.unt.edu/Rdoc/library/mclust/html/em.html">em() in mclust</a> package.)). Given the computational effort of these approaches, probably worth starting on the fully Bayesian implementation too.</p>
 <p>Meanwhile, based on likelihoods alone, results seem promising, though needs some fiddling to test for convergence. For instance:</p>
 <pre><code>&gt; loglik(release_twoshifts)
 [1] 69.42358
@@ -162,7 +162,7 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
 <p>See <a href="https://github.com/cboettig/wrightscape/blob/ad3bd09f7d6b958c019f329415f6fcfdbf267367/demos/model_fits.R">code</a> for full example.</p>
 <h2 id="misc-r">Misc R</h2>
 <ul>
-<li><p>R with AWS EC2  &amp; Hadroop with <a href="https://www.stat.purdue.edu/~sguha/rhipe/">RHIPE</a> or <a href="http://code.google.com/p/segue/">Segue</a></p></li>
+<li><p>R with AWS EC2  &amp; Hadroop with <a href="https://www.stat.purdue.edu/~sguha/rhipe/">RHIPE</a> or <a href="https://code.google.com/p/segue/">Segue</a></p></li>
 <li><p>R gui interfaces with tcltk: <a href="https://ideas.repec.org/a/jss/jstsof/17i09.html">rpanel</a></p></li>
 </ul>
 
@@ -288,7 +288,7 @@ kcachegrind callgrind.out.&lt;###&gt;</code></pre>
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

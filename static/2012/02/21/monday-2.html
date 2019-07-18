@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Monday: Writing, Mendeley groups, Notebook plugin tweaks</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -113,7 +113,7 @@
 <li><p>Meanwhile, a few thoughts:</p></li>
 </ul>
 <h2 id="reproducible-research">Reproducible Research</h2>
-<p>Mentioned in <a href="https://www.carlboettiger.info/archives/1044">Thursday’s entry</a> coming across Victoria Stodden’s post on Reproducible research standards such as practiced by Journal of Biostatistics.  So I was quite excited to see the <a href="http://www.stanford.edu/~vcs/AAAS2011/">slides and audio</a>from this year’s AAAS meeting Symposium on reproducible research.  I found the presentation of <a href="http://www-stat.stanford.edu/%7Edonoho">David Donoho</a>, Stanford University; <a href="http://www.stanford.edu/%7Egavish">Matan Gavish</a> particularly visionary as a simple yet powerful idea: URIs for all computational objects.  They have a working pilot of “<a href="http://www.stanford.edu/~gavish/vcr/">verifiable computational research“</a> scheme which is worth checking out.  I’m tempted to start subscribing to UC3 EZID’s DOI system and start tagging my computational objects already.  They discuss integration of this system with LaTeX and common computing languages.</p>
+<p>Mentioned in <a href="https://www.carlboettiger.info/archives/1044">Thursday’s entry</a> coming across Victoria Stodden’s post on Reproducible research standards such as practiced by Journal of Biostatistics.  So I was quite excited to see the <a href="https://www.stanford.edu/~vcs/AAAS2011/">slides and audio</a>from this year’s AAAS meeting Symposium on reproducible research.  I found the presentation of <a href="https://www-stat.stanford.edu/%7Edonoho">David Donoho</a>, Stanford University; <a href="https://www.stanford.edu/%7Egavish">Matan Gavish</a> particularly visionary as a simple yet powerful idea: URIs for all computational objects.  They have a working pilot of “<a href="https://www.stanford.edu/~gavish/vcr/">verifiable computational research“</a> scheme which is worth checking out.  I’m tempted to start subscribing to UC3 EZID’s DOI system and start tagging my computational objects already.  They discuss integration of this system with LaTeX and common computing languages.</p>
 <p>I would love to figure out a simple and potentially platform independent way to integrate this into my notebook workflow, tracking my computational objects with a common identifier.  It’s something I’ve already wanted to do on a basic level, for instance be able to track back the various locations I’ve embedded a flickr image of a computational result, and have that result link directly to the code that created it.  So far I can mimic this with my flickr images including the git commit versions in the description, but it’s not nearly as nice and smooth as a common device identifier that could track the code, the images, the notebook entries in semantic, computer readable manner.</p>
 <h2 id="thoughts-on-mendeley-groups">Thoughts on Mendeley Groups</h2>
 <p>Hit the cap on Mendeley group size (20) for my phylogenetics comparative methods group.  Have to decide whether to make it an Open group, where members join without request, group size is not capped, but members cannot access pdfs directly.  While my Future of Science (89 members, 51 followers) is a Public Open group, I’ve made my research-area groups Public Invite only groups.  The permissions associated with the types can be a bit difficult to keep straight, so I took a moment to jot them down here:</p>
@@ -264,7 +264,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

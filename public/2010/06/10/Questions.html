@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Questions</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -120,17 +120,17 @@
 <img src="/skins/common/images/magnify-clip.png" alt="image" /><figcaption>image</figcaption>
 </figure>
 <p><strong>Numerical solution to linear noise</strong> b=5, ue= 0, ul = 0.001, up = 0, ua = 0.01, ae = .13*k, al = .01*k, ap = .15*k, cle = .2, cap = .1, cae = 5, V=volume</p>
-<p><a href="https://github.com/cboettig/structured-populations/blob/0af18d6f4b63ef63ced376f0c73cec16b83c66b5/R/gamma_beetles.R" title="http://github.com/cboettig/structured-populations/blob/0af18d6f4b63ef63ced376f0c73cec16b83c66b5/R/gamma_beetles.R">version-stable code</a>.</p>
+<p><a href="https://github.com/cboettig/structured-populations/blob/0af18d6f4b63ef63ced376f0c73cec16b83c66b5/R/gamma_beetles.R" title="https://github.com/cboettig/structured-populations/blob/0af18d6f4b63ef63ced376f0c73cec16b83c66b5/R/gamma_beetles.R">version-stable code</a>.</p>
 <figure>
 <img src="https://openwetware.org/images/a/a9/Ibm_gamma.png" alt="individual base simulation with same parameters" /><figcaption>individual base simulation with same parameters</figcaption>
 </figure>
-<p><a href="https://github.com/cboettig/structured-populations/blob/c361d07025b038c3d435018b751a6858c71f89c7/R/ind_based_models.R" title="http://github.com/cboettig/structured-populations/blob/c361d07025b038c3d435018b751a6858c71f89c7/R/ind_based_models.R">Version-stable code</a></p>
+<p><a href="https://github.com/cboettig/structured-populations/blob/c361d07025b038c3d435018b751a6858c71f89c7/R/ind_based_models.R" title="https://github.com/cboettig/structured-populations/blob/c361d07025b038c3d435018b751a6858c71f89c7/R/ind_based_models.R">Version-stable code</a></p>
 <h3 id="differences-between-two-step-correlated-events-and-two-single-steps">Differences between two-step (correlated events) and two single steps</h3>
 <p>Can we distinguish between a process where an element leaves one population and enters another (i.e. a transitions from one age class to the next) and a model where death rate in one class is equal to the birth rate in another? The linear noise approximation for a two-step process obeys a different equation than the one-step:</p>
 <figure>
 <img src="https://openwetware.org/images/math/5/e/b/5eb413fd88e12c41c39cf48c811fc71a.png" alt="\begin{align} &amp; \frac{d}{dt} E(p) = b(p)-d(p) + \sum_{j \neq i} \tau_{ji}(p) - \tau_{ij}(p) =: f(p)\\ &amp; \frac{d}{dt} M = \textrm{diag}( b(p) + d(p) ) - T + Df(p) M + M Df(p)^T \end{align}" /><figcaption>\begin{align} &amp; \frac{d}{dt} E(p) = b(p)-d(p) + \sum_{j \neq i} \tau_{ji}(p) - \tau_{ij}(p) =: f(p)\\ &amp; \frac{d}{dt} M = \textrm{diag}( b(p) + d(p) ) - T + Df(p) M + M Df(p)^T \end{align}</figcaption>
 </figure>
-<p>where <em>T</em> is a symmetric matrix with off-diagonal elements <em>i,j</em> τ~<em>i<strong>j<em>~(</em>p<em>) + τ</em>j</strong>i</em>(<em>p</em>) and diagonal elements chosen so that rows sum to zero. This approximation is implemented in <a href="https://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R" title="http://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R">noise_approx.R</a></p>
+<p>where <em>T</em> is a symmetric matrix with off-diagonal elements <em>i,j</em> τ~<em>i<strong>j<em>~(</em>p<em>) + τ</em>j</strong>i</em>(<em>p</em>) and diagonal elements chosen so that rows sum to zero. This approximation is implemented in <a href="https://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R" title="https://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R">noise_approx.R</a></p>
 <p>How different can this be from simply implementing all transitions as single-steps?</p>
 <p>So far the difference seems small in my examples:</p>
 <figure>
@@ -267,7 +267,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

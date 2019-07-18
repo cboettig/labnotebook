@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Interfaces for databases: TreeBASE, Dryad, DataONE</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -113,14 +113,14 @@
 <li><p>RaXML pipeline for returning rough branch lengths conditioned on the given topology, user documentation, more test examples.</p></li>
 <li><p>Implement OAI-PMH test cases for treebase: For instance, query all records after a given date (or all possible other queries), i.e.</p></li>
 </ul>
-<p><a href="https://treebase.org/treebase-web/top/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;after=1996-11-04T00:00:00Z" class="uri">http://treebase.org/treebase-web/top/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;after=1996-11-04T00:00:00Z</a></p>
+<p><a href="https://treebase.org/treebase-web/top/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;after=1996-11-04T00:00:00Z" class="uri">https://treebase.org/treebase-web/top/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;after=1996-11-04T00:00:00Z</a></p>
 <p>And return treebase ids that can then be handed to search_treebase to pull the phylogenies. <a href="https://carlboettiger.info/archives/1670">DONE 2011-05-11</a></p>
 <ul>
 <li>Pull treebase ID from phylo-ws query and return the corresponding OAI-PMH metadata information. <a href="https://carlboettiger.info/archives/1670">DONE 2011-05-11</a></li>
 </ul>
 <h3 id="interfacing-with-dryad">Interfacing with Dryad:</h3>
 <ul>
-<li><p>Currently neither repository seems to always provide the key identifiers to point to the other one.  For instance, William Piel points out the same study <a href="https://treebase.org/treebase-web/search/study/anyObjectAsRDF.rdf?namespacedGUID=TB2:S11266">in TreeBASE</a> and <a href="http://datadryad.org/handle/10255/dryad.8661">in Dryad,</a> where neither links to the other.   Not sure why this study doesn’t get listed in <a href="http://datadryad.org/discover?&amp;query=&amp;filtertype=dc.title&amp;filter=Bridging+the+Rubicon&amp;submit_search-filter-controls_add=Add&amp;rpp=10&amp;sort_by=score&amp;order=DESC&amp;location=l2">Dryad’s search returns</a>.  Discussing with members of both teams (William, Rutger, and Harry with TreeBASE, Kevin and Ryan with Dryad) about addressing this.</p></li>
+<li><p>Currently neither repository seems to always provide the key identifiers to point to the other one.  For instance, William Piel points out the same study <a href="https://treebase.org/treebase-web/search/study/anyObjectAsRDF.rdf?namespacedGUID=TB2:S11266">in TreeBASE</a> and <a href="https://datadryad.org/handle/10255/dryad.8661">in Dryad,</a> where neither links to the other.   Not sure why this study doesn’t get listed in <a href="https://datadryad.org/discover?&amp;query=&amp;filtertype=dc.title&amp;filter=Bridging+the+Rubicon&amp;submit_search-filter-controls_add=Add&amp;rpp=10&amp;sort_by=score&amp;order=DESC&amp;location=l2">Dryad’s search returns</a>.  Discussing with members of both teams (William, Rutger, and Harry with TreeBASE, Kevin and Ryan with Dryad) about addressing this.</p></li>
 <li><p><a href="https://datadryad.org/handle/10255/dryad.4939?show=full">Sometimes Dryad does provide the treebase url</a>, but would have to identify from the url directly (after parsing all dc:idenfier terms), as it isn’t more clearly specified.</p></li>
 <li><p>GOAL: From a TreeBASE query (for trees/phylo-ws or metadata/OAI-PMH): be able to return Dryad data and metadata associated with the study.</p></li>
 <li><p>GOAL: From Dryad-query: return trees associated with a Dryad study by querying TreeBASE.</p></li>
@@ -128,7 +128,7 @@
 <h3 id="dryad-implementation-goals">Dryad Implementation GOALS:</h3>
 <ul>
 <li><p>Extend OAI-PMH interface to the <a href="https://datadryad.org/wiki/API">Dryad API</a></p></li>
-<li><p>Current <a href="https://www.datadryad.org/oai/request?verb=GetRecord&amp;identifier=oai:datadryad.org:10255/dryad.1619&amp;metadataPrefix=oai_dc">Dryad returns</a>don’t include clear identifiers to <a href="http://datadryad.org/handle/10255/dryad.1621">the data files</a> urls.</p></li>
+<li><p>Current <a href="https://www.datadryad.org/oai/request?verb=GetRecord&amp;identifier=oai:datadryad.org:10255/dryad.1619&amp;metadataPrefix=oai_dc">Dryad returns</a>don’t include clear identifiers to <a href="https://datadryad.org/handle/10255/dryad.1621">the data files</a> urls.</p></li>
 <li><p>Work with Dryad to figure out how to access data files as well as meta-data from the API.</p></li>
 <li><p>Extend to<a href="https://mule1.dataone.org/ArchitectureDocs-current/apis/index.html">DataONE API</a>?  Presumably will also have OAI-PMH based access to metadata?</p></li>
 </ul>
@@ -265,7 +265,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

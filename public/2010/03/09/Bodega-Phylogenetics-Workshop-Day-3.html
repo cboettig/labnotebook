@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Bodega Phylogenetics Workshop Day 3</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -107,7 +107,7 @@
   <div class="col-md-7 col-md-offset-1">
     <article>
     <h2 id="rich-glor-character-evolution">Rich Glor, Character Evolution</h2>
-<p><a href="https://bodegaphylo.wikispot.org/Discrete_Character_Evolution_%28Glor%29_2010" title="http://bodegaphylo.wikispot.org/Discrete_Character_Evolution_%28Glor%29_2010">Official slides and tutorial</a></p>
+<p><a href="https://bodegaphylo.wikispot.org/Discrete_Character_Evolution_%28Glor%29_2010" title="https://bodegaphylo.wikispot.org/Discrete_Character_Evolution_%28Glor%29_2010">Official slides and tutorial</a></p>
 <ul>
 <li>Weakness of ancestral state reconstruction
 <ul>
@@ -145,13 +145,13 @@
 <ul>
 <li>Gave a demonstration on using subversion with MrBayes. Useful example, but should have emphasized the generality. Also didn’t have a chance to demonstrate the rapidsvn GUI.</li>
 </ul></li>
-<li>I’ve added information about <strong><a href="https://bodegaphylo.wikispot.org/Version_Management" title="http://bodegaphylo.wikispot.org/Version_Management">using subversion</a></strong> to the Bodega wiki.
+<li>I’ve added information about <strong><a href="https://bodegaphylo.wikispot.org/Version_Management" title="https://bodegaphylo.wikispot.org/Version_Management">using subversion</a></strong> to the Bodega wiki.
 <ul>
-<li>Settled on rapidsvn as the suggested GUI, even though I’m not totally happy with it. The kdesvn gui seems a better choice for linux, but rapidsvn works on all platforms and has an <a href="https://www.rapidsvn.org/index.php/Main_Page" title="http://www.rapidsvn.org/index.php/Main_Page">excellent guide.</a></li>
+<li>Settled on rapidsvn as the suggested GUI, even though I’m not totally happy with it. The kdesvn gui seems a better choice for linux, but rapidsvn works on all platforms and has an <a href="https://www.rapidsvn.org/index.php/Main_Page" title="https://www.rapidsvn.org/index.php/Main_Page">excellent guide.</a></li>
 </ul></li>
 </ul>
 <p><br /> Justin Whittall: cts character traits ————————————-</p>
-<p><a href="https://bodegaphylo.wikispot.org/Continuous_Character_Evolution_%28Whittall%29_2010" title="http://bodegaphylo.wikispot.org/Continuous_Character_Evolution_%28Whittall%29_2010">Official slides and tutorial</a></p>
+<p><a href="https://bodegaphylo.wikispot.org/Continuous_Character_Evolution_%28Whittall%29_2010" title="https://bodegaphylo.wikispot.org/Continuous_Character_Evolution_%28Whittall%29_2010">Official slides and tutorial</a></p>
 <ul>
 <li>Check out the Charlie Nunn Papers.</li>
 <li>Compare incoperates uncertainty in the species means.</li>
@@ -166,7 +166,7 @@
 </ul>
 <h2 id="research-progress">Research Progress</h2>
 <ul>
-<li>Figuring out strange behavior in ouch. the value kept at model@alpha is actually the <a href="https://en.wikipedia.org/wiki/Cholesky_decomposition" title="http://en.wikipedia.org/wiki/Cholesky_decomposition">Cholesky decomposition</a> of the alpha matrix, just as the values of sigma are the Cholesky decomposition of the σ<sup>2</sup> matrix. This seems like a strange convention, surely the user would rather specify the matrices as full matrices and let the software do the decomposition? Because this decomposes matrix <em>M</em> into <em>M</em> = *L**L*<sup><em>T</em></sup>, for single trait value alpha is a scalar and this is the square root. sym.par() function in ouch is often called in the source to assemble M from the decomposition…</li>
+<li>Figuring out strange behavior in ouch. the value kept at model@alpha is actually the <a href="https://en.wikipedia.org/wiki/Cholesky_decomposition" title="https://en.wikipedia.org/wiki/Cholesky_decomposition">Cholesky decomposition</a> of the alpha matrix, just as the values of sigma are the Cholesky decomposition of the σ<sup>2</sup> matrix. This seems like a strange convention, surely the user would rather specify the matrices as full matrices and let the software do the decomposition? Because this decomposes matrix <em>M</em> into <em>M</em> = *L**L*<sup><em>T</em></sup>, for single trait value alpha is a scalar and this is the square root. sym.par() function in ouch is often called in the source to assemble M from the decomposition…</li>
 </ul>
 <p><br /></p>
 
@@ -292,7 +292,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

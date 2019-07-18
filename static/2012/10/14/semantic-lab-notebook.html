@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Semantic Lab Notebook</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -124,27 +124,27 @@
 <p>Microdata introduces new attributes into HTML tags like <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;h1&gt;</code>. The first of these is <code>itemtype</code>, which points to an external resource such as schema.org to define the vocabulary. To have this vocabulary apply to child elements, we just add the attribute <code>itemscope</code>. Then we can set the value of attribute <code>itemprop</code> in this or following elements to give it semantically defined meaning, such as</p>
 <pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> itemscope itemtype=</span><span class="st">&quot;https://data-vocabulary.org/Person&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;h1</span><span class="ot"> itemprop=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span>Carl Boettiger<span class="kw">&lt;/h1&gt;</span>
-  <span class="kw">&lt;a</span><span class="ot"> itemprop=</span><span class="st">&quot;url&quot;</span><span class="ot"> href=</span><span class="st">&quot;https://www.carlboettiger.info&quot;</span><span class="kw">&gt;</span>http://carlboettiger.info<span class="kw">&lt;/a&gt;</span>
+  <span class="kw">&lt;a</span><span class="ot"> itemprop=</span><span class="st">&quot;url&quot;</span><span class="ot"> href=</span><span class="st">&quot;https://www.carlboettiger.info&quot;</span><span class="kw">&gt;</span>https://carlboettiger.info<span class="kw">&lt;/a&gt;</span>
   <span class="kw">&lt;img</span><span class="ot"> itemprop=</span><span class="st">&quot;photo&quot;</span><span class="ot"> src=</span><span class="st">&quot;https://en.gravatar.com/userimage/12904315/7edea703b826fbbe07f2ae4d95b8416b.jpg?16&quot;</span><span class="kw">/&gt;</span>
 <span class="kw">&lt;/div&gt;</span></code></pre>
-<p>where the terms such as <code>name</code> and <code>url</code> have precise meanings attached to “Person”, as specified at the “https://data-vocabulary.org/Address”. This ability to point to an external vocabulary is really the key concept of linked data. In the spirit of HTML5, microdata is much simpler than RDFa, but also more limited. <a href="http://manu.sporny.org/2011/uber-comparison-rdfa-md-uf/">Here is an excellent comparison</a>, but for our purposes we will use RDFa as it is more common in academic use and will more seamlessly allow us to use academic ontologies. (While microdata has a clear mapping to RDF, it is not clear that any ontology that can be expressed in RDF can also be expressed in microdata).</p>
+<p>where the terms such as <code>name</code> and <code>url</code> have precise meanings attached to “Person”, as specified at the “https://data-vocabulary.org/Address”. This ability to point to an external vocabulary is really the key concept of linked data. In the spirit of HTML5, microdata is much simpler than RDFa, but also more limited. <a href="https://manu.sporny.org/2011/uber-comparison-rdfa-md-uf/">Here is an excellent comparison</a>, but for our purposes we will use RDFa as it is more common in academic use and will more seamlessly allow us to use academic ontologies. (While microdata has a clear mapping to RDF, it is not clear that any ontology that can be expressed in RDF can also be expressed in microdata).</p>
 <h3 id="rdfa">RDFa</h3>
 <p><a href="https://www.w3.org/TR/xhtml-rdfa-primer/">RDFa</a> can be written in a very similar manner. The <code>itemprop</code> attribute is replaced by the <code>property</code> attribute, and <code>vocab</code> replaces <code>itemtype</code> and automatically implies <code>itemscope</code> to child nodes.</p>
 <pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> vocab=</span><span class="st">&quot;https://xmlns.com/foaf/0.1/&quot;</span><span class="ot"> typeof=</span><span class="st">&quot;Person&quot;</span><span class="kw">&gt;</span>
   <span class="kw">&lt;h1</span><span class="ot"> property=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span>Carl Boettiger<span class="kw">&lt;/h1&gt;</span>
-  <span class="kw">&lt;a</span><span class="ot"> property=</span><span class="st">&quot;homepage&quot;</span><span class="ot"> href=</span><span class="st">&quot;https://www.carlboettiger.info&quot;</span><span class="kw">&gt;</span>http://carlboettiger.info<span class="kw">&lt;/a&gt;</span>
+  <span class="kw">&lt;a</span><span class="ot"> property=</span><span class="st">&quot;homepage&quot;</span><span class="ot"> href=</span><span class="st">&quot;https://www.carlboettiger.info&quot;</span><span class="kw">&gt;</span>https://carlboettiger.info<span class="kw">&lt;/a&gt;</span>
   <span class="kw">&lt;img</span><span class="ot"> property=</span><span class="st">&quot;depiction&quot;</span><span class="ot"> src=</span><span class="st">&quot;https://en.gravatar.com/userimage/12904315/7edea703b826fbbe07f2ae4d95b8416b.jpg?16&quot;</span><span class="kw">/&gt;</span>
  <span class="kw">&lt;/div&gt;</span></code></pre>
 <p>We could have used only the <code>property</code> attribute along with the complete URI to the term definition instead of this structure. <code>typeof</code> indicates that the child elements are all of the same type (in this case, all belong to the same “Person”). If we were omitting <code>vocab</code> and writing out all URIs, we would have had <code>&lt;div typeof=&quot;https://xmlns.com/foaf/0.1/Person&quot;&gt;</code> as well. In RDFa, we also have the <code>resource</code> attribute, which allows us to specify a URI for the element being described. This could be a relative or absolute URL. If the object is a link, using <code>resource</code> is not necessary, and the property is taken to describe the URL given in <code>href</code> or <code>src</code> rather than the anchor text.</p>
-<p>Two older options lie at either extreme: the most basic is the older technique of <a href="https://microformats.org/wiki/html5">microformatting</a>, basically relying on standard <code>class</code> and <code>rel</code> attributes to convey semantic information. Simple and without new attributes, but probably too limited for our purposes so we won’t concern ourselves with it further. The other venerable approach is serve the page as XHTML, which renders in the browser in much the same way but can be parsed by a machine as XML, with all the power and extensibility that presents. Unlike earlier HTML standards, HTML5 is already valid XML (already “serialized”), so the same page can be served in either format (earlier specs were SGML, standardized general markup languages, of which XML is just a subset). To allow parsing of the HTML5 pages as either type (see <a href="http://en.wikipedia.org/wiki/Polyglot_markup">polyglot</a>), we need only add the language and namespace to the opening <code>&lt;html&gt;</code> tag,</p>
+<p>Two older options lie at either extreme: the most basic is the older technique of <a href="https://microformats.org/wiki/html5">microformatting</a>, basically relying on standard <code>class</code> and <code>rel</code> attributes to convey semantic information. Simple and without new attributes, but probably too limited for our purposes so we won’t concern ourselves with it further. The other venerable approach is serve the page as XHTML, which renders in the browser in much the same way but can be parsed by a machine as XML, with all the power and extensibility that presents. Unlike earlier HTML standards, HTML5 is already valid XML (already “serialized”), so the same page can be served in either format (earlier specs were SGML, standardized general markup languages, of which XML is just a subset). To allow parsing of the HTML5 pages as either type (see <a href="https://en.wikipedia.org/wiki/Polyglot_markup">polyglot</a>), we need only add the language and namespace to the opening <code>&lt;html&gt;</code> tag,</p>
 <pre><code>&lt;html lang=&quot;en&quot; xmlns=&quot;https://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;&gt;</code></pre>
 <h3 id="caveats">Caveats</h3>
-<p>An essential caveat is that these are all new approaches which may not render well in legacy browsers, particularly Windows Internet Explorer. Some of these, like recognizing and styling the HTML5 semantic elements in IE, can be addressed in CSS, for which Twitter Bootstrap does a decent job. Another caveat The HTML5 spec has not been finalized, and some things are still in flux, as the <a href="https://html5doctor.com/time-and-data-element/">removal</a> and <a href="http://www.brucelawson.co.uk/2012/best-of-time/">reinstatement</a> of the <code>&lt;time&gt;</code> element illustrates.</p>
+<p>An essential caveat is that these are all new approaches which may not render well in legacy browsers, particularly Windows Internet Explorer. Some of these, like recognizing and styling the HTML5 semantic elements in IE, can be addressed in CSS, for which Twitter Bootstrap does a decent job. Another caveat The HTML5 spec has not been finalized, and some things are still in flux, as the <a href="https://html5doctor.com/time-and-data-element/">removal</a> and <a href="https://www.brucelawson.co.uk/2012/best-of-time/">reinstatement</a> of the <code>&lt;time&gt;</code> element illustrates.</p>
 <h3 id="useful-tools-for-checking-implementation">Useful tools for checking implementation</h3>
 <ul>
 <li><a href="https://validator.w3.org/nu">W3C HTML5 Validator</a></li>
 <li><a href="https://www.google.com/webmasters/tools/richsnippets">Google rich snippets</a></li>
-<li><a href="https://sparql.captsolo.net/browser/browser.py?url=http://www.w3.org/2007/08/pyRdfa/extract?uri=http://www.carlboettiger.info">RDF extraction tool</a></li>
+<li><a href="https://sparql.captsolo.net/browser/browser.py?url=https://www.w3.org/2007/08/pyRdfa/extract?uri=https://www.carlboettiger.info">RDF extraction tool</a></li>
 </ul>
 <h1 id="scholarly-semantic-markup-for-the-notebook">Scholarly Semantic Markup for the Notebook</h1>
 <p>Now that we’ve familiarized ourselves with the options, it’s time to see what semantic content we can implement.</p>
@@ -165,12 +165,12 @@
 <tr class="even">
 <td style="text-align: left;">Post metadata</td>
 <td style="text-align: left;">keywords, timestamps</td>
-<td style="text-align: left;"><a href="https://schema.org/BlogPosting">Schema.org microdata</a> or <a href="http://purl.org/terms/dc">Dublin Core</a></td>
+<td style="text-align: left;"><a href="https://schema.org/BlogPosting">Schema.org microdata</a> or <a href="https://purl.org/terms/dc">Dublin Core</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Author metadata</td>
 <td style="text-align: left;">Name, contact, networks,</td>
-<td style="text-align: left;"><a href="https://xmlns.com/foaf/0.1/">FOAF</a>, <a href="http://purl.org/terms/dc">Dublin Core</a></td>
+<td style="text-align: left;"><a href="https://xmlns.com/foaf/0.1/">FOAF</a>, <a href="https://purl.org/terms/dc">Dublin Core</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
@@ -185,12 +185,12 @@
 <tr class="even">
 <td style="text-align: left;">Citations</td>
 <td style="text-align: left;">bib info, reason for citing</td>
-<td style="text-align: left;"><a href="https://purl.org/spar/cito">CiTO</a>, <a href="http://purl.org/spar/biro">BiRO</a>,</td>
+<td style="text-align: left;"><a href="https://purl.org/spar/cito">CiTO</a>, <a href="https://purl.org/spar/biro">BiRO</a>,</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;"><a href="https://purl.org/ontologies/bibo">bibo</a>, <a href="http://purl.org/terms/dc">Dublin Core</a></td>
+<td style="text-align: left;"><a href="https://purl.org/ontologies/bibo">bibo</a>, <a href="https://purl.org/terms/dc">Dublin Core</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Taxonomic data</td>
@@ -200,7 +200,7 @@
 <tr class="odd">
 <td style="text-align: left;">Ecological data</td>
 <td style="text-align: left;">measurements, units, etc</td>
-<td style="text-align: left;"><del><a href="https://knb.ecoinformatics.org/software/eml/">EML</a></del> <a href="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl">OBOE</a></td>
+<td style="text-align: left;"><del><a href="https://knb.ecoinformatics.org/software/eml/">EML</a></del> <a href="https://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl">OBOE</a></td>
 </tr>
 </tbody>
 </table>
@@ -342,7 +342,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

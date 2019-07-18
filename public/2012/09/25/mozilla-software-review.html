@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Reflections on the Mozilla Science Code Review Pilot</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>I was recently interviewed a <em>Nature</em> senior reporter <a href="https://twitter.com/erica_check">Erika Check Hayden</a> on the subject of the scientific <a href="http://kaythaney.com/2013/08/08/experiment-exploring-code-review-for-science/">code review project</a> being conducted by <a href="https://wiki.mozilla.org/ScienceLab">Mozilla Science Lab</a>. The piece appears in this week’s issue, <a href="http://doi.org/10.1038/501472a" title="Mozilla plan seeks to debug scientific code">Hayden 2013</a>. <a href="http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html">My blog post</a> sharing my own approach to code review is mentioned at the beginning of the article, though it is rather Roger Peng’s comments at the end that have stirred <a href="https://twitter.com/Erika_Check/status/382911015358181376/photo/1">some interesting discussion</a>.</p>
+    <p>I was recently interviewed a <em>Nature</em> senior reporter <a href="https://twitter.com/erica_check">Erika Check Hayden</a> on the subject of the scientific <a href="https://kaythaney.com/2013/08/08/experiment-exploring-code-review-for-science/">code review project</a> being conducted by <a href="https://wiki.mozilla.org/ScienceLab">Mozilla Science Lab</a>. The piece appears in this week’s issue, <a href="https://doi.org/10.1038/501472a" title="Mozilla plan seeks to debug scientific code">Hayden 2013</a>. <a href="https://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html">My blog post</a> sharing my own approach to code review is mentioned at the beginning of the article, though it is rather Roger Peng’s comments at the end that have stirred <a href="https://twitter.com/Erika_Check/status/382911015358181376/photo/1">some interesting discussion</a>.</p>
 <p>Roger raises two concerns. First, that increased scrutiny will discourage researchers from sharing code, (which, right or wrong, remains a voluntary choice in most journals):</p>
 <blockquote>
 <p>One worry I have is that, with reviews like this, scientists will be even more discouraged from publishing their code</p>
@@ -123,7 +123,7 @@
 </blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p>The <em>Nature</em> News piece thus nails a central tension in the community between promoting higher standards for code (A position exemplified in an earlier <em>Nature</em> column titled <a href="https://doi.org/10.1038/467775a" title="Merali 2010, Nature">“Computational Science … Error: Why scientific programming does not compute”</a>, and more recently in <em>Science</em> by <a href="http://doi.org/10.1126/science.1231535" title="Joppa et al. 2013, &#39;Troubling Trends in Scientific Software Use&#39;">Joppa <em>et al.</em> 2013</a>, which explicitly calls for peer review of scientific software) vs promoting more widespread sharing of software (as exemplified by Nick Barnes piece in the same issue, <a href="http://doi.org/10.1038/467753a" title="Barnes 2010, Nature">“Publish your computer code: it is good enough”</a>.</p>
+<p>The <em>Nature</em> News piece thus nails a central tension in the community between promoting higher standards for code (A position exemplified in an earlier <em>Nature</em> column titled <a href="https://doi.org/10.1038/467775a" title="Merali 2010, Nature">“Computational Science … Error: Why scientific programming does not compute”</a>, and more recently in <em>Science</em> by <a href="https://doi.org/10.1126/science.1231535" title="Joppa et al. 2013, &#39;Troubling Trends in Scientific Software Use&#39;">Joppa <em>et al.</em> 2013</a>, which explicitly calls for peer review of scientific software) vs promoting more widespread sharing of software (as exemplified by Nick Barnes piece in the same issue, <a href="https://doi.org/10.1038/467753a" title="Barnes 2010, Nature">“Publish your computer code: it is good enough”</a>.</p>
 <p>The arguments made in each of the perspectives are excellent, and should be required reading for anyone interested in the subject. In addition to the shorter comment by Barnes, I also recommend the more recent <em>Nature</em> perspective, <a href="https://doi.org/10.1038/nature10836" title="Ince et al. 2012, Nature">The Case for Open Computer Programs</a>, which lays out the argument and modest practical recommendations (that have largely been ignored as far as I can tell) just brilliantly. In particular, I think they nail the issue of why describing the algorithm or providing pseudo-code is not a satisfactory description of the method.</p>
 <p>However, I also think the tension between review and sharing is somewhat artificial. While each of these positions emphasizes the need to share source-code, the call for code review by Merali, Joppa et al (or in my own blog post mentioned earlier), focus on <em>scientific software</em> aimed at reuse by others. The concerns voiced in Roger Peng’s comments and echoed by Nick Barnes focus on another class of code entirely – code associated with a particular research publication that would primarily serve only to document and support those results, rather than be readily adapted to other uses.</p>
 <blockquote class="twitter-tweet"><p>
@@ -323,7 +323,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

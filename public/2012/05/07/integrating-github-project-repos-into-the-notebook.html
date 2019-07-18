@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Integrating Github Project Repos Into The Notebook</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>For a while now most of my active research is developed through <code>.Rmd</code> scripts connected to a particular project repository (something I discuss at length in <a href="https://www.carlboettiger.info/2014/05/05/knitr-workflow-challenges.html">deep challenges with knitr workflows</a>). In the <a href="http://www.carlboettiger.info/2014/05/06/steps-to-a-more-portable-workflow.html">previous post</a> I discuss creating a <code>template</code> package with a more transparent organization of files, such as moving manuscripts from <code>inst/doc/</code> to simply <code>manuscripts/</code>. This left these exploratory analysis scripts in <code>inst/examples</code> in a similarly unintuitive place. Though I like having these scripts as part of the repository (which keeps everything for a project in one place, as it were), like the manuscript they aren’t really part of the R package, particularly as I have gotten better at creating proper unit tests in place of just rerunning dynamic scripts occasionally.</p>
+    <p>For a while now most of my active research is developed through <code>.Rmd</code> scripts connected to a particular project repository (something I discuss at length in <a href="https://www.carlboettiger.info/2014/05/05/knitr-workflow-challenges.html">deep challenges with knitr workflows</a>). In the <a href="https://www.carlboettiger.info/2014/05/06/steps-to-a-more-portable-workflow.html">previous post</a> I discuss creating a <code>template</code> package with a more transparent organization of files, such as moving manuscripts from <code>inst/doc/</code> to simply <code>manuscripts/</code>. This left these exploratory analysis scripts in <code>inst/examples</code> in a similarly unintuitive place. Though I like having these scripts as part of the repository (which keeps everything for a project in one place, as it were), like the manuscript they aren’t really part of the R package, particularly as I have gotten better at creating proper unit tests in place of just rerunning dynamic scripts occasionally.</p>
 <p>I’ve also been nagged by the idea of having to always just link to these nice dynamic documents from my lab notebook. Sure Github renders the markdown so that it’s easy enough to see highlighted code and figures etc., but it still makes them seem rather external. Occasionally I would copy the complete <code>.md</code> file into a notebook post, but this divorced it of it’s original version history and associated <code>.Rmd</code> source.</p>
 <p>One option would be to move them all directly into my lab notebook, <code>.Rmd</code> files and all. This would integrate the scripts more nicely than Github’s own rendering, matching the URL and look and feel of my notebook. It would also allow for javascript elements such as MathJax equations, Google Analytics, and Disqus that are not possible when only linking to an <code>.md</code> file on Github.</p>
 <p>In the recent <a href="https://github.com/ropensci/docs">ropensci/docs</a> project we are exploring a way to have Jekyll automatically compile (potentially with caching) a site that uses <code>.Rmd</code> posts and deploy to Github all using <code>travis</code>, but we’re not quite finished and this is potentially fragile particularly with the hundreds of posts in this notebook. Besides this, the notebook structure is rather temporally oriented, (posts are chronological and reflected in my URL structure) while these scripts are largely project-oriented. (Consistent use of categories and tags would ameliorate this).</p>
@@ -266,7 +266,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Steps To A More Portable Workflow</title>
   <meta name="author" content="Carl Boettiger" />
@@ -48,7 +48,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -107,7 +107,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>While I have made <a href="https://www.carlboettiger.info/2012/05/06/research-workflow.html">my workflow</a> for most of my ongoing projects available on Github for some time, this does not mean that it has been particularly easy to follow. Further, as I move from project to project I have slowly improved how I handle projects. For instance, I have since added unit tests (with <code>testthat</code>) and continuous integration (with <a href="http://travis-ci.org">travis-ci</a>) to my repositories, and my handling of manuscripts has gotten more automated, with richer latex templates, yaml metadata, and simpler and more powerful makefiles.</p>
+    <p>While I have made <a href="https://www.carlboettiger.info/2012/05/06/research-workflow.html">my workflow</a> for most of my ongoing projects available on Github for some time, this does not mean that it has been particularly easy to follow. Further, as I move from project to project I have slowly improved how I handle projects. For instance, I have since added unit tests (with <code>testthat</code>) and continuous integration (with <a href="https://travis-ci.org">travis-ci</a>) to my repositories, and my handling of manuscripts has gotten more automated, with richer latex templates, yaml metadata, and simpler and more powerful makefiles.</p>
 <p>Though I have typically used my most recent project as a template for my next one (not so trivial as I work on several at a time), I realized it would make sense to just maintain a general template repo with all the latest goodies. I have now launched my <a href="https://github.com/cboettig/template">template</a> on Github.</p>
 <p>I toyed with the idea of just treating the manuscript as a standard vignette, but this would make <code>pandoc</code> an external dependency for the package, putting an unecessary burden on <code>travis</code> and users. I settled on creating a <code>manuscripts</code> directory in the project root folder as the most semantically obvious place. This is added to <code>.Rbuildignore</code> as it doesn’t fit the standard structure of an R package, but since it is not a vignette and cannot be built with the package dependencies anyhow, this seems to make sense to me.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
 <p>The manuscript itslef is written in <code>.Rmd</code>, with a <code>yaml</code> header for the usual metadata of authors, affiliations, and so forth. Pandoc’s recent support for <a href="https://github.com/cboettig/template/blob/master/manuscripts/manuscript.Rmd#L1-27">yaml metadata</a> makes it much easier to use <code>.Rmd</code> with a LaTeX template, making <code>.Rnw</code> rather unnecessary. <a href="https://github.com/cboettig/template/blob/master/manuscripts/components/elsarticle.latex">My template</a> includes a custom <code>LaTeX</code> template that includes pandoc’s macros for inserting authors, affiliations, and so forth in the correct LaTeX elements, though pandoc’s <a href="https://github.com/jgm/pandoc-templates/blob/master/default.latex">default template</a> is rather good and already has macros for most things in place (meaning you can merely declare the layout or font in the yaml header and magically see the tex interpret it).</p>
@@ -252,7 +252,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Notes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -142,7 +142,7 @@ gGeoCode &lt;-<span class="st"> </span>function(address,<span class="dt">verbose
 <h2 id="xml-compliance-in-html5">XML compliance in HTML5</h2>
 <p>See <a href="https://github.com/cboettig/labnotebook/issues/21">labnotebook/issues/21</a></p>
 <p>HTML5 allows tags to be unclosed, e.g. <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> instead of <code>&lt;meta charset=&quot;utf-8&quot; /&gt;</code> but this is not valid XML.</p>
-<p>See: * <a href="https://dev.w3.org/html5/html-xhtml-author-guide/">Polyglot/xhtml5 author guide</a> * <a href="http://www.xmlplease.com/xhtml/xhtml5polyglot/#s1">Benefits of XML</a> * <a href="http://www.w3.org/TR/xhtml-media-types/#C_2">W3C XHTML media type</a> * <a href="http://www.w3.org/TR/html5/syntax.html#optional-tags">Optional tags in html5</a></p>
+<p>See: * <a href="https://dev.w3.org/html5/html-xhtml-author-guide/">Polyglot/xhtml5 author guide</a> * <a href="https://www.xmlplease.com/xhtml/xhtml5polyglot/#s1">Benefits of XML</a> * <a href="https://www.w3.org/TR/xhtml-media-types/#C_2">W3C XHTML media type</a> * <a href="https://www.w3.org/TR/html5/syntax.html#optional-tags">Optional tags in html5</a></p>
 <p>Note that tags with no content must be closed with <code>/&gt;</code> (like the <code>meta</code> example) while tags with content must get a normal closing (<code>&lt;li&gt; item &lt;/li&gt;</code> etc). Despite this, the HTML5 spec is kinda logical since closing is syntax redundant even though not closing is not valid XML, see <a href="https://stackoverflow.com/questions/3008593/html-include-or-exclude-optional-closing-tags">SO question</a> for discussion.</p>
 <h3 id="example">example</h3>
 <p>Basic XML parsing is now possible, e.g. in R:</p>
@@ -294,7 +294,7 @@ doc &lt;-<span class="st"> </span><span class="kw">xmlParse</span>(tt)
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

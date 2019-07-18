@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Notes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -117,40 +117,40 @@
 Outperforms The Correct Mechanistic Model For Simulated And
 Experimental Data. _Proceedings of The National Academy of
 Sciences_. ISSN 0027-8424, 
-https://dx.doi.org/10.1073/pnas.1216076110."><a href="http://dx.doi.org/10.1073/pnas.1216076110">Perretti <em>et. al.</em> (2013)</a></span>. It would be nice to see the comparison against the generating model.  The forecasting errors of the fully Bayesian inference using the correct model shouldn’t necessary be small, but they should be just as big as the Bayesian model expects them to be (e.g. over replicates, the Bayesian forecast error reflects the widths of the posteriors (modulo some statement about priors)).</li>
+https://dx.doi.org/10.1073/pnas.1216076110."><a href="https://dx.doi.org/10.1073/pnas.1216076110">Perretti <em>et. al.</em> (2013)</a></span>. It would be nice to see the comparison against the generating model.  The forecasting errors of the fully Bayesian inference using the correct model shouldn’t necessary be small, but they should be just as big as the Bayesian model expects them to be (e.g. over replicates, the Bayesian forecast error reflects the widths of the posteriors (modulo some statement about priors)).</li>
 </ul>
 <p>My worry with any approach doing better than the expected error is that it does so by generating biased estimation – e.g. something in the forecasting method, rather than in the data, happens to be biased towards the ‘right answer’.  In this example I don’t think that is the case.</p>
 <p>We already know that the modes of the posteriors don’t recover the correct model parameters of the generating model from an MCMC of such a complex model with limited data (though perhaps it is good to remind folks of this!), so it is not surprising that a heuristic approach can outperform this in cases.  </p>
 <p>It certainly is good to wrestle with these examples in any case.  Steve’s one of my post-doc advisors now so no doubt I’m biased.  Noam also pointed out this earlier article in Ecology <span class="showtooltip" title="Perretti C, Sugihara G and Munch S (2012). Nonparametric
 Forecasting Outperforms Parametric Methods For A Simulated
 Multi-Species System. _Ecology_. ISSN 0012-9658, 
-https://dx.doi.org/10.1890/12-0904.1."><a href="http://dx.doi.org/10.1890/12-0904.1">Perretti <em>et. al.</em> (2012)</a></span>.</p>
+https://dx.doi.org/10.1890/12-0904.1."><a href="https://dx.doi.org/10.1890/12-0904.1">Perretti <em>et. al.</em> (2012)</a></span>.</p>
 <ul>
 <li>In seminar, Marc mentioned the great paper by <span class="showtooltip" title="Wiedenmann J, Cresswell K, Goldbogen J, Potvin J and Mangel M
 (2011). Exploring The Effects of Reductions in Krill Biomass in
 The Southern Ocean on Blue Whales Using A State-Dependent Foraging
 Model. _Ecological Modelling_, *222*. ISSN 03043800, 
-https://dx.doi.org/10.1016/j.ecolmodel.2011.07.013."><a href="http://dx.doi.org/10.1016/j.ecolmodel.2011.07.013" rel="http://purl.org/spar/cito/discusses" >Wiedenmann <em>et. al.</em> (2011)</a></span> that uses the comparison of the optimal foraging strategy evolved by whales in their evolutionary environment to how that strategy performs today (similar spirit to the kinds of comparisons I am interested in with #multiple-uncertainty project.</li>
+https://dx.doi.org/10.1016/j.ecolmodel.2011.07.013."><a href="https://dx.doi.org/10.1016/j.ecolmodel.2011.07.013" rel="https://purl.org/spar/cito/discusses" >Wiedenmann <em>et. al.</em> (2011)</a></span> that uses the comparison of the optimal foraging strategy evolved by whales in their evolutionary environment to how that strategy performs today (similar spirit to the kinds of comparisons I am interested in with #multiple-uncertainty project.</li>
 </ul>
 <p>Reading an old Schaffer paper <span class="showtooltip" title="Schaffer W (1984). Stretching And Folding in Lynx Fur Returns:
 Evidence For A Strange Attractor in Nature? _The American
 Naturalist_, *124*. ISSN 0003-0147, 
-https://dx.doi.org/10.1086/284318."><a href="http://dx.doi.org/10.1086/284318" rel="http://purl.org/spar/cito/discusses" >Schaffer (1984)</a></span>.</p>
+https://dx.doi.org/10.1086/284318."><a href="https://dx.doi.org/10.1086/284318" rel="https://purl.org/spar/cito/discusses" >Schaffer (1984)</a></span>.</p>
 <ul>
 <li><p>Though <em>Nature</em> says the National Academy of Sciences needs an overhaul to stay relevant. Probably true but they still do some excellent reports that could deserve more eyes, like this on model fitting (<span class="showtooltip" title="(????). Assessing the Reliability of Complex Models: Mathematical
 and Statistical Foundations of Verification, Validation, and
 Uncertainty Quantification. 
 https://www.nap.edu/catalog.php?record_id=13395 [Online.
 last-accessed: 2013-02-28 18:23:05]. 
-https://www.nap.edu/catalog.php?record_id=13395."><a href="http://www.nap.edu/catalog.php?record_id=13395" rel="http://purl.org/spar/cito/discusses" ></a></span>). We could do more VVUQ in ecology and evolution, and the value of presenting benchmark examples of this in simple (trivial) cases cannot be overstated, e.g. Fig 5.2.1.</p></li>
+https://www.nap.edu/catalog.php?record_id=13395."><a href="https://www.nap.edu/catalog.php?record_id=13395" rel="https://purl.org/spar/cito/discusses" ></a></span>). We could do more VVUQ in ecology and evolution, and the value of presenting benchmark examples of this in simple (trivial) cases cannot be overstated, e.g. Fig 5.2.1.</p></li>
 <li><p>GP methods in Biometrika <span class="showtooltip" title="Banerjee A, Dunson D and Tokdar S (2012). Efficient Gaussian
 Process Regression For Large Datasets. _Biometrika_, *100*. ISSN
-0006-3444,  https://dx.doi.org/10.1093/biomet/ass068."><a href="http://dx.doi.org/10.1093/biomet/ass068" rel="http://purl.org/spar/cito/discusses" >Banerjee <em>et. al.</em> (2012)</a></span></p></li>
+0006-3444,  https://dx.doi.org/10.1093/biomet/ass068."><a href="https://dx.doi.org/10.1093/biomet/ass068" rel="https://purl.org/spar/cito/discusses" >Banerjee <em>et. al.</em> (2012)</a></span></p></li>
 <li><p>Luminaries of evolution forecast the future of the field, with an eye towards data and semantics in <span class="showtooltip" title="Losos J, Arnold S, Bejerano G, Brodie E, Hibbett D, Hoekstra H,
 Mindell D, Monteiro A, Moritz C, Orr H, Petrov D, Renner S,
 Ricklefs R, Soltis P and Turner T (2013). Evolutionary Biology
 For The 21st Century. _Plos Biology_, *11*. 
-https://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.1371/journal.pbio.1001466" rel="http://purl.org/spar/cito/discusses" >Losos <em>et. al.</em> (2013)</a></span></p></li>
+https://dx.doi.org/10.1371/journal.pbio.1001466."><a href="https://dx.doi.org/10.1371/journal.pbio.1001466" rel="https://purl.org/spar/cito/discusses" >Losos <em>et. al.</em> (2013)</a></span></p></li>
 </ul>
 <h3 id="misc">Misc</h3>
 <ul>
@@ -165,7 +165,7 @@ https://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.
 <li>C. T. Perretti, S. B. Munch, G. Sugihara, (2013) Model-Free Forecasting Outperforms The Correct Mechanistic Model For Simulated And Experimental Data. <em>Proceedings of The National Academy of Sciences</em> <a href="https://dx.doi.org/10.1073/pnas.1216076110">10.1073/pnas.1216076110</a></li>
 <li>William M. Schaffer, (1984) Stretching And Folding in Lynx Fur Returns: Evidence For A Strange Attractor in Nature?. <em>The American Naturalist</em> <strong>124</strong> <a href="https://dx.doi.org/10.1086/284318">10.1086/284318</a></li>
 <li>John Wiedenmann, Katherine A. Cresswell, Jeremy Goldbogen, Jean Potvin, Marc Mangel, (2011) Exploring The Effects of Reductions in Krill Biomass in The Southern Ocean on Blue Whales Using A State-Dependent Foraging Model. <em>Ecological Modelling</em> <strong>222</strong> <a href="https://dx.doi.org/10.1016/j.ecolmodel.2011.07.013">10.1016/j.ecolmodel.2011.07.013</a></li>
-<li>Assessing the Reliability of Complex Models: Mathematical and Statistical Foundations of Verification, Validation, and Uncertainty Quantification. <a href="https://www.nap.edu/catalog.php?record_id=13395" class="uri">http://www.nap.edu/catalog.php?record_id=13395</a></li>
+<li>Assessing the Reliability of Complex Models: Mathematical and Statistical Foundations of Verification, Validation, and Uncertainty Quantification. <a href="https://www.nap.edu/catalog.php?record_id=13395" class="uri">https://www.nap.edu/catalog.php?record_id=13395</a></li>
 </ul>
 
     </article>
@@ -298,7 +298,7 @@ https://dx.doi.org/10.1371/journal.pbio.1001466."><a href="http://dx.doi.org/10.
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

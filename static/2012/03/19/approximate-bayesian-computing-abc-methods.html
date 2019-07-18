@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Approximate Bayesian Computing (algorithms) methods</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p><a href="https://matsen.fhcrc.org/">Erick Matsen</a> asked me about the question at the end of Luke Harmon’s phyloseminar critiquing Approximate Bayesian Computing ABC methods.  The question wasn’t any more specific, though Luke recognized the paper.  Searching the literature didn’t turn anything up, asking <a href="http://www.mendeley.com/profiles/leonardo-de-oliveira-martins/">Leo</a> through the <a href="http://www.mendeley.com/groups/517931/bayesian-mcmc/">MCMC group</a> on Mendeley I think this is the paper:</p>
+    <p><a href="https://matsen.fhcrc.org/">Erick Matsen</a> asked me about the question at the end of Luke Harmon’s phyloseminar critiquing Approximate Bayesian Computing ABC methods.  The question wasn’t any more specific, though Luke recognized the paper.  Searching the literature didn’t turn anything up, asking <a href="https://www.mendeley.com/profiles/leonardo-de-oliveira-martins/">Leo</a> through the <a href="https://www.mendeley.com/groups/517931/bayesian-mcmc/">MCMC group</a> on Mendeley I think this is the paper:</p>
 <p>﻿Robert, C.P. et al. Lack of confidence in ABC model choice. <em>PNAS</em> <strong>I</strong>, 8(2011). (<a href="https://arxiv.org/abs/1102.4432">arXiv</a>)</p>
 <p>Seems a more pointed critique to ABC then Templeton’s discussion (Templeton, 2010) particularly as the lead author is a critic of Templeton (Berger <em>et. al.</em> 2010).</p>
 <p>At first I thought this would be a relatively intuitive argument that the method is often applied when we lack appropriate sufficient statistics for models.  Of course it comes down to a question of sufficient statistics, but the result is somewhat stronger,</p>
@@ -114,7 +114,7 @@
 <p>a straightforward proof that a model-wise sufficient statistic is usually not sufficient across models, i.e. for model comparison.  An immediate corollary is that the ABC-MC approximation does not converge to the exact Bayes factor.</p>
 </blockquote>
 <p>Hence the emphasis on model choice in the title – lacking sufficient statistics for the particular model would obviously impact posterior density estimation even within models.</p>
-<p>There’s some rather excellent discussion of these issues on <a href="https://xianblog.wordpress.com/2011/03/08/error-in-abc-versus-error-in-model-choice/">Christian Robert’s blog</a>, again thanks to Leo for pointing me to this, still some more reading to do on this before we here more about ABC from Brian O’Meara on <a href="http://phyloseminar.org/">phyloseminar</a> next week.</p>
+<p>There’s some rather excellent discussion of these issues on <a href="https://xianblog.wordpress.com/2011/03/08/error-in-abc-versus-error-in-model-choice/">Christian Robert’s blog</a>, again thanks to Leo for pointing me to this, still some more reading to do on this before we here more about ABC from Brian O’Meara on <a href="https://phyloseminar.org/">phyloseminar</a> next week.</p>
 <h3 id="update">Update</h3>
 <p>Dan Lawson (comments below) drew my attention to another paper treating this problem of model-wise sufficient statistics Didelot <em>et. al.</em> 2011.  The authors propose a potentially straight-forward work-around: define a model M in which both the original models M1 and M2 are embedded.  They then demonstrate for exponential family models that sufficient statistics for M are sufficient statistics for comparing M1 and M2 by Bayes factors, if I’ve followed the argument correctly.  I’ll try to work out an example in a phylogenetics context in the notebook when I get a chance.</p>
 <h3 id="further-reading">Further reading</h3>
@@ -123,8 +123,8 @@
 <p>﻿Albert, J. <em>Bayesian Computation with R (Use R)</em>. 300 (Springer: 2009). (<a href="https://www.amazon.com/Bayesian-Computation-R-Use/dp/0387922970">Amazon link</a>).</p>
 <h2 id="references">References</h2>
 <ul>
-<li><p>Templeton A (2010). “Coherent And Incoherent Inference in Phylogeography And Human Evolution.” <em>Proceedings of The National Academy of Sciences</em>, <strong>107</strong>. ISSN 0027-8424, <a href="https://dx.doi.org/10.1073/pnas.0910647107">http://dx.doi.org/10.1073/pnas.0910647107</a>.</p></li>
-<li><p>Berger J, Fienberg S, Raftery A and Robert C (2010). “Incoherent Phylogeographic Inference.” <em>Proceedings of The National Academy of Sciences</em>, <strong>107</strong>. ISSN 0027-8424, <a href="https://dx.doi.org/10.1073/pnas.1008762107">http://dx.doi.org/10.1073/pnas.1008762107</a>.</p></li>
+<li><p>Templeton A (2010). “Coherent And Incoherent Inference in Phylogeography And Human Evolution.” <em>Proceedings of The National Academy of Sciences</em>, <strong>107</strong>. ISSN 0027-8424, <a href="https://dx.doi.org/10.1073/pnas.0910647107">https://dx.doi.org/10.1073/pnas.0910647107</a>.</p></li>
+<li><p>Berger J, Fienberg S, Raftery A and Robert C (2010). “Incoherent Phylogeographic Inference.” <em>Proceedings of The National Academy of Sciences</em>, <strong>107</strong>. ISSN 0027-8424, <a href="https://dx.doi.org/10.1073/pnas.1008762107">https://dx.doi.org/10.1073/pnas.1008762107</a>.</p></li>
 <li><p>Likelihood-Free Estimation of Model Evidence, Xavier Didelot, Richard G. Everitt, Adam M. Johansen, Daniel J. Lawson, (2011) <em>Bayesian Analysis</em>, <strong>6</strong> <a href="https://dx.doi.org/10.1214/11-BA602">10.1214/11-BA602</a></p></li>
 </ul>
 
@@ -250,7 +250,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

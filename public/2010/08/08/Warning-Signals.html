@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Warning Signals</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -108,11 +108,11 @@
     <article>
     <ul>
 <li>Working on implementation of the the TwoRates model looking for changepoint:</li>
-<li>See for most of code implementation <a href="https://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/R/sde_likelihood.R" title="http://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/R/sde_likelihood.R">sde_likelihood.R</a> and for the model choice example see <a href="http://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/demos/warning_example.R" title="http://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/demos/warning_example.R">warning_example.R</a></li>
+<li>See for most of code implementation <a href="https://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/R/sde_likelihood.R" title="https://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/R/sde_likelihood.R">sde_likelihood.R</a> and for the model choice example see <a href="https://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/demos/warning_example.R" title="https://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/demos/warning_example.R">warning_example.R</a></li>
 </ul>
 <h2 id="general-code-cleanup">General Code cleanup</h2>
 <ul>
-<li>Added a <a href="https://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/src/saddle_node_direct.c" title="http://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/src/saddle_node_direct.c">saddle-node bifurcation</a> simulation in the format of the metapop/hastings/crowley/beetles models already in the stochastic population dynamics library. Allows for C-based parallelized ensemble simulation using my Gillespie library. R call to all of these models can be found in <a href="http://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/R/ind_based_models.R" title="http://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/R/ind_based_models.R">ind_based_models.R</a></li>
+<li>Added a <a href="https://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/src/saddle_node_direct.c" title="https://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/src/saddle_node_direct.c">saddle-node bifurcation</a> simulation in the format of the metapop/hastings/crowley/beetles models already in the stochastic population dynamics library. Allows for C-based parallelized ensemble simulation using my Gillespie library. R call to all of these models can be found in <a href="https://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/R/ind_based_models.R" title="https://github.com/cboettig/structured-populations/blob/c12b986d2804c261b2126edd4c53e421446f020a/R/ind_based_models.R">ind_based_models.R</a></li>
 </ul>
 <p><br /><br /></p>
 
@@ -242,7 +242,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

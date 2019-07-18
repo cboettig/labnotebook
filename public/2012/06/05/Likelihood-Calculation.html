@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Likelihood Calculation</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -115,7 +115,7 @@
 </figure>
 <p><strong>Fig 1</strong> Sample tree</p>
 <ul>
-<li>This is the approach implemented in the wrightscape project <a href="https://github.com/cboettig/wrightscape/blob/master/src/matrix_method.c" title="http://github.com/cboettig/wrightscape/blob/master/src/matrix_method.c">matrix_method.c</a>. Consider an example phylogenetic tree (Fig 1) over which a stochastic process describes the evolution of trait <em>x,</em> defined by the transition probability rate <em>w</em>. Then the joint probability for a set of observed traits under this process can be written:</li>
+<li>This is the approach implemented in the wrightscape project <a href="https://github.com/cboettig/wrightscape/blob/master/src/matrix_method.c" title="https://github.com/cboettig/wrightscape/blob/master/src/matrix_method.c">matrix_method.c</a>. Consider an example phylogenetic tree (Fig 1) over which a stochastic process describes the evolution of trait <em>x,</em> defined by the transition probability rate <em>w</em>. Then the joint probability for a set of observed traits under this process can be written:</li>
 </ul>
 <figure>
 <img src="https://openwetware.org/images/math/0/a/c/0ac79d1c40c55d61a5acf6e240f06438.png" alt="\begin{align} P(x_1, x_2, x_3, x_4) =&amp; \int d x_7 \Biggl[ \left[ \int d x_5 w(x_7, x_5, t_5) w(x_5, x_1, t_1) w(x_5, x_2, t_1) \right] \\ &amp; \times \left[ \int d x_6 w(x_7, x_6, t_6) w(x_6, x_3, t_3) w(x_6, x_4, t_3) \right] P(x_7) \Biggr] \end{align}" /><figcaption>\begin{align} P(x_1, x_2, x_3, x_4) =&amp; \int d x_7 \Biggl[ \left[ \int d x_5 w(x_7, x_5, t_5) w(x_5, x_1, t_1) w(x_5, x_2, t_1) \right] \\ &amp; \times \left[ \int d x_6 w(x_7, x_6, t_6) w(x_6, x_3, t_3) w(x_6, x_4, t_3) \right] P(x_7) \Biggr] \end{align}</figcaption>
@@ -128,7 +128,7 @@
 <img src="https://openwetware.org/images/math/8/1/6/8169d9da7630c0db3078b7f473f701e3.png" alt="\int d x_5 w(x_7, x_5, t_5) w(x_5, x_1, t_1) w(x_5, x_2, t_1) \approx \mathbb{W}_5 (\vec W_1 * \vec W_2) \to \vec W_5" /><figcaption>\int d x_5 w(x_7, x_5, t_5) w(x_5, x_1, t_1) w(x_5, x_2, t_1) \approx \mathbb{W}_5 (\vec W_1 * \vec W_2) \to \vec W_5</figcaption>
 </figure>
 <ul>
-<li><p>See implementation in the code, <a href="https://github.com/cboettig/wrightscape/blob/master/src/matrix_method.c" title="http://github.com/cboettig/wrightscape/blob/master/src/matrix_method.c">matrix_method.c</a>.</p></li>
+<li><p>See implementation in the code, <a href="https://github.com/cboettig/wrightscape/blob/master/src/matrix_method.c" title="https://github.com/cboettig/wrightscape/blob/master/src/matrix_method.c">matrix_method.c</a>.</p></li>
 <li><p>While the discretization is substantially faster than the numerical integration, since it reduces the problem to a series of matrix products (note that given the root note and all tip nodes, then this produces a joint probability as a single scalar. Unknown tips results in a tensor, indicating the dimensionality of the full data space).</p></li>
 <li><p>Most of the time is spent computing the elements of the matrices at each node, see Yesterday’s entry, which reduces performance to substantially below that of the linear likelihood schemes compared in that model. The advantage of this approach is that the W matrices can be computed in principle for any process, and once computed the actual calculation of the joint probability (the recursive integrals) occurs very fast, even for reasonably large grids. (No matrix inversion, just products!) It is rather the calculation of each element of the matrix separately that is both the rate limiting step and leads to poor (quadratic) scaling of compute time with increasing grid resolution. This leads us to consider some other approaches:</p></li>
 </ul>
@@ -148,7 +148,7 @@
 </figure>
 <p>and so forth. If we assume alpha and sigma are the same for all processes than the variance calculation is unaltered. We could also generalize this to allow regimes to change at points other than nodes, though in practice this may be unimportant. For varying alpha and sigma, we would need to modify the variance calculation (will hopefully write down soon). So all this is well implemented given the tree, but our desire is to avoid having to specify a painting.</p>
 <ul>
-<li>Speed in this method depends largely on the ability to calculate distances between nodes on a tree. While many common implementations of this exist, including my own, it appears that most of the phylogenetics codes do not use the computationally optimum algorithms, which are surprisingly recent in the CS literature. See the <a href="https://www.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=lowestCommonAncestor" title="http://www.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=lowestCommonAncestor">algorithms described here</a>. It appears that this distance goes by the name patristic in the phylogenetics literature. (Sample algorithms in practice – see <a href="http://www.mathworks.com/access/helpdesk/help/toolbox/bioinfo/ug/a1075738685b2.html" title="http://www.mathworks.com/access/helpdesk/help/toolbox/bioinfo/ug/a1075738685b2.html">Matlab</a>, <a href="http://github.com/jeetsukumaran/DendroPy/blob/master/dendropy/treecalc.py" title="http://github.com/jeetsukumaran/DendroPy/blob/master/dendropy/treecalc.py">dendropy</a>, <a href="https://www.nescent.org/wg_phyloinformatics/R_Hackathon_1/DataTreeManipulation" title="https://www.nescent.org/wg_phyloinformatics/R_Hackathon_1/DataTreeManipulation">R</a>, etc. Sample papers see <a href="http://en.wikipedia.org/wiki/Lowest_common_ancestor" title="http://en.wikipedia.org/wiki/Lowest_common_ancestor">on lowest common ancestor</a> problem on wikipedia.)</li>
+<li>Speed in this method depends largely on the ability to calculate distances between nodes on a tree. While many common implementations of this exist, including my own, it appears that most of the phylogenetics codes do not use the computationally optimum algorithms, which are surprisingly recent in the CS literature. See the <a href="https://www.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=lowestCommonAncestor" title="https://www.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=lowestCommonAncestor">algorithms described here</a>. It appears that this distance goes by the name patristic in the phylogenetics literature. (Sample algorithms in practice – see <a href="https://www.mathworks.com/access/helpdesk/help/toolbox/bioinfo/ug/a1075738685b2.html" title="https://www.mathworks.com/access/helpdesk/help/toolbox/bioinfo/ug/a1075738685b2.html">Matlab</a>, <a href="https://github.com/jeetsukumaran/DendroPy/blob/master/dendropy/treecalc.py" title="https://github.com/jeetsukumaran/DendroPy/blob/master/dendropy/treecalc.py">dendropy</a>, <a href="https://www.nescent.org/wg_phyloinformatics/R_Hackathon_1/DataTreeManipulation" title="https://www.nescent.org/wg_phyloinformatics/R_Hackathon_1/DataTreeManipulation">R</a>, etc. Sample papers see <a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor" title="https://en.wikipedia.org/wiki/Lowest_common_ancestor">on lowest common ancestor</a> problem on wikipedia.)</li>
 </ul>
 <h4 id="original-appraoach">Original appraoach</h4>
 <p>The Labrid example tackles this problem by attempting to generate a reasonable distribution of paintings from the data by clustering.</p>
@@ -285,7 +285,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

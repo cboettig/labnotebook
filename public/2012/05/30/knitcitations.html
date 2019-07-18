@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>knitcitations</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -109,7 +109,7 @@
     <p><strong>EDIT</strong>: Note that this package has evolved quite a bit from this initial post. While the basic interface is the same, support for additional features and some choices in formatting differ from what is presented here. Please see the <a href="https://github.com/cboettig/knitcitations/">README</a> for the latest introduction to the package. Readers may also be interested in the more recent post discussing the <a href="https://www.carlboettiger.info/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html">introduction of several new features including semantic tools in the <code>knitcitations</code> package</a></p>
 <p>Markdown is becoming an increasingly popular platform for lightweight and online publishing. While traditional publishing tools like LaTeX and word processors have long had integrated bibliographic management, few tools handle citations for lightweight publishing. I am finding myself more and more drawn to markdown rather then tex/Rnw as my standard format (not least of which is the ease of displaying the files on github, particularly now that we have automatic image uploading. I’ve taken a little whack at generating in-text citations using knitr and other R tools.</p>
 <h2 id="installation">Installation</h2>
-<p>I’ve put some simple functions in a <code>knitcitations</code> package (see the most recent version of the <a href="https://github.com/cboettig/knitcitations">knitcitations package on github here</a>). The functions use the crossref API to grab citation information given a doi, so I don’t have to generate a bibtex file for papers I’m reading, (inspired by the <a href="http://wordpress.org/extend/plugins/kcite/">kcite</a> package for Wordpress). One can currently grab the package from Github</p>
+<p>I’ve put some simple functions in a <code>knitcitations</code> package (see the most recent version of the <a href="https://github.com/cboettig/knitcitations">knitcitations package on github here</a>). The functions use the crossref API to grab citation information given a doi, so I don’t have to generate a bibtex file for papers I’m reading, (inspired by the <a href="https://wordpress.org/extend/plugins/kcite/">kcite</a> package for Wordpress). One can currently grab the package from Github</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(devtools)
 <span class="kw">install_github</span>(<span class="st">&quot;knitcitations&quot;</span>, <span class="st">&quot;cboettig&quot;</span>)</code></pre>
 <p>Let’s load the package into R and go for a spin.</p>
@@ -119,7 +119,7 @@
 <p>Then we can generate a citation given a DOI with the <code>ref</code> function:</p>
 <pre class="sourceCode r"><code class="sourceCode r">r &lt;-<span class="st"> </span><span class="kw">ref</span>(<span class="st">&quot;10.1111/j.1461-0248.2005.00827.x&quot;</span>)
 <span class="kw">print</span>(r, <span class="st">&quot;html&quot;</span>)</code></pre>
-<p>Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006). “Accounting For Uncertainty in Marine Reserve Design.” <em>Ecology Letters</em>, 9. ISSN 1461-023X, <a href="https://dx.doi.org/10.1111/j.1461-0248.2005.00827.x" class="uri">http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x</a>.</p>
+<p>Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006). “Accounting For Uncertainty in Marine Reserve Design.” <em>Ecology Letters</em>, 9. ISSN 1461-023X, <a href="https://dx.doi.org/10.1111/j.1461-0248.2005.00827.x" class="uri">https://dx.doi.org/10.1111/j.1461-0248.2005.00827.x</a>.</p>
 <p>Note that R allows bibitems to print in a variety of formats, including html.</p>
 <p>We can generate inline citations in the short name/date format with the <code>citet</code> function:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citet</span>(<span class="st">&quot;10.1111/j.1461-0248.2005.00827.x&quot;</span>)</code></pre>
@@ -175,12 +175,12 @@ https://yihui.name/knitr/>.</p>
 <h2 id="generating-the-final-bibliography">Generating the final bibliography</h2>
 <p>As we go along adding inline citations, R stores the list of citation info. Then at the end of the document, use this command to print the bibliography generated by the use of our inline citations.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bibliography</span>(<span class="st">&quot;html&quot;</span>) </code></pre>
-<p>Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006). “Accounting For Uncertainty in Marine Reserve Design.” <em>Ecology Letters</em>, <strong>9</strong>. ISSN 1461-023X, <a href="https://dx.doi.org/10.1111/j.1461-0248.2005.00827.x" class="uri">http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x</a>.</p>
-<p>Abrams PA, Ruokolainen L, Shuter BJ and Mccann KS (2012). “Harvesting Creates Ecological Traps: Consequences of Invisible Mortality Risks in Predator-Prey Metacommunities.” <em>Ecology</em>, <strong>93</strong>. ISSN 0012-9658, <a href="https://dx.doi.org/10.1890/11-0011.1" class="uri">http://dx.doi.org/10.1890/11-0011.1</a>.</p>
-<p>Michaels S and Tyre AJ (2012). “How Indeterminism Shapes Ecologists’ Contributions to Managing Socio-Ecological Systems.” <em>Conservation Letters</em>. <a href="https://dx.doi.org/10.1111/j.1755-263X.2012.00241.x" class="uri">http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x</a>.</p>
-<p>Halpern BS, Pyke CR, Fox HE, Haney JC, Schlaepfer MA and Zaradic P (2006). “Gaps And Mismatches Between Global Conservation Priorities And Spending.” <em>Conservation Biology</em>, <strong>20</strong>. <a href="https://dx.doi.org/10.1111/j.1523-1739.2005.00258.x" class="uri">http://dx.doi.org/10.1111/j.1523-1739.2005.00258.x</a>.</p>
-<p>Xie Y (2012). <em>knitr: A general-purpose package for dynamic report generation in R</em>. R package version 0.5.4, <a href="https://yihui.name/knitr/" class="uri">http://yihui.name/knitr/</a>.</p>
-<p>Francois R (2011). <em>bibtex: bibtex parser</em>. R package version 0.3-0, <a href="https://CRAN.R-project.org/package=bibtex" class="uri">http://CRAN.R-project.org/package=bibtex</a>.</p>
+<p>Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006). “Accounting For Uncertainty in Marine Reserve Design.” <em>Ecology Letters</em>, <strong>9</strong>. ISSN 1461-023X, <a href="https://dx.doi.org/10.1111/j.1461-0248.2005.00827.x" class="uri">https://dx.doi.org/10.1111/j.1461-0248.2005.00827.x</a>.</p>
+<p>Abrams PA, Ruokolainen L, Shuter BJ and Mccann KS (2012). “Harvesting Creates Ecological Traps: Consequences of Invisible Mortality Risks in Predator-Prey Metacommunities.” <em>Ecology</em>, <strong>93</strong>. ISSN 0012-9658, <a href="https://dx.doi.org/10.1890/11-0011.1" class="uri">https://dx.doi.org/10.1890/11-0011.1</a>.</p>
+<p>Michaels S and Tyre AJ (2012). “How Indeterminism Shapes Ecologists’ Contributions to Managing Socio-Ecological Systems.” <em>Conservation Letters</em>. <a href="https://dx.doi.org/10.1111/j.1755-263X.2012.00241.x" class="uri">https://dx.doi.org/10.1111/j.1755-263X.2012.00241.x</a>.</p>
+<p>Halpern BS, Pyke CR, Fox HE, Haney JC, Schlaepfer MA and Zaradic P (2006). “Gaps And Mismatches Between Global Conservation Priorities And Spending.” <em>Conservation Biology</em>, <strong>20</strong>. <a href="https://dx.doi.org/10.1111/j.1523-1739.2005.00258.x" class="uri">https://dx.doi.org/10.1111/j.1523-1739.2005.00258.x</a>.</p>
+<p>Xie Y (2012). <em>knitr: A general-purpose package for dynamic report generation in R</em>. R package version 0.5.4, <a href="https://yihui.name/knitr/" class="uri">https://yihui.name/knitr/</a>.</p>
+<p>Francois R (2011). <em>bibtex: bibtex parser</em>. R package version 0.3-0, <a href="https://CRAN.R-project.org/package=bibtex" class="uri">https://CRAN.R-project.org/package=bibtex</a>.</p>
 <h2 id="reflections">Reflections</h2>
 <p>We could have justed printed bibliography in plain text format using with <code>bibliography()</code>. Note that it contains only the citations created with the inline citation commands <code>citet</code> and <code>citep</code>, in the order cited. All of these citations are stored in a hidden options variable in R when the inline functions are called. To reset the citation list (<em>i.e.</em> empty the contents of “bibliography()”) we can use the <code>cleanbib()</code> command, or set the option <code>bibliography(erase=TRUE)</code>. Typically we could hide the bibliography chunk using a inline knitr call or the chunk option “echo=FALSE”.</p>
 <p>I hope to add markup to format this a bit more nicely later. For instance, we want the links to appear as real links. Additionally, we may want to add markup around the citations, such as the reason for the citation into the link using the <a href="https://speroni.web.cs.unibo.it/cgi-bin/lode/req.py?req=http:/purl.org/spar/cito">Citation Typing Ontology</a>. Ideally I need a method to support different citation styles, even though it is silly in today’s world that the citation format is still a choice of the <em>publisher</em> and not a choice of the <em>reader</em>. This will probably require citeproc integration and a major upgrade. Please report any bugs, feature requests or citations on the <a href="https://github.com/cboettig/knitcitations/issues">Github issues tracker!</a></p>
@@ -319,7 +319,7 @@ https://yihui.name/knitr/>.</p>
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

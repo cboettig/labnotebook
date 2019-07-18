@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Weds: Example sets & more EC2</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -136,7 +136,7 @@ ssh -i &lt;KEY&gt; &lt;Public Address&gt;</code></pre>
 <figure>
 <img src="https://farm6.staticflickr.com/5289/5264139125_9a973b9d2e_o.png" />
 </figure>
-<p>(<a href="https://aws.amazon.com/ec2/instance-types/">more detailed descriptions here</a>).  You need to use the output of the first line to get the instance id number, whose output includes the the public address.  You’ll also need to open the ports on the (default) security group if you haven’t done so.  See example in <a href="http://docs.amazonwebservices.com/AWSEC2/2007-08-29/GettingStartedGuide/running-an-instance.html">EC2 guide.</a> Suppose a script could be wrapped around this to run and log into the instance…</p>
+<p>(<a href="https://aws.amazon.com/ec2/instance-types/">more detailed descriptions here</a>).  You need to use the output of the first line to get the instance id number, whose output includes the the public address.  You’ll also need to open the ports on the (default) security group if you haven’t done so.  See example in <a href="https://docs.amazonwebservices.com/AWSEC2/2007-08-29/GettingStartedGuide/running-an-instance.html">EC2 guide.</a> Suppose a script could be wrapped around this to run and log into the instance…</p>
 <p>What’s with the compute units?  A way of comparing processor power, a faster processor may be worth multiple units.  (basically is comparison to single core 2007 1Ghz xeon processor…)</p>
 <p>Still need a solution to bring instances down when they finish (well, still need more automated cleanup/copying data out too…) so I’m not paying for extra cycles while I’m asleep and my jobs have already finished.  Deepak suggested looking into Amazon’s SNS (notifications) and SQS (queues), but haven’t figured these out.  Twitter works as a pretty good notification system for mobile-accessible simulation updates.  Can’t use the ssh client (at least not without first ssh-ing to a local machine).   <a href="https://www.9apps.net/decaf-ec2-client/">Not free, but may need to try EC2 Android app.</a> Tried accessing the web console in the mobile browser , a bit slow and cumbersome and doesn’t list my current instances… curious.</p>
 
@@ -262,7 +262,7 @@ ssh -i &lt;KEY&gt; &lt;Public Address&gt;</code></pre>
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

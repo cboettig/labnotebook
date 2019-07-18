@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Likelihood Ratio Manuscript</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -119,11 +119,11 @@
 <p>&gt; Hm, and crucially, here’s a section from Goldman “…DNA substitution” “It is crucially important that these likelihoods be maximized independently for each i (i.e., \alpha and \beta must be estimated separately for each x_i) when performing the Monte Carlo simulation, and not simply calculated under the assumption that \hat \alpha and \hat \beta as estimated from the original data; equation (9b)] are correct.”</p>
 <p>&gt; They refer to Hall and Wilson as saying that not doing this: e.g. not re-estimating the parameters each time, dramatically reduces the power. That paper looks like a good one. Although it says it’s about “nonparametric” bootstrapping; I would have thought this was parametric bootstrapping.</p>
 <p>Right, I have tried both and have found the same thing. Great to have the references to justify it. I’m with you on parametric/non-parametric, though all the non-parametric Bayesians use “non-parametric” in the same sense, as the number of parameters varies with the richness of the data, rather than being predefined.</p>
-<p>&gt; <a href="https://www.bibsonomy.org/user/peter.ralph/bootstrapAll" title="http://www.bibsonomy.org/user/peter.ralph/bootstrapAll">these papers</a></p>
+<p>&gt; <a href="https://www.bibsonomy.org/user/peter.ralph/bootstrapAll" title="https://www.bibsonomy.org/user/peter.ralph/bootstrapAll">these papers</a></p>
 <p><br /> #### some more comments</p>
 <p>-So, Butler and King choose your OU.3 out of their five models? And where do you end up? There is a bit of resolution lacking, here.</p>
 <p><br /> -Do you check to see if the empirical likelihood distributions are relatively stable? (e.g. simulating more isn’t changing them much)</p>
-<p><br /> -We really ought to find this talked about in the statistical literature. The test of the sort we are talking about is proposed in Cox, “Tests of Separate Families of Hypotheses”, <a href="https://projecteuclid.org/euclid.bsmsp/1200512162" title="http://projecteuclid.org/euclid.bsmsp/1200512162">http://projecteuclid.org/euclid.bsmsp/1200512162</a> equation (48). Except this does not involve bootstrapping; this has probably been dealt with in the literature. They seem to do this in high-energy physics: <a href="http://www.springerlink.com/content/q02303062221314n/" title="http://www.springerlink.com/content/q02303062221314n/">http://www.springerlink.com/content/q02303062221314n/</a></p>
+<p><br /> -We really ought to find this talked about in the statistical literature. The test of the sort we are talking about is proposed in Cox, “Tests of Separate Families of Hypotheses”, <a href="https://projecteuclid.org/euclid.bsmsp/1200512162" title="https://projecteuclid.org/euclid.bsmsp/1200512162">https://projecteuclid.org/euclid.bsmsp/1200512162</a> equation (48). Except this does not involve bootstrapping; this has probably been dealt with in the literature. They seem to do this in high-energy physics: <a href="https://www.springerlink.com/content/q02303062221314n/" title="https://www.springerlink.com/content/q02303062221314n/">https://www.springerlink.com/content/q02303062221314n/</a></p>
 <p><br /> . 2: “correlation typically strongest under a BM model” — really?</p>
 <p>. 4: Not clear why if “The sample points are then statistically independent and the method of phylogenetically independent contrasts will be positively misleading.”</p>
 <p>in general: the processes generally only “reach” the stationary distribution colloquially – to be correct, they “approach” it.</p>
@@ -143,7 +143,7 @@
 <h4 id="more-comments-by-hand-on-manuscript-printout">More comments by hand on manuscript printout</h4>
 <h2 id="power-in-trees-direct-test">Power in Trees direct test</h2>
 <ul>
-<li><p>Implementing a direct test of power in trees, see <a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/dab536f6c70a0bd47847bb088c4277c4b439c5e7/R/powertest.R" title="http://github.com/cboettig/Comparative-Phylogenetics/blob/dab536f6c70a0bd47847bb088c4277c4b439c5e7/R/powertest.R">powertest.R</a> in Comparative-Phylogenetics. Approach simulates data on the tree at progressively higher values of alpha, and uses the Monte Carlo likelihood ratio test to decide the minimum alpha that can be detected relative to the length of the tree. Requires a single likelihood ratio bootstrap on each value of alpha to be tested.</p></li>
+<li><p>Implementing a direct test of power in trees, see <a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/dab536f6c70a0bd47847bb088c4277c4b439c5e7/R/powertest.R" title="https://github.com/cboettig/Comparative-Phylogenetics/blob/dab536f6c70a0bd47847bb088c4277c4b439c5e7/R/powertest.R">powertest.R</a> in Comparative-Phylogenetics. Approach simulates data on the tree at progressively higher values of alpha, and uses the Monte Carlo likelihood ratio test to decide the minimum alpha that can be detected relative to the length of the tree. Requires a single likelihood ratio bootstrap on each value of alpha to be tested.</p></li>
 <li><p>Added support for my older traitmodels function, which I’ve resurrected as a branch from the wrightscape library. located in ~/Documents/experimental/wrightscape-clone/wrightscape/R and is on a branch called single_peak_ou</p></li>
 </ul>
 <p><br /> - Fits of OU are a subset of BM, so in principle should always outperform the likelihood of BM. Numerics struggle to converge in some cases giving wildly poor likelihoods though.</p>
@@ -310,7 +310,7 @@ minimum detectable alpha is 2</code></pre>
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Puzzled over the two-step jump process results</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -108,7 +108,7 @@
     <article>
     <p>The variance dynamics are slightly different if the continuous time Markov process allows events to contain two steps (such as a transition of an individual from one age class to another, or one patch to another, etc) as well as one step birth/death) transitions. <em>V</em>τ~*i**j<em>~(</em>X* / <em>V</em>) to represent the rate of transitions from state <em>i</em> to state <em>j</em>. We change variables for our state space from the discrete count state variable <em>X</em> by dividing by the system size (volume) V, to obtain the continuous, mean-field approximation of the density <em>p = X/V.</em> Then:</p>
 <p><br /> <img src="https://openwetware.org/images/math/5/e/b/5eb413fd88e12c41c39cf48c811fc71a.png" alt="\begin{align} &amp; \frac{d}{dt} E(p) = b(p)-d(p) + \sum_{j \neq i} \tau_{ji}(p) - \tau_{ij}(p) =: f(p)\\ &amp; \frac{d}{dt} M = \textrm{diag}( b(p) + d(p) ) - T + Df(p) M + M Df(p)^T \end{align}" /></p>
-<p>where <em>T</em> is a symmetric matrix with off-diagonal elements <em>i,j</em> τ~<em>i<strong>j<em>~(</em>p<em>) + τ</em>j</strong>i</em>(<em>p</em>) and diagonal elements chosen so that rows sum to zero. This approximation is implemented in <a href="https://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R" title="http://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R">noise_approx.R</a></p>
+<p>where <em>T</em> is a symmetric matrix with off-diagonal elements <em>i,j</em> τ~<em>i<strong>j<em>~(</em>p<em>) + τ</em>j</strong>i</em>(<em>p</em>) and diagonal elements chosen so that rows sum to zero. This approximation is implemented in <a href="https://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R" title="https://github.com/cboettig/structured-populations/blob/master/R/noise_approx.R">noise_approx.R</a></p>
 <h3 id="example-crowley-model">Example: Crowley model</h3>
 <ul>
 <li><strong>Carl Boettiger 15:05, 25 May 2010 (EDT)</strong>: (some corrections to eqns)</li>
@@ -124,7 +124,7 @@
 <p>Whereas interpreted as single-step birth and death the <em>cxy</em> term at the end is absent.</p>
 <p>The variance dynamics are similarly altered.</p>
 <h4 id="numerical-implementation">Numerical implementation</h4>
-<p>This individual-based simulation is implemented in <a href="https://github.com/cboettig/structured-populations/blob/master/src/metapop.c" title="http://github.com/cboettig/structured-populations/blob/master/src/metapop.c">metapop.c</a> and callable from R interface from <a href="http://github.com/cboettig/structured-populations/blob/master/R/ind_based_models.R" title="http://github.com/cboettig/structured-populations/blob/master/R/ind_based_models.R">ind_based_models.R</a> as metapop_ibm(). The file <a href="http://github.com/cboettig/structured-populations/blob/master/R/metapop.R" title="http://github.com/cboettig/structured-populations/blob/master/R/metapop.R">metapop.R</a> specifies the dynamics of birth, death, transition matrix and the Jacobian so that linear_noise_approx() function from above can be used to calculate the moments. This file also runs the crolwey_ibm model (from crowley.c, interface in the ind_based.models.R) and the linear noise approximation to it from <a href="http://github.com/cboettig/structured-populations/blob/master/R/crowley.R" title="http://github.com/cboettig/structured-populations/blob/master/R/crowley.R">crowley.R</a> to compare how the two-step process changes the noise dynamics.</p>
+<p>This individual-based simulation is implemented in <a href="https://github.com/cboettig/structured-populations/blob/master/src/metapop.c" title="https://github.com/cboettig/structured-populations/blob/master/src/metapop.c">metapop.c</a> and callable from R interface from <a href="https://github.com/cboettig/structured-populations/blob/master/R/ind_based_models.R" title="https://github.com/cboettig/structured-populations/blob/master/R/ind_based_models.R">ind_based_models.R</a> as metapop_ibm(). The file <a href="https://github.com/cboettig/structured-populations/blob/master/R/metapop.R" title="https://github.com/cboettig/structured-populations/blob/master/R/metapop.R">metapop.R</a> specifies the dynamics of birth, death, transition matrix and the Jacobian so that linear_noise_approx() function from above can be used to calculate the moments. This file also runs the crolwey_ibm model (from crowley.c, interface in the ind_based.models.R) and the linear noise approximation to it from <a href="https://github.com/cboettig/structured-populations/blob/master/R/crowley.R" title="https://github.com/cboettig/structured-populations/blob/master/R/crowley.R">crowley.R</a> to compare how the two-step process changes the noise dynamics.</p>
 <p>This comparison can be run simply by loading the package and running metapop_example() function.</p>
 <p>For some reason the individual based-simulation of the two-step process seems to resemble that of the one-step process more, while the two-step linear noise approximation alternately underestimates (Fig 1) or overestimates (Fig 2) the variance. Looking for bugs in the implementation at the moment.</p>
 <ul>
@@ -272,7 +272,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Saturday: git with latexdiff, TreeBASE and PMC package updates, bounds on lambda</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -140,7 +140,7 @@ m2&lt;-<span class="kw">update</span>(m,x)
 <li><p>likelihood based methods should always include methods to simulate under the process modeled. (medusa, many of the laser fits, etc don’t have this capacity).</p></li>
 <li><p>Write as a separate function the likelihood method passed to optim. This makes it easy to extend to other methods.</p></li>
 </ul>
-<p>Ooh, things we’d never do in phylogenetics: daily testing of software (<a href="https://trac.buildbot.net/">buildbot</a>, <a href="http://code.google.com/p/googletest/">googletest</a>)</p>
+<p>Ooh, things we’d never do in phylogenetics: daily testing of software (<a href="https://trac.buildbot.net/">buildbot</a>, <a href="https://code.google.com/p/googletest/">googletest</a>)</p>
 <h2 id="git-and-latexdiff">git and latexdiff:</h2>
 <p>Spent way too long working out how to checkout the current commit and the previous commit of a tex file for a latex-diff.  checkout without specifying a branch means you end up with detached head, on a  “no-banch”, which I couldn’t seem to merge back to master.  Checking out a copy while specifying a branch avoids this.  (revert might work too?)</p>
 <pre class="sourceCode bash"><code class="sourceCode bash">
@@ -174,7 +174,7 @@ m2&lt;-<span class="kw">update</span>(m,x)
 <p>Looking at testing the authors conclusions based on laser and medusa against treepar run, but haven’t navigated treepar’s rather verbose, unformatted output yet.</p>
 <h2 id="references">References</h2>
 <ul>
-<li>Derryberry E, Claramunt S, Derryberry G, Chesser R, Cracraft J, Aleixo A, Pérez-Emán J, Remsen Jr. J and Brumfield R (2011). “Lineage Diversification And Morphological Evolution in A Large-Scale Continental Radiation: The Neotropical Ovenbirds And Woodcreepers (Aves: Furnariidae).” <em>Evolution</em>, <strong>65</strong>. <a href="https://dx.doi.org/10.1111/j.1558-5646.2011.01374.x">http://dx.doi.org/10.1111/j.1558-5646.2011.01374.x</a>.</li>
+<li>Derryberry E, Claramunt S, Derryberry G, Chesser R, Cracraft J, Aleixo A, Pérez-Emán J, Remsen Jr. J and Brumfield R (2011). “Lineage Diversification And Morphological Evolution in A Large-Scale Continental Radiation: The Neotropical Ovenbirds And Woodcreepers (Aves: Furnariidae).” <em>Evolution</em>, <strong>65</strong>. <a href="https://dx.doi.org/10.1111/j.1558-5646.2011.01374.x">https://dx.doi.org/10.1111/j.1558-5646.2011.01374.x</a>.</li>
 </ul>
 <section class="footnotes">
 <hr />
@@ -309,7 +309,7 @@ m2&lt;-<span class="kw">update</span>(m,x)
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

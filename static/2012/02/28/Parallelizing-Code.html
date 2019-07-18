@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Parallelizing Code</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -109,7 +109,7 @@
     <h3 id="a-solution">A solution!</h3>
 <ul>
 <li>After a good bit more exploring permutations of openmp commands and experimenting with code (should have been done in a branch version so would be in the version management, instead done in my local experimental sandbox so will have to implement and merge into real code still!) was able to understand the root of my problem and pose a coherent question.</li>
-<li>Posting that question on stack overflow <a href="https://stackoverflow.com/questions/2352895/how-to-ensure-a-dynamically-allocated-array-is-private-in-openmp" title="http://stackoverflow.com/questions/2352895/how-to-ensure-a-dynamically-allocated-array-is-private-in-openmp">solved my problem</a> in under an hour. Two for two on fast and thorough solutions there, a fantastic resource.</li>
+<li>Posting that question on stack overflow <a href="https://stackoverflow.com/questions/2352895/how-to-ensure-a-dynamically-allocated-array-is-private-in-openmp" title="https://stackoverflow.com/questions/2352895/how-to-ensure-a-dynamically-allocated-array-is-private-in-openmp">solved my problem</a> in under an hour. Two for two on fast and thorough solutions there, a fantastic resource.</li>
 <li>As I understand it, the += strategy still risks collisions, perhaps these can be avoided by dynamically allocating the shared variable my_report in the same fashion (i.e. after it is declared shared), but not ideal..</li>
 </ul>
 <h3 id="to-do">To Do</h3>
@@ -244,7 +244,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

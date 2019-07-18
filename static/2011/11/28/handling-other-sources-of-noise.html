@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Handling other sources of noise</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>I’m now computing the optimal solution under three sources of noise (compare with my <a href="https://www.carlboettiger.info/archives/3296">earlier examples</a> of calculating the optimal solution assuming only growth noise, but simulating dynamics with other noise sources). See the <a href="http://www.carlboettiger.info/archives/3313">statement of problem details</a>, essentially:</p>
+    <p>I’m now computing the optimal solution under three sources of noise (compare with my <a href="https://www.carlboettiger.info/archives/3296">earlier examples</a> of calculating the optimal solution assuming only growth noise, but simulating dynamics with other noise sources). See the <a href="https://www.carlboettiger.info/archives/3313">statement of problem details</a>, essentially:</p>
 <p><span class="math">\[ \max_{ \{ q_t \} \leq 0 }  \mathbb{E} \left\{ \sum_0^{\infty} \alpha^t h_t \right\}  \]</span> s.t. Fish population follows: $ x_t = z_t^g f( x_{t-1} - h_{t-1} ) $ and measured stock is given by: $ m_t = z_t^m x_t $ while harvest is: $ h_t = (x_t, z_t^i q_t) $ Where $ z^g $ denotes uncertainty in population growth, $ z^m $ denotes uncertainty in measurement for the stock assessment, and $ z^i $ denotes uncertainty in harvest implementation. <span class="math">\[ m_t = z_t^m z_t^g f\left( x_{t-1} - \min(x_{t-1}, z_{t-1}^i q_{t-1})  \right) \]</span></p>
 <p>Sethi et al. 2005 (Sethi <em>et. al.</em> 2005).</p>
 <p>Properly, this involves integrating over all three probability distributions</p>
@@ -133,7 +133,7 @@
 </figure>
 <h2 id="references">References</h2>
 <ul>
-<li>Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005). “Fishery Management Under Multiple Uncertainty.” <em>Journal of Environmental Economics And Management</em>, <strong>50</strong>. ISSN 00950696, <a href="https://dx.doi.org/10.1016/j.jeem.2004.11.005">http://dx.doi.org/10.1016/j.jeem.2004.11.005</a>.</li>
+<li>Sethi G, Costello C, Fisher A, Hanemann M and Karp L (2005). “Fishery Management Under Multiple Uncertainty.” <em>Journal of Environmental Economics And Management</em>, <strong>50</strong>. ISSN 00950696, <a href="https://dx.doi.org/10.1016/j.jeem.2004.11.005">https://dx.doi.org/10.1016/j.jeem.2004.11.005</a>.</li>
 </ul>
 
     </article>
@@ -262,7 +262,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

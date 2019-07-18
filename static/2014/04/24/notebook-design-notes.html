@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Notebook Design Notes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -48,7 +48,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -107,7 +107,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>Reading a little about Flat UI design (<a href="https://www.sitepoint.com/getting-started-flat-ui-design/">1</a>, <a href="http://en.wikipedia.org/wiki/Flat_UI_Design">2</a>). Basic concept is that users now realize they can click on things without them looking like actual three-dimensional buttons. (Along with links, checkboxes, and forms). Frequently seems to use many different <a href="http://flatuicolors.com">colors</a> on a single page to bring some life back, though this might just make the design look like Windows 8 instead. I’ve started noticing this everwhere now that I know what it is.</p>
+    <p>Reading a little about Flat UI design (<a href="https://www.sitepoint.com/getting-started-flat-ui-design/">1</a>, <a href="https://en.wikipedia.org/wiki/Flat_UI_Design">2</a>). Basic concept is that users now realize they can click on things without them looking like actual three-dimensional buttons. (Along with links, checkboxes, and forms). Frequently seems to use many different <a href="https://flatuicolors.com">colors</a> on a single page to bring some life back, though this might just make the design look like Windows 8 instead. I’ve started noticing this everwhere now that I know what it is.</p>
 <p>Easy enough to implement in web design thanks to projects like <a href="https://designmodo.github.io/Flat-UI/">Flat-UI</a>. Not psyched about their colors or components myself, but rather nice to see the way they approach theming Bootstrap 3.1.1 without altering the original Bootstrap css. (Can potentially involve duplicating much of the original LESS).</p>
 <p>I’ve found it easy to theme by adding a customized <code>variables.less</code> under the original (thereby overwriting the original where specified while otherwise using the original as default) and then adding my own <code>custom.less</code> at the bottom of the <code>bootstrap.less</code> file that wraps them all together.</p>
 <p>Looking into upgrading my css to Twitter <a href="https://getbootstrap.com">Bootstrap 3.1.1</a>. They have replaced a simple Makefile with the rather heavy nodejs based Grunt to compile the css. No doubt there are good reasons for this, but a couple rather terrible gotchas in building from the LESS (see below). Otherwise the upgrades are mostly straight forward with a little regex to adopt the new grid class syntax. After swapping in my old <code>.less</code> files as described above I only needed to update the navigation bar and the accordion folding on categories to have the transition completed. Changes are subtle, but:</p>
@@ -262,7 +262,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

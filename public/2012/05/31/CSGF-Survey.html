@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>CSGF Survey</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -111,7 +111,7 @@
 </ul>
 <p>previous comments</p>
 <h2 id="wiki-tricks">Wiki Tricks</h2>
-<p>Exploring use of <a href="https://wiki.freegeek.org/index.php/Www-mediawiki-client" title="http://wiki.freegeek.org/index.php/Www-mediawiki-client">mvs</a> to download and upload entries from openwetware. The mediawiki client is easy to install as described in the link. Doesn’t seem to have a tool to grab everything in my Notebook namespace, but with a little bash script I can grab all the entries in a particular notebook:</p>
+<p>Exploring use of <a href="https://wiki.freegeek.org/index.php/Www-mediawiki-client" title="https://wiki.freegeek.org/index.php/Www-mediawiki-client">mvs</a> to download and upload entries from openwetware. The mediawiki client is easy to install as described in the link. Doesn’t seem to have a tool to grab everything in my Notebook namespace, but with a little bash script I can grab all the entries in a particular notebook:</p>
 <p><br /> ~<sub>~</sub> {.de1} #! /bin/bash mvs login -d openwetware.org -u Carl_Boettiger -w index.php   for j in <code>seq 3 5</code>; { for i in <code>seq 1 9</code>; do mvs update User:Carl_Boettiger/Notebook/Comparative_Phylogenetics/2010/0<span class="math">\(j/0\)</span>i.wiki done   for i in <code>seq 10 31</code>; do mvs update User:Carl_Boettiger/Notebook/Comparative_Phylogenetics/2010/0<span class="math">\(j/\)</span>i.wiki done } ~<sub>~</sub></p>
 <ul>
 <li>login should specify -p password (omitted here for obvious reasons)</li>
@@ -249,7 +249,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

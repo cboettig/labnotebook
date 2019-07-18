@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>A bit of work on my socialR package for reproducible research</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>A few small updates on my <a href="https://www.carlboettiger.info/archives/565">socialR</a> package, (continued from my <a href="http://www.carlboettiger.info/archives/1355">earlier</a> entries) which should hopefully help it evolve from a personal tool to a portable package one day. Starting by incorporating support for native R packages to handle the API interface to flickr, twitter, and github, rather than just calling command-line scripts. Jeff Gentry has just released an ROAuth package for authentication, which can be used by his twitteR package. A bit of configuring, but these are now working.</p>
+    <p>A few small updates on my <a href="https://www.carlboettiger.info/archives/565">socialR</a> package, (continued from my <a href="https://www.carlboettiger.info/archives/1355">earlier</a> entries) which should hopefully help it evolve from a personal tool to a portable package one day. Starting by incorporating support for native R packages to handle the API interface to flickr, twitter, and github, rather than just calling command-line scripts. Jeff Gentry has just released an ROAuth package for authentication, which can be used by his twitteR package. A bit of configuring, but these are now working.</p>
 <p>Successfully installed by setting</p>
 <pre><code>export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH</code></pre>
 <p>in the terminal, and added this line to /etc/ld.so.conf.d/*.conf,</p>
@@ -122,7 +122,7 @@ twitCred = OAuthFactory$new(consumerKey=consumerKey,
 twitCred$handshake()
 registerTwitterOAuth(twitCred)
 save(list=&quot;twitCred&quot;, file=&quot;twitteR_credentials&quot;)</code></pre>
-<p>Note that you must specify consumerKey and consumerSecret from registering as a twitteR app: <a href="https://twitter.com/apps/new" class="uri">http://twitter.com/apps/new</a> In the future one can then authenticate just by loading the credentials and calling register:</p>
+<p>Note that you must specify consumerKey and consumerSecret from registering as a twitteR app: <a href="https://twitter.com/apps/new" class="uri">https://twitter.com/apps/new</a> In the future one can then authenticate just by loading the credentials and calling register:</p>
 <pre><code>load(&quot;twitteR_credentials&quot;)
 registerTwitterOAuth(twitCred)</code></pre>
 <p>Can now send tweets or direct messages;</p>
@@ -257,7 +257,7 @@ tweet(&quot;tweet this&quot;)</code></pre>
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

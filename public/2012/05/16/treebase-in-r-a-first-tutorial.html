@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>TreeBASE in R: a first tutorial</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -107,7 +107,7 @@
   <div class="col-md-7 col-md-offset-1">
     <article>
     <p>My TreeBASE R package is essentially functional now.  Here’s a quick tutorial on the kinds of things it can do.  Grab the <a href="https://github.com/cboettig/treeBASE/archives/master">treebase package here</a>, install and load the library into R.</p>
-<p>TreeBASE provides two APIs to query the database, one which searches by the metadata associated with different publications (called <a href="https://sourceforge.net/apps/mediawiki/treebase/index.php?title=OAI-PMH">OAI-PMH</a>), and another which queries the phylogenies directly (called <a href="http://sourceforge.net/apps/mediawiki/treebase/index.php?title=API">Phylo-ws</a>).  They have somewhat redundant functions, but for our purposes the second one returns the actual data, while the first returns metadata.  A few examples will best illustrate how this all works.  We start with some queries of the metadata directly without downloading any trees.</p>
+<p>TreeBASE provides two APIs to query the database, one which searches by the metadata associated with different publications (called <a href="https://sourceforge.net/apps/mediawiki/treebase/index.php?title=OAI-PMH">OAI-PMH</a>), and another which queries the phylogenies directly (called <a href="https://sourceforge.net/apps/mediawiki/treebase/index.php?title=API">Phylo-ws</a>).  They have somewhat redundant functions, but for our purposes the second one returns the actual data, while the first returns metadata.  A few examples will best illustrate how this all works.  We start with some queries of the metadata directly without downloading any trees.</p>
 <ol type="1">
 <li><p>Trees can be downloaded with search_treebase(), using a variety of search conditions provided by Phylo-ws API.</p></li>
 <li><p>Metadata can be searched by date using search_metadata.  Just Download all metadata for finer queries.</p></li>
@@ -259,7 +259,7 @@ is_yule &lt;-<span class="st"> </span><span class="kw">sapply</span>(tt, pick_br
 <p>RaXML for inferring branch lengths: A quick solution for trees that have only topologies would be to infer branch lengths conditional on the topology from the character matrix.  TreeBASE does not include this with the nexus file containing the tree, and would require a separate query to pull the character matrix.  This is handled in the read.nexus.data command.</p>
 <h2 id="references">References</h2>
 <ul>
-<li>Rowe K, Aplin K, Baverstock P and Moritz C (2011). “Recent And Rapid Speciation With Limited Morphological Disparity in The Genus Rattus.” <em>Systematic Biology</em>, <strong>60</strong>. ISSN 1063-5157, <a href="https://dx.doi.org/10.1093/sysbio/syq092">http://dx.doi.org/10.1093/sysbio/syq092</a>.</li>
+<li>Rowe K, Aplin K, Baverstock P and Moritz C (2011). “Recent And Rapid Speciation With Limited Morphological Disparity in The Genus Rattus.” <em>Systematic Biology</em>, <strong>60</strong>. ISSN 1063-5157, <a href="https://dx.doi.org/10.1093/sysbio/syq092">https://dx.doi.org/10.1093/sysbio/syq092</a>.</li>
 </ul>
 
     </article>
@@ -392,7 +392,7 @@ is_yule &lt;-<span class="st"> </span><span class="kw">sapply</span>(tt, pick_br
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

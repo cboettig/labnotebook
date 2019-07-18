@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Limits to the detection of early warning signals</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>Our paper, <em>limits to the detection of early warning signals for critical transitions</em>, has now <a href="https://dx.doi.org/10.1098/rsif.2012.0125">appeared in the Proceedings of the Royal Interface</a>. An open-access copy is <a href="http://arxiv.org/abs/1204.6231">available under CC-by license on the ArXiv</a>. The essence of the paper is to bring a more model-based approach to early warning signals, while seeking to remain as general as possible.</p>
+    <p>Our paper, <em>limits to the detection of early warning signals for critical transitions</em>, has now <a href="https://dx.doi.org/10.1098/rsif.2012.0125">appeared in the Proceedings of the Royal Interface</a>. An open-access copy is <a href="https://arxiv.org/abs/1204.6231">available under CC-by license on the ArXiv</a>. The essence of the paper is to bring a more model-based approach to early warning signals, while seeking to remain as general as possible.</p>
 <p>Without a model-based approach, it is difficult to leverage statistically meaningful comparisons to identify what is a real warning signal and what is just noise. We use two simple models, (a stationary OU process and temporally heterogeneous OU process) combined with a likelihood ratio bootstrap to do this, though other models and comparisons could be equally promising.</p>
 <p>The motivation for this paper comes somewhat from the appendices in the groundbreaking work by Dakos <em>et al</em> 2008, which compares several potential null distributions and shows that Kendall’s tau, the correlation statistic used to identify an increase, takes on almost any value in its range, which doesn’t leave us with much information to go by. I both wanted to confirm this distribution and see if I could improve upon it with the model-based approach. I was glad to see that not only could we quantify uncertainty more precisely with the model based-approach, but also improve upon the sensitivity relative to traditional indicators, as seen in our ROC curves.</p>
 <p>My talk at ESA last year gave an introduction to these results.</p>
@@ -119,15 +119,15 @@ src="https://www.slideshare.net/slideshow/embed_code/11357956"
 width="425" height="355" frameborder="0" marginwidth="0" marginheight="0"
 scrolling="no"></iframe>
 <div style="padding:5px 0 12px">
-View more <a href="https://www.slideshare.net/" target="_blank">presentations</a> from <a href="http://www.slideshare.net/cboettig" target="_blank">Carl Boettiger</a>
+View more <a href="https://www.slideshare.net/" target="_blank">presentations</a> from <a href="https://www.slideshare.net/cboettig" target="_blank">Carl Boettiger</a>
 </div>
 </div>
 <h1 id="an-open-notebook-story">An Open Notebook Story</h1>
 <p>This project has gone through many iterations, dead ends, and transformations as it evolved over the past year and a half alongside my other research projects. In the process, there’s also been ample cross-pollination of ideas from different projects. The interplay of these ideas unfolds in the interleaved pages of my online lab notebook.</p>
 <p>Here are a few examples of this cross-pollination: Using the likelihood ratio bootstrap as the most powerful comparison of two composite (parameter-estimated) hypotheses first emerged in my evolutionary work which became the paper, <em>Is your phylogeny informative</em>, while solving the likelihood equation for the temporally heterogeneous OU process has it’s roots in my work on the evolutionary release of constraint that became the paper <em>Modeling Stabilizing Selection: Expanding the Ornstein-Uhlenbeck Model of Adaptive Evolution</em> and plays a role in my current <code>wrightscape</code> project. These projects share a central challenge of detecting faint signals of regime shifts from large data sets whilst quantifying uncertainty, despite substantial differences in the details of both model formulation and solution.</p>
-<p>The project had several dead ends of things that sounded promising but turn out not to work. A few that I’ve been asked about since include <a href="https://www.carlboettiger.info/wordpress/archives/144">solving the model inference problem in the frequency (Fourier) space</a> (doesn’t work because the power transform destroys the Gaussian property of the noise), and <a href="http://www.carlboettiger.info/wordpress/archives/452">estimating quadratic models (such as the canonical form for the saddle node bifurcation)</a> (page forward on each if your curious).</p>
+<p>The project had several dead ends of things that sounded promising but turn out not to work. A few that I’ve been asked about since include <a href="https://www.carlboettiger.info/wordpress/archives/144">solving the model inference problem in the frequency (Fourier) space</a> (doesn’t work because the power transform destroys the Gaussian property of the noise), and <a href="https://www.carlboettiger.info/wordpress/archives/452">estimating quadratic models (such as the canonical form for the saddle node bifurcation)</a> (page forward on each if your curious).</p>
 <h2 id="the-project-by-numbers">The project by numbers</h2>
-<p><img src="https://farm9.staticflickr.com/8144/7249633810_a1cb6395bf_m.jpg" alt="floatright" /> My notebook contains <a href="http://www.carlboettiger.info/wordpress/archives/tag/warning-signals">123 posts</a> relevant to this project, tagged under <code>warning-signals</code>, dating back to October 2010, out of a total of 388 posts. The flickr archive has <a href="http://www.flickr.com/photos/cboettig/tags/warningsignals/">903 images</a> tagged for this project, the <a href="https://github.com/cboettig/populationdynamics">github repository</a> have seen over 40,000 lines of code, mostly in different explorations, consisting of 64 files with commits on 74 days. (This repository has since been split into separate repositories for the [population dynamics simulations] and the <a href="https://github.com/cboettig/earlywarning">early warning signals computations</a>.) Simulations were run on at least four different machines, including the 512 node cluster on campus and <a href="http://www.nersc.gov/users/computational-systems/carver">NERSC’s Carver supercomputing facility</a>.</p>
+<p><img src="https://farm9.staticflickr.com/8144/7249633810_a1cb6395bf_m.jpg" alt="floatright" /> My notebook contains <a href="https://www.carlboettiger.info/wordpress/archives/tag/warning-signals">123 posts</a> relevant to this project, tagged under <code>warning-signals</code>, dating back to October 2010, out of a total of 388 posts. The flickr archive has <a href="https://www.flickr.com/photos/cboettig/tags/warningsignals/">903 images</a> tagged for this project, the <a href="https://github.com/cboettig/populationdynamics">github repository</a> have seen over 40,000 lines of code, mostly in different explorations, consisting of 64 files with commits on 74 days. (This repository has since been split into separate repositories for the [population dynamics simulations] and the <a href="https://github.com/cboettig/earlywarning">early warning signals computations</a>.) Simulations were run on at least four different machines, including the 512 node cluster on campus and <a href="https://www.nersc.gov/users/computational-systems/carver">NERSC’s Carver supercomputing facility</a>.</p>
 <h1 id="accessing-the-data-and-code">Accessing the data and code</h1>
 <p>My organizational structure has evolved over the course of this project, but mostly conforms to my <a href="https://www.carlboettiger.info/2012/05/06/research-workflow.html">Github-based R-package structure</a> within the <a href="https://github.com/cboettig/earlywarning"><code>earlywarning</code> repository</a>. The <code>inst/examples</code> directory includes code to reproduce the analysis for the chemostat, simulation, and glaciation data.</p>
 <h2 id="references">References</h2>
@@ -264,7 +264,7 @@ View more <a href="https://www.slideshare.net/" target="_blank">presentations</a
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
