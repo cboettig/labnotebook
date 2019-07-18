@@ -6,31 +6,22 @@
     <description>Recent content in Tags on Boettiger Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Blog</title>
-      <link>/tags/blog/</link>
-      <pubDate>Wed, 19 Apr 2017 00:00:00 +0000</pubDate>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/blog/</guid>
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Docker</title>
-      <link>/tags/docker/</link>
-      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Json</title>
+      <title>json</title>
       <link>/tags/json/</link>
       <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
       
@@ -39,7 +30,7 @@
     </item>
     
     <item>
-      <title>Json Ld</title>
+      <title>json-ld</title>
       <link>/tags/json-ld/</link>
       <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
       
@@ -48,7 +39,16 @@
     </item>
     
     <item>
-      <title>Open Science</title>
+      <title>docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open-science</title>
       <link>/tags/open-science/</link>
       <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
       
@@ -57,11 +57,11 @@
     </item>
     
     <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
+      <title>blog</title>
+      <link>/tags/blog/</link>
+      <pubDate>Wed, 19 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r/</guid>
+      <guid>/tags/blog/</guid>
       <description></description>
     </item>
     

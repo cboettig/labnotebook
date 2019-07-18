@@ -1,3 +1,4 @@
+theme = "hugo-material"
 relativeurls = true
 languageCode = "en-us"
 title = "Boettiger Group"
@@ -39,12 +40,17 @@ enableGitInfo = true
     weight = 5
 
 [params]
+#    background = "/img/nasa_melting.jpg"
+#    background = "/img/noaa-ice-large-cc0.jpg"
+    background = "/img/methane_bubbles.jpg"
+#    custom_css = ["cboettig.css"]
+#    custom_js = ["example.js"]
+
     name =  "Carl Boettiger"
     twitter =  "cboettig"
     github =  "cboettig"
     keybase = "cboettig"
     email =  "cboettig@gmail.com"
-    custom_css = ["cboettig.css"]
     repo = "labnotebook"
     branch = "master"
     math = true
@@ -65,4 +71,3 @@ enableGitInfo = true
     alt = "Logo"
 
     
-

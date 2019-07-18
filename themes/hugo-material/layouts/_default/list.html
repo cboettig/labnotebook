@@ -1,0 +1,24 @@
+{{ define "body" }}
+<body class="profile-page sidebar-collapse"> <!-- other classes: index-page , landing-page -->
+  {{ partial "nav.html" . }}
+  
+  {{ partial "page-header.html" . }}
+
+  <div class="main main-raised">
+    <div class="section section-basic">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto"> <!-- consider using parameter here-->
+        
+          {{ partial "list.html" . }}
+        
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {{ partial "footer" . }}
+ 
+</body>
+{{ end }}

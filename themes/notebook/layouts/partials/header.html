@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {{ .Hugo.Generator }}
+  {{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.role }}<meta name="description" content="{{ . }}">{{ end }}
+
+
+  {{ $.Scratch.Set "highlight_enabled" true }}
+  {{ if isset .Params "highlight" }}
+    {{ $.Scratch.Set "highlight_enabled" .Params.highlight }}
+  {{ else if isset .Site.Params "highlight" }}
+    {{ $.Scratch.Set "highlight_enabled" .Site.Params.highlight }}
+  {{ end }}
+  {{ if $.Scratch.Get "highlight_enabled" }}
+    {{ $v := .Site.Params.highlight_version | default "9.9.0" }}
+    {{ with .Site.Params.highlight_style }}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ $v }}/styles/{{ . }}.min.css">
+    {{ else }}
+    <link rel="stylesheet" href="{{ "/css/highlight.min.css" | relURL }}">
+    {{ end }}
+  {{ end }}
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
+  
+  {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
+  {{ end }}
+  
+  <link rel="alternate" href="{{ .RSSLink | default .Site.RSSLink  }}" type="application/rss+xml" title="{{ .Site.Title }}">
+  <link rel="feed" href="{{ .RSSLink | default .Site.RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}">
+
+  <link rel="icon" type="image/png" href="{{ "/img/icon.png" | relURL }}">
+  <link rel="apple-touch-icon" type="image/png" href="{{ "/img/apple-touch-icon.png" | relURL }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+
+
+  <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+

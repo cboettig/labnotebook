@@ -1,16 +1,21 @@
-{{ define "main" }}
-
-
-<div class="row cv">
-  <div class="col-md-8">
-    <article>
-
-      {{ .Content }}
-
-    </article>
-  </div>
-  
-  
+{{ define "body" }}
+<body class="profile-page sidebar-collapse"> <!-- other classes: index-page , landing-page -->
+  {{ partial "nav.html" . }}
+  {{ partial "page-header.html" . }}
+  <div class="main main-raised">
+    <div class="section section-basic">
+      <div class="container">
+        
+        <div class="row cv">
+          <div class="col-md-7 offset-md-1">
+            <article>
+        
+              {{ .Content }}
+        
+            </article>
+          </div>
+          
+          
   <div class="col-md-4" style="border-left: 1px solid #eee8d5;"><!-- sidebar -->   
     <p> <i class="fa fa-calendar"></i>
     {{ with .GitInfo }}
@@ -40,13 +45,16 @@
        setTimeout(function(){location.href=that.href;},200);
        return false;" class = "btn btn-default"><i class="fa fa-file-text-o fa-1x"></i> Download PDF</a>
     </p>
-
-  
   </div>
+  
+</div>
+</div>
+</div>
 </div>
 
-    <script type="application/ld+json" src = "{{ "/js/vita.json" | relURL }}"></script> 
-
+<script type="application/ld+json" src = "{{ "/js/vita.json" | relURL }}"></script> 
+{{ partial "footer" . }}
+</body>
 
 {{ end }}
  
