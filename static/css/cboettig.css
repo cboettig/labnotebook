@@ -1,15 +1,10 @@
-body { 
-  padding-top: 80px; 
+.main {
+  padding-top: 0px;
   position: relative;
   background-image: url(../img/grid-18px-masked.png);
   background-repeat: repeat-x;
   background-position: 0 40px;
 }
-@media screen and (max-width: 768px) {
-    body { padding-top: 80px; 
-    }
-}
-
 
 /* Definition lists (homepage)
 ------------------------------------------- */
@@ -22,14 +17,3 @@ body {
 .dl-horizontal dd{
   margin-left: 100px;
 }
-
-/* CV styling 
-----------------------------------------------------*/
-
-.cv {
-  text-align: justify;         
-}
-.cv ul { 
-  list-style: none;
-}
-

@@ -7,35 +7,36 @@
 </div>
 {{end}}
 
-  {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+<!-- posts only! -->
 
-   <!-- List pages can get Content and yaml metadata from an _index.md -->
-  {{ with .Content }}<div class="article-style" itemprop="articleBody">{{ . }}</div>{{ end }}
-
-
-  <div class="row">
-    <div class="col-11">
-    {{ range .Paginator.Pages }}
-    <div class="article">
-      <h2><a href="{{ .RelPermalink }}">{{if .Params.image }} <img src="{{ .Params.image }}" height="50px"/> {{ end }}{{ .Title }}</a></h2>
+    <div class="row">
+    {{ range first 3 .Paginator.Pages }}
+    <div class="col-md-4">
+      <h4><a href="{{ .RelPermalink }}">{{ .Date.Format $.Site.Params.date_format }}</a></h4>
+      {{ if .Title }}<h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>{{ end }}
+      <div class="article-style">
+        {{  .Summary | markdownify }}
+      </div>
     </div>
     {{ end }}
     </div>
 
-
-
-{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-<nav>
-  <ul class="pager">
-    {{ if .Paginator.HasPrev }}
-    <li><a href="{{ .Paginator.Prev.URL | relURL }}">&laquo; Previous</a></li>
+   {{ if gt (len .Paginator.Pages) 3 }}
+    <div class="row">
+    {{ range after 3 .Paginator.Pages }}
+    <div class="col-md-4">
+      <h4><a href="{{ .RelPermalink }}">{{ .Date.Format $.Site.Params.date_format }}</a></h4>
+      {{ if .Title }}<h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>{{ end }}
+      <div class="article-style">
+        {{  .Summary | markdownify }}
+      </div>
+    </div>
     {{ end }}
-    {{ if .Paginator.HasNext }}
-    <li><a href="{{ .Paginator.Next.URL | relURL }}">Next &raquo;</a></li>
-    {{ end }}
-  </ul>
-</nav>
-{{ end }}
+    </div>
+  {{ end }}
+  
+  {{ partial "pagination" . }}
 
   <br />  
+  
   </div>

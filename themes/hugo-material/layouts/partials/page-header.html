@@ -7,6 +7,8 @@
           <div class="brand">
             <h1>{{ .Title }}</h1>
             <h3>{{ .Params.subtitle }}</h3>
+            
+            {{ with .Params.description }} {{ . }}{{ end }}  
           </div>
         </div>
       </div>

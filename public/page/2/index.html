@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+	<meta name="generator" content="Hugo 0.55.6" />
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
@@ -30,10 +31,8 @@
 
 
   
-  <link rel="stylesheet" href="../../css/cboettig.css">
-  
-  <link rel="feed" href="../../tags/r/index.xml" type="application/rss+xml" title="Boettiger Group">
-  <link rel="canonical" href="../../tags/r/">
+  <link rel="feed" href="../../index.xml" type="application/rss+xml" title="Boettiger Group">
+  <link rel="canonical" href="../../">
 
 </head>
 
@@ -57,35 +56,35 @@
           <li class="nav-item">
             <a class="nav-link"
                href="../../index.html"
-                
+               data-target="/index.html" 
                title = "Home"> Home</a>
           </li>
           
           <li class="nav-item">
             <a class="nav-link"
                href="../../members"
-                
+               data-target="/members" 
                title = "Members"> Members</a>
           </li>
           
           <li class="nav-item">
             <a class="nav-link"
                href="../../vita"
-                
+               data-target="/vita" 
                title = "Publications"> Publications</a>
           </li>
           
           <li class="nav-item">
             <a class="nav-link"
                href="../../teaching"
-                
+               data-target="/teaching" 
                title = "Teaching"> Teaching</a>
           </li>
           
           <li class="nav-item">
             <a class="nav-link"
                href="../../lab-notebook"
-                
+               data-target="/lab-notebook" 
                title = "Lab Notebook"> Lab Notebook</a>
           </li>
           
@@ -101,8 +100,8 @@
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
           <div class="brand">
-            <h1>R</h1>
-            <h3></h3>
+            <h1>Boettiger Group, UC Berkeley</h1>
+            <h3>Dept of Environmental Science, Policy, and Management</h3>
             
               
           </div>
@@ -115,69 +114,83 @@
     <div class="section section-basic">
       <div class="container">
         <div class="row">
-          <div class="col-md-11 ml-auto mr-auto"> 
+          <div class="col-md-6 ml-auto mr-auto"> 
         
                                 
 
 
 
-    <div class="row">
+  <h1>Boettiger Group, UC Berkeley</h1>
+
+   
+  <div class="article-style" itemprop="articleBody"><p>Welcome to the research group of Carl Boettiger, Assistant Professor in the Department of
+<a href="http://ourenvironment.berkeley.edu" target="_blank">Environmental Science, Policy and Management</a>
+at <a href="http://www.berkeley.edu" target="_blank">UC Berkeley</a>.</p>
+
+<p>I work on problems in ecological forecasting and decision making under
+uncertainty, with applications for global change, conservation and
+natural resource management. I am particularly interested in how we can
+predict or manage ecological systems that may experience regime shifts:
+sudden and dramatic changes that challenge both our models and available
+data.  The rapid expansion in both computational power and the available
+ecological and environmental data enables and requires new mathematical,
+statistical and computational approaches to these questions. Ecology
+has much to learn about what are and are not useful from advances in
+informatics &amp; computer science, just as it has from statistics and
+mathematics. Traditional approaches to ecological modeling and resource
+management such as stochastic dynamic systems, Bayesian inference, and
+optimal control theory must be adapted both to take advantage of all
+available data while also dealing with its imperfections. My approach
+blends ecological theory with the synthesis of heterogeneous data and
+the development of software -- a combination now recognized as data
+science.</p>
+
+<p>I am co-founder of the <a href="https://ropensci.org" target="_blank">rOpenSci project</a>, a senior fellow at
+<a href="http://bids.berkeley.edu" target="_blank">BIDS</a>, and a science adviser to
+<a href="http://nceas.ucsb.edu" target="_blank">NCEAS</a>, reflecting my interests in
+open science, data science, and ecoinformatics.</p>
+</div>
+
+
+  <div class="row">
+    <div class="col-11">
     
-    <div class="col-md-4">
-      <h4><a href="../../2017/12/11/data-rectangling-with-jq/">Mon, Dec 11, 2017</a></h4>
-      <h4><a href="../../2017/12/11/data-rectangling-with-jq/">Data Rectangling with jq</a></h4>
-      <div class="article-style">
-        “Data rectangling”: the process of turning highly nested data structures (e.g. JSON, XML) into a tabular format.
- Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community. Recording or slides of Jenny’s talk on the subject give a much better intro to the idea and working with this in R, particularly through the purrr package.
-As nice as purrr is for the task, I’ve recently found that the jqr package from Scott Chamberlain and co can be a much easier way to go about rectangling your JSON.
-      </div>
+    <div class="article">
+      <h2><a href="../../networks/">Networks</a></h2>
     </div>
     
-    <div class="col-md-4">
-      <h4><a href="../../2017/12/09/json-ld-vita-exploration/">Sat, Dec 9, 2017</a></h4>
-      <h4><a href="../../2017/12/09/json-ld-vita-exploration/">JSON-LD Vita exploration</a></h4>
-      <div class="article-style">
-        Using JSON Queries (JQ) Pure JSON vita &lt;- readr::read_file(&quot;../../static/js/vita.json&quot;) jq(vita, &#39;.&quot;@reverse&quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&quot; &quot;) }&#39;) %&gt;% combine() %&gt;% fromJSON()   year author    2017-12-09 Wayne M. Getz  2017-12-09 Charles R. Marshall  2017-12-09 Colin J. Carlson  2017-12-09 Luca Giuggioli  2017-12-09 Sadie J. Ryan  2017-12-09 Stephanie S. Romañach  2017-12-09 Carl Boettiger  2017-12-09 Samuel D.
-      </div>
+    <div class="article">
+      <h2><a href="../../teaching/">Teaching</a></h2>
     </div>
     
-    <div class="col-md-4">
-      <h4><a href="../../2017/04/27/new-rocker-releases/">Thu, Apr 27, 2017</a></h4>
-      <h4><a href="../../2017/04/27/new-rocker-releases/">New rocker releases</a></h4>
-      <div class="article-style">
-        R 3.4.0 and devel tags are now available in the Rocker versioned stack, and latest has been updated to 3.4.0.
-This means you can now run something like:
-docker run -d -p 8787:8787 rocker/tidyverse:devel to test out a recent version1 of R devel in RStudio with the tidyverse packages already installed. Note that the packages are not themselves devel versions (e.g. from GitHub) but are instead the latest versions from CRAN, just as in the latest tag.
-      </div>
+    <div class="article">
+      <h2><a href="../../vita/">Vita</a></h2>
+    </div>
+    
+    <div class="article">
+      <h2><a href="../../cloud/">cloud.md</a></h2>
     </div>
     
     </div>
 
-   
-    <div class="row">
+
+
+
+<nav>
+  <ul class="pager">
     
-    <div class="col-md-4">
-      <h4><a href="../../2017/04/19/migrating-to-hugo-and-blogdown/">Wed, Apr 19, 2017</a></h4>
-      <h4><a href="../../2017/04/19/migrating-to-hugo-and-blogdown/">Migrating to Hugo and blogdown</a></h4>
-      <div class="article-style">
-        After OpenWetWare (2010), Wordpress (2010 - 2012) and Jekyll (2012 - 2017), I move platforms once again: now to Hugo. Why the move? As usual, this site remains a way for me to explore new technologies, but the cutting edge is by no means the allure which leads me to migrate. Rather, I find myself ever trying to move towards simpler platforms, what’s easier to maintain, free to host, easier to replicate, and what makes best use of the most widely available and well-maintained existing software and avoids unncessary custom hacks.
-      </div>
-    </div>
+    <li><a href="../../">&laquo; Previous</a></li>
     
-    </div>
-  
-  
-  
+    
+  </ul>
+</nav>
 
 
   <br />  
-  
   </div>
         
            </div>
         </div>
-      
-      
       </div>
     </div>
   </div>

@@ -8,19 +8,19 @@ aliases: "/publications"
 
 # employment
 
-- 2015-current Assistant Professor, 
-  Department of Environmental Science, Policy and Management, 
+- 2015-current Assistant Professor,
+  Department of Environmental Science, Policy and Management,
   **University of California, Berkeley.**
 
-- 2013-2015 NSF Post-doctoral Scholar in the 
-  Department of Applied Mathematics and Statistics, 
-  **University of California, Santa Cruz**. 
+- 2013-2015 NSF Post-doctoral Scholar in the
+  Department of Applied Mathematics and Statistics,
+  **University of California, Santa Cruz**.
   Mentors: [Marc Mangel](http://users.soe.ucsc.edu/~msmangel/), [Stephan Munch](http://swfsc.noaa.gov/staff.aspx?&amp;id=17294)
 
 # education
 
-- 2012 Ph.D Population Biology, 
-  **University of California, Davis**. 
+- 2012 Ph.D Population Biology,
+  **University of California, Davis**.
   Mentor: [Alan Hastings](http://two.ucdavis.edu/~me)
 
 - 2007 A.B in Physics,
@@ -36,27 +36,27 @@ aliases: "/publications"
     [doi:10.1007/s00285-019-01358-z](https://doi.org/10.1007/s00285-019-01358-z)
 
 30. Milad Memarzadeh, __Carl Boettiger__ (2019). Resolving the Measurement
-    Uncertainty Paradox in Ecological Management. *American Naturalist*. 
+    Uncertainty Paradox in Ecological Management. *American Naturalist*.
     [doi:10.1086/702704](https://doi.org/10.1086/702704)
 
-29. Dan Sholler, Karthik Ram, __Carl Boettiger__, Daniel S Katz (2019). 
+29. Dan Sholler, Karthik Ram, __Carl Boettiger__, Daniel S Katz (2019).
     Enforcing public data archiving policies in academic publishing: A
-    study of ecology journals.  *Big Data & Society* 6(1) 1-18. 
+    study of ecology journals.  *Big Data & Society* 6(1) 1-18.
     [doi:10.1177/2053951719836258](https://doi.org/10.1177/2053951719836258)
 
 28. __Carl Boettiger__ (2019). Ecological Metadata as Linked Data.
-    *Journal of Open Source Software*, 4(34), 1276, 
+    *Journal of Open Source Software*, 4(34), 1276,
     [doi:10.21105/joss.01276](https://doi.org/10.21105/joss.01276)
     ([software](https://doi.org/10.5281/zenodo.1442890)).
-  
+
 27. Katz, Allen, Barba, Berg, Bik, __Boettiger__, et al. (2018).
-    The principles of tomorrow's university. *F1000Research*, 7:1926 
-    [doi:10.12688/f1000research.17425.1](https://doi.org/10.12688/f1000research.17425.1). 
+    The principles of tomorrow's university. *F1000Research*, 7:1926
+    [doi:10.12688/f1000research.17425.1](https://doi.org/10.12688/f1000research.17425.1).
     (32 co-authors.)
 
 26. Karthik Ram, __Carl Boettiger__, Scott Chamberlain, Noam Ross,
     Maelle Salmon, & Stephanie Butland (2018). A Community of Practice
-    Around Peer-review for Long-term Research Software Sustainability. 
+    Around Peer-review for Long-term Research Software Sustainability.
     _Computing in Science & Engineering_, 9615(c), 1–1.
     [doi:10.1109/MCSE.2018.2882753](https://doi.org/10.1109/MCSE.2018.2882753)
 
@@ -65,9 +65,9 @@ aliases: "/publications"
     [doi:10.21105/joss.00971](https://doi.org/10.21105/joss.00971).
     ([software](https://doi.org/10.5281/zenodo.1432525)).
 
-24. Milad Memarzadeh, __Carl Boettiger__ (2018). Adaptive management of ecological systems 
+24. Milad Memarzadeh, __Carl Boettiger__ (2018). Adaptive management of ecological systems
     under partial observability. _Biological Conservation_. 224, 9-15.
-    [doi:10.1016/j.biocon.2018.05.009](https://doi.org/10.1016/j.biocon.2018.05.009). 
+    [doi:10.1016/j.biocon.2018.05.009](https://doi.org/10.1016/j.biocon.2018.05.009).
     ([software](https://github.com/boettiger-lab/pomdpplus))
 
 23. __Carl Boettiger__ (2018). From noise to knowledge: how randomness
@@ -77,33 +77,33 @@ aliases: "/publications"
     [code](https://github.com/cboettig/noise-phenomena),
     [data](https://doi.org/10.5281/zenodo.1219779))
 
-22. __Carl Boettiger__, Dirk Eddelbuettel (2018). An Introduction to Rocker: 
-    Docker Containers for R. _The R Journal_. 
+22. __Carl Boettiger__, Dirk Eddelbuettel (2018). An Introduction to Rocker:
+    Docker Containers for R. _The R Journal_.
     [doi:10.32614/RJ-2017-065](https://doi.org/10.32614/RJ-2017-065)
 
 21. __Carl Boettiger__ (2017). Generating Codemeta Metadata for R Packages.  
-    _The Journal of Open Source Software_ 2 (19), 454, 
+    _The Journal of Open Source Software_ 2 (19), 454,
     [doi:10.21105/joss.00454](https://doi.org/10.21105/joss.00454)
 
 20. Getz, Marshall, Carlson, Giuggioli, Ryan, Romañach,  __Boettiger__,
-    Chamberlain, Larsen, D'Odorico, O'Sullivan (2017). Making 
+    Chamberlain, Larsen, D'Odorico, O'Sullivan (2017). Making
     ecological models adequate. _Ecology Letters_.
     [doi:10.1111/ele.12893](https://doi.org/10.1111/ele.12893)
 
 19. Ben Marwick, __Carl Boettiger__, Lincoln Mullen (2017). Packaging data analytical work
-    reproducibly using R (and friends). _The American Statistician_. 
+    reproducibly using R (and friends). _The American Statistician_.
     [doi:10.1080/00031305.2017.1375986](https://doi.org/10.1080/00031305.2017.1375986).
     ([oa](https://doi.org/10.7287/peerj.preprints.3192v1))
 
 18. Hampton, Jones, Wasser, Schuldhauer, Supp, Brun, Herandez, __Boettiger__, Collins,
     Gross, Fernandez, Budden, White, Teal, Labou, Aukema (2017). Skills and Knowledge
     for Data Intensive Research. _BioScience_.
-    [doi:10.1093/biosci/bix025](https://doi.org/10.1093/biosci/bix025). 
+    [doi:10.1093/biosci/bix025](https://doi.org/10.1093/biosci/bix025).
     ([oa](https://doi.org/10.1093/biosci/bix025))
 
 17. T Alex Perkins, __Carl Boettiger__, Benjamin L. Philips. (2016) After
     the games are over: life-history trade-offs drive dispersal attenuation
-    following range expansion. _Ecology and Evolution_ 6 (18) 6425-6434. 
+    following range expansion. _Ecology and Evolution_ 6 (18) 6425-6434.
     [doi:10.1002/ece3.2314](http://dx.doi.org/10.1002/ece3.2314).
     ([oa](http://oadoi.org/10.1002/ece3.2314),
     [code](https://github.com/TAlexPerkins/dispersal_tradeoffs))
@@ -117,8 +117,8 @@ aliases: "/publications"
 
 15. __Carl Boettiger__, Scott Chamberlain, Rutger Vos and Hilmar
    Lapp (2016). RNeXML: a package for reading and writing richly annotated
-   phylogenetic, character, and trait data in R. _Methods in Ecology and Evolution_. 
-   [doi:10.1111/2041-210X.12469](http://dx.doi.org/10.1111/2041-210X.12469). 
+   phylogenetic, character, and trait data in R. _Methods in Ecology and Evolution_.
+   [doi:10.1111/2041-210X.12469](http://dx.doi.org/10.1111/2041-210X.12469).
    ([oa](http://arxiv.org/abs/1506.02722),
    [code](https://github.com/ropensci/RNeXML),
    [software](http://cran.rstudio.com/web/packages/RNeXML))
@@ -129,7 +129,7 @@ aliases: "/publications"
    [doi:10.5334/jors.bu](http://dx.doi.org/10.5334/jors.bu).
 
 13. __Carl Boettiger__ (2015). An introduction to Docker for reproducible
-   research. *ACM SIGOPS Operating Systems Review* 49(1), 71-79. 
+   research. *ACM SIGOPS Operating Systems Review* 49(1), 71-79.
    [doi:10.1145/2723872.2723882](http://dx.doi.org/10.1145/2723872.2723882).
    ([oa](http://arxiv.org/abs/1410.0846))
 
@@ -168,10 +168,10 @@ aliases: "/publications"
 
 7. __Carl Boettiger__, Duncan Temple Lang, Peter Wainwright (2012).
 	 rfishbase: exploring, manipulating and visualizing FishBase data
-	 from R, *Journal of Fish Biology*. 81 (6) 2030–2039. 
+	 from R, *Journal of Fish Biology*. 81 (6) 2030–2039.
 	 [doi:10.1111/j.1095-8649.2012.03464.x](http://dx.doi.org/10.1111/j.1095-8649.2012.03464.x).
 	 ([oa](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md),
-	 [code](https://github.com/ropensci/rfishbase), 
+	 [code](https://github.com/ropensci/rfishbase),
 	 [software](http://cran.at.r-project.org/web/packages/rfishbase/))
 
 6. __Carl Boettiger__, Duncan Temple Lang (2012). Treebase: An R
@@ -184,7 +184,7 @@ aliases: "/publications"
 
 5. __Carl Boettiger__, Alan Hastings (2012). Quantifying Limits to
 	 Detection of Early Warning for Critical Transitions, *Journal of the
-	 Royal Society: Interface* 9 (75) 2527-2539. 
+	 Royal Society: Interface* 9 (75) 2527-2539.
 	 [doi:10.1098/rsif.2012.0125](http://dx.doi.org/10.1098/rsif.2012.0125).
 	 ([oa](http://arxiv.org/abs/1204.6231),
 	 [code](https://github.com/cboettig/earlywarning))
@@ -192,21 +192,21 @@ aliases: "/publications"
 4. Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, __Carl Boettiger__,
 	 Brian O’Meara, (2012). Modeling Stabilizing Selection: Expanding the
 	 Ornstein-Uhlenbeck Model of Adaptive Evolution, *Evolution* 66 (8)
-	 2369-2383. [doi:10.1111/j.1558-5646.2012.01619.x](http://dx.doi.org/10.1111/j.1558-5646.2012.01619.x) 
+	 2369-2383. [doi:10.1111/j.1558-5646.2012.01619.x](http://dx.doi.org/10.1111/j.1558-5646.2012.01619.x)
 	 ([software](http://cran.r-project.org/web/packages/OUwie/index.html))
 
 
 3. __Carl Boettiger__, Graham Coop, Peter Ralph (2012). Is your
 	 phylogeny informative? Measuring the power of comparative methods,
-	 *Evolution* 66 (7) 2240-51. [doi:10.1111/j.1558-5646.2011.01574.x](http://dx.doi.org/10.1111/j.1558-5646.2011.01574.x), 
+	 *Evolution* 66 (7) 2240-51. [doi:10.1111/j.1558-5646.2011.01574.x](http://dx.doi.org/10.1111/j.1558-5646.2011.01574.x),
 	 ([oa](http://arxiv.org/abs/1110.4944),
 	 [code](https://github.com/cboettig/pmc),
 	 [data](http://datadryad.org/handle/10255/dryad.37645))
 
 2. __Carl Boettiger__, Jonathan Dushoff, Joshua S Weitz (2010).
 	 Fluctuation domains in adaptive evolution, *Theoretical Population
-	 Biology* 77 (1) 6-13. 
-	 [doi:10.1016/j.tpb.2009.10.003](http://dx.doi.org/10.1016/j.tpb.2009.10.003). 
+	 Biology* 77 (1) 6-13.
+	 [doi:10.1016/j.tpb.2009.10.003](http://dx.doi.org/10.1016/j.tpb.2009.10.003).
 	 ([oa](http://arxiv.org/abs/1004.4233),
 	 [code](https://github.com/cboettig/fluctuationDomains),
 	 [data](http://datadryad.org/handle/10255/dryad.37625))
@@ -295,12 +295,12 @@ aliases: "/publications"
 
 **2014**
 
--  Invited speaker, Berkeley Initiative for Global Change Biology Workshop (student organized), UC Berkeley, CA. 
+-  Invited speaker, Berkeley Initiative for Global Change Biology Workshop (student organized), UC Berkeley, CA.
 -  Invited speaker, [DIMACS](http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html) Global Change, Berkeley CA.
--  Invited speaker, Zoology Seminar, University of Wisconsin, Madison, WI. 
+-  Invited speaker, Zoology Seminar, University of Wisconsin, Madison, WI.
 -  Invited speaker, ESPM Seminar, UC Berkeley, CA.
 - [rOpenSci unconference](http://ropensci.org/blog/2014/05/14/ropenhack/), San Francisco CA.
-- [Reproducible Science: Curriculum & Workflow Workshop](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014), NESCent, Durham, NC. 
+- [Reproducible Science: Curriculum & Workflow Workshop](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014), NESCent, Durham, NC.
 - [WSSSPE 2.0 Meeting](http://wssspe.researchcomputing.org.uk/wssspe2/). New Orleans, LA.
 - Workflows Working Group, NCEAS, Santa Barbara,  CA.
 
@@ -335,14 +335,14 @@ aliases: "/publications"
 - 2017 - 2018. ad hoc Data Science Degree Proposal Committee
 - 2015 - current. Berkeley Research Computing Advisory Committee
 
-## extra-campus 
+## extra-campus
 
 - NCEAS [Scientific Advisory Board](https://www.nceas.ucsb.edu/content/nceas-science-advisers)
 - rOpenSci [Leadership Team](https://ropensci.org/about/#team)
-- Jetstream Cloud Computing [Stakeholder Advisory Board](https://jetstream-cloud.org/about/advisory-board.php), XSEDE. 
+- Jetstream Cloud Computing [Stakeholder Advisory Board](https://jetstream-cloud.org/about/advisory-board.php), XSEDE.
 
 <!--
-## reviewer for: 
+## reviewer for:
 
 - **2018** Bull. Mathematical Biology, Oikos, Ecology Letters, CiSE, Theoretical Ecology,
   Methods in Ecology & Evolution, CJFAS, NERSC, Conservation Biology, PNAS,
@@ -355,12 +355,12 @@ aliases: "/publications"
 
 - **2015** Proceedings of the National Academy of Sciences, Journal
   of Statistical Software, Bioinformatics, Chapman & Hall, Ecology Letters,
-  Ecology, PeerJ, F1000 Research, Journal of Librarianship & Scholarly Communication, 
+  Ecology, PeerJ, F1000 Research, Journal of Librarianship & Scholarly Communication,
   Nature Communications, Theoretical Ecology, Trends in Ecology & Evolution, Grid Computing
 
 - **2014** Theoretical Ecology, Biodiversity Data Journal, Ecology
-  Letters, Journal of Theoretical Biology, American Naturalist, 
-  Proceedings of the National Academy of Sciences, Proceedings of 
+  Letters, Journal of Theoretical Biology, American Naturalist,
+  Proceedings of the National Academy of Sciences, Proceedings of
   the Royal Society B
 
 - **2013** Theoretical Ecology, Francis & Taylor, Ideas in Ecology and
@@ -424,5 +424,3 @@ My software impact is also measured relative to other academics by [depsy.org](h
     *Nature*, 493 p 711 [doi:10.1038/nj7434-711a](http://dx.doi.org/10.1038/nj7434-711a)
 - Wald, Chelsea (2010). "Scientists Embrace Openness" *Science*.
   [doi:10.1126/science.caredit.a1000036](http://dx.doi.org/10.1126/science.caredit.a1000036)
-
-

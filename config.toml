@@ -43,7 +43,7 @@ enableGitInfo = true
 #    background = "/img/nasa_melting.jpg"
 #    background = "/img/noaa-ice-large-cc0.jpg"
     background = "/img/methane_bubbles.jpg"
-#    custom_css = ["cboettig.css"]
+    custom_css = ["cboettig.css"]
 #    custom_js = ["example.js"]
 
     name =  "Carl Boettiger"

@@ -1,24 +1,24 @@
-{{ define "body" }}
-<body class="profile-page sidebar-collapse"> <!-- other classes: index-page , landing-page -->
-  {{ partial "nav.html" . }}
-  
-  {{ partial "page-header.html" . }}
-
-  <div class="main main-raised">
+{{ define "header" }}
+{{ partial "page-header.html" . }}
+{{ end }}
+{{ define "main" }}
+ <div class="main main-raised">
     <div class="section section-basic">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 ml-auto mr-auto"> <!-- consider using parameter here-->
-        
+          <div class="col-md-11 ml-auto mr-auto"> 
           {{ partial "list.html" . }}
-        
            </div>
+        </div>
+        <!-- List pages can get Content and yaml metadata from an _index.md -->
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto"> 
+            {{ with .Content }}
+            <div class="article-style" itemprop="articleBody">{{ . }}</div>
+            {{ end }}
+          </div>
         </div>
       </div>
     </div>
   </div>
-  
-  {{ partial "footer" . }}
- 
-</body>
 {{ end }}

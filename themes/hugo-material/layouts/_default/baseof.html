@@ -1,7 +1,16 @@
 <!doctype html>
 <html lang="en">
   {{partial "head.html" . }}
-  {{ block "body" . }}
-	{{ end }}
+  <body class="{{ .Params.class | default "profile-page" }} sidebar-collapse"> <!-- other classes: index-page , landing-page -->
+  {{ partial "nav.html" . }}
+  
+  {{ block "header" . }}
+  {{ end }}
+  
+  {{ block "main" . }}
+  {{ end }}
+
+  {{ partial "footer" . }}
+  </body>
   {{partial "javascript.html" . }}
 </html>

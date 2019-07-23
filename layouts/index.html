@@ -1,0 +1,81 @@
+{{ define "header" }}
+{{ partial "page-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<div class="main main-raised">
+  <div class="section section-basic">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 ml-auto mr-auto">
+          <div class="card card-plain">
+          {{ .Content }}
+          </div>
+        </div>
+        <div class="col-md-1 ml-auto mr-auto">
+        </div>
+        <div class="col-md-5 ml-auto mr-auto">
+          <div class="card card-plain">
+          <div><img property="foaf:depiction" src="{{"/img/carl.png" | relURL }}" alt="Photo of Carl Boettiger" class="img-raised rounded-circle img-fluid"/></div>
+          <h4 class="card-title">
+          <span
+            property="foaf:name"><span
+            property="foaf:givenName">Carl</span> <span
+            property="foaf:familyName">Boettiger</span></span>
+          </h4>
+          <div class="card-body">
+              <i class="fa fa-envelope"></i> <script type="text/javascript" src=" {{ "/js/obfuscate-email.js" | relURL }}"></script><br/>
+              <i class="fa fa-user"></i> <a href="https://www.google.com/maps/place/Wellman+Hall,+Berkeley,+CA+94720/@37.8731768,-122.2649768,17z/data=!3m1!4b1!4m2!3m1!1s0x80857c20d77c84bb:0x1ddb86f685917787">203 Wellman Hall</a><br/>
+              <i class="fa fa-building"></i>
+              ESPM Department,           <br/>
+              University of California,  <br/>
+              130 Mulford Hall #3114,    <br/>
+              Berkeley, CA 94720-3114 USA <br/>
+              <i class="ai ai-orcid"></i>
+              <a href="https://orcid.org/0000-0002-1642-628X">0000-0002-1642-628X</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "@id": "https://orcid.org/0000-0002-1642-628X",
+  "givenName": "Carl",
+  "familyName": "Boettiger",
+  "jobTitle": "Assistant Professor",
+  "email": "cboettig@berkeley.edu",
+  "url": "http://carlboettiger.info",
+  "image": "http://www.carlboettiger.info/img/carl.png",
+  "worksFor": {
+    "@id": "https://berkeley.edu",
+    "@type": "Organization",
+    "name": "University of California, Berkeley"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ESPM Department, University of California, 130 Mulford Hall #3114",
+    "addressLocality": "Berkeley",
+    "addressRegion": "CA",
+    "postalCode": "94720-3114",
+    "addressCountry": "USA"
+  },
+  "sameAs": ["https://github.com/cboettig", "https://twitter.com/cboettig", "https://plus.google.com/+CarlBoettiger", "https://www.linkedin.com/in/cboettig/", "https://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ"],
+  "alumniOf": [{
+    "@id": "https://princeton.edu",
+    "@type": "Organization",
+    "name": "Princeton University"
+  }, {
+    "@id": "https://ucdavis.edu",
+    "@type": "Organization",
+    "name": "University of California, Davis"
+  }]
+}
+</script>
+{{ end }}
