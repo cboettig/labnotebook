@@ -19,15 +19,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   
   
+  
   <link href="../../../../sass/material-kit.min.8a21ae70d329460efe8c9beb91879f0fe96fe61e232c67bef24c84ce8622302e.css" rel="stylesheet">
   <link href="../../../../css/demo.css" rel="stylesheet" />
 
   
   <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/wesbos/Font-Awesome-Docker-Icon/master/fontcustom/fontcustom.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css">
 
-
+  <link rel="stylesheet" href="../../../../highlight/styles/github.css">
+  
 
   
   <link rel="stylesheet" href="../../../../css/cboettig.css">
@@ -35,11 +36,11 @@
   <link rel="feed" href="" type="application/rss+xml" title="Boettiger Group">
   <link rel="canonical" href="../../../../2017/05/17/using-travis-ci-in-research-compendia-and-student-repos/">
 
+
+
 </head>
 
-  
-<body class="profile-page sidebar-collapse"> 
-
+  <body class="profile-page sidebar-collapse"> 
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
@@ -94,7 +95,9 @@
       </div>
     </div>
 </nav>
-  <div class="page-header header-filter clear-filter blue-filter" 
+  
+  
+<div class="page-header header-filter clear-filter blue-filter" 
        data-parallax="true" 
        style="background-image: url('/img/methane_bubbles.jpg');">
     <div class="container">
@@ -112,12 +115,14 @@
 </div>
 
   
-  <div class="main main-raised">
-    <div class="section section-basic">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 ml-auto mr-auto">
-      
+  
+<div class="main main-raised">
+  <div class="section section-basic">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 ml-auto mr-auto">
+          <article>
+          
 
 
 <p>In general I’m a big believer in the R package mechanism as a convenient way to package and distribute a reproducible compendium of code, data, notebooks and manuscripts. However, it’s often overkill, particularly since passing basic continuous integration checks (e.g. via <code>devtools::use_travis()</code>) means running a relatively strict <code>R CMD check</code> that will worry about things such as documentation norms and details that aren’t always appropriate.</p>
@@ -144,12 +149,94 @@ script:
 </code></pre>
 <p>We’ll see how this goes in practice.</p>
 
+          </article>
+        </div>
+        <div class="col-md-4">
+          <div class="sidebar">
+            <aside prefix="og:http://ogp.me/ns/article#">
+  
+  
+  
+<div class="article-metadata">
+
+  <p>
+  <span class="article-date">
+    <i class="fa fa-calendar"></i>
+    
+    <time datetime="2017-05-17 22:00:15 &#43;0000 UTC" itemprop="datePublished">
+      Wed, May 17, 2017
+    </time>
+    
+  </span>
+  </p>
+    
+
+  <p>
+  
+  </p>
+  
+  <p>
+  
+  </p>
+
+</div>
+
+ 
+  <br />
+  
+  <p><a class="btn btn-default" rel="prev" href='../../../../2017/05/17/json-ld-framing-strategy/'><i class="fa fa-chevron-left"></i> prev</a>
+    <a class="btn btn-default" rel="next" href='../../../../2017/12/09/json-ld-vita-exploration/'>next <i class="fa fa-chevron-right"></i></a></p>
+
+  <br />
+
+<p> <a class="btn btn-default" 
+         href='https://github.com/cboettig/labnotebook/blob/master/content/lab-notebook/2017-05-17-travis-in-compendia.Rmd'><i class="icon-rlogo"></i> RMarkdown</a></p>
+
+
+  <p> <a class="btn btn-default" 
+         href='https://github.com/cboettig/labnotebook/commits/master/content/lab-notebook/2017-05-17-travis-in-compendia.Rmd'><i class="fa fa-clock-o"></i> History</a></p>
+
+  <p> <i class="fa fa-barcode"></i> SHA: <a href="https://github.com/cboettig/labnotebook/blob/84c274710f969ebf48998c82fc2c7d5fbf621dc1/content/lab-notebook/2017-05-17-travis-in-compendia.html">84c274710</a></p> 
+
+
+</aside>
+
+
           </div>
-        </div>   
+        </div>  
       </div>
+      <section id="comments">
+      <div id="disqus_thread">
+        
+      <div class="row disqus">
+        <div class="col-md-8">          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'cboettig'; 
+                 
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+
+
+      </div>
+      </section>
     </div>
   </div>
-  
+</div>
+    
+
+
+
+
+
+
   <footer class="footer">
   <div class="container">
 	  <nav class="pull-left">
@@ -162,9 +249,7 @@ script:
 	  </div>
   </div>
 </footer>
- 
-</body>
-
+  </body>
   
 
 <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
@@ -190,7 +275,9 @@ script:
 <script src="../../../../js/material-kit.min.js?v=2.0.4" type="text/javascript"></script>
 
 
-<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+<script src="../../../../highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 
 </html>

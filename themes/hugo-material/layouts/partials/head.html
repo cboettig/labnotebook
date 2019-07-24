@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  
   <!-- CSS Files -->
   {{ $style := resources.Get "sass/material-kit.scss" | toCSS | minify | fingerprint }}
   <link href="{{ $style.Permalink }}" rel="stylesheet">
@@ -22,15 +23,17 @@
 
   <!-- Additional icons: fa-docker, academicons, R-logo  -->
   <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/wesbos/Font-Awesome-Docker-Icon/master/fontcustom/fontcustom.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css">
 
-
+  <link rel="stylesheet" href="{{ "/highlight/styles/github.css" | relURL }}">
+  
 
   {{ range .Site.Params.custom_css }}
   <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
   {{ end }}
   <link rel="feed" href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" type="application/rss+xml" title="{{ .Site.Title }}">
   <link rel="canonical" href="{{ .Permalink }}">
+
+
 
 </head>

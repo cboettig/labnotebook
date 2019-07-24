@@ -1,0 +1,35 @@
+{{ define "header" }}
+{{ partial "page-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<div class="main main-raised">
+  <div class="section section-basic">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-{{.Params.pagewidth | default "7"}} ml-auto mr-auto">
+          <article>
+          {{ .Content }}
+          </article>
+        </div>
+        <div class="col-md-4">
+          <div class="sidebar">
+            {{ partial "sidebar.html" . }}
+          </div>
+        </div>  
+      </div>
+      <section id="comments">
+      <div id="disqus_thread">
+        {{ partial "disqus.html" . }}
+      </div>
+      </section>
+    </div>
+  </div>
+</div>
+    
+
+
+
+
+{{ end }}
+ 

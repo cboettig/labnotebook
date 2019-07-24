@@ -22,9 +22,11 @@
 <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
 <script src="/js/material-kit.min.js?v=2.0.4" type="text/javascript"></script>
 
+<!-- code highlighter -->
+<script src="{{ "/highlight/highlight.pack.js" | relURL }}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
 <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-
 {{ range .Site.Params.custom_js }}
   <script type="text/javascript" src="{{ "/js/" | relURL }}{{ . }}"></script>
 {{ end }}

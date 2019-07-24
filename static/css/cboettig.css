@@ -1,9 +1,6 @@
 .main {
-  padding-top: 0px;
-  position: relative;
   background-image: url(../img/grid-18px-masked.png);
   background-repeat: repeat-x;
-  background-position: 0 40px;
 }
 
 /* Definition lists (homepage)
