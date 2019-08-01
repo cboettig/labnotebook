@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>manuscript reviews on github?</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>I was recently impressed to learn of Trevor Bedford’s strategy of seeking <a href="https://twitter.com/trvrb/status/334310856982671361">pre-approval</a> for posting his reviewer’s comments as Github issues. Beyond providing links to the data and source-code, I generally don’t advertise the open science nature of papers I submit – I guess I assume that if the reader or reviewers care, it should be easy enough for them to discover it. Consequently I am usually immediately frustrated to realize that upon receiving my reviews I have to create a second, private repository for the review material, our replies to reviewers, etc., as I don’t have permission to disclose that information. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> I have recently stumbled across <a href="https://www.steinsaltz.me.uk/pnas.html">several</a> <a href="http://theseamonster.net/2013/05/are-unreasonably-harsh-reviewers-retarding-the-pace-of-coral-reef-science/">examples</a> of authors publishing to the web anonymous reviews they have received. Though anonymous, I feel the practice potentially murky without explicit permission, so I would appreciate any insight others have on this.</p>
+    <p>I was recently impressed to learn of Trevor Bedford’s strategy of seeking <a href="https://twitter.com/trvrb/status/334310856982671361">pre-approval</a> for posting his reviewer’s comments as Github issues. Beyond providing links to the data and source-code, I generally don’t advertise the open science nature of papers I submit – I guess I assume that if the reader or reviewers care, it should be easy enough for them to discover it. Consequently I am usually immediately frustrated to realize that upon receiving my reviews I have to create a second, private repository for the review material, our replies to reviewers, etc., as I don’t have permission to disclose that information. <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> I have recently stumbled across <a href="https://www.steinsaltz.me.uk/pnas.html">several</a> <a href="https://theseamonster.net/2013/05/are-unreasonably-harsh-reviewers-retarding-the-pace-of-coral-reef-science/">examples</a> of authors publishing to the web anonymous reviews they have received. Though anonymous, I feel the practice potentially murky without explicit permission, so I would appreciate any insight others have on this.</p>
 <h3 id="asking-permission">Asking permission</h3>
 <p>Trevor’s approach suggests I should consider broaching this question when first submitting my review, so I am puzzling over the best way to do so. One option would be to include such a request in the cover letter. For example,</p>
 <blockquote>
@@ -120,7 +120,7 @@
 <li>The manuscript has been written on Github. Consequently the full drafting and <strong>revision history</strong> is available, along with graphs of author contributions (which omit authors without Github accounts and may be distorted by trivial line changes)</li>
 <li>The manuscript has been written with all the code necessary to repoduce the results embedded as a <a href="https://yihui.name/knitr">knitr</a> <strong>dynamic document</strong>. This helps ensure the analysis is always in synch with the results presented in the manuscript and the that the research is reproducible. The analysis, figures, and manuscript can be reassembled from scratch by typing <code>make pdf</code> in the repository directory.<br /></li>
 <li><strong>Code</strong> to replicate the analysis and produce each of the figures shown can be found at: (Version-stable lnk to the appropriate Github pages? Deposit in Figshare/Dryad first?)<br /></li>
-<li><strong>Data</strong> to replicate the analysis and data shown in each of the figures can be found at: (Easiest to link to Github, since the code and data already reside there.<br /><em>Alternatively I could deposit these in <a href="https://figshare.com">Figshare</a> or <a href="http://datadryad.org">Dryad</a> first…)</em></li>
+<li><strong>Data</strong> to replicate the analysis and data shown in each of the figures can be found at: (Easiest to link to Github, since the code and data already reside there.<br /><em>Alternatively I could deposit these in <a href="https://figshare.com">Figshare</a> or <a href="https://datadryad.org">Dryad</a> first…)</em></li>
 <li>The manuscript, code, data, and documentation are available <strong>as an R package in the Github repository</strong>.<br /></li>
 <li>The <strong>issues tracker</strong> associated with the manuscript’s repository provides a record of this research, including lines of investigation that were resolved into the results presented here, lines that were closed as dead-ends or null results, and outstanding issues for further investigation.<br /></li>
 <li>The <strong>daily lab notebook entries</strong> accompanying this research can be found under the <a href="/tags">project-tag</a> between dates of XX and XX.</li>
@@ -129,17 +129,17 @@
 <p>Perhaps these details could be deferred to a README file in the project’s Github repo, and the cover letter could simply provide a link to the project repository? What, if anything, would appear most useful and accessible to a reviewer unfamiliar with this approach or its potential value? Though elements of this approach have been discussed in the published literature, e.g. <span class="showtooltip" title="Gentleman R and Temple Lang D (2007). Statistical Analyses And
 Reproducible Research. _Journal of Computational And Graphical
 Statistics_, *16*. ISSN 1061-8600, 
-https://dx.doi.org/10.1198/106186007X178663."><a href="http://dx.doi.org/10.1198/106186007X178663" rel="http://purl.org/spar/cito/citesAsEvidence" >Gentleman &amp; Temple Lang (2007)</a></span> ‘compendium’ concept, <span class="showtooltip" title="Stodden V (2009). Enabling Reproducible Research: Open Licensing
+https://dx.doi.org/10.1198/106186007X178663."><a href="https://dx.doi.org/10.1198/106186007X178663" rel="https://purl.org/spar/cito/citesAsEvidence" >Gentleman &amp; Temple Lang (2007)</a></span> ‘compendium’ concept, <span class="showtooltip" title="Stodden V (2009). Enabling Reproducible Research: Open Licensing
 for Scientific Innovation. 
 https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040. 
-https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040."><a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040" rel="http://purl.org/spar/cito/citesAsEvidence" >Stodden (2009)</a></span> RRS concept, or <span class="showtooltip" title="Peng R (2011). Reproducible Research in Computational Science.
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040."><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040" rel="https://purl.org/spar/cito/citesAsEvidence" >Stodden (2009)</a></span> RRS concept, or <span class="showtooltip" title="Peng R (2011). Reproducible Research in Computational Science.
 _Science_, *334*. ISSN 0036-8075, 
-https://dx.doi.org/10.1126/science.1213847."><a href="http://dx.doi.org/10.1126/science.1213847" rel="http://purl.org/spar/cito/citesAsEvidence" >Peng (2011)</a></span> reproducible papers in the Journal of Biostatistics, I’m unsure if pointing a reviewer to these references would be more valuable or more confusing. Let me know what you think.</p>
+https://dx.doi.org/10.1126/science.1213847."><a href="https://dx.doi.org/10.1126/science.1213847" rel="https://purl.org/spar/cito/citesAsEvidence" >Peng (2011)</a></span> reproducible papers in the Journal of Biostatistics, I’m unsure if pointing a reviewer to these references would be more valuable or more confusing. Let me know what you think.</p>
 <h2 id="references">References</h2>
 <ul>
 <li>Robert Gentleman, Duncan Temple Lang, (2007) Statistical Analyses And Reproducible Research. <em>Journal of Computational And Graphical Statistics</em> <strong>16</strong> <a href="https://dx.doi.org/10.1198/106186007X178663">10.1198/106186007X178663</a></li>
 <li>R. D. Peng, (2011) Reproducible Research in Computational Science. <em>Science</em> <strong>334</strong> <a href="https://dx.doi.org/10.1126/science.1213847">10.1126/science.1213847</a></li>
-<li>Victoria Stodden, (2009) Enabling Reproducible Research: Open Licensing for Scientific Innovation. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040" class="uri">http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040</a></li>
+<li>Victoria Stodden, (2009) Enabling Reproducible Research: Open Licensing for Scientific Innovation. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040" class="uri">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040</a></li>
 </ul>
 <section class="footnotes">
 <hr />
@@ -274,7 +274,7 @@ https://dx.doi.org/10.1126/science.1213847."><a href="http://dx.doi.org/10.1126/
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

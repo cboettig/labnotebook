@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Meeting with Graham and Peter</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -109,12 +109,12 @@
     <h3 id="discussion-of-model-comparisons">Discussion of Model Comparisons</h3>
 <p>Primary focus of today’s discussion was rooted in Sunday’s entry</p>
 <ul>
-<li>On <strong>plotting quirks,</strong> haven’t figured out lattice but here’s yet another <a href="https://had.co.nz" title="http://had.co.nz">newer plotting engine for R</a></li>
+<li>On <strong>plotting quirks,</strong> haven’t figured out lattice but here’s yet another <a href="https://had.co.nz" title="https://had.co.nz">newer plotting engine for R</a></li>
 <li>I need to revisit how OUCH computes likelihood ratios and P values. Since some parameters are bounded to the positive real line (and may be small) the standard chi square isn’t correct. I should repeat the AIC-style analysis for likelihood ratios, though this is just a shift of where I put the zero line. The correct thing to do would be to ask what is the probability the observed difference in likelihood ratio (or AIC, etc) would have occurred by chance using the distributions I have calculated,</li>
 </ul>
 <p><img src="https://openwetware.org/images/thumb/4/43/Aic_panels.png/60px-Aic_panels.png" alt="image" /> (click for larger)</p>
 <ul>
-<li>The approach I am advocating for goes by the name <strong><a href="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)#Parametric_bootstrap" title="http://en.wikipedia.org/wiki/Bootstrapping_(statistics)#Parametric_bootstrap">Parametric Bootstrapping</a></strong> (that link isn’t that helpful actually, could improve the wiki entry). I should implement this as above, comparing to the observed differences in the model scores of the real data, rather than the measure of slightly greater which I report.</li>
+<li>The approach I am advocating for goes by the name <strong><a href="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)#Parametric_bootstrap" title="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)#Parametric_bootstrap">Parametric Bootstrapping</a></strong> (that link isn’t that helpful actually, could improve the wiki entry). I should implement this as above, comparing to the observed differences in the model scores of the real data, rather than the measure of slightly greater which I report.</li>
 <li>Using this approach I can also <strong>evaluate the power</strong> to detect any OU model by overlap in distributions. For instance, if the tree is the starburst, even strong selection OU will have no power, while on another tree it might. This can be done by testing a variety of OU models, rather than the one that best fits the data, and will be a great way to start quantifying the <em>information contained in the tree</em> relative to the model choice question. This is a <em>crucial step</em> before I try more complicated models, giving some measure of whether a tree contains enough taxa with enough covariance to tease out temporal information accurately.</li>
 <li>Discussed my concern that the <strong>BM model and OU model aren’t really embedded,</strong> since the OU model likelihood cannot be computed accurately for small α. Of course it works in the limit, but is something to be cautious about. It has been suggested that model comparison should fit OU alone, and wait and see if α comes out small. There are two reasons to be skeptical of this</li>
 </ul>
@@ -268,7 +268,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

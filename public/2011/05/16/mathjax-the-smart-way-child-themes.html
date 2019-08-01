@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>MathJax the smart way: Child Themes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>Adding mathjax by modifying the header.php file in my wordpress theme, <a href="https://www.mathjax.org/docs/1.1/platforms/wordpress.html">as recommended by MathJax website</a>, isn’t stable to upgrades of the theme, which simply replace the header.php file with a fresh version.  The “correct” way to do this is using <a href="http://codex.wordpress.org/Child_Themes">child themes,</a> which are pretty simple, even though this got me writing my first php functions.</p>
+    <p>Adding mathjax by modifying the header.php file in my wordpress theme, <a href="https://www.mathjax.org/docs/1.1/platforms/wordpress.html">as recommended by MathJax website</a>, isn’t stable to upgrades of the theme, which simply replace the header.php file with a fresh version.  The “correct” way to do this is using <a href="https://codex.wordpress.org/Child_Themes">child themes,</a> which are pretty simple, even though this got me writing my first php functions.</p>
 <ul>
 <li><p>Create a directory in wp-content/themes with the desired name of the new theme.</p></li>
 <li><p>Create a file style.css as follows:</p></li>
@@ -126,7 +126,7 @@
 <span class="co">*/</span>
 <span class="dv">@import</span> url(<span class="st">&quot;../the-erudite/style.css&quot;</span>)</code></pre>
 <p>The stuff in the C-style comments is functional.  The only required lines are theme name and template.  template tells the style file to copy everything from the template theme (which will be updated whenever the template is updated).  The <span class="citation" data-cites="import">@import</span> command imports the style file of the template theme.  Any changes to the style can be specified in CSS below. We won’t be changing anything on the style sheet.</p>
-<p>What we want to do is change the header.  We do this the clever way using action hooks. I used <a href="https://themeshaper.com/2009/05/25/action-hooks-wordpress-child-themes/">this great reference</a> to get a handle on them, and the <a href="http://codex.wordpress.org/Child_Themes">Wordpress child themes guide</a> to see how functions.php works.</p>
+<p>What we want to do is change the header.  We do this the clever way using action hooks. I used <a href="https://themeshaper.com/2009/05/25/action-hooks-wordpress-child-themes/">this great reference</a> to get a handle on them, and the <a href="https://codex.wordpress.org/Child_Themes">Wordpress child themes guide</a> to see how functions.php works.</p>
 <ul>
 <li>Create a second file in the theme called functions.php:</li>
 </ul>
@@ -279,7 +279,7 @@ add_action<span class="ot">(</span><span class="st">&#39;wp_head&#39;</span><spa
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

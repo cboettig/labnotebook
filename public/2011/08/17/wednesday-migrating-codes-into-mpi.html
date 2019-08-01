@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Wednesday: migrating codes into MPI</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -154,14 +154,14 @@ mcmc_out &lt;-<span class="st"> </span><span class="kw">mpi.remote.exec</span>(<
 <span class="kw">module</span> load R/2.12.1
 <span class="kw">module</span> swap pgi intel
 <span class="kw">module</span> swap openmpi openmpi-intel </code></pre>
-<p>Note that format for the batch jobs differs substantially between architectures. Hopper is a Cray, and launches commands with <a href="https://www.csc.fi/english/pages/louhi_guide/batch_jobs/commands/aprun">aprun</a>, see <a href="http://www.nersc.gov/users/computational-systems/hopper/getting-started/your-first-program/">example</a>.</p>
-<p>Carver is an IBM, and seems to use <a href="https://www.mcs.anl.gov/research/projects/mpi/www/www1/mpirun.html">mpirun</a> instead, which appears to be a more general architecture command. See the <a href="http://www.nersc.gov/users/computational-systems/carver/getting-started/">Carver example program</a>.</p>
+<p>Note that format for the batch jobs differs substantially between architectures. Hopper is a Cray, and launches commands with <a href="https://www.csc.fi/english/pages/louhi_guide/batch_jobs/commands/aprun">aprun</a>, see <a href="https://www.nersc.gov/users/computational-systems/hopper/getting-started/your-first-program/">example</a>.</p>
+<p>Carver is an IBM, and seems to use <a href="https://www.mcs.anl.gov/research/projects/mpi/www/www1/mpirun.html">mpirun</a> instead, which appears to be a more general architecture command. See the <a href="https://www.nersc.gov/users/computational-systems/carver/getting-started/">Carver example program</a>.</p>
 <h5 id="testing">Testing:</h5>
 <p>Run brute_force example script on Carver and Hopper. Can’t launch R on compute nodes, perhaps a module loading issue. Will need to explore further. Otherwise might be better to move all code down into C and write the MPI there….</p>
 <h2 id="misc">Misc</h2>
 <ul>
 <li><p>Buy home server? <a href="https://zareason.com/shop/Breeze-Server-4220.html">ZaReason Breeze</a>?</p></li>
-<li><p>Conferences I’ve followed on twitter this summer: <a href="https://rcs.columbia.edu/rdlm">Research Data Lifecycle management</a>, #rdlmw #useR11 #scifoo11 <a href="http://www.mitacs.ca/events/index.php?option=com_content&amp;view=article&amp;id=214&amp;Itemid=231&amp;lang=en">Reproducible Research</a> (<a href="http://www.stodden.net/AMP2011/">talk archive</a>)</p></li>
+<li><p>Conferences I’ve followed on twitter this summer: <a href="https://rcs.columbia.edu/rdlm">Research Data Lifecycle management</a>, #rdlmw #useR11 #scifoo11 <a href="https://www.mitacs.ca/events/index.php?option=com_content&amp;view=article&amp;id=214&amp;Itemid=231&amp;lang=en">Reproducible Research</a> (<a href="https://www.stodden.net/AMP2011/">talk archive</a>)</p></li>
 </ul>
 
     </article>
@@ -290,7 +290,7 @@ mcmc_out &lt;-<span class="st"> </span><span class="kw">mpi.remote.exec</span>(<
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Noisy beetles</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -122,15 +122,15 @@
 <p><strong>Fig: 2</strong> lower mortality, higher noise</p>
 <ul>
 <li>Success! My first full implementation of the four stage (EPLA) beetle model, so far without any adaptation, and the noise of the larval class dominates (Fig 1). Without the time delays the stationary dynamics are stable nodes, at least in this part of parameter space, with a large adult class clamping tightly down on the other classes. Despite adults being the most numerous, the larval class is the most variable, just as observed.</li>
-<li>Standard parameter set, figure produced by <a href="https://github.com/cboettig/structured-populations/commit/0b6ce3ea1210284b71f3ab270b1ad6532ee0f31b/R/beetles.R" title="http://github.com/cboettig/structured-populations/commit/0b6ce3ea1210284b71f3ab270b1ad6532ee0f31b/R/beetles.R">this version</a> of the beetles.R code.</li>
+<li>Standard parameter set, figure produced by <a href="https://github.com/cboettig/structured-populations/commit/0b6ce3ea1210284b71f3ab270b1ad6532ee0f31b/R/beetles.R" title="https://github.com/cboettig/structured-populations/commit/0b6ce3ea1210284b71f3ab270b1ad6532ee0f31b/R/beetles.R">this version</a> of the beetles.R code.</li>
 <li>The level of noise depends closely on mortality estimate for this larva class. For instance, cutting the mortality rate of larva from 0.001 to 0.0001 results in much larger noise, Fig 2.</li>
 </ul>
 <p><br /> ### Modifications to implementation</p>
 <ul>
-<li>Updated code to accurately take account of the two-step process. (Will add notes on the mathematics later, meanwhile is implemented in the <a href="https://github.com/cboettig/structured-populations/blob/22c42eb726ddc6216932906953eea18dc165185f/R/noise_approx.R" title="http://github.com/cboettig/structured-populations/blob/22c42eb726ddc6216932906953eea18dc165185f/R/noise_approx.R">noise_approx.R</a> (version stable link) code.</li>
+<li>Updated code to accurately take account of the two-step process. (Will add notes on the mathematics later, meanwhile is implemented in the <a href="https://github.com/cboettig/structured-populations/blob/22c42eb726ddc6216932906953eea18dc165185f/R/noise_approx.R" title="https://github.com/cboettig/structured-populations/blob/22c42eb726ddc6216932906953eea18dc165185f/R/noise_approx.R">noise_approx.R</a> (version stable link) code.</li>
 <li>User now specifies the birth and death rates separately, rather than the first and second jump moments (b and f). User also specifies the two-step jumps and (as before) the Jacobian of b(x)-d(x).</li>
 <li>Added cannibalism of adults on pupae, who previously had no mortality terms. Without this their noise level will rise indefinitely.</li>
-<li>Separated the code for the linear noise approximation from the code for the <a href="https://github.com/cboettig/structured-populations/blob/master/R/crowley.R" title="http://github.com/cboettig/structured-populations/blob/master/R/crowley.R">crowley</a> and <a href="http://github.com/cboettig/structured-populations/commit/0b6ce3ea1210284b71f3ab270b1ad6532ee0f31b/R/beetles.R" title="http://github.com/cboettig/structured-populations/commit/0b6ce3ea1210284b71f3ab270b1ad6532ee0f31b/R/beetles.R">beetles</a> models.</li>
+<li>Separated the code for the linear noise approximation from the code for the <a href="https://github.com/cboettig/structured-populations/blob/master/R/crowley.R" title="https://github.com/cboettig/structured-populations/blob/master/R/crowley.R">crowley</a> and <a href="https://github.com/cboettig/structured-populations/commit/0b6ce3ea1210284b71f3ab270b1ad6532ee0f31b/R/beetles.R" title="https://github.com/cboettig/structured-populations/commit/0b6ce3ea1210284b71f3ab270b1ad6532ee0f31b/R/beetles.R">beetles</a> models.</li>
 </ul>
 <h3 id="git-log">Git log</h3>
 <p>commit 0b6ce3ea1210284b71f3ab270b1ad6532ee0f31b Author: Carl Boettiger <script type="text/javascript">
@@ -163,7 +163,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
 <pre><code>   seperated examples from noise approx code</code></pre>
 <p><br /> Misc / Reading ————–</p>
 <ul>
-<li><a href="https://www.nsf.gov/news/news_summ.jsp?cntn_id=116928" title="http://www.nsf.gov/news/news_summ.jsp?cntn_id=116928">NSF</a> to require data management in all proposals:</li>
+<li><a href="https://www.nsf.gov/news/news_summ.jsp?cntn_id=116928" title="https://www.nsf.gov/news/news_summ.jsp?cntn_id=116928">NSF</a> to require data management in all proposals:</li>
 </ul>
 <p>“Researchers from numerous disciplines need to work together to attack complex problems; openly sharing data will pave the way for researchers to communicate and collaborate more effectively.”</p>
 <p>“This is the first step in what will be a more comprehensive approach to data policy,” added Cora Marrett, NSF acting deputy director. “It will address the need for data from publicly-funded research to be made public.”</p>
@@ -295,7 +295,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

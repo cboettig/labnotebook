@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Tutorial On Likelihood And Roc Methods For Early Warning Signals</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -109,7 +109,7 @@
     <p>In this tutorial we walk through how to use the likelihood-based approach of <span class="showtooltip" title="Boettiger C and Hastings A (2012). Quantifying Limits to
 Detection of Early Warning For Critical Transitions. _Journal of
 The Royal Society Interface_, *9*, pp. 2527-2539. ISSN 1742-5689,
- https://dx.doi.org/10.1098/rsif.2012.0125."><a href="http://dx.doi.org/10.1098/rsif.2012.0125" rel="http://purl.org/spar/cito/usesMethodFrom" >Boettiger &amp; Hastings (2012)</a></span> to provide an early warning signal for a critical transition, and how to generate ROC curves discussed in the same paper for comparing different early warning signals. Context and details about the methodology are presented in the paper; here we focus on using the methodology provided in the accompanying R package. All of the examples shown here can be reproduced by pasting the code provided into an R terminal. We will need the following libraries to run this example. If you don’t have them, they can be installed from CRAN using the <code>install.packages</code> function.</p>
+ https://dx.doi.org/10.1098/rsif.2012.0125."><a href="https://dx.doi.org/10.1098/rsif.2012.0125" rel="https://purl.org/spar/cito/usesMethodFrom" >Boettiger &amp; Hastings (2012)</a></span> to provide an early warning signal for a critical transition, and how to generate ROC curves discussed in the same paper for comparing different early warning signals. Context and details about the methodology are presented in the paper; here we focus on using the methodology provided in the accompanying R package. All of the examples shown here can be reproduced by pasting the code provided into an R terminal. We will need the following libraries to run this example. If you don’t have them, they can be installed from CRAN using the <code>install.packages</code> function.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 <span class="kw">library</span>(reshape2)
 <span class="kw">library</span>(multicore)
@@ -300,7 +300,7 @@ skew &lt;-<span class="st"> </span><span class="kw">bootstrap_trend</span>(ibm_c
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

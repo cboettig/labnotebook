@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Likelihood Ratio Paper</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -112,7 +112,7 @@
 <p><br /> ### The Geiger model fits</p>
 <p>Thinking of extending bootstrap methods to work for geiger tests, i.e. can one justify the lambda transform?</p>
 <ul>
-<li><p>Wrote <a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/8bcb043dd72d45566fa82de4af80672a42443673/demos/anoles_ape.R" title="http://github.com/cboettig/Comparative-Phylogenetics/blob/8bcb043dd72d45566fa82de4af80672a42443673/demos/anoles_ape.R">anoles_ape.R</a> in Comparative-Phylogenetics code demos, showing converting the anoles dataset for use with geiger functions. Will write a general bootstrapping that can handle the geiger models. Unfortunately the geiger model fits are not general model fit objects that can be passed to generic functions such as update and simulate. fitContinuous should return the transformed tree, the data, a class object of the fit, the call etc, and be assigned a class. Will have to get around to this later.</p></li>
+<li><p>Wrote <a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/8bcb043dd72d45566fa82de4af80672a42443673/demos/anoles_ape.R" title="https://github.com/cboettig/Comparative-Phylogenetics/blob/8bcb043dd72d45566fa82de4af80672a42443673/demos/anoles_ape.R">anoles_ape.R</a> in Comparative-Phylogenetics code demos, showing converting the anoles dataset for use with geiger functions. Will write a general bootstrapping that can handle the geiger models. Unfortunately the geiger model fits are not general model fit objects that can be passed to generic functions such as update and simulate. fitContinuous should return the transformed tree, the data, a class object of the fit, the call etc, and be assigned a class. Will have to get around to this later.</p></li>
 <li><p>Note: for Anoles data, almost none of the tree transformations can improve the likelihood. Delta (exp scaling of branch length) does, just:</p></li>
 </ul>
 <p><br /> #### Model likelihoods for Anoles under various tree transformations</p>
@@ -145,7 +145,7 @@
 <p>… hmm, how is it dark already? better find my bike lights and continue this later.</p>
 <h2 id="adaptive-dynamics-comparing-contour-plots">Adaptive Dynamics: Comparing contour plots</h2>
 <p>Meanwhile, some adaptive dynamics simulations have completed at least. Should remember to save png as higher resolution, but the bottom line seems to show substantial differences between analytic approximation and numerical simulation:</p>
-<p><a href="https://github.com/cboettig/AdaptiveDynamics/blob/a4374f840ca0ff81bc2775eff6309a904640bf99/demos/coexist_demo.R" title="http://github.com/cboettig/AdaptiveDynamics/blob/a4374f840ca0ff81bc2775eff6309a904640bf99/demos/coexist_demo.R">code for figures below</a></p>
+<p><a href="https://github.com/cboettig/AdaptiveDynamics/blob/a4374f840ca0ff81bc2775eff6309a904640bf99/demos/coexist_demo.R" title="https://github.com/cboettig/AdaptiveDynamics/blob/a4374f840ca0ff81bc2775eff6309a904640bf99/demos/coexist_demo.R">code for figures below</a></p>
 <p>Comparing results, simulation on the left, Analytic on the right.</p>
 <p><br /><br /></p>
 
@@ -279,7 +279,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

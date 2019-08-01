@@ -1,3 +1,4 @@
+theme = "hugo-material"
 relativeurls = true
 languageCode = "en-us"
 title = "Boettiger Group"
@@ -19,32 +20,54 @@ enableGitInfo = true
 
 [[menu.main]]
     name = "Home"
+    pre = "<i class='material-icons'>home</i>"
     url = "/index.html"
     weight = 1
 [[menu.main]]
     name = "Members"
+    pre = "<i class='material-icons'>people</i>"
     url = "/members"
     weight = 2
 [[menu.main]]
     name = "Publications"
+    pre = "<i class='material-icons'>book</i>"
     url = "/vita"
     weight = 3
 [[menu.main]]
     name = "Teaching"
+    pre = "<i class='material-icons'>school</i>"
     url = "/teaching"
     weight = 4
-[[menu.main]]
-    name = "Lab Notebook"
-    url = "/lab-notebook"
-    weight = 5
+
+    
+
+
+[[menu.footer]]
+  weight = 1
+  identifier = "Berkeley"
+  name = "UC Berkeley"
+  pre = "<i class=\"material-icons\">pin_drop</i>"
+  url = "https://berkeley.edu"
+[[menu.footer]]
+  name = "Lab Notebook"
+  pre = "<i class='material-icons'>assignment</i>"
+  url = "/lab-notebook"
+  weight = 2
+
+    
 
 [params]
+#    background = "/img/nasa_melting.jpg"
+#    background = "/img/noaa-ice-large-cc0.jpg"
+    background = "/img/methane_bubbles.jpg"
+    custom_css = ["cboettig.css"]
+#    custom_js = ["example.js"]
+
     name =  "Carl Boettiger"
     twitter =  "cboettig"
     github =  "cboettig"
     keybase = "cboettig"
     email =  "cboettig@gmail.com"
-    custom_css = ["cboettig.css"]
     repo = "labnotebook"
     branch = "master"
     math = true
@@ -65,4 +88,3 @@ enableGitInfo = true
     alt = "Logo"
 
     
-

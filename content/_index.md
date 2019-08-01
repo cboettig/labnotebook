@@ -1,9 +1,10 @@
 ---
 title: "Boettiger Group, UC Berkeley"
 subtitle: "Dept of Environmental Science, Policy, and Management"
+
 ---
 
-Welcome to the research group of Carl Boettiger, Assistant Professor in the Department of 
+Welcome to the research group of Carl Boettiger, Assistant Professor in the Department of
 [Environmental Science, Policy and Management](http://ourenvironment.berkeley.edu)
 at [UC Berkeley](http://www.berkeley.edu).
 
@@ -29,4 +30,3 @@ I am co-founder of the [rOpenSci project](https://ropensci.org), a senior fellow
 [BIDS](http://bids.berkeley.edu), and a science adviser to
 [NCEAS](http://nceas.ucsb.edu), reflecting my interests in
 open science, data science, and ecoinformatics.
-

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Knitr with flickr and wordpress</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -107,7 +107,7 @@
   <div class="col-md-7 col-md-offset-1">
     <article>
     <p>It’s amazing how nice it is to work with well-developed software. It took me about 20 minutes to extend Yuhui’s interface to allow me to upload images through flickr instead of imgur, and embed them into a wordpress blog using the shortcode from the flickr gallery plugin.</p>
-<p>To do this, I just modified the hook used by the markdown format. First, I define a quick R function that uploads to flickr and returns the flickr identifier number. For the moment this is just calling<a href="https://search.cpan.org/~cpb/Flickr-Upload-1.32/flickr_upload">a command-line flickr uploader</a>, though it should be straight-forward to replace this with something like <a href="http://www.omegahat.org/Rflickr/">Rflickr</a>.</p>
+<p>To do this, I just modified the hook used by the markdown format. First, I define a quick R function that uploads to flickr and returns the flickr identifier number. For the moment this is just calling<a href="https://search.cpan.org/~cpb/Flickr-Upload-1.32/flickr_upload">a command-line flickr uploader</a>, though it should be straight-forward to replace this with something like <a href="https://www.omegahat.org/Rflickr/">Rflickr</a>.</p>
 <pre class="sourceCode r"><code class="sourceCode r">
 flickr &lt;-<span class="st"> </span>function(file, 
     <span class="dt">tags =</span> <span class="st">&quot;&quot;</span>, <span class="dt">description =</span> <span class="st">&quot;&quot;</span>, 
@@ -342,7 +342,7 @@ RWordPress::<span class="kw">uploadFile</span>(file)$url</code></pre>
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

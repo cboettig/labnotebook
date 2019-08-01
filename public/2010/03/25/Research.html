@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Research</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -136,23 +136,23 @@
 </ul>
 <pre class="de1"><code>for i in *.pdf; do convert &quot;$i&quot; &quot;${i/.pdf}&quot;.png; done</code></pre>
 <ul>
-<li>see <a href="https://github.com/cboettig/Comparative-Phylogenetics/commits/master" title="http://github.com/cboettig/Comparative-Phylogenetics/commits/master">git log</a> for more details.</li>
+<li>see <a href="https://github.com/cboettig/Comparative-Phylogenetics/commits/master" title="https://github.com/cboettig/Comparative-Phylogenetics/commits/master">git log</a> for more details.</li>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
 <li><p>Google Summer of Code includes <a href="https://www.nescent.org/wg/phyloinformatics/index.php?title=Phyloinformatics_Summer_of_Code_2010#Mentors" title="https://www.nescent.org/wg/phyloinformatics/index.php?title=Phyloinformatics_Summer_of_Code_2010#Mentors">NesCent “phyloinformatics” research</a></p></li>
-<li><p><a href="https://www3.interscience.wiley.com/journal/123328987/abstract?CRETRY=1&amp;SRETRY=0" title="http://www3.interscience.wiley.com/journal/123328987/abstract?CRETRY=1&amp;SRETRY=0">obvious…</a></p></li>
-<li><p>still reading: <a href="https://blog.openwetware.org/scienceintheopen/2009/11/05/reflections-on-science-20-from-a-distance-part-i/" title="http://blog.openwetware.org/scienceintheopen/2009/11/05/reflections-on-science-20-from-a-distance-part-i/">open science</a>, <a href="http://blog.openwetware.org/scienceintheopen/2009/11/06/reflections-on-science-20-from-a-distance-part-ii/" title="http://blog.openwetware.org/scienceintheopen/2009/11/06/reflections-on-science-20-from-a-distance-part-ii/">part 2</a>, and also enjoyed this</p></li>
+<li><p><a href="https://www3.interscience.wiley.com/journal/123328987/abstract?CRETRY=1&amp;SRETRY=0" title="https://www3.interscience.wiley.com/journal/123328987/abstract?CRETRY=1&amp;SRETRY=0">obvious…</a></p></li>
+<li><p>still reading: <a href="https://blog.openwetware.org/scienceintheopen/2009/11/05/reflections-on-science-20-from-a-distance-part-i/" title="https://blog.openwetware.org/scienceintheopen/2009/11/05/reflections-on-science-20-from-a-distance-part-i/">open science</a>, <a href="https://blog.openwetware.org/scienceintheopen/2009/11/06/reflections-on-science-20-from-a-distance-part-ii/" title="https://blog.openwetware.org/scienceintheopen/2009/11/06/reflections-on-science-20-from-a-distance-part-ii/">part 2</a>, and also enjoyed this</p></li>
 </ul>
 <h3 id="csgf-conference-hpc-survey">CSGF Conference HPC Survey</h3>
 <ul>
 <li>Not directly phylogentics, but also working on today:</li>
-<li>I was contacted by Mary Ann 3 days ago on doing another survey of CSGF fellows. <a href="https://www.surveymonkey.com/s/VMTTFXS" title="http://www.surveymonkey.com/s/VMTTFXS">Last year’s survey</a> was pretty basic (<a href="http://www.surveymonkey.com/MySurvey_Responses.aspx?sm=SXNbpnWs3a%2blQnEwe%2bfNiKvBGCZEs/jdQhlVfunE9YI%3d" title="http://www.surveymonkey.com/MySurvey_Responses.aspx?sm=SXNbpnWs3a%2blQnEwe%2bfNiKvBGCZEs/jdQhlVfunE9YI%3d">results</a>). Also interested to explore alternatives to surveymonkey, though it did make things quite easy and Krell can probably get the subscription. Possibly Google forms?</li>
+<li>I was contacted by Mary Ann 3 days ago on doing another survey of CSGF fellows. <a href="https://www.surveymonkey.com/s/VMTTFXS" title="https://www.surveymonkey.com/s/VMTTFXS">Last year’s survey</a> was pretty basic (<a href="https://www.surveymonkey.com/MySurvey_Responses.aspx?sm=SXNbpnWs3a%2blQnEwe%2bfNiKvBGCZEs/jdQhlVfunE9YI%3d" title="https://www.surveymonkey.com/MySurvey_Responses.aspx?sm=SXNbpnWs3a%2blQnEwe%2bfNiKvBGCZEs/jdQhlVfunE9YI%3d">results</a>). Also interested to explore alternatives to surveymonkey, though it did make things quite easy and Krell can probably get the subscription. Possibly Google forms?</li>
 </ul>
 <p>Some goals I have for the survey:</p>
 <ol type="1">
 <li><strong>Who knows/uses what.</strong> Be able to see what languages, parallelization, and scale of computation fellows are computing on. The crucial goal for this year is to be able to break this down by subject area and by year in the fellowship.</li>
-<li><strong>Effective practices in computing.</strong> Hugely important but too rarely taught (in sciences anyway). Version control, debugging, visualization, etc. A great example of this stuff is to see the quiz on <a href="https://software-carpentry.org/intro.html" title="http://software-carpentry.org/intro.html">Software Carpentry</a>(scroll down to #5)</li>
+<li><strong>Effective practices in computing.</strong> Hugely important but too rarely taught (in sciences anyway). Version control, debugging, visualization, etc. A great example of this stuff is to see the quiz on <a href="https://software-carpentry.org/intro.html" title="https://software-carpentry.org/intro.html">Software Carpentry</a>(scroll down to #5)</li>
 <li><a href="https://openwetware.org/wiki/Science_2.0/Brainstorming" title="https://openwetware.org/wiki/Science_2.0/Brainstorming"><strong>Science 2.0</strong></a> This goes a little further afield and might deserve its own session. Computers and the internet continue to change many aspects in the way we do science and it makes sense that CSGFs should be at the forefront. Large-scale online collaborations. The benefits and risks of science blogging. Standardized and publicly accessible data, source code, publications, and notebooks. Social networking for scientists. There’s a wealth of rapidly emerging tools in this area that I think we should all know about. Two quick examples: Mendeley for organizing our collections of scientific papers and stackoverflow.com for solving programming problems collaboratively.</li>
 </ol>
 <p><br /></p>
@@ -287,7 +287,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

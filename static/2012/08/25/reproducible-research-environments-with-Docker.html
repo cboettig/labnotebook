@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Reproducible research environments with Docker</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -125,7 +125,7 @@
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> docker run -d -p 8787:8787 cboettig/rstudio</code></pre>
 <p>(These commands will be slow on the first run since the image must be downloaded. Afterwards they should be pretty quick.)</p>
 <ul>
-<li>You can now reach your RStudio server at <code>https://&lt;system_ip_address&gt;:8787</code>. For Windows/Mac users, run <code>boot2docker ip</code> to get the value of <code>system_ip_address</code>. (This should be <code>http://92.168.59.103:8787</code> but may vary as it is set dynamically).</li>
+<li>You can now reach your RStudio server at <code>https://&lt;system_ip_address&gt;:8787</code>. For Windows/Mac users, run <code>boot2docker ip</code> to get the value of <code>system_ip_address</code>. (This should be <code>https://92.168.59.103:8787</code> but may vary as it is set dynamically).</li>
 </ul>
 <p>For Linux users, you can just use <code>https://localhost:8787</code>. For cloud instances, check your server’s public IP address, and append the port (<code>:8787</code>)..</p>
 <ul>
@@ -146,7 +146,7 @@
 <p>Linking files on a Mac or PC requires an extra step. This links us to the <code>boot2docker</code> volume, but we still must link boot2docker virtual machine to the host OS. It seems like <code>boot2docker</code> may still be working on this issue. Meanwhile, it is straight-forward to do this linking by using <a href="https://vagrantup.com">vagrant</a> to launch boot2docker. I discuss this below.</p>
 <ul>
 <li><p>Download and run an RStudio server instance: <code>sudo docker run -d -p 8787:8787 cboettig/rstudio</code></p></li>
-<li><p>You can now reach your RStudio server at <code>https://&lt;system_ip_address&gt;:8787</code>. For Windows/Mac users, run <code>boot2docker ip</code> to get the value of <code>system_ip_address</code>. (This should be <code>http://92.168.59.103:8787</code> but may vary as it is set dynamically). For linux users, you can just use <code>localhost</code>. For cloud instances, check your server’s public IP address.</p></li>
+<li><p>You can now reach your RStudio server at <code>https://&lt;system_ip_address&gt;:8787</code>. For Windows/Mac users, run <code>boot2docker ip</code> to get the value of <code>system_ip_address</code>. (This should be <code>https://92.168.59.103:8787</code> but may vary as it is set dynamically). For linux users, you can just use <code>localhost</code>. For cloud instances, check your server’s public IP address.</p></li>
 <li><p>login using the default <code>rstudio:rstudio</code> for <code>user:pw</code>, or configure particular users (see below).</p></li>
 </ul>
 <h2 id="rstudio-on-digital-ocean">RStudio on Digital Ocean</h2>
@@ -330,7 +330,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

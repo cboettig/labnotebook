@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Parametric Bayesian Example</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>As discussed with Marc in yesterday’s meeting, it would be useful to compare the Gaussian process, as a nonparametric Bayesian estimate, to the optimal management solution under a <em>parametric</em> Bayesian case, e.g. with the correct underlying model. This is implemented in BUGS (jags) through the R interface as described in <span class="showtooltip" data-html="true" title="&lt;p&gt;Bolker B, Gardner B, Maunder M, Berg C, Brooks M, Comita L, Crone E, Cubaynes S, Davies T, de Valpine P, Ford J, Gimenez O, Kery M, Kim E, Lennert-Cody C, Magnusson A, Martell S, Nash J, Nielsen A, Regetz J, Skaug H and Zipkin E (2013). “Strategies For Fitting Nonlinear Ecological Models in R, ad Model Builder, And Bugs.” Methods in Ecology And Evolution, pp. n/a–n/a. .">Bolker B, Gardner B, Maunder M, Berg C, Brooks M, Comita L, Crone E, Cubaynes S, Davies T, de Valpine P, Ford J, Gimenez O, Kery M, Kim E, Lennert-Cody C, Magnusson A, Martell S, Nash J, Nielsen A, Regetz J, Skaug H and Zipkin E (2013). “Strategies For Fitting Nonlinear Ecological Models in R, ad Model Builder, And Bugs.” Methods in Ecology And Evolution, pp. n/a–n/a. .“&gt;<a href="https://dx.doi.org/10.1111/2041-210X.12044" rel="http://purl.org/spar/cito/usesMethodIn" >Bolker <em>et. al.</em> (2013)</a></span> , and follows the state-space model analysis along the lines outlined in <span class="showtooltip" data-html="true" title="<p>Pedersen M, Berg C, Thygesen U, Nielsen A and Madsen H (2011). “Estimation Methods For Nonlinear State-Space Models in Ecology.” Ecological Modelling, 222, pp. 1394–1400. ISSN 03043800.”&gt;<a href="http://dx.doi.org/10.1016/j.ecolmodel.2011.01.007" rel="http://purl.org/spar/cito/usesMethodIn" >Pedersen <em>et. al.</em> (2011)</a></span> .</p>
+    <p>As discussed with Marc in yesterday’s meeting, it would be useful to compare the Gaussian process, as a nonparametric Bayesian estimate, to the optimal management solution under a <em>parametric</em> Bayesian case, e.g. with the correct underlying model. This is implemented in BUGS (jags) through the R interface as described in <span class="showtooltip" data-html="true" title="&lt;p&gt;Bolker B, Gardner B, Maunder M, Berg C, Brooks M, Comita L, Crone E, Cubaynes S, Davies T, de Valpine P, Ford J, Gimenez O, Kery M, Kim E, Lennert-Cody C, Magnusson A, Martell S, Nash J, Nielsen A, Regetz J, Skaug H and Zipkin E (2013). “Strategies For Fitting Nonlinear Ecological Models in R, ad Model Builder, And Bugs.” Methods in Ecology And Evolution, pp. n/a–n/a. .">Bolker B, Gardner B, Maunder M, Berg C, Brooks M, Comita L, Crone E, Cubaynes S, Davies T, de Valpine P, Ford J, Gimenez O, Kery M, Kim E, Lennert-Cody C, Magnusson A, Martell S, Nash J, Nielsen A, Regetz J, Skaug H and Zipkin E (2013). “Strategies For Fitting Nonlinear Ecological Models in R, ad Model Builder, And Bugs.” Methods in Ecology And Evolution, pp. n/a–n/a. .“&gt;<a href="https://dx.doi.org/10.1111/2041-210X.12044" rel="https://purl.org/spar/cito/usesMethodIn" >Bolker <em>et. al.</em> (2013)</a></span> , and follows the state-space model analysis along the lines outlined in <span class="showtooltip" data-html="true" title="<p>Pedersen M, Berg C, Thygesen U, Nielsen A and Madsen H (2011). “Estimation Methods For Nonlinear State-Space Models in Ecology.” Ecological Modelling, 222, pp. 1394–1400. ISSN 03043800.”&gt;<a href="https://dx.doi.org/10.1016/j.ecolmodel.2011.01.007" rel="https://purl.org/spar/cito/usesMethodIn" >Pedersen <em>et. al.</em> (2011)</a></span> .</p>
 <p>We base the estimate on the same simulated data as for the GP and MLE approaches,</p>
 <pre class="sourceCode r"><code class="sourceCode r">f &lt;-<span class="st"> </span>RickerAllee
 p &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">5</span>)
@@ -329,7 +329,7 @@ theta_dist &lt;-<span class="st"> </span><span class="kw">hist</span>(theta, <sp
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

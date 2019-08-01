@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Is BM nested in OU?  Understanding likelihoods of ouch</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -124,7 +124,7 @@ BM LogLik OU LogLik
 </blockquote>
 <p>assume that root state is a random variable drawn from the stationary distribution of the process in the regime that the root node occupies</p>
 <p>the latter involves changes to the weight matrix, to the covariance matrix, and to the regime.spec routine</p>
-<p>Unfortunately I’m not able to grab the version of ouch before this change was made but after the code was moved into C, as that stage wasn’t committed to CRAN (<a href="https://cran.r-project.org/src/contrib/Archive/ouch/">archive history</a>) and wasn’t yet on <a href="http://ouch.r-forge.r-project.org/">RForge</a> svn.</p>
+<p>Unfortunately I’m not able to grab the version of ouch before this change was made but after the code was moved into C, as that stage wasn’t committed to CRAN (<a href="https://cran.r-project.org/src/contrib/Archive/ouch/">archive history</a>) and wasn’t yet on <a href="https://ouch.r-forge.r-project.org/">RForge</a> svn.</p>
 <p>We can write down the likelihood of the OU model from the multivariate normal:</p>
 <p><span class="math">\[ -2 \log L = [X(T) - E(X(T))]^{\prime} V^{-1} [X(T) - E(X(T))] + N\log(2\pi) + \log(\det(V)) \]</span></p>
 <p>Where the expected trait values <em>E(X)</em> and covariance matrix <em>V</em> are defined from $ , $ and $ $ and the root state: <span class="math">\[ E(X_t | X_0 ) = X_0 e^{-\alpha t} + \theta (1- e^{-\alpha t}) \]</span> The <em>i,j</em> element of the covariance matrix is <span class="math">\[ V_{ij} = \frac{\sigma^2}{2\alpha} (1 - e^{-2 \alpha s_{ij} }) e^{-2\alpha (t-s_{ij} )} \]</span> where the nodes are all measured at time t (present day) and have diverged for a time $ t-s_{ij} $ (thus shared time $ s_{ij} $ since $ X_0 $.)</p>
@@ -141,7 +141,7 @@ BM LogLik OU LogLik
 <p>[ref]Note that the command “sessionInfo()” will return the version number for attached packages.[/ref]</p>
 <h2 id="references">References</h2>
 <ul>
-<li>Butler M and King A (2004). “Phylogenetic Comparative Analysis: A Modeling Approach For Adaptive Evolution.” <em>The American Naturalist</em>, <strong>164</strong>. ISSN 0003-0147, <a href="https://dx.doi.org/10.1086/426002">http://dx.doi.org/10.1086/426002</a>.</li>
+<li>Butler M and King A (2004). “Phylogenetic Comparative Analysis: A Modeling Approach For Adaptive Evolution.” <em>The American Naturalist</em>, <strong>164</strong>. ISSN 0003-0147, <a href="https://dx.doi.org/10.1086/426002">https://dx.doi.org/10.1086/426002</a>.</li>
 </ul>
 
     </article>
@@ -266,7 +266,7 @@ BM LogLik OU LogLik
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

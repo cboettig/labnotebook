@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Reading Notes, presentation prep treebase error handling</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -108,7 +108,7 @@
     <article>
     <h2 id="reading">Reading</h2>
 <ul>
-<li>Oikos journal <a href="https://oikosjournal.wordpress.com/2011/03/01/welcome-to-the-oikos-blog/">recently started</a> a rather nice blog. A journal long responsible for some of the best examples of developing and confronting ecological theory with empirical results, with an commendable emphasis on general principles and synthesis, it’s nice to see them enter the Web2.0 ecosystem. Editor Jeremy Fox has a nice <a href="http://oikosjournal.wordpress.com/2011/03/20/fox-quick-biography-and-some-thoughts-on-the-past-and-future-of-oikos/">introduction</a> to the goals of the blog – check out the “<a href="http://oikosjournal.wordpress.com/category/new-ideas/">new idea</a>s” categories for worthwhile reading. Thanks to Ethan White’s <a href="http://jabberwocky.weecology.org/2011/04/27/oikos-has-a-blog-blogrolling/">post on Jabberwocky Ecology</a> for bringing this to my attention. Particularly enjoyed the classic Borges quote linked as a pdf in the discussion of hand waving in ecology, which was so good I had to jot it down here</li>
+<li>Oikos journal <a href="https://oikosjournal.wordpress.com/2011/03/01/welcome-to-the-oikos-blog/">recently started</a> a rather nice blog. A journal long responsible for some of the best examples of developing and confronting ecological theory with empirical results, with an commendable emphasis on general principles and synthesis, it’s nice to see them enter the Web2.0 ecosystem. Editor Jeremy Fox has a nice <a href="https://oikosjournal.wordpress.com/2011/03/20/fox-quick-biography-and-some-thoughts-on-the-past-and-future-of-oikos/">introduction</a> to the goals of the blog – check out the “<a href="https://oikosjournal.wordpress.com/category/new-ideas/">new idea</a>s” categories for worthwhile reading. Thanks to Ethan White’s <a href="https://jabberwocky.weecology.org/2011/04/27/oikos-has-a-blog-blogrolling/">post on Jabberwocky Ecology</a> for bringing this to my attention. Particularly enjoyed the classic Borges quote linked as a pdf in the discussion of hand waving in ecology, which was so good I had to jot it down here</li>
 </ul>
 <blockquote>
 <h4>On Exactitude in Science Jorge Luis Borges, Collected Fictions, translated by Andrew Hurley.</h4>
@@ -166,18 +166,18 @@ ans &lt;-<span class="st"> </span><span class="kw">try</span>(<span class="kw">r
 <pre class="sourceCode r"><code class="sourceCode r">
   o =<span class="st"> </span><span class="kw">read.nexus</span>(<span class="kw">textConnection</span>(txt))</code></pre>
 <h2 id="play-ubuntu-release">Play: ubuntu release</h2>
-<p>And wow, the new Ubuntu release (11.04, Natty Nawhal) is no small shift. OpenOffice-&gt;LibreOffice, Rhythmbox replaced with Banshee, and omg, the veritable GNOME interface replaced with something I’ve never heard of (<a href="https://en.wikipedia.org/wiki/Unity_%28desktop_environment%29">Unity</a>, developed by Canonical). Described as a “smart-phone style” interface and “easier than a Mac”, I don’t know – if those things should count as universal praise. Overall pretty <a href="http://www.zdnet.com/blog/open-source/what-you-need-to-know-about-the-new-ubuntu/8760">promising</a>.</p>
+<p>And wow, the new Ubuntu release (11.04, Natty Nawhal) is no small shift. OpenOffice-&gt;LibreOffice, Rhythmbox replaced with Banshee, and omg, the veritable GNOME interface replaced with something I’ve never heard of (<a href="https://en.wikipedia.org/wiki/Unity_%28desktop_environment%29">Unity</a>, developed by Canonical). Described as a “smart-phone style” interface and “easier than a Mac”, I don’t know – if those things should count as universal praise. Overall pretty <a href="https://www.zdnet.com/blog/open-source/what-you-need-to-know-about-the-new-ubuntu/8760">promising</a>.</p>
 <h2 id="references">References</h2>
 <ul>
-<li><p>Shelton A and Mangel M (2011). “Fluctuations of Fish Populations And The Magnifying Effects of Fishing.” <em>Proceedings of The National Academy of Sciences</em>, <strong>108</strong>. ISSN 0027-8424, <a href="https://dx.doi.org/10.1073/pnas.1100334108">http://dx.doi.org/10.1073/pnas.1100334108</a>.</p></li>
-<li><p>Dakos V, Kéfi S, Rietkerk M, van Nes E and Scheffer M (2011). “Slowing Down in Spatially Patterned Ecosystems at The Brink of Collapse.” <em>The American Naturalist</em>, <strong>177</strong>. ISSN 00030147, <a href="https://dx.doi.org/10.1086/659945">http://dx.doi.org/10.1086/659945</a>.</p></li>
-<li><p>Carpenter S, Cole J, Pace M, Batt R, Brock W, Cline T, Coloso J, Hodgson J, Kitchell J, Seekell D, Smith L and Weidel B (2011). “Early Warnings of Regime Shifts: A Whole-Ecosystem Experiment.” <em>Science</em>, <strong>332</strong>. ISSN 0036-8075, <a href="https://dx.doi.org/10.1126/science.1203672">http://dx.doi.org/10.1126/science.1203672</a>.</p></li>
-<li><p>Watson J and Estes J (2011). “Stability, Resilience, And Phase Shifts in Rocky Subtidal Communities Along The West Coast of Vancouver Island, Canada.” <em>Ecological Monographs</em>, <strong>81</strong>. ISSN 0012-9615, <a href="https://dx.doi.org/10.1890/10-0262.1">http://dx.doi.org/10.1890/10-0262.1</a>.</p></li>
-<li><p>Rabosky D, Donnellan S, Talaba A and Lovette I (2007). “Exceptional Among-Lineage Variation in Diversification Rates During The Radiation of Australia’S Most Diverse Vertebrate Clade.” <em>Proceedings of The Royal Society B: Biological Sciences</em>, <strong>274</strong>. ISSN 0962-8452, <a href="https://dx.doi.org/10.1098/rspb.2007.0924">http://dx.doi.org/10.1098/rspb.2007.0924</a>.</p></li>
-<li><p>Rabosky D (2010). “Extinction Rates Should Not be Estimated From Molecular Phylogenies.” <em>Evolution</em>, <strong>64</strong>. <a href="https://dx.doi.org/10.1111/j.1558-5646.2009.00926.x">http://dx.doi.org/10.1111/j.1558-5646.2009.00926.x</a>.</p></li>
-<li><p>Alfaro M, Santini F, Brock C, Alamillo H, Dornburg A, Rabosky D, Carnevale G and Harmon L (2009). “Nine Exceptional Radiations Plus High Turnover Explain Species Diversity in Jawed Vertebrates.” <em>Proceedings of The National Academy of Sciences</em>, <strong>106</strong>. ISSN 0027-8424, <a href="https://dx.doi.org/10.1073/pnas.0811087106">http://dx.doi.org/10.1073/pnas.0811087106</a>.</p></li>
-<li><p>Sidlauskas B, Bernard C, Bloom D, Bronaugh W, Clementson M and Vari R (2011). “Ichthyologists Hooked on Facebook.” <em>Science</em>, <strong>332</strong>. ISSN 0036-8075, <a href="https://dx.doi.org/10.1126/science.332.6029.537-c">http://dx.doi.org/10.1126/science.332.6029.537-c</a>.</p></li>
-<li><p>Price S, Wainwright P, Bellwood D, Kazancioglu E, Collar D and Near T (2010). “Functional Innovations And Morphological Diversification in Parrotfish.” <em>Evolution</em>. <a href="https://dx.doi.org/10.1111/j.1558-5646.2010.01036.x">http://dx.doi.org/10.1111/j.1558-5646.2010.01036.x</a>.</p></li>
+<li><p>Shelton A and Mangel M (2011). “Fluctuations of Fish Populations And The Magnifying Effects of Fishing.” <em>Proceedings of The National Academy of Sciences</em>, <strong>108</strong>. ISSN 0027-8424, <a href="https://dx.doi.org/10.1073/pnas.1100334108">https://dx.doi.org/10.1073/pnas.1100334108</a>.</p></li>
+<li><p>Dakos V, Kéfi S, Rietkerk M, van Nes E and Scheffer M (2011). “Slowing Down in Spatially Patterned Ecosystems at The Brink of Collapse.” <em>The American Naturalist</em>, <strong>177</strong>. ISSN 00030147, <a href="https://dx.doi.org/10.1086/659945">https://dx.doi.org/10.1086/659945</a>.</p></li>
+<li><p>Carpenter S, Cole J, Pace M, Batt R, Brock W, Cline T, Coloso J, Hodgson J, Kitchell J, Seekell D, Smith L and Weidel B (2011). “Early Warnings of Regime Shifts: A Whole-Ecosystem Experiment.” <em>Science</em>, <strong>332</strong>. ISSN 0036-8075, <a href="https://dx.doi.org/10.1126/science.1203672">https://dx.doi.org/10.1126/science.1203672</a>.</p></li>
+<li><p>Watson J and Estes J (2011). “Stability, Resilience, And Phase Shifts in Rocky Subtidal Communities Along The West Coast of Vancouver Island, Canada.” <em>Ecological Monographs</em>, <strong>81</strong>. ISSN 0012-9615, <a href="https://dx.doi.org/10.1890/10-0262.1">https://dx.doi.org/10.1890/10-0262.1</a>.</p></li>
+<li><p>Rabosky D, Donnellan S, Talaba A and Lovette I (2007). “Exceptional Among-Lineage Variation in Diversification Rates During The Radiation of Australia’S Most Diverse Vertebrate Clade.” <em>Proceedings of The Royal Society B: Biological Sciences</em>, <strong>274</strong>. ISSN 0962-8452, <a href="https://dx.doi.org/10.1098/rspb.2007.0924">https://dx.doi.org/10.1098/rspb.2007.0924</a>.</p></li>
+<li><p>Rabosky D (2010). “Extinction Rates Should Not be Estimated From Molecular Phylogenies.” <em>Evolution</em>, <strong>64</strong>. <a href="https://dx.doi.org/10.1111/j.1558-5646.2009.00926.x">https://dx.doi.org/10.1111/j.1558-5646.2009.00926.x</a>.</p></li>
+<li><p>Alfaro M, Santini F, Brock C, Alamillo H, Dornburg A, Rabosky D, Carnevale G and Harmon L (2009). “Nine Exceptional Radiations Plus High Turnover Explain Species Diversity in Jawed Vertebrates.” <em>Proceedings of The National Academy of Sciences</em>, <strong>106</strong>. ISSN 0027-8424, <a href="https://dx.doi.org/10.1073/pnas.0811087106">https://dx.doi.org/10.1073/pnas.0811087106</a>.</p></li>
+<li><p>Sidlauskas B, Bernard C, Bloom D, Bronaugh W, Clementson M and Vari R (2011). “Ichthyologists Hooked on Facebook.” <em>Science</em>, <strong>332</strong>. ISSN 0036-8075, <a href="https://dx.doi.org/10.1126/science.332.6029.537-c">https://dx.doi.org/10.1126/science.332.6029.537-c</a>.</p></li>
+<li><p>Price S, Wainwright P, Bellwood D, Kazancioglu E, Collar D and Near T (2010). “Functional Innovations And Morphological Diversification in Parrotfish.” <em>Evolution</em>. <a href="https://dx.doi.org/10.1111/j.1558-5646.2010.01036.x">https://dx.doi.org/10.1111/j.1558-5646.2010.01036.x</a>.</p></li>
 </ul>
 
     </article>
@@ -314,7 +314,7 @@ ans &lt;-<span class="st"> </span><span class="kw">try</span>(<span class="kw">r
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

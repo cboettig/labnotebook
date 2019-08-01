@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Implementing the new approach</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -114,8 +114,8 @@
 <li>Still actually need to implement the MCMC portion, so far just calculates the likelihood.</li>
 <li>Also should implement the multi-tree initialization and tree-augmentation steps.</li>
 </ul>
-<p>Implementation of the approach (<a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/75b7bfdc7b1d5ccd3ce986db9cd5f7dd034cd5d1/R/method3.R" title="http://github.com/cboettig/Comparative-Phylogenetics/blob/75b7bfdc7b1d5ccd3ce986db9cd5f7dd034cd5d1/R/method3.R">version stable copy</a>) (<a href="http://github.com/cboettig/Comparative-Phylogenetics/blob/master/R/method3.R" title="http://github.com/cboettig/Comparative-Phylogenetics/blob/master/R/method3.R">most current version</a>).</p>
-<p>Computational note: All in pure R, may move all or slowest parts to C after profiling and optimization. Requires the <a href="https://cran.r-project.org/web/packages/msm/" title="http://cran.r-project.org/web/packages/msm/">msm</a> package (multistate/hidden markov) for <a href="http://pbil.univ-lyon1.fr/library/msm/html/MatrixExp.html" title="http://pbil.univ-lyon1.fr/library/msm/html/MatrixExp.html">its matrix exponentials</a>.</p>
+<p>Implementation of the approach (<a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/75b7bfdc7b1d5ccd3ce986db9cd5f7dd034cd5d1/R/method3.R" title="https://github.com/cboettig/Comparative-Phylogenetics/blob/75b7bfdc7b1d5ccd3ce986db9cd5f7dd034cd5d1/R/method3.R">version stable copy</a>) (<a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/master/R/method3.R" title="https://github.com/cboettig/Comparative-Phylogenetics/blob/master/R/method3.R">most current version</a>).</p>
+<p>Computational note: All in pure R, may move all or slowest parts to C after profiling and optimization. Requires the <a href="https://cran.r-project.org/web/packages/msm/" title="https://cran.r-project.org/web/packages/msm/">msm</a> package (multistate/hidden markov) for <a href="https://pbil.univ-lyon1.fr/library/msm/html/MatrixExp.html" title="https://pbil.univ-lyon1.fr/library/msm/html/MatrixExp.html">its matrix exponentials</a>.</p>
 <p><br /><br /></p>
 
     </article>
@@ -240,7 +240,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

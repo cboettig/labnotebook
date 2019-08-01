@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Likelihood Ratio Paper- Power in Trees</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -204,7 +204,7 @@
 <img src="/skins/common/images/magnify-clip.png" alt="image" /><figcaption>image</figcaption>
 </figure>
 <p>Null distributions of the LR all lie on top of eachother regardless of sigma</p>
-<p>From these it is possible to estimate the power (see <a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/6f6c8d70d342761e508e949f710aced716ddf472/R/powertest.R" title="http://github.com/cboettig/Comparative-Phylogenetics/blob/6f6c8d70d342761e508e949f710aced716ddf472/R/powertest.R">powertest.R code</a>)</p>
+<p>From these it is possible to estimate the power (see <a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/6f6c8d70d342761e508e949f710aced716ddf472/R/powertest.R" title="https://github.com/cboettig/Comparative-Phylogenetics/blob/6f6c8d70d342761e508e949f710aced716ddf472/R/powertest.R">powertest.R code</a>)</p>
 <p><br /> Note that the null distribution (the blue curve) doesn’t actually differ and so doesn’t need to be re-simulated with different values.</p>
 <p><br /> <img src="https://openwetware.org/images/thumb/c/c1/Anoles_power.png/180px-Anoles_power.png" alt="anoles power" /></p>
 <figure>
@@ -218,7 +218,7 @@
 <li>Other sorta bad news is that OU_LP does a handy job at beating all other models under Monte Carlo Likelihood Ratio test, so the final conclusion doesn’t have the punchiness a contradiction would. At least the contrived OU2 contradicts this. Should also add the “all different” painting to the mix to demonstrate. –Carl Boettiger 01:24, 27 August 2010 (EDT) Fixed, order of nodes conflicted.</li>
 </ul>
 <h4 id="slideshow-of-results">Slideshow of results</h4>
-<p><a href="https://photobucket.com/redirect/album?showShareLB=1"><img src="https://pic.pbsrc.com/share/icons/embed/btn_geturs.gif" alt="image" /></a><a href="http://s1212.photobucket.com/albums/cc458/cboettig/"><img src="https://pic.pbsrc.com/share/icons/embed/btn_viewall.gif" alt="image" /></a></p>
+<p><a href="https://photobucket.com/redirect/album?showShareLB=1"><img src="https://pic.pbsrc.com/share/icons/embed/btn_geturs.gif" alt="image" /></a><a href="https://s1212.photobucket.com/albums/cc458/cboettig/"><img src="https://pic.pbsrc.com/share/icons/embed/btn_viewall.gif" alt="image" /></a></p>
 <h2 id="code-updates">Code updates</h2>
 <p>–Carl Boettiger 03:26, 27 August 2010 (EDT)</p>
 <ul>
@@ -228,8 +228,8 @@
 <h4 id="updated-power-curves-for-trees">Updated power curves for trees</h4>
 <p>Using the faster approach avoiding re-sampling the null distribution for each alpha, I generate power curves for trees of different sizes and complexity. The larger, richer trees show more power.</p>
 <ul>
-<li><a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/916ec3622b5b51578c2fe871584f1846b1bddf1f/R/powertest.R" title="http://github.com/cboettig/Comparative-Phylogenetics/blob/916ec3622b5b51578c2fe871584f1846b1bddf1f/R/powertest.R">Code for method</a></li>
-<li><a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/83e0ecf41603d4f6280f9e497be89c152e661107/demos/power_examples.R" title="http://github.com/cboettig/Comparative-Phylogenetics/blob/83e0ecf41603d4f6280f9e497be89c152e661107/demos/power_examples.R">Code for example</a></li>
+<li><a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/916ec3622b5b51578c2fe871584f1846b1bddf1f/R/powertest.R" title="https://github.com/cboettig/Comparative-Phylogenetics/blob/916ec3622b5b51578c2fe871584f1846b1bddf1f/R/powertest.R">Code for method</a></li>
+<li><a href="https://github.com/cboettig/Comparative-Phylogenetics/blob/83e0ecf41603d4f6280f9e497be89c152e661107/demos/power_examples.R" title="https://github.com/cboettig/Comparative-Phylogenetics/blob/83e0ecf41603d4f6280f9e497be89c152e661107/demos/power_examples.R">Code for example</a></li>
 </ul>
 <figure>
 <img src="https://openwetware.org/images/d/d8/Fast_power_examples.png" alt="Image:Fast_power_examples.png" /><figcaption>Image:Fast_power_examples.png</figcaption>
@@ -362,7 +362,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Goals</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -120,7 +120,7 @@
 </ul>
 <h2 id="conditional-probability">Conditional probability</h2>
 <p>Solution to the time dependent OU process, see Gardiner 4th ed. pg 111, eq. (4.5.109).</p>
-<p>Solve using <img src="https://openwetware.org/images/math/2/6/1/261158506a921c58c07cce2014f09198.png" alt="f(X_t) = X_t \exp\left( - \int_0^t \alpha(s) ds \right)" /> and apply <a href="http://en.wikipedia.org/wiki/It%C5%8D%E2%80%93Doeblin%27s_formula" title="http://en.wikipedia.org/wiki/It%C5%8D%E2%80%93Doeblin%27s_formula">Ito formula</a>, giving</p>
+<p>Solve using <img src="https://openwetware.org/images/math/2/6/1/261158506a921c58c07cce2014f09198.png" alt="f(X_t) = X_t \exp\left( - \int_0^t \alpha(s) ds \right)" /> and apply <a href="https://en.wikipedia.org/wiki/It%C5%8D%E2%80%93Doeblin%27s_formula" title="https://en.wikipedia.org/wiki/It%C5%8D%E2%80%93Doeblin%27s_formula">Ito formula</a>, giving</p>
 <figure>
 <img src="https://openwetware.org/images/math/8/b/2/8b2d9515dd6a89360e9c97a122103193.png" alt="X_t = X_0 \exp\left( - \int_0^t \alpha(s) ds \right) +\theta\left( 1- \exp\left( - \int_0^t \alpha(s) ds \right) \right) + \int_0^t \sigma \exp\left( - \int_0^t \alpha(s) ds \right) dW_t" /><figcaption>X_t = X_0 \exp\left( - \int_0^t \alpha(s) ds \right) +\theta\left( 1- \exp\left( - \int_0^t \alpha(s) ds \right) \right) + \int_0^t \sigma \exp\left( - \int_0^t \alpha(s) ds \right) dW_t</figcaption>
 </figure>
@@ -209,7 +209,7 @@ analytic_V(Dt, pars)</code></pre>
 <p><br /> Misc Notes ———-</p>
 <ul>
 <li><p>Upgraded to Ubuntu 10.04. Went fine on the experimental partition with a reformat to extension 4 and a fresh install. Fast boot times, spiffy system. Full upgrade on main (ext3) partition failed miserably though, can’t even boot up successfully following the upgrade.</p></li>
-<li><p>Adding additional packages when fine, mostly copied configuration files over. A couple extra steps to get dual monitors working again, as the resolution wasn’t properly detected. <a href="https://ubuntuforums.org/showthread.php?t=1112186" title="http://ubuntuforums.org/showthread.php?t=1112186">Solution here</a>, essentially:</p></li>
+<li><p>Adding additional packages when fine, mostly copied configuration files over. A couple extra steps to get dual monitors working again, as the resolution wasn’t properly detected. <a href="https://ubuntuforums.org/showthread.php?t=1112186" title="https://ubuntuforums.org/showthread.php?t=1112186">Solution here</a>, essentially:</p></li>
 </ul>
 <pre class="de1"><code> #!/bin/bash         
  xrandr --newmode &quot;1920x1200_60.00&quot; 193.16 1920 2048 2256 2592 1200 1201 1204 1242 -HSync +Vsync
@@ -349,7 +349,7 @@ analytic_V(Dt, pars)</code></pre>
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

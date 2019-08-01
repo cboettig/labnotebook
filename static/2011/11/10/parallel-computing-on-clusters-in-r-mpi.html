@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Parallel hpc on clusters in R, MPI</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -113,7 +113,7 @@
 <p>Illustrating a couple different approaches:</p>
 <p>[gist id=1356682]</p>
 <h2 id="working-with-the-queue">Working with the queue</h2>
-<p>Writing a shell script for NERSC’s <a href="https://www.nersc.gov/users/computational-systems/carver/getting-started/">Carver</a>, (IBM iDataPlex). Note the commands that begin #PBS look to be commented out but are really preprocessor commands used to set up the queue before the actual bash commands are run. Using double hashes to distinguish true comments. Writing shell script for <a href="http://cccc.caes.ucdavis.edu/">Farm cluster</a>, CentOS5.5, syntax differs a bit.</p>
+<p>Writing a shell script for NERSC’s <a href="https://www.nersc.gov/users/computational-systems/carver/getting-started/">Carver</a>, (IBM iDataPlex). Note the commands that begin #PBS look to be commented out but are really preprocessor commands used to set up the queue before the actual bash commands are run. Using double hashes to distinguish true comments. Writing shell script for <a href="https://cccc.caes.ucdavis.edu/">Farm cluster</a>, CentOS5.5, syntax differs a bit.</p>
 <p>[gist id=1356685]</p>
 <ul>
 <li><p>qsub run.sh (submits the shell script to the queue)</p></li>
@@ -257,7 +257,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

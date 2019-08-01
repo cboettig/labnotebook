@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Json Ld on Boettiger Group</title>
+    <title>json-ld on Boettiger Group</title>
     <link>/tags/json-ld/</link>
-    <description>Recent content in Json Ld on Boettiger Group</description>
+    <description>Recent content in json-ld on Boettiger Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Dec 2017 00:00:00 +0000</lastBuildDate>

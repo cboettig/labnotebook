@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Wednesday: Treebase</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -116,7 +116,7 @@
 <li><p>Modified to check for branch lengths and remove trees without branch lengths from the returned set. Still has to download all trees, so in this case max_trees is the number attempted, not the number returned.</p></li>
 </ul>
 <h4 id="xpath-and-metadata">XPATH AND METADATA</h4>
-<p>Trying to learn XPath from the <a href="https://www.w3schools.com/xpath/xpath_syntax.asp">W3 tutorial</a> in order to parse the OAI-PMH output (like this, for a single <a href="http://treebase.org/treebase-web/top/oai?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=TB:s1234">treebase entry</a>). Not much success.  Oooh, Duncan introduced me to getNodeSet() and xmlToList(), now I can query the metadata for the tree(!)</p>
+<p>Trying to learn XPath from the <a href="https://www.w3schools.com/xpath/xpath_syntax.asp">W3 tutorial</a> in order to parse the OAI-PMH output (like this, for a single <a href="https://treebase.org/treebase-web/top/oai?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=TB:s1234">treebase entry</a>). Not much success.  Oooh, Duncan introduced me to getNodeSet() and xmlToList(), now I can query the metadata for the tree(!)</p>
 <pre><code>     tree &lt;- search_treebase(&quot;1234&quot;, &quot;id.tree&quot;)
      metadata(tree$id)</code></pre>
 <ul>
@@ -136,10 +136,10 @@
 </ul>
 <h2 id="rflickr">RFlickr</h2>
 <ol type="1">
-<li><p>Revisiting Rflickr now that Duncan has added write permissions.  install.packages(“Rflickr”, repos = “<a href="https://www.omegahat.org/R">http://www.omegahat.org/R</a>”)</p></li>
-<li><p>Look up key and secret for my <a href="https://www.flickr.com/services/apps/by/cboettig">registered app</a> (others must<a href="http://www.flickr.com/services/apps/create/apply">register an app</a>)</p></li>
+<li><p>Revisiting Rflickr now that Duncan has added write permissions.  install.packages(“Rflickr”, repos = “<a href="https://www.omegahat.org/R">https://www.omegahat.org/R</a>”)</p></li>
+<li><p>Look up key and secret for my <a href="https://www.flickr.com/services/apps/by/cboettig">registered app</a> (others must<a href="https://www.flickr.com/services/apps/create/apply">register an app</a>)</p></li>
 <li><p>Authenticate with write permissions – Go quickly after issuing this command into browser and approve access before the timeout. NOTE: PERMISSION IS SINGULAR - - won’t error if it is plural.   tok &lt;- Rflickr::authenticate(api_key, secret, permission=“write”)</p></li>
-<li><p>We can use the full <a href="https://www.flickr.com/services/api/">flickr api</a> just as described, except that we need to start everything with secret, tok, and then as specified in the API (api_key, other options).  I.e. for <a href="http://www.flickr.com/services/api/flickr.people.getInfo.html">flickr.people.getInfo</a> we would do: flickr.people.getInfo(secret, tok, api_key, “30385402@N05”)</p></li>
+<li><p>We can use the full <a href="https://www.flickr.com/services/api/">flickr api</a> just as described, except that we need to start everything with secret, tok, and then as specified in the API (api_key, other options).  I.e. for <a href="https://www.flickr.com/services/api/flickr.people.getInfo.html">flickr.people.getInfo</a> we would do: flickr.people.getInfo(secret, tok, api_key, “30385402@N05”)</p></li>
 <li><p>Instead we can use the clever interface to avoid having to give these keys each time.  (See documentation): we make a session once: &gt; session = flickrSession(secret, tok, api_key)</p></li>
 <li><p>and can now call with session$ and skip the “flickr” everywhere it occurs, and skip the keys, i.e.:  session$people.getInfo(“46456847@N08”)</p></li>
 <li><p>Note: we could have left flickr in too: session$flickr.people.getInfo(“46456847@N08”).  Partial matching in R is fantastic.</p></li>
@@ -289,7 +289,7 @@ $$ $$ or $$ $$  </code></pre>
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

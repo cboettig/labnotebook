@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Thursday: reviewing edits, ropensci, computers.</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -120,7 +120,7 @@
 <li><p>we do stepwise B&amp;K approach (as our recommended approach)</p></li>
 </ul>
 <h2 id="fishbase-interface">FishBASE interface</h2>
-<p>Tomomi had an interesting query re FishBASE today - she’d like to be able to sweep through the database and extract certain information such as genus, maximum published weight, etc.  While there doesn’t seem to be a documented API per se. the<a href="https://fishbase.us/Summary/SpeciesSummary.php?ID=2">individual reference pages</a> include a link to an <a href="http://fishbase.sinica.edu.tw/maintenance/FB/showXML.php?identifier=FB-2&amp;ProviderDbase=03">XML summary sheet</a>, where at least some of this information is intelligently tagged.  So we can easily set up some R functions with the help of XML and xpath to start grabbing the relevant information.</p>
+<p>Tomomi had an interesting query re FishBASE today - she’d like to be able to sweep through the database and extract certain information such as genus, maximum published weight, etc.  While there doesn’t seem to be a documented API per se. the<a href="https://fishbase.us/Summary/SpeciesSummary.php?ID=2">individual reference pages</a> include a link to an <a href="https://fishbase.sinica.edu.tw/maintenance/FB/showXML.php?identifier=FB-2&amp;ProviderDbase=03">XML summary sheet</a>, where at least some of this information is intelligently tagged.  So we can easily set up some R functions with the help of XML and xpath to start grabbing the relevant information.</p>
 <h2 id="mpi-computing">MPI Computing</h2>
 <p>Looks like a hardware failure may have been responsible for my crashed MPI job on farm cluster.  Waiting to hear more from admin.  Likewise waiting on NERSC help on the batch R process on compute nodes.  step by step….</p>
 
@@ -250,7 +250,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

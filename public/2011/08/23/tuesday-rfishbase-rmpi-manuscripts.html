@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Tuesday: rropensci, Rmpi, manuscripts, ...</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -122,7 +122,7 @@
   size &lt;-<span class="st"> </span><span class="kw">xmlValue</span>( size_node[[<span class="dv">1</span>]][[<span class="st">&quot;description&quot;</span>]] )</code></pre>
 <p>Note that because we specify the exact node, we get only one return item and we can call size_node[[1]]. Note that fish.id is part of the identifier, and the use of the string(.)= to get the content of the identifier. We use xmlValue to get the description element out, though other ways are possible (such as sapply xmlToList). See code for details.</p>
 <h3 id="regexp-notes">RegExp Notes</h3>
-<p>Also did some regular expressions parsing for size information, which isn’t intelligently coded in the XML. Found the <a href="https://regexlib.com/">regexplib website</a> particularly useful for looking up expressions, for instance, for handling numbers with commas and different units. This <a href="http://www.addedbytes.com/download/regular-expressions-cheat-sheet-v2/png/">cheat-sheet</a> also helps.</p>
+<p>Also did some regular expressions parsing for size information, which isn’t intelligently coded in the XML. Found the <a href="https://regexlib.com/">regexplib website</a> particularly useful for looking up expressions, for instance, for handling numbers with commas and different units. This <a href="https://www.addedbytes.com/download/regular-expressions-cheat-sheet-v2/png/">cheat-sheet</a> also helps.</p>
 <p>In particular, getting weight units was a bit tricky:</p>
 <pre class="sourceCode r"><code class="sourceCode r">
   weight &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;.+published weight: ( (</span><span class="ch">\\</span><span class="st">d|,)*</span><span class="ch">\\</span><span class="st">.?</span><span class="ch">\\</span><span class="st">d*) (g|kg).+&quot;</span>, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">1&quot;</span>, size)
@@ -289,7 +289,7 @@ result &lt;-<span class="st"> </span><span class="kw">mpi.remote.exec</span>(<sp
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

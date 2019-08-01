@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Noisy Beetles</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -120,7 +120,7 @@
 </ul>
 <h2 id="code-updates">Code Updates</h2>
 <h3 id="merged-warning-signals-into-structured-populations">Merged Warning-Signals into Structured populations</h3>
-<p>The future development of the structured populations package will depend directly on the gillespie library source code in warningSignals repository. Though these two projects will have different higher level functions as they will share much of the same base C machinery it made sense at this point to merge the projects. This preserves their <a href="https://github.com/cboettig/structured-populations/network" title="http://github.com/cboettig/structured-populations/network">independent histories</a> while avoiding the duplication of code. Will have to figure out whether or not to close down/remove the warning signals github and local repositories all together to avoid confusion (would break links to remove the github version).</p>
+<p>The future development of the structured populations package will depend directly on the gillespie library source code in warningSignals repository. Though these two projects will have different higher level functions as they will share much of the same base C machinery it made sense at this point to merge the projects. This preserves their <a href="https://github.com/cboettig/structured-populations/network" title="https://github.com/cboettig/structured-populations/network">independent histories</a> while avoiding the duplication of code. Will have to figure out whether or not to close down/remove the warning signals github and local repositories all together to avoid confusion (would break links to remove the github version).</p>
 <p>Fortunately, this merger is remarkably easy on using git:</p>
 <pre class="de1"><code>git fetch ../regime_shifts master:regime_shifts   # imports the entire regime shifts project history as a branch, names it regime_shifts
 git merge regime_shifts # Merges that branch onto the current (master) branch</code></pre>
@@ -141,8 +141,8 @@ git merge regime_shifts # Merges that branch onto the current (master) branch</c
 <ul>
 <li>Came across the <a href="https://hdl.handle.net/10.1093/bioinformatics/btq110" title="doi:10.1093/bioinformatics/btq110">DensiTree</a> paper in bioinformatics to visualize posterior tree densities that had been demonstrated in beta @ Phylogenetics workshop.</li>
 <li><p>Rather well done if classical treatment of SIS birth death model <a href="https://hdl.handle.net/10.1007/s00285-010-0336-x" title="doi:10.1007/s00285-010-0336-x">in JMB</a> with diffusion approximation, OU approximation and extinction times. Seems clearly explained a makes a nice reference.</p></li>
-<li>Interesting <a href="https://www.youtube.com/watch?v=u6XAPnuFjJc&amp;feature=player_embedded" title="http://www.youtube.com/watch?v=u6XAPnuFjJc&amp;feature=player_embedded">talk</a> and presentation style, take this approach to the classroom? Motivating students? (Talk adapted from <a href="http://www.youtube.com/watch?v=_mG-hhWL_ug&amp;feature=channel" title="http://www.youtube.com/watch?v=_mG-hhWL_ug&amp;feature=channel">Dan Pink</a>).</li>
-<li><p>Another <a href="https://www.youtube.com/watch?v=iLstkIZ5t8g&amp;feature=related" title="http://www.youtube.com/watch?v=iLstkIZ5t8g&amp;feature=related">Richard Florida</a> talk.</p></li>
+<li>Interesting <a href="https://www.youtube.com/watch?v=u6XAPnuFjJc&amp;feature=player_embedded" title="https://www.youtube.com/watch?v=u6XAPnuFjJc&amp;feature=player_embedded">talk</a> and presentation style, take this approach to the classroom? Motivating students? (Talk adapted from <a href="https://www.youtube.com/watch?v=_mG-hhWL_ug&amp;feature=channel" title="https://www.youtube.com/watch?v=_mG-hhWL_ug&amp;feature=channel">Dan Pink</a>).</li>
+<li><p>Another <a href="https://www.youtube.com/watch?v=iLstkIZ5t8g&amp;feature=related" title="https://www.youtube.com/watch?v=iLstkIZ5t8g&amp;feature=related">Richard Florida</a> talk.</p></li>
 </ul>
 <p><br /></p>
 
@@ -272,7 +272,7 @@ git merge regime_shifts # Merges that branch onto the current (master) branch</c
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

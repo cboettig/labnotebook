@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Warning Signals on Real data continued</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -153,7 +153,7 @@ Enter a frame number, or 0 to exit
 1: updateGauss(const_LTC, const_pars, X, control = list(maxit = 1000))
 2: gaussian_process.R#79: optim(pars, likfn, method = method, ...)</code></pre>
 <p>Ah ah! Real data contains replicate time samples (or unresolved time intervals at least). These produce -Inf in the call to dc.gauss, so log-likelihood sums to NaN.</p>
-<p>Replicate samples should be averaged out or removed from data-set first. As usual there’s already a <a href="https://stuff.mit.edu/afs/athena.mit.edu/software/r_v2.11.1/lib/R/library/limma/html/avereps.html">clever little R function</a> in some<a href="http://www.bioconductor.org/packages/2.6/bioc/html/limma.html">obscure package</a> to do this:</p>
+<p>Replicate samples should be averaged out or removed from data-set first. As usual there’s already a <a href="https://stuff.mit.edu/afs/athena.mit.edu/software/r_v2.11.1/lib/R/library/limma/html/avereps.html">clever little R function</a> in some<a href="https://www.bioconductor.org/packages/2.6/bioc/html/limma.html">obscure package</a> to do this:</p>
 <pre><code>require(limma)
 X &lt;-avereps(X, ID=X[,1])</code></pre>
 <p>So looks like the entire code will run (data proccessing, formatting, etc). Now to check convergence:</p>
@@ -183,7 +183,7 @@ llik_warning &lt;- 2*(loglik(timedep)-loglik(const))</code></pre>
 <p>and back to writing…</p>
 <h2 id="references">References</h2>
 <ul>
-<li>Dakos V, Scheffer M, van Nes E, Brovkin V, Petoukhov V and Held H (2008). “Slowing Down as an Early Warning Signal For Abrupt Climate Change.” <em>Proceedings of The National Academy of Sciences</em>, <strong>105</strong>. ISSN 0027-8424, <a href="https://dx.doi.org/10.1073/pnas.0802430105">http://dx.doi.org/10.1073/pnas.0802430105</a>.</li>
+<li>Dakos V, Scheffer M, van Nes E, Brovkin V, Petoukhov V and Held H (2008). “Slowing Down as an Early Warning Signal For Abrupt Climate Change.” <em>Proceedings of The National Academy of Sciences</em>, <strong>105</strong>. ISSN 0027-8424, <a href="https://dx.doi.org/10.1073/pnas.0802430105">https://dx.doi.org/10.1073/pnas.0802430105</a>.</li>
 </ul>
 
     </article>
@@ -312,7 +312,7 @@ llik_warning &lt;- 2*(loglik(timedep)-loglik(const))</code></pre>
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

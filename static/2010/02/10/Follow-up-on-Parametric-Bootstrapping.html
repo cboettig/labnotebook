@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Follow-up on Parametric Bootstrapping</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -110,7 +110,7 @@
 <li>Continuing on yesterday’s discussion of parametric boostrapping implementation. Peter sent some very helpful comments and agreed to having them here for reference; I’ve added some links.</li>
 </ul>
 <p>“I’ve read up a bit on the bootstrap just now. First off, although parametric and nonparametric bootstrapping has always seemed very different to me, they fit in the same natural framework. The general idea is that in reality, there’s some real parameters x and some probability distribution P that’s given us some data. We get an estimate x’ from that data. To estimate confidence (or what-have-you) in x’, we get some estimate P’ of *the probability distribution*, and use P’ to make a bunch more fake data, to which we apply the estimation procedures, etcetera. We could get P’ by assuming a parametric model and plugging in x’. Or, we could resample from the data, or permute it, etcetera.</p>
-<p>I suppose that you’ve seen the <a href="https://cran.r-project.org/web/packages/boot/index.html" title="http://cran.r-project.org/web/packages/boot/index.html">‘boot’</a> package in R? It does both parametric and nonparametric bootstrapping, and its function boot.ci() computes confidence intervals in some sophisticated ways. Sophisticated ways? Why do we need to be more sophisticated? Well, the simple, straightforward method that we were using in the discussion is fine, really, but there’s some corrections to it that make it better. Briefly, the bootstrap introduces (small) biases. Some references are:</p>
+<p>I suppose that you’ve seen the <a href="https://cran.r-project.org/web/packages/boot/index.html" title="https://cran.r-project.org/web/packages/boot/index.html">‘boot’</a> package in R? It does both parametric and nonparametric bootstrapping, and its function boot.ci() computes confidence intervals in some sophisticated ways. Sophisticated ways? Why do we need to be more sophisticated? Well, the simple, straightforward method that we were using in the discussion is fine, really, but there’s some corrections to it that make it better. Briefly, the bootstrap introduces (small) biases. Some references are:</p>
 <pre><code>&quot;Bootstrap confidence intervals&quot;, a review,
   https://www.jstor.org/stable/2246110
 &quot;Better bootstrap confidence intervals&quot;, describing the method BCa,
@@ -249,7 +249,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

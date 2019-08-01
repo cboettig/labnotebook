@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Boettiger Group</title>
+    <title>blog on Boettiger Group</title>
     <link>/tags/blog/</link>
-    <description>Recent content in Blog on Boettiger Group</description>
+    <description>Recent content in blog on Boettiger Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Apr 2017 00:00:00 +0000</lastBuildDate>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>FishBASE from R: some XML parsing</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p><a href="https://fishlab.ucdavis.edu/?p=395">cross-posted</a> from Wainwright Lab blog, archiving in the notebook here. This early tutorial includes some background on XML parsing from R using XPath. See the later rfishbase <a href="http://www.carlboettiger.info/archives/2529">tutorial</a> for more functionality.</p>
+    <p><a href="https://fishlab.ucdavis.edu/?p=395">cross-posted</a> from Wainwright Lab blog, archiving in the notebook here. This early tutorial includes some background on XML parsing from R using XPath. See the later rfishbase <a href="https://www.carlboettiger.info/archives/2529">tutorial</a> for more functionality.</p>
 <p>In lab known for its quality data collection, high-speed video style, writing the weekly blog post can be a bit of a challenge for the local code monkey. That’s right, no videos today. But lucky for me, even this group can still make good use of publicly available data. Like the other day, when one of our newer graduate students wanted to do a certain degree of data-mining from information available from <a href="https://fishbase.org">FishBASE</a>. Now I’m sure there are plenty of reasons to grumble about it, but there’s quite an impressive bit of information available on FishBASE, most of it decently referenced if by no means comprehensive. And getting that kind of information quickly and easily is rapidly becoming a skill every researcher needs. So here’s a quick tutorial of the tools to do this.</p>
 <p>Okay, so what are we talking about? Let’s start with an example fishbase page on Nile tilapia:</p>
 <figure>
@@ -321,7 +321,7 @@ yr &lt;-<span class="st"> </span><span class="kw">get.ages</span>(fish.data)
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

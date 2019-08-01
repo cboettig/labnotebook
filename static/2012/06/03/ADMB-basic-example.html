@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Admb Basic Example</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -166,7 +166,7 @@ o$value</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install_github(&quot;R2admb&quot;, &quot;bbolker&quot;, subdir=&quot;R2admb&quot;) # dev version</span>
 <span class="kw">library</span>(R2admb)</code></pre>
 <h2 id="admb-definition">ADMB definition</h2>
-<p>We still need to define the model using ADMB notation in the procedure section. This is mostly like R or C++, with the exception of special functions like <code>square</code> in place of <code>^2</code>, <code>norm2</code> for the sum of squares, and <code>elem_prod</code> istead of <code>*</code> for the element-wise product of two arrays. The constant <code>pi</code> is given as <code>M_PI</code>, as typical of C/C++ libraries. Where these other functions are defined I’m not sure, but some useful guides to <a href="https://fish.washington.edu/research/MPAM/resources/ADMB_Minte-Vera.pdf">ADMB vector/matrix operations</a> or an (undefined) list of <a href="http://www.admb-project.org/developers/contribute-documentation/functions/keywords.txt/view">keywords</a>…</p>
+<p>We still need to define the model using ADMB notation in the procedure section. This is mostly like R or C++, with the exception of special functions like <code>square</code> in place of <code>^2</code>, <code>norm2</code> for the sum of squares, and <code>elem_prod</code> istead of <code>*</code> for the element-wise product of two arrays. The constant <code>pi</code> is given as <code>M_PI</code>, as typical of C/C++ libraries. Where these other functions are defined I’m not sure, but some useful guides to <a href="https://fish.washington.edu/research/MPAM/resources/ADMB_Minte-Vera.pdf">ADMB vector/matrix operations</a> or an (undefined) list of <a href="https://www.admb-project.org/developers/contribute-documentation/functions/keywords.txt/view">keywords</a>…</p>
 <p>The equivalent model</p>
 <pre class="sourceCode r"><code class="sourceCode r">model &lt;-<span class="st"> </span>
 <span class="kw">paste</span>(<span class="st">&quot;</span>
@@ -355,7 +355,7 @@ Coefficients:
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

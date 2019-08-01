@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Research</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -125,11 +125,11 @@
 <li>Correlation significance test seems a very poor estimate of signal, high false positive rate at any threshold p-value for sufficiently frequent sampling. Carpenter [<a href="#bibkey_Carpenter">1</a>] Fits a dynamic linear model of the SD and argues it appears to trend up visually.</li>
 </ul>
 <ol type="1">
-<li><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?cmd=prlinks&amp;dbfrom=pubmed&amp;retmode=ref&amp;id=16958897" title="View or buy article from publisher (if available)">Carpenter SR and Brock WA. .</a> pmid:16958897. <a href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;rettype=abstract&amp;id=16958897" title="PMID 16958897">PubMed</a> <a href="http://www.hubmed.org/display.cgi?uids=16958897" title="PMID 16958897">HubMed</a> [Carpenter]</li>
+<li><a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?cmd=prlinks&amp;dbfrom=pubmed&amp;retmode=ref&amp;id=16958897" title="View or buy article from publisher (if available)">Carpenter SR and Brock WA. .</a> pmid:16958897. <a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;rettype=abstract&amp;id=16958897" title="PMID 16958897">PubMed</a> <a href="https://www.hubmed.org/display.cgi?uids=16958897" title="PMID 16958897">HubMed</a> [Carpenter]</li>
 </ol>
 <ul>
 <li><p>Detecting switch points vs gradual change? See change point estimation?</p></li>
-<li><p>Data from Dakos et. al. study available from <a href="https://www.ncdc.noaa.gov/paleo/data.html" title="http://www.ncdc.noaa.gov/paleo/data.html">NOAA</a></p></li>
+<li><p>Data from Dakos et. al. study available from <a href="https://www.ncdc.noaa.gov/paleo/data.html" title="https://www.ncdc.noaa.gov/paleo/data.html">NOAA</a></p></li>
 </ul>
 <h2 id="computing">Computing</h2>
 <ul>
@@ -157,7 +157,7 @@
 </ul>
 <h2 id="workstation-choices">Workstation choices</h2>
 <ul>
-<li>Sizing up options for our new computer server. Would be nice to be able to explore <a href="https://en.wikipedia.org/wiki/CUDA#Supported_GPUs" title="http://en.wikipedia.org/wiki/CUDA#Supported_GPUs">CUDA GPU</a> computing, considering <a href="http://www.nvidia.com/object/product_tesla_c1060_us.html" title="http://www.nvidia.com/object/product_tesla_c1060_us.html">tesla</a> and fermi (better double-precision performance) options. Other option, AMD released a 12 core chip, could possibly setup a 24 processor machine on two sockets. Getting comparisons from <a href="http://www.siliconmechanics.com/" title="http://www.siliconmechanics.com/">silicon mechanics</a>. Ok, options under $5000 (after educational discount) are in:</li>
+<li>Sizing up options for our new computer server. Would be nice to be able to explore <a href="https://en.wikipedia.org/wiki/CUDA#Supported_GPUs" title="https://en.wikipedia.org/wiki/CUDA#Supported_GPUs">CUDA GPU</a> computing, considering <a href="https://www.nvidia.com/object/product_tesla_c1060_us.html" title="https://www.nvidia.com/object/product_tesla_c1060_us.html">tesla</a> and fermi (better double-precision performance) options. Other option, AMD released a 12 core chip, could possibly setup a 24 processor machine on two sockets. Getting comparisons from <a href="https://www.siliconmechanics.com/" title="https://www.siliconmechanics.com/">silicon mechanics</a>. Ok, options under $5000 (after educational discount) are in:</li>
 </ul>
 <ol type="1">
 <li>2x Xeon Quad 2.4GHz, 12Mb Cache, 24GB RAM + Tesla C1060 active cooled</li>
@@ -166,8 +166,8 @@
 </ol>
 <ul>
 <li>Available on 4U and 1U forms. the 24 core machine could add 1-2 GPUs later. The Tesla C2050 GPU is $1888 and is much better at double precision, while the Tesla C1060 is $950.</li>
-<li><strong>Double precision vs single precision</strong> <a href="https://en.wikipedia.org/wiki/Nvidia_Tesla" title="http://en.wikipedia.org/wiki/Nvidia_Tesla">comparisons</a>. C1060 does order of magnitude worse (933 vs 78 gigaflops) on single vs double precision. The C2050 gets (1040 GFLOPS single, 520 GFLOPS double). Looking into C2050 options…</li>
-<li><a href="https://www.nvidia.com/object/product_tesla_C2050_C2070_us.html" title="http://www.nvidia.com/object/product_tesla_C2050_C2070_us.html">C2050, next gen/Fermi</a> Release April 20th, we’ll see.</li>
+<li><strong>Double precision vs single precision</strong> <a href="https://en.wikipedia.org/wiki/Nvidia_Tesla" title="https://en.wikipedia.org/wiki/Nvidia_Tesla">comparisons</a>. C1060 does order of magnitude worse (933 vs 78 gigaflops) on single vs double precision. The C2050 gets (1040 GFLOPS single, 520 GFLOPS double). Looking into C2050 options…</li>
+<li><a href="https://www.nvidia.com/object/product_tesla_C2050_C2070_us.html" title="https://www.nvidia.com/object/product_tesla_C2050_C2070_us.html">C2050, next gen/Fermi</a> Release April 20th, we’ll see.</li>
 </ul>
 <p><br /></p>
 
@@ -293,7 +293,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Likelihood calculation</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -107,8 +107,8 @@
   <div class="col-md-7 col-md-offset-1">
     <article>
     <ul>
-<li>Implemented the likelihood calculation in <a href="https://github.com/cboettig/structured-populations/blob/master/R/simulate.R" title="http://github.com/cboettig/structured-populations/blob/master/R/simulate.R">simulate.R code</a>.</li>
-<li>See <a href="https://github.com/cboettig/structured-populations/commit/786d5bc1fe419c036428e4502cdbe1ea33010e9b" title="http://github.com/cboettig/structured-populations/commit/786d5bc1fe419c036428e4502cdbe1ea33010e9b">today’s revision changes</a> via github</li>
+<li>Implemented the likelihood calculation in <a href="https://github.com/cboettig/structured-populations/blob/master/R/simulate.R" title="https://github.com/cboettig/structured-populations/blob/master/R/simulate.R">simulate.R code</a>.</li>
+<li>See <a href="https://github.com/cboettig/structured-populations/commit/786d5bc1fe419c036428e4502cdbe1ea33010e9b" title="https://github.com/cboettig/structured-populations/commit/786d5bc1fe419c036428e4502cdbe1ea33010e9b">today’s revision changes</a> via github</li>
 <li>beetle_sim() updated to return the full simulation to R.</li>
 <li>likelihood calculation by simulation done in parallel</li>
 </ul>
@@ -147,7 +147,7 @@ Library beetles loaded in cluster.
 <h3 id="code-notes">Code Notes</h3>
 <ul>
 <li><p>Consider returning log likelihoods directly from kernel density estimator for greater speed.</p></li>
-<li><p>Answered a question on <a href="https://www.mail-archive.com/help-gsl@gnu.org/msg03168.html" title="http://www.mail-archive.com/help-gsl@gnu.org/msg03168.html">gsl-help</a> regarding kernel density estimation. Should expand these functions to allow for other bandwidth methods, etc.</p></li>
+<li><p>Answered a question on <a href="https://www.mail-archive.com/help-gsl@gnu.org/msg03168.html" title="https://www.mail-archive.com/help-gsl@gnu.org/msg03168.html">gsl-help</a> regarding kernel density estimation. Should expand these functions to allow for other bandwidth methods, etc.</p></li>
 <li><p>Code needs doxygen documentation.</p></li>
 <li><p>kde library needs .cpp extension, seems that R gets confused mixing C and C++ code? Compiles fine by makefile but not by R when extensions don’t match.</p></li>
 </ul>
@@ -279,7 +279,7 @@ Library beetles loaded in cluster.
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

@@ -1,0 +1,42 @@
+                      
+<!-- An optional Header Image -->
+{{ if .Params.header.image }}
+<div class="article-header">
+  <img src="{{ "/img/" | relURL }}/{{ .Params.header.image }}" class="article-banner" itemprop="image">
+  {{ with .Params.header.caption }}<span class="article-header-caption">{{ . | markdownify | emojify }}</span>{{ end }}
+</div>
+{{end}}
+
+<!-- posts only! -->
+
+    <div class="row">
+    {{ range first 3 .Paginator.Pages }}
+    <div class="col-md-4">
+      <h4><a href="{{ .RelPermalink }}">{{ .Date.Format $.Site.Params.date_format }}</a></h4>
+      {{ if .Title }}<h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>{{ end }}
+      <div class="article-style">
+        {{  .Summary | markdownify }}
+      </div>
+    </div>
+    {{ end }}
+    </div>
+
+   {{ if gt (len .Paginator.Pages) 3 }}
+    <div class="row">
+    {{ range after 3 .Paginator.Pages }}
+    <div class="col-md-4">
+      <h4><a href="{{ .RelPermalink }}">{{ .Date.Format $.Site.Params.date_format }}</a></h4>
+      {{ if .Title }}<h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>{{ end }}
+      <div class="article-style">
+        {{  .Summary | markdownify }}
+      </div>
+    </div>
+    {{ end }}
+    </div>
+  {{ end }}
+  
+  {{ partial "pagination" . }}
+
+  <br />  
+  
+  </div>

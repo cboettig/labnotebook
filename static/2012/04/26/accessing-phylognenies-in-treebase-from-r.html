@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Accessing phylognenies in TreeBASE from R</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -106,7 +106,7 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <p>I’ve recently ((<a href="https://www.carlboettiger.info/archives/1496">25 April</a>, <a href="http://www.carlboettiger.info/archives/1382">8 April</a>)) begun a project to see if I can search for and load phylogenies from <a href="http://www.treebase.org/">TreeBASE</a> directly into R. Thanks to the rather brilliant API in place (documented on the <a href="https://sourceforge.net/apps/mediawiki/treebase/index.php?title=API">treeBASE wiki</a>) for TreeBASE, some advice from <a href="http://rutgervos.blogspot.com/">Rutger Vos</a> (TreeBASE developer), and some <a href="http://en.wikipedia.org/wiki/XPath">xpaths</a> R code from Gabe Becker (stats grad student, UC Davis), I have a (mostly) working demonstration.  As I get a chance, I’ll be adding the rest of the <a href="https://spreadsheets.google.com/pub?key=rL--O7pyhR8FcnnG5-ofAlw">queries available in the API</a>, improve the error handling and give some more thought to a user interface.  A long cry from a mature package, but a decent proof-of-principle and a nice test-piece for me to learn a bit of how to make web calls and parse xml from R.</p>
+    <p>I’ve recently ((<a href="https://www.carlboettiger.info/archives/1496">25 April</a>, <a href="https://www.carlboettiger.info/archives/1382">8 April</a>)) begun a project to see if I can search for and load phylogenies from <a href="https://www.treebase.org/">TreeBASE</a> directly into R. Thanks to the rather brilliant API in place (documented on the <a href="https://sourceforge.net/apps/mediawiki/treebase/index.php?title=API">treeBASE wiki</a>) for TreeBASE, some advice from <a href="https://rutgervos.blogspot.com/">Rutger Vos</a> (TreeBASE developer), and some <a href="https://en.wikipedia.org/wiki/XPath">xpaths</a> R code from Gabe Becker (stats grad student, UC Davis), I have a (mostly) working demonstration.  As I get a chance, I’ll be adding the rest of the <a href="https://spreadsheets.google.com/pub?key=rL--O7pyhR8FcnnG5-ofAlw">queries available in the API</a>, improve the error handling and give some more thought to a user interface.  A long cry from a mature package, but a decent proof-of-principle and a nice test-piece for me to learn a bit of how to make web calls and parse xml from R.</p>
 <p>The package is being developed in my <a href="https://github.com/cboettig/Comparative-Phylogenetics/tree/master/treebase">Comparative Methods repository</a>(will probably fork into it’s own repository once its a bit more mature), and a basic version is packaged on the <a href="https://github.com/downloads/cboettig/Comparative-Phylogenetics/treebase_0.0-1.tar.gz">downloads</a> tab.</p>
 <h2 id="introduction-to-package">Introduction to package:</h2>
 <p>My goal is to essentially mimic the <a href="https://spreadsheets.google.com/pub?key=rL--O7pyhR8FcnnG5-ofAlw">search capabilities</a>provided by the <a href="https://www.treebase.org/treebase-web/search/studySearch.html">web front-end</a> using the <a href="https://sourceforge.net/apps/mediawiki/treebase/index.php?title=API">API</a>.</p>
@@ -273,7 +273,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Comparative Phylogenetics Talk</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -123,7 +123,7 @@
 </ul>
 <h2 id="returning-to-wrightscape-approach">Returning to Wrightscape approach</h2>
 <p>Haven’t worked on the full problem of inferring multiple peaks directly from comparative data using the joint probability calculation since the beginning of this notebook, so about time to return to the direct problem and compare with the more heuristic approach of “phylogenetically corrected clustering” and also synthesize the work on uncertainty which has been a dominate theme thus far (add category label for this group!)</p>
-<p>The direct calculation is still going by the name wrightscape, and the project (without its svn history unforunately) has been migrated to git and pushed to github. So thus far the current code for this project is independent of that in Comparative-Phylogenetics project repository. This is the home of the <a href="https://github.com/cboettig/wrightscape" title="http://github.com/cboettig/wrightscape">Wrightscape repository</a>.</p>
+<p>The direct calculation is still going by the name wrightscape, and the project (without its svn history unforunately) has been migrated to git and pushed to github. So thus far the current code for this project is independent of that in Comparative-Phylogenetics project repository. This is the home of the <a href="https://github.com/cboettig/wrightscape" title="https://github.com/cboettig/wrightscape">Wrightscape repository</a>.</p>
 <p>Since it’s been a while since I’ve worked on this project, I begin by refreshing myself as to the organizational structure of the code. The callgraph provides a good summary:</p>
 <figure>
 <img src="https://openwetware.org/images/thumb/b/b6/Callgraph.png/700px-Callgraph.png" alt="image" /><figcaption>image</figcaption>
@@ -144,12 +144,12 @@
 <p>So what generality is gained by this approach? While the matrix formulation is general, this requires the direct calculation applied to each node. Should be able to simultaneously solve everything in a particular regime directly, if there is a meaningful way to MCMC over larger regime partitions rather than over node assignments.</p>
 <h2 id="evolution-meeting">Evolution meeting</h2>
 <ul>
-<li>Aaron King’s student, <a href="https://www-personal.umich.edu/~cressler/" title="http://www-personal.umich.edu/~cressler/">Clayton Cressler</a> <a href="http://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=501" title="http://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=501">talk</a></li>
-<li>Liam Revell <a href="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=459" title="http://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=459">talk</a></li>
-<li>Luke Harmon <a href="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=133" title="http://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=133">talks</a></li>
-<li>Michael Alfaro <a href="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=1379" title="http://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=1379">talk</a></li>
+<li>Aaron King’s student, <a href="https://www-personal.umich.edu/~cressler/" title="https://www-personal.umich.edu/~cressler/">Clayton Cressler</a> <a href="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=501" title="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=501">talk</a></li>
+<li>Liam Revell <a href="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=459" title="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=459">talk</a></li>
+<li>Luke Harmon <a href="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=133" title="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=133">talks</a></li>
+<li>Michael Alfaro <a href="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=1379" title="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=1379">talk</a></li>
 </ul>
-<p><br /> - Hilmar Lapp, Rod Page - My <a href="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=18" title="http://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=18">talk</a> - Search <a href="http://2010.evolutionmeeting.org/search/index.php?func=SelectAuth&amp;ltr=All" title="http://2010.evolutionmeeting.org/search/index.php?func=SelectAuth&amp;ltr=All">all talks</a></p>
+<p><br /> - Hilmar Lapp, Rod Page - My <a href="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=18" title="https://2010.evolutionmeeting.org/search/index.php?func=detail&amp;aid=18">talk</a> - Search <a href="https://2010.evolutionmeeting.org/search/index.php?func=SelectAuth&amp;ltr=All" title="https://2010.evolutionmeeting.org/search/index.php?func=SelectAuth&amp;ltr=All">all talks</a></p>
 <p><br /> - Doesn’t look like Andrew Hipp is listed. See my mattice entry from April.</p>
 <p><br /></p>
 
@@ -275,7 +275,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

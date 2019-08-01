@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Formal Semantics With Reml</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -108,7 +108,7 @@
     <article>
     <p>A lot has been happening in the <code>reml</code> development over on our package Github page, particularly through discussion on the <a href="https://ropensci.org/reml">issues tracker</a> we have been working through several of the major conceptual challenges in designing the package.</p>
 <h3 id="semantics">Semantics</h3>
-<p><strong>Writing Semantics</strong>. Lots of elements of the EML schema have semantic meaning, but we can’t start leveraging ontological tools while these terms are defined only as part of the Schema vocabulary. In their current state, they are just “meaningless bits of syntax”, e.g. the schema only defines <code>gram</code> as a valid text string that lives at <code>//attribute/measurementScale/ratio/unit/standardUnit</code>. A computer reading the schema could never formally decide that this is the same gram we use to measure mass. We use formal semantics to say this: that is, that text-string <code>gram</code> means <a href="https://ecoinformatics.org/oboe/oboe.1.0/oboe-standards.owl#Gram" class="uri">http://ecoinformatics.org/oboe/oboe.1.0/oboe-standards.owl#Gram</a>, which is embued with meaning.</p>
+<p><strong>Writing Semantics</strong>. Lots of elements of the EML schema have semantic meaning, but we can’t start leveraging ontological tools while these terms are defined only as part of the Schema vocabulary. In their current state, they are just “meaningless bits of syntax”, e.g. the schema only defines <code>gram</code> as a valid text string that lives at <code>//attribute/measurementScale/ratio/unit/standardUnit</code>. A computer reading the schema could never formally decide that this is the same gram we use to measure mass. We use formal semantics to say this: that is, that text-string <code>gram</code> means <a href="https://ecoinformatics.org/oboe/oboe.1.0/oboe-standards.owl#Gram" class="uri">https://ecoinformatics.org/oboe/oboe.1.0/oboe-standards.owl#Gram</a>, which is embued with meaning.</p>
 <p>We’ve made some definite progress in how to go about making this leap from structure to meaning after considering a variety of potential avenues. A few <a href="https://github.com/ropensci/reml/issues/5#issuecomment-21573824">open questions</a> (and a lot of implementation) remain. A useful observation comes from Ben in pointing out how we can add RDF directly to the EML, rather than relying on a second external schema file:</p>
 <pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;eml&gt;</span>
 …
@@ -290,7 +290,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

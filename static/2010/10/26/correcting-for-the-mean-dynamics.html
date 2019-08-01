@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Correcting for the mean dynamics</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -129,7 +129,7 @@
 <p>and can write the correlation function: <span class="math">\[ \langle\langle X_0 X_t \rangle \rangle = \sigma^2(\hat x) e^{-\alpha(\hat x) t} \]</span></p>
 <p>It is precisely this <span class="math">\(\alpha(\hat x)\)</span> that we wish to estimate. Now it changes due to changes in <span class="math">\(\hat x\)</span> as well as changes in the bifurcation parameter, <span class="math">\(a\)</span>, which of course also influences <span class="math">\(\hat x\)</span> directly. So we want to rewrite this as a function of the bifurcation parameter alone:</p>
 <p><span class="math">\[ \partial_x  \left[b(x,a) - d(x,a)\right]_{x = \hat x(a)} =: f(a) \]</span></p>
-<p>A little tired of LaTeX writing, I  approximate <span class="math">\(\alpha(a)|_{\hat x}\)</span>,  the slope at equilibrium as a function of the bifurcation parameter. Going astray: <a href="https://www.flickr.com/photos/cboettig/5118738314">calculation here</a>, <a href="http://farm2.static.flickr.com/1419/5118172479_aaf1a2d5a1_m.jpg">results graphed here</a>, upshot is assuming saturation doesn’t capture the bifurcation.  Applying that approximation earlier to the derivative expression gives a slope of <span class="math">\(-e\)</span>, no <span class="math">\(a\)</span> dependence at saturation anyway.</p>
+<p>A little tired of LaTeX writing, I  approximate <span class="math">\(\alpha(a)|_{\hat x}\)</span>,  the slope at equilibrium as a function of the bifurcation parameter. Going astray: <a href="https://www.flickr.com/photos/cboettig/5118738314">calculation here</a>, <a href="https://farm2.static.flickr.com/1419/5118172479_aaf1a2d5a1_m.jpg">results graphed here</a>, upshot is assuming saturation doesn’t capture the bifurcation.  Applying that approximation earlier to the derivative expression gives a slope of <span class="math">\(-e\)</span>, no <span class="math">\(a\)</span> dependence at saturation anyway.</p>
 <h4 id="numerical-solution">Numerical Solution</h4>
 <p>Foregoing a complete analytic treatment, we can solve for function numerically to get the picture. For the first model with the steady changing mean, we see the mean, the eigenvalue <span class="math">\(\alpha\)</span>, demographic noise term <span class="math">\(\sigma^2\)</span>, and total variance: <img src="https://farm2.staticflickr.com/1178/5119205688_e05388859a_o.png" /></p>
 <p>And for the second model (note smaller values of a now lead to the bifurcation): <img src="https://farm2.staticflickr.com/1220/5118603695_df7a11b494_o.png" /></p>
@@ -264,7 +264,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

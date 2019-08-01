@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Site configuration: file sharing notes</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -107,7 +107,7 @@
   <div class="col-md-7 col-md-offset-1">
     <article>
     <p>Easiest way to share files is ssh onto the carlboettiger.info server,  change into the directory carlboettiger.info/ and create a new directory there – i.e. share/.  This behaves as a regular static webpage directory that will list the files provided.</p>
-<p>Secure access can be created by going to the goodies –&gt;htaccess/WebDav page and selecting the option to make a directory or subdirectory secure, and then specifying the passwords, etc.  Have created the subdirectory https://carlboettiger.info/share/secure as an example of this.  See <a href="http://wiki.dreamhost.com/Htaccess">DreamHost wiki entry for Htaccess.</a></p>
+<p>Secure access can be created by going to the goodies –&gt;htaccess/WebDav page and selecting the option to make a directory or subdirectory secure, and then specifying the passwords, etc.  Have created the subdirectory https://carlboettiger.info/share/secure as an example of this.  See <a href="https://wiki.dreamhost.com/Htaccess">DreamHost wiki entry for Htaccess.</a></p>
 <p><a href="https://wiki.dreamhost.com/FTP">Dreamhost FTP</a> access requires an FTP user account.  Anonymous FTP can be set up at an additional cost but is not generally advised.  This may be a good way to allow users to upload large content to me.  At the moment I don’t seem to have the root access to allow me to directly copy files from the guest ftp to my own user directory.</p>
 <p>Looks like can make a page <a href="https://wiki.dreamhost.com/index.php/WebDAV">WebDAV</a> enabled, an http protocol.  Not sure that this will be very useful.  Currently sample webdav page doesn’t even display in browser.</p>
 <h2 id="git-on-server">Git on server</h2>
@@ -255,7 +255,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Demographic Noise</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -115,10 +115,10 @@
 <img src="https://openwetware.org/images/math/7/5/f/75f2b0cfed3d87a63da03d093581eefd.png" alt="\begin{align} \dot x &amp;= b_1 x (K - x - y) - d_1 x + c_1 x y \\ \dot y &amp;= b_2 y (K - x - y) - d_1 y - c_2 x y \end{align}" /><figcaption>\begin{align} \dot x &amp;= b_1 x (K - x - y) - d_1 x + c_1 x y \\ \dot y &amp;= b_2 y (K - x - y) - d_1 y - c_2 x y \end{align}</figcaption>
 </figure>
 <ul>
-<li>Model is implemented on a <a href="https://github.com/cboettig/warningSignals/tree/crowley#" title="http://github.com/cboettig/warningSignals/tree/crowley#">branch</a> of the warningSignals package. Model in <a href="http://github.com/cboettig/warningSignals/blob/crowley/src/crowley.c" title="http://github.com/cboettig/warningSignals/blob/crowley/src/crowley.c">crowley.c</a>, Depends on modified gillespie.c library in this package.</li>
+<li>Model is implemented on a <a href="https://github.com/cboettig/warningSignals/tree/crowley#" title="https://github.com/cboettig/warningSignals/tree/crowley#">branch</a> of the warningSignals package. Model in <a href="https://github.com/cboettig/warningSignals/blob/crowley/src/crowley.c" title="https://github.com/cboettig/warningSignals/blob/crowley/src/crowley.c">crowley.c</a>, Depends on modified gillespie.c library in this package.</li>
 <li>Branching necessary as implementation simplifies the gillespie function dependencies, but these changes would break compatibility with warning_signals.c and its R functions. Once warning_signals.c is updated to the new interface format I can remerge the branches.</li>
 <li>compile with <em>make crowley</em> for the moment, will add R interface soon.</li>
-<li>Branches need to be pushed to the github server separately, see the <a href="https://github.com/guides/push-a-branch-to-github" title="http://github.com/guides/push-a-branch-to-github">github directions</a>, but essentially</li>
+<li>Branches need to be pushed to the github server separately, see the <a href="https://github.com/guides/push-a-branch-to-github" title="https://github.com/guides/push-a-branch-to-github">github directions</a>, but essentially</li>
 </ul>
 <!-- -->
 <pre><code> git push origin branchname</code></pre>
@@ -260,7 +260,7 @@
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

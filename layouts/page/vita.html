@@ -1,17 +1,23 @@
+{{ define "header" }}
+{{ partial "page-header.html" . }}
+{{ end }}
+
 {{ define "main" }}
+  <div class="main main-raised">
+    <div class="section section-basic">
+      <div class="container">
+
+        <div class="row cv">
+          <div class="col-md-7 offset-md-1">
+            <article>
+
+              {{ .Content }}
+
+            </article>
+          </div>
 
 
-<div class="row cv">
-  <div class="col-md-8">
-    <article>
-
-      {{ .Content }}
-
-    </article>
-  </div>
-  
-  
-  <div class="col-md-4" style="border-left: 1px solid #eee8d5;"><!-- sidebar -->   
+  <div class="col-md-4" style="border-left: 1px solid #eee8d5;"><!-- sidebar -->
     <p> <i class="fa fa-calendar"></i>
     {{ with .GitInfo }}
     <time datetime="{{ .AuthorDate }}" itemprop="datePublished">
@@ -22,31 +28,32 @@
     {{ partial "git_sha" . }}
 
     </br >
-    
+
     <h4>Profiles and Metrics</h4>
     <p>
     <i class="ai ai-impactstory"></i><a href="https://impactstory.org/CarlBoettiger"> ImpactStory </a>
     <br/>
 		<i class="ai ai-google-scholar"></i><a href="http://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ"> Google Scholar </a>
     <br/>
-    <i class="ai ai-orcid"></i><a property="http://purl.org/spar/datacite/orcid" 
+    <i class="ai ai-orcid"></i><a property="http://purl.org/spar/datacite/orcid"
        href="https://orcid.org/0000-0002-1642-628X"> ORCID: 0000-0002-1642-628X</a>
     </p>
     <br/>
     <br/>
-    <p></i><a href="http://www.carlboettiger.info/files/cv.pdf"  
+    <p></i><a href="http://www.carlboettiger.info/files/cv.pdf"
        onclick="var that=this;
-       _gaq.push(['_trackEvent','Download','PDF',this.href]); 
+       _gaq.push(['_trackEvent','Download','PDF',this.href]);
        setTimeout(function(){location.href=that.href;},200);
        return false;" class = "btn btn-default"><i class="fa fa-file-text-o fa-1x"></i> Download PDF</a>
     </p>
-
-  
   </div>
+
+</div>
+</div>
+</div>
 </div>
 
-    <script type="application/ld+json" src = "{{ "/js/vita.json" | relURL }}"></script> 
+<script type="application/ld+json" src = "{{ "/js/vita.json" | relURL }}"></script>
 
 
 {{ end }}
- 

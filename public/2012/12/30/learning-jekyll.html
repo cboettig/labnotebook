@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>Learning Jekyll</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -190,7 +190,7 @@ redcarpet:
   extensions: [&quot;no_intra_emphasis&quot;, &quot;fenced_code_blocks&quot;, &quot;autolink&quot;, &quot;tables&quot;, &quot;with_toc_data&quot;]</code></pre>
 <h2 id="more-advanced-tricks">More advanced tricks</h2>
 <p><strong>Liquid</strong> Your next stop should really be to read <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Liquid for Designers</a>. Liquid is the glue that specifies all the rules needed to assemble your site, and is quite simple. Understand how Liquid works and you’ve mastered Jekyll. Jekyll provides <a href="https://github.com/mojombo/jekyll/wiki/Liquid-Extensions">some additional Liquid functions</a> common for blogs.</p>
-<p>Your next stop is to get some really nice customizable CSS scaffolding to control the layout for your site. While there’s a huge number of free CSS themes available, this isn’t 2002, so head on over to <a href="https://twitter.github.com/bootstrap">Twitter-Bootstrap</a> (a project originally created by some of the programmers at Twitter, now evolved to it’s own community). The CSS-based grid layout and some very nice JQuery Javascripts tools can make your site as pretty and as interactive as you can imagine. Like Octopress, prebuilt CSS can lead to all sites looking the same. Check out themes for Bootstrap, and the excellent set of icons by <a href="http://fortawesome.github.com/Font-Awesome/">FontAwesome</a>.</p>
+<p>Your next stop is to get some really nice customizable CSS scaffolding to control the layout for your site. While there’s a huge number of free CSS themes available, this isn’t 2002, so head on over to <a href="https://twitter.github.com/bootstrap">Twitter-Bootstrap</a> (a project originally created by some of the programmers at Twitter, now evolved to it’s own community). The CSS-based grid layout and some very nice JQuery Javascripts tools can make your site as pretty and as interactive as you can imagine. Like Octopress, prebuilt CSS can lead to all sites looking the same. Check out themes for Bootstrap, and the excellent set of icons by <a href="https://fortawesome.github.com/Font-Awesome/">FontAwesome</a>.</p>
 <p>Your final step is where the hacking really begins. Now and again you imagine something you just can’t do with these tools. Your only recourse is to <del>ask on <a href="https://stackoverflow.com">Stackoverflow</a> for someone to do it for you</del> learn a bit of Ruby. Anything you can write in Ruby you can add to Jekyll as a “plugin”, by defining a Liquid extension for a Ruby function. Ruby is clearly a favorite language of web-developers thanks to its dynamic-site implementation Ruby-on-Rails and a vibrant Github community, so there’s a wealth of useful tools, including an implementation to most APIs you might care to interact with (Github, Twitter, various Google APIs, are among the ones I’m using).</p>
 <h2 id="hosting-options">Hosting options</h2>
 <p>Because Jekyll generates a static site, it can be hosted almost anywhere for nothing or next to nothing in costs. The primary question to consider is your choice of domain name. If you wish to host your site from university domain name, just copy the contents of <code>_site</code> into your <code>public_html</code> or similarly named directory on the web server.</p>
@@ -327,7 +327,7 @@ redcarpet:
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>

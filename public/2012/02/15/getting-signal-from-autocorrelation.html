@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
-  <head prefix="dc: https://purl.org/dc/terms/ og: http://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
+  <head prefix="dc: https://purl.org/dc/terms/ og: https://ogp.me/ns#"> <!-- namespaces used in metadata.html -->
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
   <title>getting signal from autocorrelation</title>
   <meta name="author" content="Carl Boettiger" />
@@ -47,7 +47,7 @@
 </head>
 
 
-  <body prefix="dc: https://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/"> 
+  <body prefix="dc: https://purl.org/dc/terms/ foaf: https://xmlns.com/foaf/0.1/"> 
     <!-- Navbar  ================================================== -->
 
 <nav class="navbar navbar-default" role="navigation">
@@ -186,7 +186,7 @@ wsA &lt;-<span class="st"> </span><span class="kw">ddply</span>(Asim, <span clas
 wsB &lt;-<span class="st"> </span><span class="kw">ddply</span>(Bsim, <span class="st">&quot;rep&quot;</span>, warningtrend, window_autocorr, 
     <span class="dt">.parallel =</span> <span class="ot">TRUE</span>)</code></pre>
 <p>Which works nicely (other than the progress indicator finishing early).</p>
-<p>In principle, this can be <a href="https://stackoverflow.com/questions/5559287/how-do-i-make-dosmp-play-nicely-with-plyr">parallelized over MPI</a> using <a href="http://www.numbertheory.nl/2011/11/14/parallelization-using-plyr-loading-objects-and-packages-into-worker-nodes/">an additional function</a>, seems to work:</p>
+<p>In principle, this can be <a href="https://stackoverflow.com/questions/5559287/how-do-i-make-dosmp-play-nicely-with-plyr">parallelized over MPI</a> using <a href="https://www.numbertheory.nl/2011/11/14/parallelization-using-plyr-loading-objects-and-packages-into-worker-nodes/">an additional function</a>, seems to work:</p>
 <pre class="sourceCode r"><code class="sourceCode r">
 <span class="kw">library</span>(snow)
 <span class="kw">library</span>(doSNOW)
@@ -325,7 +325,7 @@ ws &lt;-<span class="st"> </span><span class="kw">ddply</span>(Asim, <span class
 
     <div class="col-md-3 col-md-offset-1 col-xs-4">
       <p>
-      <a rel="license" property="https://creativecommons.org/ns#license" href="http://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
+      <a rel="license" property="https://creativecommons.org/ns#license" href="https://creativecommons.org/publicdomain/zero/1.0/" onclick="recordOutboundLink(this, 'Outbound Links', 'CC0'); return false;"><img src="/assets/img/cc-zero.svg" alt="CC0"/></a> 
       </p>
     </div>
   </div>
