@@ -30,14 +30,24 @@ aliases: "/publications"
 
 # publications
 
+32. Milad Memarzadeh, Gregory L. Britten, Boris Worm, __Carl Boettiger__ (2019). 
+    Rebuilding global fisheries under uncertainty. 
+    *Proceedings of the National Academy of Sciences*.
+    [doi:10.1073/pnas.1902657116](https://doi.org/10.1073/pnas.1902657116)
+
 31. __Carl Boettiger__, Ryan Batt (2019). Bifurcation or state tipping:
     assessing transition type in a model trophic cascade.
     *Journal of Mathematical Biology*.
-    [doi:10.1007/s00285-019-01358-z](https://doi.org/10.1007/s00285-019-01358-z)
+    [doi:10.1007/s00285-019-01358-z](https://doi.org/10.1007/s00285-019-01358-z) 
+    ([oa](https://github.com/cboettig/bs-tipping/blob/master/paper/paper.pdf),
+    [code](https://github.com/cboettig/bs-tipping))
 
 30. Milad Memarzadeh, __Carl Boettiger__ (2019). Resolving the Measurement
     Uncertainty Paradox in Ecological Management. *American Naturalist*.
-    [doi:10.1086/702704](https://doi.org/10.1086/702704)
+    [doi:10.1086/702704](https://doi.org/10.1086/702704).
+    ([oa](https://github.com/boettiger-lab/pomdp-intro/tree/master/manuscripts), 
+    [code](https://github.com/boettiger-lab/pomdp-intro), 
+    [data](https://doi.org/10.5281/zenodo.2528507))
 
 29. Dan Sholler, Karthik Ram, __Carl Boettiger__, Daniel S Katz (2019).
     Enforcing public data archiving policies in academic publishing: A
