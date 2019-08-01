@@ -9,8 +9,9 @@ members:
     twitter: "cboettig"
     orcid: "0000-0002-1642-628X"
     googlescholar: "https://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ"
-    email: "cboettig@gmail.com"
+    email: "cboettig@berkeley.edu"
     photo: "carl.png"
+    keybase: "https://keybase.io/cboettig"
   - kari:
     name:
       first: "Kari" 
@@ -22,30 +23,6 @@ members:
     email: "kari.norman.314@gmail.com"
     photo: "kari.png"
     twitter: "norman_kari"
-  - allie:
-    name:
-      first: "Allie" 
-      last: "Barner"
-    title: "Postdoctoral Fellow"
-    homepage: "http://www.allisonbarner.com/"
-    twitter: "algaebarnacle"
-    googlescholar: "https://scholar.google.com/citations?user=EWydlnsAAAAJ&hl=en"
-    orcid: "0000-0001-9909-5713"
-    email: "allisonkbarner@gmail.com"
-    photo: "allie.png"
-    github: "abarner"
-  - dan:
-    name:
-      first: "Dan"
-      last: "Sholler"
-    title: "rOpenSci Postdoc"
-    googlescholar: "https://scholar.google.com/citations?user=fHVPc94AAAAJ&hl=en&oi=ao"
-    orcid: "0000-0003-2517-4317"
-    twitter: "DanSholler"
-    github: "dsholler"
-    photo: "dan.png"
-    homepage: "http://danielsholler.wordpress.com/"
-    email: "sholler.daniel@gmail.com"
   - millie:
     name:
       first: "Millie" 
@@ -53,7 +30,7 @@ members:
     title: "Graduate Student"
     homepage: "#"
     github: "milliechapman"
-    twitter: "milliec92"
+    twitter: "milliechapma"
     orcid: "0000-0002-1377-1539"
     email: "mchapman@berkeley.edu"
     photo: "millie.png"    
