@@ -18,8 +18,7 @@
       
       <guid>/2017/12/11/data-rectangling-with-jq/</guid>
       <description>“Data rectangling”: the process of turning highly nested data structures (e.g. JSON, XML) into a tabular format.
- Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community. Recording or slides of Jenny’s talk on the subject give a much better intro to the idea and working with this in R, particularly through the purrr package.
-As nice as purrr is for the task, I’ve recently found that the jqr package from Scott Chamberlain and co can be a much easier way to go about rectangling your JSON.</description>
+ Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community. Recording or slides of Jenny’s talk on the subject give a much better intro to the idea and working with this in R, particularly through the purrr package.</description>
     </item>
     
     <item>

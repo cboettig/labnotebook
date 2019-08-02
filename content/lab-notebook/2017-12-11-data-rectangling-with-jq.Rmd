@@ -37,7 +37,7 @@ library(jqr)
 ## Using purrr
 
 
-```{r results='asis'}
+```{r }
 gh_flat <- gh_repos %>% flatten()  # abandon nested structure and hope we didn't need it
 
 gh_tibble <- tibble(
@@ -48,7 +48,7 @@ gh_tibble <- tibble(
   owner =    gh_flat %>% map_chr(c("owner", "login"))
 )
 
-gh_tibble
+gh_tibble %>% datatable()
 ```
 
 Note we need to be explicit about missing value defaults and types.
@@ -58,7 +58,7 @@ Note we need to be explicit about missing value defaults and types.
 
 Note that we can simply exploit the object typing already encoded in the data (`int`, `lgl`,`chr`)
 
-```{r results="asis", message=FALSE}
+```{r message=FALSE}
 f <- system.file("extdata/gh_repos.json", package="repurrrsive")
 
 read_file(f) %>% 
@@ -70,7 +70,7 @@ read_file(f) %>%
     owner: .owner.login
     } ') %>% 
   jqr::combine() %>% # single json file
-  fromJSON() 
+  fromJSON()  %>% DT::datatable()
 ```
 
 This example only touches the surface of the `jq` syntax.  The [jq manual](https://stedolan.github.io/jq/manual/) provides a nice overview of this intuitive syntax.  `jq` can also perform a wide range of data processing on the elements: including conditionals, comparisons, regular expressions, math, and so forth.  While these are great, most R users will want to learn just enough `jq` syntax to get back a nice data rectangle, and then `dplyr` can take over.  
