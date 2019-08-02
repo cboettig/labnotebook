@@ -17,5 +17,5 @@ The theory post-doc would be based in the Boettiger lab, and work closely with p
  
 [award]: https://nsf.gov/awardsearch/showAward?AWD_ID=1824871
 [diversified farming systems]: https://doi.org/10.1016/j.ecolecon.2019.03.002
-[Dr Carl Boettiger]: https://carlboettiger.info
+[Dr. Carl Boettiger]: https://carlboettiger.info
 
