@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css">
 
-  <link rel="stylesheet" href="../../../../highlight/styles/tomorrow-night">
+  <link rel="stylesheet" href="../../../../highlight/styles/tomorrow-night.css">
   
 
   
@@ -138,13 +138,13 @@
 <h3>R code</h3>
 <p>Just for fun, I’ll make this post as an <code>.Rmd</code> file to illustrate running R code:</p>
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>## R version 3.5.0 (2018-04-23)
+<pre><code>## R version 3.6.1 (2019-07-05)
 ## Platform: x86_64-apple-darwin15.6.0 (64-bit)
-## Running under: macOS High Sierra 10.13.4
+## Running under: macOS Mojave 10.14.6
 ## 
 ## Matrix products: default
-## BLAS: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRblas.0.dylib
-## LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
+## BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
 ## 
 ## locale:
 ## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
@@ -153,11 +153,10 @@
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] compiler_3.5.0  backports_1.1.2 bookdown_0.7    magrittr_1.5   
-##  [5] rprojroot_1.3-2 tools_3.5.0     htmltools_0.3.6 yaml_2.1.19    
-##  [9] Rcpp_0.12.17    stringi_1.2.2   rmarkdown_1.9   blogdown_0.6   
-## [13] knitr_1.20      stringr_1.3.1   digest_0.6.15   xfun_0.1       
-## [17] evaluate_0.10.1</code></pre>
+##  [1] compiler_3.6.1  magrittr_1.5    bookdown_0.12   tools_3.6.1    
+##  [5] htmltools_0.3.6 yaml_2.2.0      Rcpp_1.0.1      stringi_1.4.3  
+##  [9] rmarkdown_1.14  blogdown_0.14   knitr_1.23      stringr_1.4.0  
+## [13] digest_0.6.20   xfun_0.8        evaluate_0.14</code></pre>
 <p>Note that <code>blogdown</code> relies on a simple <code>make</code>-like caching rule to avoid recompiling the R code unless the Rmd file has a newer timestamp than the output html version, making it practical to maintain a large site with non-trivial R posts.</p>
 </div>
 
