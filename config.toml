@@ -76,10 +76,7 @@ enableGitInfo = true
     description = "A website built through Hugo and blogdown."
 
     # options for highlight.js (version, additional languages, and theme)
-    highlightjsVersion = "9.10.0"
-    highlightCDN = "//cdn.bootcss.com"
-    highlightjsLang = ["r", "yaml"]
-    highlightjsTheme = "github"
+    highlightjsTheme = "tomorrow-night"
 
     [params.logo]
     url = "logo.png"

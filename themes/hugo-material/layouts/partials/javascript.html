@@ -30,3 +30,5 @@
 {{ range .Site.Params.custom_js }}
   <script type="text/javascript" src="{{ "/js/" | relURL }}{{ . }}"></script>
 {{ end }}
+
+{{ template "_internal/google_analytics.html" . }}
