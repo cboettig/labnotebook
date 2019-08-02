@@ -23,9 +23,7 @@
   <!-- Additional icons: fa-docker, academicons, R-logo  -->
   <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css">
-
   <link rel="stylesheet" href="{{ "/highlight/styles/" | relURL }}{{ .Site.Params.highlightjsTheme | default "github" }}.css">
-  
 
   {{ range .Site.Params.custom_css }}
   <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
@@ -34,5 +32,5 @@
   <link rel="canonical" href="{{ .Permalink }}">
 
 
-
+  <script src="/js/core/jquery.min.js" type="text/javascript"></script>
 </head>
