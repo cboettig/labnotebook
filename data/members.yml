@@ -34,6 +34,16 @@ members:
     orcid: "0000-0002-1377-1539"
     email: "mchapman@berkeley.edu"
     photo: "millie.png"    
+  - millie:
+    name:
+      first: "Marcus" 
+      last: "Lapeyrolerie"
+    title: "Graduate Student"
+    homepage: "#"
+    github: "mlap"
+    orcid: "0000-0003-2588-7843"
+    email: "marcuslapeyrolerie@me.com"
+    photo: "marcus.jpg"    
   - you:
     name:
       first: "Your"
