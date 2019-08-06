@@ -31,7 +31,7 @@ enableGitInfo = true
 [[menu.main]]
     name = "Publications"
     pre = "<i class='material-icons'>book</i>"
-    url = "/vita"
+    url = "/pubs"
     weight = 3
 [[menu.main]]
     name = "Teaching"

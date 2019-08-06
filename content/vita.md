@@ -272,6 +272,12 @@ aliases: "/publications"
 
 # invited talks & workshops
 
+**2019**
+
+- [Ecological Forecasting Initiative Conference](https://ecoforecast.org/efi2019/), Washington DC.
+- [NIMBioS Transient Dynamics Workshop](http://www.nimbios.org/workshops/WS_transients), Knoxville, TN.
+
+
 **2018**
 
 - [NSF SI2 PIs Meeting](https://si2-pi-community.github.io/2018-meeting/), Washington, DC
@@ -279,6 +285,11 @@ aliases: "/publications"
 - [Faculty Learning Program Fellows Workshop](https://teaching.berkeley.edu/programs/transforming-stem-teaching-faculty-learning-program/become-flp-faculty-fellow) Berkeley, CA
 - [GraphXD](https://graphxd.github.io/workshop/2018.html), Berkeley, CA
 - [Digital Data in Biodiversity](https://www.idigbio.org/wiki/index.php/Digital_Data_in_Biodiversity_Research_Conference,_Berkeley) UC Berkeley. (co-organizer)
+- [Ecological Society of America Invited Symposium](https://eco.confex.com/eco/2018/meetingapp.cgi/Session/14034) Addressing Outstanding Challenges to Operationalizing Resilience. New Orleans, LA.
+- Nonlinear Forecasting for Fisheries Applications, NOAA Southwest Fisheries Science Center, Santa Cruz, CA.
+
+
+<!-- DIMACS, Rutgers -->
 
 **2017**
 
