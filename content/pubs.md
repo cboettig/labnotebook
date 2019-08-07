@@ -214,29 +214,29 @@ aliases: "/pubs"
 
 ## R Packages
 
-- [`emld`](https://github.com/ropensci/emld): Ecological Metadata as Linked Data.  Carl Boettiger. [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/emld)](https://cran.r-project.org/package=emld)
+- [`emld`](https://github.com/ropensci/emld): Ecological Metadata as Linked Data.  Carl Boettiger. [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/emld)](https://cran.r-project.org/package=emld)
 
-- [`virtuoso`](https://github.com/ropensci/virtuoso): Interface to Virtuoso using ODBC. Carl Boettiger. [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/virtuoso)](https://cran.r-project.org/package=virtuoso)
+- [`virtuoso`](https://github.com/ropensci/virtuoso): Interface to Virtuoso using ODBC. Carl Boettiger. [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/virtuoso)](https://cran.r-project.org/package=virtuoso)
 
-- [`rdflib`](https://github.com/ropensci/rdflib): Tools to Manipulate and Query Semantic Data. Carl Boettiger. [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rdflib)](https://cran.r-project.org/package=rdflib)
+- [`rdflib`](https://github.com/ropensci/rdflib): Tools to Manipulate and Query Semantic Data. Carl Boettiger. [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rdflib)](https://cran.r-project.org/package=rdflib)
 
-- [`codemetar`](https://github.com/ropensci/codemetar): Generate CodeMeta Metadata for R Packages. Carl Boettiger. [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/codemetar)](https://cran.r-project.org/package=codemetar)
+- [`codemetar`](https://github.com/ropensci/codemetar): Generate CodeMeta Metadata for R Packages. Carl Boettiger. [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/codemetar)](https://cran.r-project.org/package=codemetar)
 
-- [`EcoNetGen`](https://github.com/cboettig/EcoNetGen): Simulate and Sample from Ecological Interaction Networks.  Carl Boettiger.  [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/EcoNetGen)](https://cran.r-project.org/package=EcoNetGen)
+- [`EcoNetGen`](https://github.com/cboettig/EcoNetGen): Simulate and Sample from Ecological Interaction Networks.  Carl Boettiger.  [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/EcoNetGen)](https://cran.r-project.org/package=EcoNetGen)
 
-- [`piggyback`](https://github.com/ropensci/piggyback/): Managing Larger Data on a GitHub Repository.  Carl Boettiger.  [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/piggyback)](https://cran.r-project.org/package=piggyback)
+- [`piggyback`](https://github.com/ropensci/piggyback/): Managing Larger Data on a GitHub Repository.  Carl Boettiger.  [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/piggyback)](https://cran.r-project.org/package=piggyback)
 
-- [`arkdb`](https://github.com/ropensci/arkdb/): Archive and Unarchive Databases Using Flat Files.  Carl Boettiger. [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/arkdb)](https://cran.r-project.org/package=arkdb)
+- [`arkdb`](https://github.com/ropensci/arkdb/): Archive and Unarchive Databases Using Flat Files.  Carl Boettiger. [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/arkdb)](https://cran.r-project.org/package=arkdb)
 
-- [`EML`](https://github.com/ropensci/EML): Read and Write Ecological Metadata Language File. Carl Boettiger, Matt Jones. [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/EML)](https://cran.r-project.org/package=EML)
+- [`EML`](https://github.com/ropensci/EML): Read and Write Ecological Metadata Language File. Carl Boettiger, Matt Jones. [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/EML)](https://cran.r-project.org/package=EML)
 
-- [`rfishbase`](https://github.com/ropensci/rfishbase): R Interface to FishBase. Carl Boettiger, Scott Chamberlain, Duncan Temple Lang, Peter Wainwright.  [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rfishbase)](https://cran.r-project.org/package=rfishbase)
+- [`rfishbase`](https://github.com/ropensci/rfishbase): R Interface to FishBase. Carl Boettiger, Scott Chamberlain, Duncan Temple Lang, Peter Wainwright.  [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rfishbase)](https://cran.r-project.org/package=rfishbase)
 
-- [`RNeXML`](https://github.com/ropensci/RNeXML): Semantically Rich I/O for the NeXML Phylogenetics Format. Carl Boettiger, Scott Chamberlain, Hilmar Lapp, Rutger Voss. [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/RNeXML)](https://cran.r-project.org/package=RNeXML)
+- [`RNeXML`](https://github.com/ropensci/RNeXML): Semantically Rich I/O for the NeXML Phylogenetics Format. Carl Boettiger, Scott Chamberlain, Hilmar Lapp, Rutger Voss. [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/RNeXML)](https://cran.r-project.org/package=RNeXML)
 
-- [`pmc`](https://github.com/cboettig/pmc): Phylogenetic Monte Carlo. Carl Boettiger. [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/pmc)](https://cran.r-project.org/package=pmc)
+- [`pmc`](https://github.com/cboettig/pmc): Phylogenetic Monte Carlo. Carl Boettiger. [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/pmc)](https://cran.r-project.org/package=pmc)
 
-- [`knitcitations`](https://github.com/cboettig/knitcitations): Citations for Knitr Markdown Files.  Carl Boettiger, [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/knitcitations)](https://cran.r-project.org/package=knitcitations)
+- [`knitcitations`](https://github.com/cboettig/knitcitations): Citations for Knitr Markdown Files.  Carl Boettiger, [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/knitcitations)](https://cran.r-project.org/package=knitcitations)
 
 
 
