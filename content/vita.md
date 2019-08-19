@@ -248,21 +248,21 @@ aliases: "/publications"
 
 - The Codemeta project (2015). **National Science Foundation**
    [#ACI-1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
-   *$165,782*. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2055972))
+   *$165,782*. ([proposal here](https://dx.doi.org/10.6084/m9.figshare.2055972))
 
 - The rOpenSci Project, Phase II funding (2014, Co-PI). **Alfred P. Sloan Foundation** $300,000
 
 - [NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013-2015). **National Science Foundation**
    [#DBI-1306697](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697),
-   $138,000 ([proposal](http://doi.org/10.6084/m9.figshare.652970))
+   $138,000 ([proposal here](http://doi.org/10.6084/m9.figshare.652970))
 
 - The rOpenSci Project Phase I funding (2013, Co-PI). **Alfred P. Sloan Foundation** $180,000
 
 - IIASA YSSP fellowship (2009). **National Academy of Sciences**, OISE-0738129,
-   $8,000. ([proposal](http://doi.org/10.6084/m9.figshare.678310))
+   $8,000. ([proposal here](http://doi.org/10.6084/m9.figshare.678310))
 
 - Computational Science Graduate Fellowship (2008). **United States Department of Energy**,
-   #DE-FG02-97ER25308, $149,000. ([proposal](https://dx.doi.org/10.6084/m9.figshare.2010246))
+   #DE-FG02-97ER25308, $149,000. ([proposal here](https://dx.doi.org/10.6084/m9.figshare.2010246))
 
 
 # book chapters
@@ -270,20 +270,22 @@ aliases: "/publications"
 - _Carl Boettiger_ (2017). A Reproducible R Notebook Using Docker. In J. Kitzes, D. Turek, & F. Deniz (Eds.), The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences (1st ed., pp. 109–117). Oakland, CA: UC Press. <https://www.ucpress.edu/book.php?isbn=9780520294752>
 
 
-# invited talks & workshops
+# invited talks
 
 **2019**
 
+- [Transients in Ecology](https://eco.confex.com/eco/2019/meetingapp.cgi/Session/15321), Ecological Society of America Annual Meeting, Louisville, KY.
 - [Ecological Forecasting Initiative Conference](https://ecoforecast.org/efi2019/), Washington DC.
 - [NIMBioS Transient Dynamics Workshop](http://www.nimbios.org/workshops/WS_transients), Knoxville, TN.
-
+- [Project EDDIE](https://serc.carleton.edu/eddie/earthecosystems/eddieevents/workshops/barriers_solutions/index.html) keynote speaker, Northfield MN.
+- [COMPASS Workshop](https://www.compassscicomm.org) for scientific communication, Asilomar, CA.
 
 **2018**
 
-- [NSF SI2 PIs Meeting](https://si2-pi-community.github.io/2018-meeting/), Washington, DC
-- [rOpenSci unconference](http://unconf18.ropensci.org), Seattle, WA
-- [Faculty Learning Program Fellows Workshop](https://teaching.berkeley.edu/programs/transforming-stem-teaching-faculty-learning-program/become-flp-faculty-fellow) Berkeley, CA
-- [GraphXD](https://graphxd.github.io/workshop/2018.html), Berkeley, CA
+- [NSF SI2 PIs Meeting](https://si2-pi-community.github.io/2018-meeting/), Washington, DC.
+- [rOpenSci unconference](http://unconf18.ropensci.org), Seattle, WA.
+- [Faculty Learning Program Fellows Workshop](https://teaching.berkeley.edu/programs/transforming-stem-teaching-faculty-learning-program/become-flp-faculty-fellow) Berkeley, CA.
+- [GraphXD](https://graphxd.github.io/workshop/2018.html), Berkeley, CA.
 - [Digital Data in Biodiversity](https://www.idigbio.org/wiki/index.php/Digital_Data_in_Biodiversity_Research_Conference,_Berkeley) UC Berkeley. (co-organizer)
 - [Ecological Society of America Invited Symposium](https://eco.confex.com/eco/2018/meetingapp.cgi/Session/14034) Addressing Outstanding Challenges to Operationalizing Resilience. New Orleans, LA.
 - Nonlinear Forecasting for Fisheries Applications, NOAA Southwest Fisheries Science Center, Santa Cruz, CA.
@@ -293,26 +295,26 @@ aliases: "/publications"
 
 **2017**
 
-- [CROSS Symposium Speaker](https://cross.ucsc.edu/cross-events/research-symposium/2017-symposium/) UC Santa Cruz.
+- [CROSS Symposium Speaker](https://cross.ucsc.edu/cross-events/research-symposium/2017-symposium/) Santa Cruz, CA.
 - [Imagining Tomorrow's University](http://www.ncsa.illinois.edu/Conferences/ImagineU/participants.html) Chicago, IL.
-- [rOpenSci unconference](http://unconf17.ropensci.org), Los Angeles, CA
+- [rOpenSci unconference](http://unconf17.ropensci.org), Los Angeles, CA.
 - [Prov-a-thon: Practical Tools for Reproducible Science](https://dataoneorg.github.io/provathon-2017/), Tamaya, NM.
 - [NSF Translational Data Science Workshop](https://bids.berkeley.edu/events/translational-data-science-workshop), Berkeley Institute for Data Science, Berkeley, CA.
 
 **2016**
 
-- [Force16 Codemeta Workshop](http://sched.co/5wK5), Portland OR (organizer)
-- [CodeMeta NSF Workshop](https://codemeta.github.io) Portland, OR (organizer)
-- [rOpenSci unconference](http://unconf16.ropensci.org), San Francisco, CA
+- [Force16 Codemeta Workshop](http://sched.co/5wK5), Portland OR (organizer).
+- [CodeMeta NSF Workshop](https://codemeta.github.io) Portland, OR (organizer).
+- [rOpenSci unconference](http://unconf16.ropensci.org), San Francisco, CA.
 
 **2015**
 
 - Invited Speaker, [Empirical Dynamical Modeling and Forecasting in Nonlinear Systems](http://ecows.oc.ntu.edu.tw/itnlws/), NTU, Taiwan.
 - Moore-Sloan Data Science Environments: Second Annual Data Science Summit
-- [Data Intensive Training Workshop](https://github.com/NCEAS/ds-workshop-2015), NCEAS, Santa Barbara, CA
+- [Data Intensive Training Workshop](https://github.com/NCEAS/ds-workshop-2015), NCEAS, Santa Barbara, CA.
 - [NSF Big Data Hubs](http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm) Design Charette, Western Region.
 - [rOpenSci unconference](http://unconf.ropensci.org/), San Francisco CA.
-- [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville TN
+- [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville TN.
 
 **2014**
 
@@ -334,7 +336,7 @@ aliases: "/publications"
 - [Sustainable Management of Living Natural Resources Workshop](http://www.mbi.ohio-state.edu/2013/ws3description.html), MBI Columbus, OH.
 - Academic software & workforce development Workshop, [ISEES](http://isees.nceas.ucsb.edu). Oakland, CA.
 - Software Lifecycle Workshop, [ISEES](http://isees.nceas.ucsb.edu), Santa Barbara, CA.
-- [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville, TN
+- [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville, TN.
 - [Stochastic spatial modeling in population dynamics Workshop](http://www.aimath.org/WWN/populationmodel/), AIM, Palo Alto, CA.
 
 
@@ -351,6 +353,8 @@ aliases: "/publications"
 
 ## campus
 
+- 2019 Faculty Working Group for the formation of the Division of Data Science & Information
+- 2018 - 2019 Faculty Task Force for Data Science Minor Design
 - 2018 - current. Governance Committee for Data Science Programs
 - 2017 - 2018. ESPM Remote Sensing Faculty Search, committee member & equity liaison
 - 2017 - 2018. ad hoc Data Science Degree Proposal Committee
