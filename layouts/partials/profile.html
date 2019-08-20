@@ -1,26 +1,28 @@
-<div class="card card-plain">
-  <div>
+<div class="card card-plain justify-content-center">
+  <div class="text-center">
     <img property="foaf:depiction" 
     src="{{"/img/carl.png" | relURL }}" 
     alt="Photo of Carl Boettiger" 
     class="img-raised rounded-circle img-fluid"/>
     </div>
-  <h4 class="card-title">
+  <h4 class="card-title text-center">
   <span
     property="foaf:name"><span
     property="foaf:givenName">Carl</span> <span
     property="foaf:familyName">Boettiger</span></span>
   </h4>
-  <div class="card-body">
-    <i class="fa fa-envelope"></i> <a href="javascript:location='mailto:\u0063\u0062\u006f\u0065\u0074\u0074\u0069\u0067\u0040\u0062\u0065\u0072\u006b\u0065\u006c\u0065\u0079\u002e\u0065\u0064\u0075';void 0"><script type="text/javascript">document.write('\u0063\u0062\u006f\u0065\u0074\u0074\u0069\u0067\u0040\u0062\u0065\u0072\u006b\u0065\u006c\u0065\u0079\u002e\u0065\u0064\u0075')</script></a><br/>
-    <i class="fa fa-user"></i> <a href="https://www.google.com/maps/place/Wellman+Hall,+Berkeley,+CA+94720/@37.8731768,-122.2649768,17z/data=!3m1!4b1!4m2!3m1!1s0x80857c20d77c84bb:0x1ddb86f685917787">203 Wellman Hall</a><br/>
-    <i class="fa fa-building"></i>
-    ESPM Department,           <br/>
-    University of California,  <br/>
-    130 Mulford Hall #3114,    <br/>
-    Berkeley, CA 94720-3114 USA <br/>
-    <i class="ai ai-orcid"></i>
-    <a href="https://orcid.org/0000-0002-1642-628X">0000-0002-1642-628X</a>
+  <div class="card-body d-flex justify-content-around">
+    <ul class="fa-ul">
+      <li><i class="fa-li fa fa-envelope"></i> <a href="javascript:location='mailto:\u0063\u0062\u006f\u0065\u0074\u0074\u0069\u0067\u0040\u0062\u0065\u0072\u006b\u0065\u006c\u0065\u0079\u002e\u0065\u0064\u0075';void 0"><script type="text/javascript">document.write('\u0063\u0062\u006f\u0065\u0074\u0074\u0069\u0067\u0040\u0062\u0065\u0072\u006b\u0065\u006c\u0065\u0079\u002e\u0065\u0064\u0075')</script></a><br/></li>
+      <li><i class="fa-li fa fa-user"></i> <a href="https://www.google.com/maps/place/Wellman+Hall,+Berkeley,+CA+94720/@37.8731768,-122.2649768,17z/data=!3m1!4b1!4m2!3m1!1s0x80857c20d77c84bb:0x1ddb86f685917787">203 Wellman Hall</a><br/></li>
+      <li><i class="fa-li fa fa-building"></i>
+      ESPM Department,           <br/>
+      University of California,  <br/>
+      130 Mulford Hall #3114,    <br/>
+      Berkeley, CA 94720-3114 USA <br/></li>
+      <li><i class="fa-li ai ai-orcid"></i>
+      <a href="https://orcid.org/0000-0002-1642-628X">0000-0002-1642-628X</a></li>
+    </ul>  
   </div>
   <div class="card-footer justify-content-center">
     <a class="btn btn-link btn-just-icon" href="https://twitter.com/{{.Site.Params.twitter}}"><i class="fa fa-twitter"></i></a> 
