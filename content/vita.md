@@ -6,7 +6,7 @@ nomath: true
 aliases: "/publications"
 ---
 
-# employment
+# Employment
 
 - 2015-current Assistant Professor,
   Department of Environmental Science, Policy and Management,
@@ -17,7 +17,7 @@ aliases: "/publications"
   **University of California, Santa Cruz**.
   Mentors: [Marc Mangel](http://users.soe.ucsc.edu/~msmangel/), [Stephan Munch](http://swfsc.noaa.gov/staff.aspx?&amp;id=17294)
 
-# education
+# Education
 
 - 2012 Ph.D Population Biology,
   **University of California, Davis**.
@@ -28,7 +28,7 @@ aliases: "/publications"
   with honors and certificates in *biophysics*
   and *applied and computational mathematics.*
 
-# publications
+# Publications
 
 32. Milad Memarzadeh, Gregory L. Britten, Boris Worm, __Carl Boettiger__ (2019). 
     Rebuilding global fisheries under uncertainty. 
@@ -227,26 +227,28 @@ aliases: "/publications"
 	 907-916. [doi:10.1086/50860](http://dx.doi.org/10.1086/508600).
 	 ([oa](http://arxiv.org/abs/astro-ph/0603060))
 
-# grants
+# Grants
 
 - The Influence of Conflicting Policies and Supply-Chain Pressures on Farmers' Decisions and Tradeoffs with Respect to Biodiversity, Profitability, and Sustainability.  Timothy Bowles (PI), Alastair Iles, Claire Kremen, Carl Boettiger. (2018-2022).  **National Science Foundation** [#CNH-1824871
 ](https://nsf.gov/awardsearch/showAward?AWD_ID=1824871) $1,301,737
 
 - The rOpenSci Project (2019-2021, Co-PI). **Helmsley Charitable Trust**, award 2016PG-BRI004. $1,000,000
 
-- Detecting Change in Global Biodiversity through Large Scale Network Analysis. (2018-2020) Berkeley Institute for Data Science, $67,000
+- Detecting Change in Global Biodiversity through Large Scale Network Analysis. (2018) Berkeley Institute for Data Science, $67,000
 
-- [Hellman Fellows Award](https://vpf.berkeley.edu/hellman-fellows-fund) (2018-2020) **The Hellman Foundation**. $37,600
+- Big Data, Big Uncertainty: Ecological Decision- Making in the 21st Century.  [Hellman Fellows Award](https://vpf.berkeley.edu/hellman-fellows-fund) (2018-2020) **The Hellman Foundation**. $37,600
 
 - [Berkeley Collegium Award for Excellence in Undergraduate Education.](http://collegium.berkeley.edu/) (2018-2019) $16,867.50
 
-- Managing ecosystems under extreme uncertainty. (2016-03 - 2019-09) NSF **XSEDE** TG-DEB160003. NSF Estimated value of computing resources: $34,558
+- Managing ecosystems under extreme uncertainty. (2016 - 2019) NSF **XSEDE** TG-DEB160003. NSF Estimated value of computing resources: $34,558
 
-- Reproducible and Collaborative Data Science. NSF **XSEDE** TG-DEB160021.  NSF Estimated value of computing resources: $20,028
+- Reproducible and Collaborative Data Science. NSF **XSEDE** TG-DEB160021.  (2016 - 2019) NSF Estimated value of computing resources: $20,028
+
+- [James S McDonnell Foundation Post-doctoral Fellowship in Complex Systems](https://www.jsmf.org/grants/20150024/) (Awarded to post-doctoral scholar Allison Barner, who then chose to bring this award to my group at UC Berkeley) $200,000.
 
 - The rOpenSci Project (2015-2018, Co-PI). **Helmsley Charitable Trust**, award 2016PG-BRI004. $2,875,071
 
-- The Codemeta project (2015). **National Science Foundation**
+- The CodeMeta Project (2015). **National Science Foundation**
    [#ACI-1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
    *$165,782*. ([proposal here](https://dx.doi.org/10.6084/m9.figshare.2055972))
 
@@ -265,20 +267,25 @@ aliases: "/publications"
    #DE-FG02-97ER25308, $149,000. ([proposal here](https://dx.doi.org/10.6084/m9.figshare.2010246))
 
 
-# book chapters
+# Book Chapters
 
 - _Carl Boettiger_ (2017). A Reproducible R Notebook Using Docker. In J. Kitzes, D. Turek, & F. Deniz (Eds.), The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences (1st ed., pp. 109–117). Oakland, CA: UC Press. <https://www.ucpress.edu/book.php?isbn=9780520294752>
 
 
-# invited talks
+# Invited Talks & Workshops
 
 **2019**
 
-- [Transients in Ecology](https://eco.confex.com/eco/2019/meetingapp.cgi/Session/15321), Ecological Society of America Annual Meeting, Louisville, KY.
-- [Ecological Forecasting Initiative Conference](https://ecoforecast.org/efi2019/), Washington DC.
-- [NIMBioS Transient Dynamics Workshop](http://www.nimbios.org/workshops/WS_transients), Knoxville, TN.
-- [Project EDDIE](https://serc.carleton.edu/eddie/earthecosystems/eddieevents/workshops/barriers_solutions/index.html) keynote speaker, Northfield MN.
+- [Transients in Ecology](https://eco.confex.com/eco/2019/meetingapp.cgi/Session/15321), Organized Oral Session, Ecological Society of America Annual Meeting, Louisville, KY.
+- [Ecological Forecasting Initiative Conference](https://ecoforecast.org/efi2019/), AAAS Headquarters, Washington DC.
+- [NIMBioS Transient Dynamics Workshop](http://www.nimbios.org/workshops/WS_transients), University of Tennessee, Knoxville, TN.
+- [Project EDDIE](https://serc.carleton.edu/eddie/earthecosystems/eddieevents/workshops/barriers_solutions/index.html) keynote speaker, Carlton College, Northfield MN.
+- [US Research Software Sustainability Institute](https://github.com/si2-urssi/software-credit) Workshop, NCEAS, Santa Barbara, CA.
 - [COMPASS Workshop](https://www.compassscicomm.org) for scientific communication, Asilomar, CA.
+
+<!--
+- Jetstream Stakeholder Advisory Board Meeting, Tuscon, AZ
+-->
 
 **2018**
 
@@ -287,7 +294,7 @@ aliases: "/publications"
 - [Faculty Learning Program Fellows Workshop](https://teaching.berkeley.edu/programs/transforming-stem-teaching-faculty-learning-program/become-flp-faculty-fellow) Berkeley, CA.
 - [GraphXD](https://graphxd.github.io/workshop/2018.html), Berkeley, CA.
 - [Digital Data in Biodiversity](https://www.idigbio.org/wiki/index.php/Digital_Data_in_Biodiversity_Research_Conference,_Berkeley) UC Berkeley. (co-organizer)
-- [Ecological Society of America Invited Symposium](https://eco.confex.com/eco/2018/meetingapp.cgi/Session/14034) Addressing Outstanding Challenges to Operationalizing Resilience. New Orleans, LA.
+- [Ecological Society of America Invited Symposium](https://eco.confex.com/eco/2018/meetingapp.cgi/Session/14034) Addressing Outstanding Challenges to Operationalizing Resilience (Organizer). New Orleans, LA.
 - Nonlinear Forecasting for Fisheries Applications, NOAA Southwest Fisheries Science Center, Santa Cruz, CA.
 
 
@@ -309,8 +316,8 @@ aliases: "/publications"
 
 **2015**
 
-- Invited Speaker, [Empirical Dynamical Modeling and Forecasting in Nonlinear Systems](http://ecows.oc.ntu.edu.tw/itnlws/), NTU, Taiwan.
-- Moore-Sloan Data Science Environments: Second Annual Data Science Summit
+- [Empirical Dynamical Modeling and Forecasting in Nonlinear Systems](http://ecows.oc.ntu.edu.tw/itnlws/), NTU, Taiwan.
+- Moore-Sloan Data Science Environments: Second Annual Data Science Summit (Workshop)
 - [Data Intensive Training Workshop](https://github.com/NCEAS/ds-workshop-2015), NCEAS, Santa Barbara, CA.
 - [NSF Big Data Hubs](http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm) Design Charette, Western Region.
 - [rOpenSci unconference](http://unconf.ropensci.org/), San Francisco CA.
@@ -318,10 +325,10 @@ aliases: "/publications"
 
 **2014**
 
--  Invited speaker, Berkeley Initiative for Global Change Biology Workshop (student organized), UC Berkeley, CA.
--  Invited speaker, [DIMACS](http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html) Global Change, Berkeley CA.
--  Invited speaker, Zoology Seminar, University of Wisconsin, Madison, WI.
--  Invited speaker, ESPM Seminar, UC Berkeley, CA.
+- Berkeley Initiative for Global Change Biology Workshop (student organized), UC Berkeley, CA.
+- [DIMACS](http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html) Global Change, Berkeley CA.
+- Zoology Seminar, University of Wisconsin, Madison, WI.
+- ESPM Seminar, UC Berkeley, CA.
 - [rOpenSci unconference](http://ropensci.org/blog/2014/05/14/ropenhack/), San Francisco CA.
 - [Reproducible Science: Curriculum & Workflow Workshop](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014), NESCent, Durham, NC.
 - [WSSSPE 2.0 Meeting](http://wssspe.researchcomputing.org.uk/wssspe2/). New Orleans, LA.
@@ -353,18 +360,19 @@ aliases: "/publications"
 
 ## campus
 
-- 2019 Faculty Working Group for the formation of the Division of Data Science & Information
-- 2018 - 2019 Faculty Task Force for Data Science Minor Design
-- 2018 - current. Governance Committee for Data Science Programs
-- 2017 - 2018. ESPM Remote Sensing Faculty Search, committee member & equity liaison
-- 2017 - 2018. ad hoc Data Science Degree Proposal Committee
-- 2015 - current. Berkeley Research Computing Advisory Committee
+- 2019 - current. *Faculty Working Group* for the formation of the Division of Data Science & Information
+- 2018 - 2019. *Faculty Task Force* for Data Science Minor Design
+- 2018 - current. *Governance Committee* for Data Science Programs
+- 2017 - 2018. ESPM Remote Sensing *Faculty Search*, committee member & equity liaison
+- 2017 - 2018. *ad hoc Data Science Degree Proposal* Committee
+- 2015 - current. *Berkeley Research Computing Advisory* Committee
 
 ## extra-campus
 
 - NCEAS [Scientific Advisory Board](https://www.nceas.ucsb.edu/content/nceas-science-advisers)
 - rOpenSci [Leadership Team](https://ropensci.org/about/#team)
 - Jetstream Cloud Computing [Stakeholder Advisory Board](https://jetstream-cloud.org/about/advisory-board.php), XSEDE.
+- Reviewer for over 40 journals, NSF review panelist, ad hoc reviewer for UC CCGA, NSF, NERSC.
 
 <!--
 ## reviewer for:
@@ -413,14 +421,29 @@ aliases: "/publications"
 - Student member for the CPB program review. 2010
 -->
 
-# selected software projects
 
--   2012 - current: The rOpenSci Project, co-founder. <https://ropensci.org>
--   2014 - current: Carl Boettiger, Dirk Eddelbuettel. The Rocker Project: Docker images for the R environment. <https://rocker-project.org>
--   2015 - current: Carl Boettiger, Matt Jones, et al. The CodeMeta Project: Software Metadata Exchange <https://codemeta.github.io>
+# Software projects
 
-My software impact is also measured relative to other academics by [depsy.org](http://depsy.org/person/329935)
+## R Packages
 
+- [`emld`](https://github.com/ropensci/emld): Ecological Metadata as Linked Data.  Carl Boettiger (2019).
+- [`virtuoso`](https://github.com/ropensci/virtuoso): Interface to Virtuoso using ODBC. Carl Boettiger (2019).
+- [`rdflib`](https://github.com/ropensci/rdflib): Tools to Manipulate and Query Semantic Data. Carl Boettiger (2018).
+- [`codemetar`](https://github.com/ropensci/codemetar): Generate CodeMeta Metadata for R Packages. Carl Boettiger, Maëlle Salmon (2018).
+- [`EcoNetGen`](https://github.com/cboettig/EcoNetGen): Simulate and Sample from Ecological Interaction Networks.  Marcus de Aguiar, Erica Newman, Mathias Pires, Carl Boettiger  (2018).
+- [`piggyback`](https://github.com/ropensci/piggyback/): Managing Larger Data on a GitHub Repository.  Carl Boettiger (2018).
+- [`arkdb`](https://github.com/ropensci/arkdb/): Archive and Unarchive Databases Using Flat Files.  Carl Boettiger (2018).
+- [`EML`](https://github.com/ropensci/EML): Read and Write Ecological Metadata Language File. Carl Boettiger, Matt Jones (2016; v2 2019).
+- [`RNeXML`](https://github.com/ropensci/RNeXML): Semantically Rich I/O for the NeXML Phylogenetics Format. Carl Boettiger, Scott Chamberlain, Hilmar Lapp, Rutger Voss (2014).
+- [`pmc`](https://github.com/cboettig/pmc): Phylogenetic Monte Carlo. Carl Boettiger (2012).
+- [`knitcitations`](https://github.com/cboettig/knitcitations): Citations for Knitr Markdown Files.  Carl Boettiger (2012).
+- [`rfishbase`](https://github.com/ropensci/rfishbase): R Interface to FishBase. Carl Boettiger, Scott Chamberlain, Duncan Temple Lang, Peter Wainwright (2011; v2 2015; v3 2019).
+
+
+## Other Software
+
+- Carl Boettiger, Dirk Eddelbuettel. The Rocker Project: Docker images for the R environment. <https://rocker-project.org>. (Language: Dockerfile)
+- Carl Boettiger, Matt Jones, et al. The CodeMeta Project: Software Metadata Exchange <https://codemeta.github.io> (Language: JSON-LD)
 
 # theses
 
@@ -437,6 +460,7 @@ My software impact is also measured relative to other academics by [depsy.org](h
 
 # media interviews
 
+- Martin, Glen. (2019)."How Algorithms Could Save the Planet." _California Magazine). <https://alumni.berkeley.edu/california-magazine/just-in/2019-02-01/how-algorithms-could-save-planet>
 - Seltenrich, N. (2016). "Scaling the Heights of Data Science."  _Breakthroughs Magazine_.  <https://nature.berkeley.edu/breakthroughs/opensci-data>
 - Tachibana, C. (2014). "The paperless lab" _Science_ 345(6195) pp. 468-470. [10.1126/science.opms.p1400087](http://www.sciencemag.org/site/products/lst_20140613.xhtml)
 - Mascarelli, A. (2014) "Research tools: Jump off the page." *Nature*
