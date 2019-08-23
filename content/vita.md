@@ -238,7 +238,7 @@ aliases: "/publications"
 
 - Big Data, Big Uncertainty: Ecological Decision- Making in the 21st Century.  [Hellman Fellows Award](https://vpf.berkeley.edu/hellman-fellows-fund) (2018-2020) **The Hellman Foundation**. $37,600
 
-- [Berkeley Collegium Award for Excellence in Undergraduate Education.](http://collegium.berkeley.edu/) (2018-2019) $16,867.50
+- [Berkeley Collegium Award for Narrowing the Gap Between Teaching and Research.](http://collegium.berkeley.edu/) (2018-2019) $16,867.50
 
 - Managing ecosystems under extreme uncertainty. (2016 - 2019) NSF **XSEDE** TG-DEB160003. NSF Estimated value of computing resources: $34,558
 
