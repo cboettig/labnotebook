@@ -360,12 +360,14 @@ aliases: "/publications"
 
 ## campus
 
-- 2019 - current. *Faculty Working Group* for the formation of the Division of Data Science & Information
-- 2018 - 2019. *Faculty Task Force* for Data Science Minor Design
-- 2018 - current. *Governance Committee* for Data Science Programs
-- 2017 - 2018. ESPM Remote Sensing *Faculty Search*, committee member & equity liaison
-- 2017 - 2018. *ad hoc Data Science Degree Proposal* Committee
-- 2015 - current. *Berkeley Research Computing Advisory* Committee
+- 2019 - current. Faculty Working Group for the formation of the Division of Data Science & Information
+- 2018 - 2019. Faculty Task Force for Data Science Minor Design
+- 2018 - current. Faculty Advisory Committee of the Vice Chancellor for Undergraduate Education
+- 2018 - current. Governance Committee for Data Science Programs
+- 2017 - 2018. ESPM Remote Sensing Faculty Search, committee member & equity liaison
+- 2017 - 2018. ad hoc Data Science Degree Proposal Committee
+- 2017 - current. Steering Committee for NSF Research Traineeship (NRT): Environment and Society: Data Science for the 21st Century (DS421)
+- 2015 - 2019. Berkeley Research Computing Advisory Committee
 
 ## extra-campus
 

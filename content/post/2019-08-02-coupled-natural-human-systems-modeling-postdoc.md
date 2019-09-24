@@ -13,9 +13,11 @@ We're looking to hire a coupled natural-human systems post-doc to work on the th
 The theory post-doc would be based in the Boettiger lab, and work closely with project leads Timothy Bowles, Claire Kremen, Alastair Iles and the rest of the team.  We seek to provide a welcoming, supportive environment and prioritizes professional development of our post-doctoral colleagues.  Please get in touch with [Dr. Carl Boettiger] for any questions.
 
 - Position details and application forms are available at <https://aprecruit.berkeley.edu/JPF02151>.
-- **Applications close  Monday, Aug 26**!
+- **Applications close  Friday, Aug 24**!
  
 [award]: https://nsf.gov/awardsearch/showAward?AWD_ID=1824871
 [diversified farming systems]: https://doi.org/10.1016/j.ecolecon.2019.03.002
 [Dr. Carl Boettiger]: https://carlboettiger.info
+
+
 
