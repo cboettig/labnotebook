@@ -99,6 +99,15 @@ Inference vs Prediction Inference vs Prediction  Breiman (2001) The two cultures
     </item>
     
     <item>
+      <title>cloud.md</title>
+      <link>/cloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cloud/</guid>
+      <description> Jetstream TACC OpenStack Jetstream IU OpenStack Chameleon TACC OpenStack  </description>
+    </item>
+    
+    <item>
       <title>Community</title>
       <link>/community/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -157,15 +166,6 @@ Actively Using    -- The web-based home of my research. Star, watch, or fork a p
  2013-2015 NSF Post-doctoral Scholar in the Department of Applied Mathematics and Statistics, University of California, Santa Cruz. Mentors: Marc Mangel, Stephan Munch
   Education  2012 Ph.D Population Biology, University of California, Davis. Mentor: Alan Hastings
  2007 A.B in Physics, Princeton University, with honors and certificates in biophysics and applied and computational mathematics.</description>
-    </item>
-    
-    <item>
-      <title>cloud.md</title>
-      <link>/cloud/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cloud/</guid>
-      <description> Jetstream TACC OpenStack Jetstream IU OpenStack Chameleon TACC OpenStack  </description>
     </item>
     
   </channel>
