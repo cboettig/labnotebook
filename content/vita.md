@@ -347,7 +347,7 @@ aliases: "/publications"
 - [Stochastic spatial modeling in population dynamics Workshop](http://www.aimath.org/WWN/populationmodel/), AIM, Palo Alto, CA.
 
 
-# awards
+# Awards
 
 -  2011 *Volterra Award* (Best student talk, ESA Theory Section)
 -  2007 Elected to Membership in the Society of *Sigma Xi*
@@ -356,9 +356,9 @@ aliases: "/publications"
 -  2006 Kusaka Memorial Prize in Physics, Princeton University
 -  2006 Plasma Physics Fellow, PPPL
 
-# service
+# Service
 
-## campus
+## Campus
 
 - 2019 - current. Faculty Working Group for the formation of the Division of Data Science & Information
 - 2018 - 2019. Faculty Task Force for Data Science Minor Design
@@ -369,7 +369,7 @@ aliases: "/publications"
 - 2017 - current. Steering Committee for NSF Research Traineeship (NRT): Environment and Society: Data Science for the 21st Century (DS421)
 - 2015 - 2019. Berkeley Research Computing Advisory Committee
 
-## extra-campus
+## Extra-campus
 
 - NCEAS [Scientific Advisory Board](https://www.nceas.ucsb.edu/content/nceas-science-advisers)
 - rOpenSci [Leadership Team](https://ropensci.org/about/#team)
@@ -424,7 +424,7 @@ aliases: "/publications"
 -->
 
 
-# Software projects
+# Software
 
 ## R Packages
 
@@ -447,7 +447,7 @@ aliases: "/publications"
 - Carl Boettiger, Dirk Eddelbuettel. The Rocker Project: Docker images for the R environment. <https://rocker-project.org>. (Language: Dockerfile)
 - Carl Boettiger, Matt Jones, et al. The CodeMeta Project: Software Metadata Exchange <https://codemeta.github.io> (Language: JSON-LD)
 
-# theses
+# Theses
 
 - Carl Boettiger, David Huse (2006) Clonal Interference Models in
   Population Genetics. *Princeton Physics Dept*. [doi:10.6084/m9.figshare.678305](http://dx.doi.org/10.6084/m9.figshare.678305).
@@ -460,7 +460,7 @@ aliases: "/publications"
 - Carl Boettiger (2012). Regime shifts in ecology and evolution (PhD
   Dissertation). [doi:10.6084/m9.figshare.97218](http://dx.doi.org/10.6084/m9.figshare.97218).
 
-# media interviews
+# Media interviews
 
 - Martin, Glen. (2019)."How Algorithms Could Save the Planet." _California Magazine). <https://alumni.berkeley.edu/california-magazine/just-in/2019-02-01/how-algorithms-could-save-planet>
 - Seltenrich, N. (2016). "Scaling the Heights of Data Science."  _Breakthroughs Magazine_.  <https://nature.berkeley.edu/breakthroughs/opensci-data>
