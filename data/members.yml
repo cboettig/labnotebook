@@ -34,7 +34,7 @@ members:
     orcid: "0000-0002-1377-1539"
     email: "mchapman@berkeley.edu"
     photo: "millie.png"    
-  - millie:
+  - marcus:
     name:
       first: "Marcus" 
       last: "Lapeyrolerie"
@@ -44,6 +44,17 @@ members:
     orcid: "0000-0003-2588-7843"
     email: "marcuslapeyrolerie@me.com"
     photo: "marcus.jpg"    
+  - serge:
+    name:
+      first: "Serge" 
+      last: "Wiltshire"
+    title: "Postdoctoral Researcher"
+    googlescholar: "https://scholar.google.com/citations?user=-8I8G-kAAAAJ&hl=en"
+    #homepage: "#"
+    #github: ""
+    #orcid: ""
+    email: "serge.wiltshire@gmail.com"
+    photo: "serge.jpg"    
   - you:
     name:
       first: "Your"

@@ -1,0 +1,692 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Freeman Curriculum Vitae
+% XeLaTeX Template
+% Version 2.0 (19/3/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%!TEX program = xelatex
+% NOTICE: This template must be compiled with XeLaTeX, the line above should
+% ensure this happens automatically but if it doesn't you will need to specify 
+% XeLaTeX as the engine in your editor or script
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Font size, can be: 10pt, 11pt or 12pt
+
+\input{structure.tex} % Include the file that specifies the document structure
+
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example right footer:
+%\rfoot{\color{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{paracol}{2} % Begin the multi-column environment
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CURRICULUM VITAE TEXT
+%----------------------------------------------------------------------------------------
+
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the author name and CV text; fixed height to match the coloured box to the right, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\centering % Centre text
+	{\sffamily\Huge Dr. Carl Boettiger}\\\medskip % Your name
+	{\Huge\color{headings}\cvtextfont Curriculum Vitae}
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+% Blank \workposition command to add another job:
+
+%\workposition{} % Duration
+%{} % FT/PT (full time or part time)
+%{} % Employer
+%{} % Job title
+%{} % Description
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\workposition{Current, from July 2015} % Duration
+{FT} % FT/PT (full time or part time)
+{University of California, Berkeley} % Employer
+{Assistant Professor} % Job title
+{Department of Environmental Science, Policy and Management} % Description
+
+%------------------------------------------------
+
+\workposition{2013-2015} % Duration
+{FT} % FT/PT (full time or part time)
+{University of California, Santa Cruz} % Employer
+{NSF Post-doctoral Scholar} % Job title
+{Department of Applied Mathematics and Statistics}  % Description
+
+%------------------------------------------------
+
+\vspace{-\baselineskip}\medskip % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education} 
+
+% Blank \educationentry{} command to add another degree:
+
+%\educationentry{} % Duration
+%{} % Degree
+%{} % Honours, achievements or distinctions (e.g. first class honours)
+%{} % Department
+%{} % Institution
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+	
+	\educationentry{2007 -- 2012} % Duration
+	{Doctor of Philosophy} % Degree
+	{} % Honours, achievements or distinctions (e.g. first class honours)
+	{Population Biology. Mentor: Alan Hastings} % Department
+	{University of California, Davis} % Institution
+	
+	%------------------------------------------------
+	
+	\educationentry{2003 -- 2007} % Duration
+	{Bachelors of Physics} % Degree
+	{with Honours} % Honours, achievements or distinctions (e.g. first class honours)
+	{Physics, w/ Certs. in Applied Mathematics} % Department
+	{Princeton University} % Institution
+	
+	%------------------------------------------------
+
+\end{supertabular}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{Grants}
+
+% Example \tableentry{} command to add another line:
+%\tableentry{Heading}{Content}{spaceafter}
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
+
+%------------------------------------------------
+
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+
+  \educationentry{2018 -- 2022}{National Science Foundation,  \$1,301,737}{}{T. Bowles, A. Iles, C. Kremen, C. Boettiger}{Coupled Natural Human Systems \href{https://nsf.gov/awardsearch/showAward?AWD_ID=1824871}{\#CNH-1824871}}
+	
+  \educationentry{2019 -- 2021}{Helmsley Charitable Trust,  \$1,000,000}{}{K. Ram, C. Boettiger, S. Chamberlain}{\href{https://ropensci.org}{The rOpenSci Project}}
+
+  \educationentry{2018}
+  {Berkeley Institute for Data Science, \$67,000}
+  {}
+  {C. Boettiger, R. Gillespie, R. Nielsen}{\hspace{.1pt}}
+
+
+  \educationentry{2018 -- 2021}
+  {The Hellman Foundation, \$37,600}
+  {}
+  {C. Boettiger}
+  {Junior Faculty Fellowship}
+  
+  
+  \educationentry{2018 -- 2019}
+  {Berkeley Collegium \$16,867}
+  {}
+  {C. Boettiger}
+  {Narrowing the Gap Between Teaching and Research}
+
+  \educationentry{2016 - 2019}{James S McDonnell Foundation, \$200,000}{}{(Awarded to Allison Barner, who brought it to my team)}{\href{https://www.jsmf.org/grants/20150024/}{Post-doctoral Fellowship in Complex Systems}}
+
+  \educationentry{2015 -- 2018}{Helmsley Charitable Trust,  \$2,875,071}{}{K. Ram, C. Boettiger, S. Chamberlain} {\href{https://ropensci.org}{The rOpenSci Project}, \#2016PG-BRI004}
+
+  \educationentry{2015 -- 2018}{National Science Foundation, \$165,782}{}{C. Boettiger, M. Jones}{The CodeMeta Project \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758}{\#ACI-1549758}}
+
+  \educationentry{2014}{Alfred P. Sloan Foundation, \$300,000}{}{K. Ram, C. Boettiger, S. Chamberlain}{The rOpenSci Project Phase II funding}  
+
+  \educationentry{2013}{Alfred P. Sloan Foundation, \$180,000}{}{K. Ram, C. Boettiger, S. Chamberlain}{The rOpenSci Project Phase I funding}  
+
+  \educationentry{2013 -- 2015}{National Science Foundation, \$138,000}{}{}
+  {C Boettiger. \href{http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm}{NSF Biology
+  Post-doc}, \href{http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697}{\#DBI-1306697}}
+
+  \educationentry{2009}
+  {National Academy of Sciences \$8,000}
+  {}
+  {IIASA YSSP fellowship}
+  {OISE-0738129}.
+
+  \educationentry{2008 -- 2012}
+  {Department of Energy, \$149,000}
+  {}
+  {Computational Science Graduate Fellowship}
+  {\href{https://www.krellinst.org/csgf/alumni/profile?n=boettiger2008}{\#DE-FG02-97ER25308}}
+
+  %Managing ecosystems under extreme uncertainty. (2016 - 2019) NSF
+  %\textbf{XSEDE} TG-DEB160003. NSF Estimated value of computing
+  %resources: \$34,558
+
+ % Reproducible and Collaborative Data Science. NSF \textbf{XSEDE}
+ % TG-DEB160021. (2016 - 2019) NSF Estimated value of computing
+ % resources: \$20,028
+
+\end{supertabular}
+
+\section{Invited Talks and Workshops}
+
+\begin{supertabular}{rl}
+
+\tableentry{2019}{Ecological Society of America \href{https://eco.confex.com/eco/2019/meetingapp.cgi/Session/15321}{invited OOS}, Louisville, KY}{}
+    \tableentry{}{\href{https://ecoforecast.org/efi2019/}{Ecological Forecasting
+  Initiative}, Washington DC.}{}
+    \tableentry{}{\href{http://www.nimbios.org/workshops/WS_transients}{NIMBioS
+       Workshop}, UT Knoxville, TN.}{}
+    \tableentry{}{\href{https://serc.carleton.edu/eddie/earthecosystems/eddieevents/workshops/barriers_solutions/index.html}{Project
+      EDDIE} keynote speaker, Carlton, Northfield MN.}{}
+    \tableentry{}{\href{https://github.com/si2-urssi/software-credit}{URSSI Workshop}, NCEAS, Santa Barbara, CA.}{}
+    \tableentry{}{\href{https://www.compassscicomm.org}{COMPASS Workshop} Asilomar, CA}{spaceafter}
+
+\tableentry{2018}{\href{https://si2-pi-community.github.io/2018-meeting/}{NSF SI2 PIs
+  Meeting}, Washington, DC.}{}
+\tableentry{}{\href{http://unconf18.ropensci.org}{rOpenSci unconference}, Seattle,
+  WA.}{}
+\tableentry{}{\href{https://teaching.berkeley.edu/programs/transforming-stem-teaching-faculty-learning-program/become-flp-faculty-fellow}{FLP Fellows Workshop} Berkeley, CA.}{}
+\tableentry{}{\href{https://graphxd.github.io/workshop/2018.html}{GraphXD},
+  Berkeley, CA}{}
+\tableentry{}{\href{https://www.idigbio.org/wiki/index.php/Digital_Data_in_Biodiversity_Research_Conference,_Berkeley}{Digital
+  Data in Biodiversity} (co-org), Berkeley CA.}{}
+\tableentry{}{\href{https://eco.confex.com/eco/2018/meetingapp.cgi/Session/14034}{ESA Invited Symposium} (Organizer). New Orleans, LA.}{}
+\tableentry{}{ Nonlinear Forecasting, NOAA SFSC, Santa Cruz, CA}{spaceafter}
+
+\tableentry{2017}{\href{https://cross.ucsc.edu/cross-events/research-symposium/2017-symposium/}{CROSS
+  Symposium Speaker} Santa Cruz, CA}{}
+\tableentry{}{\href{http://www.ncsa.illinois.edu/Conferences/ImagineU/participants.html}{Imagining
+  Tomorrow's University} Chicago, IL}{}
+\tableentry{}{\href{http://unconf17.ropensci.org}{rOpenSci unconference}, Los
+  Angeles, CA}{}
+\tableentry{}{\href{https://dataoneorg.github.io/provathon-2017/}{DataONE}, Tamaya, NM.}{}
+\tableentry{}{\href{https://bids.berkeley.edu/events/translational-data-science-workshop}{NSF
+  Translational Data Science}, Berkeley, CA.}{spaceafter}
+
+
+\tableentry{2016}{\href{http://sched.co/5wK5}{Force16 Codemeta Workshop} (organizer), Portland OR}{}
+\tableentry{}{\href{https://codemeta.github.io}{CodeMeta NSF Workshop} (Organizer) Portland, OR.}{}
+\tableentry{}{\href{http://unconf16.ropensci.org}{rOpenSci unconference}, San
+  Francisco, CA}{spaceafter}
+
+
+\tableentry{2015}{\href{http://ecows.oc.ntu.edu.tw/itnlws/}{Empirical Dynamical Modeling}, NTU, Taiwan}{}
+\tableentry{}{Moore-Sloan Second Annual Data Science Summit}{}
+\tableentry{}{\href{https://github.com/NCEAS/ds-workshop-2015}{Improving Data Intensive Training}, NCEAS, Santa Barbara, CA}{}
+\tableentry{}{\href{http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm}{NSF Big Data
+  Hubs} Design Charette, Western Region}{}
+\tableentry{}{\href{http://unconf.ropensci.org/}{rOpenSci unconference}, San
+  Francisco CA}{}
+\tableentry{}{\href{http://www.nimbios.org/workinggroups/WG_PDG}{NIMBIOS Working Group}, Knoxville TN}{spaceafter}
+
+\tableentry{2014}{Global Change Biology, UC Berkeley, CA}{}
+\tableentry{}{Zoology Seminar, University of Wisconsin, Madison, WI}{}
+\tableentry{}{\href{http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html}{DIMACS} Global Change, Berkeley CA}{}
+\tableentry{}{ESPM Seminar, UC Berkeley, CA}{}
+\tableentry{}{\href{http://ropensci.org/blog/2014/05/14/ropenhack/}{rOpenSci unconf}, San Francisco CA}{}
+\tableentry{}{\href{https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014}{Reproducible Science Curriculum}, NESCent, Durham, NC}{}
+\tableentry{}{\href{http://wssspe.researchcomputing.org.uk/wssspe2/}{WSSSPE 2.0 Meeting}. New Orleans, LA}{}
+\tableentry{}{Workflows Working Group, NCEAS, Santa Barbara, CA}{spaceafter}
+
+\tableentry{2013}{
+  \href{http://www.mbi.ohio-state.edu/2013/ws3description.html}{MBI}, invited speaker, Columbus, OH}{}
+\tableentry{and}{Seminar speaker, WHOI, Woods Hole, MA}{}
+\tableentry{prior}{Seminar speaker, Davis, CA}{}
+ \tableentry{}{SSB Symposium, Evolution Conference, Ottawa, CAN}{}
+ \tableentry{}{\href{http://isees.nceas.ucsb.edu}{ISEES}, Santa Barbara, CA}{spaceafter}
+
+
+\end{supertabular}
+  
+
+\switchcolumn % Switch to the next paracol column
+
+%----------------------------------------------------------------------------------------
+%	COLOURED CONTACT DETAILS BOX
+%----------------------------------------------------------------------------------------
+
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\colorbox{shade}{ % Create the coloured box
+		\begin{supertabular}{p{0.05\linewidth}|p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+			\raisebox{-1pt}{\faHome} & ESPM Department, University of California, 130 Mulford Hall \#3114 Berkeley, CA 94720 \\ % Address
+			\raisebox{0pt}{\small\faEnvelope} & \href{mailto:cboettig@berkeley.eu}{cboettig@berkeley.edu} \\ % Email address
+			\raisebox{-1pt}{\small\faDesktop} & \href{https://carlboettiger.info}{https://carlboettiger.info} \\ % Website
+			\raisebox{-1pt}{\faGithub} & \href{https://github.com/cboettig}{https://github.com/cboettig} \\ % GitHub profile
+			%\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/username}{https://www.linkedin.com/in/username} \\ % LinkedIn profile
+			% See fontawesome.pdf in the fonts folder for all icons you can use
+		\end{supertabular}
+	}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\section{Publications (32)}
+
+% Example \longformdescription{} command to add another publication:
+
+%\longformpublication{Reference (format this manually as desired)}
+
+%------------------------------------------------
+\longformpublication{
+Milad Memarzadeh, Gregory L. Britten, Boris Worm, \textbf{Carl
+  Boettiger} (2019). Rebuilding global fisheries under uncertainty.
+  \emph{Proceedings of the National Academy of Sciences}.
+  \href{https://doi.org/10.1073/pnas.1902657116}{doi:10.1073/pnas.1902657116}
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Ryan Batt (2019). Bifurcation or state
+  tipping: assessing transition type in a model trophic cascade.
+  \emph{Journal of Mathematical Biology}.
+  \href{https://doi.org/10.1007/s00285-019-01358-z}{doi:10.1007/s00285-019-01358-z}
+  (\href{https://github.com/cboettig/bs-tipping/blob/master/paper/paper.pdf}{oa},
+  \href{https://github.com/cboettig/bs-tipping}{code})
+}
+
+\longformpublication{
+  Milad Memarzadeh, \textbf{Carl Boettiger} (2019). Resolving the
+  Measurement Uncertainty Paradox in Ecological Management.
+  \emph{American Naturalist}.
+  \href{https://doi.org/10.1086/702704}{doi:10.1086/702704}.
+  (\href{https://github.com/boettiger-lab/pomdp-intro/tree/master/manuscripts}{oa},
+  \href{https://github.com/boettiger-lab/pomdp-intro}{code},
+  \href{https://doi.org/10.5281/zenodo.2528507}{data})
+}
+
+\longformpublication{
+  Dan Sholler, Karthik Ram, \textbf{Carl Boettiger}, Daniel S Katz
+  (2019). Enforcing public data archiving policies in academic
+  publishing: A study of ecology journals. \emph{Big Data \& Society}
+  6(1) 1-18.
+  \href{https://doi.org/10.1177/2053951719836258}{doi:10.1177/2053951719836258}
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger} (2019). Ecological Metadata as Linked Data.
+  \emph{Journal of Open Source Software}, 4(34), 1276,
+  \href{https://doi.org/10.21105/joss.01276}{doi:10.21105/joss.01276}
+  (\href{https://doi.org/10.5281/zenodo.1442890}{software}).
+}
+
+\longformpublication{
+  Katz, Allen, Barba, Berg, Bik, \textbf{Boettiger}, et al. (2018). The
+  principles of tomorrow's university. \emph{F1000Research}, 7:1926
+  \href{https://doi.org/10.12688/f1000research.17425.1}{doi:10.12688/f1000research.17425.1}.
+  (32 co-authors.)
+}
+
+\longformpublication{
+  Karthik Ram, \textbf{Carl Boettiger}, Scott Chamberlain, Noam Ross,
+  Maelle Salmon, \& Stephanie Butland (2018). A Community of Practice
+  Around Peer-review for Long-term Research Software Sustainability.
+  \emph{Computing in Science \& Engineering}, 9615(c), 1--1.
+  \href{https://doi.org/10.1109/MCSE.2018.2882753}{doi:10.1109/MCSE.2018.2882753}
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger} (2018). Managing Larger Data on a GitHub
+  Repository. \emph{Journal of Open Source Software}, 3(29), 971,
+  \href{https://doi.org/10.21105/joss.00971}{doi:10.21105/joss.00971}.
+  (\href{https://doi.org/10.5281/zenodo.1432525}{software}).
+}
+
+%%% \switchcolumn % Switch to the next paracol column
+
+
+\longformpublication{
+  Milad Memarzadeh, \textbf{Carl Boettiger} (2018). Adaptive management
+  of ecological systems under partial observability. \emph{Biological
+  Conservation}. 224, 9-15.
+  \href{https://doi.org/10.1016/j.biocon.2018.05.009}{doi:10.1016/j.biocon.2018.05.009}.
+  (\href{https://github.com/boettiger-lab/pomdpplus}{software})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger} (2018). From noise to knowledge: how
+  randomness generates novel phenomena and reveals information.
+  \emph{Ecology Letters}.
+  \href{https://doi.org/10.1111/ele.13085}{doi:10.1111/ele.13085}
+  (\href{https://github.com/cboettig/noise-phenomena/raw/master/paper/paper.pdf}{oa},
+  \href{https://github.com/cboettig/noise-phenomena}{code},
+  \href{https://doi.org/10.5281/zenodo.1219779}{data})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Dirk Eddelbuettel (2018). An Introduction to
+  Rocker: Docker Containers for R. \emph{The R Journal}.
+  \href{https://doi.org/10.32614/RJ-2017-065}{doi:10.32614/RJ-2017-065}
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger} (2017). Generating Codemeta Metadata for R
+  Packages. \emph{The Journal of Open Source Software} 2 (19), 454,
+  \href{https://doi.org/10.21105/joss.00454}{doi:10.21105/joss.00454}
+}
+
+\longformpublication{
+  Getz, Marshall, Carlson, Giuggioli, Ryan, Romañach,
+  \textbf{Boettiger}, Chamberlain, Larsen, D'Odorico, O'Sullivan (2017).
+  Making ecological models adequate. \emph{Ecology Letters}. \\
+  \href{https://doi.org/10.1111/ele.12893}{doi:10.1111/ele.12893}
+}
+
+\longformpublication{
+  Ben Marwick, \textbf{Carl Boettiger}, Lincoln Mullen (2017). Packaging
+  data analytical work reproducibly using R (and friends). \emph{The
+  American Statistician}.
+  \href{https://doi.org/10.1080/00031305.2017.1375986}{doi:10.1080/00031305.2017.1375986}.
+  (\href{https://doi.org/10.7287/peerj.preprints.3192v1}{oa})
+}
+
+\longformpublication{
+  Hampton, Jones, Wasser, Schuldhauer, Supp, Brun, Herandez,
+  \textbf{Boettiger}, Collins, Gross, Fernandez, Budden, White, Teal,
+  Labou, Aukema (2017). Skills and Knowledge for Data Intensive
+  Research. \emph{BioScience}.
+  \href{https://doi.org/10.1093/biosci/bix025}{doi:10.1093/biosci/bix025}.
+  (\href{https://doi.org/10.1093/biosci/bix025}{oa})
+}
+
+\longformpublication{
+  T Alex Perkins, \textbf{Carl Boettiger}, Benjamin L. Philips. (2016)
+  After the games are over: life-history trade-offs drive dispersal
+  attenuation following range expansion. \emph{Ecology and Evolution} 6
+  (18) 6425-6434.
+  \href{http://dx.doi.org/10.1002/ece3.2314}{doi:10.1002/ece3.2314}.
+  (\href{http://oadoi.org/10.1002/ece3.2314}{oa},
+  \href{https://github.com/TAlexPerkins/dispersal_tradeoffs}{code})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Michael Bode, James N. Sanchirico, Jacob
+  LaRiviere, Alan Hastings, and Paul Robert Armsworth (2016). Optimal
+  management of a stochastically varying population when policy
+  adjustment is costly. \emph{Ecological Applications} 26 (3) 808-817.
+  \href{http://dx.doi.org/10.1890/15-0236}{doi:10.1890/15-0236}.
+  (\href{http://arxiv.org/pdf/1507.07037v1.pdf}{oa},
+  \href{https://github.com/cboettig/pdg_control}{code})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Scott Chamberlain, Rutger Vos and Hilmar Lapp
+  (2016). RNeXML: a package for reading and writing richly annotated
+  phylogenetic, character, and trait data in R. \emph{Methods in Ecology
+  and Evolution}.
+  \href{http://dx.doi.org/10.1111/2041-210X.12469}{doi:10.1111/2041-210X.12469}.
+  (\href{http://arxiv.org/abs/1506.02722}{oa},
+  \href{https://github.com/ropensci/RNeXML}{code},
+  \href{http://cran.rstudio.com/web/packages/RNeXML}{software})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Scott Chamberlain, Edmund Hart, Karthik Ram
+  (2015). Building Software, Building Community: Lessons from the
+  rOpenSci Project. \emph{Journal of Open Research Software} 3: e8,
+  \href{http://dx.doi.org/10.5334/jors.bu}{doi:10.5334/jors.bu}.
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger} (2015). An introduction to Docker for
+  reproducible research. \emph{ACM SIGOPS Operating Systems Review}
+  49(1), 71-79.
+  \href{http://dx.doi.org/10.1145/2723872.2723882}{doi:10.1145/2723872.2723882}.
+  (\href{http://arxiv.org/abs/1410.0846}{oa})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Marc Mangel, Stephan Munch (2015). Avoiding
+  tipping points in fisheries management through Gaussian process
+  dynamic programming. \emph{Proceedings of the Royal Society B}
+  282(1801), 8--11.
+  \href{http://dx.doi.org/10.1098/rspb.2014.1631}{doi:10.1098/rspb.2014.1631}.
+  (\href{http://arxiv.org/abs/1412.8081}{oa},
+  \href{https://github.com/cboettig/nonparametric-bayes}{code},
+  \href{http://dx.doi.org/10.5061/dryad.mj226}{data})
+}
+
+%%%%%
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Alan Hastings (2013). No early warning
+  signals for stochastic transitions: insights from large deviation
+  theory. \emph{Proceedings of the Royal Society B}. \\
+  \href{http://dx.doi.org/10.1098/rspb.2013.1372}{doi:10.1098/rspb.2013.1372}.
+  (\href{http://arxiv.org/abs/1307.4415}{oa},
+  \href{https://github.com/cboettig/prosecutors-fallacy}{code})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Noam Ross, Alan Hastings (2013). Early
+  warning signals: The charted and uncharted territories.
+  \emph{Theoretical Ecology}
+  \href{http://dx.doi.org/10.1007/s12080-013-0192-6}{doi:10.1007/s12080-013-0192-6}.
+  (\href{http://arxiv.org/abs/1305.6700}{oa},
+  \href{https://github.com/cboettig/ews-review}{code})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Alan Hastings (2013). Tipping points: From
+  patterns to predictions, \emph{Nature} 493, 157--158.
+  \href{http://dx.doi.org/10.1038/493157a}{doi:10.1038/493157a}.
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Alan Hastings (2012). Early Warning Signals
+  and the Prosecutor's Fallacy, \emph{Proceedings of the Royal Society
+  B} 279 (1748) 4734-4739.
+  \href{http://dx.doi.org/10.1098/rspb.2012.2085}{doi:10.1098/rspb.2012.2085}.
+  (\href{http://arxiv.org/abs/1210.1204}{oa},
+  \href{https://github.com/cboettig/prosecutors-fallacy}{code},
+  \href{http://dx.doi.org/10.5061/dryad.2k462}{data})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Duncan Temple Lang, Peter Wainwright (2012).
+  rfishbase: exploring, manipulating and visualizing FishBase data from
+  R, \emph{Journal of Fish Biology}. 81 (6) 2030--2039.
+  \href{http://dx.doi.org/10.1111/j.1095-8649.2012.03464.x}{doi:10.1111/j.1095-8649.2012.03464.x}.
+  (\href{https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md}{oa},
+  \href{https://github.com/ropensci/rfishbase}{code},
+  \href{http://cran.at.r-project.org/web/packages/rfishbase/}{software})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Duncan Temple Lang (2012). Treebase: An R
+  package for discovery, access and manipulation of online phylogenies,
+  \emph{Methods in Ecology and Evolution} 3 (6) 1060--1066.
+  \href{http://dx.doi.org/10.1111/j.2041-210X.2012.00247.x}{doi:10.1111/j.2041-210X.2012.00247x}.
+  (\href{https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md}{oa},
+  \href{https://github.com/ropensci/treebase}{code},
+  \href{http://cran.at.r-project.org/web/packages/treebase/}{software})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Alan Hastings (2012). Quantifying Limits to
+  Detection of Early Warning for Critical Transitions, \emph{Journal of
+  the Royal Society: Interface} 9 (75) 2527-2539.
+  \href{http://dx.doi.org/10.1098/rsif.2012.0125}{doi:10.1098/rsif.2012.0125}.
+  (\href{http://arxiv.org/abs/1204.6231}{oa},
+  \href{https://github.com/cboettig/earlywarning}{code})
+}
+
+\longformpublication{
+  Jeremy M. Beaulieu, Dwueng-Chwuan Jhwueng, \textbf{Carl Boettiger},
+  Brian O'Meara, (2012). Modeling Stabilizing Selection: Expanding the
+  Ornstein-Uhlenbeck Model of Adaptive Evolution, \emph{Evolution} 66
+  (8) 2369-2383.
+  \href{http://dx.doi.org/10.1111/j.1558-5646.2012.01619.x}{doi:10.1111/j.1558-5646.2012.01619.x}
+  (\href{http://cran.r-project.org/web/packages/OUwie/index.html}{software})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Graham Coop, Peter Ralph (2012). Is your
+  phylogeny informative? Measuring the power of comparative methods,
+  \emph{Evolution} 66 (7) 2240-51.
+  \href{http://dx.doi.org/10.1111/j.1558-5646.2011.01574.x}{doi:10.1111/j.1558-5646.2011.01574.x},
+  (\href{http://arxiv.org/abs/1110.4944}{oa},
+  \href{https://github.com/cboettig/pmc}{code},
+  \href{http://datadryad.org/handle/10255/dryad.37645}{data})
+}
+
+\longformpublication{
+  \textbf{Carl Boettiger}, Jonathan Dushoff, Joshua S Weitz (2010).
+  Fluctuation domains in adaptive evolution, \emph{Theoretical
+  Population Biology} 77 (1) 6-13.
+  \href{http://dx.doi.org/10.1016/j.tpb.2009.10.003}{doi:10.1016/j.tpb.2009.10.003}.
+  (\href{http://arxiv.org/abs/1004.4233}{oa},
+  \href{https://github.com/cboettig/fluctuationDomains}{code},
+  \href{http://datadryad.org/handle/10255/dryad.37625}{data})
+}
+
+\longformpublication{
+  James J. Wray, Neta A. Bahcall, Paul Bode, \textbf{Carl Boettiger},
+  Phillip Hopkins (2006). The Shape, Multiplicity, and Evolution of
+  Superclusters in Lambda-CDM Cosmology, \emph{The Astrophysical
+  Journal} 652 (2) 907-916.
+  \href{http://dx.doi.org/10.1086/508600}{doi:10.1086/50860}.
+  (\href{http://arxiv.org/abs/astro-ph/0603060}{oa})
+ }
+
+
+\section{Book Chapters}
+
+\longformpublication{ \textbf{Carl Boettiger} (2017). A Reproducible R Notebook Using Docker. In J. Kitzes, D. Turek, \& F. Deniz (Eds.), The Practice of
+  Reproducible Research: Case Studies and Lessons from the
+  Data-Intensive Sciences (1st ed., pp.~109--117). Oakland, CA: UC
+  Press. \href{https://www.ucpress.edu/book.php?isbn=9780520294752}{ISBN:9780520294752}}
+ 
+
+\switchcolumn
+
+\section{Software}
+
+\longformpublication{
+  \href{https://github.com/ropensci/emld}{\texttt{emld}}: Ecological
+  Metadata as Linked Data. Carl Boettiger (2019).}
+
+\longformpublication{
+  \href{https://github.com/ropensci/virtuoso}{\texttt{virtuoso}}:
+  Interface to Virtuoso using ODBC. Carl Boettiger (2019).}
+\longformpublication{
+  \href{https://github.com/ropensci/rdflib}{\texttt{rdflib}}: Tools to
+  Manipulate and Query Semantic Data. Carl Boettiger (2018).
+}
+
+\longformpublication{
+  \href{https://github.com/ropensci/codemetar}{\texttt{codemetar}}:
+  Generate CodeMeta Metadata for R Packages. Carl Boettiger, Maëlle
+  Salmon (2018).
+}
+
+\longformpublication{
+  \href{https://github.com/cboettig/EcoNetGen}{\texttt{EcoNetGen}}:
+  Simulate and Sample from Ecological Interaction Networks. Marcus de
+  Aguiar, Erica Newman, Mathias Pires, Carl Boettiger (2018).
+}
+
+\longformpublication{
+  \href{https://github.com/ropensci/piggyback/}{\texttt{piggyback}}:
+  Managing Larger Data on a GitHub Repository. Carl Boettiger (2018).
+}
+
+\longformpublication{
+  \href{https://github.com/ropensci/arkdb/}{\texttt{arkdb}}: Archive and
+  Unarchive Databases Using Flat Files. Carl Boettiger (2018).
+}
+
+\longformpublication{
+  \href{https://github.com/ropensci/EML}{\texttt{EML}}: Read and Write
+  Ecological Metadata Language File. Carl Boettiger, Matt Jones (2016;
+  v2 2019).}
+
+\longformpublication{
+  \href{https://github.com/ropensci/RNeXML}{\texttt{RNeXML}}:
+  Semantically Rich I/O for the NeXML Phylogenetics Format. Carl
+  Boettiger, Scott Chamberlain, Hilmar Lapp, Rutger Voss (2014).}
+
+\longformpublication{
+  \href{https://github.com/cboettig/pmc}{\texttt{pmc}}: Phylogenetic
+  Monte Carlo. Carl Boettiger (2012).}
+
+\longformpublication{
+  \href{https://github.com/cboettig/knitcitations}{\texttt{knitcitations}}:
+  Citations for Knitr Markdown Files. Carl Boettiger (2012).
+}
+
+\longformpublication{
+  \href{https://github.com/ropensci/rfishbase}{\texttt{rfishbase}}: R
+  Interface to FishBase. Carl Boettiger, Scott Chamberlain, Duncan
+  Temple Lang, Peter Wainwright (2011; v2 2015; v3 2019).}
+
+\longformpublication{
+  Carl Boettiger, Dirk Eddelbuettel. \href{https://rocker-project.org}{The Rocker Project}: Docker images
+  for the R environment. (Language: Dockerfile)}
+
+\longformpublication{
+  Carl Boettiger, Matt Jones, et al. \href{https://codemeta.github.io}{The CodeMeta Project}: Software
+  Metadata Exchange. (Language: JSON-LD)
+}
+\medskip % Extra whitespace before the next section
+
+
+\section{Service}
+
+  NCEAS \href{https://www.nceas.ucsb.edu/content/nceas-science-advisers}{Scientific
+  Advisory Board}. (2014 - Current)\\
+  
+  rOpenSci \href{https://ropensci.org/about/\#team}{Leadership Team}. (2012 - Current)\\
+  
+  Jetstream Cloud Computing
+  \href{https://jetstream-cloud.org/about/advisory-board.php}{Stakeholder
+  Advisory Board}, XSEDE, NSF. (2015 - Current)\\
+  
+  Reviewer for over 40 journals, NSF review panelist, ad hoc reviewer
+  for NSF, NERSC,NERC and UC-CCGA.
+
+
+%----------------------------------------------------------------------------------------
+
+\end{paracol}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
