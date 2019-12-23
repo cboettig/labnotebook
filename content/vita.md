@@ -47,7 +47,7 @@ aliases: "/publications"
     [doi:10.1086/702704](https://doi.org/10.1086/702704).
     ([oa](https://github.com/boettiger-lab/pomdp-intro/tree/master/manuscripts), 
     [code](https://github.com/boettiger-lab/pomdp-intro), 
-    [data](https://doi.org/10.5281/zenodo.2528507))
+    [data](https://doi.org/10.5281/zenodo.2528507)). [F1000 recommended]( https://f1000.com/prime/735582387)
 
 29. Dan Sholler, Karthik Ram, __Carl Boettiger__, Daniel S Katz (2019).
     Enforcing public data archiving policies in academic publishing: A
@@ -150,7 +150,7 @@ aliases: "/publications"
 	 [doi:10.1098/rspb.2014.1631](http://dx.doi.org/10.1098/rspb.2014.1631).
 	 ([oa](http://arxiv.org/abs/1412.8081),
 	 [code](https://github.com/cboettig/nonparametric-bayes),
-	 [data](http://dx.doi.org/10.5061/dryad.mj226))
+	 [data](http://dx.doi.org/10.5061/dryad.mj226)). [F1000 recommended](https://f1000.com/prime/725302626)
 
 11. __Carl Boettiger__, Alan Hastings (2013). No early warning signals
    for stochastic transitions: insights from large deviation theory.
