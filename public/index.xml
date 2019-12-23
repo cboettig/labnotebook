@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Boettiger Group, UC Berkeley on Boettiger Group</title>
@@ -95,7 +95,7 @@ Inference vs Prediction Inference vs Prediction  Breiman (2001) The two cultures
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/calendar/</guid>
-      <description> </description>
+      <description></description>
     </item>
     
     <item>
@@ -132,7 +132,7 @@ Inference vs Prediction Inference vs Prediction  Breiman (2001) The two cultures
       
       <guid>/networks/</guid>
       <description>Below are a few links to my more commonly used social network profiles and Internet habitats, along with a few comments. I am pretty consistently found under the user handle cboettig on social networks, though no guarantees.
-Actively Using    -- The web-based home of my research. Star, watch, or fork a project you&#39;re interested in.   -- My primary social network, which is why it gets a contact link in my footer.</description>
+Actively Using   &amp;ndash; The web-based home of my research. Star, watch, or fork a project you&#39;re interested in.  &amp;ndash; My primary social network, which is why it gets a contact link in my footer.</description>
     </item>
     
     <item>
@@ -142,8 +142,8 @@ Actively Using    -- The web-based home of my research. Star, watch, or fork a p
       
       <guid>/pubs/</guid>
       <description>Articles  Milad Memarzadeh, Gregory L. Britten, Boris Worm, Carl Boettiger (2019). Rebuilding global fisheries under uncertainty. Proceedings of the National Academy of Sciences. doi:10.1073/pnas.1902657116
- Carl Boettiger, Ryan Batt (2019). Bifurcation or state tipping: assessing transition type in a model trophic cascade. Journal of Mathematical Biology. doi:10.1007/s00285-019-01358-z (oa, code)
- Milad Memarzadeh, Carl Boettiger (2019). Resolving the Measurement Uncertainty Paradox in Ecological Management. American Naturalist. doi:10.1086/702704. (oa, code, data)</description>
+  Carl Boettiger, Ryan Batt (2019). Bifurcation or state tipping: assessing transition type in a model trophic cascade. Journal of Mathematical Biology. doi:10.1007/s00285-019-01358-z (oa, code)
+  Milad Memarzadeh, Carl Boettiger (2019). Resolving the Measurement Uncertainty Paradox in Ecological Management. American Naturalist. doi:10.1086/702704. (oa, code, data)</description>
     </item>
     
     <item>
@@ -162,10 +162,10 @@ Actively Using    -- The web-based home of my research. Star, watch, or fork a p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/vita/</guid>
-      <description>Employment  2015-current Assistant Professor, Department of Environmental Science, Policy and Management, University of California, Berkeley.
- 2013-2015 NSF Post-doctoral Scholar in the Department of Applied Mathematics and Statistics, University of California, Santa Cruz. Mentors: Marc Mangel, Stephan Munch
-  Education  2012 Ph.D Population Biology, University of California, Davis. Mentor: Alan Hastings
- 2007 A.B in Physics, Princeton University, with honors and certificates in biophysics and applied and computational mathematics.</description>
+      <description>Employment   2015-current Assistant Professor, Department of Environmental Science, Policy and Management, University of California, Berkeley.
+  2013-2015 NSF Post-doctoral Scholar in the Department of Applied Mathematics and Statistics, University of California, Santa Cruz. Mentors: Marc Mangel, Stephan Munch
+  Education   2012 Ph.D Population Biology, University of California, Davis. Mentor: Alan Hastings
+  2007 A.B in Physics, Princeton University, with honors and certificates in biophysics and applied and computational mathematics.</description>
     </item>
     
   </channel>

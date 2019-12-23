@@ -20,7 +20,7 @@
   
   
   
-  <link href="../../sass/material-kit.min.8a21ae70d329460efe8c9beb91879f0fe96fe61e232c67bef24c84ce8622302e.css" rel="stylesheet">
+  <link href="../../sass/material-kit.min.04ba9e0995ee3b67c90a9e1b0af3f457bb23fbdced38d0b1260d66d4bd961da5.css" rel="stylesheet">
 
   
   <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
@@ -123,7 +123,7 @@
       <h4><a href="../../2017/12/09/json-ld-vita-exploration/">Sat, Dec 9, 2017</a></h4>
       <h4><a href="../../2017/12/09/json-ld-vita-exploration/">JSON-LD Vita exploration</a></h4>
       <div class="article-style">
-        Using JSON Queries (JQ) Pure JSON vita &lt;- readr::read_file(&quot;../../static/js/vita.json&quot;) jq(vita, &#39;.&quot;@reverse&quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&quot; &quot;) }&#39;) %&gt;% combine() %&gt;% fromJSON()   year author    2017-12-09 Wayne M. Getz  2017-12-09 Charles R. Marshall  2017-12-09 Colin J. Carlson  2017-12-09 Luca Giuggioli  2017-12-09 Sadie J. Ryan  2017-12-09 Stephanie S. Romañach  2017-12-09 Carl Boettiger  2017-12-09 Samuel D.
+        Using JSON Queries (JQ) Pure JSON vita &lt;- readr::read_file(&quot;../../static/js/vita.json&quot;) jq(vita, '.&quot;@reverse&quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&quot; &quot;) }') %&gt;% combine() %&gt;% fromJSON()   year author    2017-12-09 Wayne M. Getz  2017-12-09 Charles R. Marshall  2017-12-09 Colin J. Carlson  2017-12-09 Luca Giuggioli  2017-12-09 Sadie J. Ryan  2017-12-09 Stephanie S. Romañach  2017-12-09 Carl Boettiger  2017-12-09 Samuel D.
       </div>
     </div>
     

@@ -229,14 +229,16 @@ aliases: "/publications"
 
 # Grants
 
+- The Rocker Project. Carl Boettiger, Noam Ross, Dirk Eddelbuettel. (2019 - 2020). **Chan-Zuckerberg Initiative**: [Essential Open Source Software for Science](https://chanzuckerberg.com/eoss/proposals/maintaining-rocker-sustainability-for-containerized-reproducible-analyses/). 
+
 - The Influence of Conflicting Policies and Supply-Chain Pressures on Farmers' Decisions and Tradeoffs with Respect to Biodiversity, Profitability, and Sustainability.  Timothy Bowles (PI), Alastair Iles, Claire Kremen, Carl Boettiger. (2018-2022).  **National Science Foundation** [#CNH-1824871
 ](https://nsf.gov/awardsearch/showAward?AWD_ID=1824871) $1,301,737
 
-- The rOpenSci Project (2019-2021, Co-PI). **Helmsley Charitable Trust**, award 2016PG-BRI004. $1,000,000
+- The rOpenSci Project. Karthik Ram, Carl Boettiger, Scott Chamberlain. (renewal, 2019-2021). **Helmsley Charitable Trust**, award 2016PG-BRI004. $1,000,000
 
-- Detecting Change in Global Biodiversity through Large Scale Network Analysis. (2018) Berkeley Institute for Data Science, $67,000
+- Detecting Change in Global Biodiversity through Large Scale Network Analysis. Carl Boettiger, Rosemary Gillespie, Rasmus Nielsen. (2018). Berkeley Institute for Data Science, $67,000
 
-- Big Data, Big Uncertainty: Ecological Decision- Making in the 21st Century.  [Hellman Fellows Award](https://vpf.berkeley.edu/hellman-fellows-fund) (2018-2020) **The Hellman Foundation**. $37,600
+- Big Data, Big Uncertainty: Ecological Decision- Making in the 21st Century.  (2018-2020). [Hellman Fellows Award](https://vpf.berkeley.edu/hellman-fellows-fund), **The Hellman Foundation**. $37,600
 
 - [Berkeley Collegium Award for Narrowing the Gap Between Teaching and Research.](http://collegium.berkeley.edu/) (2018-2019) $16,867.50
 
@@ -246,19 +248,19 @@ aliases: "/publications"
 
 - [James S McDonnell Foundation Post-doctoral Fellowship in Complex Systems](https://www.jsmf.org/grants/20150024/) (Awarded to post-doctoral scholar Allison Barner, who then chose to bring this award to my group at UC Berkeley) $200,000.
 
-- The rOpenSci Project (2015-2018, Co-PI). **Helmsley Charitable Trust**, award 2016PG-BRI004. $2,875,071
+- The rOpenSci Project (2015-2018, Co-PI). Karthik Ram, Carl Boettiger, Scott Chamberlain. **Helmsley Charitable Trust**, award 2016PG-BRI004. $2,875,071
 
 - The CodeMeta Project (2015). **National Science Foundation**
    [#ACI-1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
    *$165,782*. ([proposal here](https://dx.doi.org/10.6084/m9.figshare.2055972))
 
-- The rOpenSci Project, Phase II funding (2014, Co-PI). **Alfred P. Sloan Foundation** $300,000
+- The rOpenSci Project, Phase II funding (2014, Co-PI). Karthik Ram, Carl Boettiger, Scott Chamberlain. **Alfred P. Sloan Foundation** $300,000
 
 - [NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013-2015). **National Science Foundation**
    [#DBI-1306697](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697),
    $138,000 ([proposal here](http://doi.org/10.6084/m9.figshare.652970))
 
-- The rOpenSci Project Phase I funding (2013, Co-PI). **Alfred P. Sloan Foundation** $180,000
+- The rOpenSci Project Phase I funding (2013 Co-PI). Karthik Ram, Carl Boettiger, Scott Chamberlain. **Alfred P. Sloan Foundation** $180,000
 
 - IIASA YSSP fellowship (2009). **National Academy of Sciences**, OISE-0738129,
    $8,000. ([proposal here](http://doi.org/10.6084/m9.figshare.678310))
@@ -276,6 +278,10 @@ aliases: "/publications"
 
 **2019**
 
+- Invited Biodiversity Research Center seminar speaker, University of British Columbia, Vancouver, Canada.
+- [Ecological Forecasting Oral Session](https://agu.confex.com/agu/fm19/meetingapp.cgi/Session/87281), American Geophysical Union, San Fransisco, CA.
+- Advancing Theory in Ecology, NSF Workshop. Pennsylvania State University, State College, PA.
+- Biodiversity Data Workshop, invited speaker, Arizona State University, Tempe, AZ.
 - [Transients in Ecology](https://eco.confex.com/eco/2019/meetingapp.cgi/Session/15321), Organized Oral Session, Ecological Society of America Annual Meeting, Louisville, KY.
 - [Ecological Forecasting Initiative Conference](https://ecoforecast.org/efi2019/), AAAS Headquarters, Washington DC.
 - [NIMBioS Transient Dynamics Workshop](http://www.nimbios.org/workshops/WS_transients), University of Tennessee, Knoxville, TN.
