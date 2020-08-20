@@ -209,9 +209,22 @@ css: ["vita.css"]
     *Proceedings of the National Academy of Sciences*.
     [doi:10.1073/pnas.1902657116](https://doi.org/10.1073/pnas.1902657116)
 
+33. de Aguiar, Newman, Pires, Yeakel, __Boettiger__, Burkle, Gravel, 
+    Guimarães Jr, O’Donnell, Poisot, Fortin, Hembry (2019).
+    Revealing biases in the sampling of ecological interaction networks,
+    *PeerJ*, [doi:10.7717/peerj.7566](https://doi.org/10.7717/peerj.7566).
+    [software](https://cran.r-project.org/package=EcoNetGen).
 
+34. __Carl Boettiger__ (2020). Ecological management of stochastic systems
+   with long transients. *Theoretical Ecology*.
+   [doi:10.1007/s12080-020-00477-4](https://doi.org/10.1007/s12080-020-00477-4),
+   [code](https://github.com/cboettig/decisions-vs-transients)
 
-
+35. Kari Norman, Scott Chamberlain, __Carl Boettiger__ (2020). 
+    taxadb: A high‐performance local taxonomic database interface.
+    *Methods in Ecology and Evolution*. 
+    [doi:10.1111/2041-210X.13440](https://doi.org/10.1111/2041-210X.13440)
+    [software](https://cran-r.project.org/package=taxadb)
 
 
 # Book chapters
