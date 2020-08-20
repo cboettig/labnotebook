@@ -16,7 +16,7 @@
       <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/cnhs-modeling-postdoc/</guid>
-      <description>We&#39;re looking to hire a coupled natural-human systems post-doc to work on the theory and modeling components of an NSF Coupled Natural Human Systems award seeking to understand the the interplay between diversified farming systems and ecosystem services. Our team consists of a diverse and tight-knit group of social science and natural science researchers combining field research, farmer surveys, and mathematical modeling, based in UC Berkeley and focusing on California Central Coast farmers.</description>
+      <description>We&amp;rsquo;re looking to hire a coupled natural-human systems post-doc to work on the theory and modeling components of an NSF Coupled Natural Human Systems award seeking to understand the the interplay between diversified farming systems and ecosystem services. Our team consists of a diverse and tight-knit group of social science and natural science researchers combining field research, farmer surveys, and mathematical modeling, based in UC Berkeley and focusing on California Central Coast farmers.</description>
     </item>
     
     <item>
@@ -79,17 +79,6 @@ docker run -d -p 8787:8787 rocker/tidyverse:devel to test out a recent version1 
     </item>
     
     <item>
-      <title></title>
-      <link>/slides/ds421/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/slides/ds421/</guid>
-      <description>Data Science Grand Challenges    Data Science Grand Challenges Carl Boettiger
- Data Science Grand ChallengesData Science Grand Challenges  Inference vs prediction Dealing with assumptions Quantifying uncertainty Reproducibility Keeping the Science in Data Science Keeping the Scientists in data science: Career questions  Inference vs prediction Prediction:
-Inference vs Prediction Inference vs Prediction  Breiman (2001) The two cultures Clark et al (2001) Ecological Forecasting: the Emerging Imperitive  Dealing with assumptions  Keeping assumptions in focus during analysis Communicating assumptions to audience Testing assumptions  Quantifying uncertainty  formal uncertainty vs acutal uncertainty uncertainty with respect to assumptions communicating uncertainty  Reproducibility  Data Science vs Open Science  Keeping the Science in Data Science Keeping the Scientist in Data Science Academic career paths for data scientists?</description>
-    </item>
-    
-    <item>
       <title>Calendar</title>
       <link>/calendar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -113,7 +102,7 @@ Inference vs Prediction Inference vs Prediction  Breiman (2001) The two cultures
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/community/</guid>
-      <description>Experiential Education I believe in experiential education and fostering an appreciation for the natural world in and outside of the classroom. I help organize and lead wilderness trips for disadvantaged children in Sacramento through Inner City Outings. I used to guide rock climbing, snow camping, and backpacking trips for college students and the general public through Davis Outdoor Adventures and Shasta Mountain Guides. I was introduced to outdoor leadership and education through Princeton&#39;s orientation program, Outdoor Action, where I lead trips and trained leaders in both technical skills and group dynamics (see my Outdoor Guide C.</description>
+      <description>Experiential Education I believe in experiential education and fostering an appreciation for the natural world in and outside of the classroom. I help organize and lead wilderness trips for disadvantaged children in Sacramento through Inner City Outings. I used to guide rock climbing, snow camping, and backpacking trips for college students and the general public through Davis Outdoor Adventures and Shasta Mountain Guides. I was introduced to outdoor leadership and education through Princeton&amp;rsquo;s orientation program, Outdoor Action, where I lead trips and trained leaders in both technical skills and group dynamics (see my Outdoor Guide C.</description>
     </item>
     
     <item>
@@ -132,7 +121,7 @@ Inference vs Prediction Inference vs Prediction  Breiman (2001) The two cultures
       
       <guid>/networks/</guid>
       <description>Below are a few links to my more commonly used social network profiles and Internet habitats, along with a few comments. I am pretty consistently found under the user handle cboettig on social networks, though no guarantees.
-Actively Using   &amp;ndash; The web-based home of my research. Star, watch, or fork a project you&#39;re interested in.  &amp;ndash; My primary social network, which is why it gets a contact link in my footer.</description>
+Actively Using   &amp;ndash; The web-based home of my research. Star, watch, or fork a project you&amp;rsquo;re interested in.  &amp;ndash; My primary social network, which is why it gets a contact link in my footer.</description>
     </item>
     
     <item>
@@ -141,9 +130,9 @@ Actively Using   &amp;ndash; The web-based home of my research. Star, watch, or 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/pubs/</guid>
-      <description>Articles  Milad Memarzadeh, Gregory L. Britten, Boris Worm, Carl Boettiger (2019). Rebuilding global fisheries under uncertainty. Proceedings of the National Academy of Sciences. doi:10.1073/pnas.1902657116
-  Carl Boettiger, Ryan Batt (2019). Bifurcation or state tipping: assessing transition type in a model trophic cascade. Journal of Mathematical Biology. doi:10.1007/s00285-019-01358-z (oa, code)
-  Milad Memarzadeh, Carl Boettiger (2019). Resolving the Measurement Uncertainty Paradox in Ecological Management. American Naturalist. doi:10.1086/702704. (oa, code, data).</description>
+      <description>Articles   James J. Wray, Neta A. Bahcall, Paul Bode, Carl Boettiger, Phillip Hopkins (2006). The Shape, Multiplicity, and Evolution of Superclusters in Lambda-CDM Cosmology, The Astrophysical Journal 652 (2) 907-916. doi:10.1086/50860. (oa)
+  Carl Boettiger, Jonathan Dushoff, Joshua S Weitz (2010). Fluctuation domains in adaptive evolution, Theoretical Population Biology 77 (1) 6-13. doi:10.1016/j.tpb.2009.10.003. (oa, code, data)
+  Carl Boettiger, Graham Coop, Peter Ralph (2012). Is your phylogeny informative?</description>
     </item>
     
     <item>

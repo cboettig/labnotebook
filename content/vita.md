@@ -4,6 +4,7 @@ layout: vita
 title: Vita
 nomath: true
 aliases: "/publications"
+css: ["vita.css"]
 ---
 
 # Employment

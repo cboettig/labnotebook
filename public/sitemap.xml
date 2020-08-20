@@ -93,11 +93,6 @@
   </url>
   
   <url>
-    <loc>/slides/ds421/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/</loc>
     <lastmod>2019-07-22T22:28:19-07:00</lastmod>
   </url>
@@ -134,11 +129,7 @@
   
   <url>
     <loc>/pubs/</loc>
-    <lastmod>2019-08-23T15:44:26-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/slides/</loc>
+    <lastmod>2019-12-23T20:18:36+11:00</lastmod>
   </url>
   
   <url>
@@ -148,7 +139,7 @@
   
   <url>
     <loc>/vita/</loc>
-    <lastmod>2019-12-23T19:46:45+11:00</lastmod>
+    <lastmod>2019-12-23T20:18:36+11:00</lastmod>
   </url>
   
 </urlset>
