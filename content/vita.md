@@ -32,6 +32,11 @@ css: ["vita.css"]
 # Publications
 
 
+36. Pascal, Memarzadeh, __Boettiger__, Lloyd, Chadès (2020).
+    A Shiny r app to solve the problem of when to stop managing or surveying species under imperfect detection
+    *Methods in Ecology and Evolution*. [doi:10.1111/2041-210X.13501](https://doi.org/10.1111/2041-210X.13501)
+    [software](https://github.com/conservation-decisions/smsPOMDP)
+
 35. Kari Norman, Scott Chamberlain, __Carl Boettiger__ (2020). 
     taxadb: A high‐performance local taxonomic database interface.
     *Methods in Ecology and Evolution*. 
@@ -248,6 +253,8 @@ css: ["vita.css"]
 
 # Grants
 
+-  CAREER: Harnessing the data revolution for predicting and managing ecosystem regime shifts. Carl Boettiger. (2020-2025).  **National Science Foundation** [#DBI-1942280](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1942280)
+
 - The Rocker Project. Carl Boettiger, Noam Ross, Dirk Eddelbuettel. (2019 - 2020). **Chan-Zuckerberg Initiative**: [Essential Open Source Software for Science](https://chanzuckerberg.com/eoss/proposals/maintaining-rocker-sustainability-for-containerized-reproducible-analyses/). 
 
 - The Influence of Conflicting Policies and Supply-Chain Pressures on Farmers' Decisions and Tradeoffs with Respect to Biodiversity, Profitability, and Sustainability.  Timothy Bowles (PI), Alastair Iles, Claire Kremen, Carl Boettiger. (2018-2022).  **National Science Foundation** [#CNH-1824871
@@ -374,12 +381,12 @@ css: ["vita.css"]
 
 # Awards
 
+-  2020 Early Career Fellow, Ecological Society of America
 -  2011 *Volterra Award* (Best student talk, ESA Theory Section)
 -  2007 Elected to Membership in the Society of *Sigma Xi*
 -  2007 Allen G. Shenstone Prize in Physics, Princeton University
 -  2007 The Class of 1870 Old English Prize, Princeton University
 -  2006 Kusaka Memorial Prize in Physics, Princeton University
--  2006 Plasma Physics Fellow, PPPL
 
 # Service
 
@@ -399,6 +406,7 @@ css: ["vita.css"]
 - NCEAS [Scientific Advisory Board](https://www.nceas.ucsb.edu/content/nceas-science-advisers)
 - rOpenSci [Leadership Team](https://ropensci.org/about/#team)
 - Jetstream Cloud Computing [Stakeholder Advisory Board](https://jetstream-cloud.org/about/advisory-board.php), XSEDE.
+- Editor, _Ecology Letters_
 - Reviewer for over 40 journals, NSF review panelist, ad hoc reviewer for UC CCGA, NSF, NERSC.
 
 <!--
