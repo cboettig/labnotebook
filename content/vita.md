@@ -253,9 +253,9 @@ css: ["vita.css"]
 
 # Grants
 
--  CAREER: Harnessing the data revolution for predicting and managing ecosystem regime shifts. Carl Boettiger. (2020-2025).  **National Science Foundation** [#DBI-1942280](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1942280)
+- CAREER: Harnessing the data revolution for predicting and managing ecosystem regime shifts. Carl Boettiger. (2020-2025).  **National Science Foundation** [#DBI-1942280](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1942280). $504,335.00  
 
-- The Rocker Project. Carl Boettiger, Noam Ross, Dirk Eddelbuettel. (2019 - 2020). **Chan-Zuckerberg Initiative**: [Essential Open Source Software for Science](https://chanzuckerberg.com/eoss/proposals/maintaining-rocker-sustainability-for-containerized-reproducible-analyses/). 
+- The Rocker Project. Carl Boettiger, Noam Ross, Dirk Eddelbuettel. (2019 - 2020). **Chan-Zuckerberg Initiative**: [Essential Open Source Software for Science](https://chanzuckerberg.com/eoss/proposals/maintaining-rocker-sustainability-for-containerized-reproducible-analyses/). $75,912
 
 - The Influence of Conflicting Policies and Supply-Chain Pressures on Farmers' Decisions and Tradeoffs with Respect to Biodiversity, Profitability, and Sustainability.  Timothy Bowles (PI), Alastair Iles, Claire Kremen, Carl Boettiger. (2018-2022).  **National Science Foundation** [#CNH-1824871
 ](https://nsf.gov/awardsearch/showAward?AWD_ID=1824871) $1,301,737
