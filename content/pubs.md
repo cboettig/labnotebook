@@ -226,6 +226,16 @@ css: ["vita.css"]
     [doi:10.1111/2041-210X.13440](https://doi.org/10.1111/2041-210X.13440)
     [software](https://cran-r.project.org/package=taxadb)
 
+36. Pascal, Memarzadeh, __Boettiger__, Lloyd, Chadès (2020).
+    A Shiny r app to solve the problem of when to stop managing or surveying species under imperfect detection
+    *Methods in Ecology and Evolution*. [doi:10.1111/2041-210X.13501](https://doi.org/10.1111/2041-210X.13501)
+    [software](https://github.com/conservation-decisions/smsPOMDP)
+
+
+37. __Carl Boettiger__. (2020). [Rp] Fluctuation domains 
+    in adaptive evolution. ReScience C 6, 1, #15. 
+    [doi:10.5281/zenodo.4081202](https://doi.org/ 	10.5281/zenodo.4081202),
+    [code](https://github.com/cboettig/fluctationDomains)
 
 # Book chapters
 
