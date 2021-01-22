@@ -233,8 +233,9 @@ css: ["vita.css"]
 
 
 37. __Carl Boettiger__. (2020). [Rp] Fluctuation domains 
-    in adaptive evolution. ReScience C 6, 1, #15. 
-    [doi:10.5281/zenodo.4081202](https://doi.org/ 	10.5281/zenodo.4081202),
+    in adaptive evolution. ReScience C 6, 1, #15, 
+    <https://rescience.github.io/bibliography/Boettiger_2020.html>,
+    [doi:10.5281/zenodo.4081202](https://doi.org/10.5281/zenodo.4081202),
     [code](https://github.com/cboettig/fluctationDomains)
 
 # Book chapters
