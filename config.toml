@@ -4,9 +4,9 @@ languageCode = "en-us"
 title = "Boettiger Group"
 googleAnalytics = "UA-18401403-1"
 disqusShortname = "cboettig"
-ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 publishDir = "public"
 enableGitInfo = true
+ignoreFiles =  ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 
 [permalinks]
     lab-notebook = "/:year/:month/:day/:slug/"
