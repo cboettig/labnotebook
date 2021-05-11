@@ -18,7 +18,7 @@
   
   <!-- CSS Files -->
   {{ $style := resources.Get "sass/material-kit.scss" | toCSS | minify | fingerprint }}
-  <link href="{{ $style.Permalink }}" rel="stylesheet">
+  <link href="{{ $style.RelPermalink }}" rel="stylesheet">
 
   <!-- Additional icons: fa-docker, academicons, R-logo  -->
   <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
