@@ -1,0 +1,507 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Freeman Curriculum Vitae
+% XeLaTeX Template
+% Version 2.0 (19/3/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%!TEX program = xelatex
+% NOTICE: This template must be compiled with XeLaTeX, the line above should
+% ensure this happens automatically but if it doesn't you will need to specify 
+% XeLaTeX as the engine in your editor or script
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Font size, can be: 10pt, 11pt or 12pt
+\input{structure.tex} % Include the file that specifies the document structure
+\usepackage{url}
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example right footer:
+%\rfoot{\color{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{paracol}{2} % Begin the multi-column environment
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CURRICULUM VITAE TEXT
+%----------------------------------------------------------------------------------------
+
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the author name and CV text; fixed height to match the coloured box to the right, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\centering % Centre text
+	{\sffamily\Huge Dr. Carl Boettiger}\\\medskip % Your name
+	{\Huge\color{headings}\cvtextfont Curriculum Vitae}
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+% Blank \workposition command to add another job:
+
+%\workposition{} % Duration
+%{} % FT/PT (full time or part time)
+%{} % Employer
+%{} % Job title
+%{} % Description
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\workposition{Current, from July 2015} % Duration
+{FT} % FT/PT (full time or part time)
+{University of California, Berkeley} % Employer
+{Assistant Professor} % Job title
+{Department of Environmental Science, Policy and Management} % Description
+
+%------------------------------------------------
+
+\workposition{2013-2015} % Duration
+{FT} % FT/PT (full time or part time)
+{University of California, Santa Cruz} % Employer
+{NSF Post-doctoral Scholar} % Job title
+{Department of Applied Mathematics and Statistics}  % Description
+
+%------------------------------------------------
+
+\vspace{-\baselineskip}\medskip % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education} 
+
+% Blank \educationentry{} command to add another degree:
+
+%\educationentry{} % Duration
+%{} % Degree
+%{} % Honours, achievements or distinctions (e.g. first class honours)
+%{} % Department
+%{} % Institution
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+	
+	\educationentry{2007 -- 2012} % Duration
+	{Doctor of Philosophy} % Degree
+	{} % Honours, achievements or distinctions (e.g. first class honours)
+	{Population Biology. Mentor: Alan Hastings} % Department
+	{University of California, Davis} % Institution
+	
+	%------------------------------------------------
+	
+	\educationentry{2003 -- 2007} % Duration
+	{Bachelors of Physics} % Degree
+	{with Honours} % Honours, achievements or distinctions (e.g. first class honours)
+	{Physics, w/ Certs. in Applied Mathematics} % Department
+	{Princeton University} % Institution
+	
+	%------------------------------------------------
+
+\end{supertabular}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{Grants}
+
+% Example \tableentry{} command to add another line:
+%\tableentry{Heading}{Content}{spaceafter}
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
+
+%------------------------------------------------
+
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+
+  \educationentry{2019 -- 2020}{Chan-Zuckerberg Initiative,  \$75,912}{}{C. Boettiger, N. Ross, D. Eddelbuettel}{\href{https://chanzuckerberg.com/eoss/proposals/maintaining-rocker-sustainability-for-containerized-reproducible-analyses/}{Essential Open Source Software for Science}}
+
+  \educationentry{2018 -- 2022}{National Science Foundation,  \$1,301,737}{}{T. Bowles, A. Iles, C. Kremen, C. Boettiger}{Coupled Natural Human Systems \href{https://nsf.gov/awardsearch/showAward?AWD_ID=1824871}{\#CNH-1824871}}
+	
+  \educationentry{2019 -- 2021}{Helmsley Charitable Trust,  \$1,000,000}{}{K. Ram, C. Boettiger, S. Chamberlain}{\href{https://ropensci.org}{The rOpenSci Project}}
+
+  \educationentry{2018}
+  {Berkeley Institute for Data Science, \$67,000}
+  {}
+  {C. Boettiger, R. Gillespie, R. Nielsen}{\hspace{.1pt}}
+
+
+  \educationentry{2018 -- 2021}
+  {The Hellman Foundation, \$37,600}
+  {}
+  {C. Boettiger}
+  {Junior Faculty Fellowship}
+  
+  
+  \educationentry{2015 -- 2018}{Helmsley Charitable Trust,  \$2,875,071}{}{K. Ram, C. Boettiger, S. Chamberlain} {\href{https://ropensci.org}{The rOpenSci Project}, \#2016PG-BRI004}
+
+  \educationentry{2015 -- 2018}{National Science Foundation, \$165,782}{}{C. Boettiger, M. Jones}{The CodeMeta Project \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758}{\#ACI-1549758}}
+
+  \educationentry{2014}{Alfred P. Sloan Foundation, \$300,000}{}{K. Ram, C. Boettiger, S. Chamberlain}{The rOpenSci Project Phase II funding}  
+
+  \educationentry{2013}{Alfred P. Sloan Foundation, \$180,000}{}{K. Ram, C. Boettiger, S. Chamberlain}{The rOpenSci Project Phase I funding}  
+
+  \educationentry{2013 -- 2015}{National Science Foundation, \$138,000}{}{}
+  {C Boettiger. \href{http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm}{NSF Biology
+  Post-doc}, \href{http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697}{\#DBI-1306697}}
+
+  \educationentry{2009}
+  {National Academy of Sciences \$8,000}
+  {}
+  {IIASA YSSP fellowship}
+  {OISE-0738129}.
+
+  \educationentry{2008 -- 2012}
+  {Department of Energy, \$149,000}
+  {}
+  {Computational Science Graduate Fellowship}
+  {\href{https://www.krellinst.org/csgf/alumni/profile?n=boettiger2008}{\#DE-FG02-97ER25308}}
+
+  %Managing ecosystems under extreme uncertainty. (2016 - 2019) NSF
+  %\textbf{XSEDE} TG-DEB160003. NSF Estimated value of computing
+  %resources: \$34,558
+
+ % Reproducible and Collaborative Data Science. NSF \textbf{XSEDE}
+ % TG-DEB160021. (2016 - 2019) NSF Estimated value of computing
+ % resources: \$20,028
+
+\end{supertabular}
+
+
+\switchcolumn % Switch to the next paracol column
+
+%----------------------------------------------------------------------------------------
+%	COLOURED CONTACT DETAILS BOX
+%----------------------------------------------------------------------------------------
+
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\colorbox{shade}{ % Create the coloured box
+		\begin{supertabular}{p{0.05\linewidth}|p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+			\raisebox{-1pt}{\faHome} & ESPM Department, University of California, 130 Mulford Hall \#3114 Berkeley, CA 94720 \\ % Address
+			\raisebox{0pt}{\small\faEnvelope} & \href{mailto:cboettig@berkeley.eu}{cboettig@berkeley.edu} \\ % Email address
+			\raisebox{-1pt}{\small\faDesktop} & \href{https://carlboettiger.info}{https://carlboettiger.info} \\ % Website
+			\raisebox{-1pt}{\faGithub} & \href{https://github.com/cboettig}{https://github.com/cboettig} \\ % GitHub profile
+			%\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/username}{https://www.linkedin.com/in/username} \\ % LinkedIn profile
+			% See fontawesome.pdf in the fonts folder for all icons you can use
+		\end{supertabular}
+	}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\section{Publications (32)}
+
+% Example \longformdescription{} command to add another publication:
+
+%\longformpublication{Reference (format this manually as desired)}
+
+%------------------------------------------------
+
+
+\longformpublication{
+\textbf{C Boettiger} (2020). Ecological management of stochastic systems
+   with long transients. \emph{Theoretical Ecology}.
+   \href{https://doi.org/10.1007/s12080-020-00477-4}{doi:10.1007/s12080-020-00477-4}
+}
+
+\longformpublication{
+K Norman, S Chamberlain, \textbf{C Boettiger} (2020). 
+    taxadb: A high‐performance local taxonomic database interface.
+    \emph{Methods in Ecology and Evolution} 
+    \href{https://doi.org/10.1111/2041-210X.13440}{doi:10.1111/2041-210X.13440}
+}
+
+\longformpublication{Pascal, Memarzadeh, \textbf{Boettiger}, Lloyd, Chades (2020).
+    A Shiny r app to solve the problem of when to stop managing or surveying species under imperfect detection
+    \emph{Methods in Ecology and Evolution}. \href{https://doi.org/10.1111/2041-210X.13501}{doi:10.1111/2041-210X.13501}
+}
+\longformpublication{
+  de Aguiar, Newman, Pires, Yeakel, \textbf{Boettiger}, Burkle, Gravel, 
+    Guimarães Jr, O’Donnell, Poisot, Fortin, Hembry (2019).
+    Revealing biases in the sampling of ecological interaction networks,
+    \emph{PeerJ}, 
+    \href{https://doi.org/10.7717/peerj.7566}{doi:10.7717/peerj.7566}.
+}    
+
+\longformpublication{
+M Memarzadeh, G Britten, B Worm, \textbf{C Boettiger} (2019). Rebuilding global fisheries under uncertainty.
+  \emph{Proceedings of the National Academy of Sciences}.
+  \href{https://doi.org/10.1073/pnas.1902657116}{doi:10.1073/pnas.1902657116}
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, R Batt (2019). Bifurcation or state
+  tipping: assessing transition type in a model trophic cascade.
+  \emph{Journal of Mathematical Biology}.
+  \href{https://doi.org/10.1007/s00285-019-01358-z}{doi:10.1007/s00285-019-01358-z}
+}
+
+\longformpublication{
+  M Memarzadeh, \textbf{C Boettiger} (2019). Resolving the
+  Measurement Uncertainty Paradox in Ecological Management.
+  \emph{American Naturalist}.
+  \href{https://doi.org/10.1086/702704}{doi:10.1086/702704}.
+}
+
+\longformpublication{
+  D Sholler, K Ram, \textbf{C. Boettiger}, DS Katz
+  (2019). Enforcing public data archiving policies in academic
+  publishing: A study of ecology journals. \emph{Big Data \& Society}
+  6(1) 1-18.
+  \href{https://doi.org/10.1177/2053951719836258}{doi:10.1177/2053951719836258}
+}
+
+\longformpublication{
+  \textbf{C Boettiger} (2019). Ecological Metadata as Linked Data.
+  \emph{Journal of Open Source Software}, 4(34), 1276,
+  \href{https://doi.org/10.21105/joss.01276}{doi:10.21105/joss.01276}
+}
+
+\longformpublication{
+  Katz, Allen, Barba, Berg, Bik, \textbf{Boettiger}, et al. (2018). The
+  principles of tomorrow's university. \emph{F1000Research}, 7:1926
+  \href{https://doi.org/10.12688/f1000research.17425.1}{doi:10.12688/f1000research.17425.1}.
+  (32 co-authors.)
+}
+
+\longformpublication{
+  K Ram, \textbf{C Boettiger}, S Chamberlain, N Ross,
+  M Salmon, \& S Butland (2018). A Community of Practice
+  Around Peer-review for Long-term Research Software Sustainability.
+  \emph{Computing in Science \& Engineering}, 9615(c), 1--1.
+  \href{https://doi.org/10.1109/MCSE.2018.2882753}{doi:10.1109/MCSE.2018.2882753}
+}
+
+\longformpublication{
+  \textbf{C Boettiger} (2018). Managing Larger Data on a GitHub
+  Repository. \emph{Journal of Open Source Software}, 3(29), 971,
+  \href{https://doi.org/10.21105/joss.00971}{doi:10.21105/joss.00971}.
+}
+
+%%% \switchcolumn % Switch to the next paracol column
+
+
+\longformpublication{
+  M Memarzadeh, \textbf{C Boettiger} (2018). Adaptive management
+  of ecological systems under partial observability. \emph{Biological
+  Conservation}. 224, 9-15.
+  \href{https://doi.org/10.1016/j.biocon.2018.05.009}{doi:10.1016/j.biocon.2018.05.009}.
+}
+
+\longformpublication{
+  \textbf{C Boettiger} (2018). From noise to knowledge: how
+  randomness generates novel phenomena and reveals information.
+  \emph{Ecology Letters}.
+  \href{https://doi.org/10.1111/ele.13085}{doi:10.1111/ele.13085}
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, D Eddelbuettel (2018). An Introduction to
+  Rocker: Docker Containers for R. \emph{The R Journal}.
+  \href{https://doi.org/10.32614/RJ-2017-065}{doi:10.32614/RJ-2017-065}
+}
+
+\longformpublication{
+  \textbf{C Boettiger} (2017). Generating Codemeta Metadata for R
+  Packages. \emph{The Journal of Open Source Software} 2 (19), 454,
+  \href{https://doi.org/10.21105/joss.00454}{doi:10.21105/joss.00454}
+}
+
+\switchcolumn
+
+
+\longformpublication{
+  Getz, Marshall, Carlson, Giuggioli, Ryan, Romañach,
+  \textbf{Boettiger}, Chamberlain, Larsen, D'Odorico, O'Sullivan (2017).
+  Making ecological models adequate. \emph{Ecology Letters}. \\
+  \href{https://doi.org/10.1111/ele.12893}{doi:10.1111/ele.12893}
+}
+
+\longformpublication{
+  B Marwick, \textbf{C Boettiger}, L Mullen (2017). Packaging
+  data analytical work reproducibly using R (and friends). \emph{The
+  American Statistician}.
+  \href{https://doi.org/10.1080/00031305.2017.1375986}{doi:10.1080/00031305.2017.1375986}.
+}
+
+\longformpublication{
+  Hampton, Jones, Wasser, Schuldhauer, Supp, Brun, Herandez,
+  \textbf{Boettiger}, Collins, Gross, Fernandez, Budden, White, Teal,
+  Labou, Aukema (2017). Skills and Knowledge for Data Intensive
+  Research. \emph{BioScience}.
+  \href{https://doi.org/10.1093/biosci/bix025}{doi:10.1093/biosci/bix025}.
+}
+
+\longformpublication{
+  TA Perkins, \textbf{C Boettiger}, BL Philips. (2016)
+  After the games are over: life-history trade-offs drive dispersal
+  attenuation following range expansion. \emph{Ecology and Evolution} 6
+  (18) 6425-6434.
+  \href{http://dx.doi.org/10.1002/ece3.2314}{doi:10.1002/ece3.2314}.
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, M Bode, JN Sanchirico, J
+  LaRiviere, A Hastings, and PR Armsworth (2016). Optimal
+  management of a stochastically varying population when policy
+  adjustment is costly. \emph{Ecological Applications} 26 (3) 808-817.
+  \href{http://dx.doi.org/10.1890/15-0236}{doi:10.1890/15-0236}.
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, S Chamberlain, R Vos and H Lapp
+  (2016). RNeXML: a package for reading and writing richly annotated
+  phylogenetic, character, and trait data in R. \emph{Methods in Ecology
+  and Evolution}.
+  \href{http://dx.doi.org/10.1111/2041-210X.12469}{doi:10.1111/2041-210X.12469}.
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, S Chamberlain, E Hart, K Ram
+  (2015). Building Software, Building Community: Lessons from the
+  rOpenSci Project. \emph{Journal of Open Research Software} 3: e8,
+  \href{http://dx.doi.org/10.5334/jors.bu}{doi:10.5334/jors.bu}.
+}
+
+\longformpublication{
+  \textbf{C Boettiger} (2015). An introduction to Docker for
+  reproducible research. \emph{ACM SIGOPS Operating Systems Review}
+  49(1), 71-79.   
+  \\ \href{http://dx.doi.org/10.1145/2723872.2723882}{doi:10.1145/2723872.2723882}.
+
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, M Mangel, S Munch (2015). Avoiding
+  tipping points in fisheries management through Gaussian process
+  dynamic programming. \emph{Proceedings of the Royal Society B}
+  282(1801), 8--11.
+  \href{http://dx.doi.org/10.1098/rspb.2014.1631}{doi:10.1098/rspb.2014.1631}.
+}
+
+
+\longformpublication{
+  \textbf{C Boettiger}, A Hastings (2013). No early warning
+  signals for stochastic transitions: insights from large deviation
+  theory. \emph{Proceedings of the Royal Society B}.
+  \href{http://dx.doi.org/10.1098/rspb.2013.1372}{doi:10.1098/rspb.2013.1372}.
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, N Ross, A Hastings (2013). Early
+  warning signals: The charted and uncharted territories.
+  \emph{Theoretical Ecology}
+  \href{http://dx.doi.org/10.1007/s12080-013-0192-6}{doi:10.1007/s12080-013-0192-6}.
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, A Hastings (2013). Tipping points: From
+  patterns to predictions, \emph{Nature} 493, 157--158.
+  \href{http://dx.doi.org/10.1038/493157a}{doi:10.1038/493157a}.
+}
+
+\switchcolumn
+
+
+\longformpublication{
+  \textbf{C Boettiger}, A Hastings (2012). Early Warning Signals
+  and the Prosecutor's Fallacy, \emph{Proceedings of the Royal Society
+  B} 279 (1748) 4734-4739.
+  \href{http://dx.doi.org/10.1098/rspb.2012.2085}{doi:10.1098/rspb.2012.2085}.
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, D Temple Lang, P Wainwright (2012).
+  rfishbase: exploring, manipulating and visualizing FishBase data from
+  R, \emph{Journal of Fish Biology}. 81 (6) 2030--2039.
+  \href{http://dx.doi.org/10.1111/j.1095-8649.2012.03464.x}{doi:10.1111/j.1095-8649.2012.03464.x}.
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, D Temple Lang (2012). Treebase: An R
+  package for discovery, access and manipulation of online phylogenies,
+  \emph{Methods in Ecology and Evolution} 3 (6) 1060--1066.
+  \href{http://dx.doi.org/10.1111/j.2041-210X.2012.00247.x}{doi:10.1111/j.2041-210X.2012.00247x}.
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, A Hastings (2012). Quantifying Limits to
+  Detection of Early Warning for Critical Transitions, \emph{Journal of
+  the Royal Society: Interface} 9 (75) 2527-2539. \\
+  \href{http://dx.doi.org/10.1098/rsif.2012.0125}{doi:10.1098/rsif.2012.0125}.
+}
+
+\longformpublication{
+  JM Beaulieu, DC Jhwueng, \textbf{C Boettiger},
+  B O'Meara, (2012). Modeling Stabilizing Selection: Expanding the
+  Ornstein-Uhlenbeck Model of Adaptive Evolution, \emph{Evolution} 66
+  (8) 2369-2383.
+  \href{http://dx.doi.org/10.1111/j.1558-5646.2012.01619.x}{doi:10.1111/j.1558-5646.2012.01619.x}
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, G Coop, P Ralph (2012). Is your
+  phylogeny informative? Measuring the power of comparative methods,
+  \emph{Evolution} 66 (7) 2240-51.
+  \href{http://dx.doi.org/10.1111/j.1558-5646.2011.01574.x}{doi:10.1111/j.1558-5646.2011.01574.x},
+}
+
+\longformpublication{
+  \textbf{C Boettiger}, J Dushoff, JS Weitz (2010).
+  Fluctuation domains in adaptive evolution, \emph{Theoretical
+  Population Biology} 77 (1) 6-13.
+  \href{http://dx.doi.org/10.1016/j.tpb.2009.10.003}{doi:10.1016/j.tpb.2009.10.003}.
+}
+
+\longformpublication{
+  JJ Wray, NA Bahcall, P Bode, \textbf{C Boettiger},
+  P Hopkins (2006). The Shape, Multiplicity, and Evolution of
+  Superclusters in Lambda-CDM Cosmology, \emph{The Astrophysical
+  Journal} 652 (2) 907-916.
+  \href{http://dx.doi.org/10.1086/508600}{doi:10.1086/50860}.
+ }
+
+
+\section{Book Chapters}
+
+\longformpublication{ \textbf{C Boettiger} (2017). A Reproducible R Notebook Using Docker. In J. Kitzes, D. Turek, \& F. Deniz (Eds.), The Practice of
+  Reproducible Research: Case Studies and Lessons from the
+  Data-Intensive Sciences (1st ed., pp.~109--117). Oakland, CA: UC
+  Press. \href{https://www.ucpress.edu/book.php?isbn=9780520294752}{ISBN:9780520294752}}
+ 
+
+
+\end{paracol}
+\end{document}
