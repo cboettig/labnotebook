@@ -5,7 +5,11 @@
     <link>/</link>
     <description>Recent content in Boettiger Group, UC Berkeley on Boettiger Group</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Coupled Natural-Human Systems Modeling Postdoc</title>
       <link>/post/cnhs-modeling-postdoc/</link>

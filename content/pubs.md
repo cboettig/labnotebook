@@ -250,6 +250,11 @@ css: ["vita.css"]
     Grazer behavior can regulate large-scale patterning of community states.
     *Ecology Letters* (Accepted)
     
+41. Chapman, Oestreich, Frawley, __Boettiger__, Diver, Santos, Scoville,
+    Armstrong, Blondin, Chand, Haulsee, Knight, Crowder (2021). 
+    Promoting equity in the use of algorithms for high seas conservation.
+    *One Earth* (In Press)
+    
 # Book chapters
 
 - _Carl Boettiger_ (2017). A Reproducible R Notebook Using Docker. In J. Kitzes, D. Turek, & F. Deniz (Eds.), The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences (1st ed., pp. 109–117). Oakland, CA: UC Press. <https://www.ucpress.edu/book.php?isbn=9780520294752>
