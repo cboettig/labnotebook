@@ -538,7 +538,7 @@ css: ["vita.css"]
 
 # Media interviews
 
-- Martin, Glen. (2019)."How Algorithms Could Save the Planet." _California Magazine). <https://alumni.berkeley.edu/california-magazine/just-in/2019-02-01/how-algorithms-could-save-planet>
+- Martin, Glen. (2019)."How Algorithms Could Save the Planet." _California Magazine_). <https://alumni.berkeley.edu/california-magazine/just-in/2019-02-01/how-algorithms-could-save-planet>
 - Seltenrich, N. (2016). "Scaling the Heights of Data Science."  _Breakthroughs Magazine_.  <https://nature.berkeley.edu/breakthroughs/opensci-data>
 - Tachibana, C. (2014). "The paperless lab" _Science_ 345(6195) pp. 468-470. [10.1126/science.opms.p1400087](http://www.sciencemag.org/site/products/lst_20140613.xhtml)
 - Mascarelli, A. (2014) "Research tools: Jump off the page." *Nature*
