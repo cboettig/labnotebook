@@ -435,21 +435,21 @@ css: ["vita.css"]
 
 ## Campus
 
-- 2019 - current. Faculty Working Group for the formation of the Division of Data Science & Information
-- 2018 - 2019. Faculty Task Force for Data Science Minor Design
-- 2018 - current. Faculty Advisory Committee of the Vice Chancellor for Undergraduate Education
 - 2018 - current. Governance Committee for Data Science Programs
+- 2019. Faculty Working Group for the formation of the Division of Data Science & Information
+- 2018 - 2019. Faculty Task Force for Data Science Minor Design
+- 2018 - 2019. Faculty Advisory Committee of the Vice Chancellor for Undergraduate Education
 - 2017 - 2018. ESPM Remote Sensing Faculty Search, committee member & equity liaison
 - 2017 - 2018. ad hoc Data Science Degree Proposal Committee
-- 2017 - current. Steering Committee for NSF Research Traineeship (NRT): Environment and Society: Data Science for the 21st Century (DS421)
+- 2017 - 2020. Steering Committee for NSF Research Traineeship (NRT): Environment and Society: Data Science for the 21st Century (DS421)
 - 2015 - 2019. Berkeley Research Computing Advisory Committee
 
 ## Extra-campus
 
-- NCEAS [Scientific Advisory Board](https://www.nceas.ucsb.edu/content/nceas-science-advisers)
-- rOpenSci [Leadership Team](https://ropensci.org/about/#team)
-- Jetstream Cloud Computing [Stakeholder Advisory Board](https://jetstream-cloud.org/about/advisory-board.php), XSEDE.
-- Editor, _Ecology Letters_
+- 2020 - current. Editor, _Ecology Letters_
+- 2010 - current. rOpenSci [Leadership Team](https://ropensci.org/about/#team)
+- 2014 - 2020. NCEAS [Scientific Advisory Board](https://www.nceas.ucsb.edu/content/nceas-science-advisers)
+- 2016 - 2019. Jetstream Cloud Computing [Stakeholder Advisory Board](https://jetstream-cloud.org/about/advisory-board.php), XSEDE.
 - Reviewer for over 40 journals, NSF review panelist, ad hoc reviewer for UC CCGA, NSF, NERSC.
 
 <!--
@@ -505,7 +505,7 @@ css: ["vita.css"]
 ## R Packages
 
 - [`neonstore`](https://github.com/cboettig/neonstore): A Fast and Provenance Aware Local NEON Data Store. 
-  Carl Boettiger and Quinn Thomas and Christine Laney and Claire Lunch (2020).
+  Carl Boettiger, Quinn Thomas, Christine Laney, Claire Lunch (2020).
 - [`contentid`](https://github.com/cboettig/contentid): An Interface for Content-Based Identifiers. 
   Carl Boettiger and Jorrit Poelen (2020).
 - [`taxalight`](https://github.com/cboettig/taxalight):  A Lightweight and Lightning-Fast Taxonomic Naming Interface.
