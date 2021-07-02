@@ -274,14 +274,14 @@ css: ["vita.css"]
 41. Chapman, Oestreich, Frawley, __Boettiger__, Diver, Santos, Scoville,
     Armstrong, Blondin, Chand, Haulsee, Knight, Crowder (2021). 
     Promoting equity in the use of algorithms for high seas conservation.
-    *One Earth* (In Press)
+    *One Earth* [doi:10.1016/j.oneear.2021.05.011](https://doi.org/10.1016/j.oneear.2021.05.011).
     
     
 # Grants
 
 - CAREER: Harnessing the data revolution for predicting and managing ecosystem regime shifts. Carl Boettiger. (2020-2025).  **National Science Foundation** [#DBI-1942280](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1942280). $504,335.00  
 
-- The Rocker Project. Carl Boettiger, Noam Ross, Dirk Eddelbuettel. (2019 - 2020). **Chan-Zuckerberg Initiative**: [Essential Open Source Software for Science](https://chanzuckerberg.com/eoss/proposals/maintaining-rocker-sustainability-for-containerized-reproducible-analyses/). $75,912
+- The Rocker Project. Carl Boettiger, Noam Ross, Dirk Eddelbuettel. (2019 - 2021). **Chan-Zuckerberg Initiative**: [Essential Open Source Software for Science](https://chanzuckerberg.com/eoss/proposals/maintaining-rocker-sustainability-for-containerized-reproducible-analyses/). $75,912
 
 - The Influence of Conflicting Policies and Supply-Chain Pressures on Farmers' Decisions and Tradeoffs with Respect to Biodiversity, Profitability, and Sustainability.  Timothy Bowles (PI), Alastair Iles, Claire Kremen, Carl Boettiger. (2018-2022).  **National Science Foundation** [#CNH-1824871
 ](https://nsf.gov/awardsearch/showAward?AWD_ID=1824871) $1,301,737
@@ -304,21 +304,21 @@ css: ["vita.css"]
 
 - The CodeMeta Project (2015). **National Science Foundation**
    [#ACI-1549758](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1549758)
-   *$165,782*. ([proposal here](https://dx.doi.org/10.6084/m9.figshare.2055972))
+   *$165,782*. ([proposal link](https://dx.doi.org/10.6084/m9.figshare.2055972))
 
 - The rOpenSci Project, Phase II funding (2014, Co-PI). Karthik Ram, Carl Boettiger, Scott Chamberlain. **Alfred P. Sloan Foundation** $300,000
 
 - [NSF Biology Post-doc](http://www.nsf.gov/pubs/2012/nsf12497/nsf12497.htm) (2013-2015). **National Science Foundation**
    [#DBI-1306697](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1306697),
-   $138,000 ([proposal here](http://doi.org/10.6084/m9.figshare.652970))
+   $138,000 ([proposal link](http://doi.org/10.6084/m9.figshare.652970))
 
 - The rOpenSci Project Phase I funding (2013 Co-PI). Karthik Ram, Carl Boettiger, Scott Chamberlain. **Alfred P. Sloan Foundation** $180,000
 
 - IIASA YSSP fellowship (2009). **National Academy of Sciences**, OISE-0738129,
-   $8,000. ([proposal here](http://doi.org/10.6084/m9.figshare.678310))
+   $8,000. ([proposal link](http://doi.org/10.6084/m9.figshare.678310))
 
 - Computational Science Graduate Fellowship (2008). **United States Department of Energy**,
-   #DE-FG02-97ER25308, $149,000. ([proposal here](https://dx.doi.org/10.6084/m9.figshare.2010246))
+   #DE-FG02-97ER25308, $149,000. ([proposal link](https://dx.doi.org/10.6084/m9.figshare.2010246))
 
 
 # Book Chapters
@@ -327,6 +327,20 @@ css: ["vita.css"]
 
 
 # Invited Talks & Workshops
+
+**2021**
+
+- Workshop on the Future of Synthesis, National Center for Ecological Analysis and Synthesis (co-organizer).
+- National Ecological Observatory Network (NEON) Workshop on Complex Landscapes at Scale.
+- Ecological Forecasting Initiative (EFI) Workshop on Empowering Development of the Next Generation of Educational Materials for Forecasting.
+
+**2020**
+
+- Invited seminar speaker, University of Oregon, Eugene, OR.
+- Chan-Zuckerberg Initiative Essential Open Source Software for Science Workshop.
+- Invited seminar speaker, DataONE data repository network.
+- Ecological Forecasting Initiative Research Coordination Network [Workshop](https://ecoforecast.org/efi-rcn-2020-workshop-videos/).
+- Invited seminar speaker, Concordia University, Montreal, CA.
 
 **2019**
 
@@ -407,9 +421,12 @@ css: ["vita.css"]
 
 # Awards
 
--  2020 Early Career Fellow, Ecological Society of America
--  2011 *Volterra Award* (Best student talk, ESA Theory Section)
--  2007 Elected to Membership in the Society of *Sigma Xi*
+-  2020 CAREER Award, National Science Foundation
+-  2020 [Early Career Fellow](https://www.esa.org/blog/2020/04/09/assistant-professor-carl-boettiger-named-2020-ecological-society-of-america-fellow/), Ecological Society of America
+-  2020 Winkler Family Foundation Scholar
+-  2018 Hellman Fellow, Hellman Foundation
+-  2011 Volterra Award, Ecological Society of America, Theory Section
+-  2007 Elected to Membership in the Society of Sigma Xi
 -  2007 Allen G. Shenstone Prize in Physics, Princeton University
 -  2007 The Class of 1870 Old English Prize, Princeton University
 -  2006 Kusaka Memorial Prize in Physics, Princeton University
