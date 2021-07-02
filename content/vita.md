@@ -537,19 +537,6 @@ css: ["vita.css"]
 - Carl Boettiger, Dirk Eddelbuettel. The Rocker Project: Docker images for the R environment. <https://rocker-project.org>. (Language: Dockerfile)
 - Carl Boettiger, Matt Jones, et al. The CodeMeta Project: Software Metadata Exchange <https://codemeta.github.io> (Language: JSON-LD)
 
-# Theses
-
-- Carl Boettiger, David Huse (2006) Clonal Interference Models in
-  Population Genetics. *Princeton Physics Dept*. [doi:10.6084/m9.figshare.678305](http://dx.doi.org/10.6084/m9.figshare.678305).
-- Carl Boettiger, Joshua Weitz, Simon Levin (2007) Adaptive Dynamics:
-  Branching Phenomena and the Canonical Equation *Princeton Physics
-  Dept*. [doi:10.6084/m9.figshare.678306](http://dx.doi.org/10.6084/m9.figshare.678306).
-- Carl Boettiger, Stephen Pacala, David Huse (2007) Ensemble Behavior
-  from Individual Dynamics in Multispecies Forest Populations.
-  *Princeton Physics Dept*. [doi:10.6084/m9.figshare.678304](http://dx.doi.org/10.6084/m9.figshare.678304).
-- Carl Boettiger (2012). Regime shifts in ecology and evolution (PhD
-  Dissertation). [doi:10.6084/m9.figshare.97218](http://dx.doi.org/10.6084/m9.figshare.97218).
-
 # Media interviews
 
 - Martin, Glen. (2019)."How Algorithms Could Save the Planet." _California Magazine_). <https://alumni.berkeley.edu/california-magazine/just-in/2019-02-01/how-algorithms-could-save-planet>
