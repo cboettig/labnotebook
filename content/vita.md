@@ -504,6 +504,16 @@ css: ["vita.css"]
 
 ## R Packages
 
+- [`neonstore`](https://github.com/cboettig/neonstore): A Fast and Provenance Aware Local NEON Data Store. 
+  Carl Boettiger and Quinn Thomas and Christine Laney and Claire Lunch (2020).
+- [`contentid`](https://github.com/cboettig/contentid): An Interface for Content-Based Identifiers. 
+  Carl Boettiger and Jorrit Poelen (2020).
+- [`taxalight`](https://github.com/cboettig/taxalight):  A Lightweight and Lightning-Fast Taxonomic Naming Interface.
+  Carl Boettiger and Kari Norman (2020)
+- [`sarsop`](https://github.com/boettiger-lab/sarsop): Approximate POMDP Planning Software.
+  Carl Boettiger and Jeroen Ooms and Milad Memarzadeh (2020).
+- [`taxadb`](https://github.com/ropensci/taxadb): A High-Performance Local Taxonomic Database Interface.
+  Carl Boettiger and Kari Norman and Jorrit Poelen and Scott Chamberlain, (2020).
 - [`emld`](https://github.com/ropensci/emld): Ecological Metadata as Linked Data.  Carl Boettiger (2019).
 - [`virtuoso`](https://github.com/ropensci/virtuoso): Interface to Virtuoso using ODBC. Carl Boettiger (2019).
 - [`rdflib`](https://github.com/ropensci/rdflib): Tools to Manipulate and Query Semantic Data. Carl Boettiger (2018).
@@ -517,6 +527,10 @@ css: ["vita.css"]
 - [`knitcitations`](https://github.com/cboettig/knitcitations): Citations for Knitr Markdown Files.  Carl Boettiger (2012).
 - [`rfishbase`](https://github.com/ropensci/rfishbase): R Interface to FishBase. Carl Boettiger, Scott Chamberlain, Duncan Temple Lang, Peter Wainwright (2011; v2 2015; v3 2019).
 
+## Python Modules
+
+- [gym_fishing](https://github.com/boettiger-lab/gym_fishing): A Simulation Environment for Deep Reinforcement Learning for sustainable fisheries management. Carl Boettiger and Marcus Lapeyrolerie (2021).
+- [gym_conservation](https://github.com/boettiger-lab/gym-conservation) A Simulation Environment for Deep Reinforcement Learning for conservation scenarios. Carl Boettiger (2021)
 
 ## Other Software
 
