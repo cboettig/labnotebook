@@ -264,8 +264,8 @@ css: ["vita.css"]
     51, 30-35, [doi:10.1016/j.cosust.2021.01.009](https://doi.org/10.1016/j.cosust.2021.01.009).
 
 39. Reimer, Arroyo-Esquivel, Jiang, Scharf, Wolkovich, Zhu, __Boettiger__ (2021).
-    Detection of long transient dynamics in noisy time series.
-    *Theoretical Ecology* (Accepted)
+    Noise can create or erase long transient dynamics.
+    *Theoretical Ecology* [doi:10.1007/s12080-021-00518-6](https://doi.org/10.1007/s12080-021-00518-6)
 
 40. Karatayev, Baskett, Kushner, Shears, Caselle, __Boettiger__ (2021).
     Grazer behavior can regulate large-scale patterning of community states.
