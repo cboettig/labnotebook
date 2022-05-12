@@ -235,7 +235,7 @@ css: ["vita.css"]
     in adaptive evolution. ReScience C 6, 1, #15, 
     <https://rescience.github.io/bibliography/Boettiger_2020.html>,
     [doi:10.5281/zenodo.4081202](https://doi.org/10.5281/zenodo.4081202),
-    [code](https://github.com/cboettig/fluctationDomains)
+    [code](https://github.com/cboettig/fluctuationDomains)
 
 38. Caleb Scoville, Melissa Chapman, Razvan Amironesei, __Carl Boettiger__ (2021). 
     Algorithmic conservation in a changing climate.
