@@ -243,17 +243,27 @@ css: ["vita.css"]
     51, 30-35, [doi:10.1016/j.cosust.2021.01.009](https://doi.org/10.1016/j.cosust.2021.01.009).
 
 39. Reimer, Arroyo-Esquivel, Jiang, Scharf, Wolkovich, Zhu, __Boettiger__ (2021).
-    Detection of long transient dynamics in noisy time series.
-    *Theoretical Ecology* (Accepted)
+    Noise can create or erase long transient dynamics.
+    *Theoretical Ecology* [doi:10.1007/s12080-021-00518-6](https://doi.org/10.1007/s12080-021-00518-6),
+    [code](https://github.com/jrreimer/Long-transient-dynamics-in-the-presence-of-noise),
+    [data](https://doi.org/10.5281/zenodo.3897393)
 
 40. Karatayev, Baskett, Kushner, Shears, Caselle, __Boettiger__ (2021).
     Grazer behavior can regulate large-scale patterning of community states.
-    *Ecology Letters* (Accepted)
+    *Ecology Letters* [doi:10.1111/ele.13828](https://doi.org/10.1111/ele.13828)
     
 41. Chapman, Oestreich, Frawley, __Boettiger__, Diver, Santos, Scoville,
     Armstrong, Blondin, Chand, Haulsee, Knight, Crowder (2021). 
     Promoting equity in the use of algorithms for high seas conservation.
-    *One Earth* (In Press)
+    *One Earth*
+    [doi:10.1016/j.oneear.2021.05.011](https://doi.org/10.1016/j.oneear.2021.05.011),
+    [oa](https://arxiv.org/abs/2205.04425),
+    [code](https://github.com/milliechapman/abnj_value_typologies)
+    
+42. Lapeyrolerie, __Boettiger__. (2021) Teaching machines to anticipate catastrophes.
+    Proceedings of the National Academy of Sciences [doi](https://doi.org/10.1073/pnas.2115605118)
+
+43. 
     
 # Book chapters
 
