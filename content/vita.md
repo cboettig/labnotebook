@@ -276,9 +276,28 @@ css: ["vita.css"]
 41. Chapman, Oestreich, Frawley, __Boettiger__, Diver, Santos, Scoville,
     Armstrong, Blondin, Chand, Haulsee, Knight, Crowder (2021). 
     Promoting equity in the use of algorithms for high seas conservation.
-    *One Earth* [doi:10.1016/j.oneear.2021.05.011](https://doi.org/10.1016/j.oneear.2021.05.011).
+    *One Earth*
+    [doi:10.1016/j.oneear.2021.05.011](https://doi.org/10.1016/j.oneear.2021.05.011),
+    [code](https://github.com/milliechapman/abnj_value_typologies)
     
-    
+42. Lapeyrolerie, __Boettiger__. (2021) Teaching machines to anticipate catastrophes.
+    *Proceedings of the National Academy of Sciences*
+    [doi](https://doi.org/10.1073/pnas.2115605118)
+
+43. Chapman, Wiltshire, Baur, Bowles, Carlisle, Castillo, Esquivel, Gennet, 
+    Iles, Karp, Kremen, Liebert, Olimpi, Ory, Ryan, Sciligo, Thompson,
+    Waterhouse, __Boettiger__. (2022).
+    Social-ecological feedbacks drive tipping points in farming system diversification.
+    *One Earth*
+    [doi:10.1016/j.oneear.2022.02.007](https://doi.org/10.1016/j.oneear.2022.02.007)
+    [oa](https://doi.org/10.48550/arXiv.2205.04425),
+    [code](https://github.com/boettiger-lab/dfs-mdp)
+
+44. Chapman, Scoville, Lapeyrolerie, __Boettiger__. (2021). 
+    Power and Accountability in Reinforcement Learning Applications to Environmental Policy. 
+    _35th Conference on Neural Information Processing Systems (NeurIPS 2021)_
+    [oa](https://openreview.net/pdf?id=6OnoKEFVD_G)
+
 # Grants
 
 - CAREER: Harnessing the data revolution for predicting and managing ecosystem regime shifts. Carl Boettiger. (2020-2025).  **National Science Foundation** [#DBI-1942280](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1942280). $504,335.00  

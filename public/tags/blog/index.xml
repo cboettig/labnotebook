@@ -6,11 +6,7 @@
     <description>Recent content in blog on Boettiger Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Apr 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 19 Apr 2017 00:00:00 +0000</lastBuildDate><atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Migrating to Hugo and blogdown</title>
       <link>/2017/04/19/migrating-to-hugo-and-blogdown/</link>

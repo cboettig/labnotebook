@@ -61,10 +61,10 @@
 %\usepackage{etaremune}
 %\renewenvironment{enumerate}{\begin{etaremune}}{\end{etaremune}}
 
-\newcounter{entrycount}
-\AtDataInput{\stepcounter{entrycount}}
-\DeclareFieldFormat{labelnumber}{\mkrevbibnum{#1}}
-\newcommand{\mkrevbibnum}[1]{\number\numexpr\value{entrycount}+1-#1}
+%\newcounter{entrycount}
+%\AtDataInput{\stepcounter{entrycount}}
+%\DeclareFieldFormat{labelnumber}{\mkrevbibnum{#1}}
+%\newcommand{\mkrevbibnum}[1]{\number\numexpr\value{entrycount}+1-#1}
 
 \usepackage[unicode]{hyperref}
 \hypersetup{
