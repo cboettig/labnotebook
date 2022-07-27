@@ -7,20 +7,45 @@ aliases: "/pubs"
 css: ["vita.css"]
 ---
 
-# Articles
+## Preprints
 
+<!--
+- Laperoleryie, __Boettiger__. Limits to Ecological Forecasting: Estimating Uncertainty for Critical Transitions with Deep Learning. ([preprint](https://github.com/boettiger-lab/mee_tipping_point_forecasting/blob/main/manuscript/manuscript.Rmd), [code](https://github.com/boettiger-lab/mee_tipping_point_forecasting))
+
+- neonstore
+
+- contentid
+
+- kari biodiversity
+
+- adaptive management vs RL
+
+-->
+
+- Chapman, __Boettiger__, Brashares. 
+  The potential contribution of private lands to the U.S. 30x30 conservation target.
+  ([preprint](https://ecoevorxiv.org/pb2s8/), [code](https://github.com/milliechapman/easements-biodiversity))
+
+-  Thomas, McClure, Moore, Woelmer, __Boettiger__, Figueiredo,
+   Hensley, Carey. 
+   Near-term forecasts of NEON lakes reveal gradients of environmental predictability across the U.S.
+   ([preprint](https://doi.org/10.1002/essoar.10510642.2), 
+    [code](https://github.com/rqthomas/NEON-forecast-code), 
+    [data](https://doi.org/10.5281/zenodo.6267616))
+
+# Articles
 
 1. James J. Wray, Neta A. Bahcall, Paul Bode, __Carl Boettiger__,
 	 Phillip Hopkins (2006). The Shape, Multiplicity, and Evolution of
 	 Superclusters in Lambda-CDM Cosmology, *The Astrophysical Journal* 652 (2)
 	 907-916. [doi:10.1086/50860](http://dx.doi.org/10.1086/508600).
-	 ([oa](http://arxiv.org/abs/astro-ph/0603060))
+	 ([preprint](http://arxiv.org/abs/astro-ph/0603060))
 
 2. __Carl Boettiger__, Jonathan Dushoff, Joshua S Weitz (2010).
 	 Fluctuation domains in adaptive evolution, *Theoretical Population
 	 Biology* 77 (1) 6-13.
 	 [doi:10.1016/j.tpb.2009.10.003](http://dx.doi.org/10.1016/j.tpb.2009.10.003).
-	 ([oa](http://arxiv.org/abs/1004.4233),
+	 ([preprint](http://arxiv.org/abs/1004.4233),
 	 [code](https://github.com/cboettig/fluctuationDomains),
 	 [data](http://datadryad.org/handle/10255/dryad.37625))
 
@@ -28,7 +53,7 @@ css: ["vita.css"]
 3. __Carl Boettiger__, Graham Coop, Peter Ralph (2012). Is your
 	 phylogeny informative? Measuring the power of comparative methods,
 	 *Evolution* 66 (7) 2240-51. [doi:10.1111/j.1558-5646.2011.01574.x](http://dx.doi.org/10.1111/j.1558-5646.2011.01574.x),
-	 ([oa](http://arxiv.org/abs/1110.4944),
+	 ([preprint](http://arxiv.org/abs/1110.4944),
 	 [code](https://github.com/cboettig/pmc),
 	 [data](http://datadryad.org/handle/10255/dryad.37645))
 
@@ -42,30 +67,28 @@ css: ["vita.css"]
 	 Detection of Early Warning for Critical Transitions, *Journal of the
 	 Royal Society: Interface* 9 (75) 2527-2539.
 	 [doi:10.1098/rsif.2012.0125](http://dx.doi.org/10.1098/rsif.2012.0125).
-	 ([oa](http://arxiv.org/abs/1204.6231),
+	 ([preprint](http://arxiv.org/abs/1204.6231),
 	 [code](https://github.com/cboettig/earlywarning))
 
 6. __Carl Boettiger__, Duncan Temple Lang (2012). Treebase: An R
 	 package for discovery, access and manipulation of online
 	 phylogenies, *Methods in Ecology and Evolution* 3 (6) 1060–1066.
 	 [doi:10.1111/j.2041-210X.2012.00247x](http://dx.doi.org/10.1111/j.2041-210X.2012.00247.x).
-	 ([oa](https://github.com/ropensci/treebase/blob/master/inst/doc/treebase/treebase_github.md),
-	 [code](https://github.com/ropensci/treebase),
-	 [software](http://cran.at.r-project.org/web/packages/treebase/))
+	 ([code](https://github.com/ropensci/treebase),
+	  [software](http://cran.at.r-project.org/web/packages/treebase/))
 
 
 7. __Carl Boettiger__, Duncan Temple Lang, Peter Wainwright (2012).
 	 rfishbase: exploring, manipulating and visualizing FishBase data
 	 from R, *Journal of Fish Biology*. 81 (6) 2030–2039.
 	 [doi:10.1111/j.1095-8649.2012.03464.x](http://dx.doi.org/10.1111/j.1095-8649.2012.03464.x).
-	 ([oa](https://github.com/ropensci/rfishbase/blob/master/inst/doc/rfishbase/rfishbase_github.md),
-	 [code](https://github.com/ropensci/rfishbase),
+	 ([code](https://github.com/ropensci/rfishbase),
 	 [software](http://cran.at.r-project.org/web/packages/rfishbase/))
 
 8. __Carl Boettiger__, Alan Hastings (2012). Early Warning Signals and
    the Prosecutor’s Fallacy, *Proceedings of the Royal Society B* 279 (1748)
    4734-4739. [doi:10.1098/rspb.2012.2085](http://dx.doi.org/10.1098/rspb.2012.2085).
-   ([oa](http://arxiv.org/abs/1210.1204),
+   ([preprint](http://arxiv.org/abs/1210.1204),
    [code](https://github.com/cboettig/prosecutors-fallacy),
    [data](http://dx.doi.org/10.5061/dryad.2k462))
 
@@ -76,14 +99,14 @@ css: ["vita.css"]
 10. __Carl Boettiger__, Noam Ross, Alan Hastings (2013). Early
    warning signals: The charted and uncharted territories. *Theoretical
    Ecology* [doi:10.1007/s12080-013-0192-6](http://dx.doi.org/10.1007/s12080-013-0192-6).
-   ([oa](http://arxiv.org/abs/1305.6700),
+   ([preprint](http://arxiv.org/abs/1305.6700),
    [code](https://github.com/cboettig/ews-review))
 
 11. __Carl Boettiger__, Alan Hastings (2013). No early warning signals
    for stochastic transitions: insights from large deviation theory.
 	*Proceedings of the Royal Society B*.
 	[doi:10.1098/rspb.2013.1372](http://dx.doi.org/10.1098/rspb.2013.1372).
-	([oa](http://arxiv.org/abs/1307.4415),
+	([preprint](http://arxiv.org/abs/1307.4415),
 	[code](https://github.com/cboettig/prosecutors-fallacy))
 
 12. __Carl Boettiger__, Marc Mangel, Stephan Munch (2015).
@@ -91,14 +114,14 @@ css: ["vita.css"]
 	 Gaussian process dynamic programming. _Proceedings of the Royal Society B_
 	 282(1801), 8–11.
 	 [doi:10.1098/rspb.2014.1631](http://dx.doi.org/10.1098/rspb.2014.1631).
-	 ([oa](http://arxiv.org/abs/1412.8081),
+	 ([preprint](http://arxiv.org/abs/1412.8081),
 	 [code](https://github.com/cboettig/nonparametric-bayes),
 	 [data](http://dx.doi.org/10.5061/dryad.mj226)).  [F1000 recommended](https://f1000.com/prime/725302626)
 	 
 13. __Carl Boettiger__ (2015). An introduction to Docker for reproducible
    research. *ACM SIGOPS Operating Systems Review* 49(1), 71-79.
    [doi:10.1145/2723872.2723882](http://dx.doi.org/10.1145/2723872.2723882).
-   ([oa](http://arxiv.org/abs/1410.0846))
+   ([preprint](http://arxiv.org/abs/1410.0846))
    
 14. __Carl Boettiger__,  Scott Chamberlain, Edmund Hart, Karthik Ram (2015).
    Building Software, Building Community: Lessons from the rOpenSci Project.
@@ -109,22 +132,23 @@ css: ["vita.css"]
    Lapp (2016). RNeXML: a package for reading and writing richly annotated
    phylogenetic, character, and trait data in R. _Methods in Ecology and Evolution_.
    [doi:10.1111/2041-210X.12469](http://dx.doi.org/10.1111/2041-210X.12469).
-   ([oa](http://arxiv.org/abs/1506.02722),
-   [code](https://github.com/ropensci/RNeXML),
-   [software](http://cran.rstudio.com/web/packages/RNeXML))
+   ([preprint](http://arxiv.org/abs/1506.02722),
+    [code](https://github.com/ropensci/RNeXML),
+    [software](http://cran.rstudio.com/web/packages/RNeXML))
 
 16. __Carl Boettiger__, Michael Bode, James N. Sanchirico, Jacob LaRiviere,
     Alan Hastings, and Paul Robert Armsworth (2016). Optimal management
     of a stochastically varying population when policy adjustment is
     costly. _Ecological Applications_ 26 (3) 808-817.   
     [doi:10.1890/15-0236](http://dx.doi.org/10.1890/15-0236).
-    ([oa](http://arxiv.org/pdf/1507.07037v1.pdf), [code](https://github.com/cboettig/pdg_control))
+    ([preprint](http://arxiv.org/abs/1507.07037v1), 
+     [code](https://github.com/cboettig/pdg_control))
 
 17. T Alex Perkins, __Carl Boettiger__, Benjamin L. Philips. (2016) After
     the games are over: life-history trade-offs drive dispersal attenuation
     following range expansion. _Ecology and Evolution_ 6 (18) 6425-6434.
     [doi:10.1002/ece3.2314](http://dx.doi.org/10.1002/ece3.2314).
-    ([oa](http://oadoi.org/10.1002/ece3.2314),
+    ([preprint](http://oadoi.org/10.1002/ece3.2314),
     [code](https://github.com/TAlexPerkins/dispersal_tradeoffs))
 
 
@@ -132,12 +156,12 @@ css: ["vita.css"]
     Gross, Fernandez, Budden, White, Teal, Labou, Aukema (2017). Skills and Knowledge
     for Data Intensive Research. _BioScience_.
     [doi:10.1093/biosci/bix025](https://doi.org/10.1093/biosci/bix025).
-    ([oa](https://doi.org/10.1093/biosci/bix025))
+    ([preprint](https://doi.org/10.1093/biosci/bix025))
 
 19. Ben Marwick, __Carl Boettiger__, Lincoln Mullen (2017). Packaging data analytical work
     reproducibly using R (and friends). _The American Statistician_.
     [doi:10.1080/00031305.2017.1375986](https://doi.org/10.1080/00031305.2017.1375986).
-    ([oa](https://doi.org/10.7287/peerj.preprints.3192v1))
+    ([preprint](https://doi.org/10.7287/peerj.preprints.3192v1))
     
 20. Getz, Marshall, Carlson, Giuggioli, Ryan, Romañach,  __Boettiger__,
     Chamberlain, Larsen, D'Odorico, O'Sullivan (2017). Making
@@ -155,7 +179,7 @@ css: ["vita.css"]
 23. __Carl Boettiger__ (2018). From noise to knowledge: how randomness
     generates novel phenomena and reveals information. _Ecology Letters_.
     [doi:10.1111/ele.13085](https://doi.org/10.1111/ele.13085)
-    ([oa](https://github.com/cboettig/noise-phenomena/raw/master/paper/paper.pdf),
+    ([preprint](https://github.com/cboettig/noise-phenomena/raw/master/paper/paper.pdf),
     [code](https://github.com/cboettig/noise-phenomena),
     [data](https://doi.org/10.5281/zenodo.1219779))
     
@@ -175,10 +199,9 @@ css: ["vita.css"]
     _Computing in Science & Engineering_, 9615(c), 1–1.
     [doi:10.1109/MCSE.2018.2882753](https://doi.org/10.1109/MCSE.2018.2882753)
     
-27. Katz, Allen, Barba, Berg, Bik, __Boettiger__, et al. (2018).
+27. Katz, Allen, Barba, Berg, Bik, __Boettiger__, et al.  (32 co-authors.) (2018).
     The principles of tomorrow's university. *F1000Research*, 7:1926
     [doi:10.12688/f1000research.17425.1](https://doi.org/10.12688/f1000research.17425.1).
-    (32 co-authors.)
 
 28. __Carl Boettiger__ (2019). Ecological Metadata as Linked Data.
     *Journal of Open Source Software*, 4(34), 1276,
@@ -188,20 +211,22 @@ css: ["vita.css"]
 29. Dan Sholler, Karthik Ram, __Carl Boettiger__, Daniel S Katz (2019).
     Enforcing public data archiving policies in academic publishing: A
     study of ecology journals.  *Big Data & Society* 6(1) 1-18.
-    [doi:10.1177/2053951719836258](https://doi.org/10.1177/2053951719836258)
+    [doi:10.1177/2053951719836258](https://doi.org/10.1177/2053951719836258).
+    ([preprint]()https://doi.org/10.48550/arXiv.1810.13040)
     
 30. Milad Memarzadeh, __Carl Boettiger__ (2019). Resolving the Measurement
     Uncertainty Paradox in Ecological Management. *American Naturalist*.
     [doi:10.1086/702704](https://doi.org/10.1086/702704).
-    ([oa](https://github.com/boettiger-lab/pomdp-intro/tree/master/manuscripts), 
+    ([preprint](https://doi.org/10.48550/arXiv.1812.11184), 
     [code](https://github.com/boettiger-lab/pomdp-intro), 
-    [data](https://doi.org/10.5281/zenodo.2528507)). [F1000 recommended]( https://f1000.com/prime/735582387)
+    [data](https://doi.org/10.5281/zenodo.2528507)).
+    [F1000 recommended]( https://f1000.com/prime/735582387)
 
 31. __Carl Boettiger__, Ryan Batt (2019). Bifurcation or state tipping:
     assessing transition type in a model trophic cascade.
     *Journal of Mathematical Biology*.
     [doi:10.1007/s00285-019-01358-z](https://doi.org/10.1007/s00285-019-01358-z) 
-    ([oa](https://github.com/cboettig/bs-tipping/blob/master/paper/paper.pdf),
+    ([preprint](https://github.com/cboettig/bs-tipping/blob/master/paper/paper.pdf),
     [code](https://github.com/cboettig/bs-tipping))
 
 32. Milad Memarzadeh, Gregory L. Britten, Boris Worm, __Carl Boettiger__ (2019). 
@@ -213,76 +238,97 @@ css: ["vita.css"]
     Guimarães Jr, O’Donnell, Poisot, Fortin, Hembry (2019).
     Revealing biases in the sampling of ecological interaction networks,
     *PeerJ*, [doi:10.7717/peerj.7566](https://doi.org/10.7717/peerj.7566).
-    [software](https://cran.r-project.org/package=EcoNetGen).
+    ([software](https://cran.r-project.org/package=EcoNetGen)).
 
 34. __Carl Boettiger__ (2020). Ecological management of stochastic systems
    with long transients. *Theoretical Ecology*.
    [doi:10.1007/s12080-020-00477-4](https://doi.org/10.1007/s12080-020-00477-4),
-   [code](https://github.com/cboettig/decisions-vs-transients)
+   ([code](https://github.com/cboettig/decisions-vs-transients))
 
 35. Kari Norman, Scott Chamberlain, __Carl Boettiger__ (2020). 
     taxadb: A high‐performance local taxonomic database interface.
     *Methods in Ecology and Evolution*. 
     [doi:10.1111/2041-210X.13440](https://doi.org/10.1111/2041-210X.13440)
-    [software](https://cran-r.project.org/package=taxadb)
+    ([software](https://cran-r.project.org/package=taxadb))
 
 36. Pascal, Memarzadeh, __Boettiger__, Lloyd, Chadès (2020).
     A Shiny r app to solve the problem of when to stop managing or surveying species under imperfect detection
     *Methods in Ecology and Evolution*.
     [doi:10.1111/2041-210X.13501](https://doi.org/10.1111/2041-210X.13501)
-    [software](https://github.com/conservation-decisions/smsPOMDP)
+    ([software](https://github.com/conservation-decisions/smsPOMDP))
 
 37. __Carl Boettiger__ (2020). [Rp] Fluctuation domains 
     in adaptive evolution. ReScience C 6, 1, #15, 
-    <https://rescience.github.io/bibliography/Boettiger_2020.html>,
     [doi:10.5281/zenodo.4081202](https://doi.org/10.5281/zenodo.4081202),
-    [code](https://github.com/cboettig/fluctuationDomains)
+    ([pdf](https://zenodo.org/record/4081202/files/article.pdf), 
+    [code](https://github.com/cboettig/fluctuationDomains))
 
 38. Caleb Scoville, Melissa Chapman, Razvan Amironesei, __Carl Boettiger__ (2021). 
     Algorithmic conservation in a changing climate.
     *Current Opinion in Environmental Sustainability*
-    51, 30-35, [doi:10.1016/j.cosust.2021.01.009](https://doi.org/10.1016/j.cosust.2021.01.009).
+    51, 30-35, 
+    [doi:10.1016/j.cosust.2021.01.009](https://doi.org/10.1016/j.cosust.2021.01.009).
 
 39. Reimer, Arroyo-Esquivel, Jiang, Scharf, Wolkovich, Zhu, __Boettiger__ (2021).
     Noise can create or erase long transient dynamics.
     *Theoretical Ecology*
-    [doi:10.1007/s12080-021-00518-6](https://doi.org/10.1007/s12080-021-00518-6),
-    [code](https://github.com/jrreimer/Long-transient-dynamics-in-the-presence-of-noise),
-    [data](https://doi.org/10.5281/zenodo.3897393)
+    [doi:10.1007/s12080-021-00518-6](https://doi.org/10.1007/s12080-021-00518-6)
+    ([code](https://github.com/jrreimer/Long-transient-dynamics-in-the-presence-of-noise),
+    [data](https://doi.org/10.5281/zenodo.3897393))
 
 40. Karatayev, Baskett, Kushner, Shears, Caselle, __Boettiger__ (2021).
     Grazer behavior can regulate large-scale patterning of community states.
     *Ecology Letters* [doi:10.1111/ele.13828](https://doi.org/10.1111/ele.13828)
+    ([preprint]( https://doi.org/10.1101/722215))
     
 41. Chapman, Oestreich, Frawley, __Boettiger__, Diver, Santos, Scoville,
     Armstrong, Blondin, Chand, Haulsee, Knight, Crowder (2021). 
     Promoting equity in the use of algorithms for high seas conservation.
     *One Earth*
     [doi:10.1016/j.oneear.2021.05.011](https://doi.org/10.1016/j.oneear.2021.05.011),
-    [code](https://github.com/milliechapman/abnj_value_typologies)
+    ([preprint](https://doi.org/10.32942/osf.io/jhbuz), 
+     [code](https://github.com/milliechapman/abnj_value_typologies))
     
 42. Lapeyrolerie, __Boettiger__. (2021) Teaching machines to anticipate catastrophes.
     *Proceedings of the National Academy of Sciences*
-    [doi](https://doi.org/10.1073/pnas.2115605118)
+    [doi:10.1073/pnas.2115605118](https://doi.org/10.1073/pnas.2115605118)
 
-43. Chapman, Wiltshire, Baur, Bowles, Carlisle, Castillo, Esquivel, Gennet, 
+43. Chapman, Scoville, Lapeyrolerie, __Boettiger__. (2021). 
+    Power and Accountability in Reinforcement Learning Applications to Environmental Policy. 
+    *35th Conference on Neural Information Processing Systems (NeurIPS 2021)*
+    ([preprint](https://doi.org/10.48550/arXiv.2205.10911),
+     [pdf](https://openreview.net/pdf?id=6OnoKEFVD_G))
+
+44. Chapman, Wiltshire, Baur, Bowles, Carlisle, Castillo, Esquivel, Gennet, 
     Iles, Karp, Kremen, Liebert, Olimpi, Ory, Ryan, Sciligo, Thompson,
     Waterhouse, __Boettiger__. (2022).
     Social-ecological feedbacks drive tipping points in farming system diversification.
     *One Earth*
     [doi:10.1016/j.oneear.2022.02.007](https://doi.org/10.1016/j.oneear.2022.02.007)
-    [oa](https://doi.org/10.48550/arXiv.2205.04425),
-    [code](https://github.com/boettiger-lab/dfs-mdp)
+    ([preprint](https://doi.org/10.48550/arXiv.2205.04425),
+     [code](https://github.com/boettiger-lab/dfs-mdp))
 
-44. Chapman, Scoville, Lapeyrolerie, __Boettiger__. (2021). 
-    Power and Accountability in Reinforcement Learning Applications to Environmental Policy. 
-    _35th Conference on Neural Information Processing Systems (NeurIPS 2021)_
-    [oa](https://openreview.net/pdf?id=6OnoKEFVD_G)
+45. __Boettiger__ (2022). The Forecast Trap. *Ecology Letters* 25, 1655-1664,
+    [doi:10.1111/ele.14024](https://doi.org/10.1111/ele.14024)
+    ([preprint](https://doi.org/10.48550/arXiv.2207.10193), 
+     [code](https://github.com/cboettig/bad-forecast-good-decision/))
 
-    
+46. Lapeyrolerie, Chapman, Norman, __Boettiger__ (2022). 
+    Deep Reinforcement Learning for Conservation Decisions. 
+    *Methods in Ecology and Evolution*.
+    ([preprint](https://doi.org/10.48550/arXiv.2106.08272),
+     [code](https://github.com/boettiger-lab/rl-intro))
+
+
+
 # Book chapters
 
-- _Carl Boettiger_ (2017). A Reproducible R Notebook Using Docker. In J. Kitzes, D. Turek, & F. Deniz (Eds.), The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences (1st ed., pp. 109–117). Oakland, CA: UC Press. <https://www.ucpress.edu/book.php?isbn=9780520294752>
+- _Carl Boettiger_ (2017). A Reproducible R Notebook Using Docker. 
+  In J. Kitzes, D. Turek, & F. Deniz (Eds.), 
+  The Practice of Reproducible Research: 
+  Case Studies and Lessons from the Data-Intensive Sciences
+  (1st ed., pp. 109–117). Oakland, CA: UC Press.
+  <https://www.ucpress.edu/book.php?isbn=9780520294752>
 
 
 # Software projects
