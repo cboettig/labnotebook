@@ -19,7 +19,7 @@
 </div>
 {{ end }}
 <div class="card-footer justify-content-center">
-<a class="btn btn-link btn-just-icon" href="mailto:{{.email}}" title="email"><i class="fa fa-envelope"></i></a>
+{{ with .email }}<a class="btn btn-link btn-just-icon" href="mailto:{{.}}" title="email"><i class="fa fa-envelope"></i></a>{{ end }}
 {{ with .twitter }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="https://twitter.com/{{.}}" title="Twitter: {{.}}"><i class="fa fa-twitter"></i></a>{{ end }}
 {{ with .impactstory }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="{{.}}" title="ImpactStory"><i class="ai ai-impactstory"></i></a>{{ end }}
 {{ with .linkedin }}<a  class="btn btn-link btn-just-icon" rel="foaf:account" href="{{.}}" title="LinkedIn"><i class="fa fa-linkedin"></i></a>{{ end }}

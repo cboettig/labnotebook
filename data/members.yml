@@ -12,23 +12,12 @@ members:
     email: "cboettig@berkeley.edu"
     photo: "carl.png"
     keybase: "https://keybase.io/cboettig"
-  - kari:
-    name:
-      first: "Kari" 
-      last: "Norman"
-    title: "Graduate Student"
-    homepage: "#"
-    github: "karinorman"
-    orcid: "0000-0002-2029-2325"
-    email: "kari.norman.314@gmail.com"
-    photo: "kari.png"
-    twitter: "norman_kari"
   - millie:
     name:
       first: "Millie" 
       last: "Chapman"
     title: "Graduate Student"
-    homepage: "#"
+    homepage: "https://milliechapman.info/"
     github: "milliechapman"
     twitter: "milliechapma"
     orcid: "0000-0002-1377-1539"
@@ -43,24 +32,31 @@ members:
     github: "mlap"
     orcid: "0000-0003-2588-7843"
     email: "marcuslapeyrolerie@me.com"
-    photo: "marcus.jpg"    
-  - serge:
+    photo: "marcus.jpg"
+  - abby:
     name:
-      first: "Serge" 
-      last: "Wiltshire"
-    title: "Postdoctoral Researcher"
-    googlescholar: "https://scholar.google.com/citations?user=-8I8G-kAAAAJ&hl=en"
-    #homepage: "#"
-    #github: ""
-    #orcid: ""
-    email: "serge.wiltshire@gmail.com"
-    photo: "serge.jpg"    
+      first: "Abby"
+      last: "Keller"
+    title: "Graduate Student"
+    photo: "abby.jpg"
+    twitter: "abby__keller"
+    orcid: "0000-0001-6068-0173"
+  - felipe:
+    name:
+      first: "Felipe"
+      last: "Montealegre-Mora"
+    title: "Postdoctoral Scholar"
+    photo: "felipe2.jpg"
+    homepage: "https://felipethescientist.com" 
+    github: "https://github.com/felimomo"
+    googlescholar: "Montealegre-Mora"
+    linkedin: "https://www.linkedin.com/in/felimomo/"
   - you:
     name:
       first: "Your"
       last: "Name Here?"
     title: "Open Position"
-    website: "#"
+    homepage: "#"
     github: "#"
     twitter: "#"
     orcid: "#" 

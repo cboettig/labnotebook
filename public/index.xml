@@ -5,7 +5,11 @@
     <link>/</link>
     <description>Recent content in Boettiger Group, UC Berkeley on Boettiger Group</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Coupled Natural-Human Systems Modeling Postdoc</title>
       <link>/post/cnhs-modeling-postdoc/</link>
@@ -107,7 +111,7 @@ docker run -d -p 8787:8787 rocker/tidyverse:devel to test out a recent version1 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/members/</guid>
-      <description>Current   Carl Boettiger  Assistant Professor             Kari Norman  Graduate Student            Millie Chapman  Graduate Student            Marcus Lapeyrolerie  Graduate Student           Serge Wiltshire  Postdoctoral Researcher          Your Name Here?</description>
+      <description>Current   Carl Boettiger  Assistant Professor             Millie Chapman  Graduate Student            Marcus Lapeyrolerie  Graduate Student           Abby Keller  Graduate Student          Felipe Montealegre-Mora  Postdoctoral Scholar           Your Name Here?</description>
     </item>
     
     <item>
