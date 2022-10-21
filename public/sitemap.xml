@@ -1,145 +1,89 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/categories/</loc>
     <lastmod>2019-09-24T09:45:10-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/cnhs-modeling-postdoc/</loc>
     <lastmod>2019-09-24T09:45:10-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/jobs/</loc>
     <lastmod>2019-09-24T09:45:10-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/</loc>
     <lastmod>2019-09-24T09:45:10-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/2017/12/11/data-rectangling-with-jq/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/json/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/r/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/r/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/json-ld/</loc>
     <lastmod>2018-05-30T12:17:49-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/2017/12/09/json-ld-vita-exploration/</loc>
     <lastmod>2018-05-30T12:17:49-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/2017/05/17/using-travis-ci-in-research-compendia-and-student-repos/</loc>
     <lastmod>2017-08-20T17:26:14-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/2017/05/17/json-ld-framing-strategy/</loc>
     <lastmod>2018-05-30T12:17:49-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/docker/</loc>
     <lastmod>2018-05-30T12:17:49-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/2017/04/27/new-rocker-releases/</loc>
     <lastmod>2018-05-30T12:17:49-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/open-science/</loc>
     <lastmod>2019-08-02T10:51:44-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/blog/</loc>
     <lastmod>2019-08-02T10:51:44-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/2017/04/19/migrating-to-hugo-and-blogdown/</loc>
     <lastmod>2019-08-02T10:51:44-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/</loc>
     <lastmod>2019-07-22T22:28:19-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/calendar/</loc>
     <lastmod>2018-02-22T23:14:55-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cloud/</loc>
     <lastmod>2017-08-20T17:26:14-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/community/</loc>
     <lastmod>2017-08-20T17:26:14-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/lab-notebook/</loc>
     <lastmod>2018-12-07T15:58:38-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/members/</loc>
     <lastmod>2019-07-22T22:28:19-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/networks/</loc>
     <lastmod>2017-08-20T17:26:14-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/pubs/</loc>
-    <lastmod>2022-05-17T13:54:53-07:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-07-27T13:53:07-07:00</lastmod>
+  </url><url>
     <loc>/teaching/</loc>
     <lastmod>2019-08-20T16:46:23-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vita/</loc>
-    <lastmod>2022-05-17T13:54:53-07:00</lastmod>
+    <lastmod>2022-07-27T13:53:07-07:00</lastmod>
   </url>
-  
 </urlset>
