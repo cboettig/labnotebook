@@ -6,3 +6,4 @@
 .sass-cache
 *.synctex.gz
 *.log
+/.quarto/

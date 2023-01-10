@@ -22,8 +22,7 @@
       
       <guid>/2017/12/11/data-rectangling-with-jq/</guid>
       <description>“Data rectangling”: the process of turning highly nested data structures (e.g. JSON, XML) into a tabular format.
-Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community. Recording or slides of Jenny’s talk on the subject give a much better intro to the idea and working with this in R, particularly through the purrr package.
-As nice as purrr is for the task, I’ve recently found that the jqr package from Scott Chamberlain and co can be a much easier way to go about rectangling your JSON.</description>
+ Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community. Recording or slides of Jenny’s talk on the subject give a much better intro to the idea and working with this in R, particularly through the purrr package.</description>
     </item>
     
     <item>
@@ -32,7 +31,7 @@ As nice as purrr is for the task, I’ve recently found that the jqr package fro
       <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/12/09/json-ld-vita-exploration/</guid>
-      <description>Using JSON Queries (JQ) Pure JSON vita &amp;lt;- readr::read_file(&amp;quot;../../static/js/vita.json&amp;quot;) jq(vita, &amp;#39;.&amp;quot;@reverse&amp;quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&amp;quot; &amp;quot;) }&amp;#39;) %&amp;gt;% combine() %&amp;gt;% fromJSON() year author 2017-12-09 Wayne M. Getz 2017-12-09 Charles R. Marshall 2017-12-09 Colin J. Carlson 2017-12-09 Luca Giuggioli 2017-12-09 Sadie J. Ryan 2017-12-09 Stephanie S. Romañach 2017-12-09 Carl Boettiger 2017-12-09 Samuel D. Chamberlain 2017-12-09 Laurel Larsen 2017-12-09 Paolo D’Odorico 2017-12-09 David O’Sullivan 2017-03-15 Stephanie E.</description>
+      <description>Using JSON Queries (JQ) Pure JSON vita &amp;lt;- readr::read_file(&amp;quot;../../static/js/vita.json&amp;quot;) jq(vita, &amp;#39;.&amp;quot;@reverse&amp;quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&amp;quot; &amp;quot;) }&amp;#39;) %&amp;gt;% combine() %&amp;gt;% fromJSON()   year author    2017-12-09 Wayne M. Getz  2017-12-09 Charles R. Marshall  2017-12-09 Colin J. Carlson  2017-12-09 Luca Giuggioli  2017-12-09 Sadie J. Ryan  2017-12-09 Stephanie S. Romañach  2017-12-09 Carl Boettiger  2017-12-09 Samuel D.</description>
     </item>
     
     <item>
@@ -81,7 +80,7 @@ docker run -d -p 8787:8787 rocker/tidyverse:devel to test out a recent version1 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/calendar/</guid>
-      <description> </description>
+      <description></description>
     </item>
     
     <item>
@@ -90,7 +89,7 @@ docker run -d -p 8787:8787 rocker/tidyverse:devel to test out a recent version1 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/cloud/</guid>
-      <description> Jetstream TACC OpenStack Jetstream IU OpenStack Chameleon TACC OpenStack </description>
+      <description> Jetstream TACC OpenStack Jetstream IU OpenStack Chameleon TACC OpenStack  </description>
     </item>
     
     <item>
@@ -108,7 +107,7 @@ docker run -d -p 8787:8787 rocker/tidyverse:devel to test out a recent version1 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/members/</guid>
-      <description>Current Carl Boettiger Assistant Professor Millie Chapman Graduate Student Marcus Lapeyrolerie Graduate Student Abby Keller Graduate Student Felipe Montealegre-Mora Postdoctoral Scholar Your Name Here? Open Position Alumni Kari Norman Graduate Student Serge Wiltshire Postdoctoral Researcher Milad Memarzadeh Postdoctoral Scholar Allie Barner Postdoctoral Fellow Dan Sholler rOpenSci Postdoc Interested in Joining? I&#39;m always interested in talking with perspective undergraduate, graduate, or post-doctoral researchers. Please contact me with a brief email explaining your background and interests if you are interested in joining the group.</description>
+      <description>Current   Carl Boettiger  Assistant Professor             Millie Chapman  Graduate Student            Marcus Lapeyrolerie  Graduate Student           Abby Keller  Graduate Student          Felipe Montealegre-Mora  Postdoctoral Scholar           Your Name Here?</description>
     </item>
     
     <item>
@@ -118,7 +117,7 @@ docker run -d -p 8787:8787 rocker/tidyverse:devel to test out a recent version1 
       
       <guid>/networks/</guid>
       <description>Below are a few links to my more commonly used social network profiles and Internet habitats, along with a few comments. I am pretty consistently found under the user handle cboettig on social networks, though no guarantees.
-Actively Using &amp;ndash; The web-based home of my research. Star, watch, or fork a project you&amp;rsquo;re interested in. &amp;ndash; My primary social network, which is why it gets a contact link in my footer.</description>
+Actively Using   &amp;ndash; The web-based home of my research. Star, watch, or fork a project you&amp;rsquo;re interested in.  &amp;ndash; My primary social network, which is why it gets a contact link in my footer.</description>
     </item>
     
     <item>
@@ -127,9 +126,9 @@ Actively Using &amp;ndash; The web-based home of my research. Star, watch, or fo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/pubs/</guid>
-      <description>Preprints Chapman, Boettiger, Brashares. The potential contribution of private lands to the U.S. 30x30 conservation target. (preprint, code)
-Thomas, McClure, Moore, Woelmer, Boettiger, Figueiredo, Hensley, Carey. Near-term forecasts of NEON lakes reveal gradients of environmental predictability across the U.S. (preprint, code, data)
-Articles James J. Wray, Neta A. Bahcall, Paul Bode, Carl Boettiger, Phillip Hopkins (2006). The Shape, Multiplicity, and Evolution of Superclusters in Lambda-CDM Cosmology, The Astrophysical Journal 652 (2) 907-916.</description>
+      <description>Preprints   Chapman, Boettiger, Brashares. The potential contribution of private lands to the U.S. 30x30 conservation target. (preprint, code)
+  Thomas, McClure, Moore, Woelmer, Boettiger, Figueiredo, Hensley, Carey. Near-term forecasts of NEON lakes reveal gradients of environmental predictability across the U.S. (preprint, code, data)
+  Articles   James J. Wray, Neta A. Bahcall, Paul Bode, Carl Boettiger, Phillip Hopkins (2006). The Shape, Multiplicity, and Evolution of Superclusters in Lambda-CDM Cosmology, The Astrophysical Journal 652 (2) 907-916.</description>
     </item>
     
     <item>
@@ -138,8 +137,8 @@ Articles James J. Wray, Neta A. Bahcall, Paul Bode, Carl Boettiger, Phillip Hopk
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/</guid>
-      <description>ESPM-157: Data Science &amp; Global Change Ecology This is an upper-division undergraduate course designed to introduce the fundamentals of data science-driven research through hands-on applications to major issues in global change ecology.
-date_range Fall Semester ESPM-288: Reproducible and Collaborative Data Science This is a graduate-level course designed for the UC Berkeley NSF Research Trainee Program Environment and Society: Data Sciences for the 21st Century and other interested students in ecological, environmental or social science programs.</description>
+      <description>ESPM-157: Data Science &amp; Global Change Ecology  This is an upper-division undergraduate course designed to introduce the fundamentals of data science-driven research through hands-on applications to major issues in global change ecology.
+ date_range Fall Semester       ESPM-288: Reproducible and Collaborative Data Science This is a graduate-level course designed for the UC Berkeley NSF Research Trainee Program Environment and Society: Data Sciences for the 21st Century and other interested students in ecological, environmental or social science programs.</description>
     </item>
     
     <item>
@@ -148,11 +147,10 @@ date_range Fall Semester ESPM-288: Reproducible and Collaborative Data Science T
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/vita/</guid>
-      <description>Employment 2015-current Assistant Professor, Department of Environmental Science, Policy and Management, University of California, Berkeley.
-2013-2015 NSF Post-doctoral Scholar in the Department of Applied Mathematics and Statistics, University of California, Santa Cruz. Mentors: Marc Mangel, Stephan Munch
-Education 2012 Ph.D Population Biology, University of California, Davis. Mentor: Alan Hastings
-2007 A.B in Physics, Princeton University, with honors and certificates in biophysics and applied and computational mathematics.
-Publications James J. Wray, Neta A.</description>
+      <description>Employment   2015-current Assistant Professor, Department of Environmental Science, Policy and Management, University of California, Berkeley.
+  2013-2015 NSF Post-doctoral Scholar in the Department of Applied Mathematics and Statistics, University of California, Santa Cruz. Mentors: Marc Mangel, Stephan Munch
+  Education   2012 Ph.D Population Biology, University of California, Davis. Mentor: Alan Hastings
+  2007 A.B in Physics, Princeton University, with honors and certificates in biophysics and applied and computational mathematics.</description>
     </item>
     
   </channel>
