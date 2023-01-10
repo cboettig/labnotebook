@@ -4,7 +4,7 @@ subtitle: "Dept of Environmental Science, Policy, and Management"
 
 ---
 
-Welcome to the research group of Carl Boettiger, Assistant Professor in the Department of
+Welcome to the research group of Carl Boettiger, Associate Professor in the Department of
 [Environmental Science, Policy and Management](http://ourenvironment.berkeley.edu)
 at [UC Berkeley](http://www.berkeley.edu).
 

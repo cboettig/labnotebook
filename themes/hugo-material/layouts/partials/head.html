@@ -12,10 +12,15 @@
 	<link rel="icon" type="image/png" href="{{ "img/favicon.png" | relURL }}" />
 
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-  
+
   <!-- CSS Files -->
   {{ $style := resources.Get "sass/material-kit.scss" | toCSS | minify | fingerprint }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
@@ -36,4 +41,6 @@
 
 
   <script src="/js/core/jquery.min.js" type="text/javascript"></script>
+  
+
 </head>
