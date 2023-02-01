@@ -10,20 +10,18 @@ css: ["vita.css"]
 ## Preprints
 
 <!--
-- Laperoleryie, __Boettiger__. Limits to Ecological Forecasting: Estimating Uncertainty for Critical Transitions with Deep Learning. ([preprint](https://github.com/boettiger-lab/mee_tipping_point_forecasting/blob/main/manuscript/manuscript.Rmd), [code](https://github.com/boettiger-lab/mee_tipping_point_forecasting))
-
-- neonstore
-
-- contentid
-
-- kari biodiversity
-
+- MEE forecasting editorial
 - adaptive management vs RL
+- kari biodiversity
 
 -->
 
-- Chapman, __Boettiger__, Brashares. 
-  The potential contribution of private lands to the U.S. 30x30 conservation target.
+
+- Thomas, __Boettiger__, Carey, Dietze, Johnson, Kenney, Mclachlan, Peters, Sokol, Weltzin, Willson, Woelmer, and Challenge Contributors. The NEON Ecological Forecasting Challenge. Accepted at Frontiers in Ecology and Environment. [preprint](https://www.doi.org/10.22541/essoar.167079499.99891914/v1)
+
+- Chapman, __Boettiger__, Brashares. (2023)
+  Leveraging private land conservation to meet 2030 biodiversity targets in the United States.
+  _Conservation Science and Practice_.
   ([preprint](https://ecoevorxiv.org/pb2s8/), [code](https://github.com/milliechapman/easements-biodiversity))
 
 -  Thomas, McClure, Moore, Woelmer, __Boettiger__, Figueiredo,
@@ -319,6 +317,19 @@ css: ["vita.css"]
     ([preprint](https://doi.org/10.48550/arXiv.2106.08272),
      [code](https://github.com/boettiger-lab/rl-intro))
 
+47. Laperoleryie, __Boettiger__. (2022)
+    Limits to Ecological Forecasting: Estimating Uncertainty for Critical
+    Transitions with Deep Learning.
+    *Methods in Ecology and Evolution*. 
+    [doi:10.1111/2041-210X.14013](https://doi.org/10.1111/2041-210X.14013)
+    ([preprint](https://github.com/boettiger-lab/mee_tipping_point_forecasting/blob/main/manuscript/manuscript.Rmd),
+    [code](https://github.com/boettiger-lab/mee_tipping_point_forecasting))
+
+48. Benjamin S. Halpern, __Carl Boettiger__, Michael C. Dietze, Jessica A. Gephart,
+    Patrick Gonzalez, Nancy B. Grimm, et al. (116 co-authors) (2023).
+    _Priorities for synthesis research in ecology and environmental science_. 
+    *Ecosphere*.
+    [doi:10.1002/ecs2.4342](https://doi.org/10.1002/ecs2.4342)
 
 
 # Book chapters
