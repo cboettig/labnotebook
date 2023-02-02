@@ -7,3 +7,4 @@
 *.synctex.gz
 *.log
 /.quarto/
+.hugo_build.lock

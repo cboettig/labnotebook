@@ -17,15 +17,11 @@ css: ["vita.css"]
 -->
 
 
-- Thomas, __Boettiger__, Carey, Dietze, Johnson, Kenney, Mclachlan, Peters, Sokol, Weltzin, Willson, Woelmer, and Challenge Contributors. The NEON Ecological Forecasting Challenge. Accepted at Frontiers in Ecology and Environment. [preprint](https://www.doi.org/10.22541/essoar.167079499.99891914/v1)
+- Thomas, __Boettiger__, Carey, Dietze, Johnson, Kenney, Mclachlan, Peters, Sokol, Weltzin, Willson, Woelmer, and Challenge Contributors. (2023) The NEON Ecological Forecasting Challenge. Accepted at Frontiers in Ecology and Environment. [preprint](https://www.doi.org/10.22541/essoar.167079499.99891914/v1)
 
-- Chapman, __Boettiger__, Brashares. (2023)
-  Leveraging private land conservation to meet 2030 biodiversity targets in the United States.
-  _Conservation Science and Practice_.
-  ([preprint](https://ecoevorxiv.org/pb2s8/), [code](https://github.com/milliechapman/easements-biodiversity))
 
 -  Thomas, McClure, Moore, Woelmer, __Boettiger__, Figueiredo,
-   Hensley, Carey. 
+   Hensley, Carey. (2023)
    Near-term forecasts of NEON lakes reveal gradients of environmental predictability across the U.S.
    ([preprint](https://doi.org/10.1002/essoar.10510642.2), 
     [code](https://github.com/rqthomas/NEON-forecast-code), 
@@ -330,6 +326,12 @@ css: ["vita.css"]
     _Priorities for synthesis research in ecology and environmental science_. 
     *Ecosphere*.
     [doi:10.1002/ecs2.4342](https://doi.org/10.1002/ecs2.4342)
+
+49. Chapman, __Boettiger__, Brashares. (2023).
+  Leveraging private land conservation to meet 2030 biodiversity targets in the United States.
+  _Conservation Science and Practice_. [doi:10.1111/csp2.12897](https://doi.org/10.1111/csp2.12897)
+  ([preprint](https://ecoevorxiv.org/pb2s8/), [code](https://github.com/milliechapman/easements-biodiversity))
+
 
 
 # Book chapters
