@@ -17,13 +17,10 @@ css: ["vita.css"]
 -->
 
 
-- Thomas, __Boettiger__, Carey, Dietze, Johnson, Kenney, Mclachlan, Peters, Sokol, Weltzin, Willson, Woelmer, and Challenge Contributors. (2023) The NEON Ecological Forecasting Challenge. Accepted at Frontiers in Ecology and Environment. [preprint](https://www.doi.org/10.22541/essoar.167079499.99891914/v1)
 
 
--  Thomas, McClure, Moore, Woelmer, __Boettiger__, Figueiredo,
-   Hensley, Carey. (2023)
-   Near-term forecasts of NEON lakes reveal gradients of environmental predictability across the U.S.
-   ([preprint](https://doi.org/10.1002/essoar.10510642.2), 
+-  Thomas, McClure, Moore, Woelmer, __Boettiger__, Figueiredo, Hensley, Carey. (2023)
+   Near-term forecasts of NEON lakes reveal gradients of environmental predictability across the U.S. ([preprint](https://doi.org/10.1002/essoar.10510642.2), 
     [code](https://github.com/rqthomas/NEON-forecast-code), 
     [data](https://doi.org/10.5281/zenodo.6267616))
 
@@ -332,6 +329,12 @@ css: ["vita.css"]
   _Conservation Science and Practice_. [doi:10.1111/csp2.12897](https://doi.org/10.1111/csp2.12897)
   ([preprint](https://ecoevorxiv.org/pb2s8/), [code](https://github.com/milliechapman/easements-biodiversity))
 
+50. Thomas, __Boettiger__, Carey, Dietze, Johnson, Kenney, Mclachlan, Peters, Sokol,
+  Weltzin, Willson, Woelmer, and Challenge Contributors. 
+  (2023) The NEON Ecological Forecasting Challenge. 
+  Frontiers in Ecology and Environment. 21, (3) pp 112-113. 
+  [doi:10.1002/fee.2616](https://doi.org/10.1002/fee.2616)
+  ([preprint](https://www.doi.org/10.22541/essoar.167079499.99891914/v1))
 
 
 # Book chapters
