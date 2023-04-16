@@ -314,6 +314,7 @@ css: ["vita.css"]
 46. Lapeyrolerie, Chapman, Norman, __Boettiger__ (2022). 
     Deep Reinforcement Learning for Conservation Decisions. 
     *Methods in Ecology and Evolution*.
+    [doi:10.1111/2041-210X.13954](https://doi.org/10.1111/2041-210X.13954)
     ([preprint](https://doi.org/10.48550/arXiv.2106.08272),
      [code](https://github.com/boettiger-lab/rl-intro))
 
