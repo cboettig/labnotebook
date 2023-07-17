@@ -318,7 +318,54 @@ css: ["vita.css"]
     ([preprint](https://doi.org/10.48550/arXiv.2106.08272),
      [code](https://github.com/boettiger-lab/rl-intro))
 
+47. Laperoleryie, __Boettiger__. (2022)
+    Limits to Ecological Forecasting: Estimating Uncertainty for Critical
+    Transitions with Deep Learning.
+    *Methods in Ecology and Evolution*. 
+    [doi:10.1111/2041-210X.14013](https://doi.org/10.1111/2041-210X.14013)
+    ([preprint](https://github.com/boettiger-lab/mee_tipping_point_forecasting/blob/main/manuscript/manuscript.Rmd),
+    [code](https://github.com/boettiger-lab/mee_tipping_point_forecasting))
+
+48. Benjamin S. Halpern, __Carl Boettiger__, Michael C. Dietze, Jessica A. Gephart,
+    Patrick Gonzalez, Nancy B. Grimm, et al. (116 co-authors) (2023).
+    Priorities for synthesis research in ecology and environmental science. 
+    *Ecosphere*.
+    [doi:10.1002/ecs2.4342](https://doi.org/10.1002/ecs2.4342)
+
+49. Chapman, __Boettiger__, Brashares. (2023).
+    Leveraging private land conservation to meet 2030 biodiversity targets in the United States.
+    _Conservation Science and Practice_. [doi:10.1111/csp2.12897](https://doi.org/10.1111/csp2.12897)
+    ([preprint](https://ecoevorxiv.org/pb2s8/),   
+    [code](https://github.com/milliechapman/easements-biodiversity))
+
+50. Thomas, __Boettiger__, Carey, Dietze, Johnson, Kenney, Mclachlan, Peters, Sokol,
+    Weltzin, Willson, Woelmer, and Challenge Contributors (2023). The NEON Ecological Forecasting Challenge. 
+    *Frontiers in Ecology and the Environment*. 21, (3) pp 112-113.
+    [doi:10.1002/fee.2616](https://doi.org/10.1002/fee.2616)
+    ([preprint](https://www.doi.org/10.22541/essoar.167079499.99891914/v1))
+
+51. Thomas, McClure, Moore, Woelmer, __Boettiger__, Figueiredo, Hensley, Carey.
+    (2023). Near-term forecasts of NEON lakes reveal gradients of
+    environmental predictability across the U.S.
+    *Frontiers in Ecology and the Environment*. 21, (5) pp 220-226.
+    [doi:10.1002/fee.2623](https://doi.org/10.1002/fee.2623)
+    ([preprint](https://doi.org/10.1002/essoar.10510642.2), 
+    [code](https://github.com/rqthomas/NEON-forecast-code), 
+    [data](https://doi.org/10.5281/zenodo.6267616))
+
+52. David Moreau, Krisina Wiebels, & __Carl Boettiger__. (2023)
+    Containers for computational reproducibility.
+    *Nature Reviews Methods Primers* 3, (50).
+    https://doi.org/10.1038/s43586-023-00236-9
+
+
 # Grants
+
+- Examining Environmental Justice through Open Source, Cloud Native Tools. **NASA National Aeronautics and Space Administration** (2022-2025). UCB Award ID: 055956-001. Carl Boettiger, PI. Total: $134,596.
+
+- Collaborative Research: Frameworks: DeCODER (Democratized Cyberinfrastructure for Open Discovery to Enable Research). (2022-2026) **National Science Foundation** [#OAC-2209865](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2209865), UCB sub-award ID: 054904-001; PI $102,984
+
+- A decision framework for managing European Green Crab infestations on the coast of Washington and Salish Sea shorelines. **US Geological Survey** (2022 - 2025). UCB Award ID: 054356-001. Carl Boettiger, PI. Total: $174,577.
 
 - CAREER: Harnessing the data revolution for predicting and managing ecosystem regime shifts. Carl Boettiger. (2020-2025).  **National Science Foundation** [#DBI-1942280](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1942280). $504,335.00  
 
@@ -368,6 +415,23 @@ css: ["vita.css"]
 
 
 # Invited Talks & Workshops
+
+**2023**
+
+- Invited seminar speaker, University of Southern California, Biology Department, CA
+- Invited seminar speaker, University of California, Davis, Department of Mathematics, CA
+- Invited seminar speaker, Virginia Polytechnic Institute and State University (Virginia Tech), VA
+- Invited workshop speaker, Critical Transitions, Princeton University, NJ
+- Invited seminar speaker, Data Sciences, University of New South Wales, Sydney, Australia
+- Invited talk, Gordon Conference on Predictive Ecology, Stonehill College, MA
+- Co-organizer, Ecological Forecasting Unconference, NEON Headquarters, Boulder, CO
+- Invited workshop speaker, Australian Mathematical Sciences (AMSI) Winter School, Brisbane, Australia
+- Invited seminar speaker, University of Queensland, Brisbane, Australia
+
+**2022**
+
+- Ecological Forecasting Initiative workshop (online)
+- Invited speaker, International Institute of Applied Systems Analysis (IIASA) conference, Boston University, Boston MA.
 
 **2021**
 
@@ -487,7 +551,7 @@ css: ["vita.css"]
 
 ## Extra-campus
 
-- 2020 - current. Editor, _Ecology Letters_
+- 2019 - current. Associate Editor, _Ecology Letters_
 - 2010 - current. rOpenSci [Leadership Team](https://ropensci.org/about/#team)
 - 2014 - 2020. NCEAS [Scientific Advisory Board](https://www.nceas.ucsb.edu/content/nceas-science-advisers)
 - 2016 - 2019. Jetstream Cloud Computing [Stakeholder Advisory Board](https://jetstream-cloud.org/about/advisory-board.php), XSEDE.

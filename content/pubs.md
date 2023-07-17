@@ -19,10 +19,7 @@ css: ["vita.css"]
 
 
 
--  Thomas, McClure, Moore, Woelmer, __Boettiger__, Figueiredo, Hensley, Carey. (2023)
-   Near-term forecasts of NEON lakes reveal gradients of environmental predictability across the U.S. ([preprint](https://doi.org/10.1002/essoar.10510642.2), 
-    [code](https://github.com/rqthomas/NEON-forecast-code), 
-    [data](https://doi.org/10.5281/zenodo.6267616))
+-  
 
 # Articles
 
@@ -333,9 +330,22 @@ css: ["vita.css"]
 50. Thomas, __Boettiger__, Carey, Dietze, Johnson, Kenney, Mclachlan, Peters, Sokol,
   Weltzin, Willson, Woelmer, and Challenge Contributors. 
   (2023) The NEON Ecological Forecasting Challenge. 
-  *Frontiers in Ecology and Environment*. 21, (3) pp 112-113. 
+  *Frontiers in Ecology and the Environment*. 21, (3) pp 112-113. 
   [doi:10.1002/fee.2616](https://doi.org/10.1002/fee.2616)
   ([preprint](https://www.doi.org/10.22541/essoar.167079499.99891914/v1))
+
+51. Thomas, McClure, Moore, Woelmer, __Boettiger__, Figueiredo, Hensley, Carey. (2023)
+   Near-term forecasts of NEON lakes reveal gradients of environmental predictability across the U.S.
+   *Frontiers in Ecology and the Environment*. 21, (5) pp 220-226.
+   [doi:10.1002/fee.2623](https://doi.org/10.1002/fee.2623)
+   ([preprint](https://doi.org/10.1002/essoar.10510642.2), 
+    [code](https://github.com/rqthomas/NEON-forecast-code), 
+    [data](https://doi.org/10.5281/zenodo.6267616))
+
+52. David Moreau, Krisina Wiebels, & __Carl Boettiger__. (2023)
+    Containers for computational reproducibility.
+    *Nature Reviews Methods Primers* 3, (50).
+    https://doi.org/10.1038/s43586-023-00236-9
 
 
 # Book chapters
