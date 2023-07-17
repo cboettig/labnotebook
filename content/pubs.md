@@ -364,11 +364,13 @@ css: ["vita.css"]
 
 ## R Packages (Published on CRAN)
 
+- [`minioclient`](https://github.com/cboettig/minioclient): A High Performance Interface to S3-based Object Stores. Carl Boettiger (2023).
+  [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/minioclient)](https://cran.r-project.org/package=minioclient)
+
 - [`gbifdb`](https://github.com/ropensci/gbifdb): A High Performance Interface to GBIF. Carl Boettiger (2022).  
   [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/gbifdb)](https://cran.r-project.org/package=gbifdb)
   [![peer reviewed](https://badges.ropensci.org/492_status.svg)](https://github.com/ropensci/software-review/issues/492)
-  </span>
-  
+
 - [`neonstore`](https://github.com/cboettig/neonstore): NEON Data Store. 
   Carl Boettiger and Quinn Thomas and Christine Laney and Claire Lunch (2020).  
   [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/neonstore)](https://cran.r-project.org/package=neonstore)
