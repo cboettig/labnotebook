@@ -344,19 +344,24 @@ css: ["vita.css"]
     [doi:10.1002/fee.2616](https://doi.org/10.1002/fee.2616)
     ([preprint](https://www.doi.org/10.22541/essoar.167079499.99891914/v1))
 
-51. Thomas, McClure, Moore, Woelmer, __Boettiger__, Figueiredo, Hensley, Carey.
-    (2023). Near-term forecasts of NEON lakes reveal gradients of
-    environmental predictability across the U.S.
-    *Frontiers in Ecology and the Environment*. 21, (5) pp 220-226.
-    [doi:10.1002/fee.2623](https://doi.org/10.1002/fee.2623)
-    ([preprint](https://doi.org/10.1002/essoar.10510642.2), 
+51. Sydne Record, __Carl Boettiger__ and Christine R Rollinson,(2023).
+    Synthesizing forecasts to inform decision-making and advance ecological theory.
+    *Methods in Ecology and Evolution*, 14: 728-731. 
+    [doi:10.1111/2041-210X.14070](https://doi.org/10.1111/2041-210X.14070)
+
+52. Thomas, McClure, Moore, Woelmer, __Boettiger__, Figueiredo, Hensley, Carey. (2023)
+   Near-term forecasts of NEON lakes reveal gradients of environmental predictability across the U.S.
+   *Frontiers in Ecology and the Environment*. 21, (5) pp 220-226.
+   [doi:10.1002/fee.2623](https://doi.org/10.1002/fee.2623)
+   ([preprint](https://doi.org/10.1002/essoar.10510642.2), 
     [code](https://github.com/rqthomas/NEON-forecast-code), 
     [data](https://doi.org/10.5281/zenodo.6267616))
 
-52. David Moreau, Krisina Wiebels, & __Carl Boettiger__. (2023)
+53. David Moreau, Krisina Wiebels, & __Carl Boettiger__. (2023)
     Containers for computational reproducibility.
     *Nature Reviews Methods Primers* 3, (50).
     https://doi.org/10.1038/s43586-023-00236-9
+
 
 
 # Grants
@@ -609,6 +614,8 @@ css: ["vita.css"]
 
 ## R Packages
 
+- [`minioclient`](https://github.com/cboettig/minioclient): A High Performance Interface to S3-based Object Stores. Carl Boettiger (2023).
+- [`gbifdb`](https://github.com/ropensci/gbifdb): A High Performance Interface to GBIF. Carl Boettiger (2022).
 - [`neonstore`](https://github.com/cboettig/neonstore): A Fast and Provenance Aware Local NEON Data Store. 
   Carl Boettiger, Quinn Thomas, Christine Laney, Claire Lunch (2020).
 - [`contentid`](https://github.com/cboettig/contentid): An Interface for Content-Based Identifiers. 

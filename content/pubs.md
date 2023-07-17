@@ -7,19 +7,16 @@ aliases: "/pubs"
 css: ["vita.css"]
 ---
 
-## Preprints
+
 
 <!--
+## Preprints
+
 - MEE forecasting editorial
-- adaptive management vs RL
 - kari biodiversity
 
 -->
 
-
-
-
--  
 
 # Articles
 
@@ -334,7 +331,12 @@ css: ["vita.css"]
   [doi:10.1002/fee.2616](https://doi.org/10.1002/fee.2616)
   ([preprint](https://www.doi.org/10.22541/essoar.167079499.99891914/v1))
 
-51. Thomas, McClure, Moore, Woelmer, __Boettiger__, Figueiredo, Hensley, Carey. (2023)
+51. Sydne Record, __Carl Boettiger__ and Christine R Rollinson,(2023).
+    Synthesizing forecasts to inform decision-making and advance ecological theory.
+    *Methods in Ecology and Evolution*, 14: 728-731. 
+    [doi:10.1111/2041-210X.14070](https://doi.org/10.1111/2041-210X.14070)
+
+52. Thomas, McClure, Moore, Woelmer, __Boettiger__, Figueiredo, Hensley, Carey. (2023)
    Near-term forecasts of NEON lakes reveal gradients of environmental predictability across the U.S.
    *Frontiers in Ecology and the Environment*. 21, (5) pp 220-226.
    [doi:10.1002/fee.2623](https://doi.org/10.1002/fee.2623)
@@ -342,7 +344,7 @@ css: ["vita.css"]
     [code](https://github.com/rqthomas/NEON-forecast-code), 
     [data](https://doi.org/10.5281/zenodo.6267616))
 
-52. David Moreau, Krisina Wiebels, & __Carl Boettiger__. (2023)
+53. David Moreau, Krisina Wiebels, & __Carl Boettiger__. (2023)
     Containers for computational reproducibility.
     *Nature Reviews Methods Primers* 3, (50).
     https://doi.org/10.1038/s43586-023-00236-9
