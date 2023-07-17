@@ -357,11 +357,16 @@ css: ["vita.css"]
     [code](https://github.com/rqthomas/NEON-forecast-code), 
     [data](https://doi.org/10.5281/zenodo.6267616))
 
-53. David Moreau, Krisina Wiebels, & __Carl Boettiger__. (2023).
+53. Melissa Chapman, Lily Xu, Marcus Lapeyrolerie & __Carl Boettiger__ (2023).
+    Bridging adaptive management and reinforcement learning for more robust decisions.
+    *Philosophical Transactions of the Royal Society B* 378, 2022-0195,
+    [doi:10.1098/rstb.2022.0195](https://doi.org/10.1098/rstb.2022.0195).
+    ([preprint](https://arxiv.org/abs/2303.08731))
+
+54. David Moreau, Krisina Wiebels, & __Carl Boettiger__. (2023).
     Containers for computational reproducibility.
     *Nature Reviews Methods Primers* 3, (50).
-    https://doi.org/10.1038/s43586-023-00236-9
-
+    [doi:10.1038/s43586-023-00236-9](https://doi.org/10.1038/s43586-023-00236-9)
 
 
 # Grants
