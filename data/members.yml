@@ -6,24 +6,19 @@ members:
     title: "Assistant Professor"
     homepage: "http://www.carlboettiger.info"
     github: "cboettig"
-    twitter: "cboettig"
     mastodon: "https://ecoevo.social/@cboettig"
     orcid: "0000-0002-1642-628X"
     googlescholar: "https://scholar.google.com/citations?hl=en&user=zj2rRtEAAAAJ"
     email: "cboettig@berkeley.edu"
     photo: "carl.png"
     keybase: "https://keybase.io/cboettig"
-  - millie:
-    name:
-      first: "Millie" 
-      last: "Chapman"
+  - daniela:
+    name: 
+      first: "Daniela"
+      last: "Rodriguez-Chavez"
     title: "Graduate Student"
-    homepage: "https://milliechapman.info/"
-    github: "milliechapman"
-    twitter: "milliechapma"
-    orcid: "0000-0002-1377-1539"
-    email: "mchapman@berkeley.edu"
-    photo: "millie.png"    
+    homepage: "#"
+    photo: "daniela.jpg"
   - marcus:
     name:
       first: "Marcus" 

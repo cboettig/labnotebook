@@ -1,4 +1,15 @@
 alumni:
+  - millie:
+    name:
+      first: "Millie" 
+      last: "Chapman"
+    title: "Graduate Student"
+    homepage: "https://milliechapman.info/"
+    github: "milliechapman"
+    twitter: "milliechapma"
+    orcid: "0000-0002-1377-1539"
+    email: "mchapman@berkeley.edu"
+    photo: "millie.png" 
   - kari:
     name:
       first: "Kari" 
