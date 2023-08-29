@@ -9,7 +9,11 @@ css: ["vita.css"]
 
 # Employment
 
-- 2015-current Assistant Professor,
+- 2022-Present Associate Professor,
+  Department of Environmental Science, Policy and Management,
+  **University of California, Berkeley.**
+
+- 2015-2022 Assistant Professor,
   Department of Environmental Science, Policy and Management,
   **University of California, Berkeley.**
 
@@ -422,6 +426,15 @@ css: ["vita.css"]
 # Book Chapters
 
 - _Carl Boettiger_ (2017). A Reproducible R Notebook Using Docker. In J. Kitzes, D. Turek, & F. Deniz (Eds.), The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences (1st ed., pp. 109–117). Oakland, CA: UC Press. <https://www.ucpress.edu/book.php?isbn=9780520294752>
+
+
+# Teaching
+
+- [ESPM-157: Data Science for Global Change Ecology](https://espm-157.carlboettiger.info/).  UC Berkeley. Upper-division undergraduate course, 4 units. Offered every Fall.
+
+- [ESPM-288: Reproducible and Collaborative Data Science](https://espm-288.carlboettiger.info).  UC Berkeley. Graduate-level course, 3 units. Offered every Spring.
+
+- ESPM-88B: Data Science in Ecology and the Environment. UC Berkeley. Freshman level Data-8 connector; not currently offered.
 
 
 # Invited Talks & Workshops
