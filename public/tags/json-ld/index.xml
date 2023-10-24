@@ -13,7 +13,7 @@
       <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/12/09/json-ld-vita-exploration/</guid>
-      <description>Using JSON Queries (JQ) Pure JSON vita &amp;lt;- readr::read_file(&amp;quot;../../static/js/vita.json&amp;quot;) jq(vita, &amp;#39;.&amp;quot;@reverse&amp;quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&amp;quot; &amp;quot;) }&amp;#39;) %&amp;gt;% combine() %&amp;gt;% fromJSON()   year author    2017-12-09 Wayne M. Getz  2017-12-09 Charles R. Marshall  2017-12-09 Colin J. Carlson  2017-12-09 Luca Giuggioli  2017-12-09 Sadie J. Ryan  2017-12-09 Stephanie S. Romañach  2017-12-09 Carl Boettiger  2017-12-09 Samuel D.</description>
+      <description>Using JSON Queries (JQ) Pure JSON vita &amp;lt;- readr::read_file(&amp;quot;../../static/js/vita.json&amp;quot;) jq(vita, &amp;#39;.&amp;quot;@reverse&amp;quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&amp;quot; &amp;quot;) }&amp;#39;) %&amp;gt;% combine() %&amp;gt;% fromJSON() year author 2017-12-09 Wayne M. Getz 2017-12-09 Charles R. Marshall 2017-12-09 Colin J. Carlson 2017-12-09 Luca Giuggioli 2017-12-09 Sadie J. Ryan 2017-12-09 Stephanie S. Romañach 2017-12-09 Carl Boettiger 2017-12-09 Samuel D. Chamberlain 2017-12-09 Laurel Larsen 2017-12-09 Paolo D’Odorico 2017-12-09 David O’Sullivan 2017-03-15 Stephanie E.</description>
     </item>
     
   </channel>

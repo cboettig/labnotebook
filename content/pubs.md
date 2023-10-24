@@ -357,6 +357,10 @@ css: ["vita.css"]
     *Nature Reviews Methods Primers* 3, (50).
     [doi:10.1038/s43586-023-00236-9](https://doi.org/10.1038/s43586-023-00236-9)
 
+55. Montealegre-Mora, Lapeyrolerie, Chapman, Keller, __Boettiger__. 
+    Pretty Darn Good Control: When are Approximate Solutions Better than Approximate Models. (2023) _Bulletin of Mathematical Biology_. [doi:10.1007/s11538-023-01198-5](https://doi.org/10.1007/s11538-023-01198-5)
+ ([preprint](https://arxiv.org/abs/2308.13654v1), [code](https://github.com/boettiger-lab/approx-model-or-approx-soln))
+
 
 # Book chapters
 
