@@ -372,9 +372,21 @@ css: ["vita.css"]
     *Nature Reviews Methods Primers* 3, (50).
     [doi:10.1038/s43586-023-00236-9](https://doi.org/10.1038/s43586-023-00236-9)
 
-55. Montealegre-Mora, Lapeyrolerie, Chapman, Keller, __Boettiger__. 
-    Pretty Darn Good Control: When are Approximate Solutions Better than Approximate Models. (2023) _Bulletin of Mathematical Biology_. [doi:10.1007/s11538-023-01198-5](https://doi.org/10.1007/s11538-023-01198-5)
- ([preprint](https://arxiv.org/abs/2308.13654v1), [code](https://github.com/boettiger-lab/approx-model-or-approx-soln))
+55. Montealegre-Mora, Lapeyrolerie, Chapman, Keller, __Boettiger__. (2023).
+    Pretty Darn Good Control: When are Approximate Solutions Better than Approximate Models. _Bulletin of Mathematical Biology_. 
+    [doi:10.1007/s11538-023-01198-5](https://doi.org/10.1007/s11538-023-01198-5)
+    ([preprint](https://arxiv.org/abs/2308.13654v1), [code](https://github.com/boettiger-lab/approx-model-or-approx-soln))
+
+56. Scoville, Faxon, Chapman, Fried, Xu, __Boettiger__, Reed, Lapeyrolerie, Van Scoyoc, Amironesei. (2023).
+    Environment, Society, and Machine Learning. In _The Oxford Handbook of the Sociology of Machine Learning_,
+    C. Borch & JP. Pardo-Guerra (eds.) 
+    [doi:10.1093/oxfordhb/9780197653609.013.8](https://doi.org/10.1093/oxfordhb/9780197653609.013.8)
+
+57. Dietze, R. Thomas, Peters, Boettiger, Koren, Shiklomanov, Ashander. (2023). 
+    A community convention for ecological forecasting: Output files and metadata version 1.0  
+    _Ecosphere_ 14(11). [doi:10.1002/ecs2.4686](http://doi.org/10.1002/ecs2.4686)
+
+
 
 # Grants
 
