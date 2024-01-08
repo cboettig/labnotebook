@@ -377,15 +377,23 @@ css: ["vita.css"]
     [doi:10.1007/s11538-023-01198-5](https://doi.org/10.1007/s11538-023-01198-5)
     ([preprint](https://arxiv.org/abs/2308.13654v1), [code](https://github.com/boettiger-lab/approx-model-or-approx-soln))
 
-56. Scoville, Faxon, Chapman, Fried, Xu, __Boettiger__, Reed, Lapeyrolerie, Van Scoyoc, Amironesei. (2023).
-    Environment, Society, and Machine Learning. In _The Oxford Handbook of the Sociology of Machine Learning_,
-    C. Borch & JP. Pardo-Guerra (eds.) 
-    [doi:10.1093/oxfordhb/9780197653609.013.8](https://doi.org/10.1093/oxfordhb/9780197653609.013.8)
-
-57. Dietze, R. Thomas, Peters, Boettiger, Koren, Shiklomanov, Ashander. (2023). 
+56. Dietze, Thomas, Peters, Boettiger, Koren, Shiklomanov, Ashander. (2023). 
     A community convention for ecological forecasting: Output files and metadata version 1.0  
     _Ecosphere_ 14(11). [doi:10.1002/ecs2.4686](http://doi.org/10.1002/ecs2.4686)
 
+57. Chapman, Goldstein, Schell, Brashares, Carter, Ellis-Soto, Faxon, Goldstein, 
+    Halpern, Longdon, Norman, O'Rourke, Scoville, Xu, __Boettiger__. (2024). 
+    Biodiversity monitoring for a just planetary future. 
+    _Science_ 383,34-36(2024). [doi:10.1126/science.adh8874](https://doi.org/10.1126/science.adh8874)
+
+# Book Chapters
+
+- _Carl Boettiger_ (2017). A Reproducible R Notebook Using Docker. In J. Kitzes, D. Turek, & F. Deniz (Eds.), The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences (1st ed., pp. 109–117). Oakland, CA: UC Press. <https://www.ucpress.edu/book.php?isbn=9780520294752>
+
+- Scoville, Faxon, Chapman, Fried, Xu, __Boettiger__, Reed, Lapeyrolerie, Van Scoyoc, Amironesei. (2023).
+    Environment, Society, and Machine Learning. In _The Oxford Handbook of the Sociology of Machine Learning_,
+    C. Borch & JP. Pardo-Guerra (eds.) 
+    [doi:10.1093/oxfordhb/9780197653609.013.8](https://doi.org/10.1093/oxfordhb/9780197653609.013.8)
 
 
 # Grants
@@ -436,11 +444,6 @@ css: ["vita.css"]
 
 - Computational Science Graduate Fellowship (2008). **United States Department of Energy**,
    #DE-FG02-97ER25308, $149,000. ([proposal link](https://dx.doi.org/10.6084/m9.figshare.2010246))
-
-
-# Book Chapters
-
-- _Carl Boettiger_ (2017). A Reproducible R Notebook Using Docker. In J. Kitzes, D. Turek, & F. Deniz (Eds.), The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences (1st ed., pp. 109–117). Oakland, CA: UC Press. <https://www.ucpress.edu/book.php?isbn=9780520294752>
 
 
 # Teaching
