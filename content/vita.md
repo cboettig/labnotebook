@@ -661,11 +661,13 @@ css: ["vita.css"]
 
 # Software
 
-## R Packages
+## R Packages (on CRAN)
 
+- [`duckdbfs`](https://github.com/cboettig/duckdbfs) High Performance Remote File System, Database and Geospatial Access Using duckdb. Carl Boettiger (2023).
+- [`earthdatalogin`](https://github.com/boettiger-lab/earthdatalogin) NASA EarthData Access Utilities. Carl Boettiger, Luis López, Yuvi Panda, Brianna Lind (2023).
 - [`minioclient`](https://github.com/cboettig/minioclient): A High Performance Interface to S3-based Object Stores. Carl Boettiger (2023).
 - [`gbifdb`](https://github.com/ropensci/gbifdb): A High Performance Interface to GBIF. Carl Boettiger (2022).
-- [`neonstore`](https://github.com/cboettig/neonstore): A Fast and Provenance Aware Local NEON Data Store. 
+- [`neonstore`](https://github.com/cboettig/neonstore): A Fast and Provenance Aware Local NEON Data Store.  
   Carl Boettiger, Quinn Thomas, Christine Laney, Claire Lunch (2020).
 - [`contentid`](https://github.com/cboettig/contentid): An Interface for Content-Based Identifiers. 
   Carl Boettiger and Jorrit Poelen (2020).
@@ -688,7 +690,7 @@ css: ["vita.css"]
 - [`knitcitations`](https://github.com/cboettig/knitcitations): Citations for Knitr Markdown Files.  Carl Boettiger (2012).
 - [`rfishbase`](https://github.com/ropensci/rfishbase): R Interface to FishBase. Carl Boettiger, Scott Chamberlain, Duncan Temple Lang, Peter Wainwright (2011; v2 2015; v3 2019).
 
-## Python Modules
+## Python Modules (on PyPi)
 
 - [gym_fishing](https://github.com/boettiger-lab/gym_fishing): A Simulation Environment for Deep Reinforcement Learning for sustainable fisheries management. Carl Boettiger and Marcus Lapeyrolerie (2021).
 - [gym_conservation](https://github.com/boettiger-lab/gym-conservation) A Simulation Environment for Deep Reinforcement Learning for conservation scenarios. Carl Boettiger (2021)
@@ -700,7 +702,7 @@ css: ["vita.css"]
 
 # Media interviews
 
-- Martin, Glen. (2019)."How Algorithms Could Save the Planet." _California Magazine_). <https://alumni.berkeley.edu/california-magazine/just-in/2019-02-01/how-algorithms-could-save-planet>
+- Martin, Glen. (2019)."How Algorithms Could Save the Planet." _California Magazine_. <https://alumni.berkeley.edu/california-magazine/just-in/2019-02-01/how-algorithms-could-save-planet>
 - Seltenrich, N. (2016). "Scaling the Heights of Data Science."  _Breakthroughs Magazine_.  <https://nature.berkeley.edu/breakthroughs/opensci-data>
 - Tachibana, C. (2014). "The paperless lab" _Science_ 345(6195) pp. 468-470. [10.1126/science.opms.p1400087](http://www.sciencemag.org/site/products/lst_20140613.xhtml)
 - Mascarelli, A. (2014) "Research tools: Jump off the page." *Nature*
