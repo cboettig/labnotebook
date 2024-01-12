@@ -398,6 +398,8 @@ css: ["vita.css"]
 
 # Grants
 
+- The Eric and Wendy Schmidt Center for Data Science and Environment. (2023-2028) Douglas McCauley, Fernando Perez, Justin Brashares, Carl Boettiger Total: $12.6M.
+
 - Examining Environmental Justice through Open Source, Cloud Native Tools. **NASA National Aeronautics and Space Administration** (2022-2025). UCB Award ID: 055956-001. Carl Boettiger, PI. Total: $134,596.
 
 - Collaborative Research: Frameworks: DeCODER (Democratized Cyberinfrastructure for Open Discovery to Enable Research). (2022-2026) **National Science Foundation** [#OAC-2209865](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2209865), UCB sub-award ID: 054904-001; PI $102,984
@@ -459,6 +461,8 @@ css: ["vita.css"]
 
 **2023**
 
+
+- Bezos Earth Fund AI for Climate and Nature Workshop, San Francisco, CA ([recording](https://youtu.be/yTqd0qREoPU))
 - Invited seminar speaker, University of Southern California, Biology Department, CA
 - Invited seminar speaker, University of California, Davis, Department of Mathematics, CA
 - Invited seminar speaker, Virginia Polytechnic Institute and State University (Virginia Tech), VA
@@ -468,6 +472,9 @@ css: ["vita.css"]
 - Co-organizer, Ecological Forecasting Unconference, NEON Headquarters, Boulder, CO
 - Invited workshop speaker, Australian Mathematical Sciences (AMSI) Winter School, Brisbane, Australia
 - Invited seminar speaker, University of Queensland, Brisbane, Australia
+- Ecological Society of America, contributed talk, Portland OR
+- GEO BON Global Conference: Monitoring Biodiversity for Action, Montreal, Canada.
+- California Academy of Natural Sciences  Past, Present, Future Biodiversity Convening, San Francisco, CA
 
 **2022**
 
@@ -577,10 +584,13 @@ css: ["vita.css"]
 -  2007 The Class of 1870 Old English Prize, Princeton University
 -  2006 Kusaka Memorial Prize in Physics, Princeton University
 
-# Service
+# Service & Outreach
 
 ## Campus
 
+- 2023 - 2024. RCNR Public-Private Partnership Proposals
+- 2023 - 2024. CDSS College Regulations Proposal Task Force
+- 2023 - current. Masters in Climate Solutions design team
 - 2018 - current. Governance Committee for Data Science Programs
 - 2019. Faculty Working Group for the formation of the Division of Data Science & Information
 - 2018 - 2019. Faculty Task Force for Data Science Minor Design
@@ -590,11 +600,14 @@ css: ["vita.css"]
 - 2017 - 2020. Steering Committee for NSF Research Traineeship (NRT): Environment and Society: Data Science for the 21st Century (DS421)
 - 2015 - 2019. Berkeley Research Computing Advisory Committee
 
-## Extra-campus
+## National / International
 
+- 2021 - current Faculty co-advisor and co-founder, [Eric and Wendy Schmidt Center for Data Science and Environment](https://dse.berkeley.edu), UC Berkeley.
+- 2023 - current. NSF Synthesis Center [Environmental Data Science Innovation & Inclusion Lab (ESIIL)](https://esiil.org/our-team) Advisory Board Member.
 - 2019 - current. Associate Editor, _Ecology Letters_
 - 2010 - current. rOpenSci [Leadership Team](https://ropensci.org/about/#team)
 - 2014 - 2020. NCEAS [Scientific Advisory Board](https://www.nceas.ucsb.edu/content/nceas-science-advisers)
+- 2014 - current. [Rocker Project](https://rocker-project.org) co-maintainer
 - 2016 - 2019. Jetstream Cloud Computing [Stakeholder Advisory Board](https://jetstream-cloud.org/about/advisory-board.php), XSEDE.
 - Reviewer for over 40 journals, NSF review panelist, ad hoc reviewer for UC CCGA, NSF, NERSC.
 
