@@ -8,7 +8,7 @@ Welcome to the research group of Carl Boettiger, Associate Professor in the Depa
 [Environmental Science, Policy and Management](http://ourenvironment.berkeley.edu)
 at [UC Berkeley](http://www.berkeley.edu).
 
-I work on problems in ecological forecasting and decision making under
+We work on problems in ecological forecasting and decision making under
 uncertainty, with applications for global change, conservation and
 natural resource management. I am particularly interested in how we can
 predict or manage ecological systems that may experience regime shifts:
@@ -26,7 +26,11 @@ blends ecological theory with the synthesis of heterogeneous data and
 the development of software -- a combination now recognized as data
 science.
 
-I am co-founder of the [rOpenSci project](https://ropensci.org), a senior fellow at
-[BIDS](http://bids.berkeley.edu), and a science adviser to
-[NCEAS](http://nceas.ucsb.edu), reflecting my interests in
-open science, data science, and ecoinformatics.
+
+I am a co-founder and faculty adviser to the Schmidt Center for Data Science
+& Environment at UC Berkeley ([DSE](https://dse.berkeley.edu)),
+an advisory board member for the NSF Environmental Data Science Innovation
+and Inclusion Lab ([ESIIL](https://esiil.org)) at Colorado, Boulder,
+and a co-founder of the open source community projects [rOpenSci](https://ropensci.org)
+and [Rocker](https://rocker-project.org).
+
