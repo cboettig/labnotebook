@@ -2,121 +2,121 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Boettiger Group, UC Berkeley on Boettiger Group</title>
-    <link>//localhost:4321/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content in Boettiger Group, UC Berkeley on Boettiger Group</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:4321/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coupled Natural-Human Systems Modeling Postdoc</title>
-      <link>//localhost:4321/post/cnhs-modeling-postdoc/</link>
+      <link>//localhost:1313/post/cnhs-modeling-postdoc/</link>
       <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/post/cnhs-modeling-postdoc/</guid>
+      <guid>//localhost:1313/post/cnhs-modeling-postdoc/</guid>
       <description>We&amp;rsquo;re looking to hire a coupled natural-human systems post-doc to work on the theory and modeling components of an NSF Coupled Natural Human Systems award seeking to understand the the interplay between diversified farming systems and ecosystem services. Our team consists of a diverse and tight-knit group of social science and natural science researchers combining field research, farmer surveys, and mathematical modeling, based in UC Berkeley and focusing on California Central Coast farmers.</description>
     </item>
     <item>
       <title>Data Rectangling with jq</title>
-      <link>//localhost:4321/2017/12/11/data-rectangling-with-jq/</link>
+      <link>//localhost:1313/2017/12/11/data-rectangling-with-jq/</link>
       <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/2017/12/11/data-rectangling-with-jq/</guid>
+      <guid>//localhost:1313/2017/12/11/data-rectangling-with-jq/</guid>
       <description>“Data rectangling”: the process of turning highly nested data structures (e.g. JSON, XML) into a tabular format.&#xA;Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community. Recording or slides of Jenny’s talk on the subject give a much better intro to the idea and working with this in R, particularly through the purrr package.&#xA;As nice as purrr is for the task, I’ve recently found that the jqr package from Scott Chamberlain and co can be a much easier way to go about rectangling your JSON.</description>
     </item>
     <item>
       <title>JSON-LD Vita exploration</title>
-      <link>//localhost:4321/2017/12/09/json-ld-vita-exploration/</link>
+      <link>//localhost:1313/2017/12/09/json-ld-vita-exploration/</link>
       <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/2017/12/09/json-ld-vita-exploration/</guid>
+      <guid>//localhost:1313/2017/12/09/json-ld-vita-exploration/</guid>
       <description>Using JSON Queries (JQ) Pure JSON vita &amp;lt;- readr::read_file(&amp;quot;../../static/js/vita.json&amp;quot;) jq(vita, &amp;#39;.&amp;quot;@reverse&amp;quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&amp;quot; &amp;quot;) }&amp;#39;) %&amp;gt;% combine() %&amp;gt;% fromJSON() year author 2017-12-09 Wayne M. Getz 2017-12-09 Charles R. Marshall 2017-12-09 Colin J. Carlson 2017-12-09 Luca Giuggioli 2017-12-09 Sadie J. Ryan 2017-12-09 Stephanie S. Romañach 2017-12-09 Carl Boettiger 2017-12-09 Samuel D. Chamberlain 2017-12-09 Laurel Larsen 2017-12-09 Paolo D’Odorico 2017-12-09 David O’Sullivan 2017-03-15 Stephanie E.</description>
     </item>
     <item>
       <title>Using travis-ci in research compendia and student repos</title>
-      <link>//localhost:4321/2017/05/17/using-travis-ci-in-research-compendia-and-student-repos/</link>
+      <link>//localhost:1313/2017/05/17/using-travis-ci-in-research-compendia-and-student-repos/</link>
       <pubDate>Wed, 17 May 2017 22:00:15 +0000</pubDate>
-      <guid>//localhost:4321/2017/05/17/using-travis-ci-in-research-compendia-and-student-repos/</guid>
+      <guid>//localhost:1313/2017/05/17/using-travis-ci-in-research-compendia-and-student-repos/</guid>
       <description>In general I’m a big believer in the R package mechanism as a convenient way to package and distribute a reproducible compendium of code, data, notebooks and manuscripts. However, it’s often overkill, particularly since passing basic continuous integration checks (e.g. via devtools::use_travis()) means running a relatively strict R CMD check that will worry about things such as documentation norms and details that aren’t always appropriate.&#xA;What I most want is an easy way to confirm that any .</description>
     </item>
     <item>
       <title>json-ld framing strategy</title>
-      <link>//localhost:4321/2017/05/17/json-ld-framing-strategy/</link>
+      <link>//localhost:1313/2017/05/17/json-ld-framing-strategy/</link>
       <pubDate>Wed, 17 May 2017 21:57:15 +0000</pubDate>
-      <guid>//localhost:4321/2017/05/17/json-ld-framing-strategy/</guid>
+      <guid>//localhost:1313/2017/05/17/json-ld-framing-strategy/</guid>
       <description>Parsing very nested JSON documents can be a pain. Here are some notes on co-opting the strategy of “Framing” used in JSON-LD. (Note that unlike the basic operations of compaction and expansion, the JSON-LD framing algorithm actually is essentially independent of the @context and any linked data concepts.&#xA;Here’s a toy example of some nested JSON. Very nested structures are usually the source of issues for me, even with purrr, because often I want to pull data found at various different levels of nesting into a single row for the data.</description>
     </item>
     <item>
       <title>New rocker releases</title>
-      <link>//localhost:4321/2017/04/27/new-rocker-releases/</link>
+      <link>//localhost:1313/2017/04/27/new-rocker-releases/</link>
       <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/2017/04/27/new-rocker-releases/</guid>
+      <guid>//localhost:1313/2017/04/27/new-rocker-releases/</guid>
       <description>R 3.4.0 and devel tags are now available in the Rocker versioned stack, and latest has been updated to 3.4.0.&#xA;This means you can now run something like:&#xA;docker run -d -p 8787:8787 rocker/tidyverse:devel to test out a recent version1 of R devel in RStudio with the tidyverse packages already installed. Note that the packages are not themselves devel versions (e.g. from GitHub) but are instead the latest versions from CRAN, just as in the latest tag.</description>
     </item>
     <item>
       <title>Migrating to Hugo and blogdown</title>
-      <link>//localhost:4321/2017/04/19/migrating-to-hugo-and-blogdown/</link>
+      <link>//localhost:1313/2017/04/19/migrating-to-hugo-and-blogdown/</link>
       <pubDate>Wed, 19 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/2017/04/19/migrating-to-hugo-and-blogdown/</guid>
+      <guid>//localhost:1313/2017/04/19/migrating-to-hugo-and-blogdown/</guid>
       <description>After OpenWetWare (2010), Wordpress (2010 - 2012) and Jekyll (2012 - 2017), I move platforms once again: now to Hugo. Why the move? As usual, this site remains a way for me to explore new technologies, but the cutting edge is by no means the allure which leads me to migrate. Rather, I find myself ever trying to move towards simpler platforms, what’s easier to maintain, free to host, easier to replicate, and what makes best use of the most widely available and well-maintained existing software and avoids unncessary custom hacks.</description>
     </item>
     <item>
       <title></title>
-      <link>//localhost:4321/slides/ds421/</link>
+      <link>//localhost:1313/slides/ds421/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/slides/ds421/</guid>
+      <guid>//localhost:1313/slides/ds421/</guid>
       <description>&lt;!DOCTYPE html&gt; Data Science Grand Challenges Data Science Grand Challenges Carl Boettiger&#xA;Data Science Grand Challenges Data Science Grand Challenges Inference vs prediction Dealing with assumptions Quantifying uncertainty Reproducibility Keeping the Science in Data Science Keeping the Scientists in data science: Career questions Inference vs prediction Prediction:&#xA;Inference vs Prediction Inference vs Prediction Breiman (2001) The two cultures Clark et al (2001) Ecological Forecasting: the Emerging Imperitive Dealing with assumptions Keeping assumptions in focus during analysis Communicating assumptions to audience Testing assumptions Quantifying uncertainty formal uncertainty vs acutal uncertainty uncertainty with respect to assumptions communicating uncertainty Reproducibility Data Science vs Open Science Keeping the Science in Data Science Keeping the Scientist in Data Science Academic career paths for data scientists?</description>
     </item>
     <item>
       <title>Calendar</title>
-      <link>//localhost:4321/calendar/</link>
+      <link>//localhost:1313/calendar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/calendar/</guid>
+      <guid>//localhost:1313/calendar/</guid>
       <description> </description>
     </item>
     <item>
       <title>cloud.md</title>
-      <link>//localhost:4321/cloud/</link>
+      <link>//localhost:1313/cloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/cloud/</guid>
+      <guid>//localhost:1313/cloud/</guid>
       <description> Jetstream TACC OpenStack Jetstream IU OpenStack Chameleon TACC OpenStack </description>
     </item>
     <item>
       <title>Community</title>
-      <link>//localhost:4321/community/</link>
+      <link>//localhost:1313/community/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/community/</guid>
+      <guid>//localhost:1313/community/</guid>
       <description>Experiential Education I believe in experiential education and fostering an appreciation for the natural world in and outside of the classroom. I help organize and lead wilderness trips for disadvantaged children in Sacramento through Inner City Outings. I used to guide rock climbing, snow camping, and backpacking trips for college students and the general public through Davis Outdoor Adventures and Shasta Mountain Guides. I was introduced to outdoor leadership and education through Princeton&amp;rsquo;s orientation program, Outdoor Action, where I lead trips and trained leaders in both technical skills and group dynamics (see my Outdoor Guide C.</description>
     </item>
     <item>
       <title>Members</title>
-      <link>//localhost:4321/members/</link>
+      <link>//localhost:1313/members/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/members/</guid>
+      <guid>//localhost:1313/members/</guid>
       <description>Current Carl Boettiger Assistant Professor Daniela Rodriguez-Chavez Graduate Student Marcus Lapeyrolerie Graduate Student Abby Keller Graduate Student Felipe Montealegre-Mora Postdoctoral Scholar Your Name Here? Open Position Alumni Millie Chapman Graduate Student Kari Norman Graduate Student Serge Wiltshire Postdoctoral Researcher Milad Memarzadeh Postdoctoral Scholar Allie Barner Postdoctoral Fellow Dan Sholler rOpenSci Postdoc Interested in Joining? I&#39;m always interested in talking with perspective undergraduate, graduate, or post-doctoral researchers. Please contact me with a brief email explaining your background and interests if you are interested in joining the group.</description>
     </item>
     <item>
       <title>Networks</title>
-      <link>//localhost:4321/networks/</link>
+      <link>//localhost:1313/networks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/networks/</guid>
+      <guid>//localhost:1313/networks/</guid>
       <description>Below are a few links to my more commonly used social network profiles and Internet habitats, along with a few comments. I am pretty consistently found under the user handle cboettig on social networks, though no guarantees.&#xA;Actively Using &amp;ndash; The web-based home of my research. Star, watch, or fork a project you&amp;rsquo;re interested in. &amp;ndash; My primary social network, which is why it gets a contact link in my footer.</description>
     </item>
     <item>
       <title>Publications</title>
-      <link>//localhost:4321/pubs/</link>
+      <link>//localhost:1313/pubs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/pubs/</guid>
+      <guid>//localhost:1313/pubs/</guid>
       <description>Articles James J. Wray, Neta A. Bahcall, Paul Bode, Carl Boettiger, Phillip Hopkins (2006). The Shape, Multiplicity, and Evolution of Superclusters in Lambda-CDM Cosmology, The Astrophysical Journal 652 (2) 907-916. doi:10.1086/50860. (preprint)&#xA;Carl Boettiger, Jonathan Dushoff, Joshua S Weitz (2010). Fluctuation domains in adaptive evolution, Theoretical Population Biology 77 (1) 6-13. doi:10.1016/j.tpb.2009.10.003. (preprint, code, data)&#xA;Carl Boettiger, Graham Coop, Peter Ralph (2012). Is your phylogeny informative? Measuring the power of comparative methods, Evolution 66 (7) 2240-51.</description>
     </item>
     <item>
       <title>Teaching</title>
-      <link>//localhost:4321/teaching/</link>
+      <link>//localhost:1313/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/teaching/</guid>
+      <guid>//localhost:1313/teaching/</guid>
       <description>ESPM-157: Data Science &amp; Global Change Ecology This is an upper-division undergraduate course designed to introduce the fundamentals of data science-driven research through hands-on applications to major issues in global change ecology.&#xA;date_range Fall Semester ESPM-288: Reproducible and Collaborative Data Science This is a graduate-level course designed for the UC Berkeley NSF Research Trainee Program Environment and Society: Data Sciences for the 21st Century and other interested students in ecological, environmental or social science programs.</description>
     </item>
     <item>
       <title>Vita</title>
-      <link>//localhost:4321/vita/</link>
+      <link>//localhost:1313/vita/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/vita/</guid>
+      <guid>//localhost:1313/vita/</guid>
       <description>Employment 2022-Present Associate Professor, Department of Environmental Science, Policy and Management, University of California, Berkeley.&#xA;2015-2022 Assistant Professor, Department of Environmental Science, Policy and Management, University of California, Berkeley.&#xA;2013-2015 NSF Post-doctoral Scholar in the Department of Applied Mathematics and Statistics, University of California, Santa Cruz. Mentors: Marc Mangel, Stephan Munch&#xA;Education 2012 Ph.D Population Biology, University of California, Davis. Mentor: Alan Hastings&#xA;2007 A.B in Physics, Princeton University, with honors and certificates in biophysics and applied and computational mathematics.</description>
     </item>
   </channel>

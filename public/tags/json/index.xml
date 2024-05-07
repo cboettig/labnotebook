@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Json on Boettiger Group</title>
-    <link>//localhost:4321/tags/json/</link>
+    <link>//localhost:1313/tags/json/</link>
     <description>Recent content in Json on Boettiger Group</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Aug 2019 11:17:03 -0700</lastBuildDate>
-    <atom:link href="//localhost:4321/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/json/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Rectangling with jq</title>
-      <link>//localhost:4321/2017/12/11/data-rectangling-with-jq/</link>
+      <link>//localhost:1313/2017/12/11/data-rectangling-with-jq/</link>
       <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/2017/12/11/data-rectangling-with-jq/</guid>
+      <guid>//localhost:1313/2017/12/11/data-rectangling-with-jq/</guid>
       <description>“Data rectangling”: the process of turning highly nested data structures (e.g. JSON, XML) into a tabular format.&#xA;Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community. Recording or slides of Jenny’s talk on the subject give a much better intro to the idea and working with this in R, particularly through the purrr package.&#xA;As nice as purrr is for the task, I’ve recently found that the jqr package from Scott Chamberlain and co can be a much easier way to go about rectangling your JSON.</description>
     </item>
   </channel>

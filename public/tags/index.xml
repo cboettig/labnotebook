@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Boettiger Group</title>
-    <link>//localhost:4321/tags/</link>
+    <link>//localhost:1313/tags/</link>
     <description>Recent content in Tags on Boettiger Group</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Aug 2019 11:17:03 -0700</lastBuildDate>
-    <atom:link href="//localhost:4321/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Json</title>
-      <link>//localhost:4321/tags/json/</link>
+      <link>//localhost:1313/tags/json/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/tags/json/</guid>
+      <guid>//localhost:1313/tags/json/</guid>
       <description></description>
     </item>
     <item>
       <title>R</title>
-      <link>//localhost:4321/tags/r/</link>
+      <link>//localhost:1313/tags/r/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/tags/r/</guid>
+      <guid>//localhost:1313/tags/r/</guid>
       <description></description>
     </item>
     <item>
       <title>Json-Ld</title>
-      <link>//localhost:4321/tags/json-ld/</link>
+      <link>//localhost:1313/tags/json-ld/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/tags/json-ld/</guid>
+      <guid>//localhost:1313/tags/json-ld/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>//localhost:4321/tags/docker/</link>
+      <link>//localhost:1313/tags/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/tags/docker/</guid>
+      <guid>//localhost:1313/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Open-Science</title>
-      <link>//localhost:4321/tags/open-science/</link>
+      <link>//localhost:1313/tags/open-science/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/tags/open-science/</guid>
+      <guid>//localhost:1313/tags/open-science/</guid>
       <description></description>
     </item>
     <item>
       <title>Blog</title>
-      <link>//localhost:4321/tags/blog/</link>
+      <link>//localhost:1313/tags/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/tags/blog/</guid>
+      <guid>//localhost:1313/tags/blog/</guid>
       <description></description>
     </item>
   </channel>

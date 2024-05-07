@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Boettiger Group</title>
-    <link>//localhost:4321/categories/</link>
+    <link>//localhost:1313/categories/</link>
     <description>Recent content in Categories on Boettiger Group</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Sep 2019 09:45:10 -0700</lastBuildDate>
-    <atom:link href="//localhost:4321/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jobs</title>
-      <link>//localhost:4321/categories/jobs/</link>
+      <link>//localhost:1313/categories/jobs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/categories/jobs/</guid>
+      <guid>//localhost:1313/categories/jobs/</guid>
       <description></description>
     </item>
     <item>
       <title>R</title>
-      <link>//localhost:4321/categories/r/</link>
+      <link>//localhost:1313/categories/r/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/categories/r/</guid>
+      <guid>//localhost:1313/categories/r/</guid>
       <description></description>
     </item>
   </channel>
