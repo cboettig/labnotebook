@@ -1,5 +1,5 @@
 <footer class="footer">
-  <div class="container">
+  <div class="container text-muted">
 	  <nav class="pull-left">
 	    <ul>
 	    {{ range .Site.Menus.footer }}
@@ -23,7 +23,7 @@
 
         {{ else }}
 
-        <li>
+        <li class="nav-item">
           <a href="{{ .URL | relURL }}">{{ .Pre }} {{ .Name }}</a>
         </li>
         {{ end }}
