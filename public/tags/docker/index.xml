@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on Boettiger Group</title>
-    <link>//localhost:1313/tags/docker/</link>
+    <link>/tags/docker/</link>
     <description>Recent content in Docker on Boettiger Group</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 May 2018 12:17:49 -0700</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>New rocker releases</title>
-      <link>//localhost:1313/2017/04/27/new-rocker-releases/</link>
+      <link>/2017/04/27/new-rocker-releases/</link>
       <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/2017/04/27/new-rocker-releases/</guid>
+      <guid>/2017/04/27/new-rocker-releases/</guid>
       <description>R 3.4.0 and devel tags are now available in the Rocker versioned stack, and latest has been updated to 3.4.0.&#xA;This means you can now run something like:&#xA;docker run -d -p 8787:8787 rocker/tidyverse:devel to test out a recent version1 of R devel in RStudio with the tidyverse packages already installed. Note that the packages are not themselves devel versions (e.g. from GitHub) but are instead the latest versions from CRAN, just as in the latest tag.</description>
     </item>
   </channel>

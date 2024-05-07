@@ -48,11 +48,12 @@ ignoreFiles =  ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8
   name = "UC Berkeley"
   pre = "<i class=\"material-icons\">pin_drop</i>"
   url = "https://berkeley.edu"
-[[menu.footer]]
-  name = "Lab Notebook"
-  pre = "<i class='material-icons'>assignment</i>"
-  url = "/lab-notebook"
-  weight = 2
+  
+#[[menu.footer]]
+#  name = "Lab Notebook"
+#  pre = "<i class='material-icons'>assignment</i>"
+#  url = "/lab-notebook"
+#  weight = 2
 
     
 
