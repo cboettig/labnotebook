@@ -17,7 +17,7 @@ members:
       first: "Daniela"
       last: "Rodriguez-Chavez"
     title: "Graduate Student"
-    homepage: "#"
+    homepage: "https://drodriguezchavez.github.io/"
     photo: "daniela.jpg"
   - marcus:
     name:
