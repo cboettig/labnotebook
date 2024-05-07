@@ -45,9 +45,9 @@ ignoreFiles =  ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8
 [[menu.footer]]
   weight = 1
   identifier = "Berkeley"
-  name = "UC Berkeley"
+  name = "UC Berkeley sits on the territory of xučyun (Huichin), the ancestral and unceded land of the Chochenyo speaking Ohlone people, the successors of the sovereign Verona Band of Alameda County"
   pre = "<i class=\"material-icons\">pin_drop</i>"
-  url = "https://berkeley.edu"
+  url = "https://cejce.berkeley.edu/ohloneland"
   
 #[[menu.footer]]
 #  name = "Lab Notebook"
