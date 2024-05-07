@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on Boettiger Group</title>
-    <link>/tags/blog/</link>
-    <description>Recent content in blog on Boettiger Group</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Blog on Boettiger Group</title>
+    <link>//localhost:4321/tags/blog/</link>
+    <description>Recent content in Blog on Boettiger Group</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Apr 2017 00:00:00 +0000</lastBuildDate><atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Aug 2019 10:51:44 -0700</lastBuildDate>
+    <atom:link href="//localhost:4321/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Migrating to Hugo and blogdown</title>
-      <link>/2017/04/19/migrating-to-hugo-and-blogdown/</link>
+      <link>//localhost:4321/2017/04/19/migrating-to-hugo-and-blogdown/</link>
       <pubDate>Wed, 19 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/2017/04/19/migrating-to-hugo-and-blogdown/</guid>
+      <guid>//localhost:4321/2017/04/19/migrating-to-hugo-and-blogdown/</guid>
       <description>After OpenWetWare (2010), Wordpress (2010 - 2012) and Jekyll (2012 - 2017), I move platforms once again: now to Hugo. Why the move? As usual, this site remains a way for me to explore new technologies, but the cutting edge is by no means the allure which leads me to migrate. Rather, I find myself ever trying to move towards simpler platforms, what’s easier to maintain, free to host, easier to replicate, and what makes best use of the most widely available and well-maintained existing software and avoids unncessary custom hacks.</description>
     </item>
-    
   </channel>
 </rss>

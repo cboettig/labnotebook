@@ -2,88 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/categories/</loc>
+    <loc>//localhost:4321/categories/</loc>
     <lastmod>2019-09-24T09:45:10-07:00</lastmod>
   </url><url>
-    <loc>/post/cnhs-modeling-postdoc/</loc>
+    <loc>//localhost:4321/post/cnhs-modeling-postdoc/</loc>
     <lastmod>2019-09-24T09:45:10-07:00</lastmod>
   </url><url>
-    <loc>/categories/jobs/</loc>
+    <loc>//localhost:4321/categories/jobs/</loc>
     <lastmod>2019-09-24T09:45:10-07:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
+    <loc>//localhost:4321/post/</loc>
     <lastmod>2019-09-24T09:45:10-07:00</lastmod>
   </url><url>
-    <loc>/2017/12/11/data-rectangling-with-jq/</loc>
+    <loc>//localhost:4321/2017/12/11/data-rectangling-with-jq/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
   </url><url>
-    <loc>/tags/json/</loc>
+    <loc>//localhost:4321/tags/json/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
   </url><url>
-    <loc>/tags/r/</loc>
+    <loc>//localhost:4321/tags/r/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
   </url><url>
-    <loc>/categories/r/</loc>
+    <loc>//localhost:4321/categories/r/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>//localhost:4321/tags/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
   </url><url>
-    <loc>/tags/json-ld/</loc>
+    <loc>//localhost:4321/tags/json-ld/</loc>
     <lastmod>2018-05-30T12:17:49-07:00</lastmod>
   </url><url>
-    <loc>/2017/12/09/json-ld-vita-exploration/</loc>
+    <loc>//localhost:4321/2017/12/09/json-ld-vita-exploration/</loc>
     <lastmod>2018-05-30T12:17:49-07:00</lastmod>
   </url><url>
-    <loc>/2017/05/17/using-travis-ci-in-research-compendia-and-student-repos/</loc>
+    <loc>//localhost:4321/2017/05/17/using-travis-ci-in-research-compendia-and-student-repos/</loc>
     <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url><url>
-    <loc>/2017/05/17/json-ld-framing-strategy/</loc>
+    <loc>//localhost:4321/2017/05/17/json-ld-framing-strategy/</loc>
     <lastmod>2018-05-30T12:17:49-07:00</lastmod>
   </url><url>
-    <loc>/tags/docker/</loc>
+    <loc>//localhost:4321/tags/docker/</loc>
     <lastmod>2018-05-30T12:17:49-07:00</lastmod>
   </url><url>
-    <loc>/2017/04/27/new-rocker-releases/</loc>
+    <loc>//localhost:4321/2017/04/27/new-rocker-releases/</loc>
     <lastmod>2018-05-30T12:17:49-07:00</lastmod>
   </url><url>
-    <loc>/tags/open-science/</loc>
+    <loc>//localhost:4321/tags/open-science/</loc>
     <lastmod>2019-08-02T10:51:44-07:00</lastmod>
   </url><url>
-    <loc>/tags/blog/</loc>
+    <loc>//localhost:4321/tags/blog/</loc>
     <lastmod>2019-08-02T10:51:44-07:00</lastmod>
   </url><url>
-    <loc>/2017/04/19/migrating-to-hugo-and-blogdown/</loc>
+    <loc>//localhost:4321/2017/04/19/migrating-to-hugo-and-blogdown/</loc>
     <lastmod>2019-08-02T10:51:44-07:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>//localhost:4321/slides/ds421/</loc>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/</loc>
     <lastmod>2023-01-10T22:34:57+00:00</lastmod>
   </url><url>
-    <loc>/calendar/</loc>
+    <loc>//localhost:4321/calendar/</loc>
     <lastmod>2018-02-22T23:14:55-08:00</lastmod>
   </url><url>
-    <loc>/cloud/</loc>
+    <loc>//localhost:4321/cloud/</loc>
     <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url><url>
-    <loc>/community/</loc>
+    <loc>//localhost:4321/community/</loc>
     <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url><url>
-    <loc>/lab-notebook/</loc>
+    <loc>//localhost:4321/lab-notebook/</loc>
     <lastmod>2018-12-07T15:58:38-08:00</lastmod>
   </url><url>
-    <loc>/members/</loc>
+    <loc>//localhost:4321/members/</loc>
     <lastmod>2019-07-22T22:28:19-07:00</lastmod>
   </url><url>
-    <loc>/networks/</loc>
+    <loc>//localhost:4321/networks/</loc>
     <lastmod>2017-08-20T17:26:14-07:00</lastmod>
   </url><url>
-    <loc>/pubs/</loc>
+    <loc>//localhost:4321/pubs/</loc>
     <lastmod>2024-01-08T21:12:43+00:00</lastmod>
   </url><url>
-    <loc>/teaching/</loc>
+    <loc>//localhost:4321/slides/</loc>
+    <lastmod>2017-08-20T17:26:14-07:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/teaching/</loc>
     <lastmod>2023-08-29T03:42:54+00:00</lastmod>
   </url><url>
-    <loc>/vita/</loc>
-    <lastmod>2024-01-12T00:54:12+00:00</lastmod>
+    <loc>//localhost:4321/vita/</loc>
+    <lastmod>2024-01-12T02:53:53+00:00</lastmod>
   </url>
 </urlset>

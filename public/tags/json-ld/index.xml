@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>json-ld on Boettiger Group</title>
-    <link>/tags/json-ld/</link>
-    <description>Recent content in json-ld on Boettiger Group</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Json-Ld on Boettiger Group</title>
+    <link>//localhost:4321/tags/json-ld/</link>
+    <description>Recent content in Json-Ld on Boettiger Group</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="/tags/json-ld/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 May 2018 12:17:49 -0700</lastBuildDate>
+    <atom:link href="//localhost:4321/tags/json-ld/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JSON-LD Vita exploration</title>
-      <link>/2017/12/09/json-ld-vita-exploration/</link>
+      <link>//localhost:4321/2017/12/09/json-ld-vita-exploration/</link>
       <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/2017/12/09/json-ld-vita-exploration/</guid>
-      <description>Using JSON Queries (JQ) Pure JSON vita &amp;lt;- readr::read_file(&amp;quot;../../static/js/vita.json&amp;quot;) jq(vita, &amp;#39;.&amp;quot;@reverse&amp;quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&amp;quot; &amp;quot;) }&amp;#39;) %&amp;gt;% combine() %&amp;gt;% fromJSON()   year author    2017-12-09 Wayne M. Getz  2017-12-09 Charles R. Marshall  2017-12-09 Colin J. Carlson  2017-12-09 Luca Giuggioli  2017-12-09 Sadie J. Ryan  2017-12-09 Stephanie S. Romañach  2017-12-09 Carl Boettiger  2017-12-09 Samuel D.</description>
+      <guid>//localhost:4321/2017/12/09/json-ld-vita-exploration/</guid>
+      <description>Using JSON Queries (JQ) Pure JSON vita &amp;lt;- readr::read_file(&amp;quot;../../static/js/vita.json&amp;quot;) jq(vita, &amp;#39;.&amp;quot;@reverse&amp;quot;.author[] | { year: .dateCreated, author: .author[] | [.givenName, .familyName] | join(&amp;quot; &amp;quot;) }&amp;#39;) %&amp;gt;% combine() %&amp;gt;% fromJSON() year author 2017-12-09 Wayne M. Getz 2017-12-09 Charles R. Marshall 2017-12-09 Colin J. Carlson 2017-12-09 Luca Giuggioli 2017-12-09 Sadie J. Ryan 2017-12-09 Stephanie S. Romañach 2017-12-09 Carl Boettiger 2017-12-09 Samuel D. Chamberlain 2017-12-09 Laurel Larsen 2017-12-09 Paolo D’Odorico 2017-12-09 David O’Sullivan 2017-03-15 Stephanie E.</description>
     </item>
-    
   </channel>
 </rss>

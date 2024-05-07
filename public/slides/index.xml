@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slides on Boettiger Group</title>
+    <link>//localhost:4321/slides/</link>
+    <description>Recent content in Slides on Boettiger Group</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:4321/slides/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>//localhost:4321/slides/ds421/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/slides/ds421/</guid>
+      <description>&lt;!DOCTYPE html&gt; Data Science Grand Challenges Data Science Grand Challenges Carl Boettiger&#xA;Data Science Grand Challenges Data Science Grand Challenges Inference vs prediction Dealing with assumptions Quantifying uncertainty Reproducibility Keeping the Science in Data Science Keeping the Scientists in data science: Career questions Inference vs prediction Prediction:&#xA;Inference vs Prediction Inference vs Prediction Breiman (2001) The two cultures Clark et al (2001) Ecological Forecasting: the Emerging Imperitive Dealing with assumptions Keeping assumptions in focus during analysis Communicating assumptions to audience Testing assumptions Quantifying uncertainty formal uncertainty vs acutal uncertainty uncertainty with respect to assumptions communicating uncertainty Reproducibility Data Science vs Open Science Keeping the Science in Data Science Keeping the Scientist in Data Science Academic career paths for data scientists?</description>
+    </item>
+  </channel>
+</rss>

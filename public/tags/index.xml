@@ -2,64 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Boettiger Group</title>
-    <link>/tags/</link>
+    <link>//localhost:4321/tags/</link>
     <description>Recent content in Tags on Boettiger Group</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Aug 2019 11:17:03 -0700</lastBuildDate>
+    <atom:link href="//localhost:4321/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>json</title>
-      <link>/tags/json/</link>
-      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/json/</guid>
+      <title>Json</title>
+      <link>//localhost:4321/tags/json/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/tags/json/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
+      <link>//localhost:4321/tags/r/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/tags/r/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>json-ld</title>
-      <link>/tags/json-ld/</link>
-      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/json-ld/</guid>
+      <title>Json-Ld</title>
+      <link>//localhost:4321/tags/json-ld/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/tags/json-ld/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>docker</title>
-      <link>/tags/docker/</link>
-      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/docker/</guid>
+      <title>Docker</title>
+      <link>//localhost:4321/tags/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/tags/docker/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>open-science</title>
-      <link>/tags/open-science/</link>
-      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/open-science/</guid>
+      <title>Open-Science</title>
+      <link>//localhost:4321/tags/open-science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/tags/open-science/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>blog</title>
-      <link>/tags/blog/</link>
-      <pubDate>Wed, 19 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/blog/</guid>
+      <title>Blog</title>
+      <link>//localhost:4321/tags/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/tags/blog/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
