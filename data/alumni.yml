@@ -1,44 +1,74 @@
 alumni:
+  - felipe:
+    name:
+      first: "Felipe"
+      last: "Montealegre-Mora"
+    title: "Postdoc Alum"
+    current: "DSE Postdoctoral Researcher"
+    photo: "felipe2.jpg"
+    homepage: "https://felipethescientist.com" 
+    github: "felimomo"
+    linkedin: "https://www.linkedin.com/in/felimomo/"
+    
+  - marcus:
+    name:
+      first: "Marcus" 
+      last: "Lapeyrolerie"
+    title: "Graduate Student Alum"
+    homepage: "https://www.linkedin.com/in/marcus-lapeyrolerie-7aa208108/"
+    linkedin: "https://www.linkedin.com/in/marcus-lapeyrolerie-7aa208108/"
+    github: "mlap"
+    orcid: "0000-0003-2588-7843"
+    email: "marcuslapeyrolerie@me.com"
+    photo: "marcus.jpg"
+    
   - millie:
     name:
       first: "Millie" 
       last: "Chapman"
-    title: "Graduate Student"
+    title: "Graduate Student Alum"
+    current: "Incoming Assistant Professor at ETH Zurich"
     homepage: "https://milliechapman.info/"
     github: "milliechapman"
     twitter: "milliechapma"
     orcid: "0000-0002-1377-1539"
     email: "mchapman@berkeley.edu"
     photo: "millie.png" 
+    
   - kari:
     name:
       first: "Kari" 
       last: "Norman"
-    title: "Graduate Student"
-    homepage: "http://karieanorman.weebly.com/"
+    title: "Graduate Student Alum"
+    current: "Scientist, US Forest Service"
+    homepage: "https://research.fs.usda.gov/about/people/kari.norman"
     github: "karinorman"
     orcid: "0000-0002-2029-2325"
+    linkedin: "https://www.linkedin.com/in/karieanorman/"
     email: "kari.norman.314@gmail.com"
     photo: "kari.png"
     twitter: "norman_kari"
+    
   - serge:
     name:
       first: "Serge" 
       last: "Wiltshire"
-    title: "Postdoctoral Researcher"
+    title: "Postdoc Alum"
+    current: "Computational Ecologist, The Nature Conservancy"
+    linkedin: "https://www.linkedin.com/in/serge-wiltshire-99894091/"
     googlescholar: "https://scholar.google.com/citations?user=-8I8G-kAAAAJ&hl=en"
-    #homepage: "#"
-    #github: ""
-    #orcid: ""
+    orcid: "0000-0002-0474-2760"
     email: "serge.wiltshire@gmail.com"
-    photo: "serge.jpg"    
+    photo: "serge.jpg"
+    
   - milad:
     name:
       first: "Milad" 
       last: "Memarzadeh"
-    title: "Postdoctoral Scholar"
-    current: "Research Scientist, NASA"
-    homepage: "http://www.miladmemarzadeh.com/"
+    title: "Postdoc Alum"
+    current: "AI Technical Lead, NASA Ames"
+    linkedin: "https://www.linkedin.com/in/milad-memarzadeh-45a82827/"
+    homepage: "https://www.nasa.gov/people/milad-memarzadeh/"
     researchgate: "https://www.researchgate.net/profile/Milad_Memarzadeh" 
     github: "miladm12"
     twitter: "miladmemarzadeh"
@@ -46,29 +76,29 @@ alumni:
     email: "memarzadeh.milad@gmail.com"
     googlescholar: "https://scholar.google.com/citations?user=c28AlioAAAAJ"
     photo: "milad.png"
+    
   - allie:
     name:
       first: "Allie" 
       last: "Barner"
-    title: "Postdoctoral Fellow"
-    current: "Assistant Professor"
-    homepage: "http://www.allisonbarner.com/"
+    title: "Postdoc Alum"
+    current: "Assistant Professor, Colby College"
     twitter: "algaebarnacle"
     googlescholar: "https://scholar.google.com/citations?user=EWydlnsAAAAJ&hl=en"
     orcid: "0000-0001-9909-5713"
     email: "allisonkbarner@gmail.com"
     photo: "allie.png"
     github: "abarner"
+    
   - dan:
     name:
       first: "Dan"
       last: "Sholler"
-    title: "rOpenSci Postdoc"
+    title: "rOpenSci Postdoc Alum"
     googlescholar: "https://scholar.google.com/citations?user=fHVPc94AAAAJ&hl=en&oi=ao"
     orcid: "0000-0003-2517-4317"
     twitter: "DanSholler"
     github: "dsholler"
     photo: "dan.png"
-    homepage: "http://danielsholler.wordpress.com/"
     email: "sholler.daniel@gmail.com"
 

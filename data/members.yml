@@ -3,7 +3,7 @@ members:
     name:
       first: "Carl" 
       last: "Boettiger"
-    title: "Assistant Professor"
+    title: "Associate Professor"
     homepage: "http://www.carlboettiger.info"
     github: "cboettig"
     mastodon: "https://ecoevo.social/@cboettig"
@@ -12,6 +12,32 @@ members:
     email: "cboettig@berkeley.edu"
     photo: "carl.png"
     keybase: "https://keybase.io/cboettig"
+
+  - diego:
+    name:
+      first: "Diego"
+      last: "Ellis Soto"
+    title: "President's Postdoctoral Fellow"
+    homepage: "https://diegoellissoto.org/"
+    googlescholar: "https://scholar.google.com/citations?user=ycqAyyMAAAAJ&hl=en"
+    linkedin: "https://www.linkedin.com/in/diego-ellis-soto-bb4295125/"
+    email: "diego.ellissoto@berkeley.edu"
+    github: "diego-ellis-soto"
+    photo: "diego.jpg"
+    orcid: ""
+    
+  - cassie:
+    name:
+      first: "Cassie"
+      last: "Buhler"
+    title: "ESIIL Postdoctoral Fellow"
+    photo: "cassie.png"
+    homepage: "https://cassiebuhler.github.io/"
+    email: "cassidy.buhler@gmail.com"
+    linkedin: "https://www.linkedin.com/in/cassie-buhler/"
+    github: "cassiebuhler"
+    orcid: "0000-0003-4157-4273"
+    
   - daniela:
     name: 
       first: "Daniela"
@@ -22,34 +48,20 @@ members:
     github: "drodriguezchavez"    
     linkedin: "https://www.linkedin.com/in/daniela-rodriguez-chavez/"
     photo: "daniela.jpg"
-  - marcus:
-    name:
-      first: "Marcus" 
-      last: "Lapeyrolerie"
-    title: "Graduate Student"
-    homepage: "#"
-    github: "mlap"
-    orcid: "0000-0003-2588-7843"
-    email: "marcuslapeyrolerie@me.com"
-    photo: "marcus.jpg"
+
   - abby:
     name:
       first: "Abby"
       last: "Keller"
     title: "Graduate Student"
+    linkedin: "https://www.linkedin.com/in/abigail-keller-553aab12b/"
+    homepage: "https://ourenvironment.berkeley.edu/users/1794875"
+    email: "agkeller@berkeley.edu"
+    github: "abigailkeller"
     photo: "abby.jpg"
     twitter: "abby__keller"
     orcid: "0000-0001-6068-0173"
-  - felipe:
-    name:
-      first: "Felipe"
-      last: "Montealegre-Mora"
-    title: "Postdoctoral Scholar"
-    photo: "felipe2.jpg"
-    homepage: "https://felipethescientist.com" 
-    github: "https://github.com/felimomo"
-    googlescholar: "Montealegre-Mora"
-    linkedin: "https://www.linkedin.com/in/felimomo/"
+
   - you:
     name:
       first: "Your"

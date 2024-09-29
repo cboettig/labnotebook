@@ -12,6 +12,7 @@
   property="foaf:familyName">{{.name.last}}</span></span></a>
 <br/>
 <small class="card-description text-muted" property="schema:jobTitle">{{.title}}</small>
+<br/><small class="card-description text-muted" property="schema:jobTitle">{{.current}}</small>
 </h4>
 {{ with .description }}
 <div class="card-body">
@@ -21,10 +22,8 @@
 <div class="card-footer justify-content-center">
 {{ with .email }}<a class="btn btn-link btn-just-icon" href="mailto:{{.}}" title="email"><i class="fa fa-envelope"></i></a>{{ end }}
 {{ with .mastodon }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="{{.}}" title="mastodon: {{.}}"><i class="fa fa-mastodon"></i></a>{{ end }}
-{{ with .twitter }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="https://twitter.com/{{.}}" title="Twitter: {{.}}"><i class="fa fa-twitter"></i></a>{{ end }}
-{{ with .impactstory }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="{{.}}" title="ImpactStory"><i class="ai ai-impactstory"></i></a>{{ end }}
+{{ with .bluesky }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="{{.}}" title="bluesky: {{.}}"><i class="fa fa-bluesky"></i></a>{{ end }}
 {{ with .linkedin }}<a  class="btn btn-link btn-just-icon" rel="foaf:account" href="{{.}}" title="LinkedIn"><i class="fa fa-linkedin"></i></a>{{ end }}
-{{ with .researchgate }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="{{.}}" title="ResearchGate"><i class="ai ai-researchgate"></i></a>{{ end }}
 {{ with .github }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="https://github.com/{{.}}" title="GitHub: {{.}}"><i class="fa fa-github"></i></a>{{ end }}
 {{ with .orcid }}<a class="btn btn-link btn-just-icon" rel="http://purl.org/spar/datacite/orcid" href="https://orcid.org/{{.}}" title="ORCID ID"><i class="ai ai-orcid"></i></a>{{ end }}
 {{ with .cv }}<a class="btn btn-link btn-just-icon" rel="foaf:publications" href="{{.}}" title="Publications"><i class="fa fa-file-text"></i></a>{{ end }}
