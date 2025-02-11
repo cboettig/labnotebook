@@ -371,6 +371,31 @@ css: ["vita.css"]
     Biodiversity monitoring for a just planetary future. 
     _Science_ 383,34-36(2024). [doi:10.1126/science.adh8874](https://doi.org/10.1126/science.adh8874)
 
+58. Wenk, E.H., Sauquet, H., Gallagher, R.V. et al. (2024)
+    The AusTraits plant dictionary. _Sci Data_ 11, 537.
+    [doi:10.1038/s41597-024-03368-z](https://doi.org/10.1038/s41597-024-03368-z)
+
+59. Pottinger, Geyer, Biyani, Martinez, Nathan, Morse, Liu, Hu, de Bruyn, Boettiger, Baker, McCauley (2024).
+    Pathways to reduce global plastic waste mismanagement and greenhouse gas emissions by 2050. _Science_ 386, 1168-1173.
+    [doi:10.1126/science.adr3837](https://doi.org/10.1126/science.adr3837)
+
+60. Cattoni, South, Warne, Boettiger, Thakran, Holden (2024).
+    Revisiting Fishery Sustainability Targets. _Bull Math Biol_ 86, 127.
+    [doi:10.1007/s11538-024-01352-7](https://doi.org/10.1007/s11538-024-01352-7)
+
+61. Olsson, Boettiger, Carey, Lofton, Thomas. Can you predict the future? A tutorial
+    for the National Ecological Observatory Network Ecological Forecasting Challenge (2024). 
+    _Journal of Open Source Education_, 7(82), 259, [doi:10.21105/jose.00259](https://doi.org/10.21105/jose.00259)
+
+62. Dietze, M., White, E.P., Abeyta, A. et al. Near-term ecological forecasting
+    for climate change action (2024). _Nat. Clim. Chang._ 14, 1236–1244. 
+    [doi:10.1038/s41558-024-02182-0](https://doi.org/10.1038/s41558-024-02182-0)
+
+63. Abigail G. Keller, Timothy D. Counihan, Edwin D. Grosholz, Carl Boettiger (2025). 
+    The transition from resistance to acceptance: Managing a marine invasive species in a changing world.
+    _Journal of Applied Ecology_ [doi:10.1111/1365-2664.14881](https://doi.org/10.1111/1365-2664.14881)
+
+
 # Book chapters
 
 - _Carl Boettiger_ (2017). A Reproducible R Notebook Using Docker. 
