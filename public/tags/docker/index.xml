@@ -13,7 +13,7 @@
       <link>/2017/04/27/new-rocker-releases/</link>
       <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
       <guid>/2017/04/27/new-rocker-releases/</guid>
-      <description>R 3.4.0 and devel tags are now available in the Rocker versioned stack, and latest has been updated to 3.4.0.&#xA;This means you can now run something like:&#xA;docker run -d -p 8787:8787 rocker/tidyverse:devel to test out a recent version1 of R devel in RStudio with the tidyverse packages already installed. Note that the packages are not themselves devel versions (e.g. from GitHub) but are instead the latest versions from CRAN, just as in the latest tag.</description>
+      <description>&lt;p&gt;R &lt;code&gt;3.4.0&lt;/code&gt; and &lt;code&gt;devel&lt;/code&gt; tags are now available in the Rocker versioned stack, and &lt;code&gt;latest&lt;/code&gt; has been updated to &lt;code&gt;3.4.0&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This means you can now run something like:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;docker run -d -p 8787:8787 rocker/tidyverse:devel&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;to test out a recent version&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; of R devel in RStudio with the &lt;code&gt;tidyverse&lt;/code&gt; packages already installed. Note that the packages are not themselves devel versions (e.g. from GitHub) but are instead the latest versions from CRAN, just as in the &lt;code&gt;latest&lt;/code&gt; tag. Only the base R system is on &lt;code&gt;devel&lt;/code&gt;. This can be handy for testing packages prior to CRAN release.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
