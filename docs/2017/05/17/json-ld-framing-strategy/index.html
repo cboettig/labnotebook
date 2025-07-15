@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+  <meta name="author" content="Carl Boettiger">
+  
+
+  <title>Boettiger Group</title>
+
+	<link rel="apple-touch-icon" sizes="76x76" href="../../../../img/favicon.png" />
+	<link rel="icon" type="image/png" href="../../../../img/favicon.png" />
+
+  
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  
+  
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+  
+  
+  <link href="../../../../sass/material-kit.min.21f13fde0d781988db0cfadedecf234226e39c5e41fcba71bc40d79e4b699153.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css">
+  <link rel="stylesheet" href="../../../../highlight/styles/tomorrow-night.css">
+
+  
+  <link rel="stylesheet" href="../../../../css/cboettig.css">
+  
+    
+  <link rel="feed" href="" type="application/rss+xml" title="Boettiger Group">
+  <link rel="canonical" href="//localhost:1313/2017/05/17/json-ld-framing-strategy/">
+
+
+  <script src="../../../../js/core/jquery.min.js" type="text/javascript"></script>
+  
+
+</head>
+
+  <body class="profile-page sidebar-collapse"> 
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href=" //localhost:1313/">
+          Boettiger Group </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link"
+               href="../../../../index.html"
+                
+               title = "Home"><i class='material-icons'>home</i> Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link"
+               href="../../../../members"
+                
+               title = "Members"><i class='material-icons'>people</i> Members</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link"
+               href="../../../../pubs"
+                
+               title = "Publications"><i class='material-icons'>book</i> Publications</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link"
+               href="../../../../teaching"
+                
+               title = "Teaching"><i class='material-icons'>school</i> Teaching</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+</nav>
+  
+  
+<div class="page-header header-filter clear-filter blue-filter" 
+       data-parallax="true" 
+       style="background-image: url('//localhost:1313/img/methane_bubbles.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <div class="brand">
+            <h1>json-ld framing strategy</h1>
+            <h3></h3>
+            
+              
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+  
+  
+<div class="main main-raised">
+  <div class="section section-basic">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 ml-auto mr-auto">
+          <article>
+          
+
+
+<p>Parsing very nested JSON documents can be a pain. Here are some notes on co-opting the strategy of “Framing” used in JSON-LD. (Note that unlike the basic operations of <code>compaction</code> and <code>expansion</code>, the JSON-LD framing algorithm actually is essentially independent of the <code>@context</code> and any linked data concepts.</p>
+<p>Here’s a toy example of some nested JSON. Very nested structures are usually the source of issues for me, even with <code>purrr</code>, because often I want to pull data found at various different levels of nesting into a single row for the data.frame I care about.</p>
+<pre class="r"><code>library(&quot;jsonlite&quot;)
+library(&quot;jsonld&quot;)
+library(&quot;magrittr&quot;)</code></pre>
+<pre class="r"><code>json &lt;-&#39;{
+      &quot;@id&quot;: &quot;http://example.org/library&quot;,
+      &quot;@type&quot;: &quot;ex:Library&quot;,
+      &quot;ex:contains&quot;: {
+        &quot;@id&quot;: &quot;http://example.org/library/the-republic&quot;,
+        &quot;@type&quot;: &quot;ex:Book&quot;,
+        &quot;ex:contains&quot;: {
+          &quot;@id&quot;: &quot;http://example.org/library/the-republic#introduction&quot;,
+          &quot;@type&quot;: &quot;ex:Chapter&quot;,
+          &quot;dc:description&quot;: &quot;An introductory chapter on The Republic.&quot;,
+          &quot;dc:title&quot;: &quot;The Introduction&quot;
+        },
+        &quot;dc:creator&quot;: &quot;Plato&quot;,
+        &quot;dc:title&quot;: &quot;The Republic&quot;
+      }
+    }
+  &#39;</code></pre>
+<p>The default behavior of <code>jsonlite:flatten</code> does not return a data frame here:</p>
+<pre class="r"><code>df &lt;-fromJSON(json, flatten = TRUE)
+class(df)</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<p>Note that <code>df</code> is still a (rather cumbersome!) list. This is particularly annoying because the type/structure is unpredictable (depends on how much a nesting a given element might have), so hard to program around, so we usually wind not flattening the data (but having to iterate over some often ugly nesting).</p>
+<div id="a-json-ld-framing-solution" class="section level2">
+<h2>A JSON-LD framing solution</h2>
+<p>Let’s imagine I just want to pull out book titles from the middle of that nested structure. Here’s a frame for that:</p>
+<pre class="r"><code>frame &lt;-
+&#39;{
+  &quot;@explicit&quot;: &quot;true&quot;,
+  &quot;@type&quot;: &quot;ex:Book&quot;,
+  &quot;dc:title&quot;: {}
+}&#39;
+jsonld_frame(json, frame) %&gt;% fromJSON()</code></pre>
+<pre><code>## $`@graph`
+##                                       @id   @type     dc:title
+## 1 http://example.org/library/the-republic ex:Book The Republic</code></pre>
+<p>How about a data frame with the title and creator for all objects, regardless of nesting depth:</p>
+<pre class="r"><code>frame &lt;-
+&#39;{
+  &quot;@explicit&quot;: &quot;true&quot;,
+  &quot;@id&quot;: {},
+  &quot;dc:title&quot;: {&quot;@default&quot;: &quot;NA&quot;},
+  &quot;dc:creator&quot;: {&quot;@default&quot;: &quot;NA&quot;}
+}&#39;
+
+jsonld_frame(json, frame) %&gt;% fromJSON()</code></pre>
+<pre><code>## $`@graph`
+##                                                    @id      @type
+## 1              http://example.org/library/the-republic    ex:Book
+## 2 http://example.org/library/the-republic#introduction ex:Chapter
+##   dc:creator         dc:title
+## 1      Plato     The Republic
+## 2         NA The Introduction</code></pre>
+<p>This strategy is also very effective when you either don’t know exactly how the data is structured, or the data structure changes either over time or across different records provided by the data provider (e.g. when some entries may have more nested content than other entries of the same type).</p>
+<p>More details on the syntax used in specifying a frame can be found in the <a href="http://json-ld.org/spec/latest/json-ld-framing/">offical documentation</a>.</p>
+</div>
+
+          </article>
+        </div>
+        <div class="col-md-4">
+          <div class="sidebar">
+            <aside prefix="og:http://ogp.me/ns/article#">
+  
+  
+  
+<div class="article-metadata">
+
+  <p>
+  <span class="article-date">
+    <i class="fa fa-calendar"></i>
+    
+    <time datetime="2017-05-17 21:57:15 &#43;0000 UTC" itemprop="datePublished">
+      Wed, May 17, 2017
+    </time>
+    
+  </span>
+  </p>
+    
+
+  <p>
+  
+  </p>
+  
+  <p>
+  
+  </p>
+
+</div>
+
+ 
+  <br />
+  
+  <p><a class="btn btn-primary btn-round" rel="prev" href='//localhost:1313/2017/04/27/new-rocker-releases/'><i class="fa fa-chevron-left"></i> prev</a>
+    <a class="btn btn-primary btn-round" rel="next" href='//localhost:1313/2017/05/17/using-travis-ci-in-research-compendia-and-student-repos/'>next <i class="fa fa-chevron-right"></i></a></p>
+
+  <br />
+
+<p> <a class="btn btn-primary btn-round" 
+         href='https://github.com/cboettig/labnotebook/blob/master/content/lab-notebook/2017-05-17-json-ld-framing-strategy.Rmd'><i class="icon-rlogo"></i> RMarkdown</a></p>
+
+
+  <p> <a class="btn btn-primary btn-round" 
+         href='https://github.com/cboettig/labnotebook/commits/master/content/lab-notebook/2017-05-17-json-ld-framing-strategy.Rmd'><i class="fa fa-clock-o"></i> History</a></p>
+
+  <p> <i class="fa fa-barcode"></i> SHA: <a href="https://github.com/cboettig/labnotebook/blob/5f6ba6eebaf5298ea74a5f77d81e4f0bfbc3d3eb/content/lab-notebook/2017-05-17-json-ld-framing-strategy.html">5f6ba6ee</a></p> 
+
+
+</aside>
+
+
+          </div>
+        </div>  
+      </div>
+      <section id="comments">
+      <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cboettig" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+      </section>
+    </div>
+  </div>
+</div>
+    
+
+
+
+
+
+
+  <footer class="footer">
+  <div class="container text-muted">
+	  <nav class="pull-left">
+	    <ul>
+	    
+        
+
+        <li class="nav-item">
+          <a href="https://cejce.berkeley.edu/ohloneland"><i class="material-icons">pin_drop</i> UC Berkeley sits on the territory of xučyun (Huichin), the ancestral and unceded land of the Chochenyo speaking Ohlone people, the successors of the sovereign Verona Band of Alameda County</a>
+        </li>
+        
+      
+        
+
+        <li class="nav-item">
+          <a href="https://localcontexts.org/notice/open-to-collaborate/"><img src="../../../../localcontexts/Open_To_Collaborate.svg" width="24"> Open To Collaborate</a>
+        </li>
+        
+      
+      </ul>
+    </nav>
+	  <div class="copyright pull-right">
+	    <img src="../../../../img/cc-by.svg"/>
+	  </div>
+	</div>
+</footer>
+
+
+  </body>
+  
+
+<script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
+<script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+
+
+
+
+
+<script src="../../../../js/core/popper.min.js" type="text/javascript"></script>
+<script src="../../../../js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+<script src="../../../../js/plugins/moment.min.js"></script>
+
+
+
+<script src="../../../../js/plugins/nouislider.min.js" type="text/javascript"></script>
+
+
+
+<script src="../../../../js/material-kit.min.js?v=2.0.4" type="text/javascript"></script>
+
+<script src="../../../../highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-18401403-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</html>
