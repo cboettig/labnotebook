@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Boettiger Group</title><link>/post/</link><description>Recent content in Posts on Boettiger Group</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 24 Sep 2019 09:45:10 -0700</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Coupled Natural-Human Systems Modeling Postdoc</title><link>/post/cnhs-modeling-postdoc/</link><pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate><guid>/post/cnhs-modeling-postdoc/</guid><description>&lt;p&gt;We&amp;rsquo;re looking to hire a coupled natural-human systems post-doc to work on the theory and modeling components of an NSF Coupled Natural Human Systems &lt;a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1824871"&gt;award&lt;/a&gt; seeking to understand the the interplay between &lt;a href="https://doi.org/10.1016/j.ecolecon.2019.03.002"&gt;diversified farming systems&lt;/a&gt; and ecosystem services. Our team consists of a diverse and tight-knit group of social science and natural science researchers combining field research, farmer surveys, and mathematical modeling, based in UC Berkeley and focusing on California Central Coast farmers. We take a decision-theoretic approach to understand the role of shocks (both ecological and regulatory), environmental change, economics, land tenure, social dynamics and other forces in their adoption of ecosystem-based practices. The interface of agriculture and ecology offers questions of both pressing societal relevance and rich opportunities for theory development in socio-ecological systems.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Boettiger Group</title>
+    <link>//localhost:1313/post/</link>
+    <description>Recent content in Posts on Boettiger Group</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Sep 2019 09:45:10 -0700</lastBuildDate>
+    <atom:link href="//localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coupled Natural-Human Systems Modeling Postdoc</title>
+      <link>//localhost:1313/post/cnhs-modeling-postdoc/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/cnhs-modeling-postdoc/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re looking to hire a coupled natural-human systems post-doc to work on the theory and modeling components of an NSF Coupled Natural Human Systems &lt;a href=&#34;https://nsf.gov/awardsearch/showAward?AWD_ID=1824871&#34;&gt;award&lt;/a&gt; seeking to understand the the interplay between &lt;a href=&#34;https://doi.org/10.1016/j.ecolecon.2019.03.002&#34;&gt;diversified farming systems&lt;/a&gt; and ecosystem services.  Our team consists of a diverse and tight-knit group of social science and natural science researchers combining field research, farmer surveys, and mathematical modeling, based in UC Berkeley and focusing on California Central Coast farmers.  We take a decision-theoretic approach to understand the role of shocks (both ecological and regulatory), environmental change, economics, land tenure, social dynamics and other forces in their adoption of ecosystem-based practices. The interface of agriculture and ecology offers questions of both pressing societal relevance and rich opportunities for theory development in socio-ecological systems.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
