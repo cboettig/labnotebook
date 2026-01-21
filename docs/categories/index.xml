@@ -4,7 +4,7 @@
     <title>Categories on Boettiger Group</title>
     <link>//localhost:1313/categories/</link>
     <description>Recent content in Categories on Boettiger Group</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Sep 2019 09:45:10 -0700</lastBuildDate>
     <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />

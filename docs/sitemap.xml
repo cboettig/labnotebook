@@ -20,10 +20,10 @@
     <loc>//localhost:1313/tags/json/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/r/</loc>
+    <loc>//localhost:1313/categories/r/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/r/</loc>
+    <loc>//localhost:1313/tags/r/</loc>
     <lastmod>2019-08-02T11:17:03-07:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/</loc>
