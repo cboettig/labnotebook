@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Json on Boettiger Group</title>
-    <link>//localhost:1313/tags/json/</link>
-    <description>Recent content in Json on Boettiger Group</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 02 Aug 2019 11:17:03 -0700</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/json/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Data Rectangling with jq</title>
-      <link>//localhost:1313/2017/12/11/data-rectangling-with-jq/</link>
-      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/2017/12/11/data-rectangling-with-jq/</guid>
-      <description>&lt;script src=&#34;../../rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;../../rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;../../rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;../../rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;../../rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;link href=&#34;../../rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;../../rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;../../rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;../../rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;“Data rectangling”: the process of turning highly nested data structures (e.g. JSON, XML) into a tabular format.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community. &lt;a href=&#34;https://speakerdeck.com/jennybc/data-rectangling&#34;&gt;Recording&lt;/a&gt; or &lt;a href=&#34;https://speakerdeck.com/jennybc/data-rectangling&#34;&gt;slides&lt;/a&gt; of Jenny’s talk on the subject give a much better intro to the idea and working with this in R, particularly through the &lt;code&gt;purrr&lt;/code&gt; package.&lt;/p&gt;&#xA;&lt;p&gt;As nice as &lt;code&gt;purrr&lt;/code&gt; is for the task, I’ve recently found that the &lt;a href=&#34;https://github.com/ropensci/jqr&#34;&gt;&lt;code&gt;jqr&lt;/code&gt; package&lt;/a&gt; from &lt;a href=&#34;https://scottchamberlain.info/&#34;&gt;Scott Chamberlain&lt;/a&gt; and co can be a much easier way to go about rectangling your JSON. Here’s a quick comparison based on an example from the &lt;a href=&#34;https://dcl-2017-04.github.io/curriculum/rectangling.html&#34;&gt;lesson&lt;/a&gt; Hadley Jenny have on Data Rectangling.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Json on Boettiger Group</title><link>/tags/json/</link><description>Recent content in Json on Boettiger Group</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 02 Aug 2019 11:17:03 -0700</lastBuildDate><atom:link href="/tags/json/index.xml" rel="self" type="application/rss+xml"/><item><title>Data Rectangling with jq</title><link>/2017/12/11/data-rectangling-with-jq/</link><pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate><guid>/2017/12/11/data-rectangling-with-jq/</guid><description>&lt;script src="../../rmarkdown-libs/htmlwidgets/htmlwidgets.js"&gt;&lt;/script&gt;
+&lt;script src="../../rmarkdown-libs/jquery/jquery.min.js"&gt;&lt;/script&gt;
+&lt;link href="../../rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" /&gt;
+&lt;script src="../../rmarkdown-libs/datatables-binding/datatables.js"&gt;&lt;/script&gt;
+&lt;link href="../../rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" /&gt;
+&lt;link href="../../rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" /&gt;
+&lt;script src="../../rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"&gt;&lt;/script&gt;
+&lt;link href="../../rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" /&gt;
+&lt;script src="../../rmarkdown-libs/crosstalk/js/crosstalk.min.js"&gt;&lt;/script&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;“Data rectangling”: the process of turning highly nested data structures (e.g. JSON, XML) into a tabular format.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Data rectangling is a brilliant turn of phrase coined by Jenny Bryan (UBC, RStudio) and leader in the #rstats community. &lt;a href="https://speakerdeck.com/jennybc/data-rectangling"&gt;Recording&lt;/a&gt; or &lt;a href="https://speakerdeck.com/jennybc/data-rectangling"&gt;slides&lt;/a&gt; of Jenny’s talk on the subject give a much better intro to the idea and working with this in R, particularly through the &lt;code&gt;purrr&lt;/code&gt; package.&lt;/p&gt;
+&lt;p&gt;As nice as &lt;code&gt;purrr&lt;/code&gt; is for the task, I’ve recently found that the &lt;a href="https://github.com/ropensci/jqr"&gt;&lt;code&gt;jqr&lt;/code&gt; package&lt;/a&gt; from &lt;a href="https://scottchamberlain.info/"&gt;Scott Chamberlain&lt;/a&gt; and co can be a much easier way to go about rectangling your JSON. Here’s a quick comparison based on an example from the &lt;a href="https://dcl-2017-04.github.io/curriculum/rectangling.html"&gt;lesson&lt;/a&gt; Hadley Jenny have on Data Rectangling.&lt;/p&gt;</description></item></channel></rss>

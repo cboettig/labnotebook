@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Docker on Boettiger Group</title>
-    <link>//localhost:1313/tags/docker/</link>
-    <description>Recent content in Docker on Boettiger Group</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 30 May 2018 12:17:49 -0700</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>New rocker releases</title>
-      <link>//localhost:1313/2017/04/27/new-rocker-releases/</link>
-      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/2017/04/27/new-rocker-releases/</guid>
-      <description>&lt;p&gt;R &lt;code&gt;3.4.0&lt;/code&gt; and &lt;code&gt;devel&lt;/code&gt; tags are now available in the Rocker versioned stack, and &lt;code&gt;latest&lt;/code&gt; has been updated to &lt;code&gt;3.4.0&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This means you can now run something like:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;docker run -d -p 8787:8787 rocker/tidyverse:devel&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;to test out a recent version&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; of R devel in RStudio with the &lt;code&gt;tidyverse&lt;/code&gt; packages already installed. Note that the packages are not themselves devel versions (e.g. from GitHub) but are instead the latest versions from CRAN, just as in the &lt;code&gt;latest&lt;/code&gt; tag. Only the base R system is on &lt;code&gt;devel&lt;/code&gt;. This can be handy for testing packages prior to CRAN release.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Boettiger Group</title><link>/tags/docker/</link><description>Recent content in Docker on Boettiger Group</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 30 May 2018 12:17:49 -0700</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>New rocker releases</title><link>/2017/04/27/new-rocker-releases/</link><pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate><guid>/2017/04/27/new-rocker-releases/</guid><description>&lt;p&gt;R &lt;code&gt;3.4.0&lt;/code&gt; and &lt;code&gt;devel&lt;/code&gt; tags are now available in the Rocker versioned stack, and &lt;code&gt;latest&lt;/code&gt; has been updated to &lt;code&gt;3.4.0&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This means you can now run something like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run -d -p 8787:8787 rocker/tidyverse:devel&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;to test out a recent version&lt;a href="#fn1" class="footnote-ref" id="fnref1"&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; of R devel in RStudio with the &lt;code&gt;tidyverse&lt;/code&gt; packages already installed. Note that the packages are not themselves devel versions (e.g. from GitHub) but are instead the latest versions from CRAN, just as in the &lt;code&gt;latest&lt;/code&gt; tag. Only the base R system is on &lt;code&gt;devel&lt;/code&gt;. This can be handy for testing packages prior to CRAN release.&lt;/p&gt;</description></item></channel></rss>
