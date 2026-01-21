@@ -371,3 +371,38 @@
 63. Abigail G. Keller, Timothy D. Counihan, Edwin D. Grosholz, Carl Boettiger (2025). 
     The transition from resistance to acceptance: Managing a marine invasive species in a changing world.
     _Journal of Applied Ecology_ [doi:10.1111/1365-2664.14881](https://doi.org/10.1111/1365-2664.14881)
+
+64. Kari E. A. Norman, Perry Valpine, and __Carl Boettiger__ (2025).
+    No General Trend in Functional Diversity in Bird and Mammal Communities Despite Compositional Change.
+    _Global Ecology and Biogeography_
+    [doi:10.1111/geb.13950](https://doi.org/10.1111/geb.13950)
+
+65. Kari E. Norman, __Carl Boettiger__, Timothée Poisot, and Gavin M. Jones (2025).
+    The role of AI in ecology’s computational carbon footprint.
+    _Frontiers in Ecology and the Environment_
+    [doi:10.1002/fee.70021](https://doi.org/10.1002/fee.70021)
+
+66. Felipe Montealegre-Mora, __Carl Boettiger__, Carl J. Walters, and Christopher Cahill (2025).
+    Using machine learning to inform harvest control rule design in complex fishery settings.
+    _Fish and Fisheries_
+    [doi:10.1111/faf.12874](https://doi.org/10.1111/faf.12874)
+
+67. Caleb Scoville, Razvan Amironesei, Lily Xu, Melissa Chapman, Nick Record, and __Carl Boettiger__ (2025).
+    From maps to models: Participation and contestability in the dynamic management of natural resources.
+    _Geo: Geography and Environment_
+    [doi:10.1002/geo2.70028](https://doi.org/10.1002/geo2.70028)
+
+68. Robert L. Baker, Colin Smith, Sarah E. Wright, Issac Quevedo, Kristin Vanderbilt, __Carl Boettiger__, Judd M. Patterson, and Joe DeVivo (2025).
+    NPSdataverse: a suite of R packages for data processing, authoring Ecological Metadata Language metadata, checking data-metadata congruence, and accessing data.
+    _The Journal of Open Source Software_
+    [doi:10.21105/joss.08066](https://doi.org/10.21105/joss.08066)
+
+69. Melissa Chapman, Martin Jung, David Leclère, __Carl Boettiger__, Andrey L. D. Augustynczik, Mykola Gusti, Leopold Ringwald, and Piero Visconti (2025).
+    Meeting European Union biodiversity targets under future land-use demands.
+    _Nature Ecology & Evolution_
+    [doi:10.1038/s41559-024-02668-3](https://doi.org/10.1038/s41559-024-02668-3)
+
+70. Freya Olsson, Cayelan C. Carey, __Carl Boettiger__, and others (2025).
+    What can we learn from 100,000 freshwater forecasts? A synthesis from the NEON Ecological Forecasting Challenge.
+    _Ecological Applications_
+    [doi:10.1002/eap.3004](https://doi.org/10.1002/eap.3004)
