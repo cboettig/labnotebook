@@ -240,7 +240,7 @@ css: ["vita.css"]
 - 2023 - 2024. CDSS College Regulations Proposal Task Force
 - 2023 - current. Masters in Climate Solutions design team
 - 2018 - current. Governance Committee for Data Science Programs
-- 2019. Faculty Working Group for the formation of the Division of Data Science & Information
+- 2019\. Faculty Working Group for the formation of the Division of Data Science & Information
 - 2018 - 2019. Faculty Task Force for Data Science Minor Design
 - 2018 - 2019. Faculty Advisory Committee of the Vice Chancellor for Undergraduate Education
 - 2017 - 2018. ESPM Remote Sensing Faculty Search, committee member & equity liaison
