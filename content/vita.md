@@ -46,6 +46,8 @@ css: ["vita.css"]
 
 # Grants
 
+- Leveraging NASA Data to Guide Biodiversity Conservation Investments with The Trust for Public Land. **NASA National Aeronautics and Space Administration** (2024-2027). Federal Award 80NSSC25K7241. Carl Boettiger, PI. Total: $615,116.
+
 - The Eric and Wendy Schmidt Center for Data Science and Environment. (2023-2028) Douglas McCauley, Fernando Perez, Justin Brashares, Carl Boettiger Total: $12.6M.
 
 - Examining Environmental Justice through Open Source, Cloud Native Tools. **NASA National Aeronautics and Space Administration** (2022-2025). UCB Award ID: 055956-001. Carl Boettiger, PI. Total: $134,596.
