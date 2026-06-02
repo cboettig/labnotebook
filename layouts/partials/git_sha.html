@@ -1,0 +1,12 @@
+{{- /* Prefer the deployed commit's SHA (injected by CI as site.Params.commit) so
+       the displayed SHA reflects the actual content — including the publications
+       include — rather than only the last commit that touched this page's own
+       source file. Fall back to page GitInfo for local builds. */ -}}
+{{- $base := printf "https://github.com/%s/%s" site.Params.github site.Params.repo -}}
+<p> <i class="fa fa-barcode"></i> SHA:
+{{- with site.Params.commit }}
+  <a href="{{ $base }}/commit/{{ . }}">{{ substr . 0 7 }}</a>
+{{- else }}{{ with $.GitInfo }}
+  <a href="{{ $base }}/blob/{{ .Hash }}/content/{{ $.File.Path }}">{{ .AbbreviatedHash }}</a>
+{{- end }}{{ end }}
+</p>

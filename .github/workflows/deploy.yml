@@ -22,22 +22,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: true
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.152.2'
           extended: true
 
       - name: Build
-        run: hugo --minify
+        # Inject the deployed commit's SHA and date so the page's "Updated/SHA"
+        # reflects the actual content (the publications include), not just the
+        # last commit that touched pubs.md/vita.md. Read by Hugo as site.Params.*
+        env:
+          HUGO_PARAMS_COMMIT: ${{ github.sha }}
+        run: |
+          export HUGO_PARAMS_COMMITDATE="$(git show -s --format=%cI HEAD)"
+          hugo --minify
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./docs
 
@@ -50,4 +57,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

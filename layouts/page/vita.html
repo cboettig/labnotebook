@@ -19,11 +19,13 @@
 
   <div class="col-md-4" style="border-left: 1px solid #eee8d5;"><!-- sidebar -->
     <p> <i class="fa fa-calendar"></i>
-    {{ with .GitInfo }}
-    <time datetime="{{ .AuthorDate }}" itemprop="datePublished">
-      Updated: {{ .AuthorDate.Format $.Site.Params.date_format }}
+    {{/* Prefer the deployed commit's date (injected by CI as site.Params.commitdate)
+         so this reflects the publications include, not just the last commit to
+         pubs.md/vita.md. Fall back to page GitInfo, then build time, for local builds. */}}
+    {{ $updated := or (and site.Params.commitdate (time site.Params.commitdate)) (and .GitInfo .GitInfo.AuthorDate) now }}
+    <time datetime="{{ $updated }}" itemprop="dateModified">
+      Updated: {{ $updated.Format $.Site.Params.date_format }}
     </time>
-    {{ end }}
     </p>
     {{ partial "git_sha" . }}
 
