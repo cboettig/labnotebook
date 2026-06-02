@@ -406,3 +406,13 @@
     The role of AI in ecology's computational carbon footprint.
     _Frontiers in Ecology and the Environment_.
     [doi:10.1002/fee.70021](https://doi.org/10.1002/fee.70021)
+
+71. Arnab Nandi, Wei-Lun Chao, Rongjun Qin, __Carl Boettiger__, Hilmar Lapp, and Tanya Berger-Wolf (2025).
+    OmniMesh: Addressing findability challenges in distributed nature data repositories.
+    _Proceedings of the 37th International Conference on Scalable Scientific Data Management (SSDBM)_, 1-6.
+    [doi:10.1145/3733723.3733728](https://doi.org/10.1145/3733723.3733728)
+
+72. Tasha Snow, Christopher Holdgraf, Wilson Sauthoff, Jessica Scheick, Ellianna Abrahams, Joanna Millstein, Sanjay Bhangar, __Carl Boettiger__, James Colliander, Luis A. Lopez, Elizabeth Holmes, Joseph H. Kennedy, Julia S. Lowndes, Alex I. Mandel, P. Yuvi, Fernando Pérez, Joe-Paul Swinski, Andy Teucher, and Matthew R. Siegfried (2026).
+    A path to better science through co-creation and open infrastructure.
+    _Perspectives of Earth and Space Scientists_ 7(1), e2025CN000295.
+    [doi:10.1029/2025CN000295](https://doi.org/10.1029/2025CN000295)
