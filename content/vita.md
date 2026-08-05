@@ -50,6 +50,8 @@ css: ["vita.css"]
 
 - The Eric and Wendy Schmidt Center for Data Science and Environment. (2023-2028) Douglas McCauley, Fernando Perez, Justin Brashares, Carl Boettiger Total: $12.6M.
 
+- Classroom and research access to GPU computing on the National Research Platform. **NSF National Artificial Intelligence Research Resource (NAIRR) Pilot** (2024 - current). Carl Boettiger, PI. Allocation of computational resources.
+
 - Examining Environmental Justice through Open Source, Cloud Native Tools. **NASA National Aeronautics and Space Administration** (2022-2025). UCB Award ID: 055956-001. Carl Boettiger, PI. Total: $134,596.
 
 - Collaborative Research: Frameworks: DeCODER (Democratized Cyberinfrastructure for Open Discovery to Enable Research). (2022-2026) **National Science Foundation** [#OAC-2209865](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2209865), UCB sub-award ID: 054904-001; PI $102,984
@@ -104,10 +106,15 @@ css: ["vita.css"]
 
 - [ESPM-288: Reproducible and Collaborative Data Science](https://espm-288.carlboettiger.info).  UC Berkeley. Graduate-level course, 3 units. Offered every Spring.
 
+- CSOL-208: Data Science for Climate Solutions. UC Berkeley. Graduate-level course in the Masters of Climate Solutions, 3 units. Created 2026; offered every Spring.
+
 - ESPM-88B: Data Science in Ecology and the Environment. UC Berkeley. Freshman level Data-8 connector; not currently offered.
 
 
 # Invited Talks & Workshops
+
+
+
 
 **2023**
 
@@ -238,6 +245,13 @@ css: ["vita.css"]
 
 ## Campus
 
+- Aug 2025 - May 2026. ESPM Equity Advisor, and Co-chair, Justice, Equity, Diversity, Inclusion & Belonging (JEDI-B) Committee
+- Aug 2025 - May 2026. ESPM Council
+- Jan 2026 - May 2026. Admissions Chair, Organisms & Environment Division, ESPM
+- Jan 2026 - May 2026. ESPM Graduate Programs Council
+- Spring 2026 - current. Founder and administrator, ESPM department computational resource (GPU and large-memory Jupyter/RStudio service)
+- 2025 - 2026. Internal Review Committee, Data Science Undergraduate Studies programs
+- Jan 2025 - May 2025. CDSS ad hoc Committee on the Interdisciplinary Data Sciences proposal
 - 2023 - 2024. RCNR Public-Private Partnership Proposals
 - 2023 - 2024. CDSS College Regulations Proposal Task Force
 - 2023 - current. Masters in Climate Solutions design team
@@ -253,6 +267,7 @@ css: ["vita.css"]
 ## National / International
 
 - 2021 - current Faculty co-advisor and co-founder, [Eric and Wendy Schmidt Center for Data Science and Environment](https://dse.berkeley.edu), UC Berkeley.
+- Aug 2025 - current. National Ecological Observatory Network (NEON) Innovation Advisory Committee.
 - 2023 - current. NSF Synthesis Center [Environmental Data Science Innovation & Inclusion Lab (ESIIL)](https://esiil.org/our-team) Advisory Board Member.
 - 2019 - current. Associate Editor, _Ecology Letters_
 - 2010 - current. rOpenSci [Leadership Team](https://ropensci.org/about/#team)

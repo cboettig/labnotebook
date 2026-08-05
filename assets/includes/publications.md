@@ -341,78 +341,84 @@
     A community convention for ecological forecasting: Output files and metadata version 1.0.
     _Ecosphere_ 14(11). [doi:10.1002/ecs2.4686](https://doi.org/10.1002/ecs2.4686)
 
-57. Chapman, Goldstein, Schell, Brashares, Carter, Ellis-Soto, Faxon, Goldstein,
+57. Scoville, Faxon, Chapman, Fried, Xu, __Boettiger__, Reed, Lapeyrolerie,
+    Van Scoyoc, Amironesei (2023). Environment, Society, and Machine Learning.
+    In _The Oxford Handbook of the Sociology of Machine Learning_,
+    C. Borch & JP. Pardo-Guerra (eds.), 527-548. Oxford University Press.
+    [doi:10.1093/oxfordhb/9780197653609.013.8](https://doi.org/10.1093/oxfordhb/9780197653609.013.8)
+
+58. Chapman, Goldstein, Schell, Brashares, Carter, Ellis-Soto, Faxon, Goldstein,
     Halpern, Longdon, Norman, O'Rourke, Scoville, Xu, __Boettiger__ (2024).
     Biodiversity monitoring for a just planetary future.
     _Science_ 383, 34-36. [doi:10.1126/science.adh8874](https://doi.org/10.1126/science.adh8874)
 
-58. Wenk, Sauquet, Gallagher, et al. (2024).
+59. Wenk, Sauquet, Gallagher, et al. (2024).
     The AusTraits plant dictionary. _Scientific Data_ 11, 537.
     [doi:10.1038/s41597-024-03368-z](https://doi.org/10.1038/s41597-024-03368-z)
 
-59. Pottinger, Geyer, Biyani, Martinez, Nathan, Morse, Liu, Hu, de Bruyn, __Boettiger__, Baker, McCauley (2024).
+60. Pottinger, Geyer, Biyani, Martinez, Nathan, Morse, Liu, Hu, de Bruyn, __Boettiger__, Baker, McCauley (2024).
     Pathways to reduce global plastic waste mismanagement and greenhouse gas emissions by 2050.
     _Science_ 386, 1168-1173.
     [doi:10.1126/science.adr3837](https://doi.org/10.1126/science.adr3837)
 
-60. Cattoni, South, Warne, __Boettiger__, Thakran, Holden (2024).
+61. Cattoni, South, Warne, __Boettiger__, Thakran, Holden (2024).
     Revisiting Fishery Sustainability Targets. _Bulletin of Mathematical Biology_ 86, 127.
     [doi:10.1007/s11538-024-01352-7](https://doi.org/10.1007/s11538-024-01352-7)
 
-61. Olsson, __Boettiger__, Carey, Lofton, Thomas (2024).
+62. Olsson, __Boettiger__, Carey, Lofton, Thomas (2024).
     Can you predict the future? A tutorial for the National Ecological Observatory Network Ecological Forecasting Challenge.
     _Journal of Open Source Education_ 7(82), 259.
     [doi:10.21105/jose.00259](https://doi.org/10.21105/jose.00259)
 
-62. Dietze, White, Abeyta, et al. (2024). Near-term ecological forecasting
+63. Dietze, White, Abeyta, et al. (2024). Near-term ecological forecasting
     for climate change action. _Nature Climate Change_ 14, 1236–1244.
     [doi:10.1038/s41558-024-02182-0](https://doi.org/10.1038/s41558-024-02182-0)
 
-63. Abigail G. Keller, Timothy D. Counihan, Edwin D. Grosholz, __Carl Boettiger__ (2025).
+64. Abigail G. Keller, Timothy D. Counihan, Edwin D. Grosholz, __Carl Boettiger__ (2025).
     The transition from resistance to acceptance: Managing a marine invasive species in a changing world.
     _Journal of Applied Ecology_. [doi:10.1111/1365-2664.14881](https://doi.org/10.1111/1365-2664.14881)
 
-64. Kari E. A. Norman, Perry de Valpine, and __Carl Boettiger__ (2025).
+65. Kari E. A. Norman, Perry de Valpine, and __Carl Boettiger__ (2025).
     No General Trend in Functional Diversity in Bird and Mammal Communities Despite Compositional Change.
     _Global Ecology and Biogeography_.
     [doi:10.1111/geb.13950](https://doi.org/10.1111/geb.13950)
 
-65. Felipe Montealegre-Mora, __Carl Boettiger__, Carl J. Walters, and Christopher Cahill (2025).
+66. Felipe Montealegre-Mora, __Carl Boettiger__, Carl J. Walters, and Christopher Cahill (2025).
     Using machine learning to inform harvest control rule design in complex fishery settings.
     _Fish and Fisheries_.
     [doi:10.1111/faf.70013](https://doi.org/10.1111/faf.70013)
 
-66. Caleb Scoville, Razvan Amironesei, Lily Xu, Melissa Chapman, Nick Record, and __Carl Boettiger__ (2025).
+67. Caleb Scoville, Razvan Amironesei, Lily Xu, Melissa Chapman, Nick Record, and __Carl Boettiger__ (2025).
     From maps to models: Participation and contestability in the dynamic management of natural resources.
     _Geo: Geography and Environment_.
     [doi:10.1002/geo2.70028](https://doi.org/10.1002/geo2.70028)
 
-67. Robert L. Baker, Colin Smith, Sarah E. Wright, Issac Quevedo, Kristin Vanderbilt, __Carl Boettiger__, Judd M. Patterson, and Joe DeVivo (2025).
+68. Robert L. Baker, Colin Smith, Sarah E. Wright, Issac Quevedo, Kristin Vanderbilt, __Carl Boettiger__, Judd M. Patterson, and Joe DeVivo (2025).
     NPSdataverse: a suite of R packages for data processing, authoring Ecological Metadata Language metadata, checking data-metadata congruence, and accessing data.
     _The Journal of Open Source Software_.
     [doi:10.21105/joss.08066](https://doi.org/10.21105/joss.08066)
 
-68. Melissa Chapman, Martin Jung, David Leclère, __Carl Boettiger__, Andrey L. D. Augustynczik, Mykola Gusti, Leopold Ringwald, and Piero Visconti (2025).
+69. Melissa Chapman, Martin Jung, David Leclère, __Carl Boettiger__, Andrey L. D. Augustynczik, Mykola Gusti, Leopold Ringwald, and Piero Visconti (2025).
     Meeting European Union biodiversity targets under future land-use demands.
     _Nature Ecology & Evolution_.
     [doi:10.1038/s41559-025-02671-1](https://doi.org/10.1038/s41559-025-02671-1)
 
-69. Freya Olsson, Cayelan C. Carey, __Carl Boettiger__, and others (2025).
+70. Freya Olsson, Cayelan C. Carey, __Carl Boettiger__, and others (2025).
     What can we learn from 100,000 freshwater forecasts? A synthesis from the NEON Ecological Forecasting Challenge.
     _Ecological Applications_.
     [doi:10.1002/eap.70004](https://doi.org/10.1002/eap.70004)
 
-70. Kari E. A. Norman, __Carl Boettiger__, Timothée Poisot, and Gavin M. Jones (2026).
+71. Kari E. A. Norman, __Carl Boettiger__, Timothée Poisot, and Gavin M. Jones (2026).
     The role of AI in ecology's computational carbon footprint.
     _Frontiers in Ecology and the Environment_.
     [doi:10.1002/fee.70021](https://doi.org/10.1002/fee.70021)
 
-71. Arnab Nandi, Wei-Lun Chao, Rongjun Qin, __Carl Boettiger__, Hilmar Lapp, and Tanya Berger-Wolf (2025).
+72. Arnab Nandi, Wei-Lun Chao, Rongjun Qin, __Carl Boettiger__, Hilmar Lapp, and Tanya Berger-Wolf (2025).
     OmniMesh: Addressing findability challenges in distributed nature data repositories.
     _Proceedings of the 37th International Conference on Scalable Scientific Data Management (SSDBM)_, 1-6.
     [doi:10.1145/3733723.3733728](https://doi.org/10.1145/3733723.3733728)
 
-72. Tasha Snow, Christopher Holdgraf, Wilson Sauthoff, Jessica Scheick, Ellianna Abrahams, Joanna Millstein, Sanjay Bhangar, __Carl Boettiger__, James Colliander, Luis A. Lopez, Elizabeth Holmes, Joseph H. Kennedy, Julia S. Lowndes, Alex I. Mandel, P. Yuvi, Fernando Pérez, Joe-Paul Swinski, Andy Teucher, and Matthew R. Siegfried (2026).
+73. Tasha Snow, Christopher Holdgraf, Wilson Sauthoff, Jessica Scheick, Ellianna Abrahams, Joanna Millstein, Sanjay Bhangar, __Carl Boettiger__, James Colliander, Luis A. Lopez, Elizabeth Holmes, Joseph H. Kennedy, Julia S. Lowndes, Alex I. Mandel, P. Yuvi, Fernando Pérez, Joe-Paul Swinski, Andy Teucher, and Matthew R. Siegfried (2026).
     A path to better science through co-creation and open infrastructure.
     _Perspectives of Earth and Space Scientists_ 7(1), e2025CN000295.
     [doi:10.1029/2025CN000295](https://doi.org/10.1029/2025CN000295)
