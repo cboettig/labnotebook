@@ -1,3 +1,5 @@
 
-ol  { display: flex; flex-direction: column-reverse; }
-  
+/* Publications are stored newest-first in assets/includes/publications.md, with
+   literal escaped numbers (`- 73\. ...`), so no display reversal is needed here.
+   The former `ol { flex-direction: column-reverse }` rule reversed an
+   ascending list for the web only, which left cv.pdf in the opposite order. */

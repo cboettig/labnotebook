@@ -10,28 +10,28 @@
   Carl Boettiger, Quinn Thomas, Christine Laney, Claire Lunch (2020).
 - [`contentid`](https://github.com/cboettig/contentid): An Interface for Content-Based Identifiers. 
   Carl Boettiger and Jorrit Poelen (2020).
-- [`taxalight`](https://github.com/cboettig/taxalight):  A Lightweight and Lightning-Fast Taxonomic Naming Interface.
+- [`taxalight`](https://github.com/cboettig/taxalight): A Lightweight and Lightning-Fast Taxonomic Naming Interface.
   Carl Boettiger and Kari Norman (2020)
 - [`sarsop`](https://github.com/boettiger-lab/sarsop): Approximate POMDP Planning Software.
   Carl Boettiger and Jeroen Ooms and Milad Memarzadeh (2020).
 - [`taxadb`](https://github.com/ropensci/taxadb): A High-Performance Local Taxonomic Database Interface.
   Carl Boettiger and Kari Norman and Jorrit Poelen and Scott Chamberlain, (2020).
-- [`emld`](https://github.com/ropensci/emld): Ecological Metadata as Linked Data.  Carl Boettiger (2019).
+- [`emld`](https://github.com/ropensci/emld): Ecological Metadata as Linked Data. Carl Boettiger (2019).
 - [`virtuoso`](https://github.com/ropensci/virtuoso): Interface to Virtuoso using ODBC. Carl Boettiger (2019).
 - [`rdflib`](https://github.com/ropensci/rdflib): Tools to Manipulate and Query Semantic Data. Carl Boettiger (2018).
 - [`codemetar`](https://github.com/ropensci/codemetar): Generate CodeMeta Metadata for R Packages. Carl Boettiger, Maëlle Salmon (2018).
 - [`codemeta`](https://github.com/cboettig/codemeta): A Smaller codemetar Package. Carl Boettiger, Maëlle Salmon (2021).
-- [`EcoNetGen`](https://github.com/cboettig/EcoNetGen): Simulate and Sample from Ecological Interaction Networks.  Marcus de Aguiar, Erica Newman, Mathias Pires, Carl Boettiger  (2018).
-- [`piggyback`](https://github.com/ropensci/piggyback/): Managing Larger Data on a GitHub Repository.  Carl Boettiger (2018).
-- [`arkdb`](https://github.com/ropensci/arkdb/): Archive and Unarchive Databases Using Flat Files.  Carl Boettiger (2018).
+- [`EcoNetGen`](https://github.com/cboettig/EcoNetGen): Simulate and Sample from Ecological Interaction Networks. Marcus de Aguiar, Erica Newman, Mathias Pires, Carl Boettiger (2018).
+- [`piggyback`](https://github.com/ropensci/piggyback/): Managing Larger Data on a GitHub Repository. Carl Boettiger (2018).
+- [`arkdb`](https://github.com/ropensci/arkdb/): Archive and Unarchive Databases Using Flat Files. Carl Boettiger (2018).
 - [`EML`](https://github.com/ropensci/EML): Read and Write Ecological Metadata Language File. Carl Boettiger, Matt Jones (2016; v2 2019).
-- [`RNeXML`](https://github.com/ropensci/RNeXML): Semantically Rich I/O for the NeXML Phylogenetics Format. Carl Boettiger, Scott Chamberlain, Hilmar Lapp, Rutger Voss (2014).
+- [`RNeXML`](https://github.com/ropensci/RNeXML): Semantically Rich I/O for the NeXML Phylogenetics Format. Carl Boettiger, Scott Chamberlain, Hilmar Lapp, Rutger Vos (2014).
 - [`pmc`](https://github.com/cboettig/pmc): Phylogenetic Monte Carlo. Carl Boettiger (2012).
-- [`knitcitations`](https://github.com/cboettig/knitcitations): Citations for Knitr Markdown Files.  Carl Boettiger (2012).
+- [`knitcitations`](https://github.com/cboettig/knitcitations): Citations for Knitr Markdown Files. Carl Boettiger (2012).
 - [`rfishbase`](https://github.com/ropensci/rfishbase): R Interface to FishBase. Carl Boettiger, Scott Chamberlain, Duncan Temple Lang, Peter Wainwright (2011; v2 2015; v3 2019).
 - [`treebase`](https://github.com/ropensci/treebase): Discovery, Access and Manipulation of TreeBASE Phylogenies. Carl Boettiger, Duncan Temple Lang (2011).
 
-## Python Modules (on PyPi)
+## Python Modules (on PyPI)
 
 - [`jupyter-geoagent`](https://github.com/boettiger-lab/jupyter-geoagent): A JupyterLab extension providing an agentic interface to cloud-native geospatial data. Carl Boettiger (2026).
 - [`jupyter-sidekick`](https://github.com/SchmidtDSE/jupyter-sidekick): A JupyterLab extension for working alongside language models. Carl Boettiger (2025).

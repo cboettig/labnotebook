@@ -58,24 +58,24 @@ css: ["vita.css"]
 
 - A decision framework for managing European Green Crab infestations on the coast of Washington and Salish Sea shorelines. **US Geological Survey** (2022 - 2025). UCB Award ID: 054356-001. Carl Boettiger, PI. Total: $174,577.
 
-- CAREER: Harnessing the data revolution for predicting and managing ecosystem regime shifts. Carl Boettiger. (2020-2025).  **National Science Foundation** [#DBI-1942280](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1942280). $504,335.00  
+- CAREER: Harnessing the data revolution for predicting and managing ecosystem regime shifts. Carl Boettiger. (2020-2025). **National Science Foundation** [#DBI-1942280](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1942280). $504,335.00  
 
 - The Rocker Project. Carl Boettiger, Noam Ross, Dirk Eddelbuettel. (2019 - 2021). **Chan-Zuckerberg Initiative**: [Essential Open Source Software for Science](https://chanzuckerberg.com/eoss/proposals/maintaining-rocker-sustainability-for-containerized-reproducible-analyses/). $75,912
 
-- The Influence of Conflicting Policies and Supply-Chain Pressures on Farmers' Decisions and Tradeoffs with Respect to Biodiversity, Profitability, and Sustainability.  Timothy Bowles (PI), Alastair Iles, Claire Kremen, Carl Boettiger. (2018-2022).  **National Science Foundation** [#CNH-1824871
+- The Influence of Conflicting Policies and Supply-Chain Pressures on Farmers' Decisions and Tradeoffs with Respect to Biodiversity, Profitability, and Sustainability. Timothy Bowles (PI), Alastair Iles, Claire Kremen, Carl Boettiger. (2018-2022). **National Science Foundation** [#CNH-1824871
 ](https://nsf.gov/awardsearch/showAward?AWD_ID=1824871) $1,301,737
 
 - The rOpenSci Project. Karthik Ram, Carl Boettiger, Scott Chamberlain. (renewal, 2019-2021). **Helmsley Charitable Trust**, award 2016PG-BRI004. $1,000,000
 
 - Detecting Change in Global Biodiversity through Large Scale Network Analysis. Carl Boettiger, Rosemary Gillespie, Rasmus Nielsen. (2018). Berkeley Institute for Data Science, $67,000
 
-- Big Data, Big Uncertainty: Ecological Decision- Making in the 21st Century.  (2018-2020). [Hellman Fellows Award](https://vpf.berkeley.edu/hellman-fellows-fund), **The Hellman Foundation**. $37,600
+- Big Data, Big Uncertainty: Ecological Decision- Making in the 21st Century. (2018-2020). [Hellman Fellows Award](https://vpf.berkeley.edu/hellman-fellows-fund), **The Hellman Foundation**. $37,600
 
 - [Berkeley Collegium Award for Narrowing the Gap Between Teaching and Research.](http://collegium.berkeley.edu/) (2018-2019) $16,867.50
 
 - Managing ecosystems under extreme uncertainty. (2016 - 2019) NSF **XSEDE** TG-DEB160003. NSF Estimated value of computing resources: $34,558
 
-- Reproducible and Collaborative Data Science. NSF **XSEDE** TG-DEB160021.  (2016 - 2019) NSF Estimated value of computing resources: $20,028
+- Reproducible and Collaborative Data Science. NSF **XSEDE** TG-DEB160021. (2016 - 2019) NSF Estimated value of computing resources: $20,028
 
 - [James S McDonnell Foundation Post-doctoral Fellowship in Complex Systems](https://www.jsmf.org/grants/20150024/) (Awarded to post-doctoral scholar Allison Barner, who then chose to bring this award to my group at UC Berkeley) $200,000.
 
@@ -102,9 +102,9 @@ css: ["vita.css"]
 
 # Teaching
 
-- [ESPM-157: Data Science for Global Change Ecology](https://espm-157.carlboettiger.info/).  UC Berkeley. Upper-division undergraduate course, 4 units. Offered every Fall.
+- [ESPM-157: Data Science for Global Change Ecology](https://espm-157.carlboettiger.info/). UC Berkeley. Upper-division undergraduate course, 4 units. Offered every Fall.
 
-- [ESPM-288: Reproducible and Collaborative Data Science](https://espm-288.carlboettiger.info).  UC Berkeley. Graduate-level course, 3 units. Offered every Spring.
+- [ESPM-288: Reproducible and Collaborative Data Science](https://espm-288.carlboettiger.info). UC Berkeley. Graduate-level course, 3 units. Offered every Spring.
 
 - CSOL-208: Data Science for Climate Solutions. UC Berkeley. Graduate-level course in the Masters of Climate Solutions, 3 units. Created 2026; offered every Spring.
 
@@ -113,30 +113,56 @@ css: ["vita.css"]
 
 # Invited Talks & Workshops
 
+**2026**
 
+ - NASA Biodiversity and Ecological Conservation Teams meeting, Washington, DC.
+ - Invited seminar speaker, Environmental Informatics Hub at Monash University, Melbourne, Australia.
+ - Natural Capital Project Symposium, Stanford, CA.
+ - Plenary speaker, California Interagency Ecological Program Annual Workshop, Sacramento, CA.
+ - Beyond Yellowstone Partners Meeting, Laramie, WY.
+ - Invited speaker, AI-Ready Ecology and Biodiversity Data Infrastructure, NCEAS, Santa Barbara, CA.
+ - National Geographic Blue Boundaries Wetlands, San Francisco, CA.
+ 
 
+ **2025**
+
+ - ESIIL NSF Synthesis Center Summit, invited speaker, Boulder, CO.
+ - Invited speaker, California 30x30 Partnership Summit, San Diego, CA.
+ - NASA Biodiversity and Ecological Conservation Teams meeting, Washington, DC.
+ - Invited NSF workshop on AI, Sensors, and Ecological Infrastructure, Pittsburgh, PA.
+ - Invited workshop, Sentinel Sites Biodiversity, UC Davis, Davis, CA.
+ - Urban Biodiversity Alliance, San Diego Museum of Natural History, San Diego, CA.
+ - Invited speaker, Serrapilheira Institute Quantitative Ecology, Brazil.
+ - Invited seminar speaker, Ocean Sciences, UC Santa Cruz, Santa Cruz, CA.
+
+ **2024**
+
+- Invited speaker, National Artificial Intelligence Resource Research (NAIRR) Pilot conference, Argonne National Labs, Chicago, IL.
+- Invited speaker, Conservation Data Justice Conference, Barcelona, Spain.
+- Invited speaker, NSF Cyberinfrastructure for Ecological Forecasting Conference, Portsmouth, NH.
+- NASA TOPS symposium, Kennedy Space Center, FL.
 
 **2023**
 
 
-- Bezos Earth Fund AI for Climate and Nature Workshop, San Francisco, CA ([recording](https://youtu.be/yTqd0qREoPU))
-- Invited seminar speaker, University of Southern California, Biology Department, CA
-- Invited seminar speaker, University of California, Davis, Department of Mathematics, CA
-- Invited seminar speaker, Virginia Polytechnic Institute and State University (Virginia Tech), VA
-- Invited workshop speaker, Critical Transitions, Princeton University, NJ
-- Invited seminar speaker, Data Sciences, University of New South Wales, Sydney, Australia
-- Invited talk, Gordon Conference on Predictive Ecology, Stonehill College, MA
-- Co-organizer, Ecological Forecasting Unconference, NEON Headquarters, Boulder, CO
-- Invited workshop speaker, Australian Mathematical Sciences (AMSI) Winter School, Brisbane, Australia
-- Invited seminar speaker, University of Queensland, Brisbane, Australia
-- Ecological Society of America, contributed talk, Portland OR
+- Bezos Earth Fund AI for Climate and Nature Workshop, San Francisco, CA ([recording](https://youtu.be/yTqd0qREoPU)).
+- Invited seminar speaker, University of Southern California, Biology Department, CA.
+- Invited seminar speaker, University of California, Davis, Department of Mathematics, CA.
+- Invited seminar speaker, Virginia Polytechnic Institute and State University (Virginia Tech), VA.
+- Invited workshop speaker, Critical Transitions, Princeton University, NJ.
+- Invited seminar speaker, Data Sciences, University of New South Wales, Sydney, Australia.
+- Invited talk, Gordon Conference on Predictive Ecology, Stonehill College, MA.
+- Co-organizer, Ecological Forecasting Unconference, NEON Headquarters, Boulder, CO.
+- Invited workshop speaker, Australian Mathematical Sciences (AMSI) Winter School, Brisbane, Australia.
+- Invited seminar speaker, University of Queensland, Brisbane, Australia.
+- Ecological Society of America, contributed talk, Portland, OR.
 - GEO BON Global Conference: Monitoring Biodiversity for Action, Montreal, Canada.
-- California Academy of Natural Sciences  Past, Present, Future Biodiversity Convening, San Francisco, CA
+- California Academy of Natural Sciences Past, Present, Future Biodiversity Convening, San Francisco, CA.
 
 **2022**
 
-- Ecological Forecasting Initiative workshop (online)
-- Invited speaker, International Institute of Applied Systems Analysis (IIASA) conference, Boston University, Boston MA.
+- Ecological Forecasting Initiative workshop (online).
+- Invited speaker, International Institute of Applied Systems Analysis (IIASA) conference, Boston University, Boston, MA.
 
 **2021**
 
@@ -150,23 +176,23 @@ css: ["vita.css"]
 - Chan-Zuckerberg Initiative Essential Open Source Software for Science Workshop.
 - Invited seminar speaker, DataONE data repository network.
 - Ecological Forecasting Initiative Research Coordination Network [Workshop](https://ecoforecast.org/efi-rcn-2020-workshop-videos/).
-- Invited seminar speaker, Concordia University, Montreal, CA.
+- Invited seminar speaker, Concordia University, Montreal, Canada.
 
 **2019**
 
 - Invited Biodiversity Research Center seminar speaker, University of British Columbia, Vancouver, Canada.
-- [Ecological Forecasting Oral Session](https://agu.confex.com/agu/fm19/meetingapp.cgi/Session/87281), American Geophysical Union, San Fransisco, CA.
+- [Ecological Forecasting Oral Session](https://agu.confex.com/agu/fm19/meetingapp.cgi/Session/87281), American Geophysical Union, San Francisco, CA.
 - Advancing Theory in Ecology, NSF Workshop. Pennsylvania State University, State College, PA.
 - Biodiversity Data Workshop, invited speaker, Arizona State University, Tempe, AZ.
 - [Transients in Ecology](https://eco.confex.com/eco/2019/meetingapp.cgi/Session/15321), Organized Oral Session, Ecological Society of America Annual Meeting, Louisville, KY.
-- [Ecological Forecasting Initiative Conference](https://ecoforecast.org/efi2019/), AAAS Headquarters, Washington DC.
+- [Ecological Forecasting Initiative Conference](https://ecoforecast.org/efi2019/), AAAS Headquarters, Washington, DC.
 - [NIMBioS Transient Dynamics Workshop](http://www.nimbios.org/workshops/WS_transients), University of Tennessee, Knoxville, TN.
-- [Project EDDIE](https://serc.carleton.edu/eddie/earthecosystems/eddieevents/workshops/barriers_solutions/index.html) keynote speaker, Carlton College, Northfield MN.
+- [Project EDDIE](https://serc.carleton.edu/eddie/earthecosystems/eddieevents/workshops/barriers_solutions/index.html) keynote speaker, Carleton College, Northfield, MN.
 - [US Research Software Sustainability Institute](https://github.com/si2-urssi/software-credit) Workshop, NCEAS, Santa Barbara, CA.
 - [COMPASS Workshop](https://www.compassscicomm.org) for scientific communication, Asilomar, CA.
 
 <!--
-- Jetstream Stakeholder Advisory Board Meeting, Tuscon, AZ
+- Jetstream Stakeholder Advisory Board Meeting, Tucson, AZ.
 -->
 
 **2018**
@@ -175,7 +201,7 @@ css: ["vita.css"]
 - [rOpenSci unconference](http://unconf18.ropensci.org), Seattle, WA.
 - [Faculty Learning Program Fellows Workshop](https://teaching.berkeley.edu/programs/transforming-stem-teaching-faculty-learning-program/become-flp-faculty-fellow) Berkeley, CA.
 - [GraphXD](https://graphxd.github.io/workshop/2018.html), Berkeley, CA.
-- [Digital Data in Biodiversity](https://www.idigbio.org/wiki/index.php/Digital_Data_in_Biodiversity_Research_Conference,_Berkeley) UC Berkeley. (co-organizer)
+- [Digital Data in Biodiversity](https://www.idigbio.org/wiki/index.php/Digital_Data_in_Biodiversity_Research_Conference,_Berkeley) UC Berkeley. (co-organizer).
 - [Ecological Society of America Invited Symposium](https://eco.confex.com/eco/2018/meetingapp.cgi/Session/14034) Addressing Outstanding Challenges to Operationalizing Resilience (Organizer). New Orleans, LA.
 - Nonlinear Forecasting for Fisheries Applications, NOAA Southwest Fisheries Science Center, Santa Cruz, CA.
 
@@ -192,54 +218,54 @@ css: ["vita.css"]
 
 **2016**
 
-- [Force16 Codemeta Workshop](http://sched.co/5wK5), Portland OR (organizer).
+- [Force16 CodeMeta Workshop](http://sched.co/5wK5), Portland, OR (organizer).
 - [CodeMeta NSF Workshop](https://codemeta.github.io) Portland, OR (organizer).
 - [rOpenSci unconference](http://unconf16.ropensci.org), San Francisco, CA.
 
 **2015**
 
 - [Empirical Dynamical Modeling and Forecasting in Nonlinear Systems](http://ecows.oc.ntu.edu.tw/itnlws/), NTU, Taiwan.
-- Moore-Sloan Data Science Environments: Second Annual Data Science Summit (Workshop)
+- Moore-Sloan Data Science Environments: Second Annual Data Science Summit (Workshop).
 - [Data Intensive Training Workshop](https://github.com/NCEAS/ds-workshop-2015), NCEAS, Santa Barbara, CA.
 - [NSF Big Data Hubs](http://www.nsf.gov/pubs/2015/nsf15562/nsf15562.htm) Design Charette, Western Region.
-- [rOpenSci unconference](http://unconf.ropensci.org/), San Francisco CA.
-- [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville TN.
+- [rOpenSci unconference](http://unconf.ropensci.org/), San Francisco, CA.
+- [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBioS, Knoxville, TN.
 
 **2014**
 
 - Berkeley Initiative for Global Change Biology Workshop (student organized), UC Berkeley, CA.
-- [DIMACS](http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html) Global Change, Berkeley CA.
+- [DIMACS](http://dimacs.rutgers.edu/Workshops/GlobalChange/announcement.html) Global Change, Berkeley, CA.
 - Zoology Seminar, University of Wisconsin, Madison, WI.
 - ESPM Seminar, UC Berkeley, CA.
-- [rOpenSci unconference](http://ropensci.org/blog/2014/05/14/ropenhack/), San Francisco CA.
+- [rOpenSci unconference](http://ropensci.org/blog/2014/05/14/ropenhack/), San Francisco, CA.
 - [Reproducible Science: Curriculum & Workflow Workshop](https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014), NESCent, Durham, NC.
 - [WSSSPE 2.0 Meeting](http://wssspe.researchcomputing.org.uk/wssspe2/). New Orleans, LA.
-- Workflows Working Group, NCEAS, Santa Barbara,  CA.
+- Workflows Working Group, NCEAS, Santa Barbara, CA.
 
 **2013 & prior**
 
 - invited speaker, MBI, [Sustainable Management of Living Natural Resources](http://www.mbi.ohio-state.edu/2013/ws3description.html), Columbus, OH.
 - invited seminar speaker, WHOI, Woods Hole, MA.
 - invited seminar speaker, UC Davis Dept of Environmental Resources and Economics; Davis, CA.
-- invited speaker, SSB Symposium, Evolution Conference, Ottawa, CAN.
+- invited speaker, SSB Symposium, Evolution Conference, Ottawa, Canada.
 - [Sustainable Management of Living Natural Resources Workshop](http://www.mbi.ohio-state.edu/2013/ws3description.html), MBI Columbus, OH.
 - Academic software & workforce development Workshop, [ISEES](http://isees.nceas.ucsb.edu). Oakland, CA.
 - Software Lifecycle Workshop, [ISEES](http://isees.nceas.ucsb.edu), Santa Barbara, CA.
-- [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBIOS, Knoxville, TN.
+- [Pretty Darn Good Control Working group](http://www.nimbios.org/workinggroups/WG_PDG), NIMBioS, Knoxville, TN.
 - [Stochastic spatial modeling in population dynamics Workshop](http://www.aimath.org/WWN/populationmodel/), AIM, Palo Alto, CA.
 
 
 # Awards
 
--  2020 CAREER Award, National Science Foundation
--  2020 [Early Career Fellow](https://www.esa.org/blog/2020/04/09/assistant-professor-carl-boettiger-named-2020-ecological-society-of-america-fellow/), Ecological Society of America
--  2020 Winkler Family Foundation Scholar
--  2018 Hellman Fellow, Hellman Foundation
--  2011 Volterra Award, Ecological Society of America, Theory Section
--  2007 Elected to Membership in the Society of Sigma Xi
--  2007 Allen G. Shenstone Prize in Physics, Princeton University
--  2007 The Class of 1870 Old English Prize, Princeton University
--  2006 Kusaka Memorial Prize in Physics, Princeton University
+- 2020 CAREER Award, National Science Foundation
+- 2020 [Early Career Fellow](https://www.esa.org/blog/2020/04/09/assistant-professor-carl-boettiger-named-2020-ecological-society-of-america-fellow/), Ecological Society of America
+- 2020 Winkler Family Foundation Scholar
+- 2018 Hellman Fellow, Hellman Foundation
+- 2011 Volterra Award, Ecological Society of America, Theory Section
+- 2007 Elected to Membership in the Society of Sigma Xi
+- 2007 Allen G. Shenstone Prize in Physics, Princeton University
+- 2007 The Class of 1870 Old English Prize, Princeton University
+- 2006 Kusaka Memorial Prize in Physics, Princeton University
 
 # Service & Outreach
 
@@ -331,7 +357,7 @@ css: ["vita.css"]
 # Media interviews
 
 - Martin, Glen. (2019)."How Algorithms Could Save the Planet." _California Magazine_. <https://alumni.berkeley.edu/california-magazine/just-in/2019-02-01/how-algorithms-could-save-planet>
-- Seltenrich, N. (2016). "Scaling the Heights of Data Science."  _Breakthroughs Magazine_.  <https://nature.berkeley.edu/breakthroughs/opensci-data>
+- Seltenrich, N. (2016). "Scaling the Heights of Data Science." _Breakthroughs Magazine_. <https://nature.berkeley.edu/breakthroughs/opensci-data>
 - Tachibana, C. (2014). "The paperless lab" _Science_ 345(6195) pp. 468-470. [10.1126/science.opms.p1400087](http://www.sciencemag.org/site/products/lst_20140613.xhtml)
 - Mascarelli, A. (2014) "Research tools: Jump off the page." *Nature*
   507, 523–525. [doi:10.1038/nj7493-523a](http://dx.doi.org/10.1038/nj7493-523a)
