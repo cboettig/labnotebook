@@ -1,3 +1,8 @@
+- 75\. Cassidy K. Buhler, Fernando Pérez, and __Carl Boettiger__ (2026).
+    Why scientists should lead the shift away from AI mega data centres.
+    _Nature_ 656(8127), 296-298.
+    [doi:10.1038/d41586-026-02451-2](https://doi.org/10.1038/d41586-026-02451-2)
+
 - 74\. R. Quinn Thomas and __Carl Boettiger__ (2026).
     Cyberinfrastructure to support ecological forecasting challenges.
     _Ecosphere_ 17(6), e70682.
