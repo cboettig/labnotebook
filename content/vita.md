@@ -48,13 +48,13 @@ css: ["vita.css"]
 
 - Leveraging NASA Data to Guide Biodiversity Conservation Investments with The Trust for Public Land. **NASA National Aeronautics and Space Administration** (2024-2027). Federal Award 80NSSC25K7241. Carl Boettiger, PI. Total: $615,116.
 
-- The Eric and Wendy Schmidt Center for Data Science and Environment. (2023-2028) Douglas McCauley, Fernando Perez, Justin Brashares, Carl Boettiger Total: $12.6M.
+- The Eric and Wendy Schmidt Center for Data Science and Environment. (2023-2028). Douglas McCauley, Fernando Perez, Justin Brashares, Carl Boettiger. Total: $12.6M.
 
 - Classroom and research access to GPU computing on the National Research Platform. **NSF National Artificial Intelligence Research Resource (NAIRR) Pilot** (2024 - current). Carl Boettiger, PI. Allocation of computational resources.
 
 - Examining Environmental Justice through Open Source, Cloud Native Tools. **NASA National Aeronautics and Space Administration** (2022-2025). UCB Award ID: 055956-001. Carl Boettiger, PI. Total: $134,596.
 
-- Collaborative Research: Frameworks: DeCODER (Democratized Cyberinfrastructure for Open Discovery to Enable Research). (2022-2026) **National Science Foundation** [#OAC-2209865](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2209865), UCB sub-award ID: 054904-001; PI $102,984
+- Collaborative Research: Frameworks: DeCODER (Democratized Cyberinfrastructure for Open Discovery to Enable Research). **National Science Foundation** [#OAC-2209865](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2209865) (2022-2026). UCB sub-award ID: 054904-001. Carl Boettiger, PI. Total: $102,984.
 
 - A decision framework for managing European Green Crab infestations on the coast of Washington and Salish Sea shorelines. **US Geological Survey** (2022 - 2025). UCB Award ID: 054356-001. Carl Boettiger, PI. Total: $174,577.
 
